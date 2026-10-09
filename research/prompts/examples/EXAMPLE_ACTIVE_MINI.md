@@ -1,4 +1,4 @@
-<!-- MINI-LOG-FORMAT: mini-log-3 -->
+<!-- MINI-LOG-FORMAT: mini-log-4 -->
 # Prediction Mini Running Log — P-900 onward
 
 > **FORMAT EXAMPLE ONLY.** Fictional league, teams, numbers and sources. Not a forecast and never imported. Real minis start at the repository's next canonical ID.
@@ -10,15 +10,15 @@
 | Repository | https://github.com/danisgreat/Sports-Research |
 | Branch | main |
 | GitHub HEAD SHA | `0000000000000000000000000000000000000000` |
-| Method | MDS-2026.10.09-v8.3 |
-| Control revision | CR-2026.10.09-R3 |
-| Active manifest | CONTROL_MANIFEST_2026-10-09-3.md |
-| Scoring version | SCV-2026.10.09-v4 |
+| Method | MDS-2026.10.09-v9.0 |
+| Control revision | CR-2026.10.09-R5 |
+| Scoring version | SCV-2026.10.09-v5 |
 | Active Combined Log | `prediction logs/PREDICTION_LOG_COMBINED_7.md` |
 | Highest committed repository P-ID | P-899 |
 | Repository next-ID snapshot | P-900 |
 | Highest local working P-ID before creation | NONE |
 | First working P-ID for this mini | P-900 |
+| Reading receipt | CURRENT_STATE, METHOD, CURRENT_RULES, SELECTION_RULES, CARD_AND_LOG_TEMPLATES and the EXAMPLE_ACTIVE_MINI structure read in full at the HEAD SHA above, 2026-10-10T07:55:00+11:00 (example) |
 | Mini opened | 2026-10-10T08:00:00+11:00 |
 | Mode | LOCAL_MINI_STAGING |
 
@@ -30,7 +30,7 @@ SPORTS_ONLY / MARKET_BLIND · PERFORMANCE_ELIGIBILITY: NOT_CERTIFIED · CANONICA
 - A working ID advances only after a complete new card is written and verified locally.
 - Addenda, corrections, duplicates and aliases keep the original ID and consume none.
 - Working IDs never change once issued; GitHub being behind does not invalidate them.
-- Canonical import (prompt 4) is separate; the importer retains these IDs or stops on a collision.
+- Canonical import (prompt 4) is separate; the import step retains these IDs or stops on a collision.
 
 ## C. Active carryover
 
@@ -61,7 +61,9 @@ None.
 - **Abandonment rule:** `FRAMEWORK_DEFAULT: an abandoned game is VOID unless the league publishes a result`
 - **Settlement fields:** `Final score including OT/SO (provider: league game page)`
 - **Capture due:** `2026-10-11T11:00:00+11:00`
-- **Evidence snapshots:** `sha256:6486df0299e72985dc5eb31c13186c2d98742feceb34a89da174040eb26fde43@2026-10-10T08:41:00+11:00; sha256:ec21fa1c3677954a5bae77c4153c741bc303dc3565a85510650a0e6c27016c3e@2026-10-10T09:10:00+11:00`
+- **Rules read:** `RULES_ICE_HOCKEY §0 §3; PROBABILITY_TOOLKIT §2.3; SELECTION_RULES §2 §3 §5; SOURCES §3.9 (example); BASE_RATES_REGISTER §7.2`
+- **Archive check:** `ARCHIVE_UNAVAILABLE: fictional league, format example only (a real NHL card would name Previous Sports Results/Ice Hockey/NHL/2025/2025_games.csv, rows read, date range and recipes R1, R2, R5, R8)`
+- **Evidence quotes:** `League game page (example) @ 2026-10-10T09:10:00+11:00 — "Scheduled · 11:00 AM · Southport Arena"; Team announcement (example) @ 2026-10-10T08:41:00+11:00 — "Starting in goal tonight: Alvarez (NOR), Brandt (SOU)"`
 
 ### Decision block
 
@@ -158,7 +160,9 @@ Late news before the start: a Northfield third-pair defender is a late scratch (
 - **Abandonment rule:** `FRAMEWORK_DEFAULT: an abandoned game is VOID unless the league publishes a result`
 - **Settlement fields:** `Final score including overtime (provider: league game page)`
 - **Capture due:** `2026-10-11T12:00:00+11:00`
-- **Evidence snapshots:** `sha256:d38c58ac284dc699e2600aad0bda81737892242811a2a2106ee8ebc2accdc837@2026-10-10T18:35:00+11:00`
+- **Rules read:** `RULES_BASKETBALL §3; PROBABILITY_TOOLKIT §1.2 §1.3; SELECTION_RULES §2 §3 §6; SOURCES §3.2 (example); BASE_RATES_REGISTER regime table (EARLY_SEASON)`
+- **Archive check:** `ARCHIVE_UNAVAILABLE: fictional league, format example only (a real card would name the league row in LEAGUE_PROFILES.md and the Previous Sports Results file, rows read and recipes R1, R2, R5)`
+- **Evidence quotes:** `League game page (example) @ 2026-10-10T18:35:00+11:00 — "Scheduled · 7:30 PM · Westbay Arena"`
 
 ### Decision block
 

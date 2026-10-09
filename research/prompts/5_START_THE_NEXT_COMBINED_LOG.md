@@ -2,155 +2,94 @@
 
 **Run by:** Claude Code in a local checkout of the repository · **GitHub:** write (this rollover only) · **Mode:** `COMBINED_LOG_ROLLOVER`
 
-The user authorises rolling the active Combined Prediction Log from Part N to Part N+1. A rollover only moves the destination for future canonical cards. It consumes **no** P-ID, changes **no** earlier byte and adds **no** card.
-
-The architecture already separates the two kinds of custody:
-- `research/src/combined_log.py` handles the **active log**: the configured `active_log` plus a per-part header receipt for every part.
-- The **Part-6 legacy custody** (`LEGACY_PART6`) keeps the P-518 original-source block check.
-
-`research/operations/rollover.py` automates the whole rollover. Do **not** hand-create the new file or edit any of these by hand:
-- `research/current_combined_log.json`;
-- the allocator;
-- the logging code.
+The user authorises rolling the active Combined Prediction Log from Part N to Part N+1. A rollover only moves the destination for future canonical cards. It consumes **no** P-ID, changes **no** earlier byte and adds **no** card. There is no rollover program: you create and edit Markdown with your file tools and use `git` and plain file commands only. Do not write scripts into the repository.
 
 Run a rollover between mini imports, never while a mini import is half-done.
 
 ---
 
+## 0. Reading gate
+
+Print the **reading receipt** ([research/prompts/README.md](README.md)) after opening: [CURRENT_STATE.md](../../CURRENT_STATE.md), [METHOD.md](../../METHOD.md), [CURRENT_RULES.md](../../CURRENT_RULES.md) (§8 and §9), [CARD_AND_LOG_TEMPLATES.md](../../CARD_AND_LOG_TEMPLATES.md) (§8, rollover), [VERIFICATION_PROTOCOL.md](../../VERIFICATION_PROTOCOL.md) (§4), [GAME_LOG_STATUS_CURRENT.md](../../GAME_LOG_STATUS_CURRENT.md), and the header and end of the active Combined Log and of the previous rollover's header.
+
 ## 1. Authority and clean state
 
-1. `git fetch`, check out the current `main` and record its 40-hex HEAD SHA. The working tree must be clean.
-2. On Windows, use the normal checkout with `core.autocrlf=true`. On Linux or macOS, create a worktree with `git -c core.autocrlf=true worktree add <dir> main` and work there. Parts 1–5 and the root CSV are custody-hashed as CRLF. **Never** set `core.autocrlf` with `git config`, because the setting leaks into the shared configuration.
-3. Read:
-   - `CURRENT_STATE.md` (generated), `METHOD.md`, `CURRENT_RULES.md` and `GAME_LOG_STATUS_CURRENT.md`;
-   - `research/current_combined_log.json` and `research/src/combined_log.py`;
-   - `research/operations/rollover.py` and `research/operations/log_card.py`;
-   - `research/README.md`;
-   - the selected control manifest.
+1. `git fetch`, check out the current `main` and record its 40-hex HEAD SHA. `git status` must show no changes in the paths you will edit.
+2. The Combined Logs are stored with Windows line endings. Write every new line with the same ending as the file you extend (open it and check), and confirm with `git diff --numstat` that the active log shows 0 deleted lines after your edit. Never change a file's line endings wholesale.
+3. Read CURRENT_STATE and the active log header. They must agree on the active log, the highest committed ID and the next ID. If they disagree, stop and report.
 
 ## 2. Baseline
 
-```powershell
-py -3.14 -B -m research.operations.log_card verify
-py -3.14 -B -m research.operations.log_card next-id
-py -3.14 -B -m research.operations.control_freeze --verify
-py -3.14 -B -m research.operations.verify_rollover
-py -3.14 -B -m research.operations.verify_reconciliation
-py -3.14 -B -m research.operations.verify_carryover_review
-py -3.14 -B -m research.operations.verify_all_logs
-py -3.14 -B -m research.operations.verify_custody
-py -3.14 -B -m pytest -p no:cacheprovider research/tests research/operations -q
-```
-
-Save every result. A failure here is **pre-existing**. Report it, and never mask it as a rollover result.
-
-If a canonical transaction is pending, stop. Recover it with `log_card recover` only after confirming that it is the expected transaction.
+Record for the active log (Part N): `wc -l`, `wc -c`, the last 3 lines, and the number of `BEGIN CANONICAL RESEARCH` markers. Record the highest committed ID and the next ID. If a mini import is half-done (a card appended without its status row), stop and finish or revert it first.
 
 ## 3. Plan (read-only)
 
-```powershell
-py -3.14 -B -m research.operations.rollover plan
-```
-
-Confirm each of these:
-- `active_log` is Part N;
-- `new_log` is Part N+1 and `new_log_exists` is `false`;
-- `pending` is `false`;
-- `next_id` equals the `log_card next-id` result and `GAME_LOG_STATUS_CURRENT.md`;
-- `highest_committed` is the last ledger card;
-- `first_in_active`–`last_in_active` matches the cards actually in Part N.
+Confirm and print each of these:
+- the active log is Part N and `prediction logs/PREDICTION_LOG_COMBINED_<N+1>.md` does not exist;
+- the next ID equals the status register line and CURRENT_STATE;
+- the first and last canonical IDs in Part N match what the header range says;
+- no pending half-import exists.
 
 If any of these disagree, stop and report.
 
 ## 4. Apply
 
-```powershell
-py -3.14 -B -m research.operations.rollover apply --main-head <HEAD SHA from step 1> --carryover "<pointer to open PENDING_EVENT carryovers, or 'none open'>"
+1. **Closure block.** Append to Part N (after its last block) a dated block:
+
+```markdown
+<!-- BEGIN ROLLOVER CLOSURE PART N -->
+## Rollover closure — Part N — <YYYY-MM-DD>
+
+Closed at <ISO 8601 with offset> on `main` at <HEAD SHA>. Cards in this part: P-AAA to P-BBB (<n> canonical entries). Highest committed ID: P-BBB. Next canonical ID: P-NNN (unchanged; this rollover consumed no ID). Part N before this block: <lines> lines. Part N+1 continues at [PREDICTION_LOG_COMBINED_<N+1>.md](PREDICTION_LOG_COMBINED_<N+1>.md).
+<!-- END ROLLOVER CLOSURE PART N -->
 ```
 
-Under the ledger lock, `apply`:
-1. Appends a dated closure block to Part N, `<!-- BEGIN ROLLOVER CLOSURE PART N -->`, which records:
-   - the time and the main HEAD;
-   - the range of cards in Part N;
-   - the highest committed ID and the unchanged next ID;
-   - the prefix length and SHA-256.
+2. **New part.** Create `prediction logs/PREDICTION_LOG_COMBINED_<N+1>.md` with this header, then the line `<!-- END ACTIVE COMBINED LOG HEADER -->`:
+   - `# Combined Prediction Log <N+1>`
+   - `**Status: ACTIVE FOR NEW CANONICAL RESEARCH.** SPORTS_ONLY / MARKET_BLIND.`
+   - `Opened:` the time (Sydney and UTC), `Repository main at rollover:` the HEAD SHA, `Method:` and `Control:` from CURRENT_STATE.
+   - `Previous active log:` a link to Part N with the committed range, and the note that P-518 to P-522 remain reserved and the Part-6 source block stays immutable.
+   - `**Highest committed canonical ID: P-BBB. Next available canonical ID: P-NNN.** Creating this file consumes no ID. The first real committed new event receives the next ID; this header is not a forecast.`
+   - `Unresolved carryover:` a pointer to the open `PENDING_EVENT` records, or `none open`.
+   - The statement that research IDs identify retained work independently of calibration and certification, and that nothing is performance-certified.
+   - A `## Continuity` table listing every earlier part (copy the previous header's table and add Part N).
+   - A `## Canonical logging` section: append-only after the end marker; entries use the `canonical-md-1` format; a duplicate event key returns the existing ID; changed delivered content is a dated addendum under the original ID; never rewrite prior probabilities, ranks, cutoffs, native identities or operator terms.
+3. **State.** Update CURRENT_STATE.md (`Active Combined Log`, previous parts), the first lines of GAME_LOG_STATUS_CURRENT.md (`Active Combined Log: ...`), and the "Previous active log" pointers that name the active log (search for the old file name in `README.md`, `CURRENT_RULES.md`, `research/prompts/`, `CARD_AND_LOG_TEMPLATES.md` and the examples, and change only live pointers; leave historical statements such as "P-523 to P-549 live in Part 6" alone).
+4. **Changelog.** Add a dated entry to CHANGELOG.md (what rolled, the range, the commit that follows).
+5. **Line endings.** If the repository's local attributes do not list the new part, tell the user that `.git/info/attributes` should get a `-text` line for it; do not create any non-Markdown file in the repository.
 
-   Earlier bytes and Part N's header receipt are untouched.
-2. Writes the Part N+1 header. It contains the status, opening time, method, control, freeze, previous part, highest and next ID with the note "consumes no ID", the reserved-ID note, the carryover pointer, SPORTS_ONLY / MARKET_BLIND, the certification disclaimer, a continuity table of every earlier part, and the logging, addendum and duplicate rules.
-3. Updates `research/current_combined_log.json` to the new `active_log`. It keeps every earlier `log_headers` receipt and adds Part N+1's.
-4. Adds `"prediction logs/PREDICTION_LOG_COMBINED_<N+1>.md" -text whitespace=cr-at-eol` to `.gitattributes`.
-5. Proves the result:
-   - the next ID is unchanged;
-   - the ledger bytes are unchanged;
-   - the active log resolves to Part N+1;
-   - every card and addendum projection verifies;
-   - Part N custody, Part N+1 custody and Part-6 legacy custody all pass.
+## 5. Verify
 
-   Then it refreshes `GAME_LOG_STATUS_CURRENT.md`.
-6. Writes `research/verification/rollover_<date>_partN_to_<N+1>/rollover_receipt.json`.
-
-If `apply` raises, nothing after the failing step has happened. Report the error, and do not hand-edit to finish the job.
-
-## 5. Update the living documents and issue a new freeze
-
-Part N leaves the freeze exclusion and becomes controlled history, so a new versioned control manifest is required. **Never edit an earlier manifest.**
-
-1. Update the living documents that must change by hand:
-   - `METHOD.md` (the `Active freeze` link, and the method/control revision if they change);
-   - `CHANGELOG.md` (a dated entry).
-
-   No other living document states the active destination or the next ID: `CURRENT_STATE.md` does, and it is generated (`current_state verify` fails when a living document states a next ID or a destination). Historical statements such as "P-523–P-549 live in Part 6" stay where they are.
-2. **Archive the superseded manifests before generating the new one.** Move every `CONTROL_MANIFEST_*.md` at the repository root into `archive/controls/` with `git mv` (content untouched; never edit an earlier manifest) and repoint the links in the living documents (`METHOD.md`, `README.md`, `CURRENT_RULES.md`, `research/README.md`, `SOURCES.md`) to `archive/controls/…`. Do not touch files under `prediction logs/`, `research/issued_research/` or `research/verification/`: their links are historical. Only the new manifest stays at the root.
-3. In `METHOD.md`, set `Active freeze: [CONTROL_MANIFEST_<YYYY-MM-DD>-<k>.md](CONTROL_MANIFEST_<YYYY-MM-DD>-<k>.md)`. Use the next unused suffix `k` for today.
-4. Generate the freeze, then verify it and refresh the generated state:
-
-```powershell
-py -3.14 -B -m research.operations.control_freeze
-py -3.14 -B -m research.operations.control_freeze --verify
-py -3.14 -B -m research.operations.log_card refresh-status
-py -3.14 -B -m research.operations.current_state write
-py -3.14 -B -m research.operations.current_state verify
-```
-
-`--verify` must report **0 mismatches**. Every controlled file must already be in its final form when you generate the freeze, because any later edit to a controlled file needs another new freeze.
-
-## 6. Verify
-
-Re-run every baseline command from step 2, then check all of the following:
+Print each result ([VERIFICATION_PROTOCOL.md](../../VERIFICATION_PROTOCOL.md) §4):
 
 | Check | Expected |
 |---|---|
-| `log_card next-id` | Same ID as before the rollover |
-| `git diff --stat` | Only these paths changed: Part N (closure appended), the new Part N+1, `research/current_combined_log.json`, `.gitattributes`, `GAME_LOG_STATUS_CURRENT.md`, `CURRENT_STATE.md`, the receipt folder, the new manifest, the superseded manifests (renamed into `archive/controls/`), and the updated living documents |
-| Part N | Its pre-rollover bytes are an exact prefix (compare with the receipt's `previous_log_prefix_sha256`) |
-| Part N+1 | Exists exactly once and contains no card |
-| Ledger | Unchanged |
-| Pending transactions | None |
-| Status page and `CURRENT_STATE.md` | Both name Part N+1 |
-| `control_freeze --verify` | 0 mismatches |
-| Baseline failures | Identical before and after; any new failure blocks publication |
+| Next canonical ID before and after | Identical |
+| `git diff --numstat` on Part N | Deleted lines = 0 (only the closure block added) |
+| `wc -l` of Part N | Before + the closure block's lines |
+| Part N+1 | Exists exactly once; contains the header and no card |
+| Status register and CURRENT_STATE | Both name Part N+1 and the same next ID |
+| `git status` | Only: Part N, the new Part N+1, GAME_LOG_STATUS_CURRENT.md, CURRENT_STATE.md, CHANGELOG.md and any live pointer you updated |
 
-The `research/operations/test_rollover.py` tests (run in step 2) already prove the invariants on fixtures. Do **not** commit a fake production card to test the first ID.
+Any failure blocks publication.
 
-## 7. Publish
+## 6. Publish
 
-Commit everything as one change, for example `Roll Combined Prediction Log N to N+1; issue CONTROL_MANIFEST_<date>-<k>`. Push to `main`, or to the branch the user names, without force. Re-read the remote HEAD. Confirm that the remote `research/current_combined_log.json` and `GAME_LOG_STATUS_CURRENT.md` name Part N+1.
+Commit everything as one change, for example `Roll Combined Prediction Log N to N+1`. Push to `main` (or the branch the user names) **without force**. Re-read the remote HEAD and confirm that the remote CURRENT_STATE.md and GAME_LOG_STATUS_CURRENT.md name Part N+1.
 
-## 8. Report
+## 7. Report
 
 ```text
+READING RECEIPT: <as printed>
 Main HEAD before / after:
 Previous active log / new active log:
 Highest committed canonical ID:
 Next canonical ID before / after: <must be identical>
 P-ID consumed by rollover: NO
-Closure block SHA-256 / Part N prefix SHA-256:
-New header bytes / SHA-256:
+Part N lines before / after: <…>
+New header lines:
 Files changed:
-Legacy Part-6 custody: <pass/fail>
-Part N and Part N+1 custody: <pass/fail>
-New control manifest / --verify result:
-Tests and verifiers: <each, with pre-existing vs new failures>
+Checks: <each with its result>
 Commit SHA / publication status:
 ```
 
