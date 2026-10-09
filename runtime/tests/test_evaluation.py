@@ -1,7 +1,6 @@
 """Unit tests for evaluation metrics and proper scoring rules."""
 
 import numpy as np
-import pytest
 
 from runtime.src.common.evaluation import (
     brier_score,

@@ -53,6 +53,43 @@ class PlattScaler:
         return expit(self.a * z + self.b)
 
 
+class BetaCalibrator:
+    """Beta calibration (Kull, Silva Filho, Flach 2017): logit p_cal = c + a ln(p) - b ln(1 - p) with a, b >= 0.
+
+    Strictly monotone, contains Platt/identity as special cases (a = b), and fixes the asymmetric miscalibration that a single
+    logit slope cannot. Fitted by constrained maximum likelihood; failure raises `FitFailed`.
+    """
+
+    def __init__(self):
+        self.a: float = 1.0
+        self.b: float = 1.0
+        self.c: float = 0.0
+        self.fitted = False
+
+    def fit(self, probs: np.ndarray, y_true: np.ndarray) -> "BetaCalibrator":
+        probs, y_true = _validated_pair(probs, y_true, "BetaCalibrator")
+        p = np.clip(probs, 1e-6, 1.0 - 1e-6)
+        x = np.column_stack([np.log(p), -np.log1p(-p), np.ones_like(p)])
+
+        def nll(theta):
+            eta = x @ theta
+            mu = expit(eta)
+            reg = 0.01 * ((theta[0] - 1.0) ** 2 + (theta[1] - 1.0) ** 2 + theta[2] ** 2)
+            return float(np.sum(np.logaddexp(0.0, eta) - y_true * eta)) + reg, x.T @ (mu - y_true) + 0.02 * (theta - np.array([1.0, 1.0, 0.0]))
+
+        res = minimize(nll, [1.0, 1.0, 0.0], jac=True, method="L-BFGS-B", bounds=[(0.0, None), (0.0, None), (None, None)])
+        require_converged(res, "BetaCalibrator", grad_tol=1e-3)
+        self.a, self.b, self.c = (float(v) for v in res.x)
+        self.fitted = True
+        return self
+
+    def predict(self, probs: np.ndarray) -> np.ndarray:
+        if not self.fitted:
+            raise NotFitted("BetaCalibrator.predict called before fit")
+        p = np.clip(np.asarray(probs, dtype=float), 1e-6, 1.0 - 1e-6)
+        return expit(self.c + self.a * np.log(p) - self.b * np.log1p(-p))
+
+
 def pava(values: np.ndarray, weights: np.ndarray) -> np.ndarray:
     """Weighted pool-adjacent-violators: the non-decreasing least-squares fit of `values`.
 

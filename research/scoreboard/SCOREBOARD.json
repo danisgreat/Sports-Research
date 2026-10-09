@@ -1,0 +1,962 @@
+{
+ "all_forecast_cards": {
+  "card_classes": {
+   "TOP2_ALL_LOST": 15,
+   "TOP2_ALL_WON": 27,
+   "TOP2_SPLIT": 26,
+   "VOID": 3
+  },
+  "cards": 71,
+  "counted_ci95": [
+   0.504897,
+   0.669216
+  ],
+  "counted_win_rate": 0.589552,
+  "counted_wins": 79,
+  "failure_classes": {
+   "BASKETBALL_TOTAL_WITHOUT_PACE_MODEL": 2,
+   "CORNER_ROW_WITHOUT_PROVIDER_OR_NB_MODEL": 1,
+   "FIRST_HALF_GOAL_OVERSELECTION": 5,
+   "HANDICAP_TAIL_OVERREACH": 1,
+   "OVERCONFIDENT_PROBABILITY": 1,
+   "PHASE_INCOHERENCE": 1,
+   "QUALITATIVE_RANKS_WITHOUT_DISTRIBUTION": 1,
+   "RANK_BY_Q_NOT_P": 3,
+   "REGIME_IGNORED": 1,
+   "RUNLINE_CUSHION_CEILING": 4,
+   "SHARED_DRIVER_TOP_TWO": 3,
+   "SMALL_SAMPLE_STRENGTH_OVERREACH": 1,
+   "TENNIS_IID_UNDERDISPERSION": 2,
+   "UNFITTED_ANALYST_ADJUSTMENT": 1,
+   "WEAK_SLATE_FORCED_RANK": 1
+  },
+  "hit_at_2": 53,
+  "live_rows": 134,
+  "mean_ndcg_at_2": 0.577569,
+  "ndcg_slates": 63,
+  "no_forecast": 0,
+  "rank1": {
+   "L": 28,
+   "P": 0,
+   "V": 3,
+   "W": 40,
+   "ci95": [
+    0.469613,
+    0.697422
+   ],
+   "live": 68,
+   "rate": 0.588235
+  },
+  "rank2": {
+   "L": 27,
+   "P": 0,
+   "V": 5,
+   "W": 39,
+   "ci95": [
+    0.47049,
+    0.701328
+   ],
+   "live": 66,
+   "rate": 0.590909
+  },
+  "winner_calls": {
+   "CORRECT": 37,
+   "INCORRECT": 11,
+   "NOT_AUDITED": 23
+  }
+ },
+ "by_month": {
+  "2026-10": {
+   "card_classes": {
+    "TOP2_ALL_LOST": 4,
+    "TOP2_ALL_WON": 5,
+    "TOP2_SPLIT": 9,
+    "VOID": 1
+   },
+   "cards": 19,
+   "counted_ci95": [
+    0.370057,
+    0.680142
+   ],
+   "counted_win_rate": 0.527778,
+   "counted_wins": 19,
+   "failure_classes": {
+    "BASKETBALL_TOTAL_WITHOUT_PACE_MODEL": 1,
+    "RUNLINE_CUSHION_CEILING": 2,
+    "SHARED_DRIVER_TOP_TWO": 2,
+    "TENNIS_IID_UNDERDISPERSION": 2,
+    "UNFITTED_ANALYST_ADJUSTMENT": 1
+   },
+   "hit_at_2": 14,
+   "live_rows": 36,
+   "mean_ndcg_at_2": 0.534064,
+   "ndcg_slates": 18,
+   "no_forecast": 0,
+   "rank1": {
+    "L": 8,
+    "P": 0,
+    "V": 1,
+    "W": 10,
+    "ci95": [
+     0.337161,
+     0.754408
+    ],
+    "live": 18,
+    "rate": 0.555556
+   },
+   "rank2": {
+    "L": 9,
+    "P": 0,
+    "V": 1,
+    "W": 9,
+    "ci95": [
+     0.290307,
+     0.709693
+    ],
+    "live": 18,
+    "rate": 0.5
+   },
+   "winner_calls": {
+    "CORRECT": 13,
+    "INCORRECT": 6
+   }
+  },
+  "UNDATED": {
+   "card_classes": {
+    "TOP2_ALL_LOST": 11,
+    "TOP2_ALL_WON": 22,
+    "TOP2_SPLIT": 17,
+    "VOID": 2
+   },
+   "cards": 52,
+   "counted_ci95": [
+    0.513285,
+    0.702737
+   ],
+   "counted_win_rate": 0.612245,
+   "counted_wins": 60,
+   "failure_classes": {
+    "BASKETBALL_TOTAL_WITHOUT_PACE_MODEL": 1,
+    "CORNER_ROW_WITHOUT_PROVIDER_OR_NB_MODEL": 1,
+    "FIRST_HALF_GOAL_OVERSELECTION": 5,
+    "HANDICAP_TAIL_OVERREACH": 1,
+    "OVERCONFIDENT_PROBABILITY": 1,
+    "PHASE_INCOHERENCE": 1,
+    "QUALITATIVE_RANKS_WITHOUT_DISTRIBUTION": 1,
+    "RANK_BY_Q_NOT_P": 3,
+    "REGIME_IGNORED": 1,
+    "RUNLINE_CUSHION_CEILING": 2,
+    "SHARED_DRIVER_TOP_TWO": 1,
+    "SMALL_SAMPLE_STRENGTH_OVERREACH": 1,
+    "WEAK_SLATE_FORCED_RANK": 1
+   },
+   "hit_at_2": 39,
+   "live_rows": 98,
+   "mean_ndcg_at_2": 0.594971,
+   "ndcg_slates": 45,
+   "no_forecast": 0,
+   "rank1": {
+    "L": 20,
+    "P": 0,
+    "V": 2,
+    "W": 30,
+    "ci95": [
+     0.461812,
+     0.723918
+    ],
+    "live": 50,
+    "rate": 0.6
+   },
+   "rank2": {
+    "L": 18,
+    "P": 0,
+    "V": 4,
+    "W": 30,
+    "ci95": [
+     0.483625,
+     0.747849
+    ],
+    "live": 48,
+    "rate": 0.625
+   },
+   "winner_calls": {
+    "CORRECT": 24,
+    "INCORRECT": 5,
+    "NOT_AUDITED": 23
+   }
+  }
+ },
+ "by_sport": {
+  "Australian rules": {
+   "card_classes": {
+    "TOP2_ALL_LOST": 0,
+    "TOP2_ALL_WON": 0,
+    "TOP2_SPLIT": 1,
+    "VOID": 0
+   },
+   "cards": 1,
+   "counted_ci95": [
+    0.094529,
+    0.905471
+   ],
+   "counted_win_rate": 0.5,
+   "counted_wins": 1,
+   "failure_classes": {
+    "RANK_BY_Q_NOT_P": 1
+   },
+   "hit_at_2": 1,
+   "live_rows": 2,
+   "mean_ndcg_at_2": 0.386853,
+   "ndcg_slates": 1,
+   "no_forecast": 0,
+   "rank1": {
+    "L": 1,
+    "P": 0,
+    "V": 0,
+    "W": 0,
+    "ci95": [
+     0.0,
+     0.793457
+    ],
+    "live": 1,
+    "rate": 0.0
+   },
+   "rank2": {
+    "L": 0,
+    "P": 0,
+    "V": 0,
+    "W": 1,
+    "ci95": [
+     0.206543,
+     1.0
+    ],
+    "live": 1,
+    "rate": 1.0
+   },
+   "winner_calls": {
+    "NOT_AUDITED": 1
+   }
+  },
+  "Baseball": {
+   "card_classes": {
+    "TOP2_ALL_LOST": 1,
+    "TOP2_ALL_WON": 3,
+    "TOP2_SPLIT": 10,
+    "VOID": 0
+   },
+   "cards": 14,
+   "counted_ci95": [
+    0.390705,
+    0.734917
+   ],
+   "counted_win_rate": 0.571429,
+   "counted_wins": 16,
+   "failure_classes": {
+    "RUNLINE_CUSHION_CEILING": 4,
+    "SHARED_DRIVER_TOP_TWO": 1,
+    "WEAK_SLATE_FORCED_RANK": 1
+   },
+   "hit_at_2": 13,
+   "live_rows": 28,
+   "mean_ndcg_at_2": 0.571429,
+   "ndcg_slates": 14,
+   "no_forecast": 0,
+   "rank1": {
+    "L": 6,
+    "P": 0,
+    "V": 0,
+    "W": 8,
+    "ci95": [
+     0.325903,
+     0.786195
+    ],
+    "live": 14,
+    "rate": 0.571429
+   },
+   "rank2": {
+    "L": 6,
+    "P": 0,
+    "V": 0,
+    "W": 8,
+    "ci95": [
+     0.325903,
+     0.786195
+    ],
+    "live": 14,
+    "rate": 0.571429
+   },
+   "winner_calls": {
+    "CORRECT": 10,
+    "INCORRECT": 1,
+    "NOT_AUDITED": 3
+   }
+  },
+  "Basketball": {
+   "card_classes": {
+    "TOP2_ALL_LOST": 2,
+    "TOP2_ALL_WON": 4,
+    "TOP2_SPLIT": 5,
+    "VOID": 0
+   },
+   "cards": 11,
+   "counted_ci95": [
+    0.387345,
+    0.767444
+   ],
+   "counted_win_rate": 0.590909,
+   "counted_wins": 13,
+   "failure_classes": {
+    "BASKETBALL_TOTAL_WITHOUT_PACE_MODEL": 2,
+    "QUALITATIVE_RANKS_WITHOUT_DISTRIBUTION": 1,
+    "RANK_BY_Q_NOT_P": 2,
+    "UNFITTED_ANALYST_ADJUSTMENT": 1
+   },
+   "hit_at_2": 9,
+   "live_rows": 22,
+   "mean_ndcg_at_2": 0.560051,
+   "ndcg_slates": 11,
+   "no_forecast": 0,
+   "rank1": {
+    "L": 6,
+    "P": 0,
+    "V": 0,
+    "W": 5,
+    "ci95": [
+     0.21271,
+     0.719912
+    ],
+    "live": 11,
+    "rate": 0.454545
+   },
+   "rank2": {
+    "L": 3,
+    "P": 0,
+    "V": 0,
+    "W": 8,
+    "ci95": [
+     0.43435,
+     0.902541
+    ],
+    "live": 11,
+    "rate": 0.727273
+   },
+   "winner_calls": {
+    "CORRECT": 6,
+    "INCORRECT": 3,
+    "NOT_AUDITED": 2
+   }
+  },
+  "Cricket": {
+   "card_classes": {
+    "TOP2_ALL_LOST": 1,
+    "TOP2_ALL_WON": 0,
+    "TOP2_SPLIT": 0,
+    "VOID": 0
+   },
+   "cards": 1,
+   "counted_ci95": [
+    0.0,
+    0.657628
+   ],
+   "counted_win_rate": 0.0,
+   "counted_wins": 0,
+   "failure_classes": {
+    "PHASE_INCOHERENCE": 1
+   },
+   "hit_at_2": 0,
+   "live_rows": 2,
+   "mean_ndcg_at_2": 0.0,
+   "ndcg_slates": 1,
+   "no_forecast": 0,
+   "rank1": {
+    "L": 1,
+    "P": 0,
+    "V": 0,
+    "W": 0,
+    "ci95": [
+     0.0,
+     0.793457
+    ],
+    "live": 1,
+    "rate": 0.0
+   },
+   "rank2": {
+    "L": 1,
+    "P": 0,
+    "V": 0,
+    "W": 0,
+    "ci95": [
+     0.0,
+     0.793457
+    ],
+    "live": 1,
+    "rate": 0.0
+   },
+   "winner_calls": {
+    "NOT_AUDITED": 1
+   }
+  },
+  "Ice hockey": {
+   "card_classes": {
+    "TOP2_ALL_LOST": 0,
+    "TOP2_ALL_WON": 4,
+    "TOP2_SPLIT": 2,
+    "VOID": 0
+   },
+   "cards": 6,
+   "counted_ci95": [
+    0.551964,
+    0.953036
+   ],
+   "counted_win_rate": 0.833333,
+   "counted_wins": 10,
+   "failure_classes": {
+    "HANDICAP_TAIL_OVERREACH": 1
+   },
+   "hit_at_2": 6,
+   "live_rows": 12,
+   "mean_ndcg_at_2": 0.833333,
+   "ndcg_slates": 6,
+   "no_forecast": 0,
+   "rank1": {
+    "L": 1,
+    "P": 0,
+    "V": 0,
+    "W": 5,
+    "ci95": [
+     0.436491,
+     0.969947
+    ],
+    "live": 6,
+    "rate": 0.833333
+   },
+   "rank2": {
+    "L": 1,
+    "P": 0,
+    "V": 0,
+    "W": 5,
+    "ci95": [
+     0.436491,
+     0.969947
+    ],
+    "live": 6,
+    "rate": 0.833333
+   },
+   "winner_calls": {
+    "CORRECT": 6
+   }
+  },
+  "Rugby league": {
+   "card_classes": {
+    "TOP2_ALL_LOST": 1,
+    "TOP2_ALL_WON": 0,
+    "TOP2_SPLIT": 0,
+    "VOID": 0
+   },
+   "cards": 1,
+   "counted_ci95": [
+    0.0,
+    0.657628
+   ],
+   "counted_win_rate": 0.0,
+   "counted_wins": 0,
+   "failure_classes": {
+    "REGIME_IGNORED": 1
+   },
+   "hit_at_2": 0,
+   "live_rows": 2,
+   "mean_ndcg_at_2": 0.0,
+   "ndcg_slates": 1,
+   "no_forecast": 0,
+   "rank1": {
+    "L": 1,
+    "P": 0,
+    "V": 0,
+    "W": 0,
+    "ci95": [
+     0.0,
+     0.793457
+    ],
+    "live": 1,
+    "rate": 0.0
+   },
+   "rank2": {
+    "L": 1,
+    "P": 0,
+    "V": 0,
+    "W": 0,
+    "ci95": [
+     0.0,
+     0.793457
+    ],
+    "live": 1,
+    "rate": 0.0
+   },
+   "winner_calls": {
+    "CORRECT": 1
+   }
+  },
+  "Soccer": {
+   "card_classes": {
+    "TOP2_ALL_LOST": 7,
+    "TOP2_ALL_WON": 15,
+    "TOP2_SPLIT": 7,
+    "VOID": 1
+   },
+   "cards": 30,
+   "counted_ci95": [
+    0.511936,
+    0.755436
+   ],
+   "counted_win_rate": 0.642857,
+   "counted_wins": 36,
+   "failure_classes": {
+    "CORNER_ROW_WITHOUT_PROVIDER_OR_NB_MODEL": 1,
+    "FIRST_HALF_GOAL_OVERSELECTION": 5,
+    "OVERCONFIDENT_PROBABILITY": 1,
+    "SHARED_DRIVER_TOP_TWO": 1,
+    "SMALL_SAMPLE_STRENGTH_OVERREACH": 1
+   },
+   "hit_at_2": 22,
+   "live_rows": 56,
+   "mean_ndcg_at_2": 0.634429,
+   "ndcg_slates": 24,
+   "no_forecast": 0,
+   "rank1": {
+    "L": 9,
+    "P": 0,
+    "V": 1,
+    "W": 20,
+    "ci95": [
+     0.507695,
+     0.827246
+    ],
+    "live": 29,
+    "rate": 0.689655
+   },
+   "rank2": {
+    "L": 11,
+    "P": 0,
+    "V": 3,
+    "W": 16,
+    "ci95": [
+     0.407264,
+     0.754855
+    ],
+    "live": 27,
+    "rate": 0.592593
+   },
+   "winner_calls": {
+    "CORRECT": 9,
+    "INCORRECT": 5,
+    "NOT_AUDITED": 16
+   }
+  },
+  "Tennis": {
+   "card_classes": {
+    "TOP2_ALL_LOST": 3,
+    "TOP2_ALL_WON": 1,
+    "TOP2_SPLIT": 1,
+    "VOID": 2
+   },
+   "cards": 7,
+   "counted_ci95": [
+    0.107789,
+    0.603227
+   ],
+   "counted_win_rate": 0.3,
+   "counted_wins": 3,
+   "failure_classes": {
+    "SHARED_DRIVER_TOP_TWO": 1,
+    "TENNIS_IID_UNDERDISPERSION": 2
+   },
+   "hit_at_2": 2,
+   "live_rows": 10,
+   "mean_ndcg_at_2": 0.322629,
+   "ndcg_slates": 5,
+   "no_forecast": 0,
+   "rank1": {
+    "L": 3,
+    "P": 0,
+    "V": 2,
+    "W": 2,
+    "ci95": [
+     0.117618,
+     0.76928
+    ],
+    "live": 5,
+    "rate": 0.4
+   },
+   "rank2": {
+    "L": 4,
+    "P": 0,
+    "V": 2,
+    "W": 1,
+    "ci95": [
+     0.036223,
+     0.624472
+    ],
+    "live": 5,
+    "rate": 0.2
+   },
+   "winner_calls": {
+    "CORRECT": 5,
+    "INCORRECT": 2
+   }
+  }
+ },
+ "calibration": {
+  "bins": [
+   {
+    "bin": "[0.0,0.4)",
+    "mean_p": null,
+    "n": 0,
+    "win_rate": null
+   },
+   {
+    "bin": "[0.4,0.5)",
+    "mean_p": null,
+    "n": 0,
+    "win_rate": null
+   },
+   {
+    "bin": "[0.5,0.6)",
+    "mean_p": null,
+    "n": 0,
+    "win_rate": null
+   },
+   {
+    "bin": "[0.6,0.7)",
+    "mean_p": null,
+    "n": 0,
+    "win_rate": null
+   },
+   {
+    "bin": "[0.7,0.8)",
+    "mean_p": null,
+    "n": 0,
+    "win_rate": null
+   },
+   {
+    "bin": "[0.8,0.9)",
+    "mean_p": null,
+    "n": 0,
+    "win_rate": null
+   },
+   {
+    "bin": "[0.9,1.0)",
+    "mean_p": null,
+    "n": 0,
+    "win_rate": null
+   }
+  ],
+  "brier": null,
+  "climatology_brier": null,
+  "log_loss": null,
+  "n": 0,
+  "reliability_intercept": null,
+  "reliability_slope": null
+ },
+ "cards": 72,
+ "evidence_grade_share_AB": 0.877023,
+ "evidence_grades": {
+  "A": 164,
+  "B": 107,
+  "C": 13,
+  "E": 2,
+  "OP": 16,
+  "X": 7
+ },
+ "first_id": "P-126",
+ "forecast_cards": 71,
+ "headline_counted_cohort": {
+  "card_classes": {
+   "TOP2_ALL_LOST": 15,
+   "TOP2_ALL_WON": 27,
+   "TOP2_SPLIT": 26,
+   "VOID": 3
+  },
+  "cards": 71,
+  "counted_ci95": [
+   0.504897,
+   0.669216
+  ],
+  "counted_win_rate": 0.589552,
+  "counted_wins": 79,
+  "failure_classes": {
+   "BASKETBALL_TOTAL_WITHOUT_PACE_MODEL": 2,
+   "CORNER_ROW_WITHOUT_PROVIDER_OR_NB_MODEL": 1,
+   "FIRST_HALF_GOAL_OVERSELECTION": 5,
+   "HANDICAP_TAIL_OVERREACH": 1,
+   "OVERCONFIDENT_PROBABILITY": 1,
+   "PHASE_INCOHERENCE": 1,
+   "QUALITATIVE_RANKS_WITHOUT_DISTRIBUTION": 1,
+   "RANK_BY_Q_NOT_P": 3,
+   "REGIME_IGNORED": 1,
+   "RUNLINE_CUSHION_CEILING": 4,
+   "SHARED_DRIVER_TOP_TWO": 3,
+   "SMALL_SAMPLE_STRENGTH_OVERREACH": 1,
+   "TENNIS_IID_UNDERDISPERSION": 2,
+   "UNFITTED_ANALYST_ADJUSTMENT": 1,
+   "WEAK_SLATE_FORCED_RANK": 1
+  },
+  "hit_at_2": 53,
+  "live_rows": 134,
+  "mean_ndcg_at_2": 0.577569,
+  "ndcg_slates": 63,
+  "no_forecast": 0,
+  "rank1": {
+   "L": 28,
+   "P": 0,
+   "V": 3,
+   "W": 40,
+   "ci95": [
+    0.469613,
+    0.697422
+   ],
+   "live": 68,
+   "rate": 0.588235
+  },
+  "rank2": {
+   "L": 27,
+   "P": 0,
+   "V": 5,
+   "W": 39,
+   "ci95": [
+    0.47049,
+    0.701328
+   ],
+   "live": 66,
+   "rate": 0.590909
+  },
+  "winner_calls": {
+   "CORRECT": 37,
+   "INCORRECT": 11,
+   "NOT_AUDITED": 23
+  }
+ },
+ "informational_ranks_3_4": {
+  "L": 58,
+  "W": 75,
+  "brier": null,
+  "ci95": [
+   0.479008,
+   0.645223
+  ],
+  "mean_p": null,
+  "observed_rate_of_those": null,
+  "rate": 0.56391,
+  "with_p": 0
+ },
+ "inputs": {
+  "ledger_sha256": "eaedf84e412374eb5b4b6b7522a463d50be1470273008f70a254bdf0f5abfdba",
+  "rank_log_sha256": "e142ffe07751f668447324576c3d2f7491bdbb14c3ae244652e39e086c3d71e7",
+  "settlement_tables": [
+   {
+    "path": "research/verification/final_settlement_2026-10-09/settlement_table.json",
+    "records": 72,
+    "schema": "final-settlement-1",
+    "sha256": "f817b609865e3239a7e3f04e49c129c034dcaccd2943f1faf9ffa8bf6a1363f2"
+   }
+  ]
+ },
+ "last_id": "P-556",
+ "legacy_history": {
+  "basis": "literal logged_result W/L only; mixed grading eras",
+  "cards": 522,
+  "slots": {
+   "1": {
+    "L": 185,
+    "W": 304,
+    "ci95": [
+     0.577901,
+     0.663556
+    ],
+    "rate": 0.621677
+   },
+   "2": {
+    "L": 207,
+    "W": 251,
+    "ci95": [
+     0.502243,
+     0.593028
+    ],
+    "rate": 0.548035
+   },
+   "3": {
+    "L": 207,
+    "W": 246,
+    "ci95": [
+     0.497003,
+     0.588366
+    ],
+    "rate": 0.543046
+   },
+   "4": {
+    "L": 202,
+    "W": 245,
+    "ci95": [
+     0.501746,
+     0.593631
+    ],
+    "rate": 0.548098
+   }
+  }
+ },
+ "rank1_by_family": {
+  "corners": {
+   "L": 1,
+   "W": 4,
+   "ci95": [
+    0.375528,
+    0.963777
+   ]
+  },
+  "first_half_goals": {
+   "L": 5,
+   "W": 9,
+   "ci95": [
+    0.38764,
+    0.836555
+   ]
+  },
+  "match_total": {
+   "L": 6,
+   "W": 5,
+   "ci95": [
+    0.21271,
+    0.719912
+   ]
+  },
+  "player_prop": {
+   "L": 1,
+   "W": 0,
+   "ci95": [
+    0.0,
+    0.793457
+   ]
+  },
+  "side_cushion_or_handicap": {
+   "L": 9,
+   "W": 11,
+   "ci95": [
+    0.342082,
+    0.741805
+   ]
+  },
+  "side_winner": {
+   "L": 1,
+   "W": 4,
+   "ci95": [
+    0.375528,
+    0.963777
+   ]
+  },
+  "team_total": {
+   "L": 2,
+   "W": 5,
+   "ci95": [
+    0.358929,
+    0.917783
+   ]
+  },
+  "tennis_games": {
+   "L": 3,
+   "W": 2,
+   "ci95": [
+    0.117618,
+    0.76928
+   ]
+  }
+ },
+ "rank1_by_family_unstable": {},
+ "rank1_unstable_cohort": {
+  "card_classes": {
+   "TOP2_ALL_LOST": 0,
+   "TOP2_ALL_WON": 0,
+   "TOP2_SPLIT": 0,
+   "VOID": 0
+  },
+  "cards": 0,
+  "counted_ci95": [
+   null,
+   null
+  ],
+  "counted_win_rate": null,
+  "counted_wins": 0,
+  "failure_classes": {},
+  "hit_at_2": 0,
+  "live_rows": 0,
+  "mean_ndcg_at_2": null,
+  "ndcg_slates": 0,
+  "no_forecast": 0,
+  "rank1": {
+   "L": 0,
+   "P": 0,
+   "V": 0,
+   "W": 0,
+   "ci95": [
+    null,
+    null
+   ],
+   "live": 0,
+   "rate": null
+  },
+  "rank2": {
+   "L": 0,
+   "P": 0,
+   "V": 0,
+   "W": 0,
+   "ci95": [
+    null,
+    null
+   ],
+   "live": 0,
+   "rate": null
+  },
+  "winner_calls": {}
+ },
+ "schema": "scoreboard-1",
+ "scoring": "SCV-2026.10.09-v4",
+ "slots": {
+  "rank1": {
+   "L": 28,
+   "W": 40,
+   "brier": null,
+   "ci95": [
+    0.469613,
+    0.697422
+   ],
+   "mean_p": null,
+   "observed_rate_of_those": null,
+   "rate": 0.588235,
+   "with_p": 0
+  },
+  "rank2": {
+   "L": 27,
+   "W": 39,
+   "brier": null,
+   "ci95": [
+    0.47049,
+    0.701328
+   ],
+   "mean_p": null,
+   "observed_rate_of_those": null,
+   "rate": 0.590909,
+   "with_p": 0
+  },
+  "ranks_1_2": {
+   "L": 55,
+   "W": 79,
+   "brier": null,
+   "ci95": [
+    0.504897,
+    0.669216
+   ],
+   "mean_p": null,
+   "observed_rate_of_those": null,
+   "rate": 0.589552,
+   "with_p": 0
+  }
+ }
+}

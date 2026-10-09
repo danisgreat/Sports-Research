@@ -1,0 +1,3 @@
+# Static checks (ENG-02). Pinned to the versions the 2026-10-09 baseline was cleaned with; CPython 3.14.6.
+ruff==0.16.8
+mypy==2.3.1

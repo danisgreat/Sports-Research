@@ -1,7 +1,7 @@
 """Read back the October 8 import, dated reviews and empty Part-7 rollover."""
 from pathlib import Path
 import argparse
-import hashlib,json,re
+import hashlib,json
 from research.operations.log_card import next_id,pending,research_cards,research_addenda,verify_projection
 from research.operations.diagnostic_rank import metrics
 from research.operations.settlement_register import selected

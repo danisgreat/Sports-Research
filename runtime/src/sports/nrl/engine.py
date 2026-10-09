@@ -35,7 +35,6 @@ class NRLStructure:
 def points_matrix(kicking: NRLKicking, conversion_rate: Optional[float] = None) -> np.ndarray:
     """M[t, p] = P(points = p | t tries) with points = 4t + 2 (Bin(t, c) + Poisson(penalty goals)) + Poisson(field goals)."""
     c = kicking.conversion_rate if conversion_rate is None else conversion_rate
-    goal_support = np.arange(0, 2 * MAX_TRIES + 12)
     pg = poisson.pmf(np.arange(0, 12), kicking.penalty_goals)
     fg = poisson.pmf(np.arange(0, 5), kicking.field_goals)
     matrix = np.zeros((MAX_TRIES + 1, MAX_POINTS + 1))
@@ -133,8 +132,8 @@ class NRLEngine(BaseSportEngine):
     def _tries_means(self, ctx: Dict[str, Any]) -> Tuple[float, float]:
         if ctx.get("home_expected_tries") is not None and ctx.get("away_expected_tries") is not None:
             return float(ctx["home_expected_tries"]), float(ctx["away_expected_tries"])
-        home, away = ctx.get("home_team"), ctx.get("away_team")
         if self.is_fitted and self.model is not None:
+            home, away = self._teams(ctx)
             for team in (home, away):
                 if not self.model.knows(team):
                     self._warn(f"unknown team {team!r}: league-average strength used; uncertainty not modelled")

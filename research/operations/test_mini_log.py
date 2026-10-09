@@ -6,7 +6,7 @@ import pytest
 from research.operations import mini_log, top_two
 
 ROOT = Path(__file__).resolve().parents[2]
-EXAMPLES = ROOT / 'research/prompts/examples'
+EXAMPLES = ROOT / 'research/prompts/examples/legacy_mini_log_2'
 ACTIVE = (EXAMPLES / 'EXAMPLE_ACTIVE_MINI.md').read_bytes()
 SETTLED = (EXAMPLES / 'EXAMPLE_SETTLED_MINI.md').read_bytes()
 

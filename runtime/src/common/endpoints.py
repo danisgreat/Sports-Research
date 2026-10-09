@@ -13,7 +13,7 @@ or supplied by the caller; none is hidden in the engines.
 """
 
 from dataclasses import dataclass
-from typing import Optional, Sequence
+from typing import Dict, Optional, Sequence
 
 import numpy as np
 from scipy.stats import norm
@@ -215,7 +215,7 @@ def baseball_extra_innings(dist: ScoreDistribution, runs_per_half_inning: Sequen
         out[k, k] -= mass
         carry = {0: mass}                                      # accumulated tied runs c -> mass
         for _ in range(innings):
-            nxt = {}
+            nxt: Dict[int, float] = {}
             for c, m in carry.items():
                 for a, h, p in pairs_home_wins:
                     out[k + c + a + 1, k + c + a] += m * p * (1.0 - phi)

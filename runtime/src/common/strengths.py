@@ -15,7 +15,7 @@ chronological cross-validation: no fixed constant.
 """
 
 from dataclasses import dataclass, field
-from typing import Dict, Iterable, List, Optional, Sequence, Tuple
+from typing import Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 from scipy.optimize import minimize
@@ -43,7 +43,7 @@ class AttackDefenceModel:
 
     # ------------------------------------------------------------------ fitting
     @staticmethod
-    def _arrays(games: Sequence[Game], index: Dict[str, int]):
+    def _arrays(games: Sequence[Game], index: Dict[str, int]) -> Tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
         home = np.array([index[g[0]] for g in games], dtype=int)
         away = np.array([index[g[1]] for g in games], dtype=int)
         hs = np.array([g[2] for g in games], dtype=float)
@@ -123,7 +123,7 @@ class AttackDefenceModel:
         if not scores:
             raise InsufficientData("no usable cross-validation fold; supply `ridge` explicitly or more games")
         self.cv_scores = scores
-        return min(scores, key=scores.get)
+        return min(scores, key=lambda r: scores[r])
 
     def fit(self, games: Sequence[Game]) -> "AttackDefenceModel":
         games = list(games)

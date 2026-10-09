@@ -3,7 +3,6 @@
 from abc import ABC, abstractmethod
 from typing import Any, Dict, List, Optional, Sequence, Tuple
 
-import numpy as np
 
 from ..common import artifacts
 from ..common.contracts import ScoreDistribution
@@ -86,6 +85,13 @@ class BaseSportEngine(ABC):
             return 1.0
         raise UnknownTeam(f"{self.sport_name}: no fitted strength for {team!r} ({label}); "
                           "supply the expected values explicitly or set unknown_team_policy='league_average'")
+
+    def _teams(self, ctx: Dict[str, Any]) -> Tuple[str, str]:
+        """(home, away) names from a context; a fitted-strength lookup without names is an input error, not a guess."""
+        home, away = _first(ctx, ("home_team", "home")), _first(ctx, ("away_team", "away"))
+        if home is None or away is None:
+            raise MissingInputs(f"{self.sport_name}: context needs home_team and away_team to look up fitted strengths")
+        return str(home), str(away)
 
     def _require(self, context: Dict[str, Any], *keys: str) -> None:
         missing = [k for k in keys if context.get(k) is None]

@@ -1,0 +1,6 @@
+# ENG-02: pyflakes rules fail CI on undefined names, unused imports and unused variables.
+target-version = "py314"
+extend-exclude = ["Previous Sports Results", "archive", "prediction logs", "research/verification", "research/custody", "research/tests"]
+
+[lint]
+select = ["F"]

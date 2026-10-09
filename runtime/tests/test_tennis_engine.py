@@ -145,3 +145,45 @@ def test_surface_effects_are_explicit():
         engine.predict_distribution({"player1": "Sinner", "player2": "Medvedev", "surface": "grass"})
     with pytest.raises(MissingInputs):
         TennisEngine(form_sigma=0.0).predict_distribution({"player1": "A", "player2": "B"})
+
+
+def test_cheap_win_and_decider_probabilities_agree_with_the_full_tree():
+    from runtime.src.sports.tennis.engine import _decider_probability, match_win_probability
+    for sets in (2, 3):
+        _, w1, _, dec = match_distribution(0.67, 0.61, sets)
+        assert match_win_probability(0.67, 0.61, sets) == pytest.approx(w1, abs=1e-10)
+        assert _decider_probability(0.67, 0.61, sets) == pytest.approx(dec, abs=1e-10)
+    _, w1, _, _ = mix_over_form(0.67, 0.61, 2, 0.04)
+    assert match_win_probability(0.67, 0.61, 2, 0.04) == pytest.approx(w1, abs=1e-10)
+
+
+def test_rating_prior_round_trips_through_serve_probabilities():
+    from runtime.src.sports.tennis.engine import serve_probabilities_from_win_prob
+    for p_win in (0.2, 0.5, 0.73, 0.9):
+        a, b = serve_probabilities_from_win_prob(p_win, 0.64, 2, 0.03)
+        assert (a + b) / 2 == pytest.approx(0.64, abs=1e-9)
+        from runtime.src.sports.tennis.engine import match_win_probability
+        assert match_win_probability(a, b, 2, 0.03) == pytest.approx(p_win, abs=1e-5)
+    with pytest.raises(ValueError):
+        serve_probabilities_from_win_prob(0.995, 0.64, 2, 0.0)
+
+
+def test_engine_uses_a_rating_prior_only_when_player_statistics_are_missing(tmp_path):
+    from runtime.src.common.ratings import SurfaceElo
+    elo = SurfaceElo()
+    for _ in range(12):
+        elo.update("Sinner", "Medvedev", "hard")
+        elo.update("Sinner", "Alcaraz", "hard")
+    engine = TennisEngine(form_sigma=0.03, elo=elo, tour_avg_serve=0.64)
+    dist = engine.predict_distribution({"player1": "Sinner", "player2": "Medvedev", "surface": "hard"})
+    assert dist.metadata["serve_basis"] == "elo_prior" and dist.p_home_win() == pytest.approx(elo.win_prob("Sinner", "Medvedev", "hard"), abs=1e-4)
+    explicit = engine.predict_distribution({"player1": "X", "player2": "Y", "p_match_elo": 0.3})
+    assert explicit.p_home_win() == pytest.approx(0.3, abs=1e-4)
+    fitted = TennisEngine(form_sigma=0.03, elo=elo).fit(TRAIN)
+    assert fitted.predict_distribution({"player1": "Sinner", "player2": "Medvedev"}).metadata["serve_basis"] == "player_stats"
+    assert fitted.predict_distribution({"player1": "Sinner", "player2": "Medvedev", "p_serve1": 0.7, "p_serve2": 0.6}).metadata["serve_basis"] == "match_specific"
+    with pytest.raises(MissingInputs):                                  # a rating prior still needs the tour serve level
+        TennisEngine(form_sigma=0.03, elo=elo).predict_distribution({"player1": "Sinner", "player2": "Medvedev"})
+    path = str(tmp_path / "t.json")
+    fitted.save_artifact(path)
+    assert TennisEngine.load_artifact(path).elo.knows("Sinner")

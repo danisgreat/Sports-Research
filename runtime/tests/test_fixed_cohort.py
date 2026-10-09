@@ -1,9 +1,13 @@
 """Unit tests for fixed-cohort comparative evaluation."""
 
 import numpy as np
-import pytest
 
 from runtime.src.common.evaluation import FixedCohortEvaluator
+
+
+def weeks(n, per_week=10):
+    """Block ids: `per_week` consecutive forecasts share a week."""
+    return [f"W{i // per_week:02d}" for i in range(n)]
 
 
 def test_fixed_cohort_promotion_pass():
@@ -22,11 +26,13 @@ def test_fixed_cohort_promotion_pass():
         y_true, p_cand, p_base,
         event_ids_cand=events, event_ids_base=events,
         lines_cand=lines, lines_base=lines,
-        require_calibration=False
+        require_calibration=False, block_ids=weeks(n), n_resamples=300,
     )
     assert res["n_samples"] == n
     assert res["delta_brier"] < -0.010
     assert res["delta_log_loss"] < 0.0
+    assert res["delta_brier_ci"][1] < 0.0 and res["delta_log_loss_ci"][1] < 0.0
+    assert res["decision_stable"] is True and res["power"]["brier"]["minimum_detectable_delta"] < 0.0
     assert res["is_promotable"] is True
 
 
@@ -44,7 +50,7 @@ def test_fixed_cohort_promotion_fail_on_log_loss():
         y_true, p_cand, p_base,
         event_ids_cand=events, event_ids_base=events,
         lines_cand=lines, lines_base=lines,
-        require_calibration=False
+        require_calibration=False, block_ids=weeks(n, 5), n_resamples=200,
     )
     assert res["delta_log_loss"] > 0.0
     assert res["is_promotable"] is False
@@ -164,3 +170,63 @@ def test_fixed_cohort_mismatched_fixtures_and_lines_fail():
     assert any("lines" in r for r in res_line["promotion_reasons"])
 
 
+
+
+def make_cohort(n=200, seed=3, skill=0.15):
+    rng = np.random.default_rng(seed)
+    p_true = np.clip(rng.normal(0.55, 0.15, n), 0.15, 0.85)
+    y = (rng.random(n) < p_true).astype(float)
+    p_base = np.clip(0.55 + 0.0 * p_true, 0, 1)
+    p_cand = np.clip(0.55 + skill * (p_true - 0.55) / 0.15 * 0.5 + 0.0, 0.05, 0.95)
+    return y, p_cand, p_base, [f"e{i}" for i in range(n)], [0.0] * n
+
+
+def test_block_ids_are_mandatory_and_enough_blocks_are_required():
+    y, pc, pb, ev, ln = make_cohort()
+    missing = FixedCohortEvaluator.evaluate(y, pc, pb, event_ids_cand=ev, event_ids_base=ev, lines_cand=ln, lines_base=ln,
+                                            require_calibration=False)
+    assert missing["is_promotable"] is False and any("block ids" in r for r in missing["promotion_reasons"])
+    wrong_len = FixedCohortEvaluator.evaluate(y, pc, pb, event_ids_cand=ev, event_ids_base=ev, lines_cand=ln, lines_base=ln,
+                                              require_calibration=False, block_ids=["a"] * 3)
+    assert wrong_len["is_promotable"] is False
+    few = FixedCohortEvaluator.evaluate(y, pc, pb, event_ids_cand=ev, event_ids_base=ev, lines_cand=ln, lines_base=ln,
+                                        require_calibration=False, block_ids=weeks(200, 50), n_resamples=100)
+    assert few["is_promotable"] is False and any("blocks" in r for r in few["promotion_reasons"])
+
+
+def test_a_point_improvement_driven_by_two_blocks_is_not_promoted():
+    rng = np.random.default_rng(8)
+    n = 60                                                    # ten blocks of six
+    y = rng.integers(0, 2, n).astype(float)
+    p_base = np.full(n, 0.5)
+    p_cand = p_base.copy()
+    p_cand[:12] = np.where(y[:12] == 1.0, 0.9, 0.1)           # skill shows up in two blocks only
+    ids = [str(i) for i in range(n)]
+    res = FixedCohortEvaluator.evaluate(y, p_cand, p_base, event_ids_cand=ids, event_ids_base=ids, lines_cand=[0.0] * n, lines_base=[0.0] * n,
+                                        require_calibration=False, block_ids=weeks(n, 6), n_resamples=400)
+    assert res["delta_brier"] < -0.010 and res["delta_log_loss"] < 0.0           # the old fixed -0.010 threshold would have passed
+    assert res["is_promotable"] is False
+    assert any("95% CI upper bound" in r or "depends on the resampling seed" in r for r in res["promotion_reasons"])
+
+
+def test_calibration_slope_ci_must_contain_one():
+    rng = np.random.default_rng(4)
+    n = 600
+    z = rng.normal(0, 1.0, n)
+    y = (rng.random(n) < 1 / (1 + np.exp(-z))).astype(float)
+    base = np.full(n, 0.5)
+    ids = [str(i) for i in range(n)]
+    good = FixedCohortEvaluator.evaluate(y, 1 / (1 + np.exp(-z)), base, event_ids_cand=ids, event_ids_base=ids, lines_cand=[0.0] * n, lines_base=[0.0] * n,
+                                         block_ids=weeks(n, 12), n_resamples=300)
+    over = FixedCohortEvaluator.evaluate(y, 1 / (1 + np.exp(-3.0 * z)), base, event_ids_cand=ids, event_ids_base=ids, lines_cand=[0.0] * n, lines_base=[0.0] * n,
+                                         block_ids=weeks(n, 12), n_resamples=300)
+    assert good["cal_slope_ci"][0] <= 1.0 <= good["cal_slope_ci"][1] and good["is_promotable"] is True
+    assert over["cal_slope_beta"] < 0.6 and over["is_promotable"] is False
+    assert any("slope" in r for r in over["promotion_reasons"])
+
+
+def test_gate_decision_does_not_depend_on_the_seed():
+    y, pc, pb, ev, ln = make_cohort(n=240, skill=0.25)
+    kw = dict(event_ids_cand=ev, event_ids_base=ev, lines_cand=ln, lines_base=ln, require_calibration=False, block_ids=weeks(240, 8), n_resamples=400)
+    outcomes = {FixedCohortEvaluator.evaluate(y, pc, pb, seeds=(s, s + 1, s + 2), **kw)["is_promotable"] for s in (1, 100, 5000)}
+    assert len(outcomes) == 1

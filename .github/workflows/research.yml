@@ -36,6 +36,12 @@ jobs:
           cache: pip
           cache-dependency-path: research/requirements.lock.txt
       - run: python -m pip install -r research/requirements.lock.txt
+      - run: python -m pip install -r research/requirements-lint.txt
+      - name: Static checks (undefined names, unused code, types)
+        run: |
+          python -m ruff check runtime research/operations
+          python -m ruff check --select F821,F822,F823,F811,F63,F7,F82 research/src
+          python -m mypy --config-file mypy.ini runtime/src research/src research/operations
       - name: Research and operations regressions
         run: python -B -m pytest -p no:cacheprovider research/tests research/operations research/experiments runtime/tests -q
       - name: Canonical source and projection custody

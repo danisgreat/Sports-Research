@@ -111,8 +111,8 @@ class BasketballEngine(BaseSportEngine):
         if ctx.get("pace") is not None:
             self._require(ctx, "home_ppp", "away_ppp")
             return float(ctx["pace"]) * float(ctx["home_ppp"]), float(ctx["pace"]) * float(ctx["away_ppp"])
-        home, away = ctx.get("home_team"), ctx.get("away_team")
         if self.is_fitted and self.model is not None:
+            home, away = self._teams(ctx)
             for team in (home, away):
                 if not self.model.knows(team):
                     self._warn(f"unknown team {team!r}: league-average strength used; uncertainty not modelled")
@@ -209,7 +209,7 @@ class BasketballEngine(BaseSportEngine):
             grid = bivariate_grid(mean_h, mean_a, sd_h, sd_a, corr, df)
             reg = ScoreDistribution(grid, np.arange(grid.shape[0]), np.arange(grid.shape[1]), endpoint="regulation")
             full = basketball_overtime(reg, mean_h, mean_a, sd_h, sd_a, regulation_minutes=minutes, ot_minutes=self.ot_minutes) \
-                if endpoint == "full_game" else reg
+                if endpoint == "full_game" and minutes is not None else reg
         else:
             total_sd, margin_sd = self._sds(match_context)
             m_h0, m_a0 = (self.league.mean_home, self.league.mean_away) if self.league is not None else (target_h, target_a)

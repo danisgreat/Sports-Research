@@ -25,10 +25,11 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-from research.operations import top_two
+from research.operations import card_validator, top_two
 
 ROOT = Path(__file__).resolve().parents[2]
-FORMAT_TAG = '<!-- MINI-LOG-FORMAT: mini-log-2 -->'
+FORMAT_TAGS = {2: '<!-- MINI-LOG-FORMAT: mini-log-2 -->', 3: '<!-- MINI-LOG-FORMAT: mini-log-3 -->'}
+FORMAT_TAG = FORMAT_TAGS[3]     # new minis; mini-log-2 files remain readable, without the PRD/GOV/SRC checks
 SETTLEMENT_TAG = '<!-- SETTLEMENT-FORMAT: mini-settlement-2 -->'
 CARDS_HEADING = '# NEW LOCAL EVENT CARDS'
 FOOTER_BEGIN = '<!-- BEGIN FOOTER -->'
@@ -99,7 +100,14 @@ def blocks(raw: bytes):
     return out
 
 
-def parse_card(block: dict):
+def detect_version(text: str) -> int | None:
+    for version, tag in FORMAT_TAGS.items():
+        if tag in text:
+            return version
+    return None
+
+
+def parse_card(block: dict, version: int = 2):
     text = block['body'].decode('utf-8')
     errors, warnings = [], []
     meta = {k.strip(): strip_ticks(v) for k, v in META_RE.findall(text)}
@@ -154,7 +162,8 @@ def parse_card(block: dict):
                 errors.append(f'rank {rank} p_card {p:.1%} outside (0%, 90%]; degenerate propositions are excluded')
             if not proposition:
                 errors.append(f'rank {rank} proposition is empty')
-            picks.append({'rank': rank, 'role': role, 'tag': tag, 'proposition': proposition, 'p_card': p})
+            picks.append({'rank': rank, 'role': role, 'tag': tag, 'proposition': proposition, 'p_card': p,
+                          'status': row[5].strip('* '), 'evidence': row[6], 'failure_route': row[7]})
         ps = [x['p_card'] for x in picks if x['p_card'] is not None]
         if len(ps) == len(picks) and any(a < b - 1e-9 for a, b in zip(ps, ps[1:])):
             errors.append('ranks must be non-increasing in p_card (Rule P4: rank by p_card, never by q)')
@@ -169,8 +178,18 @@ def parse_card(block: dict):
         errors.append('missing "**P(Rank 1 and Rank 2 both lose):** <p>%" line')
     elif joint_p > JOINT_FAILURE_WARN:
         warnings.append(f'joint top-two failure {joint_p:.1%} > {JOINT_FAILURE_WARN:.0%}: consider a less correlated Rank 2')
+    if version >= 3:
+        v3_errors, v3_warnings = card_validator.check_v3_card(text, meta, picks, meta.get('Sport', ''), meta.get('Scheduled start', ''))
+        errors += v3_errors
+        warnings += v3_warnings
+    gate_line = re.search(r'(?m)^\*\*Rank-1 gate:\*\*\s*(PASS|RANK1_UNSTABLE)\b', text)
+    dependence_line = re.search(r'(?m)^\*\*Adjustment dependence:\*\*\s*(NONE|ADJUSTMENT_DEPENDENT)\b', text)
     return {'id': block['id'], 'meta': meta, 'picks': picks, 'winner': winner[1] if winner else None,
-            'joint_failure': joint_p, 'heading': heading[2] if heading else None, 'errors': errors, 'warnings': warnings}
+            'joint_failure': joint_p, 'heading': heading[2] if heading else None, 'errors': errors, 'warnings': warnings,
+            'version': version, 'rank1_gate': gate_line[1] if gate_line else None,
+            'adjustment_dependence': dependence_line[1] if dependence_line else None,
+            'distribution': card_validator.distribution_id(meta) if version >= 3 else None,
+            'regime_flags': meta.get('Regime flags') if version >= 3 else None}
 
 
 def parse_carryover(block: dict):
@@ -250,12 +269,14 @@ def analyse(raw: bytes):
     """Parse an active (unsettled) mini and return a report with errors and warnings."""
     text = raw.decode('utf-8')
     errors, warnings = [], []
-    if FORMAT_TAG not in text:
+    version = detect_version(text)
+    if version is None:
         errors.append(f'missing format tag {FORMAT_TAG}')
+        version = 3
     if CARDS_HEADING not in text:
         errors.append(f'missing "{CARDS_HEADING}" section')
     found = blocks(raw)
-    cards = [parse_card(b) for b in found if b['kind'] == 'CARD']
+    cards = [parse_card(b, version) for b in found if b['kind'] == 'CARD']
     carry = [parse_carryover(b) for b in found if b['kind'] == 'CARRYOVER']
     settle = [b for b in found if b['kind'] == 'SETTLEMENT']
     addenda = [parse_addendum(b) for b in found if b['kind'] == 'ADDENDUM']
@@ -301,7 +322,7 @@ def analyse(raw: bytes):
     footer = footer_values(text)
     if not snapshot:
         errors.append('authority snapshot missing "| First working P-ID for this mini | P-NNN |"')
-    elif numbers and numbers[0] != pid(first):
+    elif numbers and first is not None and numbers[0] != pid(first):
         errors.append(f'first card {ids[0]} differs from the declared first working ID {first}')
     highest = ids[-1] if ids else None
     expected_next = f'P-{(numbers[-1] if numbers else pid(first) - 1) + 1}' if first else None
@@ -317,20 +338,21 @@ def analyse(raw: bytes):
         if footer.get('GitHub writes performed') not in ('NO', None):
             warnings.append('footer records GitHub writes; a local mini never writes to GitHub')
     return {'cards': cards, 'carryovers': carry, 'addenda': addenda, 'settlements': settle, 'first_id': first,
-            'highest_id': highest, 'next_id': expected_next, 'footer': footer,
+            'highest_id': highest, 'next_id': expected_next, 'footer': footer, 'version': version,
             'errors': errors, 'warnings': warnings, 'sha256': sha(raw), 'bytes': len(raw)}
 
 
 def parse_settlement(block: dict, original_picks):
     text = block['body'].decode('utf-8')
-    errors, warnings = [], []
+    errors: list[str] = []
+    warnings: list[str] = []
     head = re.match(r'### Settlement · (P-\d{3,}) · (.+?)\s*$', text.split('\n', 1)[0])
     if not head or head[1] != block['id']:
         errors.append('settlement must start with "### Settlement · P-NNN · Event"')
     if NESTED_ID_HEADING.search(text):
         errors.append('a heading starting with a P-ID would be read as a new canonical card')
-    state = re.search(r'(?m)^\*\*Card state:\*\*\s*`?([A-Z_]+)`?', text)
-    state = state[1] if state else None
+    state_match = re.search(r'(?m)^\*\*Card state:\*\*\s*`?([A-Z_]+)`?', text)
+    state = state_match[1] if state_match else None
     if state not in CARD_STATES:
         errors.append(f'"**Card state:**" must be one of {sorted(CARD_STATES)}')
     record = {'id': block['id'], 'state': state, 'rows': [], 'winner_call': None, 'failure_class': None,
@@ -450,7 +472,9 @@ def analyse_settled(frozen: bytes, settled: bytes):
                         'event': item.get('heading') or meta.get('Event key'), 'event_key': meta.get('Event key'),
                         'sport': meta.get('Sport', 'UNKNOWN'), 'league': meta.get('League'),
                         'final': rec['final'], 'winner_call': rec['winner_call'], 'failure_class': rec['failure_class'],
-                        'joint_failure': item.get('joint_failure'),
+                        'joint_failure': item.get('joint_failure'), 'rank1_gate': item.get('rank1_gate'),
+                        'adjustment_dependence': item.get('adjustment_dependence'), 'distribution': item.get('distribution'),
+                        'regime_flags': item.get('regime_flags'), 'format_version': base['version'],
                         'rows': [[r['rank'], r['contract'], r['grade'], r['evidence'], r['basis'], r['p_card']]
                                  for r in rec['rows']]})
     for cid in by_id:
@@ -530,7 +554,7 @@ def carryover_from_pending(settled_table: dict, frozen_text: str):
     """Rebuild carryover blocks for PENDING_EVENT cards of a previous settled mini."""
     blocks_out = []
     raw = frozen_text.encode('utf-8')
-    cards = {b['id']: parse_card(b) for b in blocks(raw) if b['kind'] == 'CARD'}
+    cards = {b['id']: parse_card(b, detect_version(frozen_text) or 2) for b in blocks(raw) if b['kind'] == 'CARD'}
     carries = {b['id']: b for b in blocks(raw) if b['kind'] == 'CARRYOVER'}
     for cid in settled_table.get('pending_event_ids', []):
         if cid in carries:
@@ -598,7 +622,7 @@ def append(mini: Path, card_path: Path):
     found = blocks(block_raw)
     if len(found) != 1 or found[0]['kind'] != 'CARD':
         raise MiniLogError('card file must contain exactly one <!-- BEGIN CARD P-NNN --> … <!-- END CARD P-NNN --> block')
-    card = parse_card(found[0])
+    card = parse_card(found[0], report['version'])
     if card['errors']:
         raise MiniLogError('card fails validation:\n' + '\n'.join(card['errors']))
     if card['id'] != report['next_id']:
@@ -655,7 +679,7 @@ def join(frozen_path: Path, section_path: Path, out_path: Path):
     if section.startswith(frozen):
         settled = section
     else:
-        if FORMAT_TAG.encode() in section:
+        if any(tag.encode() in section for tag in FORMAT_TAGS.values()):
             raise MiniLogError('the section contains a mini header but does not start with the frozen bytes; '
                                'the frozen part was edited or re-saved')
         settled = frozen + (b'' if section.startswith((b'\n', b'\r\n')) else b'\n') + section

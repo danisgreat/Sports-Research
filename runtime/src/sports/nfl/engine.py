@@ -60,14 +60,12 @@ def team_points_pmf(p_td: float, p_fg: float, rules: DriveRules, size: int = MAX
     out = np.zeros(size)
     current = np.zeros(size)
     current[0] = 1.0
-    reached = 0
     for n in range(0, int(support.max()) + 1):
         if n >= support.min():
             out += weights[n - support.min()] * current
         nxt = np.convolve(current, base)[:size]
         nxt[size - 1] += np.convolve(current, base)[size:].sum() if len(np.convolve(current, base)) > size else 0.0
         current = nxt
-        reached = n
     return out / out.sum()
 
 
@@ -149,8 +147,8 @@ class NFLEngine(BaseSportEngine):
     def _expected_points(self, ctx: Dict[str, Any]) -> Tuple[float, float]:
         if ctx.get("home_expected_points") is not None and ctx.get("away_expected_points") is not None:
             return float(ctx["home_expected_points"]), float(ctx["away_expected_points"])
-        home, away = ctx.get("home_team"), ctx.get("away_team")
         if self.is_fitted and self.model is not None:
+            home, away = self._teams(ctx)
             for team in (home, away):
                 if not self.model.knows(team):
                     self._warn(f"unknown team {team!r}: league-average strength used; uncertainty not modelled")

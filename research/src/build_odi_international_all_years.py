@@ -899,7 +899,6 @@ def main():
     print("ODI International Games Generator (Non-World Cup, 1975–2025)")
     print("=" * 80)
     
-    os.makedirs(OUT_DIR_ROOT, exist_ok=True)
     os.makedirs(OUT_DIR_PREV1, exist_ok=True)
     os.makedirs(OUT_DIR_PREV2, exist_ok=True)
     

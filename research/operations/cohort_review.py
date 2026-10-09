@@ -17,6 +17,7 @@ import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
+from typing import Any
 
 from research.operations import top_two
 from research.operations.mini_log import pid
@@ -31,6 +32,8 @@ def _legacy_failure_classes(table_path: Path):
     if not module.exists():
         return {}
     spec = importlib.util.spec_from_file_location('_retro', module)
+    if spec is None or spec.loader is None:
+        return {}
     loaded = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(loaded)
     out = {}
@@ -64,7 +67,8 @@ def load_tables(root: Path = ROOT):
             cards[record['id']] = {'id': record['id'], 'sport': record.get('sport', 'UNKNOWN'), 'rows': rows,
                                    'no_forecast': bool(record.get('no_forecast')), 'winner_call': winner,
                                    'failure_class': record.get('failure_class') or classes.get(record['id']),
-                                   'joint_failure': record.get('joint_failure'),
+                                   'joint_failure': record.get('joint_failure'), 'rank1_gate': record.get('rank1_gate'),
+                                   'event_key': record.get('event_key'),
                                    'source': str(path.relative_to(root))}
             count += 1
         sources.append({'path': str(path.relative_to(root)), 'schema': table['schema'], 'records': count, 'created': created})
@@ -76,8 +80,8 @@ def review(cards: dict, first: str | None = None, last: str | None = None):
               if (not first or pid(cid) >= pid(first)) and (not last or pid(cid) <= pid(last))]
     scoring = [{**c, 'rows': [(r[0], r[1], r[2], r[3]) for r in c['rows']]} for c in chosen]
     summary = top_two.summarise(scoring)
-    slots = collections.Counter()
-    evidence = collections.Counter()
+    slots: collections.Counter[Any] = collections.Counter()
+    evidence: collections.Counter[Any] = collections.Counter()
     for card in chosen:
         if card['no_forecast']:
             continue
@@ -97,7 +101,7 @@ def review(cards: dict, first: str | None = None, last: str | None = None):
                    'mean_stated': sum(j for j, _ in joint) / len(joint) if joint else None,
                    'realised_all_lost': sum(o == 'TOP2_ALL_LOST' for _, o in joint) / len(joint) if joint else None,
                    'all_lost_ci95': top_two.wilson(sum(o == 'TOP2_ALL_LOST' for _, o in joint), len(joint))}
-    stability = collections.Counter()
+    stability: collections.Counter[Any] = collections.Counter()
     for card in chosen:
         rank1 = next((r for r in card['rows'] if r[0] == 1), None)
         if card['no_forecast'] or rank1 is None or rank1[2] is None or rank1[1] not in {'W', 'L'}:

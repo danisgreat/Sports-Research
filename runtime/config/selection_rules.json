@@ -1,0 +1,35 @@
+{
+  "schema": "selection-rules-1",
+  "status": "PROVISIONAL: starting values derived from the 2026-10-09 retrospective (sections 3.2 and 7); they become binding only after a prospective confirmation window of 8 or more weeks (EVL-04 experiment SEL-1).",
+  "p_card_max": 0.90,
+  "rank1_gate": {
+    "p_min": 0.62,
+    "margin_min": 0.04,
+    "status": "provisional",
+    "legacy_unstable_p": 0.60,
+    "note": "RANK1_UNSTABLE cards are scored in their own cohort (EVL-05). The legacy 0.60 label (card rule A4.6) remains the historical split used for cards issued before this gate."
+  },
+  "rank2": {
+    "p_min": 0.58,
+    "joint_failure_warn": 0.35,
+    "joint_failure_target": 0.30
+  },
+  "adjustment_threshold_sd": 0.25,
+  "family_rules": {
+    "first_half_over_0_5": {"rank1_p_min": 0.72, "requires_distribution": "half_split", "note": "1H Over 0.5 is not Rank 1 unless p_card >= 0.72 from a half-split model"},
+    "baseball_plus_1_5": {"rank1_p_min": 0.65, "note": "baseball +1.5 is not Rank 1 unless p_card >= 0.65"},
+    "tennis_games": {"requires_distribution": "tennis_exact_tree_form_shock", "note": "tennis games rows only from the exact tree with a form shock (form_sigma > 0)"},
+    "corners": {"requires_distribution": "corners_nb", "requires_provider": true, "note": "corner rows only with a settlement provider and a negative-binomial corners model"}
+  },
+  "ladders": {
+    "soccer": {"allow_draw": true, "handicap_step": 1, "total_step": 1, "team_total_step": 1, "span_sd": 2.5, "integer_lines": false, "btts": true},
+    "ice_hockey": {"allow_draw": false, "handicap_step": 1, "total_step": 1, "team_total_step": 1, "span_sd": 2.5, "integer_lines": false},
+    "baseball": {"allow_draw": false, "handicap_step": 1, "total_step": 1, "team_total_step": 1, "span_sd": 2.5, "integer_lines": false},
+    "basketball": {"allow_draw": false, "handicap_step": 1, "total_step": 1, "team_total_step": 1, "span_sd": 2.5, "integer_lines": false},
+    "american_football": {"allow_draw": false, "handicap_step": 1, "total_step": 1, "team_total_step": 1, "span_sd": 2.5, "integer_lines": true},
+    "afl": {"allow_draw": false, "handicap_step": 1, "total_step": 1, "team_total_step": 1, "span_sd": 2.5, "integer_lines": false},
+    "rugby_league": {"allow_draw": false, "handicap_step": 1, "total_step": 1, "team_total_step": 1, "span_sd": 2.5, "integer_lines": false},
+    "cricket": {"allow_draw": false, "handicap_step": 1, "total_step": 1, "team_total_step": 1, "span_sd": 2.0, "integer_lines": false},
+    "tennis": {"allow_draw": false, "handicap_step": 1, "total_step": 1, "team_total_step": 1, "span_sd": 2.5, "integer_lines": false}
+  }
+}

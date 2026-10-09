@@ -8,7 +8,7 @@ from ..base import BaseSportEngine, _first
 from .halves import HalfSplit, half_distributions
 from ...common.contracts import ScoreDistribution
 from ...common.dixon_coles import DixonColesEngine, score_grid
-from ...common.errors import InsufficientData, MissingInputs, MissingScore, NotFitted, finite_score
+from ...common.errors import InsufficientData, MissingInputs, NotFitted, finite_score
 from ...common.leagues import LeagueProfile
 
 
@@ -60,22 +60,22 @@ class SoccerEngine(BaseSportEngine):
         return float(np.clip(rho, -0.25, 0.25))
 
     def _expected_goals(self, ctx: Dict[str, Any]):
-        home, away = ctx.get("home_team") or ctx.get("home"), ctx.get("away_team") or ctx.get("away")
         if ctx.get("home_xg") is not None and ctx.get("away_xg") is not None:
             return float(ctx["home_xg"]), float(ctx["away_xg"]), None
         if ctx.get("home_xg") is not None or ctx.get("away_xg") is not None:
             raise MissingInputs("soccer: give both home_xg and away_xg, or neither")
         if not self.is_fitted:
             raise NotFitted("soccer: fit the engine or pass home_xg and away_xg")
+        home, away = self._teams(ctx)
         lam, mu, warnings = self.dixon_coles._rates(home, away)
         return lam, mu, warnings
 
     def predict_distribution(self, match_context: Dict[str, Any], endpoint: str = "regulation") -> ScoreDistribution:
         if endpoint != "regulation":
             raise ValueError("soccer scorelines settle on the 90 minutes plus stoppage time; extra time and penalties are not modelled")
-        home, away = match_context.get("home_team") or match_context.get("home"), match_context.get("away_team") or match_context.get("away")
         explicit = match_context.get("home_xg") is not None and match_context.get("away_xg") is not None
         if not explicit and self.is_fitted:
+            home, away = self._teams(match_context)
             return self.dixon_coles.predict_score_distribution(home, away)
         lam, mu, warnings = self._expected_goals(match_context)
         rho = self._rho(match_context)

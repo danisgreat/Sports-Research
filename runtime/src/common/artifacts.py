@@ -69,10 +69,10 @@ def decode(data: Any) -> Any:
         module_name, _, qualname = data["__class__"].partition(":")
         if not module_name.startswith(ALLOWED_MODULE_PREFIX):
             raise ArtifactError(f"class {data['__class__']!r} is not allowed")
-        cls = importlib.import_module(module_name)
+        target: Any = importlib.import_module(module_name)
         for part in qualname.split("."):
-            cls = getattr(cls, part)
-        instance = cls.__new__(cls)
+            target = getattr(target, part)
+        instance = target.__new__(target)
         for key, value in data["state"].items():
             object.__setattr__(instance, key, decode(value))
         return instance
@@ -88,7 +88,7 @@ def save(obj: Any, path: str, model_card: Optional[Dict[str, Any]] = None) -> Di
     import numpy
     import scipy
     body = encode(obj)
-    card = {"data_sha256": None, "code_sha256": None, "metrics": {}, "date_range": None, "notes": ""}
+    card: Dict[str, Any] = {"data_sha256": None, "code_sha256": None, "metrics": {}, "date_range": None, "notes": ""}
     card.update(model_card or {})
     card["environment"] = {"python": platform.python_version(), "numpy": numpy.__version__, "scipy": scipy.__version__}
     document = {"schema": SCHEMA, "model_card": card, "body": body}

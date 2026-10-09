@@ -23,7 +23,7 @@ import sys
 from dataclasses import asdict, dataclass, field
 from datetime import date
 from pathlib import Path
-from typing import Iterator, Optional
+from typing import Any, Dict, Iterator, Optional
 
 try:
     from .archive import parse_score, stage as stage_of, team_key
@@ -261,7 +261,9 @@ def render_coverage(report: dict) -> str:
 
 def build(out: Path, archive_root: Path = ARCHIVE_ROOT) -> dict:
     out.mkdir(parents=True, exist_ok=True)
-    handles, writers, counts = {}, {}, {}
+    handles: Dict[str, Any] = {}
+    writers: Dict[str, Any] = {}
+    counts: Dict[str, int] = {}
     try:
         for event in iter_events(archive_root):
             name = re.sub(r"[^a-z0-9]+", "_", event.sport.lower()).strip("_")

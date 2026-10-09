@@ -15,6 +15,7 @@ import json
 import sys
 from collections import defaultdict
 from pathlib import Path
+from typing import Any
 
 import numpy as np
 from scipy import stats
@@ -64,7 +65,7 @@ def plausibility_problems(key: str, body: dict) -> list:
 
 # Reference values that the repository records in BASE_RATES_REGISTER.md from sources outside the archive
 # (ESPN match summaries). They are quoted with their source, never recomputed here, and flagged as references.
-SOCCER_REFERENCE = {
+SOCCER_REFERENCE: dict[str, dict[str, Any]] = {
     "EPL": {"source": "BASE_RATES_REGISTER.md section 7.3 (EPL 2025-26, n = 380, scoreboard plus match summaries)",
             "values": {"first_half_goal_share": 1.19 / 2.75, "p_first_half_goal": 0.716, "first_half_goals_mean": 1.19,
                        "corners_mean": 10.0, "corners_sd": 3.27, "corners_team_mean": 5.0, "corners_team_sd": 2.77}},
@@ -104,7 +105,7 @@ def sha256_file(path: Path) -> str:
 
 # Sports whose margin distribution is stored for key-number calibration, with the number of seasons used. NFL uses the
 # seasons since the 2015 extra-point change, so 11 rather than the default 3.
-MARGIN_PMF = {"american_football": {"competition": "NFL", "seasons": 11, "limit": 40}}
+MARGIN_PMF: dict[str, dict[str, Any]] = {"american_football": {"competition": "NFL", "seasons": 11, "limit": 40}}
 
 
 def margin_pmf_for(sport_dir: str, competition: str, seasons: int, limit: int, archive_root: Path) -> dict | None:
@@ -194,8 +195,8 @@ def profile_for(sport_dir: str, competition: str, seasons: int, min_games: int, 
                 extras[f"extra_inning_runs_p{r}"] = float(share)
             extras["extra_inning_frames"] = float(counts.sum())
     if sport_dir == "AFL":
-        shots = [(e.home_goals + e.home_behinds, e.home_goals) for e in events if e.home_behinds is not None] + \
-                [(e.away_goals + e.away_behinds, e.away_goals) for e in events if e.away_behinds is not None]
+        shots = [(e.home_goals + e.home_behinds, e.home_goals) for e in events if e.home_goals is not None and e.home_behinds is not None] + \
+                [(e.away_goals + e.away_behinds, e.away_goals) for e in events if e.away_goals is not None and e.away_behinds is not None]
         if len(shots) >= 200:
             n_shots = np.array([x[0] for x in shots], dtype=float)
             goals = np.array([x[1] for x in shots], dtype=float)
@@ -205,7 +206,7 @@ def profile_for(sport_dir: str, competition: str, seasons: int, min_games: int, 
     if sport_dir == "Rugby League":
         with_half = [e for e in events if e.home_halftime is not None and e.away_halftime is not None]
         if len(with_half) >= 200:
-            ht = np.array([e.home_halftime + e.away_halftime for e in with_half], dtype=float)
+            ht = np.array([(e.home_halftime or 0) + (e.away_halftime or 0) for e in with_half], dtype=float)
             ft = np.array([e.home_score + e.away_score for e in with_half], dtype=float)
             extras["first_half_points_share"] = float(ht.sum() / ft.sum())
         tries = [(e.home_tries, e.home_goals) for e in events if e.home_tries is not None and e.home_goals is not None] + \
@@ -234,7 +235,8 @@ def build(out: Path = OUT, seasons: int = 3, min_games: int = 100, archive_root:
     out.mkdir(parents=True, exist_ok=True)
     written = {}
     for key, (sport_dir, competitions) in GROUPS.items():
-        leagues, excluded = {}, {}
+        leagues: dict[str, Any] = {}
+        excluded: dict[str, Any] = {}
         for competition in competitions:
             body = profile_for(sport_dir, competition, seasons, min_games, archive_root)
             if not body:
@@ -254,7 +256,7 @@ def build(out: Path = OUT, seasons: int = 3, min_games: int = 100, archive_root:
                 body["provenance"]["omitted_extras"] = {"overtime_share": f"{body['extras'].pop('overtime_share'):.4f} outside plausible [{lo}, {hi}]; flag column unreliable"}
             spec = MARGIN_PMF.get(key)
             if spec and spec["competition"] == competition:
-                margin = margin_pmf_for(sport_dir, competition, spec["seasons"], spec["limit"], archive_root)
+                margin = margin_pmf_for(sport_dir, competition, int(spec["seasons"]), int(spec["limit"]), archive_root)
                 if margin:
                     body["margin_pmf"] = margin["pmf"]
                     body["provenance"]["margin_pmf_seasons"] = margin["seasons"]

@@ -188,7 +188,7 @@ class DixonColesEngine:
                     total += -float(np.log(max(probs[outcome], 1e-12)))
                     used += 1
             scores[float(xi)] = total / used if used else float("inf")
-        best = min(scores, key=scores.get)
+        best = min(scores, key=lambda x: scores[x])
         self.xi = best
         return best, scores
 

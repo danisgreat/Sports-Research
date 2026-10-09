@@ -1,7 +1,7 @@
 """NHL predictive engine: opponent-adjusted goal rates, goalie adjustment, late-game state model and a rules-correct OT/SO endpoint."""
 
 from dataclasses import dataclass
-from typing import Any, Dict, Mapping, Optional
+from typing import Any, ClassVar, Dict, Mapping, Optional
 
 import numpy as np
 from scipy.stats import poisson
@@ -9,7 +9,7 @@ from scipy.stats import poisson
 from ..base import BaseSportEngine, collect_games
 from ...common.contracts import ScoreDistribution
 from ...common.endpoints import HockeyOvertime, fit_ot_multiplier, hockey_full_game
-from ...common.errors import MissingInputs, NotFitted
+from ...common.errors import MissingInputs
 from ...common.leagues import LeagueProfile
 from ...common.strengths import AttackDefenceModel
 
@@ -31,7 +31,7 @@ class HockeyLateGame:
     empty_net_rate_per_minute: float
     step_minutes: float = 0.25
 
-    ILLUSTRATIVE = None  # assigned below the class body
+    ILLUSTRATIVE: ClassVar["HockeyLateGame"]  # assigned below the class body
 
 
 HockeyLateGame.ILLUSTRATIVE = HockeyLateGame(pull_minutes_by_deficit={1: 1.75, 2: 3.0}, pulled_scoring_multiplier=2.0,
@@ -110,8 +110,8 @@ class NHLEngine(BaseSportEngine):
             return float(ctx["home_xg"]), float(ctx["away_xg"])
         if ctx.get("home_xg") is not None or ctx.get("away_xg") is not None:
             raise MissingInputs("nhl: give both home_xg and away_xg, or neither")
-        home, away = ctx.get("home_team"), ctx.get("away_team")
         if self.is_fitted and self.model is not None:
+            home, away = self._teams(ctx)
             unknown = "average" if self.unknown_team_policy == "league_average" else "refuse"
             for team in (home, away):
                 if not self.model.knows(team):

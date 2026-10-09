@@ -18,7 +18,7 @@ Rain, reduced-overs and DLS targets are not part of the score grid (see `reduced
 
 from dataclasses import dataclass
 from functools import lru_cache
-from typing import Any, Dict, Optional, Sequence, Tuple
+from typing import Any, Dict, Optional, Tuple
 
 import numpy as np
 from scipy.optimize import brentq
@@ -218,10 +218,10 @@ class CricketEngine(BaseSportEngine):
                 scored.setdefault(fmt, {}).setdefault(team, []).append(runs)
                 allowed.setdefault(fmt, {}).setdefault(team, []).append(conceded)
             by_format.setdefault(fmt, []).extend([hr, ar])
-        for fmt, runs in by_format.items():
-            if len(runs) < 20:
-                raise InsufficientData(f"format {fmt!r} needs at least 10 matches, got {len(runs) // 2}")
-            self.format_means[fmt] = float(np.mean(runs))
+        for fmt, format_runs in by_format.items():
+            if len(format_runs) < 20:
+                raise InsufficientData(f"format {fmt!r} needs at least 10 matches, got {len(format_runs) // 2}")
+            self.format_means[fmt] = float(np.mean(format_runs))
             k = 8.0                                                         # shrinkage in innings, not a fixed blend
             for team, values in scored[fmt].items():
                 n = len(values)

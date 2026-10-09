@@ -13,8 +13,9 @@ import os
 from pathlib import Path, PureWindowsPath
 import re
 import uuid
-from research.src.issue import PART6, RECONCILIATION, CANONICAL_LEDGER, _custody
+from research.src.issue import PART6, RECONCILIATION, CANONICAL_LEDGER
 from research.operations.canonical_issue import next_card_id
+from research.operations import card_validator
 from research.src.ledger import _append_locked, locked, read_records
 from research.src.combined_log import active_log, custody
 
@@ -213,6 +214,9 @@ def commit(card, *, part6=None, reconciliation=RECONCILIATION, ledger=CANONICAL_
         raise ValueError('card needs explicit identity, title, status, body and original source')
     if re.search(r'(?m)^#{1,6}\s+(?:Prediction\s+|Game(?:\s+Card)?\s+)?P-\d+\b', card['body']):
         raise ValueError('nested canonical ID heading would consume extra IDs')
+    problems = card_validator.commit_gate(card['body'], card['analysis_status'])
+    if problems:
+        raise ValueError('card fails the rank-order gate (rank by p_card; no q column beside p): ' + '; '.join(problems))
     part6 = Path(part6) if part6 is not None else active_log(ROOT)
     source = Path(card['source_path']).resolve().read_bytes()
     with locked(ledger):

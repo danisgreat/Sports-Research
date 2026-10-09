@@ -1,7 +1,6 @@
 """Unit tests for probability calibration methods and diagnostics."""
 
 import numpy as np
-import pytest
 
 from runtime.src.common.calibration import (
     PlattScaler,

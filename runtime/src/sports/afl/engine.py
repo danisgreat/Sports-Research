@@ -1,7 +1,7 @@
 """AFL engine: scoring shots with negative dependence, goal conversion, and period fractions (DST-12)."""
 
 from dataclasses import dataclass
-from typing import Any, Dict, Optional, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 
 import numpy as np
 from scipy.optimize import least_squares
@@ -67,7 +67,9 @@ class AFLEngine(BaseSportEngine):
             records = list(train_data)
         else:
             raise ValueError("train_data must be a list of game dicts or a DataFrame; an engine is never 'fitted' on nothing")
-        games, goals_for, shots_for = [], {}, {}
+        games: List[Tuple[str, str, float, float]] = []
+        goals_for: Dict[str, float] = {}
+        shots_for: Dict[str, float] = {}
         all_goals = all_shots = 0.0
         points = []
         for index, m in enumerate(records):
@@ -109,8 +111,8 @@ class AFLEngine(BaseSportEngine):
     def _shots_means(self, ctx: Dict[str, Any]) -> Tuple[float, float]:
         if ctx.get("home_expected_shots") is not None and ctx.get("away_expected_shots") is not None:
             return float(ctx["home_expected_shots"]), float(ctx["away_expected_shots"])
-        home, away = ctx.get("home_team"), ctx.get("away_team")
         if self.is_fitted and self.model is not None:
+            home, away = self._teams(ctx)
             for team in (home, away):
                 if not self.model.knows(team):
                     self._warn(f"unknown team {team!r}: league-average strength used; uncertainty not modelled")
@@ -126,9 +128,9 @@ class AFLEngine(BaseSportEngine):
         home = ctx.get("home_conversion_rate")
         away = ctx.get("away_conversion_rate")
         if home is None:
-            home = self.team_conversion.get(ctx.get("home_team"), league)
+            home = self.team_conversion.get(str(ctx.get("home_team")), league)
         if away is None:
-            away = self.team_conversion.get(ctx.get("away_team"), league)
+            away = self.team_conversion.get(str(ctx.get("away_team")), league)
         return float(home), float(away)
 
     def _targets(self, ctx: Dict[str, Any]) -> Tuple[float, float]:

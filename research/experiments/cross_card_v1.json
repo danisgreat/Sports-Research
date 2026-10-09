@@ -1,0 +1,358 @@
+{
+ "alpha_one_sided": 0.025,
+ "assumed_cards_per_week": 20,
+ "feasible_count": 2,
+ "power": 0.8,
+ "protocols": [
+  {
+   "acceptance": {
+    "block": "ISO week",
+    "calibration_slope_ci_contains": 1.0,
+    "delta_brier_ci95_upper_below": 0.0,
+    "delta_log_loss_ci95_upper_below": 0.0,
+    "evaluator": "runtime.src.common.evaluation.FixedCohortEvaluator.evaluate",
+    "gate": "EVL-02",
+    "min_blocks": 8,
+    "seed_stable": true
+   },
+   "baseline": "analyst first-half probability stated on the card",
+   "candidate": "runtime.src.sports.soccer.halves (fit_half_split / half_distributions)",
+   "cohort": {
+    "exclusions": [
+     "rows with an unresolved contract definition",
+     "rows graded VOID",
+     "rows whose forecast was written after the event started"
+    ],
+    "frozen": true,
+    "inclusion": "every 1st-half goals row (Over/Under/BTTS-1H) on a soccer card issued after the freeze; both models price the same row",
+    "start": "the first card issued after this protocol is frozen and its lock is committed",
+    "stopping_rule": "fixed: stop when rows_required AND weeks_required are both reached; no interim look decides the result",
+    "unit": "rows"
+   },
+   "failure_class": "FIRST_HALF_GOAL_OVERSELECTION",
+   "family_filter": [
+    "first_half_goals"
+   ],
+   "hypothesis": "A fitted half-split model (separate first/second-half rates with a per-half correction) prices first-half goal rows with lower Brier loss than the analyst first-half estimate used on cards P-148, P-234, P-250, P-342 and P-377.",
+   "id": "XCARD-1",
+   "performance_eligible": false,
+   "power_plan": {
+    "alpha_one_sided": 0.025,
+    "assumed_cards_per_week": 20,
+    "assumption_basis": "sd_paired approximates the mean absolute probability difference between candidate and baseline (delta ~ (p_c - p_b)(p_c + p_b - 2y)); replace it with the observed value after four pilot weeks and re-freeze before the cohort starts",
+    "delta": -0.02,
+    "design_effect": 1.3,
+    "feasibility_note": "feasible: the cohort can finish inside the maximum window",
+    "feasible_within_weeks": true,
+    "icc_assumed": 0.05,
+    "max_weeks": 26,
+    "n_independent": 126,
+    "power": 0.8,
+    "rows_per_week": 7.0,
+    "rows_required": 164,
+    "sd_paired": 0.08,
+    "share_of_cards": 0.35,
+    "weeks_required": 24
+   },
+   "protocol_sha256": "d9da01727ce7c42e90a6178dd29e4e1ddf098aaed9bbdac6fb1b2a7b1861ae51",
+   "row_rule": "every 1st-half goals row (Over/Under/BTTS-1H) on a soccer card issued after the freeze; both models price the same row",
+   "schema": "cross-card-experiments-1",
+   "share_of_cards": 0.35,
+   "sport": "Soccer",
+   "status": "REGISTERED_NOT_RUN"
+  },
+  {
+   "acceptance": {
+    "block": "ISO week",
+    "calibration_slope_ci_contains": 1.0,
+    "delta_brier_ci95_upper_below": 0.0,
+    "delta_log_loss_ci95_upper_below": 0.0,
+    "evaluator": "runtime.src.common.evaluation.FixedCohortEvaluator.evaluate",
+    "gate": "EVL-02",
+    "min_blocks": 8,
+    "seed_stable": true
+   },
+   "baseline": "analyst cushion probability on the card",
+   "candidate": "runtime.src.sports.baseball.engine (environment sigma, matchup tau, starter leash)",
+   "cohort": {
+    "exclusions": [
+     "rows with an unresolved contract definition",
+     "rows graded VOID",
+     "rows whose forecast was written after the event started"
+    ],
+    "frozen": true,
+    "inclusion": "every baseball run-line row (+1.5 or -1.5, either side) on a baseball card issued after the freeze",
+    "start": "the first card issued after this protocol is frozen and its lock is committed",
+    "stopping_rule": "fixed: stop when rows_required AND weeks_required are both reached; no interim look decides the result",
+    "unit": "rows"
+   },
+   "failure_class": "RUNLINE_CUSHION_CEILING",
+   "family_filter": [
+    "side_cushion_or_handicap"
+   ],
+   "hypothesis": "A bivariate run model with a shared environment shock and starter-leash mixture prices +1.5 run-line rows with lower Brier loss than the analyst cushion estimate, removing the cushion ceiling seen on P-274, P-524, P-544 and P-547.",
+   "id": "XCARD-2",
+   "performance_eligible": false,
+   "power_plan": {
+    "alpha_one_sided": 0.025,
+    "assumed_cards_per_week": 20,
+    "assumption_basis": "sd_paired approximates the mean absolute probability difference between candidate and baseline (delta ~ (p_c - p_b)(p_c + p_b - 2y)); replace it with the observed value after four pilot weeks and re-freeze before the cohort starts",
+    "delta": -0.015,
+    "design_effect": 1.35,
+    "feasibility_note": "feasible: the cohort can finish inside the maximum window",
+    "feasible_within_weeks": true,
+    "icc_assumed": 0.05,
+    "max_weeks": 26,
+    "n_independent": 126,
+    "power": 0.8,
+    "rows_per_week": 8.0,
+    "rows_required": 170,
+    "sd_paired": 0.06,
+    "share_of_cards": 0.4,
+    "weeks_required": 22
+   },
+   "protocol_sha256": "ad1117dd98e11e5b5f13d3c2349fc50aff6b620e6055920f4867fa0ce006d463",
+   "row_rule": "every baseball run-line row (+1.5 or -1.5, either side) on a baseball card issued after the freeze",
+   "schema": "cross-card-experiments-1",
+   "share_of_cards": 0.4,
+   "sport": "Baseball",
+   "status": "REGISTERED_NOT_RUN"
+  },
+  {
+   "acceptance": {
+    "block": "ISO week",
+    "calibration_slope_ci_contains": 1.0,
+    "delta_brier_ci95_upper_below": 0.0,
+    "delta_log_loss_ci95_upper_below": 0.0,
+    "evaluator": "runtime.src.common.evaluation.FixedCohortEvaluator.evaluate",
+    "gate": "EVL-02",
+    "min_blocks": 8,
+    "seed_stable": true
+   },
+   "baseline": "raw points-per-game average total",
+   "candidate": "runtime.src.sports.basketball.engine (pace x ppp means, calibrated sd/corr)",
+   "cohort": {
+    "exclusions": [
+     "rows with an unresolved contract definition",
+     "rows graded VOID",
+     "rows whose forecast was written after the event started"
+    ],
+    "frozen": true,
+    "inclusion": "every combined-total Over/Under row on a basketball card issued after the freeze",
+    "start": "the first card issued after this protocol is frozen and its lock is committed",
+    "stopping_rule": "fixed: stop when rows_required AND weeks_required are both reached; no interim look decides the result",
+    "unit": "rows"
+   },
+   "failure_class": "BASKETBALL_TOTAL_WITHOUT_PACE_MODEL",
+   "family_filter": [
+    "match_total"
+   ],
+   "hypothesis": "A pace x efficiency bivariate model with a calibrated total spread prices combined-total rows with lower Brier loss than a raw points-average total, addressing P-527, P-548 and P-553.",
+   "id": "XCARD-3",
+   "performance_eligible": false,
+   "power_plan": {
+    "alpha_one_sided": 0.025,
+    "assumed_cards_per_week": 20,
+    "assumption_basis": "sd_paired approximates the mean absolute probability difference between candidate and baseline (delta ~ (p_c - p_b)(p_c + p_b - 2y)); replace it with the observed value after four pilot weeks and re-freeze before the cohort starts",
+    "delta": -0.015,
+    "design_effect": 1.25,
+    "feasibility_note": "NOT feasible in 26 weeks at this cadence: results are directional monitoring until the plan is met (pool further quarters, or accept a larger minimum effect); never read as significance early",
+    "feasible_within_weeks": false,
+    "icc_assumed": 0.05,
+    "max_weeks": 26,
+    "n_independent": 171,
+    "power": 0.8,
+    "rows_per_week": 6.0,
+    "rows_required": 214,
+    "sd_paired": 0.07,
+    "share_of_cards": 0.3,
+    "weeks_required": 36
+   },
+   "protocol_sha256": "2679e9f7d45d5edb37f5359eda4dab13077d4b13358df4ea0ea099d9fd38dc3c",
+   "row_rule": "every combined-total Over/Under row on a basketball card issued after the freeze",
+   "schema": "cross-card-experiments-1",
+   "share_of_cards": 0.3,
+   "sport": "Basketball",
+   "status": "REGISTERED_NOT_RUN"
+  },
+  {
+   "acceptance": {
+    "block": "ISO week",
+    "calibration_slope_ci_contains": 1.0,
+    "delta_brier_ci95_upper_below": 0.0,
+    "delta_log_loss_ci95_upper_below": 0.0,
+    "evaluator": "runtime.src.common.evaluation.FixedCohortEvaluator.evaluate",
+    "gate": "EVL-02",
+    "min_blocks": 8,
+    "seed_stable": true
+   },
+   "baseline": "same tree with form_sigma = 0 (i.i.d.)",
+   "candidate": "runtime.src.sports.tennis.engine (mix_over_form, calibrated form_sigma)",
+   "cohort": {
+    "exclusions": [
+     "rows with an unresolved contract definition",
+     "rows graded VOID",
+     "rows whose forecast was written after the event started"
+    ],
+    "frozen": true,
+    "inclusion": "every total-games and games-handicap row on a tennis card issued after the freeze",
+    "start": "the first card issued after this protocol is frozen and its lock is committed",
+    "stopping_rule": "fixed: stop when rows_required AND weeks_required are both reached; no interim look decides the result",
+    "unit": "rows"
+   },
+   "failure_class": "TENNIS_IID_UNDERDISPERSION",
+   "family_filter": [
+    "tennis_games",
+    "match_total"
+   ],
+   "hypothesis": "The exact point-to-match tree with a match-level form shock prices total-games and set-score rows with lower Brier loss than the i.i.d. tree, whose deciding-set rate was 0.50 against a 0.358 population rate (P-541, P-551, P-555).",
+   "id": "XCARD-4",
+   "performance_eligible": false,
+   "power_plan": {
+    "alpha_one_sided": 0.025,
+    "assumed_cards_per_week": 20,
+    "assumption_basis": "sd_paired approximates the mean absolute probability difference between candidate and baseline (delta ~ (p_c - p_b)(p_c + p_b - 2y)); replace it with the observed value after four pilot weeks and re-freeze before the cohort starts",
+    "delta": -0.02,
+    "design_effect": 1.1,
+    "feasibility_note": "NOT feasible in 26 weeks at this cadence: results are directional monitoring until the plan is met (pool further quarters, or accept a larger minimum effect); never read as significance early",
+    "feasible_within_weeks": false,
+    "icc_assumed": 0.05,
+    "max_weeks": 26,
+    "n_independent": 159,
+    "power": 0.8,
+    "rows_per_week": 3.0,
+    "rows_required": 175,
+    "sd_paired": 0.09,
+    "share_of_cards": 0.15,
+    "weeks_required": 59
+   },
+   "protocol_sha256": "5cd77a31837b59264fad96f59f53ddc6739ba6a85718d08c20457fb01c60a23a",
+   "row_rule": "every total-games and games-handicap row on a tennis card issued after the freeze",
+   "schema": "cross-card-experiments-1",
+   "share_of_cards": 0.15,
+   "sport": "Tennis",
+   "status": "REGISTERED_NOT_RUN"
+  },
+  {
+   "acceptance": {
+    "block": "ISO week",
+    "calibration_slope_ci_contains": 1.0,
+    "delta_brier_ci95_upper_below": 0.0,
+    "delta_log_loss_ci95_upper_below": 0.0,
+    "evaluator": "runtime.src.common.evaluation.FixedCohortEvaluator.evaluate",
+    "gate": "EVL-02",
+    "min_blocks": 8,
+    "seed_stable": true
+   },
+   "baseline": "ungated Rank 1 (the RANK1_UNSTABLE cohort)",
+   "candidate": "Rank-1 gate in force (runtime.src.common.selection.rank1_gate)",
+   "cohort": {
+    "exclusions": [
+     "rows with an unresolved contract definition",
+     "rows graded VOID",
+     "rows whose forecast was written after the event started"
+    ],
+    "frozen": true,
+    "inclusion": "Rank 1 of every card issued after the freeze; the gate label is recorded on the card before the event",
+    "start": "the first card issued after this protocol is frozen and its lock is committed",
+    "stopping_rule": "fixed: stop when rows_required AND weeks_required are both reached; no interim look decides the result",
+    "unit": "cards"
+   },
+   "failure_class": "WEAK_SLATE_FORCED_RANK",
+   "family_filter": [
+    "*"
+   ],
+   "hypothesis": "Cards whose Rank 1 passes the gate (p_card >= 0.62 and a lead of >= 0.04 over the best non-complementary alternative) win Rank 1 at least 5 points more often than cards labelled RANK1_UNSTABLE (PRD-03; also covers P-234 and P-520).",
+   "id": "XCARD-5",
+   "performance_eligible": false,
+   "power_plan": {
+    "alpha_one_sided": 0.025,
+    "assumed_cards_per_week": 20,
+    "assumption_basis": "sd_paired approximates the mean absolute probability difference between candidate and baseline (delta ~ (p_c - p_b)(p_c + p_b - 2y)); replace it with the observed value after four pilot weeks and re-freeze before the cohort starts",
+    "delta": 0.05,
+    "design_effect": 1.95,
+    "feasibility_note": "NOT feasible in 26 weeks at this cadence: results are directional monitoring until the plan is met (pool further quarters, or accept a larger minimum effect); never read as significance early",
+    "feasible_within_weeks": false,
+    "icc_assumed": 0.05,
+    "max_weeks": 26,
+    "n_independent": 3402,
+    "note": "cards, not rows; rate difference treated as a paired/unpaired contrast with the stated SD",
+    "power": 0.8,
+    "rows_per_week": 20.0,
+    "rows_required": 6633,
+    "sd_paired": 1.0408329997330665,
+    "share_of_cards": 1.0,
+    "weeks_required": 332
+   },
+   "primary_metric": "difference in Rank-1 win rate, gated minus unstable",
+   "protocol_sha256": "85bfad4b144d00df618976e3ca507f067658825dd0dba84e846897455b3f4dc6",
+   "row_rule": "Rank 1 of every card issued after the freeze; the gate label is recorded on the card before the event",
+   "schema": "cross-card-experiments-1",
+   "share_of_cards": 1.0,
+   "sport": "All",
+   "status": "REGISTERED_NOT_RUN",
+   "unit": "cards"
+  },
+  {
+   "acceptance": {
+    "block": "ISO week",
+    "calibration_slope_ci_contains": 1.0,
+    "delta_brier_ci95_upper_below": 0.0,
+    "delta_log_loss_ci95_upper_below": 0.0,
+    "evaluator": "runtime.src.common.evaluation.FixedCohortEvaluator.evaluate",
+    "gate": "EVL-02",
+    "min_blocks": 8,
+    "seed_stable": true
+   },
+   "baseline": "Rank 2 = next-highest p_card (shadow row, graded from the final score)",
+   "candidate": "Rank-2 diversification (runtime.src.common.selection.propose)",
+   "cohort": {
+    "exclusions": [
+     "rows with an unresolved contract definition",
+     "rows graded VOID",
+     "rows whose forecast was written after the event started"
+    ],
+    "frozen": true,
+    "inclusion": "every card issued after the freeze; the shadow Rank 2 comes from the priced ladder (appendix A5) and is graded from the final score. Requires the machine-readable ladder; until it exists the experiment is REGISTERED_BLOCKED",
+    "start": "the first card issued after this protocol is frozen and its lock is committed",
+    "stopping_rule": "fixed: stop when rows_required AND weeks_required are both reached; no interim look decides the result",
+    "unit": "cards"
+   },
+   "failure_class": "SHARED_DRIVER_TOP_TWO",
+   "family_filter": [
+    "*"
+   ],
+   "hypothesis": "Choosing Rank 2 to minimise P(Rank 1 and Rank 2 both lose) lowers the realised TOP2_ALL_LOST rate against choosing the next-highest p_card row (PRD-02; P-176, P-492, P-541, P-549, P-555).",
+   "id": "XCARD-6",
+   "performance_eligible": false,
+   "power_plan": {
+    "alpha_one_sided": 0.025,
+    "assumed_cards_per_week": 20,
+    "assumption_basis": "sd_paired approximates the mean absolute probability difference between candidate and baseline (delta ~ (p_c - p_b)(p_c + p_b - 2y)); replace it with the observed value after four pilot weeks and re-freeze before the cohort starts",
+    "delta": -0.05,
+    "design_effect": 1.95,
+    "feasibility_note": "NOT feasible in 26 weeks at this cadence: results are directional monitoring until the plan is met (pool further quarters, or accept a larger minimum effect); never read as significance early",
+    "feasible_within_weeks": false,
+    "icc_assumed": 0.05,
+    "max_weeks": 26,
+    "n_independent": 1005,
+    "note": "cards, not rows; rate difference treated as a paired/unpaired contrast with the stated SD",
+    "power": 0.8,
+    "rows_per_week": 20.0,
+    "rows_required": 1960,
+    "sd_paired": 0.5656854249492381,
+    "share_of_cards": 1.0,
+    "weeks_required": 98
+   },
+   "primary_metric": "difference in TOP2_ALL_LOST rate, diversified minus shadow",
+   "protocol_sha256": "85f457eea9cadf80b94d2d79e454160cea0b582eca208b8ba6f5a0c4d3286caf",
+   "row_rule": "every card issued after the freeze; the shadow Rank 2 comes from the priced ladder (appendix A5) and is graded from the final score. Requires the machine-readable ladder; until it exists the experiment is REGISTERED_BLOCKED",
+   "schema": "cross-card-experiments-1",
+   "share_of_cards": 1.0,
+   "sport": "All",
+   "status": "REGISTERED_BLOCKED",
+   "unit": "cards"
+  }
+ ],
+ "schema": "cross-card-experiments-1"
+}

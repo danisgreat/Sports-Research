@@ -12,7 +12,7 @@ Corner data is not part of the repository's archive; the model is fitted when a 
 """
 
 from dataclasses import dataclass
-from typing import Any, Dict, Optional, Sequence, Tuple
+from typing import Any, Dict, Optional, Sequence
 
 import numpy as np
 from ...common.contracts import ScoreDistribution
@@ -96,6 +96,8 @@ class CornersModel:
         if mean_home is None or mean_away is None:
             if self.strengths is None:
                 raise MissingInputs("corners: give mean_home/mean_away, or fit the model on provider data")
+            if home is None or away is None:
+                raise MissingInputs("corners: give home and away team names to look up fitted strengths")
             mean_home, mean_away = self.strengths.expected(home, away)
         phi = self.phi if phi is None else phi
         concentration = self.concentration if concentration is None else concentration

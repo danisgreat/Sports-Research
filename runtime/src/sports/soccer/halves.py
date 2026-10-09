@@ -6,7 +6,7 @@ Dixon-Coles grid, and full time is their convolution. The EPL share is about 0.4
 """
 
 from dataclasses import dataclass
-from typing import Dict, Optional, Sequence
+from typing import Dict, Sequence
 
 import numpy as np
 from scipy.optimize import brentq, least_squares

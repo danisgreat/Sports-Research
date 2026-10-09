@@ -4,7 +4,6 @@ from __future__ import annotations
 from datetime import datetime, timezone
 import hashlib
 import json
-from pathlib import Path
 import re
 
 from research.operations.log_card import next_id, pending, research_cards, verify_projection

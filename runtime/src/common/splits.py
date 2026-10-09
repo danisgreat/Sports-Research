@@ -8,8 +8,8 @@ Enforces:
 """
 
 from dataclasses import dataclass
-from datetime import datetime, timedelta
-from typing import Generator, List, Optional
+from datetime import timedelta
+from typing import Generator
 import numpy as np
 import pandas as pd
 
@@ -102,7 +102,7 @@ class PurgedRollingOriginSplit:
                 train_dur = timedelta(days=active_days * 0.50)
                 tune_dur = timedelta(days=active_days * 0.20)
                 cal_dur = timedelta(days=active_days * 0.15)
-                test_dur = timedelta(days=active_days * 0.15)
+                # the test partition is the remaining 15% of the active span
                 embargo_delta = timedelta(days=self.embargo_days)
 
                 train_start = min_date

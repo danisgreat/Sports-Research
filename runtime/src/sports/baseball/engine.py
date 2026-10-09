@@ -177,8 +177,8 @@ class BaseballEngine(BaseSportEngine):
     def _team_means(self, ctx: Dict[str, Any]) -> Tuple[float, float]:
         if ctx.get("home_expected_runs") is not None and ctx.get("away_expected_runs") is not None:
             return float(ctx["home_expected_runs"]), float(ctx["away_expected_runs"])
-        home, away = ctx.get("home_team"), ctx.get("away_team")
         if self.is_fitted and self.model is not None:
+            home, away = self._teams(ctx)
             for team in (home, away):
                 if not self.model.knows(team):
                     self._warn(f"unknown team {team!r}: league-average strength used; uncertainty not modelled")
@@ -305,7 +305,7 @@ class BaseballEngine(BaseSportEngine):
         overshoot = float(match_context.get("walk_off_overshoot_share", self.walk_off_overshoot_share))
         pmf, cap = self._extras_inputs(match_context)
         if cap == "missing":
-            raise MissingInputs(f"baseball: {self.league.league} permits ties; give the rulebook innings_cap")
+            raise MissingInputs(f"baseball: {self.league.league if self.league else 'this league'} permits ties; give the rulebook innings_cap")
         if endpoint == "full_game" and pmf is None:
             raise MissingInputs("baseball: full_game needs an extra-inning run distribution (extra_inning_pmf or a profile carrying one)")
         ninth = float(match_context.get("ninth_factor", self.ninth_factor))

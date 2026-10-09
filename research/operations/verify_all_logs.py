@@ -1,6 +1,5 @@
 """Verify dated all-log evidence, immutable cores and selected carryover."""
 from datetime import datetime,timezone
-from pathlib import Path
 import hashlib,json,re
 from research.operations.log_card import next_id,research_cards,verify_projection
 from research.operations.settlement_register import selected
