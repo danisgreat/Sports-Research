@@ -1,0 +1,25 @@
+**Final settlement (2026-10-09) — Vit Kopriva vs Zizou Bergs (ATP Shanghai).** Settled under the user's 2026-10-09 directive: every pending record is settled, with missing details settled on the best available evidence; only Rank 1 and Rank 2 can count as wins; a Rank-1 failure carries a deep retrospection. The original forecast, probabilities and ranks are unchanged where they were first logged.
+
+**Final event.** Bergs 6-3, 6-1 (games 12-4, total 16).
+
+| Rank | Proposition | Grade | Counts toward wins? | Evidence | Basis |
+|---:|---|---|---|---|---|
+| 1 | Kopriva +3.5 games | **LOSS** | NO (loss) | A owner | -8 games |
+| 2 | Over 22.5 games | **LOSS** | NO (loss) | A owner | 16 games |
+| 3 | Under 22.5 games | **WIN** | NO (rank 3+ informational) | A owner | 16 games |
+| 4 | Bergs -3.5 games | **WIN** | NO (rank 3+ informational) | A owner | +8 games |
+
+**Top-two result.** TOP2_ALL_LOST: every live top-two row LOST — **0 counted win(s) of 2 live top-two row(s)**. Rank 1: LOSS; Rank 2: LOSS.
+**Winner call.** Zizou Bergs: CORRECT.
+**Disposition.** `FINAL_SETTLED_2026-10-09`; the sporting carryover obligation is closed. Performance certification is unchanged (`NOT_CERTIFIED`, performance-ineligible): settlement under the directive is a research-ledger closure, not operator certification.
+
+**Deep Rank-1 retrospection (mandatory: Rank 1 failed).**
+
+**Claim.** Rank 1 was Kopřiva +3.5 games at 61.5%; Rank 2 was Over 22.5 at 58.6%. Both came from an i.i.d. tree with Bergs holding 81.4% and Kopřiva 76.4%, and a three-set branch of 48.4%.
+**What happened.** Bergs 6-3, 6-1 (12-4, 16 games). Both top rows lost (0/2).
+**Distribution check (reproduced).** Reimplementing the tree gives P(Kopřiva +3.5) = 0.615, P(Over) = 0.586 and P(3 sets) = 0.484, matching the card. With the same match-level form shock (SD 0.05), P(Over 22.5) falls to **0.464**, while P(+3.5) stays about 0.61 and P(|margin| ≥ 6) rises from 0.21 to 0.33. Rank 1 was robust to the misspecification; Rank 2 was not. The pair was strongly dependent, since both need a long competitive match. The blowout branch defeated both.
+**Knowable at cutoff?** The dependence and the inflated three-set mass were both knowable.
+**Verdict.** DISTRIBUTION_MISSPECIFICATION (Rank 2) plus TOP_ROW_DEPENDENCE. Rank 1 alone was variance.
+**Own-top-2 counterfactual.** Kopřiva +3.5 (0.61, lost) and Under 22.5 (0.54 under overdispersion, won) gives 1/2, with the pair now hedged against the blowout branch.
+**Failure class.** TENNIS_IID_UNDERDISPERSION; SHARED_DRIVER_TOP_TWO.
+**Proposed correction.** As P-551. Also require the top two in tennis to include at most one row that needs a deciding set.

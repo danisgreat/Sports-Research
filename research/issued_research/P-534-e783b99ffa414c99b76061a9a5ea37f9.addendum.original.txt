@@ -1,0 +1,25 @@
+**Final settlement (2026-10-09) — Sydney Roosters vs Newcastle Knights (Grand Final) (NRL Grand Final).** Settled under the user's 2026-10-09 directive: every pending record is settled, with missing details settled on the best available evidence; only Rank 1 and Rank 2 can count as wins; a Rank-1 failure carries a deep retrospection. The original forecast, probabilities and ranks are unchanged where they were first logged.
+
+**Final event.** Roosters 19-18 Knights (total 37; no golden point).
+
+| Rank | Proposition | Grade | Counts toward wins? | Evidence | Basis |
+|---:|---|---|---|---|---|
+| 1 | Roosters -4.5 | **LOSS** | NO (loss) | A owner | Won by 1 |
+| 2 | Over 38.5 | **LOSS** | NO (loss) | A owner | Total 37 |
+| 3 | Knights +12.5 | **WIN** | NO (rank 3+ informational) | A owner | Lost by 1 |
+| 4 | Under 48.5 | **WIN** | NO (rank 3+ informational) | A owner | Total 37 |
+
+**Top-two result.** TOP2_ALL_LOST: every live top-two row LOST — **0 counted win(s) of 2 live top-two row(s)**. Rank 1: LOSS; Rank 2: LOSS.
+**Winner call.** Sydney Roosters: CORRECT.
+**Disposition.** `FINAL_SETTLED_2026-10-09`; the sporting carryover obligation is closed. Performance certification is unchanged (`NOT_CERTIFIED`, performance-ineligible): settlement under the directive is a research-ledger closure, not operator certification.
+
+**Deep Rank-1 retrospection (mandatory: Rank 1 failed).**
+
+**Claim.** Rank 1 was Roosters -4.5 in the NRL Grand Final; Rank 2 was Over 38.5.
+**What happened.** Roosters 19-18 (total 37). The Roosters won the premiership by a field goal. Both top rows lost: -4.5 by 3.5 points and Over 38.5 by 1.5. The card scored 0/2. Winner call correct.
+**Distribution check.** Grand Finals are tighter and lower-scoring than regular-season games: defensive intensity, conservative kicking, field goals. A -4.5 needs a margin of 5 or more, which in a near-even final is about 40-45%. Knights +12.5 and Under 48.5 both won easily.
+**Knowable at cutoff?** Yes. `Previous Sports Results/Rugby League/NRL` holds seasonal results back to the early 1900s, including Grand Finals, from which a finals-specific margin and total compression could be estimated.
+**Verdict.** BASE_RATE_NEGLECT (finals compression) plus CONTRACT_GEOMETRY.
+**Own-top-2 counterfactual.** A finals-adjusted model would rank Knights +12.5 (won) and Under 48.5 (won) at the top, giving 2/2.
+**Failure class.** FINALS_REGIME_IGNORED.
+**Proposed correction.** Add a finals/knockout regime flag to the NRL and AFL engines, with margin and total compression factors estimated from the archive.

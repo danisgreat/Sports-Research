@@ -1,12 +1,43 @@
 # Current operating rules
 
+**October 9 final settlement, rules and retrospective:** All 72 pending records (the 65-record carryover plus P-550–P-556) are settled in Part 7. Missing details were settled on a declared evidence hierarchy, no ID was consumed, and the next ID stays P-557. New rules: only Rank 1 and Rank 2 count as wins (T2); every Rank-1 failure gets a deep retrospection (R1, 28 written); supplied contracts are reference only and the analyst derives its own top two out of four from the event distribution (P4). See [the settlement report](research/verification/final_settlement_2026-10-09/REPORT.md) and the [framework retrospective and improvement plan](FRAMEWORK_RETROSPECTIVE_2026-10-09.md), whose recommendations are not yet implemented.
+
+## October 9 rules: top-two counting, Rank-1 retrospection and analyst-derived picks (CR-2026.10.09-R1)
+
+The user added these three rules on 2026-10-09. They apply to every card from **P-557** onward and to every settlement or re-scoring performed from 2026-10-09. They never rewrite an original forecast, probability, rank or contract. Where an older paragraph below conflicts with them, these rules control.
+
+**Rule T2: only the top two ranked picks can count as a win.**
+1. A card ranks four candidates. **Rank 1 and Rank 2 are the card's picks; ranks 3 and 4 are informational alternates.**
+2. Ranks 3–4 are still graded exactly and kept for calibration and learning. They never count as wins in card summaries, cohort summaries, win rates, hit rates or any performance statement. A rank-3/4 win never offsets a rank-1/2 loss.
+3. Classify each settled card by its live top-two rows: `TOP2_ALL_WON`, `TOP2_SPLIT`, `TOP2_ALL_LOST`, or `VOID` (no live top-two row). Report counted wins over live top-two rows, Rank-1 W/L/VOID, Rank-2 W/L/VOID and Hit@2. VOID and PUSH rows leave the denominators; they are never losses.
+4. The two picks share one event. They are not independent trials, and every numerical card reports their joint failure probability.
+
+**Rule R1: a Rank-1 failure requires a deep and thorough retrospection.**
+A Rank-1 LOSS must carry a dated deep retrospection in the same settlement record. A settlement with a failed Rank 1 and no deep retrospection is incomplete. Required parts:
+(a) **Claim:** the exact proposition, p_card, the evidence it was ranked on, and its gap to Rank 2.
+(b) **What happened:** the endpoint and the mechanism that decided the row.
+(c) **Distribution check:** where possible, recompute the card's distribution, locate the outcome in it (tail mass or z-score) and stress the decisive assumption.
+(d) **Knowability:** what was available at cutoff, as against post-event only.
+(e) **Verdict:** one or more of variance, ranking/selection, model/distribution, data/source, contract/endpoint, timing, adjustment.
+(f) **Own-top-two counterfactual:** what Rule P4 would have ranked first and second using cutoff information only.
+(g) **Failure class:** a tag from the failure taxonomy, linked to earlier cards with the same class.
+(h) **Proposed correction:** testable, with an acceptance criterion. It stays `PROPOSED_NOT_TESTED` until evaluated chronologically; no model weight changes on one event.
+A Rank-1 VOID or PUSH needs no deep retrospection, but the reason is recorded.
+
+**Rule P4: supplied contracts and lines are reference only; the analyst derives its own top two out of four.**
+1. Contracts and lines supplied with an individual game log or request are reference metadata. They do not fix the candidate set or the ranking.
+2. Build the event distribution first. Use the framework's sport method and probability toolkit: a score matrix, PMF or simulation from the sport engine, plus a registered ML model where one exists. Otherwise use an explicit, reproducible `UNCALIBRATED_ANALYST_SCENARIO`. All candidate probabilities come from that one distribution.
+3. Form exactly four candidates from (i) the supplied contracts at their supplied lines and (ii) analyst-derived sporting propositions priced from the same distribution. The derived kinds are winner/double chance, handicap/spread, match total, team total and period total, on the sport's standard line ladder. Each candidate states its exact proposition, line, period, endpoint and tag (`SUPPLIED` or `ANALYST_DERIVED`, the latter naming the supplied row it replaces). Degenerate propositions with p_card above 0.90 are excluded so the picks stay informative.
+4. Rank by p_card from that distribution: the probability the proposition wins on its sporting endpoint. Never rank by q, edge or narrative. A supplied contract is used only when it is the best suited or the most likely to win once the top two are ranked. Being supplied gives it no priority.
+5. SPORTS_ONLY / MARKET_BLIND still holds. Analyst-derived lines come from the distribution and the standard ladder, never from odds pages. A user-supplied line remains contract metadata.
+
 **October 8 carryover review:** 65 existing records receive 780 supplied retrospective sections in active Part 7, with no new grades, cards or ledger writes. P-518-P-522 remain reserved. The excluded local P-550 card is preserved only in source custody; canonical next remains P-550, while its local working successor is P-551. [Review, source limits and corrections](research/verification/carryover_review_2026-10-08/REPORT.md).
 
 **October 8 settlement and rollover:** P-538–P-549 were imported without renumbering into Part 6, with original text and dated sporting retrospectives. Part 7 is now active; P-550 remains next and no ID was consumed by its creation. The selected carryover has 65 exact records, including four P-540 retirement rows with UNKNOWN_DEFINITION. See [the complete settlement/rollover review](research/verification/mini_rollover_2026-10-08/REPORT.md).
 
 **Local authority, numerical ML runtime and all-log reconciliation (October 6):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
 
-Authority: **MDS-2026.10.01-v8.0 / CR-2026.10.08-R3** (with numerical runtime extension **CR-2026.10.06-NUMERICAL-1**). The user's instruction authorizes research regardless of calibration, canonical import, and the full implementation of the numerical ML runtime architecture ([NUMERICAL_MODEL_REGISTER.md](NUMERICAL_MODEL_REGISTER.md), [H0_DATASET_CARD.md](H0_DATASET_CARD.md), [DATA_SOURCE_REGISTER.md](DATA_SOURCE_REGISTER.md), [RULES_NHL.md](RULES_NHL.md)). Issued historical values remain unchanged.
+Authority: **MDS-2026.10.09-v8.1 / CR-2026.10.09-R1** (with numerical runtime extension **CR-2026.10.06-NUMERICAL-1**); scoring **SCV-2026.10.09-v4**. The October 9 rules above (T2, R1, P4) control ranking, counting and retrospection. The user's instruction authorizes research regardless of calibration, canonical import, and the full implementation of the numerical ML runtime architecture ([NUMERICAL_MODEL_REGISTER.md](NUMERICAL_MODEL_REGISTER.md), [H0_DATASET_CARD.md](H0_DATASET_CARD.md), [DATA_SOURCE_REGISTER.md](DATA_SOURCE_REGISTER.md), [RULES_NHL.md](RULES_NHL.md)). Issued historical values remain unchanged.
 
 ## Requested research — controlling default
 
@@ -18,7 +49,7 @@ All requested game cards, including uncalibrated, qualitative, live/late and his
 
 Use `py -3.14 -m research.operations.log_card next-id`, `commit card.json`, then `verify`. Mini logs are fallback storage only if the active combined log cannot be written. Imported minis become reference copies with canonical pointers. Report imported IDs and the actual next ID. Preserve original forecast evidence and all reserved IDs. Sources, honesty and SPORTS_ONLY / MARKET_BLIND remain required. Weather is environmental evidence, not an independent sporting-event lineage.
 
-Provide four ranked picks when requested, the potential winner, exact sporting propositions, reasons and failure routes. `UNCALIBRATED_QUALITATIVE` uses `NOT_ESTIMATED` percentages and baseline. Close ranks are uncertain. A missing bookmaker/operator definition affects later operator settlement, not analysis of explicitly defined sporting propositions. Explain complementary totals, covering run lines, ties and extra innings; do not count correlated picks as independent games. No retrospective or settlement until requested.
+Provide four ranked candidates when requested, of which Rank 1 and Rank 2 are the picks (Rules T2 and P4), plus the potential winner, exact sporting propositions, reasons and failure routes. `UNCALIBRATED_QUALITATIVE` uses `NOT_ESTIMATED` percentages and baseline. Close ranks are uncertain. A missing bookmaker/operator definition affects later operator settlement, not analysis of explicitly defined sporting propositions. Explain complementary totals, covering run lines, ties and extra innings; do not count correlated picks as independent games. No retrospective or settlement until requested.
 
 The sections below retain the separately defined certified performance protocol and archive safeguards. Its source quorum, universe, strict pregame timing, approved-model and prospective-shadow requirements govern **certification only**, never availability of requested research or canonical research IDs. Earlier local documents, Drive copies and frozen issuer code cannot override this default.
 

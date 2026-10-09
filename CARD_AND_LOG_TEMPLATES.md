@@ -8,9 +8,24 @@ Current authority: [CURRENT_RULES.md](CURRENT_RULES.md), MDS-2026.10.01-v8.0. Re
 
 ## Requested research card — default workflow
 
-Prepare JSON with `event_key`, `native_event_id` (unknown if not verified), `league`, `title`, `tracking_handle`, `analysis_status`, `source_path` and full Markdown `body`. Body: exact fixture/time/state and source update time; supplied contracts and sporting/operator semantics; posted participants; season/recent/exposure/bullpen/environment evidence; ranked four picks and potential winner; rationale and failure routes; calibration/assumption/missingness labels; full sources and retained receipts. Use `UNCALIBRATED_QUALITATIVE` and `NOT_ESTIMATED` for unsupported percentages. Analyst scenarios may contain explicit uncalibrated reproducible estimates.
+Prepare JSON with `event_key`, `native_event_id` (unknown if not verified), `league`, `title`, `tracking_handle`, `analysis_status`, `source_path` and full Markdown `body`. Body: exact fixture/time/state and source update time; supplied contracts and sporting/operator semantics (reference only, Rule P4); posted participants; season/recent/exposure/bullpen/environment evidence; **the event distribution** (sport engine/score matrix/simulation or an explicit reproducible analyst scenario) with its parameters; **four candidates** priced from that one distribution, each tagged `SUPPLIED` or `ANALYST_DERIVED` with exact proposition, line, period and endpoint; **ranked by p_card, Rank 1 and Rank 2 as the picks** and ranks 3–4 marked informational (Rule T2); the joint top-two failure probability; potential winner; rationale and failure routes; calibration/assumption/missingness labels; full sources and retained receipts. Use `UNCALIBRATED_QUALITATIVE` and `NOT_ESTIMATED` for unsupported percentages. Analyst scenarios may contain explicit uncalibrated reproducible estimates.
 
 Run `py -3.14 -m research.operations.log_card commit card.json`, then `verify`. Retain actual log time, original source bytes and exact projection. Import original cards literally beneath a dated canonical correction; do not retroactively rewrite probabilities, claim times or fabricate missing ranks. The configured active combined log is the destination; existing events retain their ID for dated additions. No retrospective until requested.
+
+### Top-two pick table (from P-557)
+
+| Rank | Role | Tag | Exact proposition, line, period, endpoint | p_card | Probability status | Evidence | Principal failure route |
+|---:|---|---|---|---:|---|---|---|
+| 1 | PICK | SUPPLIED / ANALYST_DERIVED (replaces …) | … | … | … | … | … |
+| 2 | PICK | … | … | … | … | … | … |
+| 3 | INFORMATIONAL | … | … | … | … | … | … |
+| 4 | INFORMATIONAL | … | … | … | … | … | … |
+
+Below the table print: P(Rank 1 and Rank 2 both lose) from the same distribution; the Rank 1 − Rank 2 gap; and the supplied rows that were not selected, with their p_card from the same distribution.
+
+### Settlement with top-two counting and Rank-1 retrospection (from 2026-10-09)
+
+Grade every row W/L/PUSH/VOID on its sporting endpoint with an evidence grade (A owner, B structured provider, C best-available, E estimated bound, OP default rule, X no data → VOID). Count wins only for ranks 1–2 and print the card class (`TOP2_ALL_WON`/`TOP2_SPLIT`/`TOP2_ALL_LOST`/`VOID`). If Rank 1 lost, append the deep retrospection with all eight parts of Rule R1 (claim, what happened, distribution check, knowability, verdict, own-top-two counterfactual, failure class, proposed correction). The [2026-10-09 final settlement](research/verification/final_settlement_2026-10-09/REPORT.md) is the worked reference.
 
 ## Complete universe
 
@@ -42,7 +57,7 @@ Add exact final native body receipts, three independent agreeing terminal collec
 
 ## Retrospective
 
-For each event record: observed endpoint/outcome; issued probability and baseline literal; diagnostic surprise without claiming certainty; source, timing and contract validity; predeclared mechanism that occurred; mechanism that did not occur; adjustment vs model effect; and the next testable hypothesis. Review wins under the same evidence criteria as losses. Postgame awards, season-end knowledge and narrative explanation are postgame information.
+A failed Rank 1 always requires the Rule R1 deep retrospection (CURRENT_RULES.md). For each event record: observed endpoint/outcome; issued probability and baseline literal; diagnostic surprise without claiming certainty; source, timing and contract validity; predeclared mechanism that occurred; mechanism that did not occur; adjustment vs model effect; and the next testable hypothesis. Review wins under the same evidence criteria as losses. Postgame awards, season-end knowledge and narrative explanation are postgame information.
 
 ## Model-only research
 

@@ -3,7 +3,7 @@
 
 **Next canonical ID: P-557.** All requested cards go directly to the active combined log, regardless of calibration. Canonical IDs identify retained cards; performance certification and live/late timing are separate labels.
 Active Combined Log: `prediction logs/PREDICTION_LOG_COMBINED_7.md`.
-Current selected freeze: `CONTROL_MANIFEST_2026-10-08-3.md`; normalized-CRLF SHA-256 `73381897ff1025a4fdf9d47226e808b9dd49dee2149b918ae767b6c5e192647e`. Current authority: METHOD.md and CURRENT_RULES.md.
+Current selected freeze: `CONTROL_MANIFEST_2026-10-09-1.md`; normalized-CRLF SHA-256 `da5d2d28b3de59094f7593114aa6c1e3839cb87ae97ee537e2916b9d4f8df860`. Current authority: METHOD.md and CURRENT_RULES.md.
 
 | ID | Event | Tracking alias | Status |
 |---|---|---|---|

@@ -1,0 +1,16 @@
+**Final settlement (2026-10-09) — Hanwha Eagles @ Samsung Lions (KBO).** Settled under the user's 2026-10-09 directive: every pending record is settled, with missing details settled on the best available evidence; only Rank 1 and Rank 2 can count as wins; a Rank-1 failure carries a deep retrospection. The original forecast, probabilities and ranks are unchanged where they were first logged.
+
+**Final event.** Samsung 3-2 Hanwha.
+
+| Rank | Proposition | Grade | Counts toward wins? | Evidence | Basis |
+|---:|---|---|---|---|---|
+| 1 | Under 11.5 runs | **WIN** | YES | A owner | Five runs |
+| 2 | Samsung -0.5 | **WIN** | YES | A owner | Samsung won by 1 |
+| 3 | Hanwha +2.5 | **WIN** | NO (rank 3+ informational) | A owner | Lost by 1 |
+| 4 | Over 11.5 runs | **LOSS** | NO (rank 3+ informational) | A owner | Five runs |
+
+**Top-two result.** TOP2_ALL_WON: every live top-two row WON — **2 counted win(s) of 2 live top-two row(s)**. Rank 1: WIN; Rank 2: WIN.
+**Winner call.** Samsung Lions: CORRECT.
+**Disposition.** `FINAL_SETTLED_2026-10-09`; the sporting carryover obligation is closed. Performance certification is unchanged (`NOT_CERTIFIED`, performance-ineligible): settlement under the directive is a research-ledger closure, not operator certification.
+
+**Rank 1 won**, so no mandatory deep retrospection is triggered.

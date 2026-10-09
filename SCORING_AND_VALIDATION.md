@@ -4,7 +4,7 @@
 
 **October 1 v7.1 clarification:** Calibration, model qualification and prospective cohort controls determine the claims that may be made about performance. They do not prevent requested research, qualitative ranks, transparent uncalibrated analyst scenarios, late/live analysis or canonical IDs in the active combined log. See CURRENT_RULES.md and research.operations.log_card. Preserve original forecasts and score each appropriate cohort separately. No retrospective when the user has deferred it.
 
-Current scoring: **SCV-2026.10.01-v3**. [CURRENT_RULES.md](CURRENT_RULES.md) controls admission. This file defines measurement; historical cards retain their original conventions.
+Current scoring: **SCV-2026.10.09-v4** (adds the October 9 top-two counting rule below; SCV-2026.10.01-v3 definitions otherwise unchanged). [CURRENT_RULES.md](CURRENT_RULES.md) controls admission. This file defines measurement; historical cards retain their original conventions.
 
 ## Units, cohorts and scales
 
@@ -61,3 +61,16 @@ Every registry entry is MEASURES_IMPLEMENTED with experiment NOT_RUN_AT_REGISTRA
 ## October 8 full-slate ranking clarification
 
 For binary relevance, NDCG@2 = DCG@2 / IDCG@2; ideal relevance is sorted over the entire frozen ranked slate, including wins below rank 2. Do not compute ideal relevance from only the top two observed rows. Unresolved, push and void slates remain unscored until an applicable policy is frozen; they are not losses. `research.operations.diagnostic_rank` implements this descriptive policy. P-539 and P-548 receive dated corrections, preserving the supplied historical figures in the original mini archive.
+
+## October 9 top-two counting (SCV-2026.10.09-v4)
+
+Rule T2 (CURRENT_RULES.md): **only Rank 1 and Rank 2 can count as a win.**
+
+- **Counted rows.** For each settled card, the live top-two rows are ranks 1–2 graded WIN or LOSS. PUSH and VOID rows are excluded from numerators and denominators; they are never losses. A NO_FORECAST intake has no counted rows.
+- **Card class.** `TOP2_ALL_WON` (every live top-two row won), `TOP2_SPLIT` (one of two won), `TOP2_ALL_LOST` (every live top-two row lost), `VOID` (no live top-two row).
+- **Primary counting metrics.** Counted wins ÷ live top-two rows; Rank-1 W/L/VOID and Rank-1 win rate over live Rank-1 rows; Rank-2 likewise; Hit@2 = cards with at least one counted win ÷ cards with a live top-two row. Report the event count and never treat the two picks as independent trials.
+- **Ranks 3–4.** Graded and retained in a separate *informational* cohort for calibration (Brier/log loss where p exists) and ranking diagnostics. They never enter win counts, win rates or performance statements.
+- **Ranking diagnostics.** Wins@2 and full-slate NDCG@2 (October 8 clarification) stay descriptive ranking-quality measures. They are not win counts.
+- **Rank-1 failures.** Each one requires the Rule R1 deep retrospection. Cohort reports list every Rank-1 failure with its failure class and tally recurring classes.
+- **Evidence grade.** Every settled row records its evidence grade (A/B/C/E/OP/X). Cohort reports give counts by grade, so best-available (C) and estimated (E) settlements stay visible.
+- **Reference implementation.** `research/verification/final_settlement_2026-10-09/build/build_settlement.py`.

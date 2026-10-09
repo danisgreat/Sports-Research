@@ -1,0 +1,16 @@
+**Final settlement (2026-10-09) — Chunichi Dragons @ Hiroshima Toyo Carp (G25) (NPB).** Settled under the user's 2026-10-09 directive: every pending record is settled, with missing details settled on the best available evidence; only Rank 1 and Rank 2 can count as wins; a Rank-1 failure carries a deep retrospection. The original forecast, probabilities and ranks are unchanged where they were first logged.
+
+**Final event.** Hiroshima 5-1 Chunichi.
+
+| Rank | Proposition | Grade | Counts toward wins? | Evidence | Basis |
+|---:|---|---|---|---|---|
+| 1 | Carp +1.5 | **WIN** | YES | A owner | Hiroshima won by 4 |
+| 2 | Over 6.5 runs | **LOSS** | NO (loss) | A owner | Six runs |
+| 3 | Under 6.5 runs | **WIN** | NO (rank 3+ informational) | A owner | Six runs |
+| 4 | Dragons +1.5 | **LOSS** | NO (rank 3+ informational) | A owner | Chunichi lost by 4 |
+
+**Top-two result.** TOP2_SPLIT: one of the two live top-two rows WON — **1 counted win(s) of 2 live top-two row(s)**. Rank 1: WIN; Rank 2: LOSS.
+**Winner call.** Hiroshima Toyo Carp: CORRECT.
+**Disposition.** `FINAL_SETTLED_2026-10-09`; the sporting carryover obligation is closed. Performance certification is unchanged (`NOT_CERTIFIED`, performance-ineligible): settlement under the directive is a research-ledger closure, not operator certification.
+
+**Rank 1 won**, so no mandatory deep retrospection is triggered.

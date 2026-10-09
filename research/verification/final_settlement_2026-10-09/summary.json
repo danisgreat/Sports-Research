@@ -1,0 +1,763 @@
+{
+ "records": 72,
+ "per_record": {
+  "P-126": {
+   "card_outcome": "TOP2_ALL_WON",
+   "counted_wins": 1,
+   "counted_live_rows": 1,
+   "rank1": "W",
+   "rank2": "V",
+   "winner_call": "CORRECT"
+  },
+  "P-136": {
+   "card_outcome": "VOID",
+   "counted_wins": 0,
+   "counted_live_rows": 0,
+   "rank1": "V",
+   "rank2": "V",
+   "winner_call": "CORRECT"
+  },
+  "P-148": {
+   "card_outcome": "TOP2_ALL_LOST",
+   "counted_wins": 0,
+   "counted_live_rows": 2,
+   "rank1": "L",
+   "rank2": "L",
+   "winner_call": "CORRECT"
+  },
+  "P-149": {
+   "card_outcome": "TOP2_ALL_WON",
+   "counted_wins": 2,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "W",
+   "winner_call": "CORRECT"
+  },
+  "P-166": {
+   "card_outcome": "TOP2_ALL_WON",
+   "counted_wins": 2,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "W",
+   "winner_call": "CORRECT"
+  },
+  "P-176": {
+   "card_outcome": "TOP2_ALL_LOST",
+   "counted_wins": 0,
+   "counted_live_rows": 2,
+   "rank1": "L",
+   "rank2": "L",
+   "winner_call": "INCORRECT"
+  },
+  "P-178": {
+   "card_outcome": "TOP2_SPLIT",
+   "counted_wins": 1,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "L",
+   "winner_call": "CORRECT"
+  },
+  "P-179": {
+   "card_outcome": "TOP2_SPLIT",
+   "counted_wins": 1,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "L",
+   "winner_call": "NOT_AUDITED"
+  },
+  "P-200": {
+   "card_outcome": "TOP2_SPLIT",
+   "counted_wins": 1,
+   "counted_live_rows": 2,
+   "rank1": "L",
+   "rank2": "W",
+   "winner_call": "CORRECT"
+  },
+  "P-217": {
+   "card_outcome": "TOP2_ALL_LOST",
+   "counted_wins": 0,
+   "counted_live_rows": 2,
+   "rank1": "L",
+   "rank2": "L",
+   "winner_call": "NOT_AUDITED"
+  },
+  "P-233": {
+   "card_outcome": "TOP2_ALL_WON",
+   "counted_wins": 2,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "W",
+   "winner_call": "NOT_AUDITED"
+  },
+  "P-234": {
+   "card_outcome": "TOP2_SPLIT",
+   "counted_wins": 1,
+   "counted_live_rows": 2,
+   "rank1": "L",
+   "rank2": "W",
+   "winner_call": "NOT_AUDITED"
+  },
+  "P-235": {
+   "card_outcome": "TOP2_ALL_WON",
+   "counted_wins": 2,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "W",
+   "winner_call": "NOT_AUDITED"
+  },
+  "P-250": {
+   "card_outcome": "TOP2_ALL_LOST",
+   "counted_wins": 0,
+   "counted_live_rows": 1,
+   "rank1": "L",
+   "rank2": "V",
+   "winner_call": "CORRECT"
+  },
+  "P-251": {
+   "card_outcome": "TOP2_SPLIT",
+   "counted_wins": 1,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "L",
+   "winner_call": "NOT_AUDITED"
+  },
+  "P-255": {
+   "card_outcome": "TOP2_ALL_WON",
+   "counted_wins": 2,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "W",
+   "winner_call": "NOT_AUDITED"
+  },
+  "P-256": {
+   "card_outcome": "TOP2_ALL_WON",
+   "counted_wins": 2,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "W",
+   "winner_call": "NOT_AUDITED"
+  },
+  "P-265": {
+   "card_outcome": "TOP2_SPLIT",
+   "counted_wins": 1,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "L",
+   "winner_call": "NOT_AUDITED"
+  },
+  "P-274": {
+   "card_outcome": "TOP2_SPLIT",
+   "counted_wins": 1,
+   "counted_live_rows": 2,
+   "rank1": "L",
+   "rank2": "W",
+   "winner_call": "NOT_AUDITED"
+  },
+  "P-341": {
+   "card_outcome": "TOP2_SPLIT",
+   "counted_wins": 1,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "L",
+   "winner_call": "CORRECT"
+  },
+  "P-342": {
+   "card_outcome": "TOP2_ALL_LOST",
+   "counted_wins": 0,
+   "counted_live_rows": 2,
+   "rank1": "L",
+   "rank2": "L",
+   "winner_call": "CORRECT"
+  },
+  "P-368": {
+   "card_outcome": "TOP2_ALL_WON",
+   "counted_wins": 2,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "W",
+   "winner_call": "NOT_AUDITED"
+  },
+  "P-369": {
+   "card_outcome": "TOP2_ALL_LOST",
+   "counted_wins": 0,
+   "counted_live_rows": 2,
+   "rank1": "L",
+   "rank2": "L",
+   "winner_call": "NOT_AUDITED"
+  },
+  "P-377": {
+   "card_outcome": "TOP2_ALL_LOST",
+   "counted_wins": 0,
+   "counted_live_rows": 2,
+   "rank1": "L",
+   "rank2": "L",
+   "winner_call": "NOT_AUDITED"
+  },
+  "P-399": {
+   "card_outcome": "TOP2_ALL_WON",
+   "counted_wins": 2,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "W",
+   "winner_call": "NOT_AUDITED"
+  },
+  "P-401": {
+   "card_outcome": "TOP2_ALL_WON",
+   "counted_wins": 2,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "W",
+   "winner_call": "NOT_AUDITED"
+  },
+  "P-407": {
+   "card_outcome": "TOP2_ALL_WON",
+   "counted_wins": 2,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "W",
+   "winner_call": "NOT_AUDITED"
+  },
+  "P-409": {
+   "card_outcome": "TOP2_ALL_WON",
+   "counted_wins": 2,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "W",
+   "winner_call": "CORRECT"
+  },
+  "P-410": {
+   "card_outcome": "TOP2_ALL_WON",
+   "counted_wins": 2,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "W",
+   "winner_call": "NOT_AUDITED"
+  },
+  "P-418": {
+   "card_outcome": "VOID",
+   "counted_wins": 0,
+   "counted_live_rows": 0,
+   "rank1": "V",
+   "rank2": "V",
+   "winner_call": "NOT_AUDITED"
+  },
+  "P-419": {
+   "card_outcome": "TOP2_ALL_WON",
+   "counted_wins": 2,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "W",
+   "winner_call": "CORRECT"
+  },
+  "P-430": {
+   "card_outcome": "TOP2_SPLIT",
+   "counted_wins": 1,
+   "counted_live_rows": 2,
+   "rank1": "L",
+   "rank2": "W",
+   "winner_call": "INCORRECT"
+  },
+  "P-492": {
+   "card_outcome": "TOP2_ALL_LOST",
+   "counted_wins": 0,
+   "counted_live_rows": 2,
+   "rank1": "L",
+   "rank2": "L",
+   "winner_call": "CORRECT"
+  },
+  "P-518": {
+   "card_outcome": "TOP2_SPLIT",
+   "counted_wins": 1,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "L",
+   "winner_call": "NOT_AUDITED"
+  },
+  "P-519": {
+   "card_outcome": "TOP2_SPLIT",
+   "counted_wins": 1,
+   "counted_live_rows": 2,
+   "rank1": "L",
+   "rank2": "W",
+   "winner_call": "NOT_AUDITED"
+  },
+  "P-520": {
+   "card_outcome": "TOP2_SPLIT",
+   "counted_wins": 1,
+   "counted_live_rows": 2,
+   "rank1": "L",
+   "rank2": "W",
+   "winner_call": "NOT_AUDITED"
+  },
+  "P-521": {
+   "card_outcome": "TOP2_SPLIT",
+   "counted_wins": 1,
+   "counted_live_rows": 2,
+   "rank1": "L",
+   "rank2": "W",
+   "winner_call": "NOT_AUDITED"
+  },
+  "P-522": {
+   "card_outcome": "TOP2_ALL_LOST",
+   "counted_wins": 0,
+   "counted_live_rows": 2,
+   "rank1": "L",
+   "rank2": "L",
+   "winner_call": "NOT_AUDITED"
+  },
+  "P-523": {
+   "card_outcome": "TOP2_ALL_WON",
+   "counted_wins": 2,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "W",
+   "winner_call": "INCORRECT"
+  },
+  "P-524": {
+   "card_outcome": "TOP2_SPLIT",
+   "counted_wins": 1,
+   "counted_live_rows": 2,
+   "rank1": "L",
+   "rank2": "W",
+   "winner_call": "CORRECT"
+  },
+  "P-525": {
+   "card_outcome": "TOP2_SPLIT",
+   "counted_wins": 1,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "L",
+   "winner_call": "CORRECT"
+  },
+  "P-526": {
+   "card_outcome": "TOP2_ALL_WON",
+   "counted_wins": 2,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "W",
+   "winner_call": "CORRECT"
+  },
+  "P-527": {
+   "card_outcome": "TOP2_SPLIT",
+   "counted_wins": 1,
+   "counted_live_rows": 2,
+   "rank1": "L",
+   "rank2": "W",
+   "winner_call": "INCORRECT"
+  },
+  "P-528": {
+   "card_outcome": "TOP2_ALL_WON",
+   "counted_wins": 2,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "W",
+   "winner_call": "CORRECT"
+  },
+  "P-529": {
+   "card_outcome": "TOP2_ALL_WON",
+   "counted_wins": 2,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "W",
+   "winner_call": "CORRECT"
+  },
+  "P-530": {
+   "card_outcome": "TOP2_ALL_WON",
+   "counted_wins": 2,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "W",
+   "winner_call": "CORRECT"
+  },
+  "P-531": {
+   "card_outcome": "TOP2_ALL_LOST",
+   "counted_wins": 0,
+   "counted_live_rows": 2,
+   "rank1": "L",
+   "rank2": "L",
+   "winner_call": "CORRECT"
+  },
+  "P-532": {
+   "card_outcome": "NO_FORECAST",
+   "counted_wins": 1,
+   "counted_live_rows": 2,
+   "rank1": "L",
+   "rank2": "W",
+   "winner_call": "NOT_ISSUED"
+  },
+  "P-533": {
+   "card_outcome": "TOP2_SPLIT",
+   "counted_wins": 1,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "L",
+   "winner_call": "CORRECT"
+  },
+  "P-534": {
+   "card_outcome": "TOP2_ALL_LOST",
+   "counted_wins": 0,
+   "counted_live_rows": 2,
+   "rank1": "L",
+   "rank2": "L",
+   "winner_call": "CORRECT"
+  },
+  "P-535": {
+   "card_outcome": "TOP2_ALL_WON",
+   "counted_wins": 2,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "W",
+   "winner_call": "CORRECT"
+  },
+  "P-536": {
+   "card_outcome": "TOP2_ALL_WON",
+   "counted_wins": 2,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "W",
+   "winner_call": "CORRECT"
+  },
+  "P-537": {
+   "card_outcome": "TOP2_ALL_WON",
+   "counted_wins": 2,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "W",
+   "winner_call": "INCORRECT"
+  },
+  "P-538": {
+   "card_outcome": "TOP2_ALL_WON",
+   "counted_wins": 2,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "W",
+   "winner_call": "CORRECT"
+  },
+  "P-539": {
+   "card_outcome": "TOP2_SPLIT",
+   "counted_wins": 1,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "L",
+   "winner_call": "CORRECT"
+  },
+  "P-540": {
+   "card_outcome": "VOID",
+   "counted_wins": 0,
+   "counted_live_rows": 0,
+   "rank1": "V",
+   "rank2": "V",
+   "winner_call": "CORRECT"
+  },
+  "P-541": {
+   "card_outcome": "TOP2_ALL_LOST",
+   "counted_wins": 0,
+   "counted_live_rows": 2,
+   "rank1": "L",
+   "rank2": "L",
+   "winner_call": "INCORRECT"
+  },
+  "P-542": {
+   "card_outcome": "TOP2_ALL_WON",
+   "counted_wins": 2,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "W",
+   "winner_call": "CORRECT"
+  },
+  "P-543": {
+   "card_outcome": "TOP2_ALL_WON",
+   "counted_wins": 2,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "W",
+   "winner_call": "CORRECT"
+  },
+  "P-544": {
+   "card_outcome": "TOP2_SPLIT",
+   "counted_wins": 1,
+   "counted_live_rows": 2,
+   "rank1": "L",
+   "rank2": "W",
+   "winner_call": "CORRECT"
+  },
+  "P-545": {
+   "card_outcome": "TOP2_SPLIT",
+   "counted_wins": 1,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "L",
+   "winner_call": "INCORRECT"
+  },
+  "P-546": {
+   "card_outcome": "TOP2_SPLIT",
+   "counted_wins": 1,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "L",
+   "winner_call": "CORRECT"
+  },
+  "P-547": {
+   "card_outcome": "TOP2_SPLIT",
+   "counted_wins": 1,
+   "counted_live_rows": 2,
+   "rank1": "L",
+   "rank2": "W",
+   "winner_call": "CORRECT"
+  },
+  "P-548": {
+   "card_outcome": "TOP2_SPLIT",
+   "counted_wins": 1,
+   "counted_live_rows": 2,
+   "rank1": "L",
+   "rank2": "W",
+   "winner_call": "CORRECT"
+  },
+  "P-549": {
+   "card_outcome": "TOP2_ALL_LOST",
+   "counted_wins": 0,
+   "counted_live_rows": 2,
+   "rank1": "L",
+   "rank2": "L",
+   "winner_call": "INCORRECT"
+  },
+  "P-550": {
+   "card_outcome": "TOP2_SPLIT",
+   "counted_wins": 1,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "L",
+   "winner_call": "CORRECT"
+  },
+  "P-551": {
+   "card_outcome": "TOP2_ALL_LOST",
+   "counted_wins": 0,
+   "counted_live_rows": 2,
+   "rank1": "L",
+   "rank2": "L",
+   "winner_call": "CORRECT"
+  },
+  "P-552": {
+   "card_outcome": "TOP2_SPLIT",
+   "counted_wins": 1,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "L",
+   "winner_call": "CORRECT"
+  },
+  "P-553": {
+   "card_outcome": "TOP2_SPLIT",
+   "counted_wins": 1,
+   "counted_live_rows": 2,
+   "rank1": "L",
+   "rank2": "W",
+   "winner_call": "INCORRECT"
+  },
+  "P-554": {
+   "card_outcome": "TOP2_ALL_WON",
+   "counted_wins": 2,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "W",
+   "winner_call": "INCORRECT"
+  },
+  "P-555": {
+   "card_outcome": "TOP2_ALL_LOST",
+   "counted_wins": 0,
+   "counted_live_rows": 2,
+   "rank1": "L",
+   "rank2": "L",
+   "winner_call": "CORRECT"
+  },
+  "P-556": {
+   "card_outcome": "TOP2_ALL_WON",
+   "counted_wins": 2,
+   "counted_live_rows": 2,
+   "rank1": "W",
+   "rank2": "W",
+   "winner_call": "INCORRECT"
+  }
+ },
+ "totals": {
+  "cards": 71,
+  "TOP2_ALL_WON": 27,
+  "counted_wins": 79,
+  "counted_live_rows": 134,
+  "rank1_W": 40,
+  "rank2_V": 5,
+  "winner_CORRECT": 37,
+  "VOID": 3,
+  "rank1_V": 3,
+  "TOP2_ALL_LOST": 15,
+  "rank1_L": 28,
+  "rank2_L": 27,
+  "rank2_W": 39,
+  "winner_INCORRECT": 11,
+  "TOP2_SPLIT": 26,
+  "winner_NOT_AUDITED": 23,
+  "no_forecast_cards": 1,
+  "hit_at_2": 53
+ },
+ "by_sport": {
+  "Australian rules": {
+   "cards": 1,
+   "rank1_L": 1,
+   "counted_wins": 1,
+   "counted_live_rows": 2
+  },
+  "Baseball": {
+   "cards": 14,
+   "rank1_L": 6,
+   "counted_wins": 16,
+   "counted_live_rows": 28,
+   "rank1_W": 8
+  },
+  "Basketball": {
+   "cards": 11,
+   "rank1_L": 6,
+   "counted_wins": 13,
+   "counted_live_rows": 22,
+   "rank1_W": 5
+  },
+  "Cricket": {
+   "cards": 1,
+   "rank1_L": 1,
+   "counted_wins": 0,
+   "counted_live_rows": 2
+  },
+  "Ice hockey": {
+   "cards": 6,
+   "rank1_W": 5,
+   "counted_wins": 10,
+   "counted_live_rows": 12,
+   "rank1_L": 1
+  },
+  "Rugby league": {
+   "cards": 1,
+   "rank1_L": 1,
+   "counted_wins": 0,
+   "counted_live_rows": 2
+  },
+  "Soccer": {
+   "cards": 30,
+   "rank1_W": 20,
+   "counted_wins": 36,
+   "counted_live_rows": 56,
+   "rank1_L": 9,
+   "rank1_V": 1
+  },
+  "Tennis": {
+   "cards": 7,
+   "rank1_V": 2,
+   "counted_wins": 3,
+   "counted_live_rows": 10,
+   "rank1_W": 2,
+   "rank1_L": 3
+  }
+ },
+ "rank1_by_family": {
+  "corners": {
+   "W": 4,
+   "L": 1
+  },
+  "first_half_goals": {
+   "L": 5,
+   "W": 9
+  },
+  "match_total": {
+   "W": 5,
+   "L": 6
+  },
+  "player_prop": {
+   "L": 1
+  },
+  "side_cushion_or_handicap": {
+   "W": 11,
+   "L": 9
+  },
+  "side_winner": {
+   "W": 4,
+   "L": 1
+  },
+  "team_total": {
+   "L": 2,
+   "W": 5
+  },
+  "tennis_games": {
+   "W": 2,
+   "L": 3
+  }
+ },
+ "top2_by_family": {
+  "corners": {
+   "L": 2,
+   "W": 5
+  },
+  "first_half_goals": {
+   "L": 2,
+   "W": 2
+  },
+  "match_total": {
+   "W": 12,
+   "L": 12
+  },
+  "side_cushion_or_handicap": {
+   "W": 11,
+   "L": 6
+  },
+  "side_winner": {
+   "W": 4
+  },
+  "team_total": {
+   "L": 1,
+   "W": 4
+  },
+  "tennis_games": {
+   "L": 4,
+   "W": 1
+  }
+ },
+ "evidence_counts": {
+  "C": 13,
+  "X": 7,
+  "OP": 16,
+  "B": 107,
+  "A": 168,
+  "E": 2
+ },
+ "rank1_failures": [
+  "P-148",
+  "P-176",
+  "P-200",
+  "P-217",
+  "P-234",
+  "P-250",
+  "P-274",
+  "P-342",
+  "P-369",
+  "P-377",
+  "P-430",
+  "P-492",
+  "P-519",
+  "P-520",
+  "P-521",
+  "P-522",
+  "P-524",
+  "P-527",
+  "P-531",
+  "P-534",
+  "P-541",
+  "P-544",
+  "P-547",
+  "P-548",
+  "P-549",
+  "P-551",
+  "P-553",
+  "P-555"
+ ],
+ "informational_ranks_3plus": {
+  "W": 91,
+  "V": 8,
+  "L": 71
+ }
+}
