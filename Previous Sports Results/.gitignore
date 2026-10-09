@@ -1,7 +1,0 @@
-# Bulky canonical exports are reproducible local build products.
-# Keep manifest, season coverage, correction journals and source custody.
-_canonical/events.csv
-_canonical/narratives.csv
-_canonical/provenance.csv
-_canonical/archive-build-*/
-**/__pycache__/

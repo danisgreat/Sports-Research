@@ -1,9 +1,0 @@
-# Local publisher snapshots with restricted redistribution and odds-bearing feeds.
-research/data/benchmark/
-research/**/__pycache__/
-research/.pytest_cache/
-
-# Football raw research data and caches exceeding remote limits
-Previous Sports Results/_football_research/*.json
-Previous Sports Results/_football_research/sources/
-Previous Sports Results/_football_research/__pycache__/
