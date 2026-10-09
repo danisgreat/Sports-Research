@@ -1,6 +1,6 @@
 # PROMPT 3 — SETTLE THE ACTIVE LOCAL MINI AND WRITE THE RETROSPECTIVES
 
-**Run by:** external chat agent · **GitHub:** read only · **Output:** a local settlement folder · **Mode:** `LOCAL_MINI_SETTLEMENT` · **Format:** `mini-settlement-4`
+**Run by:** external chat agent · **GitHub:** read only · **Output:** a local settlement folder · **Mode:** `LOCAL_MINI_SETTLEMENT` · **Format:** `mini-settlement-3`
 
 Use only the current `main` branch of `https://github.com/danisgreat/Sports-Research` as authority for method and rules. The active local mini and its working P-IDs hold the forecasts. Never renumber them because GitHub is behind. Nothing here needs code.
 
@@ -19,7 +19,7 @@ Record the `main` HEAD SHA and the time, then read:
 1. [METHOD.md](../../METHOD.md) and [CURRENT_RULES.md](../../CURRENT_RULES.md): Rules **T2** (only Rank 1 and Rank 2 count as wins), **R1** (a Rank-1 failure needs the eight-part deep retrospection), §5 (evidence and sources) and §8 (the lifecycle).
 2. [SELECTION_RULES.md](../../SELECTION_RULES.md): §7 (grades, evidence codes, card classes, the settlement allowance) and §8 (failure classes).
 3. [SCORING_AND_VALIDATION.md](../../SCORING_AND_VALIDATION.md): top-two counting, NDCG@2, PUSH and VOID handling.
-4. [CARD_AND_LOG_TEMPLATES.md](../../CARD_AND_LOG_TEMPLATES.md) §6 (the settled mini) and §9 (the settlement self-audit). A mini in `mini-log-4`, `mini-log-3` or `mini-log-2` is settled the same way; its cards have no expected score, so their `Expected vs final` line reads `N/A (no expected score issued)`.
+4. [CARD_AND_LOG_TEMPLATES.md](../../CARD_AND_LOG_TEMPLATES.md) §6 (the settled mini) and §9 (the settlement self-audit). A `mini-log-3` or `mini-log-2` mini is settled the same way.
 5. [research/prompts/examples/EXAMPLE_SETTLED_MINI.md](examples/EXAMPLE_SETTLED_MINI.md): the exact settlement structure to copy.
 6. [CURRENT_STATE.md](../../CURRENT_STATE.md) and [GAME_LOG_STATUS_CURRENT.md](../../GAME_LOG_STATUS_CURRENT.md): the repository's `Next canonical ID`, for the report.
 7. The `RULES_*.md` file for each sport in the mini (endpoint, overtime and extra-time, retirement and abandonment rules), and the settlement routes in [SOURCES.md](../../SOURCES.md) for each sport.
@@ -79,8 +79,6 @@ Settle the **literal proposition as issued**, on the card's own endpoint. Each r
 - **Only a non-terminal event stays open.** If the event is postponed, suspended or not yet played, write `**Card state:** PENDING_EVENT` and carry it forward. That status is reserved for events that have not finished. It is not for missing statistics.
 - Complementary rows (for example Over 5.5 and Under 7.5) are dependent outcomes of one event, not independent trials.
 
-**Expected vs final (`mini-log-5` cards).** Copy the unit and terms from the card's `Expected score` bullet, in the same order. Write the final from the verified result. Error = final − expected; z = error ÷ the SD printed for that term on the card. The line shows the arithmetic; R7 names the mechanism. Never recompute or change an expected score after the result.
-
 **Counting (Rule T2).** Only Rank 1 and Rank 2 can count as wins. Ranks 3 and 4 are graded for calibration only. `PUSH` and `VOID` leave the denominator and are never losses. Card classes: `TOP2_ALL_WON`, `TOP2_SPLIT`, `TOP2_ALL_LOST`, `VOID`. The `Counts toward wins` column reads `YES` only for a Rank 1 or Rank 2 `WIN`; otherwise `NO (loss)`, `NO (push)`, `NO (void)` or `NO (rank 3+ informational)`.
 
 ## 6. Keep the result separate from the process
@@ -90,13 +88,12 @@ A winning pick can have poor process, and a losing pick can have sound process. 
 - **Result layer:** what happened to each row.
 - **Process layer:** identity, timing state, source quality and independence, lineups and availability, point-in-time integrity, endpoint and contract definition, distribution and probability, the reading and archive lines, and any addendum's late news.
 
-Record the process verdict in R9 and R10 as `Process: SOUND` or `Process: DEFICIENT — <what>`. For a `mini-log-3`, `mini-log-4` or `mini-log-5` card also check, and write in R9:
+Record the process verdict in R9 and R10 as `Process: SOUND` or `Process: DEFICIENT — <what>`. For a `mini-log-3` or `mini-log-4` card also check, and write in R9:
 
 - whether the `Rank-1 gate` was `PASS` or `RANK1_UNSTABLE` (an unstable card is scored in its own cohort, and its Rank-1 loss still gets the deep retrospection);
 - whether `Adjustment dependence` was `ADJUSTMENT_DEPENDENT`, and whether the adjusted or unadjusted top two would have won;
 - whether a `Regime flag` was set, applied by the register's multiplier, or ignored (`REGIME_IGNORED`);
 - whether the `Evidence quotes` show what was knowable at the research time;
-- for a `mini-log-5` card, the expected-vs-final error and z for each term, and whether any |z| above 2 changes the process verdict (the numbers are in the `Expected vs final` line);
 - whether the `Rules read` and `Archive check` lines named the rules, sources and past-result files that mattered, and which rule, source or archive file that would have changed the outcome was missed.
 
 ## 7. Write the settlement section
@@ -106,7 +103,7 @@ Append after the footer, exactly in the form of [CARD_AND_LOG_TEMPLATES.md](../.
 ```markdown
 
 # SETTLEMENT AND RETROSPECTIVES
-<!-- SETTLEMENT-FORMAT: mini-settlement-4 -->
+<!-- SETTLEMENT-FORMAT: mini-settlement-3 -->
 
 | Field | Value |
 |---|---|
@@ -126,7 +123,6 @@ Then write **one settlement block per card and per carryover**, carryovers first
 **Card state:** `SETTLED`
 **Final event:** <verified final, incl. regulation/OT/ET/extras and the statistic each row needs>
 **Settlement sources:** <source — what it verified — evidence code>
-**Expected vs final:** `<unit>` — <Team A> expected <x.x> / final <y> (error <±e>, z <±z>) · <Team B> expected <x.x> / final <y> (error <±e>, z <±z>) · total expected <x.x> / final <y> (error <±e>, z <±z>) · margin expected <±x.x> / final <±y> (error <±e>, z <±z>); or `N/A (no expected score issued)` for a `mini-log-4` or older card
 
 | Rank | Proposition | p_card | Grade | Counts toward wins | Evidence | Basis |
 |---|---|---|---|---|---|---|
@@ -207,7 +203,7 @@ If you can write files only one at a time, write the settlement section as `SETT
 
 ## 10. Settlement self-audit (print the table with evidence)
 
-Run **S1 to S14** from [CARD_AND_LOG_TEMPLATES.md](../../CARD_AND_LOG_TEMPLATES.md) §9 and print `| Check | Result | Evidence |`: every working ID preserved; one block per card and carryover; the frozen file is the exact prefix; propositions and `p_card` copied exactly; grades, counts and the top-two line agree; every Basis cites the field, source and time; R1 describes this card; every Rank-1 loss has all eight parts and a failure class; the card's own contract rules applied; only non-terminal events pending; SLA and carryover cap; process verdicts; reading and archive lines reviewed; the expected vs final line recomputed (S14); nothing written to GitHub or a log.
+Run **S1 to S13** from [CARD_AND_LOG_TEMPLATES.md](../../CARD_AND_LOG_TEMPLATES.md) §9 and print `| Check | Result | Evidence |`: every working ID preserved; one block per card and carryover; the frozen file is the exact prefix; propositions and `p_card` copied exactly; grades, counts and the top-two line agree; every Basis cites the field, source and time; R1 describes this card; every Rank-1 loss has all eight parts and a failure class; the card's own contract rules applied; only non-terminal events pending; SLA and carryover cap; process verdicts; reading and archive lines reviewed; nothing written to GitHub or a log.
 
 ## 11. Report
 
@@ -229,8 +225,7 @@ SLA breaches: <ids or none> · Open carryover: <n>
 Archive agreement checks: <n agree · n disagree · n not in archive>
 Next local working ID: <footer value> · Repository next-ID snapshot: <P-NNN>
 Canonical mappings pending import: <ids>
-Expected vs final (mini-log-5 cards): <n> · mean error by term <…> · mean |z| <…>
-Self-audit S1-S14: all PASS / failures fixed: <list>
+Self-audit S1-S13: all PASS / failures fixed: <list>
 GitHub writes: NO · Combined Log writes: NO · Ledger writes: NO
 ```
 

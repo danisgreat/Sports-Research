@@ -6,7 +6,7 @@ Every prompt starts with the **reading gate**: open the current rules, print a r
 
 | # | Prompt | What it does |
 |---|---|---|
-| 2 | [Start a local mini](research/prompts/2_START_LOCAL_MINI.md) | Creates an empty `mini-log-4` file with the authority snapshot, the reading receipt and carryover |
+| 2 | [Start a local mini](research/prompts/2_START_LOCAL_MINI.md) | Creates an empty `mini-log-5` file with the authority snapshot, the reading receipt and carryover |
 | 1 | [Game card](research/prompts/1_GAME_CARD.md) | One event: research, one hand-built distribution, four priced candidates, self-audit; sport blocks B1 to B9 |
 | 3 | [Settle the local mini](research/prompts/3_SETTLE_LOCAL_MINI.md) | Freezes the mini, settles every terminal row, writes R1 to R12 and the deep Rank-1 retrospections |
 | 4 | [Canonical import](research/prompts/4_CANONICAL_IMPORT.md) | Appends the settled mini to the active Combined Log by hand edit, updates the status register, state and scoreboard |

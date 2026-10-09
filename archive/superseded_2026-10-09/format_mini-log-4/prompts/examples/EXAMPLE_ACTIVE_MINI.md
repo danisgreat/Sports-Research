@@ -1,4 +1,4 @@
-<!-- MINI-LOG-FORMAT: mini-log-5 -->
+<!-- MINI-LOG-FORMAT: mini-log-4 -->
 # Prediction Mini Running Log — P-900 onward
 
 > **FORMAT EXAMPLE ONLY.** Fictional league, teams, numbers and sources. Not a forecast and never imported. Real minis start at the repository's next canonical ID.
@@ -55,7 +55,6 @@ None.
 - **Scheduled start:** `2026-10-10T11:00:00+11:00`
 - **Endpoint:** `Full game including OT/SO; a shootout adds one goal to the winner`
 - **Distribution object:** `hockey_poisson_ot_v1` — independent Poisson regulation goals (λ 3.10 home, 2.70 away) with OT/SO resolution (home 52%, one goal added); one score grid prices every row below.
-- **Expected score:** `goals, full game incl. OT/SO; SDs on the regulation basis — Southport Bears (home) 3.19 (SD 1.76) · Northfield Owls (away) 2.78 (SD 1.64) · total 5.97 (SD 2.41) · margin Southport − Northfield +0.41 (SD 2.41)`
 - **Regime flags:** `NONE`
 - **Retirement rule:** `N/A`
 - **Listed-pitcher rule:** `N/A`
@@ -104,8 +103,6 @@ Confirmed starting goalies for both teams (team announcements 08:40 +11:00); bot
 #### A4. Event distribution
 
 Regulation goals are independent Poisson with λ_home 3.10 and λ_away 2.70 (analyst scenario from season scoring and goalie quality; not a fitted model). A tied regulation (16.8% of mass) goes to OT/SO, and the home side wins it 52% of the time with one goal added.
-
-Expected score working: full-game home mean = λ_home + P(tie) × P(home wins OT/SO) = 3.10 + 0.168 × 0.52 = 3.19; away = 2.70 + 0.168 × 0.48 = 2.78; total 3.19 + 2.78 = 5.97; margin 3.19 − 2.78 = +0.41. Regulation SDs: √3.10 = 1.76 (home), √2.70 = 1.64 (away), and √(3.10 + 2.70) = 2.41 for both the total and the margin, because independent Poisson variances add. The shootout goal moves the means and is left out of the SDs.
 
 #### A5. Priced ladder (excerpt)
 
@@ -157,7 +154,6 @@ Late news before the start: a Northfield third-pair defender is a late scratch (
 - **Scheduled start:** `2026-10-10T19:30:00+11:00`
 - **Endpoint:** `Full game including overtime`
 - **Distribution object:** `basketball_pace_normal_v1` — total ~ Normal(161.0, 18.0), home margin ~ Normal(+4.0, 12.0), overtime folded into the full-game grid; one grid prices every row below.
-- **Expected score:** `points, full game incl. OT; SDs from the normal parameters — Westbay Gulls (home) 82.5 (SD 10.8) · Eastvale Pines 78.5 (SD 10.8) · total 161.0 (SD 18.0) · margin Westbay − Eastvale +4.0 (SD 12.0)`
 - **Regime flags:** `EARLY_SEASON`
 - **Retirement rule:** `N/A`
 - **Listed-pitcher rule:** `N/A`
@@ -203,8 +199,6 @@ Native event `EX-0002`; state `Scheduled` at research completion. Westbay is at 
 
 Possessions × efficiency scenario: total ~ Normal(161.0, 18.0); home margin ~ Normal(+4.0, 12.0), treated as independent of the total. Overtime is folded into the full-game distribution. Uncalibrated analyst scenario.
 
-Expected score working: home mean = (total + margin) ÷ 2 = (161.0 + 4.0) ÷ 2 = 82.5; away mean = (161.0 − 4.0) ÷ 2 = 78.5. Team SD = √((18.0² + 12.0²) ÷ 4) = √117 = 10.8 for each team, because the total and the margin are independent. The margin is +4.0 with SD 12.0. Overtime is inside the full-game grid, so it is already in these means.
-
 #### A5. Priced ladder (excerpt)
 
 | Proposition | p_card |
@@ -249,91 +243,3 @@ Totals use a pace × efficiency centre, not a raw points average. Overtime is re
 | Canonical import | PENDING |
 | GitHub writes performed | NO |
 <!-- END FOOTER -->
-
-# SETTLEMENT AND RETROSPECTIVES
-<!-- SETTLEMENT-FORMAT: mini-settlement-4 -->
-
-| Field | Value |
-|---|---|
-| Settled at | 2026-10-11T10:00:00+11:00 |
-| GitHub HEAD SHA read | `0000000000000000000000000000000000000000` |
-| Frozen original check | `251 lines; cards P-900 to P-901; footer line "Next local working P-ID | P-902"` |
-| Rules read | `CURRENT_RULES §2 §3 §5; SELECTION_RULES §7 §8; SCORING_AND_VALIDATION §2; CARD_AND_LOG_TEMPLATES §6 §9; SOURCES settlement routes (example)` |
-| Settlement directive | Settle every terminal event; missing details are settled on the A/B/C/E/OP/X evidence hierarchy |
-
-<!-- BEGIN SETTLEMENT P-900 -->
-### Settlement · P-900 · Northfield Owls @ Southport Bears
-
-**Card state:** `SETTLED`
-**Final event:** Southport Bears 4–2 Northfield Owls; regulation, 6 goals, no empty-net goal (example).
-**Settlement sources:** league game page final (example) — evidence A.
-**Expected vs final:** `goals` — Southport Bears expected 3.19 / final 4 (error +0.81, z +0.46) · Northfield Owls expected 2.78 / final 2 (error −0.78, z −0.48) · total expected 5.97 / final 6 (error +0.03, z +0.01) · margin expected +0.41 / final +2 (error +1.59, z +0.66)
-
-| Rank | Proposition | p_card | Grade | Counts toward wins | Evidence | Basis |
-|---|---|---|---|---|---|---|
-| 1 | Total goals Under 7.5 — full game incl. OT/SO | 77.1% | WIN | YES | A | 6 goals |
-| 2 | Northfield Owls +1.5 — full game incl. OT/SO | 68.2% | LOSS | NO (loss) | A | Lost by 2 |
-| 3 | Southport Bears moneyline — full game incl. OT/SO | 56.8% | WIN | NO (rank 3+ informational) | A | Southport won |
-| 4 | Total goals Over 5.5 — full game incl. OT/SO | 52.2% | WIN | NO (rank 3+ informational) | A | 6 goals |
-
-**Top-two result:** `TOP2_SPLIT` — 1 counted win(s) of 2 live top-two row(s). Rank 1: WIN; Rank 2: LOSS.
-**Winner call:** Southport Bears: `CORRECT`
-
-**R1. Original prediction.** Rank 1 Total goals Under 7.5 (full game incl. OT/SO) at p_card 77.1%; Rank 2 Northfield Owls +1.5 (full game incl. OT/SO) at 68.2%; uncalibrated analyst scenario; PREGAME.
-**R2. Final event.** Southport 4–2 in regulation.
-**R3. Contract settlement.** WIN, LOSS, WIN, WIN on the full-game endpoint.
-**R4. Rank diagnostics.** Rank 1 WIN; Rank 2 LOSS; Hit@2 1; counted 1/2.
-**R5. Winner call.** Correct.
-**R6. Spread/total/line assessment.** The total of 6 sat 1.5 goals inside the Under 7.5 line; the two-goal margin beat the +1.5 cushion by half a goal.
-**R7. Expected vs realised mechanism.** Goalie-led low event count, as expected.
-**R8. Missed mechanism.** None identified beyond the named two-goal-margin route.
-**R9. Source/timing review.** Goalies were confirmed before cutoff; no live data was used. The Rules read and Archive check lines were present and consistent with the card (the archive was unavailable because the league is fictional).
-**R10. Error/process classification.** `VARIANCE` on Rank 2; process sound.
-**R11. Learning hypothesis.** None new; this monitors the +1.5 cushion ceiling. `PROPOSED_NOT_TESTED`.
-**R12. Disposition.** `NO_CHANGE`.
-
-**Rank 1 won**, so no deep retrospection is triggered.
-<!-- END SETTLEMENT P-900 -->
-
-<!-- BEGIN SETTLEMENT P-901 -->
-### Settlement · P-901 · Westbay Gulls vs Eastvale Pines
-
-**Card state:** `SETTLED`
-**Final event:** Westbay Gulls 74–71 Eastvale Pines; regulation, total 145, home margin +3 (example).
-**Settlement sources:** league box score (example) — evidence A.
-**Expected vs final:** `points` — Westbay Gulls (home) expected 82.5 / final 74 (error −8.5, z −0.79) · Eastvale Pines expected 78.5 / final 71 (error −7.5, z −0.69) · total expected 161.0 / final 145 (error −16.0, z −0.89) · margin expected +4.0 / final +3 (error −1.0, z −0.08)
-
-| Rank | Proposition | p_card | Grade | Counts toward wins | Evidence | Basis |
-|---|---|---|---|---|---|---|
-| 1 | Combined total Over 152.5 — full game incl. OT | 68.2% | LOSS | NO (loss) | A | Total 145 |
-| 2 | Combined total Under 168.5 — full game incl. OT | 66.2% | WIN | YES | A | Total 145 |
-| 3 | Westbay Gulls moneyline — full game incl. OT | 63.1% | WIN | NO (rank 3+ informational) | A | Westbay won |
-| 4 | Eastvale Pines +6.5 — full game incl. OT | 58.3% | WIN | NO (rank 3+ informational) | A | Lost by 3 |
-
-**Top-two result:** `TOP2_SPLIT` — 1 counted win(s) of 2 live top-two row(s). Rank 1: LOSS; Rank 2: WIN.
-**Winner call:** Westbay Gulls: `CORRECT`
-
-**R1. Original prediction.** Rank 1 Combined total Over 152.5 (full game incl. OT) at p_card 68.2%; Rank 2 Combined total Under 168.5 (full game incl. OT) at 66.2%; uncalibrated analyst scenario; PREGAME.
-**R2. Final event.** Westbay 74–71; total 145.
-**R3. Contract settlement.** LOSS, WIN, WIN, WIN.
-**R4. Rank diagnostics.** Rank 1 LOSS; Rank 2 WIN; Hit@2 1; counted 1/2.
-**R5. Winner call.** Correct.
-**R6. Spread/total/line assessment.** A total of 145 is 0.89 SD below the 161 centre, 7.5 points under the Over line.
-**R7. Expected vs realised mechanism.** The defensive half of the thesis held; the pace half did not.
-**R8. Missed mechanism.** Both teams shot poorly from three (example).
-**R9. Source/timing review.** Pace inputs were season averages available before cutoff. The Rules read and Archive check lines were present and consistent with the card (the archive was unavailable because the league is fictional).
-**R10. Error/process classification.** `VARIANCE`, with a `MODEL` question on the total's centre.
-**R11. Learning hypothesis.** Early-season pace priors overstate totals for low-scoring leagues; test by shrinking pace toward the prior-season league mean over 5 games. `PROPOSED_NOT_TESTED`.
-**R12. Disposition.** `MONITOR`.
-
-**Deep Rank-1 retrospection (mandatory: Rank 1 failed).**
-
-**Claim.** Over 152.5 at 68.2% on a 161-point centre, with SD 18. The gap to Rank 2 was 2.0 points.
-**What happened.** Total 145, 7.5 points under the line.
-**Distribution check.** z = (145 − 161) / 18 = −0.89. P(total ≤ 145) ≈ 19% under the card's own distribution: an ordinary miss, not a tail event.
-**Knowability.** The centre came from season pace averages; no early-season shrinkage was applied (knowable at cutoff).
-**Verdict.** VARIANCE, with a possible centre bias of a few points.
-**Own-top-two counterfactual.** The same distribution gives the same top two. The bracketing pair guaranteed at least one counted win.
-**Failure class.** `VARIANCE`
-**Proposed correction.** Apply a 5-game early-season pace shrinkage and re-test the centre on the archive. `PROPOSED_NOT_TESTED`.
-<!-- END SETTLEMENT P-901 -->

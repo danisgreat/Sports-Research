@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026-10-09 — Expected score per sport (`mini-log-5`, `mini-settlement-4`)
+
+**Why.** The user instructed, on 2026-10-09, that the individual game log must also give the expected runs, points, goals and other scoring terms for each sport.
+
+**Changed (prompt 8, format class).**
+- [CARD_AND_LOG_TEMPLATES.md](CARD_AND_LOG_TEMPLATES.md): the `Expected score` card bullet after `Distribution object`; §3a, the terms for each sport and the rules for the bullet; the `Expected vs final` settlement line; self-audits C1 to C21 and S1 to S14.
+- Prompts [1](research/prompts/1_GAME_CARD.md) (the expected-score line in each sport block), [2](research/prompts/2_START_LOCAL_MINI.md), [3](research/prompts/3_SETTLE_LOCAL_MINI.md), [4](research/prompts/4_CANONICAL_IMPORT.md), [6](research/prompts/6_COMBINED_LOG_RETROSPECTIVE.md) (question 13: expected-score error by sport) and [research/prompts/README.md](research/prompts/README.md).
+- Golden examples: `EXAMPLE_ACTIVE_MINI.md` (`mini-log-5`) and `EXAMPLE_SETTLED_MINI.md` (`mini-settlement-4`), which remains an exact prefix of the active example.
+- Pointers: [CURRENT_STATE.md](CURRENT_STATE.md) (formats), [CURRENT_RULES.md](CURRENT_RULES.md) §8, [PROMPTS.md](PROMPTS.md) and [VERIFICATION_PROTOCOL.md](VERIFICATION_PROTOCOL.md).
+- The replaced `mini-log-4` text is in [archive/superseded_2026-10-09/format_mini-log-4/](archive/superseded_2026-10-09/format_mini-log-4/).
+
+**Unchanged.** Rules T2, R1 and P4, the Rank-1 gate, the distribution method, the scoring version, the control revision and every earlier card. Minis in `mini-log-4`, `mini-log-3` and `mini-log-2` stay valid and their cards write `N/A` where the field did not exist.
+
+**Status.** Working-tree edits, not committed when this entry was written.
+
 ## 2026-10-09 — Markdown-only framework (MDS-2026.10.09-v9.0 / CR-2026.10.09-R5)
 
 **Why.** The user instructed, on 2026-10-09: remove all Python and JSON files; remove every file that is not CSV, Markdown or text; consolidate all rules and framework information into the Markdown documents; rewrite the prompts fully for a Markdown-only framework; push to `main`; and make sure the rules, the source information and the previous sports results are carefully referred to in future work.

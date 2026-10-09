@@ -48,7 +48,7 @@ Answer each question with numbers and intervals. Mark a conclusion as establishe
 2. **Does each slot carry information?** Rank 1 should beat Rank 2, and Rank 2 should beat ranks 3+. If not, ranking is not separating propositions. Say so plainly.
 3. **Calibration.** Within each `p_card` bin, does the stated probability match the win rate? An over-confident pattern (high bins under-performing) is the single most important finding to report.
 4. **Joint failure.** Did `TOP2_ALL_LOST` happen more often than the cards' stated `P(Rank 1 and Rank 2 both lose)`?
-5. **Stability gates.** How did `RANK1_UNSTABLE` cards perform against `PASS` cards? The gate for `mini-log-3` and later cards is `p_card` at least 62% with a lead of at least 4 points; cards before it used the legacy 60% cut. State whether the data so far supports keeping, tightening or relaxing the numbers, and whether the 8-week window of experiment SEL-1 is complete. Until it is, the gate stays provisional and you do not change it.
+5. **Stability gates.** How did `RANK1_UNSTABLE` cards perform against `PASS` cards? The gate for `mini-log-3` and `mini-log-4` cards is `p_card` at least 62% with a lead of at least 4 points; cards before it used the legacy 60% cut. State whether the data so far supports keeping, tightening or relaxing the numbers, and whether the 8-week window of experiment SEL-1 is complete. Until it is, the gate stays provisional and you do not change it.
 6. **By sport and family.** Which sport × family cells are reliably below 50% at Rank 1 with enough n? Which are strong?
 7. **Failure classes.** Counts, and their change from the baseline. Is any class still recurring after its proposed correction?
 8. **Evidence quality.** The share of rows settled on C, E, OP or X. Does the result change if C and E rows are excluded?
@@ -56,7 +56,6 @@ Answer each question with numbers and intervals. Mark a conclusion as establishe
 10. **New-format checks (cards from the first `mini-log-3` or `mini-log-4` mini).** Share of cards with `ADJUSTMENT_DEPENDENT` and their results; share with a regime flag and whether the multiplier was applied; share with `Evidence quotes: NONE`; evidence mix by provider; SLA breaches; whether any `TENNIS_IID_UNDERDISPERSION`, `FIRST_HALF_GOAL_OVERSELECTION` or `RUNLINE_CUSHION_CEILING` loss recurred after the family rules took effect.
 11. **Rules, sources and past results used.** For each card in the new cohort, did `Rules read` name the sport file, the SELECTION_RULES sections and the SOURCES route? Did `Archive check` show files and rows, or `ARCHIVE_UNAVAILABLE`? Compare results between cards with a real archive check and cards without one. For each sport compare the cohort's realised rates (home-win share, overtime share, one-run share, total SD) with the LEAGUE_PROFILES row and the archive; report gaps and any profile more than one season old.
 12. **Fitted models.** None exist. State that, and list the XCARD experiments in HYPOTHESIS_REGISTER with their current row counts against the rows required.
-13. **Expected-score accuracy (`mini-log-5` cards).** For each sport and each term in its row of CARD_AND_LOG_TEMPLATES §3a, using each card's `Expected vs final` line: n, mean error (final − expected), mean |z|, and the share of |z| above 2. A bias in the total or in a team's score is established only when its interval excludes zero; otherwise `INSUFFICIENT_EVIDENCE`, with the n needed. Compare each sport's realised level with its LEAGUE_PROFILES row and the archive, and say which expected levels were too high or too low.
 
 Complementary rows on one card are dependent outcomes. Never treat four rows of one card as four independent trials. Use cards or slot-level rates as the unit of analysis.
 
@@ -101,7 +100,6 @@ Rank 1 / Rank 2 / Ranks 3+ (new): <rates with CIs>
 Calibration (new): Brier <x>, skill <x>
 Mean stated joint failure vs realised all-lost share: <x%> vs <y%>
 Top failure classes (new): <class × n>
-Expected-score error (mini-log-5, new): <sport · term · n · mean error · mean |z|>
 Archive check coverage (new): <n with files / n total> · profile gaps: <list>
 Recommendations: <n new> · register items implemented <n> / met <n> / suspended <n>
 Report: research/verification/retrospective_<date>/RETROSPECTIVE_REPORT.md

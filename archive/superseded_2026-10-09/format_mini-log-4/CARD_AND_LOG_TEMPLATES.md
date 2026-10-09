@@ -1,24 +1,10 @@
 # Card and log templates
 
-**Formats: `mini-log-5` (new minis), `mini-settlement-4`, canonical entry format `canonical-md-1`.** Authority: [CURRENT_RULES.md](CURRENT_RULES.md), MDS-2026.10.09-v9.0 / CR-2026.10.09-R5. The pre-rewrite template page, including the certified-issuer protocol, is kept in [archive/superseded_2026-10-09/CARD_AND_LOG_TEMPLATES.md](archive/superseded_2026-10-09/CARD_AND_LOG_TEMPLATES.md).
+**Formats: `mini-log-4` (new minis), `mini-settlement-3`, canonical entry format `canonical-md-1`.** Authority: [CURRENT_RULES.md](CURRENT_RULES.md), MDS-2026.10.09-v9.0 / CR-2026.10.09-R5. The pre-rewrite template page, including the certified-issuer protocol, is kept in [archive/superseded_2026-10-09/CARD_AND_LOG_TEMPLATES.md](archive/superseded_2026-10-09/CARD_AND_LOG_TEMPLATES.md).
 
 There is no validator program. The agent that writes a card, a settlement or an import **audits it by hand** with the checklists in sections 7 and 9 and prints each check with its evidence. A check that is listed but not shown is treated as not done.
 
-## 1. What changed in `mini-log-5` and `mini-settlement-4`
-
-`mini-log-5` adds the **expected score** to each card: the mean of each scoring term in the card's own sport (runs, points, goals or games), taken from the same distribution that prices the picks. `mini-settlement-4` adds the **expected vs final** line that compares it with the result. Nothing else in the card or the settlement changes. Minis started in `mini-log-4`, `mini-log-3` or `mini-log-2` stay valid and are finished in their own format; their cards write `N/A` where the field did not exist.
-
-| Item | `mini-log-4` and `mini-settlement-3` | `mini-log-5` and `mini-settlement-4` |
-|---|---|---|
-| First line tag | `<!-- MINI-LOG-FORMAT: mini-log-4 -->` | `<!-- MINI-LOG-FORMAT: mini-log-5 -->` |
-| Card bullet | none | **`Expected score`**, directly after `Distribution object`, in the unit of the sport's row in §3a |
-| Appendix A4 | the distribution and its parameters | also the expected-score working: each mean and SD from the parameters, with the formula |
-| Settlement tag | `<!-- SETTLEMENT-FORMAT: mini-settlement-3 -->` | `<!-- SETTLEMENT-FORMAT: mini-settlement-4 -->` |
-| Settlement block | no comparison | **`Expected vs final`**, after `Settlement sources`: error and z for each term |
-| Card self-audit | C1 to C20 | C1 to C21 (C21 checks the expected score) |
-| Settlement self-audit | S1 to S13 | S1 to S14 (S14 checks the expected vs final line) |
-
-## 1A. What changed from `mini-log-3` to `mini-log-4`
+## 1. What changed from `mini-log-3`
 
 `mini-log-4` is `mini-log-3` with the code and hash dependencies removed and the reading and archive discipline added. Minis already started in `mini-log-3` or `mini-log-2` stay valid and are finished in their own format; their legacy examples are in `archive/superseded_2026-10-09/prompts/examples/` and `research/prompts/examples/legacy_mini_log_2/`.
 
@@ -39,7 +25,7 @@ There is no validator program. The agent that writes a card, a settlement or an 
 
 **Layout, in order:**
 
-1. First line `<!-- MINI-LOG-FORMAT: mini-log-5 -->`.
+1. First line `<!-- MINI-LOG-FORMAT: mini-log-4 -->`.
 2. `# Prediction Mini Running Log — <FIRST> onward`.
 3. `## A. Authority snapshot`: a two-column table with every field below filled with a real value (no `<…>` left):
 
@@ -127,7 +113,6 @@ Insert the card **immediately before `# RUNNING FOOTER`**. Fill every `<…>`; `
 - **Scheduled start:** `<ISO 8601 with offset>`
 - **Endpoint:** `<exact endpoint, incl. OT/SO/extras/retirement convention>`
 - **Distribution object:** `<family>_<method>_v<n> — <parameters, one line>`
-- **Expected score:** `<unit>, <endpoint>; SDs on <basis> — <Team A> <x.x> (SD <x.x>) · <Team B> <x.x> (SD <x.x>) · total <x.x> (SD <x.x>) · margin <Team A − Team B> <±x.x> (SD <x.x>)` (terms by sport in §3a; `N/A` for a term the sport lacks)
 - **Regime flags:** `NONE` or a comma-separated list
 - **Retirement rule:** `N/A | FRAMEWORK_DEFAULT: … | OPERATOR: <name>: …`
 - **Listed-pitcher rule:** `N/A | FRAMEWORK_DEFAULT: … | OPERATOR: <name>: …`
@@ -177,36 +162,12 @@ Insert the card **immediately before `# RUNNING FOOTER`**. Fill every `<…>`; `
 - **Decision block:** the page you would act on, about 650 words at most. The distribution line, the pick table and the six bold lines only.
 - **A1:** native event, fixture state, source update time, the statement that no in-game information was used.
 - **A3 Evidence summary:** every decisive claim with its source and the time you read it. The numbers taken from the archive and the profile row ([LEAGUE_PROFILES.md](LEAGUE_PROFILES.md)) appear here.
-- **A4 Event distribution:** the family, every parameter, the arithmetic from the inputs to the grid (formula, table section used), the endpoint resolution, the sensitivity case and how the top two moved. For `mini-log-5`, also the expected-score working (§3a): each mean and SD from the parameters, with the formula and any OT, shootout or extra-time share.
+- **A4 Event distribution:** the family, every parameter, the arithmetic from the inputs to the grid (formula, table section used), the endpoint resolution, the sensitivity case and how the top two moved.
 - **A5 Priced ladder:** at least the four candidates and the lines either side of each; the complement of each priced line.
 - **A7 Family checks:** the result of every applicable check in [SELECTION_RULES.md](SELECTION_RULES.md) §4 and of the sport block.
 - **A8 Sources:** each source with what it supported and the time read; `(fallback: <source>)` where a fallback route was used.
 
 **Pick table rules.** The header exactly as shown; exactly **four** data rows; roles `PICK, PICK, INFORMATIONAL, INFORMATIONAL`; a tag starting `SUPPLIED` or `ANALYST_DERIVED`; every `p_card` a percentage in (0%, 90%]; non-increasing down the table; `Probability status` reads `FROM_DISTRIBUTION:` followed by the id in `Distribution object`; no `q` column; no `TO_FILL` placeholder anywhere. The bold lines are spelled exactly as shown. The gate label must agree with the numbers on its line.
-
-### 3a. Expected score by sport (`mini-log-5`)
-
-The expected score is the mean of each scoring term under the card's own distribution and endpoint, the same grid that prices the picks. It is computed from the distribution's parameters before the result is known. It is never read from a line, a price, a preview or a number from outside the card. A term the sport does not have is written `N/A`.
-
-| Sport | Unit | Terms in the `Expected score` bullet |
-|---|---|---|
-| Baseball | runs | each team's runs over the endpoint (nine innings, with the league's extra-innings rule); total runs; margin; SDs |
-| Cricket | runs | each side's innings total (the chasing side capped at the target); match total runs if a total is priced; wickets if a wicket row is priced; margin `N/A` (decided by runs or wickets) |
-| Basketball | points | each team; total; margin; SDs |
-| Ice hockey | goals | each team over the full game including OT/SO, with the OT/SO share stated; total; margin; SDs |
-| Tennis | games | each player's games; total games; margin in games; expected sets; P(deciding set) |
-| Soccer | goals | each team over 90 minutes plus stoppage; total; margin; first-half goals per team when a first-half row is priced; corners (count) only when a corners row is priced, with its provider |
-| Rugby league | points | each team; total; margin; SDs |
-| Rugby union | points | each team; total; margin; SDs |
-| AFL / AFLW | points | each team's goals and behinds, with points = 6 × goals + behinds; total; margin; SDs |
-| American football | points | each team; total; margin; SDs |
-
-Rules for the bullet:
-
-- The endpoint and the SD basis are written in the bullet. If the endpoint adds an OT, shootout or extra-time share, state that share in A4.
-- Show in A4 how each team SD and each margin SD is obtained from the parameters (for example, a variance adds for independent counts, and a normal total and margin with SDs T and M give each team an SD of √((T² + M²) ÷ 4) when they are independent).
-- The total mean is the centre the total rows were priced from. Check C21 confirms it.
-- Settlement compares the final with these numbers and never changes them (`Expected vs final`, §6).
 
 ## 4. Adjustments, regimes and family rules
 
@@ -227,14 +188,14 @@ Place it after the card it amends and before `# RUNNING FOOTER`; leave the foote
 
 **Re-forecast trigger.** A confirmed starter, goalie or quarterback change, or a lineup change large enough to move the ranks, that becomes public after the research time and before the start makes the ranks stale. Write an addendum with the trigger, its source and time, and a re-priced table headed `| Rank | Proposition | p_reforecast |` (deliberately not the pick-table header, so it cannot be read as a second pick table). A change qualifies when it alters a distribution input by more than 0.25 SD or reorders the top two; say which. The original card is still what is graded.
 
-## 6. The settled mini (`mini-settlement-4`)
+## 6. The settled mini (`mini-settlement-3`)
 
 The settled mini is the frozen mini's exact bytes **followed by** the appended settlement section. Nothing above the footer, including the footer, is edited.
 
 ```markdown
 
 # SETTLEMENT AND RETROSPECTIVES
-<!-- SETTLEMENT-FORMAT: mini-settlement-4 -->
+<!-- SETTLEMENT-FORMAT: mini-settlement-3 -->
 
 | Field | Value |
 |---|---|
@@ -254,7 +215,6 @@ One settlement block per carryover (first) and per card (in ID order):
 **Card state:** `SETTLED`
 **Final event:** <verified final, incl. regulation/OT/ET/extras and the statistic each row needs>
 **Settlement sources:** <source — what it verified — evidence code>
-**Expected vs final:** `<unit>` — <Team A> expected <x.x> / final <y> (error <±e>, z <±z>) · <Team B> expected <x.x> / final <y> (error <±e>, z <±z>) · total expected <x.x> / final <y> (error <±e>, z <±z>) · margin expected <±x.x> / final <±y> (error <±e>, z <±z>)
 
 | Rank | Proposition | p_card | Grade | Counts toward wins | Evidence | Basis |
 |---|---|---|---|---|---|---|
@@ -282,8 +242,6 @@ One settlement block per carryover (first) and per card (in ID order):
 <If Rank 1 won:> **Rank 1 won**, so no deep retrospection is triggered.
 <!-- END SETTLEMENT P-NNN -->
 ```
-
-**Expected vs final (`mini-log-5`).** Copy the unit and the terms from the card's `Expected score` bullet, in the same order, and write the final from the verified result. Error = final − expected; z = error ÷ the SD printed for that term on the card. The line shows the arithmetic; R7 names the mechanism. Never recompute or reissue an expected score after the result. A `mini-log-4` or older card writes `N/A (no expected score issued)`.
 
 A non-terminal event: the block holds only `**Card state:** \`PENDING_EVENT\`` and the reason and new date.
 
@@ -315,7 +273,7 @@ Mini Settlement - <FIRST> to <LAST> - <YYYY-MM-DD>/
 └── SETTLEMENT_MANIFEST.md                           (table of the fields below)
 ```
 
-`SETTLEMENT_MANIFEST.md` is a two-column table: format `mini-settlement-4`; mini status `CLOSED_LOCALLY`; GitHub HEAD read; settled at; original path and line count; settled path and line count; frozen check; first and last ID; card IDs; carryover IDs; addendum IDs; settled IDs; `PENDING_EVENT` IDs; repository next-ID snapshot; next local working ID; canonical import `PENDING`; writes `GitHub: no, Combined Log: no`.
+`SETTLEMENT_MANIFEST.md` is a two-column table: format `mini-settlement-3`; mini status `CLOSED_LOCALLY`; GitHub HEAD read; settled at; original path and line count; settled path and line count; frozen check; first and last ID; card IDs; carryover IDs; addendum IDs; settled IDs; `PENDING_EVENT` IDs; repository next-ID snapshot; next local working ID; canonical import `PENDING`; writes `GitHub: no, Combined Log: no`.
 
 ## 7. Card self-audit (print this with evidence before returning a card)
 
@@ -343,7 +301,6 @@ Print a table `| Check | Result | Evidence |`. Evidence is the number, the quote
 | C18 | The card appears once; the ID and the event key are unique in the mini (search the mini); the duplicate check against the status register and the active Combined Log header found nothing. |
 | C19 | The footer was updated: highest used = this ID, next = this ID + 1, new event cards + 1. Every earlier byte of the mini is unchanged. |
 | C20 | Each source in A8 states what it supported and when it was read. |
-| C21 | The `Expected score` bullet sits directly after `Distribution object`, uses the unit and terms of the sport's row in §3a, and states the endpoint and the SD basis. Each mean and SD recomputes from the distribution parameters, with the arithmetic in A4. The total mean equals the centre the total rows were priced from. |
 
 ## 8. Canonical entry format `canonical-md-1` (written by the import step)
 
@@ -359,7 +316,7 @@ Imported from the local mini `<mini file name>` on <date>; local working ID kept
 <!-- END CANONICAL RESEARCH P-NNN -->
 ```
 
-Dated additions use `<!-- BEGIN RESEARCH ADDENDUM P-NNN <YYYYMMDD>-<k> -->` … `<!-- END RESEARCH ADDENDUM P-NNN <YYYYMMDD>-<k> -->`, where `<k>` counts that ID's additions that day. An imported addendum holds the addendum block verbatim; an imported settlement holds the settlement block verbatim under the heading `**Final settlement (<date>).**`. A `mini-log-5` card's `Expected score` bullet is copied with the rest of the card's metadata. Earlier entries in the logs carry a 32-character token after the ID; the Markdown-only format omits it. The status register row for each new ID is `| **P-NNN** | <Event> | <Tracking alias> | <status> |`, and the register's `Next canonical ID` line moves to the highest imported ID + 1.
+Dated additions use `<!-- BEGIN RESEARCH ADDENDUM P-NNN <YYYYMMDD>-<k> -->` … `<!-- END RESEARCH ADDENDUM P-NNN <YYYYMMDD>-<k> -->`, where `<k>` counts that ID's additions that day. An imported addendum holds the addendum block verbatim; an imported settlement holds the settlement block verbatim under the heading `**Final settlement (<date>).**`. Earlier entries in the logs carry a 32-character token after the ID; the Markdown-only format omits it. The status register row for each new ID is `| **P-NNN** | <Event> | <Tracking alias> | <status> |`, and the register's `Next canonical ID` line moves to the highest imported ID + 1.
 
 **Rollover.** The closing block appended to Part N is `<!-- BEGIN ROLLOVER CLOSURE PART N -->` … `<!-- END ROLLOVER CLOSURE PART N -->` and records the time, the main HEAD, the range of cards in the part, the highest committed ID and the unchanged next ID, and the line count of the part before the block. The new part's header states the status, opening time, method, control revision, previous part, highest and next ID with the note "creating this file consumes no ID", reserved IDs, carryover pointer, SPORTS_ONLY / MARKET_BLIND, the certification disclaimer, a continuity table of every earlier part and the logging rules, followed by `<!-- END ACTIVE COMBINED LOG HEADER -->`.
 
@@ -380,7 +337,6 @@ Dated additions use `<!-- BEGIN RESEARCH ADDENDUM P-NNN <YYYYMMDD>-<k> -->` … 
 | S11 | The process verdict (`SOUND` / `DEFICIENT`) is in R9 and R10, and the gate label, adjustment dependence, regime flag, and evidence quotes were reviewed. |
 | S12 | `Rules read` and the archive agreement or disagreement are in the header and in R9. |
 | S13 | Nothing was written to GitHub or a Combined Log; no ID was allocated. |
-| S14 | Each `mini-log-5` settled card has its `Expected vs final` line, with the unit and terms of the card's `Expected score` bullet. Each error (final − expected) and z (error ÷ the card's SD) is recomputed by hand, and no expected value changed after the result. `N/A` only for a `mini-log-4` or older card. |
 
 ## 10. Experiments and canonical cards
 

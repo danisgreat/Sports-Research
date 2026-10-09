@@ -43,9 +43,9 @@ If the frozen or settled file is missing, stop. **Never rebuild forecast bytes f
 
 Print each result with its evidence.
 
-1. **Prefix.** `wc -c` the frozen file (N bytes), then `head -c N <settled> | cmp - <frozen>` prints nothing. The settled file continues with `# SETTLEMENT AND RETROSPECTIVES` and the tag `<!-- SETTLEMENT-FORMAT: mini-settlement-4 -->` (or `-3` or `-2`).
+1. **Prefix.** `wc -c` the frozen file (N bytes), then `head -c N <settled> | cmp - <frozen>` prints nothing. The settled file continues with `# SETTLEMENT AND RETROSPECTIVES` and the tag `<!-- SETTLEMENT-FORMAT: mini-settlement-3 -->` (or `-2`).
 2. **Frozen check.** The settlement header's `Frozen original check` (line count, first and last card IDs, footer line) matches the frozen file.
-3. **Format.** Run the settlement self-audit S1 to S14 ([CARD_AND_LOG_TEMPLATES.md](../../CARD_AND_LOG_TEMPLATES.md) §9) on the settled file and the card self-audit C1 to C21 on every card. Stop on any failure you cannot attribute to a pre-existing, documented gap.
+3. **Format.** Run the settlement self-audit S1 to S13 ([CARD_AND_LOG_TEMPLATES.md](../../CARD_AND_LOG_TEMPLATES.md) §9) on the settled file and the card self-audit C1 to C20 on every card. Stop on any failure you cannot attribute to a pre-existing, documented gap.
 4. **Classify every card** by searching the Combined Logs and the status register (`grep -n "P-NNN"` and the event key):
 
 | Classification | Meaning | Action |
@@ -87,7 +87,7 @@ Run [VERIFICATION_PROTOCOL.md](../../VERIFICATION_PROTOCOL.md) §3 and print eac
 1. **Append-only:** `git diff --numstat <log>` shows deleted lines = **0**; `wc -l` after equals `wc -l` before plus the lines you appended; the "before" tail lines are unchanged.
 2. **IDs:** `grep -c "BEGIN CANONICAL RESEARCH P-NNN" <log>` is 1 for every new ID; no ID skipped, reused or renumbered; the new next ID equals the highest imported ID + 1; it equals the status register line and CURRENT_STATE.
 3. **Duplicates:** no event key under two IDs.
-4. **Verbatim:** compare the pick table of at least three cards in the log with the mini, cell by cell. For a `mini-log-5` card, also compare its `Expected score` bullet.
+4. **Verbatim:** compare the pick table of at least three cards in the log with the mini, cell by cell.
 5. **Rule T2 numbers** in the import report equal the settlement section's own tallies.
 6. **Scope:** `git status` and `git diff --stat` list only the allowed paths.
 7. Nothing else changed: no earlier Combined Log, no rule file, no issued card text under `research/issued_research/`.

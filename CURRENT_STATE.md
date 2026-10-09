@@ -10,8 +10,8 @@
 | Method | MDS-2026.10.09-v9.0 (Markdown only) |
 | Control revision | CR-2026.10.09-R5 |
 | Scoring version | SCV-2026.10.09-v5 |
-| Mini-log format | `mini-log-4` (`mini-log-3` and `mini-log-2` minis in progress are still accepted) |
-| Settlement format | `mini-settlement-3` (`mini-settlement-2` still accepted) |
+| Mini-log format | `mini-log-5` (`mini-log-4`, `mini-log-3` and `mini-log-2` minis in progress are still accepted) |
+| Settlement format | `mini-settlement-4` (`mini-settlement-3` and `mini-settlement-2` still accepted) |
 | Freeze | None. Custody is the git history of `main` (CURRENT_RULES §9). Cards record the HEAD SHA they read. The last control manifest, `CONTROL_MANIFEST_2026-10-09-3.md`, is in [archive/controls/](archive/controls/). |
 | Highest committed canonical ID | **P-556** |
 | Next canonical ID | **P-557** (equal to the line in GAME_LOG_STATUS_CURRENT.md) |

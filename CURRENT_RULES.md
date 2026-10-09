@@ -85,7 +85,7 @@ Research every requested event. A missing model, baseline, calibration, fixture 
 
 ## 8. The local-mini lifecycle
 
-New cards move through the prompts in [research/prompts/](research/prompts/README.md). The format is `mini-log-4` ([CARD_AND_LOG_TEMPLATES.md](CARD_AND_LOG_TEMPLATES.md)); `mini-log-3` and `mini-log-2` minis in progress stay valid and are finished in their own format.
+New cards move through the prompts in [research/prompts/](research/prompts/README.md). The format is `mini-log-5` ([CARD_AND_LOG_TEMPLATES.md](CARD_AND_LOG_TEMPLATES.md)), which adds the expected score for each sport; `mini-log-4`, `mini-log-3` and `mini-log-2` minis in progress stay valid and are finished in their own format.
 
 1. **Start a mini (prompt 2).** The first working ID is the larger of the repository's next canonical ID and the previous mini's highest working ID + 1. Only `PENDING_EVENT` cards carry forward. Creating a mini consumes no ID.
 2. **Write cards (prompt 1).** One event, one working ID, issued in order and never changed. The card carries the reading and archive bullets, one distribution, four priced candidates, the joint failure, the gate, the adjustments, the regime flags, the contract-definition fields, the settlement fields with a capture time and the evidence quotes. Corrections and late news are dated `ADDENDUM` blocks under the existing ID.

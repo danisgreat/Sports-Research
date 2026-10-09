@@ -12,8 +12,8 @@ Reading and plain file commands only: `git status`, `git diff`, `git diff --nums
 
 | Level | When | Checklist |
 |---|---|---|
-| Card | Before returning each card | Card self-audit C1-C20 ([CARD_AND_LOG_TEMPLATES.md](CARD_AND_LOG_TEMPLATES.md) §7) |
-| Settlement | Before returning a settlement | Settlement self-audit S1-S13 (same file, §9) |
+| Card | Before returning each card | Card self-audit C1-C21 ([CARD_AND_LOG_TEMPLATES.md](CARD_AND_LOG_TEMPLATES.md) §7) |
+| Settlement | Before returning a settlement | Settlement self-audit S1-S14 (same file, §9) |
 | Import | After appending to a Combined Log | Section 3 below |
 | Rollover | After starting a new part | Section 4 below |
 | Retrospective | Before publishing a report | Section 5 below |

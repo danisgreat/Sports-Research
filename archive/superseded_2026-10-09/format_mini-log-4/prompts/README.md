@@ -5,7 +5,7 @@
 | # | Prompt | Who runs it | GitHub | Writes |
 |---|---|---|---|---|
 | 2 | [Start a new local mini](2_START_LOCAL_MINI.md) | External chat agent | Read only | New local mini (`.md`) |
-| 1 | [Game card](1_GAME_CARD.md), one per event (its common core, Part A, is at the bottom of [2_START_LOCAL_MINI.md](2_START_LOCAL_MINI.md)) | External chat agent | Read only | One card appended to the local mini |
+| 1 | [Game card](1_GAME_CARD.md), one per event | External chat agent | Read only | One card appended to the local mini |
 | 3 | [Settle the local mini](3_SETTLE_LOCAL_MINI.md) | External chat agent | Read only | Local settlement folder |
 | 4 | [Canonical import](4_CANONICAL_IMPORT.md) | Claude Code in the repository | Write | Active Combined Log, status register, state, scoreboard, import report |
 | 5 | [Start the next Combined Log](5_START_THE_NEXT_COMBINED_LOG.md), when the active part is full | Claude Code in the repository | Write | New Combined Log part, closure block, state |
@@ -49,7 +49,7 @@ Rules for using what you read:
 
 ## Shared contract between the prompts
 
-- **Format.** New minis are `mini-log-5` ([CARD_AND_LOG_TEMPLATES.md](../../CARD_AND_LOG_TEMPLATES.md)). Minis already started in `mini-log-4`, `mini-log-3` or `mini-log-2` stay valid and are finished in their own format. The [golden example](examples/EXAMPLE_ACTIVE_MINI.md) and its [settled copy](examples/EXAMPLE_SETTLED_MINI.md) are the structure to copy.
+- **Format.** New minis are `mini-log-4` ([CARD_AND_LOG_TEMPLATES.md](../../CARD_AND_LOG_TEMPLATES.md)). Minis already started in `mini-log-3` or `mini-log-2` stay valid and are finished in their own format. The [golden example](examples/EXAMPLE_ACTIVE_MINI.md) and its [settled copy](examples/EXAMPLE_SETTLED_MINI.md) are the structure to copy.
 - **IDs.** A card's local working ID is the P-ID it keeps forever. The first ID of a mini is the larger of the repository's next canonical ID and the previous mini's highest local ID + 1. The import step keeps every local ID or stops on a collision; it never renumbers.
 - **Rules.** CURRENT_RULES Rules **T2** (only Rank 1 and Rank 2 count as wins), **R1** (a Rank-1 failure needs the eight-part deep retrospection) and **P4** (supplied contracts are reference only; four candidates priced from one distribution, ranked by `p_card`, at most 90%; Rank 1 passes the provisional gate of 62% and a 4-point lead, otherwise the card is `RANK1_UNSTABLE` and scored in its own cohort).
 - **Current state.** [CURRENT_STATE.md](../../CURRENT_STATE.md) states the next canonical ID, the active Combined Log and the method. No other document states them.
@@ -60,6 +60,6 @@ Rules for using what you read:
 
 ## What the self-audits catch, and what they cannot
 
-They catch: a duplicate or out-of-order ID; a reused event key; a missing metadata field, including the expected score; a pick table without four rows, with wrong roles, a missing or degenerate probability, or not ordered by `p_card`; a probability that does not come from the one declared distribution; a leftover `TO_FILL`; an oversized decision block; a gate label that disagrees with its numbers; an adjustment above 0.25 SD without the unadjusted top two; a corners, half, period or player row with no provider; a missing reading or archive line; a heading that would consume a canonical ID; a stale footer; an edited frozen prefix; a settlement whose proposition or `p_card` differs from the card; a wrong `Counts toward wins` value or top-two line; a missing R1 to R12; a missing deep retrospection or failure class.
+They catch: a duplicate or out-of-order ID; a reused event key; a missing metadata field; a pick table without four rows, with wrong roles, a missing or degenerate probability, or not ordered by `p_card`; a probability that does not come from the one declared distribution; a leftover `TO_FILL`; an oversized decision block; a gate label that disagrees with its numbers; an adjustment above 0.25 SD without the unadjusted top two; a corners, half, period or player row with no provider; a missing reading or archive line; a heading that would consume a canonical ID; a stale footer; an edited frozen prefix; a settlement whose proposition or `p_card` differs from the card; a wrong `Counts toward wins` value or top-two line; a missing R1 to R12; a missing deep retrospection or failure class.
 
 They cannot judge whether the research was honest, the distribution sensible or the ranking wise. That is the job of the prompts and of the retrospective.

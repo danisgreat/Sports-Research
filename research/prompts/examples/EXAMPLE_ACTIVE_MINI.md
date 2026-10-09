@@ -1,4 +1,4 @@
-<!-- MINI-LOG-FORMAT: mini-log-4 -->
+<!-- MINI-LOG-FORMAT: mini-log-5 -->
 # Prediction Mini Running Log — P-900 onward
 
 > **FORMAT EXAMPLE ONLY.** Fictional league, teams, numbers and sources. Not a forecast and never imported. Real minis start at the repository's next canonical ID.
@@ -55,6 +55,7 @@ None.
 - **Scheduled start:** `2026-10-10T11:00:00+11:00`
 - **Endpoint:** `Full game including OT/SO; a shootout adds one goal to the winner`
 - **Distribution object:** `hockey_poisson_ot_v1` — independent Poisson regulation goals (λ 3.10 home, 2.70 away) with OT/SO resolution (home 52%, one goal added); one score grid prices every row below.
+- **Expected score:** `goals, full game incl. OT/SO; SDs on the regulation basis — Southport Bears (home) 3.19 (SD 1.76) · Northfield Owls (away) 2.78 (SD 1.64) · total 5.97 (SD 2.41) · margin Southport − Northfield +0.41 (SD 2.41)`
 - **Regime flags:** `NONE`
 - **Retirement rule:** `N/A`
 - **Listed-pitcher rule:** `N/A`
@@ -103,6 +104,8 @@ Confirmed starting goalies for both teams (team announcements 08:40 +11:00); bot
 #### A4. Event distribution
 
 Regulation goals are independent Poisson with λ_home 3.10 and λ_away 2.70 (analyst scenario from season scoring and goalie quality; not a fitted model). A tied regulation (16.8% of mass) goes to OT/SO, and the home side wins it 52% of the time with one goal added.
+
+Expected score working: full-game home mean = λ_home + P(tie) × P(home wins OT/SO) = 3.10 + 0.168 × 0.52 = 3.19; away = 2.70 + 0.168 × 0.48 = 2.78; total 3.19 + 2.78 = 5.97; margin 3.19 − 2.78 = +0.41. Regulation SDs: √3.10 = 1.76 (home), √2.70 = 1.64 (away), and √(3.10 + 2.70) = 2.41 for both the total and the margin, because independent Poisson variances add. The shootout goal moves the means and is left out of the SDs.
 
 #### A5. Priced ladder (excerpt)
 
@@ -154,6 +157,7 @@ Late news before the start: a Northfield third-pair defender is a late scratch (
 - **Scheduled start:** `2026-10-10T19:30:00+11:00`
 - **Endpoint:** `Full game including overtime`
 - **Distribution object:** `basketball_pace_normal_v1` — total ~ Normal(161.0, 18.0), home margin ~ Normal(+4.0, 12.0), overtime folded into the full-game grid; one grid prices every row below.
+- **Expected score:** `points, full game incl. OT; SDs from the normal parameters — Westbay Gulls (home) 82.5 (SD 10.8) · Eastvale Pines 78.5 (SD 10.8) · total 161.0 (SD 18.0) · margin Westbay − Eastvale +4.0 (SD 12.0)`
 - **Regime flags:** `EARLY_SEASON`
 - **Retirement rule:** `N/A`
 - **Listed-pitcher rule:** `N/A`
@@ -198,6 +202,8 @@ Native event `EX-0002`; state `Scheduled` at research completion. Westbay is at 
 #### A4. Event distribution
 
 Possessions × efficiency scenario: total ~ Normal(161.0, 18.0); home margin ~ Normal(+4.0, 12.0), treated as independent of the total. Overtime is folded into the full-game distribution. Uncalibrated analyst scenario.
+
+Expected score working: home mean = (total + margin) ÷ 2 = (161.0 + 4.0) ÷ 2 = 82.5; away mean = (161.0 − 4.0) ÷ 2 = 78.5. Team SD = √((18.0² + 12.0²) ÷ 4) = √117 = 10.8 for each team, because the total and the margin are independent. The margin is +4.0 with SD 12.0. Overtime is inside the full-game grid, so it is already in these means.
 
 #### A5. Priced ladder (excerpt)
 

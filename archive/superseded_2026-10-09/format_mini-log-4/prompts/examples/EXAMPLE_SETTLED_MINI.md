@@ -1,4 +1,4 @@
-<!-- MINI-LOG-FORMAT: mini-log-5 -->
+<!-- MINI-LOG-FORMAT: mini-log-4 -->
 # Prediction Mini Running Log — P-900 onward
 
 > **FORMAT EXAMPLE ONLY.** Fictional league, teams, numbers and sources. Not a forecast and never imported. Real minis start at the repository's next canonical ID.
@@ -55,7 +55,6 @@ None.
 - **Scheduled start:** `2026-10-10T11:00:00+11:00`
 - **Endpoint:** `Full game including OT/SO; a shootout adds one goal to the winner`
 - **Distribution object:** `hockey_poisson_ot_v1` — independent Poisson regulation goals (λ 3.10 home, 2.70 away) with OT/SO resolution (home 52%, one goal added); one score grid prices every row below.
-- **Expected score:** `goals, full game incl. OT/SO; SDs on the regulation basis — Southport Bears (home) 3.19 (SD 1.76) · Northfield Owls (away) 2.78 (SD 1.64) · total 5.97 (SD 2.41) · margin Southport − Northfield +0.41 (SD 2.41)`
 - **Regime flags:** `NONE`
 - **Retirement rule:** `N/A`
 - **Listed-pitcher rule:** `N/A`
@@ -104,8 +103,6 @@ Confirmed starting goalies for both teams (team announcements 08:40 +11:00); bot
 #### A4. Event distribution
 
 Regulation goals are independent Poisson with λ_home 3.10 and λ_away 2.70 (analyst scenario from season scoring and goalie quality; not a fitted model). A tied regulation (16.8% of mass) goes to OT/SO, and the home side wins it 52% of the time with one goal added.
-
-Expected score working: full-game home mean = λ_home + P(tie) × P(home wins OT/SO) = 3.10 + 0.168 × 0.52 = 3.19; away = 2.70 + 0.168 × 0.48 = 2.78; total 3.19 + 2.78 = 5.97; margin 3.19 − 2.78 = +0.41. Regulation SDs: √3.10 = 1.76 (home), √2.70 = 1.64 (away), and √(3.10 + 2.70) = 2.41 for both the total and the margin, because independent Poisson variances add. The shootout goal moves the means and is left out of the SDs.
 
 #### A5. Priced ladder (excerpt)
 
@@ -157,7 +154,6 @@ Late news before the start: a Northfield third-pair defender is a late scratch (
 - **Scheduled start:** `2026-10-10T19:30:00+11:00`
 - **Endpoint:** `Full game including overtime`
 - **Distribution object:** `basketball_pace_normal_v1` — total ~ Normal(161.0, 18.0), home margin ~ Normal(+4.0, 12.0), overtime folded into the full-game grid; one grid prices every row below.
-- **Expected score:** `points, full game incl. OT; SDs from the normal parameters — Westbay Gulls (home) 82.5 (SD 10.8) · Eastvale Pines 78.5 (SD 10.8) · total 161.0 (SD 18.0) · margin Westbay − Eastvale +4.0 (SD 12.0)`
 - **Regime flags:** `EARLY_SEASON`
 - **Retirement rule:** `N/A`
 - **Listed-pitcher rule:** `N/A`
@@ -202,8 +198,6 @@ Native event `EX-0002`; state `Scheduled` at research completion. Westbay is at 
 #### A4. Event distribution
 
 Possessions × efficiency scenario: total ~ Normal(161.0, 18.0); home margin ~ Normal(+4.0, 12.0), treated as independent of the total. Overtime is folded into the full-game distribution. Uncalibrated analyst scenario.
-
-Expected score working: home mean = (total + margin) ÷ 2 = (161.0 + 4.0) ÷ 2 = 82.5; away mean = (161.0 − 4.0) ÷ 2 = 78.5. Team SD = √((18.0² + 12.0²) ÷ 4) = √117 = 10.8 for each team, because the total and the margin are independent. The margin is +4.0 with SD 12.0. Overtime is inside the full-game grid, so it is already in these means.
 
 #### A5. Priced ladder (excerpt)
 
@@ -251,13 +245,13 @@ Totals use a pace × efficiency centre, not a raw points average. Overtime is re
 <!-- END FOOTER -->
 
 # SETTLEMENT AND RETROSPECTIVES
-<!-- SETTLEMENT-FORMAT: mini-settlement-4 -->
+<!-- SETTLEMENT-FORMAT: mini-settlement-3 -->
 
 | Field | Value |
 |---|---|
 | Settled at | 2026-10-11T10:00:00+11:00 |
 | GitHub HEAD SHA read | `0000000000000000000000000000000000000000` |
-| Frozen original check | `251 lines; cards P-900 to P-901; footer line "Next local working P-ID | P-902"` |
+| Frozen original check | `245 lines; cards P-900 to P-901; footer line "Next local working P-ID | P-902"` |
 | Rules read | `CURRENT_RULES §2 §3 §5; SELECTION_RULES §7 §8; SCORING_AND_VALIDATION §2; CARD_AND_LOG_TEMPLATES §6 §9; SOURCES settlement routes (example)` |
 | Settlement directive | Settle every terminal event; missing details are settled on the A/B/C/E/OP/X evidence hierarchy |
 
@@ -267,7 +261,6 @@ Totals use a pace × efficiency centre, not a raw points average. Overtime is re
 **Card state:** `SETTLED`
 **Final event:** Southport Bears 4–2 Northfield Owls; regulation, 6 goals, no empty-net goal (example).
 **Settlement sources:** league game page final (example) — evidence A.
-**Expected vs final:** `goals` — Southport Bears expected 3.19 / final 4 (error +0.81, z +0.46) · Northfield Owls expected 2.78 / final 2 (error −0.78, z −0.48) · total expected 5.97 / final 6 (error +0.03, z +0.01) · margin expected +0.41 / final +2 (error +1.59, z +0.66)
 
 | Rank | Proposition | p_card | Grade | Counts toward wins | Evidence | Basis |
 |---|---|---|---|---|---|---|
@@ -301,7 +294,6 @@ Totals use a pace × efficiency centre, not a raw points average. Overtime is re
 **Card state:** `SETTLED`
 **Final event:** Westbay Gulls 74–71 Eastvale Pines; regulation, total 145, home margin +3 (example).
 **Settlement sources:** league box score (example) — evidence A.
-**Expected vs final:** `points` — Westbay Gulls (home) expected 82.5 / final 74 (error −8.5, z −0.79) · Eastvale Pines expected 78.5 / final 71 (error −7.5, z −0.69) · total expected 161.0 / final 145 (error −16.0, z −0.89) · margin expected +4.0 / final +3 (error −1.0, z −0.08)
 
 | Rank | Proposition | p_card | Grade | Counts toward wins | Evidence | Basis |
 |---|---|---|---|---|---|---|
