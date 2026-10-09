@@ -4,7 +4,7 @@
 
 **Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
 
-Current authority: [CURRENT_RULES.md](CURRENT_RULES.md), MDS-2026.10.01-v8.0. Requested research uses the following template and receives a canonical ID regardless of calibration. Later sections describe the separate frozen certified-issuer protocol; its gates do not block requested research.
+Current authority: [CURRENT_RULES.md](CURRENT_RULES.md), MDS-2026.10.09-v8.2 / CR-2026.10.09-R2. Requested cards normally arrive through the [local-mini lifecycle](#local-mini-format-mini-log-2) and the operator prompts in [research/prompts/](research/prompts/README.md). Requested research uses the following template and receives a canonical ID regardless of calibration. Later sections describe the separate frozen certified-issuer protocol; its gates do not block requested research.
 
 ## Requested research card — default workflow
 
@@ -14,18 +14,43 @@ Run `py -3.14 -m research.operations.log_card commit card.json`, then `verify`. 
 
 ### Top-two pick table (from P-557)
 
-| Rank | Role | Tag | Exact proposition, line, period, endpoint | p_card | Probability status | Evidence | Principal failure route |
-|---:|---|---|---|---:|---|---|---|
+| Rank | Role | Tag | Proposition | p_card | Probability status | Evidence | Failure route |
+|---|---|---|---|---|---|---|---|
 | 1 | PICK | SUPPLIED / ANALYST_DERIVED (replaces …) | … | … | … | … | … |
 | 2 | PICK | … | … | … | … | … | … |
 | 3 | INFORMATIONAL | … | … | … | … | … | … |
 | 4 | INFORMATIONAL | … | … | … | … | … | … |
 
-Below the table print: P(Rank 1 and Rank 2 both lose) from the same distribution; the Rank 1 − Rank 2 gap; and the supplied rows that were not selected, with their p_card from the same distribution.
+The Proposition cell holds the exact proposition, line, period and endpoint. Below the table print: P(Rank 1 and Rank 2 both lose) from the same distribution; the Rank 1 − Rank 2 gap; and the supplied rows that were not selected, with their p_card from the same distribution.
 
 ### Settlement with top-two counting and Rank-1 retrospection (from 2026-10-09)
 
 Grade every row W/L/PUSH/VOID on its sporting endpoint with an evidence grade (A owner, B structured provider, C best-available, E estimated bound, OP default rule, X no data → VOID). Count wins only for ranks 1–2 and print the card class (`TOP2_ALL_WON`/`TOP2_SPLIT`/`TOP2_ALL_LOST`/`VOID`). If Rank 1 lost, append the deep retrospection with all eight parts of Rule R1 (claim, what happened, distribution check, knowability, verdict, own-top-two counterfactual, failure class, proposed correction). The [2026-10-09 final settlement](research/verification/final_settlement_2026-10-09/REPORT.md) is the worked reference.
+
+## Local mini format `mini-log-2`
+
+A local mini is the working file in which an external chat agent (GitHub read-only) writes cards between canonical imports. The lifecycle and the six operator prompts are in [research/prompts/](research/prompts/README.md); the [golden active mini](research/prompts/examples/EXAMPLE_ACTIVE_MINI.md) and its [settled copy](research/prompts/examples/EXAMPLE_SETTLED_MINI.md) are validated by the test suite and are the reference for every detail below. `research.operations.mini_log` validates this format (`verify`, `verify-settled`) and `research.operations.import_mini` imports it.
+
+**File.** `Mini Prediction Log - <FIRST> onward - <date>/PREDICTION_MINI_RUNNING_LOG_<FIRST>_ONWARD.md`. First line `<!-- MINI-LOG-FORMAT: mini-log-2 -->`; then `## A. Authority snapshot` (two-column table including `First working P-ID for this mini`), `## B. Local ID rules`, `## C. Active carryover`, `# NEW LOCAL EVENT CARDS`, and `# RUNNING FOOTER` with its table between `<!-- BEGIN FOOTER -->` and `<!-- END FOOTER -->`.
+
+**IDs.** The first working ID is max(repository next canonical ID, previous mini's highest working ID + 1). One sporting event = one ID, issued in increasing order; IDs never change. Creating a mini, an addendum, a carryover or a settlement consumes no ID. The importer keeps every working ID or stops on a collision; it never renumbers.
+
+**Blocks.** Every unit sits between exact markers, and no heading inside a block may start with a P-ID (`## P-…`), which the allocator would read as a new card.
+
+| Block | Markers | First line | Where |
+|---|---|---|---|
+| Card | `<!-- BEGIN CARD P-NNN -->` … `<!-- END CARD P-NNN -->` | `## Card · P-NNN · SPORT / LEAGUE · Event · YYYY-MM-DD` | After `# NEW LOCAL EVENT CARDS`, before the footer, increasing ID |
+| Carryover | `<!-- BEGIN CARRYOVER P-NNN -->` … | `### Carryover · P-NNN · …` | Section C; ID below every new card |
+| Addendum | `<!-- BEGIN ADDENDUM P-NNN -->` … | `### Addendum · P-NNN · <ISO 8601 with offset>` | After the card it amends, before the footer |
+| Settlement | `<!-- BEGIN SETTLEMENT P-NNN -->` … | `### Settlement · P-NNN · Event` | Only in the appended settlement section |
+
+**Card.** Metadata bullets `- **Working ID:**` (`P-NNN — LOCAL_WORKING_ID — PENDING_CANONICAL_IMPORT`), `Event key` (ending `:YYYY-MM-DD`), `Native event ID`, `Sport`, `League`, `Tracking alias`, `Analysis status`, `Timing state` (`PREGAME`, `LATE_START_UNVERIFIED` or `LIVE_OBSERVED`), `Research completed`, `Scheduled start`, `Endpoint`; sections 1–8 (identity and state; supplied contracts, reference only; evidence; event distribution; candidates and picks; family checks; sources; integrity receipt). The pick table uses the header above with exactly four rows, roles `PICK, PICK, INFORMATIONAL, INFORMATIONAL`, a `SUPPLIED` or `ANALYST_DERIVED` tag, a percentage `p_card` in (0%, 90%] for every row and non-increasing p_card. Below it, the exact lines `**P(Rank 1 and Rank 2 both lose):** x%`, `**Rank 1 − Rank 2 gap:**`, `**Supplied rows not selected:**` and `**Potential winner:** name — p% (endpoint)`. Warnings (not errors): Rank 1 below 60% without `RANK1_UNSTABLE`; joint top-two failure above 35%.
+
+**Addendum.** Corrections and late news under an existing ID (the card's own, or an earlier canonical ID found by the duplicate check). It contains no pick table, leaves the footer unchanged, and is imported as a dated canonical addendum before the settlement. Settlement grades the original card only.
+
+**Settlement.** The settled mini is the frozen mini's exact bytes followed by `# SETTLEMENT AND RETROSPECTIVES`, the tag `<!-- SETTLEMENT-FORMAT: mini-settlement-2 -->`, a header table recording `Frozen original SHA-256` (or `NOT_COMPUTED`), and one settlement block per card and carryover. A block states `**Card state:** SETTLED` or `PENDING_EVENT` (non-terminal events only). A settled block gives `**Final event:**`, `**Settlement sources:**`, the table `| Rank | Proposition | p_card | Grade | Counts toward wins | Evidence | Basis |` with propositions and p_card copied exactly, grades WIN/LOSS/PUSH/VOID, evidence A/B/C/E/OP/X (X must be VOID) and `Counts toward wins` = `YES` only for a Rank 1 or 2 WIN; then `**Top-two result:**`, `**Winner call:**`, R1.–R12., and — when Rank 1 lost — the eight-part deep retrospection with a failure class from the taxonomy in `research/operations/top_two.py`.
+
+**Settlement folder.** `Mini Settlement - <FIRST> to <LAST> - <date>/` holds `ORIGINAL_MINI/<frozen>.md`, `PREDICTION_MINI_SETTLED_<FIRST>_<LAST>.md`, `LOCAL_ID_MAPPING.md`, `UNRESOLVED_CARRYOVER.md` and `SETTLEMENT_MANIFEST.json`; `mini_log join` builds the settled file byte-exactly from a separately written settlement section.
 
 ## Complete universe
 

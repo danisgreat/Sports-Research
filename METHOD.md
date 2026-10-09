@@ -1,5 +1,7 @@
 # METHOD - current authority
 
+**October 9 local-mini lifecycle (CR-2026.10.09-R2):** New cards are written by an external chat agent into a local mini (format `mini-log-2`), settled locally, then imported with `research.operations.import_mini`, which keeps every working ID or stops on a collision. Six operator prompts, golden examples and validators are in [research/prompts/](research/prompts/README.md); rollover (`rollover`) and cohort review (`cohort_review`) are automated. No ID was consumed; the next ID stays P-557.
+
 **October 9 final settlement, rules and retrospective:** All 72 pending records (the 65-record carryover plus P-550–P-556) are settled in Part 7. Missing details were settled on a declared evidence hierarchy, no ID was consumed, and the next ID stays P-557. New rules: only Rank 1 and Rank 2 count as wins (T2); every Rank-1 failure gets a deep retrospection (R1, 28 written); supplied contracts are reference only and the analyst derives its own top two out of four from the event distribution (P4). See [the settlement report](research/verification/final_settlement_2026-10-09/REPORT.md) and the [framework retrospective and improvement plan](FRAMEWORK_RETROSPECTIVE_2026-10-09.md), whose recommendations are not yet implemented.
 
 **October 8 carryover review:** 65 existing records receive 780 supplied retrospective sections in active Part 7, with no new grades, cards or ledger writes. P-518-P-522 remain reserved. The excluded local P-550 card is preserved only in source custody; canonical next remains P-550, while its local working successor is P-551. [Review, source limits and corrections](research/verification/carryover_review_2026-10-08/REPORT.md).
@@ -12,7 +14,7 @@ October 5 administrative control repairs missing custody snapshots and restores 
 
 The subsequent [October 5 implementation](research/verification/implementation_2026-10-05/REPORT.md) aligns all current document authorities, removes the redundant closed mini pointer after archive readback, retains all eleven retrospective hypotheses as untested proposals, and reports every source-body custody failure.
 
-Status: **ACTIVE**. Method **MDS-2026.10.09-v8.1**. Control revision **CR-2026.10.09-R1**. Scoring **SCV-2026.10.09-v4**. Active freeze: [CONTROL_MANIFEST_2026-10-09-1.md](CONTROL_MANIFEST_2026-10-09-1.md). Previous freeze: CONTROL_MANIFEST_2026-10-08-3.md (CR-2026.10.08-R3). Its SHA is recorded in the living [status register](GAME_LOG_STATUS_CURRENT.md), outside its own hash scope.
+Status: **ACTIVE**. Method **MDS-2026.10.09-v8.2**. Control revision **CR-2026.10.09-R2**. Scoring **SCV-2026.10.09-v4**. Active freeze: [CONTROL_MANIFEST_2026-10-09-2.md](CONTROL_MANIFEST_2026-10-09-2.md). Previous freeze: CONTROL_MANIFEST_2026-10-09-1.md (CR-2026.10.09-R1). Its SHA is recorded in the living [status register](GAME_LOG_STATUS_CURRENT.md), outside its own hash scope.
 
 The user's instruction authorizes the implementation of the numerical machine learning system: [NUMERICAL_MODEL_REGISTER.md](NUMERICAL_MODEL_REGISTER.md), [H0_DATASET_CARD.md](H0_DATASET_CARD.md), [DATA_SOURCE_REGISTER.md](DATA_SOURCE_REGISTER.md), [RULES_NHL.md](RULES_NHL.md), and the executable `runtime/` engine. [CURRENT_RULES.md](CURRENT_RULES.md) is the controlling operational manual. [research/README.md](research/README.md) and [runtime/README.md](runtime/README.md) describe executable workflows.
 
@@ -28,6 +30,7 @@ October 6 numerical implementation establishes:
 | Purpose | Current file |
 |---|---|
 | Operating controls | [CURRENT_RULES.md](CURRENT_RULES.md) |
+| Operator prompts and local-mini lifecycle | [research/prompts/README.md](research/prompts/README.md) |
 | Workflow and commands | [research/README.md](research/README.md), [runtime/README.md](runtime/README.md) |
 | Numerical ML Model Portfolio | [NUMERICAL_MODEL_REGISTER.md](NUMERICAL_MODEL_REGISTER.md) |
 | Independent Training Datasets | [H0_DATASET_CARD.md](H0_DATASET_CARD.md) |

@@ -12,6 +12,26 @@ New entries go at the top, under **Entries from 2026-09-25(c)**. The governing r
 
 ## Entries from 2026-09-25(c)
 
+### 2026-10-09 — local-mini lifecycle prompts and tooling (MDS-2026.10.09-v8.2, CR-2026.10.09-R2, SCV-2026.10.09-v4)
+
+The user's five operator prompts were rewritten and a sixth was added. The rewritten set is start mini, game card (common core plus nine sport blocks), settle, canonical import and Combined Log rollover; the addition is the cohort retrospective. All six are in [research/prompts/](research/prompts/README.md), with a validated golden example of an active and a settled mini. The local format is specified as [`mini-log-2`](CARD_AND_LOG_TEMPLATES.md#local-mini-format-mini-log-2).
+
+New tools in `research/operations/`:
+- `mini_log`: new, append, addendum, next-id, verify, join and verify-settled.
+- `import_mini`: plan and apply. It keeps local working IDs, stops on a collision and is idempotent.
+- `rollover`: plan and apply. It consumes no ID and keeps the per-part header receipts.
+- `cohort_review`: Rule T2 scoreboard, slot comparison, calibration, joint failure and failure classes.
+- `top_two`: shared counting and failure-class taxonomy.
+
+The tools come with 43 tests. The cohort review reproduces the October 9 final settlement exactly: 79/134 counted; Rank 1 40–28–3.
+
+Changes from the user's prompts:
+- Local working IDs are kept by the importer, so the chat agent no longer needs GitHub write access.
+- Settlement follows the settle-anyway evidence hierarchy; only non-terminal events carry forward.
+- Soccer uses four candidates, like every other sport (Rule P4).
+
+This partly addresses PRD-01, PRD-02, PRD-03, PRD-06, GOV-03, GOV-04, GOV-07, EVL-01 and EVL-05 of the [framework retrospective](FRAMEWORK_RETROSPECTIVE_2026-10-09.md) for cards written through the lifecycle. The rest of that register remains unimplemented. No forecast, grade or ledger record changed, and the next ID stays P-557. New freeze: CONTROL_MANIFEST_2026-10-09-2.md.
+
 ### 2026-10-09 — final settlement of all pending records; rules T2/R1/P4; framework retrospective (MDS-2026.10.09-v8.1, CR-2026.10.09-R1, SCV-2026.10.09-v4)
 
 Settled all 72 pending records by user directive. Fifty records went into one consolidated Part 7 block: P-126–P-522, plus P-538–P-549, whose rollover verifier pins twelve addenda. The other 22 ledger cards each received a dated addendum. No ID was consumed and the next ID is P-557. Every row carries an evidence grade (A/B/C/E/OP/X), and rows with no admissible data are VOID. Results under the new top-two rule: 79 counted wins from 134 live top-two rows; Rank 1 40-28 with 3 void. There are 28 deep Rank-1 retrospections. The rules were added to CURRENT_RULES, the templates, scoring and prompts: only ranks 1–2 count as wins (T2), a Rank-1 failure needs a deep retrospection (R1), and supplied contracts are reference only, with picks priced from the event distribution (P4). Published FRAMEWORK_RETROSPECTIVE_2026-10-09.md, a recommendation register that is not implemented. It covers runtime import failure, isotonic calibrator defect, falsy-zero score coercion, endpoint incoherence, tennis under-dispersion, source coverage, and snapshot-coupled verifiers. New freeze CONTROL_MANIFEST_2026-10-09-1.md. Evidence: `research/verification/final_settlement_2026-10-09/`.

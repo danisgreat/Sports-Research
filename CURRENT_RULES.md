@@ -2,6 +2,19 @@
 
 **October 9 final settlement, rules and retrospective:** All 72 pending records (the 65-record carryover plus P-550–P-556) are settled in Part 7. Missing details were settled on a declared evidence hierarchy, no ID was consumed, and the next ID stays P-557. New rules: only Rank 1 and Rank 2 count as wins (T2); every Rank-1 failure gets a deep retrospection (R1, 28 written); supplied contracts are reference only and the analyst derives its own top two out of four from the event distribution (P4). See [the settlement report](research/verification/final_settlement_2026-10-09/REPORT.md) and the [framework retrospective and improvement plan](FRAMEWORK_RETROSPECTIVE_2026-10-09.md), whose recommendations are not yet implemented.
 
+## October 9 local-mini lifecycle (CR-2026.10.09-R2)
+
+Cards from P-557 onward move through six operator prompts in [research/prompts/](research/prompts/README.md). The format is [`mini-log-2`](CARD_AND_LOG_TEMPLATES.md#local-mini-format-mini-log-2).
+
+1. **Start a mini (prompt 2, external chat agent, GitHub read-only).** The first working ID is the larger of the repository's next canonical ID and the previous mini's highest working ID + 1. Only `PENDING_EVENT` cards from the previous settlement carry forward. Creating a mini consumes no ID.
+2. **Write cards (prompt 1).** One event = one working ID, issued in order and never changed. Each card prices four candidates from one event distribution under Rule P4, with probabilities mandatory and p_card ≤ 90%, ranked by p_card. It prints the joint top-two failure probability and replaces a correlated Rank 2 when that exceeds 35%. Rank 1 below 60% is labelled `RANK1_UNSTABLE`. Corrections and late news are dated `ADDENDUM` blocks under the existing ID.
+3. **Settle (prompt 3).** Freeze the mini byte-exactly, then append the settlement section. Every terminal event is settled on the A/B/C/E/OP/X evidence hierarchy (X = VOID); only non-terminal events stay `PENDING_EVENT`. Counting follows Rule T2, every settlement carries R1–R12, and every Rank-1 loss has the Rule R1 deep retrospection with a failure class from the taxonomy.
+4. **Import (prompt 4, Claude Code).** `import_mini plan`, then `apply`, commits each card's exact bytes through `log_card` under its working ID. It then appends addenda and settlements under the same ID, stops before any write on an identity conflict or ID collision, and is idempotent.
+5. **Roll over (prompt 5)** when the active Combined Log should close. `rollover apply` consumes no ID, then a new control manifest is issued.
+6. **Retrospective (prompt 6)** once enough new cards are settled. `cohort_review` reports Rule T2 metrics, slot comparison, calibration, joint failure and failure classes. Recommendations stay `PROPOSED_NOT_TESTED`.
+
+The validators enforce structure, not judgement. A card that passes `mini_log verify` still needs honest research, a reproducible distribution and sound ranking.
+
 ## October 9 rules: top-two counting, Rank-1 retrospection and analyst-derived picks (CR-2026.10.09-R1)
 
 The user added these three rules on 2026-10-09. They apply to every card from **P-557** onward and to every settlement or re-scoring performed from 2026-10-09. They never rewrite an original forecast, probability, rank or contract. Where an older paragraph below conflicts with them, these rules control.
@@ -37,7 +50,7 @@ A Rank-1 VOID or PUSH needs no deep retrospection, but the reason is recorded.
 
 **Local authority, numerical ML runtime and all-log reconciliation (October 6):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
 
-Authority: **MDS-2026.10.09-v8.1 / CR-2026.10.09-R1** (with numerical runtime extension **CR-2026.10.06-NUMERICAL-1**); scoring **SCV-2026.10.09-v4**. The October 9 rules above (T2, R1, P4) control ranking, counting and retrospection. The user's instruction authorizes research regardless of calibration, canonical import, and the full implementation of the numerical ML runtime architecture ([NUMERICAL_MODEL_REGISTER.md](NUMERICAL_MODEL_REGISTER.md), [H0_DATASET_CARD.md](H0_DATASET_CARD.md), [DATA_SOURCE_REGISTER.md](DATA_SOURCE_REGISTER.md), [RULES_NHL.md](RULES_NHL.md)). Issued historical values remain unchanged.
+Authority: **MDS-2026.10.09-v8.2 / CR-2026.10.09-R2** (with numerical runtime extension **CR-2026.10.06-NUMERICAL-1**); scoring **SCV-2026.10.09-v4**. The October 9 rules above (T2, R1, P4) control ranking, counting and retrospection, and the local-mini lifecycle controls how cards are written, settled and imported. The user's instruction authorizes research regardless of calibration, canonical import, and the full implementation of the numerical ML runtime architecture ([NUMERICAL_MODEL_REGISTER.md](NUMERICAL_MODEL_REGISTER.md), [H0_DATASET_CARD.md](H0_DATASET_CARD.md), [DATA_SOURCE_REGISTER.md](DATA_SOURCE_REGISTER.md), [RULES_NHL.md](RULES_NHL.md)). Issued historical values remain unchanged.
 
 ## Requested research — controlling default
 

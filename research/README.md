@@ -12,6 +12,28 @@ Current controls: [CURRENT_RULES.md](../CURRENT_RULES.md). No current model is l
 
 Current reconciliation: [all-log October 5 evidence](verification/all_log_resolution_2026-10-05/REPORT.md). The earlier [document/cleanup evidence](verification/implementation_2026-10-05/REPORT.md) is a completed historical checkpoint. P-523–P-537 are already canonical; P-538 was next at that historical repair; after the October 8 import, P-550 is next, subject to the live allocator. The two closed mini archives, all 15 carryovers, eleven diagnostic settlements and 132 retrospective sections are retained. No reimport, new certification or forecast rewrite is needed.
 
+## Local-mini lifecycle — current default (CR-2026.10.09-R2)
+
+Cards are written into a local mini by an external chat agent, settled locally, and imported here. The prompts are in [prompts/](prompts/README.md) and the format is [`mini-log-2`](../CARD_AND_LOG_TEMPLATES.md#local-mini-format-mini-log-2).
+
+```powershell
+# Local checks on a mini (any machine with the repository)
+py -3.14 -B -m research.operations.mini_log verify "<mini>.md"
+py -3.14 -B -m research.operations.mini_log next-id "<mini>.md" --repo-next P-NNN
+py -3.14 -B -m research.operations.mini_log join "<ORIGINAL_MINI>/<frozen>.md" "<SETTLEMENT_SECTION>.md" --out "<settled>.md"
+py -3.14 -B -m research.operations.mini_log verify-settled "<ORIGINAL_MINI>/<frozen>.md" "<settled>.md"
+# Canonical import (prompt 4): plan is read-only; apply keeps every working ID or stops
+py -3.14 -B -m research.operations.import_mini plan  --frozen F.md --settled S.md --out research/verification/mini_import_<P-AAA>_<P-BBB>_<date>
+py -3.14 -B -m research.operations.import_mini apply --frozen F.md --settled S.md --out research/verification/mini_import_<P-AAA>_<P-BBB>_<date>
+# Combined Log rollover (prompt 5): consumes no ID; then issue a new control manifest
+py -3.14 -B -m research.operations.rollover plan
+py -3.14 -B -m research.operations.rollover apply --main-head <40-hex SHA>
+# Cohort retrospective (prompt 6): Rule T2 scoreboard from every retained settlement table
+py -3.14 -B -m research.operations.cohort_review --out research/verification/retrospective_<date>/all [--from P-N] [--to P-M]
+```
+
+`import_mini apply` commits each card's exact block bytes through `log_card` (lock, journal, readback). It then appends the mini's `ADDENDUM` blocks and each settlement as dated addenda under the same ID, so a re-run commits nothing twice. `PENDING_EVENT` cards are imported without a settlement and carried into the next mini.
+
 ## Requested analyses and canonical logging — current default
 
 Every requested sport receives evidence-based analysis and canonical logging to the active combined log regardless of model qualification or calibration. Qualitative ranks and explicitly uncalibrated reproducible analyst scenarios are allowed. Late news and after-start analysis are allowed with honest observation/log times. Missing calibration, fixture-universe registration or independence audits are labels and limits, not analysis/logging blockers. The certified-issuer sections below describe a separate performance protocol.
