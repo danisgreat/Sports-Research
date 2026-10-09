@@ -60,7 +60,7 @@ The tennis model: on ATP 2023 to January 2026, surface-blended Elo narrowly beat
 1 surface is a regime · 2 current stability decomposed · 3 H2H needs continuity · 4 set count and total linked · 5 set cushions aren't free safety · 6 qualifying and workload · 7 retirement terms gate · 8 no ranking-only confidence · 9 level comparability demonstrated · 10 win-conditioned cover counts descriptive · 11 kill paths include opponent control · 12 scoreline coherence · 13 Elo benchmark beside the winner probability · 14 a long layoff widens the tree. Receipts and references: T-1 ITF route · T-2 surface from the calendar · TE-R1 totals reference · TE-R2 handicap coherence · TE-R3 qualifying v main draw.
 
 ### 0.8 Numerical engine specification (MDS-v8.0 / CR-2026.10.06-NUMERICAL-1)
-Under the numerical ML architecture (`runtime/src/sports/tennis/engine.py`):
+Numerical-engine design notes (the engine code was removed on 2026-10-09; compute by hand with PROBABILITY_TOOLKIT.md and the sport block of research/prompts/1_GAME_CARD.md; this list is a design record, not a rule):
 1. **Event-First Modeling**: Surface-adjusted serve/return point Markov model:
    $$\text{Point Win Prob } p_{\text{serve}} \longrightarrow \text{Game Hold/Break } P(\text{Hold}) \longrightarrow \text{Tiebreak/Set Distribution} \longrightarrow \text{Match Winner & Games Matrix } (G_1, G_2)$$
 2. **Derivative Coherence**: Games totals and games handicaps ($G_1 - G_2$) are integrated directly from the discrete joint games grid; P(deciding set) and straight-set distributions are explicit.

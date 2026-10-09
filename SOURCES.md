@@ -1,3 +1,85 @@
+# Source register: Markdown only (2026-10-09)
+
+**Version SRC-2026.10.09-v9.** This block was added at the top of the register when the framework became Markdown-only. It replaces the data that lived in `research/sources_registry.json`, `research/sources_registry_adapters.json`, `research/excluded_sources.json`, `runtime/config/sources/sources.json` and the generated reachability probes, all removed on 2026-10-09 (last copies at commit `37203fc2b`).
+
+**What changed.** The source adapters, parsers, retrieval jobs, probes and the matrix generator are gone. The **routes** in the sport tables below (sections 2 and 3, and the reachability matrix) remain the way to find each fact; the **commands** that fetched, parsed or hashed them (`sources.py`, `research/src/...`, `python -B -m ...`, `*.json` receipts) are historical. Wherever an older section below names one of those, read it as a description of what the route returns, and open the page yourself.
+
+## A. Using the register without code
+
+1. Pick the sport's table (section 3) and read the first-choice route and the fallback for the field you need (the "Source-by-source fallback chain" in §3.12 and the field fallbacks in §1.7).
+2. Open the page or API with your browsing tools. Read the exact field for the exact event. A reachable page is not event-specific evidence.
+3. Record in the card: the source, the time you read it, and a short verbatim excerpt (`Evidence quotes`). There are no stored bodies and no hashes now; the quote and the time are the audit trail.
+4. If the route fails, write the failure, the time and the reason, use the listed fallback and write `(fallback: <source>)`. Never fetch through an unauthorised route and never substitute different bytes.
+5. Independence: sources sharing a provider count once (§1.1). Every source below has `UNKNOWN` independence because no lineage audit has been done.
+6. Market-bearing products are never evidence (§1.4). Sources flagged "market fields possible" may carry odds beside the sporting fields; read only the sporting fields.
+
+## B. Core source register (14 sources)
+
+| Source id | Publisher | Host | Official | Leagues | Endpoints | Access | Market fields | Independence |
+|---|---|---|---|---|---|---|---|---|
+| nbl_official | National Basketball League | schedule.nbl.com.au | yes | NBL | FINAL_SCORE, INCL_OT, SCHEDULE | AUTOMATED_ALLOWED | no | UNKNOWN |
+| mlb_official | Major League Baseball | statsapi.mlb.com | yes | MLB | INCL_EXTRAS, REGULATION_9, SCHEDULE | AUTOMATED_ALLOWED | no | UNKNOWN |
+| espn_epl | ESPN | site.api.espn.com | no | EPL | FINAL_SCORE, SCHEDULE | AUTOMATED_ALLOWED | POSSIBLE (sporting fields only) | UNKNOWN |
+| espn_nbl | ESPN | site.api.espn.com | no | NBL | FINAL_SCORE, SCHEDULE | AUTOMATED_ALLOWED | POSSIBLE (sporting fields only) | UNKNOWN |
+| openfootball | openfootball statistical archive | raw.githubusercontent.com | no | EPL | REGULATION, SCHEDULE | AUTOMATED_ALLOWED | no | UNKNOWN |
+| premierleague_official | Premier League | www.premierleague.com | yes | EPL | REGULATION, SCHEDULE, LINEUPS | AUTOMATED_ALLOWED | no | UNKNOWN |
+| aflw_official | Australian Football League | www.afl.com.au | yes | AFLW | FINAL_SCORE, LINEUPS | AUTOMATED_ALLOWED | no | UNKNOWN |
+| iowa_state_official | Iowa State Athletics | cyclones.com | yes | CFB | FINAL_SCORE, OFFICIALS, PARTICIPANTS | AUTOMATED_ALLOWED | no | UNKNOWN |
+| kansas_state_official | Kansas State Athletics | www.kstatesports.com | yes | CFB | FINAL_SCORE | AUTOMATED_ALLOWED | no | UNKNOWN |
+| nfl_gamebooks | National Football League gamebooks | static.www.nfl.com | yes | NFL | FINAL_SCORE, VENUE, OFFICIALS, PARTICIPANTS | AUTOMATED_ALLOWED | no | UNKNOWN |
+| perth_wildcats_official | Perth Wildcats | www.wildcats.com.au | yes | NBL | FINAL_SCORE, LINEUPS | AUTOMATED_ALLOWED | no | UNKNOWN |
+| nbl_news | National Basketball League | www.nbl.com.au | yes | NBL | FINAL_SCORE, LINEUPS | AUTOMATED_ALLOWED | no | UNKNOWN |
+| football_data | Football-Data | www.football-data.co.uk | no | EPL | REGULATION | MANUAL_ONLY | POSSIBLE (sporting fields only) | UNKNOWN |
+| fixture_download | FixtureDownload | fixturedownload.com | no | NBL | FINAL_SCORE | PERSONAL_USE_LOCAL_ONLY | no | UNKNOWN |
+
+Official sources own their fields (§1.2); none of them proves independent collection.
+
+## C. Adapter status and settlement fields
+
+The adapters below were parsers written for specific providers. "Recorded body tested" meant the parser had been tested against a real saved page; "synthetic fixture only" meant it had not met a real page; "planned" meant none existed. They no longer run. The useful content is **which fields each provider supplies for settlement**, and what it does not.
+
+| Source id | Publisher | Host | Official | Leagues | Settlement fields | Not provided | Adapter status |
+|---|---|---|---|---|---|---|---|
+| kbo_official | Korea Baseball Organization | www.koreabaseball.com | yes | KBO | final_score, innings, extra_innings, status | inning_runs (box score endpoint GetBoxScoreScroll is retained but not parsed); halftime; corners | RECORDED_BODY_TESTED |
+| mlb_livefeed | Major League Baseball | statsapi.mlb.com | yes | MLB | final_score, innings, extra_innings, inning_runs, status |  | RECORDED_BODY_TESTED |
+| npb_official | Nippon Professional Baseball | npb.jp | yes | NPB | final_score, innings, extra_innings, inning_runs, status |  | RECORDED_BODY_TESTED |
+| nhl_official | National Hockey League | api-web.nhle.com | yes | NHL | final_score, overtime, shootout, status | period goal splits (landing endpoint, not parsed); regulation-only score | SYNTHETIC_FIXTURE_ONLY |
+| espn_soccer | ESPN | site.api.espn.com | no | EPL, LALIGA, SERIEA, BUNDESLIGA, LIGUE1 | final_score, halftime_score, corners, status |  | SYNTHETIC_FIXTURE_ONLY |
+| sackmann_tennis | Jeff Sackmann (Tennis Abstract) | raw.githubusercontent.com | no | ATP, WTA | serve_stats, final_score, surface | retirement/walkover flag beyond the score string; current-week results (published with a lag) | SYNTHETIC_FIXTURE_ONLY |
+| bleague_official | B.LEAGUE | www.bleague.jp | yes | B.LEAGUE | none yet | BLOCKER: game pages (ScheduleKey) are rendered client-side; no retained body shows the score JSON endpoint. Capture one real body, then write the parser. | PLANNED_NO_ADAPTER |
+| kbl_official | Korean Basketball League | www.kbl.or.kr | yes | KBL | none yet | BLOCKER: no retained body from kbl.or.kr; endpoint shape unknown. | PLANNED_NO_ADAPTER |
+| euroleague_official | Euroleague Basketball | api-live.euroleague.net | yes | EuroLeague, EuroCup | none yet | BLOCKER: official live API v1/v2 schema not retained; fetch a real body and register the parser. | PLANNED_NO_ADAPTER |
+| acb_official | Liga Endesa | live.acb.com | yes | ACB | none yet | BLOCKER: game and statistics views can share one feed (P-521/P-522 reconciliation); capture bodies and audit lineage before parsing. | PLANNED_NO_ADAPTER |
+| bbl_gbl_official | BBL and Greek Basket League | www.easycredit-bbl.de | yes | BBL, GBL | none yet | BLOCKER: no retained official bodies; the archive builders use Eurobasket/Greek-basket scrapers instead. | PLANNED_NO_ADAPTER |
+
+## D. Data sources of the retired numerical runtime (design record)
+
+Used to describe the training data of the removed runtime. They remain valid places to read historical data by hand; licences are as stated.
+
+| Source id | Sport | Grain | URL | Update cadence | Available to the forecaster at | Licence |
+|---|---|---|---|---|---|---|
+| cricsheet | cricket | ball_by_ball | https://cricsheet.org | daily | match_start_utc | ODbL 1.0 |
+| nflfastr | american_football | play_by_play | https://github.com/nflverse/nflverse-data | weekly_in_season | kickoff_utc | MIT |
+| nba_stats | basketball | possession_and_box | https://stats.nba.com | live_post_game | scheduled_tipoff_utc | fair_use_research |
+| pybaseball_statcast | baseball | pitch_and_pa | https://baseballsavant.mlb.com | daily | first_pitch_utc | fair_use_research |
+| fitzroy_afl | afl | match_and_player | https://jimmyday12.github.io/fitzRoy | post_round | bounce_utc | GPL-3 |
+| nrlr_nrl | nrl | match_and_play | https://itsjase.github.io/nrlR | post_round | kickoff_utc | MIT |
+| statsbomb_footballdata | soccer | match_and_xg | https://www.football-data.co.uk | weekly_post_match | kickoff_utc | open_research |
+| moneypuck_nhl | nhl | shot_and_game | https://moneypuck.com/data.htm | daily_in_season | puck_drop_utc | open_attribution |
+| tennis_abstract | tennis | point_and_match | https://github.com/JeffSackmann | daily_post_tournament | match_start_utc | cc_by_nc_sa_4.0 |
+
+## E. Excluded sources
+
+Never admitted: fantasy, betting or market-bearing products.
+
+- **fantasy_premierleague** (Fantasy Premier League): fantasy product; fields are market-derived (ownership, price changes). Excluded since 2026-10-09.
+
+## F. Reachability
+
+The matrix further down was generated on 2026-10-09 by a probe job that no longer exists. It shows what answered from a cloud container (most hosts returned HTTP 403) and `NOT_YET_PROBED` from a local Windows machine. Treat it as a historical observation. Test reachability by hand when you need it, and say so in the card.
+
+---
+
 # Current source access controls - 2026-10-01
 
 Current October-5 all-log custody: 111 receipt bodies verify locally; 52 are intentionally excluded from Git (42 prior benchmark bodies plus 10 new restricted/market-bearing narrative captures). A clean checkout has 59 bodies and must fail strict custody for the other 52; no CI bypass or fabricated recapture is authorized. See the all-log source inventory and publication evidence.

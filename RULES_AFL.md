@@ -68,12 +68,12 @@ The AFL model (A1) is ridge ratings with draws allowed. On 2021–2024 it beat t
 1 decompose the shot chain · 2 conversion persistence estimated · 3 winner ≠ handicap · 4 overlapping positive handicaps · 5 live Under needs observed suppression · 6 large Q4 cushion needs remaining-possession analysis · 7 venue and competition matter · 8 hitouts are opportunity · 9 high totals need a high-shot branch · 10 motivation is conditional · 11 availability-to-conversion handshake · 12 conversion sensitivity near the line · 13 volume and margin separate · 14 ground-level wind is a phase variable · 15 Q4 territorial durability.
 
 ### 0.8 Numerical engine specification (MDS-v8.0 / CR-2026.10.06-NUMERICAL-1)
-Under the numerical ML architecture (`runtime/src/sports/afl/engine.py`):
+Numerical-engine design notes (the engine code was removed on 2026-10-09; compute by hand with PROBABILITY_TOOLKIT.md and the sport block of research/prompts/1_GAME_CARD.md; this list is a design record, not a rule):
 1. **Event-First Modeling**: Territory to scoring shot to conversion pipeline:
    $$\text{Inside 50s (I50)} \longrightarrow \text{Scoring Shots} \longrightarrow \text{Goal/Behind Joint Distribution} \longrightarrow \text{Total Points } (6G + B)$$
 2. **Shot and Conversion Decoupling**: Shot creation volume and conversion efficiency are separated; conversion variance is handled via Beta-Binomial shot modeling.
 3. **Ground and Environmental Factors**: Venue dimensions (e.g. SCG vs MCG) and ground-level wind regimes condition scoring chains.
-4. **Independent Training**: Fit exclusively on `H0-AFL-v1` via `fitzRoy` (ingested through isolated R script `runtime/r_ingestion/afl_fitzroy.R`); D0 is strictly reserved for qualitative error diagnostics.
+4. **Independent Training**: Fit exclusively on `H0-AFL-v1` via `fitzRoy` (ingested through isolated R script `runtime/r_ingestion/afl_fitzroy.R` (removed 2026-10-09)); D0 is strictly reserved for qualitative error diagnostics.
 
 
 ## 1. Identity and contract

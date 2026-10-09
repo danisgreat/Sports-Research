@@ -1,5 +1,7 @@
 # Previous Sports Results (1900–2025)
 
+> **How forecasts use this archive (2026-10-09).** Every card, settlement and retrospective consults these files when they hold rows that bear on the event: see [ARCHIVE_USE_GUIDE.md](../ARCHIVE_USE_GUIDE.md) for the paths, the columns, the point-in-time rule, the recipes and the `Archive check` line, and [LEAGUE_PROFILES.md](../LEAGUE_PROFILES.md) for the league scoring levels measured from them. The archive builders mentioned below were removed on 2026-10-09 (last working state at commit `37203fc2b`); extend or repair the archive by hand with [prompt 7](../research/prompts/7_EXPAND_PREVIOUS_RESULTS.md).
+
 A developing historical research archive covering folders from **1900 through 2025**, with MLB extended to 2026. Folder existence does not imply complete or verified data. The canonical [result and coverage interface](_canonical/README.md) separates sourced outcomes from unsupported prose and explicitly records missingness.
 
 **Implementation updated 2026-10-01 (Australia/Sydney).** The measured archive contains 21,799 yearly result CSVs, 20,943 header-only files and 128,768 input rows including duplicated and subset records. Current verified-result and training-admission counts are in [_canonical/manifest.json](_canonical/manifest.json); the season register is [_canonical/seasons.csv](_canonical/seasons.csv). Basketball and Soccer archive CSVs remain empty; the separate research histories serve their current models. Historical-result admission does not prove forecasting skill.
