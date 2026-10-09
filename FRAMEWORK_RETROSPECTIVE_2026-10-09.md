@@ -2,6 +2,8 @@
 
 **Status:** `IMPLEMENTED 2026-10-09` (see §5.8). Sections 0–5.7 and 6–7 are the review as written, including its acceptance tests and the wording "not implemented"; they are kept unchanged so the findings can be re-read against what was found at the time. §5.8 records, for every recommendation ID, what was implemented, what could not be verified offline, and what only prospective cards can show. The only changes made with the review itself were the user-directed final settlement (`research/verification/final_settlement_2026-10-09/`) and the three October 9 rules (T2, R1, P4).
 
+**Update 2026-10-09 (Markdown-only).** After this review was implemented, the framework was reduced to Markdown, CSV and text (commits `a64675cf7` to `a93352c30`). The findings, the failure-class baseline and the acceptance tests below stand. Every recommendation that §5.8 marks as implemented in code, tools, CI or the runtime (fitted engines, calibration, stacking, candidate pricing, validators, the importer, scoreboard generation, source adapters, evidence snapshots, cross-card experiments) is now **`SUSPENDED_MD_ONLY`**: the code is gone and the rule it carried now lives in a document ([SELECTION_RULES.md](SELECTION_RULES.md), [CARD_AND_LOG_TEMPLATES.md](CARD_AND_LOG_TEMPLATES.md), [LEAGUE_PROFILES.md](LEAGUE_PROFILES.md), [HYPOTHESIS_REGISTER.md](HYPOTHESIS_REGISTER.md), the prompts). The three rules (T2, R1, P4), the Rank-1 gate, the one-distribution card and the regime and contract-definition fields are kept as documented rules. Paths and commands named in this document refer to the tree at commit `37203fc2b`.
+
 **Authority at review:** MDS-2026.10.09-v8.1 / CR-2026.10.09-R1 / SCV-2026.10.09-v4.
 
 ---
@@ -412,3 +414,7 @@ Status values: **IMPLEMENTED** (mechanism built and tested; the stated acceptanc
 - The tennis overdispersion figures come from the reproduction script with a chosen σ = 0.05; the correct σ must be fitted (DST-04). The direction of the effect is robust: any positive σ lowers deciding-set mass and the 22.5 Over probability for near-equal players.
 - Some threshold values (PRD-02's 0.58, PRD-03's 0.62/0.04, PRD-09's family gates) are starting points derived from §3.2. They must be confirmed prospectively before becoming binding.
 - Nothing in this document changes an issued forecast or a model weight. The implementation that followed (§5.8) changed controls, tooling and engines only, by explicit instruction.
+
+## Subsequent prediction repair (v8.4 / R4)
+
+The earlier implementation status above is a dated record. The later [repair report](research/verification/prediction_repairs_2026-10-09/REPORT.md) supersedes its runtime receipt interpretation: v1 profiles leaked test-season information, winner scoring excluded draws inconsistently, and fitted artifacts/calibration were not loaded by the card generator. Corrected evidence is versioned in `runtime_h0_v2`; archived v1 receipts are not silently replaced. Gated scoreboard wins require a recorded PASS, while historical unknown-gate results remain separate diagnostics. Neither these repairs nor a passing test suite demonstrates prospective predictive improvement.

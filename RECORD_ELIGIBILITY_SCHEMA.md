@@ -2,7 +2,7 @@
 
 **Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
 
-Current research logging: [log_card.py](research/operations/log_card.py). Frozen certification implementation: [eligibility.py](research/src/eligibility.py), [ledger.py](research/src/ledger.py), [issue.py](research/src/issue.py). Current rules: [CURRENT_RULES.md](CURRENT_RULES.md). Temporal/model/quorum gates below concern certification only; they do not block canonical research logging or analysis.
+**CERTIFICATION SUSPENDED (2026-10-09).** The logging tool, the eligibility checks, the ledger and the issuer named in earlier versions of this page were removed when the framework became Markdown-only (last working state at commit `37203fc2b`). Research logging is now the lifecycle in [CURRENT_RULES.md](CURRENT_RULES.md) §8 and the formats in [CARD_AND_LOG_TEMPLATES.md](CARD_AND_LOG_TEMPLATES.md). Every record is `RESEARCH_ONLY_NOT_CERTIFIED`; the eligibility table below is a historical description of the certification design and gates nothing.
 
 | Record type | Eligibility | Required custody |
 |---|---|---|

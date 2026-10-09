@@ -1,5 +1,29 @@
 # Changelog
 
+## 2026-10-09 — Markdown-only framework (MDS-2026.10.09-v9.0 / CR-2026.10.09-R5)
+
+**Why.** The user instructed, on 2026-10-09: remove all Python and JSON files; remove every file that is not CSV, Markdown or text; consolidate all rules and framework information into the Markdown documents; rewrite the prompts fully for a Markdown-only framework; push to `main`; and make sure the rules, the source information and the previous sports results are carefully referred to in future work.
+
+**Removed (commits `a64675cf7`, `a84bdc3c3`, `c58f53894`, `cd9e13b48`, `a93352c30`, pushed to `main`).** All Python source and tests (368 tracked files), all JSON and JSON Lines (678), archives, binary data and retained source bodies (172), the CI workflow and tooling configuration (18), and 21,798 `.gitkeep` placeholders. The last working state is commit `37203fc2b`. Untracked and ignored files, and the uncommitted edits, were saved outside the repository before deletion.
+
+**Consolidated into documents.**
+- [SELECTION_RULES.md](SELECTION_RULES.md): the gate, Rank-2 floor, joint-failure procedure, family rules, ladders, regime rules, grades, evidence codes, card classes, settlement allowances and the failure taxonomy (from `selection_rules.json`, `regimes.json`, `top_two.py`, `settlement_sla`).
+- [LEAGUE_PROFILES.md](LEAGUE_PROFILES.md): league scoring levels, margin and total spreads, correlations, overtime, shootout, one-run, first-half and corner shares, the NFL margin table and sport constants (from `runtime/config/leagues` and `sports`).
+- [ARCHIVE_USE_GUIDE.md](ARCHIVE_USE_GUIDE.md): where the previous results are, which columns to trust, the point-in-time rule, the recipes and the `Archive check` line.
+- [HYPOTHESIS_REGISTER.md](HYPOTHESIS_REGISTER.md): XCARD-1 to XCARD-6, SEL-1 and the eleven retrospective proposals, with a by-hand test method (from `cross_card_v1.json`, `improvement_register.json`).
+- [SOURCES.md](SOURCES.md): a Markdown-only source register block (core sources, adapter statuses and settlement fields, retired runtime sources, exclusions, reachability note).
+- Rewritten: [CURRENT_RULES.md](CURRENT_RULES.md) (with the reading gate and the archive rule), [CARD_AND_LOG_TEMPLATES.md](CARD_AND_LOG_TEMPLATES.md) (`mini-log-4`, `mini-settlement-3`, `canonical-md-1`, self-audit checklists C1 to C20 and S1 to S13), [SCORING_AND_VALIDATION.md](SCORING_AND_VALIDATION.md) (hand formulas, Wilson interval, week-block comparison, scoreboard by hand), [VERIFICATION_PROTOCOL.md](VERIFICATION_PROTOCOL.md), [CURRENT_STATE.md](CURRENT_STATE.md) (now maintained by hand), [METHOD.md](METHOD.md), [README.md](README.md), [CONTRIBUTING.md](CONTRIBUTING.md), [PROMPTS.md](PROMPTS.md), [research/README.md](research/README.md), [runtime/README.md](runtime/README.md).
+- **Prompts rewritten without code** ([research/prompts/](research/prompts/README.md)): prompts 1 to 6 now start with a reading gate and a reading receipt, cite rules, sources and previous results, and use self-audits instead of validators; prompt 4 (import) and prompt 5 (rollover) are hand edits with append-only checks; prompt 6 counts by hand. New prompt 7 (expand or repair the previous results) and prompt 8 (improve the framework). The golden examples are `mini-log-4` / `mini-settlement-3`.
+- **New card requirements:** `Rules read`, `Archive check` and `Evidence quotes` (replacing hash snapshots); settlement header `Frozen original check` and `Rules read`.
+
+**Banners, not rewrites.** [NUMERICAL_MODEL_REGISTER.md](NUMERICAL_MODEL_REGISTER.md), [H0_DATASET_CARD.md](H0_DATASET_CARD.md), [DATA_SOURCE_REGISTER.md](DATA_SOURCE_REGISTER.md) and [RECORD_ELIGIBILITY_SCHEMA.md](RECORD_ELIGIBILITY_SCHEMA.md) are now design notes. [FRAMEWORK_RETROSPECTIVE_2026-10-09.md](FRAMEWORK_RETROSPECTIVE_2026-10-09.md) marks its code-based recommendations `SUSPENDED_MD_ONLY`. The sport rules files label their numerical-engine sections as design records. Dated historical documents still name removed files; they are historical.
+
+**Archived.** The previous versions of every rewritten document and prompt are in [archive/superseded_2026-10-09/](archive/superseded_2026-10-09/README.md). The superseded control manifest moved to `archive/controls/`.
+
+**Unchanged.** Every issued card, Combined Logs 1 to 7, the P-518 to P-522 reservation, the next ID (P-557), the three rules T2, R1 and P4, the Rank-1 gate values, and the previous sports results CSVs.
+
+**Consequences.** There is no CI, no hash freeze and no fitted model. Certification and live qualification are suspended. Verification is by hand ([VERIFICATION_PROTOCOL.md](VERIFICATION_PROTOCOL.md)). The Combined Logs' line-ending protection (`.gitattributes`) was removed with the file; the import and rollover prompts require a `git diff --numstat` check of 0 deleted lines.
+
 ## 2026-10-05 ? local-authority all-log settlement reconciliation
 
 Inventory 537 slots; reconcile 71 TMP strings plus the P-528 local tracker; restore ten documentary rank/contract mappings; append four owner-supported sporting reviews and 48 retrospective sections without changing forecasts or allocating IDs. Select the full 53-record carryover through the logger. Register four further untested hypotheses, preserve strict source failures, and publish the authorized document repairs and redundancy cleanup to main.
@@ -731,3 +755,7 @@ Inventoried522historical slots plus one manual claim; reviewed115historicalIDs a
 ## Fifteen experiment measures — 2026-10-05
 
 Implemented source-bound target/feature protocols, proper probability and distribution measures, paired block uncertainty, fifteen-comparison handling, separate-pilot power planning, immutable evaluator/model/runtime locks, actual-time capture and complete cohort accounting. Added per-experiment next steps and regression checks. Preserved all fifteen hypothesis texts, original forecasts, canonical IDs and model-build bytes. No new experiment result or qualification is asserted.
+
+## 2026-10-09 prediction repairs (v8.4 / R4 / SCV-v5)
+
+Training-only league profiles and consistent unconditional winner evaluation replace the leaking/conditional v1 comparisons. Native game IDs preserve doubleheaders, and NHL training uses regulation scores reconstructed only from explicit OT flags. Versioned `runtime_h0_v2` receipts retain exact forecast rows; a saved engine-plus-joint-winner-calibrator pipeline is now used by default for supported regular-season candidate requests, with endpoint, team, cutoff and build-time guards. The scoreboard separates missing gates and preserves missing probabilities. Windows path and pending-mini test custody failures are fixed. Historical forecasts, original v1 receipts, source archives and admissions remain unchanged. All new models remain SHADOW_ONLY.

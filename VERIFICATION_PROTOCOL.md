@@ -1,45 +1,64 @@
 # Verification protocol
 
-Current October-5 all-log custody: 111 receipt bodies verify locally; 52 are intentionally excluded from Git (42 prior benchmark bodies plus 10 new restricted/market-bearing narrative captures). A clean checkout has 59 bodies and must fail strict custody for the other 52; no CI bypass or fabricated recapture is authorized. See the all-log source inventory and publication evidence.
+**Markdown only (CR-2026.10.09-R5).** Verification used to be a pipeline of programs: unit tests, custody and freeze verifiers, a canonical-log verifier, continuous integration. Those were removed on 2026-10-09 (last working state at commit `37203fc2b`). Verification is now a set of **hand checks that print their evidence**. The pre-rewrite page is kept in [archive/superseded_2026-10-09/VERIFICATION_PROTOCOL.md](archive/superseded_2026-10-09/VERIFICATION_PROTOCOL.md).
 
-**Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
+A passing check proves the thing it checks. It never proves the research was honest, the distribution sensible, the source true or the model skilful. Report failures as failures; never relax a check to make it pass.
 
-Current authority: [METHOD.md](METHOD.md). Run checks from the repository root with the pinned Python environment.
+## 1. Commands the repository agent may use
 
-October 5 repair evidence is retained in `research/verification/closure_2026-10-05/`. The CI job runs both regression suites, canonical projection/source verification, custody/acceptance checks and the selected freeze verifier. Checkout includes Git history because custody compares original committed blobs. Each verification step runs after earlier failures unless the workflow is cancelled, so custody failure no longer hides freeze results. No step uses continue-on-error. Root Markdown edits also trigger checks. Failure notifications report the job's actual failure; checks must be repaired rather than disabled. Mini archive readback verifies each preserved body using its recorded byte offset and SHA-256.
+Reading and plain file commands only: `git status`, `git diff`, `git diff --numstat`, `git log`, `git ls-files`, `git show`, `ls`, `cp`, `grep`, `wc`, `cmp`, `head`, `tail`. No scripts are written into the repository, and no interpreter is run against its files.
 
-```powershell
-py -3.14 -B -m pytest -p no:cacheprovider research/tests research/operations -q
-python -B -m research.src.archive validate
-py -3.14 -B -m research.operations.verify_custody
-py -3.14 -B -m research.operations.log_card verify
-py -3.14 -B -m research.operations.control_freeze --verify
-py -3.14 -B -m research.operations.verify_reconciliation
-py -3.14 -B -m research.operations.verify_all_logs
-```
+## 2. Levels of verification
 
-The automated acceptance receipt covers original issued Part 1-5 bytes, the frozen Part 6 source block, historical tuning/holdout/shadow bytes, current model dependency/runtime checks, the historical learning view, source-body receipts and no live promotion. Archive validation checks every indexed raw CSV, canonical output, receipt body and implementation hash, and score arithmetic/admission invariants. The active freeze manifest covers root controls, research code/data/receipts and the archive manifest; the archive manifest chains the full archive data scope.
+| Level | When | Checklist |
+|---|---|---|
+| Card | Before returning each card | Card self-audit C1-C20 ([CARD_AND_LOG_TEMPLATES.md](CARD_AND_LOG_TEMPLATES.md) §7) |
+| Settlement | Before returning a settlement | Settlement self-audit S1-S13 (same file, §9) |
+| Import | After appending to a Combined Log | Section 3 below |
+| Rollover | After starting a new part | Section 4 below |
+| Retrospective | Before publishing a report | Section 5 below |
+| Repository | Before every push | Section 6 below |
 
-Canonical bulk CSVs are local regenerable exports and can be ignored for publication while their hashes and coverage remain in the archive manifest. Restricted or odds-bearing benchmark raw files are intentionally excluded from publication. Retained raw source paths and their hashes remain in individual data receipts. A fresh checkout missing a restricted local file must report the gap, not download it through an unauthorized route or substitute different bytes.
+## 3. Import checks (prompt 4)
 
-Full custody is strict in every environment: the wrapper aggregates all missing, hash-invalid, length-invalid and malformed-receipt failures, retains nonzero failure, and restores its in-memory schema adapter after each run. At the October 5 implementation readback 78 bodies verify locally; 42 receipt bodies are intentionally local-only in ignored benchmark quarantine. A tracked-body export fails those 42 checks, rather than just reporting the first missing AFC body. [Complete local/publication inventory and outcomes](research/verification/implementation_2026-10-05/REPORT.md). The separate archive source-body gap disclosed by closure is not the same issue as Git omitting local benchmark bodies.
+Print each result with its evidence.
 
-Run live-source jobs separately from tests. Record source failures with time and reason. A reachable page is not event-specific evidence, and distinct publishers do not automatically constitute independent lineages.
+1. **Append-only.** For each Combined Log you edited: `git diff --numstat <file>` shows deleted lines = **0**. Any non-zero count means an earlier byte changed: restore the file and re-append.
+2. **Frozen prefix.** The frozen mini is an exact prefix of the settled mini: compare the byte counts with `wc -c`, then `head -c <frozen bytes> <settled> | cmp - <frozen>` prints nothing.
+3. **ID continuity.** Every working ID in the mini appears exactly once as a canonical block in the log: `grep -c "BEGIN CANONICAL RESEARCH P-NNN" <log>` is 1 for each. No ID is skipped, reused or renumbered. The new next ID equals the highest imported ID + 1.
+4. **Duplicates.** No event key appears under two IDs: `grep` the event key in all Combined Logs and the status register.
+5. **Verbatim.** For a sample of at least three cards, compare the pick table in the log with the one in the mini cell by cell.
+6. **Status register.** The `Next canonical ID` line, the new rows and [CURRENT_STATE.md](CURRENT_STATE.md) agree.
+7. **Scope.** `git status` shows changes only in the allowed paths: the active Combined Log, `GAME_LOG_STATUS_CURRENT.md`, `CURRENT_STATE.md`, `research/scoreboard/SCOREBOARD.md`, and the new `research/verification/mini_import_<P-AAA>_<P-BBB>_<date>/` folder.
 
-Historical links and receipts retain their original scope. Current active documents link to the present workflow. Freeze changes once, verify after writing, and put the freeze's own hash in the living status register. Verification output written after freeze lives in the explicitly excluded verification directory to avoid self-reference.
+## 4. Rollover checks (prompt 5)
 
-The current receipt is selected by METHOD. The current operations verifier reuses the frozen inventory/normalization module with that filename, current method/control metadata and the ledger-custodied research store excluded. It never edits a dependency pinned by the four model builds. The original control_manifest command addresses receipt 1. The earlier settlement audit receipt verifies its state at that earlier pass; subsequent canonical imports and current administrative headers have their own dated repair receipt. Do not rerun a historical next-P-523 expectation as if it were the current ID state.
+1. Part N is unchanged except for the appended closure block (`git diff --numstat` deletions = 0).
+2. Part N+1 exists once and contains a header and no card.
+3. The next ID is identical before and after; the rollover consumed no ID.
+4. [CURRENT_STATE.md](CURRENT_STATE.md), [GAME_LOG_STATUS_CURRENT.md](GAME_LOG_STATUS_CURRENT.md) and the continuity table in the new header all name Part N+1.
 
-The current custody wrapper recognizes the imported NPB receipt's content_sha256/stored_snapshot_path fields and verifies the same original bytes in memory. It does not rewrite source receipts or claim independent collection. Research commits remain separate from certified ISSUE records, and their exact projections and original sources are verified. A passing mechanics check establishes neither calibration nor source truth.
+## 5. Retrospective checks (prompt 6)
 
-Publication readback: 152 ignored local cache files listed in the full local control freeze remain absent from Git. The first publication also had one workflow line-ending mismatch, corrected with byte-preserving Git attributes. Remote validation remains incomplete; the local freeze does not establish clean-checkout evidence availability. The exact paths are retained in `research/verification/all_log_resolution_2026-10-05/published_freeze_inventory.json`.
+1. The new-cohort and comparison-cohort ranges were written down before looking at results.
+2. Every number in the report traces to a settled table; recompute five at random from the settlement blocks.
+3. Only `research/verification/retrospective_<date>/`, the scoreboard and CURRENT_STATE changed. The Combined Logs, the ledger of cards and the rules are unchanged.
 
-## Experiment-measure verification
+## 6. Repository checks before a push
 
-Run `py -3.14 -B -m research.experiments.runner verify` and include `research/experiments` in regression tests. The [catalog](research/experiment_measures.json) must cover all fifteen original hypotheses with preserved source hashes, fixed target/feature/measure definitions and explicit pending inputs. Test arithmetic independently and exercise overwrite, data leakage, period/provider, duplicate, pending-cohort, PMF and code/runtime-custody failures. Synthetic test success is never an experiment result. Runtime experiment stores use their own source/lock/journal/result hashes; original model builds, forecasts and ledger remain protected.
+1. `git status` lists only intended paths; nothing from `Previous Sports Results/_canonical/*.csv` (too large for GitHub) and no cache folders.
+2. `git ls-files | grep -E "\.(py|json|jsonl|ipynb)$"` prints nothing: the repository holds Markdown, CSV and text.
+3. Search the operating documents for instructions that need a program: `grep -rnE "python|py -3|research\.operations|\.json" README.md METHOD.md CURRENT_STATE.md CURRENT_RULES.md SELECTION_RULES.md CARD_AND_LOG_TEMPLATES.md SCORING_AND_VALIDATION.md VERIFICATION_PROTOCOL.md PROMPTS.md research/prompts` should print only the lines that describe the removal. Historical documents may still name removed tools; they are labelled historical.
+4. Every link added in this change resolves to an existing file (open each).
+5. The commit message states what changed and why; no history is rewritten and nothing is force-pushed.
 
-## October 8 mini import and active-log rollover
+## 7. Source and evidence verification
 
-Run `py -3.14 -B -m research.operations.verify_rollover` for exact original mini substrings, twelve canonical imports, 144 retrospective sections, append-only prior log/ledger prefixes, reserved IDs, dated addenda, current destination/status and unconsumed rollover ID. Use `--local-body-custody` separately to verify the 18 terminal bodies retained locally in Downloads; these narrative captures are not published. Three independent audited collection lineages remain unestablished. The current issuer/workflow adapters preserve immutable model-pinned historical source modules.
+- A reachable page is not event-specific evidence. Open the exact field for the exact event.
+- Distinct publishers are not independent lineages.
+- Record source failures with time and reason. Do not fetch through an unauthorised route and never substitute different bytes for an unavailable page.
+- Retained evidence is quoted in the card (`Evidence quotes`) and in the settlement Basis cell with the source and the time read. Hash receipts and stored response bodies no longer exist; the quote and the time are the audit trail.
 
-Runtime source, tests, configuration, R ingestion scripts and pyproject text are normalized to CRLF for the current static control receipt, making LF/CRLF checkouts equivalent. Raw event/evidence JSON and source bodies remain RAW and hash-strict. Earlier receipts retain their original normalization and state; the October 8 second receipt records this administrative portability correction.
+## 8. What this cannot do
+
+There is no machine check that a retained body matches a hash, that a log was not altered, or that a calculation was right. Protection against alteration is git history (every change is a commit; the previous commit is the comparison), the append-only rule and the numstat check. Protection against error is the printed arithmetic: another reader can redo it from the inputs on the page.

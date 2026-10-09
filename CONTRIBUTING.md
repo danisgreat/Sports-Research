@@ -1,17 +1,13 @@
 # Contribution procedure
 
-Run `py -3.14 -B -m research.operations.dev_check` before pushing: it runs every CI step in CI order and needs the interpreter pinned in `.python-version`. The current ID, active log and freeze are in the generated [CURRENT_STATE.md](CURRENT_STATE.md).
+The repository holds Markdown, CSV and text only. Do not add code, JSON, notebooks, workflow files or binary data; a framework change is a change to documents. Read [CURRENT_RULES.md](CURRENT_RULES.md) and [CURRENT_STATE.md](CURRENT_STATE.md) first. The pre-rewrite procedure is kept in [archive/superseded_2026-10-09/CONTRIBUTING.md](archive/superseded_2026-10-09/CONTRIBUTING.md).
 
-Read [CURRENT_RULES.md](CURRENT_RULES.md) and [research/README.md](research/README.md). Preserve issued forecast bytes, original source receipts and unrelated dirty files. Model/process edits require explicit versioning and before/after evidence.
+1. **Inventory first.** Run `git status` and `git log -3`. Note branch, HEAD and any uncommitted work that is not yours. Preserve it; never overwrite unrelated edits.
+2. **Preserve originals.** Never edit an issued card, a settled mini, a Combined Log above its end marker, a preserved original in `research/issued_research/`, or a dated verification report. Corrections are dated addenda. If a document must change, copy the old text into `archive/` in the same commit.
+3. **Keep contracts explicit.** Identity, endpoint and time stay explicit. Never replace missing data with a guess or a q with a probability.
+4. **Sources.** Use the routes in [SOURCES.md](SOURCES.md); record source failures and unknown independence. Keep odds-bearing material out.
+5. **Check by hand.** Run the checklist that matches your change ([VERIFICATION_PROTOCOL.md](VERIFICATION_PROTOCOL.md) §2 to §6) and print the evidence. `git diff --numstat` on any log you touched must show 0 deleted lines.
+6. **Rule or prompt changes.** Bump the version strings in [METHOD.md](METHOD.md) and [CURRENT_STATE.md](CURRENT_STATE.md), add a dated [CHANGELOG.md](CHANGELOG.md) entry, and add the hypothesis and its acceptance test to [HYPOTHESIS_REGISTER.md](HYPOTHESIS_REGISTER.md). Never change a rule on one event.
+7. **Publish deliberately.** Inspect the full diff, stage only intended files by path, verify the remote and a clean state before claiming publication. Do not push over someone else's work and do not force-push. No publication is implied by a local edit.
 
-1. Inventory branch and dirty work before edits. Snapshot any historical artifact whose working file must change.
-2. Keep identity, endpoint and time contracts explicit. Never replace missing data with guesses or q with a probability.
-3. Use retained allowlisted source bodies; record source failure and unknown independence. Keep restricted/odds-bearing bytes quarantined.
-4. Use new experiment paths. Never overwrite locked tuning or holdout outputs, prior shadows or issued cores.
-5. Run meaningful admission/custody/parser/model tests, archive validation and frozen-byte checks. Update active build receipts after an intentional versioned code change; rerun the affected model experiment when numerical dependencies change.
-6. Write the current method and implementation evidence, then create a new versioned manifest and verify it. Never overwrite an existing receipt. The living status/verification receipt and derived archive exports have explicit custody exclusions.
-7. If publication is requested, inspect the full diff and stage only intended files; verify remote and clean state before claiming publication. No publication is implied by local implementation.
-
-Verify archived source length/hash/offset and canonical coverage before deleting redundant working minis. Preserve unique archive bodies, frozen source/projection stores and audit evidence. Use `research.operations.verify_reconciliation` for current document, archive, carryover and hypothesis readback.
-
-Scientific and process failures must be visible. A green test checks tested mechanics; it cannot certify a source's truth, future predictive skill or a missing actual-start receipt.
+Verify archived source length and coverage before deleting any redundant working mini, and keep unique archive bodies and audit evidence. Scientific and process failures must be visible; a green check shows only what it checks.

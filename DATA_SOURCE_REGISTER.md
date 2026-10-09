@@ -1,5 +1,7 @@
 # Data Source Register (H0 & Runtime Ingestion)
 
+> **SUSPENDED: design note (2026-10-09).** This register specified the runtime ingestion sources and snapshots. The executable runtime, its fitted models, its data pipelines and the JSON registries that this document specifies were removed on 2026-10-09 when the framework became Markdown-only (commits `a64675cf7` to `a93352c30`; last working state at commit `37203fc2b`). Nothing in this document is a rule or is implemented; no model it describes exists. Current rules: [CURRENT_RULES.md](CURRENT_RULES.md). Cards are built by hand ([PROBABILITY_TOOLKIT.md](PROBABILITY_TOOLKIT.md), [LEAGUE_PROFILES.md](LEAGUE_PROFILES.md)). Bringing any of it back needs an explicit user instruction (prompt 8).
+
 **Authority:** MDS-2026.10.01-v8.0 / CR-2026.10.06-NUMERICAL-1.
 **Scope:** Authoritative register of all primary, secondary, and benchmark data sources for the numerical machine learning system across all eight supported sports.
 

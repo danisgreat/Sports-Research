@@ -1,5 +1,7 @@
 # H0 Independent Dataset Card & Specification
 
+> **SUSPENDED: design note (2026-10-09).** This card specified the independent H0 training datasets and the point-in-time feature store. The executable runtime, its fitted models, its data pipelines and the JSON registries that this document specifies were removed on 2026-10-09 when the framework became Markdown-only (commits `a64675cf7` to `a93352c30`; last working state at commit `37203fc2b`). Nothing in this document is a rule or is implemented; no model it describes exists. Current rules: [CURRENT_RULES.md](CURRENT_RULES.md). Cards are built by hand ([PROBABILITY_TOOLKIT.md](PROBABILITY_TOOLKIT.md), [LEAGUE_PROFILES.md](LEAGUE_PROFILES.md)). Bringing any of it back needs an explicit user instruction (prompt 8).
+
 **Authority:** MDS-2026.10.01-v8.0 / CR-2026.10.06-NUMERICAL-1.
 **Status:** Mandatory Standard for Numerical Model Training and Calibration.
 

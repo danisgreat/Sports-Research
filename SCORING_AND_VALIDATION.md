@@ -1,76 +1,92 @@
 # Scoring and validation
 
-**Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
+**Scoring version SCV-2026.10.09-v5 (Markdown only).** [CURRENT_RULES.md](CURRENT_RULES.md) controls what may be claimed; this page defines how to measure. Everything below is calculated by hand from the settled tables. The pre-rewrite page, with its descriptions of the removed evaluators, is kept in [archive/superseded_2026-10-09/SCORING_AND_VALIDATION.md](archive/superseded_2026-10-09/SCORING_AND_VALIDATION.md). Historical cards keep their original conventions.
 
-**October 1 v7.1 clarification:** Calibration, model qualification and prospective cohort controls determine the claims that may be made about performance. They do not prevent requested research, qualitative ranks, transparent uncalibrated analyst scenarios, late/live analysis or canonical IDs in the active combined log. See CURRENT_RULES.md and research.operations.log_card. Preserve original forecasts and score each appropriate cohort separately. No retrospective when the user has deferred it.
+## 1. Units and scales
 
-Current scoring: **SCV-2026.10.09-v4** (adds the October 9 top-two counting rule below; SCV-2026.10.01-v3 definitions otherwise unchanged). [CURRENT_RULES.md](CURRENT_RULES.md) controls admission. This file defines measurement; historical cards retain their original conventions.
+- An **event** is the statistical unit, not each complementary row. A card is one event; its four rows are dependent outcomes of it.
+- PUSH and VOID keep their own disposition and are never turned into losses or silently removed.
+- **Binary Brier** = (p - y)^2, where y is 1 for a win and 0 for a loss. **Binary log loss** = -ln(p) for a win and -ln(1 - p) for a loss. A stated 0 or 1 that is wrong has infinite log loss; report it as such rather than clipping.
+- **Multiclass Brier** (a result with draw) = sum over outcomes of (p_k - y_k)^2, divided by 2, so it matches binary Brier for two complementary states.
+- **Improvement** is candidate minus comparator; negative is better. Compare only on identical events and endpoints.
+- **Climatology reference** for a set of rows with win rate b: Brier = b(1 - b). **Brier skill** = 1 - Brier / b(1 - b). Positive means better than always stating the base rate.
+- q (the historical ordering score) is never scored as an event probability.
 
-## Units, cohorts and scales
+## 2. Counting (Rule T2, SCV-2026.10.09-v5)
 
-An event-family is the statistical unit, not each complementary contract row. Regulation EPL 1X2 has outcomes home/draw/away; NBL moneyline includes overtime. A different period, endpoint or competition requires a separate definition and registration. Pushes and voids retain their own mass/disposition; never turn them into losses or silently remove them.
+1. **Counted rows.** For each settled card, the live top-two rows are Rank 1 and Rank 2 graded WIN or LOSS. PUSH and VOID rows are excluded from numerators and denominators. A NO_FORECAST intake has no counted rows.
+2. **Card class.** `TOP2_ALL_WON`, `TOP2_SPLIT`, `TOP2_ALL_LOST`, `VOID`.
+3. **Primary metrics.** Counted wins ÷ live top-two rows; Rank-1 W/L/VOID and win rate over live Rank-1 rows; Rank 2 likewise; **Hit@2** = cards with at least one counted win ÷ cards with a live top-two row. Always report the number of cards, and never treat the two picks as independent trials.
+4. **Ranks 3-4** are graded and kept in a separate informational cohort for calibration. They never enter win counts, rates or performance statements.
+5. **Evidence grade.** Record A/B/C/E/OP/X for every row and report counts by grade, so best-available (C) and estimated (E) settlements stay visible. Report a sensitivity line that excludes C and E rows.
+6. **Rank-1 failures** each need the Rule R1 deep retrospection. Cohort reports list every one with its failure class and tally recurring classes ([SELECTION_RULES.md](SELECTION_RULES.md) §8).
 
-Binary Brier is `(p-y)^2`. Multiclass Brier is `sum((p_k-y_k)^2)/2`, making the scale compatible with binary Brier for the two complementary states. Multiclass log loss is `-log(p_observed)`; binary log loss uses the two actual outcome probabilities. All model comparisons use identical events and endpoints. Improvement is **candidate minus comparator**; negative is better.
+### Cohorts (never mixed)
 
-The legacy seven-contract EPL composite scores each event once as the mean of 1X2, total-2.5 and BTTS scores. It is available only for a separately qualified complete family scope. A passed 1X2 test cannot activate that composite. New candidate research compares 1X2 and NBL ML separately. q is an ordering transform from historical methods and is never scored as a coherent event probability.
+| Cohort | Rule |
+|---|---|
+| `COUNTED` | Rank 1 recorded `PASS` on the Rank-1 gate before the event. |
+| `RANK1_UNSTABLE` | Rank 1 recorded `RANK1_UNSTABLE` before the event. Its own cohort. |
+| `LEGACY_P_ONLY` | Issued before the gate; only `p_card` is known. |
+| `UNKNOWN_GATE` | No recorded gate result. Never inferred to pass. |
+| All forecast cards | Historical diagnostic view of every card. |
+| Informational | Ranks 3-4. |
 
-## Experiments and calibration
+## 3. The Wilson 95% interval
 
-Preserve the original September tuning/holdout CSVs, reports and receipts. Tuning/holdout commands refuse overwrites. New code creates new versioned experiments; the complete dependency graph and input hashes are frozen in model-build receipts. Runtime packages are pinned in `research/requirements.lock.txt`.
+For w wins in n counted rows: p̂ = w / n; z = 1.96.
 
-October's `development_protocol.json` was written before candidate calculation. It declares chronological folds, comparisons, selection periods, model grid, score scales, block bootstrap and seed. Those historical data had already been opened; the resulting `family_diagnostics.json` is **CHRONOLOGICAL_DEVELOPMENT_ONLY**. Selection on earlier periods followed by comparison on later periods reduces leakage, but does not restore an untouched test.
+- centre = (p̂ + z^2 / 2n) / (1 + z^2 / n)
+- half-width = z × sqrt( p̂(1 - p̂)/n + z^2 / 4n^2 ) / (1 + z^2 / n)
+- interval = centre ± half-width.
 
-`model_diagnostics.py` reports family-specific reliability bins with sample counts and Wilson outcome-rate intervals, including empty bins, plus descriptive calibration intercept/slope. These are diagnostics, not fitted operational recalibration. No posthoc calibration curve is fitted to the final evaluation outcomes and deployed. Population scoring distributions, TB1-MD and fixed Elo supply stronger comparators; an odds benchmark remains separate.
+Check: 79 wins in 134 rows gives p̂ = 0.590, centre 0.587, half-width 0.082, interval 50.5% to 66.9%. Because the two picks of a card are dependent, the interval is **descriptive**; it understates the uncertainty. Promotion decisions use the week-block comparison in section 5.
 
-Week-block paired bootstrap uses 10,000 replicates and the frozen seed. Report event count and independent block count. Do not infer future accuracy from a single point estimate or aggregate unrelated sports/families. A miss can be well-calibrated; a win can come from a bad process.
+## 4. Calibration table (by hand)
 
-## Prospective evidence and admission
+1. List every row with a stated `p_card` and its outcome (1 or 0). Exclude PUSH and VOID.
+2. Group by stated probability into bins: 50-59%, 60-69%, 70-79%, 80-90%.
+3. For each bin report n, the mean stated probability, the win rate and the Wilson interval for the win rate.
+4. Report the overall Brier score, the climatology Brier and the Brier skill.
+5. Describe the pattern: within each bin, does the stated probability sit inside the win-rate interval? An over-confident pattern (high bins under-performing) is the most important finding to report.
+6. Optional least-squares reliability line: win = a + b × p over the rows (perfect calibration is a = 0, b = 1). Report it only with its sample size and treat it as descriptive.
 
-`eligibility.py` validates native cached event bodies, content hashes, exact identity/endpoint, registry/model qualification, input/distribution joins, source independence and time ordering. Valid-looking CSV booleans do not count. Issue requires fresh pregame sources with cutoff strictly before issue and issue before verified scheduled start. Final scoring additionally requires a supported actual-start field and three independently audited terminal lineages.
+Missing probabilities stay missing. A genuine 0 or 1 probability is retained. Never substitute q.
 
-`ledger.py` records frozen universe registration, abstention, issue preparation/commitment and append-only settlement revisions in a hash chain. `pilot.score_events` validates those records and frozen ledger-selected projections, derives the contract outcomes and probabilities, and emits exclusions for every omitted event. No current canonical live issue exists.
+## 5. Comparing two methods (week-block comparison, by hand)
 
-`pilot.freeze_lock` refuses a retrospective or overwritten lock and pins the model/source registries, exact registered baseline definition/code, universe, power plan and ledger head. `decision` enrols the chronological issued cohort, waits on unsettled earlier members and records a single interim even if a batch passes its exact count. Futility is terminal across future reads. Final decisions report paired card-vs-model and model/card-vs-baseline results. The current template is NOT_FROZEN; the live composite families and requisite power evidence are absent.
+Used for the pre-registered experiments in [HYPOTHESIS_REGISTER.md](HYPOTHESIS_REGISTER.md) and for any claim that one method beats another.
 
-## Historical learning
+1. For each row both methods priced, compute the paired difference d = Brier(candidate) - Brier(baseline).
+2. Group rows by ISO week of the event. Compute the mean difference per week.
+3. Over the k weeks, take the mean of the weekly means and the standard error s / sqrt(k).
+4. The 95% interval is the mean ± 1.96 standard errors (use 2.36 for k below 8, and treat k below 8 as insufficient).
+5. A method is better only if the interval's upper bound is below 0, the calibration slope's interval contains 1, and at least 8 week-blocks are in the sample. Otherwise write `INSUFFICIENT_EVIDENCE` and the sample still needed.
+6. Do not aggregate unrelated sports or families into one number.
 
-`research/data/processed/legacy_learning/contracts.csv` preserves all 2,004 rank-log rows; `cards.csv` covers all 522 IDs. It retains 630 literal probabilities and marks unresolved or disputed fields. It never fills absent cutoffs, baselines, event IDs or endpoints. Brier values there are explicitly literal-grade diagnostics. They cannot establish source truth, prospective calibration or incremental baseline skill. Every historical row remains performance-ineligible.
+## 6. Ranking diagnostics
 
-## October 5 diagnostic cohort
+- **Wins@2** = counted wins (0, 1 or 2) on a card.
+- **NDCG@2** for binary relevance: DCG@2 = rel(rank 1)/log2(2) + rel(rank 2)/log2(3) = rel1 + 0.631 × rel2. IDCG@2 uses the ideal ordering **over the entire slate of four rows**, not only the top two observed rows: with m wins among the four rows, IDCG@2 is 1 for m = 1, 1.631 for m of 2 or more, and the card is unscored for m = 0. NDCG@2 = DCG@2 / IDCG@2. Unresolved, push and void slates stay unscored. NDCG is descriptive ranking quality, not a win count.
 
-P-527–P-537 retain eleven completed-game diagnostic reviews, not certified prospective outcomes. Missing literal probabilities/baselines make Brier/log loss and adjustment improvement NOT_COMPUTABLE; ordinal ranks, duplicated rows, alternative versions and complementary picks do not create extra trials. P-537 first-half and corners rows remain unresolved. The [carryover](research/verification/closure_2026-10-05/carryover.md) also retains P-523–P-526 custody requirements. No original NO_FORECAST or LATE_RESEARCH state is upgraded.
+## 7. Scoreboard (kept by hand in `research/scoreboard/SCOREBOARD.md`)
 
-All eleven retrospective hypotheses are recorded verbatim in [the improvement register](research/improvement_register.json) as PROPOSED_NOT_TESTED. A written acceptance criterion is not a passed experiment; no weights, probabilities or model qualifications change from those proposals.
+After each import (prompt 4) and each retrospective (prompt 6), update the scoreboard from the settled tables:
 
-## Release and failure policy
+1. Add each newly settled card to its cohort (section 2).
+2. For each cohort recompute: cards, counted wins over live top-two rows, rate with its Wilson interval, Rank-1 W-L, Rank-2 W-L, and cards won / split / lost.
+3. Update the by-sport and by-month tables and the Rank-1 results by proposition family.
+4. Update the slot table: Rank 1, Rank 2, Ranks 1-2, Ranks 3-4. If Rank 1 does not beat Rank 2, and Rank 2 does not beat ranks 3-4, say plainly that ranking is not separating propositions.
+5. Copy the headline numbers into [CURRENT_STATE.md](CURRENT_STATE.md).
+6. Spot-check five random IDs against their settlement blocks in the Combined Log. If any number disagrees, fix the scoreboard, never the log.
 
-Qualification is model-version/family/endpoint specific. A new model needs fresh qualified evidence, source lineage audit, checked temporal features and at least 50 unique prospective shadows spanning at least 28 days. A different sport starts with league-specific endpoint/source adapters and a simple baseline before complex models. Archive completeness is measured as verified event coverage, not files created.
+## 8. Historical learning and the diagnostic cohorts
 
-Classify every learning case as one or more of: data/source/identity, contract/period, timing/availability, model/calibration, research adjustment, true random miss, and unresolved/censored. Review successes under the same checks. Append a versioned hypothesis and acceptance criterion before changing a model; evaluate it chronologically against a fixed baseline. Do not edit an old forecast to make a repair look successful.
+Historical rank logs (`GAME_PREDICTION_RANK_LOG.csv`) and reconstructed views are **learning-only**: literal grades, unresolved conflicts and missing cutoffs stay labelled. They never fill absent cutoffs, baselines, event IDs or endpoints and cannot establish source truth, prospective calibration or incremental skill. P-527 to P-537 are completed-game diagnostic reviews, not certified prospective outcomes; missing literal probabilities make their Brier and log loss `NOT_COMPUTABLE`. P-537 first-half and corners rows stay unresolved.
 
-Baseline provenance is mandatory for certified admission: exact lane/league/endpoint/families/version, a pinned approved definition and code artifacts, approval strictly before cutoff, and matching distribution/holdout/shadow/pilot comparator. Hash joins verify retained bytes and declared metadata; they do not independently prove every declared input availability time or recompute every distribution. Review the original source field and baseline construction. The point-in-time feature filter likewise labels declared metadata and cannot confer live admission by itself.
+## 9. Release and failure policy
 
-## Versioned fifteen-experiment measurement protocol
-
-[EXPERIMENT-MEASURES-1](research/experiments/protocols_v1.json) implements all fifteen source-bound hypotheses separately from the frozen certified pilot/scoring code. It measures exact contract Brier/log loss, per-target CRPS and 50/80/95-percent interval coverage/score, fixed-bin reliability and paired week-block uncertainty. Composite primary scores use fixed target weights and one score per event. Pushes remain outcome categories. Raw-unit distribution scores remain separate by target. Zero-probability observed outcomes retain an explicit infinite-loss flag; no silent clipping.
-
-The fixed family is fifteen experiments: family alpha .05, per-comparison alpha .05/15, 60,000 paired week-block percentile replicates. Approximate inference requires a source-backed dependence audit. Sample planning uses a separate pilot with at least eight week blocks and a larger anticipated improvement than the minimum worthwhile threshold; the final cohort needs at least twenty blocks and its calculated numeric sample. No numbers or achieved power are invented for currently absent data. All acceptance tolerances remain unfilled until justified. [Full definitions, commands and next steps](research/experiments/NEXT_STEPS.md).
-
-Every registry entry is MEASURES_IMPLEMENTED with experiment NOT_RUN_AT_REGISTRATION. Immutable locks pin evaluator code/runtime, model/input refs and cohort identities. Missing/invalid/pending observations block statistical decisions, and CANDIDATE_FOR_REVIEW never grants performance eligibility or changes an issued forecast. The original fifteen proposal texts and status remain unchanged.
-
-## October 8 full-slate ranking clarification
-
-For binary relevance, NDCG@2 = DCG@2 / IDCG@2; ideal relevance is sorted over the entire frozen ranked slate, including wins below rank 2. Do not compute ideal relevance from only the top two observed rows. Unresolved, push and void slates remain unscored until an applicable policy is frozen; they are not losses. `research.operations.diagnostic_rank` implements this descriptive policy. P-539 and P-548 receive dated corrections, preserving the supplied historical figures in the original mini archive.
-
-## October 9 top-two counting (SCV-2026.10.09-v4)
-
-Rule T2 (CURRENT_RULES.md): **only Rank 1 and Rank 2 can count as a win.**
-
-- **Counted rows.** For each settled card, the live top-two rows are ranks 1–2 graded WIN or LOSS. PUSH and VOID rows are excluded from numerators and denominators; they are never losses. A NO_FORECAST intake has no counted rows.
-- **Card class.** `TOP2_ALL_WON` (every live top-two row won), `TOP2_SPLIT` (one of two won), `TOP2_ALL_LOST` (every live top-two row lost), `VOID` (no live top-two row).
-- **Primary counting metrics.** Counted wins ÷ live top-two rows; Rank-1 W/L/VOID and Rank-1 win rate over live Rank-1 rows; Rank-2 likewise; Hit@2 = cards with at least one counted win ÷ cards with a live top-two row. Report the event count and never treat the two picks as independent trials.
-- **Ranks 3–4.** Graded and retained in a separate *informational* cohort for calibration (Brier/log loss where p exists) and ranking diagnostics. They never enter win counts, win rates or performance statements.
-- **Ranking diagnostics.** Wins@2 and full-slate NDCG@2 (October 8 clarification) stay descriptive ranking-quality measures. They are not win counts.
-- **Rank-1 failures.** Each one requires the Rule R1 deep retrospection. Cohort reports list every Rank-1 failure with its failure class and tally recurring classes.
-- **Evidence grade.** Every settled row records its evidence grade (A/B/C/E/OP/X). Cohort reports give counts by grade, so best-available (C) and estimated (E) settlements stay visible.
-- **Reference implementation.** `research/verification/final_settlement_2026-10-09/build/build_settlement.py`.
+- **Certification is suspended** (CURRENT_RULES §10). All scores here are research scores.
+- Classify every learning case as one or more of: data or source or identity, contract or period, timing or availability, model or calibration, research adjustment, true random miss, unresolved or censored. Review wins under the same checks as losses.
+- Append a versioned hypothesis and an acceptance criterion to [HYPOTHESIS_REGISTER.md](HYPOTHESIS_REGISTER.md) before changing a rule; evaluate it chronologically against a fixed baseline. Never edit an old forecast to make a repair look successful.
+- A written acceptance criterion is not a passed experiment.
