@@ -5,6 +5,20 @@ import numpy as np
 from scipy.optimize import minimize
 from scipy.special import expit, logit
 
+from .errors import NotFitted, require_converged
+
+
+def _validated_pair(probs, y_true, model: str) -> Tuple[np.ndarray, np.ndarray]:
+    p = np.asarray(probs, dtype=float)
+    y = np.asarray(y_true, dtype=float)
+    if p.ndim != 1 or p.shape != y.shape or p.size == 0:
+        raise ValueError(f"{model}: probs and y_true must be non-empty 1-D arrays of equal length")
+    if not (np.all(np.isfinite(p)) and np.all(np.isfinite(y))):
+        raise ValueError(f"{model}: probs and y_true must be finite")
+    if np.any(p < 0.0) or np.any(p > 1.0) or not np.all(np.isin(y, (0.0, 1.0))):
+        raise ValueError(f"{model}: probs must lie in [0, 1] and y_true must be binary")
+    return p, y
+
 
 class PlattScaler:
     """Logistic calibration: P(Y=1 | p) = 1 / (1 + exp(-(a * logit(p) + b)))."""
@@ -14,6 +28,7 @@ class PlattScaler:
         self.b: float = 0.0
 
     def fit(self, probs: np.ndarray, y_true: np.ndarray) -> "PlattScaler":
+        probs, y_true = _validated_pair(probs, y_true, "PlattScaler")
         p_clipped = np.clip(probs, 1e-6, 1.0 - 1e-6)
         z = logit(p_clipped)
 
@@ -28,8 +43,8 @@ class PlattScaler:
             return nll + reg
 
         res = minimize(loss, [1.0, 0.0], method="BFGS")
-        if res.success:
-            self.a, self.b = res.x
+        require_converged(res, "PlattScaler", grad_tol=1e-3)
+        self.a, self.b = (float(res.x[0]), float(res.x[1]))
         return self
 
     def predict(self, probs: np.ndarray) -> np.ndarray:
@@ -38,48 +53,53 @@ class PlattScaler:
         return expit(self.a * z + self.b)
 
 
+def pava(values: np.ndarray, weights: np.ndarray) -> np.ndarray:
+    """Weighted pool-adjacent-violators: the non-decreasing least-squares fit of `values`.
+
+    Stack based and linear time. A pooled block carries the weighted mean of its members,
+    and each element's weight is counted exactly once (ML-01).
+    """
+    block_value, block_weight, block_size = [], [], []
+    for v, w in zip(values, weights):
+        block_value.append(float(v))
+        block_weight.append(float(w))
+        block_size.append(1)
+        while len(block_value) > 1 and block_value[-2] > block_value[-1]:
+            w2, v2, n2 = block_weight.pop(), block_value.pop(), block_size.pop()
+            w1, v1, n1 = block_weight.pop(), block_value.pop(), block_size.pop()
+            total = w1 + w2
+            block_value.append((v1 * w1 + v2 * w2) / total)
+            block_weight.append(total)
+            block_size.append(n1 + n2)
+    return np.repeat(np.array(block_value), np.array(block_size))
+
+
 class IsotonicCalibrator:
-    """Non-parametric monotonic probability calibration via Pool Adjacent Violators Algorithm (PAVA)."""
+    """Non-parametric monotonic probability calibration via the pool-adjacent-violators algorithm.
+
+    Tied probabilities are merged first (weight = count, value = mean outcome), so the fit
+    is a function of the probability and never depends on the order of tied rows.
+    """
 
     def __init__(self):
         self.x_vals: np.ndarray = np.array([])
         self.y_vals: np.ndarray = np.array([])
 
     def fit(self, probs: np.ndarray, y_true: np.ndarray) -> "IsotonicCalibrator":
-        order = np.argsort(probs)
-        x_sort = probs[order]
-        y_sort = y_true[order].astype(float)
-
-        # PAVA implementation
-        weights = np.ones_like(y_sort)
-        v = y_sort.copy()
-
-        i = 0
-        while i < len(v) - 1:
-            if v[i] > v[i + 1]:
-                # Pool violators
-                j = i
-                while j >= 0 and v[j] > v[j + 1]:
-                    w_sum = weights[j] + weights[j + 1]
-                    v_avg = (v[j] * weights[j] + v[j + 1] * weights[j + 1]) / w_sum
-                    v[j] = v_avg
-                    v[j + 1] = v_avg
-                    weights[j] = w_sum
-                    weights[j + 1] = w_sum
-                    j -= 1
-                i = 0  # Re-scan from start
-            else:
-                i += 1
-
-        self.x_vals = x_sort
-        self.y_vals = np.clip(v, 0.0, 1.0)
+        probs, y_true = _validated_pair(probs, y_true, "IsotonicCalibrator")
+        unique_x, inverse, counts = np.unique(probs, return_inverse=True, return_counts=True)
+        sums = np.bincount(inverse, weights=y_true)
+        fitted = pava(sums / counts, counts.astype(float))
+        self.x_vals = unique_x
+        self.y_vals = np.clip(fitted, 0.0, 1.0)
         return self
 
     def predict(self, probs: np.ndarray) -> np.ndarray:
         if len(self.x_vals) == 0:
-            return probs
-        # Linear interpolation with constant extrapolation
-        return np.interp(probs, self.x_vals, self.y_vals, left=self.y_vals[0], right=self.y_vals[-1])
+            raise NotFitted("IsotonicCalibrator.predict called before fit")
+        # Linear interpolation between block values with constant extrapolation
+        return np.interp(np.asarray(probs, dtype=float), self.x_vals, self.y_vals,
+                         left=self.y_vals[0], right=self.y_vals[-1])
 
 
 class TemperatureScaler:
@@ -89,6 +109,7 @@ class TemperatureScaler:
         self.temperature: float = 1.0
 
     def fit(self, probs: np.ndarray, y_true: np.ndarray) -> "TemperatureScaler":
+        probs, y_true = _validated_pair(probs, y_true, "TemperatureScaler")
         p_clipped = np.clip(probs, 1e-6, 1.0 - 1e-6)
         z = logit(p_clipped)
 
@@ -99,8 +120,8 @@ class TemperatureScaler:
             return -np.sum(y_true * np.log(p_cal) + (1.0 - y_true) * np.log(1.0 - p_cal))
 
         res = minimize(loss, [0.0], method="L-BFGS-B")
-        if res.success:
-            self.temperature = float(np.exp(res.x[0]))
+        require_converged(res, "TemperatureScaler", grad_tol=1e-3)
+        self.temperature = float(np.exp(res.x[0]))
         return self
 
     def predict(self, probs: np.ndarray) -> np.ndarray:
@@ -130,7 +151,11 @@ def compute_ece(y_true: np.ndarray, y_prob: np.ndarray, n_bins: int = 10) -> flo
 
 
 def compute_calibration_slope(y_true: np.ndarray, y_prob: np.ndarray) -> Tuple[float, float]:
-    """Fit Cox calibration curve: logit(P(Y=1)) = alpha + beta * logit(p). Returns (alpha, beta)."""
+    """Fit Cox calibration curve: logit(P(Y=1)) = alpha + beta * logit(p). Returns (alpha, beta).
+
+    Raises `FitFailed` if the optimiser does not converge; no default (0, 1) is ever returned.
+    """
+    y_prob, y_true = _validated_pair(y_prob, y_true, "compute_calibration_slope")
     p_clipped = np.clip(y_prob, 1e-5, 1.0 - 1e-5)
     z = logit(p_clipped)
 
@@ -141,7 +166,6 @@ def compute_calibration_slope(y_true: np.ndarray, y_prob: np.ndarray) -> Tuple[f
         return -np.sum(y_true * np.log(p_hat) + (1.0 - y_true) * np.log(1.0 - p_hat))
 
     res = minimize(loss, [0.0, 1.0], method="BFGS")
-    if res.success:
-        return (float(res.x[0]), float(res.x[1]))
-    return (0.0, 1.0)
+    require_converged(res, "compute_calibration_slope", grad_tol=1e-3)
+    return (float(res.x[0]), float(res.x[1]))
 

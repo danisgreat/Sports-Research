@@ -1,6 +1,6 @@
 """Proper scoring rules and probability evaluation metrics."""
 
-from typing import Dict, List, Union
+from typing import Dict, List, Optional, Union
 import numpy as np
 
 

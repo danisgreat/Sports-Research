@@ -1,0 +1,46 @@
+{
+ "excluded": {
+  "Metal Ligaen": [
+   "home_advantage 1.229 outside plausible [-0.3, 0.6]"
+  ]
+ },
+ "leagues": {
+  "NHL": {
+   "extras": {
+    "margin_excess_kurtosis": -0.570065,
+    "margin_ge_2_share": 0.601372,
+    "margin_ge_3_share": 0.402693,
+    "overtime_decided_before_shootout": 0.680092,
+    "overtime_share": 0.220783,
+    "shootout_home_share": 0.521583,
+    "shootout_share": 0.07063
+   },
+   "margin_sd": 2.6136469616377225,
+   "mean_away": 2.979420731707317,
+   "mean_home": 3.207317073170732,
+   "n_games": 3936,
+   "provenance": {
+    "archive_seasons": [
+     2023,
+     2024,
+     2025
+    ],
+    "builder": "league-profile-v1",
+    "source_files": {
+     "Previous Sports Results/Ice Hockey/NHL/2023/2023_games.csv": "9e8ba9a7a7db3065182d614586ad83a373170b7bc2df5cf21b66ffe6f72cf791",
+     "Previous Sports Results/Ice Hockey/NHL/2024/2024_games.csv": "7824db95d0f0ed8ea94cb20e93eeebb54fd78e46424a7af35d78f910fc969987",
+     "Previous Sports Results/Ice Hockey/NHL/2025/2025_games.csv": "14ed593f1ff53ea4da67dd1ee540807bacd7e4677a04e9a399b756081520a505"
+    },
+    "stage": "regular"
+   },
+   "score_corr": -0.1225679876643428,
+   "seasons": [
+    2023,
+    2025
+   ],
+   "total_sd": 2.3107806407930522
+  }
+ },
+ "schema": "league-profiles-1",
+ "sport": "ice_hockey"
+}

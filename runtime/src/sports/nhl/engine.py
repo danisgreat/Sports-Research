@@ -1,130 +1,149 @@
-"""NHL predictive engine modeling xG, goalie quality, and empty-net goal distribution."""
+"""NHL predictive engine: opponent-adjusted goal rates, goalie adjustment, late-game state model and a rules-correct OT/SO endpoint."""
 
-from typing import Any, Dict
+from dataclasses import dataclass
+from typing import Any, Dict, Mapping, Optional
+
 import numpy as np
 from scipy.stats import poisson
-from ..base import BaseSportEngine
+
+from ..base import BaseSportEngine, collect_games
 from ...common.contracts import ScoreDistribution
+from ...common.endpoints import HockeyOvertime, fit_ot_multiplier, hockey_full_game
+from ...common.errors import MissingInputs, NotFitted
+from ...common.leagues import LeagueProfile
+from ...common.strengths import AttackDefenceModel
+
+MAX_GOALS = 14
+
+
+@dataclass(frozen=True)
+class HockeyLateGame:
+    """Goalie-pull and empty-net dynamics for the last minutes of regulation (DST-10).
+
+    The trailing team pulls its goalie once the time remaining falls to `pull_minutes_by_deficit[deficit]`
+    (a deficit with no entry never pulls). While pulled, the trailing team scores at `pulled_scoring_multiplier`
+    times its normal rate and the leader scores into the empty net at `empty_net_rate_per_minute`.
+    These values must be fitted on play-by-play before they are relied on; `ILLUSTRATIVE` is an unfitted
+    scenario for mechanics and sensitivity analysis only.
+    """
+    pull_minutes_by_deficit: Mapping[int, float]
+    pulled_scoring_multiplier: float
+    empty_net_rate_per_minute: float
+    step_minutes: float = 0.25
+
+    ILLUSTRATIVE = None  # assigned below the class body
+
+
+HockeyLateGame.ILLUSTRATIVE = HockeyLateGame(pull_minutes_by_deficit={1: 1.75, 2: 3.0}, pulled_scoring_multiplier=2.0,
+                                             empty_net_rate_per_minute=0.30)
+
+
+def late_game_grid(lambda_home: float, lambda_away: float, late: HockeyLateGame, max_goals: int = MAX_GOALS) -> np.ndarray:
+    """Regulation score grid with the final minutes simulated step by step under goalie-pull dynamics."""
+    horizon = max(late.pull_minutes_by_deficit.values())
+    steps = int(round(horizon / late.step_minutes))
+    early_minutes = 60.0 - steps * late.step_minutes
+    grid = np.outer(poisson.pmf(np.arange(max_goals + 1), lambda_home * early_minutes / 60.0),
+                    poisson.pmf(np.arange(max_goals + 1), lambda_away * early_minutes / 60.0))
+    grid /= grid.sum()
+    h_idx, a_idx = np.meshgrid(np.arange(max_goals + 1), np.arange(max_goals + 1), indexing="ij")
+    deficit = h_idx - a_idx                                            # positive: home leads
+    for step in range(steps):
+        remaining = horizon - step * late.step_minutes                  # minutes left at the start of this step
+        rate_h = np.full(grid.shape, lambda_home / 60.0)
+        rate_a = np.full(grid.shape, lambda_away / 60.0)
+        for lead, minutes in late.pull_minutes_by_deficit.items():
+            if remaining <= minutes:
+                away_pulled, home_pulled = deficit == lead, deficit == -lead
+                rate_a = np.where(away_pulled, rate_a * late.pulled_scoring_multiplier, rate_a)
+                rate_h = np.where(away_pulled, late.empty_net_rate_per_minute, rate_h)
+                rate_h = np.where(home_pulled, rate_h * late.pulled_scoring_multiplier, rate_h)
+                rate_a = np.where(home_pulled, late.empty_net_rate_per_minute, rate_a)
+        p_h = 1.0 - np.exp(-rate_h * late.step_minutes)
+        p_a = 1.0 - np.exp(-rate_a * late.step_minutes)
+        new = grid * (1 - p_h) * (1 - p_a)
+        new[1:, :] += (grid * p_h * (1 - p_a))[:-1, :]
+        new[:, 1:] += (grid * (1 - p_h) * p_a)[:, :-1]
+        new[1:, 1:] += (grid * p_h * p_a)[:-1, :-1]
+        new[-1, :] += (grid * p_h * (1 - p_a))[-1, :]                  # mass at the cap stays at the cap
+        new[:, -1] += (grid * (1 - p_h) * p_a)[:, -1]
+        new[-1, -1] += (grid * p_h * p_a)[-1, -1]
+        grid = new
+    return grid / grid.sum()
 
 
 class NHLEngine(BaseSportEngine):
-    """Predictive engine for Ice Hockey matches (NHL, KHL, SHL)."""
+    """Predictive engine for ice hockey (NHL, KHL, SHL).
 
-    def __init__(self):
-        super().__init__("nhl")
-        self.is_fitted = False
-        self.league_avg_goals: float = 3.05
-        self.home_ice_advantage: float = 0.25
-        self.team_scoring_factors: Dict[str, float] = {}
-        self.team_defense_factors: Dict[str, float] = {}
+    fit(games):            opponent-adjusted goal rates by chronological-CV ridge (DST-05).
+    late_game:             optional `HockeyLateGame` (None = plain regulation Poisson).
+    predict_distribution:  endpoint "regulation" (60 minutes) or "full_game" (OT then shootout; DST-02).
+    """
+
+    def __init__(self, league: Optional[LeagueProfile] = None, unknown_team_policy: str = "refuse",
+                 late_game: Optional[HockeyLateGame] = None, overtime: Optional[HockeyOvertime] = None):
+        super().__init__("nhl", league, unknown_team_policy)
+        self.late_game = late_game
+        self.overtime = overtime
+        self.model: Optional[AttackDefenceModel] = None
 
     def fit(self, train_data: Any) -> "NHLEngine":
-        """Fit shot conversion and goaltending baselines from H0 MoneyPuck data."""
-        if isinstance(train_data, list):
-            goals_for: Dict[str, float] = {}
-            goals_against: Dict[str, float] = {}
-            games_played: Dict[str, int] = {}
-            h_g_list = []
-            a_g_list = []
-            all_g = []
-
-            for m in train_data:
-                if not isinstance(m, dict):
-                    continue
-                h = m.get("home_team")
-                a = m.get("away_team")
-                h_g = float(m.get("home_goals") or m.get("home_score", 3.0))
-                a_g = float(m.get("away_goals") or m.get("away_score", 2.8))
-
-                h_g_list.append(h_g)
-                a_g_list.append(a_g)
-                all_g.extend([h_g, a_g])
-
-                if h:
-                    goals_for[h] = goals_for.get(h, 0.0) + h_g
-                    goals_against[h] = goals_against.get(h, 0.0) + a_g
-                    games_played[h] = games_played.get(h, 0) + 1
-                if a:
-                    goals_for[a] = goals_for.get(a, 0.0) + a_g
-                    goals_against[a] = goals_against.get(a, 0.0) + h_g
-                    games_played[a] = games_played.get(a, 0) + 1
-
-            if len(all_g) >= 10:
-                self.league_avg_goals = float(np.mean(all_g))
-                if h_g_list and a_g_list:
-                    self.home_ice_advantage = float(np.mean(h_g_list) - np.mean(a_g_list))
-
-            for t, gp in games_played.items():
-                if gp >= 3 and self.league_avg_goals > 0:
-                    mean_for = goals_for[t] / gp
-                    mean_against = goals_against[t] / gp
-                    self.team_scoring_factors[t] = float(0.8 * (mean_for / self.league_avg_goals) + 0.2)
-                    self.team_defense_factors[t] = float(0.8 * (mean_against / self.league_avg_goals) + 0.2)
-
+        games = collect_games(train_data, ("home_goals", "home_score"), ("away_goals", "away_score"))
+        self.model = AttackDefenceModel().fit(games)
         self.is_fitted = True
         return self
 
-    def predict_distribution(self, match_context: Dict[str, Any]) -> ScoreDistribution:
-        """Produce joint score matrix for 60-minute regulation hockey."""
-        h_team = match_context.get("home_team")
-        a_team = match_context.get("away_team")
+    # ------------------------------------------------------------------ inputs
+    def overtime_rule(self, playoffs: bool = False) -> HockeyOvertime:
+        """The overtime rule: explicit, else derived from the league profile's archive rates."""
+        if self.overtime is not None:
+            return self.overtime
+        if self.league is None:
+            raise MissingInputs("nhl: full_game endpoint needs an explicit HockeyOvertime rule or a league profile")
+        if playoffs:
+            return HockeyOvertime(ot_minutes=None)
+        m = fit_ot_multiplier(self.league.mean_total, self.league.extra("overtime_decided_before_shootout"), 5.0)
+        return HockeyOvertime(ot_minutes=5.0, ot_rate_multiplier=m, shootout_home_share=self.league.extra("shootout_home_share"))
 
-        h_att = self.team_scoring_factors.get(h_team, 1.0)
-        a_att = self.team_scoring_factors.get(a_team, 1.0)
-        h_def = self.team_defense_factors.get(h_team, 1.0)
-        a_def = self.team_defense_factors.get(a_team, 1.0)
+    def _expected_goals(self, ctx: Dict[str, Any]):
+        if ctx.get("home_xg") is not None and ctx.get("away_xg") is not None:
+            return float(ctx["home_xg"]), float(ctx["away_xg"])
+        if ctx.get("home_xg") is not None or ctx.get("away_xg") is not None:
+            raise MissingInputs("nhl: give both home_xg and away_xg, or neither")
+        home, away = ctx.get("home_team"), ctx.get("away_team")
+        if self.is_fitted and self.model is not None:
+            unknown = "average" if self.unknown_team_policy == "league_average" else "refuse"
+            for team in (home, away):
+                if not self.model.knows(team):
+                    self._warn(f"unknown team {team!r}: league-average strength used; uncertainty not modelled")
+            return self.model.expected(home, away, unknown=unknown)
+        if self.league is not None and self.unknown_team_policy == "league_average":
+            self._warn("no fitted team strengths: league-average expected goals from the profile")
+            return self.league.mean_home, self.league.mean_away
+        self._need_fit_or_profile()
+        raise MissingInputs("nhl: pass home_xg/away_xg, or fit the engine, or use unknown_team_policy='league_average' with a league profile")
 
-        # Expected goals
-        if "home_xg" in match_context:
-            h_xg = float(match_context["home_xg"])
+    # -------------------------------------------------------------- prediction
+    def predict_distribution(self, match_context: Dict[str, Any], endpoint: str = "regulation") -> ScoreDistribution:
+        if endpoint not in ("regulation", "full_game"):
+            raise ValueError("endpoint must be 'regulation' or 'full_game'")
+        if match_context.get("empty_net_rate") is not None:
+            raise ValueError("the fixed empty_net_rate was removed; pass a HockeyLateGame instead")
+        h_xg, a_xg = self._expected_goals(match_context)
+        h_save = float(match_context.get("home_goalie_save_factor", 1.0))      # >1: stronger goalie, fewer goals against
+        a_save = float(match_context.get("away_goalie_save_factor", 1.0))
+        lam_h, lam_a = max(0.1, h_xg / a_save), max(0.1, a_xg / h_save)
+        late = match_context.get("late_game", self.late_game)
+        if late is None:
+            p_h = poisson.pmf(np.arange(MAX_GOALS + 1), lam_h)
+            p_a = poisson.pmf(np.arange(MAX_GOALS + 1), lam_a)
+            grid = np.outer(p_h, p_a)
+            grid /= grid.sum()
         else:
-            h_xg = self.league_avg_goals * h_att * a_def + (self.home_ice_advantage / 2.0)
-
-        if "away_xg" in match_context:
-            a_xg = float(match_context["away_xg"])
-        else:
-            a_xg = self.league_avg_goals * a_att * h_def - (self.home_ice_advantage / 2.0)
-
-        # Goalie save percentage adjustments
-        h_goalie_adj = float(match_context.get("home_goalie_save_factor", 1.0))
-        a_goalie_adj = float(match_context.get("away_goalie_save_factor", 1.0))
-
-        # Empty net goal probability mass
-        empty_net_rate = float(match_context.get("empty_net_rate", 0.22))
-
-        lambda_h = max(0.1, h_xg / a_goalie_adj)
-        lambda_a = max(0.1, a_xg / h_goalie_adj)
-
-        max_goals = 14
-        grid = np.zeros((max_goals + 1, max_goals + 1), dtype=float)
-
-        p_h = poisson.pmf(np.arange(max_goals + 1), lambda_h)
-        p_a = poisson.pmf(np.arange(max_goals + 1), lambda_a)
-
-        for x in range(max_goals + 1):
-            for y in range(max_goals + 1):
-                prob = p_h[x] * p_a[y]
-                
-                # Apply empty net transition mass if leading by 1 or 2 late
-                if x > y and x <= y + 2 and x < max_goals:
-                    # Trailing away team pulls goalie: chance of home sealing with empty netter
-                    prob_en = prob * empty_net_rate
-                    grid[x + 1, y] += prob_en
-                    grid[x, y] += prob * (1.0 - empty_net_rate)
-                elif y > x and y <= x + 2 and y < max_goals:
-                    # Trailing home team pulls goalie: chance of away sealing with empty netter
-                    prob_en = prob * empty_net_rate
-                    grid[x, y + 1] += prob_en
-                    grid[x, y] += prob * (1.0 - empty_net_rate)
-                else:
-                    grid[x, y] += prob
-
-        # Normalize truncated mass
-        grid /= np.sum(grid)
-
-        return ScoreDistribution(
-            grid=grid,
-            home_support=np.arange(max_goals + 1),
-            away_support=np.arange(max_goals + 1)
-        )
-
+            grid = late_game_grid(lam_h, lam_a, late)
+        meta = {"model": "nhl_poisson", "lambda_home": lam_h, "lambda_away": lam_a,
+                "late_game": "none" if late is None else "state_model", "warnings": self._take_warnings()}
+        dist = ScoreDistribution(grid, np.arange(MAX_GOALS + 1), np.arange(MAX_GOALS + 1), endpoint="regulation", metadata=meta)
+        if endpoint == "regulation":
+            return dist
+        return hockey_full_game(dist, lam_h, lam_a, self.overtime_rule(bool(match_context.get("playoffs", False))))

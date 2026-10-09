@@ -4,8 +4,8 @@ Guarantees logical monotonicity and coherence across all derived betting markets
 by pricing every contract from a single underlying score probability distribution.
 """
 
-from dataclasses import dataclass
-from typing import Dict, List, Optional, Tuple
+from dataclasses import dataclass, field
+from typing import Any, Dict, List, Optional, Tuple
 import numpy as np
 
 
@@ -18,6 +18,10 @@ class ScoreDistribution:
     p_match_home_win: Optional[float] = None
     p_match_away_win: Optional[float] = None
     p_match_draw: Optional[float] = None
+    # Which result the grid settles on: "regulation", "full_game" or "unspecified". A contract that
+    # names an endpoint is refused against a grid labelled with a different one (DST-02).
+    endpoint: str = "unspecified"
+    metadata: Dict[str, Any] = field(default_factory=dict)
 
     def __post_init__(self):
         # Validate grid numerical validity and non-negativity

@@ -1,0 +1,43 @@
+{
+ "excluded": {},
+ "leagues": {
+  "EPL": {
+   "extras": {
+    "corners_mean": 10.0,
+    "corners_sd": 3.27,
+    "corners_team_mean": 5.0,
+    "corners_team_sd": 2.77,
+    "draw_share": 0.24473684210526317,
+    "first_half_goal_share": 0.432727,
+    "first_half_goals_mean": 1.19,
+    "margin_excess_kurtosis": 0.5958490139498713,
+    "p_first_half_goal": 0.716
+   },
+   "margin_sd": 1.8592014850155638,
+   "mean_away": 1.3745614035087719,
+   "mean_home": 1.6131578947368421,
+   "n_games": 1140,
+   "provenance": {
+    "archive_seasons": [
+     "2023-24",
+     "2024-25",
+     "2025-26"
+    ],
+    "builder": "league-profile-v1",
+    "reference_extras_source": "BASE_RATES_REGISTER.md section 7.3 (EPL 2025-26, n = 380, scoreboard plus match summaries)",
+    "source_files": {
+     "research/data/processed/league_csv/epl_results.csv": "420caddff7da5b36a9c02eac9d365104a9cdbfb14e3612edcf8d7e71e2d91cb3"
+    },
+    "stage": "regular"
+   },
+   "score_corr": -0.13186407529580563,
+   "seasons": [
+    2023,
+    2025
+   ],
+   "total_sd": 1.628819700691917
+  }
+ },
+ "schema": "league-profiles-1",
+ "sport": "soccer"
+}
