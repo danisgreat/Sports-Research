@@ -1,5 +1,25 @@
 # Changelog
 
+## 2026-10-11 — Cohort retrospective (prompt 6), P-557 to P-576
+
+**Why.** The user ran prompt 6 after the canonical import of P-557 to P-579. The new cohort has 20 settled cards, below the 30-card trigger; the run was requested.
+
+**Added.** [research/verification/retrospective_2026-10-11/](research/verification/retrospective_2026-10-11/RETROSPECTIVE_REPORT.md) contains three files: `DATA_INVENTORY.md` (the scope, written first, and the file and line of every settlement block used), `COHORT_TABLES.md` (every input row and table, counted by hand) and `RETROSPECTIVE_REPORT.md` (the 13 quantitative questions, the deep-retrospection analysis, the status of all 57 recommendation IDs, and seven new proposals).
+
+**Updated.**
+- [research/scoreboard/SCOREBOARD.md](research/scoreboard/SCOREBOARD.md): by-sport rows for the RANK1_UNSTABLE and UNKNOWN_GATE cohorts; families for both; comparison failure classes; joint failure; Rank-1 and Rank-2 calibration lines; evidence by cohort.
+- [CURRENT_STATE.md](CURRENT_STATE.md): the retrospective headline and pointer.
+- [HYPOTHESIS_REGISTER.md](HYPOTHESIS_REGISTER.md): the section "Retrospective 2026-10-11", with failure-class counts, dated XCARD and SEL-1 row counts, and RET-01 to RET-07, all `PROPOSED_NOT_TESTED`.
+
+**Headline.**
+- New cohort 34/40 = 85.0% (70.9–92.9%) against 79/134 = 59.0% (50.5–66.9%). Every new top-two pair covers itself (stated and realised joint failure 0%), and top-two Brier skill is −0.03, so the rise reflects line choice, not skill.
+- Rank 1 (80.0%) does not beat Rank 2 (90.0%) or ranks 3–4 (77.5%).
+- All four Rank-1 losses are `OVERCONFIDENT_PROBABILITY`, at 88–90%.
+- 0 of 20 cards passed the Rank-1 gate. SEL-1 has 1 of 8 week-blocks.
+- No expected-score bias is established. NBL totals ran low on 3 of 3 cards.
+
+**Unchanged.** Rules, prompts, SELECTION_RULES values (the gate stays provisional), every Combined Log and issued card, every settlement and grade, and the next canonical ID (P-580).
+
 ## 2026-10-09 — Expected score per sport (`mini-log-5`, `mini-settlement-4`)
 
 **Why.** The user instructed, on 2026-10-09, that the individual game log must also give the expected runs, points, goals and other scoring terms for each sport.

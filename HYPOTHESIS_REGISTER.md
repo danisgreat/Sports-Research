@@ -48,3 +48,30 @@ Eleven proposals came out of the P-527 to P-537 reviews. They are retained verba
 ## Failure-class counts feeding new proposals
 
 The failure taxonomy is [SELECTION_RULES.md](SELECTION_RULES.md) §8. The baseline counts for the 2026-10-09 cohort are in [FRAMEWORK_RETROSPECTIVE_2026-10-09.md](FRAMEWORK_RETROSPECTIVE_2026-10-09.md) (its failure-class table). The next retrospective (prompt 6) adds a dated section here with the new counts and any new proposals, each with a pre-registered acceptance test, a minimum sample and a rollback condition.
+
+## Retrospective 2026-10-11 (new cohort P-557 to P-576)
+
+Source: [research/verification/retrospective_2026-10-11/RETROSPECTIVE_REPORT.md](research/verification/retrospective_2026-10-11/RETROSPECTIVE_REPORT.md) (tables in `COHORT_TABLES.md`). Nothing below changes a rule, a probability or an issued forecast.
+
+**Failure-class counts.** New cohort, 4 Rank-1 losses: `OVERCONFIDENT_PROBABILITY` × 4 (P-560, P-564, P-571, P-576), each at `p_card` 88.0–90.0% on a line 1.2–1.3 SD from the card's own centre. Comparison cohort (P-126 to P-556), 28 Rank-1 losses by primary class: first-half goal 5, run-line cushion 4, rank by q 3, shared driver 3, basketball total without pace 2, tennis i.i.d. 2, and one each of nine other classes. None of the six named baseline classes recurred in the new cohort. Exposure was almost zero for five of them, so their correction is not yet tested.
+
+**Dated status lines (2026-10-11).** These are counts only; the registrations above are unchanged.
+- XCARD-1: 3 qualifying rows, 0 paired (164 required).
+- XCARD-2: 2 qualifying rows, 0 paired (170 required).
+- XCARD-3: 17 qualifying rows, 0 paired (214 required).
+- XCARD-4: 0 rows.
+- XCARD-5 / SEL-1: 20 Rank-1 rows, all `RANK1_UNSTABLE`, 0 `PASS`. 1 of 8 week-blocks (2026-W41). The gate stays provisional.
+- XCARD-6: still `REGISTERED_BLOCKED`; 0 shadow Rank-2 rows graded.
+- No card priced the baseline method beside the candidate, so no paired comparison is being collected.
+
+**New proposals (all `PROPOSED_NOT_TESTED`).**
+
+| ID | Priority | Addresses | Proposal | Acceptance test | Minimum sample | Rollback condition | Status |
+|---|---|---|---|---|---|---|---|
+| RET-01 | P1 | NBL expected totals low on 3 of 3 cards (mean +16.8 points); NBL profile 2022–24, two seasons old | Recompute the NBL row of LEAGUE_PROFILES from 2025-26 and 2026-27 games (prompt 7). Cards whose league row is more than one season old print the recomputed level beside the stale one. | Mean NBL total error (final − expected) has a 95% interval containing 0; mean total \|z\| between 0.6 and 1.0 | 12 NBL cards, at least 4 week-blocks | Revert if the absolute mean error with the new row exceeds 16.8 points over those 12 cards | PROPOSED_NOT_TESTED |
+| RET-02 | P1 | Counted rate measures line choice; top-two Brier skill −0.03 | Every ranked row prints `BASELINE_P`, its probability from the league row alone. Settlement reports Brier(card) − Brier(baseline). The scoreboard headlines that skill. | Week-block mean of Brier(card) − Brier(baseline) on Ranks 1–2 with upper 95% bound below 0 | 8 week-blocks, at least 40 cards | Drop if two independent recomputations of `BASELINE_P` differ by more than 2 points on more than 10% of rows | PROPOSED_NOT_TESTED |
+| RET-03 | P1 | Rank-1 gate unreachable (0 of 20 PASS, margins ≤ 2.5 points) | Shadow gate: the best non-complementary alternative excludes other lines on the same quantity; the 62% and 4-point values are unchanged; both labels printed. Feeds SEL-1. | Shadow-PASS cards win Rank 1 at least 5 points more often than `RANK1_UNSTABLE` cards; shadow-PASS calibration within its Wilson interval | 8 week-blocks, at least 30 shadow-PASS cards | Abandon if under 20% of cards shadow-PASS after 4 weeks, or if shadow-PASS cards win less often than UNSTABLE cards | PROPOSED_NOT_TESTED |
+| RET-04 | P1 | Stated P(both lose) 0.0% by construction on 20 of 20 cards; Hit@2 mechanical | Rank 2 on a different quantity from Rank 1. Until adopted, cards print the shadow Rank 2 under this rule, graded from the final (unblocks XCARD-6). | Realised `TOP2_ALL_LOST` within the Wilson interval of the mean stated P(both lose); shadow Rank 2's Brier skill against `BASELINE_P` at least that of the current Rank 2 | 40 cards, at least 4 week-blocks | Revert if realised `TOP2_ALL_LOST` exceeds 35% with the Wilson lower bound above 30% | PROPOSED_NOT_TESTED |
+| RET-05 | P1 | 12 of 20 cards completed after the scheduled start | Cards completed after, or within 5 minutes of, the scheduled start go to a `LATE_START` sub-cohort shown separately on the scoreboard | At least 90% of cards `PREGAME`, with research completed at least 5 minutes before the start | 40 cards | Return to label-only if more than 20% of requested events go without a card | PROPOSED_NOT_TESTED |
+| RET-06 | P2 | KBO evidence A on 0 of 6 cards | Settle KBO from the official KBO box score at least 12 hours after the final; MyKBO stays as the B corroboration | At least 8 of the next 10 KBO cards at A | 10 KBO cards | Revert if the official route returns a non-terminal record for a settled game | PROPOSED_NOT_TESTED |
+| RET-07 | P3 | Gate line without numbers (P-572); 3 non-standard regime labels; winner masses summing to 98.0% (P-568) | Self-audit: C5 prints the gate numbers; C8 uses the SELECTION_RULES §6 vocabulary; C4 covers the winner line (masses sum to 100%) | 0 violations of the three checks | the next 40 cards | Drop a check that yields false positives on more than 2 of 40 cards | PROPOSED_NOT_TESTED |
