@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026-10-11 — Finish the latest retrospective's recommendations: NBL profile refresh and data audits (run 2)
+
+User instruction: implement the latest retrospective's recommendations that were not already implemented. [Change proposal](research/verification/framework_change_2026-10-11-2/CHANGE_PROPOSAL.md), [implementation](research/verification/framework_change_2026-10-11-2/IMPLEMENTATION.md), [verification](research/verification/framework_change_2026-10-11-2/VERIFICATION_REPORT.md).
+
+Checked first: RET-02 to RET-07 are present in the live v10 documents as controls (0 prospective events for any). RET-01, the NBL profile refresh, was the one item still pending, so this run did it.
+
+Changed: [LEAGUE_PROFILES.md](LEAGUE_PROFILES.md) to LP-2026.10.11-v2 (NBL row moved to the 2023-25 window, n 450, total 183.14; the 2022-24 row kept as comparator; KBO and NPB extra-innings shares withdrawn as `NOT_ESTIMABLE` because the source columns are placeholder defaults). [ARCHIVE_USE_GUIDE.md](ARCHIVE_USE_GUIDE.md) gained §8, a dated list of archive defects found, and none of the existing archive cells was changed. [SOURCES.md](SOURCES.md): the `local_windows` column of the reachability matrix was probed by hand once. [HYPOTHESIS_REGISTER.md](HYPOTHESIS_REGISTER.md): dated status freezing the FC10-PROFILE-v1 candidate and baseline definitions. [CURRENT_STATE.md](CURRENT_STATE.md): implementation paragraph.
+
+Added: `Previous Sports Results/Basketball/NBL/2026/2026_games.csv` (29 completed 2026-27 regular-season games to 2026-10-11, ESPN site API, evidence B, 10 games confirmed against other publishers; a partial snapshot, not a season), and the run-2 verification folder with the NBL and KBO/NPB audits and a 165-row date-evidence sidecar for the 2025-26 NBL games.
+
+Not changed: rules, thresholds, versions of the method, control, scoring and selection documents, prompts, templates, every Combined Log, issued card, grade, existing raw CSV and the next canonical ID (P-580). Originals of the six edited documents are in [archive/superseded_2026-10-11/profile_refresh/](archive/superseded_2026-10-11/profile_refresh/ARCHIVE_NOTE.md).
+
+Not claimed: any predictive improvement. The refreshed NBL row is a better-documented prior; the 2026-27 level is not shown to differ from it (z 1.1). FC10-PROFILE-v1 predictive acceptance remains blocked on an unregistered effect size and tolerance; the archive-file repairs, the KBO/NPB innings recovery and the lineage audit are open.
+
 ## 2026-10-11 — Replace prompts 1–8 and align the framework (v10)
 
 User authorized active replacement, supporting-rule alignment, review of the latest published retrospective/learnings, an implementation document and prompt-8 publication. [Change proposal](research/verification/framework_change_2026-10-11-1/CHANGE_PROPOSAL.md), [implementation](research/verification/framework_change_2026-10-11-1/IMPLEMENTATION.md), [verification](research/verification/framework_change_2026-10-11-1/VERIFICATION_REPORT.md).

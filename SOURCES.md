@@ -80,6 +80,8 @@ Never admitted: fantasy, betting or market-bearing products.
 
 The matrix further down was generated on 2026-10-09 by a probe job that no longer exists. It shows what answered from a cloud container (most hosts returned HTTP 403) and `NOT_YET_PROBED` from a local Windows machine. Treat it as a historical observation. Test reachability by hand when you need it, and say so in the card.
 
+**Local Windows column probed by hand on 2026-10-11** (one request per source with `curl` from the local machine at about 23:48 AEDT, except the ESPN NBL scoreboards, read earlier that evening; the cloud column is unchanged from 2026-10-09). Of 12 sources fetched, 4 returned the expected structured content (`espn_epl`, `espn_nbl`, `mlb_official`, `openfootball`), 7 answered with a home page or app shell only (`aflw_official`, `iowa_state_official`, `kansas_state_official`, `nbl_news`, `nbl_official`, `perth_wildcats_official`, `premierleague_official`), and 1 host returned 404 at its root (`nfl_gamebooks`); the two manual-only sources were not fetched. A home page or shell is reachability only: it does not show that an event field can be read. The ESPN NBL scoreboard worked from the local machine although it returned 403 from the cloud container, so the two environments genuinely differ. This is a single observation, not a weekly refresh; the matrix has no generator, so edit the row and its date by hand.
+
 ---
 
 # Current source access controls - 2026-10-01
@@ -108,20 +110,20 @@ Which registered source answers in which environment, with the fallback routes (
 
 | Source | Leagues | local_windows (observed) | cloud_container (observed) | Fallbacks (other lineage, same league) |
 |---|---|---|---|---|
-| `aflw_official` | AFLW | NOT_YET_PROBED | UNAVAILABLE (URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; 2026-10-09) | none registered |
-| `espn_epl` | EPL | NOT_YET_PROBED | UNAVAILABLE (URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; 2026-10-09) | `openfootball`, `premierleague_official` |
-| `espn_nbl` | NBL | NOT_YET_PROBED | UNAVAILABLE (URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; 2026-10-09) | `nbl_news`, `nbl_official`, `perth_wildcats_official` |
-| `fixture_download` | NBL | NOT_YET_PROBED | MANUAL_OR_NO_PROBE (PERSONAL_USE_LOCAL_ONLY; 2026-10-09) | `espn_nbl`, `nbl_news`, `nbl_official`, `perth_wildcats_official` |
-| `football_data` | EPL | NOT_YET_PROBED | MANUAL_OR_NO_PROBE (MANUAL_ONLY; 2026-10-09) | `espn_epl`, `openfootball`, `premierleague_official` |
-| `iowa_state_official` | CFB | NOT_YET_PROBED | UNAVAILABLE (URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; 2026-10-09) | `kansas_state_official` |
-| `kansas_state_official` | CFB | NOT_YET_PROBED | UNAVAILABLE (URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; 2026-10-09) | `iowa_state_official` |
-| `mlb_official` | MLB | NOT_YET_PROBED | UNAVAILABLE (URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; 2026-10-09) | none registered |
-| `nbl_news` | NBL | NOT_YET_PROBED | UNAVAILABLE (URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; 2026-10-09) | `espn_nbl`, `perth_wildcats_official` |
-| `nbl_official` | NBL | NOT_YET_PROBED | UNAVAILABLE (URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; 2026-10-09) | `espn_nbl`, `perth_wildcats_official` |
-| `nfl_gamebooks` | NFL | NOT_YET_PROBED | UNAVAILABLE (URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; 2026-10-09) | none registered |
-| `openfootball` | EPL | NOT_YET_PROBED | EXPECTED_CONTENT (HTTP 200; 2026-10-09) | `espn_epl`, `premierleague_official` |
-| `perth_wildcats_official` | NBL | NOT_YET_PROBED | UNAVAILABLE (URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; 2026-10-09) | `espn_nbl`, `nbl_news`, `nbl_official` |
-| `premierleague_official` | EPL | NOT_YET_PROBED | UNAVAILABLE (URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; 2026-10-09) | `espn_epl`, `openfootball` |
+| `aflw_official` | AFLW | REACHABLE_HOME_PAGE (HTTP 200 text/html; no event field tested; 2026-10-11) | UNAVAILABLE (URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; 2026-10-09) | none registered |
+| `espn_epl` | EPL | EXPECTED_CONTENT (HTTP 200 application/json; `events` for "English Premier League"; 2026-10-11) | UNAVAILABLE (URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; 2026-10-09) | `openfootball`, `premierleague_official` |
+| `espn_nbl` | NBL | EXPECTED_CONTENT (HTTP 200 application/json; 41 daily scoreboards read, 29 completed 2026-27 regular-season games; 2026-10-11) | UNAVAILABLE (URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; 2026-10-09) | `nbl_news`, `nbl_official`, `perth_wildcats_official` |
+| `fixture_download` | NBL | MANUAL_OR_NO_PROBE (PERSONAL_USE_LOCAL_ONLY; not fetched) | MANUAL_OR_NO_PROBE (PERSONAL_USE_LOCAL_ONLY; 2026-10-09) | `espn_nbl`, `nbl_news`, `nbl_official`, `perth_wildcats_official` |
+| `football_data` | EPL | MANUAL_OR_NO_PROBE (MANUAL_ONLY; not fetched) | MANUAL_OR_NO_PROBE (MANUAL_ONLY; 2026-10-09) | `espn_epl`, `openfootball`, `premierleague_official` |
+| `iowa_state_official` | CFB | REACHABLE_HOME_PAGE (HTTP 200 text/html; no event field tested; 2026-10-11) | UNAVAILABLE (URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; 2026-10-09) | `kansas_state_official` |
+| `kansas_state_official` | CFB | REACHABLE_HOME_PAGE (HTTP 200 text/html; no event field tested; 2026-10-11) | UNAVAILABLE (URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; 2026-10-09) | `iowa_state_official` |
+| `mlb_official` | MLB | EXPECTED_CONTENT (HTTP 200 application/json; schedule for 2026-10-10 with `totalGames`; 2026-10-11) | UNAVAILABLE (URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; 2026-10-09) | none registered |
+| `nbl_news` | NBL | REACHABLE_HOME_PAGE (HTTP 200 text/html; `/ladder` 200 but rendered client-side; `/matches` 404; 2026-10-11) | UNAVAILABLE (URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; 2026-10-09) | `espn_nbl`, `perth_wildcats_official` |
+| `nbl_official` | NBL | REACHABLE_APP_SHELL (HTTP 200, 5 KB "Select a Competition" page; scores render client-side and none were read; 2026-10-11) | UNAVAILABLE (URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; 2026-10-09) | `espn_nbl`, `perth_wildcats_official` |
+| `nfl_gamebooks` | NFL | HOST_UP_ROUTE_UNTESTED (HTTP 404 at the bare host root; no gamebook URL tested; 2026-10-11) | UNAVAILABLE (URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; 2026-10-09) | none registered |
+| `openfootball` | EPL | EXPECTED_CONTENT (HTTP 200 text/plain; README of openfootball/england; 2026-10-11) | EXPECTED_CONTENT (HTTP 200; 2026-10-09) | `espn_epl`, `premierleague_official` |
+| `perth_wildcats_official` | NBL | REACHABLE_HOME_PAGE (HTTP 200 text/html; no event field tested; 2026-10-11) | UNAVAILABLE (URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; 2026-10-09) | `espn_nbl`, `nbl_news`, `nbl_official` |
+| `premierleague_official` | EPL | REACHABLE_HOME_PAGE (HTTP 200 text/html; no event field tested; 2026-10-11) | UNAVAILABLE (URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; 2026-10-09) | `espn_epl`, `openfootball` |
 
 <!-- REACHABILITY-MATRIX:END -->
 

@@ -19,7 +19,7 @@ Examples: `Previous Sports Results/Baseball/MLB/2025/2025_games.csv`, `.../Baske
 | Need | Where |
 |---|---|
 | English Premier League results | `research/data/processed/league_csv/epl_results.csv`; fixtures and results as text in `research/data/raw/openfootball/<season>.txt` (2020-21 to 2026-27) |
-| NBL results | `research/data/processed/league_csv/nbl_results.csv`, `research/data/nbl_results_wide.csv` and team box scores in `research/data/nbl_box_team.csv` |
+| NBL results | The yearly files `Previous Sports Results/Basketball/NBL/<year>/<year>_games.csv` (see §8: the 2025 file lacks dates on its regular-season rows and mistypes post-season games; the **2026 file is a partial snapshot** of 2026-27 to 2026-10-11 and must be refreshed before use). Dated results for 2021-22 to 2025-26 are also in `research/data/processed/league_csv/nbl_results.csv`; `research/data/nbl_results_wide.csv` and team box scores are in `research/data/nbl_box_team.csv` |
 | The literal historical rank log (learning only) | `GAME_PREDICTION_RANK_LOG.csv` and `research/data/processed/legacy_learning/cards.csv`, `contracts.csv` |
 | Tennis, soccer and rugby union rates | [BASE_RATES_REGISTER.md](BASE_RATES_REGISTER.md) §6 and §7, then the source routes in [SOURCES.md](SOURCES.md) |
 
@@ -89,3 +89,16 @@ The line names the files opened, the number of rows read, the date range, the re
 ## 7. Extending or repairing the archive
 
 Use prompt 7 in [PROMPTS.md](PROMPTS.md). Keep each source's identity and date, never fill an unknown name or time, keep awards and narratives separate from game features, and say in the coverage document which seasons are inactive, future or unexplained. A header-only folder is never "complete".
+
+## 8. Known data-quality notes (audit of 2026-10-11)
+
+Found while carrying out the NBL profile refresh and the KBO/NPB extras audit ([run 2 folder](research/verification/framework_change_2026-10-11-2/IMPLEMENTATION.md)). No existing archive cell was changed. Each note says what to do instead.
+
+| File(s) | Defect | Effect | What to do |
+|---|---|---|---|
+| `Basketball/NBL/2025/2025_games.csv` | `Date`, `Day of Week` and `Start Time (Local)` are blank on all 179 rows typed "Regular Season" | The recipe R2 (last 10 games before a date), R6 (rest) and the point-in-time rule cannot be applied to 2025-26 regular-season games from this file | Take dates from `research/data/processed/league_csv/nbl_results.csv` (season `NBL26`) or the ready join [NBL_2025_26_DATE_EVIDENCE.csv](research/verification/framework_change_2026-10-11-2/NBL_2025_26_DATE_EVIDENCE.csv): 165 of 165 native IDs match; the times are scheduled UTC starts, not actual starts |
+| same file | 14 of the 179 "Regular Season" rows are post-season games (Round names CHAMPIONSHIP, ELIMINATION, IGNITE CUP FINAL, PLAYOFF 1, PLAYOFF 2, QUALIFIER, SEEDING, "SYD 2-1 ADL", "SYD WIN 3-2", "TIED 2-2") | A profile or base rate filtered on `Game Type` alone is contaminated by about 8% | Filter the 2025 file on `Round / Stage` = "Round 1" to "Round 22" as well: 165 games, 33 per team. The 2022–2024 NBL files have no such rows |
+| `Basketball/NBL` yearly files | The quarter columns do not sum to the final score on some rows: 2025 has 3 of the 165 regular rows (game numbers 101, 186, 187; two are exactly double the final) and 3 of the 14 post-season rows; 2024 has 8 of 145; 2022 has 1 of 140; 2023 has none. The final scores themselves reconcile (2025: 165 of 165 against the processed file) | Quarter-level and half-level features from those rows are wrong; totals, margins and profiles are unaffected | Check that the quarters sum to the final before using them, and drop the row's quarter data if not |
+| `Basketball/NBA/<2023, 2024, 2025>` and `Basketball/WNBA/<2023, 2024, 2025>` | One in-season cup final per file ("NBA In-Season Tournament Championship", "WNBA Commissioner's Cup Championship") is typed "Regular Season" | 3 of the NBA profile's 3,692 games and 3 of the WNBA profile's 769 are cup finals; the effect on means is negligible | Exclude them when a count must equal the schedule. Not corrected |
+| `Baseball/KBO` and `Baseball/NPB` yearly files | `Innings Played` and `Extra Innings` hold placeholder defaults (9 / No); line scores are blank (NPB 0 rows, KBO 22 to 75 per season) | An extras or tie-after-extras share cannot be measured; LEAGUE_PROFILES withdrew its KBO 0.1% and NPB 0.0% | Treat extras as `NOT_ESTIMABLE` from these files. Tie shares (equal final scores) are measured and usable. See [the audit](research/verification/framework_change_2026-10-11-2/KBO_NPB_EXTRAS_AUDIT.md) |
+| `Basketball/NBL/2026/2026_games.csv` (new) | A snapshot of 29 completed 2026-27 regular-season games to 2026-10-11, from the ESPN site API (evidence B); `Round / Stage`, venue, city, attendance, notable players and comment are blank because the source lacks them (blank = unknown) | Stale from the day after it was written | Read the last `Date`; add later games from [SOURCES.md](SOURCES.md) (§3.2) and say so in `Archive check`. A card may cite it only with `ARCHIVE_PARTIAL` and its last date |

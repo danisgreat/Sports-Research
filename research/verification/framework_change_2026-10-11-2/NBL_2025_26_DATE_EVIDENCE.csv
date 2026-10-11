@@ -1,0 +1,166 @@
+archive_game_number,archive_game_id,round,home,away,home_score,away_score,processed_event_key,scheduled_start_utc
+28,NBL_2025_2026_b19d49b0-4bef-11f0-9ee4-e7c335595f42,Round 1,Tasmania JackJumpers,Melbourne United,84,88,b19d49b0-4bef-11f0-9ee4-e7c335595f42,2025-09-18T09:30:00+00:00
+29,NBL_2025_2026_b1c52730-4bef-11f0-926a-2d91e5671953,Round 1,New Zealand Breakers,Brisbane Bullets,95,104,b1c52730-4bef-11f0-926a-2d91e5671953,2025-09-19T07:30:00+00:00
+30,NBL_2025_2026_b1c05748-4bef-11f0-8d3c-d57e2e06c908,Round 1,South East Melbourne Phoenix,Cairns Taipans,114,77,b1c05748-4bef-11f0-8d3c-d57e2e06c908,2025-09-20T07:30:00+00:00
+31,NBL_2025_2026_b1a4094f-4bef-11f0-b111-5d6a4141a228,Round 1,Perth Wildcats,Tasmania JackJumpers,72,75,b1a4094f-4bef-11f0-b111-5d6a4141a228,2025-09-20T10:00:00+00:00
+32,NBL_2025_2026_b1a5b936-4bef-11f0-85b6-3bb81d630de9,Round 1,Melbourne United,New Zealand Breakers,114,82,b1a5b936-4bef-11f0-85b6-3bb81d630de9,2025-09-21T04:30:00+00:00
+33,NBL_2025_2026_b1a6f3e4-4bef-11f0-b1e8-d71216bffd5c,Round 2,Melbourne United,South East Melbourne Phoenix,103,83,b1a6f3e4-4bef-11f0-b1e8-d71216bffd5c,2025-09-25T09:30:00+00:00
+34,NBL_2025_2026_b1a89b88-4bef-11f0-aa25-4f4cd43b9dce,Round 2,Cairns Taipans,Brisbane Bullets,83,82,b1a89b88-4bef-11f0-aa25-4f4cd43b9dce,2025-09-26T09:30:00+00:00
+35,NBL_2025_2026_b1af85d1-4bef-11f0-8087-abf05c51dbb7,Round 2,New Zealand Breakers,Perth Wildcats,78,89,b1af85d1-4bef-11f0-8087-abf05c51dbb7,2025-09-27T07:30:00+00:00
+36,NBL_2025_2026_b1aaf369-4bef-11f0-9f51-931632ab30f1,Round 2,Illawarra Hawks,Tasmania JackJumpers,86,91,b1aaf369-4bef-11f0-9f51-931632ab30f1,2025-09-27T10:00:00+00:00
+37,NBL_2025_2026_b1af0e52-4bef-11f0-9a8c-bbc504167c78,Round 2,Sydney Kings,Cairns Taipans,74,77,b1af0e52-4bef-11f0-9a8c-bbc504167c78,2025-09-28T04:30:00+00:00
+38,NBL_2025_2026_b1acbd78-4bef-11f0-89fe-438852f8f17e,Round 2,Adelaide 36ers,Brisbane Bullets,87,80,b1acbd78-4bef-11f0-89fe-438852f8f17e,2025-09-28T06:30:00+00:00
+39,NBL_2025_2026_b1b320b0-4bef-11f0-9a1f-d922ae3738da,Round 3,Cairns Taipans,Adelaide 36ers,79,110,b1b320b0-4bef-11f0-9a1f-d922ae3738da,2025-10-02T09:30:00+00:00
+40,NBL_2025_2026_b1ac11ff-4bef-11f0-942d-21274c8aac22,Round 3,Perth Wildcats,Illawarra Hawks,92,84,b1ac11ff-4bef-11f0-942d-21274c8aac22,2025-10-02T11:30:00+00:00
+41,NBL_2025_2026_b1d511f1-4bef-11f0-806a-cb2dd7ebaa67,Round 3,Sydney Kings,New Zealand Breakers,97,75,b1d511f1-4bef-11f0-806a-cb2dd7ebaa67,2025-10-04T07:30:00+00:00
+42,NBL_2025_2026_b1b14a84-4bef-11f0-9584-ff733b9275b0,Round 3,Brisbane Bullets,Tasmania JackJumpers,82,84,b1b14a84-4bef-11f0-9584-ff733b9275b0,2025-10-04T10:00:00+00:00
+43,NBL_2025_2026_b1d446e3-4bef-11f0-a4d3-3fd9cdc8f1b9,Round 4,New Zealand Breakers,Illawarra Hawks,117,88,b1d446e3-4bef-11f0-a4d3-3fd9cdc8f1b9,2025-10-08T06:30:00+00:00
+44,NBL_2025_2026_b1b36fb0-4bef-11f0-8f26-79c2d724b26f,Round 4,Sydney Kings,Melbourne United,93,107,b1b36fb0-4bef-11f0-8f26-79c2d724b26f,2025-10-08T08:30:00+00:00
+45,NBL_2025_2026_b1b4c347-4bef-11f0-bdff-2b5bbafc199b,Round 4,Adelaide 36ers,Tasmania JackJumpers,98,89,b1b4c347-4bef-11f0-bdff-2b5bbafc199b,2025-10-09T08:30:00+00:00
+46,NBL_2025_2026_b1b1def4-4bef-11f0-8dce-5f21da19a0fe,Round 4,Cairns Taipans,Perth Wildcats,77,80,b1b1def4-4bef-11f0-8dce-5f21da19a0fe,2025-10-10T08:30:00+00:00
+47,NBL_2025_2026_b1b3f8a3-4bef-11f0-a172-876c79b96794,Round 4,Illawarra Hawks,Brisbane Bullets,116,89,b1b3f8a3-4bef-11f0-a172-876c79b96794,2025-10-11T06:30:00+00:00
+48,NBL_2025_2026_b1beada2-4bef-11f0-8999-0f742927f015,Round 4,Adelaide 36ers,Sydney Kings,79,103,b1beada2-4bef-11f0-8999-0f742927f015,2025-10-11T09:00:00+00:00
+49,NBL_2025_2026_b1bca9e0-4bef-11f0-8079-e7ea492f5de5,Round 4,New Zealand Breakers,South East Melbourne Phoenix,81,87,b1bca9e0-4bef-11f0-8079-e7ea492f5de5,2025-10-12T03:30:00+00:00
+50,NBL_2025_2026_b1c2b46d-4bef-11f0-bc11-f5ae3adda2b9,Round 4,Melbourne United,Cairns Taipans,95,60,b1c2b46d-4bef-11f0-bc11-f5ae3adda2b9,2025-10-12T05:30:00+00:00
+51,NBL_2025_2026_b1bf7f4d-4bef-11f0-acd8-6d11c9352f8d,Round 5,Tasmania JackJumpers,Sydney Kings,86,70,b1bf7f4d-4bef-11f0-acd8-6d11c9352f8d,2025-10-15T08:30:00+00:00
+52,NBL_2025_2026_b1bfcfdb-4bef-11f0-83d2-dfb7e30c44c3,Round 5,Perth Wildcats,Brisbane Bullets,93,110,b1bfcfdb-4bef-11f0-83d2-dfb7e30c44c3,2025-10-15T10:30:00+00:00
+53,NBL_2025_2026_b1c59937-4bef-11f0-9850-69185882ba54,Round 5,Adelaide 36ers,South East Melbourne Phoenix,88,71,b1c59937-4bef-11f0-9850-69185882ba54,2025-10-16T08:30:00+00:00
+54,NBL_2025_2026_b1e7ffcb-4bef-11f0-82d0-f7367f0af8fe,Round 5,New Zealand Breakers,Tasmania JackJumpers,82,65,b1e7ffcb-4bef-11f0-82d0-f7367f0af8fe,2025-10-17T06:30:00+00:00
+55,NBL_2025_2026_b1c2b570-4bef-11f0-b8ed-373c052dc412,Round 5,Brisbane Bullets,Melbourne United,86,95,b1c2b570-4bef-11f0-b8ed-373c052dc412,2025-10-17T08:30:00+00:00
+56,NBL_2025_2026_b1c85327-4bef-11f0-859e-575706f46ef7,Round 5,Cairns Taipans,Adelaide 36ers,86,91,b1c85327-4bef-11f0-859e-575706f46ef7,2025-10-18T06:30:00+00:00
+57,NBL_2025_2026_b1c87dd7-4bef-11f0-b4f3-cb9793633933,Round 5,South East Melbourne Phoenix,Illawarra Hawks,116,76,b1c87dd7-4bef-11f0-b4f3-cb9793633933,2025-10-18T09:00:00+00:00
+58,NBL_2025_2026_b1d1940a-4bef-11f0-8805-87e6a155244b,Round 5,Melbourne United,New Zealand Breakers,104,88,b1d1940a-4bef-11f0-8805-87e6a155244b,2025-10-19T03:30:00+00:00
+59,NBL_2025_2026_b1cf0eb8-4bef-11f0-bde8-b9d013d7809a,Round 5,Sydney Kings,Perth Wildcats,94,72,b1cf0eb8-4bef-11f0-bde8-b9d013d7809a,2025-10-19T05:30:00+00:00
+60,NBL_2025_2026_b1d2e544-4bef-11f0-9ec3-c198ba85350c,Round 6,Cairns Taipans,Perth Wildcats,78,110,b1d2e544-4bef-11f0-9ec3-c198ba85350c,2025-10-22T08:30:00+00:00
+61,NBL_2025_2026_b1c9d775-4bef-11f0-a809-49eef7ac4b75,Round 6,New Zealand Breakers,Brisbane Bullets,83,84,b1c9d775-4bef-11f0-a809-49eef7ac4b75,2025-10-23T06:30:00+00:00
+62,NBL_2025_2026_b1d15db0-4bef-11f0-bcdf-39e750f03c92,Round 6,South East Melbourne Phoenix,Sydney Kings,112,95,b1d15db0-4bef-11f0-bcdf-39e750f03c92,2025-10-23T08:30:00+00:00
+63,NBL_2025_2026_b1d6415f-4bef-11f0-bc89-933162362355,Round 6,Cairns Taipans,Melbourne United,67,94,b1d6415f-4bef-11f0-bc89-933162362355,2025-10-24T08:30:00+00:00
+64,NBL_2025_2026_b1d40d91-4bef-11f0-aacf-5b42e4531c6f,Round 6,Brisbane Bullets,South East Melbourne Phoenix,86,109,b1d40d91-4bef-11f0-aacf-5b42e4531c6f,2025-10-25T06:30:00+00:00
+65,NBL_2025_2026_b1d41297-4bef-11f0-8b17-e7c335595f42,Round 6,Perth Wildcats,Illawarra Hawks,84,85,b1d41297-4bef-11f0-8b17-e7c335595f42,2025-10-25T09:00:00+00:00
+66,NBL_2025_2026_b1defcc2-4bef-11f0-ada5-6bbf481c9dbd,Round 6,Melbourne United,Adelaide 36ers,81,80,b1defcc2-4bef-11f0-ada5-6bbf481c9dbd,2025-10-26T03:30:00+00:00
+67,NBL_2025_2026_b1e1f8dc-4bef-11f0-a8eb-931632ab30f1,Round 6,Sydney Kings,Tasmania JackJumpers,89,90,b1e1f8dc-4bef-11f0-a8eb-931632ab30f1,2025-10-26T05:30:00+00:00
+68,NBL_2025_2026_b1e616f7-4bef-11f0-831c-438852f8f17e,Round 7,Tasmania JackJumpers,Perth Wildcats,84,95,b1e616f7-4bef-11f0-831c-438852f8f17e,2025-10-29T08:30:00+00:00
+69,NBL_2025_2026_b20defee-4bef-11f0-9845-ff733b9275b0,Round 7,Brisbane Bullets,Cairns Taipans,113,85,b20defee-4bef-11f0-9845-ff733b9275b0,2025-10-30T08:30:00+00:00
+70,NBL_2025_2026_b1ef5d2a-4bef-11f0-b312-6f7b3f296308,Round 7,Illawarra Hawks,New Zealand Breakers,60,102,b1ef5d2a-4bef-11f0-b312-6f7b3f296308,2025-10-31T08:30:00+00:00
+71,NBL_2025_2026_b1eac57b-4bef-11f0-a6b3-876c79b96794,Round 7,Tasmania JackJumpers,Cairns Taipans,69,75,b1eac57b-4bef-11f0-a6b3-876c79b96794,2025-11-01T06:30:00+00:00
+72,NBL_2025_2026_b206bcd1-4bef-11f0-98bc-f7ae306e78a8,Round 7,Brisbane Bullets,Sydney Kings,79,116,b206bcd1-4bef-11f0-98bc-f7ae306e78a8,2025-11-01T09:00:00+00:00
+73,NBL_2025_2026_b20bc78d-4bef-11f0-9d84-e3ab37cba7df,Round 7,South East Melbourne Phoenix,Perth Wildcats,94,89,b20bc78d-4bef-11f0-9d84-e3ab37cba7df,2025-11-02T03:30:00+00:00
+74,NBL_2025_2026_b1f11a42-4bef-11f0-b3b8-bbc504167c78,Round 7,Adelaide 36ers,Illawarra Hawks,90,88,b1f11a42-4bef-11f0-b3b8-bbc504167c78,2025-11-02T05:30:00+00:00
+75,NBL_2025_2026_b1f2a332-4bef-11f0-b1fa-79c2d724b26f,Round 7,Melbourne United,Sydney Kings,92,95,b1f2a332-4bef-11f0-b1fa-79c2d724b26f,2025-11-03T08:30:00+00:00
+76,NBL_2025_2026_b1eae7d5-4bef-11f0-88d2-abf05c51dbb7,Round 8,Illawarra Hawks,Melbourne United,107,93,b1eae7d5-4bef-11f0-88d2-abf05c51dbb7,2025-11-05T08:30:00+00:00
+77,NBL_2025_2026_b213f0fb-4bef-11f0-9060-4f4cd43b9dce,Round 8,New Zealand Breakers,Adelaide 36ers,79,83,b213f0fb-4bef-11f0-9060-4f4cd43b9dce,2025-11-06T06:30:00+00:00
+78,NBL_2025_2026_b1ef7159-4bef-11f0-b7aa-d71216bffd5c,Round 8,Tasmania JackJumpers,South East Melbourne Phoenix,102,103,b1ef7159-4bef-11f0-b7aa-d71216bffd5c,2025-11-06T08:30:00+00:00
+79,NBL_2025_2026_b1f191c7-4bef-11f0-8065-21274c8aac22,Round 8,Cairns Taipans,Illawarra Hawks,90,107,b1f191c7-4bef-11f0-8065-21274c8aac22,2025-11-07T08:30:00+00:00
+80,NBL_2025_2026_b1f6d41f-4bef-11f0-9c11-3ff857533451,Round 8,Tasmania JackJumpers,Brisbane Bullets,81,83,b1f6d41f-4bef-11f0-9c11-3ff857533451,2025-11-08T06:30:00+00:00
+81,NBL_2025_2026_b2169d01-4bef-11f0-89ec-45d92a8f67bd,Round 8,South East Melbourne Phoenix,Melbourne United,81,92,b2169d01-4bef-11f0-89ec-45d92a8f67bd,2025-11-08T09:00:00+00:00
+82,NBL_2025_2026_b1f90e33-4bef-11f0-b82b-4115284f2e91,Round 8,Adelaide 36ers,Perth Wildcats,87,94,b1f90e33-4bef-11f0-b82b-4115284f2e91,2025-11-09T03:30:00+00:00
+83,NBL_2025_2026_b215a009-4bef-11f0-858c-d922ae3738da,Round 8,Sydney Kings,New Zealand Breakers,79,72,b215a009-4bef-11f0-858c-d922ae3738da,2025-11-09T05:30:00+00:00
+84,NBL_2025_2026_b213faff-4bef-11f0-a179-5d6a4141a228,Round 9,Brisbane Bullets,New Zealand Breakers,84,113,b213faff-4bef-11f0-a179-5d6a4141a228,2025-11-12T08:30:00+00:00
+85,NBL_2025_2026_b1f8a034-4bef-11f0-abc8-e7ea492f5de5,Round 9,Tasmania JackJumpers,Adelaide 36ers,86,97,b1f8a034-4bef-11f0-abc8-e7ea492f5de5,2025-11-13T08:30:00+00:00
+86,NBL_2025_2026_b1fe0687-4bef-11f0-b056-6d11c9352f8d,Round 9,Cairns Taipans,South East Melbourne Phoenix,90,101,b1fe0687-4bef-11f0-b056-6d11c9352f8d,2025-11-14T08:30:00+00:00
+87,NBL_2025_2026_b1ff4361-4bef-11f0-a9f6-2d91e5671953,Round 9,Melbourne United,Brisbane Bullets,99,93,b1ff4361-4bef-11f0-a9f6-2d91e5671953,2025-11-15T06:30:00+00:00
+88,NBL_2025_2026_b1fa97d6-4bef-11f0-a4b5-41ba0d454dfc,Round 9,Perth Wildcats,New Zealand Breakers,88,75,b1fa97d6-4bef-11f0-a4b5-41ba0d454dfc,2025-11-15T09:00:00+00:00
+89,NBL_2025_2026_b1fe1cf5-4bef-11f0-aed8-dfb7e30c44c3,Round 9,Illawarra Hawks,Sydney Kings,71,98,b1fe1cf5-4bef-11f0-aed8-dfb7e30c44c3,2025-11-16T03:30:00+00:00
+90,NBL_2025_2026_b201a305-4bef-11f0-86d8-575706f46ef7,Round 9,Adelaide 36ers,Cairns Taipans,105,101,b201a305-4bef-11f0-86d8-575706f46ef7,2025-11-16T05:30:00+00:00
+91,NBL_2025_2026_b22c940a-4bef-11f0-b917-b31681696f40,Round 10,Adelaide 36ers,Illawarra Hawks,97,85,b22c940a-4bef-11f0-b917-b31681696f40,2025-11-19T08:30:00+00:00
+92,NBL_2025_2026_b201c7e9-4bef-11f0-a9a7-750b2dd8cf1d,Round 10,Brisbane Bullets,South East Melbourne Phoenix,76,103,b201c7e9-4bef-11f0-a9a7-750b2dd8cf1d,2025-11-20T08:30:00+00:00
+93,NBL_2025_2026_b202cacb-4bef-11f0-a92a-69185882ba54,Round 10,Illawarra Hawks,Melbourne United,102,105,b202cacb-4bef-11f0-a92a-69185882ba54,2025-11-21T08:30:00+00:00
+94,NBL_2025_2026_b2045be6-4bef-11f0-8af5-373c052dc412,Round 10,Perth Wildcats,Tasmania JackJumpers,101,95,b2045be6-4bef-11f0-8af5-373c052dc412,2025-11-21T10:30:00+00:00
+95,NBL_2025_2026_b2084e1a-4bef-11f0-b353-8566c32332b5,Round 10,Cairns Taipans,New Zealand Breakers,96,102,b2084e1a-4bef-11f0-b353-8566c32332b5,2025-11-22T06:30:00+00:00
+96,NBL_2025_2026_b2033949-4bef-11f0-a420-49eef7ac4b75,Round 10,South East Melbourne Phoenix,Adelaide 36ers,81,94,b2033949-4bef-11f0-a420-49eef7ac4b75,2025-11-22T09:00:00+00:00
+97,NBL_2025_2026_b2051732-4bef-11f0-b522-cb9793633933,Round 10,Tasmania JackJumpers,Sydney Kings,104,81,b2051732-4bef-11f0-b522-cb9793633933,2025-11-23T03:30:00+00:00
+98,NBL_2025_2026_b20644c0-4bef-11f0-b8aa-f5ae3adda2b9,Round 10,Melbourne United,Perth Wildcats,98,87,b20644c0-4bef-11f0-b8aa-f5ae3adda2b9,2025-11-23T05:30:00+00:00
+99,NBL_2025_2026_b204326e-4bef-11f0-a4c0-7d8c00260a69,Round 11,New Zealand Breakers,Sydney Kings,95,90,b204326e-4bef-11f0-a4c0-7d8c00260a69,2025-12-03T06:30:00+00:00
+100,NBL_2025_2026_b20f3271-4bef-11f0-a1b1-35d49e4d3f0e,Round 11,Illawarra Hawks,South East Melbourne Phoenix,113,109,b20f3271-4bef-11f0-a1b1-35d49e4d3f0e,2025-12-04T08:30:00+00:00
+101,NBL_2025_2026_b208f7fb-4bef-11f0-87f5-b9d013d7809a,Round 11,Perth Wildcats,Melbourne United,96,84,b208f7fb-4bef-11f0-87f5-b9d013d7809a,2025-12-04T10:30:00+00:00
+102,NBL_2025_2026_b2317162-4bef-11f0-b94a-2b5bbafc199b,Round 11,Adelaide 36ers,Brisbane Bullets,90,65,b2317162-4bef-11f0-b94a-2b5bbafc199b,2025-12-05T08:30:00+00:00
+103,NBL_2025_2026_b20b4968-4bef-11f0-82b0-cb2dd7ebaa67,Round 11,New Zealand Breakers,Tasmania JackJumpers,99,86,b20b4968-4bef-11f0-82b0-cb2dd7ebaa67,2025-12-06T06:30:00+00:00
+104,NBL_2025_2026_b20decaf-4bef-11f0-9b49-5b42e4531c6f,Round 11,Illawarra Hawks,Cairns Taipans,76,93,b20decaf-4bef-11f0-9b49-5b42e4531c6f,2025-12-06T09:00:00+00:00
+105,NBL_2025_2026_b217968b-4bef-11f0-b4ca-931632ab30f1,Round 11,South East Melbourne Phoenix,Melbourne United,111,86,b217968b-4bef-11f0-b4ca-931632ab30f1,2025-12-07T03:30:00+00:00
+106,NBL_2025_2026_b2208500-4bef-11f0-b419-1738d9104f5f,Round 11,Perth Wildcats,Adelaide 36ers,94,95,b2208500-4bef-11f0-b419-1738d9104f5f,2025-12-07T05:30:00+00:00
+107,NBL_2025_2026_b21be2ad-4bef-11f0-b9fc-33265c8cddeb,Round 12,South East Melbourne Phoenix,Tasmania JackJumpers,81,89,b21be2ad-4bef-11f0-b9fc-33265c8cddeb,2025-12-10T08:30:00+00:00
+108,NBL_2025_2026_b21a7ada-4bef-11f0-9241-0f742927f015,Round 12,Illawarra Hawks,Brisbane Bullets,100,85,b21a7ada-4bef-11f0-9241-0f742927f015,2025-12-11T08:30:00+00:00
+109,NBL_2025_2026_b239f201-4bef-11f0-a45e-438852f8f17e,Round 12,Adelaide 36ers,Melbourne United,114,105,b239f201-4bef-11f0-a45e-438852f8f17e,2025-12-12T08:30:00+00:00
+110,NBL_2025_2026_b210ece7-4bef-11f0-a566-55e0c73fcc94,Round 12,Perth Wildcats,Sydney Kings,79,108,b210ece7-4bef-11f0-a566-55e0c73fcc94,2025-12-12T10:30:00+00:00
+111,NBL_2025_2026_b2240a8a-4bef-11f0-87c0-b947d0e3eafa,Round 12,Cairns Taipans,Tasmania JackJumpers,68,81,b2240a8a-4bef-11f0-87c0-b947d0e3eafa,2025-12-13T06:30:00+00:00
+112,NBL_2025_2026_b2209f97-4bef-11f0-b0d4-abf05c51dbb7,Round 12,South East Melbourne Phoenix,New Zealand Breakers,92,80,b2209f97-4bef-11f0-b0d4-abf05c51dbb7,2025-12-13T09:00:00+00:00
+113,NBL_2025_2026_b23ef780-4bef-11f0-9dc2-0b013169c635,Round 12,Melbourne United,Sydney Kings,86,92,b23ef780-4bef-11f0-9dc2-0b013169c635,2025-12-14T03:30:00+00:00
+114,NBL_2025_2026_b23759e2-4bef-11f0-a3a3-3ff857533451,Round 12,Brisbane Bullets,Perth Wildcats,62,86,b23759e2-4bef-11f0-a3a3-3ff857533451,2025-12-14T05:30:00+00:00
+115,NBL_2025_2026_b21aeb47-4bef-11f0-be7c-3fd9cdc8f1b9,Round 13,Sydney Kings,Adelaide 36ers,97,93,b21aeb47-4bef-11f0-be7c-3fd9cdc8f1b9,2025-12-17T08:30:00+00:00
+116,NBL_2025_2026_b21d4ec5-4bef-11f0-b6b6-91dadb0cb999,Round 13,Melbourne United,Illawarra Hawks,97,75,b21d4ec5-4bef-11f0-b6b6-91dadb0cb999,2025-12-18T08:30:00+00:00
+117,NBL_2025_2026_b217a699-4bef-11f0-bc08-933162362355,Round 13,Perth Wildcats,South East Melbourne Phoenix,76,77,b217a699-4bef-11f0-bc08-933162362355,2025-12-18T10:30:00+00:00
+118,NBL_2025_2026_b222db5b-4bef-11f0-a519-3972d4a527b8,Round 13,Cairns Taipans,New Zealand Breakers,99,95,b222db5b-4bef-11f0-a519-3972d4a527b8,2025-12-19T08:30:00+00:00
+119,NBL_2025_2026_b215e9ec-4bef-11f0-9a36-67aa3f2ff9f5,Round 13,Illawarra Hawks,Adelaide 36ers,78,84,b215e9ec-4bef-11f0-9a36-67aa3f2ff9f5,2025-12-20T06:30:00+00:00
+120,NBL_2025_2026_b21dca73-4bef-11f0-b110-876c79b96794,Round 13,South East Melbourne Phoenix,Brisbane Bullets,107,78,b21dca73-4bef-11f0-b110-876c79b96794,2025-12-20T09:00:00+00:00
+121,NBL_2025_2026_b231a59a-4bef-11f0-84f4-e7ea492f5de5,Round 13,Tasmania JackJumpers,Perth Wildcats,85,94,b231a59a-4bef-11f0-84f4-e7ea492f5de5,2025-12-21T03:30:00+00:00
+122,NBL_2025_2026_b23193dd-4bef-11f0-9f67-cb2bdca9c6f4,Round 13,Sydney Kings,Cairns Taipans,119,77,b23193dd-4bef-11f0-9f67-cb2bdca9c6f4,2025-12-21T05:30:00+00:00
+123,NBL_2025_2026_b233874d-4bef-11f0-8db7-41ba0d454dfc,Round 13,Brisbane Bullets,New Zealand Breakers,99,85,b233874d-4bef-11f0-8db7-41ba0d454dfc,2025-12-22T08:30:00+00:00
+124,NBL_2025_2026_b22f304c-4bef-11f0-a86c-4115284f2e91,Round 13,Melbourne United,Tasmania JackJumpers,73,92,b22f304c-4bef-11f0-a86c-4115284f2e91,2025-12-23T09:00:00+00:00
+125,NBL_2025_2026_b2331552-4bef-11f0-aa1c-6bbf481c9dbd,Round 14,Adelaide 36ers,Cairns Taipans,93,73,b2331552-4bef-11f0-aa1c-6bbf481c9dbd,2025-12-24T06:30:00+00:00
+126,NBL_2025_2026_b22022d7-4bef-11f0-98e9-0f125a33c37a,Round 14,Sydney Kings,Illawarra Hawks,108,84,b22022d7-4bef-11f0-98e9-0f125a33c37a,2025-12-25T09:30:00+00:00
+127,NBL_2025_2026_b222d9de-4bef-11f0-845e-bf4a75ed2375,Round 14,Tasmania JackJumpers,New Zealand Breakers,80,81,b222d9de-4bef-11f0-845e-bf4a75ed2375,2025-12-26T08:30:00+00:00
+128,NBL_2025_2026_b225ec91-4bef-11f0-ab26-f7367f0af8fe,Round 14,Brisbane Bullets,Melbourne United,87,92,b225ec91-4bef-11f0-ab26-f7367f0af8fe,2025-12-27T09:00:00+00:00
+129,NBL_2025_2026_b226d577-4bef-11f0-b286-79c2d724b26f,Round 14,Adelaide 36ers,Perth Wildcats,95,84,b226d577-4bef-11f0-b286-79c2d724b26f,2025-12-28T03:30:00+00:00
+130,NBL_2025_2026_b228ee36-4bef-11f0-acd7-5f21da19a0fe,Round 14,Tasmania JackJumpers,South East Melbourne Phoenix,87,84,b228ee36-4bef-11f0-acd7-5f21da19a0fe,2025-12-29T08:30:00+00:00
+131,NBL_2025_2026_b2581188-4bef-11f0-9b02-715d84b30bd2,Round 14,Sydney Kings,Brisbane Bullets,95,70,b2581188-4bef-11f0-9b02-715d84b30bd2,2025-12-30T08:30:00+00:00
+132,NBL_2025_2026_b250752d-4bef-11f0-af55-21274c8aac22,Round 15,Illawarra Hawks,Tasmania JackJumpers,92,90,b250752d-4bef-11f0-af55-21274c8aac22,2025-12-31T06:30:00+00:00
+133,NBL_2025_2026_b22c3b8a-4bef-11f0-b19a-a1cf9306875a,Round 15,Cairns Taipans,South East Melbourne Phoenix,96,111,b22c3b8a-4bef-11f0-b19a-a1cf9306875a,2025-12-31T08:30:00+00:00
+134,NBL_2025_2026_b22dc792-4bef-11f0-a362-bbc504167c78,Round 15,Brisbane Bullets,Perth Wildcats,75,95,b22dc792-4bef-11f0-a362-bbc504167c78,2026-01-01T08:30:00+00:00
+135,NBL_2025_2026_b236ec74-4bef-11f0-acf5-9b02d5153837,Round 15,Adelaide 36ers,Sydney Kings,85,79,b236ec74-4bef-11f0-acf5-9b02d5153837,2026-01-02T08:30:00+00:00
+136,NBL_2025_2026_b236b66b-4bef-11f0-b141-6d11c9352f8d,Round 15,Illawarra Hawks,Cairns Taipans,96,78,b236b66b-4bef-11f0-b141-6d11c9352f8d,2026-01-03T06:30:00+00:00
+137,NBL_2025_2026_b23a1c03-4bef-11f0-847e-2d91e5671953,Round 15,Tasmania JackJumpers,Melbourne United,84,75,b23a1c03-4bef-11f0-847e-2d91e5671953,2026-01-03T09:00:00+00:00
+138,NBL_2025_2026_b23a85ed-4bef-11f0-8dfa-750b2dd8cf1d,Round 15,New Zealand Breakers,Perth Wildcats,91,99,b23a85ed-4bef-11f0-8dfa-750b2dd8cf1d,2026-01-04T03:30:00+00:00
+139,NBL_2025_2026_b2373519-4bef-11f0-a742-7d8c00260a69,Round 15,Brisbane Bullets,Adelaide 36ers,86,97,b2373519-4bef-11f0-a742-7d8c00260a69,2026-01-04T05:30:00+00:00
+140,NBL_2025_2026_b2616df6-4bef-11f0-8b96-cb9793633933,Round 15,Sydney Kings,South East Melbourne Phoenix,117,124,b2616df6-4bef-11f0-8b96-cb9793633933,2026-01-05T08:30:00+00:00
+141,NBL_2025_2026_b23e2c62-4bef-11f0-89bb-f7ae306e78a8,Round 16,Melbourne United,Cairns Taipans,92,93,b23e2c62-4bef-11f0-89bb-f7ae306e78a8,2026-01-07T08:30:00+00:00
+142,NBL_2025_2026_b2404c59-4bef-11f0-8c28-8566c32332b5,Round 16,South East Melbourne Phoenix,Illawarra Hawks,124,113,b2404c59-4bef-11f0-8c28-8566c32332b5,2026-01-08T08:30:00+00:00
+143,NBL_2025_2026_b245e256-4bef-11f0-a465-3bb81d630de9,Round 16,New Zealand Breakers,Sydney Kings,62,103,b245e256-4bef-11f0-a465-3bb81d630de9,2026-01-09T06:30:00+00:00
+144,NBL_2025_2026_b24207b7-4bef-11f0-b94d-5b42e4531c6f,Round 16,Adelaide 36ers,Tasmania JackJumpers,72,80,b24207b7-4bef-11f0-b94d-5b42e4531c6f,2026-01-09T08:30:00+00:00
+145,NBL_2025_2026_b247524c-4bef-11f0-a76a-d57e2e06c908,Round 16,South East Melbourne Phoenix,Perth Wildcats,97,107,b247524c-4bef-11f0-a76a-d57e2e06c908,2026-01-10T09:00:00+00:00
+146,NBL_2025_2026_b25032fc-4bef-11f0-9f55-d922ae3738da,Round 16,Illawarra Hawks,New Zealand Breakers,96,101,b25032fc-4bef-11f0-9f55-d922ae3738da,2026-01-11T03:30:00+00:00
+147,NBL_2025_2026_b2479931-4bef-11f0-9e48-e3ab37cba7df,Round 16,Sydney Kings,Melbourne United,97,94,b2479931-4bef-11f0-9e48-e3ab37cba7df,2026-01-11T05:30:00+00:00
+148,NBL_2025_2026_b249636f-4bef-11f0-8a3e-ff733b9275b0,Round 16,Cairns Taipans,Brisbane Bullets,88,83,b249636f-4bef-11f0-8a3e-ff733b9275b0,2026-01-12T08:30:00+00:00
+149,NBL_2025_2026_b2521ec7-4bef-11f0-868d-35d49e4d3f0e,Round 17,Sydney Kings,Brisbane Bullets,95,80,b2521ec7-4bef-11f0-868d-35d49e4d3f0e,2026-01-15T10:30:00+00:00
+150,NBL_2025_2026_b2612e9b-4bef-11f0-98fe-933162362355,Round 17,Perth Wildcats,Illawarra Hawks,92,87,b2612e9b-4bef-11f0-98fe-933162362355,2026-01-16T10:30:00+00:00
+151,NBL_2025_2026_b24f1cb5-4bef-11f0-b4d7-4f4cd43b9dce,Round 17,Cairns Taipans,New Zealand Breakers,86,104,b24f1cb5-4bef-11f0-b4d7-4f4cd43b9dce,2026-01-17T08:00:00+00:00
+152,NBL_2025_2026_b24b6e4c-4bef-11f0-baa2-55e0c73fcc94,Round 17,Melbourne United,Tasmania JackJumpers,79,77,b24b6e4c-4bef-11f0-baa2-55e0c73fcc94,2026-01-17T10:30:00+00:00
+153,NBL_2025_2026_b2713b63-4bef-11f0-a268-87e6a155244b,Round 17,Adelaide 36ers,South East Melbourne Phoenix,89,108,b2713b63-4bef-11f0-a268-87e6a155244b,2026-01-18T03:30:00+00:00
+154,NBL_2025_2026_b27eb8e2-4bef-11f0-ad13-0f742927f015,Round 18,Melbourne United,Brisbane Bullets,98,66,b27eb8e2-4bef-11f0-ad13-0f742927f015,2026-01-21T06:30:00+00:00
+155,NBL_2025_2026_b254b252-4bef-11f0-83d3-91dadb0cb999,Round 18,South East Melbourne Phoenix,New Zealand Breakers,123,116,b254b252-4bef-11f0-83d3-91dadb0cb999,2026-01-21T08:30:00+00:00
+156,NBL_2025_2026_b25616a8-4bef-11f0-9a91-3fd9cdc8f1b9,Round 18,Sydney Kings,Tasmania JackJumpers,105,94,b25616a8-4bef-11f0-9a91-3fd9cdc8f1b9,2026-01-22T08:30:00+00:00
+157,NBL_2025_2026_b2741816-4bef-11f0-9a39-876c79b96794,Round 18,Perth Wildcats,Cairns Taipans,106,69,b2741816-4bef-11f0-9a39-876c79b96794,2026-01-22T10:30:00+00:00
+158,NBL_2025_2026_b25a01d7-4bef-11f0-aaaf-21683dc436c5,Round 18,New Zealand Breakers,Adelaide 36ers,110,112,b25a01d7-4bef-11f0-aaaf-21683dc436c5,2026-01-23T06:30:00+00:00
+159,NBL_2025_2026_b266fe75-4bef-11f0-b744-5f21da19a0fe,Round 18,South East Melbourne Phoenix,Cairns Taipans,118,91,b266fe75-4bef-11f0-b744-5f21da19a0fe,2026-01-24T06:30:00+00:00
+160,NBL_2025_2026_b261b75e-4bef-11f0-803a-bf4a75ed2375,Round 18,Tasmania JackJumpers,Illawarra Hawks,91,101,b261b75e-4bef-11f0-803a-bf4a75ed2375,2026-01-24T09:00:00+00:00
+161,NBL_2025_2026_b264adb3-4bef-11f0-8f86-f7367f0af8fe,Round 18,Sydney Kings,Adelaide 36ers,106,101,b264adb3-4bef-11f0-8f86-f7367f0af8fe,2026-01-25T03:30:00+00:00
+162,NBL_2025_2026_b2614f8a-4bef-11f0-a809-b947d0e3eafa,Round 18,Perth Wildcats,Melbourne United,73,74,b2614f8a-4bef-11f0-a809-b947d0e3eafa,2026-01-25T05:30:00+00:00
+163,NBL_2025_2026_b275869a-4bef-11f0-954a-b31681696f40,Round 18,Brisbane Bullets,Illawarra Hawks,75,113,b275869a-4bef-11f0-954a-b31681696f40,2026-01-26T08:30:00+00:00
+164,NBL_2025_2026_b266e903-4bef-11f0-9cab-41ba0d454dfc,Round 19,Brisbane Bullets,Adelaide 36ers,74,107,b266e903-4bef-11f0-9cab-41ba0d454dfc,2026-01-28T08:30:00+00:00
+165,NBL_2025_2026_b282f791-4bef-11f0-a50a-d71216bffd5c,Round 19,Perth Wildcats,South East Melbourne Phoenix,101,93,b282f791-4bef-11f0-a50a-d71216bffd5c,2026-01-28T10:30:00+00:00
+166,NBL_2025_2026_b26bd3ce-4bef-11f0-bbe6-9b02d5153837,Round 19,Sydney Kings,Illawarra Hawks,122,104,b26bd3ce-4bef-11f0-bbe6-9b02d5153837,2026-01-29T08:30:00+00:00
+167,NBL_2025_2026_b2690246-4bef-11f0-a825-4115284f2e91,Round 19,New Zealand Breakers,Melbourne United,97,95,b2690246-4bef-11f0-a825-4115284f2e91,2026-01-30T06:30:00+00:00
+168,NBL_2025_2026_b285b429-4bef-11f0-9ae7-cb2bdca9c6f4,Round 19,Cairns Taipans,Tasmania JackJumpers,96,93,b285b429-4bef-11f0-9ae7-cb2bdca9c6f4,2026-01-30T08:30:00+00:00
+169,NBL_2025_2026_b27e00c9-4bef-11f0-8cce-373c052dc412,Round 19,Adelaide 36ers,South East Melbourne Phoenix,77,97,b27e00c9-4bef-11f0-8cce-373c052dc412,2026-01-31T06:30:00+00:00
+170,NBL_2025_2026_b28fc609-4bef-11f0-8354-6bbf481c9dbd,Round 19,Illawarra Hawks,Perth Wildcats,99,106,b28fc609-4bef-11f0-8354-6bbf481c9dbd,2026-01-31T09:00:00+00:00
+171,NBL_2025_2026_b28c003b-4bef-11f0-8ec3-bbc504167c78,Round 19,Tasmania JackJumpers,New Zealand Breakers,91,89,b28c003b-4bef-11f0-8ec3-bbc504167c78,2026-02-01T03:30:00+00:00
+172,NBL_2025_2026_b260edae-4bef-11f0-98aa-b9d013d7809a,Round 19,Cairns Taipans,Sydney Kings,92,106,b260edae-4bef-11f0-98aa-b9d013d7809a,2026-02-01T05:30:00+00:00
+173,NBL_2025_2026_b28bf2a9-4bef-11f0-a670-e7ea492f5de5,Round 20,New Zealand Breakers,South East Melbourne Phoenix,83,114,b28bf2a9-4bef-11f0-a670-e7ea492f5de5,2026-02-05T06:30:00+00:00
+174,NBL_2025_2026_b26142ab-4bef-11f0-ae16-3972d4a527b8,Round 20,Illawarra Hawks,Adelaide 36ers,100,99,b26142ab-4bef-11f0-ae16-3972d4a527b8,2026-02-05T08:30:00+00:00
+175,NBL_2025_2026_b2669c85-4bef-11f0-a5a1-45d92a8f67bd,Round 20,Tasmania JackJumpers,Brisbane Bullets,114,70,b2669c85-4bef-11f0-a5a1-45d92a8f67bd,2026-02-06T08:30:00+00:00
+176,NBL_2025_2026_b271c0de-4bef-11f0-889c-6f7b3f296308,Round 20,Perth Wildcats,Cairns Taipans,98,84,b271c0de-4bef-11f0-889c-6f7b3f296308,2026-02-06T10:30:00+00:00
+177,NBL_2025_2026_b28ce4e1-4bef-11f0-8285-750b2dd8cf1d,Round 20,New Zealand Breakers,Illawarra Hawks,106,95,b28ce4e1-4bef-11f0-8285-750b2dd8cf1d,2026-02-07T06:30:00+00:00
+178,NBL_2025_2026_b26f08e5-4bef-11f0-9b72-2b5bbafc199b,Round 20,Melbourne United,Adelaide 36ers,76,87,b26f08e5-4bef-11f0-9b72-2b5bbafc199b,2026-02-07T09:00:00+00:00
+179,NBL_2025_2026_b2675eab-4bef-11f0-a636-a1cf9306875a,Round 20,South East Melbourne Phoenix,Sydney Kings,88,114,b2675eab-4bef-11f0-a636-a1cf9306875a,2026-02-08T03:30:00+00:00
+180,NBL_2025_2026_b26aed8e-4bef-11f0-8d0b-7d8c00260a69,Round 20,Brisbane Bullets,Cairns Taipans,72,81,b26aed8e-4bef-11f0-8d0b-7d8c00260a69,2026-02-08T05:30:00+00:00
+181,NBL_2025_2026_b2a91b89-4bef-11f0-9702-0f125a33c37a,Round 21,Cairns Taipans,Melbourne United,85,89,b2a91b89-4bef-11f0-9702-0f125a33c37a,2026-02-12T08:30:00+00:00
+182,NBL_2025_2026_b2729d93-4bef-11f0-bd84-931632ab30f1,Round 21,Illawarra Hawks,Sydney Kings,94,120,b2729d93-4bef-11f0-bd84-931632ab30f1,2026-02-13T08:30:00+00:00
+183,NBL_2025_2026_b27a4bad-4bef-11f0-997d-0b013169c635,Round 21,Perth Wildcats,Brisbane Bullets,94,75,b27a4bad-4bef-11f0-997d-0b013169c635,2026-02-13T10:30:00+00:00
+184,NBL_2025_2026_b281e20a-4bef-11f0-b56d-6d11c9352f8d,Round 21,Adelaide 36ers,New Zealand Breakers,92,89,b281e20a-4bef-11f0-b56d-6d11c9352f8d,2026-02-14T06:30:00+00:00
+185,NBL_2025_2026_b274d640-4bef-11f0-bca8-67aa3f2ff9f5,Round 21,South East Melbourne Phoenix,Tasmania JackJumpers,120,104,b274d640-4bef-11f0-bca8-67aa3f2ff9f5,2026-02-14T09:00:00+00:00
+186,NBL_2025_2026_b2758702-4bef-11f0-9233-5b42e4531c6f,Round 21,Melbourne United,Illawarra Hawks,91,100,b2758702-4bef-11f0-9233-5b42e4531c6f,2026-02-15T03:30:00+00:00
+187,NBL_2025_2026_b2757773-4bef-11f0-b4cf-438852f8f17e,Round 21,Sydney Kings,Perth Wildcats,102,84,b2757773-4bef-11f0-b4cf-438852f8f17e,2026-02-15T05:30:00+00:00
+188,NBL_2025_2026_b27937e8-4bef-11f0-9b65-e7c335595f42,Round 22,Tasmania JackJumpers,Illawarra Hawks,70,103,b27937e8-4bef-11f0-9b65-e7c335595f42,2026-02-18T08:30:00+00:00
+189,NBL_2025_2026_b272ec12-4bef-11f0-bcaf-8566c32332b5,Round 22,New Zealand Breakers,Cairns Taipans,115,84,b272ec12-4bef-11f0-bcaf-8566c32332b5,2026-02-19T06:30:00+00:00
+190,NBL_2025_2026_b276a37d-4bef-11f0-91d4-2d91e5671953,Round 22,Melbourne United,South East Melbourne Phoenix,95,91,b276a37d-4bef-11f0-91d4-2d91e5671953,2026-02-19T08:30:00+00:00
+191,NBL_2025_2026_b28e54da-4bef-11f0-86e2-abf05c51dbb7,Round 22,Brisbane Bullets,Sydney Kings,77,117,b28e54da-4bef-11f0-86e2-abf05c51dbb7,2026-02-20T08:30:00+00:00
+192,NBL_2025_2026_b2710ab3-4bef-11f0-91f3-f7ae306e78a8,Round 22,Perth Wildcats,Adelaide 36ers,86,74,b2710ab3-4bef-11f0-91f3-f7ae306e78a8,2026-02-20T10:30:00+00:00
