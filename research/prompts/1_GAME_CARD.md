@@ -1,12 +1,12 @@
 # PROMPT 1 — Research and append one individual game card
 
-**Mode:** LOCAL_MINI_STAGING. **Writes:** the named active local mini only, including its evidence appendix and mutable footer. **GitHub/canonical writes:** none. Do not settle, retrospect, change rules or allocate canonical status.
+**Mode:** LOCAL_MINI_STAGING. **Writes:** the named active local mini only, including its evidence appendix and mutable footer. **GitHub repository (`main` branch):** read-only mode (no canonical or remote writes). Do not settle, retrospect, change rules or allocate canonical status.
 
 Inputs: `Event: <participants, league/format, date/time/timezone or official event link>`; `Active mini: <path>`; `Supplied contracts: <exact text/lines, or none>`; `Specific research constraints: <if any>`. Treat estimated starts as estimates until verified. Locate accessible inputs first; ask only for information essential to resolve ambiguity. This is the complete game prompt; nothing from prompt 2 needs to be pasted with it.
 
 ## 1. Read and establish authority
 
-Print the [reading receipt](README.md) after opening CURRENT_STATE, METHOD, CURRENT_RULES, SELECTION_RULES, CARD_AND_LOG_TEMPLATES, this prompt, the complete active mini, GAME_LOG_STATUS_CURRENT and relevant canonical event records. Read applicable sport/league rules below, ARCHIVE_USE_GUIDE, current SOURCES routes/freshness rules, and relevant probability/profile/base-rate sections. Record actual HEAD, working differences and time. Apply current controls over historical sport-engine notes.
+Reference the GitHub repository (`main` branch) in read-only mode to establish authoritative rules, current state and historical records. Print the [reading receipt](README.md) after opening CURRENT_STATE, METHOD, CURRENT_RULES, SELECTION_RULES, CARD_AND_LOG_TEMPLATES, this prompt, the complete active mini, GAME_LOG_STATUS_CURRENT and relevant canonical event records. Read applicable sport/league rules below, ARCHIVE_USE_GUIDE, current SOURCES routes/freshness rules, and relevant probability/profile/base-rate sections. Record actual HEAD on `main`, working differences and time. Apply current controls over historical sport-engine notes.
 
 If a required control or original mini is inaccessible, deliver a clearly labelled draft, not an issued append. Missing sporting data leads to explicit uncertainty or qualitative/NO_FORECAST research, not invented numbers.
 
@@ -70,4 +70,4 @@ Use CARD_AND_LOG_TEMPLATES §3 in the mini's own format; v10 uses mini-log-6. Ke
 
 For a duplicate or late-news correction, append a dated addendum; reforecast is NOT_PRIMARY and never changes the original grade. If writing is unavailable, return the complete updated mini as READ_ONLY_DRAFT / NOT_ISSUED and do not claim allocation.
 
-Return the full new card, exact file path, working ID/status, timing and lead band, top two or no-forecast reason, baseline coverage, gate/joint/sensitivity summary, audit evidence and updated footer. Explicitly state settlement NOT_PERFORMED and GitHub writes NO. Do not promise prediction success.
+Return the full new card, exact file path, working ID/status, timing and lead band, top two or no-forecast reason, baseline coverage, gate/joint/sensitivity summary, audit evidence and updated footer. Explicitly state settlement NOT_PERFORMED and GitHub writes NO (GitHub repo `main` branch referenced in read-only mode). Do not promise prediction success.

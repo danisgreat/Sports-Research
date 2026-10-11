@@ -1,12 +1,12 @@
 # PROMPT 2 — Start a new local mini
 
-**Mode:** LOCAL_MINI_STAGING. **Writes:** one new Markdown mini at the selected local path. **GitHub:** read only. This task creates no card, forecast, settlement, retrospective or canonical ID.
+**Mode:** LOCAL_MINI_STAGING. **Writes:** one new Markdown mini at the selected local path. **GitHub repository (`main` branch):** read-only mode (no canonical or remote writes). This task creates no card, forecast, settlement, retrospective or canonical ID.
 
 Inputs: `Output location: <path, or choose the established mini folder>`; `Previous mini/settlement/import receipts: <paths if known>`. Locate existing files before asking for missing paths; never assume an inaccessible previous mini does not exist.
 
 ## 1. Reading and state reconciliation
 
-Read the common controls in [README](README.md), CARD_AND_LOG_TEMPLATES §2, this prompt, GAME_LOG_STATUS_CURRENT, current canonical entry tail/dated state addenda, the latest completed import report, and [the active example](examples/EXAMPLE_ACTIVE_MINI.md). Print the receipt with actual revision/time.
+Reference the GitHub repository (`main` branch) in read-only mode. Read the common controls in [README](README.md), CARD_AND_LOG_TEMPLATES §2, this prompt, GAME_LOG_STATUS_CURRENT, current canonical entry tail/dated state addenda, the latest completed import report, and [the active example](examples/EXAMPLE_ACTIVE_MINI.md). Print the receipt with actual revision/time on `main`.
 
 Resolve active log and next canonical ID dynamically from CURRENT_STATE, current status and actual canonical records. The log's opening header is historical; do not require its old next ID to equal today. Current-record disagreement blocks allocation and is reported with exact evidence.
 
@@ -32,4 +32,4 @@ Audit actual file readback: first/next ID match; carryover items/counts reconcil
 
 ## 5. Return
 
-Provide the complete mini and path, authority receipt, canonical next snapshot, outstanding local ranges, first/next working ID, both queue counts and checks. State `New cards: 0; canonical IDs consumed: 0; settlements: 0; GitHub writes: 0`. This prompt contains no hidden game-research step; use prompt 1 for the next event.
+Provide the complete mini and path, authority receipt, canonical next snapshot, outstanding local ranges, first/next working ID, both queue counts and checks. State `New cards: 0; canonical IDs consumed: 0; settlements: 0; GitHub writes: 0 (read-only mode on main)`. This prompt contains no hidden game-research step; use prompt 1 for the next event.

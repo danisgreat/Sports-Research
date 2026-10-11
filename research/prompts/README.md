@@ -13,7 +13,7 @@
 | [7](7_EXPAND_PREVIOUS_RESULTS.md) | Archive repair | Declared CSV/source/coverage/profile paths |
 | [8](8_IMPROVE_THE_FRAMEWORK.md) | Framework improvement | Declared operating documents, archive copies, examples/report |
 
-Order: **2 → 1 for each event → 3 → 4**, then next mini; 5–8 as needed. Prompts 1–3 never publish or edit canonical logs. Prompts 4–8 publish only when the invocation authorizes it; their Publish steps are explicit instructions when the complete prompt is invoked. A review-only or local-only user request overrides publication.
+Order: **2 → 1 for each event → 3 → 4**, then next mini; 5–8 as needed. Prompts 1–3 refer to the GitHub repository (`main` branch) in read-only mode and never publish or edit canonical logs. Prompts 4–8 publish only when the invocation authorizes it; their Publish steps are explicit instructions when the complete prompt is invoked. A review-only or local-only user request overrides publication.
 
 ## Reading receipt
 

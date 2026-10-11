@@ -1,12 +1,12 @@
 # PROMPT 3 — Freeze, settle and review the local mini
 
-**Mode:** LOCAL_MINI_SETTLEMENT. **Writes:** a new local settlement package only. No canonical import, new IDs, predictions, rule changes or GitHub writes.
+**Mode:** LOCAL_MINI_SETTLEMENT. **Writes:** a new local settlement package only. **GitHub repository (`main` branch):** read-only mode (no canonical import, new IDs, predictions, rule changes or remote writes).
 
 Inputs: `Active mini: <path>`; `Output folder: <path or standard settlement folder>`; `Prior settlement revisions: <if any>`. Read the entire mini, all carryovers/addenda and original referenced cards; do not grade a summary in place of a frozen contract.
 
 ## 1. Read and freeze
 
-Print the [reading receipt](README.md) after common controls, SCORING_AND_VALIDATION, templates §§6/9, sport/league endpoint rules, SOURCES settlement routes, relevant archive guide and this prompt. Preserve original issue-time versions; today's process rules do not change yesterday's proposition.
+Reference the GitHub repository (`main` branch) in read-only mode. Print the [reading receipt](README.md) after common controls, SCORING_AND_VALIDATION, templates §§6/9, sport/league endpoint rules, SOURCES settlement routes, relevant archive guide and this prompt. Preserve original issue-time versions; today's process rules do not change yesterday's proposition.
 
 Copy the original file byte-for-byte into ORIGINAL_MINI before appending anything. Record real path/counts, original footer, IDs and actual comparison result. Build settled output from frozen bytes plus a new settlement section. If only section delivery is possible, provide SETTLEMENT_SECTION.md with a manifest saying assembly/prefix verification remains required. Never claim a byte comparison performed through a visual glance. On rerun retain earlier settled outputs and create dated revisions instead of overwriting.
 
@@ -40,4 +40,4 @@ Every Rank-1 LOSS receives the eight deep parts in CURRENT_RULES §3. Review win
 
 Write ORIGINAL_MINI, settled mini, LOCAL_ID_MAPPING.md, UNRESOLVED_CARRYOVER.md (both pending-event and evidence queues), SETTLEMENT_MANIFEST.md. Inventory every block once; preserve original source prefix and footer. Run S1–S12 with actual evidence and recompute counts/expected-score/proper-score arithmetic. A missing original forecast cannot be rebuilt from a later narrative.
 
-Return all generated files/paths; source and output counts; canonical mapping PENDING_IMPORT where appropriate; per-grade/evidence/definition/timing counts; primary results and coverage; separate shadows; deep-review count; deadlines/breaches; unresolved IDs/fields/actions; exact-prefix result and limitations. State GitHub/Combined Log writes NO and canonical IDs consumed zero.
+Return all generated files/paths; source and output counts; canonical mapping PENDING_IMPORT where appropriate; per-grade/evidence/definition/timing counts; primary results and coverage; separate shadows; deep-review count; deadlines/breaches; unresolved IDs/fields/actions; exact-prefix result and limitations. State GitHub/Combined Log writes NO (read-only mode on `main`) and canonical IDs consumed zero.
