@@ -1,173 +1,71 @@
-# PROMPT 1 — GAME CARD (one event, appended to the active local mini)
+# PROMPT 1 — Research and append one individual game card
 
-**Run by:** external chat agent · **GitHub:** read only · **Output:** one card appended to the active local mini · **Mode:** `LOCAL_MINI_STAGING` · **Format:** `mini-log-5`
+**Mode:** LOCAL_MINI_STAGING. **Writes:** the named active local mini only, including its evidence appendix and mutable footer. **GitHub/canonical writes:** none. Do not settle, retrospect, change rules or allocate canonical status.
 
-How to use: paste **Part A (common core)**, which now sits at the bottom of [2_START_LOCAL_MINI.md](2_START_LOCAL_MINI.md), and then the **one sport block** from Part B below that matches the event. Fill in the `<…>` fields. The core governs; a sport block adds the sport's research list, the distribution to build, the rules, sources and past-results files to open, and the family checks. Nothing here needs code: calculate by hand from the formulas and tables in the repository and show the working.
+Inputs: `Event: <participants, league/format, date/time/timezone or official event link>`; `Active mini: <path>`; `Supplied contracts: <exact text/lines, or none>`; `Specific research constraints: <if any>`. Treat estimated starts as estimates until verified. Locate accessible inputs first; ask only for information essential to resolve ambiguity. This is the complete game prompt; nothing from prompt 2 needs to be pasted with it.
 
----
+## 1. Read and establish authority
 
-## PART B — SPORT BLOCKS (paste the one that applies)
+Print the [reading receipt](README.md) after opening CURRENT_STATE, METHOD, CURRENT_RULES, SELECTION_RULES, CARD_AND_LOG_TEMPLATES, this prompt, the complete active mini, GAME_LOG_STATUS_CURRENT and relevant canonical event records. Read applicable sport/league rules below, ARCHIVE_USE_GUIDE, current SOURCES routes/freshness rules, and relevant probability/profile/base-rate sections. Record actual HEAD, working differences and time. Apply current controls over historical sport-engine notes.
 
-Each block lists the files to open (**Open**), the research, the distribution and the family checks. Paths are relative to the repository root.
+If a required control or original mini is inaccessible, deliver a clearly labelled draft, not an issued append. Missing sporting data leads to explicit uncertainty or qualitative/NO_FORECAST research, not invented numbers.
 
-### B1. BASEBALL
+## 2. Identity, duplicate and timing gate
 
-Upcoming game: `<Away @ Home>`, `<League>` · Estimated start: `<date, time, time zone>` (can be delayed)
-Supplied contracts (reference only): 1. `<…>` 2. `<…>` 3. `<…>` 4. `<…>`
+Verify participants, competition, season, stage, venue, native ID/game number, official scheduled start, venue zone, UTC and Australia/Sydney time. Search every relevant local mini/carryover and canonical log body/status by ID, event key and aliases; doubleheaders and postponements need explicit identity handling. An existing event gets a dated addendum under its original ID, no new card.
 
-**Open:** `RULES_BASEBALL.md` (§3 model, §4 controls, §5 live state, §7 research sequence, §8 SFA-BASEBALL, §9 league rules); `PROBABILITY_TOOLKIT.md` §3 and §3.1; `BASE_RATES_REGISTER.md` §3 and §5; `LEAGUE_PROFILES.md` Baseball (MLB, KBO, NPB); `SOURCES.md` §3.1 (and §3.14 to §3.16 for the league's history); archive `Previous Sports Results/Baseball/<MLB|KBO|NPB>/<year>/<year>_games.csv` (`Away Score`, `Home Score`, `Total Runs`, `Extra Innings`, starting pitcher and line-score columns).
+For a new event, reconcile the mini's next working ID with current canonical state and outstanding local sequence. No gap, reservation, collision or renumbering. Record current source state before research and again immediately before write. Keep cutoff, research completion, actual issue and state-recheck times separate. If start is crossed, relabel honestly; exposure to live/final information prevents a clean pregame reconstruction. Retain requested late research in its separate cohort.
 
-**Research:** confirmed starting pitchers (announced or posted lineup), starting lineups and handedness and platoon splits; pitcher form, pitch mix, velocity, workload and pitch counts; K% and BB%; bullpen quality, recent usage and unavailable high-leverage relievers; team offence (opponent-adjusted); park factor; weather and wind; travel and rest; the league's extra-innings and tie rules (RULES_BASEBALL and the official league).
+## 3. Evidence and archive
 
-**Expected score (runs):** each team's expected runs over the endpoint, total runs, margin, and the SDs of the total and the margin, from the negative-binomial means. State the innings basis (§3a).
+Follow official field-owner → structured provider → quality corroboration routes. For each decisive claim retain URL, exact field/value or brief extract, source publication/update time when known, retrieval time and provenance/lineage. Log inaccessible/stale/conflicting sources. Three domains are not three independent collectors. No odds/tips/previews/fantasy inputs.
 
-**Distribution:** per-team runs as a negative-binomial (over-dispersed) mixture of the starter segment (expected innings × starter run rate) and the bullpen segment, adjusted for the opposing offence, park and weather, with a shared game-environment factor for covariance (use the league's dispersion phi and environment sigma from LEAGUE_PROFILES). Resolve ties at nine innings with the league's extra-innings rule, or keep a tie outcome where the league allows ties. Account for the home team not batting in the bottom of the ninth when leading.
+Verify lineups/starters/goalies/QB/XI as relevant; probable is not confirmed. Distinguish fact, historical estimate and analyst assumption. Inspect actual archive contents and print files, logical rows read, season/endpoint filters, latest usable date and missingness. Use only results known before cutoff; a date alone does not prove a same-day game had finished. Do not use postgame narrative or full-season aggregates from after cutoff. A profile older than one season triggers STALE_PROFILE, a current-source check and sensitivity; missing replacement data does not justify a fabricated refresh.
 
-**Family checks:**
-- For any ±1.5 run line, print P(win) + P(lose by exactly 1). Compare with the league's one-run share in LEAGUE_PROFILES (MLB 28.2%, KBO 23.8%, NPB 33.7%). An underdog +1.5 near 0.60 has no edge by construction; four Rank-1 +1.5 rows failed in the 2026-10-09 cohort, and a +1.5 is not Rank 1 below 65% (SELECTION_RULES §4).
-- Make the one-run share a function of the expected total: high-run environments widen margins.
-- A starter change after research invalidates the card. Write an addendum (A8).
+## 4. Distribution, expected score and comparator
 
-### B2. CRICKET
+Build the simplest defensible coherent sport/endpoint distribution you can actually calculate. Print every parameter and its basis, formula/table, normalization, tail treatment, covariance and endpoint transitions. A named family is not evidence that a grid or exact simulation was computed. If the required calculation cannot be done, report a supported approximation with limitations, or qualitative research with NOT_ESTIMATED probabilities.
 
-Upcoming match: `<Team A vs Team B>`, `<competition, format>` · Estimated start: `<…>`
-Supplied contracts (reference only): 1. `<…>` 2. `<…>` 3. `<…>` 4. `<…>`
+Produce expected score terms from CARD_AND_LOG_TEMPLATES §3a, including team/total/signed-margin means and supported SDs. Keep zeros; mark missing or irrelevant terms. Print all winner/draw/tie masses. For every candidate retain unconditional W/P/L/V and p_card=W/(W+L), with denominator and action convention.
 
-**Open:** `RULES_CRICKET.md` and `LEAGUE_RULES_CRICKET.md` (format, playing conditions, DLS, super over, follow-on); `PROBABILITY_TOOLKIT.md` §1 and §7; `BASE_RATES_REGISTER.md` §6; `SOURCES.md` §3.3; archive `Previous Sports Results/Cricket T20/<competition>/<year>/<year>_games.csv`, `Cricket One-Day Format/...`, `Cricket Tests/...` (match results and innings totals; there is no cricket row in LEAGUE_PROFILES, so build the level from the files).
+Attempt BASELINE_LEAGUE_V1 on the same line/endpoint from league-only inputs, frozen before issue. Print recipe, source cohort/n/cutoff and parameters separately from the team model. No 0.5 placeholder or retrospective baseline fill. Missing baseline does not stop the card; it limits later skill measurement.
 
-**Research:** confirmed XI (after the toss, where available); injuries and rested players; batting order, wicketkeeper, bowling attack and expected overs; batting and bowling form (opponent-adjusted), with powerplay, middle and death phases for limited overs; venue, pitch report and boundary dimensions; weather, rain and dew; toss status; batting-first and chasing effects; travel and rest; playing conditions.
+Show an adjustment table, unadjusted distribution/pair and low/base/high sensitivity on material uncertain inputs. Any adjustment-driven pair change is ADJUSTMENT_DEPENDENT, even below 0.25 SD. Report plausible probability ranges as sensitivity, not confidence intervals. Do not move individual probabilities outside the shared model.
 
-**Expected score (runs):** each side's expected innings total (the chasing side capped at the target), the match total if a total is priced, and wickets if a wicket row is priced. Margin is `N/A` (§3a).
+## 5. Candidate selection and dependence
 
-**Distribution:** one format-specific model. Limited overs: ball and over resource model with wickets, phase scoring rates and the chase stopping rule (a chase ends when the target is reached). Tests: session and day run and wicket model with draw and weather branches. If the toss is unknown, weight both batting-order branches explicitly. Include a rain, DLS or reduced-overs branch.
+Freeze the supported family/line-generation recipe before pricing. Price supplied rows and the declared derived universe; retain exclusions and unused supplied rows. Do not move thresholds repeatedly toward 90% to manufacture a strong gate. Values above the selection ceiling keep their true probabilities in the diagnostic appendix and are excluded, never capped.
 
-**Family checks:**
-- Innings or phase totals and the match result come from the same model. The second-innings total is capped near the target (RULES_CRICKET controls CR-P3 and 21).
-- Never pair opposite-direction phase and total picks unless the joint win mass is shown (the P-217 lesson).
-- State how runs scored before a stoppage settle (runs scored before a stop count).
+Apply family eligibility and deterministic decreasing-p primary order from SELECTION_RULES. Show up to four supported rows, the first two as PICK. Fewer rows or qualitative/NO_FORECAST output is acceptable with the reason; unsupported rows are never padding. The best non-complementary gate alternative comes from the entire declared eligible universe, not a pruned four. Print original gate and RET03 shadow separately.
 
-### B3. BASKETBALL
+Freeze RET04 different-quantity and XCARD6 minimum-joint-failure shadow Rank 2 where calculable. Neither changes primary ordering. Print exact unconditional joint loss from common states, or honest Fréchet bounds. Label disjoint losing sets MECHANICALLY_PROTECTED; do not claim they improve skill or guarantee profit. Report both-decisive conditioning where pushes/voids exist.
 
-Upcoming game: `<Home vs Away>`, `<League>` · Estimated start: `<…>`
-Supplied contracts (reference only): 1. `<…>` 2. `<…>` 3. `<…>` 4. `<…>`
+## 6. Sport research blocks — apply the matching one
 
-**Open:** `RULES_BASKETBALL.md`; `PROBABILITY_TOOLKIT.md` §1 (totals §1.2, margins §1.3); `BASE_RATES_REGISTER.md` §3 and §7.1; `LEAGUE_PROFILES.md` Basketball (NBA, WNBA, NBL, EuroLeague, Greek Basket League; do not use the excluded leagues); `SOURCES.md` §3.2; archive `Previous Sports Results/Basketball/<NBA|WNBA|NBL|EuroLeague|...>/<year>/<year>_games.csv` (`Home Score`, `Away Score`, `Total Points`, `Overtime`, quarter or half scores).
+**Baseball:** Read RULES_BASEBALL, league conditions and the baseball profile/toolkit sections. Verify starter identity and expected workload, lineup/platoon, bullpen availability, opponent-adjusted offence, park, weather and rest. Use supported overdispersed team-run scenarios with shared environment, starter/bullpen segments and correct home last-inning/extras handling. Verify season-specific tie/innings rules; do not assume MLB rules in KBO/NPB. +1.5 needs team-directional win and exactly-one-run-loss mass, with tie/action treatment. A league absolute one-run share is not the selected team's probability. Unknown pitcher weights stay assumptions, not facts.
 
-**Research:** confirmed starters; injury report, game-time decisions and rested players; expected minutes and rotation; usage changes; offensive and defensive efficiency; pace; shot profile and three-point dependency; rebounding, turnovers and free-throw rate; matchup strengths; opponent-adjusted recent form; home and away splits; rest, back-to-backs and travel; series or playoff situation; league rule changes this season.
+**Cricket:** Read RULES_CRICKET and LEAGUE_RULES_CRICKET. Confirm exact format/playing conditions, XI, toss, batting order, bowling allocations, pitch/weather/dew and rain resources. Model innings/phase/wicket dependence with explicit toss/rain branches. A chase ends on the winning delivery and can legally overshoot the target; do not simply cap every total at the target. Tests retain draw/weather branches; tie, super-over, DLS and no-result conventions must match each row. Unsupported ball-by-ball calculation is not an exact simulation.
 
-**Expected score (points):** each team, total, margin and SDs, from the pace × efficiency means (§3a).
+**Basketball:** Read RULES_BASKETBALL and the correct league/era profile. Confirm rotation, minutes, injuries, rest/travel, pace, offensive/defensive efficiency, shot mix, rebounding, turnovers and free throws. Print possessions × efficiency centres, team covariance, total/margin widths and OT treatment. A raw scoring average is a labelled approximation, not a fitted pace model. No NBA defaults for NBL/B.LEAGUE/European leagues. Stale NBL profiles require disclosure/current evidence, not a +16.8 adjustment copied from three retrospective games.
 
-**Distribution:** possessions × points-per-possession. Use team pace and efficiency (opponent-adjusted) to produce a total mean, a margin mean, SDs and their correlation (normal or Student-t). Use the league's own scoring level, margin SD, total SD and correlation from LEAGUE_PROFILES, never NBA defaults for another league. Apply early-season shrinkage toward the prior-season league mean (fewer than about 5 games) and the early-season regime table. Resolve overtime in the full-game distribution (overtime share in LEAGUE_PROFILES).
+**Ice hockey:** Read RULES_ICE_HOCKEY; RULES_NHL only when applicable. Confirm goalies or supported mixture, lines/scratches, 5v5 creation/suppression, special teams, rest and travel. Separate regulation draw from full-game OT/SO and final-score convention; empty-net tails must be explicit. Print directional handicap mass, not unconditional league absolute-margin frequency. Unconfirmed goalie sensitivity must reach totals/ranks. Other leagues require their own rules/profile.
 
-**Family checks:**
-- A totals pick needs the pace × efficiency centre printed. Three Rank-1 totals failed in the 2026-10-09 cohort because centres were typed in or shifted by judgment.
-- Name any analyst adjustment as a parameter with its size. If removing it would change the top two, say so.
-- The potential winner and every handicap come from the same margin distribution.
+**Tennis:** Read RULES_TENNIS; inspect current tennis archive/provider coverage rather than assuming it is empty. Verify event/player identity, round, tour, surface, best-of format, tiebreak rules, fitness, workload, serve/return data and appropriate benchmark. Games/sets/winner come from compatible point-to-match construction with a supported form mixture; show calculation or label the approximation. Compare deciding-set mass with relevant tour/surface/format data, never force a global reference rate. Freeze retirement/walkover rules per row; sporting advance and operator settlement are different.
 
-### B4. ICE HOCKEY
+**Soccer:** Read RULES_SOCCER and LEAGUE_RULES_SOCCER. Confirm XI/keeper, injuries, rotation, opponent-adjusted xG/shot process, set pieces, schedule, weather and competition incentives. Use a coherent regulation score model with explicit draw, supported half split for phase rows and appropriate low-score correction. Goal counts do not generate corner probabilities; corners need their own supported count/provider model and joint dependence if combined. ET/penalties only where specified. Check first-half and team-to-score assumptions against confirmed availability; no EPL constants silently transferred to another league.
 
-Upcoming game: `<Away @ Home>`, `<League>` · Estimated start: `<…>`
-Supplied contracts (reference only): 1. `<…>` 2. `<…>` 3. `<…>` 4. `<…>`
+**Rugby league / union:** Read RULES_NRL_RUGBY or RULES_RUGBY_UNION and exact competition conditions. Verify team/bench/spine or halves/front row, kicking, possession/territory, discipline, workload and weather. Model the appropriate score events and key margins; league and union scoring systems differ. Use only applicable measured regime effects; finals need not always reduce the mean. Resolve draw/golden point/extra time per competition and endpoint.
 
-**Open:** `RULES_ICE_HOCKEY.md` and `RULES_NHL.md`; `PROBABILITY_TOOLKIT.md` §2 and §2.3; `BASE_RATES_REGISTER.md` §7.2; `LEAGUE_PROFILES.md` Ice hockey (NHL); `SOURCES.md` §3.9; archive `Previous Sports Results/Ice Hockey/NHL/<year>/<year>_games.csv` (`Home Score`, `Away Score`, `Total Goals`, `Decision Type`, `Overtime`, `Shootout`).
+**AFL / AFLW:** Read RULES_AFL and correct league/season profile. Verify teams, ruck/midfield, clearances, inside-50/scoring-shot creation, conversion, defence, rest/venue/weather. Separate shots from accuracy; points=6×goals+behinds. Use competition-specific pace/length and draw/finals rules. Explain shrinkage of unusual conversion rather than assuming a rebound.
 
-**Research:** confirmed starting goalies (if unconfirmed, model a goalie mixture), backup quality, goalie workload; scratches, forward lines and defence pairs; injuries; 5v5 expected goals and high-danger chances; shot generation and suppression; power play, penalty kill and penalty rates; finishing and save-percentage regression; rest, back-to-backs and travel; home ice.
+**American football:** Read RULES_AMERICAN_FOOTBALL and exact NFL/college/other rules. Verify QB, line/skill/defensive availability, efficiency, drive/play pace, pressure, special teams, rest/weather. Use supported discrete score/drive structure or disclose an approximation; show push/key-margin mass near 3/7 and other relevant numbers. NFL and college overtime/tie rules differ. No claim to an exact drive model without its calculation.
 
-**Expected score (goals):** each team over the full game including OT/SO, with the OT/SO share stated; total, margin and SDs (§3a).
+**Other sport:** Read its actual rules and supported source/model route. If unavailable, retain qualitative/NO_FORECAST research rather than borrowing a model whose endpoint does not fit.
 
-**Distribution:** regulation goals as goalie-adjusted Poisson (or a bivariate variant). Resolve regulation ties with the league's overtime and shootout rules (a shootout adds one goal to the winner); about 22% of NHL games reach overtime (LEAGUE_PROFILES). Add an explicit late empty-net branch for one- and two-goal leads.
+## 7. Write, audit and return
 
-**Family checks:**
-- State whether each row settles on regulation or the full game.
-- A −1.5 or −2.5 puck line needs the margin distribution printed. P(margin ≥ 2) is about 60% and P(margin ≥ 3) about 40% of NHL games (LEAGUE_PROFILES), and larger margins are rarer (the P-200 lesson).
-- An unconfirmed goalie blocks a fragile totals Rank 1.
+Use CARD_AND_LOG_TEMPLATES §3 in the mini's own format; v10 uses mini-log-6. Keep the decision block concise and put full evidence/arithmetic in A1–A9. State exact settlement fields, definitions and capture plan. Write one card before the footer, update only the footer's new-card/ID totals, and read it back. Audit C1–C16 with specific evidence. Preserve every earlier issued block.
 
-### B5. TENNIS
+For a duplicate or late-news correction, append a dated addendum; reforecast is NOT_PRIMARY and never changes the original grade. If writing is unavailable, return the complete updated mini as READ_ONLY_DRAFT / NOT_ISSUED and do not claim allocation.
 
-Upcoming match: `<Player A vs Player B>`, `<Tournament, round>` · Estimated start: `<…>`
-Supplied contracts (reference only): 1. `<…>` 2. `<…>` 3. `<…>` 4. `<…>`
-
-**Open:** `RULES_TENNIS.md`; `PROBABILITY_TOOLKIT.md` §6 (tennis Elo) and §1; `BASE_RATES_REGISTER.md` §6 and §7.4 (deciding-set reference rates); `SOURCES.md` §3.10; archive: the tennis yearly files are header-only, so write `ARCHIVE_UNAVAILABLE: Tennis yearly files are header-only` and use the SOURCES tennis routes (match statistics and the Sackmann files) for serve and return statistics.
-
-**Research:** verified players, round, surface, indoor or outdoor, best-of-3 or best-of-5, qualifying versus main draw; injury, medical and retirement news; recent workload and match durations; rest and travel; surface-specific form; opponent-adjusted quality; serve points won, first- and second-serve performance, hold rate, aces and double faults; return points won and break conversion; tiebreak record; handedness and style; overall and surface Elo benchmark. Head-to-head matters only when surface, level, fitness and style are comparable.
-
-**Expected score (games):** each player's expected games, total games, margin in games, expected sets and P(deciding set) (§3a).
-
-**Distribution:** one point-to-match score tree. Use point-on-serve probabilities for each player (opponent-adjusted, surface-adjusted), exact game, tiebreak and set enumeration, and a **match-level form random effect**. The plain independent-point model over-states deciding sets: P-551 and P-555 were reproduced at 0.50 deciding-set mass where the reference is 0.358. Winner, games handicaps and games totals all come from this one tree.
-
-**Family checks:**
-- Print P(deciding set) beside the reference (ATP best-of-3 0.358, WTA 0.340; BASE_RATES §7.4 and RULES_TENNIS). Explain any gap above about 8 points.
-- Totals between 19.5 and 25.5 games are mostly deciding-set bets; say so.
-- At most one of the two picks may need a deciding set.
-- Endpoint: a completed match. Under the framework convention a retirement voids games rows, and the winner settles to the advancing player.
-
-### B6. SOCCER
-
-Upcoming match: `<Home vs Away>`, `<Competition>` · Estimated start: `<…>`
-Supplied contracts (reference only): 1. `<…>` 2. `<…>` 3. `<…>` 4. `<…>`
-
-**Open:** `RULES_SOCCER.md` and `LEAGUE_RULES_SOCCER.md` (competition format, extra time, tie-breaks); `PROBABILITY_TOOLKIT.md` §2.1 and §2.2; `BASE_RATES_REGISTER.md` §7.3; `LEAGUE_PROFILES.md` Soccer (EPL row); `SOURCES.md` §3.4 and the reachability matrix; archive: the soccer yearly files are header-only, so for the English Premier League open `research/data/processed/league_csv/epl_results.csv`, otherwise write `ARCHIVE_UNAVAILABLE: Soccer yearly files are header-only`.
-
-**Research:** confirmed starting XI, goalkeeper and bench; injuries and suspensions; rotation (cup ties, congestion); tactical changes; xG and xGA; shots and shots on target; finishing and save regression; pressing and transitions; set pieces; home and away splits; opponent-adjusted form; rest and travel; weather and venue; competition incentives (aggregate state, table position, two-leg ties).
-
-**Expected score (goals):** each team over 90 minutes plus stoppage, total, margin and SDs; first-half goals per team when a first-half row is priced; corners only with their provider (§3a).
-
-**Distribution:** a Dixon–Coles score matrix for 90 minutes plus stoppage time, with **separate first-half and second-half λ**. In EPL 2025-26, first-half goals were 1.19 of 2.75 per match, and P(first-half goal) was 0.716 (BASE_RATES §7.3). 1X2 (with the draw), first-half rows, totals, team totals and double chance all come from this one matrix. Corners need their own negative-binomial count model with score-state effects (EPL mean 10.0 per match, SD 3.27) and a named settlement provider. Extra time and penalties apply only if the contract says so.
-
-**Family checks:**
-- A first-half Over 0.5 at Rank 1 needs the half-split λ printed, `p_card` of at least 72% (SELECTION_RULES §4) and at least 5 points above the next candidate. Five Rank-1 first-half Overs failed in the 2026-10-09 cohort.
-- For a rotated or cup favourite, discount first-half conversion: territory is not timing.
-- A team-to-score probability above 80% needs both confirmed XIs and the implied λ printed.
-- Four candidates only. The format and the top-two rule replace the older five-pick slate.
-
-### B7. RUGBY LEAGUE / RUGBY UNION
-
-Upcoming match: `<Team A vs Team B>`, `<Competition>` · Estimated start: `<…>`
-Supplied contracts (reference only): 1. `<…>` 2. `<…>` 3. `<…>` 4. `<…>`
-
-**Open:** `RULES_NRL_RUGBY.md` (league) or `RULES_RUGBY_UNION.md` (union); `PROBABILITY_TOOLKIT.md` §1; `BASE_RATES_REGISTER.md` §7.7 and the finals and six-again rows of the regime table; `LEAGUE_PROFILES.md` Rugby league (NRL); `SOURCES.md` §3.6 (league) or §3.7 (union); archive `Previous Sports Results/Rugby League/NRL/<year>/<year>_games.csv` (scores, halftime scores, tries, goals, field goals); the rugby union yearly files are header-only (`ARCHIVE_UNAVAILABLE`).
-
-**Research (league):** confirmed team list and late changes; spine (fullback, halves, hooker); forward pack and bench; metres per set and post-contact metres; line breaks and tackle breaks; ruck speed; completion and error rates; kicking and field position; red-zone attack; defensive efficiency; penalties and six-agains; rest, travel and weather.
-**Research (union):** confirmed XV and bench; halves and goal-kicker; scrum and front-row matchup; lineout; breakdown; gain line; territory and kicking; discipline and cards; attacking entries; goal-kicking percentage; bench impact; rest, travel and weather.
-
-**Expected score (points):** each team, total, margin and SDs, from the score-event means (§3a).
-
-**Distribution:** a score-event model: tries, conversions, penalty goals and field goals as count processes from team ratings, giving joint margin and total (NRL: try 4, conversion 2, penalty goal 2, field goal 1; key margins in LEAGUE_PROFILES). Knockout and finals games are tighter and lower-scoring, so apply the finals compression from the regime table (the P-534 lesson). Resolve golden point or extra time as the endpoint requires.
-
-**Family checks:** print the margin distribution around key numbers. A handicap above about 4.5 in a near-even final needs explicit support.
-
-### B8. AFL / AFLW
-
-Upcoming game: `<Team A vs Team B>`, `<AFL | AFLW>` · Estimated start: `<…>`
-Supplied contracts (reference only): 1. `<…>` 2. `<…>` 3. `<…>` 4. `<…>`
-
-**Open:** `RULES_AFL.md`; `PROBABILITY_TOOLKIT.md` §1; `BASE_RATES_REGISTER.md` §7.7 and the AFL rows of the regime table; `LEAGUE_PROFILES.md` Australian rules (AFL, AFLW); `SOURCES.md` §3.5; archive `Previous Sports Results/AFL/AFL/<year>/<year>_games.csv` or `AFL/AFLW/...` (`Game Score` text, `Total Points`, `Winning Margin`).
-
-**Research:** final teams and late changes; injuries; midfield availability and ruck matchup; contested possessions; clearances and centre clearances; inside-50s; scoring shots and shot quality; goal accuracy and its regression; intercepts and turnovers; pressure and tackles; marks inside 50; defensive transition; venue; travel and rest; weather and wind; opponent-adjusted form.
-
-**Expected score (points):** each team's expected goals and behinds, with points = 6 × goals + behinds; total, margin and SDs (§3a).
-
-**Distribution:** scoring shots per team (negative binomial, mean and dispersion from LEAGUE_PROFILES) × goal conversion (beta-binomial around 53% for AFL and 46% for AFLW), with points = 6 × goals + behinds. Keep shot creation separate from accuracy. Shrink unusual recent accuracy toward the league rate. Apply weather and wind to both creation and conversion.
-
-**Family checks:** totals use the current competition era's scoring level (AFLW totals differ markedly from AFL). Print P(total ≤ line) from the shot × conversion model.
-
-### B9. AMERICAN FOOTBALL
-
-Upcoming game: `<Away @ Home>`, `<NFL | CFB | other>` · Estimated start: `<…>`
-Supplied contracts (reference only): 1. `<…>` 2. `<…>` 3. `<…>` 4. `<…>`
-
-**Open:** `RULES_AMERICAN_FOOTBALL.md`; `PROBABILITY_TOOLKIT.md` §1; `BASE_RATES_REGISTER.md` §7.7 and the NFL rows of the regime table; `LEAGUE_PROFILES.md` American football (NFL profile and the absolute-margin table); `SOURCES.md` §3.8; archive `Previous Sports Results/American Football/NFL/<year>/<year>_games.csv` (`Game Score` text, `Total Points`, `Winning Margin`).
-
-**Research:** starting QB, QB injuries and backup; offensive-line injuries; receivers, running backs and tight ends; defensive injuries; EPA per play and success rate; passing and rushing efficiency; pressure and sack rates; explosive plays; early-down efficiency; red-zone performance; turnover regression; pace and play volume; special teams; coaching and tactical changes; rest and travel; home field; weather and wind.
-
-**Expected score (points):** each team, total, margin and SDs, from the drive model (§3a).
-
-**Distribution:** drive-based discrete scoring. Model the number of drives and the drive outcome probabilities (0, 2, 3, 6, 7, 8 points) per team, giving a discrete joint score and margin. Key margins (3, 7, 10, 14) must emerge from the discrete model, not from a smoothed normal; compare with the NFL absolute-margin table in LEAGUE_PROFILES (margin 3 is 14.6% of games, margin 7 is 8.7%). Resolve overtime under the league's rule.
-
-**Family checks:** print P(margin = 3) and P(margin = 7) beside any spread within 1 point of them. Re-forecast after any change of starting QB (A8).
-
----
-
-## No fitted models
-
-The Markdown-only framework has no fitted pipeline, calibrator or saved model. Every card is an `UNCALIBRATED_ANALYST_SCENARIO`. Winner-class, total and handicap probabilities all come from the one distribution you built by hand, and nothing is borrowed from another league. Never substitute a ranking q for a probability. Do not fabricate historical probabilities to populate a scoreboard. New rows keep their issued `p_card` values for later settlement and calibration scoring.
+Return the full new card, exact file path, working ID/status, timing and lead band, top two or no-forecast reason, baseline coverage, gate/joint/sensitivity summary, audit evidence and updated footer. Explicitly state settlement NOT_PERFORMED and GitHub writes NO. Do not promise prediction success.

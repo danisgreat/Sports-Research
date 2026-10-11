@@ -2,13 +2,13 @@
 
 A sports-only forecasting framework made of documents. It tells a research agent how to forecast, log and settle individual games across ten sports, how to use the archive of past results, and how to learn from the outcomes. **Everything is Markdown, with CSV for the data and plain text for preserved originals.** There is no program to run and no JSON to open.
 
-**What is true now** (method, next ID, active log, scoreboard): [CURRENT_STATE.md](CURRENT_STATE.md). Method **MDS-2026.10.09-v9.0**, control revision **CR-2026.10.09-R5**, scoring **SCV-2026.10.09-v5**. The Python runtime, the JSON registries, the validators and the hash-manifest freeze were removed on 2026-10-09 (commits `a64675cf7` to `a93352c30`); their last working state is commit `37203fc2b`, and the pre-rewrite documents are in [archive/superseded_2026-10-09/](archive/superseded_2026-10-09/README.md).
+**What is true now** (method, next ID, active log, scoreboard): [CURRENT_STATE.md](CURRENT_STATE.md). Method **MDS-2026.10.11-v10.0**, control **CR-2026.10.11-R1**, scoring **SCV-2026.10.11-v6**. [October 11 implementation and recommendation roadmap](research/verification/framework_change_2026-10-11-1/IMPLEMENTATION.md). The executable runtime remains removed; no fitted model or automated certification is claimed.
 
 ## Rules in force
 
 - **Rule T2:** only Rank 1 and Rank 2 count as wins. Ranks 3 and 4 are informational.
 - **Rule R1:** every Rank-1 failure gets a deep retrospection.
-- **Rule P4:** supplied contracts are reference only. The analyst builds one event distribution and prices four candidates from it, ranked by `p_card`.
+- **Rule P4:** supplied contracts are reference only. Retain up to four supported candidates from a coherent distribution, ranked by `p_card`, with a frozen same-line baseline where available. Qualitative/NO_FORECAST research remains explicit; shadow alternatives are separate.
 - **Read first, cite what you use:** every task opens with a reading receipt of the current documents, and every card names the rules, sources and past results it applied.
 - **SPORTS_ONLY / MARKET_BLIND:** no odds, tips or prediction markets anywhere in the research.
 - **Honest labels:** every probability is an uncalibrated analyst scenario; nothing is performance-certified.

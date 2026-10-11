@@ -1,139 +1,93 @@
-# Selection rules: the gate, the top two, the families and the grading codes
+# Selection, baseline and settlement rules
 
-**Version SEL-2026.10.09-v1 (Markdown only).** This page holds every number and label that used to live in `selection_rules.json`, `regimes.json` and the taxonomy inside `top_two.py`, and the hand procedures that used to run in code. Those files were removed on 2026-10-09; the last copies are in git history at commit `37203fc2b`. A card, a settlement and a retrospective cite this page by section number, for example "(SELECTION_RULES §2)".
+**SEL-2026.10.11-v2 · primary policy P_ORDER_V2.** Numerical thresholds are PROVISIONAL, not proven accuracy guarantees. Applies to new v10 cards; old selections keep their original policy. [CURRENT_RULES](CURRENT_RULES.md) controls.
 
-**Status of the numbers: PROVISIONAL.** The gate, the Rank-2 floor and the family thresholds were derived from the 2026-10-09 retrospective ([FRAMEWORK_RETROSPECTIVE_2026-10-09.md](FRAMEWORK_RETROSPECTIVE_2026-10-09.md) §3.2 and §7). They become binding only after a prospective window of at least 8 weeks (experiments SEL-1 and XCARD-5 in [HYPOTHESIS_REGISTER.md](HYPOTHESIS_REGISTER.md)). Until then nobody changes them on the strength of one event, and every card prints the numbers it used.
+## 1. Constants and scope
 
-## 1. Constants
-
-| Constant | Value | Meaning |
-|---|---:|---|
-| `p_card` ceiling | 0.90 | A proposition above 90% is degenerate and is not a candidate. |
-| Rank-1 gate, floor | 0.62 | Rank 1 passes only with `p_card` at least 62%. |
-| Rank-1 gate, margin | 0.04 | Rank 1 must lead the best non-complementary alternative by at least 4 points. |
-| Legacy unstable cut | 0.60 | Cards issued before the gate labelled a Rank 1 below 60% `RANK1_UNSTABLE`. Old cards keep that split. |
-| Rank-2 floor | 0.58 | Rank 2 is the best remaining row with `p_card` of at least 58%. |
-| Joint top-two failure, warning | 0.35 | Above this the two picks share one driver. Replace the weaker pick. |
-| Joint top-two failure, target | 0.30 | The aim when choosing Rank 2. |
-| Adjustment threshold | 0.25 SD | An analyst adjustment above this that changes the top two makes the card `ADJUSTMENT_DEPENDENT`. |
-| Decision block size | about 650 words | The page you would act on. Everything else is appendix. |
-| Settlement SLA | 72 hours | Settle each card within 72 hours of its final. |
-| Open carryover cap | 5 | More than five open `PENDING_EVENT` records is a breach; report it. |
-| Capture window | 36 hours | A corners, half-time, period or player row needs a capture time within 36 hours after the scheduled start. |
-
-## 2. The Rank-1 gate (hand procedure)
-
-1. Price the whole ladder from the one distribution (section 5).
-2. Sort by `p_card`, highest first. Rank 1 is the top row.
-3. Find the **best non-complementary alternative**: the highest `p_card` among rows that are not the opposite side of Rank 1's own line. The opposite side of a line (Over 5.5 against Under 5.5, a team's +1.5 against the other team's -1.5) is never the alternative, because it is the same bet.
-4. Gate = PASS when `p_card` of Rank 1 is at least 62% **and** (Rank 1 minus alternative) is at least 4.0 points. Otherwise the card is `RANK1_UNSTABLE`.
-5. Print `**Rank-1 gate:** PASS|RANK1_UNSTABLE — p_card x%; best non-complementary alternative y%; margin z points`. The label must agree with the numbers on the same line. Recompute them before printing.
-6. A failing gate is not an error. The card is scored in its own cohort, and the card says why no stronger proposition exists.
-
-## 3. Rank 2 and the joint failure probability
-
-**Choosing Rank 2.** Among the remaining rows with `p_card` of at least 58%, take the one that minimises P(Rank 1 and Rank 2 both lose), not simply the next-highest `p_card`. If no remaining row reaches 58%, take the highest and say that the floor was not met.
-
-**Computing P(both lose) by hand.** Let L1 and L2 be the losing events of the two picks, read from the same grid.
-
-| Picks | P(both lose) |
+| Item | Rule |
 |---|---|
-| Bracketing total: Over A and Under B with A below B | 0. The two losses cannot happen together (total at or below A, total at or above B). State it as "0.0% by construction". |
-| Same direction on one quantity (Under 7.5 and Under 6.5) | The smaller loss probability, because the narrower loss event sits inside the wider one: P(L1 and L2) = min(P(L1), P(L2)). |
-| Total and margin from one grid (Under 7.5 and a team +1.5) | Sum the grid cells in which both lose. Show the cells or the formula. |
-| Winner and the same team's handicap (A to win and A +1.5, or A to win and A -1.5) | The losing events nest: A losing by 2 or more sits inside A losing, and A losing sits inside A failing to cover -1.5. When one loss contains the other, P(both lose) is the smaller of the two loss probabilities. |
-| Different outcome spaces (a first-half row beside a full-game row) | No exact joint exists. Use the conservative bound min(P(L1), P(L2)) and say so. |
+| Ranked numeric candidates | At most four supported rows; do not pad |
+| Selection ceiling | p_card ≤ 0.90; retain true higher values outside the selected slate, never clip |
+| Rank-1 gate | p_card ≥ 0.62 and lead ≥ 0.04 over best eligible non-complementary alternative |
+| Rank-2 floor | 0.58, disclosed if unmet; no invented replacement |
+| Joint failure | Report 0.30 target / 0.35 warning as historical provisional diagnostics, not a forced reordering rule |
+| Large adjustment | Above 0.25 SD; any size that changes top two is ADJUSTMENT_DEPENDENT |
+| Decision block | At most about 650 words, full evidence in appendix |
+| Review target | Within 72 h of verified final; unknown final time is disclosed |
+| Open event alert | More than five pending events; evidence backlog separately counted |
+| Fragile-field capture | Normally within 36 h after scheduled start; real delays/multi-day events need explicit revised due time |
 
-**General rule.** If one losing event contains the other, P(both lose) is the smaller loss probability. If the two losing events cannot happen together, it is 0. Otherwise add up the grid cells in which both rows lose and show them.
+## 2. Primary order and Rank-1 gate
 
-If P(both lose) is above 35%, replace the weaker pick with the best less-correlated candidate, re-rank by `p_card`, and write what changed.
+Freeze the candidate recipe and eligibility rules before pricing. Each contract key comprises quantity, participant orientation, line, direction, period, endpoint and action/void convention. Deduplicate identical keys. Rank numeric eligible rows by unrounded p_card descending; ties use ascending contract key. Retain the first four or fewer. Rank 1/2 are the primary picks; the rest are informational. A qualitative slate uses explained qualitative order, no numerical PASS, no numeric proper score.
 
-## 4. Family rules
+Family rules apply to eligibility for the primary slate when they would prohibit its top row: remove the inadmissible would-be Rank 1 from primary selection, record its reason and keep it in the diagnostic ladder; repeat on the remaining set. Do not quietly demote it below a lower-p row in a table claimed to be probability-sorted. Unsupported rows are excluded independently of whether they would win.
 
-| Family | Rule | How to check |
-|---|---|---|
-| First-half Over 0.5 goals | Not Rank 1 unless `p_card` is at least **72%** from a half-split model (separate first-half and second-half rates). The soccer block also asks for 5 points over the next candidate. | Print the first-half and second-half lambdas. Compare with the league first-half goal share in [LEAGUE_PROFILES.md](LEAGUE_PROFILES.md) and [BASE_RATES_REGISTER.md](BASE_RATES_REGISTER.md) §7.3. |
-| Baseball +1.5 run line | Not Rank 1 unless `p_card` is at least **65%**. | Print P(win) + P(lose by exactly 1), and the one-run share of the league from LEAGUE_PROFILES. |
-| Tennis games rows | Only from the exact point-to-match tree **with a match-level form shock**. The plain independent-point tree over-states deciding sets (0.50 against a 0.358 reference). | Print P(deciding set) beside the reference in BASE_RATES_REGISTER §7.4. Explain a gap above about 8 points. |
-| Corners rows | Only with a named settlement provider **and** a negative-binomial count model for the corners. | Name the provider in Settlement fields; print the mean, SD and the dispersion used. |
-| Half-time, period and player rows | A named provider and a capture time within 36 hours after the start. | Settlement fields and Capture due. |
+Compute the original gate against the best non-complementary alternative in the full eligible priced universe, not just the displayed four. An exact opposite on the same line is complementary; another threshold on the same quantity is still an alternative. If no alternative exists, gate = NOT_ASSESSABLE. Print Rank-1 p, alternative key/p, gap, numerical floor result and PASS/RANK1_UNSTABLE. Do not round before comparing or remove competitors to manufacture a pass.
 
-Record the result of every applicable family check in appendix A7.
+Also freeze `SHADOW_GATE_RET03`: exclude other lines on Rank 1's quantity, keep 0.62 and 0.04, and print the alternative and result or NOT_ASSESSABLE. It does not replace the original gate or enter its cohort. Equal and nearby tail probabilities can keep the gate unstable; this is an observed property, not permission to tune constants after seeing outcomes.
 
-## 5. Ladders: which lines to price
+<a id="3-rank-2-and-the-joint-failure-probability"></a>
 
-Price every candidate from the one distribution. Use half lines unless the sport allows pushes. Span the lines from about 2.5 SD below to 2.5 SD above the relevant mean (2.0 SD for cricket). Price the winner (or double chance where a draw exists), handicaps, the match total, team totals and period totals.
+## 3. Rank 2, dependence and shadows
 
-| Sport | Draw in full-game ladder | Line step (handicap / total / team total) | Ladder span (SD around the mean) | Integer lines allowed | Extra rows |
-|---|---|---|---:|---|---|
-| soccer | yes | 1 / 1 / 1 | 2.5 | no (half lines) | both teams to score |
-| ice_hockey | no | 1 / 1 / 1 | 2.5 | no (half lines) |  |
-| baseball | no | 1 / 1 / 1 | 2.5 | no (half lines) |  |
-| basketball | no | 1 / 1 / 1 | 2.5 | no (half lines) |  |
-| american_football | no | 1 / 1 / 1 | 2.5 | yes (pushes possible) |  |
-| afl | no | 1 / 1 / 1 | 2.5 | no (half lines) |  |
-| rugby_league | no | 1 / 1 / 1 | 2.5 | no (half lines) |  |
-| cricket | no | 1 / 1 / 1 | 2 | no (half lines) |  |
-| tennis | no | 1 / 1 / 1 | 2.5 | no (half lines) |  |
+Primary Rank 2 is the second row in probability order. Report floor failure and dependence without changing the primary order. This resolves the v9 conflict between probability ordering and minimising joint failure; label the policy change on every new card.
 
-Soccer prices a draw in the full-game ladder; hockey, baseball, basketball, rugby, Australian rules and tennis do not (the endpoint rules resolve overtime, extra innings, extra time or tie-breaks inside the grid). A row with a possible push (American football integer lines) leaves the push mass out of the denominator: `p_card` = win ÷ (win + loss).
+Quantity keys identify the underlying random variable and endpoint: full match total; signed full margin (winner and either team's handicap share this quantity); each named team total; each phase total; each player's count. Merely reversing a margin sign or renaming a family does not create a different quantity.
 
-## 6. Regime flags
+Freeze two diagnostics when supported: (a) `SHADOW_R2_RET04`, highest-p eligible row with p≥0.58 on a different quantity from Rank 1; (b) `SHADOW_R2_XCARD6`, eligible remaining row with p≥0.58 minimising exact joint failure, ties by p then contract key. Report NONE when unavailable. They are never counted as primary wins. Different quantities can still be structurally dependent; evaluate actual losing sets.
 
-`Regime flags` on a card is `NONE` or a comma-separated list of `FINALS_COMPRESSION`, `EARLY_SEASON`, `CUP_ROTATION` and `RULE_CHANGE:<name>`. The measured multipliers on game totals are in the regime table in [BASE_RATES_REGISTER.md](BASE_RATES_REGISTER.md) (section "Regime flags"). Rules:
+For unconditional losing masses l1 and l2, exact joint = sum of common losing states from a shared model. For nested loss sets use min(l1,l2); for disjoint sets use 0 and label MECHANICALLY_PROTECTED. Otherwise, absent a computed joint, show Fréchet bounds `[max(0,l1+l2−1), min(l1,l2)]`, not a point estimate. Never multiply without justified conditional independence. Use W/P/L/V unconditional masses, not 1−p_card when pushes/voids exist. Record P(both decisive) where conditional comparison is required. Exact, bounded and unavailable joints remain separate in retrospective tables.
 
-- Apply the table's **Recommended** column and nothing else. Where it reads 1.000 the 95% interval contains 1, so the distribution is **not** shifted.
-- Record an applied multiplier in the adjustments table (name, target = total mean, size, SD units, basis `archive_estimate`).
-- `FINALS_COMPRESSION` multipliers: AFL 0.943, MLB 0.924, NBA 0.970, NFL 1.057, NHL 0.917, NRL 0.938, WNBA 1.000. `EARLY_SEASON`: NBA 0.988, NHL 1.024, NRL 0.938; the others 1.000. `RULE_CHANGE:six_again` (NRL from 2020): 1.121.
-- Not estimable from the archive, so no multiplier exists: `CUP_ROTATION` (needs lineups) and `RULE_CHANGE:kbl_foreign_player_2026_27` (no game under the rule yet). Flag them, say the effect is unmeasured, and widen the distribution rather than shifting it.
-- Ignoring a flag that applies is the failure class `REGIME_IGNORED`.
+## 4. Family checks
 
-## 7. Grades, evidence codes and card classes
-
-**Grades.** `WIN`, `LOSS`, `PUSH` (an exact integer line or a void-on-tie rule) and `VOID` (no admissible data, abandoned or cancelled with no result, or voided by rule). PUSH and VOID leave the denominators and are never losses.
-
-**Evidence codes.**
-
-| Code | Use when |
+| Family | Required support |
 |---|---|
-| A | An official or field-owner terminal record covers the target field. |
-| B | A structured provider or multi-source agreement covers the target field, with an official score. |
-| C | The best available evidence is a single secondary, conflicted or provisional source, adopted as final. |
-| E | The value is estimated from a partial measurement that bounds the target field; state your confidence. |
-| OP | The sporting endpoint is known but the operator rule is not; the card's frozen assumption or the framework default applies. |
-| X | No admissible data exists; the row **must** be VOID. |
+| Soccer first-half Over 0.5 at Rank 1 | Half-specific rate/model, p≥0.72 and 5-point lead over best eligible alternative; full-time intensity alone is insufficient |
+| Baseball +1.5 at Rank 1 | p≥0.65, signed team-specific P(win)+P(lose by exactly one), with ties/actions treated explicitly |
+| Tennis games | Reproducible point/set/match construction and supported match-form mixture; disclose approximation and deciding-set sensitivity; no invented exact enumeration |
+| Corners | Named provider, supported count distribution and field definition; cross-score joint requires a joint model |
+| Period/player rows | Exact phase/player definition, source field and capture plan; no inferred period score from match final |
+| Unknown league/format | Explicit local evidence/prior and limitations; no silent transfer of NBA/NHL/MLB or another competition's rules |
 
-**Card classes (Rule T2).** `TOP2_ALL_WON`, `TOP2_SPLIT`, `TOP2_ALL_LOST`, `VOID` (no live top-two row) and `NO_FORECAST` (intake with no ranked rows). Only Rank 1 and Rank 2 can count as wins.
+Old league-wide absolute-margin or one-run rates are sanity checks, never a particular team's directional probability or universal ceiling. Older sport-file instructions that conflict with these controls are historical.
 
-**Settlement allowance for the 72-hour clock.** The clock starts at the scheduled start plus the time the event needs to finish: baseball 5 h, cricket 12 h, tennis 8 h, American football 5 h, soccer 4 h, basketball 4 h, ice hockey 4 h, rugby 4 h, Australian rules 4 h, anything else 6 h.
+## 5. Candidate universe
 
-## 8. Failure classes (Rule R1)
+Default recipe: supported supplied lines, winner/draw/double chance as appropriate, plus supported handicap, total, team-total and period families on the sport's declared standard ladder. State each quantity's line range/step before pricing; legacy default spans ±2.5 SD (cricket ±2 SD), half lines, with integer lines only when pushes are defined. Record the actual enumerated set; if only a subset can be computed, label PARTIAL_UNIVERSE and the gate as restricted-universe diagnostic.
 
-Use the closest class; `OTHER` only with an explanation. `VARIANCE` is right only when the outcome was an ordinary draw from a sound distribution with sound inputs.
+Do not claim an exhaustive search from four hand-picked rows. Keep unselected supplied rows and relevant neighbouring lines. Analyst-derived lines may be easy by construction; report their p level, line distance from centre and baseline p. Neither a high hit rate nor zero joint failure proves a useful prediction. Baseline and candidate are scored at the exact same frozen lines.
 
-| Class | Meaning |
+## 6. Regimes and sensitivities
+
+Use NONE, FINALS_COMPRESSION, EARLY_SEASON, CUP_ROTATION or RULE_CHANGE:<verified name>. Other context is prose, not an invented operative flag. Read current [BASE_RATES_REGISTER](BASE_RATES_REGISTER.md); use only a supported recommended multiplier in the matching league/era, once. A recommended 1.000 means no shift. Missing/unmeasured effects are scenarios with disclosed basis, never fabricated measured multipliers. Some named finals regimes increase scoring; do not assume every final compresses it.
+
+Log adjustment target, before/after parameter, units/SD basis, source, analyst-versus-archive basis and overlap with other terms. Any top-two flip produces ADJUSTMENT_DEPENDENT. Publish the unadjusted pair, sensitivity probabilities and which assumptions drive the choice. Missing SD prevents an SD-size claim; it does not hide a rank flip.
+
+## 7. Grades, evidence and queues
+
+Grades: WIN, LOSS, PUSH, VOID, UNRESOLVED. VOID is a verified frozen void rule, never a synonym for no data. Card states: SETTLED, PARTIALLY_SETTLED, PENDING_EVENT, UNRESOLVED_EVIDENCE, NO_FORECAST. A cancelled event may be terminal with VOID rows under a frozen rule; unknown event state stays pending with uncertainty.
+
+| Evidence | Meaning |
 |---|---|
-| `FIRST_HALF_GOAL_OVERSELECTION` | A first-half goals row was ranked high from a full-game model or territory, not from a half-split rate. |
-| `RUNLINE_CUSHION_CEILING` | A +1.5 baseball cushion was priced near its structural ceiling (the one-run rate caps the edge). |
-| `BASKETBALL_TOTAL_WITHOUT_PACE_MODEL` | A basketball total was centred by a points average or by judgment, not by pace times efficiency. |
-| `TENNIS_IID_UNDERDISPERSION` | A tennis games row used independent points, so the deciding-set mass was too low or too high. |
-| `RANK_BY_Q_NOT_P` | The row was ranked by a historical ordering score q, not by `p_card`. |
-| `SHARED_DRIVER_TOP_TWO` | Rank 1 and Rank 2 lost together because one driver sat under both. Alias: `TOP_ROW_DEPENDENCE`. |
-| `HANDICAP_TAIL_OVERREACH` | A large handicap needed a tail the distribution did not support. |
-| `SMALL_SAMPLE_STRENGTH_OVERREACH` | A few games were read as team strength. |
-| `PHASE_INCOHERENCE` | Phase and total rows contradicted each other (cricket phase against innings total). |
-| `CORNER_ROW_WITHOUT_PROVIDER_OR_NB_MODEL` | A corners row had no provider or no count model. |
-| `OVERCONFIDENT_PROBABILITY` | The stated probability was too high for the evidence. Alias: `OVERCONFIDENT_TEAM_TOTAL`. |
-| `WEAK_SLATE_FORCED_RANK` | The slate had no strong proposition and a pick was forced. |
-| `QUALITATIVE_RANKS_WITHOUT_DISTRIBUTION` | Ranks were given with no distribution behind them. |
-| `REGIME_IGNORED` | A measured regime (finals, early season, rule change) applied and was not used. Alias: `FINALS_REGIME_IGNORED`. |
-| `UNFITTED_ANALYST_ADJUSTMENT` | An adjustment had no stated size or basis. |
-| `LATE_INFORMATION` | A lineup, goalie, starter or injury change arrived after the research time. |
-| `ENDPOINT_OR_CONTRACT` | The endpoint or contract definition was wrong or unresolved. |
-| `SOURCE_OR_IDENTITY` | The wrong event, team, date or a bad source. |
-| `VARIANCE` | An ordinary draw from a sound distribution. |
-| `OTHER` | Explain in one sentence. |
+| A | Official field-owner terminal record for the exact target |
+| B | Structured provider or supported agreement, with provenance/lineage disclosed |
+| C | Single secondary/provisional evidence; limitations and conflicts retained |
+| E | Valid bound on a partly observed value; definite grade only if the entire feasible set agrees |
+| X | No sufficient evidence; UNRESOLVED |
 
-## 9. Reading and citing this page
+Definition status is separate: OPERATOR_VERIFIED, FROZEN_FRAMEWORK_CONVENTION, UNKNOWN_DEFINITION or N/A. Retain legacy OP as a historical evidence label. Never apply a newly invented default after the result. Conflicting material sources cannot be adopted merely to close a record; record both and the unresolved field. Corrections carry original grade, new grade, source and reason.
 
-A card's `Rules read` line cites the sections of this page it applied (for example `SELECTION_RULES §2, §3, §4, §6`). A settlement's R9 and R10 cite §7 and §8. A retrospective counts failure classes from §8 only.
+## 8. Failure classes
+
+Retain the legacy classes: FIRST_HALF_GOAL_OVERSELECTION, RUNLINE_CUSHION_CEILING, BASKETBALL_TOTAL_WITHOUT_PACE_MODEL, TENNIS_IID_UNDERDISPERSION, RANK_BY_Q_NOT_P, SHARED_DRIVER_TOP_TWO, HANDICAP_TAIL_OVERREACH, SMALL_SAMPLE_STRENGTH_OVERREACH, PHASE_INCOHERENCE, CORNER_ROW_WITHOUT_PROVIDER_OR_NB_MODEL, OVERCONFIDENT_PROBABILITY, WEAK_SLATE_FORCED_RANK, QUALITATIVE_RANKS_WITHOUT_DISTRIBUTION, REGIME_IGNORED, UNFITTED_ANALYST_ADJUSTMENT, LATE_INFORMATION, ENDPOINT_OR_CONTRACT, SOURCE_OR_IDENTITY, VARIANCE and OTHER.
+
+Use aliases only with a printed mapping. Distinguish a suspected failure from an established error. Honest qualitative research is not itself misconduct; QUALITATIVE_RANKS_WITHOUT_DISTRIBUTION means numerical confidence was claimed without the supporting distribution. OVERCONFIDENT_PROBABILITY cannot be inferred solely from one high-p loss. OTHER and NOT_ASSESSABLE need an explanation. Keep multiple process faults without invented causal percentages.
+
+## 9. Frozen league-only baseline (RET-02)
+
+Use `BASELINE_LEAGUE_V1` for the same league, season regime, endpoint, orientation and line, with no team, lineup, recent-form or event-result inputs. Freeze the recipe and source window before the forecast. Prefer a vetted league distribution with all parameters supported; alternatively use a declared prior-only empirical event cohort with literal W/P/L/V counts for that exact line. Do not switch recipes after seeing which comparator is easier to beat.
+
+Document distribution family, means/SDs/dispersion/covariance or empirical counts, seasons, exclusions, home/away orientation, sample size, data last-known time and source. Match the card's push/void conditioning. Empirical baseline p=W/(W+L); if denominator zero, NOT_COMPUTED. A profile with mean and SD alone does not determine a discrete/extras/tennis/phase distribution: unsupported families remain BASELINE_UNAVAILABLE.
+
+Calculate the baseline from its own league-only inputs; do not reuse team-adjusted parameters as a baseline. Print BASELINE_P and its ID on every numeric row or a precise missing reason. A stale profile is labelled and tested, not silently refreshed with post-cutoff games. No historical backfilled baseline enters prospective paired evaluation.

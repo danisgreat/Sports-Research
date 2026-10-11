@@ -1,5 +1,7 @@
 # Research workspace
 
+**Current release:** [v10 prompts](prompts/README.md), [implementation and recommendation status](verification/framework_change_2026-10-11-1/IMPLEMENTATION.md). New cards freeze baseline/time/policy/shadow fields; terminal missing evidence remains unresolved. Legacy issued files and dated reports stay unchanged. Current controls override older historical operating notes below.
+
 **Markdown, CSV and text only.** Current state (next ID, active Combined Log) is in [../CURRENT_STATE.md](../CURRENT_STATE.md); the controlling rules are [../CURRENT_RULES.md](../CURRENT_RULES.md). The previous version of this page, which documented the Python workspace, is kept in [../archive/superseded_2026-10-09/research_readmes/research_README.md](../archive/superseded_2026-10-09/research_readmes/research_README.md). The code and JSON that lived under `research/` (source adapters, daily jobs, model builds, experiments, validators, receipts, registries) were removed on 2026-10-09; their last working state is commit `37203fc2b`.
 
 ## What is in this folder now

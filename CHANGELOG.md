@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-11 — Replace prompts 1–8 and align the framework (v10)
+
+User authorized active replacement, supporting-rule alignment, review of the latest published retrospective/learnings, an implementation document and prompt-8 publication. [Change proposal](research/verification/framework_change_2026-10-11-1/CHANGE_PROPOSAL.md), [implementation](research/verification/framework_change_2026-10-11-1/IMPLEMENTATION.md), [verification](research/verification/framework_change_2026-10-11-1/VERIFICATION_REPORT.md).
+
+Versions: MDS-2026.10.11-v10.0, CR-2026.10.11-R1, SCV-2026.10.11-v6, SEL-2026.10.11-v2; mini-log-6 / mini-settlement-5. Primary probability order is explicit; diversification/different-quantity gates and pairs are shadows. Baseline/time/coverage fields, unresolved-evidence settlement, any-size adjustment flips, full import readback and historical-header handling align across rules/prompts/templates/examples. RET-01–07 and additional high-value dependencies have concrete implementation/acceptance/status mappings.
+
+Original operating files are preserved in [the pre-v10 archive](archive/superseded_2026-10-11/prompt_v10/ARCHIVE_NOTE.md). Issued logs/cards, dated reports, historical figures and source CSVs are unchanged. Existing minis retain their formats. Synthetic examples allocate no IDs. Document controls are implemented; prospective predictive effects, refreshed profiles and live source audits are not claimed tested.
+
 ## 2026-10-11 — Cohort retrospective (prompt 6), P-557 to P-576
 
 **Why.** The user ran prompt 6 after the canonical import of P-557 to P-579. The new cohort has 20 settled cards, below the 30-card trigger; the run was requested.

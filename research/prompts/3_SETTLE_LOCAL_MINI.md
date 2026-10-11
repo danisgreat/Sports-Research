@@ -1,237 +1,43 @@
-# PROMPT 3 — SETTLE THE ACTIVE LOCAL MINI AND WRITE THE RETROSPECTIVES
+# PROMPT 3 — Freeze, settle and review the local mini
 
-**Run by:** external chat agent · **GitHub:** read only · **Output:** a local settlement folder · **Mode:** `LOCAL_MINI_SETTLEMENT` · **Format:** `mini-settlement-4`
+**Mode:** LOCAL_MINI_SETTLEMENT. **Writes:** a new local settlement package only. No canonical import, new IDs, predictions, rule changes or GitHub writes.
 
-Use only the current `main` branch of `https://github.com/danisgreat/Sports-Research` as authority for method and rules. The active local mini and its working P-IDs hold the forecasts. Never renumber them because GitHub is behind. Nothing here needs code.
+Inputs: `Active mini: <path>`; `Output folder: <path or standard settlement folder>`; `Prior settlement revisions: <if any>`. Read the entire mini, all carryovers/addenda and original referenced cards; do not grade a summary in place of a frozen contract.
 
-This task settles, grades and reviews. It does **not** import, allocate canonical IDs, change methodology, write new predictions or write to GitHub.
+## 1. Read and freeze
 
----
+Print the [reading receipt](README.md) after common controls, SCORING_AND_VALIDATION, templates §§6/9, sport/league endpoint rules, SOURCES settlement routes, relevant archive guide and this prompt. Preserve original issue-time versions; today's process rules do not change yesterday's proposition.
 
-## 0. Reading gate
+Copy the original file byte-for-byte into ORIGINAL_MINI before appending anything. Record real path/counts, original footer, IDs and actual comparison result. Build settled output from frozen bytes plus a new settlement section. If only section delivery is possible, provide SETTLEMENT_SECTION.md with a manifest saying assembly/prefix verification remains required. Never claim a byte comparison performed through a visual glance. On rerun retain earlier settled outputs and create dated revisions instead of overwriting.
 
-Print the **reading receipt** ([research/prompts/README.md](README.md)) after opening the documents in section 1. If any cannot be opened, say so and stop.
+## 2. Complete inventory
 
-## 1. Read the authority
+Classify all new local cards, canonical references, local-unimported carryovers and addenda. Create a block inventory/mapping with parent ID, event key, original source, current canonical status, earlier settlement and required disposition. Working IDs never change. Existing addenda are reviewed but not counted as new predictions.
 
-Record the `main` HEAD SHA and the time, then read:
+For each event verify identity, current state and final time from the correct source. PENDING_EVENT covers non-terminal/unknown state. Terminal records can be PARTIALLY_SETTLED or UNRESOLVED_EVIDENCE; they do not disappear. Report 72-hour review target and capture deadlines using actual evidence; scheduled duration is only an estimate when final time is unknown.
 
-1. [METHOD.md](../../METHOD.md) and [CURRENT_RULES.md](../../CURRENT_RULES.md): Rules **T2** (only Rank 1 and Rank 2 count as wins), **R1** (a Rank-1 failure needs the eight-part deep retrospection), §5 (evidence and sources) and §8 (the lifecycle).
-2. [SELECTION_RULES.md](../../SELECTION_RULES.md): §7 (grades, evidence codes, card classes, the settlement allowance) and §8 (failure classes).
-3. [SCORING_AND_VALIDATION.md](../../SCORING_AND_VALIDATION.md): top-two counting, NDCG@2, PUSH and VOID handling.
-4. [CARD_AND_LOG_TEMPLATES.md](../../CARD_AND_LOG_TEMPLATES.md) §6 (the settled mini) and §9 (the settlement self-audit). A mini in `mini-log-4`, `mini-log-3` or `mini-log-2` is settled the same way; its cards have no expected score, so their `Expected vs final` line reads `N/A (no expected score issued)`.
-5. [research/prompts/examples/EXAMPLE_SETTLED_MINI.md](examples/EXAMPLE_SETTLED_MINI.md): the exact settlement structure to copy.
-6. [CURRENT_STATE.md](../../CURRENT_STATE.md) and [GAME_LOG_STATUS_CURRENT.md](../../GAME_LOG_STATUS_CURRENT.md): the repository's `Next canonical ID`, for the report.
-7. The `RULES_*.md` file for each sport in the mini (endpoint, overtime and extra-time, retirement and abandonment rules), and the settlement routes in [SOURCES.md](../../SOURCES.md) for each sport.
-8. [ARCHIVE_USE_GUIDE.md](../../ARCHIVE_USE_GUIDE.md) §6.
+## 3. Gather exact terminal evidence
 
-Then read the **active local mini** in full, including every card, carryover and addendum.
+Prefer official field-owner scorecards/structured results; follow registered fallback routes. Retain field/value, URL, short extract, source update and read times. Verify period, score orientation, OT/SO/ET/extras, retirement/DLS/abandonment and exact stats. A final match score cannot supply missing corners or half-time totals. Archive agreement is corroboration only after checking its source lineage; discrepancy is explicit.
 
-## 2. Freeze the mini before you write anything
+For KBO, check the official terminal box promptly; a stale scoreboard triggers a retained fallback and a documented retry after about 12 hours, not a fabricated official grade. No ability to schedule means retry NOT_SCHEDULED. Capture fragile fields first. A narrative report is not a substitute for the target structured field.
 
-1. Save an exact, unedited copy of the active mini as `ORIGINAL_MINI/<original file name>`. Do not reformat, re-save through an editor that changes line endings, or fix typos. These bytes are the forecast custody.
-2. Record the **frozen original check**: the number of lines, the first and last card IDs, and the exact footer line `Next local working P-ID | P-NNN`. (No hash exists; a hash is `NOT_COMPUTED`. The repository agent confirms the prefix with a byte comparison at import.)
-3. Record the card count, the carryover count and the addendum count.
+## 4. Settle literally and retain uncertainty
 
-The settled mini is the frozen bytes **followed by** the appended settlement section. Never edit, reorder or delete anything above the footer, including the footer itself.
+Copy original proposition, rank, p, baseline, endpoint, expected score and definitions exactly. Assign WIN/LOSS/PUSH only from supported arithmetic; VOID only from the frozen void condition. Missing or conflicting target/definition is UNRESOLVED, with A/B/C/E/X evidence and independent definition status. Legacy OP remains literal provenance. A partial-value bound permits a grade only when every feasible value yields it; otherwise unresolved.
 
-## 3. Inventory and classify every record
+Separate sporting settlement under a frozen convention from unknown operator settlement. Do not choose a convention after seeing the outcome. Settled rows may be completed while others on the card stay open. Later corrections append the old/new grade, source, reason and supersession pointer.
 
-For every block in the mini, record the ID, event key, native event ID, sport and league, event, research time, timing state and classification:
+Calculate primary W/L/PUSH/VOID/UNRESOLVED, decisive coverage, proper scores only for original numeric probabilities and frozen identical baselines, and expected-versus-final errors using original supported SDs. Keep shadow/reforecast/alternate results separate. Do not replace original picks or baseline gaps with hindsight reconstructions.
 
-| Classification | Meaning | Settled here? |
-|---|---|---|
-| `LOCAL_UNIMPORTED_EVENT` | A card written in this mini | Yes |
-| `ALREADY_CANONICAL_REFERENCE` | A carryover: already canonical, waiting for its event | Yes, if now terminal |
-| `DATED_ADDENDUM` | A correction or late news under an existing ID | No; it consumes no ID and is never graded |
+## 5. R1–R12 and deep reviews
 
-Mapping rule: every card keeps its working ID and reads `CANONICAL_MAPPING: PENDING_IMPORT`. Carryovers keep their canonical ID. Do not allocate or change any canonical ID here.
+Use the settlement template's twelve sections for every terminal card; state unavailable evidence instead of filling generic prose. R1 must quote this card's own top two. Explain distance from line, model-implied tail where computable, actual mechanism, cutoff knowability, source/timing faults and process verdict separately from outcome and calibration status.
 
-## 4. Research the results
+Every Rank-1 LOSS receives the eight deep parts in CURRENT_RULES §3. Review wins with the same process tests. No numeric causal blame shares or automatic overconfidence verdict from one loss. Counterfactuals require original cutoff data and are diagnostic only. New improvements are PROPOSED_NOT_TESTED with a falsifiable test, not an immediate weight change.
 
-For each event, research the final result from these sources, in order: (1) the official competition or field owner; (2) the official team or participant; (3) an official structured statistics provider; (4) independent high-quality corroboration. Use the route and fallback in the sport's SOURCES table and say which route decided each row. Settle from official scorecards and structured results; **narrative match reports, including machine-written ones, are not sources** and have decided the wrong winner before.
+## 6. Package, audit and return
 
-**Settlement SLA.** Settle each card within **72 hours** of its final (the clock starts at the scheduled start plus the allowance in SELECTION_RULES §7). Open carryover must stay at or below 5. List any breach in the report. A `mini-log-3` or `mini-log-4` card names its exact settlement fields and provider (`Settlement fields`) and a `Capture due` time: capture those pages first, because corners, half-time, period and player pages rot within days. Record in the Basis cell the page, the field and the time you read it; there are no stored bodies or hashes, so the quote and the time are the audit trail.
+Write ORIGINAL_MINI, settled mini, LOCAL_ID_MAPPING.md, UNRESOLVED_CARRYOVER.md (both pending-event and evidence queues), SETTLEMENT_MANIFEST.md. Inventory every block once; preserve original source prefix and footer. Run S1–S12 with actual evidence and recompute counts/expected-score/proper-score arithmetic. A missing original forecast cannot be rebuilt from a later narrative.
 
-Verify the identity and date, the final state, the score, regulation versus overtime, extra time, extra innings or shootout, the period, half, set or innings splits, and any statistic a proposition needs. Check retirement, abandonment, rain and DLS where relevant. Do not infer a missing statistic from the final score alone. If you can only bound it, use evidence grade **E** and state your confidence.
-
-**Past results.** If the season file under `Previous Sports Results/` already holds the game, compare its score with the official source. Agreement is a corroboration; disagreement is a source flag for R9. Do not edit the archive.
-
-## 5. Settle every issued row (settle anyway)
-
-Settle the **literal proposition as issued**, on the card's own endpoint. Each row receives exactly one grade and one evidence code.
-
-**Grades:** `WIN`, `LOSS`, `PUSH` (an exact integer line, or a void-on-tie rule) or `VOID` (no admissible data, abandoned or cancelled with no result, or voided by rule).
-
-**Evidence codes** (SELECTION_RULES §7):
-
-| Code | Use when |
-|---|---|
-| `A` | An official or field-owner terminal record covers the target field |
-| `B` | A structured provider or multi-source agreement covers the target field, with an official score |
-| `C` | The best available evidence is a single secondary, conflicted or provisional source, adopted as final |
-| `E` | The value is estimated from a partial measurement that bounds the target field; state your confidence |
-| `OP` | The sporting endpoint is known but the operator rule is not; the card's frozen assumption or the framework default applies |
-| `X` | No admissible data exists; the row **must** be `VOID` |
-
-- **Settle anyway.** If details are missing, settle on the best evidence code above. Do not leave a terminal event unsettled.
-- **Contract definitions come from the card.** Where the sporting endpoint is known but the contract rule is not (retirement, listed pitcher, abandonment), apply the card's `Retirement rule`, `Listed-pitcher rule` or `Abandonment rule`. `FRAMEWORK_DEFAULT:` and `OPERATOR:` rules are applied as written and graded `OP`; `N/A` means the field cannot arise. Never invent a definition after the result is known, and never settle a row differently to make a pick look better.
-- **Only a non-terminal event stays open.** If the event is postponed, suspended or not yet played, write `**Card state:** PENDING_EVENT` and carry it forward. That status is reserved for events that have not finished. It is not for missing statistics.
-- Complementary rows (for example Over 5.5 and Under 7.5) are dependent outcomes of one event, not independent trials.
-
-**Expected vs final (`mini-log-5` cards).** Copy the unit and terms from the card's `Expected score` bullet, in the same order. Write the final from the verified result. Error = final − expected; z = error ÷ the SD printed for that term on the card. The line shows the arithmetic; R7 names the mechanism. Never recompute or change an expected score after the result.
-
-**Counting (Rule T2).** Only Rank 1 and Rank 2 can count as wins. Ranks 3 and 4 are graded for calibration only. `PUSH` and `VOID` leave the denominator and are never losses. Card classes: `TOP2_ALL_WON`, `TOP2_SPLIT`, `TOP2_ALL_LOST`, `VOID`. The `Counts toward wins` column reads `YES` only for a Rank 1 or Rank 2 `WIN`; otherwise `NO (loss)`, `NO (push)`, `NO (void)` or `NO (rank 3+ informational)`.
-
-## 6. Keep the result separate from the process
-
-A winning pick can have poor process, and a losing pick can have sound process. Assess both layers for every card:
-
-- **Result layer:** what happened to each row.
-- **Process layer:** identity, timing state, source quality and independence, lineups and availability, point-in-time integrity, endpoint and contract definition, distribution and probability, the reading and archive lines, and any addendum's late news.
-
-Record the process verdict in R9 and R10 as `Process: SOUND` or `Process: DEFICIENT — <what>`. For a `mini-log-3`, `mini-log-4` or `mini-log-5` card also check, and write in R9:
-
-- whether the `Rank-1 gate` was `PASS` or `RANK1_UNSTABLE` (an unstable card is scored in its own cohort, and its Rank-1 loss still gets the deep retrospection);
-- whether `Adjustment dependence` was `ADJUSTMENT_DEPENDENT`, and whether the adjusted or unadjusted top two would have won;
-- whether a `Regime flag` was set, applied by the register's multiplier, or ignored (`REGIME_IGNORED`);
-- whether the `Evidence quotes` show what was knowable at the research time;
-- for a `mini-log-5` card, the expected-vs-final error and z for each term, and whether any |z| above 2 changes the process verdict (the numbers are in the `Expected vs final` line);
-- whether the `Rules read` and `Archive check` lines named the rules, sources and past-result files that mattered, and which rule, source or archive file that would have changed the outcome was missed.
-
-## 7. Write the settlement section
-
-Append after the footer, exactly in the form of [CARD_AND_LOG_TEMPLATES.md](../../CARD_AND_LOG_TEMPLATES.md) §6:
-
-```markdown
-
-# SETTLEMENT AND RETROSPECTIVES
-<!-- SETTLEMENT-FORMAT: mini-settlement-4 -->
-
-| Field | Value |
-|---|---|
-| Settled at | <ISO 8601 with offset> |
-| GitHub HEAD SHA read | `<sha>` |
-| Frozen original check | `<N lines; cards P-AAA to P-BBB; footer line "Next local working P-ID | P-NNN">` |
-| Rules read | `<documents and sections applied>` |
-| Settlement directive | Settle every terminal event; missing details settle on the A/B/C/E/OP/X evidence hierarchy |
-```
-
-Then write **one settlement block per card and per carryover**, carryovers first, then cards in ID order:
-
-```markdown
-<!-- BEGIN SETTLEMENT P-NNN -->
-### Settlement · P-NNN · <Event>
-
-**Card state:** `SETTLED`
-**Final event:** <verified final, incl. regulation/OT/ET/extras and the statistic each row needs>
-**Settlement sources:** <source — what it verified — evidence code>
-**Expected vs final:** `<unit>` — <Team A> expected <x.x> / final <y> (error <±e>, z <±z>) · <Team B> expected <x.x> / final <y> (error <±e>, z <±z>) · total expected <x.x> / final <y> (error <±e>, z <±z>) · margin expected <±x.x> / final <±y> (error <±e>, z <±z>); or `N/A (no expected score issued)` for a `mini-log-4` or older card
-
-| Rank | Proposition | p_card | Grade | Counts toward wins | Evidence | Basis |
-|---|---|---|---|---|---|---|
-| 1 | <proposition copied exactly from the card> | <p_card exactly as issued> | WIN | YES | A | <the fact that decided it, with the source field and time> |
-| 2 | … | … | LOSS | NO (loss) | … | … |
-| 3 | … | … | … | NO (rank 3+ informational) | … | … |
-| 4 | … | … | … | NO (rank 3+ informational) | … | … |
-
-**Top-two result:** `<TOP2_ALL_WON|TOP2_SPLIT|TOP2_ALL_LOST|VOID>` — <w> counted win(s) of <n> live top-two row(s). Rank 1: <grade>; Rank 2: <grade>.
-**Winner call:** <name from the card's Potential winner line>: `<CORRECT|INCORRECT|NOT_ISSUED|UNRESOLVED>`
-
-**R1. Original prediction.** Copy THIS card's Rank 1 and Rank 2 propositions and p_card verbatim ("Rank 1 <proposition> p_card …; Rank 2 …"). An R1 that describes another card's ranking, or repeats the text of a different card, fails the settlement self-audit (the P-539 to P-545 refresh blocks repeated P-538's).
-**R2. Final event.** …
-**R3. Contract settlement.** …
-**R4. Rank diagnostics.** Rank 1 <grade>; Rank 2 <grade>; Hit@2 <0|1>; counted <w>/<n>; NDCG@2 <value, or n/a if any row is PUSH/VOID>.
-**R5. Winner call.** …
-**R6. Spread/total/line assessment.** How far the outcome landed from each line, in units and in SDs of the card's own distribution.
-**R7. Expected vs realised mechanism.** …
-**R8. Missed mechanism.** …
-**R9. Source/timing review.** What was knowable at the forecast time; any addendum; the SOURCES route and archive file used or missed; `Process: SOUND|DEFICIENT — …`.
-**R10. Error/process classification.** One or more of identity, source, latency, timing, contract, endpoint, availability, feature, model, variance, calibration, ranking, qualitative adjustment, true randomness.
-**R11. Learning hypothesis.** A testable hypothesis only, with the test. `PROPOSED_NOT_TESTED`.
-**R12. Disposition.** `NO_CHANGE | MONITOR | PROPOSE_EXPERIMENT | SOURCE_PROCESS_CHANGE_CANDIDATE | MODEL_CHANGE_CANDIDATE | RULE_CHANGE_CANDIDATE`.
-
-<If Rank 1 won:> **Rank 1 won**, so no deep retrospection is triggered.
-<!-- END SETTLEMENT P-NNN -->
-```
-
-For a non-terminal event the block is only:
-
-```markdown
-<!-- BEGIN SETTLEMENT P-NNN -->
-### Settlement · P-NNN · <Event>
-
-**Card state:** `PENDING_EVENT`
-<why it is not terminal; new scheduled date if known>
-<!-- END SETTLEMENT P-NNN -->
-```
-
-The self-audit (section 10) checks these rules: copy each proposition and `p_card` **exactly** from the card; settle every ranked row exactly once; the `Top-two result` line matches the grades; write the bold labels exactly as shown; never start a heading with a P-ID.
-
-## 8. Rank 1 lost: deep retrospection (Rule R1)
-
-When Rank 1 is graded `LOSS`, add this immediately before `<!-- END SETTLEMENT P-NNN -->`:
-
-```markdown
-**Deep Rank-1 retrospection (mandatory: Rank 1 failed).**
-
-**Claim.** The proposition, its p_card, the distribution parameters behind it and the gap to Rank 2.
-**What happened.** The exact outcome against the line.
-**Distribution check.** Where the outcome fell in the card's own distribution (z-score or tail probability, recomputed by hand). An ordinary miss, or a tail event?
-**Knowability.** What information available before the cutoff pointed the other way, and whether it was used. Name the rule, source or archive file that would have caught it.
-**Verdict.** VARIANCE, MODEL, PROCESS or a mix, with the share you assign to each.
-**Own-top-two counterfactual.** Would a better process have chosen a different top two from the same distribution? Name the rows.
-**Failure class.** `<one class from SELECTION_RULES §8>`
-**Proposed correction.** A specific, testable change with its test. `PROPOSED_NOT_TESTED`.
-```
-
-Be honest: `VARIANCE` is right only when the outcome was an ordinary draw from a sound distribution with sound inputs.
-
-## 9. Create the local settlement folder
-
-```text
-Mini Settlement - <FIRST-ID> to <LAST-ID> - <YYYY-MM-DD>/
-├── ORIGINAL_MINI/<exact frozen copy of the active mini>.md
-├── PREDICTION_MINI_SETTLED_<FIRST-ID>_<LAST-ID>.md   (frozen bytes + settlement section)
-├── LOCAL_ID_MAPPING.md
-├── UNRESOLVED_CARRYOVER.md
-└── SETTLEMENT_MANIFEST.md
-```
-
-- `ORIGINAL_MINI/` holds exactly one file.
-- `LOCAL_ID_MAPPING.md` has a table with columns `Local ID | Classification | Event key | Canonical mapping`: cards `PENDING_IMPORT`; carryovers their canonical ID; addenda listed under their parent ID.
-- `UNRESOLVED_CARRYOVER.md` lists every `PENDING_EVENT` card with its event key, the reason and the new date, or `None.`. Prompt 2 carries these forward. Nothing else is carried.
-- `SETTLEMENT_MANIFEST.md` is the two-column table described in CARD_AND_LOG_TEMPLATES §6 (format, status `CLOSED_LOCALLY`, HEAD read, times, line counts, the frozen check, first and last ID, card, carryover, addendum, settled and pending IDs, next-ID snapshot, next local working ID, canonical import `PENDING`, writes none).
-
-If you can write files only one at a time, write the settlement section as `SETTLEMENT_SECTION.md`. The repository agent then builds the settled mini by copying the frozen file and appending the section (prompt 4, step 3).
-
-## 10. Settlement self-audit (print the table with evidence)
-
-Run **S1 to S14** from [CARD_AND_LOG_TEMPLATES.md](../../CARD_AND_LOG_TEMPLATES.md) §9 and print `| Check | Result | Evidence |`: every working ID preserved; one block per card and carryover; the frozen file is the exact prefix; propositions and `p_card` copied exactly; grades, counts and the top-two line agree; every Basis cites the field, source and time; R1 describes this card; every Rank-1 loss has all eight parts and a failure class; the card's own contract rules applied; only non-terminal events pending; SLA and carryover cap; process verdicts; reading and archive lines reviewed; the expected vs final line recomputed (S14); nothing written to GitHub or a log.
-
-## 11. Report
-
-```text
-READING RECEIPT: <as printed>
-GitHub HEAD read:
-Original mini: <lines> · cards P-… to P-… · footer line
-Settled mini: <lines>
-Cards: <n> · Carryovers: <n> · Addenda: <n>
-Settled: <n> · PENDING_EVENT (carried forward): <ids or none>
-Rows: WIN <n> · LOSS <n> · PUSH <n> · VOID <n> (evidence A <n>, B <n>, C <n>, E <n>, OP <n>, X <n>)
-Counted (Rule T2): <wins>/<live top-two rows> = <x.x%>
-Card classes: all won <n> · split <n> · all lost <n> · void <n> · Hit@2 <n>/<cards>
-Rank 1: <W>–<L>–<V> · Rank 2: <W>–<L>–<V>
-Mean NDCG@2 (fully graded slates): <x.xxxx>
-Winner calls: <correct>/<issued>
-Deep Rank-1 retrospections: <n> — failure classes: <class × n, …>
-SLA breaches: <ids or none> · Open carryover: <n>
-Archive agreement checks: <n agree · n disagree · n not in archive>
-Next local working ID: <footer value> · Repository next-ID snapshot: <P-NNN>
-Canonical mappings pending import: <ids>
-Expected vs final (mini-log-5 cards): <n> · mean error by term <…> · mean |z| <…>
-Self-audit S1-S14: all PASS / failures fixed: <list>
-GitHub writes: NO · Combined Log writes: NO · Ledger writes: NO
-```
-
-Provide every generated file in full, with its exact path.
+Return all generated files/paths; source and output counts; canonical mapping PENDING_IMPORT where appropriate; per-grade/evidence/definition/timing counts; primary results and coverage; separate shadows; deep-review count; deadlines/breaches; unresolved IDs/fields/actions; exact-prefix result and limitations. State GitHub/Combined Log writes NO and canonical IDs consumed zero.

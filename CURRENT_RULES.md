@@ -1,135 +1,99 @@
 # Current operating rules
 
-**Method MDS-2026.10.09-v9.0 · Control revision CR-2026.10.09-R5 (Markdown only) · Scoring SCV-2026.10.09-v5.** What is true right now (next ID, active log, scoreboard) is in [CURRENT_STATE.md](CURRENT_STATE.md). This page states the rules. The pre-rewrite manual, with its dated status snapshots, is kept unchanged in [archive/superseded_2026-10-09/CURRENT_RULES.md](archive/superseded_2026-10-09/CURRENT_RULES.md).
+**MDS-2026.10.11-v10.0 · CR-2026.10.11-R1 · SCV-2026.10.11-v6.** Effective for new work after this revision is read. Current IDs and destination: [CURRENT_STATE.md](CURRENT_STATE.md). [Previous rules](archive/superseded_2026-10-11/prompt_v10/CURRENT_RULES.md) remain historical evidence.
 
-## 0. The framework is Markdown
+## 0. Authority, scope and honest execution
 
-The whole framework is documents: rules, formats, prompts, sources, base rates, league profiles, probability tables and the archive of past results (CSV). Nothing here runs code or opens a JSON file, and no step needs one.
+The framework remains Markdown, CSV and text. Read files, browse permitted sporting sources, use transparent arithmetic and plain file/git tools. Do not add scripts, code, JSON, notebooks or workflows. Do not claim an exact grid, simulation, model fit, calculation, file write, readback or scheduled capture unless actually performed.
 
-- **Forecasting and settling agents** read Markdown and CSV, browse and search the web, calculate by hand with [PROBABILITY_TOOLKIT.md](PROBABILITY_TOOLKIT.md), and write Markdown.
-- **The repository agent (Claude Code)** edits Markdown and CSV with its file tools and uses `git` and plain file commands (`ls`, `cp`, `grep`, `wc`, `cmp`). It writes no scripts into the repository.
-- The Python runtime, the validators, the importer, the freeze scripts and every JSON registry were removed on 2026-10-09 (commits `a64675cf7` to `a93352c30`; their last working state is commit `37203fc2b`). Their rules were moved into the documents listed in section 12. Where an old document still names a removed file, the instruction is historical and this page controls.
-- Checks that code used to run are now **self-audit checklists** in [CARD_AND_LOG_TEMPLATES.md](CARD_AND_LOG_TEMPLATES.md). The agent performs them and prints the evidence for each. A check that is listed but not shown is treated as not done.
+Latest user instructions control task scope. In the local repository, current working files govern, with branch/HEAD and relevant uncommitted differences disclosed; GitHub main is the publication surface. An external agent reads one pinned current-main revision. Neither silently changes branches, pulls over dirty work, nor assumes a stale download is current.
 
-## 1. Read before you forecast: the reading gate
+Precedence: user instruction; these operating rules and current state for their respective domains; selection/scoring/templates; sport and league rules; historical examples/learning notes. Sport-specific physical rules and actual competition conditions must be verified, not overridden by a generic no-draw assumption. Report substantive contradictions. Continue independent research when a conflict blocks only issuance/import. Never resolve an identity or ID collision by guessing.
 
-Every task starts by opening the documents below **in the repository's current `main`** and printing a **reading receipt** (format in [research/prompts/README.md](research/prompts/README.md)). Do not rely on memory of earlier chats, stale downloads, Drive copies or other branches. If a required document cannot be opened, say so and stop.
+## 1. Reading gate
 
-| Task | Read in full | Read the relevant sections |
-|---|---|---|
-| Any task | CURRENT_STATE, METHOD, this page, [SELECTION_RULES.md](SELECTION_RULES.md), [CARD_AND_LOG_TEMPLATES.md](CARD_AND_LOG_TEMPLATES.md) | |
-| A card | The sport's `RULES_<SPORT>.md` (soccer and cricket also `LEAGUE_RULES_SOCCER.md` / `LEAGUE_RULES_CRICKET.md`), [ARCHIVE_USE_GUIDE.md](ARCHIVE_USE_GUIDE.md) | [PROBABILITY_TOOLKIT.md](PROBABILITY_TOOLKIT.md), [BASE_RATES_REGISTER.md](BASE_RATES_REGISTER.md), [LEAGUE_PROFILES.md](LEAGUE_PROFILES.md) (the league's row), [SOURCES.md](SOURCES.md) (the sport's table and the reachability matrix) |
-| Settlement | SCORING_AND_VALIDATION, the sport files for the sports in the mini | SOURCES (settlement routes), BASE_RATES (regimes) |
-| Import, rollover, retrospective | The matching prompt in [research/prompts/](research/prompts/README.md), VERIFICATION_PROTOCOL | The active Combined Log header and footer, GAME_LOG_STATUS_CURRENT |
+Every task opens CURRENT_STATE, METHOD, CURRENT_RULES, SELECTION_RULES, CARD_AND_LOG_TEMPLATES and its own prompt. Print the receipt in [the prompt index](research/prompts/README.md): exact paths/sections read, revision, time with offset, missing required files and source of authority. Claim full reading only when full text was read.
 
-**Cite what you use.** A card lists the sections it applied in its `Rules read` bullet (for example `RULES_BASEBALL §3, §8; SELECTION_RULES §2-§4; SOURCES §3 KBO; BASE_RATES §5`). A rule that shaped a number is named next to the number. A rule that applied and was not used is a finding in the settlement (R9).
+Cards also read the applicable sport/league rules, ARCHIVE_USE_GUIDE, relevant SOURCES routes, PROBABILITY_TOOLKIT sections, profile/base-rate rows, active mini, status register and relevant canonical records. Settlement adds scoring and original card/contract evidence. Import, rollover and retrospective add VERIFICATION_PROTOCOL; retrospective adds current hypotheses and latest completed retrospective. Prompt 7 adds coverage/schema/source notes; prompt 8 adds contribution rules, changelog and affected dependencies.
 
-**Consult the past results.** Every card does an archive check ([ARCHIVE_USE_GUIDE.md](ARCHIVE_USE_GUIDE.md) §5) and prints the `Archive check` bullet: files opened, rows read, date range, recipes, finding, or `ARCHIVE_UNAVAILABLE` with the reason. The archive never substitutes for confirmed lineups, starters, goalies and weather.
+Unavailable required control files block the dependent mutation; missing sporting data is recorded and does not justify inventing it. Cite the rule or source next to any value it shaped. Every card prints its archive coverage, actual files/rows/date range inspected, cutoff filter, findings and gaps. Inspect current files: an old claim that a league is header-only is not a live check.
 
-## 2. Rule T2: only the top two picks count as wins
+## 2. Rule T2: frozen top two and transparent denominators
 
-1. A card ranks four candidates. **Rank 1 and Rank 2 are the card's picks.** Ranks 3 and 4 are informational alternates.
-2. Ranks 3-4 are graded exactly and kept for calibration and learning. They never count as wins in card summaries, cohort summaries, win rates, hit rates or any performance statement. A rank-3/4 win never offsets a rank-1/2 loss.
-3. Classify each settled card by its live top-two rows: `TOP2_ALL_WON`, `TOP2_SPLIT`, `TOP2_ALL_LOST` or `VOID`. Report counted wins over live top-two rows, Rank-1 W/L/VOID, Rank-2 W/L/VOID and Hit@2. VOID and PUSH rows leave the denominators; they are never losses.
-4. The two picks share one event. They are not independent trials, and every card reports their joint failure probability.
+Only the original Rank 1 and Rank 2 can count as primary wins. At most four supported candidates are retained; ranks 3–4 and shadow selections stay informational. A missing second pick is not manufactured. Never replace a losing primary with a winning alternate or reforecast.
 
-## 3. Rule R1: a Rank-1 failure needs a deep retrospection
+Report W/L/PUSH/VOID/UNRESOLVED separately, number of requested events, retained cards, numeric/qualitative/NO_FORECAST cards and scoring coverage. WIN/(WIN+LOSS) is conditional on resolved decisive outcomes and must not hide unresolved cases. Missing evidence is not VOID. Dependent rows do not become independent trials. Mechanically protected pairs require an explicit label; Hit@2 is then a construction diagnostic, not predictive skill. Exact definitions: [SCORING_AND_VALIDATION.md](SCORING_AND_VALIDATION.md).
 
-A Rank-1 LOSS carries a dated deep retrospection in the same settlement record. A settlement with a failed Rank 1 and no deep retrospection is incomplete. The eight parts:
+## 3. Rule R1: outcome review without hindsight
 
-1. **Claim:** the exact proposition, `p_card`, the evidence it was ranked on and the gap to Rank 2.
-2. **What happened:** the endpoint and the mechanism that decided the row.
-3. **Distribution check:** recompute the card's distribution by hand, locate the outcome in it (tail mass or z-score) and stress the decisive assumption.
-4. **Knowability:** what was available at the cutoff, as against post-event only.
-5. **Verdict:** variance, ranking or selection, model or distribution, data or source, contract or endpoint, timing, adjustment, with the share you assign to each.
-6. **Own-top-two counterfactual:** what Rule P4 would have ranked first and second using cutoff information only.
-7. **Failure class:** a class from [SELECTION_RULES.md](SELECTION_RULES.md) §8, linked to earlier cards with the same class.
-8. **Proposed correction:** testable, with an acceptance criterion. It stays `PROPOSED_NOT_TESTED` and no weight changes on one event.
+Every settled Rank-1 LOSS receives eight parts: exact claim; verified outcome; original-distribution check; cutoff knowability; process/model/variance assessment; cutoff-only counterfactual; failure class; testable correction. Keep R1–R12 for every terminal card, including wins and partial settlements, with unavailable sections marked and explained.
 
-A Rank-1 VOID or PUSH needs no deep retrospection, but the reason is recorded.
+Do not invent numeric blame percentages. A single tail loss neither proves miscalibration nor vindicates a distribution. Process is SOUND, DEFICIENT or NOT_ASSESSABLE with evidence; uncalibrated status is reported separately. Review matched wins for the same defects. Counterfactuals are diagnostic and never replace frozen ranks or join prospective cohorts.
 
-## 4. Rule P4: supplied contracts are reference only; derive your own top two out of four
+## 4. Rule P4: event first, reproducible selection
 
-1. Contracts and lines supplied with a request are reference metadata. They do not fix the candidate set or the ranking.
-2. Build the **event distribution first** (section 7). All candidate probabilities come from that one distribution.
-3. Form exactly four candidates from (i) the supplied contracts at their supplied lines and (ii) analyst-derived sporting propositions priced from the same distribution: winner or double chance, handicap or spread, match total, team total, period total, on the sport's ladder ([SELECTION_RULES.md](SELECTION_RULES.md) §5). Each candidate states its exact proposition, line, period, endpoint and tag (`SUPPLIED`, or `ANALYST_DERIVED` naming the supplied row it replaces). Exclude propositions above 90%.
-4. Rank by `p_card`: the probability the proposition wins on its sporting endpoint. Never rank by q, edge or narrative. A supplied contract is used only when it is the best suited or the most likely once the top two are ranked. Being supplied gives it no priority.
-5. Apply the Rank-1 gate, the Rank-2 floor, the joint failure test and the family rules ([SELECTION_RULES.md](SELECTION_RULES.md) §2-§4).
-6. SPORTS_ONLY / MARKET_BLIND holds (section 5). Analyst-derived lines come from the distribution and the standard ladder, never from an odds page.
+Supplied contracts are reference propositions, not privileged selections. Freeze the candidate-generation recipe, endpoints, standard ladder and exclusions before inspecting their probabilities. Price all supported supplied rows and the declared derived slate from one coherent event model. Keep every supplied row's disposition; do not erase a difficult line or keep moving lines until a gate passes.
 
-## 5. Evidence, sources and honesty
+The primary slate follows [SELECTION_RULES](SELECTION_RULES.md): decreasing p_card, deterministic ties, at most four rows. Family constraints are declared eligibility filters. Joint dependence is disclosed, not used to silently reorder primary ranks. Different-quantity and diversification alternatives are explicitly frozen shadow selections. Rank-1 gate constants remain provisional; the alternative-quantity gate is a shadow, not a replacement. Record candidate quantity, family, line and endpoint so comparisons cannot disguise easier propositions as better predictions.
 
-1. **SPORTS_ONLY / MARKET_BLIND.** No odds, line movement, tips, betting previews, prediction markets or fantasy data enter research, ranking, adjustments or confidence. A user-supplied line is contract metadata. An after-event market figure is quarantined and informational.
-2. **Identity first.** Confirm the competition, season, stage, teams or players, venue, scheduled start (official source, time zone, update time) and the native event ID. Build the event key `<LEAGUE>:<SEASON>:<native id or stable surrogate>:<YYYY-MM-DD local date>`. Unknown official IDs stay unknown.
-3. **Source ladder.** Official competition or field owner; official team or participant; official structured statistics provider; independent high-quality corroboration. Use the route and fallback in [SOURCES.md](SOURCES.md) and write `(fallback: <source>)` when the first-choice route was unreachable. Review the exact field and event, not a page title.
-4. **Independence.** Three websites that share a provider count once. Official status shows who owns a field; it does not prove independent collection. Say when independence is unknown.
-5. **Evidence quotes.** For every lineup, goalie, starter, injury or weather claim a card relies on, record the source, the time you read it and a short verbatim excerpt (`Evidence quotes` bullet). A Rank 1 that rests on such a claim cannot be written with `NONE`.
-6. **Timing.** Record the actual research time, the observed state and the source's own update time. States: `PREGAME` (verified not started), `LATE_START_UNVERIFIED`, `LIVE_OBSERVED`. If the event has started, never use observed scores, events or statistics as inputs. A stale 0-0 or an initialised inning cannot prove a pregame state. Late news is welcome; label it honestly and never backdate.
-7. **No unsupported claims.** Mark every unverified item ("probable, not confirmed") and model the uncertainty instead of assuming the favourable case. Never invent a source, a quote, a number, a result or a hash. If you cannot compute a figure, write `NOT_COMPUTED`.
-8. **Weather** is environmental evidence, not an independent sporting-event lineage.
-9. **Settlement is from the feed, not from memory or narrative.** Settle from official scorecards and structured results. AI-generated or narrative match reports are not sources. Typed-in scores need a quoted source line.
+## 5. Sources, event state and time
 
-## 6. Requested research: the controlling default
+SPORTS_ONLY / MARKET_BLIND: exclude odds, line movement, tips, betting previews, prediction markets and fantasy inputs. User-supplied thresholds are contract metadata. Do not claim value, edge or staking advice from this framework.
 
-Research every requested event. A missing model, baseline, calibration, fixture universe, independence audit or pre-start buffer does **not** block analysis, ranked picks or a canonical ID. Give the best-supported assessment with its uncertainty and missingness. Use `UNCALIBRATED_QUALITATIVE` ranks (percentages `NOT_ESTIMATED`) only when no distribution can be built; otherwise build one and label it `UNCALIBRATED_ANALYST_SCENARIO`. Never call a scenario validated. Explain complementary totals, covering run lines, ties and extra innings; do not count correlated picks as independent games. A missing bookmaker rule affects later operator settlement, not the sporting analysis. No retrospective or settlement until requested. An ID identifies a retained card; calibration and certification are separate labels.
+Confirm competition, season, stage, participants, venue, native event ID or labelled stable surrogate, scheduled time, timezone and official observed state. An event key includes competition/season/native ID or surrogate/date; a reschedule is an alias update under the original identity, not automatically a new event. Doubleheaders require game number or native ID. Search all relevant minis and Combined Logs, not just headers.
 
-## 7. Probabilities: one distribution, built by hand
+Use official field owners then structured providers and quality corroboration. Record URL, exact field/value, source update/publication time when available, retrieval time, short lawful quotation or faithful extract, fallback/failure and collector lineage (UNKNOWN if unknown). Domain count is not independent-source count. Retain decisive evidence as Markdown/text within allowed scope. A quotation and git commit do not prove pregame availability by themselves.
 
-1. Build **one** joint distribution of the sporting outcome for the stated endpoint (the sport block in prompt 1 gives the method). Name it in `Distribution object` as `<family>_<method>_v<n>` with its parameters. Every `p_card` is read from that grid, and each row's `Probability status` reads `FROM_DISTRIBUTION:<id>`.
-2. Start from the league profile ([LEAGUE_PROFILES.md](LEAGUE_PROFILES.md)) and the team and lineup evidence; calculate with the tables in [PROBABILITY_TOOLKIT.md](PROBABILITY_TOOLKIT.md): normal (§1), Poisson (§2), negative binomial (§3), tennis (§6), cricket (§7), two rows at once (§9), arithmetic checks (§11). Show the formula and the inputs so a reader can reproduce each number.
-3. Resolve the endpoint **inside** the distribution: regulation against overtime, shootout, extra innings or extra time, ties, retirement and abandonment. A full-game row must not leave a draw unresolved.
-4. **Adjustments are parameters, not nudges.** List each in the adjustments table (name, target, size, size in SD units, basis `fitted | archive_estimate | analyst_judgement`). An adjustment above 0.25 SD that changes the top two makes the card `ADJUSTMENT_DEPENDENT`; print the unadjusted top two.
-5. Apply the regime table once ([SELECTION_RULES.md](SELECTION_RULES.md) §6). Run at least one sensitivity case on the most uncertain input and report how the top two move.
-6. Record win, push and loss mass; `p_card` = win ÷ (win + loss). Prices on the same line are complements; prices across lines are monotone. q (the historical ordering score) is never an event probability and never ranks a new card.
-7. No fitted model exists in the Markdown-only framework. Every new card is an `UNCALIBRATED_ANALYST_SCENARIO`. More archived years alone do not establish calibration.
+Record cutoff, research completion, actual write/issue time and final state recheck separately. Inputs must be demonstrably available by cutoff. Recheck just before issue; crossing the start changes the timing label. PREGAME requires explicit not-started evidence; stale 0–0 is insufficient. LIVE_OBSERVED, LATE_START_UNVERIFIED and HISTORICAL_DIAGNOSTIC stay separate. Outcome exposure is disclosed; a historical reconstruction cannot regain pregame status. Current event information may establish identity/state but observed in-game outcomes never enter a purported pregame forecast.
 
-## 8. The local-mini lifecycle
+Also record scheduled lead time at issue. Within five minutes of scheduled start or later is the LATE_START monitoring band, even if an official delay confirms PREGAME. This band does not suppress requested research. Actual-start evidence is a separate field and may remain NOT_VERIFIED. Provider/capture plans are not scheduled jobs: state who will capture and whether automation actually exists.
 
-New cards move through the prompts in [research/prompts/](research/prompts/README.md). The format is `mini-log-5` ([CARD_AND_LOG_TEMPLATES.md](CARD_AND_LOG_TEMPLATES.md)), which adds the expected score for each sport; `mini-log-4`, `mini-log-3` and `mini-log-2` minis in progress stay valid and are finished in their own format.
+## 6. Requested research and missingness
 
-1. **Start a mini (prompt 2).** The first working ID is the larger of the repository's next canonical ID and the previous mini's highest working ID + 1. Only `PENDING_EVENT` cards carry forward. Creating a mini consumes no ID.
-2. **Write cards (prompt 1).** One event, one working ID, issued in order and never changed. The card carries the reading and archive bullets, one distribution, four priced candidates, the joint failure, the gate, the adjustments, the regime flags, the contract-definition fields, the settlement fields with a capture time and the evidence quotes. Corrections and late news are dated `ADDENDUM` blocks under the existing ID.
-3. **Settle (prompt 3)** within 72 hours of each final with open carryover at or below 5. Freeze the mini, then append the settlement section. Settle every terminal event on the evidence hierarchy A/B/C/E/OP/X (X = VOID). Only a non-terminal event stays `PENDING_EVENT`. R1 copies the card's own ranking. Every settlement carries R1-R12, and every Rank-1 loss has the deep retrospection.
-4. **Import (prompt 4, Claude Code)** appends each card, addendum and settlement to the active Combined Log under its working ID by hand edit, stopping on an identity conflict or ID collision, and updates the status register.
-5. **Roll over (prompt 5)** when the active Combined Log should close. It consumes no ID.
-6. **Retrospective (prompt 6)** once enough new cards are settled. Recommendations stay `PROPOSED_NOT_TESTED`.
-7. **Expand or repair the archive (prompt 7)** and **improve the framework (prompt 8)** as needed ([PROMPTS.md](PROMPTS.md)).
+Deliver and retain requested research independently of certification. If a distribution can be honestly computed, use UNCALIBRATED_ANALYST_SCENARIO. Otherwise use UNCALIBRATED_QUALITATIVE with p_card NOT_ESTIMATED and a supported qualitative ordering, or NO_FORECAST when identity/evidence cannot support a direction. Explain the missing inputs and next action. Never fabricate four rows, a probability, SD, baseline or source to satisfy a template.
 
-## 9. Custody in a Markdown-only repository
+Missing baseline, calibration or fitted model does not prevent research logging. Unsupported numeric fields stay NOT_COMPUTED, unavailable facts NOT_VERIFIED, undefined contract terms UNKNOWN_DEFINITION, and structurally irrelevant fields N/A. Numeric zero is data, not missingness. Qualitative ranks receive no numerical gate PASS or proper score.
 
-- **The commit is the freeze.** Every published change is a git commit on `main`. A card records the `GitHub HEAD SHA` it read. There are no hash manifests; git history is the custody record.
-- **Issued bytes never change.** Parts 1-5 of the Combined Log, the original P-518-P-522 block in Part 6, every issued card and every settled mini are append-only. Corrections are dated addenda under the original ID. Do not backdate, reformat or silently rewrite an original probability, contract, rank, cutoff or native identity.
-- **Reserved IDs.** P-518-P-522 stay reserved. Never reuse, skip, invent or renumber an ID.
-- **Frozen mini.** The settlement step copies the mini byte for byte (a file copy) before appending. The settlement header records the line count, the card IDs and the footer line as the check. When you can, confirm that the frozen file is an exact prefix of the settled file with `cmp`.
-- **Line endings.** The Combined Logs are stored with Windows line endings. Before committing any change to a log, run `git diff --numstat` on it: removed lines must be **0**. If an earlier line changed, restore the file and re-append.
-- **Duplicate events.** If an event key already appears in the mini, a Combined Log or the status register, write an addendum under the existing ID instead of a new card.
+## 7. Distribution, baseline and uncertainty
 
-## 10. Learning, scoring and certification
+Print model family, endpoint, parameters, input provenance, arithmetic and approximation limits. Marginals must come from compatible joint/conditional constructions. Separate supported auxiliary counts (corners, players) explicitly; without a joint model, report bounds rather than an exact cross-family joint. Do not label an unexecuted point/drive/ball enumeration exact.
 
-- Historical rank logs and reconstructed views are learning-only. Blank cutoffs, baselines and grades are not zero. A source-linked literal is not an independently audited result.
-- Scoring definitions, the Wilson interval and the week-block comparison are in [SCORING_AND_VALIDATION.md](SCORING_AND_VALIDATION.md). A miss can be well calibrated and a win can come from a bad process; assess process and result separately.
-- Opened data are development data. Preserve untouched future testing for release decisions.
-- **Certification is suspended.** Model qualification, live admission and prospective-pilot protocols needed the removed runtime. Every record is `RESEARCH_ONLY_NOT_CERTIFIED`. A verified sporting result is not operator certification. The earlier protocol text is in the archived manual.
-- Proposed changes live in [HYPOTHESIS_REGISTER.md](HYPOTHESIS_REGISTER.md) and need a pre-registered test.
-- Fractional-Kelly staking and any use of prices are not part of this framework.
+Retain unconditional win/push/loss/void masses and p_card = W/(W+L) where W+L > 0. Preserve allowed draws/ties; resolve OT/ET/SO/extras only when the exact competition/contract does. Full result masses sum to one within declared rounding tolerance. Do not clip a probability to the 90% selection ceiling; exclude it from the ranked slate and retain its actual value diagnostically. Tail truncation, covariance and score means/SDs must be reproducible.
+
+Every numeric candidate attempts a frozen BASELINE_P on the identical proposition/line/endpoint, using the league-only recipe in SELECTION_RULES §9. Missing comparator remains missing. Baseline provenance and cutoff are retained; no backfill after results. No fitted model currently exists.
+
+List every analyst adjustment and avoid double-counting effects already in data. Print adjusted and unadjusted top two whenever any adjustment changes them, regardless of size. Flag ADJUSTMENT_DEPENDENT for any such change, and LARGE_ADJUSTMENT separately above 0.25 SD. Test plausible low/base/high assumptions for the most uncertain inputs and show p/rank/gate changes. These are sensitivity ranges, not confidence intervals unless an interval method was actually applied. Uncertain lineups need explicit scenarios/weights or an honest nonnumeric assessment; uncertainty does not always mean widening a distribution without moving its centre.
+
+## 8. Mini lifecycle and settlement
+
+New formats: mini-log-6 and mini-settlement-5; existing formats finish unchanged. Start (2), append card (1), freeze and settle (3), import (4), rollover if needed (5), retrospective (6), repair archive (7), change framework (8). Creating a mini or rollover consumes no ID. Local working P-IDs are permanent references but not canonical until verified import; a contiguous outstanding mini sequence must be accounted for before further allocation. Never reuse P-518–P-522 or silently skip/renumber.
+
+Carry both PENDING_EVENT and terminal UNRESOLVED_EVIDENCE cases in separate queues with original IDs. The five-event open cap and 72-hour final-to-review target are alerts, never instructions to discard work or force grades. Use verified final time; if absent, mark clock UNKNOWN and use scheduled-duration estimate only for triage. Capture fragile fields promptly, normally within 36 hours after scheduled start, adjusted explicitly for delays and multi-day formats. Do not claim capture took place when only a due time exists.
+
+Settle the frozen contract. WIN/LOSS/PUSH require sufficient evidence; VOID requires the frozen void condition; missing/conflicting field or definition yields UNRESOLVED. Evidence C may support a provisional sporting assessment but unresolved conflicts remain visible. A bounded value yields a definite grade only if every feasible value gives that grade. Frozen framework convention and operator settlement are distinct: a sporting result under a convention does not prove an unknown operator result.
+
+For KBO, try the official terminal box score promptly. If stale, retain the available result and arrange/report a retry after about 12 hours, within the review SLA where possible. A promised retry is not a completed fetch. Source corrections append a dated revision; they never silently replace earlier grades.
+
+## 9. Custody, current state and publication
+
+Issued card cores, previous log parts, existing settled minis and dated reports are immutable. Append corrections with reason, timestamp, parent ID and superseded revision pointer. Freeze an exact file copy before settlement; compare actual bytes/prefix, not just line counts. Preserve line endings. Zero deleted lines in numstat alone does not prove append-only: compare the complete original prefix and inspect hunk locations.
+
+The active log's opening header is an opening snapshot and may retain old IDs/method text. Resolve current state from CURRENT_STATE, the current status-register section and canonical entries plus dated state/rollover addenda. A stale opening snapshot is not itself a custody conflict. A disagreement in current records is a blocker. Do not run retired tools named in historical log headers.
+
+Imports reconcile every card, carryover, addendum and settlement, including already-imported cards with missing new addenda. All imported cores receive full readback; no three-card spot check substitutes for completeness. Partial imports resume by exact block comparison; mismatch stops before further mutations. Closed-source status requires a verified destination or explicit retained disposition for every source block. Never delete originals automatically.
+
+Stage exact intended paths, preserve unrelated work, commit/push only when authorized by the invoked task, never force. Fetch and verify the remote ref and committed artifacts before claiming publication. A HEAD SHA records repository contents, not proof of a local card's pregame timestamp.
+
+## 10. Learning and claims
+
+Every record remains RESEARCH_ONLY_NOT_CERTIFIED. Model quality, numerical coherence, calibration, predictive skill, operational readiness and record custody are separate questions. Measure proper scores against frozen same-row baselines, coverage and expected-score errors; do not optimize headline win rate by line choice or excluding unresolved losses. Historical climatology is descriptive, not a prospective baseline.
+
+Use chronological development, tuning, calibration and untouched test/future shadow separation when designing fitted work. Current Markdown controls do not restore the removed runtime. Thresholds and new shadows are untested; eight weeks or a small sample minimum is not proof of power or promotion. See [HYPOTHESIS_REGISTER](HYPOTHESIS_REGISTER.md) and the [implementation roadmap](research/verification/framework_change_2026-10-11-1/IMPLEMENTATION.md).
 
 ## 11. Change control
 
-Rule changes bump the method or control revision here and in [METHOD.md](METHOD.md) and [CURRENT_STATE.md](CURRENT_STATE.md), add a dated [CHANGELOG.md](CHANGELOG.md) entry, move the replaced text into `archive/`, and are committed as one reviewable change. A prompt change does the same. Never change a rule on the strength of one event.
+Prompt 8 records the user instruction or finding, class, archived originals, dependencies, version changes, verification and publication. A user-authorized process repair can be implemented without pretending a statistical experiment passed. Behavioral selection/model hypotheses need separate frozen tests; preserve the original registration and append versioned amendments. Update rules, prompts, templates, examples, scoring and receipt definitions together. Do not revise historical values under a new scoring convention without a separate labelled diagnostic view.
 
-## 12. Where each rule now lives
+## 12. Navigation
 
-| Former home (removed) | Now |
-|---|---|
-| `runtime/config/selection_rules.json` | [SELECTION_RULES.md](SELECTION_RULES.md) §1-§5 |
-| `runtime/config/regimes.json` | [BASE_RATES_REGISTER.md](BASE_RATES_REGISTER.md) regime table; [SELECTION_RULES.md](SELECTION_RULES.md) §6 |
-| Failure taxonomy and codes in `top_two.py` | [SELECTION_RULES.md](SELECTION_RULES.md) §7-§8 |
-| `runtime/config/leagues/*.json`, `sports/*.json` | [LEAGUE_PROFILES.md](LEAGUE_PROFILES.md) |
-| `research/sources_registry*.json`, `excluded_sources.json`, `runtime/config/sources` | [SOURCES.md](SOURCES.md) (source register, adapters, exclusions) |
-| `research/improvement_register.json`, `experiment_measures.json`, `cross_card_v1.json` | [HYPOTHESIS_REGISTER.md](HYPOTHESIS_REGISTER.md) |
-| `research/current_combined_log.json`, `current_settlement_register.json`, `canonical_ledger.jsonl` | [CURRENT_STATE.md](CURRENT_STATE.md), [GAME_LOG_STATUS_CURRENT.md](GAME_LOG_STATUS_CURRENT.md), the Combined Log headers |
-| `mini_log`, `settlement_lint`, `settlement_sla`, `card_validator` | Self-audit checklists in [CARD_AND_LOG_TEMPLATES.md](CARD_AND_LOG_TEMPLATES.md) |
-| `import_mini`, `log_card`, `rollover`, `cohort_review`, `scoreboard` | Prompts 4, 5 and 6 and [SCORING_AND_VALIDATION.md](SCORING_AND_VALIDATION.md) |
-| Archive builders and canonical exports | [ARCHIVE_USE_GUIDE.md](ARCHIVE_USE_GUIDE.md), [Previous Sports Results/README.md](Previous%20Sports%20Results/README.md) |
-| Control manifests and freeze scripts | Git commits (section 9); the old manifests are in `archive/controls/` |
-| Numerical ML runtime and its model register | Archived design notes: [NUMERICAL_MODEL_REGISTER.md](NUMERICAL_MODEL_REGISTER.md), [H0_DATASET_CARD.md](H0_DATASET_CARD.md) |
+[Prompts](research/prompts/README.md) · [Templates](CARD_AND_LOG_TEMPLATES.md) · [Selection](SELECTION_RULES.md) · [Scoring](SCORING_AND_VALIDATION.md) · [Verification](VERIFICATION_PROTOCOL.md) · [Sources](SOURCES.md) · [Archive guide](ARCHIVE_USE_GUIDE.md).

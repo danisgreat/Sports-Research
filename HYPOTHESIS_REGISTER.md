@@ -1,6 +1,27 @@
 # Hypothesis register: what is proposed, what is pre-registered, what has been tested
 
-**Version HYP-2026.10.09-v1 (Markdown only).** Every proposed improvement stays `PROPOSED_NOT_TESTED` until a pre-registered test has run on prospective cards and met its acceptance rule. Nothing here changes a rule, a probability or an issued forecast. This register replaces `research/improvement_register.json`, `research/experiment_measures.json` and `research/experiments/cross_card_v1.json`, removed on 2026-10-09 (last copies at commit `37203fc2b`).
+**Version HYP-2026.10.11-v2 (Markdown only).** Document implementation, data readiness and predictive acceptance are separate. Current definitions are in CURRENT_RULES, SELECTION_RULES and SCORING_AND_VALIDATION. Original registrations below are preserved as dated historical protocols; their old arithmetic, sample-power claims and now-contradictory operating instructions do not override v10. No issued forecast is changed. Removed executable registries remain historical.
+
+## October 11 v10 amendments — registered before future v10 collection
+
+Authority: user requested replacement of prompts 1–8 and alignment of supporting rules, then invoked prompt 8. Source cohort P-557–P-576 is development evidence already inspected, not a future test. Full map: [implementation](research/verification/framework_change_2026-10-11-1/IMPLEMENTATION.md).
+
+Start trigger: first actual issued card that reads MDS-2026.10.11-v10.0. Record its ID/time when it exists; currently NONE. Include every requested event in coverage. Predictive pairs require original numeric candidate and same-contract baseline, verified timing and resolved field/definition, with all excluded events counted. Separate league/format/endpoint/policy; average rows within event and events within week. No retrospective baseline or gate reconstruction enters the test.
+
+| Amendment | Frozen comparison / collection floor | Acceptance design and stopping | Current status |
+|---|---|---|---|
+| FC10-BASELINE-v1 (RET-02) | BASELINE_LEAGUE_V1 versus original card on identical primary lines; freeze recipe/source/parameters at issue; at least 40 events and 8 ISO weeks | Primary paired event/week Brier difference; negative favours card; log loss and calibration/coverage guardrails. No promotion without a predeclared meaningful effect, precision/power rationale and fixed evaluation endpoint. These numerical design inputs remain unestimated and must be registered before a promotion cohort; this initial collection is feasibility/development only | RECORDING_ACTIVE; PREDICTIVE_ACCEPTANCE_BLOCKED_DESIGN; 0 paired events |
+| FC10-GATE-v1 (RET-03) | Original gate and different-quantity shadow gate, same constants; original ≥8-week/≥30 shadow-PASS floor retained | Measure gate feasibility, selection coverage and original probabilities/outcomes; no replacement merely to obtain PASS. Hypothesis: shadow partition improves useful discrimination without calibration or coverage harm. Meaningful effect and group sample plan still required; no optional early win declaration | SHADOW_READY; BLOCKED_DESIGN; 0 events |
+| FC10-PAIR-v1 (RET-04 / XCARD-6) | P_ORDER_V2 primary pair; RET04 highest-p different-quantity and XCARD6 minimum-joint shadows frozen separately; original RET04 ≥40-event/4-week floor | Compare paired proper scores/expected primary wins, coverage and correctly conditioned joint-loss events; different quantity does not imply independence. Hypothesis: a shadow improves a predeclared utility without score deterioration; utility/noninferiority tolerance/sample plan must be fixed before promotion cohort | SHADOW_READY; BLOCKED_DESIGN; 0 events |
+| FC10-PROFILE-v1 (RET-01) | Audited refreshed NBL profile versus retained old profile, same future games/lines; original 12-event/4-week floor is monitoring only | Data coverage and endpoint checks first. Future paired Brier and score MAE/bias, with predeclared practical bias/calibration tolerances and sample plan. A CI containing zero or mean absolute z in an arbitrary band is insufficient. No +16.8 offset inferred from three games | DATA_PENDING; BLOCKED_DESIGN |
+
+Any amendment to these designs gets a new dated version before its new evaluation cohort. Minimum collection counts do not demonstrate statistical power. Evaluate only at the predeclared endpoint; integrity/source failures can suspend affected comparisons immediately, with exclusions preserved. Rollback uses a forward revision, never erasure of failed outcomes.
+
+Operational monitoring (not predictive acceptance): next 40 requested events track ≥90% verified pregame with at least five scheduled minutes at issue (RET-05); next 10 KBO cards track ≥8 A-grade field-owner settlements (RET-06); next 40 cards track zero arithmetic/gate/vocabulary violations (RET-07). No requested research is suppressed to meet these targets. Actual collection is 0 at release. Fix baseline inconsistency or false-positive checks transparently rather than dropping evidence requirements.
+
+## Preserved earlier registrations and status snapshots
+
+The following text records what was proposed or believed at the time. The new amendments do not silently rewrite its acceptance tests or claim they passed.
 
 ## How a hypothesis is tested without code
 

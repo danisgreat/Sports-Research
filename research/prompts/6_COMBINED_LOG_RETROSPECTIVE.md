@@ -1,109 +1,45 @@
-# PROMPT 6 — COMPREHENSIVE RETROSPECTIVE OF THE COMBINED LOG
+# PROMPT 6 — Evidence-grounded Combined Log retrospective
 
-**Run by:** Claude Code in a local checkout of the repository · **GitHub:** write (report folder, scoreboard and state only) · **Mode:** `COHORT_RETROSPECTIVE`
+**Mode:** COHORT_RETROSPECTIVE. Run after about 30 newly settled cards or on user request; neither trigger implies statistical sufficiency. Writes: a new uniquely named retrospective folder, scoreboard, CURRENT_STATE, dated HYPOTHESIS_REGISTER additions and CHANGELOG. No log/grade/forecast/rule/prompt changes and no edits to earlier dated reports.
 
-Run this once enough cards are settled to learn from: at least **30 newly settled cards** since the last retrospective, or whenever the user asks. The retrospective measures, explains and recommends. It does **not** change rules, models, forecasts, grades or prompts. Every recommendation stays `PROPOSED_NOT_TESTED` until the user approves its implementation. All counting is done by hand from the settled tables, with the arithmetic shown; there is no cohort program.
+## 1. Read and freeze scope
 
----
+Print the [reading receipt](README.md) after common controls, scoring, verification, hypotheses, latest completed retrospective and implementation roadmap, relevant learning/source/archive/profile sections, original cards and latest valid settlement evidence. A folder containing an unfinished draft is not automatically a completed retrospective. Record branch/HEAD/dirty inventory.
 
-## 0. Reading gate
+Before constructing result tables, write SCOPE.md: fixed issue/event dates and IDs, policy/format versions, inclusion/exclusion rules, original-gate/timing/lead/evidence strata, last completed-review boundary, comparisons, snapshot time and outcomes already seen. Do not claim prospective registration for a scope written after exposure. Include all requested/research events in coverage, even pending/NO_FORECAST, while scoring only appropriate resolved rows.
 
-Print the **reading receipt** ([research/prompts/README.md](README.md)) after opening: [CURRENT_STATE.md](../../CURRENT_STATE.md), [METHOD.md](../../METHOD.md), [CURRENT_RULES.md](../../CURRENT_RULES.md) (T2, R1, P4), [SELECTION_RULES.md](../../SELECTION_RULES.md) (all), [SCORING_AND_VALIDATION.md](../../SCORING_AND_VALIDATION.md) (all), [HYPOTHESIS_REGISTER.md](../../HYPOTHESIS_REGISTER.md), [FRAMEWORK_RETROSPECTIVE_2026-10-09.md](../../FRAMEWORK_RETROSPECTIVE_2026-10-09.md) (the recommendation register, its implementation-status table and the failure-class baseline), [LEAGUE_PROFILES.md](../../LEAGUE_PROFILES.md), [ARCHIVE_USE_GUIDE.md](../../ARCHIVE_USE_GUIDE.md) §6, [research/scoreboard/SCOREBOARD.md](../../research/scoreboard/SCOREBOARD.md) and the most recent earlier retrospective (`research/verification/retrospective_*/`), if any.
+## 2. Build an inspectable inventory
 
-## 1. Authority and scope
+Create DATA_INVENTORY.md and row-level COHORT_TABLES.md. Join each original card to its latest valid dated settlement; retain original contract/rank/p/baseline/expected score and all revision pointers. Reject duplicate counting. Recover an original probability only by reading its actual frozen card, not from a later paraphrase; missing stays missing. Record every omitted metric and reason.
 
-1. Check out the current `main`, record its HEAD SHA, and confirm `git status` is clean in the paths you will write.
-2. Fix the scope **before you look at results**, and write it down:
-   - **New cohort:** from the first card after the last retrospective, through the highest settled ID.
-   - **Comparison cohort:** everything before that.
+Reconcile all IDs, rows, grades and queue statuses to source blocks before aggregating. Separate original primary picks, informational ranks, frozen shadows, qualitative cards and post-event reconstructions. Respect old scoring/selection versions. Historical totals can remain a labelled diagnostic view; v10 outcomes start with actual v10 cards, not relabelled history.
 
-   This keeps the analysis from drifting toward a convenient window.
-3. Gather the data: for each ID in scope, the latest settlement block in the Combined Logs (search `Final settlement` and `BEGIN SETTLEMENT` blocks, or the settled-mini import folders under `research/verification/mini_import_*` and `final_settlement_*`). Never use a `PENDING_EVENT` record. For each ID use only the latest settlement. List the IDs and the file and line of the block you used in `$O/DATA_INVENTORY.md`.
+## 3. Quantitative review
 
-   Let `$O` be `research/verification/retrospective_<YYYY-MM-DD>`.
+For each suitable league/format/endpoint/policy cohort report:
 
-## 2. Build the tables (by hand, with the arithmetic shown)
+1. Coverage: requested events, retained forecasts, numeric/qualitative/NO_FORECAST, pending, unresolved, decisive and paired-baseline counts; missingness sensitivity.
+2. Primary W/L/PUSH/VOID/UNRESOLVED by rank, card class and Hit@2 with exact denominators; mechanically protected pairs separately.
+3. Baseline-relative Brier and log loss on identical frozen rows, event means and week means, events/weeks, and justified uncertainty. Report NOT_COMPUTABLE when paired data is absent. Realised in-sample climatology is descriptive only.
+4. Calibration bins over the full probability range, distinct-event counts, mean p versus outcome, resolution limitations. No proof from an interval merely including p or slope 1.
+5. Expected-score bias/MAE/RMSE and issued-interval coverage by sport/term; z only from valid original SDs. Do not infer good tails merely from a small mean |z|.
+6. Original gate versus instability and RET03 shadow gate, RET04/XCARD6 shadow pairs, declared alternative/quantity and policy version. Compare outcomes on paired events; a reachable gate is not necessarily useful.
+7. Joint-loss predictions versus matching observed endpoints; exact values separate from bounds; pushes/voids conditioned consistently; structural zero acknowledged.
+8. Timing/source process: PREGAME/LIVE/LATE/HISTORICAL, actual issue lead, outcome exposure, lineup evidence, provider grade/lineage, source failures, capture completion, review SLA and evidence backlog.
+9. Adjusted/unadjusted and sensitivity results, including sub-0.25-SD rank flips, approved regime vocabulary and complete winner masses.
+10. Family failure classes and exposure counts, matched wins and process NOT_ASSESSABLE. Zero recurrence without exposure is not a successful correction. A losing high-p row is not by itself evidence of miscalibration.
+11. Archive/profile freshness and exact usable coverage; small selected cohorts do not estimate league population shifts. Historical results must precede the relevant issue cutoff.
 
-Create `$O/COHORT_TABLES.md`, one table per cohort (new, comparison, all), from the settlement blocks. Do not hand-edit numbers after you build them; rebuild from the blocks.
+Use SCORING_AND_VALIDATION for arithmetic and limitations. Same-event dependence, repeated teams, one-week samples, multiple comparisons and non-comparable line difficulty limit inference. Supply a sample-size plan only when its inputs and method exist; otherwise SAMPLE_SIZE_NOT_ESTIMATED. Do not compare raw hit rates across easy derived lines and harder supplied lines as if task difficulty were fixed.
 
-For each cohort report, under Rule T2:
-- counted wins over live top-two rows, with the Wilson 95% interval (SCORING_AND_VALIDATION §3);
-- card classes: all won, split, all lost, void;
-- Rank-1, Rank-2 and ranks-3+ win rates side by side;
-- results by sport and by Rank-1 proposition family;
-- Rank-1 failure classes, normalised to the SELECTION_RULES §8 taxonomy (aliases mapped);
-- evidence-grade counts (A, B, C, E, OP, X);
-- the calibration table of every stated `p_card` (SCORING_AND_VALIDATION §4) with Brier score and skill against climatology;
-- the joint-failure comparison: mean stated P(both lose) against the realised `TOP2_ALL_LOST` share and its Wilson interval.
+## 4. Review learning and recommend
 
-Then update the rolling scoreboard (SCORING_AND_VALIDATION §7): the `COUNTED` (gate passed), `RANK1_UNSTABLE`, `LEGACY_P_ONLY` and `UNKNOWN_GATE` cohorts are never mixed; ranks 3 and 4 never count. Update CURRENT_STATE with the headline numbers.
+Read every new Rank-1 loss review and matched wins. Name shared mechanisms and whether knowable at cutoff, but do not invent causal percentages. Review every recommendation in the latest register by separate statuses: document control implemented, data ready, test registered, test run/result and production release. Archived runtime claims do not establish a current implemented model.
 
-Spot-check five random IDs against their settlement blocks. If any number disagrees, fix your table from the source block; never edit a settlement.
+Write prioritised recommendations with ID, evidence, concrete change, dependencies/files, operational owner/task, acceptance criteria, justified prospective sample plan, failure/rollback condition and status. Prefer highest-impact correctness/measurement/source repairs first; model/selection experiments remain untested until supported. Append new hypotheses with version/date instead of editing an old registration. Do not force exactly five findings when evidence supports a different number.
 
-## 3. Quantitative analysis
+## 5. Report and publish
 
-Answer each question with numbers and intervals. Mark a conclusion as established only when the interval supports it; otherwise write `INSUFFICIENT_EVIDENCE` and the sample size needed (HYPOTHESIS_REGISTER describes the week-block test for comparisons).
+Produce RETROSPECTIVE_REPORT.md with findings, evidence tables, what worked, limits, recommendation status and next tests; retain scope/inventory/calculations. Reconcile every aggregate to the row inventory, then independently recompute representative arithmetic. Update scoreboard/state without changing underlying grades; baseline-unavailable headline stays explicit. Verify allowed scope and unchanged log bytes.
 
-1. **Headline.** Counted win rate and its interval in the new cohort against the comparison cohort. Are Rank 1 and Rank 2 individually better than the 2026-10-09 baseline (Rank 1 40-28, 58.8%; Rank 2 39-27, 59.1%)?
-2. **Does each slot carry information?** Rank 1 should beat Rank 2, and Rank 2 should beat ranks 3+. If not, ranking is not separating propositions. Say so plainly.
-3. **Calibration.** Within each `p_card` bin, does the stated probability match the win rate? An over-confident pattern (high bins under-performing) is the single most important finding to report.
-4. **Joint failure.** Did `TOP2_ALL_LOST` happen more often than the cards' stated `P(Rank 1 and Rank 2 both lose)`?
-5. **Stability gates.** How did `RANK1_UNSTABLE` cards perform against `PASS` cards? The gate for `mini-log-3` and later cards is `p_card` at least 62% with a lead of at least 4 points; cards before it used the legacy 60% cut. State whether the data so far supports keeping, tightening or relaxing the numbers, and whether the 8-week window of experiment SEL-1 is complete. Until it is, the gate stays provisional and you do not change it.
-6. **By sport and family.** Which sport × family cells are reliably below 50% at Rank 1 with enough n? Which are strong?
-7. **Failure classes.** Counts, and their change from the baseline. Is any class still recurring after its proposed correction?
-8. **Evidence quality.** The share of rows settled on C, E, OP or X. Does the result change if C and E rows are excluded?
-9. **Process.** Count the R9/R10 `Process: DEFICIENT` cards by deficiency, and compare their results with sound-process cards.
-10. **New-format checks (cards from the first `mini-log-3` or `mini-log-4` mini).** Share of cards with `ADJUSTMENT_DEPENDENT` and their results; share with a regime flag and whether the multiplier was applied; share with `Evidence quotes: NONE`; evidence mix by provider; SLA breaches; whether any `TENNIS_IID_UNDERDISPERSION`, `FIRST_HALF_GOAL_OVERSELECTION` or `RUNLINE_CUSHION_CEILING` loss recurred after the family rules took effect.
-11. **Rules, sources and past results used.** For each card in the new cohort, did `Rules read` name the sport file, the SELECTION_RULES sections and the SOURCES route? Did `Archive check` show files and rows, or `ARCHIVE_UNAVAILABLE`? Compare results between cards with a real archive check and cards without one. For each sport compare the cohort's realised rates (home-win share, overtime share, one-run share, total SD) with the LEAGUE_PROFILES row and the archive; report gaps and any profile more than one season old.
-12. **Fitted models.** None exist. State that, and list the XCARD experiments in HYPOTHESIS_REGISTER with their current row counts against the rows required.
-13. **Expected-score accuracy (`mini-log-5` cards).** For each sport and each term in its row of CARD_AND_LOG_TEMPLATES §3a, using each card's `Expected vs final` line: n, mean error (final − expected), mean |z|, and the share of |z| above 2. A bias in the total or in a team's score is established only when its interval excludes zero; otherwise `INSUFFICIENT_EVIDENCE`, with the n needed. Compare each sport's realised level with its LEAGUE_PROFILES row and the archive, and say which expected levels were too high or too low.
-
-Complementary rows on one card are dependent outcomes. Never treat four rows of one card as four independent trials. Use cards or slot-level rates as the unit of analysis.
-
-## 4. Qualitative analysis of the deep retrospections
-
-Read every Rank-1 deep retrospection in the new cohort (the settlement blocks in the Combined Log). For each failure class with two or more cases: name the shared mechanism; say whether it was knowable before the cutoff; identify which card section, sport block, rule, source route or archive file should have caught it. Read a matched sample of Rank-1 **wins** to find what worked and must be kept.
-
-## 5. Review the recommendation register
-
-For each recommendation in FRAMEWORK_RETROSPECTIVE_2026-10-09.md §5 (start from its implementation-status table) and in any later retrospective, record its status: `IMPLEMENTED` (with a pointer to the commit or file), `PARTLY_IMPLEMENTED`, `NOT_IMPLEMENTED`, `NOT_MET_OFFLINE`, `SUPERSEDED`, or **`SUSPENDED_MD_ONLY`** (it needed the removed runtime, tools or CI). For each one that is implemented, test it against its own acceptance test using the new cohort where possible and report `MET`, `NOT_MET` or `INSUFFICIENT_EVIDENCE`.
-
-## 6. Recommendations
-
-Write new or revised recommendations in the register format: `ID · Priority (P0 to P3) · Addresses (finding or failure class) · Recommendation · Acceptance test · Effort`. Each needs a pre-registered, falsifiable acceptance test with a minimum sample, and a rollback condition. Prefer changes to (1) the distribution method, (2) the candidate and ranking rule, (3) the source and settlement process, in that order; never to narrative heuristics. Every recommendation is `PROPOSED_NOT_TESTED`, and each is also added to [HYPOTHESIS_REGISTER.md](../../HYPOTHESIS_REGISTER.md) under a dated heading.
-
-## 7. Write the report
-
-Write `$O/RETROSPECTIVE_REPORT.md` with these sections:
-1. Scope, ranges, HEAD and data sources (`DATA_INVENTORY.md`, `COHORT_TABLES.md`).
-2. Executive summary: five findings and five recommendations, each with its number and interval.
-3. Quantitative analysis (section 3, one subsection per question).
-4. Failure-class and mechanism analysis (section 4).
-5. What worked.
-6. Recommendation register status (section 5).
-7. New recommendations (section 6).
-8. Limits: the sample sizes, dependence between rows, evidence-grade mix, and that the cards are uncalibrated analyst scenarios rather than certified performance.
-
-Write only inside `$O/`, plus the updated `research/scoreboard/SCOREBOARD.md`, `CURRENT_STATE.md`, the dated section of `HYPOTHESIS_REGISTER.md` and a `CHANGELOG.md` entry. Do not edit rules, prompts, the Combined Logs or any issued card text. If the user wants a rule or prompt change, that is prompt 8.
-
-## 8. Verify and publish
-
-Run [VERIFICATION_PROTOCOL.md](../../VERIFICATION_PROTOCOL.md) §5 and print the evidence: scope written first; five random numbers recomputed from the blocks; `git status` shows only the allowed paths; `git diff --numstat` on the Combined Logs is empty. Commit with a message such as `Add cohort retrospective <date> (P-AAA–P-BBB)` and push without force.
-
-## 9. Report
-
-```text
-READING RECEIPT: <as printed>
-HEAD:
-New cohort: <range> (<n> cards) · Comparison cohort: <range> (<n> cards)
-Counted (new): <w>/<n> = <x.x%> [CI] · (comparison): <w>/<n> = <x.x%> [CI]
-Rank 1 / Rank 2 / Ranks 3+ (new): <rates with CIs>
-Calibration (new): Brier <x>, skill <x>
-Mean stated joint failure vs realised all-lost share: <x%> vs <y%>
-Top failure classes (new): <class × n>
-Expected-score error (mini-log-5, new): <sport · term · n · mean error · mean |z|>
-Archive check coverage (new): <n with files / n total> · profile gaps: <list>
-Recommendations: <n new> · register items implemented <n> / met <n> / suspended <n>
-Report: research/verification/retrospective_<date>/RETROSPECTIVE_REPORT.md
-Rules, prompts, logs changed: NO · Commit SHA:
-```
+Commit by exact paths and push without force when this prompt is invoked unless user requests local-only. Fetch/verify remote SHA and report artifact. Return scope, paired-data sufficiency, primary descriptive results, unresolved coverage, evidence-supported findings, priority recommendations, report links and publication state. Avoid claims of predictive improvement unsupported by a fixed prospective comparator.

@@ -1,64 +1,42 @@
 # Verification protocol
 
-**Markdown only (CR-2026.10.09-R5).** Verification used to be a pipeline of programs: unit tests, custody and freeze verifiers, a canonical-log verifier, continuous integration. Those were removed on 2026-10-09 (last working state at commit `37203fc2b`). Verification is now a set of **hand checks that print their evidence**. The pre-rewrite page is kept in [archive/superseded_2026-10-09/VERIFICATION_PROTOCOL.md](archive/superseded_2026-10-09/VERIFICATION_PROTOCOL.md).
+**CR-2026.10.11-R1.** Markdown/CSV/text only. Checks establish their stated properties, never predictive skill. Use plain file/git commands and transparent arithmetic; do not add a validator runtime. Print `Check | PASS/FAIL/NOT_VERIFIED/N/A | evidence | limitation`.
 
-A passing check proves the thing it checks. It never proves the research was honest, the distribution sensible, the source true or the model skilful. Report failures as failures; never relax a check to make it pass.
+## 1. Before changes
 
-## 1. Commands the repository agent may use
+Record cwd, branch, HEAD, current status and intended paths. Read the task's authority and preserve unrelated modifications. Inspect actual line endings and source contents. Do not blindly checkout, pull, reset, restore whole files or stage all paths. Read-only missing inputs block only dependent actions.
 
-Reading and plain file commands only: `git status`, `git diff`, `git diff --numstat`, `git log`, `git ls-files`, `git show`, `ls`, `cp`, `grep`, `wc`, `cmp`, `head`, `tail`. No scripts are written into the repository, and no interpreter is run against its files.
+## 2. Card and settlement
 
-## 2. Levels of verification
+Run C1–C16 and S1–S12 in [CARD_AND_LOG_TEMPLATES](CARD_AND_LOG_TEMPLATES.md), with actual arithmetic and readback. Retain missing values honestly. A negative fixture must fail the relevant check; do not claim checks are executed merely because the checklist is present.
 
-| Level | When | Checklist |
-|---|---|---|
-| Card | Before returning each card | Card self-audit C1-C21 ([CARD_AND_LOG_TEMPLATES.md](CARD_AND_LOG_TEMPLATES.md) §7) |
-| Settlement | Before returning a settlement | Settlement self-audit S1-S14 (same file, §9) |
-| Import | After appending to a Combined Log | Section 3 below |
-| Rollover | After starting a new part | Section 4 below |
-| Retrospective | Before publishing a report | Section 5 below |
-| Repository | Before every push | Section 6 below |
+## 3. Import
 
-## 3. Import checks (prompt 4)
+1. Reconcile current state/status with canonical blocks and dated changes; opening headers are historical.
+2. Exact frozen mini prefix in settled file, actual bytes and line endings; line counts alone insufficient.
+3. Inventory equals new + exact existing + conflicts for cards; separately account for every carryover/addendum/settlement. Existing cards may still need new addenda.
+4. Compare every imported original core and appended source block, not a sample. Marker counts, event identity, contract/rank/p/baseline/expected score/cutoff and source provenance agree.
+5. Compare complete pre-import log prefix byte-for-byte; appended suffix only. Numstat deleted=0 and end-only diff hunks are supporting checks, not substitutes.
+6. Sequential new IDs, existing IDs preserved, reserved IDs untouched. Addenda and reruns consume none. Replay of an exact completed import plans zero changes.
+7. Status/next ID/settlement queues/scoreboard reconcile; no timestamp or performance upgrade from import.
+8. Partial-write recovery uses a source-to-destination block map. Identical completed blocks are skipped; conflicting or partial blocks block further mutation until scoped recovery.
 
-Print each result with its evidence.
+## 4. Rollover
 
-1. **Append-only.** For each Combined Log you edited: `git diff --numstat <file>` shows deleted lines = **0**. Any non-zero count means an earlier byte changed: restore the file and re-append.
-2. **Frozen prefix.** The frozen mini is an exact prefix of the settled mini: compare the byte counts with `wc -c`, then `head -c <frozen bytes> <settled> | cmp - <frozen>` prints nothing.
-3. **ID continuity.** Every working ID in the mini appears exactly once as a canonical block in the log: `grep -c "BEGIN CANONICAL RESEARCH P-NNN" <log>` is 1 for each. No ID is skipped, reused or renumbered. The new next ID equals the highest imported ID + 1.
-4. **Duplicates.** No event key appears under two IDs: `grep` the event key in all Combined Logs and the status register.
-5. **Verbatim.** For a sample of at least three cards, compare the pick table in the log with the one in the mini cell by cell.
-6. **Status register.** The `Next canonical ID` line, the new rows and [CURRENT_STATE.md](CURRENT_STATE.md) agree.
-7. **Scope.** `git status` shows changes only in the allowed paths: the active Combined Log, `GAME_LOG_STATUS_CURRENT.md`, `CURRENT_STATE.md`, `research/scoreboard/SCOREBOARD.md`, and the new `research/verification/mini_import_<P-AAA>_<P-BBB>_<date>/` folder.
+Old part is exact original prefix plus closure; new part contains only header/continuity/queue pointers. Next ID before/after identical; zero forecast blocks. Current state/status name the new part; opening header is explicitly dated. Rerun recognizes existing exact closure/new header; no duplicate closure or part.
 
-## 4. Rollover checks (prompt 5)
+## 5. Retrospective and archive
 
-1. Part N is unchanged except for the appended closure block (`git diff --numstat` deletions = 0).
-2. Part N+1 exists once and contains a header and no card.
-3. The next ID is identical before and after; the rollover consumed no ID.
-4. [CURRENT_STATE.md](CURRENT_STATE.md), [GAME_LOG_STATUS_CURRENT.md](GAME_LOG_STATUS_CURRENT.md) and the continuity table in the new header all name Part N+1.
+Retrospective: scope and prior exposure disclosed; full row inventory reconciles all totals; original and amended settlements not double-counted; ranks/shadows/timing/policy cohorts separated; baseline coverage and missingness shown. Allowed writes: new report folder, scoreboard, CURRENT_STATE, dated hypotheses and CHANGELOG only. No old report or log mutation.
 
-## 5. Retrospective checks (prompt 6)
+Archive: logical CSV records counted with CSV-aware file facilities or an explicit verified no-embedded-newline convention, not blindly physical lines minus one. Exact headers/types, event keys, doubleheaders, dates, status/endpoint, known zero versus blank, totals/margins, coverage against official schedule and source provenance checked. A sample verifies only the sample; publish unchecked remainder and never call partial coverage complete.
 
-1. The new-cohort and comparison-cohort ranges were written down before looking at results.
-2. Every number in the report traces to a settled table; recompute five at random from the settlement blocks.
-3. Only `research/verification/retrospective_<date>/`, the scoreboard and CURRENT_STATE changed. The Combined Logs, the ledger of cards and the rules are unchanged.
+## 6. Framework release and publication
 
-## 6. Repository checks before a push
+Archive replaced files from the base commit before editing. Check all eight task contracts, every new/changed relative link, consistent method/control/scoring/format versions, examples versus templates, old-format migration and edge cases. Scan live instructions for contradictions and removed-tool dependencies, distinguishing historical citations from commands. New files must be permitted text types; no retired runtime is restored.
 
-1. `git status` lists only intended paths; nothing from `Previous Sports Results/_canonical/*.csv` (too large for GitHub) and no cache folders.
-2. `git ls-files | grep -E "\.(py|json|jsonl|ipynb)$"` prints nothing: the repository holds Markdown, CSV and text.
-3. Search the operating documents for instructions that need a program: `grep -rnE "python|py -3|research\.operations|\.json" README.md METHOD.md CURRENT_STATE.md CURRENT_RULES.md SELECTION_RULES.md CARD_AND_LOG_TEMPLATES.md SCORING_AND_VALIDATION.md VERIFICATION_PROTOCOL.md PROMPTS.md research/prompts` should print only the lines that describe the removal. Historical documents may still name removed tools; they are labelled historical.
-4. Every link added in this change resolves to an existing file (open each).
-5. The commit message states what changed and why; no history is rewritten and nothing is force-pushed.
+Compare archived originals to the base revision and confirm issued logs, raw datasets, original sources and dated reports unchanged. Review full diff and staged paths. `git diff --check` must pass. Stage only intended paths; inspect staged status/stat/diff. Commit once checks pass; push without force only under task authorization. Fetch the destination ref afterwards, compare remote SHA with the commit and verify remote artifact contents. Local tracking refs without a fresh fetch are insufficient. Record what was committed/pushed and any unrelated remaining work.
 
-## 7. Source and evidence verification
+## 7. Limits
 
-- A reachable page is not event-specific evidence. Open the exact field for the exact event.
-- Distinct publishers are not independent lineages.
-- Record source failures with time and reason. Do not fetch through an unauthorised route and never substitute different bytes for an unavailable page.
-- Retained evidence is quoted in the card (`Evidence quotes`) and in the settlement Basis cell with the source and the time read. Hash receipts and stored response bodies no longer exist; the quote and the time are the audit trail.
-
-## 8. What this cannot do
-
-There is no machine check that a retained body matches a hash, that a log was not altered, or that a calculation was right. Protection against alteration is git history (every change is a commit; the previous commit is the comparison), the append-only rule and the numstat check. Protection against error is the printed arithmetic: another reader can redo it from the inputs on the page.
+A byte comparison proves identity, not source truth. A git SHA is not proof a card was issued before kickoff. A source quotation is not independently audited custody. Correct arithmetic is not a fitted model or calibrated probability. A plausible synthetic example is not live sports validation. Missing evidence must remain visible through every step.

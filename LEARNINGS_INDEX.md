@@ -1,5 +1,7 @@
 # Learnings index — every lesson, test and recurring mistake, one line each
 
+**Current navigation (2026-10-11).** Start with [CURRENT_STATE](CURRENT_STATE.md), [CURRENT_RULES](CURRENT_RULES.md), the [latest completed retrospective](research/verification/retrospective_2026-10-11/RETROSPECTIVE_REPORT.md) and [v10 implementation roadmap](research/verification/framework_change_2026-10-11-1/IMPLEMENTATION.md). RET-01–07 and FC10 amendments are tracked in [HYPOTHESIS_REGISTER](HYPOTHESIS_REGISTER.md). Document controls are implemented; predictive effects and data refreshes are not proven. Historical authority/removed-registry links and findings below retain their dated scope and never override current instructions.
+
 **Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
 
 October 5 retrospective suggestions: [eleven source-bound proposals](research/improvement_register.json), all **PROPOSED_NOT_TESTED / NOT PERFORMANCE_ELIGIBLE**. Each retains its original hypothesis/acceptance criterion; none changes a model weight, cap or ranking rule. [Implementation and limits](research/verification/implementation_2026-10-05/REPORT.md).

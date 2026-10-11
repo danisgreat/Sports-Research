@@ -1,4 +1,10 @@
-# Top-two scoreboard (SCV-2026.10.09-v5)
+# Scoreboard: current measurement and preserved historical results
+
+## v10 prospective measurement (SCV-2026.10.11-v6)
+
+At the October 11 framework release: **0 v10 issued cards; 0 paired-baseline events; 0 evaluated weeks; paired Brier/log-loss skill NOT_COMPUTABLE.** No historical baseline, timing or shadow is backfilled. Future updates report baseline-relative proper scores, expected-score accuracy and requested/issued/numeric/qualitative/NO_FORECAST/pending/unresolved coverage by original policy, timing, gate and evidence. See [scoring definitions](../../SCORING_AND_VALIDATION.md) and [implementation status](../verification/framework_change_2026-10-11-1/IMPLEMENTATION.md).
+
+The figures below remain the original **SCV-2026.10.09-v5 historical snapshot**. They are not a v10 cohort or proof of predictive skill. Their in-sample climatology reference is not a frozen pregame comparator; mechanically protected Hit@2 must not be treated as event-specific predictive success. No number below was recomputed by the prompt revision.
 
 Maintained by hand from the settled tables ([SCORING_AND_VALIDATION.md](../../SCORING_AND_VALIDATION.md) §7); figures below were generated on 2026-10-09 from the final-settlement table, cards P-126–P-556 (71 with forecasts), and updated by hand on 2026-10-11 with the 20 settled cards imported from the P-556–P-579 mini (P-557–P-576; P-577–P-579 are `PENDING_EVENT` and not scored). Rebuilt and refined from the settlement blocks by the [cohort retrospective of 2026-10-11](../verification/retrospective_2026-10-11/RETROSPECTIVE_REPORT.md) (new cohort P-557–P-576, comparison P-126–P-556); every number below agreed with the rebuild. Update after each import (prompt 4) and each retrospective (prompt 6), and copy the headline into CURRENT_STATE.md.
 

@@ -1,57 +1,37 @@
-# PROMPT 7 — EXPAND OR REPAIR THE PREVIOUS RESULTS
+# PROMPT 7 — Repair or extend the historical results archive
 
-**Run by:** Claude Code in a local checkout of the repository · **GitHub:** write (archive CSVs and coverage notes) · **Mode:** `ARCHIVE_EXPANSION`
+**Mode:** ARCHIVE_EXPANSION. Markdown/CSV/text only; no scripts/builders. Inputs: `<league, seasons, fields or documented priority>`. Writes: declared target CSVs, source/provenance/coverage notes, audited profile updates if supported, and a new verification folder. No issued log/card changes and no implicit model promotion.
 
-The archive in [Previous Sports Results/](../../Previous%20Sports%20Results/README.md) feeds every card's archive check ([ARCHIVE_USE_GUIDE.md](../../ARCHIVE_USE_GUIDE.md)). This prompt adds or repairs yearly game files. It produces **CSV and Markdown only**: you gather rows from the source routes by hand, write them in the folder's existing column layout, and prove them with printed arithmetic. The archive builders were removed on 2026-10-09 (last working state at commit `37203fc2b`); do not rebuild them as scripts.
+## 1. Read and scope
 
----
+Print the [reading receipt](README.md) after common controls, ARCHIVE_USE_GUIDE, archive README/coverage/source implementation notes, relevant SOURCES/profile/base-rate definitions, target schema and existing files, this prompt and latest relevant retrospective. Inventory branch/HEAD/dirty files; preserve originals of repaired data in the report scope.
 
-## 0. Reading gate
+Choose explicit league/season range and event grain before collection. Prioritise current forecast leagues and required endpoint fields over bulk historic volume. Declare season naming, competition stage, official schedule denominator, timezone, postponement/doubleheader identity, missing columns and exclusion rules. For RET-01 inspect NBL 2025-26 and 2026-27 regular-season coverage; for KBO extras audit missing flags versus genuine zeros before estimating rates.
 
-Print the **reading receipt** ([research/prompts/README.md](README.md)) after opening: [CURRENT_RULES.md](../../CURRENT_RULES.md) (§5, §9), [ARCHIVE_USE_GUIDE.md](../../ARCHIVE_USE_GUIDE.md), [Previous Sports Results/README.md](../../Previous%20Sports%20Results/README.md), [COVERAGE_AND_BLANK_YEARS.md](../../Previous%20Sports%20Results/COVERAGE_AND_BLANK_YEARS.md), [DATA_SOURCES_IMPLEMENTATION.md](../../Previous%20Sports%20Results/DATA_SOURCES_IMPLEMENTATION.md), the league's source section in [SOURCES.md](../../SOURCES.md) (§3.14 to §3.30 describe how existing league histories were gathered; §3.1 to §3.10 give the live routes), [LEAGUE_PROFILES.md](../../LEAGUE_PROFILES.md), and the target folder's existing yearly file (header and a sample of rows).
+## 2. Collect with field provenance
 
-## 1. Choose the target
+Use exact official/registered structured sources and record URL, native IDs, source field, publication/retrieval times, snapshot/as-of date and collector lineage. Preserve existing header/order/types; proposed schema changes need an explicit migration decision rather than ad hoc columns. Keep unrepresentable source fields in a Markdown sidecar until approved.
 
-Prioritise, in this order: (1) missing or stale seasons of a league that cards are being written for (check the league's last `Date` in its newest file); (2) official event-level labels and the columns a card needs (scores, overtime flag, starting pitchers, line scores); (3) older seasons. State the league, the season(s), the expected game count from the official schedule and why this target.
+Do not guess names, start times, regulation scores, overtime, phase counts or missing outcomes. Zero is valid; blank is unknown. Cancelled/suspended games stay classified. Final totals that include shootout/OT must be distinguished from regulation. Postgame narratives remain postgame and cannot populate point-in-time features. Same-team/date is not sufficient deduplication for doubleheaders.
 
-## 2. Collect
+Repairs record old value, new value, official evidence and reason; preserve source copies where allowed in text. A source conflict is quarantined or unresolved, not silently won by the easiest scrape. Preserve raw source values alongside documented normalization.
 
-1. Use the source routes in SOURCES for that league (official first; independent corroboration for a sample). Keep the source's own identifiers (game ID, event ID) in the identifier column.
-2. Write rows in the **existing header and column order** of the folder's other yearly files. Never invent a column. Leave unknown fields blank rather than guessed (unknown names, times and officials stay blank).
-3. Postgame prose columns (`Notable Players`, one-line comment, `Game Summary`) stay postgame; fill them only from the source and never as pregame evidence.
-4. Awards and whole-season narratives stay out of game rows.
-5. Record each source used (URL, what it supplied, date read) in a short `<Year>_SOURCES.md` beside the CSV or in the coverage document; there are no stored response bodies.
-6. Do not edit an existing row of a verified file to "fix" it unless you can cite the official record; if you do, list the change in the coverage document.
+## 3. Validate actual coverage
 
-## 3. Prove it (print every result)
+Print schema/header/type checks, logical record count, duplicate/native-ID and alias checks, date/season/status/endpoint checks, zero-versus-missing counts and field missingness. CSV can contain quoted commas/newlines: physical line count minus one is valid only after proving no embedded newlines. Use permitted CSV-aware file facilities or documented manual reconciliation, not a false complete count.
 
-| Check | How |
-|---|---|
-| Header | The first line equals the header of a sibling year file (compare with `head -1`). |
-| Row count | Data rows (`wc -l` minus 1) equal the official game count for the season, or the gap is listed. |
-| Duplicates | No duplicated game ID, and no duplicated (date, home, away) except true doubleheaders (check `Doubleheader`/game number). |
-| Score arithmetic | For ten random rows: total = home + away; winning margin = |home − away|; winner matches the scores. |
-| Date range | All dates fall inside the season; the first and last dates match the official calendar. |
-| Spot check | Compare at least ten random rows with a second source; report agreements and disagreements. |
-| Plausibility | League mean score, home-win share and overtime share are within the league's [LEAGUE_PROFILES.md](../../LEAGUE_PROFILES.md) range (a large gap is a finding, not an error to hide). |
+Check total=home+away, signed/absolute margin and winner/tie consistency wherever fields are available. Validate the full changed set where feasible; otherwise state total versus actually checked and avoid a full-validation claim. Independently check a predeclared spread across early/middle/late season, zeros, ties, OT/extras and doubleheaders; at least ten or all if fewer. List exact sampled IDs and source agreement/disagreement.
 
-## 4. Record coverage
+Reconcile event count to the official season schedule including postponed/cancelled/replayed games and exact stage scope. A header-only or partially collected file is not complete. Plausibility/profile differences are findings to investigate, not reasons to force scores toward an expected average.
 
-Update `COVERAGE_AND_BLANK_YEARS.md` (and the sport's README) with the season, the row count, the sources, the checks, and any seasons that are inactive, future or unexplained. A header-only folder is never "complete". If the new season changes a league's profile by more than one season of data, add a dated note in [LEAGUE_PROFILES.md](../../LEAGUE_PROFILES.md) and recompute the affected row by hand (ARCHIVE_USE_GUIDE recipe R1), keeping the old row in the note.
+## 4. Profile and availability
 
-## 5. Publish
+Update coverage/source notes with actual rows/fields, gaps, dates, sources and checks. Recompute a profile only from a defined vetted population with adequate coverage, explicit seasons/stage/endpoint, n, missingness, means/SD/covariance and arithmetic. Compare old/new windows before pooling; avoid double-counting current games or league-rule transitions. Archive the prior row and state effective date. If data is inadequate, mark DATA_PENDING and keep the stale prior explicitly labelled; never add a retrospective residual as a universal offset.
 
-Commit only the CSV, source and coverage files you touched, by path. Large exports (`_canonical/*.csv`) are not committed. Push to `main` without force and re-read the remote HEAD.
+Whole-season historical data are not automatically known before every game. Record availability limitations and exclude post-cutoff fields when used for replay/forecast. A refreshed profile is a data update, not demonstrated predictive improvement; RET-01 requires separate prospective paired evaluation.
 
-## 6. Report
+## 5. Verify, publish and report
 
-```text
-READING RECEIPT: <as printed>
-Target: <league · seasons> · reason:
-Rows added / repaired: <n> · official count: <n> · gap:
-Sources: <list with dates read>
-Checks: header <…> · row count <…> · duplicates <…> · score arithmetic <…> · dates <…> · spot check <n agree / n disagree> · plausibility <…>
-Coverage documents updated: <list>
-Profile row affected: <yes/no; what changed>
-Commit SHA / publication status:
-```
+Read back changed CSVs and notes, reconcile rows added/repaired/unchanged, review diff and exact write scope. Commit only intended data/source/coverage/profile/report paths; do not add large local canonical exports or unrelated files. Push without force when invoked, fetch and verify remote SHA/artifact.
+
+Return target/grain/season scope, official versus collected counts, field coverage, source lineage limits, complete versus sampled checks, unresolved conflicts, profile readiness, file links and publication status. Stop dependent computations when their data fails checks while retaining completed independent work.

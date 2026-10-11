@@ -1,5 +1,7 @@
 # Using the Previous Sports Results archive
 
+**v10 usage control (2026-10-11).** Inspect present files; the dated coverage counts below are historical snapshots. Count logical CSV records, retain zeros separately from missing values, verify season/stage/endpoint and expose sampled-versus-complete checks. A same-day result is usable only with evidence it was final and available before cutoff; a date alone is insufficient. Baselines use the frozen league-only recipe in SELECTION_RULES §9; historical TB-1/team-form recipes are distinct diagnostics. No data was refreshed by this document revision.
+
 **Version ARC-2026.10.09-v1 (Markdown and CSV only).** Every card, settlement and retrospective consults the archive **whenever it holds rows that bear on the event**, and says what it found. This page tells you where the rows are, which columns to trust, how to avoid leakage, how to turn rows into the numbers a card needs, and what to write when nothing is available. It replaces the archive builders and the canonical export scripts that were removed on 2026-10-09 (last copies at commit `37203fc2b`).
 
 The archive is a research aid. A row proves what was recorded about a past game. It does not prove forecasting skill, and an empty or header-only file is **missing data, not a finding**.
@@ -47,7 +49,7 @@ Headers differ by sport. Always print the header row of the file you open and us
 
 ## 3. The point-in-time rule (no leakage)
 
-1. Use only rows with `Date` **strictly before** the research completion time of the card. Never use the event being forecast or anything after it.
+1. Use only results known final and available before the card's explicit input cutoff. Exclude the forecast event and future games. For same-day rows require actual availability evidence; date-only records cannot establish this. If timestamps are absent, restrict to safely earlier dates and disclose the limitation.
 2. A current-season file is a snapshot. Open it and read the **last `Date`**. If the last date is older than the games you need, say so and use [SOURCES.md](SOURCES.md) for the missing recent games.
 3. Season-level profiles in [LEAGUE_PROFILES.md](LEAGUE_PROFILES.md) were built from whole seasons. They are fine as priors for an upcoming event. Do not use them to "forecast" a game inside the same seasons after the fact.
 4. A rule or environment change makes old rows unreliable. Compare season means before pooling years (BASE_RATES_REGISTER names examples: WNBA 2026 scored 10.7 points per game above 2024 and 2025; NRL six-again from 2020). Say which seasons you pooled and why.
@@ -67,7 +69,7 @@ Do these by reading the file and calculating by hand with [PROBABILITY_TOOLKIT.m
 | **R7 Venue and home edge** | Home-win share and mean margin at the venue and in the league. | Home advantage term |
 | **R8 Extras and tails** | Overtime, shootout, extra-innings, one-run and big-margin shares from the profile. | Endpoint resolution inside the grid |
 
-Small samples and noisy recent games: the last game is the worst predictor, and no bounce-back effect exists in MLB (L-20260919-01 and L-20260919-02 in [LEARNING_REGISTER.md](LEARNING_REGISTER.md)). Do not move a rating on one game.
+Small samples and noisy recent games: prior learning notes L-20260919-01/02 questioned last-game and bounce-back heuristics within their historical samples. Do not promote that into a universal impossibility claim, and do not invent a one-game adjustment without a supported model and sensitivity.
 
 ## 5. The Archive check line
 

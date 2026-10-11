@@ -1,12 +1,14 @@
 # League profiles: scoring levels and shapes measured from the archive
 
+**v10 freshness/baseline control (2026-10-11).** Existing numeric rows below are retained, not recomputed in this release. A profile older than one season is STALE_PROFILE; inspect actual current coverage before replacing it. If sufficient verified data is unavailable, retain explicit stale-prior sensitivity or qualitative research. No universal shift is inferred from a few forecast residuals. Baseline recipes follow [SELECTION_RULES §9](SELECTION_RULES.md#9-frozen-league-only-baseline-ret-02); mean/SD alone may not support discrete, phase or extras probabilities. Draw/innings/OT conditions must be verified for the actual competition/season; generic sport rows below never override them. NBL refresh and KBO extras audit are DATA_PENDING in the [implementation roadmap](research/verification/framework_change_2026-10-11-1/IMPLEMENTATION.md).
+
 **Version LP-2026.10.09-v1 (Markdown only).** These are the numbers a distribution starts from: the average score for each side, the spread of the margin and the total, how the two scores move together, and the shares of games that go to overtime, extra innings, a shootout or a one-run finish. They were measured on 2026-10-09 from the yearly CSVs in [Previous Sports Results](Previous%20Sports%20Results/README.md) (regular-season games only; the files used are listed under each table) and replace `runtime/config/leagues/*.json` and `runtime/config/sports/*.json`, removed that day (last copies at commit `37203fc2b`).
 
 ## How to use a profile
 
 1. **Prior, not forecast.** A profile is the starting centre and spread for the league. The card then adjusts for the teams, lineups, venue, weather and rest, and lists each adjustment (CARD_AND_LOG_TEMPLATES, adjustments table).
 2. **Name the row.** The card's `Archive check` and appendix A4 say which profile row supplied which number.
-3. **Check the seasons.** Each row lists the seasons it covers. If the event is more than one season after the last season listed, recompute the row from the CSVs by hand (ARCHIVE_USE_GUIDE recipe R1) and say so.
+3. **Check the seasons.** If a profile is more than one season stale, inspect vetted new-season rows and propose a documented refresh under prompt 7. Print the old and supported current level or DATA_PENDING; never invent a current profile when the archive is incomplete. A later refresh cannot alter an earlier card's baseline.
 4. **Leagues not listed** have no profile. Use the archive recipes in [ARCHIVE_USE_GUIDE.md](ARCHIVE_USE_GUIDE.md) and state that the numbers are your own.
 5. **Do not use an excluded league's numbers.** The rows listed as implausible failed the plausibility check (home advantage or total SD outside a sensible range), usually because the archive for that league is incomplete or wrongly scraped.
 

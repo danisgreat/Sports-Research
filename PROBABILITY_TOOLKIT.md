@@ -1,10 +1,10 @@
-**Markdown-only authority (2026-10-09).** This toolkit is the arithmetic reference for every card ([CURRENT_RULES.md](CURRENT_RULES.md) §7). No fitted model, executable build or calibrator exists. The paragraphs that used to open this page (registered executable builds, the coherent EPL and NBL candidates, the runtime pipelines) are in git history at commit `37203fc2b`. The RM-1 ranking probability q in §5 is **historical ordering only** and never ranks a new card: new cards rank by `p_card` from one distribution (Rule P4).
+**Current use (2026-10-11, v10).** This is an arithmetic reference, not a fitted model. CURRENT_RULES §7, SELECTION_RULES §§2–3/9 and SCORING_AND_VALIDATION govern new work: primary p ordering, separate shadows, unconditional W/P/L/V, supported joint bounds, and a frozen league-only baseline. Use a formula/table only within its assumptions and actually show the calculation. Never claim an exact enumeration merely from a model name. The older validation/baseline claims below describe their historical tests, not current calibration. RM-1 q is historical ordering only and never a new event probability.
 
 ---
 
 # Probability toolkit — every number a card needs, by hand
 
-**Opened 2026-09-28 (md-only operation).** The forecasting model reads Markdown files only. It never runs Python or opens a JSON, CSV or other non-Markdown file. This page gives it everything the old tools computed:
+**Opened 2026-09-28; usage clarified 2026-10-11.** Agents read Markdown and CSV and use transparent arithmetic. No executable runtime or registry is restored. The tables below are calculation aids, not a substitute for missing inputs or an unperformed complex calculation.
 
 The old tools are removed from the tree. Maintainers can recover them from the pinned commits in the [Historical Link Index](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents); the model never opens them.
 
