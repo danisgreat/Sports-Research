@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-12 — Restructure prompt 1 with dedicated sections 1–7 per sport
+
+User instruction: restructure prompt 1 ([research/prompts/1_GAME_CARD.md](research/prompts/1_GAME_CARD.md)) to provide complete, dedicated sections 1–7 for each of the 10 sport categories (Basketball, Cricket, Baseball, Soccer, Ice Hockey, Tennis, Rugby League / Union, AFL / AFLW, American Football, Other Sports), separated by the standard sport block format (`SPORT_NAME` over `----------------------------`). All sections maintain explicit references to the GitHub repository (`main` branch) in read-only mode (`GitHub writes NO`). Pre-edit version preserved in [archive/superseded_2026-10-12/prompt1_per_sport/](archive/superseded_2026-10-12/prompt1_per_sport/ARCHIVE_NOTE.md). No rules, thresholds, cards, logs, or canonical IDs changed.
+
 ## 2026-10-12 — Align prompts 1, 2, and 3 to explicitly reference the GitHub repository main branch in read-only mode
 
 User instruction: ensure that prompt 1, prompt 2, and prompt 3 are referring to the GitHub repository, main branch, in read-only mode, and publish this to git. Updated headers, authority reading sections, and return statements in [prompt 1](research/prompts/1_GAME_CARD.md), [prompt 2](research/prompts/2_START_LOCAL_MINI.md), and [prompt 3](research/prompts/3_SETTLE_LOCAL_MINI.md), and clarified [prompts README](research/prompts/README.md). Originals preserved in [archive/superseded_2026-10-12/prompts_github_readonly/](archive/superseded_2026-10-12/prompts_github_readonly/ARCHIVE_NOTE.md). No rules, thresholds, cards, logs, or P-IDs changed.
