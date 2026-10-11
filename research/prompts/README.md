@@ -1,6 +1,6 @@
 # Operator prompts 1–8
 
-**P-2026.10.11-v10 · Markdown/CSV/text only.** Use each complete task below; prompt 1 now contains its own common core and sport instructions. [Current rules](../../CURRENT_RULES.md) and [templates](../../CARD_AND_LOG_TEMPLATES.md) are required companions. No real ID, log part or current sports fact is hard-coded in these prompts.
+**P-2026.10.11-v10 · Markdown/CSV/text only.** Use each complete task below; prompt 1 now contains its own common core and sport instructions. [Current rules](../../CURRENT_RULES.md) and [templates](../../CARD_AND_LOG_TEMPLATES.md) are required companions. No real ID, log part, league fact or retrospective figure is hard-coded in these prompts: they cover any sport and competition, and league-specific facts come from the rules files, [league profiles](../../LEAGUE_PROFILES.md), [SOURCES](../../SOURCES.md) and the archive.
 
 | # | Task | Writes |
 |---|---|---|

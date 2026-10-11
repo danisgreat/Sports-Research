@@ -20,7 +20,7 @@ For each event verify identity, current state and final time from the correct so
 
 Prefer official field-owner scorecards/structured results; follow registered fallback routes. Retain field/value, URL, short extract, source update and read times. Verify period, score orientation, OT/SO/ET/extras, retirement/DLS/abandonment and exact stats. A final match score cannot supply missing corners or half-time totals. Archive agreement is corroboration only after checking its source lineage; discrepancy is explicit.
 
-For KBO, check the official terminal box promptly; a stale scoreboard triggers a retained fallback and a documented retry after about 12 hours, not a fabricated official grade. No ability to schedule means retry NOT_SCHEDULED. Capture fragile fields first. A narrative report is not a substitute for the target structured field.
+For every competition, check the official terminal record promptly. If the official page is stale or non-terminal, keep the fallback evidence, record the time and state seen, and document a retry. Use the retry interval that SOURCES gives for that competition; where it gives none, state the interval you chose and why. Never present a fallback as an official grade. No ability to schedule means retry NOT_SCHEDULED. Capture fragile fields first. A narrative report is not a substitute for the target structured field.
 
 ## 4. Settle literally and retain uncertainty
 

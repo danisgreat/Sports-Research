@@ -16,14 +16,14 @@ Reconcile all IDs, rows, grades and queue statuses to source blocks before aggre
 
 ## 3. Quantitative review
 
-For each suitable league/format/endpoint/policy cohort report:
+Report every sport, league, format and endpoint present in the cohort, each in its own stratum; never pool unlike competitions, and list strata too small to report with their counts. For each suitable league/format/endpoint/policy cohort report:
 
 1. Coverage: requested events, retained forecasts, numeric/qualitative/NO_FORECAST, pending, unresolved, decisive and paired-baseline counts; missingness sensitivity.
 2. Primary W/L/PUSH/VOID/UNRESOLVED by rank, card class and Hit@2 with exact denominators; mechanically protected pairs separately.
 3. Baseline-relative Brier and log loss on identical frozen rows, event means and week means, events/weeks, and justified uncertainty. Report NOT_COMPUTABLE when paired data is absent. Realised in-sample climatology is descriptive only.
 4. Calibration bins over the full probability range, distinct-event counts, mean p versus outcome, resolution limitations. No proof from an interval merely including p or slope 1.
 5. Expected-score bias/MAE/RMSE and issued-interval coverage by sport/term; z only from valid original SDs. Do not infer good tails merely from a small mean |z|.
-6. Original gate versus instability and RET03 shadow gate, RET04/XCARD6 shadow pairs, declared alternative/quantity and policy version. Compare outcomes on paired events; a reachable gate is not necessarily useful.
+6. Original gate versus instability and the shadow gate and shadow pairs defined in SELECTION_RULES §2–3 (RET03, RET04, XCARD6), declared alternative/quantity and policy version. Compare outcomes on paired events; a reachable gate is not necessarily useful.
 7. Joint-loss predictions versus matching observed endpoints; exact values separate from bounds; pushes/voids conditioned consistently; structural zero acknowledged.
 8. Timing/source process: PREGAME/LIVE/LATE/HISTORICAL, actual issue lead, outcome exposure, lineup evidence, provider grade/lineage, source failures, capture completion, review SLA and evidence backlog.
 9. Adjusted/unadjusted and sensitivity results, including sub-0.25-SD rank flips, approved regime vocabulary and complete winner masses.
