@@ -1,7 +1,7 @@
 <!-- BEGIN CURRENT RESEARCH QUEUE -->
 # Current canonical research queue
 
-**Next canonical ID: P-557.** All requested cards go directly to the active combined log, regardless of calibration. Canonical IDs identify retained cards; performance certification and live/late timing are separate labels.
+**Next canonical ID: P-580.** All requested cards go directly to the active combined log, regardless of calibration. Canonical IDs identify retained cards; performance certification and live/late timing are separate labels.
 Active Combined Log: `prediction logs/PREDICTION_LOG_COMBINED_7.md`.
 Freeze: none (custody is the git history of `main`, CURRENT_RULES §9). The last control manifest is `archive/controls/CONTROL_MANIFEST_2026-10-09-3.md`. Current authority: CURRENT_STATE.md, METHOD.md and CURRENT_RULES.md.
 
@@ -41,8 +41,31 @@ Freeze: none (custody is the git history of `main`, CURRENT_RULES §9). The last
 | **P-554** | Nagasaki Velca vs Shinshu Brave Warriors — B.PREMIER — 2026-10-08 | `LOCAL-20261008-P-554-BP-NAG-SHI` | HISTORICAL_IMPORT_UNCALIBRATED_ORIGINAL_STATE_PRESERVED |
 | **P-555** | TENNIS / ATP SHANGHAI MASTERS — Vít Kopřiva vs Zizou Bergs — 2026-10-08 | `LOCAL-20261008-P-555-ATP-SHA-KOP-BER` | HISTORICAL_IMPORT_UNCALIBRATED_ORIGINAL_STATE_PRESERVED |
 | **P-556** | TENNIS / ATP SHANGHAI MASTERS — Cameron Norrie vs Dalibor Svrčina — 2026-10-08 | `LOCAL-20261008-P-556-ATP-SHA-NOR-SVR` | HISTORICAL_IMPORT_UNCALIBRATED_ORIGINAL_STATE_PRESERVED |
+| **P-557** | BASEBALL / KBO — KIA Tigers @ NC Dinos — 2026-10-09 | `LOCAL-20261009-P-557-KBO-KIA-NC` | IMPORTED_UNCALIBRATED · FINAL_SETTLED_2026-10-09 · TOP2_ALL_WON · RANK1_UNSTABLE |
+| **P-558** | BASEBALL / KBO — LG Twins @ Lotte Giants — 2026-10-09 | `LOCAL-20261009-P-558-KBO-LG-LOTTE` | IMPORTED_UNCALIBRATED · FINAL_SETTLED_2026-10-09 · TOP2_ALL_WON · RANK1_UNSTABLE |
+| **P-559** | BASEBALL / KBO — Samsung Lions @ SSG Landers — 2026-10-09 | `LOCAL-20261009-P-559-KBO-SAMSUNG-SSG` | IMPORTED_UNCALIBRATED · FINAL_SETTLED_2026-10-09 · TOP2_SPLIT · RANK1_UNSTABLE |
+| **P-560** | BASKETBALL / NBL — Illawarra Hawks vs Tasmania JackJumpers — 2026-10-09 | `LOCAL-20261009-P-560-NBL-ILL-TAS` | IMPORTED_UNCALIBRATED · FINAL_SETTLED_2026-10-09 · TOP2_SPLIT · RANK1_UNSTABLE |
+| **P-561** | SOCCER / Chinese Super League — Qingdao Hainiu vs Beijing Guoan — 2026-10-09 | `LOCAL-20261009-P-561-CSL-QHA-BGU` | IMPORTED_UNCALIBRATED · FINAL_SETTLED_2026-10-10 · TOP2_ALL_WON · RANK1_UNSTABLE |
+| **P-562** | ICE HOCKEY / Czech Tipsport Extraliga — HC Oceláři Třinec vs Mountfield HK — 2026-10-09 | `LOCAL-20261009-P-562-TELH-TRI-MHK` | IMPORTED_UNCALIBRATED · FINAL_SETTLED_2026-10-10 · TOP2_ALL_WON · RANK1_UNSTABLE |
+| **P-563** | BASKETBALL / Finland Korisliiga — KTP Basket Kotka vs Tampereen Pyrintö — 2026-10-09 | `LOCAL-20261009-P-563-KOR-KTP-PYR` | IMPORTED_UNCALIBRATED · FINAL_SETTLED_2026-10-10 · TOP2_ALL_WON · RANK1_UNSTABLE |
+| **P-564** | BASEBALL / KBO — NC Dinos @ Hanwha Eagles — 2026-10-10 | `LOCAL-20261010-P-564-KBO-NC-HAN` | IMPORTED_UNCALIBRATED · FINAL_SETTLED_2026-10-11 · TOP2_SPLIT · RANK1_UNSTABLE |
+| **P-565** | BASKETBALL / NBL — South East Melbourne Phoenix vs Melbourne United — 2026-10-10 | `LOCAL-20261010-P-565-NBL-MEL-SEM` | IMPORTED_UNCALIBRATED · FINAL_SETTLED_2026-10-11 · TOP2_ALL_WON · RANK1_UNSTABLE |
+| **P-566** | BASKETBALL / NBL — Perth Wildcats vs New Zealand Breakers — 2026-10-10 | `LOCAL-20261010-P-566-NBL-NZL-PER` | IMPORTED_UNCALIBRATED · FINAL_SETTLED_2026-10-11 · TOP2_ALL_WON · RANK1_UNSTABLE |
+| **P-567** | Soccer / Germany Bundesliga — FC Augsburg vs FC Bayern Munich — 2026-10-10 | `LOCAL-20261010-P-567-BUNDESLIGA-FCA-FCB` | IMPORTED_UNCALIBRATED · FINAL_SETTLED_2026-10-11 · TOP2_ALL_WON · RANK1_UNSTABLE |
+| **P-568** | Basketball / German easyCredit BBL — NINERS Chemnitz vs FC Bayern Munich — 2026-10-10 | `LOCAL-20261010-P-568-BBL-CHE-FCB` | IMPORTED_UNCALIBRATED · FINAL_SETTLED_2026-10-11 · TOP2_ALL_WON · RANK1_UNSTABLE |
+| **P-569** | Soccer / Netherlands Eredivisie — Go Ahead Eagles vs Sparta Rotterdam — 2026-10-10 | `LOCAL-20261010-P-569-EREDIVISIE-GAE-SPA` | IMPORTED_UNCALIBRATED · FINAL_SETTLED_2026-10-11 · TOP2_ALL_WON · RANK1_UNSTABLE |
+| **P-570** | Ice hockey / Finland Liiga — HIFK vs KalPa — 2026-10-10 | `LOCAL-20261010-P-570-LIIGA-HIFK-KALPA` | IMPORTED_UNCALIBRATED · FINAL_SETTLED_2026-10-11 · TOP2_SPLIT · RANK1_UNSTABLE |
+| **P-571** | Ice Hockey / NHL — Minnesota Wild @ Florida Panthers — 2026-10-10 | `LOCAL-20261010-P-571-NHL-MIN-FLA` | IMPORTED_UNCALIBRATED · FINAL_SETTLED_2026-10-11 · TOP2_SPLIT · RANK1_UNSTABLE |
+| **P-572** | Baseball / Korea KBO — KT Wiz @ Samsung Lions — 2026-10-11 | `LOCAL-20261011-P-572-KBO-KT-SAM` | IMPORTED_UNCALIBRATED · FINAL_SETTLED_2026-10-11 · TOP2_ALL_WON · RANK1_UNSTABLE |
+| **P-573** | Baseball / Korea KBO — Lotte Giants @ KIA Tigers — 2026-10-11 | `LOCAL-20261011-P-573-KBO-LOT-KIA` | IMPORTED_UNCALIBRATED · FINAL_SETTLED_2026-10-11 · TOP2_ALL_WON · RANK1_UNSTABLE |
+| **P-574** | BASKETBALL / JAPAN B.LEAGUE PREMIER — SeaHorses Mikawa @ Kyoto Hannaryz — 2026-10-11 | `LOCAL-20261011-P-574-BPREMIER-MIK-KYO` | IMPORTED_UNCALIBRATED · FINAL_SETTLED_2026-10-11 · TOP2_ALL_WON · RANK1_UNSTABLE |
+| **P-575** | BASKETBALL / AUSTRALIA NBL — Cairns Taipans @ Illawarra Hawks — 2026-10-11 | `LOCAL-20261011-P-575-NBL-CNS-ILL` | IMPORTED_UNCALIBRATED · FINAL_SETTLED_2026-10-11 · TOP2_ALL_WON · RANK1_UNSTABLE |
+| **P-576** | BASKETBALL / JAPAN B.LEAGUE PREMIER — Sendai 89ers @ Tokyo Sunrockers — 2026-10-11 | `LOCAL-20261011-P-576-BPREMIER-SEN-TOK` | IMPORTED_UNCALIBRATED · FINAL_SETTLED_2026-10-11 · TOP2_SPLIT · RANK1_UNSTABLE |
+| **P-577** | TENNIS / ATP Shanghai Masters — Alexander Bublik vs Brandon Nakashima — 2026-10-11 | `LOCAL-20261011-P-577-ATP-SHA-BUB-NAK` | IMPORTED_UNCALIBRATED · PENDING_EVENT (carried forward) · RANK1_UNSTABLE |
+| **P-578** | BASKETBALL / NBA Preseason — Dallas Mavericks @ Houston Rockets — 2026-10-11 | `LOCAL-20261011-P-578-NBAPRE-DAL-HOU` | IMPORTED_UNCALIBRATED · PENDING_EVENT (carried forward) · RANK1_UNSTABLE |
+| **P-579** | BASKETBALL / Liga ACB — La Laguna Tenerife @ UCAM Murcia — 2026-10-11 | `LOCAL-20261011-P-579-ACB-LLT-UCM` | IMPORTED_UNCALIBRATED · PENDING_EVENT (carried forward) · RANK1_UNSTABLE |
 
-Highest canonical research ID: **P-556**. Active Combined Log: `prediction logs/PREDICTION_LOG_COMBINED_7.md`.
+Highest canonical research ID: **P-579**. Active Combined Log: `prediction logs/PREDICTION_LOG_COMBINED_7.md`.
 Archived mini references: `archive/mini_logs/originals_2026-10-05/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md`, `archive/mini_logs/originals_2026-10-05/PREDICTION_MINI_RUNNING_LOG_P527_ONWARD_UPDATED_4.md`.
 Unresolved carryover P-523–P-537: `research/verification/closure_2026-10-05/carryover.md`. Eleven diagnostic settlements and twelve-part retrospectives are retained in Part 6; formal certification remains unresolved.
 

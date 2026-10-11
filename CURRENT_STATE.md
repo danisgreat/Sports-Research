@@ -13,12 +13,12 @@
 | Mini-log format | `mini-log-5` (`mini-log-4`, `mini-log-3` and `mini-log-2` minis in progress are still accepted) |
 | Settlement format | `mini-settlement-4` (`mini-settlement-3` and `mini-settlement-2` still accepted) |
 | Freeze | None. Custody is the git history of `main` (CURRENT_RULES §9). Cards record the HEAD SHA they read. The last control manifest, `CONTROL_MANIFEST_2026-10-09-3.md`, is in [archive/controls/](archive/controls/). |
-| Highest committed canonical ID | **P-556** |
-| Next canonical ID | **P-557** (equal to the line in GAME_LOG_STATUS_CURRENT.md) |
+| Highest committed canonical ID | **P-579** |
+| Next canonical ID | **P-580** (equal to the line in GAME_LOG_STATUS_CURRENT.md) |
 | Reserved IDs | P-518 to P-522 |
 | Active Combined Log | [prediction logs/PREDICTION_LOG_COMBINED_7.md](prediction%20logs/PREDICTION_LOG_COMBINED_7.md) |
 | Previous parts | Parts 1 to 6, immutable; Part 6 keeps its original P-518 to P-522 source block |
-| Final settlement register | All 72 event records through P-556 are final-settled: [final_settlement_2026-10-09](research/verification/final_settlement_2026-10-09/REPORT.md). No record is performance-certified. |
+| Final settlement register | All 72 event records through P-556 are final-settled: [final_settlement_2026-10-09](research/verification/final_settlement_2026-10-09/REPORT.md). P-557 to P-576 were imported final-settled on 2026-10-11; P-577 to P-579 were imported as `PENDING_EVENT` and carry forward to the next mini (open carryover 3): [mini_import_P-556_P-579_2026-10-11](research/verification/mini_import_P-556_P-579_2026-10-11/CANONICAL_IMPORT_REPORT.md). No record is performance-certified. |
 
 ## Selection rules (provisional until the prospective window completes)
 
@@ -30,7 +30,7 @@
 
 Full tables: [research/scoreboard/SCOREBOARD.md](research/scoreboard/SCOREBOARD.md).
 
-- Forecast cards scored: 71 (P-126 to P-556). Gated counted cohort: 0 cards (no card yet carries a recorded Rank-1 gate result). All forecast cards (historical, ungated): 79 counted wins in 134 live top-two rows = 59.0% (95% interval 50.5% to 66.9%). Rank 1 40-28, Rank 2 39-27, ranks 3-4 75-58 (informational).
+- Forecast cards scored: 91 (P-126 to P-576). Gated counted cohort: 0 cards (no card yet carries a recorded Rank-1 gate PASS). RANK1_UNSTABLE cohort: 20 cards (P-557 to P-576), 34 counted wins in 40 live top-two rows = 85.0% (95% interval 70.9% to 92.9%). All forecast cards (historical, ungated): 113 counted wins in 174 live top-two rows = 64.9% (95% interval 57.6% to 71.6%). Rank 1 56-32, Rank 2 57-29, ranks 3-4 106-67 (informational).
 - Nothing here is performance-certified.
 
 ## Sources
