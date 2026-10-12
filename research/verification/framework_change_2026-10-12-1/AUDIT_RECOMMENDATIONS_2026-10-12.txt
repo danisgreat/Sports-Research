@@ -1,0 +1,681 @@
+SPORTS RESEARCH: FILES, PROMPTS AND PUBLISHED MAIN AUDIT
+Audit date: 12 October 2026 (Australia/Sydney, AEDT, UTC+11)
+Evidence snapshot: approximately 12:44-12:46 AEDT
+Requested output: a separate text file containing all recommendations found.
+Audit mode: read-only inspection, except creation of this report.
+
+EXECUTIVE FINDING
+
+The published prompt framework has useful safeguards, but further correction is
+needed before its instructions can be followed consistently. The most urgent
+published issues are wrong sport-source references, contradictory operating
+instructions, an invalid tennis probability constraint, and underspecified
+settlement revision handling.
+
+There is also a separate, more urgent LOCAL-ONLY data problem. Unpublished Czech
+hockey and English football archive builders invent missing measurements and
+write them as ordinary historical data. One inspected football result is also
+wrong against an official club record. These working files should not be admitted
+to forecasting, profiles or settlement evidence until repaired. This finding does
+not mean those new files have already been published to main.
+
+This report contains 38 recommendations. It distinguishes confirmed defects,
+preventive improvements and existing pending work. It does not claim that every
+historical record in this large repository has been independently verified.
+
+1. REVISION, SCOPE AND SOURCE RECEIPT
+
+Repository: C:\Users\danie\Desktop\Sports Research
+Remote: https://github.com/danisgreat/Sports-Research.git
+Branch: main
+Local HEAD and freshly fetched origin/main:
+  eb1acf58bb7b8c794a2f6a473f737d921f2d5fae
+Commit: Restructure prompt 1 with dedicated sections 1-7 per sport
+Commit author time: 2026-10-12T00:46:57+11:00
+Ahead/behind: 0 / 0
+Staged changes at inspection: none.
+
+Working-tree inventory BEFORE this report:
+  66,939 tracked files: 44,428 .md; 22,115 .csv; 396 .txt.
+  107 modified tracked files, including SOURCES.md and the two archive families.
+  318 untracked files: 239 .csv; 51 .htm; 16 .py; 12 .md.
+  The Python files are under research/src; cached hockey HTML is under
+  research/data/czech_extraliga/html.
+  Published main has only the three listed tracked text extensions. The new
+  Python/HTML files are local-only at the audited snapshot.
+
+Inspection performed:
+  - Reviewed prompts 2-8 and their workflow dependencies; checked the current
+    sport-specific prompt 1 sections and source references.
+  - Reviewed current authority, selection, scoring, templates, verification,
+    contribution and implementation instructions; inspected relevant historical
+    toolkit/sport guidance for contradictory operational wording.
+  - Read the latest completed retrospective and October 11 implementation/status
+    evidence, including the later profile/data audit. Those reports' historical
+    numerical claims are attributed, not represented as fully re-audited here.
+  - Inventoried the Git tree and compared local and fetched main revisions.
+  - Checked 520 relative file-link occurrences in 42 selected documents.
+  - Checked current Part 7 canonical/settlement/addendum marker pairing and IDs.
+  - Compared the active/settled golden examples byte-for-byte at the prefix.
+  - Parsed CSV records using PowerShell Import-Csv in both affected primary
+    archive directories, including their header-only files. Checked row counts,
+    date/weekday agreement and IDs; profiled selected suspect fields.
+  - Read the untracked builders and a validator without executing them.
+  - Compared the three 2025 football output copies by SHA-256.
+  - Checked the 2025 Community Shield against an official Liverpool FC result.
+
+External result source inspected:
+  Liverpool FC, Men's Team - 2025 - Community Shield:
+  https://www.liverpoolfc.com/matches/mens-team/results/2025/community-shield
+  Inspected 2026-10-12. The page records Crystal Palace 2-2 Liverpool,
+  penalties 3-2. This contradicts the local Manchester City 2-1 Arsenal row.
+  No claim of independent verification of the other 39,829 archive rows is made.
+
+Limits:
+  - This is a framework/content and targeted data audit, not a source-by-source
+    certification of all 66,939 tracked files or every numerical table.
+  - Link checking tested ordinary relative file destinations, excluding external
+    URLs and fragments. It did not validate every heading anchor or HTTP link.
+  - Statistical results were not regenerated for every historical cohort.
+  - Branch protection, account permissions and remote GitHub settings were not
+    inspected. A matching Git SHA proves synchronization, not those controls.
+  - No model, imported card, grade, archive data, prompt or operating rule was
+    changed by this audit. No repository Python scripts, builders or automated
+    importers were run.
+  - A slow Group-Object profiling command was interrupted after producing its
+    reported results; football ID/attendance checks were then completed using
+    a hash set and counters. No builder's own validation verdict was relied on.
+
+2. CHECK RESULTS AND POSITIVE CONTROLS
+
+Published/working authority:
+  CURRENT_STATE and the current GAME_LOG_STATUS_CURRENT section agree on P-579
+  as highest canonical ID, P-580 as next, and Combined Log Part 7 as active.
+  The current queue retains P-577, P-578 and P-579 as pending events.
+  Part 7 contains 23 BEGIN CANONICAL RESEARCH markers; maximum ID is 579.
+  The checked canonical/addendum/settlement markers had zero mismatches and
+  zero unclosed markers. This does not certify their sporting content.
+
+Golden examples:
+  Active example: 7,357 bytes.
+  Settled example: 11,859 bytes.
+  Active example is an exact byte prefix of the settled example: PASS.
+
+Navigation:
+  520 relative file links checked across 42 documents; 42 missing targets.
+  Distribution: CHANGELOG 38; SOURCES 3; LEARNINGS_INDEX 1.
+  Most are historical/retired references. No missing ordinary relative file
+  destination was found in the eight current prompt files in this check.
+  Wrong numbered source sections in prompt 1 are a separate semantic defect
+  that a file-existence check does not detect.
+
+Custody:
+  core.autocrlf=true. This makes explicit raw-byte versus Git-blob custody
+  definitions important; a normalized Git blob can differ from working bytes.
+
+Framework strengths worth retaining:
+  Frozen original ranks/probabilities/contracts; append-only corrections;
+  explicit UNRESOLVED rather than missing-data VOID; exact-row frozen baselines;
+  primary versus shadow separation; event/week dependence awareness; honest
+  qualitative/NO_FORECAST states; scoped publication and remote verification.
+  Current v10 measurement remains at zero issued cards in the published status.
+  Baseline-relative predictive improvement is not established.
+
+Targeted local archive measurements:
+
+  Czech Extraliga primary directory:
+    126 *_games.csv files inspected, including header-only files.
+    19,039 data records; 44 columns; zero duplicate Game ID groups observed.
+    13,980 date/weekday mismatches; zero unparseable/missing dates.
+    16,242 records dated September 15 of their respective year.
+    All 19,039 records have start time 17:30.
+    Attendance: 13,972 records have 5,420; 5,067 have 4,800.
+    Builder inspection proves these times/attendance values are hard-coded
+    defaults. The date/weekday pattern alone is not the proof of provenance.
+
+  Premier League primary directory:
+    126 *_games.csv files inspected, including header-only files.
+    20,791 data records; 36 columns; zero duplicate Match ID extra rows.
+    Zero date/weekday mismatches and zero unparseable/missing dates.
+    Attendance: 12,704 records have 38,500; 8,028 have 28,400.
+    Builder inspection proves these attendance values are hard-coded defaults.
+    SOURCES' local new section calls this a 38-column schema; parsed output
+    has 36 columns.
+
+  The three 2025 football copies have the same SHA-256:
+    3143E6D890F2AA9BB3B000871929CB9DBE1BC5C4C7D7A8CDD38DB452FC581D9A
+  Compared paths:
+    Previous Sports Results/Soccer/Premier League/2025/2025_games.csv
+    Previous Sports Results/Soccer/English Premier League/2025/2025_games.csv
+    English_Premier_League_Soccer_CSVs/English_Premier_League_Soccer_2025.csv
+  Equality confirms replication, not correctness or independent corroboration.
+
+3. RECOMMENDATIONS
+
+Priority meaning:
+  CRITICAL: quarantine affected inputs before they can influence research.
+  HIGH: correct before the next affected workflow or substantive release.
+  MEDIUM: strengthen reproducibility, measurement or maintenance next.
+  LOW: operational clarity/navigation improvement.
+Confidence is about the finding, not forecast accuracy. Confirmed findings below
+are grounded in inspected text/data. Preventive items identify underspecified
+behavior and do not claim an observed incident.
+
+R01 | CRITICAL | LOCAL ONLY | Confirmed | High confidence
+Remove synthetic hockey measurements from the historical evidence lane.
+Evidence: research/src/build_czech_extraliga_all_years.py:152-153 sets a default
+September 15/Friday; :319-347 estimates missing periods from final scores and
+alters period 3 until totals reconcile; :407 and :436-437 supply fixed start
+time, attendance and a generic referee description. The primary CSV measurements
+above show the downstream footprint; 13,980 date/weekday pairs disagree.
+Action: quarantine affected fields/files from research use, preserve the current
+version as evidence, recover exact source fields, and make unavailable values
+blank with an explicit reason. Do not fix only the weekday of an invented date.
+Acceptance: every restored date, phase score, time and attendance has a direct
+field receipt; unavailable fields stay missing; no balancing arithmetic creates
+an unobserved period score. Apply the repair to every distributed copy.
+
+R02 | CRITICAL | LOCAL ONLY | Confirmed | High confidence
+Remove fabricated football half-time scores, times, attendance and round labels.
+Evidence: research/src/build_premier_league_all_years.py:222-225 derives Shield
+half-time scores by integer division of full-time scores; :262-267 does similar
+fallbacks and supplies missing kickoff/referee values; :287-289 approximates
+matchweeks; :328 sets attendance 38,500; :349-350 estimates older half-time
+scores; :398 and :419-420 supply older time/attendance/referee defaults.
+Action: retain only observed source fields as historical facts. Put any useful
+estimate in a separately labelled research artifact excluded from settlement,
+period models and point-in-time features. Never call a generic referee label
+the identity of an official.
+Acceptance: each filled field has a source or a valid deterministic derivation
+from observed inputs; final score alone never reconstructs half-time scores.
+
+R03 | CRITICAL | LOCAL ONLY | Confirmed external conflict | High confidence
+Audit the hand-entered Community Shield result table before retaining it.
+Evidence: research/src/build_premier_league_all_years.py:119 and the first data
+row of all three 2025 football CSVs say Manchester City 2-1 Arsenal. The official
+Liverpool result cited above records Crystal Palace 2-2 Liverpool, pens 3-2.
+Action: quarantine this table, verify every manually entered result/participant/
+date/score against primary evidence, and preserve correction receipts. Check
+regulation result separately from shootout winner.
+Acceptance: all manual table entries have exact source pointers, and this false
+event is absent from every active data copy. A correct CSV shape is insufficient.
+
+R04 | HIGH | LOCAL ONLY | Confirmed claim/evidence mismatch | High confidence
+Withdraw blanket 'verified' and official-source claims until field audits pass.
+Evidence: local SOURCES.md sections 3.34/3.35 call 19,039 and 20,791 records
+verified; the builders fabricate fields while source strings also name official
+records. Hockey's validator checks arithmetic and date shape, but does not
+establish source truth or even date/weekday agreement.
+Action: publish a field-level coverage/provenance matrix: observed, derived,
+missing, inferred, conflicting and independently checked. Attribute only sources
+actually read for that field. Treat mathematical consistency as one check.
+Acceptance: verification claims specify exact fields, sample/full coverage,
+source receipts and limitations. The fabricated fixtures in R01-R03 fail review.
+
+R05 | HIGH | LOCAL ONLY | Confirmed schema change | High confidence
+Make archive schema migration explicit and reconcile documented column counts.
+Evidence: main's inspected Premier League 2025 file is a header-only older
+schema; the local replacement has 36 columns and 381 records. The new SOURCES
+section describes 38 columns. Prompt 7 requires a migration decision.
+Action: record old/new schema, field meanings, missingness, date/season and
+endpoint conventions, affected consumers and compatibility mapping. Preserve
+the original before migration. Correct the 38-versus-36 discrepancy.
+Acceptance: exact headers match the approved schema and dependent recipes read
+the intended fields without positional or implicit-name assumptions.
+
+R06 | HIGH | LOCAL ONLY / ARCHIVE DESIGN | Confirmed duplication; preventive fix
+Choose one authoritative archive path and stable event identities.
+Evidence: both new archive families use primary, alias and standalone copies;
+the three checked 2025 football copies are byte-identical. Generated IDs also
+incorporate sequential row numbers in the builders, which can change on insertion.
+Action: designate one canonical dataset path; make aliases explicit references
+or controlled exports with version/hash mappings. Prefer native event IDs or a
+documented immutable surrogate, with aliases for later reconciliation.
+Acceptance: aggregating supported paths cannot count a game three times, and
+adding an older missing game does not change the identities of existing events.
+
+R07 | HIGH | LOCAL ONLY / GOVERNANCE | Confirmed scope mismatch
+Resolve the new code/cache files against the repository's declared write scope.
+Evidence: CONTRIBUTING.md:3 and CURRENT_RULES section 0 restrict the repository
+to Markdown/CSV/text and prohibit added code. There are 16 untracked Python
+files and 51 HTML caches at this snapshot; they are not on published main.
+Action: preserve the work while deciding its authorized destination. Keep
+research helpers outside this repository, or explicitly approve/version a scope
+change before publishing them. Define how HTML source captures are retained.
+Acceptance: a future commit contains only declared file types/paths or an
+explicitly authorized policy change. Do not use broad git add or delete another
+writer's files to make the worktree appear compliant.
+
+R08 | HIGH | PUBLISHED MAIN, PROMPT 1 | Confirmed | High confidence
+Correct source-section references for each sport.
+Evidence: research/prompts/1_GAME_CARD.md points cricket at SOURCES section 3.6,
+tennis at 3.8, AFL at 3.3 and American football at 3.5. Actual SOURCES headings
+are cricket 3.3, tennis 3.10, AFL 3.5 and NFL/college football 3.8. The combined
+rugby block cites only 3.7, whereas rugby league is 3.6 and rugby union is 3.7.
+Action: use verified named anchors and include both rugby routes. Review hockey's
+NHL-labelled route for non-NHL competitions rather than treating it as universal.
+Acceptance: each sport's link opens its correct source hierarchy; check semantic
+destination as well as file existence. Preserve the requested per-sport format.
+
+R09 | HIGH | PUBLISHED MAIN, PROMPTS 1-3 / AUTHORITY | Confirmed ambiguity
+Define one authority mode for a run and pin all published controls to one SHA.
+Evidence: prompts 1-3 explicitly establish authority from GitHub main, while
+CURRENT_RULES:9 and prompts/README:35 say current local working files govern
+inside the repository. These can differ, as local SOURCES currently does.
+Action: retain the intended read-only GitHub contract for external runs; specify
+what a local run does with unpublished controls. Print authority mode, exact
+commit and relevant working differences; do not mix revisions silently.
+Acceptance: a fixture with a dirty local rule and a different published rule has
+one explicit chosen authority and reports the other as a difference.
+
+R10 | HIGH | PUBLISHED MAIN, STATUS / WORKFLOW | Confirmed contradiction
+Align the current status-register introduction with mini staging and import.
+Evidence: GAME_LOG_STATUS_CURRENT.md:4 says all requested cards go directly to
+the active Combined Log. Prompts 1-3 prohibit canonical writes and the prompt
+index specifies 2 -> 1 -> 3 -> 4.
+Action: clarify that every requested research event is retained, first in the
+authorized local workflow, with canonical publication through prompt 4. Describe
+any separately authorized direct-canonical workflow explicitly if one is needed.
+Acceptance: no operator can reasonably read the current register as permission
+for prompt 1 to bypass local staging or import checks.
+
+R11 | HIGH | PUBLISHED MAIN, SUPPORTING RULES | Confirmed residual conflict
+Separate active calculation aids from retired operational instructions.
+Evidence: PROBABILITY_TOOLKIT has a v10 precedence banner but :515 and section
+5.3 still direct ranking by q. Section 4 still uses old baseline/anchor language;
+sport files contain historical runtime-era procedures. Current selection is
+P_ORDER_V2 and the primary comparator is BASELINE_LEAGUE_V1.
+Action: move retired operational blocks into a clearly historical reference,
+or mark them locally as non-operative. Keep an active, compact calculation
+section that uses current fields and policy. Do not erase historical evidence.
+Acceptance: following any active numbered procedure produces the same ranks,
+labels and baseline roles as CURRENT_RULES and SELECTION_RULES.
+
+R12 | HIGH | PUBLISHED MAIN, TENNIS TOOLKIT | Confirmed mathematical defect
+Remove the invalid games-handicap-to-match-winner probability bound.
+Evidence: PROBABILITY_TOOLKIT.md:682 asserts P(-k.5) <= P(win) for tennis games.
+Counterexample: a player loses a best-of-three match 6-0, 4-6, 4-6, but wins
+total games 14-12 and covers -1.5 games. Covering that handicap does not imply
+winning the match. The preceding formula also conditions only on match wins.
+Action: derive game-handicap outcomes from complete compatible set-score states,
+including match-loss states. Distinguish set handicaps from game handicaps.
+Acceptance: the counterexample grades match winner LOSS and -1.5 games WIN;
+the model retains it rather than enforcing a false subset relation.
+
+R13 | HIGH | PUBLISHED MAIN, CONTRACTS / PROFILES | Confirmed overgeneralization
+Remove universal tie-action claims from active calculation guidance.
+Evidence: PROBABILITY_TOOLKIT.md:412 says a moneyline loses on a tie; the sport
+constants table in LEAGUE_PROFILES labels baseball draws impossible. Top-level
+rules correctly require competition/season and frozen contract conventions.
+Action: make draw/tie branches competition-specific and moneyline grading
+contract-specific. Label profile score maxima as computational support limits,
+with tail handling, rather than apparent physical limits.
+Acceptance: permitted ties, two-way action/push conventions, three-way outcomes
+and truncated-support mass each receive their explicitly frozen treatment.
+
+R14 | MEDIUM | PUBLISHED MAIN, NUMERICAL PRECISION | Confirmed ambiguity
+Define how approximation error affects gates and close ordering decisions.
+Evidence: SELECTION_RULES ranks unrounded probabilities; toolkit :28 rounds z
+to two decimals and p to three. Toolkit :111 also proposes a direct NFL
+probability adjustment, which can bypass the coherent-distribution requirement.
+Action: retain calculation precision and declared approximation error; mark a
+gate/order unresolved when supported precision cannot separate it. Apply any
+key-number adjustment to a normalized common distribution, then rederive rows.
+Acceptance: near-threshold fixtures do not gain PASS from rounding, and altered
+rows retain normalization, complements and monotonicity.
+
+R15 | HIGH | PROMPT 2 | Preventive improvement
+Make single-writer ownership and local inventory completeness explicit.
+Evidence: prompt 2 section 2 inventories used IDs and mentions competing writers,
+but two empty minis can both prepare the same next ID without either using it.
+Action: designate one active issuance mini/writer per sequence, with an explicit
+handoff and expiry/recovery procedure. Do not claim an inaccessible inventory is
+complete. This is local coordination, not canonical ID consumption.
+Acceptance: two simultaneous empty minis cannot both issue the next ID; an
+unverified outstanding mini blocks dependent issuance without losing research.
+
+R16 | HIGH | PROMPT 3 | Preventive improvement
+Freeze the source lifecycle as well as a copy of its bytes.
+Evidence: prompt 3 section 1 copies an active mini but does not explicitly halt
+further card appends to that source during settlement/import.
+Action: record a frozen-source receipt containing path, immutable snapshot,
+writer handoff and block inventory. Route subsequent new events to the next
+authorized mini. Detect any source growth before declaring a lifecycle closed.
+Acceptance: a card appended after the snapshot is neither silently omitted nor
+mistakenly covered by the earlier CLOSED_IMPORTED receipt.
+
+R17 | HIGH | PROMPTS 3, 4, 6 / TEMPLATES / SCORING | Underspecified behavior
+Define deterministic, row-level settlement revision resolution.
+Evidence: the settlement template starts at revision-1; prompts require dated
+revisions and refer to the 'latest valid settlement' without a complete rule for
+colliding revisions, partial corrections or unchanged rows.
+Action: require unique revision keys, exact parent/superseded revision, effective
+time, source, affected contract keys, old/new values and reason. A partial update
+must retain unaffected effective grades. Resolve conflicting branches explicitly;
+do not simply choose the last text block or greatest timestamp.
+Acceptance: reruns, same-day revisions, a one-row correction and conflicting
+updates each yield one traceable effective state per original contract, with
+all prior evidence retained and no double counting.
+
+R18 | HIGH | PROMPTS 4-5 / VERIFICATION | Preventive improvement
+Recheck destination state immediately before mutations and publication.
+Evidence: import snapshots the destination and verifies it afterwards; publication
+handles remote advances, but an explicit pre-append local concurrency guard is
+missing. Rollover depends on the same mutable destination and ID state.
+Action: compare the expected current HEAD, active path, source inventory and
+destination bytes immediately before each mutation batch. Serialize local writers.
+On change, rebuild the plan against the new state without erasing either writer.
+Acceptance: simulated concurrent append/rollover is detected before duplicate
+IDs, double closures or stale pointer updates are written.
+
+R19 | MEDIUM | PROMPT 4 / VERIFICATION | Preventive improvement; current check passes
+Make marker pairing and legacy-format handling explicit import checks.
+Evidence: the current Part 7 marker check passes, but prompt 4 mainly describes
+complete blocks and comparison without a dedicated balanced-marker assertion.
+Historical settlements use markers without revision keys; new templates add them.
+Action: check matching parent IDs, revision keys, nesting, one end per begin and
+declared legacy formats before import. Preserve old source bytes and use explicit
+wrapper metadata rather than rewriting legacy markers.
+Acceptance: missing ends, wrong IDs, duplicate revision keys and nested malformed
+blocks fail before mutation; legitimate legacy blocks still import once.
+
+R20 | HIGH | PROMPTS 3-5 / CUSTODY / GIT | Confirmed environment; preventive fix
+Specify raw file identity versus Git-normalized content identity.
+Evidence: core.autocrlf=true; rules require exact original bytes and preserved
+line endings. Source minis and destination logs can use different encodings or
+newline conventions, and Git can normalize committed text.
+Action: define separately the raw source snapshot/hash, imported literal core,
+unchanged destination prefix and committed representation. Use byte-preserving
+append operations where raw identity is required. If a normalized projection is
+allowed, declare its reversible transformation and retain the raw source.
+Acceptance: LF, CRLF, BOM/non-BOM and Unicode fixtures preserve the promised
+identity, including after checkout. Never claim byte identity from line counts
+or zero deleted lines alone. Any Git attribute change needs its own scope review.
+
+R21 | LOW | PROMPT 5 | Operational improvement
+Define rollover triggers and the route for later revisions of closed-part cards.
+Evidence: prompt 5 accepts a size/readability trigger without a measurable
+default, and future addendum routing is only implicit in the active-log rules.
+Action: document a practical reviewed threshold/trigger and record the actual
+reason each time. Append future revisions in the active part with stable links
+to the original ID and effective revision history in the closed part.
+Acceptance: no new event ID or duplicate original card is created by rollover
+or later settlement, and cross-part revision lookup remains unambiguous.
+
+R22 | HIGH | PROMPTS 1-2, 6 / TEMPLATES / SCORING | Measurement gap
+Create an intake inventory for requested-event coverage.
+Evidence: prompt 6 requests counts of all requested events, but mini templates
+only guarantee retained cards and queues. Requests that fail before card creation
+cannot be recovered reliably from a card-only inventory.
+Action: record a request key, event/alias when known, request time, disposition,
+card pointer or explicit no-card reason. Distinguish request attempts from unique
+events. Keep read-only/blocked/draft cases visible without allocating canonical IDs.
+Acceptance: requested, retained, numeric, qualitative, NO_FORECAST, blocked and
+pending counts reconcile. If historical intake is absent, report request coverage
+NOT_COMPUTABLE rather than assuming all requests became cards.
+
+R23 | MEDIUM | PROMPTS 3, 6 / SCORING | Robustness improvement
+Define evidence-stratified scoring and sensitivity views precisely.
+Evidence: rules retain A/B/C/E/X evidence and allow provisional C assessments;
+scoring asks for evidence mix but could still leave a headline driven by weaker
+records or selectively resolved fields.
+Action: specify which evidence states enter each descriptive score, show a
+stronger-evidence sensitivity view, and retain unresolved-case bounds. Keep
+sporting evidence, operator definition and performance eligibility separate.
+Acceptance: a change in evidence mix is visible, provisional rows cannot silently
+become verified, and missingness exclusions are traceable to original contracts.
+
+R24 | HIGH | CURRENT SUMMARY / RETROSPECTIVE PRESENTATION | Claim correction
+Replace causal claims about skill with the conclusion the data supports.
+Evidence: CURRENT_STATE's latest-retrospective paragraph says the counted rate
+reflects line choice, 'not skill'. The cited cohort has 20 cards, mechanically
+protected pairs and an in-sample climatology reference, not frozen same-row
+pregame baselines. The current scoring document correctly explains this limit.
+Action: say that the cohort does not establish incremental predictive skill and
+that line construction affects the reported hit rate. Keep historical reports
+unchanged; issue a dated clarification and correct current summary wording.
+Acceptance: summaries distinguish absence of evidence from proof of no skill,
+and label retrospective climatology as descriptive rather than a fair prospective
+baseline. A single high-probability loss does not establish overconfidence.
+
+R25 | HIGH | EXISTING PENDING WORK, EXPERIMENT DESIGN | Readiness recommendation
+Complete prospective acceptance designs before declaring any promotion cohort.
+Evidence: HYPOTHESIS_REGISTER explicitly leaves FC10-BASELINE, GATE, PAIR and
+PROFILE acceptance blocked on effect/tolerance/sample inputs. The run-2
+implementation report confirms no v10 experiment results yet.
+Action: choose the decision-relevant improvement/noninferiority margins,
+calibration and coverage guardrails, analysis unit, dependence treatment, sample
+justification, stopping rule and held-out start. Keep initial feasibility data
+out of a retrospectively defined confirmatory cohort.
+Acceptance: a complete dated design exists before confirmatory outcomes accrue;
+eight weeks or a nominal card count is never presented as sufficient power by
+itself. Report operational implementation separately from predictive acceptance.
+
+R26 | HIGH | PROMPT 7 | Confirmed overbroad rule
+Treat suspicious constant columns as a diagnostic, not automatic missingness.
+Evidence: prompt 7:15 declares a constant field/default-looking flag unknown.
+A legitimate measured zero can be constant, and a tie is not universally evidence
+that an extra period occurred. The local builders in R01-R02 are proven defaults
+because their transformation logic was inspected, not merely because values repeat.
+Action: use SUSPECTED_DEFAULT pending field/source/season-rule checks. Preserve
+raw values and record the interpretation separately; distinguish not applicable,
+unobserved, measured zero and confirmed placeholder.
+Acceptance: fixtures with real all-zero observations survive, while confirmed
+synthetic/default values are excluded from measurement.
+
+R27 | MEDIUM | PROMPT 7 / ARCHIVE CONTRACTS | Confirmed overgeneralization
+Make arithmetic and completeness checks endpoint-specific.
+Evidence: prompt 7:23 says period scores must sum to final without specifying
+shootout awards, extra periods or other scoring conventions. The local hockey
+builder demonstrates why forcing a sum can conceal missing or incorrect inputs.
+Action: state the reconciliation equation for each league/era/endpoint and which
+fields are measured. Classify shortened/cancelled/suspended/replayed games and
+stage scope before comparing to the official schedule denominator.
+Acceptance: legitimate endpoint differences are explained; contradictions are
+flagged, never repaired by inventing a balancing field. A row can be usable for
+final-score analysis while unusable for period or time-dependent analysis.
+
+R28 | HIGH | ARCHIVES / PROMPT 1 / REPLAYS | Data readiness improvement
+Track event time, source availability and correction time separately.
+Evidence: current rules forbid post-cutoff inputs, but a historical row date or
+present-day source retrieval does not establish when each field was available.
+Invented local dates make this distinction especially important for form/rest.
+Action: record available source publication/update evidence and retrospective
+availability limits. Filter replay inputs by known-at status; treat corrected
+historical datasets and current full-season aggregates as different snapshots.
+Acceptance: a postgame correction or late-published statistic cannot enter a
+clean pregame replay merely because its event date is earlier than the cutoff.
+
+R29 | MEDIUM | SOURCES / EXISTING PENDING WORK | Provenance recommendation
+Complete source lineage and field-route audits for current forecast leagues.
+Evidence: CURRENT_STATE says collector independence remains unknown; the run-2
+reachability pass was a one-machine observation and not a source-truth audit.
+The new local source strings name several publishers without per-field receipts.
+Action: map field owner, collector, redistributor, exact URL/field, fetch time,
+availability, failure mode and allowed fallback. Distinguish successful HTTP
+access, a homepage/shell and a usable terminal record.
+Acceptance: duplicated publishers are not counted as independent agreement and
+each important field has a tested route or an explicit unsupported status.
+
+R30 | HIGH | EXISTING PENDING WORK, NBL | Documented data repair
+Finish the known NBL date/stage/period audit before time-dependent use.
+Evidence: ARCHIVE_USE_GUIDE section 8 and framework_change_2026-10-11-2 report
+179 rows labelled Regular Season with blank date/time fields, including 14
+post-season rows. A 165-row date evidence sidecar exists. The newer 29-game
+snapshot lacks a completed official schedule-denominator check and has 19
+single-source games. These are documented prior findings, not fresh full source
+verification by this audit.
+Action: perform a scoped prompt-7 repair using the prepared evidence, distinguish
+scheduled from actual start, validate stage and observed period fields, and close
+the current-season denominator/corroboration gaps.
+Acceptance: each changed cell has old/new values and evidence; time-sensitive
+recipes use verified dates; a refreshed profile does not imply the raw archive
+is fully repaired or complete.
+
+R31 | HIGH | EXISTING PENDING WORK, KBO/NPB | Data readiness recommendation
+Recover observed innings/extras before using those rates again.
+Evidence: LEAGUE_PROFILES withdraws KBO/NPB extras shares as NOT_ESTIMABLE;
+the run-2 implementation report lists innings recovery as unfinished work.
+Action: retrieve exact per-game innings/terminal state with source receipts and
+competition/season tie rules. Preserve unknowns where recovery fails, and publish
+coverage denominators rather than filling zero extras.
+Acceptance: new extras/tie statistics use observed fields and a declared usable
+population; neither existing NOT_ESTIMABLE entries nor old forecasts are silently
+rewritten as though the measurements had always existed.
+
+R32 | MEDIUM | EXISTING PENDING WORK, OTHER PROFILES | Maintenance recommendation
+Review freshness and endpoint support beyond the NBL profile.
+Evidence: LEAGUE_PROFILES says other rows were not re-audited in the run-2
+refresh; several sport constants and historical ratios remain generic.
+Action: prioritise leagues actually requested, using explicit season/stage/
+endpoint cohorts and source quality. Keep an old supported prior visibly stale
+when new data is inadequate; declare unsupported variances/covariances missing.
+Acceptance: each active profile has an as-of date, source version, exclusions,
+field coverage and permitted endpoints. Do not mix eras merely to enlarge n.
+
+R33 | MEDIUM | PROMPT 1 / TEMPLATES / PROMPT 6 | Missing explicit output field
+Expose line difficulty alongside probability and baseline.
+Evidence: SELECTION_RULES:59 requires line distance from centre, but the card's
+decision table has no dedicated field and the repeated sport prompts do not make
+this disclosure equally visible.
+Action: add line, direction, centre distance and standardized distance when SD
+is supported, or a clear N/A. Retain supplied-versus-derived provenance and the
+frozen candidate universe in comparisons.
+Acceptance: an easier derived threshold cannot be mistaken for improved event
+prediction simply because its hit rate is higher; retrospective comparisons use
+identical frozen rows and disclose differences in selection/coverage.
+
+R34 | MEDIUM | PROMPT 8 / RELEASE MANAGEMENT | Maintenance defect/risk
+Version prompt behavior and record dependency changes accurately.
+Evidence: the suite label remains P-2026.10.11-v10 across subsequent prompt
+restructures and generalisation. CHANGELOG describes the generalisation as
+wording-only even though it adds archive validation behavior, including R26-R27.
+Git SHA still identifies exact content, but the human version label is coarse.
+Action: define a prompt revision policy; distinguish editorial, procedure,
+format and statistical changes. Update affected templates, examples and indexes
+together, with a before/after dependency map and compatibility statement.
+Acceptance: a reader can identify which prompt behavior produced a record, and
+an administrative classification is used only when behavior truly is unchanged.
+
+R35 | MEDIUM | PROMPT 8 / EXAMPLES / VERIFICATION | Preventive improvement
+Expand regression examples to the actual failure classes found here.
+Evidence: current golden prefix checks pass and existing walkthroughs cover many
+cases, but current defects show that semantic/source-truth failures remain.
+Action: add documentation fixtures for wrong sport routes; legitimate constant
+zero versus proven default; fabricated half/period values; the tennis counter-
+example; two empty minis; a source changed after freeze; partial-row revisions;
+malformed markers; LF/CRLF handling; and cross-part addenda.
+Acceptance: each negative fixture names the check that rejects it, and each
+legitimate edge case passes. Label manual walkthroughs as manual. Do not claim
+an executed test suite or live source certification from example prose.
+
+R36 | LOW | NAVIGATION / HISTORICAL CUSTODY | Confirmed missing destinations
+Repair current navigation to retired material without rewriting history.
+Evidence: the 42-document scan found 42 missing relative targets: 38 in dated
+CHANGELOG entries, three at SOURCES:95 (sources_registry.json, research/src/
+sources.py, source_observations.json) and one at LEARNINGS_INDEX:7
+(research/improvement_register.json). These are mainly removed historical tools.
+Action: point active navigation at maintained Markdown authorities or the
+Historical Link Index. Add recovery mappings for immutable historical references
+instead of altering dated evidence or restoring retired code just to fix links.
+Acceptance: current task navigation resolves; each retained historical broken
+path has a documented archived/commit recovery location. Also check heading
+anchors and numbered-section meaning, which this file-link scan did not cover.
+
+R37 | MEDIUM | REPOSITORY ORGANISATION | Maintainability recommendation
+Provide a compact active-file and usable-data index for the large repository.
+Evidence: there are 66,939 tracked files; both inspected archive directories
+contain 126 yearly CSV files but only 19,039/20,791 actual rows across their
+populated files. Folder/file existence alone is not usable data coverage.
+Action: maintain a small Markdown/CSV index of active controls, canonical data
+paths, populated seasons, logical row counts, schemas, known defects and exact
+source revisions. Separate active, historical, empty and future placeholders.
+Acceptance: an operator can locate the applicable controls and usable cohort
+without scanning unrelated history or treating an empty future file as coverage.
+
+R38 | MEDIUM | PROMPTS 2-4 / OPERATIONAL FOLLOW-UP | Queue improvement
+Make every unresolved field's follow-up executable by a named actor.
+Evidence: current rules correctly say a planned retry is not a scheduled job,
+and the current canonical queue still carries P-577 to P-579 as pending. This
+audit did not retrieve their live terminal records or settle them.
+Action: record the responsible actor, exact next source/field, due time with
+timezone, actual final-time basis or UNKNOWN, last attempt and scheduling status.
+Keep non-terminal events separate from terminal evidence gaps through import
+and rollover. Use the appropriate settlement task for new terminal evidence.
+Acceptance: every open queue item has an actionable next step; no task claims an
+automatic retry exists when none was scheduled, and no unknown becomes VOID
+merely to close a backlog.
+
+4. IMPLEMENTATION ORDER AND COMPLETION EVIDENCE
+
+First: R01-R07. Contain and repair unpublished data/provenance/schema problems
+before any affected rows feed a profile, card or settlement. Preserve originals.
+The current audit itself does not approve publishing these working changes.
+
+Second: R08-R14 and R26-R27. Correct active instruction conflicts, source routing
+and mathematical/contract defects. Follow prompt 8 for the document changes;
+archive originals and retain historical issued values.
+
+Third: R15-R23, R33-R38. Align mini lifecycle, revision semantics, import custody,
+coverage, examples, versioning and operational follow-up. Introduce new format
+versions if fields/semantics change; existing minis finish under their original
+formats with explicit compatible addenda where necessary.
+
+Fourth: R24-R25 and R28-R32. Correct current claims, finish data readiness and
+source lineage, freeze prospective designs and then collect actual outcomes.
+Data integrity and document implementation are prerequisites, not evidence that
+prediction accuracy has improved.
+
+Each implementation item should carry:
+  recommendation ID; exact authorized paths; archived before state; owner/task;
+  dependency; acceptance result and evidence; compatibility/rollback plan;
+  local commit and verified remote publication status if publication is requested.
+
+Use forward corrections for already published outcomes and failed experiments.
+Never rewrite frozen forecasts, silently change old grades, retroactively fill
+baselines, recycle an ID or relabel exploratory data as a prospective success.
+
+5. REPRODUCTION NOTES
+
+Inventory/synchronization:
+  git status --short --branch
+  git fetch origin main
+  git rev-parse HEAD origin/main
+  git rev-list --left-right --count HEAD...origin/main
+  git ls-files
+  git ls-files --others --exclude-standard
+  git diff --name-only
+  git diff --cached --name-only
+  git config --get core.autocrlf
+
+CSV checks used permitted read-only file facilities, not the untracked builders:
+  1. Enumerate *_games.csv under each primary directory.
+  2. Parse logical records with Import-Csv -Encoding UTF8.
+  3. Count records and parsed property names.
+  4. Parse Date exactly as yyyy-MM-dd; compare DayOfWeek with Day of Week.
+  5. Compare Game ID/Match ID values for duplicates.
+  6. Count the stated Attendance and Start Time values and September 15 dates.
+  7. Inspect builder assignment lines to distinguish proven defaults from merely
+     suspicious empirical constants. No data was changed by these checks.
+
+File/link checks:
+  The selected 42-document set was the 18 root documents named below, all 11
+  root RULES*.md files, the two LEAGUE_RULES*.md files, the nine Markdown files
+  directly under research/prompts, and the two current golden examples.
+  Root set: README, PROMPTS, METHOD, CURRENT_STATE, CURRENT_RULES,
+  SELECTION_RULES, SCORING_AND_VALIDATION, CARD_AND_LOG_TEMPLATES,
+  VERIFICATION_PROTOCOL, CONTRIBUTING, CHANGELOG, ARCHIVE_USE_GUIDE, SOURCES,
+  PROBABILITY_TOOLKIT, LEAGUE_PROFILES, BASE_RATES_REGISTER, HYPOTHESIS_REGISTER,
+  LEARNINGS_INDEX (all .md).
+  Ordinary Markdown file destinations were URL-decoded, resolved relative to
+  their source file and checked with Test-Path. External URLs and fragment-only
+  links were excluded. Templates with placeholder targets were excluded.
+
+The active example was compared to the corresponding leading byte span of the
+settled example. Part 7 marker bodies were checked with a stack for matching
+BEGIN/END names, parent IDs and revision text. This structural check passes;
+it is not a semantic settlement audit.
+
+All recommendations above are supported to their stated scope. The next audit
+should be against a new pinned revision and an explicit repaired-data snapshot,
+with unresolved items carried forward by R-number.

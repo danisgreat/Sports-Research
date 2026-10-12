@@ -1,5 +1,25 @@
 # Changelog
 
+## 2026-10-12 — Framework change 2026-10-12-1, phase A: quarantine fabricated archive builds and rebuild the Czech and English top flights from observed fields (audit R01–R07)
+
+User instruction: "implement all of the recommendations in order, carefully and methodically" (the 38 items of `AUDIT_RECOMMENDATIONS_2026-10-12.txt` and the 10 prediction recommendations). [Change proposal](research/verification/framework_change_2026-10-12-1/CHANGE_PROPOSAL.md), [implementation map](research/verification/framework_change_2026-10-12-1/IMPLEMENTATION.md), [data rebuild receipt](research/verification/framework_change_2026-10-12-1/DATA_REBUILD_RECEIPT.md). Class: data repair + integrity process repair.
+
+**Containment.** An unpublished local build (02:05–02:34 AEDT today) had filled 102 yearly CSVs with invented values:
+- **Czech hockey:** dates defaulted to 15 September; fixed start times, attendances and referee labels; balanced period scores.
+- **English football:** half-time = full-time ÷ 2; fixed kick-offs and attendances; approximate matchweeks; a hand-typed Community Shield table whose 2025 row was false.
+
+It also wrote unpublished SOURCES §3.34/§3.35 calling the rows verified. Everything is preserved outside the repository, in `Sports Research LOCAL_QUARANTINE_2026-10-12/` (README inside). The 320 local-only files are moved there, not deleted: code, HTML and odds-bearing caches, and duplicate alias trees. SOURCES and four generated roster/venue documents were restored to base.
+
+**Rebuilt.**
+- `Previous Sports Results/Ice Hockey/Czech Extraliga/1975…2025`: 18,752 games from hockeyarchives.info. Dates only where printed (16,909); 1,843 undated play-off games carry the round's printed date list; 145 rows flagged; 8/8 external sample.
+- `Previous Sports Results/Soccer/Premier League/1975…2025`: 20,740 games from england.csv and football-data. 11,943 of 11,944 two-compiler agreement; 9/9 ESPN sample; no Community Shield; odds never read.
+- Each folder has a `DATA_PROVENANCE.md` with a per-field matrix, schema migration, IDs, defects and use rules.
+- New SOURCES §3.31/§3.32 with scoped claims; ARCHIVE_USE_GUIDE §1/§8 notes and a new §9 (archive integrity rules); a CONTRIBUTING rule that helpers and raw captures stay outside the repository; a note in the archive README.
+
+**Not changed:** any Combined Log, issued card, grade, P-ID (next P-580), profile, rule threshold or version (versions change in later phases of this change). Originals of edited documents: [archive/superseded_2026-10-12/](archive/superseded_2026-10-12/ARCHIVE_NOTE.md).
+
+**Not claimed:** the archive is not certified. The samples verify only the sampled games. No predictive effect is claimed.
+
 ## 2026-10-12 — Restructure prompt 1 with dedicated sections 1–7 per sport
 
 User instruction: restructure prompt 1 ([research/prompts/1_GAME_CARD.md](research/prompts/1_GAME_CARD.md)) to provide complete, dedicated sections 1–7 for each of the 10 sport categories (Basketball, Cricket, Baseball, Soccer, Ice Hockey, Tennis, Rugby League / Union, AFL / AFLW, American Football, Other Sports), separated by the standard sport block format (`SPORT_NAME` over `----------------------------`). All sections maintain explicit references to the GitHub repository (`main` branch) in read-only mode (`GitHub writes NO`). Pre-edit version preserved in [archive/superseded_2026-10-12/prompt1_per_sport/](archive/superseded_2026-10-12/prompt1_per_sport/ARCHIVE_NOTE.md). No rules, thresholds, cards, logs, or canonical IDs changed.

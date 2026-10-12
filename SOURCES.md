@@ -1256,6 +1256,31 @@ Traps found and handled while building the ODI International files:
 
 ---
 
+### 3.31 Czech top-flight ice hockey game-by-game history, 1975-76 to 2025-26 (Previous Sports Results/Ice Hockey/Czech Extraliga/<YEAR>/<YEAR>_games.csv; rebuilt 2026-10-12)
+
+**Claim scope (R04).** This section names only the sources that were actually read for each field. "Verified" is not used. The per-field classification (observed, derived, conflict-flagged, not in source), the known defects and the check results are in [the archive's DATA_PROVENANCE.md](Previous%20Sports%20Results/Ice%20Hockey/Czech%20Extraliga/DATA_PROVENANCE.md).
+
+| Source | Route | Fields actually taken | Role | Access | Result |
+|---|---|---|---|---|---|
+| Hockey Archives (M. Branchu) | `https://www.hockeyarchives.info/Tchecoslovaquie<YYYY>.htm` (seasons to 1992-93), `…/Tcheque<YYYY>.htm` (from 1993-94); YYYY = season end year | Teams as printed, score, OT/SO markers and tallies, period scores, round dates, per-game date/venue notes, awarded/forfeit notes | S (single compiler; not the federation) | HTML captured 2026-10-12 about 02:05 AEDT, kept outside the repository | 51 of 51 pages parsed; 18,752 games; 16,909 dated |
+| Czech Wikipedia season article | `https://cs.wikipedia.org/wiki/Česká_hokejová_extraliga_2023/2024` | **Spot check only**, no field built from it | Corroboration sample | WebFetch 2026-10-12 | 8 of 8 play-off games agree on score, periods and OT |
+
+**Not used for any field:** Hokej.cz, the ČSLH or BPA official records, Wikipedia (apart from the spot check). An unpublished local build claimed them and is withdrawn. Start time, attendance, referees and venues (apart from 34 printed relocations) are not in the source and stay blank. Play-off games carry the round's printed date list, never an assigned date. Settle live Czech Extraliga cards from the league or club field owner, not from this archive.
+
+### 3.32 English top-flight match-by-match history, 1975-76 to 2025-26 (Previous Sports Results/Soccer/Premier League/<YEAR>/<YEAR>_games.csv; rebuilt 2026-10-12)
+
+**Claim scope (R04).** Only sources actually read are named. Field classes, the cross-check and the defects are in [the archive's DATA_PROVENANCE.md](Previous%20Sports%20Results/Soccer/Premier%20League/DATA_PROVENANCE.md).
+
+| Source | Route | Fields actually taken | Role | Access | Result |
+|---|---|---|---|---|---|
+| engsoccerdata `england.csv`, `englandplayoffs.csv` (J. Curley) | GitHub `jalapic/engsoccerdata` data exports | 1975-76 to 1992-93: date, teams, full-time score. Play-offs: round, leg, venue, attendance, aet/pens. Cross-check of later seasons | S (compiler) | CSV captured 2026-10-12 about 02:24 AEDT, outside the repository | Tier 1 present to 2024-25 except 2022-23 |
+| football-data.co.uk | `https://www.football-data.co.uk/mmz4281/<YYZZ>/E0.csv` | From 1993-94: date, teams, full-time score/result. HT score from 1995-96. Referee and shots, corners, fouls and cards from 2000-01. Attendance 2000-02. Kick-off time from 2019-20. **Odds columns never read** | S (compiler) | CSV captured 2026-10-12 about 02:24 AEDT, outside the repository (the files contain odds) | 33 of 33 seasons; 11,943 of 11,944 games agree with england.csv on date and score (the one exception: 2016-05-17 postponement, england.csv dates it 16 May) |
+| ESPN site API scoreboard | `https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=YYYYMMDD` | **Spot check only** | Corroboration sample | curl 2026-10-12 | 9 of 9 games agree |
+
+**Not used for any field:** the Premier League's PulseLive API, the FA, RSSSF. The Community Shield is not included. An unpublished hand-typed table, with a false 2025 row, is quarantined. Corners here are evidence B. A live corner contract still settles from §3.4's official field owner.
+
+---
+
 ## 4. Blocked, failed or excluded (do not plan on these)
 
 | Source | State on 2026-09-28 |
