@@ -1,7 +1,7 @@
 <!-- BEGIN CURRENT RESEARCH QUEUE -->
 # Current canonical research queue
 
-**Next canonical ID: P-580.** All requested cards go directly to the active combined log, regardless of calibration. Canonical IDs identify retained cards; performance certification and live/late timing are separate labels.
+**Next canonical ID: P-580.** Every requested event is retained, regardless of calibration: first as a local working card in the authorised mini (prompts 2 → 1 → 3), then canonically through the prompt-4 import. No card is written to the active combined log directly. *(Clarified 2026-10-12, audit R10: the earlier wording "go directly to the active combined log" described retention, not a bypass of local staging.)* Canonical IDs identify retained cards; performance certification and live/late timing are separate labels.
 Active Combined Log: `prediction logs/PREDICTION_LOG_COMBINED_7.md`.
 Freeze: none (custody is the git history of `main`, CURRENT_RULES §9). The last control manifest is `archive/controls/CONTROL_MANIFEST_2026-10-09-3.md`. Current authority: CURRENT_STATE.md, METHOD.md and CURRENT_RULES.md.
 
@@ -66,6 +66,14 @@ Freeze: none (custody is the git history of `main`, CURRENT_RULES §9). The last
 | **P-579** | BASKETBALL / Liga ACB — La Laguna Tenerife @ UCAM Murcia — 2026-10-11 | `LOCAL-20261011-P-579-ACB-LLT-UCM` | IMPORTED_UNCALIBRATED · PENDING_EVENT (carried forward) · RANK1_UNSTABLE |
 
 Highest canonical research ID: **P-579**. Active Combined Log: `prediction logs/PREDICTION_LOG_COMBINED_7.md`.
+
+**Open queue — executable follow-ups (R38; dated 2026-10-12 about 14:40 AEDT).** Added by framework change 2026-10-12-1. This session did not retrieve any terminal record, so none of these events has been settled here. Each row names who acts next, where and by when.
+
+| ID | Queue | Responsible actor | Next source + exact field | Capture due (from the card) | Final-time basis | Last attempt | Scheduled automation |
+|---|---|---|---|---|---|---|---|
+| P-577 | PENDING_EVENT | Next prompt-3 settlement run (user-initiated session) | ATP Tour official results / Shanghai official scores: per-set games, completed sets, winner, any retirement | 2026-10-12T19:30+11:00 (card estimate) | UNKNOWN (start was an estimate) | None since import on 2026-10-11 | NO |
+| P-578 | PENDING_EVENT | Next prompt-3 settlement run | NBA official game 0012600016 box score / Game Book: final, quarters, OT flag, starters, DNPs; ESPN summary fallback | 2026-10-12T21:00+11:00 | UNKNOWN | None since import | NO |
+| P-579 | PENDING_EVENT | Next prompt-3 settlement run | acb.com exact-match box score: final, quarters, OT, starters, minutes; FIBA LiveStats fallback | 2026-10-12T09:30+11:00: **due time passed without capture (breach recorded, not a reason to VOID)** | UNKNOWN | None since import | NO |
 Archived mini references: `archive/mini_logs/originals_2026-10-05/PREDICTION_MINI_RUNNING_LOG_P523_ONWARD.md`, `archive/mini_logs/originals_2026-10-05/PREDICTION_MINI_RUNNING_LOG_P527_ONWARD_UPDATED_4.md`.
 Unresolved carryover P-523–P-537: `research/verification/closure_2026-10-05/carryover.md`. Eleven diagnostic settlements and twelve-part retrospectives are retained in Part 6; formal certification remains unresolved.
 

@@ -1,3 +1,12 @@
+> **v11 precedence (2026-10-12, audit R09/R11).** [CURRENT_RULES](CURRENT_RULES.md), [SELECTION_RULES](SELECTION_RULES.md), [SCORING_AND_VALIDATION](SCORING_AND_VALIDATION.md), [CARD_AND_LOG_TEMPLATES](CARD_AND_LOG_TEMPLATES.md) and prompt 1 govern new work (MDS-2026.10.12-v11.0). This file remains the sport's reference for playing rules, mechanisms, sources and historical lessons. **Non-operative here:**
+> - RM-1 q ranking, q tiers, `TOP2_QUALITY` and cushion-term ranking: new cards rank by p_card (P_ORDER_V2).
+> - TB-1 / TB-1-MD "anchoring": `BASELINE_P` is always the league-only `BASELINE_LEAGUE_V1`, and TB-1-MD is a printed team-model reference only.
+> - Row-level numeric caps and grade caps not restated in CURRENT_RULES.
+> - Steps of the retired RULES_GENERAL / GFA algorithm.
+> - Any instruction to rank or settle that conflicts with the controls above.
+>
+> The two "October 5" authority notes below are historical. Authority mode now follows CURRENT_RULES §0: a run uses either the pinned published main or the local working tree, never both. Recent form follows ARCHIVE_USE_GUIDE recipe R2 (L5/L10/L15/L20 counted once).
+
 > **Current authority (October 5):** [METHOD.md](METHOD.md) and [CURRENT_RULES.md](CURRENT_RULES.md) govern new work. Requested qualitative or explicitly uncalibrated research receives canonical Part 6 IDs regardless of calibration; numerical performance certification is separate. Read current IDs/freeze from the [status register](GAME_LOG_STATUS_CURRENT.md), unresolved items from the [carryover](research/verification/closure_2026-10-05/carryover.md), and [current implementation evidence](research/verification/implementation_2026-10-05/REPORT.md). Earlier method, queue, freeze and eligibility statements below retain their historical scope.
 
 **Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
@@ -54,7 +63,7 @@ MLB, NPB, KBO, CPBL, LMB, MiLB and international baseball are separate populatio
 - **Openers.** The opener's first inning is width, not direction (B-4).
 
 ### 0.5 Ranking and track record
-- Rank by **RM-1 q** (`PROBABILITY_TOOLKIT.md` §5). A baseball +1.5 carries no cushion penalty. Rank 1 is the highest q, **not a +1.5 by habit**. A typical slate is `TOP2_COIN_FLIP` or `LEAN`, and the delivery says so.
+- *[Non-operative since v10: rank by p_card, SELECTION_RULES §2.]* Rank by **RM-1 q** (`PROBABILITY_TOOLKIT.md` §5). A baseball +1.5 carries no cushion penalty. Rank 1 is the highest q, **not a +1.5 by habit**. A typical slate is `TOP2_COIN_FLIP` or `LEAN`, and the delivery says so.
 - STRONG rows available from the population alone: +2.5 (0.72–0.75), a low total line (Over 5.5, 0.76), or a total two or more runs from the card's own centre. They appear only as the card's own distribution prices them (`SLATE_ADVISORY`).
 - Opposite +1.5 rows, and a moneyline plus the opponent's +1.5, are a `COVERING_PAIR`.
 - **Track record:** MLB won 58.6% at a stated 0.596, resolution **0.0075** (the lowest of any sport), so the departure ledger is mandatory. NPB/KBO/CPBL won 64.3% at 0.623. NPB/KBO/CPBL Unders 11/14 against Overs 4/9 is `T-TOTAL-DIRECTION-LEAGUE` (non-binding). `C-RUN-CENTRE-BIAS` accrues with no tilt.

@@ -1,6 +1,6 @@
 # Scoring and validation
 
-**SCV-2026.10.11-v6.** New views use these definitions; historical published scores remain unchanged and labelled by their original version. [CURRENT_RULES](CURRENT_RULES.md) controls claims. No fitted or certified model is available.
+**SCV-2026.10.12-v7.** New views use these definitions; historical published scores remain unchanged and labelled by their original version ([v6](archive/superseded_2026-10-12/SCORING_AND_VALIDATION.md)). [CURRENT_RULES](CURRENT_RULES.md) controls claims. No fitted or certified model is available. v7 adds request coverage (§1), evidence-stratified views (§2a), shadow scoring for SHADOW_RANK_DELTA and SHADOW_BASE_ONLY (§6), and deterministic revision resolution in the scoreboard (§7).
 
 ## 1. Units, probability and coverage
 
@@ -8,7 +8,15 @@ An event is the basic unit; propositions within it are dependent. Freeze origina
 
 Unconditional W+P+L+V=1; p_card=W/(W+L) scores only decisive W/L outcomes on the identical convention. It does not evaluate push/void probability. Where all masses were issued and action is well-defined, separately report a categorical score over the full outcome space. Do not mix it with binary scores.
 
-For every view report event and row inventory, W/L/PUSH/VOID/UNRESOLVED, exclusions with reasons, numeric probability coverage, paired-baseline coverage and evidence mix. NO_FORECAST and qualitative cards remain in research coverage. Publish unresolved-case sensitivity: for W wins, L losses and U unresolved potentially decisive rows, bounds W/(W+L+U) to (W+U)/(W+L+U), explicitly conditional on those U later proving decisive. If no denominator, report N/A rather than 0%.
+For every view report event and row inventory, W/L/PUSH/VOID/UNRESOLVED, exclusions with reasons, numeric probability coverage, paired-baseline coverage and evidence mix. NO_FORECAST and qualitative cards remain in research coverage.
+
+**Request coverage (R22).** Count from each mini's intake table (mini-log-7 onward). Report, and reconcile so that they sum:
+- requests received and unique events requested;
+- retained cards: numeric, qualitative, NO_FORECAST;
+- requests that never became a card: BLOCKED, DUPLICATE_OF_EXISTING_ID, OUT_OF_SCOPE or READ_ONLY_DRAFT, each with its count;
+- pending.
+
+For minis before mini-log-7, request coverage is `NOT_COMPUTABLE`. Never assume that every request became a card. Publish unresolved-case sensitivity: for W wins, L losses and U unresolved potentially decisive rows, bounds W/(W+L+U) to (W+U)/(W+L+U), explicitly conditional on those U later proving decisive. If no denominator, report N/A rather than 0%.
 
 ## 2. Counting and cohorts
 
@@ -19,6 +27,14 @@ Card class over top-two slots: ALL_WON, SPLIT or ALL_LOST only when both slots a
 Hit@2 = at least one primary WIN among cards with at least one decisive row and no unresolved primary row, divided by that fully resolved eligible-card count. Report excluded unresolved/no-decisive cards. Both-loss frequency uses only cards with two decisive primary rows. If joint masses are unconditional and pushes/voids can occur, compare like-for-like unconditional joint outcomes on fully resolved cards or use a computed conditional joint given both decisive. Never compare unlike denominators. MECHANICALLY_PROTECTED pairs are reported separately.
 
 Cohorts cross-classify policy/version, league/format/endpoint/family, numeric versus qualitative, timing, original gate PASS/RANK1_UNSTABLE/UNKNOWN_GATE/legacy recorded rule, evidence and supplied/derived status. PREGAME evidence and the scheduled-lead band are separate. LATE_START includes issue less than five minutes before scheduled start or after; verified delayed PREGAME remains in that lead band. Do not infer a historical gate PASS or pregame issue from its probabilities or scheduled time.
+
+## 2a. Evidence-stratified views (R23)
+
+- **Headline view:** only rows graded on evidence A or B, with definition status OPERATOR_VERIFIED or FROZEN_FRAMEWORK_CONVENTION.
+- **Sensitivity view:** adds rows graded on C (provisional single-source) and on E (an invariant bound). Report both views side by side, with the count of rows that each added class contributes.
+- **Excluded:** rows graded on X are UNRESOLVED and appear only in the §1 unresolved-case bounds.
+
+A provisional C grade never silently becomes A or B. An upgrade is a new settlement revision with the new evidence. Sporting evidence grade, operator definition status and performance eligibility are three separate columns in every row inventory. When the evidence mix changes between two cohorts, print it beside any comparison of them.
 
 ## 3. Proper scores and expected score
 
@@ -50,9 +66,15 @@ Wins@2 counts original primary wins. NDCG@2 is optional and descriptive: for ful
 
 Compare exact predicted joints to matching observed events; bounds stay bounds. Zero joint failure from disjoint losses is a mathematical property, not measured forecasting success. Quantity labels alone do not prove independence. Ranking separation needs paired event-level evidence; a reversed empirical slot rate on 20 cards is a diagnostic, not conclusive failure.
 
+**Shadows added in v7.** Each is scored on its own frozen rows, with the same proper scores and against the same frozen BASELINE_P, and is never mixed into primary counts.
+- `SHADOW_RANK_DELTA`: its top two, scored like primary rows. Report the paired difference against the primary top two on the same events.
+- `SHADOW_BASE_ONLY`: each row's `p_base` against the outcome, paired with the mixture p_card on the same row (experiment FC11-MIX-v1).
+
+The form-window blend is an adjustment, not a shadow. Its effect is read from the card's adjusted and unadjusted expected scores (experiment FC11-FORM-v1).
+
 ## 7. Scoreboard procedure
 
-Build a row-level inventory from original cards joined to latest valid dated settlements; retain prior revisions and supersession reasons. Reconcile every included ID and aggregate count, then independently recompute representative arithmetic. Do not backfill missing card p from a summary or q.
+Build a row-level inventory from original cards joined to their **effective** settlement per contract key. That is the latest revision on the single unbroken parent chain (CURRENT_RULES §8), not the last block in a file. Keys in a `REVISION_CONFLICT` count as UNRESOLVED. Retain prior revisions and supersession reasons, and count each contract once. Reconcile every included ID and aggregate count, then independently recompute representative arithmetic. Do not backfill missing card p from a summary or q.
 
 Headline: paired baseline-relative proper scores, number of paired events/weeks and uncertainty/status. If unavailable, say NOT_COMPUTABLE. Show hit rates, timing, gate, evidence mix, unresolved coverage and expected-score diagnostics alongside. Preserve historical snapshots; begin v10 at its first actual card, with zero events until one exists. Update CURRENT_STATE's current summary without changing log grades. Existing historical denominators require a separate labelled reconciliation if definitions differ.
 

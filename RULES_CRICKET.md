@@ -1,3 +1,12 @@
+> **v11 precedence (2026-10-12, audit R09/R11).** [CURRENT_RULES](CURRENT_RULES.md), [SELECTION_RULES](SELECTION_RULES.md), [SCORING_AND_VALIDATION](SCORING_AND_VALIDATION.md), [CARD_AND_LOG_TEMPLATES](CARD_AND_LOG_TEMPLATES.md) and prompt 1 govern new work (MDS-2026.10.12-v11.0). This file remains the sport's reference for playing rules, mechanisms, sources and historical lessons. **Non-operative here:**
+> - RM-1 q ranking, q tiers, `TOP2_QUALITY` and cushion-term ranking: new cards rank by p_card (P_ORDER_V2).
+> - TB-1 / TB-1-MD "anchoring": `BASELINE_P` is always the league-only `BASELINE_LEAGUE_V1`, and TB-1-MD is a printed team-model reference only.
+> - Row-level numeric caps and grade caps not restated in CURRENT_RULES.
+> - Steps of the retired RULES_GENERAL / GFA algorithm.
+> - Any instruction to rank or settle that conflicts with the controls above.
+>
+> The two "October 5" authority notes below are historical. Authority mode now follows CURRENT_RULES §0: a run uses either the pinned published main or the local working tree, never both. Recent form follows ARCHIVE_USE_GUIDE recipe R2 (L5/L10/L15/L20 counted once).
+
 > **Current authority (October 5):** [METHOD.md](METHOD.md) and [CURRENT_RULES.md](CURRENT_RULES.md) govern new work. Requested qualitative or explicitly uncalibrated research receives canonical Part 6 IDs regardless of calibration; numerical performance certification is separate. Read current IDs/freeze from the [status register](GAME_LOG_STATUS_CURRENT.md), unresolved items from the [carryover](research/verification/closure_2026-10-05/carryover.md), and [current implementation evidence](research/verification/implementation_2026-10-05/REPORT.md). Earlier method, queue, freeze and eligibility statements below retain their historical scope.
 
 **Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
@@ -31,7 +40,7 @@
 
 ### 0.2 Building the run distribution
 1. **Anchor.** `BASELINE_P` from the venue window by innings order where one exists (§2.6 attempts it; `INSUFFICIENT_VENUE_HISTORY` is an honest state). There is no TB-1 lane (`TEAM_BASELINE_P: NOT_COVERED`). Sparse or inaugural competitions shrink hierarchically (control 17).
-2. **Innings-order mixture (control 21).** Before the toss, every innings **and phase** total is a bat-first/chase mixture; after it, the realised branch. The chase is capped by the target and may end early. Windows are split by innings order: a chase powerplay may not size a batting-first powerplay (M24; P-482).
+2. **Innings-order mixture (control 21).** Before the toss, every innings **and phase** total is a bat-first/chase mixture; after it, the realised branch. The chase is capped by the target and may end early *[read as: the chase ends at the winning delivery, so its total is censored at the target plus that delivery's legal overshoot, not capped at the target itself; PROBABILITY_TOOLKIT §7, corrected 2026-10-12]*. Windows are split by innings order: a chase powerplay may not size a batting-first powerplay (M24; P-482).
 3. **Resources through phases.** Phase-end state (runs, wickets, which batters survive, bowling overs left) carries into the next phase (controls 16, 19). One CDF per target integrates every nested line (controls 12, 14). Wickets change the rate, the ceiling and termination (CR-S6).
 4. **Current-surface evidence.** Same-venue, same-week scoring in another format is a named, weighted adjustment (control 25). A same-venue current-regime innings that already cleared the line gets its own mass and a named reason it won't repeat (control 30, G-L20).
 5. **Bowling replacement chain.** Outgoing role → incoming bowler → the residual attack's phase resources; never a one-sign absence (control 31).
@@ -320,7 +329,7 @@ For `TEST_DAY_RUNS_FULL`, continue across any innings/team transitions until the
 ### 4.3 Limited-overs structural candidate
 
 
-Exposure units are legal balls, wickets, batting position, batter/bowler resources, scheduled balls/overs and opening/powerplay, middle and death phases. Estimate a ball/over transition such as `P(runs, wicket, extras | state)`, conditioned on target, required rate, current resources, matchup, venue/conditions and phase. Wickets change both rate and remaining ceiling. A chase is capped by the target and may end early; DLS/shortening is a distinct rules/state branch.
+Exposure units are legal balls, wickets, batting position, batter/bowler resources, scheduled balls/overs and opening/powerplay, middle and death phases. Estimate a ball/over transition such as `P(runs, wicket, extras | state)`, conditioned on target, required rate, current resources, matchup, venue/conditions and phase. Wickets change both rate and remaining ceiling. A chase is capped by the target and may end early *[read as: censored at the target plus the winning delivery's legal overshoot; PROBABILITY_TOOLKIT §7]*; DLS/shortening is a distinct rules/state branch.
 
 
 Limited-overs and Test engines do not share fitted distributions merely because both use runs and wickets.

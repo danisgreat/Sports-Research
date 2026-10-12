@@ -29,47 +29,48 @@ Order of work: phase A (R01–R07), then B (R08–R14, R26–R27, PR-01–PR-10)
 
 ## Phase B — instruction conflicts, mathematics and prediction (R08–R14, R26–R27, PR-01–PR-10)
 
-| ID | Decision | Change and files | Status |
-|---|---|---|---|
-| R08 | Adopt | Correct prompt-1 SOURCES sections per sport, using anchored links; both rugby routes; non-NHL hockey routes | PLANNED |
-| R09 | Adopt | One authority mode per run, printed with SHA and differences: CURRENT_RULES §0, prompts README, prompts 1–3 | PLANNED |
-| R10 | Adopt | Status-register line 4 clarified (local staging → prompt 4 import) | PLANNED |
-| R11 | Adopt | PROBABILITY_TOOLKIT retired procedures (q-ranking, old anchors) marked non-operative in place, with a compact active section | PLANNED |
-| R12 | Adopt | Tennis bound removed; games handicap from complete set-score states | PLANNED |
-| R13 | Adopt | Tie and moneyline treatment competition- and contract-specific; profile maxima labelled computational support limits | PLANNED |
-| R14 | Adopt | Precision rule at gates and close orders; key-number adjustments applied to a normalised distribution | PLANNED |
-| R26 | Adopt | Prompt 7: SUSPECTED_DEFAULT diagnostic instead of automatic missingness | PLANNED |
-| R27 | Adopt | Prompt 7: endpoint-specific reconciliation equations; never balance | PLANNED |
-| PR-01 | Adopt (retrieval) / register (use) | Form-window block L5/L10/L15/L20 + season + league in template A3, prompt 1 every sport, recipe R2 rewrite, C17 audit check; blended shrunk rate; experiment FC11-FORM-v1 | PLANNED |
-| PR-02 | Adopt | Restore `RECENCY_AND_REBOUND.md` from history as an archived reference; link recovery mapping | PLANNED |
-| PR-03 | Adopt (user-authorised) / register | Price from the declared sensitivity mixture when an input is labelled unfitted or uncertain; base-only p kept as shadow; FC11-MIX-v1 | PLANNED |
-| PR-04 | Adopt | Two-step issue window (research by T−60, freeze after lineup check, no later than T−5) | PLANNED |
-| PR-05 | Shadow | SHADOW_RANK_DELTA (rank by p_card − BASELINE_P); FC11-DELTA-v1 | PLANNED |
-| PR-06 | Adopt | Baseline coverage line on every card; enumerated missing reasons | PLANNED |
-| PR-07 | Merge into R33 | Line-distance column | PLANNED |
-| PR-08 | Adopt via PR-01 | Archive read becomes a fixed step | PLANNED |
-| PR-09 | Register | FC11-BIAS-v1 per-sport expected-score bias design; no correction before its sample | PLANNED |
-| PR-10 | No change | NBL profile already refreshed in run 2 (LP-2026.10.11-v2) | NO_CHANGE |
+| ID | Decision | Change made (files) | Acceptance evidence | Status |
+|---|---|---|---|---|
+| R08 | Adopt | Prompt 1: cricket §3.3, tennis §3.10, AFL §3.5, American football §3.8, rugby §3.6 + §3.7, basketball §3.2 + §3.13, baseball §3.1, soccer §3.4 (+§3.32). Hockey: §3.9 for the NHL only, with named non-NHL routes; "other sports" gets the fallback rules. All as anchored links | Link check of prompt 1: 23 links, 0 problems, anchors included (fixtures F01–F02) | DONE |
+| R09 | Adopt | `PUBLISHED_MAIN_PINNED` / `LOCAL_WORKING_TREE`, one per run, with SHA and differences printed: CURRENT_RULES §0, prompts README receipt and text, prompts 1–3, prompt 4, mini authority table, VERIFICATION §1 | Fixtures F03–F04 | DONE |
+| R10 | Adopt | GAME_LOG_STATUS_CURRENT line 4 rewritten (local staging, then prompt-4 import), with a dated note. Edited at byte level (the file is `-text` with mixed endings) | `git diff`: 1 line; 80 CRLF retained | DONE |
+| R11 | Adopt | PROBABILITY_TOOLKIT operative-status table and per-section banners (§4 anchoring, §5 RM-1, §8 shares, §10 Brier(q) non-operative; §11 checks rewritten). All 11 RULES_<SPORT> files get a v11 precedence banner. Nine inline "Rank by RM-1 q" lines and two cricket chase-cap lines marked; cricket §7 of the toolkit corrected | Base copies archived; scan finds no unmarked "Rank by RM-1 q" | DONE |
+| R12 | Adopt | Toolkit §6 rewritten: games handicap over all match states, including deciding-set losses; the false bound removed; set vs game handicap distinguished. §11 check 3 restricted. SELECTION_RULES §4 tennis row; prompt 1 tennis section | Counterexample computed: 6-0 4-6 4-6 → match LOSS, −1.5 games WIN (F09) | DONE |
+| R13 | Adopt | Toolkit §3.1 moneyline-on-tie made contract-specific; SELECTION_RULES §4 ties row; LEAGUE_PROFILES sport constants (support limit relabelled; baseball draws competition-specific); prompt 1 baseball | Fixture F10 | DONE |
+| R14 | Adopt | SELECTION_RULES §2 precision rule (ε, `GATE_UNRESOLVED_PRECISION`, `PRECISION_TIE`, adjustments only through the normalised distribution); toolkit rounding paragraph and §1.3 key numbers; prompt 1 | Fixtures F11–F12 | DONE |
+| R26 | Adopt | Prompt 7 §2 SUSPECTED_DEFAULT → MEASURED / NOT_APPLICABLE / UNOBSERVED / CONFIRMED_PLACEHOLDER; ARCHIVE_USE_GUIDE §9 rule 4 | Fixtures F05–F06 | DONE |
+| R27 | Adopt | Prompt 7 §3 endpoint-specific equations, never balance, usable-for-final-score versus period; ARCHIVE_USE_GUIDE §9 rule 5 | Fixture F08; the rebuilt hockey archive flags 55 rows and balances 0 | DONE |
+| PR-01 | Adopt (retrieval) / register (use) | CURRENT_RULES §7; ARCHIVE_USE_GUIDE recipe R2 (seven steps; equal-weight L20 shrunk with toolkit k; four-window recency blend printed as a comparison; opponent context; season boundary; no lean without mechanism); template §3b and card line; prompt 1 (all 10 sports); C17; FC11-FORM-v1 | Example card shows the arithmetic (A 1.209 / blend 1.240); fixtures F24–F25 | DONE (experiment: 0 events) |
+| PR-02 | Adopt | `archive/historical_restored/RECENCY_AND_REBOUND.md`, byte-exact from `a3c39d2f4^`, with README; link recovery in HISTORICAL_LINK_INDEX | `cmp` identical. The study's team-points table now cited correctly in recipe R2 (the MLB figures are starters' earned runs, not team scoring) | DONE |
+| PR-03 | Adopt (user-authorised) / register | CURRENT_RULES §7 mixture pricing (0.25/0.50/0.25 default, frozen before pricing); `p_base` column; `SHADOW_BASE_ONLY`; C19; FC11-MIX-v1 | Example card: symmetric cases, so mixture = base (F27); fixture F26 | DONE (experiment: 0 events) |
+| PR-04 | Adopt | CURRENT_RULES §5 two-step issue window and `LINEUP_UNCONFIRMED`; prompt 1 §2; card "lineup state / issue step" line; C20 | — | DONE (monitoring: RET-05) |
+| PR-05 | Shadow | SELECTION_RULES §3(c) `SHADOW_RANK_DELTA`; template line; prompt 1 §5; SCORING §6; FC11-DELTA-v1 | Example: c_away and d_winner (Δ .10), joint loss .30 | SHADOW_READY |
+| PR-06 | Adopt | SELECTION_RULES §9 coverage line and enumerated reasons; template; C18 | Fixture F29 | DONE |
+| PR-07 | Merged into R33 | — | — | DONE (see R33) |
+| PR-08 | Adopt via PR-01 | Archive read built into recipe R2 and C17 | — | DONE |
+| PR-09 | Register | FC11-BIAS-v1 (shadow only; per-league start when the sample is reached) | HYPOTHESIS_REGISTER v3 | REGISTERED |
+| PR-10 | No change | NBL profile already refreshed in run 2 (LP-2026.10.11-v2) | LEAGUE_PROFILES | NO_CHANGE |
 
 ## Phase C — lifecycle, custody, coverage and maintenance (R15–R23, R33–R38)
 
-| ID | Decision | Change and files | Status |
-|---|---|---|---|
-| R15 | Adopt | Writer lease in the mini authority table; prompts 1–2 check it | PLANNED |
-| R16 | Adopt | Frozen-source receipt and growth check in prompt 3; prompt 1 refuses appends to a frozen mini | PLANNED |
-| R17 | Adopt | Revision keys, parent pointers, affected keys and deterministic effective-grade resolution: templates §6, SCORING §7 | PLANNED |
-| R18 | Adopt | Pre-mutation recheck (HEAD, path, destination tail) before each mutation batch: VERIFICATION §3–4, prompts 4–5 | PLANNED |
-| R19 | Adopt | Balanced-marker and legacy-format check before import | PLANNED |
-| R20 | Adopt | Four named identities (raw source, imported core, destination prefix, committed blob) and `git ls-files --eol` checks | PLANNED |
-| R21 | Adopt | Measurable rollover trigger; cross-part revision routing | PLANNED |
-| R22 | Adopt | Request-intake table in the mini; coverage NOT_COMPUTABLE historically | PLANNED |
-| R23 | Adopt | Evidence-stratified scoring views (A/B headline, +C/E sensitivity, unresolved bounds) | PLANNED |
-| R33 | Adopt | Decision-table line-distance column | PLANNED |
-| R34 | Adopt | Prompt revision policy and classes; suite P-2026.10.12-v11.0; dated clarification of the earlier "wording-only" entry | PLANNED |
-| R35 | Adopt | Manual negative and edge fixtures for each new check | PLANNED |
-| R36 | Adopt | Live navigation repointed; historical broken paths mapped in HISTORICAL_LINK_INDEX | PLANNED |
-| R37 | Adopt | ACTIVE_FILE_INDEX.md with populated-season and row counts per competition | PLANNED |
-| R38 | Adopt | Executable follow-up fields for every queue item; current P-577–P-579 queue given actor, route and due time | PLANNED |
+| ID | Decision | Change made (files) | Acceptance evidence | Status |
+|---|---|---|---|---|
+| R15 | Adopt | Writer and lease fields in the mini authority table; prompt 2 §2 single-issuing-writer rule; prompt 1 §2 check; CURRENT_RULES §8; C20 | Fixture F13 | DONE |
+| R16 | Adopt | FROZEN_SOURCE receipt and growth check: prompt 3 §1, template §6, S14; prompt 1 refuses frozen minis | Fixture F14; example package receipt | DONE |
+| R17 | Adopt | Revision keys, parent chain, affected keys, REVISION_CONFLICT: CURRENT_RULES §8, template §6, prompt 3 §4, SCORING §7, VERIFICATION §3.11, S13 | Fixture F15 | DONE |
+| R18 | Adopt | Pre-mutation recheck: CURRENT_RULES §9, prompts 4 and 5, VERIFICATION §3.10 and §4 | — | DONE |
+| R19 | Adopt | Marker integrity and legacy declaration: template §8, prompt 4 §2, VERIFICATION §3.9 | Fixtures F16–F17 | DONE |
+| R20 | Adopt | Four identities: CURRENT_RULES §9, prompt 4, VERIFICATION §1. **Finding:** the byte-exact `-text` rules exist only in this machine's `.git/info/attributes`. Recorded as an owner decision; no attribute file was changed | Real incident caught and repaired (F18) | DONE (owner decision open) |
+| R21 | Adopt | Prompt 5 trigger, calibrated to actual part sizes (1.5 MB / 50 entries; Part 7 was 1.26 MB with 30 entries); cross-part revisions to the active part: template §8, prompt 5 | Fixtures F19–F20 | DONE |
+| R22 | Adopt | Intake table (template §2-D), prompt 1, SCORING §1 request coverage, prompt 6 | Fixture F21 | DONE |
+| R23 | Adopt | SCORING §2a evidence-stratified views; prompts 3 and 6; settlement template | Fixture F22 | DONE |
+| R33 | Adopt | SELECTION_RULES §5 line-difficulty rule; decision-table column (units / z); prompt 1; prompt 6 item 6; C18 | Fixture F28; example distances −1.249 / −0.978 | DONE |
+| R34 | Adopt | CURRENT_RULES §11 revision classes; prompt 8 §4; suite P-2026.10.12-v11.0 (FORMAT + PROCEDURE). CHANGELOG clarification that the 2026-10-12 "generalise" entry changed behaviour | Fixture F32 | DONE |
+| R35 | Adopt | [FIXTURES.md](FIXTURES.md) F01–F32 (manual walkthroughs, labelled as manual); prompt 8 §5 requires fixtures | Example prefix check executed | DONE |
+| R36 | Adopt | HISTORICAL_LINK_INDEX "2026-10-12 recovery map" (38 targets plus the status register's historical links; every Git recovery checked). SOURCES and LEARNINGS_INDEX live links repointed; archive README link qualified. Dated CHANGELOG entries untouched | Link check of the live set: 0 problems outside dated sections | DONE |
+| R37 | Adopt | [ACTIVE_FILE_INDEX.md](../../../ACTIVE_FILE_INDEX.md): operating files; 35 populated archive folders with seasons, logical rows, header width, provenance status; scan notes | 475,734 rows (454,014 without aliases) by CSV parser | DONE |
+| R38 | Adopt | Queue fields in the template, prompts 2 and 3, CURRENT_RULES §8. The current queue (P-577 to P-579) gets actor, route, due time and scheduling status in GAME_LOG_STATUS_CURRENT (byte-level insert). P-579's capture due time had already passed: recorded as a breach | 8 lines added, CRLF style kept | DONE |
+| NEW-01 | Adopt (non-destructive) | Fingerprint and duplicate scan of every archive folder. 4 byte-identical alias pairs on main (Austria/BSL, Danish/Metal Ligaen, ODI/Men's ODI, College Football pair) marked with `ALIAS_OF_CANONICAL.md` and in ARCHIVE_USE_GUIDE §8. `SUSPECTED_DEFAULT` start times (Austria, Greek, Danish), NBA/WNBA attendance 0, KBO/NPB/college patterns noted. **No published rows deleted**; emptying aliases and classifying the flagged columns are owner/prompt-7 decisions | ACTIVE_FILE_INDEX §2 | DONE_PARTIAL |
 
 ## Phase D — claims, designs and data readiness (R24–R25, R28–R32)
 

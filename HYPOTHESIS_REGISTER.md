@@ -1,6 +1,6 @@
 # Hypothesis register: what is proposed, what is pre-registered, what has been tested
 
-**Version HYP-2026.10.11-v2 (Markdown only).** Document implementation, data readiness and predictive acceptance are separate. Current definitions are in CURRENT_RULES, SELECTION_RULES and SCORING_AND_VALIDATION. Original registrations below are preserved as dated historical protocols; their old arithmetic, sample-power claims and now-contradictory operating instructions do not override v10. No issued forecast is changed. Removed executable registries remain historical.
+**Version HYP-2026.10.12-v3 (Markdown only).** The v3 amendment of 2026-10-12, below, completes the acceptance designs (audit R25) and registers FC11-FORM, FC11-MIX, FC11-DELTA and FC11-BIAS. The earlier text is unchanged. Document implementation, data readiness and predictive acceptance are separate. Current definitions are in CURRENT_RULES, SELECTION_RULES and SCORING_AND_VALIDATION. Original registrations below are preserved as dated historical protocols; their old arithmetic, sample-power claims and now-contradictory operating instructions do not override v10. No issued forecast is changed. Removed executable registries remain historical.
 
 ## October 11 v10 amendments — registered before future v10 collection
 
@@ -28,6 +28,42 @@ Source: [framework_change_2026-10-11-2](research/verification/framework_change_2
 - **The +16.8 finding, re-read.** The three-card excess was not a stable offset. The 29 games played to 2026-10-11 average 187.4 against 183.1 (z 1.1) for the new row and 181.1 (z 1.7) for the retained prior; no 2026-27 shift is established. No offset is applied.
 - **Data defects found in the archive (not hypotheses; nothing repaired).** The NBL 2025 file has blank dates on its regular-season rows, 14 post-season rows typed `Regular Season` and some quarter columns that do not sum; the KBO and NPB `Extra Innings` and `Innings Played` columns are placeholder defaults, so the extras shares were withdrawn from the profile. See ARCHIVE_USE_GUIDE §8.
 - **Open and untouched:** FC10-BASELINE-v1, FC10-GATE-v1 and FC10-PAIR-v1 (0 events each), the operational monitoring targets (0 collected) and the lineage audit.
+
+## October 12 v3 amendment — completed designs (R25) and new registrations, before any v11 card
+
+Authority: [framework change 2026-10-12-1](research/verification/framework_change_2026-10-12-1/IMPLEMENTATION.md). This adds to the tables above and edits none of them. The design inputs below were chosen **before any v11 outcome exists** (0 v11 cards at registration). They may be amended only by a dated entry made before the stage-2 cohort of the affected experiment starts.
+
+### Common design for every FC10 and FC11 predictive test (two-stage, internal pilot)
+
+| Element | Fixed now |
+|---|---|
+| Unit and aggregation | The event. Paired row differences are averaged within the event (equal weight over the available rows of the test), then events within ISO week. The week mean is the analysis unit (SCORING §5) |
+| Primary metric | Paired Brier difference d = Brier(candidate) − Brier(comparator) on identical frozen rows. Negative favours the candidate. FC11-FORM and FC11-BIAS use paired squared error of the expected total instead (below) |
+| Secondary | Paired log-loss difference (finite rows only); calibration-in-the-large \|mean p − hit rate\| on the candidate rows; for gate and pair tests, Rank-1/Rank-2 win rates with Wilson intervals (descriptive) |
+| Guardrails (must hold for acceptance) | Calibration-in-the-large ≤ 0.05; paired-row coverage ≥ 80% of eligible events, otherwise `COVERAGE_INSUFFICIENT`; headline evidence view (A/B) and sensitivity view (adding C/E) agree in sign |
+| Error rates | α = 0.025 one-sided (0.05 two-sided); power 0.80 |
+| Stage 1 (pilot, held out) | From the start trigger to the later of 8 ISO weeks and 40 eligible events. Estimates only SD_w, the standard deviation of week means of d. **No efficacy conclusion is drawn from stage 1, and its events are excluded from the confirmatory test** |
+| Sample size, frozen at the end of stage 1 | weeks needed = ⌈((1.960 + 0.842) × SD_w ÷ δ)²⌉, minimum 8. Recorded in a dated entry here before any stage-2 outcome is observed. If it exceeds 52 weeks, the test is recorded `INFEASIBLE_AT_THIS_EFFECT` and not run |
+| Stage 2 (confirmatory) | Starts with the first eligible event issued after that dated entry. One analysis, at the frozen number of weeks, with no interim efficacy looks. Integrity or source failures may suspend affected events, which stay counted as exclusions |
+| Decision | Superiority: the upper bound of the one-sided 97.5% interval of mean d (t-interval over week means) is below −δ_min (stated per test). Non-inferiority, where stated: the upper bound is below +NI. Both require the guardrails |
+| Dependence | Week blocks. Sensitivity: repeat excluding the events of the most frequent team; a sign change blocks acceptance |
+| Multiplicity | Holm adjustment across the primary tests that reach their analysis point within the same calendar month |
+| Rollback | Forward revision only; failed results stay visible |
+
+### Per-test inputs
+
+| ID | Candidate vs comparator | Start trigger | Effect δ (for sizing) / decision threshold | Status |
+|---|---|---|---|---|
+| FC10-BASELINE-v1 | Card p_card vs BASELINE_LEAGUE_V1 on primary rows | First v11 numeric card with a frozen BASELINE_P | δ = 0.010 Brier; superiority if the upper bound is < 0 and the point estimate ≤ −0.005 | DESIGN_REGISTERED; STAGE_1_PENDING; 0 events |
+| FC10-GATE-v1 | Rank-1 Brier skill (vs BASELINE_P) of original-gate PASS cards minus that of RANK1_UNSTABLE cards; shadow RET03 partition reported alongside | First v11 card with a printed gate | δ = 0.020 Brier skill between groups. Each group needs ≥ 30 events in stage 2; otherwise `INSUFFICIENT_PASS_CARDS` | DESIGN_REGISTERED; STAGE_1_PENDING |
+| FC10-PAIR-v1 | Shadow Rank 2 (RET04, XCARD6 separately) vs primary Rank 2 on the same events | First v11 card with a frozen shadow Rank 2 | Non-inferiority NI = 0.005 Brier; superiority δ = 0.010 | DESIGN_REGISTERED; STAGE_1_PENDING |
+| FC10-PROFILE-v1 | NBL `LP-2026.10.11-v2` vs the retained 2022–24 prior, same games | First NBL card citing v2 | Paired squared error of expected total. δ = 5% reduction of the comparator's mean squared error. Bias tolerance \|mean error\| ≤ 3.0 points | DESIGN_REGISTERED; STAGE_1_PENDING |
+| **FC11-FORM-v1** (PR-01) | Expected total and margin from (a) the L20/season shrunk rate vs (b) no form adjustment, and (c) the four-window recency blend vs (a) | First mini-log-7 card that prints form windows | Paired squared error of expected total and margin. δ = 3% reduction of the comparator's mean squared error (the historical recency study found 1–10% effects) | REGISTERED; 0 events |
+| **FC11-MIX-v1** (PR-03) | Mixture p_card vs `p_base` on identical rows of mixture-priced cards | First mini-log-7 card priced from a mixture | Non-inferiority NI = 0.002 Brier; superiority δ = 0.005. Also reported: hit rate vs mean p in the 0.80–0.90 band | REGISTERED; 0 events |
+| **FC11-DELTA-v1** (PR-05) | `SHADOW_RANK_DELTA` top two vs primary top two: paired Brier skill against BASELINE_P | First mini-log-7 card with ≥ 2 baselined rows | δ = 0.010 Brier skill | REGISTERED; 0 events |
+| **FC11-BIAS-v1** (PR-09) | Per sport and league, a bias-corrected expected total (prior cards' mean error, shrunk by n/(n+20)) vs uncorrected, as a shadow only | Starts per league once that league has the cards the 2026-10-11 retrospective estimated: basketball 56, ice hockey 82, soccer 94, KBO 121 | A correction is promoted only if stage 2 shows a ≥ 5% reduction of squared total error and the bias interval excludes 0 | REGISTERED; 0 events; no correction applied now |
+
+Operational targets stay monitoring only: RET-05 (≥ 90% buffered pregame), RET-06 (KBO evidence A), RET-07 (zero arithmetic, gate or vocabulary violations); add C17–C20 compliance on the next 40 mini-log-7 cards.
 
 ## Preserved earlier registrations and status snapshots
 

@@ -61,7 +61,7 @@ Do these by reading the file and calculating by hand with [PROBABILITY_TOOLKIT.m
 | Recipe | Steps | Used for |
 |---|---|---|
 | **R1 League level** | Take the league's row in [LEAGUE_PROFILES.md](LEAGUE_PROFILES.md): mean home and away score, total SD, margin SD, score correlation, home-win share, extras (one-run share, overtime share, first-half share). If the league is missing or the profile is more than one season old, average `Home Score` and `Away Score` over the last three regular seasons in the files. | Centre and spread of the distribution |
-| **R2 Team form** | List each team's last 10 regular-season games before the event date. Compute wins and losses, mean points for and against, and the home or away split. Shrink toward the league mean with the league's constant k in PROBABILITY_TOOLKIT §4.3: rating = (points + k × league mean) ÷ (games + k). Use k = 2 for a league not in that table and say so. | Team rating, expected score |
+| **R2 Team form: four windows, one rate** (PR-01, 2026-10-12) | See the steps below the table | Form-window table (template §3b), team rating, expected score |
 | **R3 Season-to-date rating** | Build the standings from the file and apply the team-baseline arithmetic in PROBABILITY_TOOLKIT §4 (TB-1-MD). It is a comparator and a sanity check, not the distribution. | Baseline probability |
 | **R4 Head-to-head** | Count the last meetings in the same competition and era with comparable personnel. Treat as light supporting evidence only; never the centre. | Matchup colour |
 | **R5 Line frequency** | For the exact line you will price, count the share of the league's games that finished over or under it in the last three seasons. | Sanity check on a total or margin row |
@@ -71,11 +71,53 @@ Do these by reading the file and calculating by hand with [PROBABILITY_TOOLKIT.m
 
 Small samples and noisy recent games: prior learning notes L-20260919-01/02 questioned last-game and bounce-back heuristics within their historical samples. Do not promote that into a universal impossibility claim, and do not invent a one-game adjustment without a supported model and sensitivity.
 
+**Recipe R2 in full (form windows).**
+
+1. **Rows.**
+   - For each side, list its dated competitive games before the cutoff, newest first. Use the archive file or a SOURCES route: the ESPN team schedule `site.api.espn.com/apis/site/v2/sports/<sport>/<league>/teams/<id>/schedule`, MLB statsapi, StatMuse for US leagues, Tennis Abstract for players.
+   - Exclude rows the archive flags as duplicate listings, awarded results, forfeits or abandonments, and say so.
+   - An undated row cannot enter a window.
+2. **Windows.** L5, L10, L15 and L20 (true n if fewer), season to date, and the league level from LEAGUE_PROFILES. For each, give scored, conceded and margin per game, plus the home/away split for L10 and L20. Print the table in template §3b.
+3. **Season boundary.**
+   - Previous-season games fill a window only when the current season has fewer games than the window. They are flagged.
+   - Exclude them, and print the shorter n, when the side changed head coach, or when more than about 30% of its regular minutes or starts changed. Say which, with the source.
+4. **Primary rate (equal weight, longer window).**
+   - r = the L20 per-game mean, or season to date if longer and in the same regime.
+   - Shrink it toward the league level: rate = (n × r + k × LM) ÷ (n + k). The constant k comes from PROBABILITY_TOOLKIT §4.3; use k = 2 where the league has none, and say so.
+   - Do this separately for scored and conceded.
+   - This is the rate that may enter the centre, as a listed adjustment.
+   - Why equal weight over the longer window. This repository's historical out-of-sample checks ([RECENCY_AND_REBOUND.md](archive/historical_restored/RECENCY_AND_REBOUND.md) §4 and §7.2, one season each) found these RMSE changes for next-game team points against the league constant:
+
+     | Window | NBA | WNBA | NBL | NHL | EPL |
+     |---|---|---|---|---|---|
+     | Last 1 | +35.7% | +28.2% | +18.0% | +39.9% | +37.6% |
+     | Last 5 | +6.5% | +0.9% | −8.1% | +8.2% | +7.7% |
+     | Last 10 | +1.9% | −1.7% | −10.4% | +3.4% | +2.2% |
+     | Season to date | −1.1% | −4.2% | −7.7% | 0.0% | 0.0% |
+
+     - Shorter windows were worse, monotonically, in the NBA, NHL and EPL, and the one-game window was the worst everywhere.
+     - The NBL was the exception: last 10 beat season to date, consistent with scoring rising through its season.
+     - In the NHL and EPL a half-way shrink to the league mean was the best simple predictor, so use a large k there.
+     - For MLB starters' next-start earned runs: last 1 2.77, last 3 2.24, last 5 2.13, season 2.02, league 1.98 (L-20260919-04).
+     - These are historical, single-season results. The comparison in step 5 tests them prospectively.
+5. **Recency blend (printed as a comparison, not used for the pick).**
+   - B = (L5 + L10 + L15 + L20) ÷ 4. This is a recency-weighted mean of the last 20 games, with weights per game of 0.1042 (games 1–5), 0.0542 (6–10), 0.0292 (11–15) and 0.0125 (16–20); its effective n is about 13.5.
+   - Shrink it with the same k, using n = 13.5.
+   - Print it beside the primary rate. Experiment FC11-FORM-v1 compares the two on settled games.
+6. **Opponent context** (optional, recommended for basketball, where opponent defence improved RMSE by 7–11%):
+   - For each game in the window, adjusted scored = scored − (opponent's conceded per game before that game − LM). Use the analogous formula for conceded.
+   - Print the adjusted L20 mean beside the raw one.
+   - If it is used, it is a listed adjustment, and the unadjusted pair is shown.
+7. **Reading the windows.**
+   - The windows overlap: they are one piece of evidence, counted once.
+   - A gap between L5 and L20 is described, not traded on, unless a named, current mechanism explains it: an injury or return, a role or lineup change, a coach change, schedule density. There is no bounce-back or streak lean.
+   - Disclose a short-window outlier as width, not as a centre shift.
+
 ## 5. The Archive check line
 
 Every card has an `Archive check` bullet in its metadata. Allowed forms:
 
-- `Previous Sports Results/Baseball/KBO/2025/2025_games.csv · 873 rows · last date 2025-10-01 · R1 league level, R2 form (last 10 each), R5 line frequency at 10.5 · KBO totals averaged 9.77 runs, 41% of games over 10.5`
+- `Previous Sports Results/Baseball/KBO/2025/2025_games.csv · 873 rows · last date 2025-10-01 · R1 league level, R2 form windows (L5/L10/L15/L20 each side, k = 20), R5 line frequency at 10.5 · KBO totals averaged 9.77 runs, 41% of games over 10.5`
 - `ARCHIVE_PARTIAL: <file> holds games to <last date>; the missing weeks came from <SOURCES route>`
 - `ARCHIVE_UNAVAILABLE: Soccer yearly files are header-only; used research/data/processed/league_csv/epl_results.csv instead` or `ARCHIVE_UNAVAILABLE: <exact reason>`
 
@@ -104,6 +146,10 @@ Found while carrying out the NBL profile refresh and the KBO/NPB extras audit ([
 | `Basketball/NBL/2026/2026_games.csv` (new) | A snapshot of 29 completed 2026-27 regular-season games to 2026-10-11, from the ESPN site API (evidence B); `Round / Stage`, venue, city, attendance, notable players and comment are blank because the source lacks them (blank = unknown) | Stale from the day after it was written | Read the last `Date`; add later games from [SOURCES.md](SOURCES.md) (§3.2) and say so in `Archive check`. A card may cite it only with `ARCHIVE_PARTIAL` and its last date |
 | `Ice Hockey/Czech Extraliga/<1975…2025>` (rebuilt 2026-10-12) | Single compiler (hockeyarchives.info); 1,843 play-off/relegation games undated (the source prints only a round's date list); 145 rows flagged, including a 2000-01 round that reprints round 1 (7 rows), awarded/forfeit games and 55 period-sum typos; club renames are separate keys | Form windows, rest and period features need the flags | Read [DATA_PROVENANCE.md](Previous%20Sports%20Results/Ice%20Hockey/Czech%20Extraliga/DATA_PROVENANCE.md) §4–5 before use; exclude the listed flags |
 | `Soccer/Premier League/<1975…2025>` (rebuilt 2026-10-12) | 1975-76 to 1992-93 single-source (england.csv); 2022-23 and 2025-26 not cross-checked; HT score absent before 1995-96, statistics and referee before 2000-01; 2026-27 not included | Period and corner features exist only for the stated seasons | Read [DATA_PROVENANCE.md](Previous%20Sports%20Results/Soccer/Premier%20League/DATA_PROVENANCE.md); add the current season from SOURCES §3.4 |
+| Four duplicate folder pairs (scan of 2026-10-12): `Basketball/BSL` = `Basketball/Austria Basketball Bundesliga`; `Ice Hockey/Metal Ligaen` = `Ice Hockey/Danish Metal Ligaen`; `Cricket One-Day Format/Men's ODI International` = `…/ODI International`; `American Football/College Football` = `College Football/NCAA Division I FBS` | Byte-identical across every season | Aggregating both counts each game twice | Use the canonical member (the second of each pair; [ACTIVE_FILE_INDEX](ACTIVE_FILE_INDEX.md)); each alias folder carries `ALIAS_OF_CANONICAL.md`. Rows not deleted (owner decision) |
+| `Basketball/Austria Basketball Bundesliga` (and alias), `Basketball/Greek Basket League`, `Ice Hockey/Danish Metal Ligaen` (and alias) | One start time fills 63–68% of rows (17:30, 19:30, 15:00): the pattern of the fabricated builds quarantined on 2026-10-12; no builder survives in git to prove or clear it | Start-time and rest features may be defaults | `SUSPECTED_DEFAULT`: do not use `Start Time` from these folders until a prompt-7 check classifies it. Scores and dates are not implicated by this scan |
+| `Basketball/NBA`, `Basketball/WNBA` | `Attendance` = 0 on 51% and 57% of rows | 0 likely means unknown (R26) | Treat `Attendance` 0 as missing unless a source confirms an empty venue (for example, the 2020 bubble games) |
+| `Baseball/KBO`, `Baseball/NPB`; `College Football` (both folders) | KBO 18:30 (59%), NPB 18:00 (75%); 39% of college rows dated 1 January | Plausibly genuine (weekday night starts; New Year's bowls) | `SUSPECTED_DEFAULT` until checked; low risk |
 
 ## 9. Integrity rules for archive data (2026-10-12, audit R06, R26, R27, R28)
 

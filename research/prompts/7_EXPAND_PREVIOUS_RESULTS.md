@@ -1,6 +1,6 @@
 # PROMPT 7 — Repair or extend the historical results archive
 
-**Mode:** ARCHIVE_EXPANSION. Markdown/CSV/text only; no scripts/builders. Inputs: `<league, seasons, fields or documented priority>`. Writes: declared target CSVs, source/provenance/coverage notes, audited profile updates if supported, and a new verification folder. No issued log/card changes and no implicit model promotion.
+**Mode:** ARCHIVE_EXPANSION. Markdown/CSV/text only; no scripts/builders in the repository. A helper run outside it is disclosed, with its rules written out in prose (CONTRIBUTING). Inputs: `<league, seasons, fields or documented priority>`. Writes: declared target CSVs, source/provenance/coverage notes, audited profile updates if supported, and a new verification folder. No issued log/card changes and no implicit model promotion.
 
 ## 1. Read and scope
 
@@ -10,9 +10,17 @@ Choose explicit league/season range and event grain before collection. Prioritis
 
 ## 2. Collect with field provenance
 
-Use exact official/registered structured sources and record URL, native IDs, source field, publication/retrieval times, snapshot/as-of date and collector lineage. Preserve existing header/order/types; proposed schema changes need an explicit migration decision rather than ad hoc columns. Keep unrepresentable source fields in a Markdown sidecar until approved.
+Use exact official/registered structured sources and record URL, native IDs, source field, publication/retrieval times, snapshot/as-of date and collector lineage. Write the dataset's `DATA_PROVENANCE.md`: a per-column class (observed, derived, missing, conflicting, independently checked), schema and migration, canonical path, ID scheme, defects and use rules (ARCHIVE_USE_GUIDE §9). A transformation helper, if one is used, runs outside the repository and its rules are written out in prose there (CONTRIBUTING). Record availability evidence separately from the game date: a later correction is known only from its correction time (R28). Preserve existing header/order/types; proposed schema changes need an explicit migration decision rather than ad hoc columns. Keep unrepresentable source fields in a Markdown sidecar until approved.
 
-Do not guess names, start times, regulation scores, overtime, phase counts or missing outcomes. Zero is valid; blank is unknown. A column that holds one constant on every row, including cancelled or unplayed games, or a flag that is never set while other fields contradict it (for example ties recorded with no extra period marked), is a default and counts as unknown, not as a measured zero. Cancelled/suspended games stay classified. Final totals that include shootout/OT must be distinguished from regulation. Postgame narratives remain postgame and cannot populate point-in-time features. Same-team/date is not sufficient deduplication for doubleheaders.
+Do not guess names, start times, regulation scores, overtime, phase counts or missing outcomes. Zero is valid; blank is unknown.
+
+**Default-looking values are a diagnostic, not a verdict (R26).** A column that holds one constant on every row, or a flag that is never set while other fields contradict it, is labelled `SUSPECTED_DEFAULT` (for example ties recorded with no extra period marked). It stays so until the field definition, the source and the season's rules have been checked. Record the outcome as one of:
+- `MEASURED` (a legitimate constant or a real all-zero column stays);
+- `NOT_APPLICABLE`;
+- `UNOBSERVED` (blank);
+- `CONFIRMED_PLACEHOLDER`, proven by reading the builder or the source. These values are removed from measurement, and the raw values are kept in the quarantine record.
+
+Keep the raw value and its interpretation in separate places. Never fill an unknown with a default, a mid-season date, a fixed time or attendance, "half of the final score", or a row-number round. Cancelled/suspended games stay classified. Final totals that include shootout/OT must be distinguished from regulation. Postgame narratives remain postgame and cannot populate point-in-time features. Same-team/date is not sufficient deduplication for doubleheaders.
 
 Repairs record old value, new value, official evidence and reason; preserve source copies where allowed in text. A source conflict is quarantined or unresolved, not silently won by the easiest scrape. Preserve raw source values alongside documented normalization.
 
@@ -20,7 +28,15 @@ Repairs record old value, new value, official evidence and reason; preserve sour
 
 Print schema/header/type checks, logical record count, duplicate/native-ID and alias checks, date/season/status/endpoint checks, zero-versus-missing counts and field missingness. CSV can contain quoted commas/newlines: physical line count minus one is valid only after proving no embedded newlines. Use permitted CSV-aware file facilities or documented manual reconciliation, not a false complete count.
 
-Check total=home+away, signed/absolute margin and winner/tie consistency wherever fields are available. Check that date and start time are populated (a row without a date cannot feed form, rest or point-in-time recipes), that each period's scores sum to the final, and that the stage field matches the competition's own stage vocabulary (post-season, cup, play-in or friendly games must not be typed as regular season). Reconcile a reproduced profile to the existing row first, so that a method difference is not mistaken for a data change. Validate the full changed set where feasible; otherwise state total versus actually checked and avoid a full-validation claim. Independently check a predeclared spread across early/middle/late season, zeros, ties, OT/extras and doubleheaders; at least ten or all if fewer. List exact sampled IDs and source agreement/disagreement.
+Check total=home+away, signed/absolute margin and winner/tie consistency wherever fields are available. Check that date and start time are populated (a row without a date cannot feed form, rest or point-in-time recipes).
+
+**Endpoint-specific reconciliation (R27).** State, per league, era and endpoint, the equation the period fields should satisfy and which fields are measured. For example:
+- modern Czech hockey: P1+P2+P3+OT+SO pair = printed final, the deciding shootout goal included;
+- 1980s Czech hockey: periods sum to the printed tie, with the shootout tally printed separately;
+- soccer half-time: HT ≤ FT per side;
+- extra innings, extra time and golden point: listed explicitly.
+
+A row that breaks its equation is flagged and kept as printed. **Never invent a balancing value.** Mark it usable for final-score work and unusable for period work. Classify shortened, cancelled, suspended, replayed, awarded and forfeited games, and the stage scope, before comparing with the official schedule denominator. Check that the stage field matches the competition's own stage vocabulary (post-season, cup, play-in or friendly games must not be typed as regular season). Reconcile a reproduced profile to the existing row first, so that a method difference is not mistaken for a data change. Validate the full changed set where feasible; otherwise state total versus actually checked and avoid a full-validation claim. Independently check a predeclared spread across early/middle/late season, zeros, ties, OT/extras and doubleheaders; at least ten or all if fewer. List exact sampled IDs and source agreement/disagreement.
 
 Reconcile event count to the official season schedule including postponed/cancelled/replayed games and exact stage scope. A header-only or partially collected file is not complete. Plausibility/profile differences are findings to investigate, not reasons to force scores toward an expected average.
 

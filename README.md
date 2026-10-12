@@ -2,13 +2,14 @@
 
 A sports-only forecasting framework made of documents. It tells a research agent how to forecast, log and settle individual games across ten sports, how to use the archive of past results, and how to learn from the outcomes. **Everything is Markdown, with CSV for the data and plain text for preserved originals.** There is no program to run and no JSON to open.
 
-**What is true now** (method, next ID, active log, scoreboard): [CURRENT_STATE.md](CURRENT_STATE.md). Method **MDS-2026.10.11-v10.0**, control **CR-2026.10.11-R1**, scoring **SCV-2026.10.11-v6**. [October 11 implementation and recommendation roadmap](research/verification/framework_change_2026-10-11-1/IMPLEMENTATION.md). The executable runtime remains removed; no fitted model or automated certification is claimed.
+**What is true now** (method, next ID, active log, scoreboard): [CURRENT_STATE.md](CURRENT_STATE.md). Method **MDS-2026.10.12-v11.0**, control **CR-2026.10.12-R1**, scoring **SCV-2026.10.12-v7**, selection **SEL-2026.10.12-v3**, prompts **P-2026.10.12-v11.0** (mini-log-7). [October 12 implementation map](research/verification/framework_change_2026-10-12-1/IMPLEMENTATION.md) (audit R01–R38 and prediction items PR-01–PR-10) · [October 11 roadmap](research/verification/framework_change_2026-10-11-1/IMPLEMENTATION.md). Active files and usable data: [ACTIVE_FILE_INDEX.md](ACTIVE_FILE_INDEX.md). The executable runtime remains removed; no fitted model or automated certification is claimed.
 
 ## Rules in force
 
 - **Rule T2:** only Rank 1 and Rank 2 count as wins. Ranks 3 and 4 are informational.
 - **Rule R1:** every Rank-1 failure gets a deep retrospection.
 - **Rule P4:** supplied contracts are reference only. Retain up to four supported candidates from a coherent distribution, ranked by `p_card`, with a frozen same-line baseline where available. Qualitative/NO_FORECAST research remains explicit; shadow alternatives are separate.
+- **Recent form, counted once (v11):** every team card reads L5, L10, L15 and L20, season and league form from dated games before the cutoff, and folds them into one shrunk rate. Where an input is uncertain, the card prices from its low/base/high mixture.
 - **Read first, cite what you use:** every task opens with a reading receipt of the current documents, and every card names the rules, sources and past results it applied.
 - **SPORTS_ONLY / MARKET_BLIND:** no odds, tips or prediction markets anywhere in the research.
 - **Honest labels:** every probability is an uncalibrated analyst scenario; nothing is performance-certified.

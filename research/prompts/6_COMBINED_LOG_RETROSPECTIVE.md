@@ -18,12 +18,13 @@ Reconcile all IDs, rows, grades and queue statuses to source blocks before aggre
 
 Report every sport, league, format and endpoint present in the cohort, each in its own stratum; never pool unlike competitions, and list strata too small to report with their counts. For each suitable league/format/endpoint/policy cohort report:
 
-1. Coverage: requested events, retained forecasts, numeric/qualitative/NO_FORECAST, pending, unresolved, decisive and paired-baseline counts; missingness sensitivity.
+1. Coverage: requested events from the minis' intake tables (mini-log-7 onward; for earlier minis request coverage is `NOT_COMPUTABLE`, never assumed complete), retained forecasts, numeric/qualitative/NO_FORECAST, blocked and duplicate requests, pending, unresolved, decisive and paired-baseline counts; missingness sensitivity.
 2. Primary W/L/PUSH/VOID/UNRESOLVED by rank, card class and Hit@2 with exact denominators; mechanically protected pairs separately.
-3. Baseline-relative Brier and log loss on identical frozen rows, event means and week means, events/weeks, and justified uncertainty. Report NOT_COMPUTABLE when paired data is absent. Realised in-sample climatology is descriptive only.
+3. Baseline-relative Brier and log loss on identical frozen rows, event means and week means, events/weeks, and justified uncertainty, in the headline (evidence A/B) and sensitivity (adding C/E) views (SCORING §2a). Report NOT_COMPUTABLE when paired data is absent. Realised in-sample climatology is descriptive only. Without paired baselines, say that the cohort "does not establish" skill, never that it shows none (R24).
 4. Calibration bins over the full probability range, distinct-event counts, mean p versus outcome, resolution limitations. No proof from an interval merely including p or slope 1.
 5. Expected-score bias/MAE/RMSE and issued-interval coverage by sport/term; z only from valid original SDs. Do not infer good tails merely from a small mean |z|.
-6. Original gate versus instability and the shadow gate and shadow pairs defined in SELECTION_RULES §2–3 (RET03, RET04, XCARD6), declared alternative/quantity and policy version. Compare outcomes on paired events; a reachable gate is not necessarily useful.
+6. Original gate versus instability (and `GATE_UNRESOLVED_PRECISION` separately), and the shadow gate and shadows defined in SELECTION_RULES §2–3 (RET03, RET04, XCARD6, RANK_DELTA, BASE_ONLY), with declared alternative/quantity and policy version. Compare outcomes on paired events; a reachable gate is not necessarily useful. Report line difficulty (distance from centre, z) beside every hit rate.
+12. Form windows: for mini-log-7 cards, the expected-score error of the unadjusted, the L20/season-adjusted and the recency-blend rates on the same settled games (FC11-FORM-v1), by sport.
 7. Joint-loss predictions versus matching observed endpoints; exact values separate from bounds; pushes/voids conditioned consistently; structural zero acknowledged.
 8. Timing/source process: PREGAME/LIVE/LATE/HISTORICAL, actual issue lead, outcome exposure, lineup evidence, provider grade/lineage, source failures, capture completion, review SLA and evidence backlog.
 9. Adjusted/unadjusted and sensitivity results, including sub-0.25-SD rank flips, approved regime vocabulary and complete winner masses.

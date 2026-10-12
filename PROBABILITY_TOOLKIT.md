@@ -1,4 +1,20 @@
-**Current use (2026-10-11, v10).** This is an arithmetic reference, not a fitted model. CURRENT_RULES §7, SELECTION_RULES §§2–3/9 and SCORING_AND_VALIDATION govern new work: primary p ordering, separate shadows, unconditional W/P/L/V, supported joint bounds, and a frozen league-only baseline. Use a formula/table only within its assumptions and actually show the calculation. Never claim an exact enumeration merely from a model name. The older validation/baseline claims below describe their historical tests, not current calibration. RM-1 q is historical ordering only and never a new event probability.
+**Current use (2026-10-12, v11; R11).** This is an arithmetic reference, not a fitted model. CURRENT_RULES §7, SELECTION_RULES §§2–3/9 and SCORING_AND_VALIDATION govern new work: primary p ordering (from the declared mixture where required), separate shadows, unconditional W/P/L/V, supported joint bounds, a precision rule at thresholds, and a frozen league-only baseline. Use a formula/table only within its assumptions and actually show the calculation. Never claim an exact enumeration merely from a model name. The older validation/baseline claims below describe their historical tests, not current calibration.
+
+**Which sections are operative.** Retired text stays in place for reading old cards, each part with a local banner.
+
+| Section | Status under v11 |
+|---|---|
+| §1 Normal | ACTIVE. The §1.3 key-number rule was corrected 2026-10-12 (apply to the normalised distribution) |
+| §2 Poisson | ACTIVE |
+| §3 Negative binomial | ACTIVE. The §3.1 tie/moneyline rule was corrected 2026-10-12 (contract-specific) |
+| §4 TB-1-MD | ACTIVE only as a **team-model aid** printed as `TEAM_BASELINE_P`. Its "anchor" columns and "anchors on BASELINE_P" wording are NON-OPERATIVE. `BASELINE_P` is always `BASELINE_LEAGUE_V1` (SELECTION_RULES §9) |
+| §5 RM-1 q | **NON-OPERATIVE** (v9 history). New cards rank by p_card and print no q |
+| §6 Tennis Elo | ACTIVE. The games-handicap bound was replaced 2026-10-12 |
+| §7 Cricket | ACTIVE. The chase "cap" was corrected 2026-10-12 (chase ends at the winning delivery, with legal overshoot) |
+| §8 Departure ledger | The logit departure may be printed descriptively. Numeric mechanism shares and the `UNEXPLAINED_DEPARTURE` grade cap are NON-OPERATIVE |
+| §9 Two rows | ACTIVE. Joint values use p from the shared model, never q |
+| §10 Settlement | ACTIVE, except Brier(q), which is NON-OPERATIVE |
+| §11 Checks | ACTIVE as revised 2026-10-12 |
 
 ---
 
@@ -25,7 +41,7 @@ TB-1-MD was validated against the tool's TB-1 on held-out seasons (§4.4). It wa
 
 **Status.** These are calculation aids, not new models. Every probability on a card is still `UNVALIDATED_SUBJECTIVE` unless §4 says a baseline has resolution. Nothing here reads odds.
 
-**Rounding.** Probabilities to 3 dp. z to 2 dp, then read the table. Between two table rows, interpolate linearly. Show the arithmetic on the card, so every number can be reproduced from what is printed (M14).
+**Rounding and precision (R14).** Read z to 2 dp from the table and interpolate linearly between rows. Keep probabilities unrounded in every comparison, and print them to 3 dp for display. State the approximation error ε of the method used: 0.002 per probability for this Φ table with interpolation; larger for coarser reads, truncated grids or approximations. A gate or rank decided within ε (2ε for a gap) is reported as `GATE_UNRESOLVED_PRECISION` / `PRECISION_TIE` (SELECTION_RULES §2), never resolved by rounding. Show the arithmetic on the card, so every number can be reproduced from what is printed (M14).
 
 ---
 
@@ -108,7 +124,13 @@ m is the side's expected margin (side score minus opponent score); σ is the mar
 
 **Known simplification (unmeasured).** One margin width is used for every matchup in a league. Mismatches probably have wider margins than close games, so the tails of lopsided games may be too thin. The effect has not been measured in this repository; treat it as part of the width uncertainty (G-L2), never as a lean.
 
-**NFL key numbers.** The normal spreads mass smoothly, but NFL margins pile up at 3 and 7 (`BASE_RATES_REGISTER.md` §7.7(a)): P(|m| = 3) 0.136–0.151; P(|m| = 7) 0.074–0.096. For a line within 0.5 of 3 or 7, say which side the key number falls on, and move the probability by the key-number mass that the normal missed. Print the adjustment.
+**NFL key numbers (corrected 2026-10-12, R14).** The normal spreads mass smoothly, but NFL margins pile up at 3 and 7 (`BASE_RATES_REGISTER.md` §7.7(a)): P(|m| = 3) 0.136–0.151; P(|m| = 7) 0.074–0.096.
+1. Discretise the margin distribution to integers: P(m = j) = Φ((j + 0.5 − μ)/σ) − Φ((j − 0.5 − μ)/σ).
+2. Raise the masses at ±3 and ±7 toward the referenced key-number shares, with the extra mass taken proportionally from the other margins.
+3. Renormalise so the masses sum to 1.
+4. Re-derive **every** margin, winner and push row from that one distribution.
+
+Never add key-number mass to a single row's probability: that breaks complements, monotonicity and normalisation. Print the before/after masses at 3 and 7 and the renormalisation.
 
 ---
 
@@ -409,11 +431,13 @@ The walk-off asymmetry makes home and away different: home wins end by exactly o
 
 **Check:** at the league split (home 0.529), both +1.5 rows come out at 0.638, the population baseline. One-run games are 27.6%, so opposite +1.5 rows are a `COVERING_PAIR` that both win 27.6% of the time.
 
-**NPB, KBO and CPBL can end tied** after the innings cap. Print P(tie) as its own mass. A moneyline loses on a tie. A +1.5 wins on a tie. A total settles on the runs scored.
+**NPB, KBO and CPBL regular-season games can end tied** after the innings cap; check the exact competition and season. Print P(tie) as its own mass. **Moneyline action on a tie comes from the frozen contract (corrected 2026-10-12, R13):** a two-way line may void or push on a tie, a three-way line has a tie outcome, and only a contract that says so loses on a tie. Record the convention before pricing; do not assume one sport-wide. A +1.5 wins on a tie. A total settles on the runs scored.
 
 ---
 
 ## 4. The team baseline by hand — TB-1-MD (`TEAM_BASELINE_P`)
+
+> **v11 status (R11).** TB-1-MD uses team inputs. It is a **team-model aid and comparator**, printed as `TEAM_BASELINE_P`, and never `BASELINE_P`, which is always the league-only `BASELINE_LEAGUE_V1` (SELECTION_RULES §9). The "Sides/Totals anchor on TB-1-MD?" columns and the phrases "anchors on `BASELINE_P`" / "never the anchor" below describe the retired v9 anchoring procedure. They are NON-OPERATIVE. The arithmetic, constants and historical validation remain usable as a reference. The k constants also feed ARCHIVE_USE_GUIDE recipe R2 (form windows).
 
 This is the same season-to-date rating that the removed `tools/team_baseline.py` computed ([recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)). It is calculated from one standings page, so it needs no code.
 
@@ -511,6 +535,8 @@ Historically evaluated on 2026-09-28 by the implementation and aggregate result 
 ---
 
 ## 5. RM-1 by hand — ranking probability q, tiers and flags
+
+> **NON-OPERATIVE since v10 (R11).** New cards rank by p_card under P_ORDER_V2 (SELECTION_RULES §2) and print no q, q tier or q flag. "Rows are ranked by q", the tiers, `TOP2_QUALITY` and the Brier(q) diagnostic below are kept only to read pre-v10 cards. Using them on a new card fails audit check C3. The logit column of §5.2 may still be read as a plain logit table (§8).
 
 RM-1 turns each row's stated probability p into a ranking probability q. Rows are **ranked by q**. q is a *row score for ordering*. It is **not** a coherent event probability:
 - never multiply q values;
@@ -677,21 +703,31 @@ P(A beats B) = 1 / (1 + 10^(−(Elo_A − Elo_B)/400)).
 | 150 | 0.703 | 320 | 0.863 | 490 | 0.944 |
 | 160 | 0.715 | 330 | 0.870 | 500 | 0.947 |
 
-**Total games and handicaps.** These come from P(deciding set) and the conditional margins in `BASE_RATES_REGISTER.md` §7.4.
-- P(−k.5) = P(win in straight sets) × P(margin ≥ k+1 | straight-sets win) + P(win in a decider) × P(margin ≥ k+1 | deciding-set win).
-- Coherence: P(−k.5) ≤ P(win).
+**Total games and handicaps (corrected 2026-10-12, R12).** A games handicap is a statement about the **games** margin, which a player can win while losing the match. Example: a player who loses the match 6-0, 4-6, 4-6 wins on games 14-12 and covers −1.5 games.
+- Build the distribution over complete match states: each set-score sequence (straight sets or a decider, either player winning), with its games margin. P(deciding set) and the conditional margins in `BASE_RATES_REGISTER.md` §7.4 supply the set-level structure.
+- P(player −k.5 games) = Σ over **all** match states, won **and** lost, of P(state) × [games margin ≥ k+1].
+  - For a best-of-three match: P(straight-sets win) × P(margin ≥ k+1 | straight-sets win) + P(deciding-set win) × P(margin ≥ k+1 | deciding-set win) + P(deciding-set loss) × P(margin ≥ k+1 | deciding-set loss).
+  - The straight-sets-loss term is 0, because a straight-sets loser has a negative games margin.
+- **Coherence that does hold:**
+  - P(−k.5) decreases as k increases;
+  - P(−k.5) + P(opponent +k.5) = 1 on a half line;
+  - the totals ladder is monotone.
+- **Coherence that does NOT hold:** P(−k.5) ≤ P(win) can fail, because the deciding-set-loss term can be positive. Never force it.
+- A **set** handicap (−1.5 sets) is a different quantity, read from the set-score distribution, not the games margin.
 
 ---
 
 ## 7. Cricket innings totals
 
 - Use the normal (§1) around the card's centre and width.
-- **The team batting second is capped near the target.** Its total cannot run far past the target plus the last scoring shot, so a high second-innings Over is structurally disadvantaged (`RULES_CRICKET.md`).
+- **The chasing innings ends at the winning delivery (corrected 2026-10-12).** The chasing team's total can legally exceed the target by the runs scored off that last delivery, up to a six or more with extras. So its distribution is censored at the target plus that overshoot, not capped at the target itself. A second-innings Over well above the likely target is structurally unlikely; model the censoring explicitly from the first-innings distribution and the overshoot, as CURRENT_RULES and prompt 1 require, and do not simply cap at the target (`RULES_CRICKET.md`).
 - Before the toss, a phase or team total is a mixture: P(bat first) × the bat-first distribution + P(chase) × the chase distribution. After the toss, use the realised branch only.
 
 ---
 
 ## 8. The departure ledger (from `BASELINE_P`)
+
+> **v11 status (R11).** Step 1 (the departure in logits from the frozen league-only `BASELINE_P`) may be printed descriptively on a card. Steps 2–3 (numeric mechanism shares, `UNEXPLAINED_DEPARTURE` and its grade cap) are NON-OPERATIVE. CURRENT_RULES forbids invented numeric blame shares. List the adjustments in the adjustment table instead (CURRENT_RULES §7).
 
 1. Departure in logits = logit(p) − logit(`BASELINE_P`). Read logit from the §5 table: logit(p) = −logit(1 − p).
 2. Give each named mechanism a signed share of the departure. The shares sum to about 1.
@@ -717,7 +753,7 @@ P(A beats B) = 1 / (1 + 10^(−(Elo_A − Elo_B)/400)).
 ## 10. Settlement arithmetic
 
 - **Brier, binary row:** (p − y)², y = 1 for a win and 0 for a loss. Score p on every row.
-- **Brier(q)** is written only as `T-RM1-PROSPECTIVE`'s row diagnostic: (q − y)² on the same row, beside Brier(p). It is left blank as follows:
+- **Brier(q)** (NON-OPERATIVE since v10; new cards print no q) was written only as `T-RM1-PROSPECTIVE`'s row diagnostic: (q − y)² on the same row, beside Brier(p). It is left blank as follows:
   - `EXCLUDED_PUSH` for a push-capable row, until a vector-aware method is specified;
   - `—` for `RM1_OUT_OF_DOMAIN`;
   - `LIVE_ISSUED` for a card not issued pregame.
@@ -733,8 +769,9 @@ P(A beats B) = 1 / (1 + 10^(−(Elo_A − Elo_B)/400)).
 
 1. Complements sum to 1 (minus push mass).
 2. Nested lines are monotone: P(Over 7.5) ≥ P(Over 8.5).
-3. Handicaps: P(−L) ≤ P(win) ≤ P(+L).
-4. The family table sums to 1.000.
-5. Every row's p is reproduced from the printed μ, σ, λ or family masses by the arithmetic shown.
-6. q is used for order only.
-7. `BASELINE_P` and `TEAM_BASELINE_P` are printed for every row, or marked `NOT_YET_DERIVED` / `NOT_COVERED` / `UNVALIDATED`.
+3. Handicaps on the **same margin quantity as the winner market** (points sports, soccer goals, baseball runs): P(−L) ≤ P(win) ≤ P(+L). This does **not** apply to tennis games handicaps against the match winner (§6).
+4. The family table sums to 1.000. A mixture's case tables each sum to 1, and so does the mixture.
+5. Every row's p is reproduced from the printed μ, σ, λ or family masses by the arithmetic shown, with ε stated.
+6. Ranking is by p_card. No q is printed on a new card (§5 is non-operative).
+7. `BASELINE_P` (league-only `BASELINE_LEAGUE_V1`) is printed for every numeric row, or an enumerated missing reason (SELECTION_RULES §9). `TEAM_BASELINE_P` (TB-1-MD) is optional and is labelled a team-model reference.
+8. Every ranked row prints its line distance from the centre (units and z) and, when priced from a mixture, its `p_base`.

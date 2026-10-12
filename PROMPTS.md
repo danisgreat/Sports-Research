@@ -1,6 +1,6 @@
 # Operator prompts
 
-**Active suite: P-2026.10.11-v10.** [Reading receipt and workflow](research/prompts/README.md). Use the complete selected prompt; its required rules/templates are linked there.
+**Active suite: P-2026.10.12-v11.0** (mini-log-7 / mini-settlement-6). [Reading receipt and workflow](research/prompts/README.md). Use the complete selected prompt; its required rules/templates are linked there.
 
 | # | Copy-ready prompt |
 |---|---|
@@ -13,6 +13,6 @@
 | 7 | [Expand or repair historical results](research/prompts/7_EXPAND_PREVIOUS_RESULTS.md) |
 | 8 | [Improve the framework](research/prompts/8_IMPROVE_THE_FRAMEWORK.md) |
 
-Run 2 → 1 per event → 3 → 4; use 5–8 when needed. Current IDs/destination: [CURRENT_STATE](CURRENT_STATE.md). [Implemented changes and recommendation roadmap](research/verification/framework_change_2026-10-11-1/IMPLEMENTATION.md). [Preserved previous suite](archive/superseded_2026-10-11/prompt_v10/research/prompts/README.md).
+Run 2 → 1 per event → 3 → 4; use 5–8 when needed. Current IDs/destination: [CURRENT_STATE](CURRENT_STATE.md). Implemented changes and recommendation roadmap: [2026-10-12-1](research/verification/framework_change_2026-10-12-1/IMPLEMENTATION.md) (current), [2026-10-11-1](research/verification/framework_change_2026-10-11-1/IMPLEMENTATION.md). Preserved previous suites: [v10](archive/superseded_2026-10-12/research/prompts/README.md), [pre-v10](archive/superseded_2026-10-11/prompt_v10/research/prompts/README.md).
 
 These prompts improve evidence, consistency and measurement. Predictive improvement remains to be demonstrated prospectively against frozen baselines; no prompt guarantees outcomes.

@@ -7,12 +7,13 @@
 | Item | Value |
 |---|---|
 | Status | ACTIVE |
-| Method | MDS-2026.10.11-v10.0 (Markdown only) |
-| Control revision | CR-2026.10.11-R1 |
-| Scoring version | SCV-2026.10.11-v6 (historical v5 views retained) |
-| Selection version | SEL-2026.10.11-v2 / P_ORDER_V2; alternatives recorded as shadows |
-| Mini-log format | `mini-log-6` (in-progress `mini-log-2` through `mini-log-5` retain their format) |
-| Settlement format | `mini-settlement-5` (earlier settlement formats remain accepted) |
+| Method | MDS-2026.10.12-v11.0 (Markdown only) |
+| Control revision | CR-2026.10.12-R1 |
+| Scoring version | SCV-2026.10.12-v7 (historical v5/v6 views retained) |
+| Selection version | SEL-2026.10.12-v3 / P_ORDER_V2 priced from the declared mixture where required; alternatives recorded as shadows |
+| Prompt suite | P-2026.10.12-v11.0 |
+| Mini-log format | `mini-log-7` (in-progress `mini-log-2` through `mini-log-6` retain their format) |
+| Settlement format | `mini-settlement-6` (earlier settlement formats remain accepted) |
 | Freeze | None. Custody is the git history of `main` (CURRENT_RULES §9). Cards record the HEAD SHA they read. The last control manifest, `CONTROL_MANIFEST_2026-10-09-3.md`, is in [archive/controls/](archive/controls/). |
 | Highest committed canonical ID | **P-579** |
 | Next canonical ID | **P-580** (equal to the line in GAME_LOG_STATUS_CURRENT.md) |
@@ -29,14 +30,24 @@
 
 ## Scoreboard
 
-- **v10 prospective measurement:** 0 issued v10 cards at this release; paired baseline-relative skill NOT_COMPUTABLE. No old card is relabelled or given a backfilled baseline. [Implementation and pending work](research/verification/framework_change_2026-10-11-1/IMPLEMENTATION.md).
+- **v10/v11 prospective measurement:** 0 issued v10 or v11 cards at this release; paired baseline-relative skill NOT_COMPUTABLE. No old card is relabelled or given a backfilled baseline. Implementation and pending work: [2026-10-12-1](research/verification/framework_change_2026-10-12-1/IMPLEMENTATION.md), [2026-10-11-1](research/verification/framework_change_2026-10-11-1/IMPLEMENTATION.md).
 - **Historical v5 snapshot follows:** original cohorts and figures remain unchanged; these are descriptive, not prospective v10 evidence.
 
 Full tables: [research/scoreboard/SCOREBOARD.md](research/scoreboard/SCOREBOARD.md).
 
 - Forecast cards scored: 91 (P-126 to P-576). Gated counted cohort: 0 cards (no card yet carries a recorded Rank-1 gate PASS). RANK1_UNSTABLE cohort: 20 cards (P-557 to P-576), 34 counted wins in 40 live top-two rows = 85.0% (95% interval 70.9% to 92.9%). All forecast cards (historical, ungated): 113 counted wins in 174 live top-two rows = 64.9% (95% interval 57.6% to 71.6%). Rank 1 56-32, Rank 2 57-29, ranks 3-4 106-67 (informational).
-- Last cohort retrospective: [2026-10-11](research/verification/retrospective_2026-10-11/RETROSPECTIVE_REPORT.md), new cohort P-557 to P-576 against P-126 to P-556. Rank 1 80.0% (58.4% to 91.9%) does not beat Rank 2 90.0% (69.9% to 97.2%) or ranks 3-4 77.5%. Top-two Brier 0.131 against climatology 0.128 (skill -0.03). Every RANK1_UNSTABLE top-two pair covers itself (stated joint failure 0.0%, realised all-lost 0 of 20), so its counted rate reflects line choice, not skill. 0 of 20 cards passed the Rank-1 gate; experiment SEL-1 has 1 of 8 week-blocks and no PASS card, so the gate stays provisional. Seven proposals (RET-01 to RET-07) are `PROPOSED_NOT_TESTED` in [HYPOTHESIS_REGISTER.md](HYPOTHESIS_REGISTER.md).
+- Last cohort retrospective: [2026-10-11](research/verification/retrospective_2026-10-11/RETROSPECTIVE_REPORT.md), new cohort P-557 to P-576 against P-126 to P-556. Rank 1 80.0% (58.4% to 91.9%) does not beat Rank 2 90.0% (69.9% to 97.2%) or ranks 3-4 77.5%. Top-two Brier 0.131 against climatology 0.128 (skill -0.03). Every RANK1_UNSTABLE top-two pair covers itself (stated joint failure 0.0%, realised all-lost 0 of 20). So the counted rate is driven by line construction, and the cohort **does not establish** incremental predictive skill: there were no frozen same-row pregame baselines, and the skill figure uses an in-sample climatology reference, which is descriptive only. *(Wording corrected 2026-10-12, audit R24. The earlier summary said "not skill", which overstated what 20 cards without paired baselines can show. The dated retrospective is unchanged.)* 0 of 20 cards passed the Rank-1 gate; experiment SEL-1 has 1 of 8 week-blocks and no PASS card, so the gate stays provisional. Seven proposals (RET-01 to RET-07) are `PROPOSED_NOT_TESTED` in [HYPOTHESIS_REGISTER.md](HYPOTHESIS_REGISTER.md).
 - Nothing here is performance-certified.
+
+## October 12 implementation status
+
+Framework change [2026-10-12-1](research/verification/framework_change_2026-10-12-1/IMPLEMENTATION.md) implements the 38 audit recommendations of `AUDIT_RECOMMENDATIONS_2026-10-12.txt` and the 10 prediction recommendations, in the audit's order. Item-by-item status and evidence are in its implementation map. Headlines:
+- **Archive:** fabricated, unpublished Czech and English builds quarantined outside the repository; both leagues rebuilt from observed fields.
+- **Controls:** single authority mode; writer lease, freeze receipt and request intake; settlement revision chains; pre-mutation rechecks; four named byte identities.
+- **Toolkit:** corrected tennis, tie and key-number mathematics; retired procedures marked non-operative.
+- **Cards:** form windows L5–L20; mixture pricing; line difficulty and baseline coverage; shadows RANK_DELTA and BASE_ONLY; completed two-stage experiment designs.
+
+No log, grade, P-ID or issued card changed. All predictive effects remain untested.
 
 ## October 11 implementation status
 

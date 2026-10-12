@@ -1,3 +1,12 @@
+> **v11 precedence (2026-10-12, audit R09/R11).** [CURRENT_RULES](CURRENT_RULES.md), [SELECTION_RULES](SELECTION_RULES.md), [SCORING_AND_VALIDATION](SCORING_AND_VALIDATION.md), [CARD_AND_LOG_TEMPLATES](CARD_AND_LOG_TEMPLATES.md) and prompt 1 govern new work (MDS-2026.10.12-v11.0). This file remains the sport's reference for playing rules, mechanisms, sources and historical lessons. **Non-operative here:**
+> - RM-1 q ranking, q tiers, `TOP2_QUALITY` and cushion-term ranking: new cards rank by p_card (P_ORDER_V2).
+> - TB-1 / TB-1-MD "anchoring": `BASELINE_P` is always the league-only `BASELINE_LEAGUE_V1`, and TB-1-MD is a printed team-model reference only.
+> - Row-level numeric caps and grade caps not restated in CURRENT_RULES.
+> - Steps of the retired RULES_GENERAL / GFA algorithm.
+> - Any instruction to rank or settle that conflicts with the controls above.
+>
+> The two "October 5" authority notes below are historical. Authority mode now follows CURRENT_RULES §0: a run uses either the pinned published main or the local working tree, never both. Recent form follows ARCHIVE_USE_GUIDE recipe R2 (L5/L10/L15/L20 counted once).
+
 > **Current authority (October 5):** [METHOD.md](METHOD.md) and [CURRENT_RULES.md](CURRENT_RULES.md) govern new work. Requested qualitative or explicitly uncalibrated research receives canonical Part 6 IDs regardless of calibration; numerical performance certification is separate. Read current IDs/freeze from the [status register](GAME_LOG_STATUS_CURRENT.md), unresolved items from the [carryover](research/verification/closure_2026-10-05/carryover.md), and [current implementation evidence](research/verification/implementation_2026-10-05/REPORT.md). Earlier method, queue, freeze and eligibility statements below retain their historical scope.
 
 **Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
@@ -47,7 +56,7 @@ Pregame means before the actual tip. NBL: the first `jumpBall` event in the matc
 - **Intentions are not constraints.** An announced minutes plan keeps a close-game restoration branch (`O-ANNOUNCED-MINUTES-PLAN`). A coach's stated pace intent is at most a branch, never a centre shift (S-2).
 
 ### 0.4 Ranking and track record
-- Rank by **RM-1 q**. A flipped favourite handicap is capped at SUPPORTED unless `TEAM_BASELINE_P` gives the stated cushion ≥ 0.55. An Under at Rank 1 needs its width at or above the reference (K-13).
+- *[Non-operative since v10: rank by p_card, SELECTION_RULES §2.]* Rank by **RM-1 q**. A flipped favourite handicap is capped at SUPPORTED unless `TEAM_BASELINE_P` gives the stated cushion ≥ 0.55. An Under at Rank 1 needs its width at or above the reference (K-13).
 - A departure of more than 0.10 from `TEAM_BASELINE_P` names a receipted mechanism (K-11). With resolution near zero, the departure ledger is mandatory (K-10).
 - **Track record:** 31 decisions won 58.1% at 0.586, resolution **0.012**. Underdog cushions 3/8 (2/9 at Rank 1/2). Rank 1/2 overall 18 W / 16 L.
 

@@ -6,7 +6,15 @@ Inputs: `Active mini: <path>`; `Output folder: <path or standard settlement fold
 
 ## 1. Read and freeze
 
-Reference the GitHub repository (`main` branch) in read-only mode. Print the [reading receipt](README.md) after common controls, SCORING_AND_VALIDATION, templates §§6/9, sport/league endpoint rules, SOURCES settlement routes, relevant archive guide and this prompt. Preserve original issue-time versions; today's process rules do not change yesterday's proposition.
+Read every control from one pinned commit of the GitHub repository (`main` branch) in read-only mode (`PUBLISHED_MAIN_PINNED`, CURRENT_RULES §0), and print the mode and full SHA. Print the [reading receipt](README.md) after common controls, SCORING_AND_VALIDATION, templates §§6/9, sport/league endpoint rules, SOURCES settlement routes, relevant archive guide and this prompt. Preserve original issue-time versions; today's process rules do not change yesterday's proposition.
+
+**Freeze the lifecycle, not just the bytes (R16).** Before copying, write the `FROZEN_SOURCE` receipt into the settlement manifest (template §6):
+- the source path, raw byte count and SHA-256 of the raw working bytes;
+- the block inventory: card IDs and addendum keys;
+- the freeze time;
+- the hand-over of the issuing-writer lease to the next mini, or NONE.
+
+After this, prompt 1 must not append to this mini; new events go to the next authorised mini. Re-check the source's byte count and SHA-256 just before packaging. If it grew, report `GROWTH_DETECTED`, list the new blocks and route each one: settle it in a new revision of this package, or carry it to the next mini. Never treat it as covered by the earlier receipt.
 
 Copy the original file byte-for-byte into ORIGINAL_MINI before appending anything. Record real path/counts, original footer, IDs and actual comparison result. Build settled output from frozen bytes plus a new settlement section. If only section delivery is possible, provide SETTLEMENT_SECTION.md with a manifest saying assembly/prefix verification remains required. Never claim a byte comparison performed through a visual glance. On rerun retain earlier settled outputs and create dated revisions instead of overwriting.
 
@@ -26,9 +34,14 @@ For every competition, check the official terminal record promptly. If the offic
 
 Copy original proposition, rank, p, baseline, endpoint, expected score and definitions exactly. Assign WIN/LOSS/PUSH only from supported arithmetic; VOID only from the frozen void condition. Missing or conflicting target/definition is UNRESOLVED, with A/B/C/E/X evidence and independent definition status. Legacy OP remains literal provenance. A partial-value bound permits a grade only when every feasible value yields it; otherwise unresolved.
 
-Separate sporting settlement under a frozen convention from unknown operator settlement. Do not choose a convention after seeing the outcome. Settled rows may be completed while others on the card stay open. Later corrections append the old/new grade, source, reason and supersession pointer.
+Separate sporting settlement under a frozen convention from unknown operator settlement. Do not choose a convention after seeing the outcome. Settled rows may be completed while others on the card stay open.
 
-Calculate primary W/L/PUSH/VOID/UNRESOLVED, decisive coverage, proper scores only for original numeric probabilities and frozen identical baselines, and expected-versus-final errors using original supported SDs. Keep shadow/reforecast/alternate results separate. Do not replace original picks or baseline gaps with hindsight reconstructions.
+**Revisions (R17).** Every settlement block carries `revision-<n>` (unique per ID), its parent revision, effective time, source and the affected contract keys, with old and new values and the reason.
+- A partial correction changes only its listed keys; all other keys keep their parent-chain grades.
+- Two revisions with the same parent are a `REVISION_CONFLICT`; the affected keys stay UNRESOLVED until a resolving revision names both.
+- Never decide by file position or by timestamp alone.
+
+Calculate primary W/L/PUSH/VOID/UNRESOLVED, decisive coverage, proper scores only for original numeric probabilities and frozen identical baselines, and expected-versus-final errors using original supported SDs. Show proper scores in the headline (evidence A/B) and sensitivity (adding C/E) views (SCORING §2a, R23). For mini-log-7 cards, also score the frozen `SHADOW_RANK_DELTA` and `SHADOW_BASE_ONLY` rows. Record the form-window check: the observed score against the unadjusted and the form-adjusted expected score. Keep shadow/reforecast/alternate results separate. Do not replace original picks or baseline gaps with hindsight reconstructions.
 
 ## 5. R1–R12 and deep reviews
 
@@ -38,6 +51,6 @@ Every Rank-1 LOSS receives the eight deep parts in CURRENT_RULES §3. Review win
 
 ## 6. Package, audit and return
 
-Write ORIGINAL_MINI, settled mini, LOCAL_ID_MAPPING.md, UNRESOLVED_CARRYOVER.md (both pending-event and evidence queues), SETTLEMENT_MANIFEST.md. Inventory every block once; preserve original source prefix and footer. Run S1–S12 with actual evidence and recompute counts/expected-score/proper-score arithmetic. A missing original forecast cannot be rebuilt from a later narrative.
+Write ORIGINAL_MINI, settled mini (mini-settlement-6 for a mini-log-7 source; the source's own settlement format otherwise), LOCAL_ID_MAPPING.md, UNRESOLVED_CARRYOVER.md (both pending-event and evidence queues, with the actor, route, due time, final-time basis, last attempt and scheduling status of template §2-C), SETTLEMENT_MANIFEST.md (with the FROZEN_SOURCE receipt and growth check). Inventory every block once; preserve original source prefix and footer. Run S1–S15 with actual evidence and recompute counts/expected-score/proper-score arithmetic. A missing original forecast cannot be rebuilt from a later narrative.
 
 Return all generated files/paths; source and output counts; canonical mapping PENDING_IMPORT where appropriate; per-grade/evidence/definition/timing counts; primary results and coverage; separate shadows; deep-review count; deadlines/breaches; unresolved IDs/fields/actions; exact-prefix result and limitations. State GitHub/Combined Log writes NO (read-only mode on `main`) and canonical IDs consumed zero.

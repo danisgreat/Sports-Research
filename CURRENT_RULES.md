@@ -1,12 +1,16 @@
 # Current operating rules
 
-**MDS-2026.10.11-v10.0 · CR-2026.10.11-R1 · SCV-2026.10.11-v6.** Effective for new work after this revision is read. Current IDs and destination: [CURRENT_STATE.md](CURRENT_STATE.md). [Previous rules](archive/superseded_2026-10-11/prompt_v10/CURRENT_RULES.md) remain historical evidence.
+**MDS-2026.10.12-v11.0 · CR-2026.10.12-R1 · SCV-2026.10.12-v7 · SEL-2026.10.12-v3.** Effective for new work after this revision is read. Current IDs and destination: [CURRENT_STATE.md](CURRENT_STATE.md). Previous rules remain historical evidence: [v10.0](archive/superseded_2026-10-12/CURRENT_RULES.md), [pre-v10](archive/superseded_2026-10-11/prompt_v10/CURRENT_RULES.md).
 
 ## 0. Authority, scope and honest execution
 
-The framework remains Markdown, CSV and text. Read files, browse permitted sporting sources, use transparent arithmetic and plain file/git tools. Do not add scripts, code, JSON, notebooks or workflows. Do not claim an exact grid, simulation, model fit, calculation, file write, readback or scheduled capture unless actually performed.
+The framework remains Markdown, CSV and text. Read files, browse permitted sporting sources, use transparent arithmetic and plain file/git tools. Do not add scripts, code, JSON, notebooks or workflows to the repository. A helper used outside it is disclosed, and its rules are written out in prose (CONTRIBUTING). Do not claim an exact grid, simulation, model fit, calculation, file write, readback or scheduled capture unless actually performed.
 
-Latest user instructions control task scope. In the local repository, current working files govern, with branch/HEAD and relevant uncommitted differences disclosed; GitHub main is the publication surface. An external agent reads one pinned current-main revision. Neither silently changes branches, pulls over dirty work, nor assumes a stale download is current.
+**One authority mode per run (R09).** Latest user instructions control task scope. Each run prints exactly one mode in its reading receipt and never mixes revisions silently:
+- `PUBLISHED_MAIN_PINNED` is the default for prompts 1–3 and for any agent outside the repository. Read every control from one commit of `origin/main`, print its full SHA, and use only that commit's files. Local edits do not apply.
+- `LOCAL_WORKING_TREE` applies only to a run inside the repository whose user asks for local controls, or to prompts 4–8, which mutate the repository. Print branch, HEAD and every uncommitted difference to a control file. Those working files govern this run only, and the receipt names them.
+
+Where the published and local versions of a control differ, the receipt lists the difference and says which one was applied. Neither mode silently changes branches, pulls over dirty work, or assumes a stale download is current.
 
 Precedence: user instruction; these operating rules and current state for their respective domains; selection/scoring/templates; sport and league rules; historical examples/learning notes. Sport-specific physical rules and actual competition conditions must be verified, not overridden by a generic no-draw assumption. Report substantive contradictions. Continue independent research when a conflict blocks only issuance/import. Never resolve an identity or ID collision by guessing.
 
@@ -48,6 +52,14 @@ Record cutoff, research completion, actual write/issue time and final state rech
 
 Also record scheduled lead time at issue. Within five minutes of scheduled start or later is the LATE_START monitoring band, even if an official delay confirms PREGAME. This band does not suppress requested research. Actual-start evidence is a separate field and may remain NOT_VERIFIED. Provider/capture plans are not scheduled jobs: state who will capture and whether automation actually exists.
 
+**Two-step issue window (PR-04).**
+1. **Research:** finish the event model, form windows, baseline and sensitivity cases by about 60 minutes before the scheduled start.
+2. **Freeze:** at the lineup check, re-read the official lineup, starter or goalie and the injury source. The first such check falls when the official lineup is due, and no later than 5 minutes before the start. Update only the inputs that changed, re-price from the same model, then freeze and issue.
+
+If the lineup is still unpublished at T−5, issue with explicit lineup scenarios priced as a mixture (§7) and the label `LINEUP_UNCONFIRMED`. A request received too late for step 1 is still researched and labelled under the timing rules. This is a schedule target, never a reason to drop a requested event.
+
+**Known-at time (R28).** An input enters a pregame card only if it was available before the cutoff. A historical row's game date is not its availability time. Archive rows are retrospective compilations: print the capture date, and treat a late correction or late-published statistic as known only from its correction time. If that is unknown, label the input `KNOWN_AT_UNVERIFIED` and keep it out of anything that decides Rank 1. Full-season aggregates and corrected datasets are separate snapshots from what was known on the day.
+
 ## 6. Requested research and missingness
 
 Deliver and retain requested research independently of certification. If a distribution can be honestly computed, use UNCALIBRATED_ANALYST_SCENARIO. Otherwise use UNCALIBRATED_QUALITATIVE with p_card NOT_ESTIMATED and a supported qualitative ordering, or NO_FORECAST when identity/evidence cannot support a direction. Explain the missing inputs and next action. Never fabricate four rows, a probability, SD, baseline or source to satisfy a template.
@@ -64,19 +76,50 @@ Every numeric candidate attempts a frozen BASELINE_P on the identical propositio
 
 List every analyst adjustment and avoid double-counting effects already in data. Print adjusted and unadjusted top two whenever any adjustment changes them, regardless of size. Flag ADJUSTMENT_DEPENDENT for any such change, and LARGE_ADJUSTMENT separately above 0.25 SD. Test plausible low/base/high assumptions for the most uncertain inputs and show p/rank/gate changes. These are sensitivity ranges, not confidence intervals unless an interval method was actually applied. Uncertain lineups need explicit scenarios/weights or an honest nonnumeric assessment; uncertainty does not always mean widening a distribution without moving its centre.
 
+**Price the uncertainty you disclose (PR-03; SEL-2026.10.12-v3).**
+- **When it applies:** the card labels an input unfitted, stale, early-season, unconfirmed or `LINEUP_UNCONFIRMED`, and runs a low/base/high case on it.
+- **Primary distribution:** the declared mixture of those cases, default weights 0.25/0.50/0.25. Different weights need a stated basis, frozen before pricing. Every row's p_card, the gate and the ranks come from the mixture.
+- **Shadow:** the base-case-only p is printed beside each row as `p_base` (shadow `SHADOW_BASE_ONLY`). It never counts as a primary result.
+- **Tails:** a mixture widens the tails honestly. Do not then move the line to recover a higher p: the candidate recipe is frozen first (§4).
+
+**Recent form: four windows, one rate (PR-01).**
+- **Windows:** every numeric team-sport card reads each side's L5, L10, L15 and L20, season-to-date and league level (ARCHIVE_USE_GUIDE recipe R2). Use dated games only, before the cutoff, from the archive or a registered source route. A window that does not exist is printed with its true n.
+- **One piece of evidence:** the windows overlap. They are never counted as separate confirmations, and a short-window move is never a direction on its own (no bounce-back or streak lean without a named, current mechanism).
+- **Use in the centre:** the rate that enters the centre is one shrunk blend, computed and printed as recipe R2 says. Using it is an analyst adjustment and goes in the adjustment table with the unadjusted pair.
+- **Individual sports:** tennis and other individual sports print the player's last 5/10/15/20 matches on the relevant surface or format where a route exists, under the same rules.
+
 ## 8. Mini lifecycle and settlement
 
-New formats: mini-log-6 and mini-settlement-5; existing formats finish unchanged. Start (2), append card (1), freeze and settle (3), import (4), rollover if needed (5), retrospective (6), repair archive (7), change framework (8). Creating a mini or rollover consumes no ID. Local working P-IDs are permanent references but not canonical until verified import; a contiguous outstanding mini sequence must be accounted for before further allocation. Never reuse P-518–P-522 or silently skip/renumber.
+New formats: mini-log-7 and mini-settlement-6; existing formats (mini-log-2 to -6, settlement -2 to -5) finish unchanged. Start (2), append card (1), freeze and settle (3), import (4), rollover if needed (5), retrospective (6), repair archive (7), change framework (8). Creating a mini or rollover consumes no ID. Local working P-IDs are permanent references but not canonical until verified import; a contiguous outstanding mini sequence must be accounted for before further allocation. Never reuse P-518–P-522 or silently skip/renumber.
 
-Carry both PENDING_EVENT and terminal UNRESOLVED_EVIDENCE cases in separate queues with original IDs. The five-event open cap and 72-hour final-to-review target are alerts, never instructions to discard work or force grades. Use verified final time; if absent, mark clock UNKNOWN and use scheduled-duration estimate only for triage. Capture fragile fields promptly, normally within 36 hours after scheduled start, adjusted explicitly for delays and multi-day formats. Do not claim capture took place when only a due time exists.
+**Lifecycle controls (R15, R16, R22).**
+- **One issuing writer per mini.** A mini names its issuing writer and lease time. Only that writer appends new cards. A second mini may not prepare the same next working ID while an unexpired lease or an unaccounted-for mini exists. Hand-over and expiry are recorded in the mini.
+- **Freezing.** Settlement freezes a mini by writing a `FROZEN_SOURCE` receipt: path, byte count, SHA-256 and block inventory at freeze time. From then on, new events go to the next authorised mini. A card found after the snapshot is reported as source growth: neither omitted nor counted as covered by the earlier receipt.
+- **Request intake.** Every request, including one that never becomes a card, is logged in the mini's intake table with a disposition.
+
+Carry both PENDING_EVENT and terminal UNRESOLVED_EVIDENCE cases in separate queues with original IDs. Every queue item names its responsible actor, exact next source and field, due time with timezone, final-time basis (or UNKNOWN), last attempt, and whether any scheduled automation exists (R38). The five-event open cap and 72-hour final-to-review target are alerts, never instructions to discard work or force grades. Use verified final time; if absent, mark clock UNKNOWN and use scheduled-duration estimate only for triage. Capture fragile fields promptly, normally within 36 hours after scheduled start, adjusted explicitly for delays and multi-day formats. Do not claim capture took place when only a due time exists.
 
 Settle the frozen contract. WIN/LOSS/PUSH require sufficient evidence; VOID requires the frozen void condition; missing/conflicting field or definition yields UNRESOLVED. Evidence C may support a provisional sporting assessment but unresolved conflicts remain visible. A bounded value yields a definite grade only if every feasible value gives that grade. Frozen framework convention and operator settlement are distinct: a sporting result under a convention does not prove an unknown operator result.
 
 For KBO, try the official terminal box score promptly. If stale, retain the available result and arrange/report a retry after about 12 hours, within the review SLA where possible. A promised retry is not a completed fetch. Source corrections append a dated revision; they never silently replace earlier grades.
 
+**Settlement revisions (R17).** Each settlement block has a unique key `revision-<n>` per P-ID, its parent revision (NONE for the first), effective time, source, affected contract keys, and old and new values with the reason. A partial revision changes only its listed keys. Every other key keeps the grade from its parent chain. The effective grade of a contract key is the one in the latest revision of the single unbroken parent chain. Two revisions with the same parent are a `REVISION_CONFLICT`: the affected keys are UNRESOLVED until a resolving revision names both as parents. Never pick by "last block in the file" or by the greatest timestamp. Every prior revision stays readable, and no grade is counted twice.
+
 ## 9. Custody, current state and publication
 
 Issued card cores, previous log parts, existing settled minis and dated reports are immutable. Append corrections with reason, timestamp, parent ID and superseded revision pointer. Freeze an exact file copy before settlement; compare actual bytes/prefix, not just line counts. Preserve line endings. Zero deleted lines in numstat alone does not prove append-only: compare the complete original prefix and inspect hunk locations.
+
+**Four identities, never conflated (R20).** This repository runs with `core.autocrlf=true`, so working bytes and committed blobs can differ in line endings.
+1. **Raw source snapshot:** the working file's exact bytes, with SHA-256 and byte count, taken before any change.
+2. **Imported literal core:** the original card text copied byte-for-byte into its wrapper.
+3. **Destination prefix:** the destination working file's exact bytes before the append, compared byte-for-byte afterwards.
+4. **Committed representation:** the git blob, normalised to LF. Check it with `git ls-files --eol`.
+
+A claim of byte identity names which identity it means. Line counts, zero deleted lines and the git SHA prove none of the first three. Any normalised comparison declares its transformation (for example CRLF→LF) and keeps the raw source. Changing git attributes needs its own scoped review.
+
+**Finding, 2026-10-12.** The byte-exact (`-text`) rules for Combined Log parts 6–8, `GAME_LOG_STATUS_CURRENT.md`, `research/verification/**`, `research/issued_research/**`, `archive/mini_logs/**` and the archive's `_canonical`/`_custody` folders exist only in this machine's local `.git/info/attributes` (the committed `.gitattributes` was deleted earlier). A fresh clone or another machine applies `core.autocrlf` conversion to those files. Until the owner decides whether to restore a committed attributes file, any agent working outside the original machine must check `git check-attr text <path>` and the raw bytes before claiming byte identity, and must edit `-text` files at byte level. A text editor can silently convert a whole mixed-ending file; this happened and was caught and repaired on 2026-10-12.
+
+**Recheck before every mutation batch (R18).** Immediately before each append, rollover or status update, re-read HEAD, the active-log path and the destination file's current byte count and tail. Compare them with the plan. On any change, stop, rebuild the plan against the new state and preserve both writers' work. Never append from a stale plan.
 
 The active log's opening header is an opening snapshot and may retain old IDs/method text. Resolve current state from CURRENT_STATE, the current status-register section and canonical entries plus dated state/rollover addenda. A stale opening snapshot is not itself a custody conflict. A disagreement in current records is a blocker. Do not run retired tools named in historical log headers.
 
@@ -86,13 +129,18 @@ Stage exact intended paths, preserve unrelated work, commit/push only when autho
 
 ## 10. Learning and claims
 
-Every record remains RESEARCH_ONLY_NOT_CERTIFIED. Model quality, numerical coherence, calibration, predictive skill, operational readiness and record custody are separate questions. Measure proper scores against frozen same-row baselines, coverage and expected-score errors; do not optimize headline win rate by line choice or excluding unresolved losses. Historical climatology is descriptive, not a prospective baseline.
+Every record remains RESEARCH_ONLY_NOT_CERTIFIED. Model quality, numerical coherence, calibration, predictive skill, operational readiness and record custody are separate questions. **Absence of evidence is not evidence of absence (R24):** a cohort without frozen same-row pregame baselines "does not establish" incremental skill. It does not prove there is none. Line construction affects a hit rate. A single high-probability loss does not establish overconfidence. Measure proper scores against frozen same-row baselines, coverage and expected-score errors; do not optimize headline win rate by line choice or excluding unresolved losses. Historical climatology is descriptive, not a prospective baseline.
 
 Use chronological development, tuning, calibration and untouched test/future shadow separation when designing fitted work. Current Markdown controls do not restore the removed runtime. Thresholds and new shadows are untested; eight weeks or a small sample minimum is not proof of power or promotion. See [HYPOTHESIS_REGISTER](HYPOTHESIS_REGISTER.md) and the [implementation roadmap](research/verification/framework_change_2026-10-11-1/IMPLEMENTATION.md).
 
 ## 11. Change control
 
-Prompt 8 records the user instruction or finding, class, archived originals, dependencies, version changes, verification and publication. A user-authorized process repair can be implemented without pretending a statistical experiment passed. Behavioral selection/model hypotheses need separate frozen tests; preserve the original registration and append versioned amendments. Update rules, prompts, templates, examples, scoring and receipt definitions together. Do not revise historical values under a new scoring convention without a separate labelled diagnostic view.
+Prompt 8 records the user instruction or finding, class, archived originals, dependencies, version changes, verification and publication. **Prompt revisions (R34).** The prompt suite carries `P-<date>-v<major>.<minor>`.
+- The **major** bumps for a FORMAT or STATISTICAL change: a new field, a new rule for p, ranks or scoring.
+- The **minor** bumps for a PROCEDURE change: different steps, the same outputs.
+- An EDITORIAL change (wording only, behaviour identical) keeps the version and says so in CHANGELOG.
+
+Every change states its class, and the before/after behaviour if it is not editorial. A change that alters what an operator must do is never classed as wording-only. A user-authorized process repair can be implemented without pretending a statistical experiment passed. Behavioral selection/model hypotheses need separate frozen tests; preserve the original registration and append versioned amendments. Update rules, prompts, templates, examples, scoring and receipt definitions together. Do not revise historical values under a new scoring convention without a separate labelled diagnostic view.
 
 ## 12. Navigation
 

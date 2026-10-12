@@ -1,5 +1,50 @@
 # Changelog
 
+## 2026-10-12 — Framework change 2026-10-12-1, phases B and C: v11 rules, prompts and formats (audit R08–R23, R26–R27, R33–R38; prediction items PR-01–PR-10)
+
+Same instruction and change folder as phase A ([implementation map](research/verification/framework_change_2026-10-12-1/IMPLEMENTATION.md), [fixtures F01–F32](research/verification/framework_change_2026-10-12-1/FIXTURES.md)). Classes: process repair, format definition, scoring definition, and a user-authorised selection change (mixture pricing) with registered experiments.
+
+**Versions:** MDS-2026.10.12-v11.0 · CR-2026.10.12-R1 · SCV-2026.10.12-v7 · SEL-2026.10.12-v3 · HYP-2026.10.12-v3 · mini-log-7 / mini-settlement-6 · prompts P-2026.10.12-v11.0 (revision class FORMAT + PROCEDURE).
+
+**Prediction:**
+- Every card reads L5/L10/L15/L20, season and league form, counted once. The centre may move only by the equal-weight L20/season rate shrunk with the toolkit k; the four-window recency blend is printed as a registered comparison (FC11-FORM-v1).
+- Cards price from the declared low/base/high mixture whenever an input is labelled uncertain, with `p_base` and `SHADOW_BASE_ONLY` kept (FC11-MIX-v1).
+- Two-step issue window (research by T−60, freeze after the lineup check).
+- Line distance and z on every ranked row; baseline coverage with enumerated reasons.
+- New shadow `SHADOW_RANK_DELTA` (FC11-DELTA-v1); bias-correction design FC11-BIAS-v1.
+- The 2026-09 recency study was restored byte-exact to `archive/historical_restored/`.
+
+**Corrections:**
+- Prompt-1 source sections (R08).
+- One authority mode per run (R09).
+- Status-register wording (R10).
+- Retired q-ranking, anchoring, ledger shares and the chase "cap" marked non-operative in the toolkit and all sport files (R11).
+- Tennis games-handicap bound replaced (R12).
+- Contract-specific tie and moneyline treatment (R13).
+- Precision rule at the gate, with key-number mass applied through the normalised distribution (R14).
+- SUSPECTED_DEFAULT and endpoint-specific reconciliation in prompt 7 (R26, R27).
+
+**Lifecycle and custody:**
+- Writer lease (R15) and FROZEN_SOURCE receipt (R16).
+- Settlement revision chains (R17).
+- Pre-mutation rechecks (R18) and marker checks (R19).
+- Four named byte identities (R20). Also a finding: the byte-exact attribute rules exist only in the local `.git/info/attributes`. That is an owner decision.
+- Calibrated rollover trigger (R21).
+- Request intake (R22).
+- Evidence-stratified scores (R23).
+- Executable queue fields; the current P-577 to P-579 queue was given actors and due times, and P-579's missed capture time is recorded (R38).
+
+**Maintenance:**
+- Revision classes; this entry also clarifies the 2026-10-12 "generalise the operator prompts" entry below (R34). It was described as wording only, but it added an archive-validation step and competition-resolution behaviour, so under the new classes it was a PROCEDURE change. Its text is unchanged.
+- Fixtures (R35).
+- Recovery map for 38 missing link targets plus the status register's historical links; live links repointed (R36).
+- New [ACTIVE_FILE_INDEX.md](ACTIVE_FILE_INDEX.md) (R37).
+- **NEW-01, a scan of every archive folder:** 4 byte-identical alias pairs already on main, now marked with `ALIAS_OF_CANONICAL.md`, with no rows deleted; `SUSPECTED_DEFAULT` start times and attendance zeros noted in ARCHIVE_USE_GUIDE §8.
+
+**Examples:** the new mini-log-7 pair passes the byte-prefix check (11,052-byte active file as a prefix of the 16,534-byte settled file). The v10 pair moved unchanged to `legacy_mini_log_6/`.
+
+**Not changed:** any Combined Log byte, issued card, grade, P-ID (next P-580), dated report, profile row, or the gate, floor and ceiling numbers. Originals: [archive/superseded_2026-10-12/](archive/superseded_2026-10-12/ARCHIVE_NOTE.md). **Not claimed:** any predictive improvement. Every experiment has 0 events.
+
 ## 2026-10-12 — Framework change 2026-10-12-1, phase A: quarantine fabricated archive builds and rebuild the Czech and English top flights from observed fields (audit R01–R07)
 
 User instruction: "implement all of the recommendations in order, carefully and methodically" (the 38 items of `AUDIT_RECOMMENDATIONS_2026-10-12.txt` and the 10 prediction recommendations). [Change proposal](research/verification/framework_change_2026-10-12-1/CHANGE_PROPOSAL.md), [implementation map](research/verification/framework_change_2026-10-12-1/IMPLEMENTATION.md), [data rebuild receipt](research/verification/framework_change_2026-10-12-1/DATA_REBUILD_RECEIPT.md). Class: data repair + integrity process repair.

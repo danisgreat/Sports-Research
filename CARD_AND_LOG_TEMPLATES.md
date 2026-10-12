@@ -1,41 +1,58 @@
 # Card, mini, settlement and canonical formats
 
-**mini-log-6 · mini-settlement-5 · canonical-md-1.** Authority: MDS-2026.10.11-v10.0 / CR-2026.10.11-R1 / SCV-2026.10.11-v6. [Rules](CURRENT_RULES.md) and [selection definitions](SELECTION_RULES.md) control semantics.
+**mini-log-7 · mini-settlement-6 · canonical-md-1.** Authority: MDS-2026.10.12-v11.0 / CR-2026.10.12-R1 / SCV-2026.10.12-v7 / SEL-2026.10.12-v3. [Rules](CURRENT_RULES.md) and [selection definitions](SELECTION_RULES.md) control semantics. Previous formats: [mini-log-6 / mini-settlement-5](archive/superseded_2026-10-12/CARD_AND_LOG_TEMPLATES.md).
 
 <a id="local-mini-format-mini-log-2"></a>
 
 ## 1. Compatibility
 
-Old minis finish in their original format. Never insert baselines, gates, expected scores or missing cutoffs into an old card. New dated addenda may carry unresolved status or diagnostic fields without changing its original selection/scoring version. Old numeric self-audits are interpreted against the original format, with gaps documented rather than repaired by fabrication. For v10 new minis, use the structures below. Example IDs beginning EXAMPLE are not P-IDs and must never be imported.
+Old minis finish in their original format. Never insert baselines, gates, expected scores, form windows or missing cutoffs into an old card. New dated addenda may carry unresolved status or diagnostic fields without changing its original selection/scoring version. Old numeric self-audits are interpreted against the original format, with gaps documented rather than repaired by fabrication. For new minis, use the structures below. A mini-log-6 mini still open on 2026-10-12 finishes as mini-log-6; its next mini is mini-log-7. Example IDs beginning EXAMPLE are not P-IDs and must never be imported.
+
+**What mini-log-7 adds:**
+- **Authority and lifecycle:** authority mode (R09), writer lease (R15), frozen-status pointer (R16), request intake (R22), executable queue fields (R38).
+- **On each card:** known-at line (R28), lineup state and pricing basis (PR-03, PR-04), form-window block (PR-01), line distance and `p_base` columns (R33, PR-03), baseline coverage (PR-06), and the two new shadows (PR-05).
+
+**What mini-settlement-6 adds:** revision keys with parent chains (R17), a frozen-source receipt (R16), evidence-stratified scores (R23) and executable queue fields.
 
 ## 2. Mini
 
 Create `Mini Prediction Log - <FIRST> onward - <date>/PREDICTION_MINI_RUNNING_LOG_<FIRST>_ONWARD.md`:
 
 ```markdown
-<!-- MINI-LOG-FORMAT: mini-log-6 -->
+<!-- MINI-LOG-FORMAT: mini-log-7 -->
 # Prediction Mini Running Log — <FIRST> onward
 
 ## A. Authority snapshot
 | Field | Value |
 |---|---|
+| Authority mode | PUBLISHED_MAIN_PINNED <full SHA> or LOCAL_WORKING_TREE <branch/HEAD> |
 | Repository / branch / read HEAD | <actual local or published authority> |
-| Relevant working differences | <paths or NONE> |
+| Relevant working differences | <paths or NONE; which version was applied> |
 | Method / control / scoring / selection | <versions> |
 | Active Combined Log | <resolved path> |
 | Highest committed / next canonical ID | <current values> |
 | Outstanding local minis and IDs | <contiguous inventory or NONE> |
 | First working ID | <reconciled next local ID> |
+| Issuing writer / lease start / lease expiry | <named session or person / ISO time / ISO time> |
+| Lease hand-overs | <from → to, time, reason; or NONE> |
+| Frozen for settlement | NO, or YES: <FROZEN_SOURCE receipt path> |
 | Reading receipt / opened at | <paths and ISO time with offset> |
 | Mode | LOCAL_MINI_STAGING |
 
 SPORTS_ONLY / MARKET_BLIND · RESEARCH_ONLY_NOT_CERTIFIED · CANONICAL_IMPORT_STATUS: PENDING
 
 ## B. Local ID rules
-Creating this mini consumes no ID. One retained event receives one permanent working ID; canonical status requires import. Addenda/carryovers consume none. No silent skipping, reuse or renumbering. Only a complete written/read-back card advances the footer.
+Creating this mini consumes no ID. One retained event receives one permanent working ID; canonical status requires import. Addenda/carryovers consume none. No silent skipping, reuse or renumbering. Only a complete written/read-back card advances the footer. Only the issuing writer appends cards. Another writer must wait for lease expiry or a recorded hand-over. Never append to a mini marked frozen; route the event to the next authorised mini.
 
 ## C. Carryover and evidence queue
-<one reference per unresolved event/field with ID, event key, original card path, exact frozen pick table, endpoint/definition pointer, latest revision, reason, next action and due time; or NONE>
+| ID | Event key | Queue | Original card / frozen pick table | Latest revision | Open field | Responsible actor | Next source + exact field | Due (ISO, tz) | Final-time basis | Last attempt | Scheduled automation |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+<one row per unresolved event/field, PENDING_EVENT or UNRESOLVED_EVIDENCE; or NONE>
+
+## D. Request intake
+| Request key | Received (ISO, tz) | Event / alias as requested | Disposition | Card or addendum pointer, or no-card reason |
+|---|---|---|---|---|
+<one row per request, including duplicates and blocked requests. Disposition: CARD, ADDENDUM_TO_EXISTING_ID, DUPLICATE_OF_EXISTING_ID, BLOCKED, OUT_OF_SCOPE, READ_ONLY_DRAFT or PENDING. Requests allocate no ID>
 
 # NEW LOCAL EVENT CARDS
 
@@ -77,19 +94,25 @@ Insert immediately before the footer. Preserve earlier card/addendum bytes; only
 - **Settlement fields / capture plan:** <row-to-provider/field mapping; due time; responsible action; scheduled job YES/NO>
 - **Rules read / archive check:** <paths/sections; actual files/rows/date window/filters/findings/gaps>
 - **Evidence receipt:** <decisive claim/source/field/extract/source time/retrieval time/lineage; detail in A3>
+- **Known-at:** <archive capture date; any KNOWN_AT_UNVERIFIED input and confirmation it does not decide Rank 1>
+- **Lineup state / issue step:** <CONFIRMED (source, time) or LINEUP_UNCONFIRMED; research completed at T−<min>; lineup check at T−<min>>
+- **Pricing basis:** <BASE (no input labelled uncertain) or MIXTURE low/base/high = <w1/w2/w3>, with the uncertain input named>
+- **Form windows:** <per side: L5/L10/L15/L20/season/league for the scored and conceded rate, with n; the blended rate used; full table in A3 (§3b)>
 
 ### Decision block
 <One-sentence assessment and principal uncertainty; mean score is not exact-score mode.>
 
-| Rank | Role | Tag | Contract key / exact proposition | p_card | BASELINE_P | Probability basis | Main failure route |
-|---|---|---|---|---|---|---|---|
-| 1 | PICK | SUPPLIED or ANALYST_DERIVED | <line/period/endpoint/action> | <p or NOT_ESTIMATED> | <p or missing reason> | <distribution id or QUALITATIVE> | <mechanism> |
+| Rank | Role | Tag | Contract key / exact proposition | p_card | p_base | BASELINE_P | Line distance (units / z) | Probability basis | Main failure route |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | PICK | SUPPLIED or ANALYST_DERIVED | <line/period/endpoint/action> | <p or NOT_ESTIMATED> | <base-only p, or = p_card when BASE> | <p or missing reason> | <signed line − centre; z or N/A> | <distribution id or QUALITATIVE> | <mechanism> |
 <up to four actual supported rows; roles PICK for ranks 1–2, INFORMATIONAL thereafter>
 
-**Rank-1 gate:** <label; p; alternative key/p; gap; floor/family checks; scope>
+**Baseline coverage:** <rows with BASELINE_P>/<numeric ranked rows>; missing reasons from SELECTION_RULES §9
+**Rank-1 gate:** <label (PASS / RANK1_UNSTABLE / GATE_UNRESOLVED_PRECISION / NOT_ASSESSABLE); p; alternative key/p; gap; ε; floor/family checks; scope>
 **Rank-2 floor:** <PASS/BELOW_FLOOR/NOT_ASSESSABLE>
 **Joint failure:** <exact unconditional value, bounds or NOT_COMPUTED; losing sets; P(both decisive) if relevant; MECHANICALLY_PROTECTED when applicable>
 **Shadow gate / Rank 2:** <RET03 alternative/result; RET04 and XCARD6 contract/p/baseline/joint or NONE; NOT_PRIMARY>
+**Shadow RANK_DELTA / BASE_ONLY:** <top two by p_card − BASELINE_P with Δ, or NONE; base-only ranks/gate when priced from a mixture, or N/A; NOT_PRIMARY>
 **Adjustment dependence:** <NONE/ADJUSTMENT_DEPENDENT; LARGE_ADJUSTMENT separately; unadjusted pair when changed>
 **Potential winner:** <result probabilities including allowed draw/tie, or NOT_ESTIMATED>
 **Supplied rows not selected:** <each exact line/p or missing reason and disposition>
@@ -122,7 +145,28 @@ NO_FORECAST retains identity, reason, evidence, timing and follow-up, with an em
 | Cricket | Format/innings-specific runs and wickets where supported; chase stops at winning delivery with legal overshoot; common cross-team margin often N/A |
 | AFL/AFLW | Goals, behinds, points=6×goals+behinds, total/margin/SDs for the correct competition |
 
-For team scores X,Y: E(T)=E(X)+E(Y), E(M)=E(X)−E(Y); Var(T)=Var(X)+Var(Y)+2Cov(X,Y); Var(M)=Var(X)+Var(Y)−2Cov(X,Y). If using total/margin parameters, Var(X)=(Var(T)+Var(M)+2Cov(T,M))/4 and Var(Y)=(Var(T)+Var(M)−2Cov(T,M))/4. Missing covariance is not automatically zero. Preserve unsupported SD as NOT_COMPUTED.
+For team scores X,Y: E(T)=E(X)+E(Y), E(M)=E(X)−E(Y); Var(T)=Var(X)+Var(Y)+2Cov(X,Y); Var(M)=Var(X)+Var(Y)−2Cov(X,Y). If using total/margin parameters, Var(X)=(Var(T)+Var(M)+2Cov(T,M))/4 and Var(Y)=(Var(T)+Var(M)−2Cov(T,M))/4. Missing covariance is not automatically zero. Preserve unsupported SD as NOT_COMPUTED. A mixture card prints the expected score of the mixture: the weighted mean of the case means, and a variance equal to the weighted case variances plus the weighted squared deviations of the case means from the mixture mean.
+
+### 3b. Form windows (A3; PR-01, recipe R2)
+
+One table per side. Use dated games before the cutoff only, and compute it as ARCHIVE_USE_GUIDE recipe R2 says.
+
+| Window | n | Dates (first–last) | Scored per game | Conceded per game | Margin per game | Opponents' mean rating or rank (if available) | Games from previous season | Flags |
+|---|---:|---|---:|---:|---:|---|---:|---|
+| L5 | | | | | | | | |
+| L10 | | | | | | | | |
+| L15 | | | | | | | | |
+| L20 | | | | | | | | |
+| Season to date | | | | | | | | |
+| League level (profile row / version) | — | — | | | — | — | — | |
+
+Below each table print:
+- the blended rate (recipe R2) with its arithmetic;
+- the shrinkage constant k and its source;
+- the roster-continuity note for any games from the previous season;
+- the sentence "windows overlap; counted once".
+
+A window shorter than its label prints its true n. A missing window prints `ARCHIVE_UNAVAILABLE:<reason>` or the SOURCES route used. Excluded flagged rows (for example the archive's duplicate or awarded-result flags) are listed.
 
 ## 4. Addenda
 
@@ -138,13 +182,16 @@ Folder `Mini Settlement - <FIRST> to <LAST> - <date>/`: ORIGINAL_MINI (exact cop
 
 ```markdown
 # SETTLEMENT AND RETROSPECTIVES
-<!-- SETTLEMENT-FORMAT: mini-settlement-5 -->
-Authority/read time: <actual receipt>
+<!-- SETTLEMENT-FORMAT: mini-settlement-6 -->
+Authority/read time: <actual receipt, including authority mode>
 Frozen original: <path; byte/line counts if measured; exact-prefix comparison result>
+FROZEN_SOURCE receipt: <source path; raw byte count; SHA-256 of raw bytes; block inventory (card IDs, addenda keys); freeze time; writer hand-over to <next mini or NONE>>
+Source growth check: <at package time the source still has the frozen byte count, or GROWTH_DETECTED: blocks after the snapshot and where they were routed>
 Inventory: <cards/carryovers/addenda; pending and unresolved separately>
 
 <!-- BEGIN SETTLEMENT P-NNN revision-1 -->
 ### Settlement · P-NNN · <event> · <actual review time>
+**Revision:** revision-1 · parent NONE (or revision-<n−1>) · effective <ISO time> · affected contract keys <ALL or list> · changes <old → new, with reason; NONE for the first>
 **Card state:** SETTLED | PARTIALLY_SETTLED | PENDING_EVENT | UNRESOLVED_EVIDENCE | NO_FORECAST
 **Original card / prior revision:** <source pointers>
 **Final event / verified final time:** <facts, endpoint, sources; unknown explicit>
@@ -156,8 +203,9 @@ Inventory: <cards/carryovers/addenda; pending and unresolved separately>
 <one row per issued candidate, including UNRESOLVED; no invented missing ranks>
 
 **Top-two result:** <class; W/L/PUSH/VOID/UNRESOLVED; decisive denominator>
-**Proper scores:** <paired Brier/log loss rows or NOT_COMPUTABLE reasons>
-**Shadow results:** <separate frozen RET03/RET04/XCARD6 diagnostics or NOT_ISSUED>
+**Proper scores:** <paired Brier/log loss rows or NOT_COMPUTABLE reasons; evidence class of each row (headline A/B, sensitivity C/E)>
+**Shadow results:** <separate frozen RET03/RET04/XCARD6/RANK_DELTA/BASE_ONLY diagnostics or NOT_ISSUED>
+**Form-window check:** <observed score against the unadjusted and the form-adjusted expected score; error of each; NOT_APPLICABLE when no form adjustment was made>
 **Winner call:** <original call result on its exact endpoint or unresolved>
 **R1. Original prediction:** <this card's literal top two and probabilities>
 **R2. Final event:** <verified endpoint and outstanding fields>
@@ -176,6 +224,8 @@ Inventory: <cards/carryovers/addenda; pending and unresolved separately>
 ```
 
 Pending cards get state evidence, literal original reference and next check, with result-dependent R sections N/A. Terminal unresolved rows retain the supported settlement work and open questions. Manifest inventories each source block, local/canonical status, latest revision, grades/counts, outputs, prefix check and import PENDING. No guessed hash or byte-comparison PASS.
+
+**Later revisions (R17).** A rerun or correction appends `<!-- BEGIN SETTLEMENT P-NNN revision-<n> -->` with the next unused n for that ID, its parent and the affected contract keys. It never re-uses a key or edits an earlier block. UNRESOLVED_CARRYOVER.md uses the queue columns of §2-C, so that every open item has an actor, a route, a due time and a scheduling status.
 
 ## 7. Card self-audit
 
@@ -197,6 +247,10 @@ Pending cards get state evidence, literal original reference and next check, wit
 | C14 | Frozen same-row baseline and independent league-only parameters, or explicit unavailable reason |
 | C15 | Expected-score arithmetic/units/covariance and missingness; decision block/appendix complete |
 | C16 | Written card and footer read back; earlier blocks unchanged; audit has actual evidence, not just check names |
+| C17 | Form windows: L5/L10/L15/L20/season/league printed per side with true n, from dated pre-cutoff games; flagged archive rows excluded; one blended rate with k and arithmetic; windows not counted as separate confirmations; adjustment listed with the unadjusted pair (or ARCHIVE_UNAVAILABLE with the route tried) |
+| C18 | Line distance (units and z, or N/A) on every ranked row; baseline coverage line present; each missing BASELINE_P uses an enumerated reason |
+| C19 | Pricing basis: a mixture is used whenever an input is labelled unfitted, stale, early-season or unconfirmed; weights frozen before pricing; p_base printed; base-only shadow ranks and gate shown; ε and any GATE_UNRESOLVED_PRECISION / PRECISION_TIE stated |
+| C20 | Lifecycle: issuing writer and lease valid at append time; mini not frozen; request logged in the intake table; known-at line present; lineup state and issue-step times recorded |
 
 ## 8. Canonical entry and rollover
 
@@ -205,6 +259,15 @@ Keep canonical-md-1: `<!-- BEGIN CANONICAL RESEARCH P-NNN -->`, heading `## P-NN
 Dated additions use `<!-- BEGIN RESEARCH ADDENDUM P-NNN <date>-<sequence> -->` and matching END, enclosing the entire original addendum/settlement block. Maintain a source-to-destination map, with explicit revisions; skip identical existing blocks. A canonical reference repeated in carryover is not a new card.
 
 Rollover appends a closure to the old part and creates one dated opening snapshot for the next, continuity links, unchanged next ID and queue pointers. No copied forecasts, no new event and no back-edit of opening snapshots. Current values live in CURRENT_STATE and the current status section, reconciled to canonical entries.
+
+**Cross-part revisions (R21).** A later settlement revision or addendum for a card whose original sits in a closed part is appended to the **active** part. Its wrapper is `<!-- BEGIN RESEARCH ADDENDUM P-NNN <date>-<sequence> -->`, and it opens with a pointer line `Original: <closed part path>, canonical block P-NNN; prior revision: <part and revision key>`. The closed part is never edited. The effective revision chain is resolved across parts by revision key (CURRENT_RULES §8). Neither a rollover nor a later settlement creates a new ID or duplicates the original card.
+
+**Marker integrity (R19).** Before import, every block must satisfy:
+- `BEGIN`/`END` markers balanced, one END per BEGIN, with no nesting across different IDs;
+- the END names the same ID, and revision key where present, as its BEGIN;
+- no duplicate revision key for an ID.
+
+Legacy settlement markers without revision keys (mini-settlement-2 to -5) are accepted under their declared format. The import wrapper records the legacy format; legacy bytes are never rewritten to add keys.
 
 ## 9. Settlement self-audit
 
@@ -222,7 +285,10 @@ Rollover appends a closure to the old part and creates one dated opening snapsho
 | S10 | Pending-event and terminal-evidence queues complete; SLA uses actual final or marked unknown |
 | S11 | Expected errors/z and proper scores recompute; no historical baseline reconstruction |
 | S12 | Output files read back, allowed writes only, mapping/manifest and rerun revisions reconcile |
+| S13 | Revision keys unique per ID; every revision names its parent and affected keys; the effective grade per contract key follows the single parent chain; conflicting branches marked REVISION_CONFLICT and counted UNRESOLVED |
+| S14 | FROZEN_SOURCE receipt (path, raw bytes, SHA-256, block inventory) written before settlement; source growth checked at package time and any later block routed, not silently covered |
+| S15 | Every open queue item has actor, next source and field, due time with timezone, final-time basis, last attempt and scheduled-automation status; evidence strata shown in the proper-score lines |
 
 ## 10. Acceptance examples
 
-Active and settled structural examples: [active](research/prompts/examples/EXAMPLE_ACTIVE_MINI.md), [settled](research/prompts/examples/EXAMPLE_SETTLED_MINI.md). Worked checks and negative fixtures: [verification](research/verification/framework_change_2026-10-11-1/VERIFICATION_REPORT.md). They are synthetic documentation tests, not sports forecasts or prospective evidence.
+Active and settled structural examples (mini-log-7 / mini-settlement-6): [active](research/prompts/examples/EXAMPLE_ACTIVE_MINI.md), [settled](research/prompts/examples/EXAMPLE_SETTLED_MINI.md); the v10 pair is in [legacy_mini_log_6/](research/prompts/examples/legacy_mini_log_6/EXAMPLE_ACTIVE_MINI.md). Worked checks and negative fixtures: [v11 fixtures F01–F32](research/verification/framework_change_2026-10-12-1/FIXTURES.md), [v10 verification](research/verification/framework_change_2026-10-11-1/VERIFICATION_REPORT.md). They are synthetic documentation tests, not sports forecasts or prospective evidence.

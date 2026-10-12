@@ -29,10 +29,14 @@ A refreshed profile is a data update, not demonstrated predictive improvement; t
 
 ## Sport constants
 
-| Sport | Scoring units | Largest score supported | Draw possible | Notes |
+**Read these two columns carefully (R13, 2026-10-12).**
+- **Computational support limit** is the largest per-team score a hand grid or table is expected to carry. It is not a physical limit. Any mass beyond it must be assigned explicitly (a tail bucket, or renormalisation stated on the card).
+- **Draw possible** is the sport's general case. The exact competition, season and stage decide, and the frozen contract decides how a tie settles (moneyline void/push, three-way, or loss). A generic row never overrides them.
+
+| Sport | Scoring units | Computational support limit (per team) | Draw possible | Notes |
 |---|---|---:|---|---|
 | AFL / AFLW | points (goals, behinds) | 180 | yes | 6 points per goal, 1 per behind |
-| Baseball | runs | 25 | no | 9 nominal innings; Statcast regimes pre-2008, 2008-2014, 2015+ |
+| Baseball | runs | 25 | competition-specific: MLB no (extras to a result); KBO, NPB and CPBL regular-season games can end tied after the innings cap | 9 nominal innings; Statcast regimes pre-2008, 2008-2014, 2015+ |
 | Basketball | points | 180 | no | about 100 possessions and 1.14 points per possession nominal |
 | Cricket | runs | 700 | yes | phases powerplay, middle, death; formats Test, ODI, T20 |
 | American football | points | 65 | yes | about 11 drives per team; key margins 3, 6, 7, 10, 14, 17, 20, 21 |
