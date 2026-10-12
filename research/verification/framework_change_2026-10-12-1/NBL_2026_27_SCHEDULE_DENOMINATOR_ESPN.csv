@@ -1,0 +1,166 @@
+espn_id,query_date,start_utc,season_type,season_slug,home,away,home_score,away_score,completed,state
+401875251,2026-09-19,2026-09-19T09:30Z,2,regular-season,Melbourne United,Adelaide 36ers,95,97,True,post
+401875243,2026-09-19,2026-09-19T11:30Z,2,regular-season,Perth Wildcats,South East Melbourne Phoenix,79,100,True,post
+401875263,2026-09-20,2026-09-20T05:00Z,2,regular-season,New Zealand Breakers,Illawarra Hawks,95,81,True,post
+401875242,2026-09-20,2026-09-20T07:00Z,2,regular-season,Sydney Kings,Cairns Taipans,111,90,True,post
+401875253,2026-09-21,2026-09-21T09:30Z,2,regular-season,Tasmania JackJumpers,South East Melbourne Phoenix,96,91,True,post
+401875244,2026-09-22,2026-09-22T09:30Z,2,regular-season,Brisbane Bullets,New Zealand Breakers,88,85,True,post
+401875241,2026-09-23,2026-09-23T09:30Z,2,regular-season,Cairns Taipans,Tasmania JackJumpers,93,87,True,post
+401875267,2026-09-24,2026-09-24T09:30Z,2,regular-season,South East Melbourne Phoenix,Melbourne United,61,86,True,post
+401875245,2026-09-24,2026-09-24T11:30Z,2,regular-season,Perth Wildcats,Adelaide 36ers,98,97,True,post
+401875252,2026-09-25,2026-09-25T09:30Z,2,regular-season,Brisbane Bullets,Illawarra Hawks,103,95,True,post
+401875254,2026-09-26,2026-09-26T11:30Z,2,regular-season,Perth Wildcats,New Zealand Breakers,97,93,True,post
+401875257,2026-09-27,2026-09-27T06:00Z,2,regular-season,Adelaide 36ers,Cairns Taipans,83,69,True,post
+401875277,2026-09-27,2026-09-27T08:00Z,2,regular-season,Sydney Kings,Illawarra Hawks,121,100,True,post
+401875246,2026-09-30,2026-09-30T07:30Z,2,regular-season,New Zealand Breakers,Cairns Taipans,98,75,True,post
+401875279,2026-09-30,2026-09-30T09:30Z,2,regular-season,Sydney Kings,Brisbane Bullets,93,78,True,post
+401875255,2026-10-01,2026-10-01T09:30Z,2,regular-season,Tasmania JackJumpers,Melbourne United,84,82,True,post
+401875256,2026-10-02,2026-10-02T09:30Z,2,regular-season,Illawarra Hawks,Adelaide 36ers,114,92,True,post
+401875287,2026-10-02,2026-10-02T11:30Z,2,regular-season,Perth Wildcats,South East Melbourne Phoenix,92,88,True,post
+401875250,2026-10-03,2026-10-03T07:30Z,2,regular-season,Brisbane Bullets,Tasmania JackJumpers,99,109,True,post
+401875260,2026-10-03,2026-10-03T09:30Z,2,regular-season,Melbourne United,Cairns Taipans,95,107,True,post
+401875262,2026-10-04,2026-10-04T04:00Z,2,regular-season,South East Melbourne Phoenix,Illawarra Hawks,113,96,True,post
+401875248,2026-10-04,2026-10-04T06:00Z,2,regular-season,Adelaide 36ers,New Zealand Breakers,72,88,True,post
+401875259,2026-10-07,2026-10-07T08:30Z,2,regular-season,Adelaide 36ers,Melbourne United,91,96,True,post
+401875265,2026-10-08,2026-10-08T08:30Z,2,regular-season,Cairns Taipans,Brisbane Bullets,97,91,True,post
+401875247,2026-10-09,2026-10-09T08:30Z,2,regular-season,Illawarra Hawks,Tasmania JackJumpers,112,122,True,post
+401875266,2026-10-10,2026-10-10T08:30Z,2,regular-season,South East Melbourne Phoenix,Melbourne United,99,104,True,post
+401875268,2026-10-10,2026-10-10T10:30Z,2,regular-season,Perth Wildcats,New Zealand Breakers,100,84,True,post
+401875249,2026-10-11,2026-10-11T04:00Z,2,regular-season,Sydney Kings,Adelaide 36ers,78,84,True,post
+401875258,2026-10-11,2026-10-11T06:00Z,2,regular-season,Illawarra Hawks,Cairns Taipans,100,110,True,post
+401875269,2026-10-14,2026-10-14T08:30Z,2,regular-season,Sydney Kings,New Zealand Breakers,0,0,False,pre
+401875261,2026-10-15,2026-10-15T08:30Z,2,regular-season,Brisbane Bullets,South East Melbourne Phoenix,0,0,False,pre
+401875264,2026-10-16,2026-10-16T08:30Z,2,regular-season,Tasmania JackJumpers,Adelaide 36ers,0,0,False,pre
+401875270,2026-10-17,2026-10-17T06:30Z,2,regular-season,South East Melbourne Phoenix,Cairns Taipans,0,0,False,pre
+401875271,2026-10-17,2026-10-17T08:30Z,2,regular-season,Sydney Kings,Perth Wildcats,0,0,False,pre
+401875281,2026-10-18,2026-10-18T04:00Z,2,regular-season,Tasmania JackJumpers,New Zealand Breakers,0,0,False,pre
+401875272,2026-10-18,2026-10-18T06:00Z,2,regular-season,Melbourne United,Illawarra Hawks,0,0,False,pre
+401875282,2026-10-21,2026-10-21T08:30Z,2,regular-season,Tasmania JackJumpers,Brisbane Bullets,0,0,False,pre
+401875283,2026-10-22,2026-10-22T08:30Z,2,regular-season,Illawarra Hawks,Sydney Kings,0,0,False,pre
+401875274,2026-10-23,2026-10-23T10:30Z,2,regular-season,Perth Wildcats,Melbourne United,0,0,False,pre
+401875273,2026-10-24,2026-10-24T06:30Z,2,regular-season,Illawarra Hawks,Brisbane Bullets,0,0,False,pre
+401875275,2026-10-24,2026-10-24T08:30Z,2,regular-season,South East Melbourne Phoenix,Adelaide 36ers,0,0,False,pre
+401875276,2026-10-25,2026-10-25T04:00Z,2,regular-season,Cairns Taipans,New Zealand Breakers,0,0,False,pre
+401875284,2026-10-25,2026-10-25T06:00Z,2,regular-season,Melbourne United,Sydney Kings,0,0,False,pre
+401875292,2026-10-28,2026-10-28T10:30Z,2,regular-season,Perth Wildcats,Sydney Kings,0,0,False,pre
+401875280,2026-10-29,2026-10-29T08:30Z,2,regular-season,Brisbane Bullets,Cairns Taipans,0,0,False,pre
+401875293,2026-10-30,2026-10-30T06:30Z,2,regular-season,New Zealand Breakers,Adelaide 36ers,0,0,False,pre
+401875278,2026-10-30,2026-10-30T08:30Z,2,regular-season,Tasmania JackJumpers,Sydney Kings,0,0,False,pre
+401875291,2026-10-31,2026-10-31T08:30Z,2,regular-season,Cairns Taipans,Melbourne United,0,0,False,pre
+401875285,2026-10-31,2026-10-31T10:30Z,2,regular-season,Perth Wildcats,Illawarra Hawks,0,0,False,pre
+401875313,2026-11-01,2026-11-01T04:00Z,2,regular-season,South East Melbourne Phoenix,Tasmania JackJumpers,0,0,False,pre
+401875288,2026-11-01,2026-11-01T06:00Z,2,regular-season,Adelaide 36ers,Brisbane Bullets,0,0,False,pre
+401875301,2026-11-02,2026-11-02T08:30Z,2,regular-season,Melbourne United,New Zealand Breakers,0,0,False,pre
+401875290,2026-11-04,2026-11-04T08:30Z,2,regular-season,Brisbane Bullets,Perth Wildcats,0,0,False,pre
+401875295,2026-11-05,2026-11-05T08:30Z,2,regular-season,Cairns Taipans,Illawarra Hawks,0,0,False,pre
+401875294,2026-11-06,2026-11-06T08:30Z,2,regular-season,Tasmania JackJumpers,New Zealand Breakers,0,0,False,pre
+401875289,2026-11-07,2026-11-07T06:30Z,2,regular-season,Adelaide 36ers,Illawarra Hawks,0,0,False,pre
+401875286,2026-11-07,2026-11-07T08:30Z,2,regular-season,Melbourne United,Brisbane Bullets,0,0,False,pre
+401875307,2026-11-07,2026-11-08T04:00Z,2,regular-season,Sydney Kings,South East Melbourne Phoenix,0,0,False,pre
+401875296,2026-11-08,2026-11-08T06:00Z,2,regular-season,Perth Wildcats,Cairns Taipans,0,0,False,pre
+401875326,2026-11-11,2026-11-11T08:30Z,2,regular-season,South East Melbourne Phoenix,Illawarra Hawks,0,0,False,pre
+401875328,2026-11-12,2026-11-12T08:30Z,2,regular-season,Adelaide 36ers,Melbourne United,0,0,False,pre
+401875297,2026-11-12,2026-11-12T10:30Z,2,regular-season,Perth Wildcats,Tasmania JackJumpers,0,0,False,pre
+401875310,2026-11-13,2026-11-13T06:30Z,2,regular-season,New Zealand Breakers,Brisbane Bullets,0,0,False,pre
+401875299,2026-11-13,2026-11-13T08:30Z,2,regular-season,Cairns Taipans,Sydney Kings,0,0,False,pre
+401875356,2026-11-14,2026-11-14T08:30Z,2,regular-season,Melbourne United,South East Melbourne Phoenix,0,0,False,pre
+401875302,2026-11-14,2026-11-14T10:30Z,2,regular-season,Perth Wildcats,Illawarra Hawks,0,0,False,pre
+401875298,2026-11-14,2026-11-15T04:00Z,2,regular-season,Sydney Kings,New Zealand Breakers,0,0,False,pre
+401875300,2026-11-15,2026-11-15T06:00Z,2,regular-season,Brisbane Bullets,Tasmania JackJumpers,0,0,False,pre
+401875306,2026-11-18,2026-11-18T06:30Z,2,regular-season,New Zealand Breakers,South East Melbourne Phoenix,0,0,False,pre
+401875305,2026-11-19,2026-11-19T08:30Z,2,regular-season,Illawarra Hawks,Adelaide 36ers,0,0,False,pre
+401875351,2026-11-20,2026-11-20T08:30Z,2,regular-season,Cairns Taipans,Perth Wildcats,0,0,False,pre
+401875338,2026-11-21,2026-11-21T06:30Z,2,regular-season,Tasmania JackJumpers,Illawarra Hawks,0,0,False,pre
+401875314,2026-11-21,2026-11-21T08:30Z,2,regular-season,Melbourne United,New Zealand Breakers,0,0,False,pre
+401875315,2026-11-21,2026-11-22T04:00Z,2,regular-season,South East Melbourne Phoenix,Cairns Taipans,0,0,False,pre
+401875309,2026-11-22,2026-11-22T06:00Z,2,regular-season,Brisbane Bullets,Sydney Kings,0,0,False,pre
+401875308,2026-12-02,2026-12-02T08:30Z,2,regular-season,Adelaide 36ers,South East Melbourne Phoenix,0,0,False,pre
+401875304,2026-12-03,2026-12-03T08:30Z,2,regular-season,Brisbane Bullets,Perth Wildcats,0,0,False,pre
+401875321,2026-12-04,2026-12-04T06:30Z,2,regular-season,New Zealand Breakers,Melbourne United,0,0,False,pre
+401875323,2026-12-04,2026-12-04T08:30Z,2,regular-season,Illawarra Hawks,Sydney Kings,0,0,False,pre
+401875340,2026-12-05,2026-12-05T06:30Z,2,regular-season,Cairns Taipans,South East Melbourne Phoenix,0,0,False,pre
+401875311,2026-12-05,2026-12-05T08:30Z,2,regular-season,Adelaide 36ers,Tasmania JackJumpers,0,0,False,pre
+401875312,2026-12-05,2026-12-06T04:00Z,2,regular-season,Melbourne United,Brisbane Bullets,0,0,False,pre
+401875325,2026-12-06,2026-12-06T06:00Z,2,regular-season,Sydney Kings,Perth Wildcats,0,0,False,pre
+401875303,2026-12-09,2026-12-09T07:30Z,2,regular-season,Cairns Taipans,Adelaide 36ers,0,0,False,pre
+401875339,2026-12-10,2026-12-10T08:30Z,2,regular-season,Illawarra Hawks,Tasmania JackJumpers,0,0,False,pre
+401875346,2026-12-11,2026-12-11T06:30Z,2,regular-season,New Zealand Breakers,Sydney Kings,0,0,False,pre
+401875322,2026-12-12,2026-12-12T06:30Z,2,regular-season,Cairns Taipans,Brisbane Bullets,0,0,False,pre
+401875316,2026-12-12,2026-12-12T08:30Z,2,regular-season,Melbourne United,Tasmania JackJumpers,0,0,False,pre
+401875332,2026-12-12,2026-12-13T04:00Z,2,regular-season,Adelaide 36ers,Sydney Kings,0,0,False,pre
+401875324,2026-12-13,2026-12-13T06:00Z,2,regular-season,South East Melbourne Phoenix,Perth Wildcats,0,0,False,pre
+401875318,2026-12-16,2026-12-16T10:30Z,2,regular-season,Perth Wildcats,Melbourne United,0,0,False,pre
+401875317,2026-12-17,2026-12-17T08:30Z,2,regular-season,Sydney Kings,Cairns Taipans,0,0,False,pre
+401875330,2026-12-18,2026-12-18T08:30Z,2,regular-season,New Zealand Breakers,Tasmania JackJumpers,0,0,False,pre
+401875329,2026-12-19,2026-12-19T06:30Z,2,regular-season,Adelaide 36ers,Brisbane Bullets,0,0,False,pre
+401875341,2026-12-19,2026-12-19T09:00Z,2,regular-season,South East Melbourne Phoenix,Sydney Kings,0,0,False,pre
+401875334,2026-12-19,2026-12-20T04:00Z,2,regular-season,Illawarra Hawks,Melbourne United,0,0,False,pre
+401875327,2026-12-20,2026-12-20T06:00Z,2,regular-season,Cairns Taipans,Perth Wildcats,0,0,False,pre
+401875319,2026-12-21,2026-12-21T08:30Z,2,regular-season,Tasmania JackJumpers,Adelaide 36ers,0,0,False,pre
+401875331,2026-12-22,2026-12-22T06:30Z,2,regular-season,New Zealand Breakers,Brisbane Bullets,0,0,False,pre
+401875320,2026-12-23,2026-12-23T09:00Z,2,regular-season,Melbourne United,Cairns Taipans,0,0,False,pre
+401875347,2026-12-24,2026-12-24T08:00Z,2,regular-season,Adelaide 36ers,Perth Wildcats,0,0,False,pre
+401875333,2026-12-25,2026-12-25T08:30Z,2,regular-season,Sydney Kings,Illawarra Hawks,0,0,False,pre
+401875342,2026-12-26,2026-12-26T08:30Z,2,regular-season,Tasmania JackJumpers,South East Melbourne Phoenix,0,0,False,pre
+401875337,2026-12-26,2026-12-27T04:00Z,2,regular-season,Illawarra Hawks,New Zealand Breakers,0,0,False,pre
+401875383,2026-12-27,2026-12-27T06:00Z,2,regular-season,Brisbane Bullets,Cairns Taipans,0,0,False,pre
+401875343,2026-12-29,2026-12-29T08:30Z,2,regular-season,Sydney Kings,Melbourne United,0,0,False,pre
+401875335,2026-12-30,2026-12-30T08:30Z,2,regular-season,Brisbane Bullets,Adelaide 36ers,0,0,False,pre
+401875336,2026-12-31,2026-12-31T06:30Z,2,regular-season,Illawarra Hawks,South East Melbourne Phoenix,0,0,False,pre
+401875344,2026-12-31,2026-12-31T08:30Z,2,regular-season,Cairns Taipans,New Zealand Breakers,0,0,False,pre
+401875371,2027-01-01,2027-01-01T08:30Z,2,regular-season,Tasmania JackJumpers,Perth Wildcats,0,0,False,pre
+401875382,2027-01-02,2027-01-02T06:30Z,2,regular-season,Illawarra Hawks,Cairns Taipans,0,0,False,pre
+401875345,2027-01-02,2027-01-02T08:30Z,2,regular-season,Adelaide 36ers,South East Melbourne Phoenix,0,0,False,pre
+401875353,2027-01-02,2027-01-03T04:00Z,2,regular-season,New Zealand Breakers,Perth Wildcats,0,0,False,pre
+401875355,2027-01-03,2027-01-03T06:00Z,2,regular-season,Brisbane Bullets,Melbourne United,0,0,False,pre
+401875352,2027-01-04,2027-01-04T08:30Z,2,regular-season,Sydney Kings,Tasmania JackJumpers,0,0,False,pre
+401875354,2027-01-06,2027-01-06T06:30Z,2,regular-season,South East Melbourne Phoenix,Tasmania JackJumpers,0,0,False,pre
+401875358,2027-01-06,2027-01-06T08:30Z,2,regular-season,Illawarra Hawks,Perth Wildcats,0,0,False,pre
+401875357,2027-01-07,2027-01-07T08:30Z,2,regular-season,Melbourne United,Adelaide 36ers,0,0,False,pre
+401875360,2027-01-08,2027-01-08T06:30Z,2,regular-season,New Zealand Breakers,Illawarra Hawks,0,0,False,pre
+401875359,2027-01-08,2027-01-08T08:30Z,2,regular-season,Brisbane Bullets,Sydney Kings,0,0,False,pre
+401875361,2027-01-09,2027-01-09T06:30Z,2,regular-season,Cairns Taipans,Tasmania JackJumpers,0,0,False,pre
+401875348,2027-01-09,2027-01-09T08:30Z,2,regular-season,Adelaide 36ers,Perth Wildcats,0,0,False,pre
+401875364,2027-01-09,2027-01-10T04:00Z,2,regular-season,South East Melbourne Phoenix,New Zealand Breakers,0,0,False,pre
+401875362,2027-01-10,2027-01-10T06:00Z,2,regular-season,Sydney Kings,Melbourne United,0,0,False,pre
+401875394,2027-01-13,2027-01-13T10:30Z,2,regular-season,Melbourne United,Cairns Taipans,0,0,False,pre
+401875369,2027-01-14,2027-01-14T10:30Z,2,regular-season,Sydney Kings,South East Melbourne Phoenix,0,0,False,pre
+401875397,2027-01-15,2027-01-15T10:30Z,2,regular-season,Perth Wildcats,New Zealand Breakers,0,0,False,pre
+401875395,2027-01-16,2027-01-16T10:30Z,2,regular-season,Tasmania JackJumpers,Adelaide 36ers,0,0,False,pre
+401875363,2027-01-17,2027-01-17T06:00Z,2,regular-season,Brisbane Bullets,Illawarra Hawks,0,0,False,pre
+401875396,2027-01-20,2027-01-20T06:30Z,2,regular-season,Melbourne United,Tasmania JackJumpers,0,0,False,pre
+401875350,2027-01-20,2027-01-20T08:30Z,2,regular-season,Illawarra Hawks,New Zealand Breakers,0,0,False,pre
+401875400,2027-01-21,2027-01-21T08:30Z,2,regular-season,South East Melbourne Phoenix,Adelaide 36ers,0,0,False,pre
+401875367,2027-01-22,2027-01-22T08:30Z,2,regular-season,Tasmania JackJumpers,Cairns Taipans,0,0,False,pre
+401875402,2027-01-22,2027-01-22T10:30Z,2,regular-season,Perth Wildcats,Sydney Kings,0,0,False,pre
+401875366,2027-01-23,2027-01-23T06:30Z,2,regular-season,Adelaide 36ers,Illawarra Hawks,0,0,False,pre
+401875384,2027-01-23,2027-01-23T08:30Z,2,regular-season,Brisbane Bullets,Melbourne United,0,0,False,pre
+401875368,2027-01-23,2027-01-24T04:00Z,2,regular-season,New Zealand Breakers,Cairns Taipans,0,0,False,pre
+401875349,2027-01-24,2027-01-24T06:00Z,2,regular-season,South East Melbourne Phoenix,Perth Wildcats,0,0,False,pre
+401875398,2027-01-25,2027-01-25T08:30Z,2,regular-season,Sydney Kings,Brisbane Bullets,0,0,False,pre
+401875365,2027-01-27,2027-01-27T06:30Z,2,regular-season,Tasmania JackJumpers,Illawarra Hawks,0,0,False,pre
+401875370,2027-01-27,2027-01-27T07:30Z,2,regular-season,Cairns Taipans,Sydney Kings,0,0,False,pre
+401875375,2027-01-28,2027-01-28T08:30Z,2,regular-season,Brisbane Bullets,South East Melbourne Phoenix,0,0,False,pre
+401875399,2027-01-28,2027-01-28T10:30Z,2,regular-season,Perth Wildcats,Adelaide 36ers,0,0,False,pre
+401875373,2027-01-29,2027-01-29T06:30Z,2,regular-season,New Zealand Breakers,Melbourne United,0,0,False,pre
+401875381,2027-01-30,2027-01-30T06:30Z,2,regular-season,Illawarra Hawks,Perth Wildcats,0,0,False,pre
+401875372,2027-01-30,2027-01-30T08:30Z,2,regular-season,Adelaide 36ers,Sydney Kings,0,0,False,pre
+401875376,2027-01-31,2027-01-31T06:00Z,2,regular-season,Cairns Taipans,South East Melbourne Phoenix,0,0,False,pre
+401875374,2027-01-31,2027-01-31T08:30Z,2,regular-season,Tasmania JackJumpers,Brisbane Bullets,0,0,False,pre
+401875390,2027-02-04,2027-02-04T08:30Z,2,regular-season,New Zealand Breakers,South East Melbourne Phoenix,0,0,False,pre
+401875385,2027-02-04,2027-02-04T08:30Z,2,regular-season,Illawarra Hawks,Brisbane Bullets,0,0,False,pre
+401875386,2027-02-05,2027-02-05T08:30Z,2,regular-season,Tasmania JackJumpers,Melbourne United,0,0,False,pre
+401875380,2027-02-05,2027-02-05T10:30Z,2,regular-season,Perth Wildcats,Cairns Taipans,0,0,False,pre
+401875403,2027-02-06,2027-02-06T06:30Z,2,regular-season,Brisbane Bullets,Adelaide 36ers,0,0,False,pre
+401875392,2027-02-06,2027-02-06T08:30Z,2,regular-season,South East Melbourne Phoenix,Sydney Kings,0,0,False,pre
+401875378,2027-02-06,2027-02-07T04:00Z,2,regular-season,New Zealand Breakers,Tasmania JackJumpers,0,0,False,pre
+401875389,2027-02-07,2027-02-07T06:00Z,2,regular-season,Melbourne United,Perth Wildcats,0,0,False,pre
+401875388,2027-02-10,2027-02-10T08:30Z,2,regular-season,Tasmania JackJumpers,Perth Wildcats,0,0,False,pre
+401875379,2027-02-11,2027-02-11T06:30Z,2,regular-season,New Zealand Breakers,Sydney Kings,0,0,False,pre
+401875377,2027-02-11,2027-02-11T08:30Z,2,regular-season,Melbourne United,South East Melbourne Phoenix,0,0,False,pre
+401875387,2027-02-12,2027-02-12T08:30Z,2,regular-season,Cairns Taipans,Adelaide 36ers,0,0,False,pre
+401875407,2027-02-12,2027-02-12T10:30Z,2,regular-season,Perth Wildcats,Brisbane Bullets,0,0,False,pre
+401875391,2027-02-13,2027-02-13T06:30Z,2,regular-season,Melbourne United,Illawarra Hawks,0,0,False,pre
+401875408,2027-02-13,2027-02-13T08:30Z,2,regular-season,Sydney Kings,Tasmania JackJumpers,0,0,False,pre
+401875401,2027-02-13,2027-02-14T04:00Z,2,regular-season,Adelaide 36ers,New Zealand Breakers,0,0,False,pre
+401875393,2027-02-14,2027-02-14T06:00Z,2,regular-season,South East Melbourne Phoenix,Brisbane Bullets,0,0,False,pre

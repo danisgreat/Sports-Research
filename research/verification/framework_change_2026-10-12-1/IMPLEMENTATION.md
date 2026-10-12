@@ -74,13 +74,17 @@ Order of work: phase A (R01–R07), then B (R08–R14, R26–R27, PR-01–PR-10)
 
 ## Phase D — claims, designs and data readiness (R24–R25, R28–R32)
 
-| ID | Decision | Change and files | Status |
-|---|---|---|---|
-| R24 | Adopt | CURRENT_STATE wording "does not establish incremental skill" plus a dated clarification | PLANNED |
-| R25 | Adopt | Two-stage internal-pilot design with all design inputs fixed now, for FC10 and FC11 experiments | PLANNED |
-| R28 | Adopt | Known-at rule in CURRENT_RULES §5 and prompt 1 (archive rule already in ARCHIVE_USE_GUIDE §9.6) | PLANNED |
-| R29 | Adopt (scoped) | Field-lineage matrix for leagues in current use, with live route probes | PLANNED |
-| R30 | Adopt | NBL 2025 dates, stage and quarter-flag repair from the prepared sidecar; 2026 snapshot denominator and corroboration | PLANNED |
-| R31 | Attempt | KBO/NPB observed innings recovery for a declared scope, or DATA_PENDING with the routes tried | PLANNED |
-| R32 | Adopt | Profile freshness table (as-of, window, coverage, permitted endpoints); new rows only where the archive supports them | PLANNED |
-| NEW-01 | Adopt | Scan the other builder-era archive folders (SOURCES §3.14–§3.30) for the R01/R02 default fingerprints | PLANNED |
+Statuses updated 2026-10-12, about 22:40 AEDT, before the phase-D commit. R24, R25 and R28 had already shipped in the phase B/C commit `93b4b52e6`; their rows were still marked PLANNED and are corrected here.
+
+| ID | Decision | Change and files | Acceptance evidence | Status |
+|---|---|---|---|---|
+| R24 | Adopt | CURRENT_STATE scoreboard wording: the cohort "does not establish incremental predictive skill", with a dated clarification; the dated retrospective is unchanged | Fixture F23; shipped in `93b4b52e6` | DONE |
+| R25 | Adopt | HYPOTHESIS_REGISTER v3: a two-stage internal-pilot design common to every FC10/FC11 test, with margins, guardrails, analysis unit, dependence, stopping rule and held-out start fixed before any v11 card | Shipped in `93b4b52e6`; 0 events | DONE (design); REGISTERED (experiments) |
+| R28 | Adopt | Known-at rule in CURRENT_RULES §5, prompt 1 (all sport sections) and ARCHIVE_USE_GUIDE §9 rule 6; `KNOWN_AT_UNVERIFIED` may not decide Rank 1 | Fixture F30; shipped in `93b4b52e6` | DONE |
+| R29 | Adopt (scoped) | [LINEAGE_MATRIX.md](LINEAGE_MATRIX.md): field owner, provider, probe result, lineage and fallback for 12 leagues in current use; KBO and NPB owner routes added after the R31 work | One-machine probes on 2026-10-12; publisher lineage statements, NBL owner scores and the NBA CDN remain open | DONE_PARTIAL |
+| R30 | Adopt | `Basketball/NBL/2025/2025_games.csv`: 179 dates and weekdays filled (165 from the run-2 sidecar, 14 post-season from ESPN), 14 post-season `Game Type` values set from the printed round. Start times stay blank (scheduled is not actual). 2026-27 snapshot: denominator checked against ESPN's 165 fixtures. ARCHIVE_USE_GUIDE §8 | 372 cells, each in [the log](NBL_2025_REPAIR_LOG.csv); 0 weekday mismatches; 165 regular games, 33 per team; 14/14 post-season dates and scores re-read from the ESPN summary at the phase-D check. The quarter-sum rows are flagged, not repaired. An NBL-owned score for the 19 single-source 2026-27 games stays DATA_PENDING | DONE_PARTIAL |
+| R31 | Attempt → done for 2025 | KBO 2025: innings and extras for all 779 completed games checked against KBO's own scoreboard service. Two values from the first MyKBO pass were wrong and are reverted. Stage labels repaired (5 opening-day games; Wild Card and Semi-Playoff swapped). NPB 2025: all 878 completed games read from npb.jp box scores; 109 innings values repaired; 2 Climax Series rows relabelled. ARCHIVE_USE_GUIDE §8, LEAGUE_PROFILES recovery note | KBO 148 and NPB 222 changed cells, every one traced from main's value to the final value through the logs; scores 779/779 and 878/878 agree with the owner; regular seasons complete (720 at 144 per team; 858 at 143 per team). 2000–2024 innings and both leagues' line-score columns not recovered | DONE_PARTIAL (2025 only) |
+| R32 | Adopt | LEAGUE_PROFILES LP-2026.10.12-v3: freshness table (as-of, window, source, latest completed season, status, permitted endpoints) for all 15 rows; Czech Extraliga row added from the rebuilt archive; sport constants relabelled (R13) | The Czech row was recomputed independently at the phase-D check: n 1,092, means 2.95/2.48, SDs 2.46/2.19, r −0.118, OT 22.3%, SO 9.2%, home win 57.8%; all match. No existing numeric row changed | DONE |
+| NEW-01 | Adopt | Scan of every populated archive folder for the R01/R02 fingerprints | Covered by the phase-C scan in [ACTIVE_FILE_INDEX](../../../ACTIVE_FILE_INDEX.md) §2 (`SUSPECTED_DEFAULT` columns listed; classification is a prompt-7 task) | DONE_PARTIAL (see phase C) |
+
+**Found during phase D and deliberately not published.** An uncommitted NBA G League build appeared in the working tree after the audit: `research/src/` Python builders, `research/data/nba_g_league/` JSON caches, three copies of each season (`NBA_G_League_Basketball_CSVs/`, `Basketball/NBA G League/`, `Basketball/G League/`) and an unpublished SOURCES §3.33 that calls the data verified with "zero ungrounded fabricated results". A spot check found the R01/R02 fingerprint: all 418 games of 2010 have start time 19:00 and attendance 2,500. It fails R04, R06 and R07 as written. It is left in place, unstaged, for its owner to quarantine or rebuild under prompt 7.

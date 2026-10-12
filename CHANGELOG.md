@@ -1,5 +1,32 @@
 # Changelog
 
+## 2026-10-12 — Framework change 2026-10-12-1, phase D: claims, designs and data readiness (audit R24–R25, R28–R32); rules edit CR-R2
+
+Same change folder ([implementation map](research/verification/framework_change_2026-10-12-1/IMPLEMENTATION.md), [verification](research/verification/framework_change_2026-10-12-1/VERIFICATION_REPORT.md)). Classes: data repair (archive), source documentation, and a user-made PROCEDURE edit to the rules.
+
+**Versions:** CR-2026.10.12-R2 (was R1). MDS, SCV, SEL, HYP, template formats and prompts unchanged. LEAGUE_PROFILES stays LP-2026.10.12-v3 with additive notes only.
+
+**Rules edit (user, PROCEDURE).** CURRENT_RULES §5 no longer has the LATE_START monitoring-band paragraph. The freeze step no longer says "no later than 5 minutes before the start".
+- **Before:** record the scheduled lead time at issue. Within five minutes of the start was the LATE_START band. The freeze fell no later than T−5.
+- **After:** freeze at the official lineup check. Issuing with lineup scenarios (`LINEUP_UNCONFIRMED`) if the lineup is unpublished at T−5 is unchanged.
+- **Not yet aligned:** prompt 1 (its per-sport §2), the card template's "Scheduled lead / band" field and SCORING cohort text still use the T−5 / LATE_START terms. The user's local edit to prompt 1 (first sport section only) is not in this commit. The R1 text is archived at `archive/superseded_2026-10-12/CURRENT_RULES_v11.0_CR-R1.md`.
+
+**Already shipped, now recorded:** R24 (skill wording), R25 (two-stage acceptance designs) and R28 (known-at rule) went out in `93b4b52e6`; the implementation map is corrected.
+
+**Data repairs (no card, grade, P-ID or frozen profile row changed):**
+- **NBL 2025 (R30):** 179 dates and weekdays filled. 14 post-season rows retyped from their printed round, so `Regular Season` is 165 games, 33 per team. The 2026-27 snapshot's denominator was checked against ESPN.
+- **KBO 2025 (R31):** innings and extras for all 779 completed games checked against KBO's own scoreboard service. Two values from a first MyKBO pass were wrong and are reverted. Five opening-day games were typed Exhibition, and the Wild Card and Semi-Playoff labels were swapped; both are fixed. Measured 2025: extras 8.2% (59/720), ties 3.1%.
+- **NPB 2025 (R31):** all 878 completed games read from npb.jp box scores; 109 innings values repaired (every row had read 9 / No). Two Climax Series games typed Regular Season are relabelled. Measured 2025: extras 11.8% (101/858), ties 2.7%.
+- KBO/NPB 2000–2024 innings are still placeholders; the window extras share stays `NOT_ESTIMABLE`.
+
+**Documentation:**
+- [LINEAGE_MATRIX](research/verification/framework_change_2026-10-12-1/LINEAGE_MATRIX.md) for 12 leagues (R29, one-machine probes), with the new KBO and NPB owner routes.
+- LEAGUE_PROFILES freshness table and Czech Extraliga row (R32; recomputed and matched).
+- ARCHIVE_USE_GUIDE §8 rows, ACTIVE_FILE_INDEX notes.
+- Status-register queue recheck: the P-577 and P-578 capture due times have now passed too; nothing was settled.
+
+**Not published:** an uncommitted NBA G League build (`research/src/` code, JSON caches, three copies per season, SOURCES §3.33 claiming verified data) carries the R01/R02 default fingerprint (2010: every game 19:00, attendance 2,500). It is left unstaged for its owner.
+
 ## 2026-10-12 — Framework change 2026-10-12-1, phases B and C: v11 rules, prompts and formats (audit R08–R23, R26–R27, R33–R38; prediction items PR-01–PR-10)
 
 Same instruction and change folder as phase A ([implementation map](research/verification/framework_change_2026-10-12-1/IMPLEMENTATION.md), [fixtures F01–F32](research/verification/framework_change_2026-10-12-1/FIXTURES.md)). Classes: process repair, format definition, scoring definition, and a user-authorised selection change (mixture pricing) with registered experiments.

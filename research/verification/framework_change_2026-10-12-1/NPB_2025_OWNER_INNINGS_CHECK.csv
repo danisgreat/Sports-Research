@@ -1,0 +1,879 @@
+game_id,season_phase,date,archive_innings,archive_extra,archive_away,archive_home,owner_innings,owner_note,owner_away_runs,owner_home_runs,owner_away_line,owner_home_line,innings_agree,score_agree,url,fetched_utc
+NPB_2025_20250328_00105,Regular Season,2025-03-28,9,No,5,6,10,10 innings,5,6,0 0 0 0 4 1 0 0 0 0,0 0 0 0 0 0 0 2 3 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025032800105.html,2026-10-12T11:13Z
+NPB_2025_20250328_00106,Regular Season,2025-03-28,9,No,0,5,9,,0,5,0 0 0 0 0 0 0 0 0,1 1 0 0 1 2 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025032800106.html,2026-10-12T11:13Z
+NPB_2025_20250328_00107,Regular Season,2025-03-28,9,No,4,0,9,,4,0,2 0 0 0 0 0 0 2 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025032800107.html,2026-10-12T11:13Z
+NPB_2025_20250328_00478,Regular Season,2025-03-28,9,No,2,0,9,,2,0,0 0 0 0 0 0 1 0 1,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025032800478.html,2026-10-12T11:13Z
+NPB_2025_20250328_00479,Regular Season,2025-03-28,9,No,2,3,9,,2,3,0 0 0 0 0 0 0 1 1,0 2 0 0 0 0 0 0 1X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025032800479.html,2026-10-12T11:13Z
+NPB_2025_20250328_00480,Regular Season,2025-03-28,9,No,8,2,9,,8,2,0 0 0 0 0 6 1 1 0,0 0 1 0 0 0 0 1 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025032800480.html,2026-10-12T11:13Z
+NPB_2025_20250329_00108,Regular Season,2025-03-29,9,No,0,12,9,,0,12,0 0 0 0 0 0 0 0 0,1 6 3 2 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025032900108.html,2026-10-12T11:13Z
+NPB_2025_20250329_00109,Regular Season,2025-03-29,9,No,1,0,9,,1,0,0 1 0 0 0 0 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025032900109.html,2026-10-12T11:13Z
+NPB_2025_20250329_00110,Regular Season,2025-03-29,9,No,3,2,9,,3,2,0 0 0 0 1 2 0 0 0,0 0 0 1 1 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025032900110.html,2026-10-12T11:13Z
+NPB_2025_20250329_00481,Regular Season,2025-03-29,9,No,3,2,10,10 innings,3,2,1 0 0 1 0 0 0 0 0 1,0 0 0 0 0 1 0 1 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025032900481.html,2026-10-12T11:13Z
+NPB_2025_20250329_00482,Regular Season,2025-03-29,9,No,5,4,10,10 innings,5,4,0 0 1 0 0 1 0 0 0 3,0 0 0 0 0 0 1 1 0 2,N,Y,https://npb.jp/bis/eng/2025/games/s2025032900482.html,2026-10-12T11:13Z
+NPB_2025_20250329_00483,Regular Season,2025-03-29,9,No,5,4,10,10 innings,5,4,0 0 0 0 3 1 0 0 0 1,0 0 1 0 3 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025032900483.html,2026-10-12T11:13Z
+NPB_2025_20250330_00111,Regular Season,2025-03-30,9,No,0,3,9,,0,3,0 0 0 0 0 0 0 0 0,0 2 0 0 0 0 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025033000111.html,2026-10-12T11:13Z
+NPB_2025_20250330_00112,Regular Season,2025-03-30,9,No,1,2,9,,1,2,0 0 0 0 0 0 0 1 0,0 0 0 1 1 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025033000112.html,2026-10-12T11:13Z
+NPB_2025_20250330_00113,Regular Season,2025-03-30,9,No,0,2,9,,0,2,0 0 0 0 0 0 0 0 0,0 0 0 1 1 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025033000113.html,2026-10-12T11:13Z
+NPB_2025_20250330_00484,Regular Season,2025-03-30,9,No,7,5,9,,7,5,1 0 3 0 2 0 0 1 0,1 0 0 1 0 0 0 3 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025033000484.html,2026-10-12T11:13Z
+NPB_2025_20250330_00485,Regular Season,2025-03-30,9,No,1,6,9,,1,6,0 0 0 1 0 0 0 0 0,0 3 0 0 2 0 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025033000485.html,2026-10-12T11:13Z
+NPB_2025_20250330_00486,Regular Season,2025-03-30,9,No,7,4,9,,7,4,0 0 0 0 1 0 3 1 2,0 2 2 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025033000486.html,2026-10-12T11:13Z
+NPB_2025_20250401_00115,Regular Season,2025-04-01,9,No,2,3,9,,2,3,0 0 0 1 0 0 0 0 1,0 1 0 0 0 0 1 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040100115.html,2026-10-12T11:13Z
+NPB_2025_20250401_00116,Regular Season,2025-04-01,9,No,7,1,9,,7,1,0 0 1 0 0 3 0 0 3,0 1 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040100116.html,2026-10-12T11:13Z
+NPB_2025_20250401_00487,Regular Season,2025-04-01,9,No,5,1,9,,5,1,1 2 0 0 2 0 0 0 0,0 1 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040100487.html,2026-10-12T11:13Z
+NPB_2025_20250402_00117,Regular Season,2025-04-02,9,No,4,5,10,10 innings,4,5,0 2 0 0 0 2 0 0 0 0,1 0 0 0 0 0 0 3 0 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025040200117.html,2026-10-12T11:13Z
+NPB_2025_20250402_00118,Regular Season,2025-04-02,9,No,2,0,9,,2,0,1 0 0 0 0 1 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040200118.html,2026-10-12T11:13Z
+NPB_2025_20250402_00119,Regular Season,2025-04-02,9,No,6,6,12,12 innings,6,6,0 1 0 0 0 2 0 3 0 0 0 0,0 0 0 2 0 2 2 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025040200119.html,2026-10-12T11:13Z
+NPB_2025_20250402_00490,Regular Season,2025-04-02,9,No,1,3,9,,1,3,0 0 0 0 0 1 0 0 0,0 0 0 0 2 0 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040200490.html,2026-10-12T11:13Z
+NPB_2025_20250402_00492,Regular Season,2025-04-02,9,No,3,2,9,,3,2,0 0 0 1 0 0 2 0 0,0 0 1 0 0 0 1 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040200492.html,2026-10-12T11:13Z
+NPB_2025_20250403_00120,Regular Season,2025-04-03,9,No,0,3,9,,0,3,0 0 0 0 0 0 0 0 0,0 0 0 2 0 0 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040300120.html,2026-10-12T11:13Z
+NPB_2025_20250403_00121,Regular Season,2025-04-03,9,No,5,3,9,,5,3,0 1 2 0 1 0 0 1 0,0 0 1 0 0 1 1 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040300121.html,2026-10-12T11:13Z
+NPB_2025_20250403_00122,Regular Season,2025-04-03,9,No,5,2,9,,5,2,0 0 0 0 0 1 0 1 3,0 0 0 0 0 0 0 2 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040300122.html,2026-10-12T11:13Z
+NPB_2025_20250403_00493,Regular Season,2025-04-03,9,No,1,4,9,,1,4,0 0 0 1 0 0 0 0 0,0 0 0 0 0 3 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040300493.html,2026-10-12T11:13Z
+NPB_2025_20250403_00494,Regular Season,2025-04-03,9,No,3,2,9,,3,2,0 0 0 0 0 2 0 1 0,0 0 0 0 0 2 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040300494.html,2026-10-12T11:13Z
+NPB_2025_20250404_00123,Regular Season,2025-04-04,9,No,7,2,9,,7,2,1 0 2 0 0 0 3 1 0,1 0 0 0 0 0 0 0 1,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040400123.html,2026-10-12T11:13Z
+NPB_2025_20250404_00124,Regular Season,2025-04-04,9,No,1,1,12,12 innings,1,1,0 1 0 0 0 0 0 0 0 0 0 0,0 0 0 0 0 0 0 1 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025040400124.html,2026-10-12T11:13Z
+NPB_2025_20250404_00125,Regular Season,2025-04-04,9,No,2,8,9,,2,8,0 0 2 0 0 0 0 0 0,0 0 0 3 1 4 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040400125.html,2026-10-12T11:13Z
+NPB_2025_20250404_00495,Regular Season,2025-04-04,9,No,4,3,9,,4,3,0 0 3 0 0 0 1 0 0,0 0 0 1 0 1 0 1 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040400495.html,2026-10-12T11:13Z
+NPB_2025_20250404_00496,Regular Season,2025-04-04,9,No,3,1,9,,3,1,0 0 0 1 1 0 0 0 1,0 0 0 0 0 0 1 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040400496.html,2026-10-12T11:13Z
+NPB_2025_20250404_00497,Regular Season,2025-04-04,9,No,6,0,9,,6,0,0 0 0 6 0 0 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040400497.html,2026-10-12T11:13Z
+NPB_2025_20250405_00126,Regular Season,2025-04-05,9,No,4,3,9,,4,3,1 0 2 0 0 0 0 1 0,1 0 0 0 0 0 0 0 2,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040500126.html,2026-10-12T11:13Z
+NPB_2025_20250405_00127,Regular Season,2025-04-05,9,No,0,2,9,,0,2,0 0 0 0 0 0 0 0 0,0 2 0 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040500127.html,2026-10-12T11:13Z
+NPB_2025_20250405_00128,Regular Season,2025-04-05,9,No,7,8,11,11 innings,7,8,2 0 0 0 0 0 0 0 5 0 0,0 2 0 2 0 0 0 2 1 0 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025040500128.html,2026-10-12T11:13Z
+NPB_2025_20250405_00498,Regular Season,2025-04-05,9,No,11,1,9,,11,1,3 0 0 2 2 1 2 0 1,1 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040500498.html,2026-10-12T11:13Z
+NPB_2025_20250405_00499,Regular Season,2025-04-05,9,No,0,1,9,,0,1,0 0 0 0 0 0 0 0 0,0 0 0 0 0 0 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040500499.html,2026-10-12T11:13Z
+NPB_2025_20250405_00500,Regular Season,2025-04-05,9,No,6,3,9,,6,3,0 0 2 0 0 0 4 0 0,0 0 0 0 2 0 0 0 1,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040500500.html,2026-10-12T11:13Z
+NPB_2025_20250406_00129,Regular Season,2025-04-06,9,No,1,0,9,,1,0,0 0 0 1 0 0 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040600129.html,2026-10-12T11:13Z
+NPB_2025_20250406_00130,Regular Season,2025-04-06,9,No,6,5,9,,6,5,3 0 0 1 1 0 1 0 0,3 1 0 0 0 1 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040600130.html,2026-10-12T11:13Z
+NPB_2025_20250406_00131,Regular Season,2025-04-06,9,No,6,7,9,,6,7,0 0 0 0 3 0 0 1 2,0 1 4 0 0 0 0 2 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040600131.html,2026-10-12T11:13Z
+NPB_2025_20250406_00501,Regular Season,2025-04-06,9,No,6,4,9,,6,4,0 2 0 0 0 3 1 0 0,1 1 0 0 2 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040600501.html,2026-10-12T11:13Z
+NPB_2025_20250406_00502,Regular Season,2025-04-06,9,No,5,0,9,,5,0,1 0 1 1 0 1 0 0 1,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040600502.html,2026-10-12T11:13Z
+NPB_2025_20250406_00503,Regular Season,2025-04-06,9,No,1,11,9,,1,11,0 0 0 0 0 0 1 0 0,2 0 2 0 4 2 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040600503.html,2026-10-12T11:13Z
+NPB_2025_20250408_00132,Regular Season,2025-04-08,9,No,3,3,12,12 innings,3,3,0 0 0 0 0 1 0 2 0 0 0 0,0 0 0 2 0 0 1 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025040800132.html,2026-10-12T11:13Z
+NPB_2025_20250408_00133,Regular Season,2025-04-08,9,No,1,1,12,12 innings,1,1,0 0 0 0 0 0 1 0 0 0 0 0,0 0 0 1 0 0 0 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025040800133.html,2026-10-12T11:13Z
+NPB_2025_20250408_00134,Regular Season,2025-04-08,9,No,1,0,9,,1,0,0 0 0 0 0 0 0 1 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040800134.html,2026-10-12T11:13Z
+NPB_2025_20250408_00504,Regular Season,2025-04-08,9,No,5,2,9,,5,2,0 0 0 2 0 0 0 0 3,0 2 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040800504.html,2026-10-12T11:13Z
+NPB_2025_20250408_00505,Regular Season,2025-04-08,9,No,7,3,9,,7,3,1 0 0 0 0 2 4 0 0,1 0 0 0 0 0 0 0 2,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040800505.html,2026-10-12T11:13Z
+NPB_2025_20250408_00506,Regular Season,2025-04-08,9,No,5,2,9,,5,2,1 2 0 0 0 2 0 0 0,0 0 0 0 0 2 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040800506.html,2026-10-12T11:13Z
+NPB_2025_20250409_00135,Regular Season,2025-04-09,9,No,6,3,9,,6,3,0 0 0 2 0 0 2 1 1,0 0 0 0 0 0 0 0 3,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040900135.html,2026-10-12T11:13Z
+NPB_2025_20250409_00136,Regular Season,2025-04-09,9,No,1,3,9,,1,3,0 0 0 0 0 0 0 1 0,0 1 0 0 0 0 0 2 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040900136.html,2026-10-12T11:13Z
+NPB_2025_20250409_00137,Regular Season,2025-04-09,9,No,5,3,9,,5,3,0 0 0 0 0 5 0 0 0,0 3 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040900137.html,2026-10-12T11:13Z
+NPB_2025_20250409_00507,Regular Season,2025-04-09,9,No,8,2,9,,8,2,0 1 0 0 3 0 0 4 0,0 1 0 0 0 0 0 0 1,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040900507.html,2026-10-12T11:13Z
+NPB_2025_20250409_00508,Regular Season,2025-04-09,9,No,0,2,9,,0,2,0 0 0 0 0 0 0 0 0,2 0 0 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040900508.html,2026-10-12T11:13Z
+NPB_2025_20250409_00509,Regular Season,2025-04-09,9,No,10,9,9,,10,9,0 0 1 0 1 0 0 3 5,0 2 0 1 2 1 0 0 3,Y,Y,https://npb.jp/bis/eng/2025/games/s2025040900509.html,2026-10-12T11:13Z
+NPB_2025_20250410_00138,Regular Season,2025-04-10,9,No,2,1,11,11 innings,2,1,0 0 0 0 0 0 1 0 0 0 1,0 0 0 0 1 0 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025041000138.html,2026-10-12T11:13Z
+NPB_2025_20250410_00510,Regular Season,2025-04-10,9,No,10,0,9,,10,0,2 1 3 2 0 0 1 1 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041000510.html,2026-10-12T11:13Z
+NPB_2025_20250410_00511,Regular Season,2025-04-10,9,No,1,1,12,12 innings,1,1,0 1 0 0 0 0 0 0 0 0 0 0,0 0 0 0 1 0 0 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025041000511.html,2026-10-12T11:13Z
+NPB_2025_20250411_00141,Regular Season,2025-04-11,9,No,3,6,9,,3,6,2 0 0 0 1 0 0 0 0,4 0 0 1 1 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041100141.html,2026-10-12T11:13Z
+NPB_2025_20250411_00142,Regular Season,2025-04-11,9,No,3,12,9,,3,12,0 1 0 1 1 0 0 0 0,0 3 0 7 2 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041100142.html,2026-10-12T11:13Z
+NPB_2025_20250411_00512,Regular Season,2025-04-11,9,No,0,2,12,12 innings,0,2,0 0 0 0 0 0 0 0 0 0 0 0,0 0 0 0 0 0 0 0 0 0 0 2X,N,Y,https://npb.jp/bis/eng/2025/games/s2025041100512.html,2026-10-12T11:13Z
+NPB_2025_20250411_00513,Regular Season,2025-04-11,9,No,4,1,9,,4,1,0 0 0 0 1 3 0 0 0,0 0 0 0 0 1 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041100513.html,2026-10-12T11:13Z
+NPB_2025_20250411_00514,Regular Season,2025-04-11,9,No,5,4,10,10 innings,5,4,0 1 0 1 0 0 0 1 1 1,0 0 0 0 0 1 2 0 1 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025041100514.html,2026-10-12T11:13Z
+NPB_2025_20250412_00143,Regular Season,2025-04-12,9,No,4,5,9,,4,5,0 0 0 0 0 0 0 0 4,0 0 2 0 2 1 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041200143.html,2026-10-12T11:13Z
+NPB_2025_20250412_00144,Regular Season,2025-04-12,9,No,3,2,9,,3,2,1 0 0 0 2 0 0 0 0,0 0 0 0 1 0 0 0 1,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041200144.html,2026-10-12T11:13Z
+NPB_2025_20250412_00145,Regular Season,2025-04-12,9,No,0,1,9,,0,1,0 0 0 0 0 0 0 0 0,0 0 1 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041200145.html,2026-10-12T11:13Z
+NPB_2025_20250412_00515,Regular Season,2025-04-12,9,No,2,1,9,,2,1,0 0 0 0 0 0 0 1 1,0 0 0 0 0 0 0 0 1,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041200515.html,2026-10-12T11:13Z
+NPB_2025_20250412_00516,Regular Season,2025-04-12,9,No,4,2,9,,4,2,4 0 0 0 0 0 0 0 0,0 0 0 0 0 0 0 0 2,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041200516.html,2026-10-12T11:13Z
+NPB_2025_20250412_00517,Regular Season,2025-04-12,9,No,8,0,9,,8,0,0 0 1 3 3 1 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041200517.html,2026-10-12T11:13Z
+NPB_2025_20250413_00148,Regular Season,2025-04-13,9,No,3,5,9,,3,5,0 0 0 1 0 0 2 0 0,1 0 0 0 2 1 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041300148.html,2026-10-12T11:13Z
+NPB_2025_20250413_00518,Regular Season,2025-04-13,9,No,7,2,9,,7,2,1 1 1 0 4 0 0 0 0,0 0 1 0 0 0 1 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041300518.html,2026-10-12T11:13Z
+NPB_2025_20250413_00519,Regular Season,2025-04-13,9,No,6,1,9,,6,1,3 0 2 0 0 0 0 0 1,0 0 0 0 0 0 0 1 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041300519.html,2026-10-12T11:13Z
+NPB_2025_20250415_00149,Regular Season,2025-04-15,9,No,0,1,9,,0,1,0 0 0 0 0 0 0 0 0,0 0 1 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041500149.html,2026-10-12T11:13Z
+NPB_2025_20250415_00150,Regular Season,2025-04-15,9,No,5,1,9,,5,1,1 0 0 0 0 4 0 0 0,0 0 0 0 0 0 0 0 1,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041500150.html,2026-10-12T11:13Z
+NPB_2025_20250415_00151,Regular Season,2025-04-15,9,No,1,7,9,,1,7,0 0 1 0 0 0 0 0 0,2 0 4 0 0 0 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041500151.html,2026-10-12T11:13Z
+NPB_2025_20250415_00521,Regular Season,2025-04-15,9,No,9,3,9,,9,3,0 0 0 0 0 8 0 0 1,1 0 0 1 1 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041500521.html,2026-10-12T11:13Z
+NPB_2025_20250415_00522,Regular Season,2025-04-15,9,No,0,2,9,,0,2,0 0 0 0 0 0 0 0 0,1 0 0 0 0 0 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041500522.html,2026-10-12T11:13Z
+NPB_2025_20250415_00523,Regular Season,2025-04-15,9,No,2,1,10,10 innings,2,1,0 0 0 0 0 1 0 0 0 1,0 0 0 0 0 0 1 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025041500523.html,2026-10-12T11:13Z
+NPB_2025_20250416_00152,Regular Season,2025-04-16,9,No,0,5,9,,0,5,0 0 0 0 0 0 0 0 0,2 0 1 0 2 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041600152.html,2026-10-12T11:13Z
+NPB_2025_20250416_00153,Regular Season,2025-04-16,9,No,2,0,9,,2,0,0 0 0 0 0 0 1 1 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041600153.html,2026-10-12T11:13Z
+NPB_2025_20250416_00524,Regular Season,2025-04-16,9,No,0,4,9,,0,4,0 0 0 0 0 0 0 0 0,0 0 0 0 0 3 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041600524.html,2026-10-12T11:13Z
+NPB_2025_20250416_00525,Regular Season,2025-04-16,9,No,5,0,9,,5,0,1 0 1 1 0 1 0 0 1,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041600525.html,2026-10-12T11:13Z
+NPB_2025_20250416_00526,Regular Season,2025-04-16,9,No,6,2,9,,6,2,0 0 3 2 0 0 0 1 0,0 0 1 0 0 0 1 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041600526.html,2026-10-12T11:13Z
+NPB_2025_20250417_00154,Regular Season,2025-04-17,9,No,9,1,9,,9,1,2 4 1 0 1 0 0 1 0,0 0 0 0 0 0 0 0 1,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041700154.html,2026-10-12T11:13Z
+NPB_2025_20250417_00155,Regular Season,2025-04-17,9,No,7,5,11,11 innings,7,5,0 1 0 0 0 0 0 3 1 0 2,1 2 0 0 0 0 0 0 2 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025041700155.html,2026-10-12T11:13Z
+NPB_2025_20250417_00527,Regular Season,2025-04-17,9,No,3,2,9,,3,2,0 0 2 0 0 0 1 0 0,1 0 0 0 0 1 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041700527.html,2026-10-12T11:13Z
+NPB_2025_20250417_00528,Regular Season,2025-04-17,9,No,4,3,9,,4,3,0 0 0 0 0 0 0 1 3,0 0 0 0 0 3 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041700528.html,2026-10-12T11:13Z
+NPB_2025_20250418_00156,Regular Season,2025-04-18,9,No,7,2,9,,7,2,0 0 3 0 0 0 3 0 1,0 0 0 1 0 0 0 1 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041800156.html,2026-10-12T11:13Z
+NPB_2025_20250418_00157,Regular Season,2025-04-18,9,No,5,2,9,,5,2,0 5 0 0 0 0 0 0 0,2 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041800157.html,2026-10-12T11:13Z
+NPB_2025_20250418_00529,Regular Season,2025-04-18,9,No,4,1,9,,4,1,0 0 1 0 0 0 0 3 0,0 0 0 0 0 0 0 1 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041800529.html,2026-10-12T11:13Z
+NPB_2025_20250418_00530,Regular Season,2025-04-18,9,No,1,2,9,,1,2,0 0 0 0 0 0 1 0 0,0 0 1 0 0 0 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041800530.html,2026-10-12T11:13Z
+NPB_2025_20250418_00531,Regular Season,2025-04-18,9,No,1,2,9,,1,2,1 0 0 0 0 0 0 0 0,0 0 0 0 0 1 0 0 1X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041800531.html,2026-10-12T11:13Z
+NPB_2025_20250419_00158,Regular Season,2025-04-19,9,No,6,4,9,,6,4,0 0 0 0 0 2 2 1 1,0 2 0 0 1 0 0 1 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041900158.html,2026-10-12T11:13Z
+NPB_2025_20250419_00159,Regular Season,2025-04-19,9,No,2,3,9,,2,3,0 0 1 0 0 0 0 1 0,2 0 0 0 0 1 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041900159.html,2026-10-12T11:13Z
+NPB_2025_20250419_00160,Regular Season,2025-04-19,9,No,3,0,9,,3,0,0 3 0 0 0 0 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041900160.html,2026-10-12T11:13Z
+NPB_2025_20250419_00532,Regular Season,2025-04-19,9,No,1,2,9,,1,2,0 0 0 0 1 0 0 0 0,0 2 0 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041900532.html,2026-10-12T11:13Z
+NPB_2025_20250419_00533,Regular Season,2025-04-19,9,No,0,1,9,,0,1,0 0 0 0 0 0 0 0 0,0 0 1 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041900533.html,2026-10-12T11:13Z
+NPB_2025_20250419_00534,Regular Season,2025-04-19,9,No,7,4,9,,7,4,0 0 0 1 1 0 0 5 0,0 0 0 2 0 0 0 2 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025041900534.html,2026-10-12T11:13Z
+NPB_2025_20250420_00161,Regular Season,2025-04-20,9,No,2,3,10,10 innings,2,3,0 1 0 0 1 0 0 0 0 0,2 0 0 0 0 0 0 0 0 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025042000161.html,2026-10-12T11:13Z
+NPB_2025_20250420_00162,Regular Season,2025-04-20,9,No,0,2,9,,0,2,0 0 0 0 0 0 0 0 0,0 1 0 1 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025042000162.html,2026-10-12T11:13Z
+NPB_2025_20250420_00163,Regular Season,2025-04-20,9,No,1,8,9,,1,8,0 0 0 0 0 0 1 0 0,2 0 1 0 3 0 0 2 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025042000163.html,2026-10-12T11:13Z
+NPB_2025_20250420_00535,Regular Season,2025-04-20,9,No,1,4,9,,1,4,0 0 0 1 0 0 0 0 0,0 3 0 0 1 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025042000535.html,2026-10-12T11:13Z
+NPB_2025_20250420_00536,Regular Season,2025-04-20,9,No,3,1,9,,3,1,0 0 2 1 0 0 0 0 0,1 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025042000536.html,2026-10-12T11:13Z
+NPB_2025_20250420_00537,Regular Season,2025-04-20,9,No,2,0,9,,2,0,0 0 0 0 0 0 1 0 1,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025042000537.html,2026-10-12T11:13Z
+NPB_2025_20250422_00164,Regular Season,2025-04-22,9,No,1,8,9,,1,8,0 0 0 0 1 0 0 0 0,2 0 3 0 0 3 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025042200164.html,2026-10-12T11:13Z
+NPB_2025_20250422_00165,Regular Season,2025-04-22,9,No,4,2,9,,4,2,0 1 0 1 1 0 1 0 0,0 0 0 0 0 0 2 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025042200165.html,2026-10-12T11:13Z
+NPB_2025_20250422_00538,Regular Season,2025-04-22,9,No,4,2,9,,4,2,0 0 0 0 1 0 0 3 0,0 1 0 0 0 1 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025042200538.html,2026-10-12T11:13Z
+NPB_2025_20250422_00539,Regular Season,2025-04-22,9,No,1,2,10,10 innings,1,2,1 0 0 0 0 0 0 0 0 0,0 0 0 0 0 1 0 0 0 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025042200539.html,2026-10-12T11:13Z
+NPB_2025_20250422_00540,Regular Season,2025-04-22,9,No,5,5,12,12 innings,5,5,1 0 1 0 0 0 2 0 1 0 0 0,0 0 0 0 0 1 2 0 2 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025042200540.html,2026-10-12T11:13Z
+NPB_2025_20250423_00167,Regular Season,2025-04-23,9,No,0,2,9,,0,2,0 0 0 0 0 0 0 0 0,0 0 0 0 0 0 0 2 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025042300167.html,2026-10-12T11:13Z
+NPB_2025_20250423_00168,Regular Season,2025-04-23,9,No,3,2,10,10 innings,3,2,1 0 0 1 0 0 0 0 0 1,0 0 1 0 0 1 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025042300168.html,2026-10-12T11:13Z
+NPB_2025_20250423_00169,Regular Season,2025-04-23,9,No,1,7,9,,1,7,0 0 0 0 0 0 1 0 0,4 2 0 0 0 0 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025042300169.html,2026-10-12T11:13Z
+NPB_2025_20250423_00541,Regular Season,2025-04-23,9,No,8,3,9,,8,3,3 0 0 0 0 4 0 1 0,0 0 0 0 0 1 1 0 1,Y,Y,https://npb.jp/bis/eng/2025/games/s2025042300541.html,2026-10-12T11:13Z
+NPB_2025_20250423_00542,Regular Season,2025-04-23,9,No,2,5,9,,2,5,1 1 0 0 0 0 0 0 0,0 0 4 1 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025042300542.html,2026-10-12T11:13Z
+NPB_2025_20250423_00543,Regular Season,2025-04-23,9,No,2,6,9,,2,6,0 0 0 1 1 0 0 0 0,1 1 0 3 0 1 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025042300543.html,2026-10-12T11:13Z
+NPB_2025_20250424_00170,Regular Season,2025-04-24,9,No,4,2,9,,4,2,0 1 0 0 0 0 3 0 0,2 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025042400170.html,2026-10-12T11:13Z
+NPB_2025_20250425_00171,Regular Season,2025-04-25,9,No,1,2,9,,1,2,0 1 0 0 0 0 0 0 0,0 0 1 0 0 0 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025042500171.html,2026-10-12T11:13Z
+NPB_2025_20250425_00172,Regular Season,2025-04-25,9,No,6,4,9,,6,4,0 0 3 1 0 1 1 0 0,1 0 0 1 0 0 0 0 2,Y,Y,https://npb.jp/bis/eng/2025/games/s2025042500172.html,2026-10-12T11:13Z
+NPB_2025_20250425_00173,Regular Season,2025-04-25,9,No,1,4,9,,1,4,0 0 0 0 0 1 0 0 0,1 0 3 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025042500173.html,2026-10-12T11:13Z
+NPB_2025_20250425_00544,Regular Season,2025-04-25,9,No,2,1,9,,2,1,0 1 0 0 0 0 1 0 0,1 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025042500544.html,2026-10-12T11:13Z
+NPB_2025_20250425_00545,Regular Season,2025-04-25,9,No,1,0,9,,1,0,0 0 0 0 0 0 0 0 1,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025042500545.html,2026-10-12T11:13Z
+NPB_2025_20250425_00546,Regular Season,2025-04-25,9,No,6,2,10,10 innings,6,2,0 0 0 0 0 0 0 0 2 4,1 0 0 0 0 1 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025042500546.html,2026-10-12T11:13Z
+NPB_2025_20250426_00174,Regular Season,2025-04-26,9,No,0,2,9,,0,2,0 0 0 0 0 0 0 0 0,0 0 2 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025042600174.html,2026-10-12T11:13Z
+NPB_2025_20250426_00175,Regular Season,2025-04-26,9,No,2,5,9,,2,5,0 0 0 0 0 0 0 0 2,1 2 1 1 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025042600175.html,2026-10-12T11:13Z
+NPB_2025_20250426_00176,Regular Season,2025-04-26,9,No,2,6,9,,2,6,1 0 0 1 0 0 0 0 0,1 0 0 0 1 0 0 4 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025042600176.html,2026-10-12T11:13Z
+NPB_2025_20250426_00547,Regular Season,2025-04-26,9,No,1,2,9,,1,2,0 0 1 0 0 0 0 0 0,0 0 0 0 0 0 2 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025042600547.html,2026-10-12T11:13Z
+NPB_2025_20250426_00548,Regular Season,2025-04-26,9,No,3,6,9,,3,6,0 0 0 0 0 0 0 0 3,0 1 0 1 3 0 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025042600548.html,2026-10-12T11:13Z
+NPB_2025_20250426_00549,Regular Season,2025-04-26,9,No,0,3,9,,0,3,0 0 0 0 0 0 0 0 0,0 0 0 3 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025042600549.html,2026-10-12T11:13Z
+NPB_2025_20250427_00177,Regular Season,2025-04-27,9,No,1,2,9,,1,2,1 0 0 0 0 0 0 0 0,0 0 0 2 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025042700177.html,2026-10-12T11:13Z
+NPB_2025_20250427_00178,Regular Season,2025-04-27,9,No,6,2,9,,6,2,0 0 0 3 3 0 0 0 0,2 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025042700178.html,2026-10-12T11:13Z
+NPB_2025_20250427_00179,Regular Season,2025-04-27,9,No,2,1,9,,2,1,0 0 1 0 0 0 0 0 1,1 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025042700179.html,2026-10-12T11:13Z
+NPB_2025_20250427_00550,Regular Season,2025-04-27,9,No,5,3,9,,5,3,2 0 0 2 1 0 0 0 0,1 1 0 0 0 0 1 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025042700550.html,2026-10-12T11:13Z
+NPB_2025_20250427_00551,Regular Season,2025-04-27,9,No,2,3,11,11 innings,2,3,0 0 0 0 0 1 0 0 1 0 0,0 0 2 0 0 0 0 0 0 0 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025042700551.html,2026-10-12T11:13Z
+NPB_2025_20250427_00552,Regular Season,2025-04-27,9,No,2,3,9,,2,3,0 0 0 0 0 0 2 0 0,1 0 1 0 0 0 0 0 1X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025042700552.html,2026-10-12T11:13Z
+NPB_2025_20250429_00180,Regular Season,2025-04-29,9,No,3,4,12,12 innings,3,4,0 0 0 2 0 1 0 0 0 0 0 0,0 2 0 0 0 0 0 0 1 0 0 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025042900180.html,2026-10-12T11:13Z
+NPB_2025_20250429_00181,Regular Season,2025-04-29,9,No,6,1,9,,6,1,1 0 0 0 1 0 1 0 3,0 1 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025042900181.html,2026-10-12T11:13Z
+NPB_2025_20250429_00182,Regular Season,2025-04-29,9,No,1,4,9,,1,4,0 0 0 1 0 0 0 0 0,0 1 0 0 3 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025042900182.html,2026-10-12T11:13Z
+NPB_2025_20250429_00553,Regular Season,2025-04-29,9,No,1,7,9,,1,7,0 0 0 0 0 0 0 1 0,1 1 0 3 0 2 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025042900553.html,2026-10-12T11:13Z
+NPB_2025_20250429_00554,Regular Season,2025-04-29,9,No,2,3,9,,2,3,0 0 0 0 0 0 1 1 0,0 1 0 0 0 0 0 1 1X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025042900554.html,2026-10-12T11:13Z
+NPB_2025_20250429_00555,Regular Season,2025-04-29,9,No,2,1,10,10 innings,2,1,0 0 0 0 0 0 1 0 0 1,0 1 0 0 0 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025042900555.html,2026-10-12T11:13Z
+NPB_2025_20250430_00183,Regular Season,2025-04-30,9,No,0,2,9,,0,2,0 0 0 0 0 0 0 0 0,0 0 0 0 0 2 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025043000183.html,2026-10-12T11:13Z
+NPB_2025_20250430_00184,Regular Season,2025-04-30,9,No,1,4,9,,1,4,0 0 0 1 0 0 0 0 0,0 1 0 0 0 1 1 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025043000184.html,2026-10-12T11:13Z
+NPB_2025_20250430_00185,Regular Season,2025-04-30,9,No,4,5,11,11 innings,4,5,1 0 0 0 0 3 0 0 0 0 0,1 0 1 0 0 2 0 0 0 0 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025043000185.html,2026-10-12T11:13Z
+NPB_2025_20250430_00556,Regular Season,2025-04-30,9,No,1,3,9,,1,3,0 0 1 0 0 0 0 0 0,2 0 0 0 0 0 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025043000556.html,2026-10-12T11:13Z
+NPB_2025_20250430_00557,Regular Season,2025-04-30,9,No,0,5,9,,0,5,0 0 0 0 0 0 0 0 0,0 1 2 2 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025043000557.html,2026-10-12T11:13Z
+NPB_2025_20250430_00558,Regular Season,2025-04-30,9,No,6,1,9,,6,1,0 0 0 3 0 0 1 2 0,0 0 0 1 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025043000558.html,2026-10-12T11:13Z
+NPB_2025_20250501_00186,Regular Season,2025-05-01,9,No,3,4,12,12 innings,3,4,3 0 0 0 0 0 0 0 0 0 0 0,0 1 1 0 0 1 0 0 0 0 0 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025050100186.html,2026-10-12T11:13Z
+NPB_2025_20250501_00187,Regular Season,2025-05-01,9,No,3,0,10,10 innings,3,0,0 0 0 0 0 0 0 0 0 3,0 0 0 0 0 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025050100187.html,2026-10-12T11:13Z
+NPB_2025_20250501_00188,Regular Season,2025-05-01,9,No,2,3,9,,2,3,0 0 0 1 1 0 0 0 0,0 0 0 2 1 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025050100188.html,2026-10-12T11:13Z
+NPB_2025_20250501_00559,Regular Season,2025-05-01,9,No,1,2,10,10 innings,1,2,0 0 0 0 0 0 0 0 1 0,1 0 0 0 0 0 0 0 0 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025050100559.html,2026-10-12T11:13Z
+NPB_2025_20250501_00560,Regular Season,2025-05-01,9,No,3,2,9,,3,2,0 0 0 0 2 0 1 0 0,2 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025050100560.html,2026-10-12T11:13Z
+NPB_2025_20250502_00190,Regular Season,2025-05-02,9,No,0,4,9,,0,4,0 0 0 0 0 0 0 0 0,0 0 0 0 0 3 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025050200190.html,2026-10-12T11:13Z
+NPB_2025_20250502_00191,Regular Season,2025-05-02,9,No,4,2,9,,4,2,0 0 3 0 1 0 0 0 0,0 2 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025050200191.html,2026-10-12T11:13Z
+NPB_2025_20250502_00562,Regular Season,2025-05-02,9,No,3,4,9,,3,4,3 0 0 0 0 0 0 0 0,0 0 0 0 1 0 0 0 3X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025050200562.html,2026-10-12T11:13Z
+NPB_2025_20250503_00192,Regular Season,2025-05-03,9,No,0,1,9,,0,1,0 0 0 0 0 0 0 0 0,0 0 0 0 0 0 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025050300192.html,2026-10-12T11:13Z
+NPB_2025_20250503_00193,Regular Season,2025-05-03,9,No,1,7,9,,1,7,0 0 0 0 0 0 0 1 0,1 0 2 0 0 4 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025050300193.html,2026-10-12T11:13Z
+NPB_2025_20250503_00194,Regular Season,2025-05-03,9,No,0,2,9,,0,2,0 0 0 0 0 0 0 0 0,0 0 1 0 0 1 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025050300194.html,2026-10-12T11:13Z
+NPB_2025_20250503_00563,Regular Season,2025-05-03,9,No,4,3,9,,4,3,0 0 0 1 0 1 2 0 0,0 0 0 0 0 0 0 3 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025050300563.html,2026-10-12T11:13Z
+NPB_2025_20250503_00564,Regular Season,2025-05-03,9,No,7,0,9,,7,0,1 0 0 0 1 0 0 2 3,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025050300564.html,2026-10-12T11:13Z
+NPB_2025_20250503_00565,Regular Season,2025-05-03,9,No,0,5,9,,0,5,0 0 0 0 0 0 0 0 0,0 0 0 1 1 3 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025050300565.html,2026-10-12T11:13Z
+NPB_2025_20250504_00195,Regular Season,2025-05-04,9,No,3,1,9,,3,1,0 0 2 0 0 1 0 0 0,0 0 0 0 0 0 1 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025050400195.html,2026-10-12T11:13Z
+NPB_2025_20250504_00196,Regular Season,2025-05-04,9,No,5,2,9,,5,2,0 0 0 1 0 0 3 0 1,0 0 0 1 0 0 1 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025050400196.html,2026-10-12T11:13Z
+NPB_2025_20250504_00197,Regular Season,2025-05-04,9,No,4,9,9,,4,9,0 1 1 0 2 0 0 0 0,0 0 0 7 0 0 2 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025050400197.html,2026-10-12T11:13Z
+NPB_2025_20250504_00566,Regular Season,2025-05-04,9,No,2,3,9,,2,3,0 1 0 0 0 0 0 0 1,2 0 1 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025050400566.html,2026-10-12T11:13Z
+NPB_2025_20250504_00567,Regular Season,2025-05-04,9,No,3,14,9,,3,14,1 1 1 0 0 0 0 0 0,1 3 2 0 4 3 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025050400567.html,2026-10-12T11:13Z
+NPB_2025_20250504_00568,Regular Season,2025-05-04,9,No,3,5,9,,3,5,0 0 0 2 0 1 0 0 0,0 0 0 2 1 1 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025050400568.html,2026-10-12T11:13Z
+NPB_2025_20250505_00198,Regular Season,2025-05-05,9,No,10,1,9,,10,1,0 0 0 1 0 2 3 1 3,0 0 1 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025050500198.html,2026-10-12T11:13Z
+NPB_2025_20250505_00199,Regular Season,2025-05-05,9,No,4,0,9,,4,0,0 0 1 0 0 0 3 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025050500199.html,2026-10-12T11:13Z
+NPB_2025_20250505_00200,Regular Season,2025-05-05,9,No,2,1,9,,2,1,0 0 0 2 0 0 0 0 0,0 0 1 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025050500200.html,2026-10-12T11:13Z
+NPB_2025_20250505_00569,Regular Season,2025-05-05,9,No,2,0,9,,2,0,0 0 0 0 0 2 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025050500569.html,2026-10-12T11:13Z
+NPB_2025_20250505_00570,Regular Season,2025-05-05,9,No,2,1,9,,2,1,0 0 1 0 0 1 0 0 0,0 0 0 1 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025050500570.html,2026-10-12T11:13Z
+NPB_2025_20250505_00571,Regular Season,2025-05-05,9,No,0,1,9,,0,1,0 0 0 0 0 0 0 0 0,0 0 0 1 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025050500571.html,2026-10-12T11:13Z
+NPB_2025_20250506_00201,Regular Season,2025-05-06,9,No,7,1,9,,7,1,2 2 2 0 0 0 0 1 0,0 0 0 0 0 1 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025050600201.html,2026-10-12T11:13Z
+NPB_2025_20250506_00203,Regular Season,2025-05-06,9,No,3,0,9,,3,0,0 0 1 0 2 0 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025050600203.html,2026-10-12T11:13Z
+NPB_2025_20250506_00572,Regular Season,2025-05-06,9,No,10,0,9,,10,0,4 0 0 2 4 0 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025050600572.html,2026-10-12T11:13Z
+NPB_2025_20250506_00574,Regular Season,2025-05-06,9,No,7,3,9,,7,3,0 3 0 0 0 2 0 1 1,0 0 0 1 0 0 0 2 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025050600574.html,2026-10-12T11:13Z
+NPB_2025_20250507_00204,Regular Season,2025-05-07,9,No,4,6,9,,4,6,0 1 1 0 2 0 0 0 0,2 0 0 4 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025050700204.html,2026-10-12T11:13Z
+NPB_2025_20250507_00205,Regular Season,2025-05-07,9,No,5,3,9,,5,3,0 0 2 0 0 0 1 0 2,0 0 0 1 1 0 1 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025050700205.html,2026-10-12T11:13Z
+NPB_2025_20250507_00206,Regular Season,2025-05-07,9,No,1,2,9,,1,2,0 0 0 0 0 0 0 0 1,2 0 0 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025050700206.html,2026-10-12T11:13Z
+NPB_2025_20250507_00575,Regular Season,2025-05-07,9,No,1,7,9,,1,7,1 0 0 0 0 0 0 0 0,3 1 0 0 0 0 0 3 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025050700575.html,2026-10-12T11:13Z
+NPB_2025_20250507_00576,Regular Season,2025-05-07,9,No,3,7,9,,3,7,0 1 0 0 2 0 0 0 0,2 1 1 0 0 3 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025050700576.html,2026-10-12T11:13Z
+NPB_2025_20250507_00577,Regular Season,2025-05-07,9,No,2,2,12,12 innings,2,2,2 0 0 0 0 0 0 0 0 0 0 0,0 0 0 0 0 0 0 2 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025050700577.html,2026-10-12T11:13Z
+NPB_2025_20250509_00207,Regular Season,2025-05-09,9,No,2,5,9,,2,5,0 0 1 1 0 0 0 0 0,0 0 0 1 0 1 1 2 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025050900207.html,2026-10-12T11:13Z
+NPB_2025_20250509_00208,Regular Season,2025-05-09,9,No,3,4,10,10 innings,3,4,0 0 0 3 0 0 0 0 0 0,0 0 1 0 0 0 1 0 1 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025050900208.html,2026-10-12T11:13Z
+NPB_2025_20250509_00578,Regular Season,2025-05-09,9,No,1,2,9,,1,2,0 0 0 0 0 0 0 1 0,0 1 1 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025050900578.html,2026-10-12T11:13Z
+NPB_2025_20250509_00579,Regular Season,2025-05-09,9,No,0,1,9,,0,1,0 0 0 0 0 0 0 0 0,0 0 0 0 1 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025050900579.html,2026-10-12T11:13Z
+NPB_2025_20250509_00580,Regular Season,2025-05-09,9,No,11,1,9,,11,1,0 1 0 0 1 9 0 0 0,1 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025050900580.html,2026-10-12T11:13Z
+NPB_2025_20250510_00210,Regular Season,2025-05-10,9,No,3,2,9,,3,2,1 0 0 1 0 0 0 1 0,0 0 1 0 0 0 0 1 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051000210.html,2026-10-12T11:13Z
+NPB_2025_20250510_00211,Regular Season,2025-05-10,9,No,5,3,9,,5,3,0 0 0 2 0 2 0 0 1,1 0 2 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051000211.html,2026-10-12T11:13Z
+NPB_2025_20250510_00212,Regular Season,2025-05-10,9,No,0,2,9,,0,2,0 0 0 0 0 0 0 0 0,1 0 0 0 0 1 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051000212.html,2026-10-12T11:13Z
+NPB_2025_20250510_00581,Regular Season,2025-05-10,9,No,7,8,9,,7,8,0 0 0 6 0 1 0 0 0,1 2 0 1 4 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051000581.html,2026-10-12T11:13Z
+NPB_2025_20250510_00582,Regular Season,2025-05-10,9,No,0,7,9,,0,7,0 0 0 0 0 0 0 0 0,0 0 4 0 0 0 1 2 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051000582.html,2026-10-12T11:13Z
+NPB_2025_20250510_00583,Regular Season,2025-05-10,9,No,1,6,9,,1,6,0 0 0 0 0 0 0 0 1,0 0 0 2 1 3 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051000583.html,2026-10-12T11:13Z
+NPB_2025_20250511_00213,Regular Season,2025-05-11,9,No,1,2,9,,1,2,0 0 0 0 0 0 0 1 0,0 0 0 0 0 2 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051100213.html,2026-10-12T11:13Z
+NPB_2025_20250511_00214,Regular Season,2025-05-11,9,No,2,4,9,,2,4,0 0 0 1 1 0 0 0 0,2 0 2 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051100214.html,2026-10-12T11:13Z
+NPB_2025_20250511_00215,Regular Season,2025-05-11,9,No,0,1,9,,0,1,0 0 0 0 0 0 0 0 0,1 0 0 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051100215.html,2026-10-12T11:13Z
+NPB_2025_20250511_00584,Regular Season,2025-05-11,9,No,0,4,9,,0,4,0 0 0 0 0 0 0 0 0,1 2 0 0 0 1 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051100584.html,2026-10-12T11:13Z
+NPB_2025_20250511_00585,Regular Season,2025-05-11,9,No,0,10,9,,0,10,0 0 0 0 0 0 0 0 0,0 0 3 0 0 1 5 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051100585.html,2026-10-12T11:13Z
+NPB_2025_20250511_00586,Regular Season,2025-05-11,9,No,7,1,9,,7,1,0 2 0 3 0 0 0 2 0,0 1 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051100586.html,2026-10-12T11:13Z
+NPB_2025_20250513_00216,Regular Season,2025-05-13,9,No,1,1,12,12 innings,1,1,0 0 0 0 0 0 0 0 1 0 0 0,0 0 0 0 0 0 1 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025051300216.html,2026-10-12T11:13Z
+NPB_2025_20250513_00217,Regular Season,2025-05-13,9,No,4,5,9,,4,5,3 0 0 0 0 0 0 0 1,1 0 0 1 3 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051300217.html,2026-10-12T11:13Z
+NPB_2025_20250513_00218,Regular Season,2025-05-13,9,No,4,5,12,12 innings,4,5,0 0 0 0 1 1 0 2 0 0 0 0,1 1 1 0 1 0 0 0 0 0 0 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025051300218.html,2026-10-12T11:13Z
+NPB_2025_20250513_00587,Regular Season,2025-05-13,9,No,0,7,9,,0,7,0 0 0 0 0 0 0 0 0,0 0 1 0 0 0 5 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051300587.html,2026-10-12T11:13Z
+NPB_2025_20250513_00588,Regular Season,2025-05-13,9,No,3,4,9,,3,4,0 0 1 1 0 1 0 0 0,2 0 0 1 0 0 0 0 1X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051300588.html,2026-10-12T11:13Z
+NPB_2025_20250513_00589,Regular Season,2025-05-13,9,No,1,6,9,,1,6,0 0 0 0 0 0 1 0 0,1 0 0 0 0 1 2 2 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051300589.html,2026-10-12T11:13Z
+NPB_2025_20250514_00219,Regular Season,2025-05-14,9,No,0,2,9,,0,2,0 0 0 0 0 0 0 0 0,1 0 0 0 0 0 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051400219.html,2026-10-12T11:13Z
+NPB_2025_20250514_00220,Regular Season,2025-05-14,9,No,0,3,9,,0,3,0 0 0 0 0 0 0 0 0,0 1 0 0 0 1 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051400220.html,2026-10-12T11:13Z
+NPB_2025_20250514_00590,Regular Season,2025-05-14,9,No,9,5,9,,9,5,2 0 0 0 1 0 0 5 1,0 0 0 0 3 0 2 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051400590.html,2026-10-12T11:13Z
+NPB_2025_20250514_00591,Regular Season,2025-05-14,9,No,0,4,9,,0,4,0 0 0 0 0 0 0 0 0,0 1 1 1 1 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051400591.html,2026-10-12T11:13Z
+NPB_2025_20250514_00592,Regular Season,2025-05-14,9,No,3,1,9,,3,1,1 0 0 0 1 0 1 0 0,0 1 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051400592.html,2026-10-12T11:13Z
+NPB_2025_20250515_00221,Regular Season,2025-05-15,9,No,0,1,9,,0,1,0 0 0 0 0 0 0 0 0,0 0 0 0 0 0 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051500221.html,2026-10-12T11:13Z
+NPB_2025_20250515_00222,Regular Season,2025-05-15,9,No,1,5,9,,1,5,0 0 0 0 1 0 0 0 0,0 0 0 0 0 4 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051500222.html,2026-10-12T11:13Z
+NPB_2025_20250515_00593,Regular Season,2025-05-15,9,No,0,7,9,,0,7,0 0 0 0 0 0 0 0 0,0 0 0 0 0 0 2 5 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051500593.html,2026-10-12T11:13Z
+NPB_2025_20250515_00594,Regular Season,2025-05-15,9,No,5,2,9,,5,2,1 0 2 0 0 1 1 0 0,0 0 0 0 0 0 2 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051500594.html,2026-10-12T11:13Z
+NPB_2025_20250515_00595,Regular Season,2025-05-15,9,No,0,5,9,,0,5,0 0 0 0 0 0 0 0 0,0 1 0 2 0 2 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051500595.html,2026-10-12T11:13Z
+NPB_2025_20250516_00223,Regular Season,2025-05-16,9,No,2,4,9,,2,4,0 0 0 0 0 1 0 1 0,0 0 0 1 0 0 0 3 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051600223.html,2026-10-12T11:13Z
+NPB_2025_20250516_00224,Regular Season,2025-05-16,9,No,8,6,9,,8,6,1 0 0 0 2 0 2 3 0,3 0 0 1 0 2 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051600224.html,2026-10-12T11:13Z
+NPB_2025_20250516_00225,Regular Season,2025-05-16,9,No,4,2,9,,4,2,2 0 0 0 0 0 0 0 2,0 0 0 0 0 0 2 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051600225.html,2026-10-12T11:13Z
+NPB_2025_20250516_00596,Regular Season,2025-05-16,9,No,0,3,9,,0,3,0 0 0 0 0 0 0 0 0,1 2 0 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051600596.html,2026-10-12T11:13Z
+NPB_2025_20250516_00597,Regular Season,2025-05-16,9,No,8,0,9,,8,0,3 0 0 1 0 0 3 0 1,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051600597.html,2026-10-12T11:13Z
+NPB_2025_20250516_00598,Regular Season,2025-05-16,9,No,5,1,9,,5,1,2 0 0 0 1 2 0 0 0,0 0 0 0 0 0 1 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051600598.html,2026-10-12T11:13Z
+NPB_2025_20250517_00226,Regular Season,2025-05-17,9,No,0,1,9,,0,1,0 0 0 0 0 0 0 0 0,0 1 0 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051700226.html,2026-10-12T11:13Z
+NPB_2025_20250517_00227,Regular Season,2025-05-17,9,No,6,7,9,,6,7,0 0 0 3 2 0 0 1 0,0 1 1 0 1 0 3 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051700227.html,2026-10-12T11:13Z
+NPB_2025_20250517_00228,Regular Season,2025-05-17,9,No,2,5,9,,2,5,0 0 0 0 0 0 0 2 0,0 0 0 1 3 0 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051700228.html,2026-10-12T11:13Z
+NPB_2025_20250517_00599,Regular Season,2025-05-17,9,No,2,3,10,10 innings,2,3,0 0 0 0 0 0 0 1 1 0,0 1 0 1 0 0 0 0 0 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025051700599.html,2026-10-12T11:13Z
+NPB_2025_20250517_00601,Regular Season,2025-05-17,9,No,1,2,9,,1,2,0 0 0 0 1 0 0 0 0,1 0 0 0 1 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051700601.html,2026-10-12T11:13Z
+NPB_2025_20250518_00229,Regular Season,2025-05-18,9,No,7,4,9,,7,4,0 1 0 0 1 0 3 2 0,0 1 0 0 3 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051800229.html,2026-10-12T11:13Z
+NPB_2025_20250518_00230,Regular Season,2025-05-18,9,No,10,2,9,,10,2,0 0 0 0 7 0 0 3 0,0 1 0 0 1 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051800230.html,2026-10-12T11:13Z
+NPB_2025_20250518_00231,Regular Season,2025-05-18,9,No,1,3,9,,1,3,0 0 0 1 0 0 0 0 0,0 0 0 0 0 2 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051800231.html,2026-10-12T11:13Z
+NPB_2025_20250518_00602,Regular Season,2025-05-18,9,No,3,1,9,,3,1,0 1 0 0 0 0 0 0 2,1 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025051800602.html,2026-10-12T11:13Z
+NPB_2025_20250518_00603,Regular Season,2025-05-18,9,No,1,2,12,12 innings,1,2,0 0 0 0 0 0 0 0 1 0 0 0,0 0 0 0 0 0 0 0 1 0 0 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025051800603.html,2026-10-12T11:13Z
+NPB_2025_20250518_00604,Regular Season,2025-05-18,9,No,1,2,12,12 innings,1,2,0 0 0 0 0 0 0 0 1 0 0 0,0 0 0 0 1 0 0 0 0 0 0 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025051800604.html,2026-10-12T11:13Z
+NPB_2025_20250520_00232,Regular Season,2025-05-20,9,No,2,10,9,,2,10,0 0 0 0 0 1 1 0 0,1 3 2 3 0 1 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052000232.html,2026-10-12T11:13Z
+NPB_2025_20250520_00233,Regular Season,2025-05-20,9,No,0,4,9,,0,4,0 0 0 0 0 0 0 0 0,3 0 0 0 0 0 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052000233.html,2026-10-12T11:13Z
+NPB_2025_20250520_00234,Regular Season,2025-05-20,9,No,2,3,9,,2,3,0 0 2 0 0 0 0 0 0,1 1 0 0 0 1 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052000234.html,2026-10-12T11:13Z
+NPB_2025_20250520_00605,Regular Season,2025-05-20,9,No,5,2,9,,5,2,0 0 0 0 2 1 0 0 2,0 2 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052000605.html,2026-10-12T11:13Z
+NPB_2025_20250520_00606,Regular Season,2025-05-20,9,No,1,0,9,,1,0,0 0 1 0 0 0 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052000606.html,2026-10-12T11:13Z
+NPB_2025_20250520_00607,Regular Season,2025-05-20,9,No,1,2,9,,1,2,0 0 0 0 0 0 1 0 0,0 0 1 0 0 0 0 0 1X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052000607.html,2026-10-12T11:13Z
+NPB_2025_20250521_00235,Regular Season,2025-05-21,9,No,6,5,9,,6,5,0 1 1 2 0 0 1 0 1,0 0 0 0 0 3 2 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052100235.html,2026-10-12T11:13Z
+NPB_2025_20250521_00236,Regular Season,2025-05-21,9,No,5,4,9,,5,4,0 0 0 4 0 1 0 0 0,0 0 0 1 0 1 2 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052100236.html,2026-10-12T11:13Z
+NPB_2025_20250521_00608,Regular Season,2025-05-21,9,No,1,2,9,,1,2,0 1 0 0 0 0 0 0 0,0 0 0 1 0 0 0 0 1X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052100608.html,2026-10-12T11:13Z
+NPB_2025_20250521_00609,Regular Season,2025-05-21,9,No,1,6,9,,1,6,0 0 0 0 0 1 0 0 0,0 0 0 0 1 2 3 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052100609.html,2026-10-12T11:13Z
+NPB_2025_20250522_00238,Regular Season,2025-05-22,9,No,0,4,9,,0,4,0 0 0 0 0 0 0 0 0,2 0 0 0 0 2 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052200238.html,2026-10-12T11:13Z
+NPB_2025_20250522_00239,Regular Season,2025-05-22,9,No,3,2,11,11 innings,3,2,0 1 0 0 0 0 1 0 0 0 1,0 2 0 0 0 0 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025052200239.html,2026-10-12T11:13Z
+NPB_2025_20250522_00240,Regular Season,2025-05-22,9,No,2,2,12,12 innings,2,2,1 0 1 0 0 0 0 0 0 0 0 0,0 1 0 0 0 0 0 1 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025052200240.html,2026-10-12T11:13Z
+NPB_2025_20250522_00610,Regular Season,2025-05-22,9,No,4,3,11,11 innings,4,3,2 0 0 0 1 0 0 0 0 0 1,0 1 0 1 0 1 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025052200610.html,2026-10-12T11:13Z
+NPB_2025_20250522_00611,Regular Season,2025-05-22,9,No,1,2,9,,1,2,0 0 0 0 1 0 0 0 0,0 0 0 0 0 0 1 0 1X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052200611.html,2026-10-12T11:13Z
+NPB_2025_20250522_00612,Regular Season,2025-05-22,9,No,9,1,9,,9,1,0 0 0 0 1 5 2 1 0,0 0 0 0 0 0 1 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052200612.html,2026-10-12T11:13Z
+NPB_2025_20250523_00241,Regular Season,2025-05-23,9,No,0,5,9,,0,5,0 0 0 0 0 0 0 0 0,0 0 0 4 0 1 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052300241.html,2026-10-12T11:13Z
+NPB_2025_20250523_00242,Regular Season,2025-05-23,9,No,3,0,11,11 innings,3,0,0 0 0 0 0 0 0 0 0 0 3,0 0 0 0 0 0 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025052300242.html,2026-10-12T11:13Z
+NPB_2025_20250523_00243,Regular Season,2025-05-23,9,No,2,1,9,,2,1,0 0 0 1 1 0 0 0 0,0 0 0 0 0 0 1 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052300243.html,2026-10-12T11:13Z
+NPB_2025_20250523_00613,Regular Season,2025-05-23,9,No,1,0,9,,1,0,0 1 0 0 0 0 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052300613.html,2026-10-12T11:13Z
+NPB_2025_20250523_00614,Regular Season,2025-05-23,9,No,3,9,9,,3,9,1 0 0 0 2 0 0 0 0,1 2 3 2 1 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052300614.html,2026-10-12T11:13Z
+NPB_2025_20250524_00244,Regular Season,2025-05-24,9,No,2,4,9,,2,4,0 0 0 0 0 0 2 0 0,0 0 1 1 0 0 0 2 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052400244.html,2026-10-12T11:13Z
+NPB_2025_20250524_00245,Regular Season,2025-05-24,9,No,4,5,9,,4,5,0 1 0 0 0 2 0 0 1,1 2 0 0 0 0 0 2 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052400245.html,2026-10-12T11:13Z
+NPB_2025_20250524_00615,Regular Season,2025-05-24,9,No,1,2,9,,1,2,0 0 0 1 0 0 0 0 0,2 0 0 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052400615.html,2026-10-12T11:13Z
+NPB_2025_20250524_00616,Regular Season,2025-05-24,9,No,6,1,9,,6,1,3 0 1 0 0 0 0 2 0,0 0 0 1 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052400616.html,2026-10-12T11:13Z
+NPB_2025_20250525_00247,Regular Season,2025-05-25,9,No,2,5,9,,2,5,0 0 2 0 0 0 0 0 0,0 3 2 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052500247.html,2026-10-12T11:13Z
+NPB_2025_20250525_00248,Regular Season,2025-05-25,9,No,5,1,9,,5,1,0 0 0 0 1 0 0 0 4,0 0 0 0 1 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052500248.html,2026-10-12T11:13Z
+NPB_2025_20250525_00249,Regular Season,2025-05-25,9,No,0,3,9,,0,3,0 0 0 0 0 0 0 0 0,0 0 3 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052500249.html,2026-10-12T11:13Z
+NPB_2025_20250525_00618,Regular Season,2025-05-25,9,No,1,1,12,12 innings,1,1,0 0 0 1 0 0 0 0 0 0 0 0,0 0 0 0 1 0 0 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025052500618.html,2026-10-12T11:13Z
+NPB_2025_20250525_00619,Regular Season,2025-05-25,9,No,8,0,9,,8,0,0 0 0 2 0 0 3 2 1,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052500619.html,2026-10-12T11:13Z
+NPB_2025_20250525_00620,Regular Season,2025-05-25,9,No,13,5,9,,13,5,2 0 4 0 4 0 0 0 3,3 2 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052500620.html,2026-10-12T11:13Z
+NPB_2025_20250527_00250,Regular Season,2025-05-27,9,No,2,1,9,,2,1,0 0 0 2 0 0 0 0 0,0 0 0 1 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052700250.html,2026-10-12T11:13Z
+NPB_2025_20250527_00251,Regular Season,2025-05-27,9,No,1,2,9,,1,2,0 0 0 0 0 0 0 1 0,0 0 0 1 0 0 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052700251.html,2026-10-12T11:13Z
+NPB_2025_20250527_00252,Regular Season,2025-05-27,9,No,0,1,11,11 innings,0,1,0 0 0 0 0 0 0 0 0 0 0,0 0 0 0 0 0 0 0 0 0 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025052700252.html,2026-10-12T11:13Z
+NPB_2025_20250527_00621,Regular Season,2025-05-27,9,No,3,1,9,,3,1,0 0 0 0 0 1 0 1 1,0 0 0 1 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052700621.html,2026-10-12T11:13Z
+NPB_2025_20250527_00622,Regular Season,2025-05-27,9,No,4,6,9,,4,6,0 0 0 0 0 0 0 0 4,0 3 0 0 0 0 1 2 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052700622.html,2026-10-12T11:13Z
+NPB_2025_20250527_00623,Regular Season,2025-05-27,9,No,5,2,9,,5,2,0 0 0 0 2 0 0 2 1,0 0 0 0 2 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052700623.html,2026-10-12T11:13Z
+NPB_2025_20250528_00253,Regular Season,2025-05-28,9,No,1,4,9,,1,4,1 0 0 0 0 0 0 0 0,2 0 0 0 0 0 2 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052800253.html,2026-10-12T11:13Z
+NPB_2025_20250528_00254,Regular Season,2025-05-28,9,No,4,1,9,,4,1,0 0 0 0 0 3 0 0 1,0 0 0 0 0 0 1 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052800254.html,2026-10-12T11:13Z
+NPB_2025_20250528_00255,Regular Season,2025-05-28,9,No,0,1,9,,0,1,0 0 0 0 0 0 0 0 0,0 0 0 0 1 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052800255.html,2026-10-12T11:13Z
+NPB_2025_20250528_00624,Regular Season,2025-05-28,9,No,0,6,9,,0,6,0 0 0 0 0 0 0 0 0,2 0 0 0 0 3 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052800624.html,2026-10-12T11:13Z
+NPB_2025_20250528_00625,Regular Season,2025-05-28,9,No,2,1,9,,2,1,0 0 0 0 0 1 0 0 1,0 1 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052800625.html,2026-10-12T11:13Z
+NPB_2025_20250528_00626,Regular Season,2025-05-28,9,No,1,2,9,,1,2,0 0 0 1 0 0 0 0 0,0 0 0 0 0 0 1 0 1X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052800626.html,2026-10-12T11:13Z
+NPB_2025_20250529_00256,Regular Season,2025-05-29,9,No,6,0,9,,6,0,2 3 1 0 0 0 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052900256.html,2026-10-12T11:13Z
+NPB_2025_20250529_00257,Regular Season,2025-05-29,9,No,5,1,9,,5,1,0 0 0 1 0 0 3 0 1,1 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052900257.html,2026-10-12T11:13Z
+NPB_2025_20250529_00627,Regular Season,2025-05-29,9,No,6,3,9,,6,3,0 0 0 2 1 2 0 1 0,1 0 2 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025052900627.html,2026-10-12T11:13Z
+NPB_2025_20250530_00258,Regular Season,2025-05-30,9,No,2,6,9,,2,6,0 0 0 0 1 0 0 0 1,0 1 3 1 0 0 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025053000258.html,2026-10-12T11:13Z
+NPB_2025_20250530_00259,Regular Season,2025-05-30,9,No,4,1,9,,4,1,0 0 0 0 0 2 2 0 0,1 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025053000259.html,2026-10-12T11:13Z
+NPB_2025_20250530_00260,Regular Season,2025-05-30,9,No,5,2,9,,5,2,0 0 0 0 3 0 0 0 2,0 1 0 0 0 0 0 0 1,Y,Y,https://npb.jp/bis/eng/2025/games/s2025053000260.html,2026-10-12T11:13Z
+NPB_2025_20250530_00628,Regular Season,2025-05-30,9,No,1,4,9,,1,4,0 0 0 0 0 0 0 1 0,0 0 0 0 1 2 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025053000628.html,2026-10-12T11:13Z
+NPB_2025_20250530_00629,Regular Season,2025-05-30,9,No,4,2,9,,4,2,0 1 0 0 0 0 0 3 0,1 0 0 0 0 0 1 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025053000629.html,2026-10-12T11:13Z
+NPB_2025_20250531_00261,Regular Season,2025-05-31,9,No,2,5,9,,2,5,0 0 1 1 0 0 0 0 0,2 0 0 0 0 0 0 3 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025053100261.html,2026-10-12T11:13Z
+NPB_2025_20250531_00262,Regular Season,2025-05-31,9,No,2,4,9,,2,4,0 0 0 2 0 0 0 0 0,0 1 0 0 0 0 1 2 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025053100262.html,2026-10-12T11:13Z
+NPB_2025_20250531_00263,Regular Season,2025-05-31,9,No,2,0,9,,2,0,0 0 0 0 1 0 0 0 1,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025053100263.html,2026-10-12T11:13Z
+NPB_2025_20250531_00630,Regular Season,2025-05-31,9,No,3,4,9,,3,4,0 0 0 0 3 0 0 0 0,0 1 0 0 0 0 0 0 3X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025053100630.html,2026-10-12T11:13Z
+NPB_2025_20250531_00632,Regular Season,2025-05-31,9,No,2,3,11,11 innings,2,3,0 0 0 0 0 0 2 0 0 0 0,0 0 0 0 2 0 0 0 0 0 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025053100632.html,2026-10-12T11:13Z
+NPB_2025_20250601_00264,Regular Season,2025-06-01,9,No,2,3,9,,2,3,1 0 0 0 1 0 0 0 0,1 0 0 1 0 0 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025060100264.html,2026-10-12T11:13Z
+NPB_2025_20250601_00265,Regular Season,2025-06-01,9,No,1,4,9,,1,4,1 0 0 0 0 0 0 0 0,1 0 0 0 0 0 0 3 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025060100265.html,2026-10-12T11:13Z
+NPB_2025_20250601_00266,Regular Season,2025-06-01,9,No,8,0,9,,8,0,2 0 0 0 0 0 0 3 3,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025060100266.html,2026-10-12T11:13Z
+NPB_2025_20250601_00633,Regular Season,2025-06-01,9,No,0,1,9,,0,1,0 0 0 0 0 0 0 0 0,0 0 0 0 0 0 0 0 1X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025060100633.html,2026-10-12T11:13Z
+NPB_2025_20250601_00634,Regular Season,2025-06-01,9,No,0,3,9,,0,3,0 0 0 0 0 0 0 0 0,2 0 0 1 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025060100634.html,2026-10-12T11:13Z
+NPB_2025_20250601_00635,Regular Season,2025-06-01,9,No,3,2,9,,3,2,0 0 1 0 1 0 0 0 1,0 0 2 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025060100635.html,2026-10-12T11:13Z
+NPB_2025_20250603_00853,Regular Season,2025-06-03,9,No,1,0,9,,1,0,0 0 0 0 0 1 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025060300853.html,2026-10-12T11:13Z
+NPB_2025_20250603_00854,Regular Season,2025-06-03,9,No,6,3,9,,6,3,1 0 0 1 2 2 0 0 0,0 1 0 1 0 0 1 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025060300854.html,2026-10-12T11:13Z
+NPB_2025_20250603_00855,Regular Season,2025-06-03,9,No,0,1,11,11 innings,0,1,0 0 0 0 0 0 0 0 0 0 0,0 0 0 0 0 0 0 0 0 0 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025060300855.html,2026-10-12T11:13Z
+NPB_2025_20250603_00857,Regular Season,2025-06-03,9,No,5,2,9,,5,2,3 0 0 0 1 0 0 0 1,0 0 0 0 0 1 0 0 1,Y,Y,https://npb.jp/bis/eng/2025/games/s2025060300857.html,2026-10-12T11:13Z
+NPB_2025_20250603_00858,Regular Season,2025-06-03,9,No,0,4,9,,0,4,0 0 0 0 0 0 0 0 0,0 1 2 1 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025060300858.html,2026-10-12T11:13Z
+NPB_2025_20250604_00859,Regular Season,2025-06-04,9,No,4,5,9,,4,5,0 0 0 2 0 0 0 2 0,1 1 0 2 1 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025060400859.html,2026-10-12T11:13Z
+NPB_2025_20250604_00860,Regular Season,2025-06-04,9,No,1,3,9,,1,3,0 0 0 0 0 0 0 0 1,2 1 0 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025060400860.html,2026-10-12T11:13Z
+NPB_2025_20250604_00861,Regular Season,2025-06-04,9,No,2,4,9,,2,4,0 0 0 0 0 1 0 1 0,1 0 0 0 2 0 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025060400861.html,2026-10-12T11:13Z
+NPB_2025_20250604_00862,Regular Season,2025-06-04,9,No,3,5,9,,3,5,0 0 0 0 0 0 0 3 0,0 3 2 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025060400862.html,2026-10-12T11:13Z
+NPB_2025_20250604_00863,Regular Season,2025-06-04,9,No,1,6,9,,1,6,0 0 0 0 0 0 0 1 0,0 0 0 6 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025060400863.html,2026-10-12T11:13Z
+NPB_2025_20250604_00864,Regular Season,2025-06-04,9,No,2,8,9,,2,8,0 0 0 0 0 0 0 0 2,0 4 0 0 1 1 0 2 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025060400864.html,2026-10-12T11:13Z
+NPB_2025_20250605_00865,Regular Season,2025-06-05,9,No,7,1,9,,7,1,2 0 0 0 2 0 0 3 0,0 0 0 0 0 0 0 1 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025060500865.html,2026-10-12T11:13Z
+NPB_2025_20250605_00866,Regular Season,2025-06-05,9,No,5,0,9,,5,0,0 3 0 0 0 0 0 0 2,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025060500866.html,2026-10-12T11:13Z
+NPB_2025_20250605_00867,Regular Season,2025-06-05,9,No,4,1,9,,4,1,0 0 2 1 1 0 0 0 0,0 0 0 1 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025060500867.html,2026-10-12T11:13Z
+NPB_2025_20250605_00868,Regular Season,2025-06-05,9,No,1,2,10,10 innings,1,2,0 0 0 0 1 0 0 0 0 0,0 0 1 0 0 0 0 0 0 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025060500868.html,2026-10-12T11:13Z
+NPB_2025_20250605_00869,Regular Season,2025-06-05,9,No,3,4,9,,3,4,0 2 0 1 0 0 0 0 0,2 0 0 0 2 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025060500869.html,2026-10-12T11:13Z
+NPB_2025_20250605_00870,Regular Season,2025-06-05,9,No,4,8,9,,4,8,0 0 0 0 0 0 0 2 2,4 0 0 0 0 0 4 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025060500870.html,2026-10-12T11:13Z
+NPB_2025_20250606_00871,Regular Season,2025-06-06,9,No,2,0,9,,2,0,0 0 0 0 0 1 0 1 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025060600871.html,2026-10-12T11:13Z
+NPB_2025_20250606_00872,Regular Season,2025-06-06,9,No,2,3,10,10 innings,2,3,0 0 0 0 0 1 0 1 0 0,0 0 0 0 0 0 0 0 2 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025060600872.html,2026-10-12T11:13Z
+NPB_2025_20250606_00873,Regular Season,2025-06-06,9,No,1,2,9,,1,2,0 0 0 0 0 1 0 0 0,1 0 0 1 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025060600873.html,2026-10-12T11:13Z
+NPB_2025_20250606_00874,Regular Season,2025-06-06,9,No,2,3,9,,2,3,0 1 0 0 0 1 0 0 0,2 0 0 0 0 1 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025060600874.html,2026-10-12T11:13Z
+NPB_2025_20250606_00875,Regular Season,2025-06-06,9,No,0,1,10,10 innings,0,1,0 0 0 0 0 0 0 0 0 0,0 0 0 0 0 0 0 0 0 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025060600875.html,2026-10-12T11:13Z
+NPB_2025_20250606_00876,Regular Season,2025-06-06,9,No,2,3,9,,2,3,0 1 0 1 0 0 0 0 0,0 0 0 2 0 0 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025060600876.html,2026-10-12T11:13Z
+NPB_2025_20250607_00877,Regular Season,2025-06-07,9,No,0,2,9,,0,2,0 0 0 0 0 0 0 0 0,0 0 0 0 0 2 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025060700877.html,2026-10-12T11:13Z
+NPB_2025_20250607_00878,Regular Season,2025-06-07,9,No,8,1,9,,8,1,0 0 1 0 0 7 0 0 0,0 0 0 0 1 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025060700878.html,2026-10-12T11:13Z
+NPB_2025_20250607_00879,Regular Season,2025-06-07,9,No,7,4,9,,7,4,1 2 0 2 0 0 2 0 0,0 0 0 1 0 0 0 3 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025060700879.html,2026-10-12T11:13Z
+NPB_2025_20250607_00880,Regular Season,2025-06-07,9,No,3,4,9,,3,4,0 0 0 0 3 0 0 0 0,0 0 0 1 0 0 0 0 3X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025060700880.html,2026-10-12T11:13Z
+NPB_2025_20250607_00881,Regular Season,2025-06-07,9,No,2,8,9,,2,8,0 0 0 2 0 0 0 0 0,0 0 0 0 0 3 1 4 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025060700881.html,2026-10-12T11:13Z
+NPB_2025_20250607_00882,Regular Season,2025-06-07,9,No,2,5,9,,2,5,0 0 0 0 0 0 0 0 2,1 0 1 0 0 1 2 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025060700882.html,2026-10-12T11:13Z
+NPB_2025_20250608_00883,Regular Season,2025-06-08,9,No,0,5,9,,0,5,0 0 0 0 0 0 0 0 0,0 0 0 1 0 0 0 4 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025060800883.html,2026-10-12T11:13Z
+NPB_2025_20250608_00884,Regular Season,2025-06-08,9,No,2,4,9,,2,4,0 0 0 0 0 0 2 0 0,1 0 0 0 2 0 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025060800884.html,2026-10-12T11:13Z
+NPB_2025_20250608_00885,Regular Season,2025-06-08,9,No,4,5,10,10 innings,4,5,0 0 0 0 3 1 0 0 0 0,0 1 0 0 0 2 0 0 1 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025060800885.html,2026-10-12T11:13Z
+NPB_2025_20250608_00886,Regular Season,2025-06-08,9,No,0,3,9,,0,3,0 0 0 0 0 0 0 0 0,0 0 0 0 0 0 1 2 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025060800886.html,2026-10-12T11:13Z
+NPB_2025_20250608_00887,Regular Season,2025-06-08,9,No,1,8,9,,1,8,0 0 0 1 0 0 0 0 0,0 0 4 0 0 0 0 4 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025060800887.html,2026-10-12T11:13Z
+NPB_2025_20250608_00888,Regular Season,2025-06-08,9,No,0,10,9,,0,10,0 0 0 0 0 0 0 0 0,1 0 0 2 4 2 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025060800888.html,2026-10-12T11:13Z
+NPB_2025_20250610_00889,Regular Season,2025-06-10,9,No,1,3,9,,1,3,0 0 0 0 0 0 0 1 0,1 0 0 0 0 1 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061000889.html,2026-10-12T11:13Z
+NPB_2025_20250610_00890,Regular Season,2025-06-10,9,No,3,1,9,,3,1,0 0 0 0 0 0 3 0 0,0 0 0 0 0 1 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061000890.html,2026-10-12T11:13Z
+NPB_2025_20250610_00891,Regular Season,2025-06-10,9,No,2,4,9,,2,4,0 1 1 0 0 0 0 0 0,0 0 0 0 0 0 0 4 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061000891.html,2026-10-12T11:13Z
+NPB_2025_20250610_00892,Regular Season,2025-06-10,9,No,1,6,9,,1,6,0 0 0 0 0 0 0 1 0,0 1 0 0 1 4 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061000892.html,2026-10-12T11:13Z
+NPB_2025_20250610_00893,Regular Season,2025-06-10,9,No,0,2,9,,0,2,0 0 0 0 0 0 0 0 0,0 0 0 0 1 1 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061000893.html,2026-10-12T11:13Z
+NPB_2025_20250610_00894,Regular Season,2025-06-10,9,No,2,5,9,,2,5,0 0 0 2 0 0 0 0 0,1 0 0 0 1 0 0 3 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061000894.html,2026-10-12T11:13Z
+NPB_2025_20250611_00895,Regular Season,2025-06-11,9,No,2,8,9,,2,8,1 0 0 1 0 0 0 0 0,2 1 1 2 1 0 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061100895.html,2026-10-12T11:13Z
+NPB_2025_20250611_00896,Regular Season,2025-06-11,9,No,8,5,9,,8,5,1 3 3 0 0 0 0 1 0,0 0 1 0 3 0 0 1 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061100896.html,2026-10-12T11:13Z
+NPB_2025_20250611_00897,Regular Season,2025-06-11,9,No,2,3,9,,2,3,0 0 0 0 0 1 0 0 1,0 0 0 0 0 0 0 0 3X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061100897.html,2026-10-12T11:13Z
+NPB_2025_20250611_00898,Regular Season,2025-06-11,9,No,6,2,12,12 innings,6,2,0 0 0 0 0 1 1 0 0 0 0 4,1 0 0 0 0 0 1 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025061100898.html,2026-10-12T11:13Z
+NPB_2025_20250611_00899,Regular Season,2025-06-11,9,No,4,0,9,,4,0,0 0 1 0 0 0 0 1 2,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061100899.html,2026-10-12T11:13Z
+NPB_2025_20250611_00900,Regular Season,2025-06-11,9,No,7,3,9,,7,3,4 2 0 0 0 1 0 0 0,0 0 1 0 0 0 2 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061100900.html,2026-10-12T11:13Z
+NPB_2025_20250612_00901,Regular Season,2025-06-12,9,No,1,6,9,,1,6,1 0 0 0 0 0 0 0 0,1 0 1 1 0 0 3 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061200901.html,2026-10-12T11:13Z
+NPB_2025_20250612_00902,Regular Season,2025-06-12,9,No,0,4,9,,0,4,0 0 0 0 0 0 0 0 0,0 0 1 0 0 1 1 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061200902.html,2026-10-12T11:13Z
+NPB_2025_20250612_00903,Regular Season,2025-06-12,9,No,1,4,9,,1,4,1 0 0 0 0 0 0 0 0,1 1 0 2 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061200903.html,2026-10-12T11:13Z
+NPB_2025_20250612_00904,Regular Season,2025-06-12,9,No,4,5,9,,4,5,0 1 0 0 0 3 0 0 0,1 0 0 3 0 0 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061200904.html,2026-10-12T11:13Z
+NPB_2025_20250612_00905,Regular Season,2025-06-12,9,No,2,4,9,,2,4,0 0 2 0 0 0 0 0 0,2 0 0 1 0 1 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061200905.html,2026-10-12T11:13Z
+NPB_2025_20250612_00906,Regular Season,2025-06-12,9,No,0,0,12,12 innings,0,0,0 0 0 0 0 0 0 0 0 0 0 0,0 0 0 0 0 0 0 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025061200906.html,2026-10-12T11:13Z
+NPB_2025_20250613_00907,Regular Season,2025-06-13,9,No,6,2,9,,6,2,0 0 0 2 1 0 3 0 0,0 0 0 0 0 1 0 0 1,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061300907.html,2026-10-12T11:13Z
+NPB_2025_20250613_00908,Regular Season,2025-06-13,9,No,2,3,9,,2,3,0 0 2 0 0 0 0 0 0,0 0 0 3 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061300908.html,2026-10-12T11:13Z
+NPB_2025_20250613_00909,Regular Season,2025-06-13,9,No,2,1,10,10 innings,2,1,0 0 0 0 1 0 0 0 0 1,0 0 1 0 0 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025061300909.html,2026-10-12T11:13Z
+NPB_2025_20250613_00910,Regular Season,2025-06-13,9,No,4,5,9,,4,5,0 1 0 3 0 0 0 0 0,1 2 0 1 0 0 0 0 1X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061300910.html,2026-10-12T11:13Z
+NPB_2025_20250613_00911,Regular Season,2025-06-13,9,No,3,7,9,,3,7,1 0 0 0 0 2 0 0 0,0 0 5 1 0 0 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061300911.html,2026-10-12T11:13Z
+NPB_2025_20250613_00912,Regular Season,2025-06-13,9,No,1,4,9,,1,4,0 0 0 0 0 0 1 0 0,0 0 0 2 2 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061300912.html,2026-10-12T11:13Z
+NPB_2025_20250614_00913,Regular Season,2025-06-14,9,No,0,5,9,,0,5,0 0 0 0 0 0 0 0 0,0 1 2 1 0 0 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061400913.html,2026-10-12T11:13Z
+NPB_2025_20250614_00914,Regular Season,2025-06-14,9,No,4,5,10,10 innings,4,5,0 0 2 0 0 1 0 0 1 0,0 0 0 0 1 0 3 0 0 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025061400914.html,2026-10-12T11:13Z
+NPB_2025_20250614_00915,Regular Season,2025-06-14,9,No,1,2,9,,1,2,0 0 0 0 0 1 0 0 0,1 0 0 1 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061400915.html,2026-10-12T11:13Z
+NPB_2025_20250614_00916,Regular Season,2025-06-14,9,No,5,0,9,,5,0,0 0 0 1 3 1 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061400916.html,2026-10-12T11:13Z
+NPB_2025_20250614_00917,Regular Season,2025-06-14,9,No,1,2,11,11 innings,1,2,0 0 0 0 0 0 0 1 0 0 0,0 0 0 0 1 0 0 0 0 0 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025061400917.html,2026-10-12T11:13Z
+NPB_2025_20250614_00918,Regular Season,2025-06-14,9,No,0,4,9,,0,4,0 0 0 0 0 0 0 0 0,0 1 0 0 1 0 2 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061400918.html,2026-10-12T11:13Z
+NPB_2025_20250615_00919,Regular Season,2025-06-15,9,No,7,8,10,10 innings,7,8,1 0 0 0 0 6 0 0 0 0,0 0 0 0 0 1 0 4 2 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025061500919.html,2026-10-12T11:13Z
+NPB_2025_20250615_00920,Regular Season,2025-06-15,9,No,2,3,12,12 innings,2,3,0 0 0 0 0 0 2 0 0 0 0 0,0 0 0 1 1 0 0 0 0 0 0 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025061500920.html,2026-10-12T11:13Z
+NPB_2025_20250615_00921,Regular Season,2025-06-15,9,No,0,1,9,,0,1,0 0 0 0 0 0 0 0 0,0 0 0 0 0 1 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061500921.html,2026-10-12T11:13Z
+NPB_2025_20250615_00922,Regular Season,2025-06-15,9,No,4,5,9,,4,5,2 0 0 0 0 0 2 0 0,0 0 0 2 0 2 0 0 1X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061500922.html,2026-10-12T11:13Z
+NPB_2025_20250615_00923,Regular Season,2025-06-15,9,No,3,8,9,,3,8,0 0 0 1 0 0 2 0 0,0 0 0 0 5 1 0 2 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061500923.html,2026-10-12T11:13Z
+NPB_2025_20250615_00924,Regular Season,2025-06-15,9,No,3,4,9,,3,4,0 0 0 0 0 2 0 1 0,0 0 0 2 0 0 0 2 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061500924.html,2026-10-12T11:13Z
+NPB_2025_20250617_00925,Regular Season,2025-06-17,9,No,4,1,9,,4,1,0 4 0 0 0 0 0 0 0,0 0 0 1 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061700925.html,2026-10-12T11:13Z
+NPB_2025_20250617_00926,Regular Season,2025-06-17,9,No,4,4,12,12 innings,4,4,0 1 0 0 2 0 1 0 0 0 0 0,0 0 3 0 1 0 0 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025061700926.html,2026-10-12T11:13Z
+NPB_2025_20250617_00927,Regular Season,2025-06-17,9,No,3,0,9,,3,0,0 0 0 1 0 0 0 0 2,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061700927.html,2026-10-12T11:13Z
+NPB_2025_20250617_00928,Regular Season,2025-06-17,9,No,5,3,9,,5,3,1 0 0 0 1 0 0 3 0,1 0 0 0 0 0 0 2 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061700928.html,2026-10-12T11:13Z
+NPB_2025_20250617_00929,Regular Season,2025-06-17,9,No,3,1,9,,3,1,0 0 0 0 0 0 3 0 0,0 0 1 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061700929.html,2026-10-12T11:13Z
+NPB_2025_20250617_00930,Regular Season,2025-06-17,9,No,2,0,9,,2,0,2 0 0 0 0 0 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061700930.html,2026-10-12T11:13Z
+NPB_2025_20250618_00931,Regular Season,2025-06-18,9,No,1,2,9,,1,2,0 0 0 0 1 0 0 0 0,0 0 0 0 0 1 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061800931.html,2026-10-12T11:13Z
+NPB_2025_20250618_00932,Regular Season,2025-06-18,9,No,6,2,9,,6,2,0 0 2 0 3 1 0 0 0,0 0 0 0 2 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061800932.html,2026-10-12T11:13Z
+NPB_2025_20250618_00933,Regular Season,2025-06-18,9,No,2,4,9,,2,4,0 2 0 0 0 0 0 0 0,1 0 0 0 2 0 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061800933.html,2026-10-12T11:13Z
+NPB_2025_20250618_00934,Regular Season,2025-06-18,9,No,3,6,9,,3,6,0 0 0 1 2 0 0 0 0,0 0 0 4 2 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061800934.html,2026-10-12T11:13Z
+NPB_2025_20250618_00935,Regular Season,2025-06-18,9,No,1,8,9,,1,8,0 0 0 0 0 1 0 0 0,0 0 1 0 2 0 0 5 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061800935.html,2026-10-12T11:13Z
+NPB_2025_20250618_00936,Regular Season,2025-06-18,9,No,4,8,9,,4,8,0 2 0 2 0 0 0 0 0,0 0 0 0 2 4 2 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061800936.html,2026-10-12T11:13Z
+NPB_2025_20250619_00937,Regular Season,2025-06-19,9,No,4,1,9,,4,1,0 1 3 0 0 0 0 0 0,0 0 0 0 0 0 0 0 1,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061900937.html,2026-10-12T11:13Z
+NPB_2025_20250619_00938,Regular Season,2025-06-19,9,No,3,1,9,,3,1,2 0 0 0 0 0 1 0 0,0 0 0 0 0 0 0 0 1,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061900938.html,2026-10-12T11:13Z
+NPB_2025_20250619_00939,Regular Season,2025-06-19,9,No,2,1,9,,2,1,0 0 0 0 0 1 1 0 0,0 0 0 0 0 0 1 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061900939.html,2026-10-12T11:13Z
+NPB_2025_20250619_00940,Regular Season,2025-06-19,9,No,6,1,9,,6,1,2 0 0 3 0 0 1 0 0,0 0 0 0 1 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061900940.html,2026-10-12T11:13Z
+NPB_2025_20250619_00941,Regular Season,2025-06-19,9,No,0,2,9,,0,2,0 0 0 0 0 0 0 0 0,0 0 0 1 0 0 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061900941.html,2026-10-12T11:13Z
+NPB_2025_20250619_00942,Regular Season,2025-06-19,9,No,16,2,9,,16,2,4 0 0 2 0 0 3 0 7,0 0 0 0 2 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025061900942.html,2026-10-12T11:13Z
+NPB_2025_20250620_00943,Regular Season,2025-06-20,9,No,1,2,9,,1,2,0 1 0 0 0 0 0 0 0,0 0 0 1 0 1 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025062000943.html,2026-10-12T11:13Z
+NPB_2025_20250620_00944,Regular Season,2025-06-20,9,No,10,8,10,10 innings,10,8,3 0 0 5 0 0 0 0 0 2,0 2 1 0 0 0 4 1 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025062000944.html,2026-10-12T11:13Z
+NPB_2025_20250620_00945,Regular Season,2025-06-20,9,No,6,1,9,,6,1,3 0 1 0 0 0 0 0 2,0 0 0 0 1 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025062000945.html,2026-10-12T11:13Z
+NPB_2025_20250620_00946,Regular Season,2025-06-20,9,No,1,0,9,,1,0,0 0 0 0 0 1 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025062000946.html,2026-10-12T11:13Z
+NPB_2025_20250620_00947,Regular Season,2025-06-20,9,No,2,1,10,10 innings,2,1,1 0 0 0 0 0 0 0 0 1,0 0 0 0 1 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025062000947.html,2026-10-12T11:13Z
+NPB_2025_20250620_00948,Regular Season,2025-06-20,9,No,4,0,9,,4,0,0 0 0 1 0 0 2 0 1,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025062000948.html,2026-10-12T11:13Z
+NPB_2025_20250621_00949,Regular Season,2025-06-21,9,No,2,5,9,,2,5,0 0 0 2 0 0 0 0 0,0 0 0 0 0 0 5 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025062100949.html,2026-10-12T11:13Z
+NPB_2025_20250621_00950,Regular Season,2025-06-21,9,No,2,5,9,,2,5,1 0 0 0 0 0 0 0 1,4 0 0 0 0 0 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025062100950.html,2026-10-12T11:13Z
+NPB_2025_20250621_00951,Regular Season,2025-06-21,9,No,0,5,9,,0,5,0 0 0 0 0 0 0 0 0,0 3 0 0 0 1 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025062100951.html,2026-10-12T11:13Z
+NPB_2025_20250621_00952,Regular Season,2025-06-21,9,No,3,2,9,,3,2,2 0 0 0 0 0 1 0 0,0 0 0 0 0 1 1 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025062100952.html,2026-10-12T11:13Z
+NPB_2025_20250621_00953,Regular Season,2025-06-21,9,No,0,3,9,,0,3,0 0 0 0 0 0 0 0 0,3 0 0 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025062100953.html,2026-10-12T11:13Z
+NPB_2025_20250621_00954,Regular Season,2025-06-21,9,No,3,8,9,,3,8,0 1 0 0 0 0 0 2 0,2 2 0 2 2 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025062100954.html,2026-10-12T11:13Z
+NPB_2025_20250622_00955,Regular Season,2025-06-22,9,No,5,0,9,,5,0,0 2 1 0 0 1 0 0 1,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025062200955.html,2026-10-12T11:13Z
+NPB_2025_20250622_00956,Regular Season,2025-06-22,9,No,4,2,9,,4,2,1 0 0 0 0 3 0 0 0,0 0 0 0 0 2 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025062200956.html,2026-10-12T11:13Z
+NPB_2025_20250622_00957,Regular Season,2025-06-22,9,No,10,9,9,,10,9,5 2 0 2 1 0 0 0 0,3 0 0 3 3 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025062200957.html,2026-10-12T11:13Z
+NPB_2025_20250622_00958,Regular Season,2025-06-22,9,No,1,4,9,,1,4,0 0 0 0 0 1 0 0 0,1 0 3 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025062200958.html,2026-10-12T11:13Z
+NPB_2025_20250622_00959,Regular Season,2025-06-22,9,No,3,1,9,,3,1,0 0 0 2 0 0 0 1 0,0 0 0 1 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025062200959.html,2026-10-12T11:13Z
+NPB_2025_20250622_00960,Regular Season,2025-06-22,9,No,2,5,9,,2,5,0 2 0 0 0 0 0 0 0,0 0 0 3 0 0 2 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025062200960.html,2026-10-12T11:13Z
+NPB_2025_20250624_01952,Regular Season,2025-06-24,9,No,4,6,9,,4,6,1 2 0 0 0 1 0 0 0,0 1 2 0 3 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025062401952.html,2026-10-12T11:13Z
+NPB_2025_20250627_00267,Regular Season,2025-06-27,9,No,0,4,9,,0,4,0 0 0 0 0 0 0 0 0,0 0 0 0 0 1 0 3 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025062700267.html,2026-10-12T11:13Z
+NPB_2025_20250627_00268,Regular Season,2025-06-27,9,No,3,4,9,,3,4,0 0 0 2 0 1 0 0 0,0 0 0 0 0 0 3 0 1X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025062700268.html,2026-10-12T11:13Z
+NPB_2025_20250627_00269,Regular Season,2025-06-27,9,No,2,3,9,,2,3,0 1 1 0 0 0 0 0 0,1 0 2 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025062700269.html,2026-10-12T11:13Z
+NPB_2025_20250627_00636,Regular Season,2025-06-27,9,No,5,2,9,,5,2,0 0 0 2 0 0 0 3 0,0 1 1 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025062700636.html,2026-10-12T11:13Z
+NPB_2025_20250627_00637,Regular Season,2025-06-27,9,No,6,3,9,,6,3,0 0 0 0 0 1 0 5 0,0 0 1 0 0 0 0 2 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025062700637.html,2026-10-12T11:13Z
+NPB_2025_20250627_00638,Regular Season,2025-06-27,9,No,2,10,9,,2,10,0 0 0 0 0 0 0 0 2,1 0 0 3 4 0 2 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025062700638.html,2026-10-12T11:13Z
+NPB_2025_20250628_00270,Regular Season,2025-06-28,9,No,0,5,9,,0,5,0 0 0 0 0 0 0 0 0,0 0 0 2 0 3 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025062800270.html,2026-10-12T11:13Z
+NPB_2025_20250628_00271,Regular Season,2025-06-28,9,No,2,0,9,,2,0,0 0 0 0 2 0 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025062800271.html,2026-10-12T11:13Z
+NPB_2025_20250628_00272,Regular Season,2025-06-28,9,No,2,1,9,,2,1,0 0 0 0 0 2 0 0 0,0 0 1 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025062800272.html,2026-10-12T11:13Z
+NPB_2025_20250628_00639,Regular Season,2025-06-28,9,No,2,3,9,,2,3,0 0 1 0 0 0 0 1 0,0 0 0 0 0 0 1 2 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025062800639.html,2026-10-12T11:13Z
+NPB_2025_20250628_00640,Regular Season,2025-06-28,9,No,0,5,9,,0,5,0 0 0 0 0 0 0 0 0,3 0 0 2 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025062800640.html,2026-10-12T11:13Z
+NPB_2025_20250628_00641,Regular Season,2025-06-28,9,No,3,7,9,,3,7,0 1 1 1 0 0 0 0 0,2 0 1 0 3 0 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025062800641.html,2026-10-12T11:13Z
+NPB_2025_20250629_00273,Regular Season,2025-06-29,9,No,0,1,9,,0,1,0 0 0 0 0 0 0 0 0,0 1 0 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025062900273.html,2026-10-12T11:13Z
+NPB_2025_20250629_00274,Regular Season,2025-06-29,9,No,6,0,9,,6,0,1 0 0 0 4 0 0 1 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025062900274.html,2026-10-12T11:13Z
+NPB_2025_20250629_00275,Regular Season,2025-06-29,9,No,2,1,9,,2,1,0 0 0 1 0 1 0 0 0,0 0 0 0 0 0 0 1 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025062900275.html,2026-10-12T11:13Z
+NPB_2025_20250629_00642,Regular Season,2025-06-29,9,No,2,1,9,,2,1,0 0 2 0 0 0 0 0 0,0 1 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025062900642.html,2026-10-12T11:13Z
+NPB_2025_20250629_00643,Regular Season,2025-06-29,9,No,2,1,9,,2,1,0 1 0 1 0 0 0 0 0,0 0 0 0 0 0 1 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025062900643.html,2026-10-12T11:13Z
+NPB_2025_20250629_00644,Regular Season,2025-06-29,9,No,4,2,9,,4,2,0 4 0 0 0 0 0 0 0,2 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025062900644.html,2026-10-12T11:13Z
+NPB_2025_20250701_00276,Regular Season,2025-07-01,9,No,2,3,9,,2,3,0 2 0 0 0 0 0 0 0,3 0 0 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070100276.html,2026-10-12T11:13Z
+NPB_2025_20250701_00277,Regular Season,2025-07-01,9,No,1,2,9,,1,2,0 0 0 0 0 1 0 0 0,1 0 1 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070100277.html,2026-10-12T11:13Z
+NPB_2025_20250701_00278,Regular Season,2025-07-01,9,No,2,2,12,12 innings,2,2,2 0 0 0 0 0 0 0 0 0 0 0,0 0 0 1 0 1 0 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025070100278.html,2026-10-12T11:13Z
+NPB_2025_20250701_00645,Regular Season,2025-07-01,9,No,0,6,9,,0,6,0 0 0 0 0 0 0 0 0,2 0 1 0 0 0 1 2 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070100645.html,2026-10-12T11:13Z
+NPB_2025_20250701_00646,Regular Season,2025-07-01,9,No,3,0,9,,3,0,0 0 0 0 0 1 0 2 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070100646.html,2026-10-12T11:13Z
+NPB_2025_20250701_00647,Regular Season,2025-07-01,9,No,0,1,9,,0,1,0 0 0 0 0 0 0 0 0,0 0 0 0 0 1 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070100647.html,2026-10-12T11:13Z
+NPB_2025_20250702_00279,Regular Season,2025-07-02,9,No,3,4,9,,3,4,1 0 0 1 0 0 1 0 0,4 0 0 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070200279.html,2026-10-12T11:13Z
+NPB_2025_20250702_00280,Regular Season,2025-07-02,9,No,0,1,9,,0,1,0 0 0 0 0 0 0 0 0,0 0 0 0 0 0 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070200280.html,2026-10-12T11:13Z
+NPB_2025_20250702_00281,Regular Season,2025-07-02,9,No,1,2,9,,1,2,1 0 0 0 0 0 0 0 0,0 0 2 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070200281.html,2026-10-12T11:13Z
+NPB_2025_20250702_00648,Regular Season,2025-07-02,9,No,6,3,9,,6,3,0 0 0 0 0 6 0 0 0,0 0 1 0 0 0 2 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070200648.html,2026-10-12T11:13Z
+NPB_2025_20250702_00649,Regular Season,2025-07-02,9,No,6,2,10,10 innings,6,2,2 0 0 0 0 0 0 0 0 4,0 0 0 0 0 2 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025070200649.html,2026-10-12T11:13Z
+NPB_2025_20250702_00650,Regular Season,2025-07-02,9,No,1,2,9,,1,2,1 0 0 0 0 0 0 0 0,0 0 0 0 0 0 0 0 2X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070200650.html,2026-10-12T11:13Z
+NPB_2025_20250703_00282,Regular Season,2025-07-03,9,No,5,8,9,,5,8,3 0 0 0 0 0 0 0 2,3 0 0 1 1 0 2 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070300282.html,2026-10-12T11:13Z
+NPB_2025_20250703_00283,Regular Season,2025-07-03,9,No,2,3,9,,2,3,2 0 0 0 0 0 0 0 0,0 0 0 1 1 0 0 0 1X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070300283.html,2026-10-12T11:13Z
+NPB_2025_20250703_00284,Regular Season,2025-07-03,9,No,5,0,9,,5,0,1 0 0 0 0 4 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070300284.html,2026-10-12T11:13Z
+NPB_2025_20250703_00651,Regular Season,2025-07-03,9,No,1,4,9,,1,4,0 0 1 0 0 0 0 0 0,0 1 0 2 0 1 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070300651.html,2026-10-12T11:13Z
+NPB_2025_20250704_00285,Regular Season,2025-07-04,9,No,0,1,9,,0,1,0 0 0 0 0 0 0 0 0,0 0 0 0 0 0 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070400285.html,2026-10-12T11:13Z
+NPB_2025_20250704_00286,Regular Season,2025-07-04,9,No,7,1,9,,7,1,0 0 0 0 0 0 0 2 5,0 0 0 1 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070400286.html,2026-10-12T11:13Z
+NPB_2025_20250704_00287,Regular Season,2025-07-04,9,No,1,2,9,,1,2,0 0 0 0 0 0 0 0 1,0 0 1 1 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070400287.html,2026-10-12T11:13Z
+NPB_2025_20250704_00652,Regular Season,2025-07-04,9,No,1,7,9,,1,7,0 1 0 0 0 0 0 0 0,1 0 5 0 0 0 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070400652.html,2026-10-12T11:13Z
+NPB_2025_20250704_00653,Regular Season,2025-07-04,9,No,6,8,9,,6,8,0 0 3 0 0 1 0 2 0,5 0 0 1 0 2 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070400653.html,2026-10-12T11:13Z
+NPB_2025_20250704_00654,Regular Season,2025-07-04,9,No,1,0,9,,1,0,0 0 0 0 0 0 0 1 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070400654.html,2026-10-12T11:13Z
+NPB_2025_20250705_00288,Regular Season,2025-07-05,9,No,0,0,12,12 innings,0,0,0 0 0 0 0 0 0 0 0 0 0 0,0 0 0 0 0 0 0 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025070500288.html,2026-10-12T11:13Z
+NPB_2025_20250705_00289,Regular Season,2025-07-05,9,No,3,0,9,,3,0,0 0 0 2 0 1 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070500289.html,2026-10-12T11:13Z
+NPB_2025_20250705_00290,Regular Season,2025-07-05,9,No,6,4,12,12 innings,6,4,0 0 1 0 0 0 0 3 0 0 0 2,1 0 0 0 2 0 1 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025070500290.html,2026-10-12T11:13Z
+NPB_2025_20250705_00655,Regular Season,2025-07-05,9,No,1,12,9,,1,12,0 0 0 1 0 0 0 0 0,0 1 1 3 0 4 0 3 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070500655.html,2026-10-12T11:13Z
+NPB_2025_20250705_00656,Regular Season,2025-07-05,9,No,8,2,9,,8,2,2 0 0 3 0 0 0 0 3,0 0 0 0 2 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070500656.html,2026-10-12T11:13Z
+NPB_2025_20250705_00657,Regular Season,2025-07-05,9,No,3,4,9,,3,4,1 0 0 1 0 1 0 0 0,0 0 2 0 1 1 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070500657.html,2026-10-12T11:13Z
+NPB_2025_20250706_00291,Regular Season,2025-07-06,9,No,3,2,9,,3,2,0 0 0 0 0 1 0 0 2,0 0 0 0 1 0 0 1 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070600291.html,2026-10-12T11:13Z
+NPB_2025_20250706_00292,Regular Season,2025-07-06,9,No,5,1,9,,5,1,3 0 1 0 0 0 0 1 0,0 1 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070600292.html,2026-10-12T11:13Z
+NPB_2025_20250706_00293,Regular Season,2025-07-06,9,No,5,4,9,,5,4,1 0 3 0 1 0 0 0 0,0 2 0 0 2 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070600293.html,2026-10-12T11:13Z
+NPB_2025_20250706_00658,Regular Season,2025-07-06,9,No,6,8,9,,6,8,1 3 0 1 0 1 0 0 0,0 6 0 0 0 0 2 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070600658.html,2026-10-12T11:13Z
+NPB_2025_20250706_00659,Regular Season,2025-07-06,9,No,1,4,9,,1,4,0 1 0 0 0 0 0 0 0,0 0 3 0 0 0 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070600659.html,2026-10-12T11:13Z
+NPB_2025_20250706_00660,Regular Season,2025-07-06,9,No,1,3,9,,1,3,0 1 0 0 0 0 0 0 0,0 1 0 2 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070600660.html,2026-10-12T11:13Z
+NPB_2025_20250708_00294,Regular Season,2025-07-08,9,No,4,5,9,,4,5,0 1 0 0 1 0 0 1 1,0 0 0 1 0 0 1 0 3X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070800294.html,2026-10-12T11:13Z
+NPB_2025_20250708_00295,Regular Season,2025-07-08,9,No,4,0,9,,4,0,2 0 0 1 0 1 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070800295.html,2026-10-12T11:13Z
+NPB_2025_20250708_00296,Regular Season,2025-07-08,9,No,6,1,9,,6,1,2 0 0 1 2 0 1 0 0,0 0 0 1 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070800296.html,2026-10-12T11:13Z
+NPB_2025_20250708_00661,Regular Season,2025-07-08,9,No,7,2,9,,7,2,0 1 1 3 0 0 0 0 2,0 0 0 1 0 0 0 1 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070800661.html,2026-10-12T11:13Z
+NPB_2025_20250708_00662,Regular Season,2025-07-08,9,No,5,4,11,11 innings,5,4,0 2 0 0 2 0 0 0 0 0 1,0 1 0 0 0 3 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025070800662.html,2026-10-12T11:13Z
+NPB_2025_20250708_00663,Regular Season,2025-07-08,9,No,9,1,9,,9,1,0 0 4 0 4 0 0 1 0,0 0 1 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070800663.html,2026-10-12T11:13Z
+NPB_2025_20250709_00297,Regular Season,2025-07-09,9,No,3,2,9,,3,2,0 0 0 0 0 0 0 0 3,0 1 0 0 0 0 0 1 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070900297.html,2026-10-12T11:13Z
+NPB_2025_20250709_00298,Regular Season,2025-07-09,9,No,4,4,12,12 innings,4,4,0 0 1 0 0 0 3 0 0 0 0 0,0 1 1 0 0 0 0 0 2 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025070900298.html,2026-10-12T11:13Z
+NPB_2025_20250709_00299,Regular Season,2025-07-09,9,No,3,1,9,,3,1,0 1 1 0 0 0 1 0 0,0 1 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070900299.html,2026-10-12T11:13Z
+NPB_2025_20250709_00664,Regular Season,2025-07-09,9,No,2,0,9,,2,0,0 0 0 0 0 2 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070900664.html,2026-10-12T11:13Z
+NPB_2025_20250709_00665,Regular Season,2025-07-09,9,No,13,1,9,,13,1,4 1 0 2 1 3 0 1 1,0 0 0 0 0 1 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070900665.html,2026-10-12T11:13Z
+NPB_2025_20250709_00666,Regular Season,2025-07-09,9,No,1,0,9,,1,0,0 0 1 0 0 0 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025070900666.html,2026-10-12T11:13Z
+NPB_2025_20250710_00300,Regular Season,2025-07-10,9,No,6,3,9,,6,3,0 1 0 0 0 0 5 0 0,0 0 0 0 0 3 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025071000300.html,2026-10-12T11:13Z
+NPB_2025_20250710_00667,Regular Season,2025-07-10,9,No,1,5,9,,1,5,0 0 0 0 0 1 0 0 0,0 0 0 0 0 2 2 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025071000667.html,2026-10-12T11:13Z
+NPB_2025_20250710_00668,Regular Season,2025-07-10,9,No,0,4,9,,0,4,0 0 0 0 0 0 0 0 0,0 0 0 0 0 4 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025071000668.html,2026-10-12T11:13Z
+NPB_2025_20250711_00301,Regular Season,2025-07-11,9,No,2,1,11,11 innings,2,1,0 0 0 0 0 0 0 1 0 0 1,0 1 0 0 0 0 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025071100301.html,2026-10-12T11:13Z
+NPB_2025_20250711_00302,Regular Season,2025-07-11,9,No,1,2,9,,1,2,0 0 0 0 0 1 0 0 0,0 0 0 0 1 0 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025071100302.html,2026-10-12T11:13Z
+NPB_2025_20250711_00303,Regular Season,2025-07-11,9,No,6,3,9,,6,3,0 6 0 0 0 0 0 0 0,0 0 0 2 1 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025071100303.html,2026-10-12T11:13Z
+NPB_2025_20250711_00669,Regular Season,2025-07-11,9,No,6,0,9,,6,0,1 0 1 0 1 3 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025071100669.html,2026-10-12T11:13Z
+NPB_2025_20250711_00670,Regular Season,2025-07-11,9,No,0,3,9,,0,3,0 0 0 0 0 0 0 0 0,0 2 0 0 1 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025071100670.html,2026-10-12T11:13Z
+NPB_2025_20250711_00671,Regular Season,2025-07-11,9,No,2,2,12,12 innings,2,2,0 0 0 0 1 0 0 1 0 0 0 0,1 0 1 0 0 0 0 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025071100671.html,2026-10-12T11:13Z
+NPB_2025_20250712_00304,Regular Season,2025-07-12,9,No,3,0,9,,3,0,3 0 0 0 0 0 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025071200304.html,2026-10-12T11:13Z
+NPB_2025_20250712_00305,Regular Season,2025-07-12,9,No,1,7,9,,1,7,0 0 0 0 0 0 0 0 1,3 1 1 0 0 0 0 2 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025071200305.html,2026-10-12T11:13Z
+NPB_2025_20250712_00306,Regular Season,2025-07-12,9,No,2,5,9,,2,5,0 0 0 2 0 0 0 0 0,0 0 0 3 0 0 0 2 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025071200306.html,2026-10-12T11:13Z
+NPB_2025_20250712_00672,Regular Season,2025-07-12,9,No,3,7,9,,3,7,0 1 1 1 0 0 0 0 0,2 3 0 0 0 2 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025071200672.html,2026-10-12T11:13Z
+NPB_2025_20250712_00673,Regular Season,2025-07-12,9,No,0,7,9,,0,7,0 0 0 0 0 0 0 0 0,0 0 1 0 0 3 1 2 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025071200673.html,2026-10-12T11:13Z
+NPB_2025_20250712_00674,Regular Season,2025-07-12,9,No,5,1,9,,5,1,1 1 0 0 0 0 0 3 0,0 0 0 0 0 0 0 1 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025071200674.html,2026-10-12T11:13Z
+NPB_2025_20250713_00307,Regular Season,2025-07-13,9,No,3,4,9,,3,4,0 3 0 0 0 0 0 0 0,0 1 3 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025071300307.html,2026-10-12T11:13Z
+NPB_2025_20250713_00308,Regular Season,2025-07-13,9,No,2,3,10,10 innings,2,3,0 0 0 0 0 2 0 0 0 0,2 0 0 0 0 0 0 0 0 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025071300308.html,2026-10-12T11:13Z
+NPB_2025_20250713_00309,Regular Season,2025-07-13,9,No,1,2,9,,1,2,0 0 0 0 0 0 0 0 1,0 0 0 0 0 2 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025071300309.html,2026-10-12T11:13Z
+NPB_2025_20250713_00675,Regular Season,2025-07-13,9,No,0,4,9,,0,4,0 0 0 0 0 0 0 0 0,0 1 0 0 3 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025071300675.html,2026-10-12T11:13Z
+NPB_2025_20250713_00676,Regular Season,2025-07-13,9,No,5,3,9,,5,3,0 1 0 2 1 1 0 0 0,0 0 0 0 0 0 0 0 3,Y,Y,https://npb.jp/bis/eng/2025/games/s2025071300676.html,2026-10-12T11:13Z
+NPB_2025_20250713_00677,Regular Season,2025-07-13,9,No,1,5,9,,1,5,1 0 0 0 0 0 0 0 0,2 0 0 0 1 0 2 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025071300677.html,2026-10-12T11:13Z
+NPB_2025_20250714_00678,Regular Season,2025-07-14,9,No,2,1,9,,2,1,0 0 0 0 2 0 0 0 0,0 0 0 0 0 0 1 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025071400678.html,2026-10-12T11:13Z
+NPB_2025_20250715_00311,Regular Season,2025-07-15,9,No,3,2,11,11 innings,3,2,0 0 0 2 0 0 0 0 0 0 1,1 0 0 0 0 0 1 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025071500311.html,2026-10-12T11:13Z
+NPB_2025_20250715_00312,Regular Season,2025-07-15,9,No,1,0,9,,1,0,0 0 0 0 0 0 0 1 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025071500312.html,2026-10-12T11:13Z
+NPB_2025_20250715_00679,Regular Season,2025-07-15,9,No,7,6,10,10 innings,7,6,0 0 1 0 0 4 1 0 0 1,0 0 4 0 0 0 0 2 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025071500679.html,2026-10-12T11:13Z
+NPB_2025_20250715_00680,Regular Season,2025-07-15,9,No,2,10,9,,2,10,0 2 0 0 0 0 0 0 0,0 1 3 1 1 0 4 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025071500680.html,2026-10-12T11:13Z
+NPB_2025_20250716_00313,Regular Season,2025-07-16,9,No,6,0,9,,6,0,0 0 0 0 0 2 0 0 4,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025071600313.html,2026-10-12T11:13Z
+NPB_2025_20250716_00314,Regular Season,2025-07-16,9,No,3,4,9,,3,4,1 0 0 1 0 0 1 0 0,1 0 2 0 0 1 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025071600314.html,2026-10-12T11:13Z
+NPB_2025_20250716_00681,Regular Season,2025-07-16,9,No,10,1,9,,10,1,3 0 2 0 2 1 0 2 0,0 0 1 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025071600681.html,2026-10-12T11:13Z
+NPB_2025_20250716_00682,Regular Season,2025-07-16,9,No,0,1,9,,0,1,0 0 0 0 0 0 0 0 0,0 0 0 0 0 0 0 0 1X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025071600682.html,2026-10-12T11:13Z
+NPB_2025_20250716_00683,Regular Season,2025-07-16,9,No,0,6,9,,0,6,0 0 0 0 0 0 0 0 0,0 0 1 0 0 3 0 2 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025071600683.html,2026-10-12T11:13Z
+NPB_2025_20250717_00315,Regular Season,2025-07-17,9,No,2,3,9,,2,3,0 1 0 0 0 1 0 0 0,0 1 0 0 0 1 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025071700315.html,2026-10-12T11:13Z
+NPB_2025_20250717_00317,Regular Season,2025-07-17,9,No,1,1,6,6 innings,1,1,0 0 0 1 0 0,0 1 0 0 0 0X,N,Y,https://npb.jp/bis/eng/2025/games/s2025071700317.html,2026-10-12T11:13Z
+NPB_2025_20250717_00684,Regular Season,2025-07-17,9,No,3,4,9,,3,4,3 0 0 0 0 0 0 0 0,0 1 0 0 3 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025071700684.html,2026-10-12T11:13Z
+NPB_2025_20250717_00686,Regular Season,2025-07-17,9,No,2,2,5,5 innings,2,2,1 1 0 0 0,0 1 0 0 1,N,Y,https://npb.jp/bis/eng/2025/games/s2025071700686.html,2026-10-12T11:13Z
+NPB_2025_20250718_01951,Regular Season,2025-07-18,9,No,8,3,10,10 innings,8,3,0 0 1 0 2 0 0 0 0 5,0 0 0 2 0 1 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025071801951.html,2026-10-12T11:13Z
+NPB_2025_20250719_00318,Regular Season,2025-07-19,9,No,4,0,11,11 innings,4,0,0 0 0 0 0 0 0 0 0 0 4,0 0 0 0 0 0 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025071900318.html,2026-10-12T11:13Z
+NPB_2025_20250719_00319,Regular Season,2025-07-19,9,No,1,3,9,,1,3,0 0 0 0 0 0 0 0 1,0 0 0 1 1 0 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025071900319.html,2026-10-12T11:13Z
+NPB_2025_20250719_00320,Regular Season,2025-07-19,9,No,2,7,9,,2,7,0 0 0 0 2 0 0 0 0,0 0 0 0 2 2 2 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025071900320.html,2026-10-12T11:13Z
+NPB_2025_20250719_00687,Regular Season,2025-07-19,9,No,5,2,9,,5,2,1 0 1 0 0 2 1 0 0,0 1 0 0 0 0 1 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025071900687.html,2026-10-12T11:13Z
+NPB_2025_20250719_00688,Regular Season,2025-07-19,9,No,4,0,9,,4,0,0 0 0 2 0 0 0 0 2,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025071900688.html,2026-10-12T11:13Z
+NPB_2025_20250719_00689,Regular Season,2025-07-19,9,No,0,8,9,,0,8,0 0 0 0 0 0 0 0 0,0 0 0 0 3 3 2 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025071900689.html,2026-10-12T11:13Z
+NPB_2025_20250720_00321,Regular Season,2025-07-20,9,No,2,1,9,,2,1,0 1 0 1 0 0 0 0 0,0 0 0 1 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025072000321.html,2026-10-12T11:13Z
+NPB_2025_20250720_00322,Regular Season,2025-07-20,9,No,7,8,9,,7,8,3 1 0 0 1 1 0 0 1,3 3 0 0 1 0 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025072000322.html,2026-10-12T11:13Z
+NPB_2025_20250720_00323,Regular Season,2025-07-20,9,No,5,3,10,10 innings,5,3,0 0 1 0 0 0 0 0 2 2,1 0 0 0 0 0 2 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025072000323.html,2026-10-12T11:13Z
+NPB_2025_20250720_00690,Regular Season,2025-07-20,9,No,4,2,9,,4,2,1 0 0 3 0 0 0 0 0,0 1 0 0 0 0 1 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025072000690.html,2026-10-12T11:13Z
+NPB_2025_20250720_00691,Regular Season,2025-07-20,9,No,7,3,9,,7,3,0 0 4 1 0 2 0 0 0,0 0 2 0 1 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025072000691.html,2026-10-12T11:13Z
+NPB_2025_20250720_00692,Regular Season,2025-07-20,9,No,2,8,9,,2,8,0 0 1 0 1 0 0 0 0,0 0 3 0 0 5 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025072000692.html,2026-10-12T11:13Z
+NPB_2025_20250721_00324,Regular Season,2025-07-21,9,No,5,6,9,,5,6,0 1 2 0 2 0 0 0 0,0 0 0 0 0 0 5 0 1X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025072100324.html,2026-10-12T11:13Z
+NPB_2025_20250721_00325,Regular Season,2025-07-21,9,No,6,7,9,,6,7,1 0 1 0 3 1 0 0 0,0 0 0 1 0 2 1 0 3X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025072100325.html,2026-10-12T11:13Z
+NPB_2025_20250721_00326,Regular Season,2025-07-21,9,No,1,0,9,,1,0,0 0 0 0 0 1 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025072100326.html,2026-10-12T11:13Z
+NPB_2025_20250721_00693,Regular Season,2025-07-21,9,No,2,0,9,,2,0,0 0 0 2 0 0 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025072100693.html,2026-10-12T11:13Z
+NPB_2025_20250721_00694,Regular Season,2025-07-21,9,No,4,1,9,,4,1,0 0 4 0 0 0 0 0 0,0 1 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025072100694.html,2026-10-12T11:13Z
+NPB_2025_20250721_00695,Regular Season,2025-07-21,9,No,0,2,9,,0,2,0 0 0 0 0 0 0 0 0,0 2 0 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025072100695.html,2026-10-12T11:13Z
+NPB_2025_20250723_01955,All-Star Game,2025-07-23,9,No,1,5,9,,1,5,0 0 0 0 1 0 0 0 0,0 1 3 0 0 0 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025072301955.html,2026-10-12T11:13Z
+NPB_2025_20250724_01956,All-Star Game,2025-07-24,9,No,10,7,9,,10,7,3 3 1 1 1 0 0 0 1,0 1 0 0 2 0 3 1 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025072401956.html,2026-10-12T11:13Z
+NPB_2025_20250726_00327,Regular Season,2025-07-26,9,No,1,2,9,,1,2,1 0 0 0 0 0 0 0 0,0 0 0 0 0 1 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025072600327.html,2026-10-12T11:13Z
+NPB_2025_20250726_00328,Regular Season,2025-07-26,9,No,0,2,9,,0,2,0 0 0 0 0 0 0 0 0,1 0 0 0 0 1 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025072600328.html,2026-10-12T11:13Z
+NPB_2025_20250726_00329,Regular Season,2025-07-26,9,No,5,1,9,,5,1,0 0 0 0 1 0 3 0 1,0 0 0 1 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025072600329.html,2026-10-12T11:13Z
+NPB_2025_20250726_00696,Regular Season,2025-07-26,9,No,0,5,9,,0,5,0 0 0 0 0 0 0 0 0,0 3 1 1 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025072600696.html,2026-10-12T11:13Z
+NPB_2025_20250726_00697,Regular Season,2025-07-26,9,No,2,3,9,,2,3,0 0 0 0 0 0 0 0 2,0 0 1 1 0 0 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025072600697.html,2026-10-12T11:13Z
+NPB_2025_20250726_00698,Regular Season,2025-07-26,9,No,3,11,9,,3,11,0 0 2 0 0 0 0 1 0,0 0 0 0 0 4 0 7 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025072600698.html,2026-10-12T11:13Z
+NPB_2025_20250727_00330,Regular Season,2025-07-27,9,No,2,3,9,,2,3,0 1 0 1 0 0 0 0 0,1 0 0 2 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025072700330.html,2026-10-12T11:13Z
+NPB_2025_20250727_00331,Regular Season,2025-07-27,9,No,1,7,9,,1,7,0 0 0 0 0 1 0 0 0,0 5 0 0 0 0 2 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025072700331.html,2026-10-12T11:13Z
+NPB_2025_20250727_00332,Regular Season,2025-07-27,9,No,6,5,9,,6,5,1 0 3 0 1 0 0 1 0,0 0 0 0 4 0 0 1 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025072700332.html,2026-10-12T11:13Z
+NPB_2025_20250727_00699,Regular Season,2025-07-27,9,No,5,4,11,11 innings,5,4,0 0 0 3 0 0 0 1 0 0 1,1 2 0 0 0 0 1 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025072700699.html,2026-10-12T11:13Z
+NPB_2025_20250727_00700,Regular Season,2025-07-27,9,No,1,4,9,,1,4,0 0 0 0 0 1 0 0 0,0 0 0 0 0 3 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025072700700.html,2026-10-12T11:13Z
+NPB_2025_20250727_00701,Regular Season,2025-07-27,9,No,1,3,9,,1,3,0 0 0 0 0 0 0 1 0,0 1 0 2 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025072700701.html,2026-10-12T11:13Z
+NPB_2025_20250729_00333,Regular Season,2025-07-29,9,No,5,1,9,,5,1,0 3 0 0 0 1 0 1 0,0 0 1 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025072900333.html,2026-10-12T11:13Z
+NPB_2025_20250729_00334,Regular Season,2025-07-29,9,No,5,8,9,,5,8,3 0 0 0 0 2 0 0 0,0 0 0 4 2 2 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025072900334.html,2026-10-12T11:13Z
+NPB_2025_20250729_00335,Regular Season,2025-07-29,9,No,0,1,9,,0,1,0 0 0 0 0 0 0 0 0,1 0 0 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025072900335.html,2026-10-12T11:13Z
+NPB_2025_20250729_00702,Regular Season,2025-07-29,9,No,5,2,9,,5,2,1 0 0 3 0 0 1 0 0,1 0 0 0 0 0 0 0 1,Y,Y,https://npb.jp/bis/eng/2025/games/s2025072900702.html,2026-10-12T11:13Z
+NPB_2025_20250729_00703,Regular Season,2025-07-29,9,No,2,1,9,,2,1,0 0 0 0 1 1 0 0 0,0 0 0 0 0 0 1 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025072900703.html,2026-10-12T11:13Z
+NPB_2025_20250729_00704,Regular Season,2025-07-29,9,No,3,2,10,10 innings,3,2,0 0 0 0 2 0 0 0 0 1,0 2 0 0 0 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025072900704.html,2026-10-12T11:13Z
+NPB_2025_20250730_00336,Regular Season,2025-07-30,9,No,2,1,9,,2,1,0 1 0 0 0 1 0 0 0,0 0 0 0 0 0 1 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025073000336.html,2026-10-12T11:13Z
+NPB_2025_20250730_00337,Regular Season,2025-07-30,9,No,2,0,9,,2,0,0 0 0 0 0 2 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025073000337.html,2026-10-12T11:13Z
+NPB_2025_20250730_00338,Regular Season,2025-07-30,9,No,0,5,9,,0,5,0 0 0 0 0 0 0 0 0,0 0 0 1 0 1 0 3 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025073000338.html,2026-10-12T11:13Z
+NPB_2025_20250730_00705,Regular Season,2025-07-30,9,No,4,5,9,,4,5,0 0 2 0 0 0 0 2 0,0 2 0 0 1 0 0 2 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025073000705.html,2026-10-12T11:13Z
+NPB_2025_20250730_00706,Regular Season,2025-07-30,9,No,8,5,9,,8,5,3 0 0 0 4 0 0 0 1,0 0 0 1 1 3 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025073000706.html,2026-10-12T11:13Z
+NPB_2025_20250730_00707,Regular Season,2025-07-30,9,No,4,6,9,,4,6,0 0 0 0 0 2 0 0 2,0 0 0 1 3 2 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025073000707.html,2026-10-12T11:13Z
+NPB_2025_20250731_00339,Regular Season,2025-07-31,9,No,1,14,9,,1,14,0 0 0 0 0 0 0 0 1,4 1 0 0 0 1 4 4 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025073100339.html,2026-10-12T11:13Z
+NPB_2025_20250731_00340,Regular Season,2025-07-31,9,No,6,7,10,10 innings,6,7,1 0 0 3 0 2 0 0 0 0,0 0 1 2 0 0 0 1 2 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025073100340.html,2026-10-12T11:13Z
+NPB_2025_20250731_00341,Regular Season,2025-07-31,9,No,6,3,9,,6,3,3 0 0 1 2 0 0 0 0,1 0 1 1 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025073100341.html,2026-10-12T11:13Z
+NPB_2025_20250731_00708,Regular Season,2025-07-31,9,No,5,4,9,,5,4,1 0 0 3 1 0 0 0 0,0 0 0 2 1 0 0 0 1,Y,Y,https://npb.jp/bis/eng/2025/games/s2025073100708.html,2026-10-12T11:13Z
+NPB_2025_20250731_00709,Regular Season,2025-07-31,9,No,6,5,9,,6,5,0 2 0 1 0 2 0 0 1,0 0 0 0 0 1 4 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025073100709.html,2026-10-12T11:13Z
+NPB_2025_20250731_00710,Regular Season,2025-07-31,9,No,2,6,9,,2,6,0 0 0 2 0 0 0 0 0,1 0 0 1 1 3 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025073100710.html,2026-10-12T11:13Z
+NPB_2025_20250801_00342,Regular Season,2025-08-01,9,No,7,2,9,,7,2,0 0 0 0 6 0 0 0 1,0 2 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080100342.html,2026-10-12T11:13Z
+NPB_2025_20250801_00343,Regular Season,2025-08-01,9,No,3,2,10,10 innings,3,2,1 0 0 0 0 1 0 0 0 1,0 0 0 0 0 0 1 0 1 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025080100343.html,2026-10-12T11:13Z
+NPB_2025_20250801_00344,Regular Season,2025-08-01,9,No,1,3,9,,1,3,0 0 0 1 0 0 0 0 0,0 0 0 0 0 2 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080100344.html,2026-10-12T11:13Z
+NPB_2025_20250801_00711,Regular Season,2025-08-01,9,No,2,11,9,,2,11,0 0 0 0 2 0 0 0 0,2 5 1 2 1 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080100711.html,2026-10-12T11:13Z
+NPB_2025_20250801_00712,Regular Season,2025-08-01,9,No,2,4,9,,2,4,0 1 1 0 0 0 0 0 0,0 0 0 0 0 0 0 0 4X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080100712.html,2026-10-12T11:13Z
+NPB_2025_20250801_00713,Regular Season,2025-08-01,9,No,1,3,9,,1,3,0 0 1 0 0 0 0 0 0,2 0 0 0 1 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080100713.html,2026-10-12T11:13Z
+NPB_2025_20250802_00345,Regular Season,2025-08-02,9,No,7,4,9,,7,4,3 0 0 1 2 0 0 1 0,0 1 0 0 0 2 1 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080200345.html,2026-10-12T11:13Z
+NPB_2025_20250802_00346,Regular Season,2025-08-02,9,No,5,1,9,,5,1,0 2 0 2 0 0 0 1 0,0 0 0 1 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080200346.html,2026-10-12T11:13Z
+NPB_2025_20250802_00347,Regular Season,2025-08-02,9,No,6,0,9,,6,0,0 0 1 4 0 0 1 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080200347.html,2026-10-12T11:13Z
+NPB_2025_20250802_00714,Regular Season,2025-08-02,9,No,5,5,12,12 innings,5,5,0 0 1 2 0 0 0 0 1 1 0 0,1 0 1 0 0 0 2 0 0 1 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025080200714.html,2026-10-12T11:13Z
+NPB_2025_20250802_00715,Regular Season,2025-08-02,9,No,7,1,9,,7,1,2 0 0 1 0 1 0 1 2,0 0 1 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080200715.html,2026-10-12T11:13Z
+NPB_2025_20250802_00716,Regular Season,2025-08-02,9,No,2,5,9,,2,5,0 0 1 0 0 1 0 0 0,0 2 1 0 1 0 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080200716.html,2026-10-12T11:13Z
+NPB_2025_20250803_00348,Regular Season,2025-08-03,9,No,3,4,9,,3,4,0 1 0 0 0 1 0 0 1,0 1 0 0 0 2 0 0 1X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080300348.html,2026-10-12T11:13Z
+NPB_2025_20250803_00349,Regular Season,2025-08-03,9,No,1,8,9,,1,8,0 0 0 0 0 1 0 0 0,0 0 0 2 3 0 0 3 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080300349.html,2026-10-12T11:13Z
+NPB_2025_20250803_00350,Regular Season,2025-08-03,9,No,1,2,9,,1,2,0 0 1 0 0 0 0 0 0,1 0 0 0 0 1 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080300350.html,2026-10-12T11:13Z
+NPB_2025_20250803_00717,Regular Season,2025-08-03,9,No,2,1,9,,2,1,1 0 0 0 0 0 0 0 1,0 0 0 0 1 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080300717.html,2026-10-12T11:13Z
+NPB_2025_20250803_00718,Regular Season,2025-08-03,9,No,9,0,9,,9,0,0 0 3 6 0 0 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080300718.html,2026-10-12T11:13Z
+NPB_2025_20250803_00719,Regular Season,2025-08-03,9,No,1,8,9,,1,8,0 0 1 0 0 0 0 0 0,1 1 0 0 2 0 1 3 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080300719.html,2026-10-12T11:13Z
+NPB_2025_20250805_00351,Regular Season,2025-08-05,9,No,2,5,9,,2,5,1 0 1 0 0 0 0 0 0,0 0 0 1 0 0 1 3 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080500351.html,2026-10-12T11:13Z
+NPB_2025_20250805_00352,Regular Season,2025-08-05,9,No,4,5,9,,4,5,1 0 0 0 3 0 0 0 0,0 1 1 0 0 2 0 0 1X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080500352.html,2026-10-12T11:13Z
+NPB_2025_20250805_00353,Regular Season,2025-08-05,9,No,6,2,9,,6,2,0 0 0 0 0 0 0 3 3,0 0 2 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080500353.html,2026-10-12T11:13Z
+NPB_2025_20250805_00720,Regular Season,2025-08-05,9,No,1,6,9,,1,6,0 0 0 0 0 0 1 0 0,0 0 5 1 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080500720.html,2026-10-12T11:13Z
+NPB_2025_20250805_00721,Regular Season,2025-08-05,9,No,0,1,11,11 innings,0,1,0 0 0 0 0 0 0 0 0 0 0,0 0 0 0 0 0 0 0 0 0 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025080500721.html,2026-10-12T11:13Z
+NPB_2025_20250805_00722,Regular Season,2025-08-05,9,No,3,6,9,,3,6,0 0 0 0 0 1 0 2 0,0 3 0 0 2 1 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080500722.html,2026-10-12T11:13Z
+NPB_2025_20250806_00354,Regular Season,2025-08-06,9,No,0,2,9,,0,2,0 0 0 0 0 0 0 0 0,0 1 1 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080600354.html,2026-10-12T11:13Z
+NPB_2025_20250806_00355,Regular Season,2025-08-06,9,No,8,5,9,,8,5,2 0 0 2 2 2 0 0 0,0 2 0 0 1 2 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080600355.html,2026-10-12T11:13Z
+NPB_2025_20250806_00356,Regular Season,2025-08-06,9,No,3,2,10,10 innings,3,2,0 0 1 0 0 0 0 1 0 1,0 1 0 0 1 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025080600356.html,2026-10-12T11:13Z
+NPB_2025_20250806_00723,Regular Season,2025-08-06,9,No,0,4,9,,0,4,0 0 0 0 0 0 0 0 0,0 1 0 0 0 1 0 2 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080600723.html,2026-10-12T11:13Z
+NPB_2025_20250806_00724,Regular Season,2025-08-06,9,No,1,2,9,,1,2,0 0 0 1 0 0 0 0 0,0 0 0 0 0 0 2 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080600724.html,2026-10-12T11:13Z
+NPB_2025_20250806_00725,Regular Season,2025-08-06,9,No,12,3,9,,12,3,0 0 2 1 5 1 0 0 3,0 0 0 0 0 2 0 1 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080600725.html,2026-10-12T11:13Z
+NPB_2025_20250807_00357,Regular Season,2025-08-07,9,No,3,2,9,,3,2,0 0 0 1 0 1 0 1 0,0 0 1 0 1 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080700357.html,2026-10-12T11:13Z
+NPB_2025_20250807_00358,Regular Season,2025-08-07,9,No,5,9,9,,5,9,0 0 4 1 0 0 0 0 0,3 3 0 1 0 0 0 2 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080700358.html,2026-10-12T11:13Z
+NPB_2025_20250807_00359,Regular Season,2025-08-07,9,No,3,8,9,,3,8,0 1 1 1 0 0 0 0 0,1 1 3 0 2 1 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080700359.html,2026-10-12T11:13Z
+NPB_2025_20250807_00726,Regular Season,2025-08-07,9,No,2,0,9,,2,0,0 0 0 0 0 0 0 1 1,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080700726.html,2026-10-12T11:13Z
+NPB_2025_20250807_00727,Regular Season,2025-08-07,9,No,3,7,9,,3,7,3 0 0 0 0 0 0 0 0,1 0 0 0 1 0 1 4 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080700727.html,2026-10-12T11:13Z
+NPB_2025_20250807_00728,Regular Season,2025-08-07,9,No,2,1,9,,2,1,0 0 0 0 0 2 0 0 0,0 0 1 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080700728.html,2026-10-12T11:13Z
+NPB_2025_20250808_00360,Regular Season,2025-08-08,9,No,12,2,9,,12,2,3 0 0 3 0 4 2 0 0,0 1 0 0 0 0 0 0 1,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080800360.html,2026-10-12T11:13Z
+NPB_2025_20250808_00361,Regular Season,2025-08-08,9,No,3,2,11,11 innings,3,2,0 2 0 0 0 0 0 0 0 0 1,0 0 0 0 0 0 0 0 2 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025080800361.html,2026-10-12T11:13Z
+NPB_2025_20250808_00362,Regular Season,2025-08-08,9,No,3,1,12,12 innings,3,1,0 0 0 0 0 0 0 0 1 0 0 2,0 0 0 1 0 0 0 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025080800362.html,2026-10-12T11:13Z
+NPB_2025_20250809_00363,Regular Season,2025-08-09,9,No,4,3,9,,4,3,0 0 0 1 0 2 0 1 0,0 0 2 0 0 0 1 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080900363.html,2026-10-12T11:13Z
+NPB_2025_20250809_00364,Regular Season,2025-08-09,9,No,0,2,9,,0,2,0 0 0 0 0 0 0 0 0,1 0 0 0 1 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080900364.html,2026-10-12T11:13Z
+NPB_2025_20250809_00365,Regular Season,2025-08-09,9,No,2,6,9,,2,6,1 0 0 1 0 0 0 0 0,1 1 0 0 0 0 0 4 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080900365.html,2026-10-12T11:13Z
+NPB_2025_20250809_00729,Regular Season,2025-08-09,9,No,4,9,9,,4,9,0 0 0 0 0 0 0 3 1,0 2 0 2 0 0 0 5 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080900729.html,2026-10-12T11:13Z
+NPB_2025_20250809_00730,Regular Season,2025-08-09,9,No,3,2,9,,3,2,0 0 0 0 1 1 0 1 0,0 0 0 0 1 1 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080900730.html,2026-10-12T11:13Z
+NPB_2025_20250809_00731,Regular Season,2025-08-09,9,No,1,4,9,,1,4,0 1 0 0 0 0 0 0 0,0 2 0 2 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025080900731.html,2026-10-12T11:13Z
+NPB_2025_20250810_00367,Regular Season,2025-08-10,9,No,6,5,9,,6,5,1 0 0 0 0 3 0 2 0,0 0 0 2 2 1 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081000367.html,2026-10-12T11:13Z
+NPB_2025_20250810_00368,Regular Season,2025-08-10,9,No,2,5,9,,2,5,0 0 0 0 0 1 0 0 1,1 0 1 0 1 1 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081000368.html,2026-10-12T11:13Z
+NPB_2025_20250810_00732,Regular Season,2025-08-10,9,No,9,4,9,,9,4,0 0 2 1 0 0 1 5 0,2 0 0 0 1 0 0 1 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081000732.html,2026-10-12T11:13Z
+NPB_2025_20250810_00734,Regular Season,2025-08-10,9,No,0,1,9,,0,1,0 0 0 0 0 0 0 0 0,0 0 1 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081000734.html,2026-10-12T11:13Z
+NPB_2025_20250811_00369,Regular Season,2025-08-11,9,No,2,0,9,,2,0,0 0 0 1 1 0 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081100369.html,2026-10-12T11:13Z
+NPB_2025_20250811_00370,Regular Season,2025-08-11,9,No,4,9,9,,4,9,0 0 0 0 0 1 2 0 1,1 0 3 0 5 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081100370.html,2026-10-12T11:13Z
+NPB_2025_20250811_00735,Regular Season,2025-08-11,9,No,4,5,10,10 innings,4,5,1 0 0 0 1 1 0 1 0 0,0 0 0 0 2 0 0 0 2 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025081100735.html,2026-10-12T11:13Z
+NPB_2025_20250811_00736,Regular Season,2025-08-11,9,No,5,3,10,10 innings,5,3,0 0 0 1 0 2 0 0 0 2,0 0 0 1 0 1 0 0 1 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025081100736.html,2026-10-12T11:13Z
+NPB_2025_20250811_00737,Regular Season,2025-08-11,9,No,1,3,9,,1,3,1 0 0 0 0 0 0 0 0,0 0 1 1 0 0 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081100737.html,2026-10-12T11:13Z
+NPB_2025_20250812_00372,Regular Season,2025-08-12,9,No,0,5,9,,0,5,0 0 0 0 0 0 0 0 0,0 0 4 0 0 0 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081200372.html,2026-10-12T11:13Z
+NPB_2025_20250812_00373,Regular Season,2025-08-12,9,No,1,3,9,,1,3,0 0 0 1 0 0 0 0 0,0 1 0 0 0 0 0 0 2X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081200373.html,2026-10-12T11:13Z
+NPB_2025_20250812_00374,Regular Season,2025-08-12,9,No,2,9,9,,2,9,0 0 2 0 0 0 0 0 0,0 0 4 0 3 0 0 2 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081200374.html,2026-10-12T11:13Z
+NPB_2025_20250813_00375,Regular Season,2025-08-13,9,No,4,3,9,,4,3,0 0 0 0 3 1 0 0 0,3 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081300375.html,2026-10-12T11:13Z
+NPB_2025_20250813_00376,Regular Season,2025-08-13,9,No,10,2,9,,10,2,0 0 3 0 0 3 0 1 3,0 1 0 1 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081300376.html,2026-10-12T11:13Z
+NPB_2025_20250813_00377,Regular Season,2025-08-13,9,No,2,0,9,,2,0,0 0 2 0 0 0 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081300377.html,2026-10-12T11:13Z
+NPB_2025_20250813_00738,Regular Season,2025-08-13,9,No,2,3,9,,2,3,0 0 1 0 1 0 0 0 0,0 1 0 0 0 0 0 1 1X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081300738.html,2026-10-12T11:13Z
+NPB_2025_20250813_00739,Regular Season,2025-08-13,9,No,5,3,9,,5,3,5 0 0 0 0 0 0 0 0,0 0 0 0 1 2 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081300739.html,2026-10-12T11:13Z
+NPB_2025_20250813_00740,Regular Season,2025-08-13,9,No,7,4,9,,7,4,2 0 2 0 3 0 0 0 0,0 0 0 0 0 3 1 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081300740.html,2026-10-12T11:13Z
+NPB_2025_20250814_00741,Regular Season,2025-08-14,9,No,4,9,9,,4,9,0 1 0 0 0 0 1 2 0,3 0 2 0 3 0 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081400741.html,2026-10-12T11:13Z
+NPB_2025_20250814_00742,Regular Season,2025-08-14,9,No,2,3,9,,2,3,0 0 0 0 2 0 0 0 0,0 0 1 0 0 2 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081400742.html,2026-10-12T11:13Z
+NPB_2025_20250814_00743,Regular Season,2025-08-14,9,No,5,1,9,,5,1,0 0 0 0 2 0 1 2 0,0 0 0 0 0 0 0 1 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081400743.html,2026-10-12T11:13Z
+NPB_2025_20250815_00378,Regular Season,2025-08-15,9,No,5,6,9,,5,6,0 0 0 4 0 0 1 0 0,0 0 0 0 0 3 2 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081500378.html,2026-10-12T11:13Z
+NPB_2025_20250815_00379,Regular Season,2025-08-15,9,No,4,3,10,10 innings,4,3,0 0 1 0 1 0 0 1 0 1,1 0 1 0 0 0 0 1 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025081500379.html,2026-10-12T11:13Z
+NPB_2025_20250815_00380,Regular Season,2025-08-15,9,No,2,1,9,,2,1,0 0 0 1 0 0 1 0 0,0 0 0 1 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081500380.html,2026-10-12T11:13Z
+NPB_2025_20250815_00744,Regular Season,2025-08-15,9,No,1,3,9,,1,3,1 0 0 0 0 0 0 0 0,3 0 0 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081500744.html,2026-10-12T11:13Z
+NPB_2025_20250815_00745,Regular Season,2025-08-15,9,No,0,1,9,,0,1,0 0 0 0 0 0 0 0 0,1 0 0 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081500745.html,2026-10-12T11:13Z
+NPB_2025_20250815_00746,Regular Season,2025-08-15,9,No,1,6,9,,1,6,0 0 0 1 0 0 0 0 0,0 0 0 0 1 0 4 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081500746.html,2026-10-12T11:13Z
+NPB_2025_20250816_00381,Regular Season,2025-08-16,9,No,3,0,9,,3,0,2 0 1 0 0 0 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081600381.html,2026-10-12T11:13Z
+NPB_2025_20250816_00382,Regular Season,2025-08-16,9,No,6,0,9,,6,0,1 1 0 0 1 0 2 1 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081600382.html,2026-10-12T11:13Z
+NPB_2025_20250816_00383,Regular Season,2025-08-16,9,No,3,5,9,,3,5,0 0 2 0 0 0 1 0 0,1 0 0 0 1 3 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081600383.html,2026-10-12T11:13Z
+NPB_2025_20250816_00747,Regular Season,2025-08-16,9,No,9,5,9,,9,5,0 3 1 0 3 0 0 1 1,0 0 0 1 0 1 0 0 3,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081600747.html,2026-10-12T11:13Z
+NPB_2025_20250816_00748,Regular Season,2025-08-16,9,No,1,0,9,,1,0,0 0 1 0 0 0 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081600748.html,2026-10-12T11:13Z
+NPB_2025_20250816_00749,Regular Season,2025-08-16,9,No,7,2,9,,7,2,1 5 0 1 0 0 0 0 0,0 0 0 0 0 1 0 1 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081600749.html,2026-10-12T11:13Z
+NPB_2025_20250817_00384,Regular Season,2025-08-17,9,No,3,1,9,,3,1,0 0 0 3 0 0 0 0 0,0 0 0 0 1 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081700384.html,2026-10-12T11:13Z
+NPB_2025_20250817_00385,Regular Season,2025-08-17,9,No,5,4,12,12 innings,5,4,1 1 0 0 0 0 0 2 0 0 0 1,0 1 0 0 0 1 2 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025081700385.html,2026-10-12T11:13Z
+NPB_2025_20250817_00386,Regular Season,2025-08-17,9,No,7,2,9,,7,2,0 0 2 5 0 0 0 0 0,1 0 0 0 1 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081700386.html,2026-10-12T11:13Z
+NPB_2025_20250817_00750,Regular Season,2025-08-17,9,No,7,5,9,,7,5,1 0 3 0 2 0 1 0 0,0 0 0 0 0 0 2 3 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081700750.html,2026-10-12T11:13Z
+NPB_2025_20250817_00751,Regular Season,2025-08-17,9,No,6,7,12,12 innings,6,7,4 0 1 0 1 0 0 0 0 0 0 0,0 0 0 0 4 2 0 0 0 0 0 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025081700751.html,2026-10-12T11:13Z
+NPB_2025_20250817_00752,Regular Season,2025-08-17,9,No,0,1,9,,0,1,0 0 0 0 0 0 0 0 0,0 0 0 0 0 0 0 0 1X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081700752.html,2026-10-12T11:13Z
+NPB_2025_20250819_00387,Regular Season,2025-08-19,9,No,15,2,9,,15,2,2 1 2 0 3 5 2 0 0,1 0 0 0 0 0 0 1 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081900387.html,2026-10-12T11:13Z
+NPB_2025_20250819_00388,Regular Season,2025-08-19,9,No,3,1,9,,3,1,0 0 1 0 0 0 0 0 2,0 1 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081900388.html,2026-10-12T11:13Z
+NPB_2025_20250819_00389,Regular Season,2025-08-19,9,No,4,5,9,,4,5,0 1 0 0 2 0 1 0 0,0 3 0 0 0 2 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081900389.html,2026-10-12T11:13Z
+NPB_2025_20250819_00753,Regular Season,2025-08-19,9,No,5,6,9,,5,6,0 0 0 0 5 0 0 0 0,2 0 0 1 0 0 0 0 3X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081900753.html,2026-10-12T11:13Z
+NPB_2025_20250819_00754,Regular Season,2025-08-19,9,No,4,3,10,10 innings,4,3,0 2 0 0 0 0 0 0 1 1,0 2 1 0 0 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025081900754.html,2026-10-12T11:13Z
+NPB_2025_20250819_00755,Regular Season,2025-08-19,9,No,2,5,9,,2,5,2 0 0 0 0 0 0 0 0,1 3 1 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025081900755.html,2026-10-12T11:13Z
+NPB_2025_20250820_00390,Regular Season,2025-08-20,9,No,2,7,9,,2,7,0 0 1 0 0 1 0 0 0,0 1 0 2 4 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082000390.html,2026-10-12T11:13Z
+NPB_2025_20250820_00391,Regular Season,2025-08-20,9,No,4,7,9,,4,7,0 0 1 1 1 0 1 0 0,0 5 0 0 0 2 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082000391.html,2026-10-12T11:13Z
+NPB_2025_20250820_00392,Regular Season,2025-08-20,9,No,2,1,9,,2,1,2 0 0 0 0 0 0 0 0,0 0 1 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082000392.html,2026-10-12T11:13Z
+NPB_2025_20250820_00756,Regular Season,2025-08-20,9,No,5,6,9,,5,6,0 1 1 0 0 2 0 1 0,1 0 0 1 2 2 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082000756.html,2026-10-12T11:13Z
+NPB_2025_20250820_00757,Regular Season,2025-08-20,9,No,3,5,9,,3,5,1 0 0 1 0 0 0 1 0,0 0 0 0 2 0 3 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082000757.html,2026-10-12T11:13Z
+NPB_2025_20250820_00758,Regular Season,2025-08-20,9,No,4,5,9,,4,5,0 0 0 2 0 0 0 0 2,0 1 0 1 0 0 3 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082000758.html,2026-10-12T11:13Z
+NPB_2025_20250821_00393,Regular Season,2025-08-21,9,No,7,1,9,,7,1,1 5 0 0 0 0 0 0 1,0 0 0 1 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082100393.html,2026-10-12T11:13Z
+NPB_2025_20250821_00394,Regular Season,2025-08-21,9,No,5,2,9,,5,2,0 0 0 2 0 0 3 0 0,0 0 0 0 0 0 2 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082100394.html,2026-10-12T11:13Z
+NPB_2025_20250821_00759,Regular Season,2025-08-21,9,No,10,0,9,,10,0,0 8 0 0 2 0 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082100759.html,2026-10-12T11:13Z
+NPB_2025_20250821_00760,Regular Season,2025-08-21,9,No,10,12,9,,10,12,0 0 1 0 3 3 1 0 2,2 0 0 9 0 0 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082100760.html,2026-10-12T11:13Z
+NPB_2025_20250822_00395,Regular Season,2025-08-22,9,No,1,8,9,,1,8,0 0 0 0 0 0 0 1 0,0 0 1 0 0 4 3 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082200395.html,2026-10-12T11:13Z
+NPB_2025_20250822_00396,Regular Season,2025-08-22,9,No,3,1,10,10 innings,3,1,0 0 0 0 1 0 0 0 0 2,0 0 0 1 0 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025082200396.html,2026-10-12T11:13Z
+NPB_2025_20250822_00397,Regular Season,2025-08-22,9,No,6,4,11,11 innings,6,4,0 0 0 0 0 0 0 4 0 0 2,0 2 0 0 1 0 0 1 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025082200397.html,2026-10-12T11:13Z
+NPB_2025_20250822_00761,Regular Season,2025-08-22,9,No,3,4,9,,3,4,0 2 0 0 0 1 0 0 0,0 0 3 0 0 0 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082200761.html,2026-10-12T11:13Z
+NPB_2025_20250822_00762,Regular Season,2025-08-22,9,No,2,3,9,,2,3,1 0 0 0 0 1 0 0 0,1 2 0 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082200762.html,2026-10-12T11:13Z
+NPB_2025_20250822_00763,Regular Season,2025-08-22,9,No,3,0,9,,3,0,0 0 1 1 0 0 1 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082200763.html,2026-10-12T11:13Z
+NPB_2025_20250823_00398,Regular Season,2025-08-23,9,No,1,4,9,,1,4,0 0 0 0 0 0 0 0 1,0 0 0 0 1 0 1 2 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082300398.html,2026-10-12T11:13Z
+NPB_2025_20250823_00399,Regular Season,2025-08-23,9,No,2,2,12,12 innings,2,2,2 0 0 0 0 0 0 0 0 0 0 0,0 1 0 0 0 0 0 0 1 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025082300399.html,2026-10-12T11:13Z
+NPB_2025_20250823_00400,Regular Season,2025-08-23,9,No,5,2,9,,5,2,2 0 1 0 0 0 0 1 1,0 0 2 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082300400.html,2026-10-12T11:13Z
+NPB_2025_20250823_00764,Regular Season,2025-08-23,9,No,3,8,9,,3,8,0 0 0 2 0 0 0 1 0,0 4 0 1 0 1 2 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082300764.html,2026-10-12T11:13Z
+NPB_2025_20250823_00765,Regular Season,2025-08-23,9,No,8,6,9,,8,6,0 3 0 2 0 3 0 0 0,3 0 1 0 0 0 2 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082300765.html,2026-10-12T11:13Z
+NPB_2025_20250823_00766,Regular Season,2025-08-23,9,No,2,0,9,,2,0,1 0 0 0 0 0 0 1 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082300766.html,2026-10-12T11:13Z
+NPB_2025_20250824_00401,Regular Season,2025-08-24,9,No,4,2,9,,4,2,1 0 0 1 2 0 0 0 0,0 0 0 0 1 0 0 0 1,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082400401.html,2026-10-12T11:13Z
+NPB_2025_20250824_00402,Regular Season,2025-08-24,9,No,8,1,9,,8,1,0 0 1 1 0 1 0 5 0,0 0 0 1 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082400402.html,2026-10-12T11:13Z
+NPB_2025_20250824_00403,Regular Season,2025-08-24,9,No,4,5,9,,4,5,0 0 0 0 0 3 0 1 0,0 0 5 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082400403.html,2026-10-12T11:13Z
+NPB_2025_20250824_00767,Regular Season,2025-08-24,9,No,0,1,10,10 innings,0,1,0 0 0 0 0 0 0 0 0 0,0 0 0 0 0 0 0 0 0 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025082400767.html,2026-10-12T11:13Z
+NPB_2025_20250824_00768,Regular Season,2025-08-24,9,No,3,2,9,,3,2,1 1 0 0 0 0 1 0 0,0 0 0 1 0 0 0 0 1,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082400768.html,2026-10-12T11:13Z
+NPB_2025_20250824_00769,Regular Season,2025-08-24,9,No,0,2,9,,0,2,0 0 0 0 0 0 0 0 0,0 0 0 0 1 0 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082400769.html,2026-10-12T11:13Z
+NPB_2025_20250826_00404,Regular Season,2025-08-26,9,No,3,2,9,,3,2,0 0 0 0 0 0 0 0 3,0 1 0 1 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082600404.html,2026-10-12T11:13Z
+NPB_2025_20250826_00405,Regular Season,2025-08-26,9,No,2,0,9,,2,0,0 0 0 1 0 1 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082600405.html,2026-10-12T11:13Z
+NPB_2025_20250826_00406,Regular Season,2025-08-26,9,No,1,4,9,,1,4,0 0 0 0 0 0 0 1 0,2 0 0 0 0 0 1 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082600406.html,2026-10-12T11:13Z
+NPB_2025_20250826_00770,Regular Season,2025-08-26,9,No,3,10,9,,3,10,0 0 1 0 0 0 0 1 1,0 0 1 0 5 4 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082600770.html,2026-10-12T11:13Z
+NPB_2025_20250826_00771,Regular Season,2025-08-26,9,No,2,2,12,12 innings,2,2,1 0 1 0 0 0 0 0 0 0 0 0,0 0 0 0 0 0 2 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025082600771.html,2026-10-12T11:13Z
+NPB_2025_20250826_00772,Regular Season,2025-08-26,9,No,5,6,12,12 innings,5,6,0 0 1 2 0 0 0 1 0 1 0 0,0 0 0 1 0 0 3 0 0 1 0 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025082600772.html,2026-10-12T11:13Z
+NPB_2025_20250827_00407,Regular Season,2025-08-27,9,No,2,1,9,,2,1,0 0 0 2 0 0 0 0 0,0 0 0 0 0 1 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082700407.html,2026-10-12T11:13Z
+NPB_2025_20250827_00408,Regular Season,2025-08-27,9,No,0,3,9,,0,3,0 0 0 0 0 0 0 0 0,0 0 1 0 1 1 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082700408.html,2026-10-12T11:13Z
+NPB_2025_20250827_00409,Regular Season,2025-08-27,9,No,2,3,9,,2,3,0 0 0 0 0 2 0 0 0,0 0 0 0 3 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082700409.html,2026-10-12T11:13Z
+NPB_2025_20250827_00773,Regular Season,2025-08-27,9,No,3,1,9,,3,1,0 1 0 2 0 0 0 0 0,0 0 0 0 0 0 1 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082700773.html,2026-10-12T11:13Z
+NPB_2025_20250827_00774,Regular Season,2025-08-27,9,No,2,3,9,,2,3,0 0 2 0 0 0 0 0 0,0 0 2 1 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082700774.html,2026-10-12T11:13Z
+NPB_2025_20250827_00775,Regular Season,2025-08-27,9,No,6,1,9,,6,1,4 1 0 0 0 0 1 0 0,0 1 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082700775.html,2026-10-12T11:13Z
+NPB_2025_20250828_00410,Regular Season,2025-08-28,9,No,4,5,9,,4,5,2 0 0 0 0 0 0 0 2,0 2 0 1 0 2 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082800410.html,2026-10-12T11:13Z
+NPB_2025_20250828_00411,Regular Season,2025-08-28,9,No,3,4,9,,3,4,1 0 0 0 0 1 1 0 0,2 0 0 0 0 0 2 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082800411.html,2026-10-12T11:13Z
+NPB_2025_20250828_00412,Regular Season,2025-08-28,9,No,3,8,9,,3,8,0 2 0 0 0 1 0 0 0,1 4 0 0 0 1 2 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082800412.html,2026-10-12T11:13Z
+NPB_2025_20250829_00413,Regular Season,2025-08-29,9,No,4,2,9,,4,2,0 1 0 2 0 1 0 0 0,0 0 0 0 0 0 1 0 1,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082900413.html,2026-10-12T11:13Z
+NPB_2025_20250829_00414,Regular Season,2025-08-29,9,No,9,8,9,,9,8,0 0 0 1 0 2 3 0 3,0 3 0 0 0 0 1 2 2,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082900414.html,2026-10-12T11:13Z
+NPB_2025_20250829_00415,Regular Season,2025-08-29,9,No,4,3,9,,4,3,0 0 0 1 0 3 0 0 0,0 0 0 0 1 0 0 2 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082900415.html,2026-10-12T11:13Z
+NPB_2025_20250829_00776,Regular Season,2025-08-29,9,No,0,5,9,,0,5,0 0 0 0 0 0 0 0 0,0 0 0 0 0 4 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082900776.html,2026-10-12T11:13Z
+NPB_2025_20250829_00777,Regular Season,2025-08-29,9,No,8,1,9,,8,1,0 3 0 3 0 0 1 0 1,0 0 1 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082900777.html,2026-10-12T11:13Z
+NPB_2025_20250829_00778,Regular Season,2025-08-29,9,No,3,1,9,,3,1,0 1 2 0 0 0 0 0 0,0 0 0 1 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025082900778.html,2026-10-12T11:13Z
+NPB_2025_20250830_00416,Regular Season,2025-08-30,9,No,4,5,9,,4,5,0 2 0 0 0 0 0 0 2,0 1 3 0 0 0 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025083000416.html,2026-10-12T11:13Z
+NPB_2025_20250830_00417,Regular Season,2025-08-30,9,No,9,7,11,11 innings,9,7,2 0 0 0 0 1 0 2 0 0 4,2 0 1 0 0 0 0 2 0 0 2,N,Y,https://npb.jp/bis/eng/2025/games/s2025083000417.html,2026-10-12T11:13Z
+NPB_2025_20250830_00418,Regular Season,2025-08-30,9,No,2,3,9,,2,3,0 1 0 0 1 0 0 0 0,1 0 1 0 1 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025083000418.html,2026-10-12T11:13Z
+NPB_2025_20250830_00779,Regular Season,2025-08-30,9,No,6,2,9,,6,2,1 0 2 0 1 0 1 1 0,2 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025083000779.html,2026-10-12T11:13Z
+NPB_2025_20250830_00780,Regular Season,2025-08-30,9,No,7,1,9,,7,1,0 0 3 0 1 0 0 3 0,0 0 0 0 0 0 1 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025083000780.html,2026-10-12T11:13Z
+NPB_2025_20250830_00781,Regular Season,2025-08-30,9,No,4,6,9,,4,6,1 0 2 0 1 0 0 0 0,0 0 0 1 0 4 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025083000781.html,2026-10-12T11:13Z
+NPB_2025_20250831_00419,Regular Season,2025-08-31,9,No,4,7,9,,4,7,0 1 1 0 1 0 0 1 0,0 3 0 2 1 0 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025083100419.html,2026-10-12T11:13Z
+NPB_2025_20250831_00420,Regular Season,2025-08-31,9,No,0,2,9,,0,2,0 0 0 0 0 0 0 0 0,1 0 0 0 0 0 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025083100420.html,2026-10-12T11:13Z
+NPB_2025_20250831_00421,Regular Season,2025-08-31,9,No,4,5,9,,4,5,0 0 0 0 0 0 3 0 1,0 0 1 0 0 0 4 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025083100421.html,2026-10-12T11:13Z
+NPB_2025_20250831_00782,Regular Season,2025-08-31,9,No,1,0,11,11 innings,1,0,0 0 0 0 0 0 0 0 0 0 1,0 0 0 0 0 0 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025083100782.html,2026-10-12T11:13Z
+NPB_2025_20250831_00783,Regular Season,2025-08-31,9,No,4,1,9,,4,1,0 0 0 1 1 0 0 0 2,0 0 0 0 1 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025083100783.html,2026-10-12T11:13Z
+NPB_2025_20250831_00784,Regular Season,2025-08-31,9,No,3,4,9,,3,4,0 1 0 0 0 1 0 1 0,0 1 2 1 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025083100784.html,2026-10-12T11:13Z
+NPB_2025_20250902_00422,Regular Season,2025-09-02,9,No,1,4,9,,1,4,0 0 1 0 0 0 0 0 0,0 0 0 1 1 0 0 2 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090200422.html,2026-10-12T11:13Z
+NPB_2025_20250902_00423,Regular Season,2025-09-02,9,No,5,3,9,,5,3,0 0 4 0 0 0 1 0 0,0 0 0 0 0 0 3 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090200423.html,2026-10-12T11:13Z
+NPB_2025_20250902_00424,Regular Season,2025-09-02,9,No,8,5,9,,8,5,2 5 0 0 1 0 0 0 0,0 2 0 0 0 0 0 3 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090200424.html,2026-10-12T11:13Z
+NPB_2025_20250902_00785,Regular Season,2025-09-02,9,No,2,0,9,,2,0,0 0 0 0 1 1 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090200785.html,2026-10-12T11:13Z
+NPB_2025_20250902_00786,Regular Season,2025-09-02,9,No,8,6,9,,8,6,0 0 5 0 0 3 0 0 0,0 0 0 0 0 0 2 4 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090200786.html,2026-10-12T11:13Z
+NPB_2025_20250902_00787,Regular Season,2025-09-02,9,No,1,2,9,,1,2,1 0 0 0 0 0 0 0 0,0 0 0 0 0 0 1 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090200787.html,2026-10-12T11:13Z
+NPB_2025_20250903_00425,Regular Season,2025-09-03,9,No,3,5,9,,3,5,0 0 2 0 0 0 0 1 0,4 0 0 1 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090300425.html,2026-10-12T11:13Z
+NPB_2025_20250903_00426,Regular Season,2025-09-03,9,No,2,5,9,,2,5,0 0 1 0 0 1 0 0 0,0 0 0 0 4 1 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090300426.html,2026-10-12T11:13Z
+NPB_2025_20250903_00427,Regular Season,2025-09-03,9,No,1,2,9,,1,2,0 0 0 0 1 0 0 0 0,0 0 0 0 2 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090300427.html,2026-10-12T11:13Z
+NPB_2025_20250903_00788,Regular Season,2025-09-03,9,No,11,6,9,,11,6,4 0 2 0 0 3 0 0 2,2 0 0 0 0 0 4 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090300788.html,2026-10-12T11:13Z
+NPB_2025_20250903_00789,Regular Season,2025-09-03,9,No,1,2,9,,1,2,0 0 0 1 0 0 0 0 0,1 0 0 1 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090300789.html,2026-10-12T11:13Z
+NPB_2025_20250903_00790,Regular Season,2025-09-03,9,No,1,7,9,,1,7,0 0 0 0 0 1 0 0 0,0 5 1 0 0 1 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090300790.html,2026-10-12T11:13Z
+NPB_2025_20250904_00428,Regular Season,2025-09-04,9,No,12,1,8,8 innings,12,1,2 0 0 7 0 0 1 2,1 0 0 0 0 0 0 0X,N,Y,https://npb.jp/bis/eng/2025/games/s2025090400428.html,2026-10-12T11:13Z
+NPB_2025_20250904_00429,Regular Season,2025-09-04,9,No,7,5,9,,7,5,2 0 0 1 0 0 4 0 0,0 0 0 0 0 0 4 1 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090400429.html,2026-10-12T11:13Z
+NPB_2025_20250904_00430,Regular Season,2025-09-04,9,No,1,0,6,6 innings,1,0,0 0 1 0 0 0X,0 0 0 0 0 <br />,N,Y,https://npb.jp/bis/eng/2025/games/s2025090400430.html,2026-10-12T11:13Z
+NPB_2025_20250904_00791,Regular Season,2025-09-04,9,No,9,2,9,,9,2,0 2 4 0 0 0 1 1 1,0 0 0 0 0 0 0 2 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090400791.html,2026-10-12T11:13Z
+NPB_2025_20250904_00792,Regular Season,2025-09-04,9,No,0,8,9,,0,8,0 0 0 0 0 0 0 0 0,3 1 0 0 0 2 2 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090400792.html,2026-10-12T11:13Z
+NPB_2025_20250905_00431,Regular Season,2025-09-05,9,No,6,7,9,,6,7,0 0 1 2 0 0 0 0 3,0 1 1 0 0 2 3 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090500431.html,2026-10-12T11:13Z
+NPB_2025_20250905_00432,Regular Season,2025-09-05,9,No,0,1,9,,0,1,0 0 0 0 0 0 0 0 0,0 0 0 0 1 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090500432.html,2026-10-12T11:13Z
+NPB_2025_20250905_00433,Regular Season,2025-09-05,9,No,1,6,9,,1,6,1 0 0 0 0 0 0 0 0,6 0 0 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090500433.html,2026-10-12T11:13Z
+NPB_2025_20250905_00793,Regular Season,2025-09-05,9,No,3,5,9,,3,5,0 0 3 0 0 0 0 0 0,0 0 0 3 0 2 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090500793.html,2026-10-12T11:13Z
+NPB_2025_20250905_00794,Regular Season,2025-09-05,9,No,0,2,9,,0,2,0 0 0 0 0 0 0 0 0,0 0 0 0 2 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090500794.html,2026-10-12T11:13Z
+NPB_2025_20250905_00795,Regular Season,2025-09-05,9,No,0,11,9,,0,11,0 0 0 0 0 0 0 0 0,3 3 1 1 0 1 2 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090500795.html,2026-10-12T11:13Z
+NPB_2025_20250906_00434,Regular Season,2025-09-06,9,No,3,2,9,,3,2,0 0 0 0 0 3 0 0 0,0 0 0 0 0 2 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090600434.html,2026-10-12T11:13Z
+NPB_2025_20250906_00435,Regular Season,2025-09-06,9,No,5,4,9,,5,4,0 0 1 2 0 0 0 0 2,3 1 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090600435.html,2026-10-12T11:13Z
+NPB_2025_20250906_00436,Regular Season,2025-09-06,9,No,1,4,9,,1,4,1 0 0 0 0 0 0 0 0,0 0 0 1 0 2 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090600436.html,2026-10-12T11:13Z
+NPB_2025_20250906_00796,Regular Season,2025-09-06,9,No,0,4,9,,0,4,0 0 0 0 0 0 0 0 0,1 0 0 0 1 0 2 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090600796.html,2026-10-12T11:13Z
+NPB_2025_20250906_00797,Regular Season,2025-09-06,9,No,1,3,9,,1,3,0 1 0 0 0 0 0 0 0,0 0 1 0 0 0 2 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090600797.html,2026-10-12T11:13Z
+NPB_2025_20250906_00798,Regular Season,2025-09-06,9,No,1,2,9,,1,2,0 0 0 0 0 1 0 0 0,0 1 1 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090600798.html,2026-10-12T11:13Z
+NPB_2025_20250907_00437,Regular Season,2025-09-07,9,No,2,3,9,,2,3,0 1 0 0 0 0 1 0 0,0 0 0 1 0 1 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090700437.html,2026-10-12T11:13Z
+NPB_2025_20250907_00438,Regular Season,2025-09-07,9,No,6,3,9,,6,3,1 0 0 0 3 0 2 0 0,0 0 0 1 1 0 0 1 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090700438.html,2026-10-12T11:13Z
+NPB_2025_20250907_00439,Regular Season,2025-09-07,9,No,0,2,9,,0,2,0 0 0 0 0 0 0 0 0,0 1 0 0 0 1 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090700439.html,2026-10-12T11:13Z
+NPB_2025_20250907_00799,Regular Season,2025-09-07,9,No,4,2,9,,4,2,1 0 2 1 0 0 0 0 0,0 0 0 1 0 0 0 1 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090700799.html,2026-10-12T11:13Z
+NPB_2025_20250907_00800,Regular Season,2025-09-07,9,No,2,3,9,,2,3,0 1 0 0 1 0 0 0 0,0 0 0 0 1 1 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090700800.html,2026-10-12T11:13Z
+NPB_2025_20250907_00801,Regular Season,2025-09-07,9,No,4,2,9,,4,2,0 0 1 2 1 0 0 0 0,0 1 0 0 0 0 0 1 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090700801.html,2026-10-12T11:13Z
+NPB_2025_20250908_01975,Regular Season,2025-09-08,9,No,2,4,9,,2,4,1 0 0 0 0 0 0 0 1,3 0 0 0 0 0 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090801975.html,2026-10-12T11:13Z
+NPB_2025_20250909_00440,Regular Season,2025-09-09,9,No,4,6,9,,4,6,1 2 0 0 1 0 0 0 0,6 0 0 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090900440.html,2026-10-12T11:13Z
+NPB_2025_20250909_00441,Regular Season,2025-09-09,9,No,2,3,9,,2,3,0 1 0 1 0 0 0 0 0,0 0 0 0 1 2 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090900441.html,2026-10-12T11:13Z
+NPB_2025_20250909_00442,Regular Season,2025-09-09,9,No,3,0,9,,3,0,0 3 0 0 0 0 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090900442.html,2026-10-12T11:13Z
+NPB_2025_20250909_00802,Regular Season,2025-09-09,9,No,4,7,9,,4,7,0 3 0 0 0 0 0 0 1,0 0 2 1 1 3 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090900802.html,2026-10-12T11:13Z
+NPB_2025_20250909_00803,Regular Season,2025-09-09,9,No,5,6,11,11 innings,5,6,2 1 0 0 0 1 0 1 0 0 0,2 2 0 0 0 0 1 0 0 0 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025090900803.html,2026-10-12T11:13Z
+NPB_2025_20250909_00804,Regular Season,2025-09-09,9,No,7,3,9,,7,3,0 2 0 0 0 0 5 0 0,0 0 0 1 1 0 0 1 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025090900804.html,2026-10-12T11:13Z
+NPB_2025_20250910_00443,Regular Season,2025-09-10,9,No,3,4,9,,3,4,2 0 0 1 0 0 0 0 0,1 0 0 2 0 0 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091000443.html,2026-10-12T11:13Z
+NPB_2025_20250910_00444,Regular Season,2025-09-10,9,No,6,3,9,,6,3,0 2 0 2 0 0 0 2 0,0 0 0 2 0 0 1 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091000444.html,2026-10-12T11:13Z
+NPB_2025_20250910_00445,Regular Season,2025-09-10,9,No,6,1,9,,6,1,0 0 0 3 0 1 2 0 0,1 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091000445.html,2026-10-12T11:13Z
+NPB_2025_20250911_00446,Regular Season,2025-09-11,9,No,3,2,9,,3,2,1 0 1 0 0 0 0 0 1,2 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091100446.html,2026-10-12T11:13Z
+NPB_2025_20250911_00447,Regular Season,2025-09-11,9,No,5,6,9,,5,6,2 0 0 0 0 0 0 3 0,0 0 0 1 5 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091100447.html,2026-10-12T11:13Z
+NPB_2025_20250911_00448,Regular Season,2025-09-11,9,No,0,2,9,,0,2,0 0 0 0 0 0 0 0 0,0 0 0 2 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091100448.html,2026-10-12T11:13Z
+NPB_2025_20250911_00806,Regular Season,2025-09-11,9,No,4,10,9,,4,10,0 0 0 0 0 3 0 1 0,6 0 1 0 0 3 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091100806.html,2026-10-12T11:13Z
+NPB_2025_20250911_00807,Regular Season,2025-09-11,9,No,1,9,9,,1,9,0 0 0 1 0 0 0 0 0,1 3 4 0 1 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091100807.html,2026-10-12T11:13Z
+NPB_2025_20250912_00449,Regular Season,2025-09-12,9,No,10,2,9,,10,2,2 0 2 0 0 1 0 4 1,0 0 0 0 0 0 0 1 1,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091200449.html,2026-10-12T11:13Z
+NPB_2025_20250912_00450,Regular Season,2025-09-12,9,No,0,9,9,,0,9,0 0 0 0 0 0 0 0 0,2 0 4 0 2 0 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091200450.html,2026-10-12T11:13Z
+NPB_2025_20250912_00808,Regular Season,2025-09-12,9,No,7,3,9,,7,3,0 0 0 2 0 0 0 5 0,0 0 0 0 0 0 0 0 3,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091200808.html,2026-10-12T11:13Z
+NPB_2025_20250912_00809,Regular Season,2025-09-12,9,No,3,6,9,,3,6,0 0 0 1 0 0 2 0 0,4 1 0 0 0 0 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091200809.html,2026-10-12T11:13Z
+NPB_2025_20250913_00451,Regular Season,2025-09-13,9,No,10,11,9,,10,11,3 0 0 0 7 0 0 0 0,4 0 2 0 0 0 3 0 2X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091300451.html,2026-10-12T11:13Z
+NPB_2025_20250913_00452,Regular Season,2025-09-13,9,No,6,2,9,,6,2,0 0 3 0 0 3 0 0 0,0 0 1 0 0 0 0 1 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091300452.html,2026-10-12T11:13Z
+NPB_2025_20250913_00453,Regular Season,2025-09-13,9,No,0,5,9,,0,5,0 0 0 0 0 0 0 0 0,0 0 2 0 2 0 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091300453.html,2026-10-12T11:13Z
+NPB_2025_20250913_00810,Regular Season,2025-09-13,9,No,4,5,11,11 innings,4,5,0 0 0 1 0 1 0 0 2 0 0,1 0 1 2 0 0 0 0 0 0 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025091300810.html,2026-10-12T11:13Z
+NPB_2025_20250913_00811,Regular Season,2025-09-13,9,No,6,4,9,,6,4,0 0 0 6 0 0 0 0 0,2 0 0 0 0 0 0 0 2,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091300811.html,2026-10-12T11:13Z
+NPB_2025_20250913_00812,Regular Season,2025-09-13,9,No,2,1,9,,2,1,0 0 0 0 0 0 0 0 2,0 0 0 0 0 0 0 1 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091300812.html,2026-10-12T11:13Z
+NPB_2025_20250914_00454,Regular Season,2025-09-14,9,No,7,9,9,,7,9,0 4 0 0 0 1 0 1 1,1 0 0 6 0 2 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091400454.html,2026-10-12T11:13Z
+NPB_2025_20250914_00455,Regular Season,2025-09-14,9,No,1,0,9,,1,0,0 0 0 0 0 0 1 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091400455.html,2026-10-12T11:13Z
+NPB_2025_20250914_00456,Regular Season,2025-09-14,9,No,8,6,9,,8,6,0 0 0 0 0 5 2 0 1,0 0 0 0 2 0 4 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091400456.html,2026-10-12T11:13Z
+NPB_2025_20250914_00813,Regular Season,2025-09-14,9,No,3,4,9,,3,4,0 0 0 0 0 1 2 0 0,2 1 0 0 0 1 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091400813.html,2026-10-12T11:13Z
+NPB_2025_20250914_00814,Regular Season,2025-09-14,9,No,1,5,9,,1,5,0 0 0 1 0 0 0 0 0,0 1 2 1 0 1 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091400814.html,2026-10-12T11:13Z
+NPB_2025_20250914_00815,Regular Season,2025-09-14,9,No,4,3,9,,4,3,0 0 0 0 0 4 0 0 0,0 0 3 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091400815.html,2026-10-12T11:13Z
+NPB_2025_20250915_00457,Regular Season,2025-09-15,9,No,0,3,9,,0,3,0 0 0 0 0 0 0 0 0,0 0 0 0 0 2 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091500457.html,2026-10-12T11:13Z
+NPB_2025_20250915_00458,Regular Season,2025-09-15,9,No,2,6,9,,2,6,0 0 1 0 0 0 1 0 0,2 0 2 0 2 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091500458.html,2026-10-12T11:13Z
+NPB_2025_20250915_00459,Regular Season,2025-09-15,9,No,2,6,9,,2,6,0 0 0 1 0 1 0 0 0,4 0 0 0 0 2 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091500459.html,2026-10-12T11:13Z
+NPB_2025_20250915_00816,Regular Season,2025-09-15,9,No,5,12,9,,5,12,0 0 2 1 0 0 0 0 2,0 0 2 0 0 7 3 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091500816.html,2026-10-12T11:13Z
+NPB_2025_20250915_00817,Regular Season,2025-09-15,9,No,4,5,12,12 innings,4,5,1 0 0 3 0 0 0 0 0 0 0 0,0 0 0 2 0 2 0 0 0 0 0 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025091500817.html,2026-10-12T11:13Z
+NPB_2025_20250915_00818,Regular Season,2025-09-15,9,No,5,0,9,,5,0,0 0 3 0 1 1 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091500818.html,2026-10-12T11:13Z
+NPB_2025_20250916_00819,Regular Season,2025-09-16,9,No,3,7,9,,3,7,0 0 0 1 1 0 1 0 0,0 3 0 3 1 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091600819.html,2026-10-12T11:13Z
+NPB_2025_20250917_00460,Regular Season,2025-09-17,9,No,4,2,9,,4,2,0 2 1 0 1 0 0 0 0,2 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091700460.html,2026-10-12T11:13Z
+NPB_2025_20250917_00461,Regular Season,2025-09-17,9,No,1,0,9,,1,0,0 0 0 0 0 0 1 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091700461.html,2026-10-12T11:13Z
+NPB_2025_20250917_00462,Regular Season,2025-09-17,9,No,6,1,9,,6,1,0 0 1 0 0 3 0 0 2,0 0 1 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091700462.html,2026-10-12T11:13Z
+NPB_2025_20250917_00820,Regular Season,2025-09-17,9,No,2,3,11,11 innings,2,3,0 1 0 0 0 0 0 1 0 0 0,0 0 1 1 0 0 0 0 0 0 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025091700820.html,2026-10-12T11:13Z
+NPB_2025_20250917_00821,Regular Season,2025-09-17,9,No,2,1,9,,2,1,0 0 1 0 0 0 0 0 1,0 0 0 0 0 1 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091700821.html,2026-10-12T11:13Z
+NPB_2025_20250917_00822,Regular Season,2025-09-17,9,No,8,11,9,,8,11,0 1 0 0 0 3 0 4 0,0 7 4 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091700822.html,2026-10-12T11:13Z
+NPB_2025_20250918_00463,Regular Season,2025-09-18,9,No,0,5,9,,0,5,0 0 0 0 0 0 0 0 0,1 1 2 1 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091800463.html,2026-10-12T11:13Z
+NPB_2025_20250918_00464,Regular Season,2025-09-18,9,No,7,4,9,,7,4,0 1 0 0 3 3 0 0 0,0 0 3 0 0 0 1 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091800464.html,2026-10-12T11:13Z
+NPB_2025_20250918_01974,Regular Season,2025-09-18,9,No,7,2,9,,7,2,0 0 2 1 0 1 2 1 0,0 0 0 0 2 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091801974.html,2026-10-12T11:13Z
+NPB_2025_20250918_00823,Regular Season,2025-09-18,9,No,1,2,9,,1,2,0 0 0 0 0 0 0 1 0,0 0 0 0 0 0 0 1 1X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091800823.html,2026-10-12T11:13Z
+NPB_2025_20250918_00824,Regular Season,2025-09-18,9,No,0,7,9,,0,7,0 0 0 0 0 0 0 0 0,4 3 0 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091800824.html,2026-10-12T11:13Z
+NPB_2025_20250918_00825,Regular Season,2025-09-18,9,No,2,3,9,,2,3,0 1 0 1 0 0 0 0 0,0 1 0 0 0 0 0 2 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091800825.html,2026-10-12T11:13Z
+NPB_2025_20250919_00465,Regular Season,2025-09-19,9,No,4,5,9,,4,5,2 0 0 0 0 0 2 0 0,0 1 0 2 0 2 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091900465.html,2026-10-12T11:13Z
+NPB_2025_20250919_00466,Regular Season,2025-09-19,9,No,6,2,9,,6,2,1 2 0 0 0 0 1 2 0,0 0 0 0 0 0 2 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091900466.html,2026-10-12T11:13Z
+NPB_2025_20250919_00467,Regular Season,2025-09-19,9,No,0,4,9,,0,4,0 0 0 0 0 0 0 0 0,0 0 0 2 1 1 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091900467.html,2026-10-12T11:13Z
+NPB_2025_20250919_01953,Regular Season,2025-09-19,9,No,4,1,9,,4,1,0 0 0 0 1 0 3 0 0,0 0 0 1 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025091901953.html,2026-10-12T11:13Z
+NPB_2025_20250920_00468,Regular Season,2025-09-20,9,No,1,3,9,,1,3,0 0 0 1 0 0 0 0 0,0 1 0 2 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092000468.html,2026-10-12T11:13Z
+NPB_2025_20250920_00469,Regular Season,2025-09-20,9,No,0,3,9,,0,3,0 0 0 0 0 0 0 0 0,0 0 2 0 0 0 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092000469.html,2026-10-12T11:13Z
+NPB_2025_20250920_00470,Regular Season,2025-09-20,9,No,4,1,9,,4,1,0 0 0 1 1 0 0 2 0,0 0 0 0 0 0 1 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092000470.html,2026-10-12T11:13Z
+NPB_2025_20250920_00826,Regular Season,2025-09-20,9,No,7,8,9,,7,8,0 0 0 2 2 2 1 0 0,1 1 2 3 0 0 0 0 1X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092000826.html,2026-10-12T11:13Z
+NPB_2025_20250920_00827,Regular Season,2025-09-20,9,No,1,2,9,,1,2,0 0 0 1 0 0 0 0 0,0 0 2 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092000827.html,2026-10-12T11:13Z
+NPB_2025_20250920_00828,Regular Season,2025-09-20,9,No,5,4,9,,5,4,0 0 0 3 0 0 0 0 2,2 0 0 0 1 0 0 0 1,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092000828.html,2026-10-12T11:13Z
+NPB_2025_20250921_00471,Regular Season,2025-09-21,9,No,1,8,9,,1,8,0 0 0 0 0 0 0 1 0,0 2 0 0 6 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092100471.html,2026-10-12T11:13Z
+NPB_2025_20250921_00472,Regular Season,2025-09-21,9,No,2,7,9,,2,7,0 0 0 0 1 1 0 0 0,0 4 3 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092100472.html,2026-10-12T11:13Z
+NPB_2025_20250921_00473,Regular Season,2025-09-21,9,No,2,5,9,,2,5,2 0 0 0 0 0 0 0 0,1 2 0 0 0 2 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092100473.html,2026-10-12T11:13Z
+NPB_2025_20250921_00829,Regular Season,2025-09-21,9,No,2,7,9,,2,7,0 0 0 2 0 0 0 0 0,2 0 3 0 0 2 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092100829.html,2026-10-12T11:13Z
+NPB_2025_20250921_00830,Regular Season,2025-09-21,9,No,8,2,9,,8,2,0 3 1 0 1 0 1 2 0,0 0 0 0 1 1 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092100830.html,2026-10-12T11:13Z
+NPB_2025_20250921_00831,Regular Season,2025-09-21,9,No,2,1,9,,2,1,0 1 0 0 1 0 0 0 0,0 0 0 0 0 0 0 0 1,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092100831.html,2026-10-12T11:13Z
+NPB_2025_20250922_00474,Regular Season,2025-09-22,9,No,2,3,9,,2,3,0 1 0 1 0 0 0 0 0,0 0 0 0 2 0 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092200474.html,2026-10-12T11:13Z
+NPB_2025_20250922_00832,Regular Season,2025-09-22,9,No,2,0,9,,2,0,0 2 0 0 0 0 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092200832.html,2026-10-12T11:13Z
+NPB_2025_20250922_00833,Regular Season,2025-09-22,9,No,1,0,9,,1,0,0 0 0 0 0 0 0 1 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092200833.html,2026-10-12T11:13Z
+NPB_2025_20250923_00475,Regular Season,2025-09-23,9,No,3,0,9,,3,0,0 0 0 2 0 0 0 0 1,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092300475.html,2026-10-12T11:13Z
+NPB_2025_20250923_00476,Regular Season,2025-09-23,9,No,2,2,12,12 innings,2,2,0 0 0 0 1 1 0 0 0 0 0 0,0 1 0 0 1 0 0 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025092300476.html,2026-10-12T11:13Z
+NPB_2025_20250923_00477,Regular Season,2025-09-23,9,No,0,5,9,,0,5,0 0 0 0 0 0 0 0 0,2 2 0 0 0 0 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092300477.html,2026-10-12T11:13Z
+NPB_2025_20250923_00834,Regular Season,2025-09-23,9,No,7,0,9,,7,0,2 1 0 0 1 1 0 2 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092300834.html,2026-10-12T11:13Z
+NPB_2025_20250923_00835,Regular Season,2025-09-23,9,No,0,1,9,,0,1,0 0 0 0 0 0 0 0 0,0 1 0 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092300835.html,2026-10-12T11:13Z
+NPB_2025_20250923_00836,Regular Season,2025-09-23,9,No,1,0,9,,1,0,0 0 1 0 0 0 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092300836.html,2026-10-12T11:13Z
+NPB_2025_20250924_00837,Regular Season,2025-09-24,9,No,8,3,9,,8,3,2 1 0 2 0 3 0 0 0,0 0 0 0 1 0 0 0 2,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092400837.html,2026-10-12T11:13Z
+NPB_2025_20250924_00838,Regular Season,2025-09-24,9,No,0,5,9,,0,5,0 0 0 0 0 0 0 0 0,0 1 0 0 2 2 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092400838.html,2026-10-12T11:13Z
+NPB_2025_20250925_00839,Regular Season,2025-09-25,9,No,6,0,9,,6,0,0 0 0 0 0 0 2 0 4,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092500839.html,2026-10-12T11:13Z
+NPB_2025_20250925_00840,Regular Season,2025-09-25,9,No,4,5,9,,4,5,0 2 1 0 1 0 0 0 0,0 0 0 0 0 0 5 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092500840.html,2026-10-12T11:13Z
+NPB_2025_20250925_00841,Regular Season,2025-09-25,9,No,6,4,9,,6,4,3 0 1 2 0 0 0 0 0,0 0 0 0 0 0 0 0 4,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092500841.html,2026-10-12T11:13Z
+NPB_2025_20250926_01959,Regular Season,2025-09-26,9,No,1,11,9,,1,11,0 0 0 1 0 0 0 0 0,1 0 6 2 0 0 0 2 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092601959.html,2026-10-12T11:13Z
+NPB_2025_20250926_01976,Regular Season,2025-09-26,9,No,4,5,9,,4,5,1 0 0 0 3 0 0 0 0,2 2 0 0 0 0 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092601976.html,2026-10-12T11:13Z
+NPB_2025_20250926_01960,Regular Season,2025-09-26,9,No,2,6,9,,2,6,0 0 0 0 1 1 0 0 0,4 0 1 0 1 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092601960.html,2026-10-12T11:13Z
+NPB_2025_20250926_01954,Regular Season,2025-09-26,9,No,4,3,9,,4,3,0 0 0 0 0 2 2 0 0,2 1 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092601954.html,2026-10-12T11:13Z
+NPB_2025_20250926_00842,Regular Season,2025-09-26,9,No,8,5,9,,8,5,0 1 3 0 3 1 0 0 0,3 0 1 0 0 1 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092600842.html,2026-10-12T11:13Z
+NPB_2025_20250927_01961,Regular Season,2025-09-27,9,No,1,3,9,,1,3,1 0 0 0 0 0 0 0 0,2 1 0 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092701961.html,2026-10-12T11:13Z
+NPB_2025_20250927_01962,Regular Season,2025-09-27,9,No,9,8,9,,9,8,0 0 1 0 0 0 3 0 5,2 2 1 1 0 0 0 2 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092701962.html,2026-10-12T11:13Z
+NPB_2025_20250927_01963,Regular Season,2025-09-27,9,No,5,3,9,,5,3,0 0 0 0 0 4 0 1 0,0 0 0 0 0 0 3 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092701963.html,2026-10-12T11:13Z
+NPB_2025_20250927_00843,Regular Season,2025-09-27,9,No,4,1,9,,4,1,0 1 0 0 3 0 0 0 0,1 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092700843.html,2026-10-12T11:13Z
+NPB_2025_20250927_00844,Regular Season,2025-09-27,9,No,2,0,9,,2,0,0 1 1 0 0 0 0 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092700844.html,2026-10-12T11:13Z
+NPB_2025_20250927_00845,Regular Season,2025-09-27,9,No,0,2,9,,0,2,0 0 0 0 0 0 0 0 0,0 0 0 0 2 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092700845.html,2026-10-12T11:13Z
+NPB_2025_20250928_01964,Regular Season,2025-09-28,9,No,4,4,12,12 innings,4,4,0 0 0 2 0 1 0 1 0 0 0 0,2 0 0 2 0 0 0 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025092801964.html,2026-10-12T11:13Z
+NPB_2025_20250928_01965,Regular Season,2025-09-28,9,No,10,2,9,,10,2,0 1 0 0 0 0 1 8 0,1 0 0 0 0 0 1 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092801965.html,2026-10-12T11:13Z
+NPB_2025_20250928_01966,Regular Season,2025-09-28,9,No,4,2,9,,4,2,1 0 0 0 0 0 0 0 3,0 0 0 0 1 1 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092801966.html,2026-10-12T11:13Z
+NPB_2025_20250928_00846,Regular Season,2025-09-28,9,No,4,1,9,,4,1,0 0 2 0 0 0 1 1 0,0 1 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092800846.html,2026-10-12T11:13Z
+NPB_2025_20250928_00847,Regular Season,2025-09-28,9,No,4,3,9,,4,3,0 1 0 1 0 0 1 1 0,0 2 0 1 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092800847.html,2026-10-12T11:13Z
+NPB_2025_20250928_00848,Regular Season,2025-09-28,9,No,5,10,9,,5,10,0 0 0 0 1 0 0 2 2,0 5 4 1 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092800848.html,2026-10-12T11:13Z
+NPB_2025_20250929_00849,Regular Season,2025-09-29,9,No,0,2,9,,0,2,0 0 0 0 0 0 0 0 0,0 1 0 0 0 1 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092900849.html,2026-10-12T11:13Z
+NPB_2025_20250929_01958,Regular Season,2025-09-29,9,No,0,4,9,,0,4,0 0 0 0 0 0 0 0 0,1 2 0 0 1 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025092901958.html,2026-10-12T11:13Z
+NPB_2025_20250930_01967,Regular Season,2025-09-30,9,No,2,4,9,,2,4,0 0 2 0 0 0 0 0 0,3 0 0 0 0 0 1 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025093001967.html,2026-10-12T11:13Z
+NPB_2025_20250930_01968,Regular Season,2025-09-30,9,No,5,4,9,,5,4,0 1 2 0 0 0 2 0 0,1 0 0 0 0 0 0 2 1,Y,Y,https://npb.jp/bis/eng/2025/games/s2025093001968.html,2026-10-12T11:13Z
+NPB_2025_20250930_01977,Regular Season,2025-09-30,9,No,2,1,9,,2,1,0 0 0 0 0 0 0 2 0,0 0 0 1 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025093001977.html,2026-10-12T11:13Z
+NPB_2025_20250930_00850,Regular Season,2025-09-30,9,No,2,1,9,,2,1,0 0 0 2 0 0 0 0 0,0 0 0 1 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025093000850.html,2026-10-12T11:13Z
+NPB_2025_20251001_01969,Regular Season,2025-10-01,9,No,2,5,9,,2,5,0 0 0 0 0 0 0 0 2,5 0 0 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025100101969.html,2026-10-12T11:13Z
+NPB_2025_20251001_01970,Regular Season,2025-10-01,9,No,6,9,9,,6,9,0 4 0 0 0 1 1 0 0,3 0 1 0 1 3 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025100101970.html,2026-10-12T11:13Z
+NPB_2025_20251001_00851,Regular Season,2025-10-01,9,No,5,10,9,,5,10,0 0 0 3 0 0 0 0 2,4 0 0 2 4 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025100100851.html,2026-10-12T11:13Z
+NPB_2025_20251002_01971,Regular Season,2025-10-02,9,No,2,6,9,,2,6,0 0 0 1 0 0 1 0 0,1 0 3 0 2 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025100201971.html,2026-10-12T11:13Z
+NPB_2025_20251002_00852,Regular Season,2025-10-02,9,No,6,5,9,,6,5,0 4 1 1 0 0 0 0 0,0 0 2 0 0 2 0 1 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025100200852.html,2026-10-12T11:13Z
+NPB_2025_20251003_01972,Regular Season,2025-10-03,9,No,6,1,9,,6,1,2 0 0 1 3 0 0 0 0,0 0 0 0 0 1 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025100301972.html,2026-10-12T11:13Z
+NPB_2025_20251003_01983,Regular Season,2025-10-03,9,No,6,7,9,,6,7,1 1 0 0 0 0 0 4 0,0 0 0 0 0 0 1 3 3X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025100301983.html,2026-10-12T11:13Z
+NPB_2025_20251003_01978,Regular Season,2025-10-03,9,No,2,10,9,,2,10,0 0 0 0 0 0 0 2 0,2 0 0 0 6 1 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025100301978.html,2026-10-12T11:13Z
+NPB_2025_20251004_01973,Regular Season,2025-10-04,9,No,3,1,9,,3,1,0 0 1 2 0 0 0 0 0,0 0 0 1 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025100401973.html,2026-10-12T11:13Z
+NPB_2025_20251004_01979,Regular Season,2025-10-04,9,No,2,3,9,,2,3,0 0 1 0 0 0 0 1 0,0 0 2 0 0 0 0 1 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025100401979.html,2026-10-12T11:13Z
+NPB_2025_20251004_01980,Regular Season,2025-10-04,9,No,0,3,9,,0,3,0 0 0 0 0 0 0 0 0,0 0 0 1 0 0 0 2 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025100401980.html,2026-10-12T11:13Z
+NPB_2025_20251005_01981,Regular Season,2025-10-05,9,No,2,1,11,11 innings,2,1,0 1 0 0 0 0 0 0 0 0 1,0 1 0 0 0 0 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025100501981.html,2026-10-12T11:13Z
+NPB_2025_20251005_01982,Regular Season,2025-10-05,9,No,5,2,9,,5,2,1 0 0 0 0 0 4 0 0,0 0 0 1 0 0 0 1 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025100501982.html,2026-10-12T11:13Z
+NPB_2025_20251011_01985,Regular Season,2025-10-11,9,No,2,6,9,,2,6,0 0 0 2 0 0 0 0 0,0 1 2 0 0 1 0 2 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025101101985.html,2026-10-12T11:13Z
+NPB_2025_20251011_01988,Regular Season,2025-10-11,9,No,0,2,9,,0,2,0 0 0 0 0 0 0 0 0,0 1 0 1 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025101101988.html,2026-10-12T11:13Z
+NPB_2025_20251012_01986,Climax Series,2025-10-12,9,No,6,7,11,11 innings,6,7,5 0 0 0 0 0 0 0 0 0 1,5 0 0 0 0 0 0 0 0 0 2X,N,Y,https://npb.jp/bis/eng/2025/games/s2025101201986.html,2026-10-12T11:13Z
+NPB_2025_20251012_01989,Climax Series,2025-10-12,9,No,4,5,9,,4,5,0 1 3 0 0 0 0 0 0,0 1 2 0 0 0 0 2 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025101201989.html,2026-10-12T11:13Z
+NPB_2025_20251015_01990,Climax Series,2025-10-15,9,No,0,2,9,,0,2,0 0 0 0 0 0 0 0 0,0 0 0 0 0 2 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025101501990.html,2026-10-12T11:13Z
+NPB_2025_20251015_01996,Climax Series,2025-10-15,9,No,1,2,10,10 innings,1,2,0 0 0 0 0 0 0 1 0 0,0 0 0 0 0 0 1 0 0 1X,N,Y,https://npb.jp/bis/eng/2025/games/s2025101501996.html,2026-10-12T11:13Z
+NPB_2025_20251016_01991,Climax Series,2025-10-16,9,No,3,5,10,10 innings,3,5,0 0 2 1 0 0 0 0 0 0,2 0 0 0 0 0 0 1 0 2X,N,Y,https://npb.jp/bis/eng/2025/games/s2025101601991.html,2026-10-12T11:13Z
+NPB_2025_20251016_01997,Climax Series,2025-10-16,9,No,0,3,9,,0,3,0 0 0 0 0 0 0 0 0,0 0 0 0 0 0 0 3 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025101601997.html,2026-10-12T11:13Z
+NPB_2025_20251017_01992,Climax Series,2025-10-17,9,No,0,4,9,,0,4,0 0 0 0 0 0 0 0 0,3 0 1 0 0 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025101701992.html,2026-10-12T11:13Z
+NPB_2025_20251017_01998,Climax Series,2025-10-17,9,No,6,0,9,,6,0,1 0 0 1 0 0 4 0 0,0 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025101701998.html,2026-10-12T11:13Z
+NPB_2025_20251018_01999,Climax Series,2025-10-18,9,No,9,3,9,,9,3,0 0 4 2 1 0 2 0 0,1 0 1 0 1 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025101801999.html,2026-10-12T11:13Z
+NPB_2025_20251019_02000,Climax Series,2025-10-19,9,No,7,1,9,,7,1,0 0 0 3 3 1 0 0 0,0 0 0 0 0 0 1 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025101902000.html,2026-10-12T11:13Z
+NPB_2025_20251020_02001,Climax Series,2025-10-20,9,No,1,2,9,,1,2,0 0 0 1 0 0 0 0 0,0 0 1 0 1 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025102002001.html,2026-10-12T11:13Z
+NPB_2025_20251025_02002,Japan Series,2025-10-25,9,No,2,1,9,,2,1,0 0 0 0 0 2 0 0 0,1 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025102502002.html,2026-10-12T11:13Z
+NPB_2025_20251026_02003,Japan Series,2025-10-26,9,No,1,10,9,,1,10,1 0 0 0 0 0 0 0 0,3 6 0 0 1 0 0 0 X,Y,Y,https://npb.jp/bis/eng/2025/games/s2025102602003.html,2026-10-12T11:13Z
+NPB_2025_20251028_02004,Japan Series,2025-10-28,9,No,2,1,9,,2,1,0 0 0 1 0 1 0 0 0,1 0 0 0 0 0 0 0 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025102802004.html,2026-10-12T11:13Z
+NPB_2025_20251029_02005,Japan Series,2025-10-29,9,No,3,2,9,,3,2,0 1 0 0 1 1 0 0 0,0 0 0 0 0 0 0 2 0,Y,Y,https://npb.jp/bis/eng/2025/games/s2025102902005.html,2026-10-12T11:13Z
+NPB_2025_20251030_02006,Japan Series,2025-10-30,9,No,3,2,11,11 innings,3,2,0 0 0 0 0 0 0 2 0 0 1,0 1 0 0 1 0 0 0 0 0 0,N,Y,https://npb.jp/bis/eng/2025/games/s2025103002006.html,2026-10-12T11:13Z

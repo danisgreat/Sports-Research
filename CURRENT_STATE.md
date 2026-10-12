@@ -8,7 +8,7 @@
 |---|---|
 | Status | ACTIVE |
 | Method | MDS-2026.10.12-v11.0 (Markdown only) |
-| Control revision | CR-2026.10.12-R1 |
+| Control revision | CR-2026.10.12-R2 |
 | Scoring version | SCV-2026.10.12-v7 (historical v5/v6 views retained) |
 | Selection version | SEL-2026.10.12-v3 / P_ORDER_V2 priced from the declared mixture where required; alternatives recorded as shadows |
 | Prompt suite | P-2026.10.12-v11.0 |

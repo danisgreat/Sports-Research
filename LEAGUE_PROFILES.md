@@ -2,6 +2,38 @@
 
 **v10 freshness/baseline control (2026-10-11).** Existing numeric rows below are retained, not recomputed in this release. A profile older than one season is STALE_PROFILE; inspect actual current coverage before replacing it. If sufficient verified data is unavailable, retain explicit stale-prior sensitivity or qualitative research. No universal shift is inferred from a few forecast residuals. Baseline recipes follow [SELECTION_RULES §9](SELECTION_RULES.md#9-frozen-league-only-baseline-ret-02); mean/SD alone may not support discrete, phase or extras probabilities. Draw/innings/OT conditions must be verified for the actual competition/season; generic sport rows below never override them. The NBL refresh and the KBO/NPB extras audit were carried out on 2026-10-11 (version below).
 
+**Version LP-2026.10.12-v3 (2026-10-12, framework change 2026-10-12-1, audit R13/R32).** Additive only; no existing numeric row changed.
+1. The **Czech Extraliga** row was added from the rebuilt archive (see Ice hockey). Read its DATA_PROVENANCE first.
+2. A **freshness table** (below) gives every row an as-of date, window, source, coverage and permitted endpoints, plus a status:
+   - `CURRENT`: the window includes the latest completed season.
+   - `LAG_1`: one completed season is missing. Usable as a disclosed prior; check current coverage.
+   - `STALE_PROFILE`: two or more seasons are missing. Prompt-1 sensitivity is required.
+3. The sport-constants table now labels per-team score limits as computational support limits, and draws as competition-specific (R13).
+
+A refreshed or added row is a data update, not demonstrated predictive improvement.
+
+### Freshness table (2026-10-12)
+
+"Latest completed season" is judged on 2026-10-12. The permitted endpoints are those the row's own measurements support. Anything else (period, extras, corners) needs its own supported source or stays `NOT_ESTIMABLE`.
+
+| League | Window (n) | As-of version | Source | Latest completed season | Status | Permitted endpoints | Notes |
+|---|---|---|---|---|---|---|---|
+| KBO | 2023–2025 (2,182) | LP-2026.10.09-v1 | archive yearly files | 2026 | LAG_1 | full-game runs, totals, margins, winner, tie share | Window extras share still NOT_ESTIMABLE (2023–2024 not recovered). 2025 alone, owner-checked: extras 8.2% (59/720), ties 3.1%. See ARCHIVE_USE_GUIDE §8 (R31) and the note under Baseball |
+| MLB | 2024–2026 (7,288) | LP-2026.10.09-v1 | archive | 2026 | CURRENT | full-game, extras share | — |
+| NPB | 2023–2025 (2,576) | LP-2026.10.09-v1 | archive | 2026 | LAG_1 | as KBO | Window extras share NOT_ESTIMABLE. 2025 alone, owner-checked: extras 11.8% (101/858), ties 2.7% (ARCHIVE_USE_GUIDE §8, R31) |
+| EuroLeague | 2023–2025 (992) | LP-2026.10.09-v1 | archive | 2025-26 | CURRENT | full-game | — |
+| Greek Basket League | 2023–2025 (420) | LP-2026.10.09-v1 | archive | 2025-26 | CURRENT | full-game | Archive start times SUSPECTED_DEFAULT (ARCHIVE_USE_GUIDE §8); scores not implicated |
+| NBA | 2023–2025 (3,692) | LP-2026.10.09-v1 | archive | 2025-26 | CURRENT | full-game, OT share | Attendance zero-as-missing; not used here |
+| NBL | 2023–2025 (450) | LP-2026.10.11-v2 | archive (2025 dates and stages repaired 2026-10-12; the row's scores are unchanged) | 2025-26 | CURRENT | full-game, OT share, home win | Prior row LP-2026.10.09-v1 retained |
+| WNBA | 2023–2025 (769) | LP-2026.10.09-v1 | archive | 2026 | LAG_1 | full-game, OT share | BASE_RATES_REGISTER notes WNBA 2026 scoring +10.7 over 2024–25: use the regime note |
+| NHL | 2023–2025 (3,936) | LP-2026.10.09-v1 | archive | 2025-26 | CURRENT | full-game incl. OT/SO, margins | — |
+| **Czech Extraliga** | 2023–2025 (1,092) | **LP-2026.10.12-v3** | rebuilt archive (single compiler) | 2025-26 | CURRENT | full-game incl. OT/SO, margins | New row; see Ice hockey |
+| AFL | 2023–2025 (621) | LP-2026.10.09-v1 | archive | 2026 | LAG_1 | full-game | — |
+| AFLW | 2022, 2025 (270) | LP-2026.10.09-v1 | archive (files 2022 and 2025 only) | 2025 (2026 in progress) | CURRENT with gap | full-game | Window omits 2023–2024; coverage disclosed |
+| NRL | 2023–2025 (612) | LP-2026.10.09-v1 | archive | 2026 | LAG_1 | full-game | — |
+| NFL | 2023–2025 (816) | LP-2026.10.09-v1 | archive | 2025 | CURRENT | full-game, key margins | — |
+| EPL | 2023–2025 (1,140) | LP-2026.10.09-v1 | `research/data/processed/league_csv/epl_results.csv` | 2025-26 | CURRENT | full-game goals; corners and first-half from BASE_RATES §7.3 (2025-26) | Rebuilt archive (2026-10-12) now holds HT from 1995-96 and corners from 2000-01: a candidate refresh source for a future version |
+
 **Version LP-2026.10.11-v2 (2026-10-11, run 2 of the October 11 framework change).** Two changes since LP-2026.10.09-v1; every other row is unchanged and was not re-audited.
 1. **NBL row refreshed** to the 2023–2025 window (n = 450). The previous row (2022–2024, n = 425) is retained below as the frozen comparator `LP-2026.10.09-v1`. A card issued before this version keeps the row it cited. The window comparison, the 2025-26 schedule reconciliation, the 2026-27 year-to-date check and the data defects found are in [NBL_PROFILE_AUDIT.md](research/verification/framework_change_2026-10-11-2/NBL_PROFILE_AUDIT.md).
 2. **KBO and NPB "extra-innings share" withdrawn** (was 0.1% and 0.0%). Those figures came from `Extra Innings` and `Innings Played` columns that hold placeholder defaults, not measurements; the share is `NOT_ESTIMABLE` from the yearly files. Evidence: [KBO_NPB_EXTRAS_AUDIT.md](research/verification/framework_change_2026-10-11-2/KBO_NPB_EXTRAS_AUDIT.md).
@@ -68,6 +100,12 @@ A refreshed profile is a data update, not demonstrated predictive improvement; t
 - A card that needs an extras or tie-after-extras mass states it as its own estimate with the basis, or flags `NOT_ESTIMABLE`. The tie share above is measured (equal final scores) and may be cited as such.
 - A baseline that depends on extras (a three-way KBO/NPB winner, a full-game total with extras) stays `BASELINE_UNAVAILABLE` until innings are recovered from an official box-score source under prompt 7.
 
+**Recovery note, 2025 seasons (2026-10-12, audit R31).** The 2025 KBO and NPB files now hold owner-checked innings for every completed game: KBO's scoreboard service and each game's npb.jp box score (ARCHIVE_USE_GUIDE §8). This adds measurements; the numeric rows above are not recomputed and keep their versions.
+- **Measured 2025 regular season, single season:** KBO extras 8.2% (59 of 720) and ties 3.1% (22). NPB extras 11.8% (101 of 858) and ties 2.7% (23).
+- **Ties by how they ended:** KBO 19 after extras and 3 called at 9 innings. NPB 21 at the 12-inning cap and 2 called short.
+- **Citing these:** a card may cite them as a one-season 2025 measurement with n. They are not a 2023–2025 window value. The window extras share stays `NOT_ESTIMABLE` until 2023–2024 are recovered the same way.
+- **Stage labels were repaired in 2025:** KBO gains 5 regular-season games (opening day, typed Exhibition) and NPB loses 2 (Climax Series First Stage games typed Regular Season). So the frozen rows above (KBO n 2,182, NPB n 2,576) no longer reproduce exactly from the repaired files. They remain the cited LP-2026.10.09-v1 values; a refresh is a new version.
+
 ### Basketball
 
 | League | Games | Seasons | Mean home | Mean away | Mean total | Margin SD | Total SD | Score corr. |
@@ -110,9 +148,16 @@ Excluded as implausible (do not use): Austria Basketball Bundesliga (home_advant
 | League | Games | Seasons | Mean home | Mean away | Mean total | Margin SD | Total SD | Score corr. |
 |---|---:|---|---:|---:|---:|---:|---:|---:|
 | NHL | 3936 | 2023-2025 | 3.21 | 2.98 | 6.19 | 2.61 | 2.31 | -0.123 |
+| Czech Extraliga | 1092 | 2023-2025 | 2.95 | 2.48 | 5.43 | 2.46 | 2.19 | -0.118 |
 
 - **NHL** extras: margin excess kurtosis -0.570; P(margin>=2) 60.1%; P(margin>=3) 40.3%; OT decided before shootout 68.0%; overtime share 22.1%; shootout home win share 52.2%; shootout share 7.1%.
   Built from: `Previous Sports Results/Ice Hockey/NHL/2023/2023_games.csv`, `Previous Sports Results/Ice Hockey/NHL/2024/2024_games.csv`, `Previous Sports Results/Ice Hockey/NHL/2025/2025_games.csv`; stage regular.
+
+- **Czech Extraliga** (LP-2026.10.12-v3, effective for cards issued from 2026-10-12):
+  - Extras: overtime share 22.3%; shootout share 9.2%; home win share 57.8%; P(margin ≥ 2) 55.9%; P(margin ≥ 3) 34.4%; 0 draws (overtime and shootouts decide every regular-season game in these seasons).
+  - Final scores are as printed, with the deciding shootout goal included (DATA_PROVENANCE §2). SDs and correlation are sample statistics (n − 1).
+  - Built from: `Previous Sports Results/Ice Hockey/Czech Extraliga/2023/2023_games.csv`, `…/2024/2024_games.csv`, `…/2025/2025_games.csv`; regular season only (364 games per season). Excluded: rows flagged POSSIBLE_DUPLICATE, AWARDED_RESULT, FORFEIT_NOT_PLAYED or ABANDONED (0 in this window).
+  - Single compiler (hockeyarchives.info); the 2023-24 sample check agreed 8/8. [Provenance](Previous%20Sports%20Results/Ice%20Hockey/Czech%20Extraliga/DATA_PROVENANCE.md).
 
 Excluded as implausible (do not use): Metal Ligaen (home_advantage 1.229 outside plausible [-0.3, 0.6]).
 

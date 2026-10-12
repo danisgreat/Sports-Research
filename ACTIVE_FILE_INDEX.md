@@ -43,17 +43,17 @@
 | [American Football / NFL](Previous%20Sports%20Results/American%20Football/NFL/) | 106 (1920–2025) | 18,192 | 13 | no | — |
 | [American Football / Super Bowl](Previous%20Sports%20Results/American%20Football/Super%20Bowl/) | 59 (1967–2025) | 59 | 13 | no | — |
 | [American Football / UFL](Previous%20Sports%20Results/American%20Football/UFL/) | 2 (2024–2025) | 78 | 13 | no | — |
-| [Baseball / KBO](Previous%20Sports%20Results/Baseball/KBO/) | 26 (2000–2025) | 17,764 | 45 | no | `SUSPECTED_DEFAULT` Start Time (KST): '18:30' on 10410/17764 (59%) |
+| [Baseball / KBO](Previous%20Sports%20Results/Baseball/KBO/) | 26 (2000–2025) | 17,764 | 45 | no | `SUSPECTED_DEFAULT` Start Time (KST): '18:30' on 10410/17764 (59%). 2025 innings, extras and stage labels repaired from the KBO owner record on 2026-10-12 (R31); 2000–2024 innings remain placeholders (ARCHIVE_USE_GUIDE §8) |
 | [Baseball / MLB](Previous%20Sports%20Results/Baseball/MLB/) | 27 (2000–2026) | 77,831 | 104 | no | — |
 | [Baseball / Minor Leagues](Previous%20Sports%20Results/Baseball/Minor%20Leagues/) | 26 (2000–2025) | 57,665 | 46 | no | — |
-| [Baseball / NPB](Previous%20Sports%20Results/Baseball/NPB/) | 26 (2000–2025) | 22,345 | 46 | no | `SUSPECTED_DEFAULT` Start Time (JST): '18:00' on 16657/22345 (75%) |
+| [Baseball / NPB](Previous%20Sports%20Results/Baseball/NPB/) | 26 (2000–2025) | 22,345 | 46 | no | `SUSPECTED_DEFAULT` Start Time (JST): '18:00' on 16657/22345 (75%). 2025 innings, extras and two stage labels repaired from npb.jp box scores on 2026-10-12 (R31); 2000–2024 innings remain placeholders |
 | [Basketball / Austria Basketball Bundesliga](Previous%20Sports%20Results/Basketball/Austria%20Basketball%20Bundesliga/) | 51 (1975–2025) | 7,449 | 39 | no | CANONICAL for a duplicated pair; `SUSPECTED_DEFAULT` Start Time (Local): '17:30' on 4818/7449 (65%) |
 | [Basketball / BSL](Previous%20Sports%20Results/Basketball/BSL/) | 51 (1975–2025) | 7,449 | 39 | no | **ALIAS** (byte-identical to `Basketball/Austria Basketball Bundesliga`, 51 or 126 of the same seasons): not canonical; never aggregate with it; `SUSPECTED_DEFAULT` Start Time (Local): '17:30' on 4818/7449 (65%) |
 | [Basketball / EuroBasket](Previous%20Sports%20Results/Basketball/EuroBasket/) | 51 (1975–2025) | 1,319 | 44 | no | — |
 | [Basketball / EuroLeague](Previous%20Sports%20Results/Basketball/EuroLeague/) | 26 (2000–2025) | 6,685 | 49 | no | — |
 | [Basketball / Greek Basket League](Previous%20Sports%20Results/Basketball/Greek%20Basket%20League/) | 51 (1975–2025) | 8,179 | 39 | no | `SUSPECTED_DEFAULT` Start Time (Local): '19:30' on 5596/8179 (68%) |
 | [Basketball / NBA](Previous%20Sports%20Results/Basketball/NBA/) | 51 (1975–2025) | 59,788 | 29 | no | `SUSPECTED_DEFAULT` Attendance: '0' on 30313/59788 (51%) |
-| [Basketball / NBL](Previous%20Sports%20Results/Basketball/NBL/) | 52 (1975–2026) | 8,124 | 39 | no | — |
+| [Basketball / NBL](Previous%20Sports%20Results/Basketball/NBL/) | 52 (1975–2026) | 8,124 | 39 | no | 2025 dates and stage types repaired 2026-10-12 (R30); some quarter rows do not sum to the final (ARCHIVE_USE_GUIDE §8) |
 | [Basketball / WNBA](Previous%20Sports%20Results/Basketball/WNBA/) | 51 (1975–2025) | 6,676 | 29 | no | `SUSPECTED_DEFAULT` Attendance: '0' on 3824/6676 (57%) |
 | [College Football / NCAA Division I FBS](Previous%20Sports%20Results/College%20Football/NCAA%20Division%20I%20FBS/) | 126 (1900–2025) | 790 | 13 | no | CANONICAL for a duplicated pair; `SUSPECTED_DEFAULT` Date: 306/790 rows on month-day 01-01 (39%) |
 | [Cricket One-Day Format / Men's ODI International](Previous%20Sports%20Results/Cricket%20One-Day%20Format/Men%27s%20ODI%20International/) | 51 (1975–2025) | 4,428 | 47 | no | **ALIAS** (byte-identical to `Cricket One-Day Format/ODI International`, 51 or 126 of the same seasons): not canonical; never aggregate with it |

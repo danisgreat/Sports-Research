@@ -1,0 +1,373 @@
+game_number,field,old_value,new_value,evidence
+28,Date,,2025-09-18,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-09-18T09:30:00+00:00 -> Australia/Hobart local 2025-09-18T19:30+10:00
+28,Day of Week,,Thursday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-09-18T09:30:00+00:00 -> Australia/Hobart local 2025-09-18T19:30+10:00
+29,Date,,2025-09-19,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-09-19T07:30:00+00:00 -> Pacific/Auckland local 2025-09-19T19:30+12:00
+29,Day of Week,,Friday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-09-19T07:30:00+00:00 -> Pacific/Auckland local 2025-09-19T19:30+12:00
+30,Date,,2025-09-20,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-09-20T07:30:00+00:00 -> Australia/Melbourne local 2025-09-20T17:30+10:00
+30,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-09-20T07:30:00+00:00 -> Australia/Melbourne local 2025-09-20T17:30+10:00
+31,Date,,2025-09-20,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-09-20T10:00:00+00:00 -> Australia/Perth local 2025-09-20T18:00+08:00
+31,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-09-20T10:00:00+00:00 -> Australia/Perth local 2025-09-20T18:00+08:00
+32,Date,,2025-09-21,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-09-21T04:30:00+00:00 -> Australia/Melbourne local 2025-09-21T14:30+10:00
+32,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-09-21T04:30:00+00:00 -> Australia/Melbourne local 2025-09-21T14:30+10:00
+33,Date,,2025-09-25,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-09-25T09:30:00+00:00 -> Australia/Melbourne local 2025-09-25T19:30+10:00
+33,Day of Week,,Thursday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-09-25T09:30:00+00:00 -> Australia/Melbourne local 2025-09-25T19:30+10:00
+34,Date,,2025-09-26,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-09-26T09:30:00+00:00 -> Australia/Brisbane local 2025-09-26T19:30+10:00
+34,Day of Week,,Friday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-09-26T09:30:00+00:00 -> Australia/Brisbane local 2025-09-26T19:30+10:00
+35,Date,,2025-09-27,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-09-27T07:30:00+00:00 -> Pacific/Auckland local 2025-09-27T19:30+12:00
+35,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-09-27T07:30:00+00:00 -> Pacific/Auckland local 2025-09-27T19:30+12:00
+36,Date,,2025-09-27,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-09-27T10:00:00+00:00 -> Australia/Sydney local 2025-09-27T20:00+10:00
+36,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-09-27T10:00:00+00:00 -> Australia/Sydney local 2025-09-27T20:00+10:00
+37,Date,,2025-09-28,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-09-28T04:30:00+00:00 -> Australia/Sydney local 2025-09-28T14:30+10:00
+37,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-09-28T04:30:00+00:00 -> Australia/Sydney local 2025-09-28T14:30+10:00
+38,Date,,2025-09-28,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-09-28T06:30:00+00:00 -> Australia/Adelaide local 2025-09-28T16:00+09:30
+38,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-09-28T06:30:00+00:00 -> Australia/Adelaide local 2025-09-28T16:00+09:30
+39,Date,,2025-10-02,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-02T09:30:00+00:00 -> Australia/Brisbane local 2025-10-02T19:30+10:00
+39,Day of Week,,Thursday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-02T09:30:00+00:00 -> Australia/Brisbane local 2025-10-02T19:30+10:00
+40,Date,,2025-10-02,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-02T11:30:00+00:00 -> Australia/Perth local 2025-10-02T19:30+08:00
+40,Day of Week,,Thursday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-02T11:30:00+00:00 -> Australia/Perth local 2025-10-02T19:30+08:00
+41,Date,,2025-10-04,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-04T07:30:00+00:00 -> Australia/Sydney local 2025-10-04T17:30+10:00
+41,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-04T07:30:00+00:00 -> Australia/Sydney local 2025-10-04T17:30+10:00
+42,Date,,2025-10-04,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-04T10:00:00+00:00 -> Australia/Brisbane local 2025-10-04T20:00+10:00
+42,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-04T10:00:00+00:00 -> Australia/Brisbane local 2025-10-04T20:00+10:00
+43,Date,,2025-10-08,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-08T06:30:00+00:00 -> Pacific/Auckland local 2025-10-08T19:30+13:00
+43,Day of Week,,Wednesday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-08T06:30:00+00:00 -> Pacific/Auckland local 2025-10-08T19:30+13:00
+44,Date,,2025-10-08,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-08T08:30:00+00:00 -> Australia/Sydney local 2025-10-08T19:30+11:00
+44,Day of Week,,Wednesday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-08T08:30:00+00:00 -> Australia/Sydney local 2025-10-08T19:30+11:00
+45,Date,,2025-10-09,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-09T08:30:00+00:00 -> Australia/Adelaide local 2025-10-09T19:00+10:30
+45,Day of Week,,Thursday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-09T08:30:00+00:00 -> Australia/Adelaide local 2025-10-09T19:00+10:30
+46,Date,,2025-10-10,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-10T08:30:00+00:00 -> Australia/Brisbane local 2025-10-10T18:30+10:00
+46,Day of Week,,Friday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-10T08:30:00+00:00 -> Australia/Brisbane local 2025-10-10T18:30+10:00
+47,Date,,2025-10-11,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-11T06:30:00+00:00 -> Australia/Sydney local 2025-10-11T17:30+11:00
+47,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-11T06:30:00+00:00 -> Australia/Sydney local 2025-10-11T17:30+11:00
+48,Date,,2025-10-11,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-11T09:00:00+00:00 -> Australia/Adelaide local 2025-10-11T19:30+10:30
+48,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-11T09:00:00+00:00 -> Australia/Adelaide local 2025-10-11T19:30+10:30
+49,Date,,2025-10-12,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-12T03:30:00+00:00 -> Pacific/Auckland local 2025-10-12T16:30+13:00
+49,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-12T03:30:00+00:00 -> Pacific/Auckland local 2025-10-12T16:30+13:00
+50,Date,,2025-10-12,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-12T05:30:00+00:00 -> Australia/Melbourne local 2025-10-12T16:30+11:00
+50,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-12T05:30:00+00:00 -> Australia/Melbourne local 2025-10-12T16:30+11:00
+51,Date,,2025-10-15,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-15T08:30:00+00:00 -> Australia/Hobart local 2025-10-15T19:30+11:00
+51,Day of Week,,Wednesday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-15T08:30:00+00:00 -> Australia/Hobart local 2025-10-15T19:30+11:00
+52,Date,,2025-10-15,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-15T10:30:00+00:00 -> Australia/Perth local 2025-10-15T18:30+08:00
+52,Day of Week,,Wednesday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-15T10:30:00+00:00 -> Australia/Perth local 2025-10-15T18:30+08:00
+53,Date,,2025-10-16,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-16T08:30:00+00:00 -> Australia/Adelaide local 2025-10-16T19:00+10:30
+53,Day of Week,,Thursday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-16T08:30:00+00:00 -> Australia/Adelaide local 2025-10-16T19:00+10:30
+54,Date,,2025-10-17,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-17T06:30:00+00:00 -> Pacific/Auckland local 2025-10-17T19:30+13:00
+54,Day of Week,,Friday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-17T06:30:00+00:00 -> Pacific/Auckland local 2025-10-17T19:30+13:00
+55,Date,,2025-10-17,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-17T08:30:00+00:00 -> Australia/Brisbane local 2025-10-17T18:30+10:00
+55,Day of Week,,Friday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-17T08:30:00+00:00 -> Australia/Brisbane local 2025-10-17T18:30+10:00
+56,Date,,2025-10-18,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-18T06:30:00+00:00 -> Australia/Brisbane local 2025-10-18T16:30+10:00
+56,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-18T06:30:00+00:00 -> Australia/Brisbane local 2025-10-18T16:30+10:00
+57,Date,,2025-10-18,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-18T09:00:00+00:00 -> Australia/Melbourne local 2025-10-18T20:00+11:00
+57,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-18T09:00:00+00:00 -> Australia/Melbourne local 2025-10-18T20:00+11:00
+58,Date,,2025-10-19,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-19T03:30:00+00:00 -> Australia/Melbourne local 2025-10-19T14:30+11:00
+58,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-19T03:30:00+00:00 -> Australia/Melbourne local 2025-10-19T14:30+11:00
+59,Date,,2025-10-19,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-19T05:30:00+00:00 -> Australia/Sydney local 2025-10-19T16:30+11:00
+59,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-19T05:30:00+00:00 -> Australia/Sydney local 2025-10-19T16:30+11:00
+60,Date,,2025-10-22,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-22T08:30:00+00:00 -> Australia/Brisbane local 2025-10-22T18:30+10:00
+60,Day of Week,,Wednesday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-22T08:30:00+00:00 -> Australia/Brisbane local 2025-10-22T18:30+10:00
+61,Date,,2025-10-23,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-23T06:30:00+00:00 -> Pacific/Auckland local 2025-10-23T19:30+13:00
+61,Day of Week,,Thursday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-23T06:30:00+00:00 -> Pacific/Auckland local 2025-10-23T19:30+13:00
+62,Date,,2025-10-23,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-23T08:30:00+00:00 -> Australia/Melbourne local 2025-10-23T19:30+11:00
+62,Day of Week,,Thursday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-23T08:30:00+00:00 -> Australia/Melbourne local 2025-10-23T19:30+11:00
+63,Date,,2025-10-24,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-24T08:30:00+00:00 -> Australia/Brisbane local 2025-10-24T18:30+10:00
+63,Day of Week,,Friday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-24T08:30:00+00:00 -> Australia/Brisbane local 2025-10-24T18:30+10:00
+64,Date,,2025-10-25,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-25T06:30:00+00:00 -> Australia/Brisbane local 2025-10-25T16:30+10:00
+64,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-25T06:30:00+00:00 -> Australia/Brisbane local 2025-10-25T16:30+10:00
+65,Date,,2025-10-25,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-25T09:00:00+00:00 -> Australia/Perth local 2025-10-25T17:00+08:00
+65,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-25T09:00:00+00:00 -> Australia/Perth local 2025-10-25T17:00+08:00
+66,Date,,2025-10-26,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-26T03:30:00+00:00 -> Australia/Melbourne local 2025-10-26T14:30+11:00
+66,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-26T03:30:00+00:00 -> Australia/Melbourne local 2025-10-26T14:30+11:00
+67,Date,,2025-10-26,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-26T05:30:00+00:00 -> Australia/Sydney local 2025-10-26T16:30+11:00
+67,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-26T05:30:00+00:00 -> Australia/Sydney local 2025-10-26T16:30+11:00
+68,Date,,2025-10-29,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-29T08:30:00+00:00 -> Australia/Hobart local 2025-10-29T19:30+11:00
+68,Day of Week,,Wednesday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-29T08:30:00+00:00 -> Australia/Hobart local 2025-10-29T19:30+11:00
+69,Date,,2025-10-30,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-30T08:30:00+00:00 -> Australia/Brisbane local 2025-10-30T18:30+10:00
+69,Day of Week,,Thursday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-30T08:30:00+00:00 -> Australia/Brisbane local 2025-10-30T18:30+10:00
+70,Date,,2025-10-31,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-31T08:30:00+00:00 -> Australia/Sydney local 2025-10-31T19:30+11:00
+70,Day of Week,,Friday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-10-31T08:30:00+00:00 -> Australia/Sydney local 2025-10-31T19:30+11:00
+71,Date,,2025-11-01,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-01T06:30:00+00:00 -> Australia/Hobart local 2025-11-01T17:30+11:00
+71,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-01T06:30:00+00:00 -> Australia/Hobart local 2025-11-01T17:30+11:00
+72,Date,,2025-11-01,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-01T09:00:00+00:00 -> Australia/Brisbane local 2025-11-01T19:00+10:00
+72,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-01T09:00:00+00:00 -> Australia/Brisbane local 2025-11-01T19:00+10:00
+73,Date,,2025-11-02,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-02T03:30:00+00:00 -> Australia/Melbourne local 2025-11-02T14:30+11:00
+73,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-02T03:30:00+00:00 -> Australia/Melbourne local 2025-11-02T14:30+11:00
+74,Date,,2025-11-02,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-02T05:30:00+00:00 -> Australia/Adelaide local 2025-11-02T16:00+10:30
+74,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-02T05:30:00+00:00 -> Australia/Adelaide local 2025-11-02T16:00+10:30
+75,Date,,2025-11-03,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-03T08:30:00+00:00 -> Australia/Melbourne local 2025-11-03T19:30+11:00
+75,Day of Week,,Monday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-03T08:30:00+00:00 -> Australia/Melbourne local 2025-11-03T19:30+11:00
+76,Date,,2025-11-05,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-05T08:30:00+00:00 -> Australia/Sydney local 2025-11-05T19:30+11:00
+76,Day of Week,,Wednesday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-05T08:30:00+00:00 -> Australia/Sydney local 2025-11-05T19:30+11:00
+77,Date,,2025-11-06,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-06T06:30:00+00:00 -> Pacific/Auckland local 2025-11-06T19:30+13:00
+77,Day of Week,,Thursday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-06T06:30:00+00:00 -> Pacific/Auckland local 2025-11-06T19:30+13:00
+78,Date,,2025-11-06,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-06T08:30:00+00:00 -> Australia/Hobart local 2025-11-06T19:30+11:00
+78,Day of Week,,Thursday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-06T08:30:00+00:00 -> Australia/Hobart local 2025-11-06T19:30+11:00
+79,Date,,2025-11-07,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-07T08:30:00+00:00 -> Australia/Brisbane local 2025-11-07T18:30+10:00
+79,Day of Week,,Friday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-07T08:30:00+00:00 -> Australia/Brisbane local 2025-11-07T18:30+10:00
+80,Date,,2025-11-08,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-08T06:30:00+00:00 -> Australia/Hobart local 2025-11-08T17:30+11:00
+80,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-08T06:30:00+00:00 -> Australia/Hobart local 2025-11-08T17:30+11:00
+81,Date,,2025-11-08,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-08T09:00:00+00:00 -> Australia/Melbourne local 2025-11-08T20:00+11:00
+81,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-08T09:00:00+00:00 -> Australia/Melbourne local 2025-11-08T20:00+11:00
+82,Date,,2025-11-09,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-09T03:30:00+00:00 -> Australia/Adelaide local 2025-11-09T14:00+10:30
+82,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-09T03:30:00+00:00 -> Australia/Adelaide local 2025-11-09T14:00+10:30
+83,Date,,2025-11-09,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-09T05:30:00+00:00 -> Australia/Sydney local 2025-11-09T16:30+11:00
+83,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-09T05:30:00+00:00 -> Australia/Sydney local 2025-11-09T16:30+11:00
+84,Date,,2025-11-12,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-12T08:30:00+00:00 -> Australia/Brisbane local 2025-11-12T18:30+10:00
+84,Day of Week,,Wednesday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-12T08:30:00+00:00 -> Australia/Brisbane local 2025-11-12T18:30+10:00
+85,Date,,2025-11-13,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-13T08:30:00+00:00 -> Australia/Hobart local 2025-11-13T19:30+11:00
+85,Day of Week,,Thursday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-13T08:30:00+00:00 -> Australia/Hobart local 2025-11-13T19:30+11:00
+86,Date,,2025-11-14,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-14T08:30:00+00:00 -> Australia/Brisbane local 2025-11-14T18:30+10:00
+86,Day of Week,,Friday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-14T08:30:00+00:00 -> Australia/Brisbane local 2025-11-14T18:30+10:00
+87,Date,,2025-11-15,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-15T06:30:00+00:00 -> Australia/Melbourne local 2025-11-15T17:30+11:00
+87,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-15T06:30:00+00:00 -> Australia/Melbourne local 2025-11-15T17:30+11:00
+88,Date,,2025-11-15,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-15T09:00:00+00:00 -> Australia/Perth local 2025-11-15T17:00+08:00
+88,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-15T09:00:00+00:00 -> Australia/Perth local 2025-11-15T17:00+08:00
+89,Date,,2025-11-16,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-16T03:30:00+00:00 -> Australia/Sydney local 2025-11-16T14:30+11:00
+89,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-16T03:30:00+00:00 -> Australia/Sydney local 2025-11-16T14:30+11:00
+90,Date,,2025-11-16,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-16T05:30:00+00:00 -> Australia/Adelaide local 2025-11-16T16:00+10:30
+90,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-16T05:30:00+00:00 -> Australia/Adelaide local 2025-11-16T16:00+10:30
+91,Date,,2025-11-19,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-19T08:30:00+00:00 -> Australia/Adelaide local 2025-11-19T19:00+10:30
+91,Day of Week,,Wednesday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-19T08:30:00+00:00 -> Australia/Adelaide local 2025-11-19T19:00+10:30
+92,Date,,2025-11-20,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-20T08:30:00+00:00 -> Australia/Brisbane local 2025-11-20T18:30+10:00
+92,Day of Week,,Thursday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-20T08:30:00+00:00 -> Australia/Brisbane local 2025-11-20T18:30+10:00
+93,Date,,2025-11-21,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-21T08:30:00+00:00 -> Australia/Sydney local 2025-11-21T19:30+11:00
+93,Day of Week,,Friday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-21T08:30:00+00:00 -> Australia/Sydney local 2025-11-21T19:30+11:00
+94,Date,,2025-11-21,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-21T10:30:00+00:00 -> Australia/Perth local 2025-11-21T18:30+08:00
+94,Day of Week,,Friday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-21T10:30:00+00:00 -> Australia/Perth local 2025-11-21T18:30+08:00
+95,Date,,2025-11-22,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-22T06:30:00+00:00 -> Australia/Brisbane local 2025-11-22T16:30+10:00
+95,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-22T06:30:00+00:00 -> Australia/Brisbane local 2025-11-22T16:30+10:00
+96,Date,,2025-11-22,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-22T09:00:00+00:00 -> Australia/Melbourne local 2025-11-22T20:00+11:00
+96,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-22T09:00:00+00:00 -> Australia/Melbourne local 2025-11-22T20:00+11:00
+97,Date,,2025-11-23,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-23T03:30:00+00:00 -> Australia/Hobart local 2025-11-23T14:30+11:00
+97,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-23T03:30:00+00:00 -> Australia/Hobart local 2025-11-23T14:30+11:00
+98,Date,,2025-11-23,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-23T05:30:00+00:00 -> Australia/Melbourne local 2025-11-23T16:30+11:00
+98,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-11-23T05:30:00+00:00 -> Australia/Melbourne local 2025-11-23T16:30+11:00
+99,Date,,2025-12-03,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-03T06:30:00+00:00 -> Pacific/Auckland local 2025-12-03T19:30+13:00
+99,Day of Week,,Wednesday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-03T06:30:00+00:00 -> Pacific/Auckland local 2025-12-03T19:30+13:00
+100,Date,,2025-12-04,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-04T08:30:00+00:00 -> Australia/Sydney local 2025-12-04T19:30+11:00
+100,Day of Week,,Thursday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-04T08:30:00+00:00 -> Australia/Sydney local 2025-12-04T19:30+11:00
+101,Date,,2025-12-04,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-04T10:30:00+00:00 -> Australia/Perth local 2025-12-04T18:30+08:00
+101,Day of Week,,Thursday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-04T10:30:00+00:00 -> Australia/Perth local 2025-12-04T18:30+08:00
+102,Date,,2025-12-05,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-05T08:30:00+00:00 -> Australia/Adelaide local 2025-12-05T19:00+10:30
+102,Day of Week,,Friday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-05T08:30:00+00:00 -> Australia/Adelaide local 2025-12-05T19:00+10:30
+103,Date,,2025-12-06,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-06T06:30:00+00:00 -> Pacific/Auckland local 2025-12-06T19:30+13:00
+103,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-06T06:30:00+00:00 -> Pacific/Auckland local 2025-12-06T19:30+13:00
+104,Date,,2025-12-06,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-06T09:00:00+00:00 -> Australia/Sydney local 2025-12-06T20:00+11:00
+104,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-06T09:00:00+00:00 -> Australia/Sydney local 2025-12-06T20:00+11:00
+105,Date,,2025-12-07,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-07T03:30:00+00:00 -> Australia/Melbourne local 2025-12-07T14:30+11:00
+105,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-07T03:30:00+00:00 -> Australia/Melbourne local 2025-12-07T14:30+11:00
+106,Date,,2025-12-07,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-07T05:30:00+00:00 -> Australia/Perth local 2025-12-07T13:30+08:00
+106,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-07T05:30:00+00:00 -> Australia/Perth local 2025-12-07T13:30+08:00
+107,Date,,2025-12-10,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-10T08:30:00+00:00 -> Australia/Melbourne local 2025-12-10T19:30+11:00
+107,Day of Week,,Wednesday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-10T08:30:00+00:00 -> Australia/Melbourne local 2025-12-10T19:30+11:00
+108,Date,,2025-12-11,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-11T08:30:00+00:00 -> Australia/Sydney local 2025-12-11T19:30+11:00
+108,Day of Week,,Thursday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-11T08:30:00+00:00 -> Australia/Sydney local 2025-12-11T19:30+11:00
+109,Date,,2025-12-12,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-12T08:30:00+00:00 -> Australia/Adelaide local 2025-12-12T19:00+10:30
+109,Day of Week,,Friday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-12T08:30:00+00:00 -> Australia/Adelaide local 2025-12-12T19:00+10:30
+110,Date,,2025-12-12,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-12T10:30:00+00:00 -> Australia/Perth local 2025-12-12T18:30+08:00
+110,Day of Week,,Friday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-12T10:30:00+00:00 -> Australia/Perth local 2025-12-12T18:30+08:00
+111,Date,,2025-12-13,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-13T06:30:00+00:00 -> Australia/Brisbane local 2025-12-13T16:30+10:00
+111,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-13T06:30:00+00:00 -> Australia/Brisbane local 2025-12-13T16:30+10:00
+112,Date,,2025-12-13,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-13T09:00:00+00:00 -> Australia/Melbourne local 2025-12-13T20:00+11:00
+112,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-13T09:00:00+00:00 -> Australia/Melbourne local 2025-12-13T20:00+11:00
+113,Date,,2025-12-14,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-14T03:30:00+00:00 -> Australia/Melbourne local 2025-12-14T14:30+11:00
+113,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-14T03:30:00+00:00 -> Australia/Melbourne local 2025-12-14T14:30+11:00
+114,Date,,2025-12-14,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-14T05:30:00+00:00 -> Australia/Brisbane local 2025-12-14T15:30+10:00
+114,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-14T05:30:00+00:00 -> Australia/Brisbane local 2025-12-14T15:30+10:00
+115,Date,,2025-12-17,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-17T08:30:00+00:00 -> Australia/Sydney local 2025-12-17T19:30+11:00
+115,Day of Week,,Wednesday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-17T08:30:00+00:00 -> Australia/Sydney local 2025-12-17T19:30+11:00
+116,Date,,2025-12-18,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-18T08:30:00+00:00 -> Australia/Melbourne local 2025-12-18T19:30+11:00
+116,Day of Week,,Thursday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-18T08:30:00+00:00 -> Australia/Melbourne local 2025-12-18T19:30+11:00
+117,Date,,2025-12-18,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-18T10:30:00+00:00 -> Australia/Perth local 2025-12-18T18:30+08:00
+117,Day of Week,,Thursday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-18T10:30:00+00:00 -> Australia/Perth local 2025-12-18T18:30+08:00
+118,Date,,2025-12-19,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-19T08:30:00+00:00 -> Australia/Brisbane local 2025-12-19T18:30+10:00
+118,Day of Week,,Friday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-19T08:30:00+00:00 -> Australia/Brisbane local 2025-12-19T18:30+10:00
+119,Date,,2025-12-20,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-20T06:30:00+00:00 -> Australia/Sydney local 2025-12-20T17:30+11:00
+119,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-20T06:30:00+00:00 -> Australia/Sydney local 2025-12-20T17:30+11:00
+120,Date,,2025-12-20,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-20T09:00:00+00:00 -> Australia/Melbourne local 2025-12-20T20:00+11:00
+120,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-20T09:00:00+00:00 -> Australia/Melbourne local 2025-12-20T20:00+11:00
+121,Date,,2025-12-21,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-21T03:30:00+00:00 -> Australia/Hobart local 2025-12-21T14:30+11:00
+121,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-21T03:30:00+00:00 -> Australia/Hobart local 2025-12-21T14:30+11:00
+122,Date,,2025-12-21,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-21T05:30:00+00:00 -> Australia/Sydney local 2025-12-21T16:30+11:00
+122,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-21T05:30:00+00:00 -> Australia/Sydney local 2025-12-21T16:30+11:00
+123,Date,,2025-12-22,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-22T08:30:00+00:00 -> Australia/Brisbane local 2025-12-22T18:30+10:00
+123,Day of Week,,Monday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-22T08:30:00+00:00 -> Australia/Brisbane local 2025-12-22T18:30+10:00
+124,Date,,2025-12-23,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-23T09:00:00+00:00 -> Australia/Melbourne local 2025-12-23T20:00+11:00
+124,Day of Week,,Tuesday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-23T09:00:00+00:00 -> Australia/Melbourne local 2025-12-23T20:00+11:00
+125,Date,,2025-12-24,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-24T06:30:00+00:00 -> Australia/Adelaide local 2025-12-24T17:00+10:30
+125,Day of Week,,Wednesday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-24T06:30:00+00:00 -> Australia/Adelaide local 2025-12-24T17:00+10:30
+126,Date,,2025-12-25,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-25T09:30:00+00:00 -> Australia/Sydney local 2025-12-25T20:30+11:00
+126,Day of Week,,Thursday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-25T09:30:00+00:00 -> Australia/Sydney local 2025-12-25T20:30+11:00
+127,Date,,2025-12-26,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-26T08:30:00+00:00 -> Australia/Hobart local 2025-12-26T19:30+11:00
+127,Day of Week,,Friday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-26T08:30:00+00:00 -> Australia/Hobart local 2025-12-26T19:30+11:00
+128,Date,,2025-12-27,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-27T09:00:00+00:00 -> Australia/Brisbane local 2025-12-27T19:00+10:00
+128,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-27T09:00:00+00:00 -> Australia/Brisbane local 2025-12-27T19:00+10:00
+129,Date,,2025-12-28,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-28T03:30:00+00:00 -> Australia/Adelaide local 2025-12-28T14:00+10:30
+129,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-28T03:30:00+00:00 -> Australia/Adelaide local 2025-12-28T14:00+10:30
+130,Date,,2025-12-29,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-29T08:30:00+00:00 -> Australia/Hobart local 2025-12-29T19:30+11:00
+130,Day of Week,,Monday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-29T08:30:00+00:00 -> Australia/Hobart local 2025-12-29T19:30+11:00
+131,Date,,2025-12-30,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-30T08:30:00+00:00 -> Australia/Sydney local 2025-12-30T19:30+11:00
+131,Day of Week,,Tuesday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-30T08:30:00+00:00 -> Australia/Sydney local 2025-12-30T19:30+11:00
+132,Date,,2025-12-31,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-31T06:30:00+00:00 -> Australia/Sydney local 2025-12-31T17:30+11:00
+132,Day of Week,,Wednesday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-31T06:30:00+00:00 -> Australia/Sydney local 2025-12-31T17:30+11:00
+133,Date,,2025-12-31,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-31T08:30:00+00:00 -> Australia/Brisbane local 2025-12-31T18:30+10:00
+133,Day of Week,,Wednesday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2025-12-31T08:30:00+00:00 -> Australia/Brisbane local 2025-12-31T18:30+10:00
+134,Date,,2026-01-01,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-01T08:30:00+00:00 -> Australia/Brisbane local 2026-01-01T18:30+10:00
+134,Day of Week,,Thursday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-01T08:30:00+00:00 -> Australia/Brisbane local 2026-01-01T18:30+10:00
+135,Date,,2026-01-02,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-02T08:30:00+00:00 -> Australia/Adelaide local 2026-01-02T19:00+10:30
+135,Day of Week,,Friday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-02T08:30:00+00:00 -> Australia/Adelaide local 2026-01-02T19:00+10:30
+136,Date,,2026-01-03,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-03T06:30:00+00:00 -> Australia/Sydney local 2026-01-03T17:30+11:00
+136,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-03T06:30:00+00:00 -> Australia/Sydney local 2026-01-03T17:30+11:00
+137,Date,,2026-01-03,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-03T09:00:00+00:00 -> Australia/Hobart local 2026-01-03T20:00+11:00
+137,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-03T09:00:00+00:00 -> Australia/Hobart local 2026-01-03T20:00+11:00
+138,Date,,2026-01-04,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-04T03:30:00+00:00 -> Pacific/Auckland local 2026-01-04T16:30+13:00
+138,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-04T03:30:00+00:00 -> Pacific/Auckland local 2026-01-04T16:30+13:00
+139,Date,,2026-01-04,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-04T05:30:00+00:00 -> Australia/Brisbane local 2026-01-04T15:30+10:00
+139,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-04T05:30:00+00:00 -> Australia/Brisbane local 2026-01-04T15:30+10:00
+140,Date,,2026-01-05,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-05T08:30:00+00:00 -> Australia/Sydney local 2026-01-05T19:30+11:00
+140,Day of Week,,Monday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-05T08:30:00+00:00 -> Australia/Sydney local 2026-01-05T19:30+11:00
+141,Date,,2026-01-07,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-07T08:30:00+00:00 -> Australia/Melbourne local 2026-01-07T19:30+11:00
+141,Day of Week,,Wednesday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-07T08:30:00+00:00 -> Australia/Melbourne local 2026-01-07T19:30+11:00
+142,Date,,2026-01-08,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-08T08:30:00+00:00 -> Australia/Melbourne local 2026-01-08T19:30+11:00
+142,Day of Week,,Thursday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-08T08:30:00+00:00 -> Australia/Melbourne local 2026-01-08T19:30+11:00
+143,Date,,2026-01-09,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-09T06:30:00+00:00 -> Pacific/Auckland local 2026-01-09T19:30+13:00
+143,Day of Week,,Friday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-09T06:30:00+00:00 -> Pacific/Auckland local 2026-01-09T19:30+13:00
+144,Date,,2026-01-09,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-09T08:30:00+00:00 -> Australia/Adelaide local 2026-01-09T19:00+10:30
+144,Day of Week,,Friday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-09T08:30:00+00:00 -> Australia/Adelaide local 2026-01-09T19:00+10:30
+145,Date,,2026-01-10,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-10T09:00:00+00:00 -> Australia/Melbourne local 2026-01-10T20:00+11:00
+145,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-10T09:00:00+00:00 -> Australia/Melbourne local 2026-01-10T20:00+11:00
+146,Date,,2026-01-11,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-11T03:30:00+00:00 -> Australia/Sydney local 2026-01-11T14:30+11:00
+146,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-11T03:30:00+00:00 -> Australia/Sydney local 2026-01-11T14:30+11:00
+147,Date,,2026-01-11,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-11T05:30:00+00:00 -> Australia/Sydney local 2026-01-11T16:30+11:00
+147,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-11T05:30:00+00:00 -> Australia/Sydney local 2026-01-11T16:30+11:00
+148,Date,,2026-01-12,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-12T08:30:00+00:00 -> Australia/Brisbane local 2026-01-12T18:30+10:00
+148,Day of Week,,Monday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-12T08:30:00+00:00 -> Australia/Brisbane local 2026-01-12T18:30+10:00
+149,Date,,2026-01-15,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-15T10:30:00+00:00 -> Australia/Sydney local 2026-01-15T21:30+11:00
+149,Day of Week,,Thursday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-15T10:30:00+00:00 -> Australia/Sydney local 2026-01-15T21:30+11:00
+150,Date,,2026-01-16,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-16T10:30:00+00:00 -> Australia/Perth local 2026-01-16T18:30+08:00
+150,Day of Week,,Friday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-16T10:30:00+00:00 -> Australia/Perth local 2026-01-16T18:30+08:00
+151,Date,,2026-01-17,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-17T08:00:00+00:00 -> Australia/Brisbane local 2026-01-17T18:00+10:00
+151,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-17T08:00:00+00:00 -> Australia/Brisbane local 2026-01-17T18:00+10:00
+152,Date,,2026-01-17,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-17T10:30:00+00:00 -> Australia/Melbourne local 2026-01-17T21:30+11:00
+152,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-17T10:30:00+00:00 -> Australia/Melbourne local 2026-01-17T21:30+11:00
+153,Date,,2026-01-18,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-18T03:30:00+00:00 -> Australia/Adelaide local 2026-01-18T14:00+10:30
+153,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-18T03:30:00+00:00 -> Australia/Adelaide local 2026-01-18T14:00+10:30
+154,Date,,2026-01-21,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-21T06:30:00+00:00 -> Australia/Melbourne local 2026-01-21T17:30+11:00
+154,Day of Week,,Wednesday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-21T06:30:00+00:00 -> Australia/Melbourne local 2026-01-21T17:30+11:00
+155,Date,,2026-01-21,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-21T08:30:00+00:00 -> Australia/Melbourne local 2026-01-21T19:30+11:00
+155,Day of Week,,Wednesday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-21T08:30:00+00:00 -> Australia/Melbourne local 2026-01-21T19:30+11:00
+156,Date,,2026-01-22,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-22T08:30:00+00:00 -> Australia/Sydney local 2026-01-22T19:30+11:00
+156,Day of Week,,Thursday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-22T08:30:00+00:00 -> Australia/Sydney local 2026-01-22T19:30+11:00
+157,Date,,2026-01-22,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-22T10:30:00+00:00 -> Australia/Perth local 2026-01-22T18:30+08:00
+157,Day of Week,,Thursday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-22T10:30:00+00:00 -> Australia/Perth local 2026-01-22T18:30+08:00
+158,Date,,2026-01-23,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-23T06:30:00+00:00 -> Pacific/Auckland local 2026-01-23T19:30+13:00
+158,Day of Week,,Friday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-23T06:30:00+00:00 -> Pacific/Auckland local 2026-01-23T19:30+13:00
+159,Date,,2026-01-24,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-24T06:30:00+00:00 -> Australia/Melbourne local 2026-01-24T17:30+11:00
+159,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-24T06:30:00+00:00 -> Australia/Melbourne local 2026-01-24T17:30+11:00
+160,Date,,2026-01-24,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-24T09:00:00+00:00 -> Australia/Hobart local 2026-01-24T20:00+11:00
+160,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-24T09:00:00+00:00 -> Australia/Hobart local 2026-01-24T20:00+11:00
+161,Date,,2026-01-25,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-25T03:30:00+00:00 -> Australia/Sydney local 2026-01-25T14:30+11:00
+161,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-25T03:30:00+00:00 -> Australia/Sydney local 2026-01-25T14:30+11:00
+162,Date,,2026-01-25,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-25T05:30:00+00:00 -> Australia/Perth local 2026-01-25T13:30+08:00
+162,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-25T05:30:00+00:00 -> Australia/Perth local 2026-01-25T13:30+08:00
+163,Date,,2026-01-26,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-26T08:30:00+00:00 -> Australia/Brisbane local 2026-01-26T18:30+10:00
+163,Day of Week,,Monday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-26T08:30:00+00:00 -> Australia/Brisbane local 2026-01-26T18:30+10:00
+164,Date,,2026-01-28,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-28T08:30:00+00:00 -> Australia/Brisbane local 2026-01-28T18:30+10:00
+164,Day of Week,,Wednesday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-28T08:30:00+00:00 -> Australia/Brisbane local 2026-01-28T18:30+10:00
+165,Date,,2026-01-28,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-28T10:30:00+00:00 -> Australia/Perth local 2026-01-28T18:30+08:00
+165,Day of Week,,Wednesday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-28T10:30:00+00:00 -> Australia/Perth local 2026-01-28T18:30+08:00
+166,Date,,2026-01-29,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-29T08:30:00+00:00 -> Australia/Sydney local 2026-01-29T19:30+11:00
+166,Day of Week,,Thursday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-29T08:30:00+00:00 -> Australia/Sydney local 2026-01-29T19:30+11:00
+167,Date,,2026-01-30,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-30T06:30:00+00:00 -> Pacific/Auckland local 2026-01-30T19:30+13:00
+167,Day of Week,,Friday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-30T06:30:00+00:00 -> Pacific/Auckland local 2026-01-30T19:30+13:00
+168,Date,,2026-01-30,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-30T08:30:00+00:00 -> Australia/Brisbane local 2026-01-30T18:30+10:00
+168,Day of Week,,Friday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-30T08:30:00+00:00 -> Australia/Brisbane local 2026-01-30T18:30+10:00
+169,Date,,2026-01-31,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-31T06:30:00+00:00 -> Australia/Adelaide local 2026-01-31T17:00+10:30
+169,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-31T06:30:00+00:00 -> Australia/Adelaide local 2026-01-31T17:00+10:30
+170,Date,,2026-01-31,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-31T09:00:00+00:00 -> Australia/Sydney local 2026-01-31T20:00+11:00
+170,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-01-31T09:00:00+00:00 -> Australia/Sydney local 2026-01-31T20:00+11:00
+171,Date,,2026-02-01,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-01T03:30:00+00:00 -> Australia/Hobart local 2026-02-01T14:30+11:00
+171,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-01T03:30:00+00:00 -> Australia/Hobart local 2026-02-01T14:30+11:00
+172,Date,,2026-02-01,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-01T05:30:00+00:00 -> Australia/Brisbane local 2026-02-01T15:30+10:00
+172,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-01T05:30:00+00:00 -> Australia/Brisbane local 2026-02-01T15:30+10:00
+173,Date,,2026-02-05,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-05T06:30:00+00:00 -> Pacific/Auckland local 2026-02-05T19:30+13:00
+173,Day of Week,,Thursday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-05T06:30:00+00:00 -> Pacific/Auckland local 2026-02-05T19:30+13:00
+174,Date,,2026-02-05,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-05T08:30:00+00:00 -> Australia/Sydney local 2026-02-05T19:30+11:00
+174,Day of Week,,Thursday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-05T08:30:00+00:00 -> Australia/Sydney local 2026-02-05T19:30+11:00
+175,Date,,2026-02-06,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-06T08:30:00+00:00 -> Australia/Hobart local 2026-02-06T19:30+11:00
+175,Day of Week,,Friday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-06T08:30:00+00:00 -> Australia/Hobart local 2026-02-06T19:30+11:00
+176,Date,,2026-02-06,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-06T10:30:00+00:00 -> Australia/Perth local 2026-02-06T18:30+08:00
+176,Day of Week,,Friday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-06T10:30:00+00:00 -> Australia/Perth local 2026-02-06T18:30+08:00
+177,Date,,2026-02-07,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-07T06:30:00+00:00 -> Pacific/Auckland local 2026-02-07T19:30+13:00
+177,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-07T06:30:00+00:00 -> Pacific/Auckland local 2026-02-07T19:30+13:00
+178,Date,,2026-02-07,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-07T09:00:00+00:00 -> Australia/Melbourne local 2026-02-07T20:00+11:00
+178,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-07T09:00:00+00:00 -> Australia/Melbourne local 2026-02-07T20:00+11:00
+179,Date,,2026-02-08,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-08T03:30:00+00:00 -> Australia/Melbourne local 2026-02-08T14:30+11:00
+179,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-08T03:30:00+00:00 -> Australia/Melbourne local 2026-02-08T14:30+11:00
+180,Date,,2026-02-08,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-08T05:30:00+00:00 -> Australia/Brisbane local 2026-02-08T15:30+10:00
+180,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-08T05:30:00+00:00 -> Australia/Brisbane local 2026-02-08T15:30+10:00
+181,Date,,2026-02-12,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-12T08:30:00+00:00 -> Australia/Brisbane local 2026-02-12T18:30+10:00
+181,Day of Week,,Thursday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-12T08:30:00+00:00 -> Australia/Brisbane local 2026-02-12T18:30+10:00
+182,Date,,2026-02-13,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-13T08:30:00+00:00 -> Australia/Sydney local 2026-02-13T19:30+11:00
+182,Day of Week,,Friday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-13T08:30:00+00:00 -> Australia/Sydney local 2026-02-13T19:30+11:00
+183,Date,,2026-02-13,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-13T10:30:00+00:00 -> Australia/Perth local 2026-02-13T18:30+08:00
+183,Day of Week,,Friday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-13T10:30:00+00:00 -> Australia/Perth local 2026-02-13T18:30+08:00
+184,Date,,2026-02-14,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-14T06:30:00+00:00 -> Australia/Adelaide local 2026-02-14T17:00+10:30
+184,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-14T06:30:00+00:00 -> Australia/Adelaide local 2026-02-14T17:00+10:30
+185,Date,,2026-02-14,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-14T09:00:00+00:00 -> Australia/Melbourne local 2026-02-14T20:00+11:00
+185,Day of Week,,Saturday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-14T09:00:00+00:00 -> Australia/Melbourne local 2026-02-14T20:00+11:00
+186,Date,,2026-02-15,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-15T03:30:00+00:00 -> Australia/Melbourne local 2026-02-15T14:30+11:00
+186,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-15T03:30:00+00:00 -> Australia/Melbourne local 2026-02-15T14:30+11:00
+187,Date,,2026-02-15,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-15T05:30:00+00:00 -> Australia/Sydney local 2026-02-15T16:30+11:00
+187,Day of Week,,Sunday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-15T05:30:00+00:00 -> Australia/Sydney local 2026-02-15T16:30+11:00
+188,Date,,2026-02-18,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-18T08:30:00+00:00 -> Australia/Hobart local 2026-02-18T19:30+11:00
+188,Day of Week,,Wednesday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-18T08:30:00+00:00 -> Australia/Hobart local 2026-02-18T19:30+11:00
+189,Date,,2026-02-19,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-19T06:30:00+00:00 -> Pacific/Auckland local 2026-02-19T19:30+13:00
+189,Day of Week,,Thursday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-19T06:30:00+00:00 -> Pacific/Auckland local 2026-02-19T19:30+13:00
+190,Date,,2026-02-19,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-19T08:30:00+00:00 -> Australia/Melbourne local 2026-02-19T19:30+11:00
+190,Day of Week,,Thursday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-19T08:30:00+00:00 -> Australia/Melbourne local 2026-02-19T19:30+11:00
+191,Date,,2026-02-20,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-20T08:30:00+00:00 -> Australia/Brisbane local 2026-02-20T18:30+10:00
+191,Day of Week,,Friday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-20T08:30:00+00:00 -> Australia/Brisbane local 2026-02-20T18:30+10:00
+192,Date,,2026-02-20,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-20T10:30:00+00:00 -> Australia/Perth local 2026-02-20T18:30+08:00
+192,Day of Week,,Friday,run-2 sidecar NBL_2025_26_DATE_EVIDENCE.csv: scheduled_start_utc 2026-02-20T10:30:00+00:00 -> Australia/Perth local 2026-02-20T18:30+08:00
+193,Game Type,Regular Season,Not applicable,"printed round label 'Round IGNITE CUP FINAL' (post-season or cup game; regular season is Round 1-22, 165 games)"
+193,Date,,2026-02-22,ESPN site API NBL event 401858632 date 2026-02-22T05:30+00:00 -> Australia/Adelaide local 2026-02-22T16:00+10:30 (evidence B)
+193,Day of Week,,Sunday,ESPN site API NBL event 401858632 date 2026-02-22T05:30+00:00 -> Australia/Adelaide local 2026-02-22T16:00+10:30 (evidence B)
+194,Game Type,Regular Season,Play-In,"printed round label 'Round SEEDING' (post-season or cup game; regular season is Round 1-22, 165 games)"
+194,Date,,2026-03-04,ESPN site API NBL event 401862001 date 2026-03-04T08:30+00:00 -> Australia/Melbourne local 2026-03-04T19:30+11:00 (evidence B)
+194,Day of Week,,Wednesday,ESPN site API NBL event 401862001 date 2026-03-04T08:30+00:00 -> Australia/Melbourne local 2026-03-04T19:30+11:00 (evidence B)
+195,Game Type,Regular Season,Play-In,"printed round label 'Round QUALIFIER' (post-season or cup game; regular season is Round 1-22, 165 games)"
+195,Date,,2026-03-05,ESPN site API NBL event 401862002 date 2026-03-05T08:30+00:00 -> Australia/Melbourne local 2026-03-05T19:30+11:00 (evidence B)
+195,Day of Week,,Thursday,ESPN site API NBL event 401862002 date 2026-03-05T08:30+00:00 -> Australia/Melbourne local 2026-03-05T19:30+11:00 (evidence B)
+196,Game Type,Regular Season,Play-In,"printed round label 'Round ELIMINATION' (post-season or cup game; regular season is Round 1-22, 165 games)"
+196,Date,,2026-03-07,ESPN site API NBL event 401863534 date 2026-03-07T09:00+00:00 -> Australia/Perth local 2026-03-07T17:00+08:00 (evidence B)
+196,Day of Week,,Saturday,ESPN site API NBL event 401863534 date 2026-03-07T09:00+00:00 -> Australia/Perth local 2026-03-07T17:00+08:00 (evidence B)
+197,Game Type,Regular Season,Playoffs,"printed round label 'Round PLAYOFF 1' (post-season or cup game; regular season is Round 1-22, 165 games)"
+197,Date,,2026-03-10,ESPN site API NBL event 401863486 date 2026-03-10T08:30+00:00 -> Australia/Adelaide local 2026-03-10T19:00+10:30 (evidence B)
+197,Day of Week,,Tuesday,ESPN site API NBL event 401863486 date 2026-03-10T08:30+00:00 -> Australia/Adelaide local 2026-03-10T19:00+10:30 (evidence B)
+198,Game Type,Regular Season,Playoffs,"printed round label 'Round PLAYOFF 2' (post-season or cup game; regular season is Round 1-22, 165 games)"
+198,Date,,2026-03-11,ESPN site API NBL event 401863731 date 2026-03-11T08:30+00:00 -> Australia/Sydney local 2026-03-11T19:30+11:00 (evidence B)
+198,Day of Week,,Wednesday,ESPN site API NBL event 401863731 date 2026-03-11T08:30+00:00 -> Australia/Sydney local 2026-03-11T19:30+11:00 (evidence B)
+199,Game Type,Regular Season,Playoffs,"printed round label 'Round PLAYOFF 1' (post-season or cup game; regular season is Round 1-22, 165 games)"
+199,Date,,2026-03-14,ESPN site API NBL event 401863501 date 2026-03-14T06:30+00:00 -> Australia/Melbourne local 2026-03-14T17:30+11:00 (evidence B)
+199,Day of Week,,Saturday,ESPN site API NBL event 401863501 date 2026-03-14T06:30+00:00 -> Australia/Melbourne local 2026-03-14T17:30+11:00 (evidence B)
+200,Game Type,Regular Season,Playoffs,"printed round label 'Round PLAYOFF 2' (post-season or cup game; regular season is Round 1-22, 165 games)"
+200,Date,,2026-03-14,ESPN site API NBL event 401863732 date 2026-03-14T09:00+00:00 -> Australia/Perth local 2026-03-14T17:00+08:00 (evidence B)
+200,Day of Week,,Saturday,ESPN site API NBL event 401863732 date 2026-03-14T09:00+00:00 -> Australia/Perth local 2026-03-14T17:00+08:00 (evidence B)
+201,Game Type,Regular Season,Playoffs,"printed round label 'Round PLAYOFF 1' (post-season or cup game; regular season is Round 1-22, 165 games)"
+201,Date,,2026-03-17,ESPN site API NBL event 401863488 date 2026-03-17T08:30+00:00 -> Australia/Adelaide local 2026-03-17T19:00+10:30 (evidence B)
+201,Day of Week,,Tuesday,ESPN site API NBL event 401863488 date 2026-03-17T08:30+00:00 -> Australia/Adelaide local 2026-03-17T19:00+10:30 (evidence B)
+202,Game Type,Regular Season,Finals,"printed round label 'Round CHAMPIONSHIP' (post-season or cup game; regular season is Round 1-22, 165 games)"
+202,Date,,2026-03-21,ESPN site API NBL event 401865150 date 2026-03-21T08:00+00:00 -> Australia/Sydney local 2026-03-21T19:00+11:00 (evidence B)
+202,Day of Week,,Saturday,ESPN site API NBL event 401865150 date 2026-03-21T08:00+00:00 -> Australia/Sydney local 2026-03-21T19:00+11:00 (evidence B)
+203,Game Type,Regular Season,Finals,"printed round label 'Round CHAMPIONSHIP' (post-season or cup game; regular season is Round 1-22, 165 games)"
+203,Date,,2026-03-27,ESPN site API NBL event 401865147 date 2026-03-27T08:30+00:00 -> Australia/Adelaide local 2026-03-27T19:00+10:30 (evidence B)
+203,Day of Week,,Friday,ESPN site API NBL event 401865147 date 2026-03-27T08:30+00:00 -> Australia/Adelaide local 2026-03-27T19:00+10:30 (evidence B)
+204,Game Type,Regular Season,Finals,"printed round label 'Round SYD 2-1 ADL' (post-season or cup game; regular season is Round 1-22, 165 games)"
+204,Date,,2026-03-29,ESPN site API NBL event 401865148 date 2026-03-29T03:30+00:00 -> Australia/Sydney local 2026-03-29T14:30+11:00 (evidence B)
+204,Day of Week,,Sunday,ESPN site API NBL event 401865148 date 2026-03-29T03:30+00:00 -> Australia/Sydney local 2026-03-29T14:30+11:00 (evidence B)
+205,Game Type,Regular Season,Finals,"printed round label 'Round TIED 2-2' (post-season or cup game; regular season is Round 1-22, 165 games)"
+205,Date,,2026-04-01,ESPN site API NBL event 401865149 date 2026-04-01T08:30+00:00 -> Australia/Adelaide local 2026-04-01T19:00+10:30 (evidence B)
+205,Day of Week,,Wednesday,ESPN site API NBL event 401865149 date 2026-04-01T08:30+00:00 -> Australia/Adelaide local 2026-04-01T19:00+10:30 (evidence B)
+206,Game Type,Regular Season,Finals,"printed round label 'Round SYD WIN 3-2' (post-season or cup game; regular season is Round 1-22, 165 games)"
+206,Date,,2026-04-05,ESPN site API NBL event 401865270 date 2026-04-05T04:30+00:00 -> Australia/Sydney local 2026-04-05T14:30+10:00 (evidence B)
+206,Day of Week,,Sunday,ESPN site API NBL event 401865270 date 2026-04-05T04:30+00:00 -> Australia/Sydney local 2026-04-05T14:30+10:00 (evidence B)

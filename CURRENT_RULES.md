@@ -1,6 +1,6 @@
 # Current operating rules
 
-**MDS-2026.10.12-v11.0 · CR-2026.10.12-R1 · SCV-2026.10.12-v7 · SEL-2026.10.12-v3.** Effective for new work after this revision is read. Current IDs and destination: [CURRENT_STATE.md](CURRENT_STATE.md). Previous rules remain historical evidence: [v10.0](archive/superseded_2026-10-12/CURRENT_RULES.md), [pre-v10](archive/superseded_2026-10-11/prompt_v10/CURRENT_RULES.md).
+**MDS-2026.10.12-v11.0 · CR-2026.10.12-R2 · SCV-2026.10.12-v7 · SEL-2026.10.12-v3.** Effective for new work after this revision is read. Current IDs and destination: [CURRENT_STATE.md](CURRENT_STATE.md). Previous rules remain historical evidence: [v11.0 CR-R1](archive/superseded_2026-10-12/CURRENT_RULES_v11.0_CR-R1.md), [v10.0](archive/superseded_2026-10-12/CURRENT_RULES.md), [pre-v10](archive/superseded_2026-10-11/prompt_v10/CURRENT_RULES.md).
 
 ## 0. Authority, scope and honest execution
 
@@ -50,11 +50,9 @@ Use official field owners then structured providers and quality corroboration. R
 
 Record cutoff, research completion, actual write/issue time and final state recheck separately. Inputs must be demonstrably available by cutoff. Recheck just before issue; crossing the start changes the timing label. PREGAME requires explicit not-started evidence; stale 0–0 is insufficient. LIVE_OBSERVED, LATE_START_UNVERIFIED and HISTORICAL_DIAGNOSTIC stay separate. Outcome exposure is disclosed; a historical reconstruction cannot regain pregame status. Current event information may establish identity/state but observed in-game outcomes never enter a purported pregame forecast.
 
-Also record scheduled lead time at issue. Within five minutes of scheduled start or later is the LATE_START monitoring band, even if an official delay confirms PREGAME. This band does not suppress requested research. Actual-start evidence is a separate field and may remain NOT_VERIFIED. Provider/capture plans are not scheduled jobs: state who will capture and whether automation actually exists.
-
 **Two-step issue window (PR-04).**
 1. **Research:** finish the event model, form windows, baseline and sensitivity cases by about 60 minutes before the scheduled start.
-2. **Freeze:** at the lineup check, re-read the official lineup, starter or goalie and the injury source. The first such check falls when the official lineup is due, and no later than 5 minutes before the start. Update only the inputs that changed, re-price from the same model, then freeze and issue.
+2. **Freeze:** at the lineup check, re-read the official lineup, starter or goalie and the injury source. The first such check falls when the official lineup is due. Update only the inputs that changed, re-price from the same model, then freeze and issue.
 
 If the lineup is still unpublished at T−5, issue with explicit lineup scenarios priced as a mixture (§7) and the label `LINEUP_UNCONFIRMED`. A request received too late for step 1 is still researched and labelled under the timing rules. This is a schedule target, never a reason to drop a requested event.
 

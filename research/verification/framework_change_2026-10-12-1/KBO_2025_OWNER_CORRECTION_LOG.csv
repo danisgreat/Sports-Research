@@ -1,0 +1,29 @@
+game_id,field,old_value,new_value,evidence
+20250523NCOB02025,Innings Played,10,9,KBO GetScoreBoardScroll (evidence A); owner line score shows 9 innings; read 2026-10-12T11:10Z
+20250523NCOB02025,Extra Innings,Y,N,KBO GetScoreBoardScroll (evidence A); owner line score shows 9 innings; read 2026-10-12T11:10Z
+20250925KTSK02025,Innings Played,10,9,KBO GetScoreBoardScroll (evidence A); owner line score shows 9 innings; read 2026-10-12T11:10Z
+20250925KTSK02025,Extra Innings,Y,N,KBO GetScoreBoardScroll (evidence A); owner line score shows 9 innings; read 2026-10-12T11:10Z
+20250322HHKT02025,Season Phase,Pre-Season,Regular Season,"KBO GetScoreBoardScroll srId=0 for gameId 20250322HHKT0 (evidence A, read 2026-10-12); en.wikipedia 2025 KBO League season (B corroboration); regular season opened 2025-03-22"
+20250322HHKT02025,Game Type,Exhibition,Regular Season,"KBO GetScoreBoardScroll srId=0 for gameId 20250322HHKT0 (evidence A, read 2026-10-12); en.wikipedia 2025 KBO League season (B corroboration); regular season opened 2025-03-22"
+20250322LTLG02025,Season Phase,Pre-Season,Regular Season,"KBO GetScoreBoardScroll srId=0 for gameId 20250322LTLG0 (evidence A, read 2026-10-12); en.wikipedia 2025 KBO League season (B corroboration); regular season opened 2025-03-22"
+20250322LTLG02025,Game Type,Exhibition,Regular Season,"KBO GetScoreBoardScroll srId=0 for gameId 20250322LTLG0 (evidence A, read 2026-10-12); en.wikipedia 2025 KBO League season (B corroboration); regular season opened 2025-03-22"
+20250322NCHT02025,Season Phase,Pre-Season,Regular Season,"KBO GetScoreBoardScroll srId=0 for gameId 20250322NCHT0 (evidence A, read 2026-10-12); en.wikipedia 2025 KBO League season (B corroboration); regular season opened 2025-03-22"
+20250322NCHT02025,Game Type,Exhibition,Regular Season,"KBO GetScoreBoardScroll srId=0 for gameId 20250322NCHT0 (evidence A, read 2026-10-12); en.wikipedia 2025 KBO League season (B corroboration); regular season opened 2025-03-22"
+20250322OBSK02025,Season Phase,Pre-Season,Regular Season,"KBO GetScoreBoardScroll srId=0 for gameId 20250322OBSK0 (evidence A, read 2026-10-12); en.wikipedia 2025 KBO League season (B corroboration); regular season opened 2025-03-22"
+20250322OBSK02025,Game Type,Exhibition,Regular Season,"KBO GetScoreBoardScroll srId=0 for gameId 20250322OBSK0 (evidence A, read 2026-10-12); en.wikipedia 2025 KBO League season (B corroboration); regular season opened 2025-03-22"
+20250322WOSS02025,Season Phase,Pre-Season,Regular Season,"KBO GetScoreBoardScroll srId=0 for gameId 20250322WOSS0 (evidence A, read 2026-10-12); en.wikipedia 2025 KBO League season (B corroboration); regular season opened 2025-03-22"
+20250322WOSS02025,Game Type,Exhibition,Regular Season,"KBO GetScoreBoardScroll srId=0 for gameId 20250322WOSS0 (evidence A, read 2026-10-12); en.wikipedia 2025 KBO League season (B corroboration); regular season opened 2025-03-22"
+44441006NCSS02025,Game Type,Semi-Playoff,Wild Card Game,"KBO GetScoreBoardScroll srId=4 for gameId 20251006NCSS0 (evidence A, read 2026-10-12); en.wikipedia 2025 KBO League season (B corroboration)"
+44441006NCSS02025,Series / Round,Semi-Playoff,Wild Card,"KBO GetScoreBoardScroll srId=4 for gameId 20251006NCSS0 (evidence A, read 2026-10-12); en.wikipedia 2025 KBO League season (B corroboration)"
+44441007NCSS02025,Game Type,Semi-Playoff,Wild Card Game,"KBO GetScoreBoardScroll srId=4 for gameId 20251007NCSS0 (evidence A, read 2026-10-12); en.wikipedia 2025 KBO League season (B corroboration)"
+44441007NCSS02025,Series / Round,Semi-Playoff,Wild Card,"KBO GetScoreBoardScroll srId=4 for gameId 20251007NCSS0 (evidence A, read 2026-10-12); en.wikipedia 2025 KBO League season (B corroboration)"
+33331009SSSK02025,Game Type,Wild Card Game,Semi-Playoff,"KBO GetScoreBoardScroll srId=3 for gameId 20251009SSSK0 (evidence A, read 2026-10-12); en.wikipedia 2025 KBO League season (B corroboration)"
+33331009SSSK02025,Series / Round,Wild Card,Semi-Playoff,"KBO GetScoreBoardScroll srId=3 for gameId 20251009SSSK0 (evidence A, read 2026-10-12); en.wikipedia 2025 KBO League season (B corroboration)"
+33331010SSSK02025,Game Type,Wild Card Game,Semi-Playoff,Derived: postponed 2025-10-10 Samsung@SSG row sits inside the series that KBO codes srId=3 (games of 10-09 and 10-11); no owner read for a postponed game
+33331010SSSK02025,Series / Round,Wild Card,Semi-Playoff,Derived: postponed 2025-10-10 Samsung@SSG row sits inside the series that KBO codes srId=3 (games of 10-09 and 10-11); no owner read for a postponed game
+33331011SSSK02025,Game Type,Wild Card Game,Semi-Playoff,"KBO GetScoreBoardScroll srId=3 for gameId 20251011SSSK0 (evidence A, read 2026-10-12); en.wikipedia 2025 KBO League season (B corroboration)"
+33331011SSSK02025,Series / Round,Wild Card,Semi-Playoff,"KBO GetScoreBoardScroll srId=3 for gameId 20251011SSSK0 (evidence A, read 2026-10-12); en.wikipedia 2025 KBO League season (B corroboration)"
+33331013SKSS02025,Game Type,Wild Card Game,Semi-Playoff,"KBO GetScoreBoardScroll srId=3 for gameId 20251013SKSS0 (evidence A, read 2026-10-12); en.wikipedia 2025 KBO League season (B corroboration)"
+33331013SKSS02025,Series / Round,Wild Card,Semi-Playoff,"KBO GetScoreBoardScroll srId=3 for gameId 20251013SKSS0 (evidence A, read 2026-10-12); en.wikipedia 2025 KBO League season (B corroboration)"
+33331014SKSS02025,Game Type,Wild Card Game,Semi-Playoff,"KBO GetScoreBoardScroll srId=3 for gameId 20251014SKSS0 (evidence A, read 2026-10-12); en.wikipedia 2025 KBO League season (B corroboration)"
+33331014SKSS02025,Series / Round,Wild Card,Semi-Playoff,"KBO GetScoreBoardScroll srId=3 for gameId 20251014SKSS0 (evidence A, read 2026-10-12); en.wikipedia 2025 KBO League season (B corroboration)"

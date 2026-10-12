@@ -1,6 +1,6 @@
 # Method: current authority
 
-**ACTIVE: MDS-2026.10.12-v11.0 · CR-2026.10.12-R1 · SCV-2026.10.12-v7 · SEL-2026.10.12-v3.** Current allocation and destination are in [CURRENT_STATE](CURRENT_STATE.md). Rules: [CURRENT_RULES](CURRENT_RULES.md).
+**ACTIVE: MDS-2026.10.12-v11.0 · CR-2026.10.12-R2 · SCV-2026.10.12-v7 · SEL-2026.10.12-v3.** Current allocation and destination are in [CURRENT_STATE](CURRENT_STATE.md). Rules: [CURRENT_RULES](CURRENT_RULES.md).
 
 1. Read every control in one authority mode (published main pinned to a SHA, or the local working tree), record revision/time, and disclose differences and gaps.
 2. Verify the event, endpoint, cutoff, known-at availability and actual issue state. Research by about T−60 and freeze after the lineup check. Keep late/historical research separate.
