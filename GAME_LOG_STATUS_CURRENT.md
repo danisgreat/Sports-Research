@@ -1,7 +1,7 @@
 <!-- BEGIN CURRENT RESEARCH QUEUE -->
 # Current canonical research queue
 
-**Next canonical ID: P-580.** Every requested event is retained, regardless of calibration: first as a local working card in the authorised mini (prompts 2 → 1 → 3), then canonically through the prompt-4 import. No card is written to the active combined log directly. *(Clarified 2026-10-12, audit R10: the earlier wording "go directly to the active combined log" described retention, not a bypass of local staging.)* Canonical IDs identify retained cards; performance certification and live/late timing are separate labels.
+**Next canonical ID: P-585.** Every requested event is retained, regardless of calibration: first as a local working card in the authorised mini (prompts 2 → 1 → 3), then canonically through the prompt-4 import. No card is written to the active combined log directly. *(Clarified 2026-10-12, audit R10: the earlier wording "go directly to the active combined log" described retention, not a bypass of local staging.)* Canonical IDs identify retained cards; performance certification and live/late timing are separate labels.
 Active Combined Log: `prediction logs/PREDICTION_LOG_COMBINED_7.md`.
 Freeze: none (custody is the git history of `main`, CURRENT_RULES §9). The last control manifest is `archive/controls/CONTROL_MANIFEST_2026-10-09-3.md`. Current authority: CURRENT_STATE.md, METHOD.md and CURRENT_RULES.md.
 
@@ -61,11 +61,18 @@ Freeze: none (custody is the git history of `main`, CURRENT_RULES §9). The last
 | **P-574** | BASKETBALL / JAPAN B.LEAGUE PREMIER — SeaHorses Mikawa @ Kyoto Hannaryz — 2026-10-11 | `LOCAL-20261011-P-574-BPREMIER-MIK-KYO` | IMPORTED_UNCALIBRATED · FINAL_SETTLED_2026-10-11 · TOP2_ALL_WON · RANK1_UNSTABLE |
 | **P-575** | BASKETBALL / AUSTRALIA NBL — Cairns Taipans @ Illawarra Hawks — 2026-10-11 | `LOCAL-20261011-P-575-NBL-CNS-ILL` | IMPORTED_UNCALIBRATED · FINAL_SETTLED_2026-10-11 · TOP2_ALL_WON · RANK1_UNSTABLE |
 | **P-576** | BASKETBALL / JAPAN B.LEAGUE PREMIER — Sendai 89ers @ Tokyo Sunrockers — 2026-10-11 | `LOCAL-20261011-P-576-BPREMIER-SEN-TOK` | IMPORTED_UNCALIBRATED · FINAL_SETTLED_2026-10-11 · TOP2_SPLIT · RANK1_UNSTABLE |
-| **P-577** | TENNIS / ATP Shanghai Masters — Alexander Bublik vs Brandon Nakashima — 2026-10-11 | `LOCAL-20261011-P-577-ATP-SHA-BUB-NAK` | IMPORTED_UNCALIBRATED · PENDING_EVENT (carried forward) · RANK1_UNSTABLE |
-| **P-578** | BASKETBALL / NBA Preseason — Dallas Mavericks @ Houston Rockets — 2026-10-11 | `LOCAL-20261011-P-578-NBAPRE-DAL-HOU` | IMPORTED_UNCALIBRATED · PENDING_EVENT (carried forward) · RANK1_UNSTABLE |
-| **P-579** | BASKETBALL / Liga ACB — La Laguna Tenerife @ UCAM Murcia — 2026-10-11 | `LOCAL-20261011-P-579-ACB-LLT-UCM` | IMPORTED_UNCALIBRATED · PENDING_EVENT (carried forward) · RANK1_UNSTABLE |
+| **P-577** | TENNIS / ATP Shanghai Masters — Alexander Bublik vs Brandon Nakashima — 2026-10-11 | `LOCAL-20261011-P-577-ATP-SHA-BUB-NAK` | IMPORTED_UNCALIBRATED · SETTLED_SPORTING revision-1 2026-10-13 / TOP2_SPLIT / OPERATOR_UNKNOWN / NOT_CERTIFIED · RANK1_UNSTABLE |
+| **P-578** | BASKETBALL / NBA Preseason — Dallas Mavericks @ Houston Rockets — 2026-10-11 | `LOCAL-20261011-P-578-NBAPRE-DAL-HOU` | IMPORTED_UNCALIBRATED · SETTLED_SPORTING revision-1 2026-10-13 / TOP2_ALL_WON / OPERATOR_UNKNOWN / NOT_CERTIFIED · RANK1_UNSTABLE |
+| **P-579** | BASKETBALL / Liga ACB — La Laguna Tenerife @ UCAM Murcia — 2026-10-11 | `LOCAL-20261011-P-579-ACB-LLT-UCM` | IMPORTED_UNCALIBRATED · SETTLED_SPORTING revision-1 2026-10-13 / TOP2_ALL_WON / OPERATOR_UNKNOWN / NOT_CERTIFIED · RANK1_UNSTABLE |
+| **P-580** | Ice hockey / Czech Tipsport Extraliga · Motor České Budějovice vs Bílí Tygři Liberec · 2026-10-11 (venue date) | `CZE-ELH:2026-27:179863:2026-10-11` | IMPORTED_UNCALIBRATED / SETTLED_SPORTING / TOP2_ALL_WON / RANK1_UNSTABLE / LATE_START_UNVERIFIED / revision-1 / OPERATOR_UNKNOWN / NOT_CERTIFIED |
+| **P-581** | SOCCER / Denmark 3F Superliga 2026–27 · Brøndby IF vs Lyngby BK · 2026-10-11 | `DEN-SUPERLIGA:2026-27:DBU-556151:2026-10-11` | IMPORTED_UNCALIBRATED / SETTLED_SPORTING / TOP2_SPLIT / RANK1_UNSTABLE / LATE_START_UNVERIFIED / revision-1 / OPERATOR_UNKNOWN / NOT_CERTIFIED |
+| **P-582** | SOCCER / English Premier League 2026–27 · Liverpool FC vs Manchester City · 2026-10-11 (venue date) | `EPL:2026-27:ESPN-401879264:2026-10-11` | IMPORTED_UNCALIBRATED / SETTLED_SPORTING / TOP2_ALL_WON / RANK1_UNSTABLE / BUFFERED_ACTUAL_START_NOT_VERIFIED / revision-1 / OPERATOR_UNKNOWN / NOT_CERTIFIED |
+| **P-583** | BASEBALL / Korea KBO 2026 regular season · KT Wiz @ Samsung Lions · 2026-10-12 | `KBO:2026:REGULAR:20261012KTSS0` | IMPORTED_UNCALIBRATED / NO_FORECAST_WITH_TERMINAL_RESULT / SOURCE_CONFLICT_OPEN / LATE_START / revision-1 / OPERATOR_UNKNOWN / NOT_CERTIFIED |
+| **P-584** | Soccer / Mexico Liga Premier Serie A (Group 2, Round 7) · Dragones de Oaxaca vs Guerreros del Pacífico · 2026-10-12 Oaxaca / 2026-10-13 Melbourne | `MEX-LIGA-PREMIER-SERIE-A:2026-27:R7:DRAGONES-OAXACA-GUERREROS-PACIFICO:2026-10-12` | IMPORTED_UNCALIBRATED / PENDING_EVENT / DIAGNOSTIC_ONLY_NOT_PRIMARY / LATE_START_UNVERIFIED / revision-1 / OPERATOR_UNKNOWN / NOT_CERTIFIED |
 
-Highest canonical research ID: **P-579**. Active Combined Log: `prediction logs/PREDICTION_LOG_COMBINED_7.md`.
+Highest canonical research ID: **P-584**. Active Combined Log: `prediction logs/PREDICTION_LOG_COMBINED_7.md`.
+
+**Historical queue snapshot (October 12): superseded by the October 13 current queues below; its capture-breach history is retained.**
 
 **Open queue — executable follow-ups (R38; dated 2026-10-12 about 14:40 AEDT).** Added by framework change 2026-10-12-1. This session did not retrieve any terminal record, so none of these events has been settled here. Each row names who acts next, where and by when.
 
@@ -83,6 +90,22 @@ Unresolved carryover P-523–P-537: `research/verification/closure_2026-10-05/ca
 Local working files are the authority. GitHub main is their publication destination; fetch comparisons do not replace local authoritative files.
 
 P-518–P-522 remain reserved. Mini logs are reference/fallback copies. Verify the next ID by hand: it equals the highest imported ID + 1 (VERIFICATION_PROTOCOL §3).
+
+
+## Current import queues — 2026-10-13
+
+Current next ID P-585, highest P-584; 99 terminal research records / 1 pending in the tracked settlement/import inventory. Source mini is CLOSED_IMPORTED by a new receipt; original ACTIVE footer stays historical and unchanged.
+
+| ID / scope | Queue | Responsible actor | Next source + exact field | Due with timezone | Final-time basis | Last attempt | Automation |
+|---|---|---|---|---|---|---|---|
+| P-584 | PENDING_EVENT | Next user-invoked settlement run | Dragones official calendar / Liga Premier match sheet FT, HT, corners, final state; BeSoccer 2027176995 fallback | 2026-10-14T12:00:00+11:00 PROPOSED_MANUAL | UNKNOWN | Source package 2026-10-13T15:15+11:00, no terminal | NOT_SCHEDULED |
+| P-583 | TERMINAL_UNRESOLVED_EVIDENCE | Next settlement correction review | KT 20261012KTSS0 detailed line score; compare KT/ Yonhap reported 4–2 vs detailed cache 4–1 | 2026-10-14T12:00:00+11:00 PROPOSED_MANUAL | UNKNOWN | Same source package; conflict retained | NOT_SCHEDULED |
+| P-581 | TERMINAL_UNRESOLVED_EVIDENCE_DIAGNOSTIC | Next evidence review | DBU/Opta field-owner corners 8/4 corroboration | 2026-10-14T12:00:00+11:00 PROPOSED_MANUAL | UNKNOWN | Same source package, secondary total 12 | NOT_SCHEDULED |
+| P-582 | TERMINAL_UNRESOLVED_DEFINITION_DIAGNOSTIC | Next evidence review | PL wonCorners 5/6 and frozen operator field/action; TNTsports secondary | 2026-10-14T12:00:00+11:00 PROPOSED_MANUAL | UNKNOWN | Same source package, secondary total 11 | NOT_SCHEDULED |
+| P-577–P-584 (8 IDs) | OPERATOR_UNKNOWN | User / next review if applicable | Exact written operator action/void/abandonment terms by contract | USER_SUPPLIED if applicable | N/A | No terms supplied | NOT_SCHEDULED |
+| P-577–P-583 (7 terminal IDs) | FINAL_TIME_SLA_NOT_VERIFIED | Next evidence review | Actual full-time timestamps and original capture receipts, if recoverable | At next review; no claimed SLA PASS | UNKNOWN | Source package did not preserve verified final wall-clock | NOT_SCHEDULED |
+
+Counts: 1 pending event; 3 terminal field-specific evidence tasks; 1 operator group over 8 IDs; final-time evidence unknown over 7 terminal records. Source-companion completeness is a separate 4-document custody limitation. Carryover original-core comparison resolved for P-577–P-579; no duplicate originals imported. Full routes, dispositions and receipts: [research/verification/mini_import_P-577_P-584_2026-10-13-1/UNRESOLVED_POST_IMPORT.md](research/verification/mini_import_P-577_P-584_2026-10-13-1/UNRESOLVED_POST_IMPORT.md). No sporting source was fetched by this import and nothing is performance-certified. Earlier historical settlement registers/queues remain retained above and below.
 
 <!-- END CURRENT RESEARCH QUEUE -->
 

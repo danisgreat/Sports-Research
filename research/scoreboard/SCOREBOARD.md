@@ -1,5 +1,29 @@
 # Scoreboard: current measurement and preserved historical results
 
+## Current import measurement — 13 October 2026 (SCV-2026.10.12-v7)
+
+**Paired baseline comparison:** 4 original primary rows on P-581/P-582, 2 v10 events, 1 ISO event week (2026-W41): card Brier 0.187418187, frozen baseline Brier 0.188131225, paired difference -0.000713038; card log loss 0.554631889, baseline log loss 0.550530220. Event-equal and week-equal Brier differences both -0.000713038 because each of the two events has two paired rows and both are in the same week. **INSUFFICIENT_EVIDENCE:** one week, below the framework's eight-week minimum; no validated incremental skill or clean prospective certification. Baseline provenance/known-at and actual-start gaps remain frozen.
+
+| Original cohort | Retained events in this packet | Original numeric primary cards | Primary W / L / PUSH / VOID / UNRESOLVED | Primary Brier | Primary log loss | Paired baseline coverage |
+|---|---:|---:|---|---:|---:|---|
+| Pre-v10 carryovers P-577–P-579 | 3 | 3 | 5 / 1 / 0 / 0 / 0 | 0.143715020 | 0.473619130 | 0/6 primary rows |
+| v10 P-580–P-583 | 4 | 3 | 5 / 1 / 0 / 0 / 0 | 0.129632290 | 0.411696198 | 4/6 primary rows; 2/3 numeric events |
+| v11 P-584 | 1 | 0 | 0 / 0 / 0 / 0 / 0 | NOT_COMPUTABLE | NOT_COMPUTABLE | 0 eligible primary rows; pending diagnostic event |
+
+Packet custody coverage: 8 events, 6 original numeric primary cards (12 primary rows), 1 NO_FORECAST (P-583), 1 numeric diagnostic-only card (P-584), 7 terminal records, 1 pending event. The source footer calls 4 of its 5 new cards numeric: 3 have original primary slates and the fourth is diagnostic-only. Request coverage is NOT_COMPUTABLE for the legacy mini-log-6 intake; do not infer 100% request retention. Full original row inventory: [IMPORTED_ROW_INVENTORY.csv](../verification/mini_import_P-577_P-584_2026-10-13-1/IMPORTED_ROW_INVENTORY.csv).
+
+**Evidence/definitions:** primary A rows 10 (9 W/1 L), B rows 2 (1 W/1 L), C/E/X primary contributions 0. Headline A/B sporting view = sensitivity view, 10W/2L; all rows use their FROZEN_FRAMEWORK_CONVENTION and remain OPERATOR_UNKNOWN / NOT_CERTIFIED. This packet-only arithmetic is a reconciliation, never a pooled policy cohort. Informational original ranks 3–4: 10W/2L (pre-v10 5W/1L; v10 5W/1L); not primary wins. P-584's four ranked diagnostics, P-583's late numeric addendum and all other post-issue/shadow prices are excluded from primary scoring.
+
+**Ranks and timing:** each three-card scored cohort has Rank 1 2W/1L and Rank 2 3W/0L; Hit@2 3/3 and both-loss frequency 0/3 in each. P-578/P-579 and P-581 have mechanically protected primary pairs (three of six); P-577/P-580/P-582 do not. All six source primary cards record RANK1_UNSTABLE; no PASS cohort is created. Pre-v10 P-577 retains its historical PREGAME label with estimated schedule/actual first ball unknown; P-578/P-579 are LATE_START_UNVERIFIED. V10 P-580/P-581 are late; P-582 is BUFFERED by scheduled lead but actual start remains NOT_VERIFIED. V10 P-583 is NO_FORECAST, with its timing correction LATE_START retained. V11 P-584 is LATE_START_UNVERIFIED and NOT_PRIMARY. No original label is upgraded by custody import.
+
+**Historical reconciliation, preserving v5 literal conventions:** older 91 scored forecast cards through P-576 have 113W/61L plus 8 legacy VOID top-two slots. Effective newly settled pre-v10 P-577–P-579 add 5W/1L, so current historical pre-v10 inventory is **94 forecast cards, 118W/62L, 180 decisive rows (65.6%), 8 legacy VOID slots**. Rank 1 58W/33L/3V; Rank 2 60W/29L/5V. Historical RANK1_UNSTABLE cohort becomes 23 cards, 39W/7L, 46 decisive rows (84.8%); Rank 1 18W/5L, Rank 2 21W/2L; legacy classes 16 ALL_WON / 7 SPLIT / 0 ALL_LOST. UNKNOWN_GATE remains 71 cards, 79W/55L. Historical info ranks 3–4: prior 106W/67L + 5W/1L = 111W/68L. Original 2026-10-11 scoreboard snapshot below stays unchanged. Legacy VOID/no-evidence conventions, including P-418, remain literal and require a separate settlement-review task; no regrading or v7 headline recoding occurs here. [Historical primary reconciliation](../verification/mini_import_P-577_P-584_2026-10-13-1/HISTORICAL_PRIMARY_RECONCILIATION.csv) rebuilds every one of the older 182 primary slots; the old settled tables lack usable same-row frozen baselines/probabilities, so no historical proper score is invented.
+
+Expected-vs-final totals were independently recomputed in the import receipt on the exact sport endpoints: P-577 +10.63 games / +1.720 SD; P-578 +18.63 points / +0.781 SD; P-579 −5.31 points / −0.265 SD; P-580 +1.3333 goals / +0.571 SD; P-581 +4.056 goals / +2.364 SD; P-582 −0.246 goals / −0.137 SD. Units are heterogeneous and never averaged together. P-583 original expected scores NOT_COMPUTED; P-584 lacks a terminal final. Predictive interval coverage NOT_COMPUTABLE. No shadow result absent from the settlement is manufactured.
+
+Queues: [UNRESOLVED_POST_IMPORT.md](../verification/mini_import_P-577_P-584_2026-10-13-1/UNRESOLVED_POST_IMPORT.md): 1 pending event, 3 terminal field tasks, operator definitions over 8 IDs, final-time/SLA evidence over 7 terminal records, 4 missing companion documents. No automation scheduled; no record is performance-certified.
+
+## Preserved release and historical scoreboard snapshot
+
 ## v10 prospective measurement (SCV-2026.10.11-v6)
 
 At the October 11 framework release: **0 v10 issued cards; 0 paired-baseline events; 0 evaluated weeks; paired Brier/log-loss skill NOT_COMPUTABLE.** No historical baseline, timing or shadow is backfilled. Future updates report baseline-relative proper scores, expected-score accuracy and requested/issued/numeric/qualitative/NO_FORECAST/pending/unresolved coverage by original policy, timing, gate and evidence. See [scoring definitions](../../SCORING_AND_VALIDATION.md) and [implementation status](../verification/framework_change_2026-10-11-1/IMPLEMENTATION.md).

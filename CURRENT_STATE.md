@@ -15,12 +15,12 @@
 | Mini-log format | `mini-log-7` (in-progress `mini-log-2` through `mini-log-6` retain their format) |
 | Settlement format | `mini-settlement-6` (earlier settlement formats remain accepted) |
 | Freeze | None. Custody is the git history of `main` (CURRENT_RULES §9). Cards record the HEAD SHA they read. The last control manifest, `CONTROL_MANIFEST_2026-10-09-3.md`, is in [archive/controls/](archive/controls/). |
-| Highest committed canonical ID | **P-579** |
-| Next canonical ID | **P-580** (equal to the line in GAME_LOG_STATUS_CURRENT.md) |
+| Highest committed canonical ID | **P-584** |
+| Next canonical ID | **P-585** (equal to the line in GAME_LOG_STATUS_CURRENT.md) |
 | Reserved IDs | P-518 to P-522 |
 | Active Combined Log | [prediction logs/PREDICTION_LOG_COMBINED_7.md](prediction%20logs/PREDICTION_LOG_COMBINED_7.md) |
 | Previous parts | Parts 1 to 6, immutable; Part 6 keeps its original P-518 to P-522 source block |
-| Final settlement register | All 72 event records through P-556 are final-settled: [final_settlement_2026-10-09](research/verification/final_settlement_2026-10-09/REPORT.md). P-557 to P-576 were imported final-settled on 2026-10-11; P-577 to P-579 were imported as `PENDING_EVENT` and carry forward to the next mini (open carryover 3): [mini_import_P-556_P-579_2026-10-11](research/verification/mini_import_P-556_P-579_2026-10-11/CANONICAL_IMPORT_REPORT.md). No record is performance-certified. |
+| Final settlement register | Historical 72 records through P-556 and P-557–P-576 retain final settlements. P-577–P-583 sporting observations/revisions now imported; P-583 remains NO_FORECAST with source conflict. **99 terminal research records, 1 pending (P-584)** in the tracked final-settlement/import inventory; 3 terminal field-specific evidence tasks, operator action unknown over the 8 packet events and final-time/SLA unknown on 7 new terminal records. [October 13 import](research/verification/mini_import_P-577_P-584_2026-10-13-1/CANONICAL_IMPORT_REPORT.md). No record is performance-certified. |
 
 ## Selection rules (provisional until the prospective window completes)
 
@@ -30,7 +30,7 @@
 
 ## Scoreboard
 
-- **v10/v11 prospective measurement:** 0 issued v10 or v11 cards at this release; paired baseline-relative skill NOT_COMPUTABLE. No old card is relabelled or given a backfilled baseline. Implementation and pending work: [2026-10-12-1](research/verification/framework_change_2026-10-12-1/IMPLEMENTATION.md), [2026-10-11-1](research/verification/framework_change_2026-10-11-1/IMPLEMENTATION.md).
+- **Current v10/v11 import measurement (13 October):** v10 P-580–P-583 = 4 retained events (3 numeric primary, 1 NO_FORECAST), primary 5W/1L, baseline coverage 4/6 rows on 2 events in 1 ISO week; paired Brier card 0.187418187 vs baseline 0.188131225 (difference -0.000713038), INSUFFICIENT_EVIDENCE. V11 P-584 = 1 pending diagnostic-only event, zero eligible primary rows. Historical pre-v10 P-577–P-579 add 5W/1L; current historical inventory 94 forecast cards, 118W/62L plus 8 legacy VOID slots, 65.6% decisive rate; historical Rank 1 58W/33L/3V, Rank 2 60W/29L/5V. The 0-card v10/v11 release snapshot was dated to the framework release and is superseded for current counts by this import; no old card is relabelled or baseline backfilled. Full scoring/queue provenance: [import](research/verification/mini_import_P-577_P-584_2026-10-13-1/CANONICAL_IMPORT_REPORT.md). Clean prospective predictive skill remains unestablished; nothing is performance-certified.
 - **Historical v5 snapshot follows:** original cohorts and figures remain unchanged; these are descriptive, not prospective v10 evidence.
 
 Full tables: [research/scoreboard/SCOREBOARD.md](research/scoreboard/SCOREBOARD.md).

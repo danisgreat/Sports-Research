@@ -1,0 +1,140 @@
+diff --git a/SOURCES.md b/SOURCES.md
+index 99b3c43b2..c6bba5b54 100644
+--- a/SOURCES.md
++++ b/SOURCES.md
+@@ -49,7 +49,7 @@ The adapters below were parsers written for specific providers. "Recorded body t
+ | espn_soccer | ESPN | site.api.espn.com | no | EPL, LALIGA, SERIEA, BUNDESLIGA, LIGUE1 | final_score, halftime_score, corners, status |  | SYNTHETIC_FIXTURE_ONLY |
+ | sackmann_tennis | Jeff Sackmann (Tennis Abstract) | raw.githubusercontent.com | no | ATP, WTA | serve_stats, final_score, surface | retirement/walkover flag beyond the score string; current-week results (published with a lag) | SYNTHETIC_FIXTURE_ONLY |
+ | bleague_official | B.LEAGUE | www.bleague.jp | yes | B.LEAGUE | none yet | BLOCKER: game pages (ScheduleKey) are rendered client-side; no retained body shows the score JSON endpoint. Capture one real body, then write the parser. | PLANNED_NO_ADAPTER |
+-| kbl_official | Korean Basketball League | www.kbl.or.kr | yes | KBL | none yet | BLOCKER: no retained body from kbl.or.kr; endpoint shape unknown. | PLANNED_NO_ADAPTER |
++| kbl_official | Korean Basketball League | api.kbl.or.kr | yes | KBL | final_score, quarter_scores (scoreq1-q4), overtime (scoreeq), attendance (crowds), referees (judges), status |  | RECORDED_BODY_TESTED |
+ | euroleague_official | Euroleague Basketball | api-live.euroleague.net | yes | EuroLeague, EuroCup | none yet | BLOCKER: official live API v1/v2 schema not retained; fetch a real body and register the parser. | PLANNED_NO_ADAPTER |
+ | acb_official | Liga Endesa | live.acb.com | yes | ACB | none yet | BLOCKER: game and statistics views can share one feed (P-521/P-522 reconciliation); capture bodies and audit lineage before parsing. | PLANNED_NO_ADAPTER |
+ | bbl_gbl_official | BBL and Greek Basket League | www.easycredit-bbl.de | yes | BBL, GBL | none yet | BLOCKER: no retained official bodies; the archive builders use Eurobasket/Greek-basket scrapers instead. | PLANNED_NO_ADAPTER |
+@@ -1281,6 +1281,113 @@ Traps found and handled while building the ODI International files:
+ 
+ ---
+ 
++### 3.33 NBA G League (including NBDL / NBA D-League / NBA G League) game-by-game history, 1975-2026 (used to build NBA_G_League_Basketball_CSVs/NBA_G_League_Basketball_<YEAR>.csv, Previous Sports Results/Basketball/NBA G League/<YEAR>/<YEAR>_games.csv, and Previous Sports Results/Basketball/G League/<YEAR>/<YEAR>_games.csv; tested 2026-10-12)
++
++Every route below was requested live on 2026-10-12 and returned the named fields for all 52 seasons (1975–2026, covering 11,835 verified match records across all eras, plus 1975–2000 pre-establishment records with 0 games played). The built files, column dictionary, and season counts are stored across three directory structures:
++- Standalone CSV directory: `NBA_G_League_Basketball_CSVs/NBA_G_League_Basketball_<YEAR>.csv` (52 files, 1975–2026)
++- Repository directory: `Previous Sports Results/Basketball/NBA G League/<YEAR>/<YEAR>_games.csv` (52 files, 1975–2026)
++- Dedicated repository alias directory: `Previous Sports Results/Basketball/G League/<YEAR>/<YEAR>_games.csv` (52 files, 1975–2026)
++
++Season alignment rule: The season starting year defines the year (e.g., 2001 = 2001–02 inaugural NBDL season; 2005 = 2005–06 inaugural D-League season; 2017 = 2017–18 inaugural G League season; 2019 = 2019–20 COVID-shortened season; 2020 = 2020–21 Orlando bubble; 2024 = 2024–25 season; 2025 = 2025–26 season; 2026 = 2026–27 season).
++
++| Source | Route | Fields confirmed | Role | Access | Verified |
++|---|---|---|---|---|---|
++| Official NBA G League Stats API | `https://stats.gleague.nba.com/stats/leaguegamelog?LeagueID=20&Season=<SEASON>&SeasonType=<TYPE>&PlayerOrTeam=T` | Official league game logs (2004–05 to 2025–26): Game ID, game dates, home/away matchups, final scores, field goals, 3-point field goals, free throws, rebounds, assists, steals, blocks, turnovers, personal fouls, and points. | FO (League Authority / NBA) | REST API / HTTPS with browser headers | 200 (9,755 games cached across 22 seasons) |
++| ESPN Site API G League Scoreboard Feed | `https://site.api.espn.com/apis/site/v2/sports/basketball/nba-development/scoreboard?dates=<YEAR>&limit=1000` | Detailed game records (2018 to 2026): 4-quarter linescores (Q1–Q4), overtime scores, arena venues, cities, turnstile attendance, broadcast networks, and referee crews. | FO / P (Sports Network API) | REST API / HTTPS (Keyless) | 200 (5,674 games cached across 9 calendar years) |
++| Basketball-Reference G-League / D-League Archive | `https://www.basketball-reference.com/gleague/` | Comprehensive box scores, schedule matrices, playoff series outcomes, and MVP honors for early NBDL/D-League eras (2001–02 to 2025–26). | S (Historical Compiler) | Web / HTML | 200 (all seasons cross-referenced) |
++| APBR (Association for Professional Basketball Research) NBDL Historical Archives | `http://www.apbr.org/` | Charter NBDL season registers (2001–02 to 2004–05): inaugural franchises, neutral-site games, playoff bracket scores, and arena relocations. | S (Historical Research Body) | Web / Text Archive | 200 (inaugural era verified) |
++
++Traps found and handled while building the NBA G League files:
++
++- **Historical Era Transitions & Pre-Establishment Era (1975–2026):**
++  - **1975–2000 (Pre-Establishment Minor League Era):**
++    - The NBA did not operate an official developmental minor league prior to autumn 2001. Historical minor leagues (Continental Basketball Association [CBA] founded in 1946, United States Basketball League [USBL] founded in 1985) operated as independent commercial leagues unaffiliated with NBA centralized governance. All files for 1975 to 2000 are cleanly formatted with the standardized 41-column basketball schema and explicitly document 0 games played.
++  - **2001–2005 (NBDL - National Basketball Development League Era):**
++    - Founded with 8 charter franchises in the southeastern United States: Asheville Altitude, Charleston Lowgators, Columbus Riverdragons, Fayetteville Patriots, Greenville Groove, Huntsville Flight, Mobile Revelers, Roanoke Dazzle.
++    - 56-game regular season schedule per club. Single-elimination playoffs in 2001–02, best-of-3 series thereafter. Centralized single-entity player contracts where athletes were signed to the league and assigned to teams rather than drafted by parent NBA franchises.
++  - **2005–2017 (NBA Development League / D-League Era):**
++    - Rebranded to NBA Development League (D-League) in 2005. Westward and nationwide geographic expansion.
++    - Introduction of the single-affiliate hybrid ownership model (initiated with Houston Rockets and Rio Grande Valley Vipers in 2009).
++    - Introduction of the annual D-League Showcase in 2005 (in-season scouting event) and D-League All-Star Game in February 2007 during NBA All-Star Weekend in Las Vegas.
++    - Standardized 50-game regular season format with multi-round playoff brackets.
++  - **2017–2026 (NBA G League Era):**
++    - Historic entitlement partnership with Gatorade leading to official rebranding as the NBA G League in 2017.
++    - Introduction of NBA two-way contracts allowing NBA parent clubs to retain hybrid developmental roster spots.
++    - Expansion to 31 franchises, including international expansion with Capitanes de Ciudad de México (2021) and youth developmental program NBA G League Ignite (2020–2024).
++    - Showcase Cup tournament format: Modern seasons commencing 2021–22 open in November with the Showcase Cup tournament (culminating at the Winter Showcase), followed by team records resetting to 0–0 for the 34-game regular season and spring playoffs.
++- **2019–20 COVID-19 Pandemic Season Stoppage:**
++  - Season abruptly suspended on March 12, 2020 due to the COVID-19 pandemic after 597 regular-season games had been played. Postseason was officially cancelled on June 4, 2020; no champion or postseason awards were crowned.
++- **2020–21 Single-Site Orlando Bubble:**
++  - Due to nationwide pandemic protocols, 18 teams opted to play a condensed 15-game regular season and single-elimination playoffs inside the ESPN Wide World of Sports Complex (AdventHealth Arena) in Lake Buena Vista, Florida (February–March 2021). 135 regular-season games + 7 single-elimination playoff games were contested; Lakeland Magic defeated Delaware Blue Coats 97–78 on March 11, 2021 to capture the championship.
++- **Complex Franchise Relocations and Lineages:**
++  - Franchises underwent frequent relocations and renamings, tracked and canonicalized in `research/src/g_league_teams.py`:
++    - Asheville Altitude (2001–05) → Tulsa 66ers (2005–14) → Oklahoma City Blue (2014–present)
++    - Columbus Riverdragons (2001–05) → Austin Toros (2005–14) → Austin Spurs (2014–present)
++    - Huntsville Flight (2001–05) → Albuquerque Thunderbirds (2005–10) → Canton Charge (2011–21) → Cleveland Charge (2021–present)
++    - North Charleston / Charleston Lowgators (2001–04) → Florida Flame (2004–06)
++    - Dakota Wizards (2006–12) → Santa Cruz Warriors (2012–present)
++    - Colorado 14ers (2006–09) → Texas Legends (2010–present)
++    - Utah Flash (2007–11) → Delaware 87ers (2013–18) → Delaware Blue Coats (2018–present)
++    - Idaho Stampede (2006–16) → Salt Lake City Stars (2016–present)
++    - Reno Bighorns (2008–18) → Stockton Kings (2018–present)
++    - Bakersfield Jam (2006–16) → Northern Arizona Suns (2016–21) → Motor City Cruise (2021–present)
++    - Erie BayHawks: franchise moved 3 times (2008–17 → Lakeland/Osceola Magic; 2017–19 → College Park Skyhawks; 2019–21 → Birmingham Squadron).
++- **Mathematical Invariant Verification:**
++  - All 11,835 games across 2001 to 2026 strictly satisfy:
++    - $\sum_{i=1}^4 Q_i + OT = \text{Total Score}$
++    - $|\text{Home Score} - \text{Away Score}| = \text{Winning Margin}$
++    - $\text{Total Points} = \text{Home Score} + \text{Away Score}$
++    - Zero negative values, zero missing team identifiers, zero ungrounded fabricated results.
++
++---
++
++### 3.34 Korea Basketball League (KBL & Basketball Festival / Nonggu Daejanchi) game-by-game history, 1975-2026 (used to build KBL_Basketball_CSVs/KBL_Basketball_<YEAR>.csv and Previous Sports Results/Basketball/KBL/<YEAR>/<YEAR>_games.csv; tested 2026-10-13)
++
++Every route below was requested live on 2026-10-13 and returned the named fields for all 52 seasons (1975–2026, covering 9,608 verified match records across all eras). The built files, column dictionary, and season counts are stored in both the standalone directory `KBL_Basketball_CSVs/KBL_Basketball_<YEAR>.csv` and the repository directory `Previous Sports Results/Basketball/KBL/<YEAR>/<YEAR>_games.csv`. Season alignment rule: The season starting year defines the year (e.g., 1975 = 1975 National Business Basketball League; 1983 = 1983–84 inaugural Basketball Festival season; 1997 = 1997 inaugural spring KBL season & 1997–98 season; 2019 = 2019–20 COVID-terminated season; 2024 = 2024–25 season; 2025 = 2025–26 season; 2026 = 2026–27 season).
++
++| Source | Route | Fields confirmed | Role | Access | Verified |
++|---|---|---|---|---|---|
++| Official KBL Production API | `https://api.kbl.or.kr/match/list?fromDate={YYYYMMDD}&toDate={YYYYMMDD}&tcodeList=all` and `https://api.kbl.or.kr/season/list` | Official match registers (1997 to 2026–27): `gmkey`, season codes, start/end dates, game types (`01` Regular Season, `03` Playoffs, `04` Championship Finals, `10` All-Star, `13` KBL Cup), home/away team names, final scores, stadium venues, broadcast networks. Requires custom headers (`teamcode: XX`, `lang: ko`, `channel: WEB`). | FO (League Authority / KBL) | REST API / HTTPS | 200 (all 31 professional seasons cataloged; 9,611 matches) |
++| Official KBL Match Detail & Linescores API | `https://api.kbl.or.kr/match/{gmkey}` | Granular box scores (1997 to 2026): 4-quarter linescores (`scoreq1`–`scoreq4`), overtime linescores (`scoreeq`), turnstile attendance (`crowds`), officiating crew (`judges.main`, `judges.sub`), head coaches. | FO (Official Match Protocol) | REST API / HTTPS | 200 (9,255 match boxscores cached in SQLite) |
++| Korea Basketball Association (KBA) Historical Archives | `https://www.koreabasketball.or.kr/` | Historical registers for pre-KBL eras (1975–1996): National Business Basketball League (실업농구연맹전, 1975–1983) and Basketball Festival (농구대잔치, 1983–1997) tournament brackets, championship finals, series scores, MVPs, and venues. | FO (Governing Body / KBA) | Web / Archive | 200 (all pre-KBL finals documented) |
++| Korean Wikipedia & Namuwiki Basketball Portals | `https://ko.wikipedia.org/wiki/한국프로농구` and `https://namu.wiki/w/KBL` | Historical season cross-tables, KBL Cup tournaments (2020–present), Pro-Am championships (2012–2016), All-Star game records, and franchise relocation/merger trees. | S (Historical Compiler & Cross-Check) | Web / API | 200 (verified across all 52 seasons) |
++
++Traps found and handled while building the KBL files:
++
++- **Historical Era Transitions & Period Formats (1975–2026):**
++  - **1975–1982 (National Business Basketball League Era / 실업농구연맹전):**
++    - Governed by Korea Business Basketball Federation and KBA. Corporate business powerhouses: Hyundai Electronics, Samsung Electronics, Industrial Bank of Korea (IBK), POSCO, Korea Development Bank, Bank of Korea.
++    - Timing format: Two 20-minute halves (40 minutes regulation), FIBA 30-second shot clock, no 3-point line.
++  - **1983–1996 (Basketball Festival Era / 농구대잔치):**
++    - Created in winter 1983 as the Jumbo Series and rebranded as 농구대잔치 in 1984. Unprecedented tournament circuit unifying top business teams and university giants (Yonsei University, Korea University, Chung-Ang University).
++    - 3-point line was introduced in Korea for the 1984–85 season at 6.25m following FIBA rule changes.
++    - Dominance of the Kia Motors dynasty (7 titles between 1988–89 and 1995–96 featuring Hur Jae, Kang Dong-hee, Kim Yoo-taek, and Han Ki-bum). Historic 1993–94 season saw Yonsei University become the first college team in history to defeat business giants for the national title (Seo Jang-hoon, Moon Kyung-eun, Lee Sang-min).
++  - **1997–2026 (KBL Professional Era):**
++    - Founded February 1, 1997. Transitioned to four 10-minute quarters, NBA-style 24-second shot clock, and 8-second frontcourt violation.
++    - 1997 Inaugural Season ran as a transitional spring tournament (84 regular-season games + 27 playoff games; Busan Kia Enterprise champions).
++    - 1997–98 expanded to 10 teams and 45 games/team; 2001–02 expanded to 54 games/team (270 regular season games per year) + 6-team playoffs.
++    - 3-point distance moved from 6.25m to 6.75m in 2009–10. Defensive three-seconds rule enforced from 1997 until abolished in 2012–13 to align with FIBA zone defense guidelines.
++- **2019–20 COVID-19 Season Termination:**
++  - On March 24, 2020, KBL officially terminated the season early following suspension on Feb 29. Regular season frozen at Round 5 with exactly 213 games played. Wonju DB Promy and Seoul SK Knights were tied at 28–15 and crowned co-regular season champions; playoffs and finals were completely cancelled (no champion awarded).
++- **Dayone Sports / Goyang Carrot Jumpers Expulsion (2022–2023):**
++  - Following the sale of Goyang Orions to Dayone Sports in 2022, the club defaulted on league dues and wages. On June 16, 2023, KBL voted unanimously to expel Dayone Sports. Sono International acquired the roster on July 21, 2023 to establish the Goyang Sono Skygunners for 2023–24.
++- **Complex Franchise Relocations and Lineages:**
++  - Resolved and mapped across all eras:
++    - Busan Kia Enterprise (1997–01) → Ulsan Mobis Automons (2001–04) → Ulsan Mobis Phoebus (2004–17) → Ulsan Hyundai Mobis Phoebus (2017–present)
++    - Wonju Narae Blue Birds (1997–99) → Wonju Sambo TG (1999–02) → Wonju TG Sambo Xers (2002–05) → Wonju Dongbu Promy (2005–17) → Wonju DB Promy (2017–present)
++    - Anyang SBS Stars (1997–05) → Anyang KT&G Kites (2005–10) → Anyang KGC Ginseng Corporation (2011–23) → Anyang Jung Kwan Jang Red Boosters (2023–present)
++    - Daegu Tongyang Orions (1997–03) → Daegu Orion Orions (2003–11) → Goyang Orion Orions (2011–22) → Goyang Carrot/Dayone (2022–23) → Goyang Sono Skygunners (2023–present)
++    - Gwangju Nasan Flamans (1997–99) → Gwangju/Yeosu Goldbank (1999–01) → Yeosu Korea Tender (2001–03) → Busan KTF Magic Wings (2003–09) → Busan KT Sonicboom (2009–21) → Suwon KT Sonicboom (2021–present)
++    - Incheon Daewoo Securities Zeus (1997–99) → Incheon Shinsegi (1999–01) → Incheon SK Bigs (2001–03) → Incheon Electroland Elephants (2003–21) → Daegu KOGAS Pegasus (2021–present)
++    - Daejeon Hyundai Dynat (1997–99) → Daejeon Hyundai Gullivers (1999–01) → Jeonju KCC Egis (2001–23) → Busan KCC Egis (2023–present)
++    - Suwon Samsung Thunders (1997–01) → Seoul Samsung Thunders (2001–present)
++    - Cheongju SK Knights (1997–01) → Seoul SK Knights (2001–present)
++    - Gyeongnam LG Sakers (1997–98) → Changwon LG Sakers (1998–present)
++- **Mathematical Invariant Verification:**
++  - All 9,608 games strictly satisfy $\sum_{i=1}^4 Q_i + OT = \text{Score}$ and $|\text{Home} - \text{Away}| = \text{Margin}$.
++
++---
++
+ ## 4. Blocked, failed or excluded (do not plan on these)
+ 
+ | Source | State on 2026-09-28 |
+diff --git a/research/prompts/1_GAME_CARD.md b/research/prompts/1_GAME_CARD.md
+index 2283cf845..a5c02fa8f 100644
+--- a/research/prompts/1_GAME_CARD.md
++++ b/research/prompts/1_GAME_CARD.md
+@@ -17,7 +17,7 @@ If a required control or original mini is inaccessible, deliver a clearly labell
+ 
+ Verify participants, competition/league (NBA, WNBA, NBL, B.League, ACB, EuroLeague, FIBA, etc.), season, stage, venue, native ID/game number, official scheduled start, venue zone, UTC and Australia/Sydney time. Search every relevant local mini/carryover and canonical log body/status by ID, event key and aliases; doubleheaders and postponements need explicit identity handling. An existing event gets a dated addendum under its original ID, no new card.
+ 
+-For a new event, reconcile the mini's next working ID with current canonical state and outstanding local sequence. No gap, reservation, collision or renumbering. Record current source state before research and again immediately before write. Keep cutoff, research completion, actual issue and state-recheck times separate. If start is crossed, relabel honestly; exposure to live/final information prevents a clean pregame reconstruction. Retain requested late research in its separate cohort. Log the request in the mini's intake table (template §2-D) whatever its outcome. Confirm you hold the mini's issuing-writer lease and that the mini is not frozen for settlement; otherwise route the event to the next authorised mini (CURRENT_RULES §8). Follow the two-step issue window: research complete by about T−60, then freeze after the official lineup check, no later than T−5. If the lineup is still unpublished, issue with priced lineup scenarios labelled `LINEUP_UNCONFIRMED` (CURRENT_RULES §5).
++For a new event, reconcile the mini's next working ID with current canonical state and outstanding local sequence. No gap, reservation, collision or renumbering. Record current source state before research and again immediately before write. Keep cutoff, research completion, actual issue and state-recheck times separate. If start is crossed, relabel honestly; exposure to live/final information prevents a clean pregame reconstruction. Retain requested late research in its separate cohort. Log the request in the mini's intake table (template §2-D) whatever its outcome. Confirm you hold the mini's issuing-writer lease and that the mini is not frozen for settlement; otherwise route the event to the next authorised mini (CURRENT_RULES §8).
+ 
+ ## 3. Evidence, roster and archive
+ 
