@@ -2,7 +2,7 @@
 
 A sports-only forecasting framework made of documents. It tells a research agent how to forecast, log and settle individual games across ten sports, how to use the archive of past results, and how to learn from the outcomes. **Everything a card uses is Markdown, with CSV for the data and plain text for preserved originals.** There is no program to run and no JSON to open; the one exception is the maintainer model workshop [`ml/`](ml/README.md), which cards never read or depend on.
 
-**What is true now** (method, next ID, active log, scoreboard): [CURRENT_STATE.md](CURRENT_STATE.md). Method **MDS-2026.10.12-v11.0**, control **CR-2026.10.14-R3**, scoring **SCV-2026.10.12-v7**, selection **SEL-2026.10.12-v3**, prompts **P-2026.10.14-v11.3** (mini-log-7). [October 12 implementation map](research/verification/framework_change_2026-10-12-1/IMPLEMENTATION.md) (audit R01–R38 and prediction items PR-01–PR-10) · [October 11 roadmap](research/verification/framework_change_2026-10-11-1/IMPLEMENTATION.md). Active files and usable data: [ACTIVE_FILE_INDEX.md](ACTIVE_FILE_INDEX.md). The 2026-10-09 runtime remains removed. Development models from the `ml/` workshop are `HISTORICAL_DEVELOPMENT` only; no model is a card input and nothing is certified.
+**What is true now** (method, next ID, active log, scoreboard): [CURRENT_STATE.md](CURRENT_STATE.md). Method **MDS-2026.10.15-v12.0**, control **CR-2026.10.15-R1**, scoring **SCV-2026.10.15-v8**, selection **SEL-2026.10.12-v3**, prompts **P-2026.10.15-v12.0** (mini-log-7). [October 12 implementation map](research/verification/framework_change_2026-10-12-1/IMPLEMENTATION.md) (audit R01–R38 and prediction items PR-01–PR-10) · [October 11 roadmap](research/verification/framework_change_2026-10-11-1/IMPLEMENTATION.md). Active files and usable data: [ACTIVE_FILE_INDEX.md](ACTIVE_FILE_INDEX.md). The 2026-10-09 runtime remains removed. Development models from the `ml/` workshop are `HISTORICAL_DEVELOPMENT` only; no model is a card input and nothing is certified.
 
 ## Rules in force
 
@@ -60,3 +60,7 @@ Forecasts here are uncalibrated analyst scenarios. The framework tests its own r
 ## October 14 ML review and complete prompts
 
 [Implementation review](research/verification/framework_change_2026-10-14-5/ML_WORKSHOP_REVIEW.md) · [full prompts 1–8](research/prompts/README.md) · [individual game prompt with eleven sport/upcoming-game sections](research/prompts/1_GAME_CARD.md) · [artifact admission](research/model_shadow/ARTIFACT_PROVENANCE.md). Useful development mechanisms exist, but prospective predictive skill and RL benefits remain unestablished. Control CR-2026.10.14-R3; suite P-2026.10.14-v11.3.
+
+## Research completion timing (15 October 2026)
+
+[TIMING_RESEARCH_PROTOCOL](TIMING_RESEARCH_PROTOCOL.md) replaces scheduled lead deadlines with comprehensive research completion for every sport. Research may continue after play starts. Verified pre-start inputs with no outcome exposure can be CLEAN_PRE_START_INPUTS, while post-start issue and genuinely prospective pre-start release remain separate. [Current prompts](research/prompts/README.md) use P-2026.10.15-v12.0; no old card or model is upgraded.

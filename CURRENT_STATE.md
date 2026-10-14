@@ -4,16 +4,18 @@
 
 ## Authority
 
+**Timing update (15 October 2026):** [TIMING-2026.10.15-v1](TIMING_RESEARCH_PROTOCOL.md) removes all fixed manual research/freeze deadlines and permits research to finish after start. CLEAN_PRE_START_INPUTS describes verified pre-start evidence and no outcome exposure independently of actual issue time. Post-start issuance remains visible and separately scored; it is not a pre-start-issued prospective forecast. [Implementation](research/verification/framework_change_2026-10-15-1/IMPLEMENTATION.md). Existing issued cards, IDs, grades, statistics and model qualification unchanged.
+
 **Availability procedure update (14 October 2026):** [AVAIL-2026.10.14-v1](ROSTER_AVAILABILITY_PROTOCOL.md) and [change receipt](research/verification/framework_change_2026-10-14-4/IMPLEMENTATION.md) require comprehensive starter, bench and absence research for both sides, including obscure competitions. PROCEDURE only; truthful missingness, prediction/selection/scoring rules, formats and model-workshop firewall remain in force. Prompt v11.3 retains this procedure and adds the complete lifecycle/integrity controls.
 
 | Item | Value |
 |---|---|
 | Status | ACTIVE |
-| Method | MDS-2026.10.12-v11.0 (Markdown only) |
-| Control revision | CR-2026.10.14-R3 ([integrity and lifecycle release](research/verification/framework_change_2026-10-14-5/IMPLEMENTATION.md); [availability procedure](research/verification/framework_change_2026-10-14-4/IMPLEMENTATION.md); retains [workshop/reading-gate/firewall](research/verification/framework_change_2026-10-14-3/IMPLEMENTATION.md)) |
-| Scoring version | SCV-2026.10.12-v7 (historical v5/v6 views retained) |
+| Method | MDS-2026.10.15-v12.0 (Markdown only) |
+| Control revision | CR-2026.10.15-R1 ([completion-based timing release](research/verification/framework_change_2026-10-15-1/IMPLEMENTATION.md); retains [integrity and lifecycle release](research/verification/framework_change_2026-10-14-5/IMPLEMENTATION.md); [availability procedure](research/verification/framework_change_2026-10-14-4/IMPLEMENTATION.md); retains [workshop/reading-gate/firewall](research/verification/framework_change_2026-10-14-3/IMPLEMENTATION.md)) |
+| Scoring version | SCV-2026.10.15-v8 (historical v5-v7 views retained) |
 | Selection version | SEL-2026.10.12-v3 / P_ORDER_V2 priced from the declared mixture where required; alternatives recorded as shadows |
-| Prompt suite | P-2026.10.14-v11.3 (PROCEDURE: comprehensive availability research; prompts 1–3 never read `research/model_shadow/` or `ml/` before their own freeze; prompt 8 may change `ml/`) |
+| Prompt suite | P-2026.10.15-v12.0 (STATISTICAL/measurement-policy + PROCEDURE: completion-based timing and comprehensive availability research; prompts 1–3 never read `research/model_shadow/` or `ml/` before their own freeze; prompt 8 may change `ml/`) |
 | Mini-log format | `mini-log-7` (in-progress `mini-log-2` through `mini-log-6` retain their format) |
 | Settlement format | `mini-settlement-6` (earlier settlement formats remain accepted) |
 | Freeze | None. Custody is the git history of `main` (CURRENT_RULES §9). Cards record the HEAD SHA they read. The last control manifest, `CONTROL_MANIFEST_2026-10-09-3.md`, is in [archive/controls/](archive/controls/). |

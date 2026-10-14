@@ -1,6 +1,6 @@
 # PROMPT 4 — Verify and import the complete settlement package
 
-**P-2026.10.14-v11.3 · CANONICAL_IMPORT · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: active log suffix, current status/state/scoreboard and a new import report with preserved inputs. Never rewrite issued cores, closed parts or grades. Publish when this full prompt is invoked unless the user requests local-only.
+**P-2026.10.15-v12.0 · CANONICAL_IMPORT · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: active log suffix, current status/state/scoreboard and a new import report with preserved inputs. Never rewrite issued cores, closed parts or grades. Publish when this full prompt is invoked unless the user requests local-only.
 
 ## Inputs
 
@@ -34,7 +34,7 @@ Model outputs remain in their own lane. Never insert model probabilities into an
 
 ## 4. Reconcile and verify completely
 
-Update state/status/scoreboard from effective settlement chains, with pending events and terminal unresolved fields separate. Headline scores use frozen same-row baselines and evidence strata; missing comparisons remain NOT_COMPUTABLE. Import does not confer certification.
+Update state/status/scoreboard from effective settlement chains, with pending events and terminal unresolved fields separate. Headline scores use frozen same-row baselines and evidence strata; missing comparisons remain NOT_COMPUTABLE. Import does not confer certification. Preserve actual issue phase and clean-pre-start-input status separately under TIMING_RESEARCH_PROTOCOL; never relabel a legacy late card or pool late-issued research with a pre-start-issued prospective cohort.
 
 Read back EVERY imported core/source block; compare the entire old destination prefix and raw identities, inspect append locations and committed line endings. Reconcile mappings, continuity, counts, revisions, queues and outputs. Source closure requires a destination or explicit retained disposition for every source block. Never delete originals automatically.
 

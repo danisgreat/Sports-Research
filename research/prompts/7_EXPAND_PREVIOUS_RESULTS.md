@@ -1,6 +1,6 @@
 # PROMPT 7 — Repair source data and admission before model use
 
-**P-2026.10.14-v11.3 · ARCHIVE_EXPANSION · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: declared sporting CSVs, provenance/source/coverage notes, supported profile updates and a new verification folder. Helpers/raw captures stay outside the repository. No original cards/logs, model parameters or implicit promotion.
+**P-2026.10.15-v12.0 · ARCHIVE_EXPANSION · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: declared sporting CSVs, provenance/source/coverage notes, supported profile updates and a new verification folder. Helpers/raw captures stay outside the repository. No original cards/logs, model parameters or implicit promotion.
 
 ## Inputs
 

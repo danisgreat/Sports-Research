@@ -1,6 +1,6 @@
 # Operator prompts
 
-**Active suite: P-2026.10.14-v11.3** (mini-log-7 / mini-settlement-6). [Reading receipt and workflow](research/prompts/README.md). Use the complete selected prompt; its required rules/templates are linked there.
+**Active suite: P-2026.10.15-v12.0** (mini-log-7 / mini-settlement-6). [Reading receipt and workflow](research/prompts/README.md). Use the complete selected prompt; its required rules/templates are linked there.
 
 | # | Copy-ready prompt |
 |---|---|

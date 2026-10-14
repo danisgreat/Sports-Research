@@ -1,6 +1,6 @@
 # PROMPT 6 — Review cards and independently verified sporting shadows
 
-**P-2026.10.14-v11.3 · COHORT_RETROSPECTIVE · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Trigger: user request or about 30 newly settled cards; neither proves statistical sufficiency. Writes: a new uniquely named report, authorized scoreboard/state summaries, dated hypothesis amendments and CHANGELOG. No original log/grade/forecast, active rule/prompt or previous report changes. The decision lab is excluded.
+**P-2026.10.15-v12.0 · COHORT_RETROSPECTIVE · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Trigger: user request or about 30 newly settled cards; neither proves statistical sufficiency. Writes: a new uniquely named report, authorized scoreboard/state summaries, dated hypothesis amendments and CHANGELOG. No original log/grade/forecast, active rule/prompt or previous report changes. The decision lab is excluded.
 
 ## 1. Freeze scope and evidence
 
@@ -20,7 +20,7 @@ Report:
 - Same-row paired Brier/log-loss differences, event and ISO-week means, events/weeks, justified uncertainty, headline A/B and sensitivity C/E evidence. In-sample climatology is descriptive. Missing paired evidence does not establish incremental skill; it does not prove none.
 - Complete-range reliability bins and empty bins, event counts and calibration uncertainty; expected-score bias/MAE/RMSE and originally issued interval coverage. No z without original SD.
 - Gate PASS/instability/precision and frozen RET03/RET04/XCARD6/RANK_DELTA/BASE_ONLY comparisons, original/unadjusted adjustments, form-window/mixture diagnostics and identical-line difficulty.
-- Correctly conditioned joint losses; exact values versus bounds; actual issue state/lead, availability-search completion, source lineage, capture/review SLA and unresolved workload.
+- Correctly conditioned joint losses; exact values versus bounds; actual issue state/lead and independent input horizon, separately scored CLEAN_PRE_START_INPUTS / POST_START_ISSUE versus pre-start-issued/unknown/outcome-exposed cohorts; no fixed research deadline, availability-search completion, source lineage, capture/review SLA and unresolved workload.
 - Rank-1 deep reviews and matched-win process defects; mechanism known-at versus post-event explanation. One loss or short streak is not calibration proof.
 
 Use event/week dependence, repeated teams, serial drift, missingness, multiplicity and unequal task difficulty in the interpretation. Fewer than eight weeks is INSUFFICIENT_EVIDENCE under current scoring; eight is a floor, not a power calculation. No invented bootstrap or sample-size number.

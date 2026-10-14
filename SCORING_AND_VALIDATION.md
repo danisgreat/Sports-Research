@@ -1,6 +1,6 @@
 # Scoring and validation
 
-**SCV-2026.10.12-v7.** New views use these definitions; historical published scores remain unchanged and labelled by their original version ([v6](archive/superseded_2026-10-12/SCORING_AND_VALIDATION.md)). [CURRENT_RULES](CURRENT_RULES.md) controls claims. No fitted or certified model is available. v7 adds request coverage (§1), evidence-stratified views (§2a), shadow scoring for SHADOW_RANK_DELTA and SHADOW_BASE_ONLY (§6), and deterministic revision resolution in the scoreboard (§7).
+**SCV-2026.10.15-v8.** New views use these definitions; historical published scores remain unchanged and labelled by their original version ([v6](archive/superseded_2026-10-12/SCORING_AND_VALIDATION.md)). [CURRENT_RULES](CURRENT_RULES.md) controls claims. No fitted or certified model is available. v8 separates pre-start input quality from actual issue phase with no fixed lead deadline; prior v7 added request coverage (§1), evidence-stratified views (§2a), shadow scoring for SHADOW_RANK_DELTA and SHADOW_BASE_ONLY (§6), and deterministic revision resolution in the scoreboard (§7).
 
 ## 1. Units, probability and coverage
 
@@ -26,7 +26,7 @@ Card class over top-two slots: ALL_WON, SPLIT or ALL_LOST only when both slots a
 
 Hit@2 = at least one primary WIN among cards with at least one decisive row and no unresolved primary row, divided by that fully resolved eligible-card count. Report excluded unresolved/no-decisive cards. Both-loss frequency uses only cards with two decisive primary rows. If joint masses are unconditional and pushes/voids can occur, compare like-for-like unconditional joint outcomes on fully resolved cards or use a computed conditional joint given both decisive. Never compare unlike denominators. MECHANICALLY_PROTECTED pairs are reported separately.
 
-Cohorts cross-classify policy/version, league/format/endpoint/family, numeric versus qualitative, timing, original gate PASS/RANK1_UNSTABLE/UNKNOWN_GATE/legacy recorded rule, evidence and supplied/derived status. PREGAME evidence and the scheduled-lead band are separate. LATE_START includes issue less than five minutes before scheduled start or after; verified delayed PREGAME remains in that lead band. Do not infer a historical gate PASS or pregame issue from its probabilities or scheduled time.
+Cohorts cross-classify policy/version, league/format/endpoint/family, numeric versus qualitative, actual issue phase, input evidence quality, original gate PASS/RANK1_UNSTABLE/UNKNOWN_GATE/legacy recorded rule, evidence and supplied/derived status. Under [TIMING_RESEARCH_PROTOCOL](TIMING_RESEARCH_PROTOCOL.md), verified PREGAME issuance has no minimum scheduled lead: even an issue immediately before actual start qualifies if not-started evidence is valid. CLEAN_PRE_START_INPUTS / POST_START_ISSUE may contribute to its own research T2/proper-score cohort after comprehensive research, but is never pooled with clean pre-start-issued prospective cards or used to meet an old experiment timing criterion. Lead minutes remain descriptive, not a freeze deadline or quality gate. TIMING_UNVERIFIED/KNOWN_AT_UNVERIFIED and LIVE_OBSERVED/HISTORICAL_DIAGNOSTIC remain separate. Do not infer old timing, gate PASS or model admission; preserve all historical labels and experiment definitions.
 
 ## 2a. Evidence-stratified views (R23)
 
@@ -81,3 +81,7 @@ Headline: paired baseline-relative proper scores, number of paired events/weeks 
 ## 8. Historical evidence and release
 
 Historical learning logs, revised datasets and post-event counterfactuals cannot establish prospective skill. An omitted probability, cutoff or baseline is not restored by a later interpretation. Every recommendation is tracked as document implementation, data readiness, test registration, observed experiment result and release decision separately. Certification remains suspended.
+
+## 9. Completion-based research policy (SCV-v8)
+
+T2 retains every original primary result in its declared policy/timing cohort; a post-start issue is not excluded from research logging solely for lateness. CLEAN_PRE_START_INPUTS requires the timing protocol's independent field-known-at and outcome-exposure checks. Report pre-start-issued, clean-pre-start-input/post-start-issued, unverified and outcome-exposed counts separately, plus unchanged legacy cohorts. Record baseline construction/issue time too: an outcome-blind comparator made after start remains in the same late-issued lane, not a pre-start-frozen prospective baseline. No missing baseline, issue time, source receipt or historical probability is reconstructed. Existing preregistered prospective/model release gates remain unchanged; no predictive benefit is claimed for removing deadlines.

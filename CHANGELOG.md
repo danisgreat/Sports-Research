@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-15 - Completion-based research, with truthful input and issue timing
+
+**User-authorised instruction:** remove fixed manual research/freeze lead times, complete the research even after a game starts, preserve each sport/upcoming-game section, and publish main. STATISTICAL/measurement-policy + PROCEDURE: MDS-2026.10.15-v12.0, CR-2026.10.15-R1, SCV-2026.10.15-v8, P-2026.10.15-v12.0; selection SEL-2026.10.12-v3 and mini-log-7/mini-settlement-6/canonical-md-1 unchanged.
+
+[Timing protocol](TIMING_RESEARCH_PROTOCOL.md), [implementation](research/verification/framework_change_2026-10-15-1/IMPLEMENTATION.md), [verification](research/verification/framework_change_2026-10-15-1/VERIFICATION_REPORT.md). No fixed countdown forces incomplete research or issuance. Independently proven pre-start inputs without live/final outcome exposure may be CLEAN_PRE_START_INPUTS even when research/issue finishes after actual start; actual POST_START_ISSUE stays explicit and separately scored. A near-start or delayed pre-start issue is PREGAME with valid not-started evidence, no minimum lead. Post-start issue is not described as a forecast released before start. This truth-preserving adaptation fulfils continued research without fabricating timing/prospective certification. Freeze at completed issuance, immutable originals, model independence and source/candidate/baseline chronology remain.
+
+All eleven sport/general sections and their Upcoming game blocks retained. Rules, common protocol, all eight prompt versions, templates, scoring, verification, source-availability protocol and navigation aligned; original RET-05 retained with a dated amendment removing its buffered monitoring target. No existing forecast/grade/ID/archive/model parameter or qualified-status change. Local filled cricket inputs in Prompt1 preserved outside the publication diff. Effects on predictive scores remain untested.
+
 ## 2026-10-14 — ML/RL integrity review and full prompt release
 
 **User-authorised scope:** review actual research implementation, optimise all eight prompts while preserving separate sport/upcoming-game sections, and publish all reviewed pending changes to main. PROCEDURE + integrity repairs; CR-2026.10.14-R3, P-2026.10.14-v11.3. Method, selection, scoring and record formats are unchanged.

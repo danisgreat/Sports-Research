@@ -1,6 +1,6 @@
 # Verification protocol
 
-**CR-2026.10.12-R1** ([previous](archive/superseded_2026-10-12/VERIFICATION_PROTOCOL.md)). Markdown/CSV/text only. Checks establish their stated properties, never predictive skill. Use plain file/git commands and transparent arithmetic; do not add a validator runtime. Print `Check | PASS/FAIL/NOT_VERIFIED/N/A | evidence | limitation`.
+**CR-2026.10.15-R1** ([previous](archive/superseded_2026-10-12/VERIFICATION_PROTOCOL.md)). Markdown/CSV/text only. Checks establish their stated properties, never predictive skill. Use plain file/git commands and transparent arithmetic; do not add a validator runtime. Print `Check | PASS/FAIL/NOT_VERIFIED/N/A | evidence | limitation`.
 
 ## 1. Before changes
 
@@ -15,6 +15,7 @@ Say which identity a comparison proves: raw source snapshot, imported core, dest
 
 ## 2. Card and settlement
 
+[Timing checks](TIMING_RESEARCH_PROTOCOL.md): ensure no fixed research deadline forces issue, preserve actual phase and source horizon separately, and require independent pre-start publication proof/no outcome exposure for CLEAN_PRE_START_INPUTS. Near-start or delayed PREGAME is valid with actual not-started evidence; post-start issue remains a separate scored research cohort. Unknown actual start, late-published inputs, changed dynamic pages, live-result exposure and backdated issue each fail the relevant clean-input/pre-start-release claim. Completing research after start alone is not a process failure. Legacy issued labels and registered model/prospective timing gates remain unchanged.
 Availability checks use [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md): verify both sides, starters/bench/absence evidence separately, local-language escalation when needed, and final late-change recheck. An incomplete search fails C20; complete research with genuine missing publication remains unconfirmed. Check the exact side/field and scenario or qualitative disposition, not whether a CONFIRMED string is present.
 
 Run C1–C20 and S1–S15 (C17–C20 and S13–S15 for mini-log-7 / mini-settlement-6; older formats use their own checks) in [CARD_AND_LOG_TEMPLATES](CARD_AND_LOG_TEMPLATES.md), with actual arithmetic and readback. Retain missing values honestly. A negative fixture must fail the relevant check; do not claim checks are executed merely because the checklist is present.

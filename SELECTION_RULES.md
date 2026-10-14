@@ -1,6 +1,6 @@
 # Selection, baseline and settlement rules
 
-**SEL-2026.10.12-v3 · primary policy P_ORDER_V2 (unchanged order rule; priced from the declared mixture where CURRENT_RULES §7 requires one).** Numerical thresholds are PROVISIONAL, not proven accuracy guarantees. Applies to new v11 cards; old selections keep their original policy ([SEL v2](archive/superseded_2026-10-12/SELECTION_RULES.md)). [CURRENT_RULES](CURRENT_RULES.md) controls.
+**SEL-2026.10.12-v3 · primary policy P_ORDER_V2 (unchanged order rule; priced from the declared mixture where CURRENT_RULES §7 requires one).** Numerical thresholds are PROVISIONAL, not proven accuracy guarantees. Applies to new v11 and later cards; unchanged selection rules, with timing governed by [TIMING_RESEARCH_PROTOCOL](TIMING_RESEARCH_PROTOCOL.md); old selections keep their original policy ([SEL v2](archive/superseded_2026-10-12/SELECTION_RULES.md)). [CURRENT_RULES](CURRENT_RULES.md) controls.
 
 ## 1. Constants and scope
 

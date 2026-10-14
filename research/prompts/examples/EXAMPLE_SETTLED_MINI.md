@@ -56,7 +56,7 @@ Examples consume no P-ID. Production rules are in CARD_AND_LOG_TEMPLATES §2.
 - **Rules read / archive check:** CURRENT_RULES §§2–8; SELECTION_RULES §§2–3/5/9; SCORING_AND_VALIDATION §§1–3; ARCHIVE_USE_GUIDE recipe R2 (toy rows in A3); archive N/A synthetic
 - **Evidence receipt:** all inputs stipulated in A3; no external sporting source
 - **Known-at:** N/A synthetic; no archive capture; no KNOWN_AT_UNVERIFIED input
-- **Lineup state / issue step:** N/A (toy sport has no lineup); research completed at T−60, freeze at T−8
+- **Lineup state / issue step:** N/A (toy sport has no lineup); hypothetical research completion 10:01Z, issue freeze 10:02Z when complete; no countdown requirement
 - **Pricing basis:** MIXTURE low/base/high = .25/.50/.25 on TOY_ENVIRONMENT (labelled unfitted)
 - **Form windows:** A scored L5/L10/L15/L20/season 1.40/1.30/1.27/1.25/1.25 (n 5/10/15/20/20); B scored .20/.30/.33/.30/.30; league .80; primary rates A 1.209, B .345; recency blend A 1.240, B .349; printed only, not applied (A3)
 

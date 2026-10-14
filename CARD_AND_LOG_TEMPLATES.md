@@ -1,6 +1,6 @@
 # Card, mini, settlement and canonical formats
 
-**mini-log-7 · mini-settlement-6 · canonical-md-1.** Authority: MDS-2026.10.12-v11.0 / CR-2026.10.14-R3 / SCV-2026.10.12-v7 / SEL-2026.10.12-v3. [Rules](CURRENT_RULES.md) and [selection definitions](SELECTION_RULES.md) control semantics. Previous formats: [mini-log-6 / mini-settlement-5](archive/superseded_2026-10-12/CARD_AND_LOG_TEMPLATES.md).
+**mini-log-7 · mini-settlement-6 · canonical-md-1.** Authority: MDS-2026.10.15-v12.0 / CR-2026.10.15-R1 / SCV-2026.10.15-v8 / SEL-2026.10.12-v3. [Rules](CURRENT_RULES.md) and [selection definitions](SELECTION_RULES.md) control semantics. Previous formats: [mini-log-6 / mini-settlement-5](archive/superseded_2026-10-12/CARD_AND_LOG_TEMPLATES.md).
 
 <a id="local-mini-format-mini-log-2"></a>
 
@@ -85,7 +85,7 @@ Insert immediately before the footer. Preserve earlier card/addendum bytes; only
 - **Analysis status:** UNCALIBRATED_ANALYST_SCENARIO | UNCALIBRATED_QUALITATIVE | NO_FORECAST
 - **Timing:** <state; cutoff; research completion; actual issue time; source state/recheck time; source publication time; actual start or NOT_VERIFIED>
 - **Scheduled start:** <venue timezone, UTC and Australia/Sydney with offsets; source>
-- **Scheduled lead / band:** <minutes at issue; BUFFERED or LATE_START or UNKNOWN>
+- **Scheduled lead / band:** <descriptive minutes only; actual issue phase PREGAME / POST_START_ISSUE / TIMING_UNVERIFIED; input evidence CLEAN_PRE_START_INPUTS / KNOWN_AT_UNVERIFIED / OUTCOME_EXPOSED>
 - **Endpoint / definition:** <regulation/extras; tie/push/void/retirement/listed pitcher/abandonment convention; operator status>
 - **Distribution object:** <id/family/parameters/approximation or NOT_COMPUTED>
 - **Expected score:** <sport units; team means/SDs, total and signed margin, endpoint; N/A/NOT_COMPUTED as appropriate>
@@ -95,7 +95,7 @@ Insert immediately before the footer. Preserve earlier card/addendum bytes; only
 - **Rules read / archive check:** <paths/sections; actual files/rows/date window/filters/findings/gaps>
 - **Evidence receipt:** <decisive claim/source/field/extract/source time/retrieval time/lineage; detail in A3>
 - **Known-at:** <archive capture date; any KNOWN_AT_UNVERIFIED input and confirmation it does not decide Rank 1>
-- **Lineup state / issue step:** <CONFIRMED (source, time) or LINEUP_UNCONFIRMED; research completed at T−<min>; lineup check at T−<min>>
+- **Lineup state / issue step:** <CONFIRMED (source, time) or LINEUP_UNCONFIRMED; actual research-completion/availability-check times; complete-search result; no required countdown>
 - **Pricing basis:** <BASE (no input labelled uncertain) or MIXTURE low/base/high = <w1/w2/w3>, with the uncertain input named>
 - **Form windows:** <per side: L5/L10/L15/L20/season/league for the scored and conceded rate, with n; the blended rate used; full table in A3 (§3b)>
 
@@ -243,7 +243,7 @@ Pending cards get state evidence, literal original reference and next check, wit
 | C8 | Regime vocabulary, matching source/version and no double adjustment |
 | C9 | Sport/family/endpoint/provider checks; no invented exact engine |
 | C10 | Contract definitions, field capture and actual scheduling status |
-| C11 | Cutoff/research/issue/recheck ordering; honest event/lead states and outcome exposure |
+| C11 | Timing protocol: independent evidence horizon/retrieval/completion/issue/state; no fixed deadline; pre-start input proof and actual issue phase separate; honest outcome exposure |
 | C12 | Market blindness, supported evidence with times, lineage unknowns |
 | C13 | Actual archive window/sample/coverage and point-in-time availability |
 | C14 | Frozen same-row baseline and independent league-only parameters, or explicit unavailable reason |
@@ -294,3 +294,7 @@ Legacy settlement markers without revision keys (mini-settlement-2 to -5) are ac
 ## 10. Acceptance examples
 
 Active and settled structural examples (mini-log-7 / mini-settlement-6): [active](research/prompts/examples/EXAMPLE_ACTIVE_MINI.md), [settled](research/prompts/examples/EXAMPLE_SETTLED_MINI.md); the v10 pair is in [legacy_mini_log_6/](research/prompts/examples/legacy_mini_log_6/EXAMPLE_ACTIVE_MINI.md). Worked checks and negative fixtures: [v11 fixtures F01–F32](research/verification/framework_change_2026-10-12-1/FIXTURES.md), [v10 verification](research/verification/framework_change_2026-10-11-1/VERIFICATION_REPORT.md). They are synthetic documentation tests, not sports forecasts or prospective evidence.
+
+## 11. Timing semantics for new v12 work
+
+Use [TIMING_RESEARCH_PROTOCOL](TIMING_RESEARCH_PROTOCOL.md) in the existing Timing/Known-at/Lineup-state/A1/A3/A8/A9 fields. No added mandatory schema field or mini-format migration. Retain actual late issue time even with CLEAN_PRE_START_INPUTS; report that cohort separately. All old mini formats and issued timing/rank/p/baseline/grade bytes remain unchanged. S9/S10 additionally keep clean-input late-issued research apart from pre-start-issued prospective/shadow scores; a settlement cannot create missing pre-start proof.

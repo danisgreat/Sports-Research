@@ -1,3 +1,5 @@
+> **Current timing amendment (15 October 2026):** [TIMING_RESEARCH_PROTOCOL](TIMING_RESEARCH_PROTOCOL.md) removes fixed manual research/freeze lead targets. Old dated deadline/core-annex lessons below are historical and do not force early issuance. Complete research even after start; distinguish evidenced pre-start inputs from actual issue time and observed outcomes. No old evidence or test is relabelled.
+
 # Learning and prospective-test register (the lesson archive)
 
 **Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.

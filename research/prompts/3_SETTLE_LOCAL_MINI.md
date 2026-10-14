@@ -1,6 +1,6 @@
 # PROMPT 3 — Freeze, settle and review a local mini
 
-**P-2026.10.14-v11.3 · LOCAL_MINI_SETTLEMENT.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: a new settlement package and dated revisions; no canonical/GitHub writes. Original cards are immutable. Optional sporting-shadow comparisons occur only after manual settlement; the decision lab is excluded.
+**P-2026.10.15-v12.0 · LOCAL_MINI_SETTLEMENT.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: a new settlement package and dated revisions; no canonical/GitHub writes. Original cards are immutable. Optional sporting-shadow comparisons occur only after manual settlement; the decision lab is excluded.
 
 ## Inputs
 
@@ -17,6 +17,8 @@ Read common controls/protocol, scoring, verification, current status, sport/leag
 Copy exact original working bytes to ORIGINAL_MINI before settlement. Record FROZEN_SOURCE: path, byte count, computed SHA-256, complete block inventory, freeze time and writer hand-over. Record its frozen status through the permitted lifecycle receipt. New events go to the next authorized mini. Recheck source growth at package time; account for later blocks and routing instead of silently omitting them.
 
 Produce PREDICTION_MINI_SETTLED as the complete frozen prefix plus settlement, LOCAL_ID_MAPPING, UNRESOLVED_CARRYOVER and SETTLEMENT_MANIFEST. Use mini-settlement-6 for new packages; earlier formats remain valid. A rerun appends a new revision in a new versioned output; never overwrite an earlier package.
+
+Before scoring, preserve actual issue phase and independent pre-start-input proof under TIMING_RESEARCH_PROTOCOL. No settlement creates a pre-start freeze/issue receipt; late-issued clean-input research is separately scored and is never prospective pre-start issuance.
 
 ## 2. Establish outcomes and exact terms
 

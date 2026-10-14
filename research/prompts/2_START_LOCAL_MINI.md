@@ -1,6 +1,6 @@
 # PROMPT 2 — Start the next local mini
 
-**P-2026.10.14-v11.3 · LOCAL_MINI_STAGING.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: one new Markdown mini. Creating a mini consumes no event ID. GitHub is read-only. Workshop forecasts and the decision lab are excluded.
+**P-2026.10.15-v12.0 · LOCAL_MINI_STAGING.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: one new Markdown mini. Creating a mini consumes no event ID. GitHub is read-only. Workshop forecasts and the decision lab are excluded.
 
 ## Inputs
 

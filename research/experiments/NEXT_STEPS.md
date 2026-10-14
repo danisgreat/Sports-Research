@@ -1,3 +1,5 @@
+> **Manual research timing (15 October 2026):** [TIMING_RESEARCH_PROTOCOL](../../TIMING_RESEARCH_PROTOCOL.md) controls completion-based cards, with no fixed lead deadline. Retired CLI notes below are design history, not a manual freeze requirement. Registered prospective pre-start-release experiments/models retain their original admission rules; late-issued clean-input research belongs to a separate cohort.
+
 # Fifteen experiment measures and next steps
 
 Local working files are authoritative. This is the current measurement implementation for all fifteen source-bound retrospective proposals. Original hypotheses, issued forecasts, research P-IDs and qualification states remain unchanged. The [measure register](../experiment_measures.json) binds the [versioned protocols](protocols_v1.json). All fifteen have implemented measurement infrastructure; their motivating sporting games are not new untouched test evidence. No model experiment has been run at registration.

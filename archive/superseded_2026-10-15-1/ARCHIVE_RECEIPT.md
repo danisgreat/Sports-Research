@@ -1,0 +1,3 @@
+# Preserved framework before timing revision
+
+Exact committed documents from 4e05ffe11cef2088674ed28783347f95b8b450f0, retaining original relative-link context at their original repository paths. [Custody](../../research/verification/framework_change_2026-10-15-1/DOCUMENT_CUSTODY.csv). All raw working baselines also saved outside the repository in `C:\Users\danie\Downloads\framework_timing_2026-10-15_custody_2/working_before/`; the independent filled cricket input is preserved locally and externally, excluded from published inactive prompt. Historical issued records/model outputs and previous reports unchanged.
