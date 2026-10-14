@@ -1,0 +1,11 @@
+# Verified settlement import publication
+
+Operation completed; receipt date 2026-10-15 (client Australia/Sydney date).
+
+Local source import commit 062a8049d700b543389d37b365fc304140adc13e on ml-regeneration-2026-10-14 was cherry-picked as **d8b4bb048ea4dc52dc8e9b2d3713b59bca22034d** on main, parent99ac347bdf9bae3b81d9ce5c8758e1d3edae4cfc. Non-force `git push origin main` succeeded. A fresh `git fetch origin main` and independent `git ls-remote origin refs/heads/main` both returned **d8b4bb048ea4dc52dc8e9b2d3713b59bca22034d**, equal to local main. All33 published artifact blobs equal the reviewed source-branch import, and every remote import artifact was read back. No ML/code, raw archive or closed part was in that commit.
+
+Remote Combined Log7 SHA256 **c6b4f862eb2bb6bc35c7371c2876ce70416e742385da1e33f970ce3b56404094**,1719563bytes; full1474973-byte old prefix unchanged and all11 full original/source blocks compare byte-exact. Six preserved repository input bodies match their downloaded hashes; raw checksum JSON remains in named external custody. Mapping/continuity, summaries, row inventory, source byte partitions, queues and report agree: highestP-589,nextP-590;5new originals,1shadow addendum,5sporting revision-1 blocks;4inherited evidence leads retained without regrading. Main/source import publication itself does not certify sporting sources or prospective forecasts.
+
+Existing ML commits773f64f39ecc55b64ce76de6b7b49644a1d8e8da andfffe36f2944ff1a352109eeec3cace3d00d0ac84 remain preserved on ml-regeneration-2026-10-14. At remote readback an unrelated local edit to research/prompts/1_GAME_CARD.md was detected (filled cricket upcoming-game inputs); its raw snapshot is externally preserved, SHA256b4e1dd69197aca53583bda79be87badfa3f34d066da2340fcc631a54356c85e0. It was not changed or staged by the import. The follow-on user-authorised timing framework task will preserve those inputs separately from publication scope.
+
+This new receipt is committed separately after the verified import; its own commit SHA cannot be embedded without self-reference. Final main SHA is verified again after publishing this receipt and any separately authorised framework change. Earlier dated import reports/inputs remain unchanged.
