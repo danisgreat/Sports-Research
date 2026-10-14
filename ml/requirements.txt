@@ -1,0 +1,5 @@
+# Versions used for the committed outputs of framework change 2026-10-14-3 (CPython 3.14.6, Windows 11).
+numpy==2.5.2
+scipy==1.18.1
+pandas==3.0.5
+pytest==9.1.1
