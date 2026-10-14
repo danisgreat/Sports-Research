@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import csv
 import re
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 from pathlib import Path
 
 import numpy as np
@@ -93,29 +93,70 @@ def _parse_text(row: dict, lg: League, rep: LoadReport) -> tuple[int, int] | Non
         rep.drop("score_text_team_unmatched")
         return None
     hs, as_ = (p1, p2) if first == "home" else (p2, p1)
-    try:
-        tot = int(float(row.get(c["total"] or "", "") or "nan"))
-        mar = int(float(row.get(c["margin"] or "", "") or "nan"))
-        if tot != hs + as_ or mar != abs(hs - as_):
-            rep.drop("score_text_arithmetic_conflict")
-            return None
-    except ValueError:
-        pass  # columns blank: the parsed text is the only evidence; kept
+    if not arithmetic_matches(row, c, hs, as_):
+        rep.drop("score_text_arithmetic_conflict")
+        return None
     return hs, as_
 
 
+def missing_text(value) -> bool:
+    return value is None or str(value).strip().lower() in ("", "n/a", "na", "nan", "none", "null", "unknown", "not applicable")
+
+
+def score_int(value) -> int:
+    """Reject missing, fractional, negative and nonfinite observed counts; never truncate."""
+    number = float(value)
+    if not np.isfinite(number) or number < 0 or number != int(number):
+        raise ValueError("score must be a finite nonnegative integer")
+    return int(number)
+
+
+def arithmetic_matches(row, columns, home, away) -> bool:
+    for field, expected in (("total", home + away), ("margin", abs(home - away))):
+        value = row.get(columns.get(field))
+        if missing_text(value):
+            continue
+        try:
+            if score_int(value) != expected:
+                return False
+        except (ValueError, TypeError):
+            return False
+    return True
+
+
+def flag_state(value) -> bool | None:
+    """Tri-state extra-time flag; unknown text is never positive evidence."""
+    if missing_text(value):
+        return None
+    text = str(value).strip().lower()
+    if text in ("no", "n", "false", "regulation", "reg"):
+        return False
+    if text in ("yes", "y", "true", "overtime", "ot", "shootout", "so", "extras"):
+        return True
+    try:
+        number = float(text)
+        return bool(number > 0) if np.isfinite(number) and number >= 0 else None
+    except ValueError:
+        match = DASH_RE.fullmatch(text)
+        return bool(int(match["p1"]) + int(match["p2"])) if match else None
+
+
 def _yes(v) -> bool:
-    return (v or "").strip().lower() not in ("", "no", "n", "0", "false", "none", "nan", "regulation")
+    return flag_state(v) is True
 
 
 def _hockey_decision(row: dict, lg: League) -> str:
     c = lg.columns
     if c["decision"]:
         d = (row.get(c["decision"]) or "").strip()
-        return {"regulation": "Regulation", "overtime": "Overtime", "shootout": "Shootout"}.get(d.lower(), d)
-    so = c["shootout"] and _yes(row.get(c["shootout"]))
-    ot = c["overtime"] and _yes(row.get(c["overtime"]))
-    return "Shootout" if so else ("Overtime" if ot else "Regulation")
+        if not missing_text(d):
+            return {"regulation": "Regulation", "reg": "Regulation", "overtime": "Overtime", "ot": "Overtime", "shootout": "Shootout", "so": "Shootout", "tie": "Tie"}.get(d.lower(), "Unknown")
+    states = {key: flag_state(row.get(c[key])) for key in ("shootout", "overtime") if c[key]}
+    if states.get("shootout") is True:
+        return "Shootout"
+    if states.get("overtime") is True:
+        return "Overtime"
+    return "Regulation" if states and all(value is False for value in states.values()) else "Unknown"
 
 
 def load_league(lg: League | str, seasons: list[int] | None = None) -> tuple[pd.DataFrame, LoadReport]:
@@ -124,7 +165,7 @@ def load_league(lg: League | str, seasons: list[int] | None = None) -> tuple[pd.
         lg = get_league(lg)
     c = lg.columns
     rep = LoadReport(lg.path)
-    rows = []
+    rows, native_flags = [], []
     files = sorted(p for p in (ARCHIVE / lg.path).glob("*/*_games.csv") if p.parent.name.isdigit())
     for f in files:
         season = int(f.parent.name)
@@ -132,9 +173,16 @@ def load_league(lg: League | str, seasons: list[int] | None = None) -> tuple[pd.
             continue
         with open(f, newline="", encoding="utf-8-sig", errors="replace") as fh:
             got = False
-            for row in csv.DictReader(fh):
+            from ml.config import detect_columns
+            reader = csv.DictReader(fh)
+            c = detect_columns(list(reader.fieldnames or []))
+            file_league = replace(lg, columns=c)
+            for row in reader:
                 got = True
                 rep.rows_read += 1
+                if not c["home"] or not c["away"] or not c["parser"]:
+                    rep.drop("unsupported_file_schema")
+                    continue
                 stage = stage_of(row.get(c["stage"], "")) if c["stage"] else "REG"
                 gt = (row.get("Game Type") or "")
                 if "all-star" in gt.lower():
@@ -146,23 +194,26 @@ def load_league(lg: League | str, seasons: list[int] | None = None) -> tuple[pd.
                 raw_h = (row.get(c["home"]) or "").strip()
                 raw_a = (row.get(c["away"]) or "").strip()
                 home, away = lg.aliases.get(raw_h, raw_h), lg.aliases.get(raw_a, raw_a)
-                if not home or not away or home == away:
+                if missing_text(home) or missing_text(away) or home == away:
                     rep.drop("invalid_team_identity")
                     continue
                 if c["parser"] == "columns":
                     try:
-                        hs = int(float(row[c["home_score"]]))
-                        as_ = int(float(row[c["away_score"]]))
+                        hs = score_int(row[c["home_score"]])
+                        as_ = score_int(row[c["away_score"]])
                     except (TypeError, ValueError, KeyError):
                         rep.drop("missing_numeric_score")
                         continue
                 else:
-                    res = _parse_text(row, lg, rep)
+                    res = _parse_text(row, file_league, rep)
                     if res is None:
                         continue
                     hs, as_ = res
                 if hs < 0 or as_ < 0:
                     rep.drop("negative_score")
+                    continue
+                if not arithmetic_matches(row, c, hs, as_):
+                    rep.drop("score_arithmetic_conflict")
                     continue
                 ext = bool(c["extras"]) and (row.get(c["extras"]) or "").strip().upper() in ("Y", "YES")
                 if is_placeholder_zero(lg.sport, hs, as_, ext):
@@ -171,35 +222,46 @@ def load_league(lg: League | str, seasons: list[int] | None = None) -> tuple[pd.
                 decision = ""
                 reg_hs, reg_as = hs, as_
                 if lg.tie_rule == "hockey_regulation":
-                    decision = _hockey_decision(row, lg)
+                    decision = _hockey_decision(row, file_league)
                     if decision in ("Overtime", "Shootout"):
                         if abs(hs - as_) != 1:
                             rep.drop("ot_margin_not_one")
                             continue
                         reg_hs = reg_as = min(hs, as_)
-                    elif decision != "Regulation":
+                    elif decision not in ("Regulation", "Tie"):
                         rep.drop("unknown_decision")
+                        continue
+                    elif decision == "Tie" and hs != as_:
+                        rep.drop("tie_score_conflict")
                         continue
                     elif hs == as_ and stage == "REG":
                         decision = "Tie"  # a genuine regulation tie in a league/era without OT/SO
                 elif lg.tie_rule == "extras" and c["extras"] and _yes(row.get(c["extras"])):
                     decision = "EXTRAS"
                 eid = (row.get(c["id"]) or "").strip() if c["id"] else ""
-                if not eid:
+                native = not missing_text(eid)
+                if not native:
                     eid = f"{lg.model_id}:{date.date()}:{home}:{away}"
                 rows.append((lg.competition, season, date, stage, eid, home, away, hs, as_, reg_hs, reg_as, decision))
+                native_flags.append(native)
             if got:
                 rep.files += 1
     df = pd.DataFrame(rows, columns=COLUMNS)
+    df["_native"] = pd.Series(native_flags, index=df.index, dtype=bool)
+    if lg.sport == "Baseball":
+        ambiguous = ~df["_native"] & df.duplicated(["season", "date", "home", "away"], keep=False)
+        if ambiguous.any():
+            rep.dropped["ambiguous_doubleheader_identity"] = int(ambiguous.sum())
+            df = df[~ambiguous]
     before = len(df)
-    df = df.drop_duplicates(subset=["event_id"], keep="first")
+    df = df.drop_duplicates(subset=COLUMNS, keep="first")
     if len(df) < before:
         rep.dropped["duplicate_event_id"] = before - len(df)
-    if lg.sport != "Baseball":  # baseball doubleheaders keep native IDs; elsewhere identical rows are copies
-        dup = df.duplicated(subset=["date", "home", "away", "hs", "as_"], keep="first")
-        if dup.any():
-            rep.dropped["duplicate_identity"] = int(dup.sum())
-            df = df[~dup]
+    conflict = df.duplicated(subset=["season", "event_id"], keep=False)
+    if conflict.any():
+        rep.dropped["conflicting_event_id"] = int(conflict.sum())
+        df = df[~conflict]
+    df = df.drop(columns="_native")
     df = df.sort_values(["date", "event_id"]).reset_index(drop=True)
     rep.rows_kept = len(df)
     return df, rep
@@ -225,9 +287,8 @@ def snapshot_hash(lg: League, seasons: list[int]) -> str:
     import hashlib
 
     h = hashlib.sha256()
-    for s in sorted(seasons):
-        p = ARCHIVE / lg.path / str(s) / f"{s}_games.csv"
-        if p.exists():
+    for p in sorted((ARCHIVE / lg.path).glob("*/*_games.csv")):
+        if p.parent.name.isdigit() and int(p.parent.name) in seasons:
             h.update(f"{p.relative_to(ARCHIVE).as_posix()}:{file_sha256(p)}\n".encode())
     return h.hexdigest()
 

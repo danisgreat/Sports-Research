@@ -12,6 +12,7 @@ from __future__ import annotations
 import csv
 import hashlib
 import io
+import re
 import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
@@ -74,6 +75,8 @@ def freeze(model_id: str, lg: League, params: dict, fixtures: pd.DataFrame, out_
         raise ValueError("nonempty fixtures with complete identity/start fields are required")
     if fixtures[list(required)].isna().any().any():
         raise ValueError("fixture identity/start fields cannot be missing")
+    if any(fixtures[col].astype(str).str.strip().isin(["", "N/A", "UNKNOWN"]).any() for col in ("event_key", "home", "away", "stage")) or (fixtures["home"] == fixtures["away"]).any():
+        raise ValueError("fixture identities cannot be blank, unknown or self-matches")
     if fixtures["event_key"].isna().any() or fixtures["event_key"].duplicated().any():
         raise ValueError("fixture event keys must be present and unique")
     if fixtures["season"].nunique() != 1:
@@ -91,7 +94,7 @@ def freeze(model_id: str, lg: League, params: dict, fixtures: pd.DataFrame, out_
     target = out_dir.resolve()
     if target == REPO_ROOT.resolve() or REPO_ROOT.resolve() in target.parents:
         raise ValueError("unrevealed forecasts must be written outside the repository")
-    if Path(model_id).name != model_id or "\\" in model_id:
+    if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_.-]*", model_id):
         raise ValueError("model_id must be a single directory name")
     cutoff = cutoff_stamp.tz_convert(None)
     config_sha = sha256_bytes(repr((lg.path, lg.endpoint, sorted(params.items()))).encode("utf-8"))
@@ -100,6 +103,22 @@ def freeze(model_id: str, lg: League, params: dict, fixtures: pd.DataFrame, out_
     games, _ = load_league(lg)
     if recent_results is not None and len(recent_results):
         assert_no_market_columns(recent_results.columns)
+        required_results = {"date", "season", "stage", "event_id", "home", "away", "hs", "as_"}
+        if lg.tie_rule == "hockey_regulation":
+            required_results |= {"reg_hs", "reg_as", "decision"}
+        if not required_results.issubset(recent_results.columns):
+            raise ValueError("recent results require complete result identity and score fields")
+        recent_results = recent_results.copy()
+        recent_results["date"] = pd.to_datetime(recent_results["date"], errors="coerce")
+        if recent_results[list(required_results)].isna().any().any() or recent_results["event_id"].duplicated().any():
+            raise ValueError("recent results have missing or duplicate identities")
+        for col in (["hs", "as_", "reg_hs", "reg_as"] if lg.tie_rule == "hockey_regulation" else ["hs", "as_"]):
+            recent_results[col] = pd.to_numeric(recent_results[col], errors="coerce")
+            values = recent_results[col].to_numpy(float)
+            if not np.isfinite(values).all() or np.any(values < 0) or np.any(values != np.floor(values)):
+                raise ValueError("recent result scores must be finite nonnegative integers")
+        if recent_results["event_id"].isin(games["event_id"]).any():
+            raise ValueError("recent results overlap archive event identities; reconcile before freezing")
         games = pd.concat([games, recent_results], ignore_index=True)
     as_of = cutoff.normalize()
     season = int(fixtures["season"].iloc[0])
@@ -134,14 +153,15 @@ def freeze(model_id: str, lg: League, params: dict, fixtures: pd.DataFrame, out_
             rows.append({**common, "shadow_row_id": f"{model_id}:{f.event_key}:ALL", "family": "ALL",
                          "status": f"NOT_ISSUED:FIT_FAILED:{fit_error}"})
             continue
-        g, flags = model.grid(f.home, f.away)
+        home, away = lg.aliases.get(f.home, f.home), lg.aliases.get(f.away, f.away)
+        g, flags = model.grid(home, away)
         s = g.summary()
         inputs = "lineup NOT_USED; " + (";".join(flags) if flags else "no new-team prior")
         pw, pdr, pl = g.winner()
         bw, bd, bl = bgrid.winner()
         contracts = [("MONEYLINE_3WAY" if lg.tie_rule == "draw" else "MONEYLINE_2WAY", "HOME", None,
                       (pw, pdr if lg.tie_rule != "draw" else 0.0, pl + (pdr if lg.tie_rule == "draw" else 0.0)),
-                      bw / (bw + bl) if lg.tie_rule != "draw" else bw, tb1.p_home_win(f.home, f.away) if tb1 else None)]
+                      bw / (bw + bl) if lg.tie_rule != "draw" else bw, tb1.p_home_win(home, away) if tb1 else None)]
         if lg.tie_rule == "draw":
             contracts.append(("MONEYLINE_3WAY", "DRAW", None, (pdr, 0.0, pw + pl), bd, None))
             contracts.append(("MONEYLINE_3WAY", "AWAY", None, (pl, 0.0, pw + pdr), bl, None))
@@ -153,7 +173,7 @@ def freeze(model_id: str, lg: League, params: dict, fixtures: pd.DataFrame, out_
             m = g.total(line, "OVER")
             bm = bgrid.total(line, "OVER")
             contracts.append(("TOTAL", "OVER", line, (m.win, m.push, m.loss), bm.p_decisive,
-                              tb1.p_over(f.home, f.away, line) if tb1 else None))
+                              tb1.p_over(home, away, line) if tb1 else None))
         for fam, side, line, (w, p, l), bp, tp in contracts:
             dec = w / (w + l) if (w + l) > 0 else None
             rows.append({**common,
@@ -200,7 +220,7 @@ def reveal(csv_path: Path, model_id: str, now_utc: datetime | None = None,
     now_utc = now_utc or datetime.now(timezone.utc)
     if now_utc.tzinfo is None:
         raise ValueError("reveal time requires an explicit timezone")
-    if Path(model_id).name != model_id or "\\" in model_id:
+    if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_.-]*", model_id):
         raise ValueError("model_id must be a single directory name")
     data = csv_path.read_bytes()
     digest = sha256_bytes(data)
@@ -246,11 +266,17 @@ def reveal(csv_path: Path, model_id: str, now_utc: datetime | None = None,
 def settle_rows(forecasts: pd.DataFrame, finals: pd.DataFrame, source_url: str, evidence_grade: str) -> pd.DataFrame:
     """First-revision settlements. ``finals``: event_key, hs, as_ (final at the forecast endpoint)."""
     assert_no_market_columns(finals.columns)
+    if forecasts.empty:
+        return pd.DataFrame(columns=SETTLEMENT_COLUMNS)
+    if forecasts["shadow_row_id"].isna().any() or forecasts["event_key"].isna().any() or finals["event_key"].isna().any():
+        raise ValueError("missing forecast/final identity")
     if forecasts["shadow_row_id"].duplicated().any():
         raise ValueError("duplicate shadow row identity")
     if finals["event_key"].duplicated().any():
         raise ValueError("duplicate final event identity")
     finals = finals.copy()
+    if "endpoint" in finals:
+        finals = finals.rename(columns={"endpoint": "final_endpoint"})
     for score in ("hs", "as_"):
         if score not in finals:
             finals[score] = np.nan
@@ -259,25 +285,35 @@ def settle_rows(forecasts: pd.DataFrame, finals: pd.DataFrame, source_url: str, 
     out = []
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     for r in m.itertuples():
+        res, obs, why = "UNRESOLVED", "N/A", "unsupported or incomplete contract"
         scores = (getattr(r, "hs", np.nan), getattr(r, "as_", np.nan))
-        if not all(np.isfinite(x) and x >= 0 and x == int(x) for x in scores):
+        if str(getattr(r, "status", "FROZEN")).startswith("NOT_ISSUED"):
+            why = "forecast not issued"
+        elif not source_url or not evidence_grade:
+            why = "source/evidence receipt missing"
+        elif "final_endpoint" in m and (pd.isna(r.final_endpoint) or r.final_endpoint != getattr(r, "endpoint", None)):
+            why = "final endpoint missing or mismatched"
+        elif not all(np.isfinite(x) and x >= 0 and x == int(x) for x in scores):
             res, obs, why = "UNRESOLVED", "N/A", "final score not available"
         else:
             margin, total = r.hs - r.as_, r.hs + r.as_
             fam, side = r.family, r.orientation
-            if fam.startswith("MONEYLINE"):
+            if fam in ("MONEYLINE_2WAY", "MONEYLINE_3WAY") and side in ("HOME", "AWAY", *(["DRAW"] if fam == "MONEYLINE_3WAY" else [])):
                 x = margin if side == "HOME" else (-margin if side == "AWAY" else (1 if margin == 0 else -1))
                 res = "WIN" if x > 0 else ("PUSH" if x == 0 and fam == "MONEYLINE_2WAY" else "LOSS")
                 obs = f"{int(r.hs)}-{int(r.as_)}"
-            elif fam == "HANDICAP":
-                x = margin + float(r.line)
-                res = "WIN" if x > 0 else ("PUSH" if x == 0 else "LOSS")
-                obs = str(int(margin))
-            else:
-                x = total - float(r.line)
-                res = "WIN" if x > 0 else ("PUSH" if x == 0 else "LOSS")
-                obs = str(int(total))
-            why = "final score"
+            elif (fam == "HANDICAP" and side in ("HOME", "AWAY")) or (fam == "TOTAL" and side in ("OVER", "UNDER")):
+                try:
+                    line = float(r.line)
+                except (ValueError, TypeError):
+                    line = np.nan
+                if np.isfinite(line):
+                    value = (margin if side == "HOME" else -margin) if fam == "HANDICAP" else total
+                    x = value + line if fam == "HANDICAP" else (total - line if side == "OVER" else line - total)
+                    res = "WIN" if x > 0 else ("PUSH" if x == 0 else "LOSS")
+                    obs = str(int(value))
+            if res != "UNRESOLVED":
+                why = "final score"
         out.append({"shadow_row_id": r.shadow_row_id, "revision": "revision-1", "parent_revision": "NONE",
                     "effective_utc": now, "result": res, "observed_value": obs, "evidence_grade": evidence_grade,
                     "source_url": source_url, "field": "final score", "retrieved_utc": now, "reason": why})

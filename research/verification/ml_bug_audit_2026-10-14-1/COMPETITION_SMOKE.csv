@@ -1,0 +1,173 @@
+competition,model_id,engine,status,rows_read,rows_kept,training_rows,endpoint,drops,archive_sha256,grid_mass,p_home,p_draw,p_away,crps,code_sha256
+AFL/AFL,AUS-AFL-JOINT-r1,gaussian,SMOKE_PASS,18221,17659,855,FULL_GAME,"{'invalid_team_identity': 21, 'score_text_unparsed': 198, 'zero_zero_placeholder': 11, 'duplicate_event_id': 330, 'conflicting_event_id': 2}",ae44699d2ca08b3f169f285693e78b71fa9eb323ac967be745ff4c824c299e19,1.0,0.5881255689453638,0.010874474734567355,0.40099995632006874,NOT_EVALUATED; fit/grid only,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+AFL/AFL Grand Final,,,NOT_MODELLED,129,,,,single-game-per-season subset (e.g. a final); its games are modelled inside the parent competition,,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+AFL/AFLW,AUS-AFLW-JOINT-r1,gaussian,SMOKE_PASS,793,683,441,FULL_GAME,"{'score_text_team_unmatched': 103, 'score_text_unparsed': 4, 'invalid_team_identity': 1, 'zero_zero_placeholder': 2}",21c798c837df55468f8413822ead2f06b0683ac69e8986457083b86de23df6ca,1.0,0.7224406014811529,0.011902496114871637,0.26565690240397555,NOT_EVALUATED; fit/grid only,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+American Football/College Football,,,NOT_MODELLED,790,,,,alias copy of College Football/NCAA Division I FBS (ACTIVE_FILE_INDEX §2),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+American Football/IFAF World Championship,AMF-IFAF-WORLD-CHAMPIONSHIP-JOINT-r1,gaussian,NOT_MODELLED,50,,,,insufficient history: only 0 season(s) with >= 20 evaluation games,,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+American Football/NFL,AMF-NFL-JOINT-r1,gaussian,SMOKE_PASS,18192,18115,1139,FULL_GAME_INCL_OT,"{'invalid_team_identity': 2, 'zero_zero_placeholder': 73, 'conflicting_event_id': 2}",f6697ef4cec736b3cee2a9371af3888bea8d395b90c9b3f05c8f448c7dde0a96,1.0,0.44756293005906156,0.0026609960124558915,0.5497760739284826,NOT_EVALUATED; fit/grid only,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+American Football/Super Bowl,,,NOT_MODELLED,59,,,,single-game-per-season subset (e.g. a final); its games are modelled inside the parent competition,,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+American Football/UFL,AMF-UFL-JOINT-r1,gaussian,NOT_MODELLED,78,,,,insufficient history: only 2 season(s) with >= 20 evaluation games,,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Baseball/Australian Baseball League,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Baseball/Caribbean Series and Winter Leagues,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Baseball/CPBL,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Baseball/KBO,BSB-KBO-NB-r1,count,SMOKE_PASS,17764,16282,2996,FULL_GAME_INCL_EXTRAS,"{'zero_zero_placeholder': 316, 'missing_numeric_score': 1132, 'conflicting_event_id': 34}",7d5ccfbe7144a2223841c6460c8c1dbed9940f7a87d9a6d6f3db36c12388c3d7,1.0,0.40970800906959287,0.021799913827453384,0.5684920771029537,NOT_EVALUATED; fit/grid only,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Baseball/Mexican League,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Baseball/Minor Leagues,BSB-MINOR-LEAGUES-NB-r1,count,SMOKE_PASS,57665,55327,8662,FULL_GAME_INCL_EXTRAS,"{'missing_numeric_score': 2334, 'zero_zero_placeholder': 4}",5602ea8b6c750d96b56b53003eba7bc8cda229888e7611807dda6b0919575759,1.0,0.49539208501824805,0.0,0.5046079149817521,NOT_EVALUATED; fit/grid only,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Baseball/MLB,BSB-MLB-NB-r1,count,SMOKE_PASS,77831,77782,9855,FULL_GAME_INCL_EXTRAS,{'zero_zero_placeholder': 49},5a2776135c320a31cbbc83a7aff98666661c213d94fac4e3d218169c90d0776e,1.0,0.5183908982643319,0.0,0.4816091017356682,NOT_EVALUATED; fit/grid only,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Baseball/NPB,BSB-NPB-NB-r1,count,SMOKE_PASS,22345,21666,3496,FULL_GAME_INCL_EXTRAS,"{'zero_zero_placeholder': 53, 'missing_numeric_score': 565, 'duplicate_event_id': 61}",cb25662058d5a058eeded96372fc7ad74ac472dc67c0a59845e24610b83a4880,1.0,0.4619742555077548,0.02374505357713769,0.5142806909151076,NOT_EVALUATED; fit/grid only,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Baseball/Summer Olympics,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Baseball/WBSC Premier12,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Baseball/World Baseball Classic,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Basketball/ABA League,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Basketball/Austria Basketball Bundesliga,BKB-AUSTRIA-BASKETBALL-BUNDESLIGA-JOINT-r1,gaussian,SMOKE_PASS,7449,7435,707,FULL_GAME_INCL_OT,{'invalid_team_identity': 14},d3f929d227064f3bba145eb30be882958de56ac76945c19d90ebb6ba44040268,1.0,0.6633629466264832,0.0,0.3366370533735169,NOT_EVALUATED; fit/grid only,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Basketball/B League,BKB-B-LEAGUE-JOINT-r1,gaussian,SMOKE_PASS,6350,6350,2356,FULL_GAME_INCL_OT,{},c31917f54fd9b76b2ade0bd0e3740d654222256ff33fd9cc6f64809d825af3c4,0.9999999999999999,0.6876607694696667,0.0,0.3123392305303332,NOT_EVALUATED; fit/grid only,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Basketball/Basketball Bundesliga,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Basketball/BSL,,,NOT_MODELLED,7449,,,,alias copy of Basketball/Austria Basketball Bundesliga (ACTIVE_FILE_INDEX §2),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Basketball/CBA,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Basketball/EuroBasket,BKB-EUROBASKET-JOINT-r1,gaussian,SMOKE_PASS,1319,1037,152,FULL_GAME_INCL_OT,"{'invalid_date': 179, 'invalid_team_identity': 27, 'missing_numeric_score': 76}",e6cf04ea8049e1852c8ac9a23cba49b9a74b8169dcd69ae33b41a6a3d77f5ea0,1.0,0.19285109324225017,0.0,0.8071489067577498,NOT_EVALUATED; fit/grid only,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Basketball/EuroCup,BKB-EUROCUP-JOINT-r1,gaussian,SMOKE_PASS,4851,4851,622,FULL_GAME_INCL_OT,{},d5ec1d15a4222b60b99a748c8ab91b7542be316e48d660315361c07ca86d8364,1.0,0.6907890739356953,0.0,0.3092109260643048,NOT_EVALUATED; fit/grid only,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Basketball/EuroLeague,BKB-EUROLEAGUE-JOINT-r1,gaussian,SMOKE_PASS,6685,6603,1391,FULL_GAME_INCL_OT,{'missing_numeric_score': 82},0d05e401ff4173fbc14b79909064c098b6cc0324cead9b1c6ab05ce747c84c89,0.9999999999999998,0.6796798012466858,0.0,0.3203201987533142,NOT_EVALUATED; fit/grid only,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Basketball/EuroLeague Women,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Basketball/FIBA AmeriCup,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Basketball/FIBA Asia Cup,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Basketball/Greek Basket League,BKB-GREEK-BASKET-LEAGUE-JOINT-r1,gaussian,SMOKE_PASS,8179,8171,628,FULL_GAME_INCL_OT,{'invalid_team_identity': 8},232e453a1b95aadf382ab69ce001e133e86bb64f5c56077a842faf8e6de2c4c4,1.0,0.6215539494339889,0.0,0.378446050566011,NOT_EVALUATED; fit/grid only,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Basketball/KBL,BKB-KBL-JOINT-r1,gaussian,SMOKE_PASS,8285,8285,889,FULL_GAME_INCL_OT,{},5ff477406380e78844f7986e8b52945cadf36f9101b970bfb875f54741c00350,1.0000000000000002,0.4977793042223088,0.0,0.5022206957776912,NOT_EVALUATED; fit/grid only,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Basketball/Liga ACB,BKB-LIGA-ACB-JOINT-r1,gaussian,SMOKE_PASS,15881,15881,1004,FULL_GAME_INCL_OT,{},286bd1df850f55b343237961f1ef2b00bb84321a38cf87123753bf5f03d29f91,0.9999999999999998,0.5191473823091062,0.0,0.48085261769089366,NOT_EVALUATED; fit/grid only,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Basketball/LNB Elite,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Basketball/Men's FIBA World Cup,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Basketball/NBA,BKB-NBA-JOINT-r1,gaussian,SMOKE_PASS,59788,59788,5283,FULL_GAME_INCL_OT,{},6ad9976bfe3c80414323bb85c2a731d5d4b99c5526ed3b99fdb5c7ecd9510ea4,1.0,0.5460738545566072,0.0,0.4539261454433927,NOT_EVALUATED; fit/grid only,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Basketball/NBA G League,BKB-NBA-G-LEAGUE-JOINT-r1,gaussian,SMOKE_PASS,10947,10947,2146,FULL_GAME_INCL_OT,{},8eb13e2164679725bc994bd3cf79e8a10444210dd3447d51c4780b2b519321e9,1.0,0.43054521399703644,0.0,0.5694547860029635,NOT_EVALUATED; fit/grid only,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Basketball/NBL,BKB-NBL-JOINT-r1,gaussian,SMOKE_PASS,8124,8116,520,FULL_GAME_INCL_OT,"{'missing_numeric_score': 4, 'zero_zero_placeholder': 4}",aebd4b5a6e89e76e7c42ffebe0f3c8d6b8718b8cfd05ba30c849f50b20d4fd19,1.0,0.5473786647890134,0.0,0.45262133521098663,NOT_EVALUATED; fit/grid only,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Basketball/NBL1,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Basketball/PBA,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Basketball/Serie A,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Basketball/Summer Olympics,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Basketball/VTB United League,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Basketball/WNBA,BKB-WNBA-JOINT-r1,gaussian,SMOKE_PASS,6676,6654,1075,FULL_GAME_INCL_OT,{'invalid_team_identity': 22},9726933ab342654458f7ef6786ed40a8f56ce220ac00433bfa3dfdd6a2e53508,1.0,0.5119299665622564,0.0,0.4880700334377435,NOT_EVALUATED; fit/grid only,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Basketball/WNBL,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Basketball/Women's FIBA World Cup,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Canadian Football/CFL,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Canadian Football/Grey Cup,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Canadian Football/Vanier Cup,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+College Football/College Football Playoff,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+College Football/Cotton Bowl,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+College Football/Fiesta Bowl,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+College Football/NCAA Division I FBS,,,NOT_MODELLED,790,,,,SUSPECTED_DEFAULT dates: 304/783 dated rows on month-day 01-01; the known-at rule cannot be applied,,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+College Football/NCAA Division I FCS,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+College Football/Orange Bowl,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+College Football/Peach Bowl,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+College Football/Rose Bowl,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+College Football/Sugar Bowl,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Cricket One-Day Format/Marsh One-Day Cup,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Cricket One-Day Format/Men's Champions Trophy,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Cricket One-Day Format/Men's Cricket World Cup,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Cricket One-Day Format/Men's ODI International,,,NOT_MODELLED,4428,,,,alias copy of Cricket One-Day Format/ODI International (ACTIVE_FILE_INDEX §2),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Cricket One-Day Format/Metro Bank One Day Cup,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Cricket One-Day Format/ODI International,CROD-ODI-INTERNATIONAL-FI-r1,cricket,SMOKE_PASS,4428,2622,381,FIRST_INNINGS_FULL_LENGTH,"{'short_first_innings': 1082, 'unparsed_first_innings': 724}",b4e006e80079c93c4939d9b77c964fd958fa46e15ecaf3dab77b3598e9f51867,1.0,,,,NOT_EVALUATED; fit/grid only,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Cricket One-Day Format/Vijay Hazare Trophy,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Cricket One-Day Format/Women's Cricket World Cup,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Cricket T20/Big Bash,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Cricket T20/CPL,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Cricket T20/ILT20,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Cricket T20/IPL,CRT20-IPL-FI-r1,cricket,SMOKE_PASS,1213,705,177,FIRST_INNINGS_FULL_LENGTH,"{'short_first_innings': 46, 'unparsed_first_innings': 428, 'method:DLS': 22, 'method:Weather Abandonment': 11, 'invalid_identity_or_date': 1}",bf261041aef872c5b7da0ab64dc2caa7caa420c76ad8500b7065d56be4313bd5,0.9999999999999999,,,,NOT_EVALUATED; fit/grid only,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Cricket T20/Men's T20 World Cup,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Cricket T20/MLC,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Cricket T20/PSL,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Cricket T20/SA20,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Cricket T20/The Hundred,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Cricket T20/WBBL,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Cricket T20/Women's T20 World Cup,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Cricket T20/WPL,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Cricket Tests/County Championship,,,NOT_MODELLED,7894,,,,"multi-day first-class cricket: first-innings totals mix declarations, follow-on and weather and need a separate session/declaration model (framework §8.4)",,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Cricket Tests/ICC World Test Championship,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Cricket Tests/Plunket Shield,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Cricket Tests/Ranji Trophy,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Cricket Tests/Sheffield Shield,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Cricket Tests/The Ashes,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Hockey/Euro Hockey League,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Hockey/FIH Hockey Pro League,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Hockey/Hockey India League,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Hockey/Hoofdklasse,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Hockey/Men's FIH Hockey World Cup,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Hockey/Summer Olympics,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Hockey/Women's FIH Hockey World Cup,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Ice Hockey/AHL,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Ice Hockey/AIHL,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Ice Hockey/Czech Extraliga,IH-CZECH-EXTRALIGA-REG-r1,count,SMOKE_PASS,18752,16487,1456,FULL_GAME_INCL_OT_SO,"{'invalid_date': 1843, 'ot_margin_not_one': 422}",2ee071dd8698a65ba1f3a21727824c1f9bfc20d76f0fb97a8fd8c3861d51d0b2,0.9999999999999997,0.6268363804949637,0.0,0.3731636195050362,NOT_EVALUATED; fit/grid only,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Ice Hockey/Danish Metal Ligaen,IH-DANISH-METAL-LIGAEN-REG-r1,count,SMOKE_PASS,9053,9035,941,FULL_GAME_INCL_OT_SO,{'invalid_team_identity': 18},e89e937ee34807d28071cb84dbe658154778eb8f758183d0482583fd50d5310a,0.9999999999999999,0.5521194517018329,0.0,0.447880548298167,NOT_EVALUATED; fit/grid only,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Ice Hockey/DEL,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Ice Hockey/ECHL,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Ice Hockey/KHL,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Ice Hockey/Liiga,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Ice Hockey/Men's IIHF World Championship,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Ice Hockey/Metal Ligaen,,,NOT_MODELLED,9053,,,,alias copy of Ice Hockey/Danish Metal Ligaen (ACTIVE_FILE_INDEX §2),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Ice Hockey/NHL,IH-NHL-REG-r1,count,SMOKE_PASS,58379,58372,5592,FULL_GAME_INCL_OT_SO,"{'invalid_date': 2, 'ot_margin_not_one': 3, 'missing_numeric_score': 2}",24b177dee0344eb56717bac2c174e51142abfd06e58509ed522f8fd901d91af3,1.0,0.4937352427090557,0.0,0.5062647572909443,NOT_EVALUATED; fit/grid only,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Ice Hockey/PWHL,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Ice Hockey/SHL,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Ice Hockey/Swiss National League,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Ice Hockey/Winter Olympics,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Ice Hockey/Women's IIHF World Championship,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Rugby League/Men's Rugby League World Cup,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Rugby League/NRL,RL-NRL-JOINT-r1,gaussian,SMOKE_PASS,9583,9581,832,FULL_GAME_INCL_GOLDEN_POINT,"{'zero_zero_placeholder': 1, 'missing_numeric_score': 1}",6752549244da3624fe073282c3250c66f5789a68bc6e94094e1882d0f877c5ae,1.0,0.5744480676823348,0.0036886666092989006,0.4218632657083664,NOT_EVALUATED; fit/grid only,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Rugby League/NRLW,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Rugby League/RFL Championship,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Rugby League/State of Origin,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Rugby League/Super League,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Rugby League/Women's Rugby League World Cup,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Rugby League/Women's Super League,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Rugby Union/Champions Cup,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Rugby Union/EPCR Challenge Cup,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Rugby Union/Farah Palmer Cup,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Rugby Union/League One,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Rugby Union/Men's Rugby World Cup,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Rugby Union/Premiership,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Rugby Union/Premiership Women's Rugby,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Rugby Union/Six Nations,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Rugby Union/Super Rugby Pacific,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Rugby Union/The Rugby Championship,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Rugby Union/Top 14,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Rugby Union/United Rugby Championship,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Rugby Union/Women's Rugby World Cup,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Rugby Union/Women's Six Nations,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Soccer/A-League Men,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Soccer/A-League Women,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Soccer/AFC Champions League,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Soccer/Bundesliga,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Soccer/CAF Champions League,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Soccer/CONCACAF Champions Cup,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Soccer/CONCACAF Gold Cup,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Soccer/CONMEBOL Libertadores,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Soccer/Copa America,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Soccer/FIFA Club World Cup,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Soccer/Frauen-Bundesliga,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Soccer/La Liga,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Soccer/Liga F,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Soccer/Ligue 1,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Soccer/Major League Soccer,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Soccer/Men's AFC Asian Cup,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Soccer/Men's Africa Cup of Nations,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Soccer/Men's FIFA World Cup,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Soccer/Men's UEFA European Championship,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Soccer/NWSL,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Soccer/Premier League,SOC-PREMIER-LEAGUE-DC-r1,dixon_coles,SMOKE_PASS,20740,20740,1520,REGULATION_90,{},208ccfcc4a0fe7720284b968524785b30be4b8c60a9ea54f9e1e5beab50bc709,1.0,0.38245011034051224,0.25617693450495327,0.36137295515453455,NOT_EVALUATED; fit/grid only,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Soccer/Premiere Ligue,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Soccer/Serie A,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Soccer/Serie A Femminile,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Soccer/Summer Olympics,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Soccer/UEFA Champions League,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Soccer/UEFA Conference League,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Soccer/UEFA Europa League,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Soccer/Women's FIFA World Cup,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Soccer/Women's UEFA European Championship,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Soccer/WSL,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+State Level AFL/NTFL,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+State Level AFL/QAFL,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+State Level AFL/SANFL,AUSST-SANFL-JOINT-r1,gaussian,SMOKE_PASS,384,384,384,FULL_GAME,{},bae63d347a46699f9e5c9877be9a7d36b5879cddea5ba832a811a4fc3a12fcd3,1.0,0.6138397059328898,0.010206324414467175,0.3759539696526431,NOT_EVALUATED; fit/grid only,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+State Level AFL/SANFLW,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+State Level AFL/TSL,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+State Level AFL/VFL,AUSST-VFL-JOINT-r1,gaussian,SMOKE_PASS,972,821,725,FULL_GAME,"{'score_text_team_unmatched': 87, 'zero_zero_placeholder': 64}",4c0f8a95c02ac5a5bf29c9684b2c86647313ddc03b07aa3480892c06ed23c830,1.0,0.5683358727198359,0.01085472082317062,0.4208094064569936,NOT_EVALUATED; fit/grid only,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+State Level AFL/VFLW,AUSST-VFLW-JOINT-r1,gaussian,SMOKE_PASS,460,454,364,FULL_GAME,"{'zero_zero_placeholder': 1, 'score_text_team_unmatched': 5}",d1bb3ae119a9978f4001b380c9c767b5e451ebf3267fd192681d8c143d5688f4,1.0000000000000002,0.4344526555553022,0.013588827776120915,0.551958516668577,NOT_EVALUATED; fit/grid only,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+State Level AFL/WAFL,AUSST-WAFL-JOINT-r1,gaussian,SMOKE_PASS,10019,9916,384,FULL_GAME,{'zero_zero_placeholder': 103},0c64971c881035910a59a102da8a230a43b25ac38a2a9a656303d5d87e478994,1.0,0.6835458510075265,0.0106753261198315,0.3057788228726419,NOT_EVALUATED; fit/grid only,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+State Level AFL/WAFLW,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Tennis/ATP,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a
+Tennis/WTA,,,NOT_MODELLED,0,,,,header-only folder (no data rows),,,,,,,8b429aa88492aabdf45e13558dff330696678b4faef7b11ae8869b24d1271f5a

@@ -25,7 +25,7 @@ import numpy as np
 import pandas as pd
 
 from ml.config import REPO_ROOT, League, discover
-from ml.data.archive import load_league, snapshot_hash, training_frame
+from ml.data.archive import load_league, snapshot_hash, seasons_available, training_frame
 from ml.evaluation import backtest, report
 
 CACHE = Path(os.environ.get("ML_CACHE", REPO_ROOT.parent / "Sports-Research-workshop-cache"))
@@ -51,10 +51,13 @@ def receipt_base() -> dict:
             "pandas": pd.__version__, "scipy": __import__("scipy").__version__}
 
 
-def finish_receipt(rec: dict) -> dict:
+def finish_receipt(rec: dict, input_checks=()) -> dict:
     """Refuse to stamp a completed run after its generating source changed on disk."""
     if code_digest() != rec["code_sha256"]:
         raise RuntimeError("generating source changed during run; preserve diagnostics and rerun from a stable checkout")
+    for label, expected, current in input_checks:
+        if current() != expected:
+            raise RuntimeError(f"{label} changed during run; rerun from stable inputs")
     return {**rec, "completed_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")}
 
 
@@ -63,6 +66,8 @@ def run_competition(lg: League, log=print) -> dict:
     from ml.evaluation.writers import write_league
 
     rec = receipt_base()
+    archive_digest = lambda: snapshot_hash(lg, seasons_available(lg))
+    rec["archive_snapshot_sha256"] = archive_digest()
     t0 = time.time()
     games, load = load_league(lg)
     best, tune_table = backtest.tune(lg, games, log=lambda *a: None)
@@ -72,8 +77,6 @@ def run_competition(lg: League, log=print) -> dict:
         variants["KEYNUM"] = {**best, "key_numbers": True}
     seasons = tuple(sorted({lg.tune_seasons[-1], *lg.test_seasons} | (set(lg.tune_seasons) if lg.path == EPL_PATH else set())))
     pred = backtest.evaluate(lg, best, seasons, games, extra_variants=variants, log=lambda *a: None)
-    CACHE.mkdir(parents=True, exist_ok=True)
-    pred.to_csv(CACHE / f"{lg.model_id}_predictions.csv", index=False)
     test = pred[pred["season"].isin(lg.test_seasons)]
     pt = report.paired_table(test, "MODEL", lg.test_seasons)
     verdict = report.development_verdict(pt, lg.test_seasons)
@@ -97,8 +100,14 @@ def run_competition(lg: League, log=print) -> dict:
     res = {"league": lg, "best": best, "tune_table": tune_table, "pred": pred, "paired": pt, "verdict": verdict,
            "extra": extra, "calibration_experiment": cal, "calibration": calib, "load": load, "final_model": final,
            "final_as_of": as_of, "final_season": season_last,
-           "data_sha": snapshot_hash(lg, sorted(games["season"].unique().tolist())), "seconds": time.time() - t0}
-    row = write_league(res, finish_receipt(rec))
+           "data_sha": rec["archive_snapshot_sha256"], "seconds": time.time() - t0}
+    prediction_bytes = pred.to_csv(index=False, lineterminator="\n").encode("utf8")
+    rec["prediction_source_sha256"] = hashlib.sha256(prediction_bytes).hexdigest()
+    completed_receipt = finish_receipt(rec, [("archive inputs", rec["archive_snapshot_sha256"], archive_digest)])
+    CACHE.mkdir(parents=True, exist_ok=True)
+    (CACHE / f"{lg.model_id}_predictions.csv").write_bytes(prediction_bytes)
+    (CACHE / f"{lg.model_id}_predictions_RECEIPT.md").write_text("# Development prediction cache receipt\n\n" + "\n".join(f"- `{key}`: {value}" for key, value in completed_receipt.items()) + "\n", encoding="utf8", newline="\n")
+    row = write_league(res, completed_receipt)
     log(f"[{lg.model_id}] {verdict['overall']} ({time.time() - t0:.0f}s)")
     return row
 
@@ -108,11 +117,13 @@ def run_cricket(lg: League, log=print) -> dict:
     from ml.models.cricket import tune_and_evaluate
 
     rec = receipt_base()
+    archive_digest = lambda: snapshot_hash(lg, seasons_available(lg))
+    rec["archive_snapshot_sha256"] = archive_digest()
     t0 = time.time()
     res = tune_and_evaluate(lg, log=lambda *a: None)
     res["league"] = lg
     res["seconds"] = time.time() - t0
-    row = write_cricket(res, finish_receipt(rec))
+    row = write_cricket(res, finish_receipt(rec, [("archive inputs", rec["archive_snapshot_sha256"], archive_digest)]))
     log(f"[{lg.model_id}] {row['development_verdict']} ({time.time() - t0:.0f}s)")
     return row
 
@@ -136,7 +147,13 @@ def not_modelled_rows(found) -> list[dict]:
 
 
 def run_all(workers: int, only: list[str] | None = None, log=print) -> list[dict]:
+    if not isinstance(workers, int) or workers < 1:
+        raise ValueError("workers must be a positive integer")
     found = discover()
+    if only is not None:
+        eligible = {d.path for d in found if d.status == "MODELLED"}
+        if not only or any(path not in eligible for path in only):
+            raise ValueError("competition request must name existing modellable paths: " + ", ".join(only))
     todo = [d.league for d in found if d.status == "MODELLED" and (only is None or d.path in only)]
     log(f"discovered {len(found)} competition folders; modelling {len(todo)} with {workers} workers")
     rows = []
@@ -157,7 +174,8 @@ def run_cards() -> None:
 
     rec = receipt_base()
     rec["rank_log_sha256"] = hashlib.sha256((REPO_ROOT / "GAME_PREDICTION_RANK_LOG.csv").read_bytes()).hexdigest()
-    write_cards(audit(), finish_receipt(rec))
+    rank_digest = lambda: hashlib.sha256((REPO_ROOT / "GAME_PREDICTION_RANK_LOG.csv").read_bytes()).hexdigest()
+    write_cards(audit(), finish_receipt(rec, [("rank log", rec["rank_log_sha256"], rank_digest)]))
 
 
 def run_decision_lab() -> None:
@@ -172,13 +190,16 @@ def run_decision_lab() -> None:
     rec = receipt_base()
     rec["prediction_source_sha256"] = hashlib.sha256(path.read_bytes()).hexdigest()
     from ml.decision.lab import FD_DIR
-    market_hash = hashlib.sha256()
-    for market_file in sorted(FD_DIR.glob("*.csv")):
-        market_hash.update(market_file.name.encode())
-        market_hash.update(hashlib.sha256(market_file.read_bytes()).digest())
-    rec["local_market_capture_sha256"] = market_hash.hexdigest()
+    def market_digest():
+        market_hash = hashlib.sha256()
+        for market_file in sorted(FD_DIR.glob("*.csv")):
+            market_hash.update(market_file.name.encode())
+            market_hash.update(hashlib.sha256(market_file.read_bytes()).digest())
+        return market_hash.hexdigest()
+    rec["local_market_capture_sha256"] = market_digest()
     pred = pd.read_csv(path, parse_dates=["date", "fit_date"])
-    write_decision_lab(run(pred, model_id=lg.model_id), finish_receipt(rec))
+    prediction_digest = lambda: hashlib.sha256(path.read_bytes()).hexdigest()
+    write_decision_lab(run(pred, model_id=lg.model_id), finish_receipt(rec, [("prediction inputs", rec["prediction_source_sha256"], prediction_digest), ("market inputs", rec["local_market_capture_sha256"], market_digest)]))
 
 
 def main(argv: list[str]) -> None:

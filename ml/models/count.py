@@ -27,6 +27,10 @@ class CountParams:
     negbin: bool = False
     promoted_prior: bool = False
 
+    def __post_init__(self):
+        if not np.isfinite(self.half_life_days) or self.half_life_days <= 0 or not np.isfinite(self.ridge) or self.ridge < 0:
+            raise ValueError("invalid count-model decay or regularization parameters")
+
 
 class PoissonRatings:
     name = "DIXON_COLES"
@@ -110,9 +114,9 @@ class PoissonRatings:
         bounds = [(None, None), (-1.0, 1.0)] + ([(-0.25, 0.25)] if use_rho else []) + [(-3.0, 3.0)] * (2 * T)
         res = optimize.minimize(f_and_g, th0, jac=True, method="L-BFGS-B", bounds=bounds,
                                 options={"maxiter": 2000, "gtol": 1e-7})
-        if not res.success and "ABNORMAL" not in str(res.message):
+        if not res.success:
             raise FitError(f"likelihood optimisation failed: {res.message}")
-        if not np.all(np.isfinite(res.x)) or res.fun >= 1e99:
+        if not np.all(np.isfinite(res.x)) or not np.isfinite(res.fun) or res.fun >= 1e99:
             raise FitError("optimiser returned an invalid point")
         return unpack(res.x)
 

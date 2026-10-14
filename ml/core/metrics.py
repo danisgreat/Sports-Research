@@ -8,27 +8,45 @@ import pandas as pd
 from scipy import optimize, stats
 
 
+def _binary_inputs(p, y):
+    p, y = np.broadcast_arrays(np.asarray(p, float), np.asarray(y, float))
+    if np.isinf(p).any() or np.isinf(y).any() or ((p < -1e-12) | (p > 1 + 1e-12)).any() or ((~np.isnan(y)) & (y != 0) & (y != 1)).any():
+        raise ValueError("binary scores require probabilities in [0,1] and outcomes 0/1; missing values remain missing")
+    return np.clip(p, 0, 1), y  # Only remove floating-point endpoint roundoff, never impose probability floors.
+
+
 def brier(p, y) -> np.ndarray:
-    return (np.asarray(p, float) - np.asarray(y, float)) ** 2
+    p, y = _binary_inputs(p, y)
+    return (p - y) ** 2
 
 
 def log_loss(p, y, eps: float = 0.0) -> np.ndarray:
     """Binary log loss; no hidden clipping unless eps > 0 is passed explicitly."""
-    p = np.asarray(p, float)
-    y = np.asarray(y, float)
+    p, y = _binary_inputs(p, y)
+    if not np.isfinite(eps) or not 0 <= eps < .5:
+        raise ValueError("log-loss floor must be in [0,.5)")
     if eps:
         p = np.clip(p, eps, 1 - eps)
     with np.errstate(divide="ignore"):
         # Avoid 0 * -inf at correct literal 0/1 forecasts. Wrong certainty is infinite loss.
-        return -np.where(y == 1, np.log(p), np.log1p(-p))
+        return np.where(np.isnan(y), np.nan, -np.where(y == 1, np.log(p), np.log1p(-p)))
 
 
 def brier_multiclass_half(probs: np.ndarray, outcome_idx: np.ndarray) -> np.ndarray:
     """Half-sum multiclass Brier: 0.5 * sum_k (p_k - y_k)^2 (SCORING §3 scaling)."""
-    probs = np.asarray(probs, float)
+    probs, outcome_idx = np.asarray(probs, float), np.asarray(outcome_idx, float)
+    if probs.ndim != 2 or probs.shape[1] < 2 or outcome_idx.shape != (len(probs),):
+        raise ValueError("multiclass vectors and outcomes have incompatible shapes")
+    complete = np.isfinite(probs).all(axis=1)
+    known = np.isfinite(outcome_idx)
+    if np.isinf(probs).any() or np.isinf(outcome_idx).any() or np.any(probs < 0) or np.any(probs > 1) or not np.allclose(probs[complete].sum(axis=1), 1):
+        raise ValueError("invalid multiclass probability vector")
+    if np.any(outcome_idx[known] != outcome_idx[known].astype(int)) or np.any(outcome_idx[known] < 0) or np.any(outcome_idx[known] >= probs.shape[1]):
+        raise ValueError("outcome index outside the declared classes")
     onehot = np.zeros_like(probs)
-    onehot[np.arange(len(probs)), np.asarray(outcome_idx, int)] = 1.0
-    return 0.5 * ((probs - onehot) ** 2).sum(axis=1)
+    onehot[np.flatnonzero(known), outcome_idx[known].astype(int)] = 1.0
+    scores = 0.5 * ((probs - onehot) ** 2).sum(axis=1)
+    return np.where(complete & known, scores, np.nan)
 
 
 def iso_week(dates: pd.Series) -> pd.Series:
@@ -43,6 +61,7 @@ def paired_week_interval(diff: pd.Series, event: pd.Series, week: pd.Series, con
     Negative values favour the candidate. k < 8 weeks is reported as INSUFFICIENT_EVIDENCE (SCORING §5).
     """
     df = pd.DataFrame({"d": diff.values, "e": event.values, "w": week.values}).dropna()
+    df = df[np.isfinite(df["d"])]
     if df.empty:
         return {"k_weeks": 0, "n_events": 0, "mean": float("nan"), "lo": float("nan"), "hi": float("nan"),
                 "sd_w": float("nan"), "status": "NOT_COMPUTABLE"}
@@ -51,7 +70,7 @@ def paired_week_interval(diff: pd.Series, event: pd.Series, week: pd.Series, con
     k = len(wk)
     m = float(wk.mean())
     sd = float(wk.std(ddof=1)) if k > 1 else float("nan")
-    if k > 1 and sd > 0:
+    if k > 1:
         t = stats.t.ppf(0.5 + conf / 2, k - 1)
         half = t * sd / math.sqrt(k)
     else:
@@ -64,8 +83,11 @@ def paired_week_interval(diff: pd.Series, event: pd.Series, week: pd.Series, con
 
 def reliability_table(p, y, bins: int = 10) -> pd.DataFrame:
     """Complete predeclared bins over [0, 1]; empty bins are retained (SCORING §4)."""
-    p = np.asarray(p, float)
-    y = np.asarray(y, float)
+    p, y = _binary_inputs(p, y)
+    valid = np.isfinite(p) & np.isfinite(y)
+    p, y = p[valid], y[valid]
+    if not isinstance(bins, (int, np.integer)) or bins <= 0:
+        raise ValueError("positive integer bin count required")
     edges = np.linspace(0, 1, bins + 1)
     idx = np.clip(np.digitize(p, edges[1:-1], right=False), 0, bins - 1)
     rows = []
@@ -94,9 +116,12 @@ def wilson(k: float, n: int, z: float = 1.96) -> tuple[float, float]:
 
 def brier_decomposition(p, y, bins: int = 10) -> dict:
     """Murphy decomposition on fixed bins: Brier ~= reliability - resolution + uncertainty (+ within-bin term)."""
-    p = np.asarray(p, float)
-    y = np.asarray(y, float)
+    p, y = _binary_inputs(p, y)
+    valid = np.isfinite(p) & np.isfinite(y)
+    p, y = p[valid], y[valid]
     n = len(p)
+    if n == 0:
+        return {key: float("nan") for key in ("brier", "reliability", "resolution", "uncertainty", "within_bin_residual")}
     edges = np.linspace(0, 1, bins + 1)
     idx = np.clip(np.digitize(p, edges[1:-1]), 0, bins - 1)
     obar = y.mean()
@@ -117,9 +142,13 @@ def brier_decomposition(p, y, bins: int = 10) -> dict:
 
 def calibration_fit(p, y) -> dict:
     """Calibration-in-the-large, ECE and the logistic (Cox) intercept/slope of y on logit(p)."""
-    p = np.clip(np.asarray(p, float), 1e-6, 1 - 1e-6)
-    y = np.asarray(y, float)
-    x = np.log(p / (1 - p))
+    p, y = _binary_inputs(p, y)
+    valid = np.isfinite(p) & np.isfinite(y)
+    p, y = p[valid], y[valid]
+    if len(p) == 0:
+        return {"n": 0, "converged": False, **{key: float("nan") for key in ("cal_in_large", "ece", "intercept", "intercept_se", "slope", "slope_se")}}
+    clipped = np.clip(p, 1e-6, 1 - 1e-6)
+    x = np.log(clipped / (1 - clipped))
 
     def nll(b):
         z = b[0] + b[1] * x
@@ -156,6 +185,8 @@ def cluster_bootstrap_mean(values: np.ndarray, clusters: np.ndarray, n_boot: int
     g = df.groupby("c")["v"].agg(["sum", "count"])
     s, c = g["sum"].to_numpy(), g["count"].to_numpy()
     k = len(g)
+    if k == 0 or n_boot <= 0:
+        return float("nan"), float("nan")
     draws = rng.integers(0, k, size=(n_boot, k))
     means = s[draws].sum(axis=1) / c[draws].sum(axis=1)
     return float(np.percentile(means, 2.5)), float(np.percentile(means, 97.5))

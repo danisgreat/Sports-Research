@@ -27,7 +27,7 @@ OUTCOMES = ("H", "D", "A")
 
 
 def load_prices() -> pd.DataFrame:
-    rows = []
+    rows, invalid = [], 0
     for f in sorted(FD_DIR.glob("*.csv")):
         season = int(f.stem[:4])
         with open(f, newline="", encoding="utf-8-sig", errors="replace") as fh:
@@ -36,17 +36,32 @@ def load_prices() -> pd.DataFrame:
                     taken = [float(r[c]) for c in ("PSH", "PSD", "PSA")]
                     close = [float(r[c]) for c in ("PSCH", "PSCD", "PSCA")]
                 except (KeyError, ValueError):
+                    invalid += 1
                     continue
-                rows.append({"season": season, "date": pd.to_datetime(r["Date"], dayfirst=True),
-                             "home": r["HomeTeam"].strip(), "away": r["AwayTeam"].strip(), "ftr": r["FTR"].strip(),
+                if not np.isfinite(taken + close).all() or min(taken + close) <= 1:
+                    invalid += 1
+                    continue
+                date = pd.to_datetime(r.get("Date"), dayfirst=True, errors="coerce")
+                home, away, ftr = (r.get(key, "").strip() for key in ("HomeTeam", "AwayTeam", "FTR"))
+                if pd.isna(date) or not home or not away or home == away or ftr not in OUTCOMES:
+                    invalid += 1
+                    continue
+                rows.append({"season": season, "date": date,
+                             "home": home, "away": away, "ftr": ftr,
                              "o_H": taken[0], "o_D": taken[1], "o_A": taken[2],
                              "c_H": close[0], "c_D": close[1], "c_A": close[2]})
-    return pd.DataFrame(rows)
+    df = pd.DataFrame(rows, columns=["season", "date", "home", "away", "ftr", "o_H", "o_D", "o_A", "c_H", "c_D", "c_A"])
+    df.attrs["invalid_price_rows"] = invalid
+    df["date"] = pd.to_datetime(df["date"])
+    return df
 
 
 def join(pred: pd.DataFrame, prices: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
-    m = pred.merge(prices, on=["season", "date", "home", "away"], how="left", indicator=True)
-    info = {"predictions": len(pred), "matched": int((m["_merge"] == "both").sum())}
+    keys = ["season", "date", "home", "away"]
+    if pred.duplicated(keys).any() or prices.duplicated(keys).any():
+        raise ValueError("ambiguous prediction/price identity; join must be one-to-one")
+    m = pred.merge(prices, on=keys, how="left", indicator=True, validate="one_to_one")
+    info = {"predictions": len(pred), "matched": int((m["_merge"] == "both").sum()), "invalid_price_rows": prices.attrs.get("invalid_price_rows", 0)}
     m = m[m["_merge"] == "both"].drop(columns="_merge")
     oi = m["outcome_idx"].map({0: "H", 1: "D", 2: "A"})
     info["ftr_mismatch"] = int((oi != m["ftr"]).sum())
@@ -57,6 +72,12 @@ def join(pred: pd.DataFrame, prices: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
 def run(pred: pd.DataFrame, seed: int = 20261014, model_id: str = "SOC-PREMIER-LEAGUE-DC-r1") -> dict:
     prices = load_prices()
     df, info = join(pred, prices)
+    vector_columns = [f"{prefix}_p_{side}" for prefix in ("MODEL", "BASE", "TB1") for side in ("home", "draw", "away")]
+    complete = np.isfinite(df[vector_columns]).all(axis=1)
+    info["missing_probability_rows"] = int((~complete).sum())
+    df = df[complete].copy()
+    for prefix in ("MODEL", "BASE", "TB1"):
+        brier_multiclass_half(df[[f"{prefix}_p_{s}" for s in ("home", "draw", "away")]].to_numpy(), df["outcome_idx"].to_numpy())
     out: dict = {"join": info, "model_id": model_id}
     seasons = sorted(df["season"].unique())
     if len(seasons) < 3:
@@ -181,12 +202,18 @@ def simulate(d: pd.DataFrame, policy: str, slate_cap: float = 0.10, halt_dd: flo
     review, ML_RL_IMPLEMENTATION_FRAMEWORK §10.3), so bankroll figures after a halt are frozen.
     """
     bank, peak, max_dd, halted_week = 1.0, 1.0, 0.0, None
+    if not np.isfinite(halt_dd) or not 0 <= halt_dd <= 1:
+        raise ValueError("drawdown halt threshold must be in [0,1]")
+    if not d.empty and (not np.isfinite(d["o_k"]).all() or (d["o_k"] <= 1).any() or not d["won_k"].isin([0, 1]).all()):
+        raise ValueError("simulation requires valid odds and resolved binary outcomes")
     staked = pnl = 0.0
+    executed_bets = 0
     sig = d[d[f"stake_{policy}"] > 0]
     for wk, g in d.groupby("wk", sort=True):
         if halted_week is not None:
             break
         s = kelly.cap_slate(g[f"stake_{policy}"].to_numpy(), slate_cap)
+        executed_bets += int((s > 0).sum())
         ret = np.where(g["won_k"].to_numpy() == 1, s * (g["o_k"].to_numpy() - 1), -s)
         staked += s.sum() * bank
         pnl += ret.sum() * bank
@@ -196,9 +223,9 @@ def simulate(d: pd.DataFrame, policy: str, slate_cap: float = 0.10, halt_dd: flo
         if 1 - bank / peak > halt_dd:
             halted_week = wk
     if sig.empty:
-        return {"policy": policy, "n_bets": 0}
+        return {"policy": policy, "n_bets": 0, "executed_bets": 0, "turnover": 0.0, "pnl": 0.0, "final_bankroll": 1.0, "max_drawdown": 0.0, "halted_at_week": "never", **{key: np.nan for key in ("mean_clv", "clv_week_lo", "clv_week_hi", "share_clv_positive", "stake_weighted_clv", "hit_rate", "mean_odds", "roi")}}
     iv = paired_week_interval(sig["clv_k"], sig["event_id"], sig["week"])
-    return {"policy": policy, "n_bets": len(sig), "mean_clv": float(sig["clv_k"].mean()),
+    return {"policy": policy, "n_bets": len(sig), "executed_bets": executed_bets, "mean_clv": float(sig["clv_k"].mean()),
             "clv_week_lo": iv["lo"], "clv_week_hi": iv["hi"], "share_clv_positive": float((sig["clv_k"] > 0).mean()),
             "stake_weighted_clv": float(np.average(sig["clv_k"], weights=sig[f"stake_{policy}"])),
             "hit_rate": float(sig["won_k"].mean()), "mean_odds": float(sig["o_k"].mean()),

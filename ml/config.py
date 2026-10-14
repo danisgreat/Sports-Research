@@ -259,7 +259,7 @@ def discover() -> list[Discovery]:
 
 @__import__("functools").lru_cache(maxsize=1)
 def _discover_cached() -> tuple:
-    from ml.data.archive import stage_of  # local import: archive imports config
+    from ml.data.archive import stage_of, flag_state, missing_text, score_int  # local import: archive imports config
 
     out: list[Discovery] = []
     for sport_dir in sorted(p for p in ARCHIVE.iterdir() if p.is_dir() and not p.name.startswith("_")):
@@ -301,7 +301,7 @@ def _discover_cached() -> tuple:
                         md_counter[d[5:10]] = md_counter.get(d[5:10], 0) + 1
                     if cols["home_score"] and cols["away_score"]:
                         try:
-                            margins.setdefault(y, []).append(int(float(r[cols["home_score"]])) - int(float(r[cols["away_score"]])))
+                            margins.setdefault(y, []).append(score_int(r[cols["home_score"]]) - score_int(r[cols["away_score"]]))
                         except (TypeError, ValueError):
                             pass
                     otc = cols["decision"] or cols["overtime"]
@@ -309,9 +309,9 @@ def _discover_cached() -> tuple:
                         v = (r.get(otc) or "").strip().lower()
                         acc = ot_rows.setdefault(y, [0, 0, 0])
                         acc[0] += 1
-                        if v:
+                        if not missing_text(v):
                             acc[1] += 1
-                            acc[2] += v not in ("no", "n", "0", "regulation", "false", "none")
+                            acc[2] += flag_state(v) is True
             nseas = len(stage_counts)
             if rows_total == 0:
                 out.append(Discovery(None, path, "NOT_MODELLED", "header-only folder (no data rows)", 0, 0))
@@ -344,8 +344,9 @@ def _discover_cached() -> tuple:
                                      "the known-at rule cannot be applied", nseas, rows_total))
                 continue
             cols = detect_columns(header)
-            if rules["engine"] != "cricket" and (cols["home"] is None or cols["parser"] is None):
-                out.append(Discovery(None, path, "NOT_MODELLED", "no home/away or score columns detected", nseas,
+            required = ("fi_team", "si_team", "fi_runs", "fi_wkts", "fi_overs", "date") if rules["engine"] == "cricket" else ("home", "away", "date", "parser")
+            if any(cols[key] is None for key in required):
+                out.append(Discovery(None, path, "NOT_MODELLED", "missing required columns: " + ",".join(key for key in required if cols[key] is None), nseas,
                                      rows_total))
                 continue
             reg_total = sum(v.get("REG", 0) for v in stage_counts.values())

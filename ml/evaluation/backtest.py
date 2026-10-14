@@ -42,6 +42,8 @@ def week_start(d: pd.Timestamp) -> pd.Timestamp:
 def make_model(lg: League, params: dict):
     if lg.engine == "gaussian":
         return GaussianRatings(lg, GaussParams(**params))
+    if lg.engine not in ("count", "dixon_coles"):
+        raise FitError(f"score-grid engine not supported: {lg.engine}")
     return PoissonRatings(lg, CountParams(
         half_life_days=params["half_life_days"], ridge=params["ridge"],
         use_rho=lg.engine == "dixon_coles", negbin=lg.negbin, promoted_prior=lg.promoted_prior))
@@ -65,6 +67,7 @@ def _outcome_idx(hs: int, as_: int) -> int:
 # ------------------------------------------------------------------------------------------------ tuning
 def _score_params(lg: League, all_games: pd.DataFrame, params: dict) -> tuple[float, int]:
     scores = []
+    failed = False
     for season in lg.tune_seasons:
         games = all_games[(all_games["season"] == season) & (all_games["stage"].isin(lg.eval_stages))]
         for ws, block in _weeks(games):
@@ -73,6 +76,7 @@ def _score_params(lg: League, all_games: pd.DataFrame, params: dict) -> tuple[fl
                 m = make_model(lg, params)
                 m.fit(train, ws, season) if lg.engine != "gaussian" else m.fit(train, ws)
             except FitError:
+                failed = True
                 continue
             for r in block.itertuples():
                 if lg.engine == "gaussian":
@@ -83,7 +87,7 @@ def _score_params(lg: League, all_games: pd.DataFrame, params: dict) -> tuple[fl
                     g, _ = m.grid(r.home, r.away)
                     cm, ct = g.crps_margin(r.hs - r.as_), g.crps_total(r.hs + r.as_)
                 scores.append(cm + ct)
-    return (float(np.mean(scores)) if scores else np.inf), len(scores)
+    return (float(np.mean(scores)) if scores and not failed else np.inf), len(scores)
 
 
 def _extend(axis: str, values: list, side: str) -> list:
@@ -121,6 +125,8 @@ def tune(lg: League, all_games: pd.DataFrame | None = None, log=print, max_exten
             done[combo] = {**params, "objective": obj, "n": n, "seconds": round(time.time() - t0, 1)}
             log(f"  tune {lg.model_id} {params} -> {obj:.4f} (n={n})")
         table = pd.DataFrame(done.values()).sort_values("objective")
+        if not np.isfinite(table["objective"]).any():
+            raise FitError("no tuning candidate produced complete finite tune-period scores")
         best = {k: table.iloc[0][k] for k in keys}
         changed = False
         for k in keys:
@@ -176,7 +182,7 @@ def evaluate(lg: League, params: dict, seasons: tuple[int, ...], all_games: pd.D
             for r in block.itertuples():
                 margin, total = r.hs - r.as_, r.hs + r.as_
                 y_home = float(margin > 0)
-                y_over = float(total > line)
+                y_over = float(total > line) if np.isfinite(line) else np.nan
                 oi = _outcome_idx(r.hs, r.as_)
                 row = {"league": lg.competition, "season": season, "date": r.date, "week": None, "event_id": r.event_id,
                        "home": r.home, "away": r.away, "hs": r.hs, "as_": r.as_, "fit_date": ws,
@@ -213,6 +219,8 @@ def evaluate(lg: League, params: dict, seasons: tuple[int, ...], all_games: pd.D
                 out.append(row)
         log(f"  evaluated {lg.model_id} {season}: {sum(1 for x in out if x['season'] == season)} games")
     df = pd.DataFrame(out)
+    if df.empty:
+        raise FitError("no evaluation-stage games in the requested seasons")
     df["week"] = iso_week(df["date"])
     for pref in ["MODEL", *(extra_variants or {}), "BASE", "TB1"]:
         if f"{pref}_p_home" in df:

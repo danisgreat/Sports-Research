@@ -37,7 +37,9 @@ class ScoreGrid:
         p = np.asarray(p, dtype=float)
         if p.ndim != 2:
             raise CoherenceError("grid must be two-dimensional")
-        self.p = p
+        if p.size == 0 or any(not np.isfinite(x) or x != int(x) for x in (h0, a0)):
+            raise CoherenceError("nonempty grid and integer support origins required")
+        self.p = p.copy()
         self.h0 = int(h0)
         self.a0 = int(a0)
         if check:
@@ -46,6 +48,10 @@ class ScoreGrid:
     # ------------------------------------------------------------------ construction
     @classmethod
     def independent(cls, ph: np.ndarray, pa: np.ndarray, h0: int = 0, a0: int = 0) -> "ScoreGrid":
+        for marginal in (ph, pa):
+            marginal = np.asarray(marginal, float)
+            if marginal.ndim != 1 or marginal.size == 0 or not np.isfinite(marginal).all() or np.any(marginal < 0) or marginal.sum() <= 0:
+                raise CoherenceError("marginals must have finite nonnegative positive mass")
         g = np.outer(ph, pa)
         return cls(g / g.sum(), h0, a0)
 
@@ -62,8 +68,10 @@ class ScoreGrid:
         With ``clamp_rho`` a rho outside the pair's valid domain is moved to 99% of the nearest bound (the model is
         undefined outside it); the caller records the flag RHO_CLAMPED. Without it, an invalid rho raises.
         """
-        if lam_h <= 0 or lam_a <= 0:
+        if not all(np.isfinite(v) for v in (lam_h, lam_a, rho)) or lam_h <= 0 or lam_a <= 0:
             raise CoherenceError("Poisson means must be positive")
+        if max_goals is not None and (not np.isfinite(max_goals) or max_goals != int(max_goals) or max_goals < 1):
+            raise CoherenceError("Poisson support maximum must be a positive integer")
         lo, hi = cls.rho_domain(lam_h, lam_a)
         if clamp_rho and not (lo < rho < hi):
             rho = 0.99 * (lo if rho <= lo else hi)
@@ -85,6 +93,10 @@ class ScoreGrid:
     @classmethod
     def negbin(cls, mu_h: float, mu_a: float, phi: float, max_runs: int | None = None) -> "ScoreGrid":
         """Independent negative-binomial scores with Var = mu + phi * mu^2 (phi = 0 gives Poisson)."""
+        if not all(np.isfinite(v) for v in (mu_h, mu_a, phi)) or min(mu_h, mu_a) <= 0 or phi < 0:
+            raise CoherenceError("negative-binomial means must be positive and dispersion nonnegative")
+        if max_runs is not None and (not np.isfinite(max_runs) or max_runs != int(max_runs) or max_runs < 1):
+            raise CoherenceError("negative-binomial support maximum must be a positive integer")
         if phi <= 1e-9:
             return cls.poisson(mu_h, mu_a, 0.0, max_runs)
         if max_runs is None:
@@ -102,6 +114,10 @@ class ScoreGrid:
     def bivariate_normal(cls, mean_h: float, mean_a: float, cov: np.ndarray, n_sd: float = 6.5) -> "ScoreGrid":
         """Discretised bivariate normal on non-negative integers (density at lattice points, renormalised)."""
         cov = np.asarray(cov, dtype=float)
+        if cov.shape != (2, 2) or not np.isfinite(cov).all() or not np.allclose(cov, cov.T) or np.linalg.eigvalsh(cov).min() <= 0:
+            raise CoherenceError("score covariance must be finite, symmetric and positive definite")
+        if not all(np.isfinite(v) for v in (mean_h, mean_a, n_sd)) or n_sd <= 0:
+            raise CoherenceError("finite means and positive support width required")
         sh, sa = np.sqrt(cov[0, 0]), np.sqrt(cov[1, 1])
         if not (sh > 0 and sa > 0):
             raise CoherenceError("score standard deviations must be positive")
@@ -179,14 +195,18 @@ class ScoreGrid:
 
     def handicap(self, line: float, side: str = "HOME") -> Masses:
         """Home (or away) with handicap ``line`` added to its score: win if score + line beats the other."""
+        if side not in ("HOME", "AWAY") or not np.isfinite(line):
+            raise CoherenceError("handicap requires HOME/AWAY and a finite line")
         mv, mp = self.margin_pmf()
         x = mv + line if side == "HOME" else -mv + line
-        return Masses(float(mp[x > 0].sum()), float(mp[np.isclose(x, 0)].sum()), float(mp[x < 0].sum()))
+        return Masses(float(mp[x > 0].sum()), float(mp[x == 0].sum()), float(mp[x < 0].sum()))
 
     def total(self, line: float, side: str = "OVER") -> Masses:
+        if side not in ("OVER", "UNDER") or not np.isfinite(line):
+            raise CoherenceError("total requires OVER/UNDER and a finite line")
         tv, tp = self.total_pmf()
         x = tv - line if side == "OVER" else line - tv
-        return Masses(float(tp[x > 0].sum()), float(tp[np.isclose(x, 0)].sum()), float(tp[x < 0].sum()))
+        return Masses(float(tp[x > 0].sum()), float(tp[x == 0].sum()), float(tp[x < 0].sum()))
 
     # ------------------------------------------------------------------ tie resolution
     def resolve_ties(self, p_home_extra: float, residual_draw: float = 0.0, winner_bonus: int = 1,
@@ -199,6 +219,9 @@ class ScoreGrid:
         """
         if not 0 <= p_home_extra <= 1 or not 0 <= residual_draw <= 1:
             raise CoherenceError("extra-time probabilities must lie in [0, 1]")
+        if any(not np.isfinite(x) or x != int(x) or x < 0 for x in (winner_bonus, both_bonus)) or winner_bonus == 0:
+            raise CoherenceError("extra-time bonuses must be nonnegative integers with a positive winner bonus")
+        winner_bonus, both_bonus = int(winner_bonus), int(both_bonus)
         hv, av = self._hv(), self._av()
         pad = winner_bonus + both_bonus
         nh, na = self.p.shape[0] + pad, self.p.shape[1] + pad
@@ -207,10 +230,10 @@ class ScoreGrid:
         for i, h in enumerate(hv):
             j = h - self.a0
             if 0 <= j < self.p.shape[1]:
-                m = g[i, j]
+                m = self.p[i, j]
                 if m == 0:
                     continue
-                g[i, j] = 0.0
+                g[i, j] -= m  # Retain incoming shifted mass from earlier original tied states.
                 base_i, base_j = i + both_bonus, j + both_bonus
                 g[base_i, base_j] += m * residual_draw
                 g[base_i + winner_bonus, base_j] += m * (1 - residual_draw) * p_home_extra
@@ -220,6 +243,8 @@ class ScoreGrid:
     def reweight_winner(self, target: tuple[float, float, float]) -> "ScoreGrid":
         """Coherent calibration: rescale every state inside each winner class to the target class mass."""
         cur = self.winner()
+        if len(target) != 3 or not all(np.isfinite(t) and t >= 0 for t in target):
+            raise CoherenceError("three finite nonnegative target winner masses required")
         if any(t > 0 and c <= 0 for t, c in zip(target, cur)):
             raise CoherenceError("cannot give mass to a winner class with zero support")
         if abs(sum(target) - 1) > 1e-9:

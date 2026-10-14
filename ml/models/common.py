@@ -14,10 +14,16 @@ class FitError(RuntimeError):
 
 
 def decay_weights(dates: pd.Series, as_of: pd.Timestamp, half_life_days: float) -> np.ndarray:
-    age = (as_of - pd.to_datetime(dates)).dt.days.to_numpy(dtype=float)
-    if np.any(age < 0):
+    if not np.isfinite(half_life_days) or half_life_days <= 0:
+        raise FitError("half-life must be finite and positive")
+    dates = pd.to_datetime(dates, errors="coerce")
+    if dates.isna().any() or pd.isna(as_of) or (dates >= as_of).any():
         raise FitError("training data contains games on or after the fit date (leakage)")
-    return 0.5 ** (age / half_life_days)
+    age = (as_of - dates).dt.total_seconds().to_numpy(dtype=float) / 86400
+    weights = 0.5 ** (age / half_life_days)
+    if not np.isfinite(weights).all() or weights.sum() <= 0:
+        raise FitError("training weights have no finite positive mass")
+    return weights
 
 
 def apply_tie_rule(grid: ScoreGrid, lg: League, extra: dict) -> ScoreGrid:

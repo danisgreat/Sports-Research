@@ -268,8 +268,11 @@ def write_cricket(res: dict, rec: dict) -> dict:
     pt = pd.DataFrame(rows)
     every = pt[(pt["candidate"] == "C2") & (pt["comparator"] == "C1") & (pt["metric"] == "crps") & (pt["season"] != "ALL")]
     every_c0 = pt[(pt["candidate"] == "C2") & (pt["comparator"] == "C0") & (pt["metric"] == "crps") & (pt["season"] != "ALL")]
-    verdict = ("PASS_DEVELOPMENT" if len(every) and (every["status"] == "BELOW_ZERO").all()
+    verdict = ("PASS_DEVELOPMENT" if set(every["season"]) == set(lg.test_seasons) and len(every)
+               and set(every_c0["season"]) == set(lg.test_seasons)
+               and (every["status"] == "BELOW_ZERO").all()
                and (every_c0["status"] == "BELOW_ZERO").all() else "FAIL_DEVELOPMENT")
+    status = status_for(verdict, lg.data_warnings, lg.path in ADMITTED)
     cov = {lv: t[f"{lv}_in80"].mean() for lv in ("C0", "C1", "C2", "C2PRE")}
     pit = {lv: np.histogram(t[f"{lv}_pit"], bins=5, range=(0, 1))[0].tolist() for lv in ("C0", "C2")}
     receipt = _receipt(rec, {"model_id": mid, "params": res["params"], "dropped_rows": res["dropped"],
@@ -283,8 +286,8 @@ def write_cricket(res: dict, rec: dict) -> dict:
     d.mkdir(parents=True, exist_ok=True)
     out.to_csv(d / "DEVELOPMENT_PREDICTIONS.csv", index=False, lineterminator="\n")
     lines = [f"# Development results: `{mid}` (first-innings runs, `{lg.path}`)", "",
-             "**Evidence class: `HISTORICAL_DEVELOPMENT`.** Refitted before every match date from earlier IPL first "
-             "innings (four seasons plus season to date). Hyperparameters chosen on "
+             f"**Evidence class: `HISTORICAL_DEVELOPMENT`.** Refitted before every match date from earlier {lg.path} first "
+             f"innings ({lg.history_seasons} season-label years plus season to date). Hyperparameters chosen on "
              f"{list(lg.tune_seasons)} only; test seasons {list(lg.test_seasons)}.", "",
              f"**Verdict for C2 (team model):** `{verdict}` (CRPS interval below 0 against both C1 and C0 in every "
              "test season required).", "",
@@ -298,11 +301,12 @@ def write_cricket(res: dict, rec: dict) -> dict:
              md_table(res["tune_table"].head(8), list(res["tune_table"].columns)), "", "## Receipt", "", receipt]
     _write(d / "DEVELOPMENT_RESULTS.md", "\n".join(lines))
     card = [f"# Model card: `{mid}`", "",
-            f"**Status: `{'SHADOW_CANDIDATE' if verdict == 'PASS_DEVELOPMENT' else 'DEVELOPMENT_ONLY'}`.** Not a card "
+            f"**Status: `{status}`.** Not a card "
             "input.", "",
             "| Field | Value |", "|---|---|",
             f"| Contract | runs of the team batting first, full-length innings ({lg.overs_cap:.0f} overs bowled or all out) |",
             f"| Population | scorecards in `Previous Sports Results/{lg.path}`; excluded: {res['dropped']} |",
+            f"| Hold reasons | {hold_reasons(verdict, lg.data_warnings, lg.path in ADMITTED) or 'none'} |",
             "| Ladder | C0 league-only (time-decayed mean and SD) · C1 + shrunk venue effect · C2 + batting and bowling "
             "team strengths (weighted ridge) · C2PRE = 50/50 unfitted symmetric batting-order scenario; toss fairness does not establish this weight |",
             "| Distribution | discretised normal on 0–600 runs; finite-support approximation, not a physical run cap |",
@@ -363,7 +367,7 @@ def write_decision_lab(res: dict, rec: dict) -> None:
              "pending review, and bankroll figures freeze there. CLV = taken odds × no-vig closing probability − 1. "
              "The CLV columns cover every decision the policy staked over all reported seasons, independent of the "
              "bankroll path.", "",
-             md_table(pol, ["policy", "n_bets", "mean_clv", "clv_week_lo", "clv_week_hi", "share_clv_positive",
+             md_table(pol, ["policy", "n_bets", "executed_bets", "mean_clv", "clv_week_lo", "clv_week_hi", "share_clv_positive",
                             "stake_weighted_clv", "hit_rate", "mean_odds", "turnover", "pnl", "roi", "final_bankroll",
                             "max_drawdown", "halted_at_week"]),
              "",
@@ -376,6 +380,7 @@ def write_decision_lab(res: dict, rec: dict) -> None:
              f"- Feedback timing: {res['feedback_timing']}. All same-day actions precede that day's closing-reward updates; date-only inputs still do not verify execution timing.",
              "- Actions are sampled from the returned probability vector, so logged propensities describe the actual behaviour policy. Full-information rewards still assume observable counterfactual payoffs without market impact.",
              "- Prices, limits, latency and account restrictions of a real operator are not modelled.", "",
+             "- n_bets counts positive policy signals, including after a bankroll halt; executed_bets counts capped positions in the paper bankroll path. Weekly batches assume no within-week reuse of settlement cash. The IPS check evaluates uncapped per-match stake-times-CLV rewards, not the halted/capped portfolio's economic value.", "",
              "## Receipt", "", _receipt(rec, {"rows": res["frame_rows"]})]
     _write(d / "RESULTS.md", "\n".join(lines))
 

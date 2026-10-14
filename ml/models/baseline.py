@@ -34,6 +34,10 @@ class LeagueBaseline:
             yh, ya = train["hs"].to_numpy(float), train["as_"].to_numpy(float)
         self.mh, self.ma = float(yh.mean()), float(ya.mean())
         self.cov = np.cov(np.vstack([yh, ya]))
+        if not np.isfinite(yh).all() or not np.isfinite(ya).all() or min(self.mh, self.ma) <= 0:
+            raise FitError("league baseline needs finite positive score means")
+        if self.lg.engine == "gaussian" and (not np.isfinite(self.cov).all() or np.linalg.eigvalsh(self.cov).min() <= 0):
+            raise FitError("league baseline covariance is not positive definite")
         self.sd_margin = float(np.sqrt(self.cov[0, 0] + self.cov[1, 1] - 2 * self.cov[0, 1]))
         self.residual_draw = residual_draw_share(train, self.sd_margin)
         if self.lg.engine in ("dixon_coles", "count"):

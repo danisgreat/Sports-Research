@@ -28,6 +28,10 @@ class GaussParams:
     key_numbers: bool = False   # NFL only: margin reweighting towards observed key-number frequencies
     key_pseudo: float = 20.0
 
+    def __post_init__(self):
+        if not all(np.isfinite(v) for v in (self.half_life_days, self.ridge, self.cov_inflation, self.key_pseudo)) or self.half_life_days <= 0 or self.ridge < 0 or self.cov_inflation <= 0 or self.key_pseudo <= 0:
+            raise ValueError("invalid Gaussian decay, regularization, covariance or key-number parameters")
+
 
 class GaussianRatings:
     name = "JOINT_NORMAL"

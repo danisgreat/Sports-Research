@@ -1,5 +1,7 @@
 # `ml/` — maintainer model workshop
 
+**Repeat bug audit:** [implementation and coverage](../research/verification/ml_bug_audit_2026-10-14-1/IMPLEMENTATION.md) repairs source parsing, grids, chronology, failure handling, reports, shadow outcomes and decision mechanics. Read the [additional artifact admission notice](../research/model_shadow/BUG_AUDIT_ADMISSION_2026-10-14.md) before using old outputs with the new implementation. Fixed historical fit/grid smoke checks are not predictive validation; fresh model outputs need controlled regeneration.
+
 **Current release:** CR-2026.10.14-R3 / prompt suite v11.3. Read the [actual implementation review](../research/verification/framework_change_2026-10-14-5/ML_WORKSHOP_REVIEW.md) and [artifact admission](../research/model_shadow/ARTIFACT_PROVENANCE.md). Historical model outputs retain their original generating source; corrected report replays have new receipts. No model is promoted. The 60 executed checks cover specified mechanics, not predictive qualification.
 
 **Authority:** CURRENT_RULES §0 (model workshop exception) and §5a (decision-lab firewall), CR-2026.10.14-R1; framework change [2026-10-14-3](../research/verification/framework_change_2026-10-14-3/IMPLEMENTATION.md); design in [ML_RL_IMPLEMENTATION_FRAMEWORK_2026-10-14.md](../ML_RL_IMPLEMENTATION_FRAMEWORK_2026-10-14.md).

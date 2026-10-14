@@ -1,5 +1,7 @@
 # Model shadow lane (`research/model_shadow/`)
 
+**Repeat audit notice:** [BUG_AUDIT_ADMISSION_2026-10-14.md](BUG_AUDIT_ADMISSION_2026-10-14.md) records additional code/data-definition repairs. Existing generated scores retain their historical receipts and are not current-model evidence. New fit/grid smoke checks do not promote any model.
+
 **Authority:** CURRENT_RULES §0 (model workshop exception), §1 (reading-gate exclusion) and §5a (decision-lab firewall), CR-2026.10.14-R3; framework change [2026-10-14-3](../verification/framework_change_2026-10-14-3/IMPLEMENTATION.md). Code: [`ml/`](../../ml/README.md). Design: [ML_RL_IMPLEMENTATION_FRAMEWORK_2026-10-14.md](../../ML_RL_IMPLEMENTATION_FRAMEWORK_2026-10-14.md).
 
 > **Prompts 1–3 never open, search or cite this folder before their own card is frozen.** Prompts 3 and 6 may read it after settlement, for paired scoring only. `DECISION_LAB/` is outside every reading gate. No file here is a card input.

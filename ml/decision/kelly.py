@@ -7,6 +7,8 @@ import numpy as np
 def kelly_full(p_win: float, odds: float, p_push: float = 0.0) -> float:
     """Log-optimal fraction for win (+b f), push (0), loss (-f): f* = (p_w b - p_l) / (b (p_w + p_l))."""
     b = odds - 1.0
+    if not all(np.isfinite(v) for v in (p_win, odds, p_push)) or p_win < 0 or p_push < 0 or p_win + p_push > 1 or odds <= 1:
+        raise ValueError("invalid win/push probability or decimal odds")
     p_loss = 1.0 - p_win - p_push
     if b <= 0 or p_win * b - p_loss <= 0:
         return 0.0
@@ -15,6 +17,8 @@ def kelly_full(p_win: float, odds: float, p_push: float = 0.0) -> float:
 
 def shrink_factor(f: float, odds: float, sigma_p: float) -> float:
     """f^2 / (f^2 + Var(f_hat)), with Var(f_hat) ~= (sigma_p * df/dp)^2 and df/dp = odds / (odds - 1) (no push)."""
+    if not all(np.isfinite(v) for v in (f, odds, sigma_p)) or f < 0 or odds <= 1 or sigma_p < 0:
+        raise ValueError("invalid Kelly fraction, decimal odds or estimation uncertainty")
     if f <= 0:
         return 0.0
     if sigma_p <= 0:
@@ -24,10 +28,15 @@ def shrink_factor(f: float, odds: float, sigma_p: float) -> float:
 
 
 def stake(p_win: float, odds: float, sigma_p: float, fraction: float = 0.25, cap: float = 0.02) -> float:
+    if not all(np.isfinite(v) and 0 <= v <= 1 for v in (fraction, cap)):
+        raise ValueError("stake fraction and cap must be in [0,1]")
     f = kelly_full(p_win, odds)
     return float(min(cap, fraction * shrink_factor(f, odds, sigma_p) * f))
 
 
 def cap_slate(stakes: np.ndarray, slate_cap: float = 0.10) -> np.ndarray:
+    stakes = np.asarray(stakes, float)
+    if stakes.ndim != 1 or not np.isfinite(stakes).all() or np.any(stakes < 0) or not np.isfinite(slate_cap) or not 0 <= slate_cap <= 1:
+        raise ValueError("finite nonnegative stakes and slate cap in [0,1] required")
     total = float(np.sum(stakes))
     return stakes if total <= slate_cap or total == 0 else stakes * (slate_cap / total)

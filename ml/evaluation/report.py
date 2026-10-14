@@ -32,12 +32,14 @@ def paired_table(df: pd.DataFrame, cand: str, seasons) -> pd.DataFrame:
                 res = paired_week_interval(d[a] - d[b], d["event_id"], d["week"])
                 rows.append({"comparator": comp_name, "metric": label, "season": season, "n_games": len(d),
                              "candidate": float(d[a].mean()), "comparator_value": float(d[b].mean()), **res})
-    return pd.DataFrame(rows)
+    return pd.DataFrame(rows, columns=["comparator", "metric", "season", "n_games", "candidate", "comparator_value", "k_weeks", "n_events", "mean", "lo", "hi", "sd_w", "status"])
 
 
 def development_verdict(pt: pd.DataFrame, seasons) -> dict:
     """PASS only if the primary metric's interval is below 0 against BOTH comparators in EVERY test season."""
     out = {}
+    if pt.empty or not seasons:
+        return {**{name: "NOT_COMPUTABLE" for _, name in COMPARATORS}, "overall": "FAIL_DEVELOPMENT"}
     for comp, comp_name in COMPARATORS:
         sub = pt[(pt["comparator"] == comp_name) & (pt["metric"] == METRICS[0][1]) & (pt["season"].isin(seasons))]
         if sub.empty:
@@ -65,8 +67,11 @@ def platt_by_previous_season(df: pd.DataFrame, cand: str, seasons) -> pd.DataFra
 
     rows = []
     for s in seasons:
-        prev = df[df["season"] == s - 1]
+        earlier = df.loc[df["season"] < s, "season"]
+        prev = df[df["season"] == earlier.max()] if len(earlier) else df.iloc[:0]
         cur = df[df["season"] == s].copy()
+        prev = prev[np.isfinite(prev[f"{cand}_p_home"]) & np.isfinite(prev["y_home"])]
+        cur = cur[np.isfinite(cur[f"{cand}_p_home"]) & np.isfinite(cur["y_home"])]
         if len(prev) < 200 or cur.empty:
             continue
         x = np.log(np.clip(prev[f"{cand}_p_home"], 1e-6, 1 - 1e-6) / (1 - np.clip(prev[f"{cand}_p_home"], 1e-6, 1 - 1e-6)))
@@ -76,7 +81,10 @@ def platt_by_previous_season(df: pd.DataFrame, cand: str, seasons) -> pd.DataFra
             z = b[0] + b[1] * x
             return np.sum(np.logaddexp(0, z) - y * z)
 
-        b = optimize.minimize(nll, np.array([0.0, 1.0]), method="BFGS").x
+        fitted = optimize.minimize(nll, np.array([0.0, 1.0]), method="BFGS")
+        if not fitted.success or not np.isfinite(fitted.x).all():
+            continue  # A failed calibrator is not applied; the deployed identity remains in place.
+        b = fitted.x
         pc = np.clip(cur[f"{cand}_p_home"], 1e-6, 1 - 1e-6)
         xc = np.log(pc / (1 - pc))
         cur["CAL_p_home"] = 1 / (1 + np.exp(-(b[0] + b[1] * xc)))

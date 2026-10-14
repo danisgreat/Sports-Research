@@ -21,7 +21,8 @@ import pandas as pd
 from scipy import stats
 
 from ml.config import ARCHIVE
-from ml.core.distributions import normal_crps
+from ml.core.distributions import discrete_crps
+from ml.data.archive import missing_text, score_int
 from ml.models.common import FitError, decay_weights
 
 SUPPORT = np.arange(0, 601)
@@ -43,33 +44,55 @@ def load_cricket(lg) -> tuple[pd.DataFrame, dict]:
         if not f.parent.name.isdigit():
             continue
         with open(f, newline="", encoding="utf-8-sig", errors="replace") as fh:
-            for r in csv.DictReader(fh):
+            from ml.config import detect_columns
+            from ml.data.archive import stage_of
+            reader = csv.DictReader(fh)
+            c = detect_columns(list(reader.fieldnames or []))
+            for r in reader:
+                if c["stage"] and stage_of(r.get(c["stage"])) == "PRE":
+                    drop("preseason")
+                    continue
                 method = (r.get(c["method"]) or "").strip() if c["method"] else ""
-                if method not in ("", "Normal", "N/A"):
+                if not missing_text(method) and method.lower() != "normal":
                     drop(f"method:{method}")
                     continue
                 try:
-                    runs = int(float(r[c["fi_runs"]]))
-                    wk = int(float(r[c["fi_wkts"]]))
-                    overs = float(re.sub(r"[^0-9.]", "", r[c["fi_overs"]] or "") or "nan")
+                    runs = score_int(r[c["fi_runs"]])
+                    wk = score_int(r[c["fi_wkts"]])
+                    overs_text = str(r[c["fi_overs"]] or "").strip()
+                    match = re.fullmatch(r"(\d+)(?:\.([0-5]))?(?:\s*(?:ov|over|overs))?", overs_text, flags=re.I)
+                    if not match or wk > 10:
+                        raise ValueError("invalid wickets/overs")
+                    balls = int(match[1]) * 6 + int(match[2] or 0)
+                    if balls > int(lg.overs_cap * 6):
+                        raise ValueError("innings beyond format")
                 except (ValueError, KeyError, TypeError):
                     drop("unparsed_first_innings")
                     continue
-                if not (overs >= lg.overs_cap or wk == 10):
+                if not (balls == int(lg.overs_cap * 6) or wk == 10):
                     drop("short_first_innings")
                     continue
                 bat = lg.aliases.get((r.get(c["fi_team"]) or "").strip(), (r.get(c["fi_team"]) or "").strip())
                 bowl = lg.aliases.get((r.get(c["si_team"]) or "").strip(), (r.get(c["si_team"]) or "").strip())
                 date = pd.to_datetime(r.get(c["date"]), errors="coerce") if c["date"] else pd.NaT
-                if pd.isna(date) or not bat or not bowl or bat == bowl:
+                if pd.isna(date) or missing_text(bat) or missing_text(bowl) or bat == bowl:
                     drop("invalid_identity_or_date")
                     continue
                 season = int(f.parent.name)
                 rows.append({"season": season, "date": date,
-                             "event_id": (r.get(c["id"]) or "").strip() or f"{lg.model_id}:{date.date()}:{bat}:{bowl}",
+                             "event_id": ((r.get(c["id"]) or "").strip() if not missing_text(r.get(c["id"])) else f"{lg.model_id}:{date.date()}:{bat}:{bowl}"),
                              "bat": bat, "bowl": bowl, "venue": _venue_key(r.get(c["venue"] or "", "")),
                              "runs": runs})
-    df = pd.DataFrame(rows).drop_duplicates("event_id").sort_values(["date", "event_id"]).reset_index(drop=True)
+    df = pd.DataFrame(rows, columns=["season", "date", "event_id", "bat", "bowl", "venue", "runs"])
+    before = len(df)
+    df = df.drop_duplicates()
+    if len(df) < before:
+        dropped["duplicate_row"] = before - len(df)
+    conflict = df.duplicated(["season", "event_id"], keep=False)
+    if conflict.any():
+        dropped["conflicting_event_id"] = int(conflict.sum())
+        df = df[~conflict]
+    df = df.sort_values(["date", "event_id"]).reset_index(drop=True)
     return df, dropped
 
 
@@ -79,6 +102,10 @@ class CricketParams:
     ridge: float
     k_venue: float
     sd_inflation: float
+
+    def __post_init__(self):
+        if not all(np.isfinite(v) for v in (self.half_life_days, self.ridge, self.k_venue, self.sd_inflation)) or self.half_life_days <= 0 or self.ridge < 0 or self.k_venue < 0 or self.sd_inflation <= 0:
+            raise ValueError("invalid cricket decay, regularization or dispersion parameters")
 
 
 class FirstInningsModel:
@@ -131,24 +158,31 @@ class FirstInningsModel:
 
 
 def discrete_scores(pmf: np.ndarray, y: int, line: float) -> dict:
+    if not np.isfinite(y) or y != int(y) or y < 0:
+        raise ValueError("observed innings runs must be a nonnegative integer")
+    pmf = np.asarray(pmf, float)
+    if pmf.shape != SUPPORT.shape or not np.isfinite(pmf).all() or np.any(pmf < 0) or not np.isclose(pmf.sum(), 1):
+        raise ValueError("invalid first-innings distribution")
     cdf = np.cumsum(pmf)
-    crps = float(np.sum((cdf - (SUPPORT >= y)) ** 2))
+    crps = discrete_crps(SUPPORT, pmf, y)
     p_over = float(pmf[SUPPORT > line].sum())
     lo = int(SUPPORT[np.searchsorted(cdf, 0.10)])
     hi = int(SUPPORT[np.searchsorted(cdf, 0.90)])
-    pit = float(cdf[y - 1] if y > 0 else 0.0) + 0.5 * float(pmf[y])
+    pit = (1.0 if y > SUPPORT[-1] else float(cdf[y - 1] if y > 0 else 0.0) + 0.5 * float(pmf[y]))
     return {"crps": crps, "p_over": p_over, "in80": float(lo <= y <= hi), "pit": pit}
 
 
 def tune_and_evaluate(lg, log=print):
     seasons_tune, seasons_test = lg.tune_seasons, lg.test_seasons
     df, dropped = load_cricket(lg)
+    if df.empty or not seasons_tune or not seasons_test:
+        raise FitError("no usable innings or tune/test periods")
     def run(params: CricketParams, seasons, levels=("C0", "C1", "C2")):
         out = []
         for season in seasons:
             games = df[df["season"] == season]
             for d, block in games.groupby("date"):
-                train = df[(df["date"] < d) & (df["season"] >= season - 4)]
+                train = df[(df["date"] < d) & (df["season"] >= season - lg.history_seasons)]
                 fitted = {lv: FirstInningsModel(lv, params).fit(train, d) for lv in levels}
                 line = fitted[levels[0]].line
                 for r in block.itertuples():
@@ -166,6 +200,8 @@ def tune_and_evaluate(lg, log=print):
                         row.update({f"C2PRE_{k}": v for k, v in sc.items()})
                     out.append(row)
         res = pd.DataFrame(out)
+        if res.empty:
+            raise FitError("no usable innings in the requested evaluation periods")
         for lv in [*levels, *(["C2PRE"] if "C2" in levels else [])]:
             res[f"{lv}_brier_over"] = (res[f"{lv}_p_over"] - res["y_over"]) ** 2
         return res
