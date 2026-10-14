@@ -1,0 +1,21 @@
+id,variable,observed,frozen_mean,source_error,recomputed_error,source_standardized_error,definition,independent_SD_verification
+P-585,first side,13,11.919,+1.081,1.081,+0.271,exact issued endpoint; original source precision,source SD used where issued; no missing SD filled
+P-585,second side,10,13.548,-3.548,-3.548,-1.126,exact issued endpoint; original source precision,source SD used where issued; no missing SD filled
+P-585,total,23,25.467,-2.467,-2.467,-0.409,exact issued endpoint; original source precision,source SD used where issued; no missing SD filled
+P-585,signed first−second margin,3,-1.628,+4.628,4.628,+1.180,exact issued endpoint; original source precision,source SD used where issued; no missing SD filled
+P-586,first side,100,93.431,+6.569,6.569,NOT_ESTIMATED,exact issued endpoint; original source precision,source SD used where issued; no missing SD filled
+P-586,second side,88,83.431,+4.569,4.569,NOT_ESTIMATED,exact issued endpoint; original source precision,source SD used where issued; no missing SD filled
+P-586,total,188,176.861,+11.139,11.139,NOT_ESTIMATED,exact issued endpoint; original source precision,source SD used where issued; no missing SD filled
+P-586,signed first−second margin,12,10.000,+2.000,2.000,NOT_ESTIMATED,exact issued endpoint; original source precision,source SD used where issued; no missing SD filled
+P-587,first side,2,3.508,-1.508,-1.508,-0.808,exact issued endpoint; original source precision,source SD used where issued; no missing SD filled
+P-587,second side,4,2.763,+1.237,1.237,+0.735,exact issued endpoint; original source precision,source SD used where issued; no missing SD filled
+P-587,total,6,6.271,-0.271,-0.271,-0.107,exact issued endpoint; original source precision,source SD used where issued; no missing SD filled
+P-587,signed first−second margin,-2,0.745,-2.745,-2.745,-1.098,exact issued endpoint; original source precision,source SD used where issued; no missing SD filled
+P-588,first side,101,113.209,-12.209,-12.209,-0.827,exact issued endpoint; original source precision,source SD used where issued; no missing SD filled
+P-588,second side,89,108.917,-19.917,-19.917,-1.329,exact issued endpoint; original source precision,source SD used where issued; no missing SD filled
+P-588,total,190,222.126,-32.126,-32.126,-1.360,exact issued endpoint; original source precision,source SD used where issued; no missing SD filled
+P-588,signed first−second margin,12,4.292,+7.708,7.708,+0.427,exact issued endpoint; original source precision,source SD used where issued; no missing SD filled
+P-589,first side,6,3.329,+2.671,2.671,NOT_ESTIMATED,exact issued endpoint; original source precision,source SD used where issued; no missing SD filled
+P-589,second side,3,2.778,+0.222,0.222,NOT_ESTIMATED,exact issued endpoint; original source precision,source SD used where issued; no missing SD filled
+P-589,total,9,6.107,+2.893,2.893,+1.154,exact issued endpoint; original source precision,source SD used where issued; no missing SD filled
+P-589,signed first−second margin,3,0.551,+2.449,2.449,+1.035,exact issued endpoint; original source precision,source SD used where issued; no missing SD filled

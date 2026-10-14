@@ -1,0 +1,3 @@
+# Closed supplied snapshot receipt
+
+At 2026-10-14T23:20:21+11:00, the supplied frozen ORIGINAL_MINI.md (208588 bytes SHA-256 5a57bd78e79c6cd9b8eec8e6b52ab96bc4743ddbf656f442e659ad13c987fdae) is CLOSED_IMPORTED for its five original cards, one P-587 addendum, five source settlements and four inherited queue/evidence dispositions. All administrative bytes preserved under inputs; original ACTIVE/footer/pending labels unchanged. This receipt governs the exact downloaded snapshot only; inaccessible /mnt/data source growth, independent freeze chronology and separate missing FROZEN_SOURCE_RECEIPT.json remain NOT_VERIFIED. No issuer lease transfer, source deletion, new mini or new event beyond five declared IDs. Next P-590; external writers remain unshared/NOT_VERIFIED.

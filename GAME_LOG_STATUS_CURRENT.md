@@ -1,7 +1,7 @@
 <!-- BEGIN CURRENT RESEARCH QUEUE -->
 # Current canonical research queue
 
-**Next canonical ID: P-585.** Every requested event is retained, regardless of calibration: first as a local working card in the authorised mini (prompts 2 → 1 → 3), then canonically through the prompt-4 import. No card is written to the active combined log directly. *(Clarified 2026-10-12, audit R10: the earlier wording "go directly to the active combined log" described retention, not a bypass of local staging.)* Canonical IDs identify retained cards; performance certification and live/late timing are separate labels.
+**Next canonical ID: P-590.** Every requested event is retained, regardless of calibration: first as a local working card in the authorised mini (prompts 2 → 1 → 3), then canonically through the prompt-4 import. No card is written to the active combined log directly. *(Clarified 2026-10-12, audit R10: the earlier wording "go directly to the active combined log" described retention, not a bypass of local staging.)* Canonical IDs identify retained cards; performance certification and live/late timing are separate labels.
 Active Combined Log: `prediction logs/PREDICTION_LOG_COMBINED_7.md`.
 Freeze: none (custody is the git history of `main`, CURRENT_RULES §9). The last control manifest is `archive/controls/CONTROL_MANIFEST_2026-10-09-3.md`. Current authority: CURRENT_STATE.md, METHOD.md and CURRENT_RULES.md.
 
@@ -69,8 +69,13 @@ Freeze: none (custody is the git history of `main`, CURRENT_RULES §9). The last
 | **P-582** | SOCCER / English Premier League 2026–27 · Liverpool FC vs Manchester City · 2026-10-11 (venue date) | `EPL:2026-27:ESPN-401879264:2026-10-11` | IMPORTED_UNCALIBRATED / SETTLED_SPORTING / TOP2_ALL_WON / RANK1_UNSTABLE / BUFFERED_ACTUAL_START_NOT_VERIFIED / revision-1 / OPERATOR_UNKNOWN / NOT_CERTIFIED |
 | **P-583** | BASEBALL / Korea KBO 2026 regular season · KT Wiz @ Samsung Lions · 2026-10-12 | `KBO:2026:REGULAR:20261012KTSS0` | IMPORTED_UNCALIBRATED / NO_FORECAST_WITH_TERMINAL_RESULT / SOURCE_CONFLICT_OPEN / LATE_START / revision-1 / OPERATOR_UNKNOWN / NOT_CERTIFIED |
 | **P-584** | Soccer / Mexico Liga Premier Serie A (Group 2, Round 7) · Dragones de Oaxaca vs Guerreros del Pacífico · 2026-10-12 Oaxaca / 2026-10-13 Melbourne | `MEX-LIGA-PREMIER-SERIE-A:2026-27:R7:DRAGONES-OAXACA-GUERREROS-PACIFICO:2026-10-12` | IMPORTED_UNCALIBRATED / PENDING_EVENT / DIAGNOSTIC_ONLY_NOT_PRIMARY / LATE_START_UNVERIFIED / revision-1 / OPERATOR_UNKNOWN / NOT_CERTIFIED |
+| **P-585** | Tennis / ATP Shanghai - Arthur Gea vs Jakub Mensik - 2026-10-13 venue date | `ATP-SHANGHAI:2026:R16:ARTHUR-GEA:JAKUB-MENSIK:2026-10-13` | IMPORTED_UNCALIBRATED / SETTLED_SPORTING revision-1 / ALL_LOST / SUPPLIED_FIRST_V1 / SCHEDULED_LEAD_LE_5_ACTUAL_START_NOT_VERIFIED / OPERATOR_UNKNOWN / NOT_CERTIFIED |
+| **P-586** | Basketball / EuroCup - Bahcesehir Koleji Istanbul vs Kids&Us Manresa - 2026-10-13 venue date | `EUROCUP:2026-27:RS-R3:U2026-GAME47:BKS-MAN:2026-10-13` | IMPORTED_UNCALIBRATED / SETTLED_SPORTING revision-1 / SPLIT / SUPPLIED_FIRST_V1 / LATE_START_UNVERIFIED / OPERATOR_UNKNOWN / NOT_CERTIFIED |
+| **P-587** | Ice hockey / NHL - Calgary Flames @ Anaheim Ducks - 2026-10-13 venue date | `NHL:2026-27:REGULAR:2026020103:CGY@ANA:2026-10-13` | IMPORTED_UNCALIBRATED / SETTLED_SPORTING revision-1 / SPLIT / SUPPLIED_FIRST_V1 / LATE_START_UNVERIFIED / OPERATOR_UNKNOWN / NOT_CERTIFIED |
+| **P-588** | Basketball / NBA preseason - Golden State Warriors @ Los Angeles Lakers - 2026-10-13 venue date | `NBA:2026-27:PRESEASON:0012600048:GSW@LAL:2026-10-13` | IMPORTED_UNCALIBRATED / SETTLED_SPORTING revision-1 / ALL_WON / SUPPLIED_FIRST_V1 / LATE_START_UNVERIFIED / OPERATOR_UNKNOWN / NOT_CERTIFIED |
+| **P-589** | Ice hockey / NHL - Boston Bruins @ San Jose Sharks - 2026-10-13 venue date | `NHL:2026-27:REG:2026020105:BOS@SJS:2026-10-13` | IMPORTED_UNCALIBRATED / SETTLED_SPORTING revision-1 / SPLIT / SUPPLIED_FIRST_V1 / LATE_START_UNVERIFIED / OPERATOR_UNKNOWN / NOT_CERTIFIED |
 
-Highest canonical research ID: **P-584**. Active Combined Log: `prediction logs/PREDICTION_LOG_COMBINED_7.md`.
+Highest canonical research ID: **P-589**. Active Combined Log: `prediction logs/PREDICTION_LOG_COMBINED_7.md`.
 
 **Historical queue snapshot (October 12): superseded by the October 13 current queues below; its capture-breach history is retained.**
 
@@ -978,3 +983,10 @@ Local source inventory verifies 78/78 receipt bodies. A tracked-body export veri
 
 [Implementation, cleanup and final checks](research/verification/implementation_2026-10-05/REPORT.md). The original historical status snapshots above remain unchanged.
 <!-- END CURRENT IMPLEMENTATION READBACK 2026-10-05-I2 -->
+
+
+## Current import queues - 2026-10-14
+
+Current highest P-589 / next P-590; 105 tracked research records, 104 terminal and 1 pending P-584. This section supersedes dated allocation/queue snapshots, preserving original grades. Five new events retain their declared SUPPLIED_FIRST_V1 policy; original top two 5W/5L, separate from P_ORDER_V2. P-584 secondary 5-1 lead remains owner-unverified and pending; P-583 owner 4-2 and P-582 club corners 5/6 remain correction leads, no revision-2; P-581 corners 8/4 remain unresolved.
+
+[Complete current queue](research/verification/mini_import_P-585_P-589_2026-10-14-1/UNRESOLVED_POST_IMPORT.md): 1 pending event, 3 terminal field tasks, 13 operator-unknown events, 12 terminal final-time/SLA gaps, 5 documentary custody gaps across packages. Proposed manual due 2026-10-15T18:00:00+11:00; no automation. [Import custody/readback report](research/verification/mini_import_P-585_P-589_2026-10-14-1/CANONICAL_IMPORT_REPORT.md). Historical source ACTIVE/pending footer unchanged; separate CLOSED_IMPORTED receipt covers the supplied snapshot only, with no issuer handover or new mini. Importer fetched no sporting source; nothing is certified.

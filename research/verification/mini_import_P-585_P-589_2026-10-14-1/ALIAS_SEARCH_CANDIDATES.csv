@@ -1,0 +1,4 @@
+path,alias_pair,disposition
+prediction logs/PREDICTION_LOG_COMBINED.md,gea / mensik,pre-import byte snapshot; contextual names/other-date records; no exact-event key/native ID or issued new-ID marker
+prediction logs/PREDICTION_LOG_COMBINED.md,boston / san jose,pre-import byte snapshot; contextual names/other-date records; no exact-event key/native ID or issued new-ID marker
+prediction logs/PREDICTION_LOG_COMBINED_6.md,boston / san jose,pre-import byte snapshot; contextual names/other-date records; no exact-event key/native ID or issued new-ID marker
