@@ -1,3 +1,0 @@
-shadow_row_id,revision,parent_revision,effective_utc,result,observed_value,evidence_grade,source_url,field,retrieved_utc,reason
-EPL-DC-v1:EPL_2026_TOT_WHU:ML_HOME,REV-1,,2026-10-17T14:00:00Z,UNRESOLVED,PENDING_MATCH,GRADE_A,https://www.premierleague.com/match/115850,score,2026-10-17T14:05:00Z,Fixture not yet played
-EPL-DC-v1:EPL_2026_TOT_WHU:TOTAL_O2.5,REV-1,,2026-10-17T14:00:00Z,UNRESOLVED,PENDING_MATCH,GRADE_A,https://www.premierleague.com/match/115850,score,2026-10-17T14:05:00Z,Fixture not yet played

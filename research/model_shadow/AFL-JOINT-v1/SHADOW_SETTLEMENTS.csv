@@ -1,4 +1,0 @@
-shadow_row_id,revision,parent_revision,effective_utc,result,observed_value,evidence_grade,source_url,field,retrieved_utc,reason
-AFL-JOINT-v1:AFL_2027_SYD_HAW:ML_HOME,REV-1,,2027-03-18T11:30:00Z,UNRESOLVED,PENDING_MATCH,GRADE_A,https://www.afl.com.au/matches/6850,score,2027-03-18T11:35:00Z,Fixture not yet played
-AFL-JOINT-v1:AFL_2027_SYD_HAW:SPREAD_H-18.5,REV-1,,2027-03-18T11:30:00Z,UNRESOLVED,PENDING_MATCH,GRADE_A,https://www.afl.com.au/matches/6850,score,2027-03-18T11:35:00Z,Fixture not yet played
-AFL-JOINT-v1:AFL_2027_SYD_HAW:TOTAL_O168.5,REV-1,,2027-03-18T11:30:00Z,UNRESOLVED,PENDING_MATCH,GRADE_A,https://www.afl.com.au/matches/6850,score,2027-03-18T11:35:00Z,Fixture not yet played

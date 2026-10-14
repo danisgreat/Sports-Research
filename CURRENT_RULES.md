@@ -1,14 +1,14 @@
 # Current operating rules
 
-**MDS-2026.10.14-v11.1 Â· CR-2026.10.14-R3 Â· SCV-2026.10.14-v8 Â· SEL-2026.10.12-v3.** Effective for new work after this revision is read. Current IDs and destination: [CURRENT_STATE.md](CURRENT_STATE.md). Previous rules remain historical evidence: [v11.0 CR-R2](archive/superseded_2026-10-14-2/CURRENT_RULES.md), [v11.0 CR-R1](archive/superseded_2026-10-12/CURRENT_RULES_v11.0_CR-R1.md), [v10.0](archive/superseded_2026-10-12/CURRENT_RULES.md), [pre-v10](archive/superseded_2026-10-11/prompt_v10/CURRENT_RULES.md).
+**MDS-2026.10.12-v11.0 · CR-2026.10.12-R2 · SCV-2026.10.12-v7 · SEL-2026.10.12-v3.** Effective for new work after this revision is read. Current IDs and destination: [CURRENT_STATE.md](CURRENT_STATE.md). Previous rules remain historical evidence: [v11.0 CR-R1](archive/superseded_2026-10-12/CURRENT_RULES_v11.0_CR-R1.md), [v10.0](archive/superseded_2026-10-12/CURRENT_RULES.md), [pre-v10](archive/superseded_2026-10-11/prompt_v10/CURRENT_RULES.md).
 
 ## 0. Authority, scope and honest execution
 
-The framework remains Markdown, CSV and text. Read files, browse permitted sporting sources, use transparent arithmetic and plain file/git tools. Do not add scripts, code, JSON, notebooks or workflows to the repository. All automated code execution and model training are isolated in an external workshop repository outside this folder (D1-B). Model outputs enter this repository exclusively as frozen Markdown and CSV artifacts with SHA-256 receipts in the shadow lane (`research/model_shadow/`). A helper used outside it is disclosed, and its rules are written out in prose (CONTRIBUTING). Do not claim an exact grid, simulation, model fit, calculation, file write, readback or scheduled capture unless actually performed.
+The framework remains Markdown, CSV and text. Read files, browse permitted sporting sources, use transparent arithmetic and plain file/git tools. Do not add scripts, code, JSON, notebooks or workflows to the repository. A helper used outside it is disclosed, and its rules are written out in prose (CONTRIBUTING). Do not claim an exact grid, simulation, model fit, calculation, file write, readback or scheduled capture unless actually performed.
 
 **One authority mode per run (R09).** Latest user instructions control task scope. Each run prints exactly one mode in its reading receipt and never mixes revisions silently:
-- `PUBLISHED_MAIN_PINNED` is the default for prompts 1â€“3 and for any agent outside the repository. Read every control from one commit of `origin/main`, print its full SHA, and use only that commit's files. Local edits do not apply.
-- `LOCAL_WORKING_TREE` applies only to a run inside the repository whose user asks for local controls, or to prompts 4â€“8, which mutate the repository. Print branch, HEAD and every uncommitted difference to a control file. Those working files govern this run only, and the receipt names them.
+- `PUBLISHED_MAIN_PINNED` is the default for prompts 1–3 and for any agent outside the repository. Read every control from one commit of `origin/main`, print its full SHA, and use only that commit's files. Local edits do not apply.
+- `LOCAL_WORKING_TREE` applies only to a run inside the repository whose user asks for local controls, or to prompts 4–8, which mutate the repository. Print branch, HEAD and every uncommitted difference to a control file. Those working files govern this run only, and the receipt names them.
 
 Where the published and local versions of a control differ, the receipt lists the difference and says which one was applied. Neither mode silently changes branches, pulls over dirty work, or assumes a stale download is current.
 
@@ -21,17 +21,16 @@ Every task opens CURRENT_STATE, METHOD, CURRENT_RULES, SELECTION_RULES, CARD_AND
 Cards also read the applicable sport/league rules, ARCHIVE_USE_GUIDE, relevant SOURCES routes, PROBABILITY_TOOLKIT sections, profile/base-rate rows, active mini, status register and relevant canonical records. Settlement adds scoring and original card/contract evidence. Import, rollover and retrospective add VERIFICATION_PROTOCOL; retrospective adds current hypotheses and latest completed retrospective. Prompt 7 adds coverage/schema/source notes; prompt 8 adds contribution rules, changelog and affected dependencies.
 
 Unavailable required control files block the dependent mutation; missing sporting data is recorded and does not justify inventing it. Cite the rule or source next to any value it shaped. Every card prints its archive coverage, actual files/rows/date range inspected, cutoff filter, findings and gaps. Inspect current files: an old claim that a league is header-only is not a live check.
-- **Reading-gate exclusion (D1-B, D2):** Prompts 1, 2 and 3 (game cards and research) **MUST NOT** open, search or read `research/model_shadow/` or `MARKET_BENCHMARK_LEDGER.md` before freezing their own primary card (`p_card`). This guarantees independence and eliminates model anchoring. Prompts 3 (settlement) and 6 (retrospective) may read them after settlement for paired scoring only.
 
 ## 2. Rule T2: frozen top two and transparent denominators
 
-Only the original Rank 1 and Rank 2 can count as primary wins. At most four supported candidates are retained; ranks 3â€“4 and shadow selections stay informational. A missing second pick is not manufactured. Never replace a losing primary with a winning alternate or reforecast.
+Only the original Rank 1 and Rank 2 can count as primary wins. At most four supported candidates are retained; ranks 3–4 and shadow selections stay informational. A missing second pick is not manufactured. Never replace a losing primary with a winning alternate or reforecast.
 
 Report W/L/PUSH/VOID/UNRESOLVED separately, number of requested events, retained cards, numeric/qualitative/NO_FORECAST cards and scoring coverage. WIN/(WIN+LOSS) is conditional on resolved decisive outcomes and must not hide unresolved cases. Missing evidence is not VOID. Dependent rows do not become independent trials. Mechanically protected pairs require an explicit label; Hit@2 is then a construction diagnostic, not predictive skill. Exact definitions: [SCORING_AND_VALIDATION.md](SCORING_AND_VALIDATION.md).
 
 ## 3. Rule R1: outcome review without hindsight
 
-Every settled Rank-1 LOSS receives eight parts: exact claim; verified outcome; original-distribution check; cutoff knowability; process/model/variance assessment; cutoff-only counterfactual; failure class; testable correction. Keep R1â€“R12 for every terminal card, including wins and partial settlements, with unavailable sections marked and explained.
+Every settled Rank-1 LOSS receives eight parts: exact claim; verified outcome; original-distribution check; cutoff knowability; process/model/variance assessment; cutoff-only counterfactual; failure class; testable correction. Keep R1–R12 for every terminal card, including wins and partial settlements, with unavailable sections marked and explained.
 
 Do not invent numeric blame percentages. A single tail loss neither proves miscalibration nor vindicates a distribution. Process is SOUND, DEFICIENT or NOT_ASSESSABLE with evidence; uncalibrated status is reported separately. Review matched wins for the same defects. Counterfactuals are diagnostic and never replace frozen ranks or join prospective cohorts.
 
@@ -49,13 +48,13 @@ Confirm competition, season, stage, participants, venue, native event ID or labe
 
 Use official field owners then structured providers and quality corroboration. Record URL, exact field/value, source update/publication time when available, retrieval time, short lawful quotation or faithful extract, fallback/failure and collector lineage (UNKNOWN if unknown). Domain count is not independent-source count. Retain decisive evidence as Markdown/text within allowed scope. A quotation and git commit do not prove pregame availability by themselves.
 
-Record cutoff, research completion, actual write/issue time and final state recheck separately. Inputs must be demonstrably available by cutoff. Recheck just before issue; crossing the start changes the timing label. PREGAME requires explicit not-started evidence; stale 0â€“0 is insufficient. LIVE_OBSERVED, LATE_START_UNVERIFIED and HISTORICAL_DIAGNOSTIC stay separate. Outcome exposure is disclosed; a historical reconstruction cannot regain pregame status. Current event information may establish identity/state but observed in-game outcomes never enter a purported pregame forecast.
+Record cutoff, research completion, actual write/issue time and final state recheck separately. Inputs must be demonstrably available by cutoff. Recheck just before issue; crossing the start changes the timing label. PREGAME requires explicit not-started evidence; stale 0–0 is insufficient. LIVE_OBSERVED, LATE_START_UNVERIFIED and HISTORICAL_DIAGNOSTIC stay separate. Outcome exposure is disclosed; a historical reconstruction cannot regain pregame status. Current event information may establish identity/state but observed in-game outcomes never enter a purported pregame forecast.
 
 **Two-step issue window (PR-04).**
 1. **Research:** finish the event model, form windows, baseline and sensitivity cases by about 60 minutes before the scheduled start.
 2. **Freeze:** at the lineup check, re-read the official lineup, starter or goalie and the injury source. The first such check falls when the official lineup is due. Update only the inputs that changed, re-price from the same model, then freeze and issue.
 
-If the lineup is still unpublished at Tâˆ’5, issue with explicit lineup scenarios priced as a mixture (Â§7) and the label `LINEUP_UNCONFIRMED`. A request received too late for step 1 is still researched and labelled under the timing rules. This is a schedule target, never a reason to drop a requested event.
+If the lineup is still unpublished at T−5, issue with explicit lineup scenarios priced as a mixture (§7) and the label `LINEUP_UNCONFIRMED`. A request received too late for step 1 is still researched and labelled under the timing rules. This is a schedule target, never a reason to drop a requested event.
 
 **Known-at time (R28).** An input enters a pregame card only if it was available before the cutoff. A historical row's game date is not its availability time. Archive rows are retrospective compilations: print the capture date, and treat a late correction or late-published statistic as known only from its correction time. If that is unknown, label the input `KNOWN_AT_UNVERIFIED` and keep it out of anything that decides Rank 1. Full-season aggregates and corrected datasets are separate snapshots from what was known on the day.
 
@@ -71,7 +70,7 @@ Print model family, endpoint, parameters, input provenance, arithmetic and appro
 
 Retain unconditional win/push/loss/void masses and p_card = W/(W+L) where W+L > 0. Preserve allowed draws/ties; resolve OT/ET/SO/extras only when the exact competition/contract does. Full result masses sum to one within declared rounding tolerance. Do not clip a probability to the 90% selection ceiling; exclude it from the ranked slate and retain its actual value diagnostically. Tail truncation, covariance and score means/SDs must be reproducible.
 
-Every numeric candidate attempts a frozen BASELINE_P on the identical proposition/line/endpoint, using the league-only recipe in SELECTION_RULES Â§9. Missing comparator remains missing. Baseline provenance and cutoff are retained; no backfill after results. Fitted models operate exclusively in the shadow lane (`research/model_shadow/`) under pre-registered hypotheses, evaluated against BASELINE_LEAGUE_V1 and TEAM_BASELINE_P. Live cards remain UNCALIBRATED_ANALYST_SCENARIO until a model is formally promoted under Prompt 8.
+Every numeric candidate attempts a frozen BASELINE_P on the identical proposition/line/endpoint, using the league-only recipe in SELECTION_RULES §9. Missing comparator remains missing. Baseline provenance and cutoff are retained; no backfill after results. No fitted model currently exists.
 
 List every analyst adjustment and avoid double-counting effects already in data. Print adjusted and unadjusted top two whenever any adjustment changes them, regardless of size. Flag ADJUSTMENT_DEPENDENT for any such change, and LARGE_ADJUSTMENT separately above 0.25 SD. Test plausible low/base/high assumptions for the most uncertain inputs and show p/rank/gate changes. These are sensitivity ranges, not confidence intervals unless an interval method was actually applied. Uncertain lineups need explicit scenarios/weights or an honest nonnumeric assessment; uncertainty does not always mean widening a distribution without moving its centre.
 
@@ -79,7 +78,7 @@ List every analyst adjustment and avoid double-counting effects already in data.
 - **When it applies:** the card labels an input unfitted, stale, early-season, unconfirmed or `LINEUP_UNCONFIRMED`, and runs a low/base/high case on it.
 - **Primary distribution:** the declared mixture of those cases, default weights 0.25/0.50/0.25. Different weights need a stated basis, frozen before pricing. Every row's p_card, the gate and the ranks come from the mixture.
 - **Shadow:** the base-case-only p is printed beside each row as `p_base` (shadow `SHADOW_BASE_ONLY`). It never counts as a primary result.
-- **Tails:** a mixture widens the tails honestly. Do not then move the line to recover a higher p: the candidate recipe is frozen first (Â§4).
+- **Tails:** a mixture widens the tails honestly. Do not then move the line to recover a higher p: the candidate recipe is frozen first (§4).
 
 **Recent form: four windows, one rate (PR-01).**
 - **Windows:** every numeric team-sport card reads each side's L5, L10, L15 and L20, season-to-date and league level (ARCHIVE_USE_GUIDE recipe R2). Use dated games only, before the cutoff, from the archive or a registered source route. A window that does not exist is printed with its true n.
@@ -89,7 +88,7 @@ List every analyst adjustment and avoid double-counting effects already in data.
 
 ## 8. Mini lifecycle and settlement
 
-New formats: mini-log-7 and mini-settlement-6; existing formats (mini-log-2 to -6, settlement -2 to -5) finish unchanged. Start (2), append card (1), freeze and settle (3), import (4), rollover if needed (5), retrospective (6), repair archive (7), change framework (8). Creating a mini or rollover consumes no ID. Local working P-IDs are permanent references but not canonical until verified import; a contiguous outstanding mini sequence must be accounted for before further allocation. Never reuse P-518â€“P-522 or silently skip/renumber.
+New formats: mini-log-7 and mini-settlement-6; existing formats (mini-log-2 to -6, settlement -2 to -5) finish unchanged. Start (2), append card (1), freeze and settle (3), import (4), rollover if needed (5), retrospective (6), repair archive (7), change framework (8). Creating a mini or rollover consumes no ID. Local working P-IDs are permanent references but not canonical until verified import; a contiguous outstanding mini sequence must be accounted for before further allocation. Never reuse P-518–P-522 or silently skip/renumber.
 
 **Lifecycle controls (R15, R16, R22).**
 - **One issuing writer per mini.** A mini names its issuing writer and lease time. Only that writer appends new cards. A second mini may not prepare the same next working ID while an unexpired lease or an unaccounted-for mini exists. Hand-over and expiry are recorded in the mini.
@@ -114,9 +113,9 @@ Issued card cores, previous log parts, existing settled minis and dated reports 
 3. **Destination prefix:** the destination working file's exact bytes before the append, compared byte-for-byte afterwards.
 4. **Committed representation:** the git blob, normalised to LF. Check it with `git ls-files --eol`.
 
-A claim of byte identity names which identity it means. Line counts, zero deleted lines and the git SHA prove none of the first three. Any normalised comparison declares its transformation (for example CRLFâ†’LF) and keeps the raw source. Changing git attributes needs its own scoped review.
+A claim of byte identity names which identity it means. Line counts, zero deleted lines and the git SHA prove none of the first three. Any normalised comparison declares its transformation (for example CRLF→LF) and keeps the raw source. Changing git attributes needs its own scoped review.
 
-**Finding, 2026-10-12.** The byte-exact (`-text`) rules for Combined Log parts 6â€“8, `GAME_LOG_STATUS_CURRENT.md`, `research/verification/**`, `research/issued_research/**`, `archive/mini_logs/**` and the archive's `_canonical`/`_custody` folders exist only in this machine's local `.git/info/attributes` (the committed `.gitattributes` was deleted earlier). A fresh clone or another machine applies `core.autocrlf` conversion to those files. Until the owner decides whether to restore a committed attributes file, any agent working outside the original machine must check `git check-attr text <path>` and the raw bytes before claiming byte identity, and must edit `-text` files at byte level. A text editor can silently convert a whole mixed-ending file; this happened and was caught and repaired on 2026-10-12.
+**Finding, 2026-10-12.** The byte-exact (`-text`) rules for Combined Log parts 6–8, `GAME_LOG_STATUS_CURRENT.md`, `research/verification/**`, `research/issued_research/**`, `archive/mini_logs/**` and the archive's `_canonical`/`_custody` folders exist only in this machine's local `.git/info/attributes` (the committed `.gitattributes` was deleted earlier). A fresh clone or another machine applies `core.autocrlf` conversion to those files. Until the owner decides whether to restore a committed attributes file, any agent working outside the original machine must check `git check-attr text <path>` and the raw bytes before claiming byte identity, and must edit `-text` files at byte level. A text editor can silently convert a whole mixed-ending file; this happened and was caught and repaired on 2026-10-12.
 
 **Recheck before every mutation batch (R18).** Immediately before each append, rollover or status update, re-read HEAD, the active-log path and the destination file's current byte count and tail. Compare them with the plan. On any change, stop, rebuild the plan against the new state and preserve both writers' work. Never append from a stale plan.
 
@@ -143,4 +142,4 @@ Every change states its class, and the before/after behaviour if it is not edito
 
 ## 12. Navigation
 
-[Prompts](research/prompts/README.md) Â· [Templates](CARD_AND_LOG_TEMPLATES.md) Â· [Selection](SELECTION_RULES.md) Â· [Scoring](SCORING_AND_VALIDATION.md) Â· [Verification](VERIFICATION_PROTOCOL.md) Â· [Sources](SOURCES.md) Â· [Archive guide](ARCHIVE_USE_GUIDE.md).
+[Prompts](research/prompts/README.md) · [Templates](CARD_AND_LOG_TEMPLATES.md) · [Selection](SELECTION_RULES.md) · [Scoring](SCORING_AND_VALIDATION.md) · [Verification](VERIFICATION_PROTOCOL.md) · [Sources](SOURCES.md) · [Archive guide](ARCHIVE_USE_GUIDE.md).
