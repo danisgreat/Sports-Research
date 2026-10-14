@@ -1,46 +1,42 @@
-# PROMPT 6 — Evidence-grounded Combined Log retrospective
+# PROMPT 6 — Review cards and independently verified sporting shadows
 
-**Mode:** COHORT_RETROSPECTIVE. Run after about 30 newly settled cards or on user request; neither trigger implies statistical sufficiency. Writes: a new uniquely named retrospective folder, scoreboard, CURRENT_STATE, dated HYPOTHESIS_REGISTER additions and CHANGELOG. No log/grade/forecast/rule/prompt changes and no edits to earlier dated reports.
+**P-2026.10.14-v11.3 · COHORT_RETROSPECTIVE · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Trigger: user request or about 30 newly settled cards; neither proves statistical sufficiency. Writes: a new uniquely named report, authorized scoreboard/state summaries, dated hypothesis amendments and CHANGELOG. No original log/grade/forecast, active rule/prompt or previous report changes. The decision lab is excluded.
 
-## 1. Read and freeze scope
+## 1. Freeze scope and evidence
 
-Print the [reading receipt](README.md) after common controls, scoring, verification, hypotheses, latest completed retrospective and implementation roadmap, relevant learning/source/archive/profile sections, original cards and latest valid settlement evidence. A folder containing an unfinished draft is not automatically a completed retrospective. Record branch/HEAD/dirty inventory.
+Read common controls/protocol, scoring, verification, hypotheses, latest completed retrospective/implementation, relevant learning/source/archive/profile sections and original cards/effective settlements. An unfinished draft is not a completed report. Print HEAD/dirty inventory, actual reading receipt and outcome exposure.
 
-Before constructing result tables, write SCOPE.md: fixed issue/event dates and IDs, policy/format versions, inclusion/exclusion rules, original-gate/timing/lead/evidence strata, last completed-review boundary, comparisons, snapshot time and outcomes already seen. Do not claim prospective registration for a scope written after exposure. Include all requested/research events in coverage, even pending/NO_FORECAST, while scoring only appropriate resolved rows.
+Write SCOPE before analysis: issue/event dates and IDs, policy/format versions, inclusion/exclusion, timing/gate/lead/evidence strata, original-baseline availability, prior exposure, comparisons and snapshot time. It is retrospective if outcomes were already seen. Include numeric, qualitative, NO_FORECAST, pending, unresolved, blocked and duplicate request coverage.
 
-## 2. Build an inspectable inventory
+Create DATA_INVENTORY and row-level COHORT_TABLES joining original cards to effective revision chains. Inventory every included/excluded ID and source block; conflicting branches remain unresolved. Recover missing original p only from the actual frozen core, never a summary or hindsight interpretation.
 
-Create DATA_INVENTORY.md and row-level COHORT_TABLES.md. Join each original card to its latest valid dated settlement; retain original contract/rank/p/baseline/expected score and all revision pointers. Reject duplicate counting. Recover an original probability only by reading its actual frozen card, not from a later paraphrase; missing stays missing. Record every omitted metric and reason.
+## 2. Assess prediction with matching units
 
-Reconcile all IDs, rows, grades and queue statuses to source blocks before aggregating. Separate original primary picks, informational ranks, frozen shadows, qualitative cards and post-event reconstructions. Respect old scoring/selection versions. Historical totals can remain a labelled diagnostic view; v10 outcomes start with actual v10 cards, not relabelled history.
+For every sport/competition/format/endpoint/policy represented, report its own counts; list small strata explicitly. Preserve version boundaries, ranks, primary/informational/shadow/reforecast cohorts and evidence classes.
 
-## 3. Quantitative review
+Report:
+- Requests/retained events and numeric/baseline/settlement coverage; earlier missing intake means NOT_COMPUTABLE, not complete coverage. Include unresolved-case sensitivity.
+- Original rank W/L/PUSH/VOID/UNRESOLVED, card classes and Hit@2 with exact denominators; mechanically protected pairs separately.
+- Same-row paired Brier/log-loss differences, event and ISO-week means, events/weeks, justified uncertainty, headline A/B and sensitivity C/E evidence. In-sample climatology is descriptive. Missing paired evidence does not establish incremental skill; it does not prove none.
+- Complete-range reliability bins and empty bins, event counts and calibration uncertainty; expected-score bias/MAE/RMSE and originally issued interval coverage. No z without original SD.
+- Gate PASS/instability/precision and frozen RET03/RET04/XCARD6/RANK_DELTA/BASE_ONLY comparisons, original/unadjusted adjustments, form-window/mixture diagnostics and identical-line difficulty.
+- Correctly conditioned joint losses; exact values versus bounds; actual issue state/lead, availability-search completion, source lineage, capture/review SLA and unresolved workload.
+- Rank-1 deep reviews and matched-win process defects; mechanism known-at versus post-event explanation. One loss or short streak is not calibration proof.
 
-Report every sport, league, format and endpoint present in the cohort, each in its own stratum; never pool unlike competitions, and list strata too small to report with their counts. For each suitable league/format/endpoint/policy cohort report:
+Use event/week dependence, repeated teams, serial drift, missingness, multiplicity and unequal task difficulty in the interpretation. Fewer than eight weeks is INSUFFICIENT_EVIDENCE under current scoring; eight is a floor, not a power calculation. No invented bootstrap or sample-size number.
 
-1. Coverage: requested events from the minis' intake tables (mini-log-7 onward; for earlier minis request coverage is `NOT_COMPUTABLE`, never assumed complete), retained forecasts, numeric/qualitative/NO_FORECAST, blocked and duplicate requests, pending, unresolved, decisive and paired-baseline counts; missingness sensitivity.
-2. Primary W/L/PUSH/VOID/UNRESOLVED by rank, card class and Hit@2 with exact denominators; mechanically protected pairs separately.
-3. Baseline-relative Brier and log loss on identical frozen rows, event means and week means, events/weeks, and justified uncertainty, in the headline (evidence A/B) and sensitivity (adding C/E) views (SCORING §2a). Report NOT_COMPUTABLE when paired data is absent. Realised in-sample climatology is descriptive only. Without paired baselines, say that the cohort "does not establish" skill, never that it shows none (R24).
-4. Calibration bins over the full probability range, distinct-event counts, mean p versus outcome, resolution limitations. No proof from an interval merely including p or slope 1.
-5. Expected-score bias/MAE/RMSE and issued-interval coverage by sport/term; z only from valid original SDs. Do not infer good tails merely from a small mean |z|.
-6. Original gate versus instability (and `GATE_UNRESOLVED_PRECISION` separately), and the shadow gate and shadows defined in SELECTION_RULES §2–3 (RET03, RET04, XCARD6, RANK_DELTA, BASE_ONLY), with declared alternative/quantity and policy version. Compare outcomes on paired events; a reachable gate is not necessarily useful. Report line difficulty (distance from centre, z) beside every hit rate.
-12. Form windows: for mini-log-7 cards, the expected-score error of the unadjusted, the L20/season-adjusted and the recency-blend rates on the same settled games (FC11-FORM-v1), by sport.
-7. Joint-loss predictions versus matching observed endpoints; exact values separate from bounds; pushes/voids conditioned consistently; structural zero acknowledged.
-8. Timing/source process: PREGAME/LIVE/LATE/HISTORICAL, actual issue lead, outcome exposure, lineup evidence, provider grade/lineage, source failures, capture completion, review SLA and evidence backlog.
-9. Adjusted/unadjusted and sensitivity results, including sub-0.25-SD rank flips, approved regime vocabulary and complete winner masses.
-10. Family failure classes and exposure counts, matched wins and process NOT_ASSESSABLE. Zero recurrence without exposure is not a successful correction. A losing high-p row is not by itself evidence of miscalibration.
-11. Archive/profile freshness and exact usable coverage; small selected cohorts do not estimate league population shifts. Historical results must precede the relevant issue cutoff.
+## 3. Audit sporting shadows separately
 
-Use SCORING_AND_VALIDATION for arithmetic and limitations. Same-event dependence, repeated teams, one-week samples, multiple comparisons and non-comparable line difficulty limit inference. Supply a sample-size plan only when its inputs and method exist; otherwise SAMPLE_SIZE_NOT_ESTIMATED. Do not compare raw hit rates across easy derived lines and harder supplied lines as if task difficulty were fixed.
+After manual settlement, inspect permitted sporting model/forecast/receipt/result files. Match exact model/config/data identities, scope and contract to independently frozen pre-start forecasts with retained publication/cutoff evidence and effective settlement. A generated historical prediction or local receipt alone is not prospective.
 
-## 4. Review learning and recommend
+Keep HISTORICAL_DEVELOPMENT, unverified/reconstructed shadows and PROSPECTIVE_SHADOW separate. Invalid gates receive an exclusion reason and retained inventory. Compare manual and model probabilities only on identical frozen event/line/endpoint with genuine independent issuance; assisted/exposed analysis is a distinct policy. Model rows never offset primary losses or inflate independent n.
 
-Read every new Rank-1 loss review and matched wins. Name shared mechanisms and whether knowable at cutoff, but do not invent causal percentages. Review every recommendation in the latest register by separate statuses: document control implemented, data ready, test registered, test run/result and production release. Archived runtime claims do not establish a current implemented model.
+Assess distribution/calibration/coverage against strong frozen baselines and registered meaningful effects/precision/stop rules. A SHADOW_CANDIDATE, passing tests or a wide interval containing slope 1 is not qualified. Recommend but do not implement/promote a model here; prompt 8 handles authorized changes. Never use decision-lab results in card learning.
 
-Write prioritised recommendations with ID, evidence, concrete change, dependencies/files, operational owner/task, acceptance criteria, justified prospective sample plan, failure/rollback condition and status. Prefer highest-impact correctness/measurement/source repairs first; model/selection experiments remain untested until supported. Append new hypotheses with version/date instead of editing an old registration. Do not force exactly five findings when evidence supports a different number.
+## 4. Recommend, verify and publish
 
-## 5. Report and publish
+For each finding record evidence, actual defect/mechanism, exact proposed change/files, dependencies, owner/task, status, acceptance/rollback and prospective design inputs. Separate implemented controls, data readiness, registration, measured experiment result and release. Preserve old hypotheses and append versioned amendments. Unknown power inputs mean BLOCKED_DESIGN / SAMPLE_SIZE_NOT_ESTIMATED.
 
-Produce RETROSPECTIVE_REPORT.md with findings, evidence tables, what worked, limits, recommendation status and next tests; retain scope/inventory/calculations. Reconcile every aggregate to the row inventory, then independently recompute representative arithmetic. Update scoreboard/state without changing underlying grades; baseline-unavailable headline stays explicit. Verify allowed scope and unchanged log bytes.
+Produce RETROSPECTIVE_REPORT with complete inventory, cohort calculations, supported findings/limits and priorities. Reconcile all totals and independently check representative arithmetic. Update authorized summaries without changing grades or claiming new qualification.
 
-Commit by exact paths and push without force when this prompt is invoked unless user requests local-only. Fetch/verify remote SHA and report artifact. Return scope, paired-data sufficiency, primary descriptive results, unresolved coverage, evidence-supported findings, priority recommendations, report links and publication state. Avoid claims of predictive improvement unsupported by a fixed prospective comparator.
+Publish exact paths under invoked-task authorization, fetch and verify remote artifacts. Return scope, paired-data sufficiency, results/coverage, exclusions/unresolved queues, findings, test priorities and commit/remote status.

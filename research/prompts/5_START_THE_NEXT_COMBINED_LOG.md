@@ -1,27 +1,29 @@
 # PROMPT 5 — Roll over the Combined Log without consuming IDs
 
-**Mode:** COMBINED_LOG_ROLLOVER. Input: user request or documented trigger. **Default triggers (R21; calibrated 2026-10-12 against the existing parts, which rolled over at 0.4–1.3 MB, and Part 7 at 1.26 MB with 30 entries):** whichever comes first of the active part's working file exceeding 1.5 MB, holding 50 or more canonical entries, or a reader reporting that it will not open or render reliably. Record which trigger applied, with the measured size, count or failure. A rollover is never required to settle or import anything. Run between imports, never over a partial import. Writes: current log closure, one new part, CURRENT_STATE, current GAME_LOG_STATUS_CURRENT pointer, explicit live pointer documents if needed, CHANGELOG and a new rollover report. No forecast, settlement, duplicate card or ID allocation.
+**P-2026.10.14-v11.3 · COMBINED_LOG_ROLLOVER · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Default trigger: working file exceeds 1.5 MB, contains at least 50 canonical entries, or cannot be opened/rendered reliably. Record the actual trigger/measurement; rollover is not required to settle or import. Run between complete imports.
 
-## 1. Read and reconcile
+## Inputs and allowed writes
 
-Print the [reading receipt](README.md) after common controls, template §8, VERIFICATION_PROTOCOL §4, status, active/previous log opening and closure records, current entry tail and this prompt. Record branch/HEAD/status; preserve unrelated changes. Resolve active Part N from CURRENT_STATE and current status against actual entries. Opening ranges and IDs are historical snapshots, not claims of today's state.
+Resolve active Part N, user request/trigger and current queues. Writes: old-part closure, one new part, current state/status/live pointers, CHANGELOG and a new rollover receipt. No forecasts, settlements, copied cards, P-ID allocation or model promotion. Publish under the invoked task unless explicitly local-only.
 
-Inventory pending/evidence queues, highest canonical ID, next ID, current part's actual canonical entries and unresolved import plans. Block rollover until any half-import is resolved. Record the full original old-part bytes for comparison; verify exact proposed Part N+1 path without relying on lexicographic filename sorting.
+## 1. Reconcile and plan
 
-## 2. Plan and apply
+Read common controls/protocol, templates §8, verification §4, current status and actual log entries/opening/closure records. Print authority/HEAD/dirty inventory. Resolve current Part N, highest/next ID, reserved IDs, pending and evidence queues, and any partial import. Opening snapshots are historical; do not revise them to current values.
 
-If exact rollover already exists and current pointers match, return ALREADY_COMPLETED with zero writes. A partially created new part/closure requires scoped recovery by comparison; never overwrite an occupied file or create Part N+2 to hide the conflict.
+Block rollover over an unfinished import. Snapshot the entire old-part working bytes/count/hash and proposed Part N+1 path. An exact completed rollover returns ALREADY_COMPLETED with zero writes. A partial closure/new part requires scoped comparison/recovery; never overwrite an occupied file or create N+2 to hide it.
 
-Append a dated closure to Part N: closure time/HEAD, actual contained ID range and entry count, highest global ID, unchanged next ID, both queue pointers, prior byte/line counts if measured, and link to Part N+1. Preserve every old byte.
+## 2. Apply closure and new opening
 
-Create Part N+1 with title, ACTIVE status, opening time in Sydney/UTC, actual method/control/scoring/HEAD, explicit OPENING_SNAPSHOT label, previous part/continuity links, reserved-ID note, global highest/next ID unchanged, pending and evidence queues, research-only/market-blind labels and canonical-md-1 append/addendum rules. End header with `<!-- END ACTIVE COMBINED LOG HEADER -->`. No placeholder forecast/card.
+Immediately before closure, recheck HEAD, active path, raw count/hash/tail, next ID and source plan. On drift, re-plan. Append a dated closure with measured contained range/count, highest global ID, unchanged next ID, both queues and prior identity, plus the new-part link.
 
-Recheck immediately before the closure append and again before creating the new part (R18). HEAD, the active path, the old part's byte count and SHA-256 and the next ID must match the plan; otherwise stop and re-plan. After rollover, later settlement revisions and addenda for cards in the closed part are appended to the **new active part**, with a pointer to the original part and revision key (template §8, R21). The closed part is never edited.
+Recheck again before creating Part N+1. Create its ACTIVE opening, method/control/scoring/HEAD, time/zone, explicit OPENING_SNAPSHOT, previous-part continuity, reserved-ID note, highest/next ID unchanged, queue pointers and research-only/market-blind labels. Use canonical-md-1 and the END ACTIVE COMBINED LOG HEADER marker. Do not insert a placeholder forecast.
 
-Update only current destination pointers and append the changelog/rollover receipt. Prefer dynamic CURRENT_STATE references to more hard-coded active filenames; historical links remain unchanged. Do not alter an old opening header to make it look current.
+Later revisions for closed-part originals go into the new active part with original/prior-revision pointers; the closed original stays immutable. Shadow/model IDs and receipts remain at their existing independent locations. Rollover is no qualification or artifact change.
 
-## 3. Verify, publish, report
+Update only live pointers and dated change/report records. Prefer dynamic CURRENT_STATE references; retain historical links and old-format semantics.
 
-Compare full old prefix exactly; inspect suffix/diff endings; next ID identical; new part has zero canonical blocks; one closure/new part; continuity links work; current status/state agree; queues retain every item. Verify scope against the initial dirty inventory.
+## 3. Verify, publish and return
 
-Commit scoped changes and push without force when this full prompt is invoked unless user limits to local work; fetch and verify remote SHA and pointers. Return old/new paths, entry counts, preserved-prefix evidence, unchanged next ID, zero IDs consumed, queue counts, checks, commit and remote publication status. A failed check means rollover NOT_COMPLETE.
+Compare the entire old prefix, confirm only closure appended, and verify new part contains header/continuity/queues only. Reconcile all current pointers, zero copied forecasts, unchanged IDs and rerun idempotency. Read back every output; report raw/committed identities separately.
+
+Stage exact paths and publish without force when authorized; fetch and verify remote SHA and artifacts. Return trigger, old/new paths, queue continuity, unchanged next ID, byte verification and actual publication status.

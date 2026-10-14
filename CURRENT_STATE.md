@@ -4,14 +4,16 @@
 
 ## Authority
 
+**Availability procedure update (14 October 2026):** [AVAIL-2026.10.14-v1](ROSTER_AVAILABILITY_PROTOCOL.md) and [change receipt](research/verification/framework_change_2026-10-14-4/IMPLEMENTATION.md) require comprehensive starter, bench and absence research for both sides, including obscure competitions. PROCEDURE only; truthful missingness, prediction/selection/scoring rules, formats and model-workshop firewall remain in force. Prompt v11.3 retains this procedure and adds the complete lifecycle/integrity controls.
+
 | Item | Value |
 |---|---|
 | Status | ACTIVE |
 | Method | MDS-2026.10.12-v11.0 (Markdown only) |
-| Control revision | CR-2026.10.12-R2 |
+| Control revision | CR-2026.10.14-R3 ([integrity and lifecycle release](research/verification/framework_change_2026-10-14-5/IMPLEMENTATION.md); [availability procedure](research/verification/framework_change_2026-10-14-4/IMPLEMENTATION.md); retains [workshop/reading-gate/firewall](research/verification/framework_change_2026-10-14-3/IMPLEMENTATION.md)) |
 | Scoring version | SCV-2026.10.12-v7 (historical v5/v6 views retained) |
 | Selection version | SEL-2026.10.12-v3 / P_ORDER_V2 priced from the declared mixture where required; alternatives recorded as shadows |
-| Prompt suite | P-2026.10.12-v11.0 |
+| Prompt suite | P-2026.10.14-v11.3 (PROCEDURE: comprehensive availability research; prompts 1–3 never read `research/model_shadow/` or `ml/` before their own freeze; prompt 8 may change `ml/`) |
 | Mini-log format | `mini-log-7` (in-progress `mini-log-2` through `mini-log-6` retain their format) |
 | Settlement format | `mini-settlement-6` (earlier settlement formats remain accepted) |
 | Freeze | None. Custody is the git history of `main` (CURRENT_RULES §9). Cards record the HEAD SHA they read. The last control manifest, `CONTROL_MANIFEST_2026-10-09-3.md`, is in [archive/controls/](archive/controls/). |
@@ -39,6 +41,12 @@ Full tables: [research/scoreboard/SCOREBOARD.md](research/scoreboard/SCOREBOARD.
 - Last cohort retrospective: [2026-10-11](research/verification/retrospective_2026-10-11/RETROSPECTIVE_REPORT.md), new cohort P-557 to P-576 against P-126 to P-556. Rank 1 80.0% (58.4% to 91.9%) does not beat Rank 2 90.0% (69.9% to 97.2%) or ranks 3-4 77.5%. Top-two Brier 0.131 against climatology 0.128 (skill -0.03). Every RANK1_UNSTABLE top-two pair covers itself (stated joint failure 0.0%, realised all-lost 0 of 20). So the counted rate is driven by line construction, and the cohort **does not establish** incremental predictive skill: there were no frozen same-row pregame baselines, and the skill figure uses an in-sample climatology reference, which is descriptive only. *(Wording corrected 2026-10-12, audit R24. The earlier summary said "not skill", which overstated what 20 cards without paired baselines can show. The dated retrospective is unchanged.)* 0 of 20 cards passed the Rank-1 gate; experiment SEL-1 has 1 of 8 week-blocks and no PASS card, so the gate stays provisional. Seven proposals (RET-01 to RET-07) are `PROPOSED_NOT_TESTED` in [HYPOTHESIS_REGISTER.md](HYPOTHESIS_REGISTER.md).
 - Nothing here is performance-certified.
 
+## October 14 implementation and integrity status (framework changes 3–5)
+
+The workshop is partly implemented development research, not a qualified predictor. The [current review](research/verification/framework_change_2026-10-14-5/ML_WORKSHOP_REVIEW.md) reconciles actual code and artifacts: 172 discovered competition folders; 29 completed historical models, 1 interrupted/incomplete model, and 142 NOT_MODELLED routes. Four numerical development passes remain DATA_HOLD for source/admission; no prospective lane or model promotion. The [artifact admission record](research/model_shadow/ARTIFACT_PROVENANCE.md) overrides unsupported label/candidate interpretations in old generated cards.
+
+All eight prompts are updated to v11.3; prompt 1 keeps eleven standalone sport/general sections and each section's Upcoming game block. Availability research remains comprehensive, with truthful missingness. Targeted source/receipt/timing/settlement/propensity repairs pass 60 workshop tests. The corrected paper decision replay does not demonstrate RL benefits. [Implementation and release verification](research/verification/framework_change_2026-10-14-5/VERIFICATION_REPORT.md). Canonical IDs, forecasts, grades, scoring/selection and archive datasets are unchanged.
+
 ## October 12 implementation status
 
 Framework change [2026-10-12-1](research/verification/framework_change_2026-10-12-1/IMPLEMENTATION.md) implements the 38 audit recommendations of `AUDIT_RECOMMENDATIONS_2026-10-12.txt` and the 10 prediction recommendations, in the audit's order. Item-by-item status and evidence are in its implementation map. Headlines:
@@ -60,8 +68,9 @@ Prompts 1–8 and their supporting rules/templates/examples are replaced under t
 
 ## Models
 
-- No fitted model exists. Supported numeric cards are `UNCALIBRATED_ANALYST_SCENARIO`; otherwise retain `UNCALIBRATED_QUALITATIVE` or `NO_FORECAST` with missing values explicit ([PROBABILITY_TOOLKIT.md](PROBABILITY_TOOLKIT.md), [LEAGUE_PROFILES.md](LEAGUE_PROFILES.md)).
-- The numerical runtime and its model register are archived design notes ([NUMERICAL_MODEL_REGISTER.md](archive/root_documents_2026-10-14/NUMERICAL_MODEL_REGISTER.md)).
+- **Cards:** no fitted model is a card input. Supported numeric cards are `UNCALIBRATED_ANALYST_SCENARIO`; otherwise retain `UNCALIBRATED_QUALITATIVE` or `NO_FORECAST` with missing values explicit ([PROBABILITY_TOOLKIT.md](PROBABILITY_TOOLKIT.md), [LEAGUE_PROFILES.md](LEAGUE_PROFILES.md)).
+- **Model workshop (2026-10-14):** fitted development models exist in [`ml/`](ml/README.md), with outputs and statuses in [research/model_shadow/STATUS.md](research/model_shadow/STATUS.md). All are `HISTORICAL_DEVELOPMENT`; no prospective lane has started, and none is a card input. Prompts 1–3 never read them.
+- The 2026-10-09 numerical runtime and its model register are archived design notes ([NUMERICAL_MODEL_REGISTER.md](archive/root_documents_2026-10-14/NUMERICAL_MODEL_REGISTER.md)).
 
 ## Where things are
 

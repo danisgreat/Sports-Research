@@ -6,8 +6,9 @@ weather or DLS method, or a short first innings that was not all out, are exclud
 C0  league only:   y ~ N(mu, sigma), time-decayed mean and SD of the competition's recent first innings.
 C1  + venue:       mu + v[venue], v shrunk by n_eff / (n_eff + k_venue).
 C2  + teams:       mu + v[venue] + bat[batting team] + bowl[bowling team], weighted ridge.
-C2_PRE prices before the toss: 0.5 * F(A bats) + 0.5 * F(B bats). The toss is a fair coin and the decision
-tendency cancels for a symmetric pair, so P(A bats first) = 0.5.
+C2_PRE uses the declared symmetric scenario 0.5 * F(A bats) + 0.5 * F(B bats).
+The weight is an unfitted assumption: a fair toss alone does not imply equal batting-first probabilities
+when the two teams' toss decisions differ. This prototype is not a verified pre-toss production model.
 """
 from __future__ import annotations
 

@@ -60,7 +60,7 @@ Used to describe the training data of the removed runtime. They remain valid pla
 
 | Source id | Sport | Grain | URL | Update cadence | Available to the forecaster at | Licence |
 |---|---|---|---|---|---|---|
-| cricsheet | cricket | ball_by_ball | https://cricsheet.org | daily | match_start_utc | ODbL 1.0 |
+| cricsheet | cricket | ball_by_ball | https://cricsheet.org | daily | match_start_utc | ODC-By 1.0 (Open Data Commons Attribution; corrected 2026-10-14 from "ODbL 1.0" against cricsheet.org/register) |
 | nflfastr | american_football | play_by_play | https://github.com/nflverse/nflverse-data | weekly_in_season | kickoff_utc | MIT |
 | nba_stats | basketball | possession_and_box | https://stats.nba.com | live_post_game | scheduled_tipoff_utc | fair_use_research |
 | pybaseball_statcast | baseball | pitch_and_pa | https://baseballsavant.mlb.com | daily | first_pitch_utc | fair_use_research |
@@ -376,7 +376,7 @@ The **Role** column:
 | Source | Route | Fields | Role | Access | Verified |
 |---|---|---|---|---|---|
 | ESPN (NBA, WNBA, NBL, EuroLeague) | §2.1 scoreboard, summary, standings, injuries | Starters, `didNotPlay`, box, standings PF/PA | P | API | 200 |
-| NBA official injury report (new in this register) | `https://official.nba.com/nba-injury-report-2025-26-season/` (links to timed PDFs) | Official status at a stamped time | FO | Browser | 200 |
+| NBA official injury report | Navigate `https://official.nba.com/` to the actual season’s report and its timed PDFs; `nba-injury-report-2025-26-season/` is historical only | Official status at the exact report time; not starter/bench confirmation | FO | Browser | 200 |
 | WNBA official injury report (new) | `https://www.wnba.com/wnba-injury-report` | Official status | FO | Browser | 200 |
 | NBA daily lineups page | `https://www.nba.com/players/todays-lineups` | Potential official starters after rendering and exact-game check | FO | Browser | JS_ONLY on 2026-09-28; not an unattended fallback |
 | NBL official | `https://www.nbl.com.au/` match pages; match data `schedule.nbl.com.au/api/calendar/match?match=<uuid>&league=NBL`. The first `jumpBall` event is the actual tip; skip the `betting`/`odds` objects | Tip time, play-by-play, box | FO | API | Site 200; the match API needs the match UUID from the page |
@@ -453,7 +453,7 @@ The **Role** column:
 | Premier League injury updates | `https://www.premierleague.com/en/latest-player-injuries` | Dated availability reports; confirm team selection at the game cutoff | FO | Browser | Opened 2026-09-28 |
 | UEFA match API | `https://match.uefa.com/v5/matches?competitionId=<id>&seasonYear=<yyyy>` | UEFA fixtures, lineups, stats (field owner for UEFA corners) | FO | Browser | 200 |
 | UEFA match information kits | `https://www.uefa.com/news-media/mediaservices/informationkits/competitions/uefachampionsleague/2026/match/2045976/` (example; navigate to exact match) | Dated squad, history and match context; final XI must still be checked | FO (UEFA matches) | Browser | Opened 2026-09-28; content may require rendering |
-| League official sites (new) | laliga.com, bundesliga.com, ligue1.com, kleague.com, keepup.com.au (A-League), `data.j-league.or.jp` | Official fixtures, lineups, stats | FO | API | 200 (Serie A redirects: use legaseriea.it through the browser) |
+| League official sites (new) | laliga.com, bundesliga.com, ligue1.com, kleague.com, aleagues.com.au (A-League), `data.j-league.or.jp` | Official fixtures, lineups, stats | FO | API | 200 (Serie A redirects: use legaseriea.it through the browser) |
 | Club official site or app | The club's match centre, and the XI about 60 minutes before kick-off | **The confirmed XI** (it beats predicted-lineup pages) | FO | Browser | — |
 | FotMob (new route) | `https://www.fotmob.com/api/data/leagues?id=<id>` and `…/api/data/matches?date=YYYYMMDD`; pages via the proxy | Fixtures, lineups, xG, tables | S | API | 200 |
 | Understat (new) | `https://understat.com/league/<EPL\|La_liga\|Bundesliga\|Serie_A\|Ligue_1>/<season>` | xG for and against by team | S | API | 200 before; **2026-09-28: the page loaded without its `teamsData` block** (`JS_ONLY`); render it or use FotMob xG |
@@ -563,6 +563,10 @@ The **Role** column:
 
 ### 3.11 Field fallback and official social use by sport
 
+**Mandatory availability search, 14 October 2026:** apply [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md) §§1–6 for every game and both sides. Its field-specific route matrix, current-season navigation and obscure-competition escalation control starter/bench/injury research where older route descriptions differ. These routes combine dated tests and discovery guidance; each exact game still needs actual pre-cutoff evidence. Never stop after one missing aggregator, equate a roster with starters, or describe absent injury data as a healthy team.
+
+**Route maintenance:** WNBA uses `https://www.wnba.com/wnba-injury-report`; NBA reports must be navigated from `https://official.nba.com/` for the actual season (the guessed 2026-27 URL failed this review). NBL injury news is selected from the current homepage Injury List, not an old season article. ACB uses current-round `Novedades y parte médico`. A-League discovery uses `https://aleagues.com.au/`, replacing the older KEEPUP starting route. AFC/CAF match centres, organizer-linked FIBA LiveStats, KBL/B.League local-language releases, club medical notices and final late changes are covered in the protocol. Its review labels distinguish opened/indexed/discovery/blocked from exact-game verification.
+
 Use the table for the **missing field only**; move to the next route immediately after `BLOCKED`, `JS_ONLY` without a renderer, `STALE`, `WRONG_EVENT` or `RETRIEVAL_MISS`. A page marked `NOT_PUBLISHED` calls for a timed refresh around the expected release, while other fields continue. For every sport, a verified original team or competition social post can carry only the field its author controls (§1.8). Its existence does not establish an additional independent lineage or override a newer official correction. An official web article copying the post is the same release.
 
 | Sport / competitions | Practical route after exact-game field-owner feed or match centre | Original official social post that may help | If still missing |
@@ -578,7 +582,7 @@ Use the table for the **missing field only**; move to the next route immediately
 | NHL | NHL gamecenter and dated status report; club's game-day release for confirmed goalie and scratches | Club's explicit starting-goalie, scratch or injury post | Independent current goalie report with S-1 receipt remains projected until a field-owning confirmation; never infer from morning-skate photos. |
 | Tennis: ATP / WTA / ITF | Tour exact-match page and current draw; WTA/ITF order of play and tournament desk's change notice | Tournament/tour's explicit withdrawal, walkover, court or schedule change; player's own health statement is limited to their words | Independent match report; an order of play is a schedule, not proof the player started or a terminal result. |
 
-**Coverage limit:** these are tested routes and decision rules, not a guarantee that a given competition publishes every field. Each game log must show what was actually retrieved before its own cutoff, the failed routes, the field's final status and the effect on the forecast. Keep league, season and women's/men's populations separate.
+**Coverage limit:** these are dated route tests and discovery/decision guidance, not a guarantee that a given competition publishes every field. Each game log must show what was actually retrieved before its own cutoff, the failed routes, the field's final status and the effect on the forecast. Keep league, season and women's/men's populations separate.
 
 ### 3.12 Source-by-source fallback chain and official social accounts (2026-09-29(a))
 

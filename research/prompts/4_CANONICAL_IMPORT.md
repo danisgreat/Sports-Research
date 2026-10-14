@@ -1,65 +1,47 @@
-# PROMPT 4 — Canonical import with complete readback
+# PROMPT 4 — Verify and import the complete settlement package
 
-**Mode:** CANONICAL_SETTLED_MINI_IMPORT. Run in the local checkout. Input: `<settlement folder>`. Writes: active Combined Log suffix; current GAME_LOG_STATUS_CURRENT rows; CURRENT_STATE; research/scoreboard/SCOREBOARD; one new `research/verification/mini_import_<range>_<date>-<run>/` folder containing inputs, plan, mapping and receipts. No rule changes, re-research, regrading or rewriting old reports/cards.
+**P-2026.10.14-v11.3 · CANONICAL_IMPORT · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: active log suffix, current status/state/scoreboard and a new import report with preserved inputs. Never rewrite issued cores, closed parts or grades. Publish when this full prompt is invoked unless the user requests local-only.
 
-## 1. Read and inspect
+## Inputs
 
-Print the [reading receipt](README.md) after common controls, full input manifest/mapping/queue, frozen and settled minis, scoring, VERIFICATION_PROTOCOL §3, status, active log's dated opening and current tail/entries, relevant older event records and this prompt. Record cwd/branch/HEAD/status; preserve unrelated work. Fetch remote for publication planning without changing branches or overwriting local edits. Explain branch divergence before any dependent publication.
+- Settlement package and every source mini/carryover: exact paths.
+- Canonical destination: resolve dynamically.
+- Publication: invoked-task default or explicit local-only.
 
-Reconcile current next ID and active path from CURRENT_STATE, current status section and actual canonical records/dated state addenda. A historical opening header may retain old IDs and retired commands; it is not current allocation authority. Snapshot the destination's entire original bytes for comparison, with count/end marker as supporting evidence. Authority mode is `LOCAL_WORKING_TREE` (CURRENT_RULES §0): print HEAD and every uncommitted control difference.
+## 1. Read, reconcile and snapshot
 
-**Name the identity you are checking (R20).** Record:
-- the raw source snapshot: SHA-256 and byte count of the settled mini's working bytes;
-- the raw destination prefix: SHA-256 and byte count of the active log's working bytes before any append;
-- the line-ending state of both (`git ls-files --eol` and a CRLF count).
+Read common controls/protocol, templates §8, scoring, verification §3, original/settled bytes, mappings/manifests/queues, current state/status and relevant log entries/addenda. Print branch/HEAD/dirty inventory and reading receipt. Fetch the publication ref without overwriting local work; explain divergence.
 
-Under `core.autocrlf=true` the committed blob is normalised to LF and is checked separately after commit. Copy imported cores byte-for-byte; if a normalised comparison is unavoidable, declare the transformation and keep the raw file.
+Resolve active log, highest/next ID, reserved IDs, outstanding local sequence and effective revisions from current records. Opening headers are historical. Search parts/minis by ID, event key and aliases. Genuine identity/allocation disagreement blocks dependent mutation; preserve evidence and independent work.
 
-## 2. Validate all inputs before changing canonical files
+Snapshot the full destination working bytes/count/hash/end marker and line endings. Distinguish raw source, imported literal core, destination prefix and committed blob. Check local text attributes/core.autocrlf. Line counts or zero deleted lines do not prove byte identity.
 
-Require the exact frozen original; never reconstruct forecast bytes from summary. Confirm settled output begins with the exact frozen prefix. If only a settlement section exists, assemble a copy in the new report inputs and compare its prefix. Audit original-format card checks and settlement checks, recording historical gaps without inventing missing fields. Legacy VOID/no-evidence conventions remain literal and are flagged for a separate settlement-review task, not silently regraded during import.
+## 2. Plan every block
 
-Inventory every source card, carryover, addendum and settlement revision. Search all canonical logs/status by ID, event key and aliases. Plan actions independently:
+Require the exact original and complete settled-prefix match. Inventory every card, carryover, addendum and revision, including already-imported cards with new addenda. Map each unit to NEW_CANONICAL_EVENT, EXACT_EXISTING_SKIP, NEW_ADDENDUM_OR_REVISION, RETAINED_PENDING/UNRESOLVED or CONFLICT. Reconcile these separately for every block type.
 
-| Source unit | Action |
-|---|---|
-| New event and next sequential working ID | NEW_CANONICAL_EVENT |
-| Identical existing event/ID/core | ALREADY_IMPORTED_EXACT; still examine its addenda/settlements |
-| Same ID with different event, same event with different ID, unexplained sequence gap | CONFLICT; stop dependent import, never renumber |
-| Canonical/local carryover | Resolve parent; reference only; append only missing supported settlement revisions |
-| Exact existing addendum/settlement | ALREADY_COMMITTED; no write |
-| New addendum/revision with resolved parent | APPEND; keep original timestamp/content and supersession |
+Compare full existing blocks, not only IDs. Partial/mismatched blocks stop the batch until scoped recovery. Exact reruns plan zero changes. Preserve local IDs, sequential genuinely new events and reserved ranges; no skipped/renumbered/manufactured event. Addenda and model rows consume no IDs.
 
-**Marker integrity before any write (R19).** Check every source block:
-- each `BEGIN` has exactly one matching `END` with the same ID (and revision key where present);
-- no block is nested inside another ID's block;
-- no revision key repeats for an ID;
-- each block's declared format is one of mini-log-2 to -7 or mini-settlement-2 to -6.
+Validate known-format balanced BEGIN/END, matching IDs/revision keys, no cross-ID nesting and unique revision keys. Legacy keyless markers stay valid in their declared format. Revision branches require explicit conflict resolution, never last-row-wins.
 
-Legacy settlement markers without revision keys are accepted under their declared legacy format, and the wrapper records that format; legacy bytes are never rewritten. Any failure blocks the dependent import before mutation.
+## 3. Apply append-only import
 
-All source counts reconcile to dispositions; `new + exact + conflict = source cards`, not `new = all source cards`. Pending and evidence queues reconcile too. Validate the whole dependency set before starting an append. Write IMPORT_PLAN.md in the new report folder, including exact expected block markers/order and current-state changes. Conflict reporting does not permit a partial ID sequence.
+Before each batch recheck HEAD, active path, destination count/hash/tail, next ID and source inventory against the plan. A change forces a new plan.
 
-## 3. Apply and recover idempotently
+Append canonical-md-1 wrappers containing complete original cores byte-for-byte. Import metadata is not a forecast timestamp. Append complete original source addenda/settlements under dated wrappers. A revision for a closed-part original goes into the active part with original/prior-revision pointers; never edit the closed part.
 
-Copy complete inputs into the report folder.
+Model outputs remain in their own lane. Never insert model probabilities into an analyst original, create primary picks from shadow rows, or count model wins in T2. Any permitted after-settlement comparison is separately labelled and retains original policy/cutoff/baseline coverage.
 
-**Recheck immediately before each mutation batch (R18).** Re-read HEAD, the active-log path, the destination's current byte count, SHA-256 and last marker, and the source inventory. Compare them with IMPORT_PLAN.md. If anything changed (another writer, a rollover, a new commit), stop and rebuild the plan against the new state; never append from the stale plan and never overwrite the other writer's work. Serialise local writers: one import at a time per active log.
+## 4. Reconcile and verify completely
 
-Append new canonical-md-1 wrappers in ID order, preserving every original core byte; original mini remains retained in full. Append only missing addenda/settlements, including for already-imported cards. Non-terminal and terminal-unresolved records are importable research with their explicit queues; never certify them by import.
+Update state/status/scoreboard from effective settlement chains, with pending events and terminal unresolved fields separate. Headline scores use frozen same-row baselines and evidence strata; missing comparisons remain NOT_COMPUTABLE. Import does not confer certification.
 
-Maintain a source-block → canonical-block mapping including parent, source path, original revision, action and readback result. After each complete block, compare it to the planned source. Interrupted rerun compares actual blocks: exact complete blocks are skipped; a partial/mismatched block is reported and repaired only within the agent's known uncommitted suffix. Never reset a whole log or rewrite a committed block. New evidence after a committed import is a dated revision.
+Read back EVERY imported core/source block; compare the entire old destination prefix and raw identities, inspect append locations and committed line endings. Reconcile mappings, continuity, counts, revisions, queues and outputs. Source closure requires a destination or explicit retained disposition for every source block. Never delete originals automatically.
 
-Update current status for new cards and changed carryovers; append/revise only the current administrative section, retaining historical snapshots. Next ID comes from the full canonical sequence, not blindly max ID in this input. Recompute scoreboard from original cards plus each contract key's effective revision (CURRENT_RULES §8; SCORING §7), using the correct version/cohort; baseline gaps stay missing. Update CURRENT_STATE's counts/queues and historical-versus-v10 separation. An exact repeated import with no new evidence plans zero canonical/state/scoreboard changes.
-
-## 4. Verify and retain
-
-Run VERIFICATION_PROTOCOL §3: complete original log prefix unchanged; end-only suffix and line endings; all card cores and every added block compared, not a three-card sample; one canonical card per new ID; no duplicate event; all source units accounted for; next ID/status/queues/scoreboard agree; scope respected. Print actual evidence for each. Check old log parts, issued-research files and unrelated work unchanged.
-
-Write CANONICAL_IMPORT_REPORT.md, CANONICAL_ID_MAPPING.md, UNRESOLVED_POST_IMPORT.md and VERIFICATION_REPORT.md. Mark original mini CLOSED_IMPORTED only in a new receipt/pointer after every source unit has a verified destination or retained explicit disposition. Do not delete working or original minis automatically; unresolved evidence remains linked.
+Report planned/applied/skipped/conflicting units, custody/readback evidence, pre/post state and limits. Exercise duplicate/rerun/partial-recovery failures and valid cases; label manual checks honestly.
 
 ## 5. Publish and return
 
-When this full prompt is invoked, commit the verified allowed paths and push to the instructed branch/main without force, unless the user requested local-only. Inspect staged diff, fetch remote after push, compare remote SHA and remote current-state/artifact contents. Concurrent remote change requires reconciliation preserving both histories; no silent force/reset.
+Stage exact intended paths, inspect the full staged diff/scope, run relevant checks and commit/push without force when authorized. Fetch and compare remote SHA and key artifact contents. Preserve concurrent work.
 
-Return input/output paths, HEAD before/commit/remote, new and existing IDs, added/skipped/conflicting blocks, all queue counts, preserved-byte/readback evidence, next ID, scoreboard coverage and publication status. Report partial/blocking work explicitly. Nothing is performance-certified.
+Return package/destination/report links, all dispositions, canonical continuity, effective settlements/queues, paired-score coverage, byte identities and actual commit/remote status. A failed dependent append never erases completed verified work.

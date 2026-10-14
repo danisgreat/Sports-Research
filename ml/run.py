@@ -51,10 +51,18 @@ def receipt_base() -> dict:
             "pandas": pd.__version__, "scipy": __import__("scipy").__version__}
 
 
+def finish_receipt(rec: dict) -> dict:
+    """Refuse to stamp a completed run after its generating source changed on disk."""
+    if code_digest() != rec["code_sha256"]:
+        raise RuntimeError("generating source changed during run; preserve diagnostics and rerun from a stable checkout")
+    return {**rec, "completed_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")}
+
+
 def run_competition(lg: League, log=print) -> dict:
     """Tune, evaluate and write one score-model competition; returns its STATUS row."""
     from ml.evaluation.writers import write_league
 
+    rec = receipt_base()
     t0 = time.time()
     games, load = load_league(lg)
     best, tune_table = backtest.tune(lg, games, log=lambda *a: None)
@@ -90,7 +98,7 @@ def run_competition(lg: League, log=print) -> dict:
            "extra": extra, "calibration_experiment": cal, "calibration": calib, "load": load, "final_model": final,
            "final_as_of": as_of, "final_season": season_last,
            "data_sha": snapshot_hash(lg, sorted(games["season"].unique().tolist())), "seconds": time.time() - t0}
-    row = write_league(res, receipt_base())
+    row = write_league(res, finish_receipt(rec))
     log(f"[{lg.model_id}] {verdict['overall']} ({time.time() - t0:.0f}s)")
     return row
 
@@ -99,11 +107,12 @@ def run_cricket(lg: League, log=print) -> dict:
     from ml.evaluation.writers import write_cricket
     from ml.models.cricket import tune_and_evaluate
 
+    rec = receipt_base()
     t0 = time.time()
     res = tune_and_evaluate(lg, log=lambda *a: None)
     res["league"] = lg
     res["seconds"] = time.time() - t0
-    row = write_cricket(res, receipt_base())
+    row = write_cricket(res, finish_receipt(rec))
     log(f"[{lg.model_id}] {row['development_verdict']} ({time.time() - t0:.0f}s)")
     return row
 
@@ -146,7 +155,9 @@ def run_cards() -> None:
     from ml.evaluation.card_calibration import audit
     from ml.evaluation.writers import write_cards
 
-    write_cards(audit(), receipt_base())
+    rec = receipt_base()
+    rec["rank_log_sha256"] = hashlib.sha256((REPO_ROOT / "GAME_PREDICTION_RANK_LOG.csv").read_bytes()).hexdigest()
+    write_cards(audit(), finish_receipt(rec))
 
 
 def run_decision_lab() -> None:
@@ -158,8 +169,16 @@ def run_decision_lab() -> None:
     path = CACHE / f"{lg.model_id}_predictions.csv"
     if not path.exists():
         raise SystemExit(f"run the {EPL_PATH} competition first (the lab reads {path.name})")
+    rec = receipt_base()
+    rec["prediction_source_sha256"] = hashlib.sha256(path.read_bytes()).hexdigest()
+    from ml.decision.lab import FD_DIR
+    market_hash = hashlib.sha256()
+    for market_file in sorted(FD_DIR.glob("*.csv")):
+        market_hash.update(market_file.name.encode())
+        market_hash.update(hashlib.sha256(market_file.read_bytes()).digest())
+    rec["local_market_capture_sha256"] = market_hash.hexdigest()
     pred = pd.read_csv(path, parse_dates=["date", "fit_date"])
-    write_decision_lab(run(pred, model_id=lg.model_id), receipt_base())
+    write_decision_lab(run(pred, model_id=lg.model_id), finish_receipt(rec))
 
 
 def main(argv: list[str]) -> None:

@@ -1,56 +1,47 @@
-# PROMPT 3 — Freeze, settle and review the local mini
+# PROMPT 3 — Freeze, settle and review a local mini
 
-**Mode:** LOCAL_MINI_SETTLEMENT. **Writes:** a new local settlement package only. **GitHub repository (`main` branch):** read-only mode (no canonical import, new IDs, predictions, rule changes or remote writes).
+**P-2026.10.14-v11.3 · LOCAL_MINI_SETTLEMENT.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: a new settlement package and dated revisions; no canonical/GitHub writes. Original cards are immutable. Optional sporting-shadow comparisons occur only after manual settlement; the decision lab is excluded.
 
-Inputs: `Active mini: <path>`; `Output folder: <path or standard settlement folder>`; `Prior settlement revisions: <if any>`. Read the entire mini, all carryovers/addenda and original referenced cards; do not grade a summary in place of a frozen contract.
+## Inputs
 
-## 1. Read and freeze
+- Active mini or previously frozen package: exact path.
+- Output: new dated settlement folder.
+- Carryovers/prior revisions: paths, or discover.
+- Evidence tasks: exact fields, or ALL.
+- Authority: published main pinned, or explicitly local.
 
-Read every control from one pinned commit of the GitHub repository (`main` branch) in read-only mode (`PUBLISHED_MAIN_PINNED`, CURRENT_RULES §0), and print the mode and full SHA. Print the [reading receipt](README.md) after common controls, SCORING_AND_VALIDATION, templates §§6/9, sport/league endpoint rules, SOURCES settlement routes, relevant archive guide and this prompt. Preserve original issue-time versions; today's process rules do not change yesterday's proposition.
+## 1. Read, inventory and freeze
 
-**Freeze the lifecycle, not just the bytes (R16).** Before copying, write the `FROZEN_SOURCE` receipt into the settlement manifest (template §6):
-- the source path, raw byte count and SHA-256 of the raw working bytes;
-- the block inventory: card IDs and addendum keys;
-- the freeze time;
-- the hand-over of the issuing-writer lease to the next mini, or NONE.
+Read common controls/protocol, scoring, verification, current status, sport/league rules, SOURCES, availability protocol and actual original cards/addenda. Print the reading receipt, authority SHA, exposure/availability limits and gaps. Inventory every card, supplied row, addendum, revision, pending event and terminal evidence gap. Preserve each mini's original format.
 
-After this, prompt 1 must not append to this mini; new events go to the next authorised mini. Re-check the source's byte count and SHA-256 just before packaging. If it grew, report `GROWTH_DETECTED`, list the new blocks and route each one: settle it in a new revision of this package, or carry it to the next mini. Never treat it as covered by the earlier receipt.
+Copy exact original working bytes to ORIGINAL_MINI before settlement. Record FROZEN_SOURCE: path, byte count, computed SHA-256, complete block inventory, freeze time and writer hand-over. Record its frozen status through the permitted lifecycle receipt. New events go to the next authorized mini. Recheck source growth at package time; account for later blocks and routing instead of silently omitting them.
 
-Copy the original file byte-for-byte into ORIGINAL_MINI before appending anything. Record real path/counts, original footer, IDs and actual comparison result. Build settled output from frozen bytes plus a new settlement section. If only section delivery is possible, provide SETTLEMENT_SECTION.md with a manifest saying assembly/prefix verification remains required. Never claim a byte comparison performed through a visual glance. On rerun retain earlier settled outputs and create dated revisions instead of overwriting.
+Produce PREDICTION_MINI_SETTLED as the complete frozen prefix plus settlement, LOCAL_ID_MAPPING, UNRESOLVED_CARRYOVER and SETTLEMENT_MANIFEST. Use mini-settlement-6 for new packages; earlier formats remain valid. A rerun appends a new revision in a new versioned output; never overwrite an earlier package.
 
-## 2. Complete inventory
+## 2. Establish outcomes and exact terms
 
-Classify all new local cards, canonical references, local-unimported carryovers and addenda. Create a block inventory/mapping with parent ID, event key, original source, current canonical status, earlier settlement and required disposition. Working IDs never change. Existing addenda are reviewed but not counted as new predictions.
+Retrieve official terminal state and exact field-owner outcomes with permitted corroboration. Match frozen event/participant orientation/line/period/endpoint and activation/action/void/retirement/extras terms to the competition-season rules. Record definition status, source URL, field/extract, publication/update/retrieval time, evidence grade, failures/conflicts and unknown lineage.
 
-For each event verify identity, current state and final time from the correct source. PENDING_EVENT covers non-terminal/unknown state. Terminal records can be PARTIALLY_SETTLED or UNRESOLVED_EVIDENCE; they do not disappear. Report 72-hour review target and capture deadlines using actual evidence; scheduled duration is only an estimate when final time is unknown.
+Late lineups or participation can diagnose an original process gap; they cannot prove pre-issue knowability. Do not backfill original starters, probabilities, baselines, ranks or timestamps.
 
-## 3. Gather exact terminal evidence
+WIN/LOSS/PUSH need sufficient evidence; VOID needs the frozen void condition. Missing/conflicting result or definition is UNRESOLVED. A bound gives a definite grade only if every feasible value agrees. Sporting convention and unknown operator settlement are separate. Pending events receive state evidence and next action, not guessed finals.
 
-Prefer official field-owner scorecards/structured results; follow registered fallback routes. Retain field/value, URL, short extract, source update and read times. Verify period, score orientation, OT/SO/ET/extras, retirement/DLS/abandonment and exact stats. A final match score cannot supply missing corners or half-time totals. Archive agreement is corroboration only after checking its source lineage; discrepancy is explicit.
+## 3. Append settlements and retrospectives
 
-For every competition, check the official terminal record promptly. If the official page is stale or non-terminal, keep the fallback evidence, record the time and state seen, and document a retry. Use the retry interval that SOURCES gives for that competition; where it gives none, state the interval you chose and why. Never present a fallback as an official grade. No ability to schedule means retry NOT_SCHEDULED. Capture fragile fields first. A narrative report is not a substitute for the target structured field.
+Each revision has a unique per-ID key, parent(s), effective time, affected contract keys, old/new values, source and reason. Resolve one valid chain per key; branching conflicts stay UNRESOLVED until a resolving revision names them. Do not choose the last row or count a key twice.
 
-## 4. Settle literally and retain uncertainty
+Copy original rank/proposition/p_card/BASELINE_P/expected score literally. Count W/L/PUSH/VOID/UNRESOLVED separately; only original ranks 1–2 are primary. Informational, reforecast and frozen shadow wins never replace losses. Compute proper scores only from issued numeric probabilities with correct conditioning; full vectors are scored separately. Missing original p, SD or baseline stays missing.
 
-Copy original proposition, rank, p, baseline, endpoint, expected score and definitions exactly. Assign WIN/LOSS/PUSH only from supported arithmetic; VOID only from the frozen void condition. Missing or conflicting target/definition is UNRESOLVED, with A/B/C/E/X evidence and independent definition status. Legacy OP remains literal provenance. A partial-value bound permits a grade only when every feasible value yields it; otherwise unresolved.
+Complete R1–R12 for every terminal card, including wins and partial settlements; explain unavailable parts. Every Rank-1 LOSS gets eight parts: exact claim; verified outcome; original-distribution check; cutoff knowability; process/model/variance assessment; cutoff-only counterfactual; failure class; testable correction. No invented blame percentages, post-event rank replacement or miscalibration inference from one loss. Check matched wins for the same defects.
 
-Separate sporting settlement under a frozen convention from unknown operator settlement. Do not choose a convention after seeing the outcome. Settled rows may be completed while others on the card stay open.
+## 4. Optional sporting-shadow comparison
 
-**Revisions (R17).** Every settlement block carries `revision-<n>` (unique per ID), its parent revision, effective time, source and the affected contract keys, with old and new values and the reason.
-- A partial correction changes only its listed keys; all other keys keep their parent-chain grades.
-- Two revisions with the same parent are a `REVISION_CONFLICT`; the affected keys stay UNRESOLVED until a resolving revision names both.
-- Never decide by file position or by timestamp alone.
+Complete manual settlement first. Read only the permitted sporting model/forecast/freeze/settlement receipts. Verify scope/version, independently frozen pre-start hash, unchanged bytes, publication/cutoff evidence, code/data/config identities and exact endpoint/contract/line. A local receipt is not a committed receipt. Invalid or missing freeze evidence is HISTORICAL_DIAGNOSTIC / NOT_PROSPECTIVE with reason.
 
-Calculate primary W/L/PUSH/VOID/UNRESOLVED, decisive coverage, proper scores only for original numeric probabilities and frozen identical baselines, and expected-versus-final errors using original supported SDs. Show proper scores in the headline (evidence A/B) and sensitivity (adding C/E) views (SCORING §2a, R23). For mini-log-7 cards, also score the frozen `SHADOW_RANK_DELTA` and `SHADOW_BASE_ONLY` rows. Record the form-window check: the observed score against the unadjusted and the form-adjusted expected score. Keep shadow/reforecast/alternate results separate. Do not replace original picks or baseline gaps with hindsight reconstructions.
+Settle shadows under their own IDs/revision chains; they consume no P-ID and enter no primary win count. Report paired same-row scores and coverage only where originals and outcomes support them. Retain unmatched events and exclusions. Do not upgrade model status or read DECISION_LAB.
 
-## 5. R1–R12 and deep reviews
+## 5. Verify and return
 
-Use the settlement template's twelve sections for every terminal card; state unavailable evidence instead of filling generic prose. R1 must quote this card's own top two. Explain distance from line, model-implied tail where computable, actual mechanism, cutoff knowability, source/timing faults and process verdict separately from outcome and calibration status.
+Run S1–S15 and applicable original-format card checks with evidence. Compare the entire settled prefix, reconcile every source block/mapping/revision and read back every output. Check source growth, markers, unconditional/decisive denominators and queue responsibilities. Verified final time drives SLA; absent final time means UNKNOWN, an estimate is triage only.
 
-Every Rank-1 LOSS receives the eight deep parts in CURRENT_RULES §3. Review wins with the same process tests. No numeric causal blame shares or automatic overconfidence verdict from one loss. Counterfactuals require original cutoff data and are diagnostic only. New improvements are PROPOSED_NOT_TESTED with a falsifiable test, not an immediate weight change.
-
-## 6. Package, audit and return
-
-Write ORIGINAL_MINI, settled mini (mini-settlement-6 for a mini-log-7 source; the source's own settlement format otherwise), LOCAL_ID_MAPPING.md, UNRESOLVED_CARRYOVER.md (both pending-event and evidence queues, with the actor, route, due time, final-time basis, last attempt and scheduling status of template §2-C), SETTLEMENT_MANIFEST.md (with the FROZEN_SOURCE receipt and growth check). Inventory every block once; preserve original source prefix and footer. Run S1–S15 with actual evidence and recompute counts/expected-score/proper-score arithmetic. A missing original forecast cannot be rebuilt from a later narrative.
-
-Return all generated files/paths; source and output counts; canonical mapping PENDING_IMPORT where appropriate; per-grade/evidence/definition/timing counts; primary results and coverage; separate shadows; deep-review count; deadlines/breaches; unresolved IDs/fields/actions; exact-prefix result and limitations. State GitHub/Combined Log writes NO (read-only mode on `main`) and canonical IDs consumed zero.
+Return paths, frozen-source identity, full inventory, revisions/grades, primary denominators, pending/unresolved queues, deep-review coverage, optional shadow comparison/exclusions and verification limits. Canonical import PENDING; GitHub writes NO. A retry plan is not an executed or scheduled capture.

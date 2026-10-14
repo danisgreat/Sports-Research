@@ -19,7 +19,8 @@ def log_loss(p, y, eps: float = 0.0) -> np.ndarray:
     if eps:
         p = np.clip(p, eps, 1 - eps)
     with np.errstate(divide="ignore"):
-        return -(y * np.log(p) + (1 - y) * np.log(1 - p))
+        # Avoid 0 * -inf at correct literal 0/1 forecasts. Wrong certainty is infinite loss.
+        return -np.where(y == 1, np.log(p), np.log1p(-p))
 
 
 def brier_multiclass_half(probs: np.ndarray, outcome_idx: np.ndarray) -> np.ndarray:

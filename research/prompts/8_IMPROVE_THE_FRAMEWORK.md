@@ -1,43 +1,54 @@
-# PROMPT 8 — Improve rules, prompts and formats with a reviewable implementation
+# PROMPT 8 — Implement, verify and release a framework or workshop change
 
-**Mode:** FRAMEWORK_CHANGE. Run by Claude Code/Codex in the local repository. **Writes:** declared Markdown documents, preserved prior text, templates/examples and a new verification/implementation folder. No code, JSON, notebooks, workflows or fitted-model claims. Publication is included when this full prompt is invoked unless the user specifies local-only.
+**P-2026.10.14-v11.3 · FRAMEWORK_CHANGE · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: declared operating Markdown/CSV/text, archived originals, fixtures and a unique verification folder. Python/tests/requirements are permitted only under ml/ by CURRENT_RULES §0. No JSON, notebooks, pickles, workflows or binaries. Publish when this full prompt is invoked unless explicitly local-only.
 
-Inputs: `<requested problem/change>`; `<relevant retrospective/learning references, or discover latest completed published ones>`; `<write constraints>`. Carry the authorized change through implementation, verification and publication; do not stop at a generic recommendation list.
+## Inputs
 
-## 1. Read current authority and latest learning
+- User instruction or concrete finding, with exact scope.
+- Relevant retrospective/source/model evidence and prior exposure, or discover.
+- Allowed writes, independent/assisted/shadow lanes and publication instruction.
+- Workshop targets, if requested: exact competition/endpoint/model/config and evidence question.
+- Decision-lab audit only when expressly authorized; its material remains outside card learning.
 
-Print the [reading receipt](README.md) after CURRENT_STATE, METHOD, CURRENT_RULES, SELECTION_RULES, CARD_AND_LOG_TEMPLATES, SCORING_AND_VALIDATION, VERIFICATION_PROTOCOL, HYPOTHESIS_REGISTER, CONTRIBUTING, the latest three CHANGELOG entries, all affected prompts/dependencies, latest completed retrospective and relevant learning-register entries. Inspect cwd/branch/HEAD/status, fetch publication state without overwriting local work, and record the exact source revision.
+## 1. Read current authority and inspect actual mechanisms
 
-Read what is currently implemented, not just old status labels. An archived runtime test is not a current capability. Distinguish retrospective reported results from any independently recomputed evidence. Read raw supporting tables when a proposed change depends on a number; disclose gaps rather than claiming an independent audit not performed.
+Read common controls/protocol, scoring/verification/hypotheses, contribution rules, latest three changelog entries, affected prompts/dependencies, latest completed retrospective and relevant learning. For workshop work read source/tests, model cards, generated artifact and run receipts. An unfinished report, placeholder or unavailable STATUS is not implemented evidence. Print branch/HEAD/dirty inventory and a full receipt; fetch the publication ref without overwriting work.
 
-## 2. Write the concrete proposal first
+Assess data admission/known-at, coherent physical support/endpoints, same-row baselines, chronology/tuning/calibration separation, independent prospective freeze, artifact loading and operational failure paths separately. Tests prove only their actual checks. Exposed historical evaluation cannot become untouched/prospective by renaming it.
 
-Create a unique `research/verification/framework_change_<date>-<run>/CHANGE_PROPOSAL.md`: user instruction verbatim/date, exact defects and source sections/card IDs, scope, affected dependencies, change class, intended before/after behavior, versions, verification plan and rollback. Preserve unrelated work and issued records.
+## 2. Write a concrete proposal and dependency map
 
-Classify separately: administrative correction; integrity/process repair; scoring/format definition; selection/model/threshold experiment; data repair; suspended software prerequisite. A user instruction can authorize a process change without a statistical test. It cannot make predictive success true. A paper criterion is not a passed experiment.
+Create a unique framework_change_<date>-<run> folder with CHANGE_PROPOSAL and IMPLEMENTATION. Record instruction/date, defects and exact file/evidence, scope, classification, before/after behaviour, dependencies/versions, verification and rollback.
 
-## 3. Provide an implementation document
+For every recommendation state adopt/adapt/shadow/defer/reject, exact change/task/owner, acceptance evidence, remaining sample/design requirements and status. Administrative/source/integrity repairs can be authorized without pretending a predictive test passed. Selection/model/threshold/qualification changes need their own frozen comparison.
 
-Write IMPLEMENTATION.md with a prioritised recommendation-by-recommendation map: original ID/finding; adopt/adapt/shadow/defer/reject and why; precise change; files; dependencies; task/owner; acceptance evidence; future sample/cohort requirements; rollback; status. Include as many recommendations as materially useful, not an arbitrary fixed count. Separate implemented document controls from data work not performed, shadows not tested, and fitted work suspended by Markdown scope.
+Archive replaced working documents byte-for-byte, including dirty baselines. Store retired code as text outside active execution or in permitted workshop version history. Preserve issued originals, grades, old hypotheses and dated reports. Do not erase concurrent work or finish another process's partial artifact by inventing values.
 
-Review acceptance tests critically. A confidence interval containing zero/one is not proof of equivalence, an arbitrary mean-|z| band does not prove calibration, a reachable gate does not prove selection value, and lower joint failure from covering lines is not predictive skill. Preserve original registrations and append explicit revised protocols; no silent moving of goalposts or claimed power without calculation.
+## 3. Implement in dependency order
 
-## 4. Implement in dependency order
+1. Establish authorized scope and evidence lane, then data/source/identity/availability contracts.
+2. Complete preregistration before confirmatory use: scope, candidate/baseline, horizon, primary metric, meaningful effect, precision/dependence/power, missingness, multiplicity and stopping. Unknown design inputs keep promotion BLOCKED_DESIGN.
+3. Implement numerical contracts and serious simple baselines before complex challengers. Winner/handicap/total/push must be projections of a compatible event state; cricket/tennis/extras require their own structure.
+4. Fit/tune/calibrate/evaluate chronologically with all attempted candidates logged. Each transform, player cluster, rating, encoder and roster state must be training/cutoff-safe. A calibrator must not use the outcomes being evaluated.
+5. Implement actual shadow guards: code/data/config/input identity, timing, committed receipt retrieval, unchanged bytes, per-event reveal, exact settlement convention and revision validation. A locally written receipt is not proof of commitment. An earliest-start slate release cannot expose later manual forecasts.
+6. Align rules/templates/prompts/examples/source registers/status/indexes together. FORMAT/STATISTICAL changes bump prompt major; PROCEDURE bumps minor; truly editorial wording keeps version. Old minis/cards retain their semantics.
 
-1. Copy every replaced document into a unique archive preserving relative paths and the base revision; do not overwrite an earlier archive.
-2. Register new/versioned hypotheses before any future card uses them. Freeze candidate/baseline definitions, prospective start trigger, cohort/unit, primary metric, meaningful effect/precision, sample plan, missingness, stopping and rollback. If a necessary power/design input is unknown, keep predictive promotion BLOCKED_DESIGN rather than inventing it.
-3. Edit controlling rules first, then scoring/templates/source/profile guidance, all affected prompts/indexes and synthetic examples. Keep the workflow Markdown/CSV/text. Search the live operating set for contradictions and stale dependencies; distinguish historical mentions from active instructions.
-4. Bump only the versions actually changed, consistently across METHOD, CURRENT_RULES, CURRENT_STATE, templates and examples. Preserve old in-progress formats and explain migration through addenda/new minis. Classify every prompt change as EDITORIAL, PROCEDURE, FORMAT or STATISTICAL (CURRENT_RULES §11). Bump the prompt suite accordingly (`P-<date>-v<major>.<minor>`), and write a before/after dependency map for anything that is not editorial. Never call a change "wording-only" when an operator must now do something different.
-5. Add dated changelog and learning/status pointers. Preserve original cards, logs, historical grades and dated reports. Do not consume a P-ID for tests or administrative changes.
+For RL/decision work, verify observable action-time inputs and delayed feedback, exact logged behaviour probabilities and support, identical opportunities/baselines, payoffs/costs/reserved cash/settlement time and limitations. CLV-based reward is a surrogate; a drawdown penalty is not CVaR or a hard guarantee. Date-only prices permit an assumption-labelled paper replay, not verified execution. RL cannot be promoted by a favourable seed or inherited forecasts.
 
-## 5. Verify behavior and scope
+## 4. Verify implementation and artifact integrity
 
-Run VERIFICATION_PROTOCOL §6 and print actual results. Use a throwaway EXAMPLE-ID card/settlement outside live minis; test supported numeric, qualitative/missing baseline, unresolved field, push/void, allowed draw, late issue, adjustment rank flip, duplicate import and rerun/partial recovery cases as relevant. Every new check gets at least one negative fixture, naming the check that rejects it, and one legitimate edge case that passes (R35). Keep them in the change folder's `FIXTURES.md`, and label manual walkthroughs as manual. Check formulas and templates together, all changed relative links, version strings, archive byte identity, old-format preservation and exact allowed paths. A manual scenario walkthrough is labelled as such, not an executed importer or prospective test.
+Run relevant focused tests and the required workshop suite, python -m pytest ml/tests, when code changes. Every material new check needs a rejecting negative case and a legitimate edge case. Exercise deterministic/rerun recovery, future-input injection, wrong source/schema/hash, uncommitted receipt, early reveal, incomplete/duplicate final and endpoint mismatch as relevant. Use throwaway EXAMPLE IDs, no live P-IDs.
 
-Read back every deliverable. Document failures/limits and fix dependent contradictions. Verify no scripts/code/JSON or new log entries were introduced and no protected old bytes changed. Review full staged diff, not only a file list.
+An altered generating code/config/data hash invalidates current-artifact claims. Regenerate affected outputs from an actual controlled run or retain the old run with its exact recoverable implementation and label it historical/unqualified; never hand-edit generated scores or stamp a new receipt onto old numbers. Record failures/limits instead of publishing missing runs as complete.
 
-## 6. Publish and report
+Check generated scopes/coverage/receipts against actual source/population and code. A league-name LABEL_A allowlist is not field-owner admission. Store raw market data outside the research repository, export permitted aggregates only, and verify forecast/model files contain no market fields. Logs and card learning never ingest decision-lab signals.
 
-Commit intended paths with a concrete problem/behavior message. Push to main or named branch without force; fetch and compare remote SHA and key artifact contents. Preserve concurrent work; reconcile a normal remote advance without history rewrite. Never claim publication from an unfetched tracking ref.
+Run VERIFICATION_PROTOCOL §6: versions/dependencies/links, archive hashes, old-format preservation, actual readback, full intended diff, allowed types/paths and protected-record identities. Label manual walkthroughs and executed tests accurately. Summarise model quality, calibration, predictive evidence and operational readiness separately.
 
-Return active prompt/index and implementation links, important before/after changes, versions, validation evidence, exact commit/remote status, effect on in-progress minis and unresolved data/experiment dependencies. Distinguish completed engineering/document work from predictive improvement still unproven.
+## 5. Release, rollback and report
+
+Release only the authorized scope whose evidence gates passed. A tested development candidate stays development/shadow until its registered prospective evidence, sufficient precision and owner-approved exact-scope integration exist. No model output becomes a card input by this prompt rewrite alone. Rejection/inconclusive/data-hold results remain visible.
+
+Stage exact reviewed paths and inspect staged diff/status. Recheck source/artifact hashes and concurrent writes immediately before commit. Publish without force under authorization; fetch/compare main or named destination SHA and read back key artifacts. A remote advance needs normal reconciliation, never history overwrite.
+
+Return current prompt/index and implementation/review links, before/after behaviour, exact versions, measured checks/results, qualified versus blocked scopes, effects on in-progress minis, remaining data/experiment tasks and verified commit/remote state. Rollback targets the changed code/config/scope only, preserving canonical history and all failed forecasts.

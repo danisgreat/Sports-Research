@@ -1,6 +1,6 @@
 # Card, mini, settlement and canonical formats
 
-**mini-log-7 · mini-settlement-6 · canonical-md-1.** Authority: MDS-2026.10.12-v11.0 / CR-2026.10.12-R2 / SCV-2026.10.12-v7 / SEL-2026.10.12-v3. [Rules](CURRENT_RULES.md) and [selection definitions](SELECTION_RULES.md) control semantics. Previous formats: [mini-log-6 / mini-settlement-5](archive/superseded_2026-10-12/CARD_AND_LOG_TEMPLATES.md).
+**mini-log-7 · mini-settlement-6 · canonical-md-1.** Authority: MDS-2026.10.12-v11.0 / CR-2026.10.14-R3 / SCV-2026.10.12-v7 / SEL-2026.10.12-v3. [Rules](CURRENT_RULES.md) and [selection definitions](SELECTION_RULES.md) control semantics. Previous formats: [mini-log-6 / mini-settlement-5](archive/superseded_2026-10-12/CARD_AND_LOG_TEMPLATES.md).
 
 <a id="local-mini-format-mini-log-2"></a>
 
@@ -121,6 +121,8 @@ Insert immediately before the footer. Preserve earlier card/addendum bytes; only
 #### A1. Identity, timing and state
 #### A2. Frozen supplied contracts and candidate recipe
 #### A3. Evidence and archive inputs
+
+Complete [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md) for both sides in this existing evidence appendix: starters/starting role, selected bench/replacements, reported injuries/illness/suspensions/absences and final late changes, with exact-game sources/times and actual failed/escalated searches. Preserve each field's confirmed/projected/missing/conflicting state; N/A needs a sport/format reason. Existing lineup metadata summarises this evidence, not just the starting side.
 #### A4. Distribution, baseline, expected-score arithmetic and sensitivity
 #### A5. Full priced universe or labelled subset; W/P/L/V by row
 #### A6. Adjustments, regimes and unadjusted comparison
@@ -250,7 +252,7 @@ Pending cards get state evidence, literal original reference and next check, wit
 | C17 | Form windows: L5/L10/L15/L20/season/league printed per side with true n, from dated pre-cutoff games; flagged archive rows excluded; one blended rate with k and arithmetic; windows not counted as separate confirmations; adjustment listed with the unadjusted pair (or ARCHIVE_UNAVAILABLE with the route tried) |
 | C18 | Line distance (units and z, or N/A) on every ranked row; baseline coverage line present; each missing BASELINE_P uses an enumerated reason |
 | C19 | Pricing basis: a mixture is used whenever an input is labelled unfitted, stale, early-season or unconfirmed; weights frozen before pricing; p_base printed; base-only shadow ranks and gate shown; ε and any GATE_UNRESOLVED_PRECISION / PRECISION_TIE stated |
-| C20 | Lifecycle: issuing writer and lease valid at append time; mini not frozen; request logged in the intake table; known-at line present; lineup state and issue-step times recorded |
+| C20 | Availability: comprehensive both-side starter/bench/absence search per ROSTER_AVAILABILITY_PROTOCOL completed with actual attempts and final recheck in A3/A8; projections, access/publication gaps and material uncertainty honest. Lifecycle: issuing writer and lease valid at append time; mini not frozen; request logged in the intake table; known-at line present; lineup state and issue-step times recorded |
 
 ## 8. Canonical entry and rollover
 

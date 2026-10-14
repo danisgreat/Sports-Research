@@ -8,3 +8,5 @@ The numerical runtime that lived here was removed on 2026-10-09 so that the fram
 - **Not available now:** fitted models and calibrators, shadow forecasts, the `runtime_h0` and `runtime_h0_v2` build receipts, live qualification. Every card is a hand-built `UNCALIBRATED_ANALYST_SCENARIO`.
 
 To bring any of this back, follow prompt 8 ([../research/prompts/8_IMPROVE_THE_FRAMEWORK.md](../research/prompts/8_IMPROVE_THE_FRAMEWORK.md)): it needs an explicit user instruction, because it reverses the Markdown-only rule.
+
+**2026-10-14.** The owner authorised a new, bounded maintainer workshop at [`../ml/`](../ml/README.md) (framework change [2026-10-14-3](../research/verification/framework_change_2026-10-14-3/IMPLEMENTATION.md)). It is new code with its own tests, not this runtime restored. Note: the 9 October repairs described in `research/verification/prediction_repairs_2026-10-09/REPORT.md` (train-only profiles, draw handling, `runtime_h0_v2`) were never committed; `37203fc2b` is the last *committed* runtime, not a repaired one.

@@ -1,6 +1,6 @@
 # Operator prompts
 
-**Active suite: P-2026.10.12-v11.0** (mini-log-7 / mini-settlement-6). [Reading receipt and workflow](research/prompts/README.md). Use the complete selected prompt; its required rules/templates are linked there.
+**Active suite: P-2026.10.14-v11.3** (mini-log-7 / mini-settlement-6). [Reading receipt and workflow](research/prompts/README.md). Use the complete selected prompt; its required rules/templates are linked there.
 
 | # | Copy-ready prompt |
 |---|---|
@@ -16,3 +16,7 @@
 Run 2 → 1 per event → 3 → 4; use 5–8 when needed. Current IDs/destination: [CURRENT_STATE](CURRENT_STATE.md). Implemented changes and recommendation roadmap: [2026-10-12-1](research/verification/framework_change_2026-10-12-1/IMPLEMENTATION.md) (current), [2026-10-11-1](research/verification/framework_change_2026-10-11-1/IMPLEMENTATION.md). Preserved previous suites: [v10](archive/superseded_2026-10-12/research/prompts/README.md), [pre-v10](archive/superseded_2026-10-11/prompt_v10/research/prompts/README.md).
 
 These prompts improve evidence, consistency and measurement. Predictive improvement remains to be demonstrated prospectively against frozen baselines; no prompt guarantees outcomes.
+
+Availability procedure: [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md), mandatory for every prompt-1 game.
+
+All eight tasks require [COMMON_OPERATING_PROTOCOL](research/prompts/COMMON_OPERATING_PROTOCOL.md). Use [prompt 1](research/prompts/1_GAME_CARD.md) for eleven separate sport/general Upcoming game blocks. The supplied-first root draft is reference only; current P4/selection rules govern.

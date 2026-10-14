@@ -1,0 +1,39 @@
+ M ACTIVE_FILE_INDEX.md
+ M CARD_AND_LOG_TEMPLATES.md
+ M CHANGELOG.md
+ M CONTRIBUTING.md
+ M CURRENT_RULES.md
+ M CURRENT_STATE.md
+ M METHOD.md
+ M PROMPTS.md
+ M README.md
+ M RULES_AFL.md
+ M RULES_AMERICAN_FOOTBALL.md
+ M RULES_BASEBALL.md
+ M RULES_BASKETBALL.md
+ M RULES_CRICKET.md
+ M RULES_ICE_HOCKEY.md
+ M RULES_NHL.md
+ M RULES_NRL_RUGBY.md
+ M RULES_RUGBY_UNION.md
+ M RULES_SOCCER.md
+ M RULES_TENNIS.md
+ M SOURCES.md
+ M VERIFICATION_PROTOCOL.md
+ M research/prompts/1_GAME_CARD.md
+ M research/prompts/8_IMPROVE_THE_FRAMEWORK.md
+ M research/prompts/README.md
+ M research/prompts/examples/EXAMPLE_ACTIVE_MINI.md
+ M research/prompts/examples/EXAMPLE_SETTLED_MINI.md
+ M runtime/README.md
+?? ML_RL_IMPLEMENTATION_FRAMEWORK_2026-10-14.md
+?? PROMPT_1_SUPPLIED_FIRST_EXTENDED_2026-10-14.md
+?? ROSTER_AVAILABILITY_PROTOCOL.md
+?? archive/superseded_2026-10-14-3/
+?? archive/superseded_2026-10-14-4/
+?? archive/superseded_2026-10-14-5/
+?? ml/
+?? research/model_shadow/
+?? research/verification/framework_change_2026-10-14-3/
+?? research/verification/framework_change_2026-10-14-4/
+?? research/verification/framework_change_2026-10-14-5/

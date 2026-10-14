@@ -1,5 +1,7 @@
 # `ml/` — maintainer model workshop
 
+**Current release:** CR-2026.10.14-R3 / prompt suite v11.3. Read the [actual implementation review](../research/verification/framework_change_2026-10-14-5/ML_WORKSHOP_REVIEW.md) and [artifact admission](../research/model_shadow/ARTIFACT_PROVENANCE.md). Historical model outputs retain their original generating source; corrected report replays have new receipts. No model is promoted. The 60 executed checks cover specified mechanics, not predictive qualification.
+
 **Authority:** CURRENT_RULES §0 (model workshop exception) and §5a (decision-lab firewall), CR-2026.10.14-R1; framework change [2026-10-14-3](../research/verification/framework_change_2026-10-14-3/IMPLEMENTATION.md); design in [ML_RL_IMPLEMENTATION_FRAMEWORK_2026-10-14.md](../ML_RL_IMPLEMENTATION_FRAMEWORK_2026-10-14.md).
 
 This is the only place in the repository where code may live. A maintainer runs it. **Cards never run it, read it or depend on it**, and prompts 1–3 never open `research/model_shadow/` before their own freeze. Its outputs are Markdown and market-free CSV under `research/model_shadow/`, each with a receipt.

@@ -1,5 +1,6 @@
 """Decision-lab arithmetic and shadow-lane custody (C-ML-07, C-ML-08, C-ML-10, C-ML-16, C-ML-17)."""
 import hashlib
+import subprocess
 from datetime import datetime, timedelta, timezone
 
 import numpy as np
@@ -56,20 +57,26 @@ def test_c_ml_07_contract_line_column_allowed():
     lane.assert_no_market_columns(["event_key", "line", "league_median_line", "mass_push", "p_decisive"])
 
 
-def _setup_receipt(tmp_path, monkeypatch, start: datetime, digest: str, name="SHADOW_FORECASTS_2026-W43.csv"):
+def _setup_receipt(tmp_path, monkeypatch, start: datetime, digest: str, name="SHADOW_FORECASTS_2026-W43.csv",
+                   commit: bool = True):
     monkeypatch.setattr(lane, "SHADOW_ROOT", tmp_path / "shadow")
     d = tmp_path / "shadow" / "M-r1"
     d.mkdir(parents=True)
     (d / "FREEZE_RECEIPTS.md").write_text(
         "| file | bytes | sha256 | first_start_utc | frozen_utc | workshop | status |\n|---|---|---|---|---|---|---|\n"
-        f"| `{name}` | 10 | `{digest}` | {start.strftime('%Y-%m-%dT%H:%M:%SZ')} | x | y | PENDING_START |\n",
+        f"| `{name}` | {(tmp_path / name).stat().st_size} | `{digest}` | {start.strftime('%Y-%m-%dT%H:%M:%SZ')} | x | y | PENDING_START |\n",
         encoding="utf-8")
+    subprocess.run(["git", "init", "-q", str(tmp_path)], check=True)
+    if commit:
+        subprocess.run(["git", "-C", str(tmp_path), "add", "shadow"], check=True)
+        subprocess.run(["git", "-C", str(tmp_path), "-c", "user.name=Test", "-c", "user.email=test@example.invalid",
+                        "commit", "-qm", "Freeze test receipt"], check=True)
     return d
 
 
 def test_c_ml_17_reveal_refused_before_start_and_on_hash_mismatch(tmp_path, monkeypatch):
     f = tmp_path / "SHADOW_FORECASTS_2026-W43.csv"
-    f.write_bytes(b"event_key,line\nE1,2.5\n")
+    f.write_bytes(b"event_key,line,scheduled_start_utc\nE1,2.5,2026-10-20T00:00:00Z\n")
     digest = hashlib.sha256(f.read_bytes()).hexdigest()
     start = datetime(2026, 10, 20, tzinfo=timezone.utc)
     _setup_receipt(tmp_path, monkeypatch, start, digest)
@@ -81,7 +88,7 @@ def test_c_ml_17_reveal_refused_before_start_and_on_hash_mismatch(tmp_path, monk
 
 def test_c_ml_10_reveal_refuses_tampered_file(tmp_path, monkeypatch):
     f = tmp_path / "SHADOW_FORECASTS_2026-W43.csv"
-    f.write_bytes(b"event_key,line\nE1,2.5\n")
+    f.write_bytes(b"event_key,line,scheduled_start_utc\nE1,2.5,2026-01-01T00:00:00Z\n")
     _setup_receipt(tmp_path, monkeypatch, datetime(2026, 1, 1, tzinfo=timezone.utc), "0" * 64)
     with pytest.raises(ValueError, match="SHA-256"):
         lane.reveal(f, "M-r1")

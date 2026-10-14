@@ -3,22 +3,23 @@
 freeze  -> prices every fixture in a fixtures CSV from ONE event grid per game, writes the forecast CSV OUTSIDE
            the repository, and returns the receipt line (path, bytes, real SHA-256, first start) that is committed
            to FREEZE_RECEIPTS.md BEFORE the first scheduled start.
-reveal  -> after that start, copies the file into research/model_shadow/<model>/ only if its SHA-256 still matches
+reveal  -> after all package starts, copies the file into research/model_shadow/<model>/ only if its SHA-256 matches
            the committed receipt.
-settle  -> appends revision-chained WIN/PUSH/LOSS rows from final scores (CURRENT_RULES §8 R17).
+settle  -> computes first-revision rows; operator validates later append-only chains (CURRENT_RULES §8 R17).
 """
 from __future__ import annotations
 
 import csv
 import hashlib
 import io
+import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
 
-from ml.config import SHADOW_ROOT, League
+from ml.config import SHADOW_ROOT, REPO_ROOT, League
 from ml.data.archive import load_league, snapshot_hash, training_frame
 from ml.evaluation.backtest import make_model
 from ml.models.baseline import TB1, LeagueBaseline
@@ -30,6 +31,7 @@ FORECAST_COLUMNS = [
     "mass_win", "mass_push", "mass_loss", "mass_void", "p_decisive", "mean_home", "mean_away", "sd_margin",
     "sd_total", "cov_home_away", "baseline_p", "baseline_id", "team_baseline_p", "calibration", "inputs_status",
     "label_tier_trained_on", "workshop_commit", "data_snapshot_sha256", "archive_commit", "status",
+    "mass_conditioning", "config_sha256", "recent_results_sha256",
 ]
 SETTLEMENT_COLUMNS = ["shadow_row_id", "revision", "parent_revision", "effective_utc", "result", "observed_value",
                       "evidence_grade", "source_url", "field", "retrieved_utc", "reason"]
@@ -67,7 +69,34 @@ def freeze(model_id: str, lg: League, params: dict, fixtures: pd.DataFrame, out_
            handicap_lines: tuple[float, ...] = (), total_lines: tuple[float, ...] = ()) -> dict:
     """Price ``fixtures`` (columns: event_key, season, stage, scheduled_start_utc, home, away)."""
     assert_no_market_columns(fixtures.columns)
-    cutoff = pd.Timestamp(cutoff_utc).tz_convert(None) if pd.Timestamp(cutoff_utc).tzinfo else pd.Timestamp(cutoff_utc)
+    required = {"event_key", "season", "stage", "scheduled_start_utc", "home", "away"}
+    if fixtures.empty or not required.issubset(fixtures.columns):
+        raise ValueError("nonempty fixtures with complete identity/start fields are required")
+    if fixtures[list(required)].isna().any().any():
+        raise ValueError("fixture identity/start fields cannot be missing")
+    if fixtures["event_key"].isna().any() or fixtures["event_key"].duplicated().any():
+        raise ValueError("fixture event keys must be present and unique")
+    if fixtures["season"].nunique() != 1:
+        raise ValueError("one freeze package must have one season")
+    cutoff_stamp = pd.Timestamp(cutoff_utc)
+    if cutoff_stamp.tzinfo is None:
+        raise ValueError("cutoff requires an explicit timezone")
+    starts = [pd.Timestamp(x) for x in fixtures["scheduled_start_utc"]]
+    if any(pd.isna(x) or x.tzinfo is None for x in starts):
+        raise ValueError("every scheduled start requires an explicit timezone")
+    first = min(starts)
+    now = datetime.now(timezone.utc)
+    if cutoff_stamp >= first or now >= first.to_pydatetime() or cutoff_stamp > now:
+        raise ValueError("cutoff and actual freeze must precede every event start; cutoff cannot be future")
+    target = out_dir.resolve()
+    if target == REPO_ROOT.resolve() or REPO_ROOT.resolve() in target.parents:
+        raise ValueError("unrevealed forecasts must be written outside the repository")
+    if Path(model_id).name != model_id or "\\" in model_id:
+        raise ValueError("model_id must be a single directory name")
+    cutoff = cutoff_stamp.tz_convert(None)
+    config_sha = sha256_bytes(repr((lg.path, lg.endpoint, sorted(params.items()))).encode("utf-8"))
+    recent_sha = (sha256_bytes(recent_results.to_csv(index=False, lineterminator="\n").encode("utf-8"))
+                  if recent_results is not None else "NONE")
     games, _ = load_league(lg)
     if recent_results is not None and len(recent_results):
         assert_no_market_columns(recent_results.columns)
@@ -77,7 +106,7 @@ def freeze(model_id: str, lg: League, params: dict, fixtures: pd.DataFrame, out_
     train = training_frame(games)
     train = train[(train["date"] < as_of) & (train["season"] >= season - lg.history_seasons)]
     rows = []
-    frozen = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    frozen = None
     data_sha = snapshot_hash(lg, sorted(train["season"].unique().tolist()))
     try:
         model = make_model(lg, params)
@@ -99,7 +128,8 @@ def freeze(model_id: str, lg: League, params: dict, fixtures: pd.DataFrame, out_
                   "endpoint": lg.endpoint, "calibration": "IDENTITY_INSUFFICIENT_CAL",
                   "label_tier_trained_on": "B",
                   "workshop_commit": workshop_commit, "data_snapshot_sha256": data_sha,
-                  "archive_commit": archive_commit}
+                  "archive_commit": archive_commit, "mass_conditioning": "CONDITIONAL_COMPLETION",
+                  "config_sha256": config_sha, "recent_results_sha256": recent_sha}
         if fit_error:
             rows.append({**common, "shadow_row_id": f"{model_id}:{f.event_key}:ALL", "family": "ALL",
                          "status": f"NOT_ISSUED:FIT_FAILED:{fit_error}"})
@@ -134,13 +164,18 @@ def freeze(model_id: str, lg: League, params: dict, fixtures: pd.DataFrame, out_
                          "baseline_p": bp, "baseline_id": "BASELINE_LEAGUE_V1",
                          "team_baseline_p": "NOT_COMPUTED" if tp is None else tp,
                          "inputs_status": inputs, "status": "FROZEN"})
+    completed = datetime.now(timezone.utc)
+    if completed >= first.to_pydatetime():
+        raise ValueError("freeze calculation completed after event start; no frozen file written")
+    frozen = completed.strftime("%Y-%m-%dT%H:%M:%SZ")
+    for row in rows:
+        row["frozen_utc"] = frozen
     buf = io.StringIO()
     wr = csv.DictWriter(buf, fieldnames=FORECAST_COLUMNS, lineterminator="\n")
     wr.writeheader()
     for r in rows:
         wr.writerow({k: _fmt(r.get(k)) for k in FORECAST_COLUMNS})
     data = buf.getvalue().encode("utf-8")
-    first = min(pd.to_datetime(fixtures["scheduled_start_utc"], utc=True))
     week = first.isocalendar()
     name = f"SHADOW_FORECASTS_{week[0]}-W{week[1]:02d}.csv"
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -155,22 +190,52 @@ def freeze(model_id: str, lg: League, params: dict, fixtures: pd.DataFrame, out_
             "receipt_line": receipt, "rows": len(rows)}
 
 
-def reveal(csv_path: Path, model_id: str, now_utc: datetime | None = None) -> Path:
-    """Copy a frozen file into the repository after its first start, if the committed receipt matches."""
+def reveal(csv_path: Path, model_id: str, now_utc: datetime | None = None,
+           receipt_commit: str = "HEAD") -> Path:
+    """Reveal only after ALL slate starts, validating a receipt read from a real git commit.
+
+    Git presence/time is custody evidence, not independent proof of pregame publication.
+    Prospective admission also needs the operator's retained external timing evidence.
+    """
     now_utc = now_utc or datetime.now(timezone.utc)
+    if now_utc.tzinfo is None:
+        raise ValueError("reveal time requires an explicit timezone")
+    if Path(model_id).name != model_id or "\\" in model_id:
+        raise ValueError("model_id must be a single directory name")
     data = csv_path.read_bytes()
     digest = sha256_bytes(data)
-    rec = (SHADOW_ROOT / model_id / "FREEZE_RECEIPTS.md").read_text(encoding="utf-8")
+    receipt_path = SHADOW_ROOT / model_id / "FREEZE_RECEIPTS.md"
+    probe = subprocess.run(["git", "-C", str(SHADOW_ROOT), "rev-parse", "--show-toplevel"],
+                           capture_output=True, text=True)
+    if probe.returncode:
+        raise ValueError("committed receipt unavailable: no git repository")
+    repo = Path(probe.stdout.strip())
+    rel = receipt_path.resolve().relative_to(repo.resolve()).as_posix()
+    committed = subprocess.run(["git", "-C", str(repo), "show", f"{receipt_commit}:{rel}"],
+                               capture_output=True, text=True)
+    if committed.returncode:
+        raise ValueError("no committed receipt for this file")
+    rec = committed.stdout
+    if receipt_path.read_text(encoding="utf-8").replace("\r\n", "\n") != rec:
+        raise ValueError("working receipt differs from the committed receipt")
     line = next((ln for ln in rec.splitlines() if f"`{csv_path.name}`" in ln), None)
     if line is None:
         raise ValueError("no committed receipt for this file")
     if f"`{digest}`" not in line:
         raise ValueError("SHA-256 differs from the committed receipt; the file is not revealed")
     first = pd.Timestamp(line.split("|")[4].strip())
+    if int(line.split("|")[2].strip()) != len(data):
+        raise ValueError("byte count differs from the committed receipt")
     if now_utc < first.to_pydatetime():
         raise ValueError("first scheduled start has not passed; reveal refused")
     header = data.decode("utf-8").splitlines()[0].split(",")
     assert_no_market_columns(header)
+    rows = pd.read_csv(io.BytesIO(data))
+    if "scheduled_start_utc" not in rows or rows.empty:
+        raise ValueError("complete per-event start times are required for reveal")
+    starts = pd.to_datetime(rows["scheduled_start_utc"], utc=True, errors="coerce")
+    if starts.isna().any() or now_utc < starts.max().to_pydatetime():
+        raise ValueError("not all scheduled starts have passed; reveal refused")
     dest = SHADOW_ROOT / model_id / csv_path.name
     if dest.exists():
         raise FileExistsError(dest)
@@ -181,11 +246,21 @@ def reveal(csv_path: Path, model_id: str, now_utc: datetime | None = None) -> Pa
 def settle_rows(forecasts: pd.DataFrame, finals: pd.DataFrame, source_url: str, evidence_grade: str) -> pd.DataFrame:
     """First-revision settlements. ``finals``: event_key, hs, as_ (final at the forecast endpoint)."""
     assert_no_market_columns(finals.columns)
-    m = forecasts.merge(finals, on="event_key", how="left")
+    if forecasts["shadow_row_id"].duplicated().any():
+        raise ValueError("duplicate shadow row identity")
+    if finals["event_key"].duplicated().any():
+        raise ValueError("duplicate final event identity")
+    finals = finals.copy()
+    for score in ("hs", "as_"):
+        if score not in finals:
+            finals[score] = np.nan
+        finals[score] = pd.to_numeric(finals[score], errors="coerce")
+    m = forecasts.merge(finals, on="event_key", how="left", validate="many_to_one")
     out = []
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     for r in m.itertuples():
-        if pd.isna(getattr(r, "hs", np.nan)):
+        scores = (getattr(r, "hs", np.nan), getattr(r, "as_", np.nan))
+        if not all(np.isfinite(x) and x >= 0 and x == int(x) for x in scores):
             res, obs, why = "UNRESOLVED", "N/A", "final score not available"
         else:
             margin, total = r.hs - r.as_, r.hs + r.as_

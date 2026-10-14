@@ -15,6 +15,8 @@ Say which identity a comparison proves: raw source snapshot, imported core, dest
 
 ## 2. Card and settlement
 
+Availability checks use [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md): verify both sides, starters/bench/absence evidence separately, local-language escalation when needed, and final late-change recheck. An incomplete search fails C20; complete research with genuine missing publication remains unconfirmed. Check the exact side/field and scenario or qualitative disposition, not whether a CONFIRMED string is present.
+
 Run C1–C20 and S1–S15 (C17–C20 and S13–S15 for mini-log-7 / mini-settlement-6; older formats use their own checks) in [CARD_AND_LOG_TEMPLATES](CARD_AND_LOG_TEMPLATES.md), with actual arithmetic and readback. Retain missing values honestly. A negative fixture must fail the relevant check; do not claim checks are executed merely because the checklist is present.
 
 ## 3. Import
@@ -49,7 +51,7 @@ Archive: logical CSV records counted with CSV-aware file facilities or an explic
 
 ## 6. Framework release and publication
 
-Archive replaced files from the base commit before editing. Check all eight task contracts, every new/changed relative link, consistent method/control/scoring/format versions, examples versus templates, old-format migration and edge cases. Scan live instructions for contradictions and removed-tool dependencies, distinguishing historical citations from commands. New files must be permitted text types; no retired runtime is restored.
+Archive replaced files from the base commit before editing. Check all eight task contracts, every new/changed relative link, consistent method/control/scoring/format versions, examples versus templates, old-format migration and edge cases. Scan live instructions for contradictions and removed-tool dependencies, distinguishing historical citations from commands. New files must be permitted text types; no retired runtime is restored wholesale. Code may change only under `ml/`; then `python -m pytest ml/tests` must pass, every CSV under `research/model_shadow/` must pass the market-column guard (`ml.shadow.lane.assert_no_market_columns`), and a regenerated model file must match a recorded run receipt (code SHA-256, archive snapshot SHA-256).
 
 Compare archived originals to the base revision and confirm issued logs, raw datasets, original sources and dated reports unchanged. Review full diff and staged paths. `git diff --check` must pass. Stage only intended paths; inspect staged status/stat/diff. Commit once checks pass; push without force only under task authorization. Fetch the destination ref afterwards, compare remote SHA with the commit and verify remote artifact contents. Local tracking refs without a fresh fetch are insufficient. Record what was committed/pushed and any unrelated remaining work.
 

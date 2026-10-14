@@ -1,37 +1,34 @@
-# PROMPT 2 — Start a new local mini
+# PROMPT 2 — Start the next local mini
 
-**Mode:** LOCAL_MINI_STAGING. **Writes:** one new Markdown mini at the selected local path. **GitHub repository (`main` branch):** read-only mode (no canonical or remote writes). This task creates no card, forecast, settlement, retrospective or canonical ID.
+**P-2026.10.14-v11.3 · LOCAL_MINI_STAGING.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: one new Markdown mini. Creating a mini consumes no event ID. GitHub is read-only. Workshop forecasts and the decision lab are excluded.
 
-Inputs: `Output location: <path, or choose the established mini folder>`; `Previous mini/settlement/import receipts: <paths if known>`. Locate existing files before asking for missing paths; never assume an inaccessible previous mini does not exist.
+## Inputs
 
-## 1. Reading and state reconciliation
+- Output location: established local mini folder, or choose a descriptive folder.
+- Previous mini, settlement and import receipts: exact paths, or discover.
+- Requested events/carryovers: exact requests, or NONE.
+- Authority: published main pinned, or explicitly requested local controls.
 
-Read every control from one pinned commit of the GitHub repository (`main` branch) in read-only mode (`PUBLISHED_MAIN_PINNED`, CURRENT_RULES §0) and print the mode and full SHA. Read the common controls in [README](README.md), CARD_AND_LOG_TEMPLATES §2, this prompt, GAME_LOG_STATUS_CURRENT, current canonical entry tail/dated state addenda, the latest completed import report, and [the active example](examples/EXAMPLE_ACTIVE_MINI.md). Print the receipt with actual revision/time on `main`.
+## 1. Read and reconcile
 
-Resolve active log and next canonical ID dynamically from CURRENT_STATE, current status and actual canonical records. The log's opening header is historical; do not require its old next ID to equal today. Current-record disagreement blocks allocation and is reported with exact evidence.
+Read current state/method/rules/selection/templates, the prompt index/common protocol, current status, active log entries/addenda and previous mini/import receipts. Print actual paths/sections, one full authority SHA, versions, time/offset and missing evidence. Locate existing files before asking; inaccessible does not mean nonexistent.
 
-## 2. Inventory outstanding local work
+Resolve highest/next canonical ID, reserved IDs, active log, outstanding local minis/unimported IDs and writer leases from current records. Opening headers are historical. Search record bodies and mappings. A genuine disagreement blocks allocation while independent identity/source research continues; do not run retired allocators, skip, reuse or renumber an ID.
 
-Read previous active/settled minis and their manifests, mappings and unresolved queues. List every unimported working ID, owner mini and event key, including minis created after the last settlement. Verify local IDs form the expected contiguous unimported continuation. Account for duplicates/aliases/reservations and competing writers.
+Continue an active contiguous mini or record an authorized hand-over instead of creating competing allocations. An exact existing requested mini returns ALREADY_EXISTS with zero new allocation. A frozen mini routes new events to the next authorized mini.
 
-First local ID = max(current next canonical ID, highest accounted-for local working ID+1). Use that formula only after proving the sequence is accounted for; an unexplained gap or overlap blocks ID preparation.
+## 2. Create the complete mini
 
-**Single issuing writer (R15).** Before preparing an ID, check every active mini's authority table for an issuing writer and lease. Another mini with an unexpired lease, or one whose state cannot be read, blocks this mini from preparing the same next ID. Record the blocking mini, keep any research, and wait for expiry or a recorded hand-over. Name this mini's issuing writer, lease start and lease expiry (default 24 hours, renewable by an explicit line). Hand-over is a dated line naming the old and new writer. Creating the mini still consumes no ID. An inventory that cannot be fully read is reported as incomplete, never as NONE. No previous mini can be reported NONE only after inspection or an explicit user statement. Creating the file consumes no ID. A previous unimported mini remains a documented dependency, not silently canonical.
+Use CARD_AND_LOG_TEMPLATES §2 exactly, format mini-log-7. Record authority/read time, active destination, canonical and outstanding-local snapshots, reconciled first working ID, writer, lease start/expiry, hand-over and frozen status. Initial counts are zero; highest used NONE; next working ID equals the reconciled first ID.
 
-## 3. Carryover
+Carry pending events and terminal unresolved evidence separately with original IDs/local-canonical status. Each item names original reference, latest revision, open field, actor, exact next source/field, due time/zone, final-time basis or UNKNOWN, last attempt and actual automation. An open-event alert never discards a request or forces settlement.
 
-Retain two queues: non-terminal PENDING_EVENT and terminal UNRESOLVED_EVIDENCE. Copy/reference original ID, exact identity, original card path/table, frozen endpoint/definitions, latest settlement revision, remaining field, and the executable follow-up fields of template §2-C (R38): responsible actor, next source and exact field, due time with timezone, final-time basis (or UNKNOWN), last attempt, and whether any automation is actually scheduled (normally NO). Preserve LOCAL_UNIMPORTED versus canonical status accurately. Already settled rows are referenced only where needed for a partially unresolved card; never copied as new forecasts.
+Retain every request in intake: received time, identity/alias, disposition and existing/new-record pointer. Blocked/duplicate requests stay visible. Do not invent a card, picks, probabilities, source or lineup to populate the mini.
 
-Report pending-event count above five as an alert and retain every record. Do not remove evidence gaps to meet a cap. Reconcile every previous queue item to carried, resolved-with-pointer or an explicitly retained disposition.
+Model-shadow IDs remain separate from P-IDs. Do not load model forecasts or seed a manual mini with model parameters. Each prompt-1 game performs its own availability, cutoff, candidate and frozen-baseline checks.
 
-## 4. Create and read back
+## 3. Verify and return
 
-Create the exact mini-log-7 structure in CARD_AND_LOG_TEMPLATES §2: authority table (authority mode, issuing writer and lease, frozen status NO), local-ID rules, carryover/evidence queues with executable fields, an empty request-intake table, empty NEW LOCAL EVENT CARDS, footer. Populate real current authority values; use explicit NONE/N/A/NOT_VERIFIED, never placeholder facts. New-card counts zero, highest new ID NONE, next working ID the reconciled first ID. No placeholder P-card headings.
+Read back the complete mini. Check authority, allocation continuity, writer lease, zero initial counts, queue/intake coverage and footer agreement. Earlier minis, cards and canonical status/logs must remain unchanged. Structural examples use EXAMPLE IDs.
 
-If the output already exists, inspect it: exact existing empty mini is an idempotent return; a populated or different mini is never overwritten. Choose a new non-colliding name only when it represents a genuinely new lifecycle, not to escape a custody conflict.
-
-Audit actual file readback: first/next ID match; carryover items/counts reconcile; original tables match; no candidate/card created; current destination correct; no unfilled template values. Allowed changes are only the new file. Report any inability to write as READ_ONLY_DRAFT / NOT_ISSUED.
-
-## 5. Return
-
-Provide the complete mini and path, authority receipt, canonical next snapshot, outstanding local ranges, first/next working ID, both queue counts and checks. State `New cards: 0; canonical IDs consumed: 0; settlements: 0; GitHub writes: 0 (read-only mode on main)`. This prompt contains no hidden game-research step; use prompt 1 for the next event.
+Return exact path, first/next ID, format/status, authority SHA, retained carryovers/alerts and actual reading/write/readback evidence. Settlement/canonical import NOT_PERFORMED; GitHub writes NO. If writing failed, return a complete READ_ONLY_DRAFT / NOT_ISSUED artifact without claiming creation.

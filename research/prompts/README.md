@@ -1,6 +1,13 @@
 # Operator prompts 1–8
 
-**P-2026.10.12-v11.0 · Markdown/CSV/text only.** Revision class: FORMAT + PROCEDURE (mini-log-7 / mini-settlement-6, authority mode, form windows, mixture pricing, lifecycle and custody controls; CURRENT_RULES §11 explains the classes). Previous suite: [P-2026.10.11-v10](../../archive/superseded_2026-10-12/research/prompts/README.md). Use each complete task below; prompt 1 now contains its own common core and sport instructions. [Current rules](../../CURRENT_RULES.md) and [templates](../../CARD_AND_LOG_TEMPLATES.md) are required companions. No real ID, log part, league fact or retrospective figure is hard-coded in these prompts: they cover any sport and competition, and league-specific facts come from the rules files, [league profiles](../../LEAGUE_PROFILES.md), [SOURCES](../../SOURCES.md) and the archive.
+**v11.3 PROCEDURE release:** all eight prompts use [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Prompt 1 has eleven separate sport/general sections, each with its own Upcoming game input block; rugby league and union are independent. The workflow preserves manual-card independence, availability research, qualified shadow evidence, source admission and verified publication. Earlier v11.1/v11.2 controls remain in force unless explicitly superseded.
+
+The root supplied-first extended prompt is a preserved proposal, not an active replacement for P4. Use the numbered suite below.
+
+
+**v11.2 PROCEDURE update:** prompt 1 applies [ROSTER_AVAILABILITY_PROTOCOL](../../ROSTER_AVAILABILITY_PROTOCOL.md) to both sides and every applicable starter/bench/absence field, including local-language discovery and a final late-change check. Evidence stays in existing card fields/A3/A8/C20; mini-log-7 and earlier issued records retain their formats. The v11.1 workshop reading exclusion remains in force.
+
+**P-2026.10.14-v11.3 · Markdown/CSV/text only** (retains v11.1 PROCEDURE: prompts 1–3 never read `research/model_shadow/` or `ml/` before their own freeze; prompt 8 may change `ml/` under CURRENT_RULES §0). Original v11.0 revision class: FORMAT + PROCEDURE (mini-log-7 / mini-settlement-6, authority mode, form windows, mixture pricing, lifecycle and custody controls; CURRENT_RULES §11 explains the classes). Previous suite: [P-2026.10.11-v10](../../archive/superseded_2026-10-12/research/prompts/README.md). Use each complete task below; prompt 1 now contains its own common core and sport instructions. [Current rules](../../CURRENT_RULES.md) and [templates](../../CARD_AND_LOG_TEMPLATES.md) are required companions. No real ID, log part, league fact or retrospective figure is hard-coded in these prompts: they cover any sport and competition, and league-specific facts come from the rules files, [league profiles](../../LEAGUE_PROFILES.md), [SOURCES](../../SOURCES.md) and the archive.
 
 | # | Task | Writes |
 |---|---|---|
@@ -16,6 +23,8 @@
 Order: **2 → 1 for each event → 3 → 4**, then next mini; 5–8 as needed. Prompts 1–3 refer to the GitHub repository (`main` branch) in read-only mode and never publish or edit canonical logs. Prompts 4–8 publish only when the invocation authorizes it; their Publish steps are explicit instructions when the complete prompt is invoked. A review-only or local-only user request overrides publication.
 
 ## Reading receipt
+
+**Exclusion (CR-2026.10.14-R1).** Prompts 1–3 do not open, search or cite `research/model_shadow/` or `ml/` before their own card is frozen; a receipt that lists either is invalid for a card.
 
 Before dependent work, open actual files and print:
 

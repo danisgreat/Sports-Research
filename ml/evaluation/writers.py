@@ -6,8 +6,6 @@ import pandas as pd
 
 from ml.config import SHADOW_ROOT
 
-LABEL_A = {"Baseball/MLB", "AFL/AFL", "AFL/AFLW", "State Level AFL/VFL", "State Level AFL/VFLW",
-           "State Level AFL/SANFL"}  # competitions with receipt-verified training labels in the 10-05 export
 from ml.evaluation.report import COMPARATORS, METRICS, fmt, md_table
 
 STATUS_CSV = SHADOW_ROOT / "MODEL_STATUS.csv"
@@ -222,7 +220,7 @@ def write_league(res: dict, rec: dict) -> None:
             "line, from one score grid |",
             f"| Population | competitive games from the archive (`Previous Sports Results/{lg.path}`); "
             f"pre-season excluded; rows read {load.rows_read}, kept {load.rows_kept}, dropped {load.dropped or 'none'} |",
-            f"| Label tier | {'A+B' if lg.path in LABEL_A else 'B'} (ML_RL_IMPLEMENTATION_FRAMEWORK §7.1) |",
+            "| Label tier | B / development only; field-owner admission for these exact rows and fields is not established |",
             "| Inputs | prior results only (dates strictly before the fit date). No lineups, injuries, weather, rest "
             "or prices. |",
             f"| Fit window | games before the Monday of the forecast week, seasons s − {lg.history_seasons} … s, "
@@ -306,8 +304,8 @@ def write_cricket(res: dict, rec: dict) -> dict:
             f"| Contract | runs of the team batting first, full-length innings ({lg.overs_cap:.0f} overs bowled or all out) |",
             f"| Population | scorecards in `Previous Sports Results/{lg.path}`; excluded: {res['dropped']} |",
             "| Ladder | C0 league-only (time-decayed mean and SD) · C1 + shrunk venue effect · C2 + batting and bowling "
-            "team strengths (weighted ridge) · C2PRE = 50/50 mixture over who bats first (pre-toss price) |",
-            "| Distribution | discretised normal on 0–350 runs |",
+            "team strengths (weighted ridge) · C2PRE = 50/50 unfitted symmetric batting-order scenario; toss fairness does not establish this weight |",
+            "| Distribution | discretised normal on 0–600 runs; finite-support approximation, not a physical run cap |",
             f"| Hyperparameters | {res['params']} |",
             "| Known limits | no ball-by-ball phase data yet (WP-05), no XI, pitch or weather; Impact Player era "
             "(2023+) handled only through time decay |",
@@ -348,9 +346,9 @@ def write_decision_lab(res: dict, rec: dict) -> None:
              "> **Firewall (CURRENT_RULES §5a).** Historical paper simulation only. Not betting advice, not a value claim, "
              "never read by prompts 1–3, never cited by a card, rule, rank, width or learning disposition. Raw prices stay "
              "in the local, git-excluded football-data capture; only these aggregates are committed.", "",
-             f"Join: {res['join']}. Warm-up seasons 2019-20 and 2020-21 (method choice, sigma_p, bandit warm-up); "
-             "reported seasons 2021-22 to 2025-26. Model: `" + res["model_id"] + "` prices, frozen at each week's Monday from earlier "
-             "games. Taken price: Pinnacle pre-closing (PSH/PSD/PSA, collected before the weekend). Close: Pinnacle "
+             f"Join: {res['join']}. Warm-up season labels {res['warmup_seasons']} (method choice, sigma_p, bandit warm-up); "
+             f"later evaluation season labels {res['evaluation_seasons']}. Model: `" + res["model_id"] + "` prices, frozen at each week's Monday from earlier "
+             "games. Taken price: Pinnacle pre-closing columns PSH/PSD/PSA; quote/capture/fill times are not verified. Close: Pinnacle "
              f"closing (PSCH/PSCD/PSCA), de-vigged by **{res['devig_method']}** (warm-up closing log loss "
              + ", ".join(f"{k} {v:.5f}" for k, v in res["devig_logloss_warmup"].items()) + ").", "",
              "## 1. Forecast benchmark: model against the no-vig market (MKT-BENCH-r1)", "",
@@ -374,10 +372,9 @@ def write_decision_lab(res: dict, rec: dict) -> None:
              "the bandit's inverse-propensity estimate can be checked against the exact value of the policy 'always "
              f"quarter stake': {res['ope']}.", "",
              "## Reading", "",
-             "- A policy can only be as good as the forecasts it sizes. Section 1 states whether those forecasts beat the "
-             "no-vig market; if they do not, positive closing-line value is not expected, and any profit is variance.",
-             "- The bandit learns from CLV, which is known before the result; the full-information learner uses the same "
-             "rewards for every arm and is the fairer learner for this setting.",
+             "- These are historical development comparisons; market-relative scores or simulated profit do not establish future economic performance or causal blame.",
+             f"- Feedback timing: {res['feedback_timing']}. All same-day actions precede that day's closing-reward updates; date-only inputs still do not verify execution timing.",
+             "- Actions are sampled from the returned probability vector, so logged propensities describe the actual behaviour policy. Full-information rewards still assume observable counterfactual payoffs without market impact.",
              "- Prices, limits, latency and account restrictions of a real operator are not modelled.", "",
              "## Receipt", "", _receipt(rec, {"rows": res["frame_rows"]})]
     _write(d / "RESULTS.md", "\n".join(lines))
@@ -394,7 +391,8 @@ def write_index(rec: dict, rows: list[dict] | None = None) -> None:
              "every test season, on rows with no integrity warning; may enter a registered prospective lane. "
              "`DATA_HOLD` = passed, but the rows failed an automatic integrity check; no lane until verified. "
              "`DEVELOPMENT_ONLY` = did not pass; enters no lane. `RUN_FAILED` = the run raised an error. No model "
-             "is a card input. `NOT_MODELLED` rows name why a competition in the archive has no model.", "",
+             "is a card input. `RUN_INCOMPLETE` means the interrupted run has no completed artifact. `NOT_MODELLED` rows name why a competition in the archive has no model. "
+             "Read [ARTIFACT_PROVENANCE.md](ARTIFACT_PROVENANCE.md) before admission; a numerical candidate with unverified source/code custody remains DATA_HOLD.", "",
              md_table(st, ["competition", "model_id", "engine", "status", "development_verdict", "tb1", "test_seasons",
                            "data_warnings", "detail"]),
              "", "## Receipt", "", _receipt(rec, {})]

@@ -1,5 +1,21 @@
 # Changelog
 
+## 2026-10-14 — ML/RL integrity review and full prompt release
+
+**User-authorised scope:** review actual research implementation, optimise all eight prompts while preserving separate sport/upcoming-game sections, and publish all reviewed pending changes to main. PROCEDURE + integrity repairs; CR-2026.10.14-R3, P-2026.10.14-v11.3. Method, selection, scoring and record formats are unchanged.
+
+[Review](research/verification/framework_change_2026-10-14-5/ML_WORKSHOP_REVIEW.md) · [implementation](research/verification/framework_change_2026-10-14-5/IMPLEMENTATION.md) · [verification](research/verification/framework_change_2026-10-14-5/VERIFICATION_REPORT.md). Prompt 1 has eleven complete sport/general workflows and eleven Upcoming game blocks, including separate rugby league and rugby union. Prompts 2–8 and the common protocol strengthen authority, source admission, independent manual forecasts, custody, settlement, evidence lanes and actual publication verification.
+
+Repairs cover literal-certainty log loss, real committed-receipt readback, all-start package reveal, freeze/input identities, incomplete/duplicate finals, actual behaviour probabilities, date-batched closing feedback, feasible warm-up coverage, strong-label claims and stable-source completion receipts. Sixty executed workshop tests pass. Card calibration and the corrected paper decision replay were actually rerun; the latter does not establish RL gains. Twenty-nine historical model artifacts retain their generating source/receipts; one interrupted model stays incomplete. Four numerical passes remain DATA_HOLD. No model is a card input or promoted. The source snapshot and previous documents/reports are preserved; canonical and raw archive bytes remain unchanged. Publication includes the earlier availability/workshop amendments and the inactive supplied-first proposal, without changing P4 authority.
+
+## 2026-10-14 — Comprehensive starters, bench and absence research
+
+**User-authorised scope:** strengthen lineup/availability sources and game-card research for every sport, especially obscure competitions. Class: PROCEDURE plus source maintenance. **Control CR-2026.10.14-R2; prompts P-2026.10.14-v11.2.** Method, selection, scoring and mini formats unchanged.
+
+[Availability protocol](ROSTER_AVAILABILITY_PROTOCOL.md) requires both sides' exact starting-role/selection, bench or replacements, medical/absence and eligibility checks, original club/competition releases, local-language discovery when needed, and a final late-change recheck. SOURCES §3.11 links current-season navigation and a cross-sport route matrix; all ten prompt-1 blocks and eleven sport-rule references apply it. Existing Evidence receipt/A3/A8/C20 record the work. An incomplete search fails the process audit; genuinely unavailable information retains its true status and supported scenario/qualitative disposition.
+
+[Implementation and prediction review](research/verification/framework_change_2026-10-14-4/IMPLEMENTATION.md) · [fixtures](research/verification/framework_change_2026-10-14-4/FIXTURES.md) · [verification](research/verification/framework_change_2026-10-14-4/VERIFICATION_REPORT.md). Pre-edit working originals, including previous workshop amendments, are archived byte-for-byte. No model work, datasets, issued records, hypotheses, grades or IDs changed. Predictive benefit is untested; confirmation cannot be guaranteed when a competition has not published selections. This update is local and unpublished.
+
 ## 2026-10-14 — Archive ten historical root documents
 
 **User-authorised scope:** archive exactly the ten root files classified ARCHIVE in the review and publish the change. Class: EDITORIAL (organisation/navigation only); all method, control, scoring, selection and prompt versions unchanged.

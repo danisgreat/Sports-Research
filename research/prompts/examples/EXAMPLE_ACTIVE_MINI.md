@@ -86,6 +86,7 @@ Fixture identity/times only; production C2/C11 event verification N/A. No real p
 #### A2. Frozen supplied contracts and candidate recipe
 The declared toy universe is exactly a_margin, b_home, c_away, d_winner; no search/ladder optimality claim beyond this fixed fixture set. Quantity keys: signed margin, A team total, B team total, signed margin. Deterministic equal-p ties sort by contract key.
 #### A3. Evidence and archive inputs
+Availability procedure: N/A for this stipulated toy sport (no real participants, starters, bench or injury list). This exemption never applies merely because a real competition is obscure. Real-game examples and negative cases are in [availability fixtures](../../verification/framework_change_2026-10-14-4/FIXTURES.md).
 Candidate case masses and separate baseline masses .30,.30,.25,.15 are stipulated before the outcome fixture; every case sums to 1. No external sources, sample size or fitted model invented.
 
 Form windows (toy rows, template §3b). Side A:

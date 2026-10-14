@@ -1,7 +1,9 @@
 """Contextual bandit (linear Thompson sampling with exponential forgetting) for stake sizing.
 
 Arms are stake multipliers. Reward is stake x closing-line value, observed at the close (before the result).
-Propensities are estimated by Monte Carlo over the posterior so the logs support off-policy evaluation.
+Monte Carlo estimates a posterior arm distribution; actions are sampled FROM that distribution.
+The returned probabilities are therefore the actual conditional behaviour probabilities, not estimates
+of a separately sampled action's propensity.
 """
 from __future__ import annotations
 
@@ -29,11 +31,17 @@ class LinTS:
         return out
 
     def choose(self, x: np.ndarray, n_prop: int = 200) -> tuple[int, np.ndarray]:
-        s = self._sample_scores(x, n_prop + 1)
-        chosen = int(np.argmax(s[0]))
-        prop = np.bincount(np.argmax(s[1:], axis=1), minlength=len(self.arms)) / n_prop
+        if n_prop <= 0:
+            raise ValueError("n_prop must be positive")
+        x = np.asarray(x, float)
+        if x.shape != (self.d,) or not np.isfinite(x).all():
+            raise ValueError("context must be a finite vector of the configured dimension")
+        s = self._sample_scores(x, n_prop)
+        prop = np.bincount(np.argmax(s, axis=1), minlength=len(self.arms)) / n_prop
         prop = np.clip(prop, 1e-3, None)
-        return chosen, prop / prop.sum()
+        prop = prop / prop.sum()
+        chosen = int(self.rng.choice(len(self.arms), p=prop))
+        return chosen, prop
 
     def update(self, k: int, x: np.ndarray, r: float) -> None:
         for i in range(len(self.arms)):

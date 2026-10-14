@@ -11,17 +11,18 @@
 | Card, mini, settlement and canonical formats; self-audit C1–C20, S1–S15 | [CARD_AND_LOG_TEMPLATES.md](CARD_AND_LOG_TEMPLATES.md) |
 | Scoring and evaluation | [SCORING_AND_VALIDATION.md](SCORING_AND_VALIDATION.md) |
 | Verification checks | [VERIFICATION_PROTOCOL.md](VERIFICATION_PROTOCOL.md) |
-| Operator prompts 1–8 | [research/prompts/README.md](research/prompts/README.md), [PROMPTS.md](PROMPTS.md) |
+| Operator prompts 1–8 | [research/prompts/README.md](research/prompts/README.md), [common operating protocol](research/prompts/COMMON_OPERATING_PROTOCOL.md), [PROMPTS.md](PROMPTS.md) |
 | Experiments and their status | [HYPOTHESIS_REGISTER.md](HYPOTHESIS_REGISTER.md) |
 | Arithmetic aids (with operative-status table) | [PROBABILITY_TOOLKIT.md](PROBABILITY_TOOLKIT.md) |
 | League levels, base rates | [LEAGUE_PROFILES.md](LEAGUE_PROFILES.md), [BASE_RATES_REGISTER.md](BASE_RATES_REGISTER.md) |
-| Source routes and reachability | [SOURCES.md](SOURCES.md) |
+| Source routes and reachability | [SOURCES.md](SOURCES.md), [mandatory roster/availability research](ROSTER_AVAILABILITY_PROTOCOL.md) |
 | Archive use, recipes (R2 form windows) and integrity rules | [ARCHIVE_USE_GUIDE.md](ARCHIVE_USE_GUIDE.md) |
 | Sport rules and lessons (v11 precedence banner at the top of each) | `RULES_<SPORT>.md`, [LEAGUE_RULES_CRICKET.md](LEAGUE_RULES_CRICKET.md), [LEAGUE_RULES_SOCCER.md](LEAGUE_RULES_SOCCER.md) |
 | Current queue and canonical status | [GAME_LOG_STATUS_CURRENT.md](GAME_LOG_STATUS_CURRENT.md) (current section at the top; later sections are dated history) |
 | Active Combined Log | named in CURRENT_STATE (Part 7 on 2026-10-12) |
 | Contribution and publication rules | [CONTRIBUTING.md](CONTRIBUTING.md) |
 | Recovery of removed or moved paths | [HISTORICAL_LINK_INDEX.md](HISTORICAL_LINK_INDEX.md) |
+| Model workshop (maintainer code; never read by prompts 1–3) | [ml/README.md](ml/README.md), outputs in [research/model_shadow/](research/model_shadow/README.md), design [ML_RL_IMPLEMENTATION_FRAMEWORK_2026-10-14.md](ML_RL_IMPLEMENTATION_FRAMEWORK_2026-10-14.md) |
 
 **History, not instructions:** `archive/`, `prediction logs/` parts 1–6, dated folders under `research/verification/`, `research/issued_research/`, LEARNING_REGISTER / LEARNINGS_INDEX (lessons, with promotion status), FRAMEWORK_RETROSPECTIVE_2026-10-09, NUMERICAL_MODEL_REGISTER (design notes), VALIDATION_EVIDENCE.
 

@@ -24,8 +24,6 @@ from ml.decision.bandit import FullInfoRidge, LinTS
 
 FD_DIR = REPO_ROOT / "research" / "data" / "benchmark" / "football_data"
 OUTCOMES = ("H", "D", "A")
-WARMUP = (2019, 2020)
-TEST = (2021, 2022, 2023, 2024, 2025)
 
 
 def load_prices() -> pd.DataFrame:
@@ -60,9 +58,17 @@ def run(pred: pd.DataFrame, seed: int = 20261014, model_id: str = "SOC-PREMIER-L
     prices = load_prices()
     df, info = join(pred, prices)
     out: dict = {"join": info, "model_id": model_id}
+    seasons = sorted(df["season"].unique())
+    if len(seasons) < 3:
+        raise ValueError("decision study needs at least two warm-up seasons and one later evaluation season")
+    # The model's actual prediction coverage determines feasible periods. Fixed 2019/2020
+    # warm-up dates need not exist in a model tuned on later archive seasons.
+    warmup = tuple(seasons[:2])
+    evaluation = tuple(seasons[2:])
+    out["warmup_seasons"], out["evaluation_seasons"] = list(warmup), list(evaluation)
 
     # 1. de-vig method chosen on warm-up seasons by closing log loss
-    warm = df[df["season"].isin(WARMUP)]
+    warm = df[df["season"].isin(warmup)]
     ll = {}
     for name, fn in devig.METHODS.items():
         q = np.vstack([fn(r) for r in warm[["c_H", "c_D", "c_A"]].to_numpy()])
@@ -78,7 +84,7 @@ def run(pred: pd.DataFrame, seed: int = 20261014, model_id: str = "SOC-PREMIER-L
     pm = df[["MODEL_p_home", "MODEL_p_draw", "MODEL_p_away"]].to_numpy()
 
     # 2. MKT-BENCH: model and comparators against the no-vig close (post-settlement scoring view)
-    test = df["season"].isin(TEST).to_numpy()
+    test = df["season"].isin(evaluation).to_numpy()
     sources = {"MODEL": pm, "BASELINE_LEAGUE_V1": df[["BASE_p_home", "BASE_p_draw", "BASE_p_away"]].to_numpy(),
                "TB1": df[["TB1_p_home", "TB1_p_draw", "TB1_p_away"]].to_numpy(), "NOVIG_TAKEN": qo, "NOVIG_CLOSE": qc}
     y = df["outcome_idx"].to_numpy()
@@ -86,20 +92,20 @@ def run(pred: pd.DataFrame, seed: int = 20261014, model_id: str = "SOC-PREMIER-L
     for name, P in sources.items():
         b3 = brier_multiclass_half(P, y)
         df[f"b3_{name}"] = b3
-        for s in [*TEST, "ALL"]:
+        for s in [*evaluation, "ALL"]:
             mask = test if s == "ALL" else (df["season"] == s).to_numpy()
             bench.append({"source": name, "season": s, "n": int(mask.sum()), "brier_3way": float(b3[mask].mean())})
     out["bench"] = pd.DataFrame(bench)
     paired = []
     for other in ("NOVIG_CLOSE", "NOVIG_TAKEN", "TB1", "BASELINE_LEAGUE_V1"):
-        for s in [*TEST, "ALL"]:
+        for s in [*evaluation, "ALL"]:
             d = df[test] if s == "ALL" else df[df["season"] == s]
             res = paired_week_interval(d["b3_MODEL"] - d[f"b3_{other}"], d["event_id"], d["week"])
             paired.append({"model_minus": other, "season": s, **res})
     out["bench_paired"] = pd.DataFrame(paired)
 
     # 3. staking simulation
-    sigma_p = float(np.std((pm - qc)[df["season"].isin(WARMUP).to_numpy()]))
+    sigma_p = float(np.std((pm - qc)[df["season"].isin(warmup).to_numpy()]))
     out["sigma_p_warmup"] = sigma_p
     ev = pm * df[["o_H", "o_D", "o_A"]].to_numpy() - 1
     kbest = ev.argmax(axis=1)
@@ -126,18 +132,26 @@ def run(pred: pd.DataFrame, seed: int = 20261014, model_id: str = "SOC-PREMIER-L
     policies = ["FLAT_EV>0.03", "QUARTER_KELLY_SHRUNK", "LINTS_BANDIT", "FULL_INFO_RIDGE"]
     stakes = {p: np.zeros(len(df)) for p in policies}
     props, chosen = np.zeros((len(df), len(arms))), np.zeros(len(df), int)
-    for i, r in enumerate(df.itertuples()):
-        base = r.shrink * r.f_full
-        stakes["FLAT_EV>0.03"][i] = 0.01 if r.ev_k > 0.03 else 0.0
-        stakes["QUARTER_KELLY_SHRUNK"][i] = min(0.02, 0.25 * base)
-        x = context(r)
-        a, pr = bandit.choose(x)
-        chosen[i], props[i] = a, pr
-        stakes["LINTS_BANDIT"][i] = min(0.02, arms[a] * base)
-        stakes["FULL_INFO_RIDGE"][i] = min(0.02, arms[full.choose(x)] * base)
-        rewards = np.array([min(0.02, m * base) * r.clv_k for m in arms])
-        bandit.update(a, x, rewards[a])
-        full.update_all(x, rewards)
+    # Date-only captures cannot order decisions and closing feedback within a day.
+    # Choose ALL of that day's actions before delivering any closing reward from it.
+    for _, slate in df.groupby("date", sort=True):
+        feedback = []
+        for r in slate.itertuples():
+            i = r.Index
+            base = r.shrink * r.f_full
+            stakes["FLAT_EV>0.03"][i] = 0.01 if r.ev_k > 0.03 else 0.0
+            stakes["QUARTER_KELLY_SHRUNK"][i] = min(0.02, 0.25 * base)
+            x = context(r)
+            a, pr = bandit.choose(x)
+            chosen[i], props[i] = a, pr
+            stakes["LINTS_BANDIT"][i] = min(0.02, arms[a] * base)
+            stakes["FULL_INFO_RIDGE"][i] = min(0.02, arms[full.choose(x)] * base)
+            rewards = np.array([min(0.02, m * base) * r.clv_k for m in arms])
+            feedback.append((a, x, rewards))
+        for a, x, rewards in feedback:
+            bandit.update(a, x, rewards[a])
+            full.update_all(x, rewards)
+    out["feedback_timing"] = "DATE_BATCHED_CLOSE_FEEDBACK; quote/fill timestamps unverified"
     df["bandit_arm"] = chosen
     for i, a in enumerate(arms):
         df[f"prop_{i}"] = props[:, i]
@@ -145,11 +159,11 @@ def run(pred: pd.DataFrame, seed: int = 20261014, model_id: str = "SOC-PREMIER-L
     sims = []
     for p in policies:
         df[f"stake_{p}"] = stakes[p]
-        sims.append(simulate(df[df["season"].isin(TEST)], p))
+        sims.append(simulate(df[df["season"].isin(evaluation)], p))
     out["policies"] = pd.DataFrame(sims)
 
     # 4. off-policy evaluation check: IPS estimate of "always arm 1 (quarter)" from the bandit logs vs exact value
-    t = df[df["season"].isin(TEST)]
+    t = df[df["season"].isin(evaluation)]
     base = t["shrink"] * t["f_full"]
     exact = np.minimum(0.02, arms[1] * base) * t["clv_k"]
     ips = np.where(t["bandit_arm"] == 1, exact / t["prop_1"], 0.0)

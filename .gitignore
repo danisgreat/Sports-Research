@@ -1,0 +1,16 @@
+# Runtime caches are not implementation or evidence artifacts.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local-only bulky exports and market captures remain outside publication.
+Previous Sports Results/_canonical/events.csv
+Previous Sports Results/_canonical/narratives.csv
+Previous Sports Results/_canonical/provenance.csv
+Previous Sports Results/_canonical/seasons.csv
+research/data/benchmark/
+research/data/cricsheet_odi/
+research/data/greek_cache/
+research/data/nrl_cache/
