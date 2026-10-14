@@ -49,9 +49,9 @@ The adapters below were parsers written for specific providers. "Recorded body t
 | espn_soccer | ESPN | site.api.espn.com | no | EPL, LALIGA, SERIEA, BUNDESLIGA, LIGUE1 | final_score, halftime_score, corners, status |  | SYNTHETIC_FIXTURE_ONLY |
 | sackmann_tennis | Jeff Sackmann (Tennis Abstract) | raw.githubusercontent.com | no | ATP, WTA | serve_stats, final_score, surface | retirement/walkover flag beyond the score string; current-week results (published with a lag) | SYNTHETIC_FIXTURE_ONLY |
 | bleague_official | B.LEAGUE | www.bleague.jp | yes | B.LEAGUE | none yet | BLOCKER: game pages (ScheduleKey) are rendered client-side; no retained body shows the score JSON endpoint. Capture one real body, then write the parser. | PLANNED_NO_ADAPTER |
-| kbl_official | Korean Basketball League | api.kbl.or.kr | yes | KBL | final_score, quarter_scores (scoreq1-q4), overtime (scoreeq), attendance (crowds), referees (judges), status |  | RECORDED_BODY_TESTED |
+| kbl_official | Korean Basketball League | www.kbl.or.kr | yes | KBL | none yet | BLOCKER: no retained body from kbl.or.kr; endpoint shape unknown. | PLANNED_NO_ADAPTER |
 | euroleague_official | Euroleague Basketball | api-live.euroleague.net | yes | EuroLeague, EuroCup | none yet | BLOCKER: official live API v1/v2 schema not retained; fetch a real body and register the parser. | PLANNED_NO_ADAPTER |
-| acb_official | Asociación de Clubes de Baloncesto (ACB) | acb.com | yes | ACB, Copa del Rey, Supercopa | final_score, schedule, round, subphase, start_time, match_id, teams, status | live play-by-play (retained on live.acb.com); individual plus-minus on legacy box scores | RECORDED_BODY_TESTED |
+| acb_official | Liga Endesa | live.acb.com | yes | ACB | none yet | BLOCKER: game and statistics views can share one feed (P-521/P-522 reconciliation); capture bodies and audit lineage before parsing. | PLANNED_NO_ADAPTER |
 | bbl_gbl_official | BBL and Greek Basket League | www.easycredit-bbl.de | yes | BBL, GBL | none yet | BLOCKER: no retained official bodies; the archive builders use Eurobasket/Greek-basket scrapers instead. | PLANNED_NO_ADAPTER |
 
 ## D. Data sources of the retired numerical runtime (design record)
@@ -393,7 +393,6 @@ The **Role** column:
 | Eurobasket (new) | `https://basketball.eurobasket.com/` | International leagues, rosters, injuries | S | Browser | 200 |
 | BasketNews (LKL) | `r.jina.ai/https://www.basketnews.lt/…` | Finals, quarter lines | S | Proxy | earlier |
 | WNBA CDN live data (New (a)) | `https://cdn.wnba.com/static/json/liveData/scoreboard/todaysScoreboard_10.json` | Today's WNBA scoreboard in the NBA liveData schema | FO (same lineage as wnba.com) | Browser | 200 on 2026-09-28; exact-game fields untested (no game in the file at test time) |
-| B.League official (Japan, new) | `https://www.bleague.jp/schedule/?data_format=json&year={YYYY}` and `https://www.bleague.jp/game_detail/?ScheduleKey={ID}` | Schedule, results, line scores, attendance, referees, box | FO | API / Browser | 200 |
 | NBA CDN JSON (`cdn.nba.com` scoreboard and schedule), `stats.nba.com` | — | — | — | **Blocked** from here (403; `stats.nba.com` resets the connection, 2026-09-28 and again 2026-09-30) | — |
 | NBL `apicdn.nbl.com.au` Genius route | — | — | — | 502 / 403 on 2026-09-28. Use the NBL match page and its `schedule.nbl.com.au` match API | — |
 
@@ -1280,242 +1279,21 @@ Traps found and handled while building the ODI International files:
 
 **Not used for any field:** the Premier League's PulseLive API, the FA, RSSSF. The Community Shield is not included. An unpublished hand-typed table, with a false 2025 row, is quarantined. Corners here are evidence B. A live corner contract still settles from §3.4's official field owner.
 
----
+### 3.33 Basketball archives rebuilt 2026-10-14: KBL, B.League, Liga ACB, EuroCup, NBA G League (Previous Sports Results/Basketball/<League>/<YEAR>/<YEAR>_games.csv)
 
-### 3.33 NBA G League (including NBDL / NBA D-League / NBA G League) game-by-game history, 1975-2026 (used to build NBA_G_League_Basketball_CSVs/NBA_G_League_Basketball_<YEAR>.csv, Previous Sports Results/Basketball/NBA G League/<YEAR>/<YEAR>_games.csv, and Previous Sports Results/Basketball/G League/<YEAR>/<YEAR>_games.csv; tested 2026-10-12)
+**Claim scope (R04).** Only sources actually read are named, per field. "Verified" is not used. Field classes, exclusions, checks and defects are in each folder's DATA_PROVENANCE.md. A different §3.33 (an NBA G League section calling defaulted rows "verified") appeared briefly in commit `e73c9c24e` on 2026-10-14; it is withdrawn and quarantined with that build ([change folder](research/verification/framework_change_2026-10-14-1/IMPLEMENTATION.md)).
 
-Every route below was requested live on 2026-10-12 and returned the named fields for all 52 seasons (1975–2026, covering 11,835 verified match records across all eras, plus 1975–2000 pre-establishment records with 0 games played). The built files, column dictionary, and season counts are stored across three directory structures:
-- Standalone CSV directory: `NBA_G_League_Basketball_CSVs/NBA_G_League_Basketball_<YEAR>.csv` (52 files, 1975–2026)
-- Repository directory: `Previous Sports Results/Basketball/NBA G League/<YEAR>/<YEAR>_games.csv` (52 files, 1975–2026)
-- Dedicated repository alias directory: `Previous Sports Results/Basketball/G League/<YEAR>/<YEAR>_games.csv` (52 files, 1975–2026)
-
-Season alignment rule: The season starting year defines the year (e.g., 2001 = 2001–02 inaugural NBDL season; 2005 = 2005–06 inaugural D-League season; 2017 = 2017–18 inaugural G League season; 2019 = 2019–20 COVID-shortened season; 2020 = 2020–21 Orlando bubble; 2024 = 2024–25 season; 2025 = 2025–26 season; 2026 = 2026–27 season).
-
-| Source | Route | Fields confirmed | Role | Access | Verified |
+| Archive | Source and route | Fields actually taken | Role | Capture | Result |
 |---|---|---|---|---|---|
-| Official NBA G League Stats API | `https://stats.gleague.nba.com/stats/leaguegamelog?LeagueID=20&Season=<SEASON>&SeasonType=<TYPE>&PlayerOrTeam=T` | Official league game logs (2004–05 to 2025–26): Game ID, game dates, home/away matchups, final scores, field goals, 3-point field goals, free throws, rebounds, assists, steals, blocks, turnovers, personal fouls, and points. | FO (League Authority / NBA) | REST API / HTTPS with browser headers | 200 (9,755 games cached across 22 seasons) |
-| ESPN Site API G League Scoreboard Feed | `https://site.api.espn.com/apis/site/v2/sports/basketball/nba-development/scoreboard?dates=<YEAR>&limit=1000` | Detailed game records (2018 to 2026): 4-quarter linescores (Q1–Q4), overtime scores, arena venues, cities, turnstile attendance, broadcast networks, and referee crews. | FO / P (Sports Network API) | REST API / HTTPS (Keyless) | 200 (5,674 games cached across 9 calendar years) |
-| Basketball-Reference G-League / D-League Archive | `https://www.basketball-reference.com/gleague/` | Comprehensive box scores, schedule matrices, playoff series outcomes, and MVP honors for early NBDL/D-League eras (2001–02 to 2025–26). | S (Historical Compiler) | Web / HTML | 200 (all seasons cross-referenced) |
-| APBR (Association for Professional Basketball Research) NBDL Historical Archives | `http://www.apbr.org/` | Charter NBDL season registers (2001–02 to 2004–05): inaugural franchises, neutral-site games, playoff bracket scores, and arena relocations. | S (Historical Research Body) | Web / Text Archive | 200 (inaugural era verified) |
+| [KBL](Previous%20Sports%20Results/Basketball/KBL/DATA_PROVENANCE.md) 1997–2026-27 | KBL data API `https://api.kbl.or.kr/` (`match/list`, `match/{gmkey}`, `season/list`) | Date, tip-off (KST), teams, score, quarters and overtime, venue, attendance, referees, category | FO | 2026-10-13 15:15–15:23 AEDT (earlier session), outside the repository | 8,285 first-team games (regular, playoffs, final). D-League, cups, All-Star, EASL excluded |
+| [B League](Previous%20Sports%20Results/Basketball/B%20League/DATA_PROVENANCE.md) 2016-17–2026-27 | `https://www.bleague.jp/schedule/?data_format=json&year=<YYYY>&tab=1&event=<E>&mon=all&index=<N>` | Date (header or card), tip-off (JST), short team names, score, printed stage, venue | FO | 2026-10-14, outside the repository | 6,350 top-division games. `event` does not filter; stage labels classify. All-Star excluded. Pre-2016 leagues not rebuilt |
+| [Liga ACB](Previous%20Sports%20Results/Basketball/Liga%20ACB/DATA_PROVENANCE.md) 1975-76–2026-27 | `https://acb.com/es/liga/calendario?temporada=<season start year − 1935>` (Next.js data) | Date and UTC start, teams, score, round, subphase number | FO | 2026-10-14, outside the repository | 15,881 league games. Copa del Rey and Supercopa excluded. No venue, attendance, referee or quarter fields in the source |
+| [EuroCup](Previous%20Sports%20Results/Basketball/EuroCup/DATA_PROVENANCE.md) 2002-03–2026-27 | `https://api-live.euroleague.net/v2/competitions/U/seasons/U<YYYY>/games` | Local and UTC start (when confirmed), teams, score, quarters and overtime, venue, attendance (with its confirmed flag), referees, phase | FO | 2026-10-14, outside the repository | 4,851 games. Pre-2002 tier-two cups not rebuilt |
+| [NBA G League](Previous%20Sports%20Results/Basketball/NBA%20G%20League/DATA_PROVENANCE.md) 2004-05–2025-26 | `https://stats.gleague.nba.com/stats/leaguegamelog?LeagueID=20&…&PlayerOrTeam=T` (Regular Season, Playoffs, Showcase) | Date, home/away teams, score, season type | FO | 2026-10-14, outside the repository | 10,947 games. NBDL 2001-04 not in the API |
+| NBA G League enrichment | ESPN `site.api.espn.com/…/basketball/nba-development/scoreboard?dates=<YYYYMM>` | Quarters, venue, city, attendance, UTC start, neutral flag, only through the strict score-date-team-id join | Evidence B | 2026-10-14, outside the repository | 4,809 games enriched (2018 onward) |
+| Spot checks only | Wikipedia (en, ko, ja) final-series pages; 12 bleague.jp game pages | **No field built from them** | Corroboration sample | WebFetch / API reads 2026-10-14 | All sampled finals agree; 12 of 12 B.League carried dates agree |
 
-Traps found and handled while building the NBA G League files:
-
-- **Historical Era Transitions & Pre-Establishment Era (1975–2026):**
-  - **1975–2000 (Pre-Establishment Minor League Era):**
-    - The NBA did not operate an official developmental minor league prior to autumn 2001. Historical minor leagues (Continental Basketball Association [CBA] founded in 1946, United States Basketball League [USBL] founded in 1985) operated as independent commercial leagues unaffiliated with NBA centralized governance. All files for 1975 to 2000 are cleanly formatted with the standardized 41-column basketball schema and explicitly document 0 games played.
-  - **2001–2005 (NBDL - National Basketball Development League Era):**
-    - Founded with 8 charter franchises in the southeastern United States: Asheville Altitude, Charleston Lowgators, Columbus Riverdragons, Fayetteville Patriots, Greenville Groove, Huntsville Flight, Mobile Revelers, Roanoke Dazzle.
-    - 56-game regular season schedule per club. Single-elimination playoffs in 2001–02, best-of-3 series thereafter. Centralized single-entity player contracts where athletes were signed to the league and assigned to teams rather than drafted by parent NBA franchises.
-  - **2005–2017 (NBA Development League / D-League Era):**
-    - Rebranded to NBA Development League (D-League) in 2005. Westward and nationwide geographic expansion.
-    - Introduction of the single-affiliate hybrid ownership model (initiated with Houston Rockets and Rio Grande Valley Vipers in 2009).
-    - Introduction of the annual D-League Showcase in 2005 (in-season scouting event) and D-League All-Star Game in February 2007 during NBA All-Star Weekend in Las Vegas.
-    - Standardized 50-game regular season format with multi-round playoff brackets.
-  - **2017–2026 (NBA G League Era):**
-    - Historic entitlement partnership with Gatorade leading to official rebranding as the NBA G League in 2017.
-    - Introduction of NBA two-way contracts allowing NBA parent clubs to retain hybrid developmental roster spots.
-    - Expansion to 31 franchises, including international expansion with Capitanes de Ciudad de México (2021) and youth developmental program NBA G League Ignite (2020–2024).
-    - Showcase Cup tournament format: Modern seasons commencing 2021–22 open in November with the Showcase Cup tournament (culminating at the Winter Showcase), followed by team records resetting to 0–0 for the 34-game regular season and spring playoffs.
-- **2019–20 COVID-19 Pandemic Season Stoppage:**
-  - Season abruptly suspended on March 12, 2020 due to the COVID-19 pandemic after 597 regular-season games had been played. Postseason was officially cancelled on June 4, 2020; no champion or postseason awards were crowned.
-- **2020–21 Single-Site Orlando Bubble:**
-  - Due to nationwide pandemic protocols, 18 teams opted to play a condensed 15-game regular season and single-elimination playoffs inside the ESPN Wide World of Sports Complex (AdventHealth Arena) in Lake Buena Vista, Florida (February–March 2021). 135 regular-season games + 7 single-elimination playoff games were contested; Lakeland Magic defeated Delaware Blue Coats 97–78 on March 11, 2021 to capture the championship.
-- **Complex Franchise Relocations and Lineages:**
-  - Franchises underwent frequent relocations and renamings, tracked and canonicalized in `research/src/g_league_teams.py`:
-    - Asheville Altitude (2001–05) → Tulsa 66ers (2005–14) → Oklahoma City Blue (2014–present)
-    - Columbus Riverdragons (2001–05) → Austin Toros (2005–14) → Austin Spurs (2014–present)
-    - Huntsville Flight (2001–05) → Albuquerque Thunderbirds (2005–10) → Canton Charge (2011–21) → Cleveland Charge (2021–present)
-    - North Charleston / Charleston Lowgators (2001–04) → Florida Flame (2004–06)
-    - Dakota Wizards (2006–12) → Santa Cruz Warriors (2012–present)
-    - Colorado 14ers (2006–09) → Texas Legends (2010–present)
-    - Utah Flash (2007–11) → Delaware 87ers (2013–18) → Delaware Blue Coats (2018–present)
-    - Idaho Stampede (2006–16) → Salt Lake City Stars (2016–present)
-    - Reno Bighorns (2008–18) → Stockton Kings (2018–present)
-    - Bakersfield Jam (2006–16) → Northern Arizona Suns (2016–21) → Motor City Cruise (2021–present)
-    - Erie BayHawks: franchise moved 3 times (2008–17 → Lakeland/Osceola Magic; 2017–19 → College Park Skyhawks; 2019–21 → Birmingham Squadron).
-- **Mathematical Invariant Verification:**
-  - All 11,835 games across 2001 to 2026 strictly satisfy:
-    - $\sum_{i=1}^4 Q_i + OT = \text{Total Score}$
-    - $|\text{Home Score} - \text{Away Score}| = \text{Winning Margin}$
-    - $\text{Total Points} = \text{Home Score} + \text{Away Score}$
-    - Zero negative values, zero missing team identifiers, zero ungrounded fabricated results.
-
----
-
-### 3.34 Korea Basketball League (KBL & Basketball Festival / Nonggu Daejanchi) game-by-game history, 1975-2026 (used to build KBL_Basketball_CSVs/KBL_Basketball_<YEAR>.csv and Previous Sports Results/Basketball/KBL/<YEAR>/<YEAR>_games.csv; tested 2026-10-13)
-
-Every route below was requested live on 2026-10-13 and returned the named fields for all 52 seasons (1975–2026, covering 9,608 verified match records across all eras). The built files, column dictionary, and season counts are stored in both the standalone directory `KBL_Basketball_CSVs/KBL_Basketball_<YEAR>.csv` and the repository directory `Previous Sports Results/Basketball/KBL/<YEAR>/<YEAR>_games.csv`. Season alignment rule: The season starting year defines the year (e.g., 1975 = 1975 National Business Basketball League; 1983 = 1983–84 inaugural Basketball Festival season; 1997 = 1997 inaugural spring KBL season & 1997–98 season; 2019 = 2019–20 COVID-terminated season; 2024 = 2024–25 season; 2025 = 2025–26 season; 2026 = 2026–27 season).
-
-| Source | Route | Fields confirmed | Role | Access | Verified |
-|---|---|---|---|---|---|
-| Official KBL Production API | `https://api.kbl.or.kr/match/list?fromDate={YYYYMMDD}&toDate={YYYYMMDD}&tcodeList=all` and `https://api.kbl.or.kr/season/list` | Official match registers (1997 to 2026–27): `gmkey`, season codes, start/end dates, game types (`01` Regular Season, `03` Playoffs, `04` Championship Finals, `10` All-Star, `13` KBL Cup), home/away team names, final scores, stadium venues, broadcast networks. Requires custom headers (`teamcode: XX`, `lang: ko`, `channel: WEB`). | FO (League Authority / KBL) | REST API / HTTPS | 200 (all 31 professional seasons cataloged; 9,611 matches) |
-| Official KBL Match Detail & Linescores API | `https://api.kbl.or.kr/match/{gmkey}` | Granular box scores (1997 to 2026): 4-quarter linescores (`scoreq1`–`scoreq4`), overtime linescores (`scoreeq`), turnstile attendance (`crowds`), officiating crew (`judges.main`, `judges.sub`), head coaches. | FO (Official Match Protocol) | REST API / HTTPS | 200 (9,255 match boxscores cached in SQLite) |
-| Korea Basketball Association (KBA) Historical Archives | `https://www.koreabasketball.or.kr/` | Historical registers for pre-KBL eras (1975–1996): National Business Basketball League (실업농구연맹전, 1975–1983) and Basketball Festival (농구대잔치, 1983–1997) tournament brackets, championship finals, series scores, MVPs, and venues. | FO (Governing Body / KBA) | Web / Archive | 200 (all pre-KBL finals documented) |
-| Korean Wikipedia & Namuwiki Basketball Portals | `https://ko.wikipedia.org/wiki/한국프로농구` and `https://namu.wiki/w/KBL` | Historical season cross-tables, KBL Cup tournaments (2020–present), Pro-Am championships (2012–2016), All-Star game records, and franchise relocation/merger trees. | S (Historical Compiler & Cross-Check) | Web / API | 200 (verified across all 52 seasons) |
-
-Traps found and handled while building the KBL files:
-
-- **Historical Era Transitions & Period Formats (1975–2026):**
-  - **1975–1982 (National Business Basketball League Era / 실업농구연맹전):**
-    - Governed by Korea Business Basketball Federation and KBA. Corporate business powerhouses: Hyundai Electronics, Samsung Electronics, Industrial Bank of Korea (IBK), POSCO, Korea Development Bank, Bank of Korea.
-    - Timing format: Two 20-minute halves (40 minutes regulation), FIBA 30-second shot clock, no 3-point line.
-  - **1983–1996 (Basketball Festival Era / 농구대잔치):**
-    - Created in winter 1983 as the Jumbo Series and rebranded as 농구대잔치 in 1984. Unprecedented tournament circuit unifying top business teams and university giants (Yonsei University, Korea University, Chung-Ang University).
-    - 3-point line was introduced in Korea for the 1984–85 season at 6.25m following FIBA rule changes.
-    - Dominance of the Kia Motors dynasty (7 titles between 1988–89 and 1995–96 featuring Hur Jae, Kang Dong-hee, Kim Yoo-taek, and Han Ki-bum). Historic 1993–94 season saw Yonsei University become the first college team in history to defeat business giants for the national title (Seo Jang-hoon, Moon Kyung-eun, Lee Sang-min).
-  - **1997–2026 (KBL Professional Era):**
-    - Founded February 1, 1997. Transitioned to four 10-minute quarters, NBA-style 24-second shot clock, and 8-second frontcourt violation.
-    - 1997 Inaugural Season ran as a transitional spring tournament (84 regular-season games + 27 playoff games; Busan Kia Enterprise champions).
-    - 1997–98 expanded to 10 teams and 45 games/team; 2001–02 expanded to 54 games/team (270 regular season games per year) + 6-team playoffs.
-    - 3-point distance moved from 6.25m to 6.75m in 2009–10. Defensive three-seconds rule enforced from 1997 until abolished in 2012–13 to align with FIBA zone defense guidelines.
-- **2019–20 COVID-19 Season Termination:**
-  - On March 24, 2020, KBL officially terminated the season early following suspension on Feb 29. Regular season frozen at Round 5 with exactly 213 games played. Wonju DB Promy and Seoul SK Knights were tied at 28–15 and crowned co-regular season champions; playoffs and finals were completely cancelled (no champion awarded).
-- **Dayone Sports / Goyang Carrot Jumpers Expulsion (2022–2023):**
-  - Following the sale of Goyang Orions to Dayone Sports in 2022, the club defaulted on league dues and wages. On June 16, 2023, KBL voted unanimously to expel Dayone Sports. Sono International acquired the roster on July 21, 2023 to establish the Goyang Sono Skygunners for 2023–24.
-- **Complex Franchise Relocations and Lineages:**
-  - Resolved and mapped across all eras:
-    - Busan Kia Enterprise (1997–01) → Ulsan Mobis Automons (2001–04) → Ulsan Mobis Phoebus (2004–17) → Ulsan Hyundai Mobis Phoebus (2017–present)
-    - Wonju Narae Blue Birds (1997–99) → Wonju Sambo TG (1999–02) → Wonju TG Sambo Xers (2002–05) → Wonju Dongbu Promy (2005–17) → Wonju DB Promy (2017–present)
-    - Anyang SBS Stars (1997–05) → Anyang KT&G Kites (2005–10) → Anyang KGC Ginseng Corporation (2011–23) → Anyang Jung Kwan Jang Red Boosters (2023–present)
-    - Daegu Tongyang Orions (1997–03) → Daegu Orion Orions (2003–11) → Goyang Orion Orions (2011–22) → Goyang Carrot/Dayone (2022–23) → Goyang Sono Skygunners (2023–present)
-    - Gwangju Nasan Flamans (1997–99) → Gwangju/Yeosu Goldbank (1999–01) → Yeosu Korea Tender (2001–03) → Busan KTF Magic Wings (2003–09) → Busan KT Sonicboom (2009–21) → Suwon KT Sonicboom (2021–present)
-    - Incheon Daewoo Securities Zeus (1997–99) → Incheon Shinsegi (1999–01) → Incheon SK Bigs (2001–03) → Incheon Electroland Elephants (2003–21) → Daegu KOGAS Pegasus (2021–present)
-    - Daejeon Hyundai Dynat (1997–99) → Daejeon Hyundai Gullivers (1999–01) → Jeonju KCC Egis (2001–23) → Busan KCC Egis (2023–present)
-    - Suwon Samsung Thunders (1997–01) → Seoul Samsung Thunders (2001–present)
-    - Cheongju SK Knights (1997–01) → Seoul SK Knights (2001–present)
-    - Gyeongnam LG Sakers (1997–98) → Changwon LG Sakers (1998–present)
-- **Mathematical Invariant Verification:**
-  - All 9,608 games strictly satisfy $\sum_{i=1}^4 Q_i + OT = \text{Score}$ and $|\text{Home} - \text{Away}| = \text{Margin}$.
-
----
-
-### 3.35 Japan Basketball League & B.League (B1, B2, NBL, bj-league, JBL, Japan League, Emperor's Cup) game-by-game history, 1975-2026 (used to build B_League_Basketball_CSVs/B_League_Basketball_<YEAR>.csv and Previous Sports Results/Basketball/B League/<YEAR>/<YEAR>_games.csv; tested 2026-10-13)
-
-Every route below was requested live on 2026-10-13 and returned the named fields for all 52 seasons (1975–2026, covering 11,681 verified match records across all eras, 23,362 rows checked). The built files, column dictionary, and season counts are stored in both the standalone directory `B_League_Basketball_CSVs/B_League_Basketball_<YEAR>.csv` and the repository directory `Previous Sports Results/Basketball/B League/<YEAR>/<YEAR>_games.csv`. Season alignment rule: The season starting year defines the year (e.g., 1975 = 1975 Japan League; 2005 = 2005–06 inaugural bj-league season; 2007 = 2007–08 JBL season; 2013 = 2013–14 NBL Japan season; 2016 = 2016–17 inaugural B.League season; 2019 = 2019–20 COVID-terminated season; 2024 = 2024–25 season; 2025 = 2025–26 season; 2026 = 2026–27 season).
-
-| Source | Route | Fields confirmed | Role | Access | Verified |
-|---|---|---|---|---|---|
-| Official B.League Schedule & Kuroco CMS API | `https://www.bleague.jp/schedule/?data_format=json&year={YYYY}&tab={TAB}&event={EVENT}&mon=all&index={INDEX}` | Official match cards (2016–17 to 2025–26): `ScheduleKey`, dates, game types (Event `2` B1 Regular Season, `3` B1 Championship Playoffs, `4` B1 Relegation Playoff, `5` All-Star, `11` Promotion/Relegation Series, `20` Early Cup, Event `7` B2 Regular Season, `8` B2 Playoffs), home/away teams, 4-quarter and OT line scores, final scores, arena venues. Pagination increments by 20. | FO (League Authority / B.League) | REST JSON API / HTTPS | 200 (all 10 modern B.League seasons cataloged; 11,541 matches indexed in SQLite) |
-| Official B.League Box Score Protocol | `https://www.bleague.jp/game_detail/?ScheduleKey={ID}&tab=4` | Match box scores: quarter breakdown (Q1–Q4, OT), official attendance, officiating crew (referees), head coaches, arena locations. | FO (Official Match Protocol) | Web / HTTPS | 200 (reconciled across B1 and B2 fixtures) |
-| Japan Basketball Association (JBA) Historical Archives | `https://www.japanbasketball.jp/` and `https://zennihon2024-25.japanbasketball.jp/` | Historical tournament registers for pre-B.League eras (1975–2015): Emperor's Cup (全日本総合バスケットボール選手権大会 / 天皇杯), Japan Basketball League (JBL / 日本リーグ, 1967–2000), JBL Super League (2001–2007), JBL (2007–2013), and NBL Japan (2013–2016) championship playoff brackets, final scores, MVPs, and venues. | FO (National Governing Body / JBA) | Web / Archive | 200 (all pre-B.League finals and major series documented) |
-| bj-league Historical Archives & Japanese Basketball Portals | `http://bj-league.livedoor.biz/` and `https://ja.wikipedia.org/wiki/bjリーグ` | Complete game-by-game records and playoff brackets for the independent bj-league (Basketball Japan League, 2005–2016), including two-legged playoff tiebreakers and Ariake Colosseum Final Four tournaments. | S (Historical Compiler & Cross-Check) | Web / Archive | 200 (verified across all 11 bj-league seasons) |
-
-Traps found and handled while building the B.League files:
-
-- **Historical Era Transitions & Period Formats (1975–2026):**
-  - **1975–2000 (Japan Basketball League Era / 日本リーグ):**
-    - Governed by Japan Basketball Association (JBA) with corporate company teams (Sumitomo Metal Sparks, Toshiba Brave Thunders, Matsushita Electric Kangaroos, Toyota Motors Alvark, Aisin Seiki SeaHorses, Isuzu Motors Giga Cats).
-    - Timing format: Two 20-minute halves (40 minutes regulation), FIBA 30-second shot clock, 3-point line adopted in 1984–85 at 6.25m. In CSV, 1st half score recorded in Q1, 2nd half in Q2, with Q3/Q4 as null and documented in notes.
-  - **2001–2007 (JBL Super League Era):**
-    - Modernized to four 10-minute quarters with 24-second shot clock and 8-second frontcourt rule. Transitioned towards semi-professionalization.
-  - **2005–2016 (The Split Era: JBL/NBL vs bj-league):**
-    - **JBL (2007–2013) & NBL (2013–2016)**: Continued corporate-heritage league under JBA.
-    - **bj-league (2005–2016)**: First independent, fully professional American-style franchise league in Japan. Expanded from 6 charter clubs in 2005–06 to 24 teams across Eastern and Western conferences. Used unique two-legged playoff system: if teams split the 2-game series 1–1, an immediate 10-minute tiebreaker mini-game was played.
-  - **2016–2026 (Unified B.League Era):**
-    - FIBA suspended the JBA in 2014 due to the failure to merge JBL/NBL and bj-league. The FIBA Japan Taskforce (headed by Saburo Kawabuchi) unified the pyramid into B.League (B1, B2, B3) starting 2016–17.
-    - Standardized 60-game regular season per team in B1/B2, 8-team Championship playoffs, relegation playoffs, Early Cup in-season tournaments (2017–2019), and annual B.League All-Star Game.
-- **2010–11 Great East Japan Earthquake (東日本大震災):**
-  - On March 11, 2011, the earthquake interrupted both leagues. JBL cancelled remaining regular season matches and playoffs; standings were frozen with Aisin SeaHorses awarded 1st. In bj-league, Sendai 89ERS, Saitama Broncos, and Tokyo Apache suspended activities; Sendai and Tokyo withdrew while Saitama rejoined after disaster recovery.
-- **2019–20 COVID-19 Pandemic Season Termination:**
-  - Games were held behind closed doors in mid-March 2020 before B.League officially terminated the season on March 27, 2020 after ~41 regular season games per club. The 2020 Championship playoffs were cancelled; no champion was crowned, and relegation was suspended.
-- **Complex Franchise Relocations and Lineages:**
-  - Resolved and mapped across all eras:
-    - Toshiba Brave Thunders → DeNA Kawasaki Brave Thunders
-    - Toyota Motors Alvark → Alvark Tokyo
-    - Aisin Seiki SeaHorses → SeaHorses Mikawa
-    - Mitsubishi Electric Diamond Dolphins → Nagoya Diamond Dolphins
-    - Hitachi Sunrockers → Sunrockers Shibuya
-    - Link Tochigi Brex → Utsunomiya Brex
-    - Ryukyu Golden Kings (bj-league charter dynasty → 2022–23 B.League B1 champions)
-    - Chiba Jets Funabashi (bj-league 2011 → NBL 2013 → B.League B1 champions 2020–21)
-    - Akita Northern Happinets, Toyama Grouses, Niigata Albirex BB, Yokohama B-Corsairs, Kyoto Hannaryz, Osaka Evessa, Shimane Susanoo Magic.
-- **Mathematical Invariant Verification:**
-  - All 11,681 games strictly satisfy $\sum_{i=1}^4 Q_i + OT = \text{Score}$ and $|\text{Home} - \text{Away}| = \text{Margin}$.
-
-### 3.36 Spanish Top-Flight Basketball: Liga ACB, Liga Nacional, Copa del Rey & Supercopa (1975–2026)
-
-- **Coverage:** Complete, verified game-by-game historical records across all 52 seasons from **1975 to 2026** (commencing calendar years 1975 to 2026).
-- **Files Delivered:**
-  - Standalone CSV directory: `Liga_ACB_Basketball_CSVs/Liga_ACB_Basketball_<YEAR>.csv` (52 files, 1975–2026).
-  - Main repository directory: `Previous Sports Results/Basketball/Liga ACB/<YEAR>/<YEAR>_games.csv` (52 files, 1975–2026; existing 1900–1974 pre-establishment headers preserved intact).
-  - Total Games Logged: **16,838 unique games** across 52 seasons.
-  - Companion Documentation:
-    - `Previous Sports Results/Basketball/Liga ACB/HISTORICAL_TEAMS_AND_ROSTERS.md`
-    - `Previous Sports Results/Basketball/Liga ACB/HISTORICAL_PLAYERS_AND_ROSTERS.md`
-    - `Previous Sports Results/Basketball/Liga ACB/VENUES_AND_ARENAS.md`
-    - `Previous Sports Results/Basketball/Liga ACB/VENUES_AND_LOCATIONS.md`
-- **Official Data Endpoints & Ingestion Pipeline:**
-  - Ingestion engine reverse-engineered official `acb.com` Next.js React Server Component (RSC) hydration streams (`self.__next_f.push` payloads).
-  - Discovered linear season-edition bijection:
-    $$\text{edition\_id} = \text{season\_year} - 1935$$
-    - 1975–76 = Edition 40
-    - 1983–84 (ACB inaugural season) = Edition 48
-    - 1994–95 (Modern single table) = Edition 59
-    - 2025–26 = Edition 90
-    - 2026–27 = Edition 91
-  - Official calendar routes queried across all three premier domestic competitions:
-    - Liga Nacional / Liga ACB: `https://acb.com/es/liga/calendario?temporada={edition_id}`
-    - Copa del Rey de Baloncesto: `https://acb.com/es/copa-del-rey/calendario?temporada={edition_id}`
-    - Supercopa de España (Endesa): `https://acb.com/es/supercopa/calendario?temporada={edition_id}`
-- **Subphase Classification Taxonomy:**
-  - In ACB Next.js payloads, round objects carry specialized `subphase` identifiers:
-    - `subphase == null` or `id in [271, 272]`: `Regular Season` (`Jornada 1` to `34`)
-    - `subphase.id == 294`: `Playoffs - Round of 16` (Octavos de final)
-    - `subphase.id == 293`: `Playoffs - Quarterfinals` (Cuartos de final)
-    - `subphase.id == 292`: `Playoffs - Semifinals` (Semifinales)
-    - `subphase.id == 291`: `Playoffs - Finals` (Final Liga ACB)
-    - `subphase.id == 280`: `Relegation / Play-down` (Promoción de permanencia)
-    - `subphase.id == 221`: `Fase Final Extraordinaria` (2020 Valencia Biosecure Bubble)
-- **Key Historical Eras & Anomalies Resolved:**
-  - *1975–1983 (Liga Nacional Era, FEB):* Two 20-minute halves, draws permitted in regular season, 12 to 14 clubs. Concluded with the historic single-game championship tiebreaker on April 7, 1983 in Oviedo: FC Barcelona 75 – 70 Real Madrid.
-  - *1983–1994 (ACB Multi-Phase Group Era):* 16 to 24 teams playing multi-stage groups (Grupo Impar/Par -> Grupo A1/A2), followed by playoff brackets. 3-point line introduced in 1984–85 at 6.25m.
-  - *1994–2026 (Modern Unified ACB Era):* 18 teams (34 rounds, 306 regular season games) + 8-team playoffs + 8-team Copa del Rey + 4-team Supercopa.
-  - *2000 FIBA Modernization:* Transitioned from two 20-minute halves to four 10-minute quarters, and 30s to 24s shot clock. 3-point line extended to 6.75m in 2010.
-  - *2008–09 (17 Teams):* Akasvayu Girona folded due to bankruptcy (272 regular season games).
-  - *2019–20 COVID-19 Suspension & Valencia Bubble:* Season suspended in March 2020 after Round 23 (207 games); resumed in Valencia biosecure bubble with a 12-team tournament (30 group games, 2 semifinals, 1 final) won by Kirolbet Baskonia (69–67 vs Barcelona). Total season games: 248.
-  - *2020–21 (19 Teams):* Gipuzkoa Basket admitted without relegation from prior season, resulting in 36 games/team (342 regular season games).
-- **Mathematical Invariant Verification:**
-  - 100% of all 16,838 games pass strict mathematical validation: $\text{Total Points} = \text{Home Score} + \text{Away Score}$, $\text{Winning Margin} = |\text{Home Score} - \text{Away Score}|$, sequential 1-indexed IDs, valid ISO dates, and verified winners/losers.
-
----
-
-### 3.37 European Club Basketball Tier-2: EuroCup, ULEB Cup & FIBA European Cup Winners' / Saporta Cup (1975–2026)
-
-- **Coverage:** Complete, verified game-by-game historical records across all 52 seasons from **1975 to 2026** (commencing calendar years 1975 to 2026).
-- **Files Delivered:**
-  - Standalone CSV directory: `EuroCup_Basketball_CSVs/EuroCup_Basketball_<YEAR>.csv` (52 files, 1975–2026).
-  - Main repository directory: `Previous Sports Results/Basketball/EuroCup/<YEAR>/<YEAR>_games.csv` (52 files, 1975–2026; existing 1900–1974 pre-establishment headers preserved intact).
-  - Total Games Logged: **5,972 unique matches** across 52 seasons.
-  - Companion Documentation:
-    - `Previous Sports Results/Basketball/EuroCup/HISTORICAL_TEAMS_AND_ROSTERS.md`
-    - `Previous Sports Results/Basketball/EuroCup/HISTORICAL_PLAYERS_AND_ROSTERS.md`
-    - `Previous Sports Results/Basketball/EuroCup/VENUES_AND_ARENAS.md`
-    - `Previous Sports Results/Basketball/EuroCup/VENUES_AND_LOCATIONS.md`
-    - `Previous Sports Results/Basketball/EuroCup/2026/COACHES.md`
-    - `Previous Sports Results/Basketball/EuroCup/2026/OFFICIATING.md`
-- **Official Data Endpoints & Ingestion Pipeline:**
-  - Direct consumption of official Euroleague Basketball Live API endpoints for the modern era (2002–2026):
-    - Competition code: **`U`** (EuroCup / ULEB Cup; distinguishing from `E` for EuroLeague).
-    - Seasons endpoint: `https://api-live.euroleague.net/v2/competitions/U/seasons`
-    - Game schedules and boxscore feed: `https://api-live.euroleague.net/v2/competitions/U/seasons/U{YYYY}/games`
-    - Extracted attributes: `gameCode`, `round`, `date`, `local.club.name`, `road.club.name`, `local.score`, `road.score`, quarter partials (`partials1` to `partials4`), `extraPeriods`, `arena.name`, `arena.city`, `attendance`, `referees`, and timestamps.
-  - Historical era (1975–2001) parsed from structured tournament archives (FIBA Europe, Linguasport, and multi-lingual Wikipedia articles with resolved redirects):
-    - 1975–1991: FIBA European Cup Winners' Cup (Coupe d'Europe des Vainqueurs de Coupe)
-    - 1991–1996: FIBA European Cup
-    - 1996–1998: FIBA EuroCup
-    - 1998–2002: FIBA Saporta Cup
-- **Key Historical Eras & Tournament Anomalies Resolved:**
-  - *1975–2000 (FIBA Halves Era):* Two 20-minute halves, draws permitted in first leg of two-legged aggregate knockout ties.
-  - *2000 FIBA Rules Overhaul:* Introduction of four 10-minute quarters, 24-second shot clocks, and elimination of draws (extra periods played except in two-legged ties).
-  - *2002–03 Inaugural ULEB Cup:* Contested by 24 teams; culminated in the only two-legged finals in ULEB/EuroCup history (Valencia defeated Krka Novo Mesto 90–78 and 78–76).
-  - *2007–08 Expansion Peak:* Record 54 competing clubs; 325 games played culminating in the Turin Final Eight won by DKV Joventut.
-  - *2013–14 All-Time Games Record:* 366 total matches featuring 48 clubs + 8 EuroLeague regular season drop-down teams in the Last 32.
-  - *2019–20 COVID-19 Abrupt Suspension:* Season suspended March 12, 2020 after the Top 16 (168 games played); officially cancelled May 25, 2020 without playoffs or champion.
-  - *2021–22 Geopolitical Expulsions & Playoff Format Change:* Russian clubs (Lokomotiv Kuban) expelled in March 2022; new format implemented with two 10-team groups and single-elimination play-in/playoffs.
-  - *2023–24 Paris Basketball Dominance:* Paris Basketball recorded historic 22–1 season, sweeping the Finals to earn EuroLeague promotion.
-  - *2026–27 Active Season:* 32 games logged through October 2026.
-- **Mathematical Invariant Verification:**
-  - 100% of all 5,972 games pass strict mathematical validation: $\text{Total Points} = \text{Home Score} + \text{Away Score}$, $\text{Winning Margin} = |\text{Home Score} - \text{Away Score}|$, sequential 1-indexed IDs, valid ISO dates, and verified winners/losers.
+**Defaults removed (R01/R02/R26).** No start time, venue, attendance, referee or overtime value is inferred. Placeholder values found in the sources are blanked with a flag: ACB 12:00Z seasons (1975-76 to 1989-90), EuroCup 00:00 start times, attendance zeros outside the COVID closed-door window. Raw source captures, SHA-256 values and the helper rules are in the change folder. Settle live basketball cards from the field owners in §3.2 and above, not from these archives.
 
 ---
 

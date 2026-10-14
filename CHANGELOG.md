@@ -1,5 +1,21 @@
 # Changelog
 
+## 2026-10-14 — Framework change 2026-10-14-1: basketball archive quarantine and observed-only rebuild (re-applies audit R01–R07, R26–R27)
+
+[Implementation](research/verification/framework_change_2026-10-14-1/IMPLEMENTATION.md) · [receipt](research/verification/framework_change_2026-10-14-1/DATA_REBUILD_RECEIPT.md) · [verification](research/verification/framework_change_2026-10-14-1/VERIFICATION_REPORT.md). Class: data repair (archive) and source documentation. No rule, prompt, template, log, card, grade, P-ID, profile or threshold changed.
+
+- **Why:** commit `e73c9c24e` (same day) staged the whole working tree and published what framework change 2026-10-12-1 had contained:
+  - 63 Python files, 4 SQLite databases, 32 JSON files and an HTML capture (R07);
+  - five basketball archives built with defaults (R01/R02) and a duplicate `Basketball/G League/` folder (R06);
+  - an unscoped "verified" SOURCES §3.33 (R04);
+  - unsourced reports and roster/venue prose.
+- **Quarantine:** all of it moved byte-for-byte to `Sports Research LOCAL_QUARANTINE_2026-10-14` outside the repository (2,089 files, `cmp` 0 mismatches). The modified basketball files and SOURCES.md were restored to `65f780cef`.
+- **Rebuild:** KBL (8,285 games), B League top division (6,350), Liga ACB (15,881), EuroCup (4,851) and NBA G League (10,947), each from the league's own record, using observed fields only. Placeholder values found in the sources are blanked with flags. Each folder has a `DATA_PROVENANCE.md`.
+- **Docs:** SOURCES §3.33 (scoped); ACTIVE_FILE_INDEX §2 (40 populated folders, 522,048 rows); ARCHIVE_USE_GUIDE §8. Originals archived in `archive/superseded_2026-10-14/`.
+- **Open:**
+  - Removing `e73c9c24e`'s files from Git history needs a force-push (owner decision).
+  - Not rebuilt: B League before 2016-17, EuroCup before 2002-03, NBA G League 2001-04.
+
 ## 2026-10-12 — Framework change 2026-10-12-1, phase D: claims, designs and data readiness (audit R24–R25, R28–R32); rules edit CR-R2
 
 Same change folder ([implementation map](research/verification/framework_change_2026-10-12-1/IMPLEMENTATION.md), [verification](research/verification/framework_change_2026-10-12-1/VERIFICATION_REPORT.md)). Classes: data repair (archive), source documentation, and a user-made PROCEDURE edit to the rules.

@@ -27,7 +27,7 @@
 
 ## 2. Archive folders that contain rows
 
-35 of 172 competition folders hold at least one data row: 475,734 logical rows, or 454,014 after excluding the four alias copies. The other 137 folders are header-only placeholders (Baseball 7, Basketball 20, Canadian Football 3, College Football 8, Cricket one-day 6, Cricket T20 11, Cricket Tests 5, Field Hockey 7, Ice Hockey 12, Rugby League 7, Rugby Union 14, Soccer 30, State Level AFL 5, Tennis 2). Paths are `Previous Sports Results/<Sport>/<Competition>/<Year>/<Year>_games.csv`.
+40 of 172 competition folders hold at least one data row: 522,048 logical rows, or 500,328 after excluding the four alias copies (updated 2026-10-14 for the five basketball folders rebuilt by framework change [2026-10-14-1](research/verification/framework_change_2026-10-14-1/IMPLEMENTATION.md): +46,314 rows). The other 132 folders are header-only placeholders (Baseball 7, Basketball 15, Canadian Football 3, College Football 8, Cricket one-day 6, Cricket T20 11, Cricket Tests 5, Field Hockey 7, Ice Hockey 12, Rugby League 7, Rugby Union 14, Soccer 30, State Level AFL 5, Tennis 2). Paths are `Previous Sports Results/<Sport>/<Competition>/<Year>/<Year>_games.csv`.
 
 **Duplicate folders on main (found 2026-10-12).** Four pairs are byte-identical across all their seasons, which breaks ARCHIVE_USE_GUIDE §9 rule 1. The canonical member is named below, and each alias carries a note. Rows were **not** deleted; whether to empty the alias folders is an owner decision (implementation map NEW-01).
 
@@ -48,11 +48,16 @@
 | [Baseball / Minor Leagues](Previous%20Sports%20Results/Baseball/Minor%20Leagues/) | 26 (2000–2025) | 57,665 | 46 | no | — |
 | [Baseball / NPB](Previous%20Sports%20Results/Baseball/NPB/) | 26 (2000–2025) | 22,345 | 46 | no | `SUSPECTED_DEFAULT` Start Time (JST): '18:00' on 16657/22345 (75%). 2025 innings, extras and two stage labels repaired from npb.jp box scores on 2026-10-12 (R31); 2000–2024 innings remain placeholders |
 | [Basketball / Austria Basketball Bundesliga](Previous%20Sports%20Results/Basketball/Austria%20Basketball%20Bundesliga/) | 51 (1975–2025) | 7,449 | 39 | no | CANONICAL for a duplicated pair; `SUSPECTED_DEFAULT` Start Time (Local): '17:30' on 4818/7449 (65%) |
+| [Basketball / B League](Previous%20Sports%20Results/Basketball/B%20League/) | 11 (2016–2026) | 6,350 | 46 | yes | Rebuilt 2026-10-14 (bleague.jp, field owner); no quarters, attendance or referees in the source; pre-2016 leagues not rebuilt |
 | [Basketball / BSL](Previous%20Sports%20Results/Basketball/BSL/) | 51 (1975–2025) | 7,449 | 39 | no | **ALIAS** (byte-identical to `Basketball/Austria Basketball Bundesliga`, 51 or 126 of the same seasons): not canonical; never aggregate with it; `SUSPECTED_DEFAULT` Start Time (Local): '17:30' on 4818/7449 (65%) |
 | [Basketball / EuroBasket](Previous%20Sports%20Results/Basketball/EuroBasket/) | 51 (1975–2025) | 1,319 | 44 | no | — |
+| [Basketball / EuroCup](Previous%20Sports%20Results/Basketball/EuroCup/) | 25 (2002–2026) | 4,851 | 46 | yes | Rebuilt 2026-10-14 (Euroleague Basketball API, field owner); pre-2002 cups not rebuilt |
 | [Basketball / EuroLeague](Previous%20Sports%20Results/Basketball/EuroLeague/) | 26 (2000–2025) | 6,685 | 49 | no | — |
 | [Basketball / Greek Basket League](Previous%20Sports%20Results/Basketball/Greek%20Basket%20League/) | 51 (1975–2025) | 8,179 | 39 | no | `SUSPECTED_DEFAULT` Start Time (Local): '19:30' on 5596/8179 (68%) |
+| [Basketball / KBL](Previous%20Sports%20Results/Basketball/KBL/) | 31 (1996–2026) | 8,285 | 46 | yes | Rebuilt 2026-10-14 (KBL API, field owner); the inaugural 1997 season is filed under 1996 |
+| [Basketball / Liga ACB](Previous%20Sports%20Results/Basketball/Liga%20ACB/) | 52 (1975–2026) | 15,881 | 46 | yes | Rebuilt 2026-10-14 (acb.com, field owner); start times blank 1975-76 to 1989-90 (source placeholder); no venue, attendance, referee or quarter fields |
 | [Basketball / NBA](Previous%20Sports%20Results/Basketball/NBA/) | 51 (1975–2025) | 59,788 | 29 | no | `SUSPECTED_DEFAULT` Attendance: '0' on 30313/59788 (51%) |
+| [Basketball / NBA G League](Previous%20Sports%20Results/Basketball/NBA%20G%20League/) | 22 (2004–2025) | 10,947 | 46 | yes | Rebuilt 2026-10-14 (stats.gleague.nba.com, field owner; ESPN enrichment on 4,809 rows, evidence B); `Basketball/G League/` must not be recreated |
 | [Basketball / NBL](Previous%20Sports%20Results/Basketball/NBL/) | 52 (1975–2026) | 8,124 | 39 | no | 2025 dates and stage types repaired 2026-10-12 (R30); some quarter rows do not sum to the final (ARCHIVE_USE_GUIDE §8) |
 | [Basketball / WNBA](Previous%20Sports%20Results/Basketball/WNBA/) | 51 (1975–2025) | 6,676 | 29 | no | `SUSPECTED_DEFAULT` Attendance: '0' on 3824/6676 (57%) |
 | [College Football / NCAA Division I FBS](Previous%20Sports%20Results/College%20Football/NCAA%20Division%20I%20FBS/) | 126 (1900–2025) | 790 | 13 | no | CANONICAL for a duplicated pair; `SUSPECTED_DEFAULT` Date: 306/790 rows on month-day 01-01 (39%) |
