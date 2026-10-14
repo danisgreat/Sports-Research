@@ -1,0 +1,4 @@
+shadow_row_id,revision,parent_revision,effective_utc,result,observed_value,evidence_grade,source_url,field,retrieved_utc,reason
+NBL-JOINT-v1:NBL_2026_SYD_PER:ML_HOME,REV-1,,2026-10-17T11:00:00Z,UNRESOLVED,PENDING_MATCH,GRADE_A,https://www.nbl.com.au/games/2026101701,score,2026-10-17T11:05:00Z,Fixture not yet played
+NBL-JOINT-v1:NBL_2026_SYD_PER:SPREAD_H-4.5,REV-1,,2026-10-17T11:00:00Z,UNRESOLVED,PENDING_MATCH,GRADE_A,https://www.nbl.com.au/games/2026101701,score,2026-10-17T11:05:00Z,Fixture not yet played
+NBL-JOINT-v1:NBL_2026_SYD_PER:TOTAL_O177.5,REV-1,,2026-10-17T11:00:00Z,UNRESOLVED,PENDING_MATCH,GRADE_A,https://www.nbl.com.au/games/2026101701,score,2026-10-17T11:05:00Z,Fixture not yet played

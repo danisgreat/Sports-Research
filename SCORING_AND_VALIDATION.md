@@ -1,6 +1,6 @@
 # Scoring and validation
 
-**SCV-2026.10.12-v7.** New views use these definitions; historical published scores remain unchanged and labelled by their original version ([v6](archive/superseded_2026-10-12/SCORING_AND_VALIDATION.md)). [CURRENT_RULES](CURRENT_RULES.md) controls claims. No fitted or certified model is available. v7 adds request coverage (§1), evidence-stratified views (§2a), shadow scoring for SHADOW_RANK_DELTA and SHADOW_BASE_ONLY (§6), and deterministic revision resolution in the scoreboard (§7).
+**SCV-2026.10.14-v8.** New views use these definitions; historical published scores remain unchanged and labelled by their original version ([v7](archive/superseded_2026-10-14-2/SCORING_AND_VALIDATION.md), [v6](archive/superseded_2026-10-12/SCORING_AND_VALIDATION.md)). [CURRENT_RULES](CURRENT_RULES.md) controls claims. No fitted or certified model is available. v8 adds the full-league shadow lane evaluation protocol and two-stage sizing design (Â§9; Framework Change 2026-10-14-2).
 
 ## 1. Units, probability and coverage
 
@@ -20,7 +20,7 @@ For minis before mini-log-7, request coverage is `NOT_COMPUTABLE`. Never assume 
 
 ## 2. Counting and cohorts
 
-Only original Ranks 1–2 enter primary wins. Rate = W/(W+L); PUSH/VOID excluded with counts, UNRESOLVED visible. Report each rank separately. Ranks 3–4, shadow gate/pairs, reforecasts and historical reconstructions have separate tables and never offset primary losses.
+Only original Ranks 1â€“2 enter primary wins. Rate = W/(W+L); PUSH/VOID excluded with counts, UNRESOLVED visible. Report each rank separately. Ranks 3â€“4, shadow gate/pairs, reforecasts and historical reconstructions have separate tables and never offset primary losses.
 
 Card class over top-two slots: ALL_WON, SPLIT or ALL_LOST only when both slots are decisive; ONE_DECISIVE when only one is W/L and the other is PUSH/VOID or no second pick; NO_DECISIVE for no W/L and no unresolved; PARTIAL_UNRESOLVED whenever either issued primary row remains unresolved. Preserve old TOP2 labels as historical, not silently recoded grades.
 
@@ -32,21 +32,21 @@ Cohorts cross-classify policy/version, league/format/endpoint/family, numeric ve
 
 - **Headline view:** only rows graded on evidence A or B, with definition status OPERATOR_VERIFIED or FROZEN_FRAMEWORK_CONVENTION.
 - **Sensitivity view:** adds rows graded on C (provisional single-source) and on E (an invariant bound). Report both views side by side, with the count of rows that each added class contributes.
-- **Excluded:** rows graded on X are UNRESOLVED and appear only in the §1 unresolved-case bounds.
+- **Excluded:** rows graded on X are UNRESOLVED and appear only in the Â§1 unresolved-case bounds.
 
 A provisional C grade never silently becomes A or B. An upgrade is a new settlement revision with the new evidence. Sporting evidence grade, operator definition status and performance eligibility are three separate columns in every row inventory. When the evidence mix changes between two cohorts, print it beside any comparison of them.
 
 ## 3. Proper scores and expected score
 
-Binary Brier=(p−y)^2; log loss=−ln(p) if y=1, otherwise −ln(1−p). Wrong literal 0/1 gives infinite log loss; no hidden clipping. Half-sum multiclass Brier=0.5×sum((p_k−y_k)^2), labelled with this scaling. Missing original p means NOT_COMPUTABLE.
+Binary Brier=(pâˆ’y)^2; log loss=âˆ’ln(p) if y=1, otherwise âˆ’ln(1âˆ’p). Wrong literal 0/1 gives infinite log loss; no hidden clipping. Half-sum multiclass Brier=0.5Ã—sum((p_kâˆ’y_k)^2), labelled with this scaling. Missing original p means NOT_COMPUTABLE.
 
-For same-row baseline: d_Brier=Brier(card)−Brier(baseline); negative favours the card. Also retain paired log-loss difference when finite. Report paired counts and all exclusions. Brier skill=1−mean Brier(card)/mean Brier(baseline) only on identical rows, with positive baseline denominator. A zero denominator yields UNDEFINED, not perfect skill. A realised in-sample climatology b(1−b) is a retrospective descriptive reference, not an independent pregame baseline.
+For same-row baseline: d_Brier=Brier(card)âˆ’Brier(baseline); negative favours the card. Also retain paired log-loss difference when finite. Report paired counts and all exclusions. Brier skill=1âˆ’mean Brier(card)/mean Brier(baseline) only on identical rows, with positive baseline denominator. A zero denominator yields UNDEFINED, not perfect skill. A realised in-sample climatology b(1âˆ’b) is a retrospective descriptive reference, not an independent pregame baseline.
 
-Expected-score error=observed−issued mean; z=error/issued SD only if SD>0 and endpoint/unit match. Report n, mean error, MAE, RMSE, interval coverage when predictive intervals were issued, and z summaries by sport/term. No SD or no issued mean stays missing. A mean score is not a modal exact-score prediction; absence of large z values does not establish calibrated tails.
+Expected-score error=observedâˆ’issued mean; z=error/issued SD only if SD>0 and endpoint/unit match. Report n, mean error, MAE, RMSE, interval coverage when predictive intervals were issued, and z summaries by sport/term. No SD or no issued mean stays missing. A mean score is not a modal exact-score prediction; absence of large z values does not establish calibrated tails.
 
 ## 4. Calibration diagnostics
 
-Use predeclared complete bins covering [0,1], e.g. [0,.1), …, [.9,1], and retain empty bins. Report each bin's rows, distinct events, mean p, realised rate and descriptive uncertainty. Keep ranks, policy and endpoints distinguishable. A wide interval containing the stated probability or calibration slope 1 does not prove calibration; equivalence needs predeclared tolerances and sufficient precision. Do not fit and assess a calibrator on the same outcomes.
+Use predeclared complete bins covering [0,1], e.g. [0,.1), â€¦, [.9,1], and retain empty bins. Report each bin's rows, distinct events, mean p, realised rate and descriptive uncertainty. Keep ranks, policy and endpoints distinguishable. A wide interval containing the stated probability or calibration slope 1 does not prove calibration; equivalence needs predeclared tolerances and sufficient precision. Do not fit and assess a calibrator on the same outcomes.
 
 Calibration, discrimination and incremental predictive skill are different. A constant 85% on easy propositions can be well calibrated without useful event-specific information. Evaluate baseline-relative scores on identical lines as well as selection coverage.
 
@@ -54,9 +54,9 @@ Calibration, discrimination and incremental predictive skill are different. A co
 
 Freeze cohort dates/inclusion, candidate and baseline versions, primary endpoint, minimum meaningful effect, analysis unit, missingness, sample-size justification and stopping rule before collecting future results. Original RET/XCARD registrations remain readable; amendments get new IDs and prospective start times.
 
-Average paired row differences within each event first (predeclared rank weighting; default equal across available paired primary rows, report partial pairs), then within ISO week. Report event-weighted descriptive mean and equal-week mean separately. For k week means with sample SD s, an approximate interval is mean ± t_(k−1,.975)×s/sqrt(k), with the t value/source or arithmetic shown. k<8 is INSUFFICIENT_EVIDENCE under this framework; eight weeks is only a minimum, not a power guarantee. Strong serial/team dependence or heterogeneity limits this approximation and blocks a strong claim without a justified block analysis. Do not invent a bootstrap or power calculation that was not performed.
+Average paired row differences within each event first (predeclared rank weighting; default equal across available paired primary rows, report partial pairs), then within ISO week. Report event-weighted descriptive mean and equal-week mean separately. For k week means with sample SD s, an approximate interval is mean Â± t_(kâˆ’1,.975)Ã—s/sqrt(k), with the t value/source or arithmetic shown. k<8 is INSUFFICIENT_EVIDENCE under this framework; eight weeks is only a minimum, not a power guarantee. Strong serial/team dependence or heterogeneity limits this approximation and blocks a strong claim without a justified block analysis. Do not invent a bootstrap or power calculation that was not performed.
 
-Wilson intervals may be shown for single-slot/card proportions with n and formula: centre=(p+z²/(2n))/(1+z²/n); half-width=z*sqrt(p(1−p)/n+z²/(4n²))/(1+z²/n), z=1.96. Pooled-row intervals ignore within-event dependence and are labelled descriptive; they do not establish promotion. No claim that their direction of error is always the same.
+Wilson intervals may be shown for single-slot/card proportions with n and formula: centre=(p+zÂ²/(2n))/(1+zÂ²/n); half-width=z*sqrt(p(1âˆ’p)/n+zÂ²/(4nÂ²))/(1+zÂ²/n), z=1.96. Pooled-row intervals ignore within-event dependence and are labelled descriptive; they do not establish promotion. No claim that their direction of error is always the same.
 
 Acceptance requires the pre-registered meaningful improvement and precision, no material calibration/coverage degradation, and all evidence controls. Multiple sports/families/tests are exploratory unless multiplicity and selection were planned. No sample-size-needed number without stated effect, variance/dependence, alpha, power and method. Otherwise SAMPLE_SIZE_NOT_ESTIMATED. No acceptance merely because a CI contains zero/one or because mean |z| sits in an arbitrary band.
 
@@ -74,10 +74,26 @@ The form-window blend is an adjustment, not a shadow. Its effect is read from th
 
 ## 7. Scoreboard procedure
 
-Build a row-level inventory from original cards joined to their **effective** settlement per contract key. That is the latest revision on the single unbroken parent chain (CURRENT_RULES §8), not the last block in a file. Keys in a `REVISION_CONFLICT` count as UNRESOLVED. Retain prior revisions and supersession reasons, and count each contract once. Reconcile every included ID and aggregate count, then independently recompute representative arithmetic. Do not backfill missing card p from a summary or q.
+Build a row-level inventory from original cards joined to their **effective** settlement per contract key. That is the latest revision on the single unbroken parent chain (CURRENT_RULES Â§8), not the last block in a file. Keys in a `REVISION_CONFLICT` count as UNRESOLVED. Retain prior revisions and supersession reasons, and count each contract once. Reconcile every included ID and aggregate count, then independently recompute representative arithmetic. Do not backfill missing card p from a summary or q.
 
 Headline: paired baseline-relative proper scores, number of paired events/weeks and uncertainty/status. If unavailable, say NOT_COMPUTABLE. Show hit rates, timing, gate, evidence mix, unresolved coverage and expected-score diagnostics alongside. Preserve historical snapshots; begin v10 at its first actual card, with zero events until one exists. Update CURRENT_STATE's current summary without changing log grades. Existing historical denominators require a separate labelled reconciliation if definitions differ.
 
 ## 8. Historical evidence and release
 
 Historical learning logs, revised datasets and post-event counterfactuals cannot establish prospective skill. An omitted probability, cutoff or baseline is not restored by a later interpretation. Every recommendation is tracked as document implementation, data readiness, test registration, observed experiment result and release decision separately. Certification remains suspended.
+
+## 9. Shadow lane evaluation and two-stage sizing protocol (Framework Change 2026-10-14-2)
+
+Fitted models operate in `research/model_shadow/<model_id>/` and are evaluated strictly prospectively against two frozen comparators on identical lines: `BASELINE_LEAGUE_V1` and `TEAM_BASELINE_P` (TB-1).
+
+1. **Full-League Shadow Pricing:** To eliminate selection bias and achieve statistical power, shadow models price every regular-season fixture across the league.
+2. **Proper Scoring:**
+   - **Moneylines & Spreads:** Paired Brier differences $d_i = \text{Brier}(\hat{p}_{\text{model}}) - \text{Brier}(p_{\text{comp}})$, averaged by event then by ISO week.
+   - **Score Distributions (Totals, Cricket 1st Innings):** Continuous Ranked Probability Score (CRPS) on discrete integer support: $\text{CRPS}(F, y) = \sum_t (F(t) - \mathbb{I}(y \le t))^2$.
+   - **Dispersion / Calibration:** Probability Integral Transform (PIT) histograms and 10-bin reliability diagrams (calibration-in-the-large $\le 0.05$).
+3. **Two-Stage Confirmatory Sizing:**
+   $$\text{Weeks} = \left\lceil \left( \frac{(1.960 + 0.842) \cdot \text{SD}_w}{\delta} \right)^2 \right\rceil$$
+   where $\text{SD}_w$ is the empirical standard deviation of weekly paired mean differences estimated in Stage 1. Minimum duration is 8 weeks; if calculated sample size exceeds 52 weeks, the test is classified `INFEASIBLE_AT_THIS_EFFECT`.
+4. **Promotion Bars:**
+   - **To REFERENCE:** Stage 2 95% confidence interval strictly below 0 against both comparators, zero coherence failures, and owner order.
+   - **To ANCHOR:** Non-inferiority demonstrated against `p_card` on identical card rows in addition to full-league superiority, plus owner order.

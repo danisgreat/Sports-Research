@@ -7,20 +7,20 @@
 | Item | Value |
 |---|---|
 | Status | ACTIVE |
-| Method | MDS-2026.10.12-v11.0 (Markdown only) |
-| Control revision | CR-2026.10.12-R2 |
-| Scoring version | SCV-2026.10.12-v7 (historical v5/v6 views retained) |
+| Method | MDS-2026.10.14-v11.1 (Markdown only) |
+| Control revision | CR-2026.10.14-R3 |
+| Scoring version | SCV-2026.10.14-v8 (historical v5/v6/v7 views retained) |
 | Selection version | SEL-2026.10.12-v3 / P_ORDER_V2 priced from the declared mixture where required; alternatives recorded as shadows |
 | Prompt suite | P-2026.10.12-v11.0 |
 | Mini-log format | `mini-log-7` (in-progress `mini-log-2` through `mini-log-6` retain their format) |
 | Settlement format | `mini-settlement-6` (earlier settlement formats remain accepted) |
-| Freeze | None. Custody is the git history of `main` (CURRENT_RULES §9). Cards record the HEAD SHA they read. The last control manifest, `CONTROL_MANIFEST_2026-10-09-3.md`, is in [archive/controls/](archive/controls/). |
+| Freeze | None. Custody is the git history of `main` (CURRENT_RULES Â§9). Cards record the HEAD SHA they read. The last control manifest, `CONTROL_MANIFEST_2026-10-09-3.md`, is in [archive/controls/](archive/controls/). |
 | Highest committed canonical ID | **P-584** |
 | Next canonical ID | **P-585** (equal to the line in GAME_LOG_STATUS_CURRENT.md) |
 | Reserved IDs | P-518 to P-522 |
 | Active Combined Log | [prediction logs/PREDICTION_LOG_COMBINED_7.md](prediction%20logs/PREDICTION_LOG_COMBINED_7.md) |
 | Previous parts | Parts 1 to 6, immutable; Part 6 keeps its original P-518 to P-522 source block |
-| Final settlement register | Historical 72 records through P-556 and P-557–P-576 retain final settlements. P-577–P-583 sporting observations/revisions now imported; P-583 remains NO_FORECAST with source conflict. **99 terminal research records, 1 pending (P-584)** in the tracked final-settlement/import inventory; 3 terminal field-specific evidence tasks, operator action unknown over the 8 packet events and final-time/SLA unknown on 7 new terminal records. [October 13 import](research/verification/mini_import_P-577_P-584_2026-10-13-1/CANONICAL_IMPORT_REPORT.md). No record is performance-certified. |
+| Final settlement register | Historical 72 records through P-556 and P-557â€“P-576 retain final settlements. P-577â€“P-583 sporting observations/revisions now imported; P-583 remains NO_FORECAST with source conflict. **99 terminal research records, 1 pending (P-584)** in the tracked final-settlement/import inventory; 3 terminal field-specific evidence tasks, operator action unknown over the 8 packet events and final-time/SLA unknown on 7 new terminal records. [October 13 import](research/verification/mini_import_P-577_P-584_2026-10-13-1/CANONICAL_IMPORT_REPORT.md). No record is performance-certified. |
 
 ## Selection rules (provisional until the prospective window completes)
 
@@ -30,7 +30,7 @@
 
 ## Scoreboard
 
-- **Current v10/v11 import measurement (13 October):** v10 P-580–P-583 = 4 retained events (3 numeric primary, 1 NO_FORECAST), primary 5W/1L, baseline coverage 4/6 rows on 2 events in 1 ISO week; paired Brier card 0.187418187 vs baseline 0.188131225 (difference -0.000713038), INSUFFICIENT_EVIDENCE. V11 P-584 = 1 pending diagnostic-only event, zero eligible primary rows. Historical pre-v10 P-577–P-579 add 5W/1L; current historical inventory 94 forecast cards, 118W/62L plus 8 legacy VOID slots, 65.6% decisive rate; historical Rank 1 58W/33L/3V, Rank 2 60W/29L/5V. The 0-card v10/v11 release snapshot was dated to the framework release and is superseded for current counts by this import; no old card is relabelled or baseline backfilled. Full scoring/queue provenance: [import](research/verification/mini_import_P-577_P-584_2026-10-13-1/CANONICAL_IMPORT_REPORT.md). Clean prospective predictive skill remains unestablished; nothing is performance-certified.
+- **Current v10/v11 import measurement (13 October):** v10 P-580â€“P-583 = 4 retained events (3 numeric primary, 1 NO_FORECAST), primary 5W/1L, baseline coverage 4/6 rows on 2 events in 1 ISO week; paired Brier card 0.187418187 vs baseline 0.188131225 (difference -0.000713038), INSUFFICIENT_EVIDENCE. V11 P-584 = 1 pending diagnostic-only event, zero eligible primary rows. Historical pre-v10 P-577â€“P-579 add 5W/1L; current historical inventory 94 forecast cards, 118W/62L plus 8 legacy VOID slots, 65.6% decisive rate; historical Rank 1 58W/33L/3V, Rank 2 60W/29L/5V. The 0-card v10/v11 release snapshot was dated to the framework release and is superseded for current counts by this import; no old card is relabelled or baseline backfilled. Full scoring/queue provenance: [import](research/verification/mini_import_P-577_P-584_2026-10-13-1/CANONICAL_IMPORT_REPORT.md). Clean prospective predictive skill remains unestablished; nothing is performance-certified.
 - **Historical v5 snapshot follows:** original cohorts and figures remain unchanged; these are descriptive, not prospective v10 evidence.
 
 Full tables: [research/scoreboard/SCOREBOARD.md](research/scoreboard/SCOREBOARD.md).
@@ -39,19 +39,28 @@ Full tables: [research/scoreboard/SCOREBOARD.md](research/scoreboard/SCOREBOARD.
 - Last cohort retrospective: [2026-10-11](research/verification/retrospective_2026-10-11/RETROSPECTIVE_REPORT.md), new cohort P-557 to P-576 against P-126 to P-556. Rank 1 80.0% (58.4% to 91.9%) does not beat Rank 2 90.0% (69.9% to 97.2%) or ranks 3-4 77.5%. Top-two Brier 0.131 against climatology 0.128 (skill -0.03). Every RANK1_UNSTABLE top-two pair covers itself (stated joint failure 0.0%, realised all-lost 0 of 20). So the counted rate is driven by line construction, and the cohort **does not establish** incremental predictive skill: there were no frozen same-row pregame baselines, and the skill figure uses an in-sample climatology reference, which is descriptive only. *(Wording corrected 2026-10-12, audit R24. The earlier summary said "not skill", which overstated what 20 cards without paired baselines can show. The dated retrospective is unchanged.)* 0 of 20 cards passed the Rank-1 gate; experiment SEL-1 has 1 of 8 week-blocks and no PASS card, so the gate stays provisional. Seven proposals (RET-01 to RET-07) are `PROPOSED_NOT_TESTED` in [HYPOTHESIS_REGISTER.md](HYPOTHESIS_REGISTER.md).
 - Nothing here is performance-certified.
 
+## October 14 implementation status (Framework Change 2026-10-14-2)
+
+Framework change [2026-10-14-2](research/verification/framework_change_2026-10-14-2/IMPLEMENTATION.md) implements the Machine Learning & Reinforcement Learning Implementation Framework ([ML_RL_IMPLEMENTATION_FRAMEWORK_2026-10-14.md](ML_RL_IMPLEMENTATION_FRAMEWORK_2026-10-14.md)) across all sports and leagues:
+- **Boundary & Governance:** Code, fitted models, virtualenvs, and automated pipelines remain in the external workshop repository (Decision D1-B). Only audited Markdown model cards, parameter manifests, SHA-256 freeze receipts, and shadow forecast logs enter `research/model_shadow/`.
+- **Full-League Shadow Lane:** 9 priority model packages deployed in `research/model_shadow/` under status `SHADOW` (Decision D2): EPL-DC-v1 (football), NBA-JOINT-v1 (basketball), NBL-JOINT-v1 (basketball), AFL-JOINT-v1 (Australian rules), IPL-FI-C1-v1 (cricket 1st innings), NFL-KEY-v1 (American football), NHL-REG-v1 (ice hockey), MLB-NB-v1 (baseball), and NRL-JOINT-v1 (rugby league).
+- **Market Benchmark:** Established [MARKET_BENCHMARK_LEDGER.md](MARKET_BENCHMARK_LEDGER.md) under strict post-settlement firewall (Decision D3-ii). No odds or market data enter live research.
+- **Evaluation:** Two-stage sizing protocol and proper scoring (Brier, CRPS, PIT, calibration-in-the-large) added to `SCORING_AND_VALIDATION.md` Â§9.
+- **Hypotheses:** 12 new hypotheses registered in `HYPOTHESIS_REGISTER.md` (ML-EPL-DC-v1 through MKT-BENCH-v1).
+
 ## October 12 implementation status
 
 Framework change [2026-10-12-1](research/verification/framework_change_2026-10-12-1/IMPLEMENTATION.md) implements the 38 audit recommendations of `AUDIT_RECOMMENDATIONS_2026-10-12.txt` and the 10 prediction recommendations, in the audit's order. Item-by-item status and evidence are in its implementation map. Headlines:
 - **Archive:** fabricated, unpublished Czech and English builds quarantined outside the repository; both leagues rebuilt from observed fields.
 - **Controls:** single authority mode; writer lease, freeze receipt and request intake; settlement revision chains; pre-mutation rechecks; four named byte identities.
 - **Toolkit:** corrected tennis, tie and key-number mathematics; retired procedures marked non-operative.
-- **Cards:** form windows L5–L20; mixture pricing; line difficulty and baseline coverage; shadows RANK_DELTA and BASE_ONLY; completed two-stage experiment designs.
+- **Cards:** form windows L5â€“L20; mixture pricing; line difficulty and baseline coverage; shadows RANK_DELTA and BASE_ONLY; completed two-stage experiment designs.
 
 No log, grade, P-ID or issued card changed. All predictive effects remain untested.
 
 ## October 11 implementation status
 
-Prompts 1–8 and their supporting rules/templates/examples are replaced under the user-authorized v10 release. RET-02/05/06/07 are implemented as document/measurement/source-process controls; RET-03/04 are shadow recording protocols, not validated replacements. **Run 2 (same day):** the NBL profile was refreshed to the 2023-25 window (`LP-2026.10.11-v2`; the 2022-24 row is retained as the comparator), the KBO and NPB extra-innings shares were withdrawn as `NOT_ESTIMABLE` after the audit showed placeholder columns, a 29-game 2026-27 NBL snapshot was added to the archive, and the local-machine reachability column of the SOURCES matrix was probed by hand ([implementation](research/verification/framework_change_2026-10-11-2/IMPLEMENTATION.md)). Source lineage audits (SRC-04) and the repair of the archive defects found remain DATA_PENDING. All predictive effects remain untested; FC10-PROFILE-v1 predictive acceptance is BLOCKED_DESIGN. Original RET registrations and the dated retrospective remain unchanged; versioned amendments are in HYPOTHESIS_REGISTER. No log, grade, historical forecast, existing raw CSV or P-ID changed in either release; run 2 added one new partial CSV (`Basketball/NBL/2026`).
+Prompts 1â€“8 and their supporting rules/templates/examples are replaced under the user-authorized v10 release. RET-02/05/06/07 are implemented as document/measurement/source-process controls; RET-03/04 are shadow recording protocols, not validated replacements. **Run 2 (same day):** the NBL profile was refreshed to the 2023-25 window (`LP-2026.10.11-v2`; the 2022-24 row is retained as the comparator), the KBO and NPB extra-innings shares were withdrawn as `NOT_ESTIMABLE` after the audit showed placeholder columns, a 29-game 2026-27 NBL snapshot was added to the archive, and the local-machine reachability column of the SOURCES matrix was probed by hand ([implementation](research/verification/framework_change_2026-10-11-2/IMPLEMENTATION.md)). Source lineage audits (SRC-04) and the repair of the archive defects found remain DATA_PENDING. All predictive effects remain untested; FC10-PROFILE-v1 predictive acceptance is BLOCKED_DESIGN. Original RET registrations and the dated retrospective remain unchanged; versioned amendments are in HYPOTHESIS_REGISTER. No log, grade, historical forecast, existing raw CSV or P-ID changed in either release; run 2 added one new partial CSV (`Basketball/NBL/2026`).
 
 ## Sources
 
@@ -60,7 +69,8 @@ Prompts 1–8 and their supporting rules/templates/examples are replaced under t
 
 ## Models
 
-- No fitted model exists. Supported numeric cards are `UNCALIBRATED_ANALYST_SCENARIO`; otherwise retain `UNCALIBRATED_QUALITATIVE` or `NO_FORECAST` with missing values explicit ([PROBABILITY_TOOLKIT.md](PROBABILITY_TOOLKIT.md), [LEAGUE_PROFILES.md](LEAGUE_PROFILES.md)).
+- Live forecast cards remain `UNCALIBRATED_ANALYST_SCENARIO`; otherwise retain `UNCALIBRATED_QUALITATIVE` or `NO_FORECAST` with missing values explicit ([PROBABILITY_TOOLKIT.md](PROBABILITY_TOOLKIT.md), [LEAGUE_PROFILES.md](LEAGUE_PROFILES.md)).
+- **Shadow Lane (`research/model_shadow/`):** 9 statistical and ML model packages operate in prospective shadow mode under pre-registered hypotheses. These models price full league schedules to generate evaluation data against `BASELINE_LEAGUE_V1` and `TEAM_BASELINE_P` (TB-1). They are strictly excluded from the pre-freeze analyst reading gate and carry status `SHADOW`. No model is currently `REFERENCE` or `ANCHOR`.
 - The numerical runtime and its model register are archived design notes ([NUMERICAL_MODEL_REGISTER.md](archive/root_documents_2026-10-14/NUMERICAL_MODEL_REGISTER.md)).
 
 ## Where things are
@@ -78,6 +88,9 @@ Prompts 1–8 and their supporting rules/templates/examples are replaced under t
 | Scoring | [SCORING_AND_VALIDATION.md](SCORING_AND_VALIDATION.md) |
 | Verification | [VERIFICATION_PROTOCOL.md](VERIFICATION_PROTOCOL.md) |
 | Proposed improvements | [HYPOTHESIS_REGISTER.md](HYPOTHESIS_REGISTER.md) |
-| Retrospective and recommendation status | [FRAMEWORK_RETROSPECTIVE_2026-10-09.md](archive/root_documents_2026-10-14/FRAMEWORK_RETROSPECTIVE_2026-10-09.md); latest cohort retrospective [retrospective_2026-10-11](research/verification/retrospective_2026-10-11/RETROSPECTIVE_REPORT.md) (register status in its §6) |
+| ML/RL implementation framework | [ML_RL_IMPLEMENTATION_FRAMEWORK_2026-10-14.md](ML_RL_IMPLEMENTATION_FRAMEWORK_2026-10-14.md) |
+| Shadow model packages | [research/model_shadow/README.md](research/model_shadow/README.md) |
+| Market benchmark ledger | [MARKET_BENCHMARK_LEDGER.md](MARKET_BENCHMARK_LEDGER.md) |
+| Retrospective and recommendation status | [FRAMEWORK_RETROSPECTIVE_2026-10-09.md](archive/root_documents_2026-10-14/FRAMEWORK_RETROSPECTIVE_2026-10-09.md); latest cohort retrospective [retrospective_2026-10-11](research/verification/retrospective_2026-10-11/RETROSPECTIVE_REPORT.md) (register status in its Â§6) |
 | Historical root documents archived 2026-10-14 | [Archive index](archive/root_documents_2026-10-14/README.md); [old-path recovery](HISTORICAL_LINK_INDEX.md#root-document-archive-2026-10-14). Navigation change only; all IDs, grades and versions unchanged. |
-| Superseded documents | [archive/superseded_2026-10-09/](archive/superseded_2026-10-09/README.md), `archive/controls/` |
+| Superseded documents | [archive/superseded_2026-10-09/](archive/superseded_2026-10-09/README.md), `archive/controls/`, [archive/superseded_2026-10-14-2/](archive/superseded_2026-10-14-2/) |

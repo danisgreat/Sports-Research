@@ -1,0 +1,4 @@
+shadow_row_id,revision,parent_revision,effective_utc,result,observed_value,evidence_grade,source_url,field,retrieved_utc,reason
+MLB-NB-v1:MLB_2027_LAD_SF:ML_HOME,REV-1,,2027-04-01T23:30:00Z,UNRESOLVED,PENDING_MATCH,GRADE_A,https://www.mlb.com/gameday/745000,score,2027-04-01T23:35:00Z,Fixture not yet played
+MLB-NB-v1:MLB_2027_LAD_SF:RUNLINE_H-1.5,REV-1,,2027-04-01T23:30:00Z,UNRESOLVED,PENDING_MATCH,GRADE_A,https://www.mlb.com/gameday/745000,score,2027-04-01T23:35:00Z,Fixture not yet played
+MLB-NB-v1:MLB_2027_LAD_SF:TOTAL_O8.5,REV-1,,2027-04-01T23:30:00Z,UNRESOLVED,PENDING_MATCH,GRADE_A,https://www.mlb.com/gameday/745000,score,2027-04-01T23:35:00Z,Fixture not yet played

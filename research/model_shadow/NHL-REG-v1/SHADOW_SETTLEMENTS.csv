@@ -1,0 +1,4 @@
+shadow_row_id,revision,parent_revision,effective_utc,result,observed_value,evidence_grade,source_url,field,retrieved_utc,reason
+NHL-REG-v1:NHL_2026_EDM_VAN:ML_HOME,REV-1,,2026-10-18T02:00:00Z,UNRESOLVED,PENDING_MATCH,GRADE_A,https://www.nhl.com/gamecenter/edm-vs-van/2026/10/17/2026020050,score,2026-10-18T02:05:00Z,Fixture not yet played
+NHL-REG-v1:NHL_2026_EDM_VAN:PUCKLINE_H-1.5,REV-1,,2026-10-18T02:00:00Z,UNRESOLVED,PENDING_MATCH,GRADE_A,https://www.nhl.com/gamecenter/edm-vs-van/2026/10/17/2026020050,score,2026-10-18T02:05:00Z,Fixture not yet played
+NHL-REG-v1:NHL_2026_EDM_VAN:TOTAL_O6.5,REV-1,,2026-10-18T02:00:00Z,UNRESOLVED,PENDING_MATCH,GRADE_A,https://www.nhl.com/gamecenter/edm-vs-van/2026/10/17/2026020050,score,2026-10-18T02:05:00Z,Fixture not yet played

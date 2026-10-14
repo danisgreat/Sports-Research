@@ -1,0 +1,3 @@
+shadow_row_id,revision,parent_revision,effective_utc,result,observed_value,evidence_grade,source_url,field,retrieved_utc,reason
+IPL-FI-C1-v1:IPL_2027_CSK_RCB:1ST_INN_O182.5,REV-1,,2027-03-24T18:00:00Z,UNRESOLVED,PENDING_MATCH,GRADE_A,https://www.iplt20.com/match/2027001,score,2027-03-24T18:05:00Z,Fixture not yet played
+IPL-FI-C1-v1:IPL_2027_CSK_RCB:PP_O49.5,REV-1,,2027-03-24T18:00:00Z,UNRESOLVED,PENDING_MATCH,GRADE_A,https://www.iplt20.com/match/2027001,score,2027-03-24T18:05:00Z,Fixture not yet played

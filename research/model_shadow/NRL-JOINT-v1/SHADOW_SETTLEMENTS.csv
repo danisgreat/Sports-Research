@@ -1,0 +1,4 @@
+shadow_row_id,revision,parent_revision,effective_utc,result,observed_value,evidence_grade,source_url,field,retrieved_utc,reason
+NRL-JOINT-v1:NRL_2027_PEN_MEL:HEAD_TO_HEAD,REV-1,,2027-03-05T12:00:00Z,UNRESOLVED,PENDING_MATCH,GRADE_A,https://www.nrl.com/draw/nrl-premiership/2027/round-1/panthers-v-storm,score,2027-03-05T12:05:00Z,Fixture not yet played
+NRL-JOINT-v1:NRL_2027_PEN_MEL:LINE_H-2.5,REV-1,,2027-03-05T12:00:00Z,UNRESOLVED,PENDING_MATCH,GRADE_A,https://www.nrl.com/draw/nrl-premiership/2027/round-1/panthers-v-storm,score,2027-03-05T12:05:00Z,Fixture not yet played
+NRL-JOINT-v1:NRL_2027_PEN_MEL:TOTAL_O42.5,REV-1,,2027-03-05T12:00:00Z,UNRESOLVED,PENDING_MATCH,GRADE_A,https://www.nrl.com/draw/nrl-premiership/2027/round-1/panthers-v-storm,score,2027-03-05T12:05:00Z,Fixture not yet played

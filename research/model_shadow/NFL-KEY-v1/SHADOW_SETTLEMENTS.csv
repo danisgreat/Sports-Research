@@ -1,0 +1,4 @@
+shadow_row_id,revision,parent_revision,effective_utc,result,observed_value,evidence_grade,source_url,field,retrieved_utc,reason
+NFL-KEY-v1:NFL_2026_SF_KC:ML_HOME,REV-1,,2026-10-18T23:30:00Z,UNRESOLVED,PENDING_MATCH,GRADE_A,https://www.nfl.com/games/2026-w07-kc-vs-sf,score,2026-10-18T23:35:00Z,Fixture not yet played
+NFL-KEY-v1:NFL_2026_SF_KC:SPREAD_A+1.5,REV-1,,2026-10-18T23:30:00Z,UNRESOLVED,PENDING_MATCH,GRADE_A,https://www.nfl.com/games/2026-w07-kc-vs-sf,score,2026-10-18T23:35:00Z,Fixture not yet played
+NFL-KEY-v1:NFL_2026_SF_KC:TOTAL_O46.5,REV-1,,2026-10-18T23:30:00Z,UNRESOLVED,PENDING_MATCH,GRADE_A,https://www.nfl.com/games/2026-w07-kc-vs-sf,score,2026-10-18T23:35:00Z,Fixture not yet played

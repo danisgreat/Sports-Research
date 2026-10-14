@@ -1,0 +1,4 @@
+shadow_row_id,revision,parent_revision,effective_utc,result,observed_value,evidence_grade,source_url,field,retrieved_utc,reason
+NBA-JOINT-v1:NBA_2026_BOS_NYK:ML_HOME,REV-1,,2026-10-23T02:00:00Z,UNRESOLVED,PENDING_MATCH,GRADE_A,https://www.nba.com/game/0022600001,score,2026-10-23T02:05:00Z,Fixture not yet played
+NBA-JOINT-v1:NBA_2026_BOS_NYK:SPREAD_H-5.5,REV-1,,2026-10-23T02:00:00Z,UNRESOLVED,PENDING_MATCH,GRADE_A,https://www.nba.com/game/0022600001,score,2026-10-23T02:05:00Z,Fixture not yet played
+NBA-JOINT-v1:NBA_2026_BOS_NYK:TOTAL_O224.5,REV-1,,2026-10-23T02:00:00Z,UNRESOLVED,PENDING_MATCH,GRADE_A,https://www.nba.com/game/0022600001,score,2026-10-23T02:05:00Z,Fixture not yet played
