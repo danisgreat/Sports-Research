@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-10-14 — Archive ten historical root documents
+
+**User-authorised scope:** archive exactly the ten root files classified ARCHIVE in the review and publish the change. Class: EDITORIAL (organisation/navigation only); all method, control, scoring, selection and prompt versions unchanged.
+
+The ten originals are preserved in [archive/root_documents_2026-10-14/](archive/root_documents_2026-10-14/README.md), with working-byte and prior committed-blob identities recorded. Current navigation links now point to that archive. [Historical path recovery](HISTORICAL_LINK_INDEX.md#root-document-archive-2026-10-14) and a separate [original-link context map](archive/root_documents_2026-10-14/LINK_RECOVERY.md) keep frozen citations recoverable without rewriting old reports or archived originals. Before-edit navigation copies are retained in `archive/root_documents_2026-10-14/navigation_before/`.
+
+The four MOVE recommendations and RULES_NHL consolidation remain outside this change. The untracked supplied-first extended prompt is preserved and not included in this publication. Forecasts, canonical logs/status, scoreboard, raw datasets, original research records, hypotheses and their acceptance criteria are unchanged; HYPOTHESIS_REGISTER receives only its retrospective-reference link update.
+
+[Implementation and verification receipt](research/verification/root_document_archive_2026-10-14/ARCHIVE_RECEIPT.md).
+
 ## 2026-10-14 — Framework change 2026-10-14-1: basketball archive quarantine and observed-only rebuild (re-applies audit R01–R07, R26–R27)
 
 [Implementation](research/verification/framework_change_2026-10-14-1/IMPLEMENTATION.md) · [receipt](research/verification/framework_change_2026-10-14-1/DATA_REBUILD_RECEIPT.md) · [verification](research/verification/framework_change_2026-10-14-1/VERIFICATION_REPORT.md). Class: data repair (archive) and source documentation. No rule, prompt, template, log, card, grade, P-ID, profile or threshold changed.

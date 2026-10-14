@@ -25,6 +25,8 @@
 
 **History, not instructions:** `archive/`, `prediction logs/` parts 1–6, dated folders under `research/verification/`, `research/issued_research/`, LEARNING_REGISTER / LEARNINGS_INDEX (lessons, with promotion status), FRAMEWORK_RETROSPECTIVE_2026-10-09, NUMERICAL_MODEL_REGISTER (design notes), VALIDATION_EVIDENCE.
 
+**Root-document archive, 2026-10-14:** the ten historical documents approved for archiving have moved to [archive/root_documents_2026-10-14/](archive/root_documents_2026-10-14/README.md), including FRAMEWORK_RETROSPECTIVE_2026-10-09 and NUMERICAL_MODEL_REGISTER. Their contents are preserved; they are not operating instructions. See [old-path recovery](HISTORICAL_LINK_INDEX.md#root-document-archive-2026-10-14). The data-coverage counts below remain their original dated snapshot.
+
 ## 2. Archive folders that contain rows
 
 40 of 172 competition folders hold at least one data row: 522,048 logical rows, or 500,328 after excluding the four alias copies (updated 2026-10-14 for the five basketball folders rebuilt by framework change [2026-10-14-1](research/verification/framework_change_2026-10-14-1/IMPLEMENTATION.md): +46,314 rows). The other 132 folders are header-only placeholders (Baseball 7, Basketball 15, Canadian Football 3, College Football 8, Cricket one-day 6, Cricket T20 11, Cricket Tests 5, Field Hockey 7, Ice Hockey 12, Rugby League 7, Rugby Union 14, Soccer 30, State Level AFL 5, Tennis 2). Paths are `Previous Sports Results/<Sport>/<Competition>/<Year>/<Year>_games.csv`.

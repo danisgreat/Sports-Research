@@ -372,3 +372,25 @@ Unrecoverable: **0**.
 | `archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md` (anchors `#p-306`…`#p-317`) | GAME_LOG_STATUS_CURRENT.md (historical sections) | document: [Git 3fbf0c981b40](https://github.com/danisgreat/Sports-Research/blob/3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa/archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md) (deleted in `78f8cb8`); a byte copy is retained at [research/verification/settlement_2026-10-01/source_recovery/86c904c1fb476a02_PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md](research/verification/settlement_2026-10-01/source_recovery/86c904c1fb476a02_PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md) |
 
 **Also covered by this map:** the dated historical sections of `GAME_LOG_STATUS_CURRENT.md` contain about 390 links of the forms `PREDICTION_LOG_COMBINED*.md` (now under `prediction logs/`, rows above), `research/improvement_register.json` (row above) and the mini-log settlement file in the last row. Those sections are dated evidence and are left unedited; this map is their recovery route.
+
+
+<a id="root-document-archive-2026-10-14"></a>
+
+## Root-document archive — 2026-10-14
+
+The user authorised archiving exactly the ten files marked ARCHIVE in the root-document review, then committing and pushing. They are removed from the main folder and preserved under `archive/root_documents_2026-10-14`. This is an EDITORIAL navigation/organisation change: no rule, hypothesis, probability, grade, event ID, model or data changed. Files marked MOVE or MERGE were not relocated.
+
+Frozen ledgers, issued cards, dated reports and older changelog entries keep their original path text. Resolve those references through the table below. Archived originals keep their byte-exact text, including links written relative to the former repository-root location; use the [link-context map](archive/root_documents_2026-10-14/LINK_RECOVERY.md) rather than interpreting those old relative links at their new directory. [Custody and verification receipt](research/verification/root_document_archive_2026-10-14/ARCHIVE_RECEIPT.md).
+
+| Original root path | Archived original | Immutable original root location |
+|---|---|---|
+| `DATA_SOURCE_REGISTER.md` | [DATA_SOURCE_REGISTER.md](archive/root_documents_2026-10-14/DATA_SOURCE_REGISTER.md) | [Pre-move source](https://github.com/danisgreat/Sports-Research/blob/5d754a426e0d864db314b88a818036a039cf255e/DATA_SOURCE_REGISTER.md) |
+| `FRAMEWORK_RETROSPECTIVE_2026-10-09.md` | [FRAMEWORK_RETROSPECTIVE_2026-10-09.md](archive/root_documents_2026-10-14/FRAMEWORK_RETROSPECTIVE_2026-10-09.md) | [Pre-move source](https://github.com/danisgreat/Sports-Research/blob/5d754a426e0d864db314b88a818036a039cf255e/FRAMEWORK_RETROSPECTIVE_2026-10-09.md) |
+| `H0_DATASET_CARD.md` | [H0_DATASET_CARD.md](archive/root_documents_2026-10-14/H0_DATASET_CARD.md) | [Pre-move source](https://github.com/danisgreat/Sports-Research/blob/5d754a426e0d864db314b88a818036a039cf255e/H0_DATASET_CARD.md) |
+| `IMPLEMENTATION_2026-10-01.md` | [IMPLEMENTATION_2026-10-01.md](archive/root_documents_2026-10-14/IMPLEMENTATION_2026-10-01.md) | [Pre-move source](https://github.com/danisgreat/Sports-Research/blob/5d754a426e0d864db314b88a818036a039cf255e/IMPLEMENTATION_2026-10-01.md) |
+| `MARKET_BENCHMARK_LEDGER.md` | [MARKET_BENCHMARK_LEDGER.md](archive/root_documents_2026-10-14/MARKET_BENCHMARK_LEDGER.md) | [Pre-move source](https://github.com/danisgreat/Sports-Research/blob/5d754a426e0d864db314b88a818036a039cf255e/MARKET_BENCHMARK_LEDGER.md) |
+| `NUMERICAL_MODEL_REGISTER.md` | [NUMERICAL_MODEL_REGISTER.md](archive/root_documents_2026-10-14/NUMERICAL_MODEL_REGISTER.md) | [Pre-move source](https://github.com/danisgreat/Sports-Research/blob/5d754a426e0d864db314b88a818036a039cf255e/NUMERICAL_MODEL_REGISTER.md) |
+| `PIPELINE_IMPLEMENTATION_2026-09-29.md` | [PIPELINE_IMPLEMENTATION_2026-09-29.md](archive/root_documents_2026-10-14/PIPELINE_IMPLEMENTATION_2026-09-29.md) | [Pre-move source](https://github.com/danisgreat/Sports-Research/blob/5d754a426e0d864db314b88a818036a039cf255e/PIPELINE_IMPLEMENTATION_2026-09-29.md) |
+| `RECORD_ELIGIBILITY_SCHEMA.md` | [RECORD_ELIGIBILITY_SCHEMA.md](archive/root_documents_2026-10-14/RECORD_ELIGIBILITY_SCHEMA.md) | [Pre-move source](https://github.com/danisgreat/Sports-Research/blob/5d754a426e0d864db314b88a818036a039cf255e/RECORD_ELIGIBILITY_SCHEMA.md) |
+| `SKILL_BASELINE_LEDGER.md` | [SKILL_BASELINE_LEDGER.md](archive/root_documents_2026-10-14/SKILL_BASELINE_LEDGER.md) | [Pre-move source](https://github.com/danisgreat/Sports-Research/blob/5d754a426e0d864db314b88a818036a039cf255e/SKILL_BASELINE_LEDGER.md) |
+| `VERIFICATION_RECEIPT_2026-09-28.md` | [VERIFICATION_RECEIPT_2026-09-28.md](archive/root_documents_2026-10-14/VERIFICATION_RECEIPT_2026-09-28.md) | [Pre-move source](https://github.com/danisgreat/Sports-Research/blob/5d754a426e0d864db314b88a818036a039cf255e/VERIFICATION_RECEIPT_2026-09-28.md) |

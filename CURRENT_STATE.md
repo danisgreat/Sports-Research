@@ -61,7 +61,7 @@ Prompts 1–8 and their supporting rules/templates/examples are replaced under t
 ## Models
 
 - No fitted model exists. Supported numeric cards are `UNCALIBRATED_ANALYST_SCENARIO`; otherwise retain `UNCALIBRATED_QUALITATIVE` or `NO_FORECAST` with missing values explicit ([PROBABILITY_TOOLKIT.md](PROBABILITY_TOOLKIT.md), [LEAGUE_PROFILES.md](LEAGUE_PROFILES.md)).
-- The numerical runtime and its model register are archived design notes ([NUMERICAL_MODEL_REGISTER.md](NUMERICAL_MODEL_REGISTER.md)).
+- The numerical runtime and its model register are archived design notes ([NUMERICAL_MODEL_REGISTER.md](archive/root_documents_2026-10-14/NUMERICAL_MODEL_REGISTER.md)).
 
 ## Where things are
 
@@ -78,5 +78,6 @@ Prompts 1–8 and their supporting rules/templates/examples are replaced under t
 | Scoring | [SCORING_AND_VALIDATION.md](SCORING_AND_VALIDATION.md) |
 | Verification | [VERIFICATION_PROTOCOL.md](VERIFICATION_PROTOCOL.md) |
 | Proposed improvements | [HYPOTHESIS_REGISTER.md](HYPOTHESIS_REGISTER.md) |
-| Retrospective and recommendation status | [FRAMEWORK_RETROSPECTIVE_2026-10-09.md](FRAMEWORK_RETROSPECTIVE_2026-10-09.md); latest cohort retrospective [retrospective_2026-10-11](research/verification/retrospective_2026-10-11/RETROSPECTIVE_REPORT.md) (register status in its §6) |
+| Retrospective and recommendation status | [FRAMEWORK_RETROSPECTIVE_2026-10-09.md](archive/root_documents_2026-10-14/FRAMEWORK_RETROSPECTIVE_2026-10-09.md); latest cohort retrospective [retrospective_2026-10-11](research/verification/retrospective_2026-10-11/RETROSPECTIVE_REPORT.md) (register status in its §6) |
+| Historical root documents archived 2026-10-14 | [Archive index](archive/root_documents_2026-10-14/README.md); [old-path recovery](HISTORICAL_LINK_INDEX.md#root-document-archive-2026-10-14). Navigation change only; all IDs, grades and versions unchanged. |
 | Superseded documents | [archive/superseded_2026-10-09/](archive/superseded_2026-10-09/README.md), `archive/controls/` |

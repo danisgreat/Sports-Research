@@ -114,7 +114,7 @@ Eleven proposals came out of the P-527 to P-537 reviews. They are retained verba
 
 ## Failure-class counts feeding new proposals
 
-The failure taxonomy is [SELECTION_RULES.md](SELECTION_RULES.md) §8. The baseline counts for the 2026-10-09 cohort are in [FRAMEWORK_RETROSPECTIVE_2026-10-09.md](FRAMEWORK_RETROSPECTIVE_2026-10-09.md) (its failure-class table). The next retrospective (prompt 6) adds a dated section here with the new counts and any new proposals, each with a pre-registered acceptance test, a minimum sample and a rollback condition.
+The failure taxonomy is [SELECTION_RULES.md](SELECTION_RULES.md) §8. The baseline counts for the 2026-10-09 cohort are in [FRAMEWORK_RETROSPECTIVE_2026-10-09.md](archive/root_documents_2026-10-14/FRAMEWORK_RETROSPECTIVE_2026-10-09.md) (its failure-class table). The next retrospective (prompt 6) adds a dated section here with the new counts and any new proposals, each with a pre-registered acceptance test, a minimum sample and a rollback condition.
 
 ## Retrospective 2026-10-11 (new cohort P-557 to P-576)
 
