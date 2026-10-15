@@ -164,3 +164,8 @@ Every change states its class, and the before/after behaviour if it is not edito
 ## 12. Navigation
 
 [Prompts](research/prompts/README.md) · [Templates](CARD_AND_LOG_TEMPLATES.md) · [Selection](SELECTION_RULES.md) · [Scoring](SCORING_AND_VALIDATION.md) · [Verification](VERIFICATION_PROTOCOL.md) · [Sources](SOURCES.md) · [Archive guide](ARCHIVE_USE_GUIDE.md).
+
+
+**Model use and mandatory running-log record (owner clarification, 16 October 2026).** Use the supported ML/RL mechanisms when they are available for the exact sport, competition and endpoint. Whether a model exists or not, assign the reconciled permanent P-ID, append the researched game card to the active running mini-log, read it back and advance its footer. A missing sport-specific model must not leave an otherwise recordable game as intake-only, unissued or without an ID. With no verified model output, record RESEARCH_ONLY_NO_MODEL, the actual reason and supported analyst work; never invent model probabilities or receipts. Carry that same P-ID through verified canonical import; do not allocate another ID. Before an authorized import, the local card may truthfully say PENDING_IMPORT; that status never cancels its ID or running-log entry. Identity/allocation conflicts, frozen or inaccessible originals and real write failures still block only the affected mutation. Verified settlements remain available for future model development in both paths.
+
+See [RETAIN-v1](RESEARCH_RETENTION_PROTOCOL.md). This is an editorial clarification of the existing two-path behavior; no model, numerical policy or format change.

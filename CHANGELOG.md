@@ -1006,3 +1006,8 @@ Implemented source-bound target/feature protocols, proper probability and distri
 ## 2026-10-09 prediction repairs (v8.4 / R4 / SCV-v5)
 
 Training-only league profiles and consistent unconditional winner evaluation replace the leaking/conditional v1 comparisons. Native game IDs preserve doubleheaders, and NHL training uses regulation scores reconstructed only from explicit OT flags. Versioned `runtime_h0_v2` receipts retain exact forecast rows; a saved engine-plus-joint-winner-calibrator pipeline is now used by default for supported regular-season candidate requests, with endpoint, team, cutoff and build-time guards. The scoreboard separates missing gates and preserves missing probabilities. Windows path and pending-mini test custody failures are fixed. Historical forecasts, original v1 receipts, source archives and admissions remain unchanged. All new models remain SHADOW_ONLY.
+
+
+## 2026-10-16 - Explicit model-available and model-absent recording paths
+
+EDITORIAL clarification of RETAIN-v1; MDS-v17.0 / CR-2026.10.16-R1 / P-v17.0, formats and numerical policy unchanged. Both paths produce the reconciled permanent P-ID and running-log card. Supported ML/RL remains usable; missing sport-specific models never suppress ID assignment or recording. Canonical import preserves the same ID and honest import status. No new game or settlement allocated. [Implementation and checks](research/verification/framework_change_2026-10-16-2/IMPLEMENTATION.md).
