@@ -1,19 +1,12 @@
-"""Historical replay: how should the primary runtime turn its experts into ONE primary distribution?
+"""Historical policy proxy: fixed experts, random selection and full-information mixtures.
 
-Compares, on identical games and identical questions, using the primary runtime's exact experts
-(ml.primary: RATINGS_FAST = half-life 90 d, RATINGS_SLOW = 365 d, ridge 8, covariance inflation 1.1;
-LEAGUE_BASELINE = league-only):
-
-  EXP3_SELECT   ml.primary's policy: Exp3 (gamma 0.10, reward 1 - loss of the selected expert, delayed feedback),
-                one expert drawn at random per event. Scored by its EXACT expected loss, averaged over 200 seeds.
-                Context = competition only (coarser than ml.primary's, which can only make it learn faster).
-  FAST / SLOW / BASELINE   one expert always.
-  HEDGE_MIX     full-information exponential weights over all three experts' frozen predictions; the primary
-                distribution is the weighted MIXTURE of grids (a valid joint distribution, so still coherent).
-                Learning rate eta chosen on tune seasons only, frozen for test seasons.
-  EQUAL_MIX     0.5 FAST + 0.5 SLOW.
-
-Evidence class: HISTORICAL_DEVELOPMENT (archive seasons opened before). Market-free. Nothing here is a card input.
+HISTORICAL_DEVELOPMENT_PROXY_NOT_RUNTIME_VALIDATION. Uses weekly fits on limited
+archive seasons and cumulative weights, not V3's source-known-at warm window and
+issued-bundle feedback. Eta tunes composite home/total Brier, before test seasons.
+EXP3_SELECT integrates conditional action losses and averages policy trajectories
+over 200 seeds; it is a Monte Carlo estimate, not an exact unconditional expectation.
+Calendar weeks are shared across competitions for the pooled interval; DATA_HOLD
+competitions are diagnostic only. Results never qualify primary parameters.
 """
 from __future__ import annotations
 
@@ -32,7 +25,7 @@ import pandas as pd
 
 from ml.config import SHADOW_ROOT, League, discover
 from ml.core.metrics import iso_week, paired_week_interval
-from ml.data.archive import load_league
+from ml.data.archive import load_league, snapshot_hash, seasons_available
 from ml.evaluation.backtest import _fit_window, _weeks, make_model
 from ml.models.baseline import LeagueBaseline
 from ml.models.common import FitError, residual_draw_share
@@ -41,7 +34,7 @@ ARMS = ("RATINGS_FAST", "RATINGS_SLOW", "LEAGUE_BASELINE")
 GAMMA = 0.10          # ml.primary.GAMMA
 ETAS = (0.5, 1, 2, 5, 10, 20, 50)
 N_SEEDS = 200
-OUT = SHADOW_ROOT / "PRIMARY_POLICY_REPLAY"
+OUT = SHADOW_ROOT / "PRIMARY_POLICY_REPLAY_V3"
 
 
 def _experts(lg: League, train: pd.DataFrame, as_of: pd.Timestamp):
@@ -73,13 +66,16 @@ def _experts(lg: League, train: pd.DataFrame, as_of: pd.Timestamp):
 def predictions(lg: League, seasons) -> pd.DataFrame:
     games, _ = load_league(lg)
     rows = []
+    coverage = dict(requested=0, fit_failed=0, unseen=0, flagged=0, grid_failed=0)
     for season in seasons:
         sg = games[(games.season == season) & (games.stage.isin(lg.eval_stages))]
+        coverage["requested"] += len(sg)
         for ws, block in _weeks(sg):
             train = _fit_window(games, lg, season, ws)
             try:
                 ex = _experts(lg, train, ws)
             except FitError:
+                coverage["fit_failed"] += len(block)
                 continue
             base = ex[ARMS[2]]
             line = base.total_line
@@ -87,15 +83,24 @@ def predictions(lg: League, seasons) -> pd.DataFrame:
             known = set(train.home) | set(train.away)
             for r in block.itertuples():
                 if r.home not in known or r.away not in known:
+                    coverage["unseen"] += 1
                     continue  # ml.primary refuses unseen participants
                 row = {"season": season, "date": r.date, "event_id": r.event_id, "y_home": float(r.hs > r.as_),
                        "y_over": float(r.hs + r.as_ > line)}
-                for arm in ARMS:
-                    g = bgrid if arm == ARMS[2] else ex[arm].grid(r.home, r.away)[0]
-                    row[f"{arm}_home"] = g.winner()[0]
-                    row[f"{arm}_over"] = g.total(line).win
-                rows.append(row)
+                try:
+                    for arm in ARMS:
+                        g, flags = (bgrid, []) if arm == ARMS[2] else ex[arm].grid(r.home, r.away)
+                        if flags:
+                            coverage["flagged"] += 1
+                            break
+                        row[f"{arm}_home"] = g.winner()[0]
+                        row[f"{arm}_over"] = g.total(line).win
+                    else:
+                        rows.append(row)
+                except FitError:
+                    coverage["grid_failed"] += 1
     df = pd.DataFrame(rows)
+    df.attrs["coverage"] = coverage
     if df.empty:
         return df
     df["week"] = iso_week(df["date"])
@@ -106,6 +111,7 @@ def predictions(lg: League, seasons) -> pd.DataFrame:
 
 def exp3_expected(df: pd.DataFrame, seed: int) -> np.ndarray:
     """Per-game action-probability vectors of ml.primary's Exp3 with weekly-delayed feedback (one seed)."""
+    df = df.reset_index(drop=True)
     rng = np.random.default_rng(seed)
     logs = np.zeros(len(ARMS))
     probs = np.zeros((len(df), len(ARMS)))
@@ -127,6 +133,9 @@ def exp3_expected(df: pd.DataFrame, seed: int) -> np.ndarray:
 
 def hedge_weights(df: pd.DataFrame, eta: float) -> np.ndarray:
     """Full-information exponential weights; only weeks strictly before each game's week contribute."""
+    if not np.isfinite(eta) or eta <= 0:
+        raise ValueError("positive finite eta required")
+    df = df.reset_index(drop=True)
     losses = df[[f"{a}_loss" for a in ARMS]].to_numpy()
     cum = np.zeros(len(ARMS))
     out = np.zeros_like(losses)
@@ -175,12 +184,17 @@ def replay(lg: League) -> dict:
     if df.empty:
         return {"competition": lg.path, "status": "NO_ROWS"}
     tune = df[df.season.isin(lg.tune_seasons)].reset_index(drop=True)
+    if tune.empty or not lg.test_seasons or not df.season.isin(lg.test_seasons).any():
+        return {"competition": lg.path, "status": "NO_TUNE_OR_TEST_ROWS", "coverage": df.attrs.get("coverage", {})}
+    if max(lg.tune_seasons) >= min(lg.test_seasons):
+        raise ValueError("tune seasons must precede every test season")
     eta_scores = {eta: policy_scores_fast(tune, eta) for eta in ETAS}
     eta = min(eta_scores, key=eta_scores.get)
     scores = policy_scores(df, eta)  # weights carry over from tune seasons (earlier data only)
     test = scores[scores.season.isin(lg.test_seasons)]
     return {"competition": lg.path, "model_id": lg.model_id, "eta": eta, "rows": test,
-            "data_warnings": ";".join(lg.data_warnings), "n_test": len(test), "seconds": time.time() - t0}
+            "data_warnings": ";".join(lg.data_warnings), "n_test": len(test), "seconds": time.time() - t0,
+            "coverage": df.attrs.get("coverage", {})}
 
 
 def policy_scores_fast(df: pd.DataFrame, eta: float) -> float:
@@ -195,7 +209,11 @@ def _worker(path: str) -> dict:
     from ml.config import get_league
     lg = get_league(path)
     try:
-        return replay(lg)
+        before = snapshot_hash(lg, seasons_available(lg))
+        result = replay(lg)
+        if before != snapshot_hash(lg, seasons_available(lg)):
+            raise RuntimeError("archive inputs changed during replay")
+        return {**result, "archive_sha256": before}
     except Exception as e:  # recorded, never hidden
         return {"competition": path, "status": f"FAILED:{type(e).__name__}:{e}"[:200]}
 
@@ -217,6 +235,14 @@ def main(workers: int = 10) -> None:
     write(results, receipt_base())
 
 
+def pooled_interval(rows: pd.DataFrame) -> dict:
+    """Namespace event IDs, but cluster competitions sharing a calendar week together."""
+    if rows.empty:
+        return paired_week_interval(pd.Series(dtype=float), pd.Series(dtype=str), pd.Series(dtype=str))
+    return paired_week_interval(rows.HEDGE_MIX_home - rows.EXP3_SELECT_home,
+                                rows.comp + "|" + rows.event_id.astype(str), rows.week)
+
+
 def write(results: list[dict], rec: dict) -> None:
     pols = ["EXP3_SELECT", "FAST", "SLOW", "BASELINE", "EQUAL_MIX", "HEDGE_MIX"]
     table, pooled = [], []
@@ -226,7 +252,8 @@ def write(results: list[dict], rec: dict) -> None:
             continue
         t = r["rows"].copy()
         t["comp"] = r["competition"]
-        pooled.append(t)
+        if not r.get("data_warnings"):
+            pooled.append(t)
         iv = paired_week_interval(t.HEDGE_MIX_home - t.EXP3_SELECT_home, t.event_id, t.week)
         best_single = min(("FAST", "SLOW"), key=lambda n: t[f"{n}_home"].mean())
         iv2 = paired_week_interval(t.HEDGE_MIX_home - t[f"{best_single}_home"], t.event_id, t.week)
@@ -236,36 +263,43 @@ def write(results: list[dict], rec: dict) -> None:
                       "best_single": best_single, "hedge_minus_best": iv2["mean"], "best_lo": iv2["lo"],
                       "best_hi": iv2["hi"], "best_status": iv2["status"],
                       "exp3_p_baseline": t.EXP3_p_baseline.mean(), "hedge_w_baseline": t.HEDGE_w_baseline.mean(),
-                      "warnings": r.get("data_warnings", "")})
+                      "warnings": r.get("data_warnings", ""), "archive_sha256": r.get("archive_sha256", "NOT_VERIFIED"),
+                      **{"coverage_" + k: v for k, v in r.get("coverage", {}).items()}})
     tab = pd.DataFrame(table)
-    allrows = pd.concat(pooled, ignore_index=True)
-    allrows["wk2"] = allrows.comp + "|" + allrows.week
-    pooled_iv = paired_week_interval(allrows.HEDGE_MIX_home - allrows.EXP3_SELECT_home, allrows.event_id, allrows.wk2)
+    allrows = pd.concat(pooled, ignore_index=True) if pooled else pd.DataFrame(columns=["HEDGE_MIX_home", "EXP3_SELECT_home", "comp", "event_id", "week"])
+    pooled_iv = pooled_interval(allrows)
     from ml.evaluation.report import md_table
-    OUT.mkdir(parents=True, exist_ok=True)
+    if OUT.exists():
+        raise FileExistsError("replay output already exists; choose a new output directory")
+    OUT.mkdir(parents=True)
     cols = ["competition", "n_test", "eta", *pols, "hedge_minus_exp3", "lo", "hi", "status", "best_single",
-            "hedge_minus_best", "best_lo", "best_hi", "best_status", "exp3_p_baseline", "hedge_w_baseline", "warnings"]
+            "hedge_minus_best", "best_lo", "best_hi", "best_status", "exp3_p_baseline", "hedge_w_baseline", "warnings", "archive_sha256",
+            "coverage_requested", "coverage_fit_failed", "coverage_unseen", "coverage_flagged", "coverage_grid_failed", "note"]
     lines = [
         "# Primary policy replay: random expert selection (Exp3) versus a full-information mixture", "",
-        "**Evidence class: `HISTORICAL_DEVELOPMENT`.** Market-free; not a card input. Question: given the primary "
+        "**Evidence class: `HISTORICAL_DEVELOPMENT_PROXY_NOT_RUNTIME_VALIDATION`.** Market-free; not a card input. Question: given the primary "
         "runtime's own three experts (ml/primary.py), which way of producing ONE primary distribution is more accurate? "
         "Method and policies: module docstring of `ml/evaluation/primary_replay.py`. Every policy is scored on identical "
         "games (unseen teams excluded, as the runtime refuses them) and identical questions. Primary metric: home-win "
         "Brier per game (lower is better). Intervals: t-intervals over ISO-week means of game differences "
-        "(SCORING_AND_VALIDATION §5); test seasons only; eta chosen on tune seasons only.", "",
+        "(SCORING_AND_VALIDATION §5); test seasons only. Eta is tuned on composite home/total Brier. "
+        "This replay uses weekly fits, limited history seasons, cumulative weights and date-only archive availability; "
+        "it does not implement V3's known-at warm-window/issued-feedback policy or actual card top-two selection.", "",
         f"**Pooled over all competitions:** HEDGE_MIX − EXP3_SELECT = {pooled_iv['mean']:+.4f} "
-        f"[{pooled_iv['lo']:+.4f}, {pooled_iv['hi']:+.4f}] over {pooled_iv['k_weeks']} competition-weeks "
-        f"({pooled_iv['status']}).", "",
+        f"[{pooled_iv['lo']:+.4f}, {pooled_iv['hi']:+.4f}] over {pooled_iv['k_weeks']} shared calendar weeks "
+        f"({pooled_iv['status']}); DATA_HOLD leagues excluded from this pooled comparison.", "",
         "Why a mixture cannot lose to random selection with the same weights: Brier and log loss are convex in p, so the "
         "expected score of a randomly selected expert is never better than the score of the probability-weighted "
         "mixture (Jensen's inequality). Exp3 additionally ignores the other experts' observable losses, although every "
         "bundle freezes all three grids.", "",
-        md_table(tab[cols] if "n_test" in tab else tab, cols, 4), "",
+        md_table(tab.reindex(columns=cols), cols, 4), "",
         "`exp3_p_baseline` is the average probability that Exp3 prices a primary card from the team-blind league "
         "baseline; `hedge_w_baseline` is the mixture weight the full-information policy gives it.", "",
+        "The Monte Carlo comparator averages 200 sampled learning trajectories; week intervals do not include Monte Carlo uncertainty. Same-weight Jensen comparisons do not guarantee that different adaptive policies have the same ordering.", "",
         "## Receipt", "", "\n".join(f"- `{k}`: {v}" for k, v in rec.items())]
     (OUT / "RESULTS.md").write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8", newline="\n")
     tab.to_csv(OUT / "RESULTS.csv", index=False, lineterminator="\n")
+    allrows.to_csv(OUT / "PAIRED_ROWS.csv", index=False, lineterminator="\n")
     print(f"pooled HEDGE_MIX - EXP3_SELECT {pooled_iv}")
 
 

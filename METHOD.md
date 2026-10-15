@@ -1,6 +1,6 @@
 # Method: current authority
 
-**ACTIVE: MDS-2026.10.15-v14.0 · CR-2026.10.15-R3 · SCV-2026.10.15-v9 · SEL-2026.10.12-v3.** Current allocation and destination are in [CURRENT_STATE](CURRENT_STATE.md). Rules: [CURRENT_RULES](CURRENT_RULES.md).
+**ACTIVE: MDS-2026.10.15-v15.0 · CR-2026.10.15-R4 · SCV-2026.10.15-v10 · SEL-2026.10.12-v3.** Current allocation and destination are in [CURRENT_STATE](CURRENT_STATE.md). Rules: [CURRENT_RULES](CURRENT_RULES.md).
 
 1. Read every control in one authority mode (published main pinned to a SHA, or the local working tree), record revision/time, and disclose differences and gaps.
 2. Apply the comprehensive both-side availability search in [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md), including local-language discovery for obscure competitions; verify the event, endpoint, scheduled start, known-at availability and actual issue state. There is no separate cutoff: the evidence horizon is the game-log scheduled start, and lineups, confirmed starters, bench and news are gathered up until then. Complete the research without a fixed countdown deadline, continuing after start when needed. Apply [TIMING_RESEARCH_PROTOCOL](TIMING_RESEARCH_PROTOCOL.md): pre-start input quality and actual issue time are separate; freeze the completed original only at issuance.
@@ -12,7 +12,7 @@
 8. Import every block exactly once, retain original bytes, reconcile current state and publish scoped commits when authorized.
 9. Evaluate same-row proper scores and event/week uncertainty. A documentation improvement is not demonstrated predictive improvement.
 
-Primary cards now use the owner-authorised [ML/RL primary runtime](PRIMARY_PREDICTION_PROTOCOL.md). Numeric p_card comes from newly fitted sporting distributions combined by a sports-only full-information mixture whose weights learn from every expert's settled losses (PRIMARY_HEDGE_MIX_V2), with exact source/input/output/code receipts. This is experimental primary use, not certified skill. The named primary bundle and feedback lane may be read/run during card research; the market decision lab and unadmitted historical forecasts remain excluded. Unsupported endpoints/data/fit failures retain research with NO_FORECAST rather than claiming a model ran. Code remains confined to ml/; output is Markdown/CSV/text. Old cards retain their own methods and formats.
+Primary cards now use the owner-authorised [ML/RL primary runtime](PRIMARY_PREDICTION_PROTOCOL.md). Numeric p_card comes from newly fitted sporting distributions combined by a sports-only full-information mixture whose weights learn from every expert's settled losses (PRIMARY_HEDGE_MIX_V3), with exact source/input/output/code receipts. This is experimental primary use, not certified skill. The named primary bundle and feedback lane may be read/run during card research; the market decision lab and unadmitted historical forecasts remain excluded. Unsupported endpoints/data/fit failures retain research with NO_FORECAST rather than claiming a model ran. Code remains confined to ml/; output is Markdown/CSV/text. Old cards retain their own methods and formats.
 
 The preserved v11 implementation carried out the user's October 12 instruction to carry out the 38 audit recommendations and the 10 prediction recommendations in order. Changes:
 - archive repair;

@@ -1,6 +1,6 @@
 # PROMPT 4 — Verify and import the complete settlement package
 
-**P-2026.10.15-v13.0 · CANONICAL_IMPORT · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: active log suffix, current status/state/scoreboard and a new import report with preserved inputs. Never rewrite issued cores, closed parts or grades. Publish when this full prompt is invoked unless the user requests local-only.
+**P-2026.10.15-v14.0 · CANONICAL_IMPORT · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: active log suffix, current status/state/scoreboard and a new import report with preserved inputs. Never rewrite issued cores, closed parts or grades. Publish when this full prompt is invoked unless the user requests local-only.
 
 ## Inputs
 
@@ -30,7 +30,7 @@ Before each batch recheck HEAD, active path, destination count/hash/tail, next I
 
 Append canonical-md-1 wrappers containing complete original cores byte-for-byte. Import metadata is not a forecast timestamp. Append complete original source addenda/settlements under dated wrappers. A revision for a closed-part original goes into the active part with original/prior-revision pointers; never edit the closed part.
 
-New MODEL_ASSISTED_PRIMARY_V1 issued cards may contain their actual primary model probabilities under PRIMARY_PREDICTION_PROTOCOL; import them with original policy/receipt intact as a separate cohort. Historical manual cards and separate model shadows retain their own lane. Never insert model probabilities into an analyst original, create primary picks from shadow rows, or count separate shadow/comparator wins in card T2. Actual issued assisted-primary top two count only in their declared assisted cohort. Any permitted after-settlement comparison is separately labelled and retains original policy/cutoff/baseline coverage.
+New MODEL_ASSISTED_PRIMARY_V3 issued cards may contain their actual primary model probabilities under PRIMARY_PREDICTION_PROTOCOL; import them with original policy/receipt intact as a separate cohort. Historical manual cards and separate model shadows retain their own lane. Never insert model probabilities into an analyst original, create primary picks from shadow rows, or count separate shadow/comparator wins in card T2. Actual issued assisted-primary top two count only in their declared assisted cohort. Any permitted after-settlement comparison is separately labelled and retains original policy/cutoff/baseline coverage.
 
 ## 4. Reconcile and verify completely
 

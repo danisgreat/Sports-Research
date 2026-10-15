@@ -1,6 +1,6 @@
 # Completion-based research and honest event timing
 
-**TIMING-2026.10.15-v2 · MDS-2026.10.15-v14.0 · CR-2026.10.15-R3 · SCV-2026.10.15-v9.** Owner instructions 15 October 2026 ([v1](archive/superseded_2026-10-15-3/TIMING_RESEARCH_PROTOCOL.md) → v2: no separate cutoff; the evidence horizon is the game-log scheduled start). Applies to manual cards in every sport, competition and format, including obscure events. [Rules](CURRENT_RULES.md), [scoring](SCORING_AND_VALIDATION.md), [templates](CARD_AND_LOG_TEMPLATES.md).
+**TIMING-2026.10.15-v2 · MDS-2026.10.15-v15.0 · CR-2026.10.15-R4 · SCV-2026.10.15-v10.** Owner instructions 15 October 2026 ([v1](archive/superseded_2026-10-15-3/TIMING_RESEARCH_PROTOCOL.md) → v2: no separate cutoff; the evidence horizon is the game-log scheduled start). Applies to manual cards in every sport, competition and format, including obscure events. [Rules](CURRENT_RULES.md), [scoring](SCORING_AND_VALIDATION.md), [templates](CARD_AND_LOG_TEMPLATES.md).
 
 ## 1. Complete research without a fixed freeze deadline
 

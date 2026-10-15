@@ -1,6 +1,6 @@
 # Card, mini, settlement and canonical formats
 
-**mini-log-7 · mini-settlement-6 · canonical-md-1.** Authority: MDS-2026.10.15-v14.0 / CR-2026.10.15-R3 / SCV-2026.10.15-v9 / SEL-2026.10.12-v3. [Rules](CURRENT_RULES.md) and [selection definitions](SELECTION_RULES.md) control semantics. Previous formats: [mini-log-6 / mini-settlement-5](archive/superseded_2026-10-12/CARD_AND_LOG_TEMPLATES.md).
+**mini-log-7 · mini-settlement-6 · canonical-md-1.** Authority: MDS-2026.10.15-v15.0 / CR-2026.10.15-R4 / SCV-2026.10.15-v10 / SEL-2026.10.12-v3. [Rules](CURRENT_RULES.md) and [selection definitions](SELECTION_RULES.md) control semantics. Previous formats: [mini-log-6 / mini-settlement-5](archive/superseded_2026-10-12/CARD_AND_LOG_TEMPLATES.md).
 
 <a id="local-mini-format-mini-log-2"></a>
 
@@ -82,7 +82,7 @@ Insert immediately before the footer. Preserve earlier card/addendum bytes; only
 - **Working ID:** P-NNN — LOCAL_WORKING_ID — PENDING_CANONICAL_IMPORT
 - **Event key / native ID / aliases:** <exact identity; unknown native ID explicit>
 - **Authority:** <method/control/scoring/selection/HEAD; working differences>
-- **Analysis status:** MODEL_ASSISTED_PRIMARY_V1 / EXPERIMENTAL_PRIMARY_NOT_CERTIFIED | UNCALIBRATED_QUALITATIVE | NO_FORECAST
+- **Analysis status:** MODEL_ASSISTED_PRIMARY_V3 / EXPERIMENTAL_PRIMARY_NOT_CERTIFIED | UNCALIBRATED_QUALITATIVE | NO_FORECAST
 - **Timing:** <state; cutoff = game-log scheduled start (or earlier actual issue / verified first play, with which); research completion; actual issue time; source state/recheck time; source publication time; actual start or NOT_VERIFIED>
 - **Scheduled start:** <venue timezone, UTC and Australia/Sydney with offsets; source>
 - **Scheduled lead / band:** <descriptive minutes only; actual issue phase PREGAME / POST_START_ISSUE / TIMING_UNVERIFIED; input evidence CLEAN_PRE_START_INPUTS / KNOWN_AT_UNVERIFIED / OUTCOME_EXPOSED>
@@ -125,7 +125,7 @@ Insert immediately before the footer. Preserve earlier card/addendum bytes; only
 Complete [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md) for both sides in this existing evidence appendix: starters/starting role, selected bench/replacements, reported injuries/illness/suspensions/absences and final late changes, with exact-game sources/times and actual failed/escalated searches. Preserve each field's confirmed/projected/missing/conflicting state; N/A needs a sport/format reason. Existing lineup metadata summarises this evidence, not just the starting side.
 #### A4. Distribution, baseline, expected-score arithmetic and sensitivity
 
-For new primary cards include PRIMARY_PREDICTION_PROTOCOL receipt: exact runtime/bundle path, source/known-at review, event/endpoint/model/code/input/grid hashes, mixture weights with their cumulative losses, η and η source, warm-start and feedback counts, information horizon and its source, policy/context/recipe, model source/status and actual generation/declared issue. Copy original numeric rows from PREDICTIONS.csv and expected moments from the mixed grid; retain all FORMS.csv true sample sizes and model feature/availability limits. No run means ML_NOT_RUN/NO_FORECAST, not an invented manual numeric replacement.
+For new primary cards include PRIMARY_PREDICTION_PROTOCOL receipt: exact runtime/bundle path, source/known-at review, event/endpoint/model/code/input/grid hashes, mixture weights with their cumulative losses, admitted η/default and its evidence snapshot, hashed WARM_START/FEEDBACK_LOSSES ledgers with unique event IDs, warm-start and feedback counts, information horizon and its source, policy/context/recipe, model source/status and actual generation/declared issue. Copy original numeric rows from PREDICTIONS.csv and expected moments from the mixed grid; retain all FORMS.csv true sample sizes and model feature/availability limits. No run means ML_NOT_RUN/NO_FORECAST, not an invented manual numeric replacement.
 #### A5. Full priced universe or labelled subset; W/P/L/V by row
 #### A6. Adjustments, regimes and unadjusted comparison
 #### A7. Family checks and shadow records

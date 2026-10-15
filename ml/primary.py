@@ -1,19 +1,12 @@
-"""Experimental primary sporting forecasts from a full-information expert mixture.
+"""Experimental primary forecasts from a deterministic full-information expert mixture.
 
-No market/staking imports. Three fitted experts (two team-rating decay windows and the league-only
-baseline) are combined into ONE primary distribution: the exponentially weighted mixture of their complete
-score grids, so every contract keeps coherent winner/total/push masses.
-
-Weights (PRIMARY_HEDGE_MIX_V2) come from every expert's loss on the same questions, from two sources that are
-both known by the information horizon (the game-log scheduled start, or an earlier issue/actual start):
-  1. a warm start: weekly rolling refits over the last 30 game-weeks of admitted history before the horizon;
-  2. settled earlier primary bundles of the same competition/endpoint, where all three frozen expert grids are
-     scored against the evidence-backed final (full information: no expert's loss is unobserved).
-This replaced PRIMARY_EXP3_V1 (random single-expert selection by a delayed Exp3 bandit) after a 41,752-game
-historical replay (research/model_shadow/PRIMARY_POLICY_REPLAY/RESULTS.md): the mixture had lower home-win Brier
-than Exp3 in 23 of 28 competitions and was never worse; a randomly selected expert can never beat the mixture
-with the same weights in expectation (Brier/log loss are convex). No V1 bundle was ever issued.
-Only hash-verified immutable prediction bundles can supply later feedback.
+PRIMARY_HEDGE_MIX_V3 uses exact-time admitted, weekly out-of-sample warm losses and
+verified frozen-bundle feedback, counting each event once. All experts are scored
+on common sporting questions; whole grids are mixed into one coherent distribution.
+This is online expert aggregation, not a trained environment-control RL agent.
+V2 and the earlier random Exp3 approach are retained as historical development.
+The old 41,752-game replay is a proxy, not validation of V3's warm/feedback policy.
+No market inputs, source-truth certification, calibration or predictive gain implied.
 """
 from __future__ import annotations
 
@@ -39,12 +32,13 @@ from ml.models.baseline import LeagueBaseline
 from ml.models.common import FitError, residual_draw_share
 from ml.models.cricket import FirstInningsModel, CricketParams
 
-POLICY = "PRIMARY_HEDGE_MIX_V2"
+POLICY = "PRIMARY_HEDGE_MIX_V3"
+LEGACY_POLICY = "PRIMARY_HEDGE_MIX_V2"
 ARMS = ("RATINGS_FAST", "RATINGS_SLOW", "LEAGUE_BASELINE")
 MIX_ARM = "HEDGE_MIX"
 WARM_WEEKS = 30          # warm start: the last 30 game-weeks before the cutoff (however far back, e.g. after an off-season)
 DEFAULT_ETA = 2.0        # used when the replay table has no row for the competition (labelled in the receipt)
-ETA_TABLE = Path(__file__).resolve().parents[1] / "research" / "model_shadow" / "PRIMARY_POLICY_REPLAY" / "RESULTS.csv"
+ETA_TABLE = Path(__file__).resolve().parents[1] / "research" / "primary_policy" / "ETA_ADMISSION.csv"
 
 
 class AdmissionError(ValueError):
@@ -110,6 +104,7 @@ def admit_history(rows: list[dict], cutoff, target: str, competition: str, endpo
             receipt_file(*token)
             checked.add(token)
         rec = {"date": date.tz_localize(None), "event_id": r["event_id"], "season": int(r["season"]),
+               "final_at": final.tz_localize(None), "available_at": known.tz_localize(None),
                "home": r["home"], "away": r["away"], "decision": r["decision"], "stage": r.get("stage", "REG")}
         if not rec["home"].strip() or not rec["away"].strip() or rec["home"] == rec["away"]:
             raise AdmissionError("invalid training participants")
@@ -225,22 +220,24 @@ def expert_loss(grid: ScoreGrid, hs: int, as_: int, line: float, cricket: bool) 
     return 0.5 * ((grid.winner()[0] - y_home) ** 2 + (p_over - y_over) ** 2)
 
 
-def warm_start(lg: League, train: pd.DataFrame, as_of: pd.Timestamp) -> tuple[np.ndarray, int]:
+def warm_records(lg: League, train: pd.DataFrame, as_of: pd.Timestamp, excluded=()) -> list[dict]:
     """Every expert's summed loss on the admitted games of the last WARM_WEEKS game-weeks before the cutoff.
 
     Each game is priced by experts refitted on games strictly before the Monday of its week. Weeks with fewer than
     30 earlier games or a failed fit are skipped. Unseen teams are skipped (as at issue).
     """
     cricket = lg.engine == "cricket"
+    if not {"available_at", "final_at"}.issubset(train):
+        raise AdmissionError("warm replay requires field known-at/final times, not game dates alone")
     train = train[train.date < as_of.normalize()]  # strictly earlier calendar days, whatever the caller passes
     if train.empty:
-        return np.zeros(len(ARMS)), 0
+        return []
     starts = (train.date.dt.normalize() - pd.to_timedelta(train.date.dt.weekday, unit="D"))
     recent = train
-    total, n = np.zeros(len(ARMS)), 0
+    rows = []
     for ws in sorted(starts.unique())[-WARM_WEEKS:]:
         ws = pd.Timestamp(ws)
-        earlier = train[train.date < ws]
+        earlier = train[(train.date < ws) & (train.available_at <= ws) & (train.final_at <= ws)]
         if len(earlier) < 30:
             continue
         try:
@@ -248,26 +245,47 @@ def warm_start(lg: League, train: pd.DataFrame, as_of: pd.Timestamp) -> tuple[np
         except FitError:
             continue
         known = set(earlier.home) | set(earlier.away)
-        week = recent[(starts == ws) & recent.home.isin(known) & recent.away.isin(known)]
+        week = recent[(starts == ws) & recent.home.isin(known) & recent.away.isin(known) & ~recent.event_id.isin(excluded)]
         for g in week.itertuples():
             losses = []
-            for arm in ARMS:
-                grid, _ = pricers[arm](g.home, g.away, getattr(g, "venue", "") or "")
-                losses.append(expert_loss(grid, int(g.hs), int(g.as_), line, cricket))
-            total += np.array(losses)
-            n += 1
-    return total, n
+            try:
+                for arm in ARMS:
+                    grid, flags = pricers[arm](g.home, g.away, getattr(g, "venue", "") or "")
+                    if flags:
+                        break  # No partial vector or flagged expert can train the mixture.
+                    losses.append(expert_loss(grid, int(g.hs), int(g.as_), line, cricket))
+            except FitError:
+                continue
+            if len(losses) != len(ARMS):
+                continue
+            rows.append(dict(event_id=g.event_id, refit_at=ws.tz_localize("UTC").isoformat(), available_at=g.available_at.tz_localize("UTC").isoformat(),
+                             league_line=line, **{"loss_" + a: v for a, v in zip(ARMS, losses)}))
+    return rows
+
+
+def loss_sum(rows: list[dict]) -> np.ndarray:
+    values = np.array([[float(r["loss_" + a]) for a in ARMS] for r in rows], dtype=float).reshape(-1, len(ARMS))
+    if not np.isfinite(values).all() or np.any((values < 0) | (values > 1)):
+        raise AdmissionError("expert losses must be finite values in [0,1]")
+    return values.sum(axis=0)
+
+
+def warm_start(lg: League, train: pd.DataFrame, as_of: pd.Timestamp) -> tuple[np.ndarray, int]:
+    rows = warm_records(lg, train, as_of)
+    return loss_sum(rows), len(rows)
 
 
 def mix_grids(grids: list[ScoreGrid], weights) -> ScoreGrid:
     """Weighted mixture of complete score grids on their union support: a valid joint distribution."""
     w = np.asarray(weights, float)
-    if len(w) != len(grids) or np.any(w < 0) or abs(w.sum() - 1) > 1e-9:
+    if not grids or w.ndim != 1 or len(w) != len(grids) or not np.isfinite(w).all() or np.any(w < 0) or abs(w.sum() - 1) > 1e-9:
         raise AdmissionError("mixture weights must be a probability vector over the experts")
     h0 = min(g.h0 for g in grids)
     a0 = min(g.a0 for g in grids)
     h1 = max(g.h0 + g.p.shape[0] for g in grids)
     a1 = max(g.a0 + g.p.shape[1] for g in grids)
+    if (h1-h0) * (a1-a0) > 2_000_000:
+        raise AdmissionError("unreasonable union-grid dimensions")
     out = np.zeros((h1 - h0, a1 - a0))
     for wi, g in zip(w, grids):
         out[g.h0 - h0:g.h0 - h0 + g.p.shape[0], g.a0 - a0:g.a0 - a0 + g.p.shape[1]] += wi * g.p
@@ -275,21 +293,39 @@ def mix_grids(grids: list[ScoreGrid], weights) -> ScoreGrid:
 
 
 def hedge_weights(cumulative: np.ndarray, eta: float) -> np.ndarray:
-    z = -eta * (np.asarray(cumulative, float) - np.min(cumulative))
+    cumulative = np.asarray(cumulative, float)
+    if cumulative.shape != (len(ARMS),) or not np.isfinite(cumulative).all() or np.any(cumulative < 0) or not math.isfinite(eta) or eta <= 0:
+        raise AdmissionError("finite nonnegative cumulative losses and positive finite eta required")
+    z = -eta * (cumulative - np.min(cumulative))
     e = np.exp(z)
     return e / e.sum()
 
 
-def eta_for(lg: League) -> tuple[float, str, str]:
-    """Learning rate chosen on tune seasons by the historical replay; a labelled default otherwise."""
+def eta_for(lg: League, horizon=None) -> tuple[float, str, str]:
+    """Only an exact-policy, point-in-time admitted parameter can override the provisional default.
+
+    A development results table does not admit its tuned parameters to a different warm/feedback policy.
+    """
     if not ETA_TABLE.exists():
-        return DEFAULT_ETA, "DEFAULT_NO_REPLAY_TABLE", "NONE"
+        return DEFAULT_ETA, "DEFAULT_NO_ADMITTED_TABLE", "NONE"
     data = ETA_TABLE.read_bytes()
     table = pd.read_csv(io.BytesIO(data))
-    row = table[table["competition"] == lg.path] if "competition" in table else table.iloc[:0]
-    if row.empty or "eta" not in row or pd.isna(row["eta"].iloc[0]):
-        return DEFAULT_ETA, "DEFAULT_NO_REPLAY_ROW", digest(data)
-    return float(row["eta"].iloc[0]), "REPLAY_TUNE_SEASONS", digest(data)
+    needed = {"competition", "policy", "eta", "tune_end", "frozen_at", "evidence_path", "evidence_sha256"}
+    if set(table.columns) != needed:
+        raise AdmissionError("eta admission table requires exact policy/timing/evidence fields; extra/market columns prohibited")
+    row = table[(table.competition == lg.path) & (table.policy == POLICY)]
+    if row.empty:
+        return DEFAULT_ETA, "DEFAULT_NO_ADMITTED_ROW", digest(data)
+    if len(row) != 1:
+        raise AdmissionError("conflicting eta admission rows")
+    r = row.iloc[0]
+    value = float(r.eta)
+    if not math.isfinite(value) or value <= 0 or clock(r.tune_end) > clock(r.frozen_at):
+        raise AdmissionError("invalid eta or tuning/freeze chronology")
+    if horizon is None or clock(r.frozen_at) > clock(horizon):
+        return DEFAULT_ETA, "DEFAULT_PARAMETER_NOT_KNOWN_AT_HORIZON", digest(data)
+    receipt_file(r.evidence_path, r.evidence_sha256)
+    return value, "ADMITTED_EXACT_POLICY_PARAMETER", digest(data)
 
 
 def fit_experts(lg: League, train: pd.DataFrame, cutoff, home: str, away: str, venue=""):
@@ -342,19 +378,21 @@ def _parse_vector(text: str) -> dict:
     out = {}
     for part in text.split(";"):
         name, value = part.split(":", 1)
+        if name in out:
+            raise AdmissionError("duplicate expert vector key")
         out[name] = float(value)
     if set(out) != set(ARMS) or not all(math.isfinite(v) for v in out.values()):
         raise AdmissionError("frozen expert vector must name exactly the three experts")
     return out
 
 
-def feedback_losses(feedback: list[dict], context: str, before) -> tuple[np.ndarray, int]:
+def feedback_losses(feedback: list[dict], context: str, before, *, return_rows=False):
     """Full-information delayed feedback: every expert's frozen loss on earlier settled bundles of this context.
 
     A row counts only if it was available before ``before``; it is re-derived from the hash-verified bundle and the
     evidence-backed final, so a row cannot carry an invented loss.
     """
-    total, n = np.zeros(len(ARMS)), 0
+    admitted = []
     seen = set()
     for row in feedback:
         if row["event_id"] in seen:
@@ -370,7 +408,7 @@ def feedback_losses(feedback: list[dict], context: str, before) -> tuple[np.ndar
             continue
         if not clock(rec["issue_at"]) < clock(row["final_at"]) <= clock(row["available_at"]):
             raise AdmissionError("feedback was not observable after actual issue/final")
-        expected = settle(Path(row["bundle"]), int(row["home_score"]), int(row["away_score"]),
+        expected = settle(Path(row["bundle"]), float(row["home_score"]), float(row["away_score"]),
                           row["final_at"], row["available_at"], row["evidence_path"], row["evidence_sha256"])
         losses = []
         for arm in ARMS:
@@ -378,9 +416,10 @@ def feedback_losses(feedback: list[dict], context: str, before) -> tuple[np.ndar
             if not math.isfinite(value) or abs(float(expected["loss_" + arm]) - value) > 1e-12:
                 raise AdmissionError("feedback loss differs from the frozen expert grids and evidence final")
             losses.append(value)
-        total += np.array(losses)
-        n += 1
-    return total, n
+        admitted.append(dict(event_id=row["event_id"], available_at=row["available_at"],
+                             receipt_sha256=row["receipt_sha256"],
+                             **{"loss_" + a: v for a, v in zip(ARMS, losses)}))
+    return admitted if return_rows else (loss_sum(admitted), len(admitted))
 
 
 def _load_grids(folder: Path) -> dict:
@@ -406,11 +445,36 @@ def _load_grids(folder: Path) -> dict:
 
 def verify_bundle(folder: Path) -> dict:
     rows = read_rows(folder / "RECEIPT.csv")
-    if len(rows) != 1 or rows[0]["policy"] != POLICY:
+    if len(rows) != 1 or rows[0]["policy"] not in (POLICY, LEGACY_POLICY):
         raise AdmissionError("unknown bundle policy/receipt")
     rec = rows[0]
     for name in ("PREDICTIONS", "GRIDS", "FORMS", "HISTORY", "CONTRACTS", "REQUEST", "FEEDBACK_INPUT", "MODEL_CONFIG"):
         receipt_file(folder / (name + ".csv"), rec[name.lower() + "_sha256"])
+    if rec["policy"] == POLICY:
+        for name in ("WARM_START", "FEEDBACK_LOSSES", "ETA_ADMISSION"):
+            receipt_file(folder / (name + ".csv"), rec[name.lower() + "_sha256"])
+        warm, fb = read_rows(folder / "WARM_START.csv"), read_rows(folder / "FEEDBACK_LOSSES.csv")
+        ids = [r["event_id"] for r in warm + fb]
+        if len(ids) != len(set(ids)) or rec["event_id"] in ids:
+            raise AdmissionError("duplicate/target event in learning ledgers")
+        if len(warm) != int(rec["warm_start_games"]) or len(fb) != int(rec["feedback_events"]):
+            raise AdmissionError("learning ledger counts differ from receipt")
+        cumulative = _parse_vector(rec["cumulative_losses"])
+        if not np.allclose(loss_sum(warm + fb), [cumulative[a] for a in ARMS], atol=1e-12, rtol=0):
+            raise AdmissionError("cumulative losses differ from frozen learning ledgers")
+        request_rows = read_rows(folder / "REQUEST.csv")
+        if len(request_rows) != 1:
+            raise AdmissionError("one frozen request required")
+        request = request_rows[0]
+        horizon, basis = information_horizon(request)
+        if any(rec[k] != request[k] for k in ("event_id", "competition", "endpoint")) or clock(rec["information_horizon"]) != horizon or rec["horizon_source"] != basis:
+            raise AdmissionError("receipt identity/horizon differs from frozen request")
+        if any(clock(r["available_at"]) > horizon for r in warm + fb):
+            raise AdmissionError("future evidence in frozen learning ledgers")
+        if not math.isfinite(float(rec["league_line"])):
+            raise AdmissionError("finite frozen league line required")
+        if rec["eta_table_sha256"] != "NONE" and rec["eta_table_sha256"] != rec["eta_admission_sha256"]:
+            raise AdmissionError("eta table changed during inference")
     if rec["selected_arm"] != MIX_ARM:
         raise AdmissionError("primary distribution must be the frozen expert mixture")
     weights = _parse_vector(rec["mixture_weights"])
@@ -425,6 +489,8 @@ def verify_bundle(folder: Path) -> dict:
     mix = mix_grids([grids[a] for a in ARMS], w)
     for row in read_rows(folder / "PREDICTIONS.csv"):
         win, push, loss = price(mix, row, rec["endpoint"])
+        if not all(math.isfinite(float(row[k])) and 0 <= float(row[k]) <= 1 for k in ("win", "push", "loss")):
+            raise AdmissionError("invalid frozen W/P/L masses")
         if max(abs(win-float(row["win"])), abs(push-float(row["push"])), abs(loss-float(row["loss"]))) > 1e-10:
             raise AdmissionError("issued row not derived from frozen expert mixture")
         expected = win/(win+loss) if win+loss > 0 else "NOT_COMPUTED"
@@ -494,7 +560,8 @@ def information_horizon(request: dict) -> tuple[pd.Timestamp, str]:
 
 def forecast(request: dict, lg: League, history: list[dict], contracts: list[dict], output: Path,
              feedback: list[dict] | None = None, rng=None) -> dict:
-    """``rng`` is accepted for call compatibility and ignored: the V2 primary distribution is deterministic."""
+    """``rng`` is accepted for call compatibility and ignored: the V3 primary distribution is deterministic."""
+    generating_code = source_hash()
     allowed_request = {"event_id", "competition", "home", "away", "scheduled_start", "issue_at", "actual_start", "endpoint", "venue", "outcome_exposure", "candidate_recipe"}
     if "cutoff" in request:
         raise AdmissionError("no separate cutoff: supply scheduled_start (the expected start in the game log)")
@@ -524,10 +591,22 @@ def forecast(request: dict, lg: League, history: list[dict], contracts: list[dic
     context = f"{POLICY}|{lg.path}|{lg.endpoint}"
     if any(r["event_id"] == request["event_id"] for r in (feedback or [])):
         raise AdmissionError("target feedback cannot enter its own prediction")
-    warm, n_warm = warm_start(lg, train, cutoff.tz_localize(None))
-    fb, n_fb = feedback_losses(feedback or [], context, cutoff)  # only feedback published by the horizon
-    cumulative = warm + fb
-    eta, eta_source, eta_sha = eta_for(lg)
+    fb_rows = feedback_losses(feedback or [], context, cutoff, return_rows=True)
+    fb_ids = {r["event_id"] for r in fb_rows}
+    for row in feedback or []:
+        if row["event_id"] not in fb_ids:
+            continue
+        same = train[train.event_id == row["event_id"]]
+        if len(same) and (float(row["home_score"]) != same.iloc[0].hs or float(row["away_score"]) != same.iloc[0].as_):
+            raise AdmissionError("history/feedback score conflict; reconcile effective settlement first")
+        if len(same):
+            original = read_rows(Path(row["bundle"]) / "REQUEST.csv")[0]
+            if any(same.iloc[0][k] != original[k] for k in ("home", "away")):
+                raise AdmissionError("history/feedback participant orientation conflict")
+    warm_rows = warm_records(lg, train, cutoff.tz_localize(None), excluded=fb_ids)
+    n_warm, n_fb = len(warm_rows), len(fb_rows)
+    cumulative = loss_sum(warm_rows + fb_rows)
+    eta, eta_source, eta_sha = eta_for(lg, cutoff)
     weights = hedge_weights(cumulative, eta)
     grid = mix_grids([experts[a] for a in ARMS], weights)
     if not contracts or len({r["contract_key"] for r in contracts}) != len(contracts):
@@ -562,6 +641,9 @@ def forecast(request: dict, lg: League, history: list[dict], contracts: list[dic
     artifacts = {"PREDICTIONS": csv_bytes(priced), "GRIDS": csv_bytes(grids), "FORMS": csv_bytes(forms),
                  "HISTORY": csv_bytes(history), "CONTRACTS": csv_bytes(contracts), "REQUEST": csv_bytes([request]),
                  "MODEL_CONFIG": csv_bytes([{f.name: repr(getattr(lg, f.name)) for f in fields(lg)}]),
+                 "WARM_START": csv_bytes(warm_rows) if warm_rows else b"event_id,refit_at,available_at,league_line,loss_RATINGS_FAST,loss_RATINGS_SLOW,loss_LEAGUE_BASELINE\n",
+                 "FEEDBACK_LOSSES": csv_bytes(fb_rows) if fb_rows else b"event_id,available_at,receipt_sha256,loss_RATINGS_FAST,loss_RATINGS_SLOW,loss_LEAGUE_BASELINE\n",
+                 "ETA_ADMISSION": ETA_TABLE.read_bytes() if ETA_TABLE.exists() else b"competition,policy,eta,tune_end,frozen_at,evidence_path,evidence_sha256\n",
                  "FEEDBACK_INPUT": csv_bytes(feedback) if feedback else b"event_id\n"}
     rec = dict(policy=POLICY, event_id=request["event_id"], competition=lg.path, endpoint=lg.endpoint,
                information_horizon=cutoff.isoformat(), horizon_source=horizon_source,
@@ -575,10 +657,10 @@ def forecast(request: dict, lg: League, history: list[dict], contracts: list[dic
                training_rows=len(train),
                numpy_version=np.__version__, pandas_version=pd.__version__, scipy_version=scipy.__version__,
                expert_recipe="FAST_half_life90_SLOW365_ridge8_cov_inflation1.1;cricket_C2_ridge20_venue20_inflation1.1",
-               issue_clock_status="DECLARED_ISSUE_NOT_INDEPENDENTLY_PUBLISHED", model_id=f"PRIMARY_FRESH_FIT_V2:{lg.path}:{MIX_ARM}",
+               issue_clock_status="DECLARED_ISSUE_NOT_INDEPENDENTLY_PUBLISHED", model_id=f"PRIMARY_FRESH_FIT_V3:{lg.path}:{MIX_ARM}",
                candidate_recipe=recipe, model_features="team identity, prior scores, time decay; no fitted availability effects",
                feedback_sha256=digest(csv_bytes(feedback)) if feedback else "NONE",
-               code_sha256=source_hash(), repository_head=repository_head(), generated_at=datetime.now(timezone.utc).isoformat(),
+               code_sha256=generating_code, repository_head=repository_head(), generated_at=datetime.now(timezone.utc).isoformat(),
                **grid.summary(), **{k.lower() + "_sha256": digest(v) for k, v in artifacts.items()})
     # Atomic publication: existing bundles never overwritten, even for a rerun.
     output.parent.mkdir(parents=True, exist_ok=True)
@@ -598,6 +680,9 @@ def forecast(request: dict, lg: League, history: list[dict], contracts: list[dic
             encoding="utf-8")
         if output.exists():
             raise AdmissionError("existing issued bundle; choose a new event/revision output path")
+        verify_bundle(temporary)
+        if source_hash() != generating_code:
+            raise AdmissionError("source changed during inference; retry from stable code")
         temporary.rename(output)
     finally:
         if temporary.exists():
@@ -632,7 +717,7 @@ def main(argv=None):
     for name in ("request", "history", "contracts", "out"):
         predict.add_argument("--" + name, type=Path, required=True)
     predict.add_argument("--feedback", type=Path)
-    predict.add_argument("--seed", type=int, help="accepted for compatibility; V2 is deterministic and ignores it")
+    predict.add_argument("--seed", type=int, help="accepted for compatibility; V3 is deterministic and ignores it")
     review = sub.add_parser("settle")
     for name in ("bundle", "evidence", "out"):
         review.add_argument("--" + name, type=Path, required=True)

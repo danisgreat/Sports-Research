@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-15 — Primary mixture integrity review
+
+Owner authorises review, verified bug fixes and main publication of the other session's changes. STATISTICAL source-policy + PROCEDURE: MDS-v15 / CR-R4 / SCV-v10 / P-v14; PRIMARY_HEDGE_MIX_V3. Corrects warm known-at leakage, duplicate history/feedback weight, parameter admission, retained learning ledgers, nonfinite validation and replay failure/pooling integrity. All eleven sport/Upcoming workflows retained and direct prompt wording aligned. Prior replay remains immutable proxy evidence; no new predictive advantage or RL-agent qualification is claimed. [Review](research/verification/framework_change_2026-10-15-4/REVIEW.md).
+
 ## 2026-10-15 - Primary mixture replaces Exp3; the evidence horizon is the game-log scheduled start
 
 **Owner instructions:** "continue the implementation after checking the other session's most recent implementation to see if your implementation is better and more accurate"; "there shouldn't be any cutoff, the cutoff can be whatever time is the expected game start in the game log, gather sources of information like lineups, confirmed starters, bench, other news, etc, up until then". STATISTICAL + PROCEDURE: PRIMARY-2026.10.15-v2 / MDS-2026.10.15-v14.0 / CR-2026.10.15-R3 / TIMING-2026.10.15-v2; SCV-2026.10.15-v9, SEL-2026.10.12-v3, P-2026.10.15-v13.0 and record formats unchanged. [Implementation](research/verification/framework_change_2026-10-15-3/IMPLEMENTATION.md), [verification](research/verification/framework_change_2026-10-15-3/VERIFICATION_REPORT.md), [replay](research/model_shadow/PRIMARY_POLICY_REPLAY/RESULTS.md).

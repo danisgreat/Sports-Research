@@ -1,4 +1,4 @@
-> **Primary ML/RL owner amendment (15 October 2026):** [PRIMARY_PREDICTION_PROTOCOL](../../PRIMARY_PREDICTION_PROTOCOL.md) permits the separate receipt-bound primary runtime and its full-information sporting mixture (PRIMARY_HEDGE_MIX_V2, which replaced the Exp3 bandit on 15 October 2026). Older statements below barring all model card inputs describe the prior independent-manual lane and are superseded for this new named lane. Existing historical artifacts remain unqualified; market/decision-lab outputs stay excluded.
+> **Primary ML/RL owner amendment (15 October 2026):** [PRIMARY_PREDICTION_PROTOCOL](../../PRIMARY_PREDICTION_PROTOCOL.md) permits the separate receipt-bound primary runtime and its full-information sporting mixture (PRIMARY_HEDGE_MIX_V3, which replaced the Exp3 bandit on 15 October 2026). Older statements below barring all model card inputs describe the prior independent-manual lane and are superseded for this new named lane. Existing historical artifacts remain unqualified; market/decision-lab outputs stay excluded.
 
 # Model shadow lane (`research/model_shadow/`)
 

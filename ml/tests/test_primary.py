@@ -9,7 +9,7 @@ from ml.config import League
 from ml.core.distributions import ScoreGrid
 from ml.primary import (ARMS, MIX_ARM, AdmissionError, admit_history, csv_bytes, digest, eta_for, feedback_losses,
                         forecast, hedge_weights, information_horizon, mix_grids, read_rows, settle, verify_bundle,
-                        warm_start)
+                        warm_start, warm_records, POLICY)
 from ml.tests.test_models import synthetic
 
 
@@ -271,3 +271,87 @@ def test_receipt_records_horizon_and_late_issue_uses_scheduled_start(inputs):
     history[0]['available_at'] = '2023-01-01T11:20:00+00:00'  # published after the scheduled start: inadmissible
     with pytest.raises(AdmissionError):
         forecast(req, lg, history, contracts, tmp/'late2')
+
+
+def test_warm_fits_cannot_use_later_published_labels(inputs, monkeypatch):
+    import pandas as pd
+    from ml import primary
+    req, lg, history, _, _, _ = inputs
+    train = admit_history(history, information_horizon(req)[0], req['event_id'], lg.path, lg.endpoint)
+    delayed = train.iloc[0].event_id
+    train.loc[train.event_id == delayed, 'available_at'] = pd.Timestamp('2022-12-31')
+    calls = []
+    grid = ScoreGrid.poisson(2, 1)
+    def fit(lg, earlier, as_of):
+        assert (earlier.available_at <= as_of).all()
+        assert (earlier.final_at <= as_of).all()
+        assert delayed not in set(earlier.event_id)
+        calls.append(as_of)
+        return {a: lambda *args: (grid, []) for a in ARMS}, 3.5
+    monkeypatch.setattr(primary, '_fit_models', fit)
+    assert warm_records(lg, train, pd.Timestamp('2023-01-01'))
+    assert calls
+
+
+def test_flagged_experts_cannot_train_warm_weights(inputs, monkeypatch):
+    import pandas as pd
+    from ml import primary
+    req, lg, history, _, _, _ = inputs
+    train = admit_history(history, information_horizon(req)[0], req['event_id'], lg.path, lg.endpoint)
+    grid = ScoreGrid.poisson(2, 1)
+    monkeypatch.setattr(primary, '_fit_models', lambda *args: ({a: lambda *args: (grid, ['RHO_CLAMPED']) for a in ARMS}, 3.5))
+    assert warm_start(lg, train, pd.Timestamp('2023-01-01'))[1] == 0
+
+
+def test_feedback_event_is_not_counted_again_in_warm_history(inputs):
+    req, lg, history, contracts, tmp, capture = inputs
+    run(inputs)
+    fb = settle(tmp/'bundle', 110, 95, '2023-01-01T13:00:00Z', '2023-01-01T14:00:00Z', capture, digest(capture.read_bytes()))
+    prior = dict(history[0], event_id=req['event_id'], home=req['home'], away=req['away'], hs=110, as_=95,
+                 reg_hs=110, reg_as=95, date='2023-01-01T11:00:00Z', final_at=fb['final_at'], available_at=fb['available_at'])
+    nxt = dict(req, event_id='EXAMPLE-NEXT', scheduled_start='2023-01-03T11:00:00Z', issue_at='2023-01-03T10:00:00Z', actual_start='2023-01-03T11:00:00Z')
+    rec = forecast(nxt, lg, history+[prior], contracts, tmp/'next', feedback=[fb])
+    warm = read_rows(tmp/'next'/'WARM_START.csv')
+    learned = read_rows(tmp/'next'/'FEEDBACK_LOSSES.csv')
+    assert req['event_id'] not in {r['event_id'] for r in warm}
+    assert [r['event_id'] for r in learned] == [req['event_id']]
+    assert rec['feedback_events'] == 1
+    prior['hs'] = 111;prior['reg_hs'] = 111
+    with pytest.raises(AdmissionError, match='score conflict'):
+        forecast(nxt, lg, history+[prior], contracts, tmp/'conflict', feedback=[fb])
+    fb['home_score'] = '110.5'
+    with pytest.raises(AdmissionError, match='invalid final score'):
+        feedback_losses([fb], rec['context'], '2023-01-04T00:00:00Z')
+
+
+@pytest.mark.parametrize('eta,loss', [(float('nan'),[0,1,2]),(float('inf'),[0,1,2]),(-1,[0,1,2]),(0,[0,1,2]),(1,[0,float('nan'),2]),(1,[-1,0,1])])
+def test_invalid_learning_parameters_rejected(eta, loss):
+    with pytest.raises(AdmissionError):hedge_weights(np.array(loss), eta)
+
+
+def test_eta_parameter_requires_exact_policy_and_known_at(inputs, monkeypatch):
+    from ml import primary
+    tmp, capture = inputs[4:]
+    table = tmp/'eta.csv'
+    row = dict(competition=inputs[1].path, policy=POLICY, eta=5, tune_end='2022-01-01T00:00:00Z',
+               frozen_at='2022-02-01T00:00:00Z', evidence_path=str(capture), evidence_sha256=digest(capture.read_bytes()))
+    table.write_bytes(csv_bytes([row]));monkeypatch.setattr(primary, 'ETA_TABLE', table)
+    assert eta_for(inputs[1], '2022-01-15T00:00:00Z')[1] == 'DEFAULT_PARAMETER_NOT_KNOWN_AT_HORIZON'
+    assert eta_for(inputs[1], '2023-01-01T00:00:00Z')[:2] == (5, 'ADMITTED_EXACT_POLICY_PARAMETER')
+    table.write_bytes(csv_bytes([row,row]))
+    with pytest.raises(AdmissionError, match='conflicting eta'):eta_for(inputs[1], '2023-01-01T00:00:00Z')
+    row['policy'] = 'OTHER_POLICY';table.write_bytes(csv_bytes([row]))
+    assert eta_for(inputs[1], '2023-01-01T00:00:00Z')[1] == 'DEFAULT_NO_ADMITTED_ROW'
+    row['closing_odds'] = '1.9';table.write_bytes(csv_bytes([row]))
+    with pytest.raises(AdmissionError, match='extra/market columns'):
+        eta_for(inputs[1], '2023-01-01T00:00:00Z')
+
+
+def test_cumulative_losses_bound_to_saved_learning_rows(inputs):
+    run(inputs)
+    folder=inputs[4]/'bundle'
+    receipt=read_rows(folder/'RECEIPT.csv')
+    receipt[0]['cumulative_losses']=';'.join(f'{a}:0' for a in ARMS)
+    receipt[0]['mixture_weights']=';'.join(f'{a}:{1/3}' for a in ARMS)
+    (folder/'RECEIPT.csv').write_bytes(csv_bytes(receipt))
+    with pytest.raises(AdmissionError, match='frozen learning ledgers'):verify_bundle(folder)

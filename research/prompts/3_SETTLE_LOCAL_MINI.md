@@ -1,6 +1,6 @@
 # PROMPT 3 — Freeze, settle and review a local mini
 
-**P-2026.10.15-v13.0 · LOCAL_MINI_SETTLEMENT.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: a new settlement package and dated revisions; no canonical/GitHub writes. Original cards are immutable. For MODEL_ASSISTED_PRIMARY_V1, retain and verify its primary bundle, settle original keys first, then run primary settle and reconcile one effective source-backed feedback row per event before future learning. Optional sporting-shadow comparisons occur only after manual settlement; the decision lab is excluded.
+**P-2026.10.15-v14.0 · LOCAL_MINI_SETTLEMENT.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: a new settlement package and dated revisions; no canonical/GitHub writes. Original cards are immutable. For MODEL_ASSISTED_PRIMARY_V3, retain and verify its primary bundle, settle original keys first, then run primary settle and reconcile one effective source-backed feedback row per event before future learning. Optional sporting-shadow comparisons occur only after manual settlement; the decision lab is excluded.
 
 ## Inputs
 
