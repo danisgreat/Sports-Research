@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-15 - Primary ML and sporting RL integration
+
+Owner explicitly authorises ML/RL in primary game predictions and main publication. STATISTICAL + PROCEDURE: MDS-2026.10.15-v13.0 / CR-2026.10.15-R2 / SCV-2026.10.15-v9 / P-2026.10.15-v13.0; selection thresholds, mini formats, issued IDs/grades and completion-based research timing unchanged. [Primary protocol](PRIMARY_PREDICTION_PROTOCOL.md), [implementation](research/verification/framework_change_2026-10-15-2/IMPLEMENTATION.md).
+
+Actual per-event fitting, coherent contract pricing, sports-only contextual Exp3 expert selection, immutable bundles and delayed settled sporting feedback replace the blanket primary-model exclusion. Old DATA_HOLD artifacts are not promoted. All eleven sport/upcoming workflows retained; unsupported endpoints/data/model failures retain NO_FORECAST. Source custody and actual proof remain distinct. No gambling/staking signal enters primary learning. Existing local cross-sport integrity fixes were brought to main; cricket writer's missing admission/hold references corrected and historical numerical passes kept on DATA_HOLD. Tests/demonstration receipts establish specified mechanics only, not predictive improvement.
+
 ## 2026-10-15 - Completion-based research, with truthful input and issue timing
 
 **User-authorised instruction:** remove fixed manual research/freeze lead times, complete the research even after a game starts, preserve each sport/upcoming-game section, and publish main. STATISTICAL/measurement-policy + PROCEDURE: MDS-2026.10.15-v12.0, CR-2026.10.15-R1, SCV-2026.10.15-v8, P-2026.10.15-v12.0; selection SEL-2026.10.12-v3 and mini-log-7/mini-settlement-6/canonical-md-1 unchanged.

@@ -1,6 +1,6 @@
 # Common operating protocol for prompts 1–8
 
-**P-2026.10.15-v12.0 · CR-2026.10.15-R1.** Timing/measurement and procedure revision: completion-based manual research with separate input and issue cohorts; retains complete lifecycle handling of independent manual cards, development models and prospective shadows. Formats remain mini-log-7, mini-settlement-6 and canonical-md-1. Probability/rank thresholds and score formulas are unchanged; timing cohort semantics use SCV-2026.10.15-v8. Read the complete selected prompt and this companion; prompt 1 retains a separate complete sport section and an inactive Upcoming game block for each sport.
+**P-2026.10.15-v13.0 · CR-2026.10.15-R2.** Statistical source/policy and procedure revision: actual per-event ML/RL now supplies primary rows; historical independent manual, model-assisted primary and prospective shadows remain separate. Completion-based research retains separate input and issue cohorts. Formats remain mini-log-7, mini-settlement-6 and canonical-md-1. The new owner-authorised primary ML/RL lane uses [PRIMARY_PREDICTION_PROTOCOL](../../PRIMARY_PREDICTION_PROTOCOL.md). Probability/rank thresholds and score formulas are unchanged; timing cohort semantics use SCV-2026.10.15-v9. Read the complete selected prompt and this companion; prompt 1 retains a separate complete sport section and an inactive Upcoming game block for each sport.
 
 ## 1. Resolve authority and task boundaries
 
@@ -8,10 +8,10 @@ Read CURRENT_STATE, METHOD, CURRENT_RULES, SELECTION_RULES, CARD_AND_LOG_TEMPLAT
 
 | Task | Authority and writes | ML/shadow handling |
 |---|---|---|
-| 1 Game card | PUBLISHED_MAIN_PINNED unless explicitly local; named mini/evidence/footer only | Manual analysis stays independent; no workshop/model-shadow/decision-lab reading before freeze |
-| 2 Start mini | Same authority rule; one new mini | Do not run/read model forecasts; a mini allocates no event ID |
-| 3 Settle mini | Published pinned or explicitly local; frozen-source and new settlement package | Original cards first; optional verified sporting shadows only after card settlement, separately scored |
-| 4 Import | LOCAL_WORKING_TREE; verified canonical suffix and current summaries | Do not import workshop forecasts as analyst cards or consume P-IDs for shadow rows |
+| 1 Game card | PUBLISHED_MAIN_PINNED unless explicitly local; named mini/model-input/bundle/evidence/footer only | Named primary model/runtime/bundle allowed; source research stays sporting; no market decision lab |
+| 2 Start mini | Same authority rule; one new mini | Read primary protocol/route requirements only; no event forecast until prompt1; no event ID |
+| 3 Settle mini | Published pinned or explicitly local; frozen-source and new settlement package | Original keys first; verify primary bundle and source-backed effective feedback; optional sporting shadows separately scored |
+| 4 Import | LOCAL_WORKING_TREE; verified canonical suffix and current summaries | Import issued MODEL_ASSISTED_PRIMARY_V1 cores literally; model feedback/shadow rows consume no P-IDs |
 | 5 Rollover | LOCAL_WORKING_TREE; closure/new part and current pointers | Preserve independent shadow identity/locations; rollover is no model release |
 | 6 Retrospective | LOCAL_WORKING_TREE; new cohort report and authorized summaries/amendments | Sporting-shadow comparisons after settlement, with freeze/receipt/endpoint gates; no decision-lab material in card learning |
 | 7 Archive/source work | LOCAL_WORKING_TREE; declared CSV/provenance/profile paths | Record label and known-at admission by field; do not regenerate models or change parameters implicitly |
@@ -45,7 +45,7 @@ Before using a sporting shadow for a prospective comparison, require exact model
 
 Maintain TRAIN → chronological TUNE/OOF → independent CALIBRATE → untouched TEST → FUTURE SHADOW separation. Historical archive exposure stays disclosed. Predeclare the estimand, practical effect, precision/power/dependence, inclusion, multiplicity and stop rule before confirmatory collection. Numerical floors or a confidence interval containing an ideal value are not qualification. Refit/recalibration creates a governed new artifact or belongs to a predeclared refit procedure; it never edits issued probabilities.
 
-The decision lab is paper research under CURRENT_RULES §5a. RL is not a game-outcome forecaster. Its aggregates, CLV, stake choices and market comparisons never influence card inputs, ranks, widths or learning. Authorize its audit explicitly under prompt 8, outside other reading gates. Require observation/reward timing, exact behaviour probabilities, action support, comparable opportunities, payoff/cash/exposure accounting and stronger simple baselines. Missing quote/fill timestamps prevent a verified historical execution claim. A profitable simulation or negative simulation does not establish future economic performance.
+The decision lab is paper research under CURRENT_RULES §5a. The existing staking RL is not a game-outcome forecaster; the new separate sports-only bandit selects the forecasting expert under PRIMARY_PREDICTION_PROTOCOL. The staking lab aggregates, CLV, stake choices and market comparisons never influence card inputs, ranks, widths or learning. Authorize its audit explicitly under prompt 8, outside other reading gates. Require observation/reward timing, exact behaviour probabilities, action support, comparable opportunities, payoff/cash/exposure accounting and stronger simple baselines. Missing quote/fill timestamps prevent a verified historical execution claim. A profitable simulation or negative simulation does not establish future economic performance.
 
 ## 5. Return a concrete, verified result
 

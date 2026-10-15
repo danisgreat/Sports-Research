@@ -1,0 +1,5 @@
+# Publication plan and authority
+
+User explicitly requests primary ML/RL integration and push to Git. Publish main without force, including prerequisite integrity commit 77a1173562700a2a662ac23678d15fe73b5fe0a3 and a new scoped integration commit. Fresh fetch before staging: origin/main 5b07db16858d729ce3270753b4e8cb8870cef5df; remote 0 ahead/local 1 ahead. No unrelated changes staged.
+
+Stage exact paths only. Prompt1 uses the inactive publication variant, preserving the original three local edit areas in the working tree. Validate every staged archival blob against the prior committed source; local core.autocrlf=true means working-byte identity alone is insufficient. Inspect full staged diff and scope, whitespace checks (historical archived trailing blank retained), and current source/test identities. After push, fetch and compare main SHA plus staged artifact contents and protected bytes. Add a new publication readback receipt after successful verification; no claim of success before that receipt.

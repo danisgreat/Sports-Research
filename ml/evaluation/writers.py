@@ -58,7 +58,13 @@ def status_for(verdict: str, warnings) -> str:
     """PASS on data with an integrity warning is DATA_HOLD: no lane until the rows are verified at a field owner."""
     if verdict != "PASS_DEVELOPMENT":
         return "DEVELOPMENT_ONLY"
-    return "DATA_HOLD" if warnings else "SHADOW_CANDIDATE"
+    # No current historical artifact has field-level source/known-at admission.
+    # Explicit experimental primary runs are a different receipt-bound lane.
+    return "DATA_HOLD"
+
+
+def hold_reasons(verdict: str, warnings) -> str:
+    return ";".join([*warnings, "FIELD_OWNER_ADMISSION_UNVERIFIED"]) if verdict == "PASS_DEVELOPMENT" else ""
 
 
 def status_row(model_id: str, path: str, engine: str, verdict: str, detail: str, seasons: str, tb1_label: str,
@@ -272,7 +278,7 @@ def write_cricket(res: dict, rec: dict) -> dict:
                and set(every_c0["season"]) == set(lg.test_seasons)
                and (every["status"] == "BELOW_ZERO").all()
                and (every_c0["status"] == "BELOW_ZERO").all() else "FAIL_DEVELOPMENT")
-    status = status_for(verdict, lg.data_warnings, lg.path in ADMITTED)
+    status = status_for(verdict, lg.data_warnings)
     cov = {lv: t[f"{lv}_in80"].mean() for lv in ("C0", "C1", "C2", "C2PRE")}
     pit = {lv: np.histogram(t[f"{lv}_pit"], bins=5, range=(0, 1))[0].tolist() for lv in ("C0", "C2")}
     receipt = _receipt(rec, {"model_id": mid, "params": res["params"], "dropped_rows": res["dropped"],
@@ -306,7 +312,7 @@ def write_cricket(res: dict, rec: dict) -> dict:
             "| Field | Value |", "|---|---|",
             f"| Contract | runs of the team batting first, full-length innings ({lg.overs_cap:.0f} overs bowled or all out) |",
             f"| Population | scorecards in `Previous Sports Results/{lg.path}`; excluded: {res['dropped']} |",
-            f"| Hold reasons | {hold_reasons(verdict, lg.data_warnings, lg.path in ADMITTED) or 'none'} |",
+            f"| Hold reasons | {hold_reasons(verdict, lg.data_warnings) or 'none'} |",
             "| Ladder | C0 league-only (time-decayed mean and SD) · C1 + shrunk venue effect · C2 + batting and bowling "
             "team strengths (weighted ridge) · C2PRE = 50/50 unfitted symmetric batting-order scenario; toss fairness does not establish this weight |",
             "| Distribution | discretised normal on 0–600 runs; finite-support approximation, not a physical run cap |",

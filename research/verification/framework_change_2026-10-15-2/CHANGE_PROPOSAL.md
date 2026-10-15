@@ -1,0 +1,3 @@
+# Primary ML/RL integration proposal
+
+User requests actual ML/RL in primary predictions and Git publication. Adopt a freshly fitted per-event model path, whole-distribution sporting bandit action and actual delayed sporting feedback; adapt RL away from the separate gambling/staking lab. Named primary lane replaces the old model exclusion. Explicitly experimental primary research, not promotion/calibration certification. No arbitrary pooling or retroactive changes. Unsupported sports/endpoints/data/fit failures remain NO_FORECAST with coverage recorded, not fake generalised integration. No fixed research deadline reintroduced.

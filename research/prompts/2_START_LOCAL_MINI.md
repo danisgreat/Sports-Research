@@ -1,6 +1,6 @@
 # PROMPT 2 — Start the next local mini
 
-**P-2026.10.15-v12.0 · LOCAL_MINI_STAGING.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: one new Markdown mini. Creating a mini consumes no event ID. GitHub is read-only. Workshop forecasts and the decision lab are excluded.
+**P-2026.10.15-v13.0 · LOCAL_MINI_STAGING.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: one new Markdown mini. Creating a mini consumes no event ID. GitHub is read-only. Workshop forecasts and the decision lab are excluded.
 
 ## Inputs
 
@@ -25,7 +25,7 @@ Carry pending events and terminal unresolved evidence separately with original I
 
 Retain every request in intake: received time, identity/alias, disposition and existing/new-record pointer. Blocked/duplicate requests stay visible. Do not invent a card, picks, probabilities, source or lineup to populate the mini.
 
-Model-shadow IDs remain separate from P-IDs. Do not load model forecasts or seed a manual mini with model parameters. Each prompt-1 game performs its own availability, cutoff, candidate and frozen-baseline checks.
+Model-shadow IDs remain separate from P-IDs. Read PRIMARY_PREDICTION_PROTOCOL; prompt1 will run the actual event-specific primary model. Do not seed a mini from unadmitted historical predictions. Each prompt-1 game performs its own availability, cutoff, candidate and frozen-baseline checks.
 
 ## 3. Verify and return
 

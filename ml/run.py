@@ -203,6 +203,10 @@ def run_decision_lab() -> None:
 
 
 def main(argv: list[str]) -> None:
+    if argv and argv[0] == "primary":
+        from ml.primary import main as primary_main
+        primary_main(argv[1:])
+        return
     from ml.evaluation.writers import write_index
 
     if not argv:

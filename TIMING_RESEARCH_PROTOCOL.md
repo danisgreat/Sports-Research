@@ -40,3 +40,5 @@ Historical issued timing, contracts, ranks, probabilities, baselines, grades and
 ## 5. Required checks
 
 Verify every sport retains comprehensive availability/source work and no countdown forces freeze. Exercise legitimate near-start, independently delayed-start and post-start clean-input cases. Reject unknown starts, late-published fields, target outcome exposure, mutable retrospective source versions and invented issue times for their claimed clean/pre-start status. Keep actual timings and cohort arithmetic distinct. [Executed fixtures and receipt](research/verification/framework_change_2026-10-15-1/VERIFICATION_REPORT.md). Correct process or byte checks do not establish predictive improvement.
+
+**Primary-model amendment (15 October 2026):** [PRIMARY_PREDICTION_PROTOCOL](PRIMARY_PREDICTION_PROTOCOL.md) permits the named source-reviewed primary runtime and sporting feedback. Comprehensive availability and truthful timing remain mandatory. These first runtime models do not fit player/lineup effects; record material unsupported scenarios rather than inventing an adjustment. The market decision lab remains excluded.

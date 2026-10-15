@@ -23,7 +23,7 @@
 | Active Combined Log | named in CURRENT_STATE (Part 7 on 2026-10-12) |
 | Contribution and publication rules | [CONTRIBUTING.md](CONTRIBUTING.md) |
 | Recovery of removed or moved paths | [HISTORICAL_LINK_INDEX.md](HISTORICAL_LINK_INDEX.md) |
-| Model workshop (maintainer code; never read by prompts 1–3) | [ml/README.md](ml/README.md), outputs in [research/model_shadow/](research/model_shadow/README.md), design [ML_RL_IMPLEMENTATION_FRAMEWORK_2026-10-14.md](ML_RL_IMPLEMENTATION_FRAMEWORK_2026-10-14.md) |
+| Primary runtime (named lane allowed for prompts 1–3) and separate workshop | [ml/README.md](ml/README.md), outputs in [research/model_shadow/](research/model_shadow/README.md), design [ML_RL_IMPLEMENTATION_FRAMEWORK_2026-10-14.md](ML_RL_IMPLEMENTATION_FRAMEWORK_2026-10-14.md) |
 
 **History, not instructions:** `archive/`, `prediction logs/` parts 1–6, dated folders under `research/verification/`, `research/issued_research/`, LEARNING_REGISTER / LEARNINGS_INDEX (lessons, with promotion status), FRAMEWORK_RETROSPECTIVE_2026-10-09, NUMERICAL_MODEL_REGISTER (design notes), VALIDATION_EVIDENCE.
 
@@ -79,3 +79,5 @@
 | [State Level AFL / VFL](Previous%20Sports%20Results/State%20Level%20AFL/VFL/) | 5 (2021–2025) | 972 | 13 | no | — |
 | [State Level AFL / VFLW](Previous%20Sports%20Results/State%20Level%20AFL/VFLW/) | 5 (2021–2025) | 460 | 13 | no | — |
 | [State Level AFL / WAFL](Previous%20Sports%20Results/State%20Level%20AFL/WAFL/) | 126 (1900–2025) | 10,019 | 13 | no | — |
+
+**Primary ML/RL (15 October 2026):** [PRIMARY_PREDICTION_PROTOCOL](PRIMARY_PREDICTION_PROTOCOL.md) governs new experimental model-assisted primary rows and sports-only model-selection feedback. Actual per-event execution and receipts required; no old artifact is automatically qualified.

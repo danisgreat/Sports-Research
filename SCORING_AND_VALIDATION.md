@@ -1,6 +1,6 @@
 # Scoring and validation
 
-**SCV-2026.10.15-v8.** New views use these definitions; historical published scores remain unchanged and labelled by their original version ([v6](archive/superseded_2026-10-12/SCORING_AND_VALIDATION.md)). [CURRENT_RULES](CURRENT_RULES.md) controls claims. No fitted or certified model is available. v8 separates pre-start input quality from actual issue phase with no fixed lead deadline; prior v7 added request coverage (§1), evidence-stratified views (§2a), shadow scoring for SHADOW_RANK_DELTA and SHADOW_BASE_ONLY (§6), and deterministic revision resolution in the scoreboard (§7).
+**SCV-2026.10.15-v9.** New views use these definitions; historical published scores remain unchanged and labelled by their original version ([v6](archive/superseded_2026-10-12/SCORING_AND_VALIDATION.md)). [CURRENT_RULES](CURRENT_RULES.md) controls claims. Fitted experimental primary models are available through PRIMARY_PREDICTION_PROTOCOL; no model is predictive-performance certified. v8 separates pre-start input quality from actual issue phase with no fixed lead deadline; prior v7 added request coverage (§1), evidence-stratified views (§2a), shadow scoring for SHADOW_RANK_DELTA and SHADOW_BASE_ONLY (§6), and deterministic revision resolution in the scoreboard (§7).
 
 ## 1. Units, probability and coverage
 
@@ -85,3 +85,7 @@ Historical learning logs, revised datasets and post-event counterfactuals cannot
 ## 9. Completion-based research policy (SCV-v8)
 
 T2 retains every original primary result in its declared policy/timing cohort; a post-start issue is not excluded from research logging solely for lateness. CLEAN_PRE_START_INPUTS requires the timing protocol's independent field-known-at and outcome-exposure checks. Report pre-start-issued, clean-pre-start-input/post-start-issued, unverified and outcome-exposed counts separately, plus unchanged legacy cohorts. Record baseline construction/issue time too: an outcome-blind comparator made after start remains in the same late-issued lane, not a pre-start-frozen prospective baseline. No missing baseline, issue time, source receipt or historical probability is reconstructed. Existing preregistered prospective/model release gates remain unchanged; no predictive benefit is claimed for removing deadlines.
+
+## 10. Model-assisted primary cohort (SCV-v9)
+
+[PRIMARY_PREDICTION_PROTOCOL](PRIMARY_PREDICTION_PROTOCOL.md) authorises MODEL_ASSISTED_PRIMARY_V1. Its actual issued top two count in their own T2 cohort; do not relabel historical manual cards, add comparator/shadow wins or pool assisted with independent manual evidence. Preserve selected model/action probability/context/recipe and whole-grid hashes. Sporting reward=1 minus mean original decisive-primary Brier; all-push/void/unknown gives no update. Feedback must follow final and available-at, with one effective original bundle/settlement chain per event. Primary use is explicitly experimental; no old DATA_HOLD or model/operational certification is silently upgraded. New prospective acceptance/design remains unregistered/BLOCKED_DESIGN until separately frozen; tests or synthetic demos prove no advantage.

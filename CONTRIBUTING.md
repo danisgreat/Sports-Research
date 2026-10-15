@@ -11,3 +11,5 @@ The repository holds Markdown, CSV and text only, with one exception: the mainta
 7. **Publish deliberately.** Inspect the full diff, stage only intended files by path, verify the remote and a clean state before claiming publication. Do not push over someone else's work and do not force-push. No publication is implied by a local edit.
 
 Verify archived source length and coverage before deleting any redundant working mini, and keep unique archive bodies and audit evidence. Scientific and process failures must be visible; a green check shows only what it checks.
+
+Owner primary-model exception (15 October 2026): code still only under ml/; source-reviewed normalized market-free input and immutable output/feedback CSV/Markdown may be written under the named research/primary_predictions/ event folder, under PRIMARY_PREDICTION_PROTOCOL. Preserve source captures externally and existing issued cards; test actual primary inference and delayed sporting feedback, not just prompt wording.

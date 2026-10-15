@@ -1,12 +1,14 @@
-# `ml/` — maintainer model workshop
+> **Primary ML/RL owner amendment (15 October 2026):** [PRIMARY_PREDICTION_PROTOCOL](../PRIMARY_PREDICTION_PROTOCOL.md) permits the separate receipt-bound primary runtime and sporting bandit. Older statements below barring all model card inputs describe the prior independent-manual lane and are superseded for this new named lane. Existing historical artifacts remain unqualified; market/decision-lab outputs stay excluded.
+
+# `ml/` — primary sporting runtime and maintainer model workshop
 
 **Repeat bug audit:** [implementation and coverage](../research/verification/ml_bug_audit_2026-10-14-1/IMPLEMENTATION.md) repairs source parsing, grids, chronology, failure handling, reports, shadow outcomes and decision mechanics. Read the [additional artifact admission notice](../research/model_shadow/BUG_AUDIT_ADMISSION_2026-10-14.md) before using old outputs with the new implementation. Fixed historical fit/grid smoke checks are not predictive validation; fresh model outputs need controlled regeneration.
 
-**Current release:** CR-2026.10.14-R3 / prompt suite v11.3. Read the [actual implementation review](../research/verification/framework_change_2026-10-14-5/ML_WORKSHOP_REVIEW.md) and [artifact admission](../research/model_shadow/ARTIFACT_PROVENANCE.md). Historical model outputs retain their original generating source; corrected report replays have new receipts. No model is promoted. The 60 executed checks cover specified mechanics, not predictive qualification.
+**Historical workshop review (14 October 2026):** CR-2026.10.14-R3 / prompt suite v11.3. Current primary release is CR-2026.10.15-R2 / prompt suite v13.0 under PRIMARY_PREDICTION_PROTOCOL. Read the [actual implementation review](../research/verification/framework_change_2026-10-14-5/ML_WORKSHOP_REVIEW.md) and [artifact admission](../research/model_shadow/ARTIFACT_PROVENANCE.md). Historical model outputs retain their original generating source; corrected report replays have new receipts. No model is promoted. That historical review reported 60 executed checks; current primary/integrity test results are in the new primary verification report. Neither establishes predictive qualification.
 
 **Authority:** CURRENT_RULES §0 (model workshop exception) and §5a (decision-lab firewall), CR-2026.10.14-R1; framework change [2026-10-14-3](../research/verification/framework_change_2026-10-14-3/IMPLEMENTATION.md); design in [ML_RL_IMPLEMENTATION_FRAMEWORK_2026-10-14.md](../ML_RL_IMPLEMENTATION_FRAMEWORK_2026-10-14.md).
 
-This is the only place in the repository where code may live. A maintainer runs it. **Cards never run it, read it or depend on it**, and prompts 1–3 never open `research/model_shadow/` before their own freeze. Its outputs are Markdown and market-free CSV under `research/model_shadow/`, each with a receipt.
+This is the only place in the repository where code may live. A maintainer runs it. Prompts 1–3 now run/read the named source-reviewed primary runtime under PRIMARY_PREDICTION_PROTOCOL and retain the immutable bundle under `research/primary_predictions/` or the named mini evidence scope. Other workshop outputs remain separate under `research/model_shadow/`; its unadmitted forecasts and DECISION_LAB are not primary inputs. Every output carries its actual status/receipt.
 
 ## Run
 
@@ -89,3 +91,5 @@ The workshop has no list of "main leagues". `ml/config.py` walks `Previous Sport
 - **Market-free outputs:** `assert_no_market_columns` refuses odds, line or price columns in anything that enters the repository.
 - **Hyperparameters on tune seasons only:** a value chosen on a grid boundary has its axis extended and is re-tuned (declared before test results were read).
 - **No JSON, pickles or notebooks.**
+
+Primary inference/settlement CLI: `python -m ml primary predict --help` / `python -m ml primary settle --help`. This actually fits/reloads saved distributions and uses delayed sporting feedback; it does not run the staking lab. Source-known-at history, reviewed field/endpoint evidence, actual run receipts and immutable outputs required.

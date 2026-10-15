@@ -49,7 +49,9 @@ def test_integrity_gate_flags_collapsed_season_dispersion():
 
 def test_status_for_data_hold():
     from ml.evaluation.writers import status_for
-    assert status_for("PASS_DEVELOPMENT", ()) == "SHADOW_CANDIDATE"
+    # A numerical pass has no field-owner admission by itself. Experimental
+    # primary execution is a separate explicitly authorised receipt-bound lane.
+    assert status_for("PASS_DEVELOPMENT", ()) == "DATA_HOLD"
     assert status_for("PASS_DEVELOPMENT", ("OVERTIME_FIELD_IMPLAUSIBLE:0/900",)) == "DATA_HOLD"
     assert status_for("FAIL_DEVELOPMENT", ("x",)) == "DEVELOPMENT_ONLY"
 

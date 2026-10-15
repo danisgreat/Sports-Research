@@ -1,6 +1,6 @@
 # Card, mini, settlement and canonical formats
 
-**mini-log-7 · mini-settlement-6 · canonical-md-1.** Authority: MDS-2026.10.15-v12.0 / CR-2026.10.15-R1 / SCV-2026.10.15-v8 / SEL-2026.10.12-v3. [Rules](CURRENT_RULES.md) and [selection definitions](SELECTION_RULES.md) control semantics. Previous formats: [mini-log-6 / mini-settlement-5](archive/superseded_2026-10-12/CARD_AND_LOG_TEMPLATES.md).
+**mini-log-7 · mini-settlement-6 · canonical-md-1.** Authority: MDS-2026.10.15-v13.0 / CR-2026.10.15-R2 / SCV-2026.10.15-v9 / SEL-2026.10.12-v3. [Rules](CURRENT_RULES.md) and [selection definitions](SELECTION_RULES.md) control semantics. Previous formats: [mini-log-6 / mini-settlement-5](archive/superseded_2026-10-12/CARD_AND_LOG_TEMPLATES.md).
 
 <a id="local-mini-format-mini-log-2"></a>
 
@@ -82,7 +82,7 @@ Insert immediately before the footer. Preserve earlier card/addendum bytes; only
 - **Working ID:** P-NNN — LOCAL_WORKING_ID — PENDING_CANONICAL_IMPORT
 - **Event key / native ID / aliases:** <exact identity; unknown native ID explicit>
 - **Authority:** <method/control/scoring/selection/HEAD; working differences>
-- **Analysis status:** UNCALIBRATED_ANALYST_SCENARIO | UNCALIBRATED_QUALITATIVE | NO_FORECAST
+- **Analysis status:** MODEL_ASSISTED_PRIMARY_V1 / EXPERIMENTAL_PRIMARY_NOT_CERTIFIED | UNCALIBRATED_QUALITATIVE | NO_FORECAST
 - **Timing:** <state; cutoff; research completion; actual issue time; source state/recheck time; source publication time; actual start or NOT_VERIFIED>
 - **Scheduled start:** <venue timezone, UTC and Australia/Sydney with offsets; source>
 - **Scheduled lead / band:** <descriptive minutes only; actual issue phase PREGAME / POST_START_ISSUE / TIMING_UNVERIFIED; input evidence CLEAN_PRE_START_INPUTS / KNOWN_AT_UNVERIFIED / OUTCOME_EXPOSED>
@@ -124,6 +124,8 @@ Insert immediately before the footer. Preserve earlier card/addendum bytes; only
 
 Complete [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md) for both sides in this existing evidence appendix: starters/starting role, selected bench/replacements, reported injuries/illness/suspensions/absences and final late changes, with exact-game sources/times and actual failed/escalated searches. Preserve each field's confirmed/projected/missing/conflicting state; N/A needs a sport/format reason. Existing lineup metadata summarises this evidence, not just the starting side.
 #### A4. Distribution, baseline, expected-score arithmetic and sensitivity
+
+For new primary cards include PRIMARY_PREDICTION_PROTOCOL receipt: exact runtime/bundle path, source/known-at review, event/endpoint/model/code/input/grid hashes, selected arm, full action distribution/propensity, policy/context/recipe, model source/status and actual generation/declared issue. Copy original numeric rows from PREDICTIONS.csv and expected moments from the selected grid; retain all FORMS.csv true sample sizes and model feature/availability limits. No run means ML_NOT_RUN/NO_FORECAST, not an invented manual numeric replacement.
 #### A5. Full priced universe or labelled subset; W/P/L/V by row
 #### A6. Adjustments, regimes and unadjusted comparison
 #### A7. Family checks and shadow records
@@ -249,9 +251,9 @@ Pending cards get state evidence, literal original reference and next check, wit
 | C14 | Frozen same-row baseline and independent league-only parameters, or explicit unavailable reason |
 | C15 | Expected-score arithmetic/units/covariance and missingness; decision block/appendix complete |
 | C16 | Written card and footer read back; earlier blocks unchanged; audit has actual evidence, not just check names |
-| C17 | Form windows: L5/L10/L15/L20/season/league printed per side with true n, from dated pre-cutoff games; flagged archive rows excluded; one blended rate with k and arithmetic; windows not counted as separate confirmations; adjustment listed with the unadjusted pair (or ARCHIVE_UNAVAILABLE with the route tried) |
+| C17 | Form windows: L5/L10/L15/L20/season/league printed per side with true n, from dated pre-cutoff games; flagged archive rows excluded; blend/k/arithmetic retained as comparison diagnostics where supported; windows not counted as separate confirmations; fitted primary centre is not manually overwritten; explicit manual comparisons retain their adjustment/unadjusted pair (or ARCHIVE_UNAVAILABLE with the route tried) |
 | C18 | Line distance (units and z, or N/A) on every ranked row; baseline coverage line present; each missing BASELINE_P uses an enumerated reason |
-| C19 | Pricing basis: a mixture is used whenever an input is labelled unfitted, stale, early-season or unconfirmed; weights frozen before pricing; p_base printed; base-only shadow ranks and gate shown; ε and any GATE_UNRESOLVED_PRECISION / PRECISION_TIE stated |
+| C19 | Primary runtime: actual source/fit/bundle/propensity checked; all rows match selected grid, model features/limits explicit. Pricing basis: primary W/P/L and p_card derive from the actual selected retained ML grid; manual mixtures/adjustments cannot overwrite it. Material unsupported effects mean NO_FORECAST. An explicitly requested manual comparison retains frozen mixture weights/p_base and base-only diagnostics; ε and any GATE_UNRESOLVED_PRECISION / PRECISION_TIE stated |
 | C20 | Availability: comprehensive both-side starter/bench/absence search per ROSTER_AVAILABILITY_PROTOCOL completed with actual attempts and final recheck in A3/A8; projections, access/publication gaps and material uncertainty honest. Lifecycle: issuing writer and lease valid at append time; mini not frozen; request logged in the intake table; known-at line present; lineup state and issue-step times recorded |
 
 ## 8. Canonical entry and rollover
@@ -298,3 +300,7 @@ Active and settled structural examples (mini-log-7 / mini-settlement-6): [active
 ## 11. Timing semantics for new v12 work
 
 Use [TIMING_RESEARCH_PROTOCOL](TIMING_RESEARCH_PROTOCOL.md) in the existing Timing/Known-at/Lineup-state/A1/A3/A8/A9 fields. No added mandatory schema field or mini-format migration. Retain actual late issue time even with CLEAN_PRE_START_INPUTS; report that cohort separately. All old mini formats and issued timing/rank/p/baseline/grade bytes remain unchanged. S9/S10 additionally keep clean-input late-issued research apart from pre-start-issued prospective/shadow scores; a settlement cannot create missing pre-start proof.
+
+## 12. Primary ML/RL receipt and feedback
+
+[PRIMARY_PREDICTION_PROTOCOL](PRIMARY_PREDICTION_PROTOCOL.md) controls new model-assisted cards in existing A4/A5/A9 metadata. Existing mini-log-7 and older formats retain their format; the declared policy/version changes, never an issued core. Settlement retains the original bundle, grades original keys first, then creates a new source-backed feedback row and reconciles the effective revision inventory before future learning. The market/decision lab remains excluded.

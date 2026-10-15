@@ -4,6 +4,8 @@
 
 ## Authority
 
+**Primary ML/RL integration (15 October 2026):** [PRIMARY-2026.10.15-v1](PRIMARY_PREDICTION_PROTOCOL.md) authorises model-assisted experimental primary cards from actual receipt-bound per-event runs, with a sporting bandit selecting the distribution and learning only from resolved available feedback. No old DATA_HOLD model is qualified by this change. Unsupported/missing runs remain explicit NO_FORECAST. [Implementation](research/verification/framework_change_2026-10-15-2/IMPLEMENTATION.md).
+
 **Timing update (15 October 2026):** [TIMING-2026.10.15-v1](TIMING_RESEARCH_PROTOCOL.md) removes all fixed manual research/freeze deadlines and permits research to finish after start. CLEAN_PRE_START_INPUTS describes verified pre-start evidence and no outcome exposure independently of actual issue time. Post-start issuance remains visible and separately scored; it is not a pre-start-issued prospective forecast. [Implementation](research/verification/framework_change_2026-10-15-1/IMPLEMENTATION.md). Existing issued cards, IDs, grades, statistics and model qualification unchanged.
 
 **Availability procedure update (14 October 2026):** [AVAIL-2026.10.14-v1](ROSTER_AVAILABILITY_PROTOCOL.md) and [change receipt](research/verification/framework_change_2026-10-14-4/IMPLEMENTATION.md) require comprehensive starter, bench and absence research for both sides, including obscure competitions. PROCEDURE only; truthful missingness, prediction/selection/scoring rules, formats and model-workshop firewall remain in force. Prompt v11.3 retains this procedure and adds the complete lifecycle/integrity controls.
@@ -11,11 +13,11 @@
 | Item | Value |
 |---|---|
 | Status | ACTIVE |
-| Method | MDS-2026.10.15-v12.0 (Markdown only) |
-| Control revision | CR-2026.10.15-R1 ([completion-based timing release](research/verification/framework_change_2026-10-15-1/IMPLEMENTATION.md); retains [integrity and lifecycle release](research/verification/framework_change_2026-10-14-5/IMPLEMENTATION.md); [availability procedure](research/verification/framework_change_2026-10-14-4/IMPLEMENTATION.md); retains [workshop/reading-gate/firewall](research/verification/framework_change_2026-10-14-3/IMPLEMENTATION.md)) |
-| Scoring version | SCV-2026.10.15-v8 (historical v5-v7 views retained) |
-| Selection version | SEL-2026.10.12-v3 / P_ORDER_V2 priced from the declared mixture where required; alternatives recorded as shadows |
-| Prompt suite | P-2026.10.15-v12.0 (STATISTICAL/measurement-policy + PROCEDURE: completion-based timing and comprehensive availability research; prompts 1–3 never read `research/model_shadow/` or `ml/` before their own freeze; prompt 8 may change `ml/`) |
+| Method | MDS-2026.10.15-v13.0 (Markdown/CSV/text controls; primary runtime in ml/) |
+| Control revision | CR-2026.10.15-R2 ([primary ML/RL release](research/verification/framework_change_2026-10-15-2/IMPLEMENTATION.md); [completion-based timing release](research/verification/framework_change_2026-10-15-1/IMPLEMENTATION.md); retains [integrity and lifecycle release](research/verification/framework_change_2026-10-14-5/IMPLEMENTATION.md); [availability procedure](research/verification/framework_change_2026-10-14-4/IMPLEMENTATION.md); retains [workshop/reading-gate/firewall](research/verification/framework_change_2026-10-14-3/IMPLEMENTATION.md)) |
+| Scoring version | SCV-2026.10.15-v9 (historical v5-v7 views retained) |
+| Selection version | SEL-2026.10.12-v3 / P_ORDER_V2 priced from the actual selected primary ML grid; historical manual mixtures remain in their own cohort; alternatives recorded as shadows |
+| Prompt suite | P-2026.10.15-v13.0 (STATISTICAL/measurement-policy + PROCEDURE: completion-based timing and comprehensive availability research; primary-runtime/receipt access is authorised; market decision-lab access remains prohibited; prompt 8 may change `ml/`) |
 | Mini-log format | `mini-log-7` (in-progress `mini-log-2` through `mini-log-6` retain their format) |
 | Settlement format | `mini-settlement-6` (earlier settlement formats remain accepted) |
 | Freeze | None. Custody is the git history of `main` (CURRENT_RULES §9). Cards record the HEAD SHA they read. The last control manifest, `CONTROL_MANIFEST_2026-10-09-3.md`, is in [archive/controls/](archive/controls/). |
@@ -72,8 +74,8 @@ Prompts 1–8 and their supporting rules/templates/examples are replaced under t
 
 ## Models
 
-- **Cards:** no fitted model is a card input. Supported numeric cards are `UNCALIBRATED_ANALYST_SCENARIO`; otherwise retain `UNCALIBRATED_QUALITATIVE` or `NO_FORECAST` with missing values explicit ([PROBABILITY_TOOLKIT.md](PROBABILITY_TOOLKIT.md), [LEAGUE_PROFILES.md](LEAGUE_PROFILES.md)).
-- **Model workshop (2026-10-14):** fitted development models exist in [`ml/`](ml/README.md), with outputs and statuses in [research/model_shadow/STATUS.md](research/model_shadow/STATUS.md). All are `HISTORICAL_DEVELOPMENT`; no prospective lane has started, and none is a card input. Prompts 1–3 never read them.
+- **New cards:** MODEL_ASSISTED_PRIMARY_V1 / EXPERIMENTAL_PRIMARY_NOT_CERTIFIED uses the primary runtime and its real receipts. Original historical manual cards remain unchanged. Missing exact-scope data/runtime support means NO_FORECAST, not a fabricated model output. [Primary policy](PRIMARY_PREDICTION_PROTOCOL.md).
+- **Model workshop (2026-10-14):** fitted development models exist in [`ml/`](ml/README.md), with outputs and statuses in [research/model_shadow/STATUS.md](research/model_shadow/STATUS.md). All are `HISTORICAL_DEVELOPMENT`; no prospective lane has started, and these old historical outputs remain unadmitted. New primary cards use a separate freshly fitted per-event bundle, not these cached predictions.
 - The 2026-10-09 numerical runtime and its model register are archived design notes ([NUMERICAL_MODEL_REGISTER.md](archive/root_documents_2026-10-14/NUMERICAL_MODEL_REGISTER.md)).
 
 ## Where things are

@@ -1,6 +1,6 @@
 # PROMPT 6 — Review cards and independently verified sporting shadows
 
-**P-2026.10.15-v12.0 · COHORT_RETROSPECTIVE · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Trigger: user request or about 30 newly settled cards; neither proves statistical sufficiency. Writes: a new uniquely named report, authorized scoreboard/state summaries, dated hypothesis amendments and CHANGELOG. No original log/grade/forecast, active rule/prompt or previous report changes. The decision lab is excluded.
+**P-2026.10.15-v13.0 · COHORT_RETROSPECTIVE · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Trigger: user request or about 30 newly settled cards; neither proves statistical sufficiency. Writes: a new uniquely named report, authorized scoreboard/state summaries, dated hypothesis amendments and CHANGELOG. No original log/grade/forecast, active rule/prompt or previous report changes. The decision lab is excluded.
 
 ## 1. Freeze scope and evidence
 
@@ -15,6 +15,7 @@ Create DATA_INVENTORY and row-level COHORT_TABLES joining original cards to effe
 For every sport/competition/format/endpoint/policy represented, report its own counts; list small strata explicitly. Preserve version boundaries, ranks, primary/informational/shadow/reforecast cohorts and evidence classes.
 
 Report:
+- MODEL_ASSISTED_PRIMARY_V1 separately from independent manual/shadow cohorts, including model selection propensity, cold-start/feedback coverage and actual code/source/grid receipts. Compare sporting learning against frozen same-row baselines; never import staking rewards into card learning.
 - Requests/retained events and numeric/baseline/settlement coverage; earlier missing intake means NOT_COMPUTABLE, not complete coverage. Include unresolved-case sensitivity.
 - Original rank W/L/PUSH/VOID/UNRESOLVED, card classes and Hit@2 with exact denominators; mechanically protected pairs separately.
 - Same-row paired Brier/log-loss differences, event and ISO-week means, events/weeks, justified uncertainty, headline A/B and sensitivity C/E evidence. In-sample climatology is descriptive. Missing paired evidence does not establish incremental skill; it does not prove none.

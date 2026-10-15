@@ -257,16 +257,20 @@ def discover() -> list[Discovery]:
     return list(_discover_cached())
 
 
-@__import__("functools").lru_cache(maxsize=1)
-def _discover_cached() -> tuple:
+@__import__("functools").lru_cache(maxsize=128)
+def _discover_cached(only_path: str | None = None) -> tuple:
     from ml.data.archive import stage_of, flag_state, missing_text, score_int  # local import: archive imports config
 
     out: list[Discovery] = []
     for sport_dir in sorted(p for p in ARCHIVE.iterdir() if p.is_dir() and not p.name.startswith("_")):
         sport = sport_dir.name
+        if only_path is not None and sport != only_path.split("/", 1)[0]:
+            continue
         rules = SPORT_RULES.get(sport)
         for comp_dir in sorted(p for p in sport_dir.iterdir() if p.is_dir()):
             path = f"{sport}/{comp_dir.name}"
+            if only_path is not None and path != only_path:
+                continue
             files = sorted(p for p in comp_dir.glob("*/*_games.csv") if p.parent.name.isdigit())
             counts, stage_counts, header, rows_total = {}, {}, None, 0
             md_counter: dict[str, int] = {}
@@ -395,7 +399,9 @@ def _discover_cached() -> tuple:
 
 
 def get_league(path: str) -> League:
-    for d in discover():
+    # Per-event inference need not parse every other sport's archive. Retain
+    # exactly the same discovery checks/configuration for the requested scope.
+    for d in _discover_cached(path):
         if d.path == path and d.league is not None:
             return d.league
     raise KeyError(path)

@@ -118,3 +118,7 @@ Calculate the baseline from its own league-only inputs; do not reuse team-adjust
 - **Missing reasons:** a missing baseline uses exactly one of these reasons: `NO_LEAGUE_PROFILE`, `PROFILE_LACKS_ENDPOINT` (for example extras, phase or corners not supported), `DISCRETE_FAMILY_UNSUPPORTED`, `NEW_FORMAT_NO_PRIOR`, `SOURCE_UNREACHABLE` (with the attempt and time), or `OTHER:<explanation>`.
 - **Fill route:** a reason that names a missing profile row is also listed for prompt 7, so the gap gets filled rather than repeated.
 - **TB-1-MD is a team model aid.** TB-1-MD (PROBABILITY_TOOLKIT §4) uses team inputs, so it is never `BASELINE_LEAGUE_V1`.
+
+## 10. Primary model source
+
+For MODEL_ASSISTED_PRIMARY_V1 the [primary runtime](PRIMARY_PREDICTION_PROTOCOL.md) supplies the selected coherent event distribution. The sporting bandit selects the whole expert, not a stake or an after-the-result winning row. P_ORDER_V2, original ranks, family/gate/precision/90% rules and same-row baseline definitions remain. The operator validates the full candidate recipe and family checks; a runtime success is not automatic gate PASS or calibrated/qualified use.

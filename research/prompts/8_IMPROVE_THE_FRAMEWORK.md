@@ -1,6 +1,6 @@
 # PROMPT 8 — Implement, verify and release a framework or workshop change
 
-**P-2026.10.15-v12.0 · FRAMEWORK_CHANGE · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: declared operating Markdown/CSV/text, archived originals, fixtures and a unique verification folder. Python/tests/requirements are permitted only under ml/ by CURRENT_RULES §0. No JSON, notebooks, pickles, workflows or binaries. Publish when this full prompt is invoked unless explicitly local-only.
+**P-2026.10.15-v13.0 · FRAMEWORK_CHANGE · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: declared operating Markdown/CSV/text, archived originals, fixtures and a unique verification folder. Python/tests/requirements are permitted only under ml/ by CURRENT_RULES §0. No JSON, notebooks, pickles, workflows or binaries. Publish when this full prompt is invoked unless explicitly local-only.
 
 ## Inputs
 
@@ -47,7 +47,7 @@ Run VERIFICATION_PROTOCOL §6: versions/dependencies/links, archive hashes, old-
 
 ## 5. Release, rollback and report
 
-Release only the authorized scope whose evidence gates passed. A tested development candidate stays development/shadow until its registered prospective evidence, sufficient precision and owner-approved exact-scope integration exist. No model output becomes a card input by this prompt rewrite alone. Rejection/inconclusive/data-hold results remain visible.
+Release only the authorized scope whose evidence gates passed. A tested development candidate stays development/shadow until its registered prospective evidence, sufficient precision and owner-approved exact-scope integration exist. Owner-authorised experimental primary use follows PRIMARY_PREDICTION_PROTOCOL and actual receipt-bound per-event execution; a prompt rewrite alone is not a fitted model or predictive qualification. Rejection/inconclusive/data-hold results remain visible.
 
 Stage exact reviewed paths and inspect staged diff/status. Recheck source/artifact hashes and concurrent writes immediately before commit. Publish without force under authorization; fetch/compare main or named destination SHA and read back key artifacts. A remote advance needs normal reconciliation, never history overwrite.
 

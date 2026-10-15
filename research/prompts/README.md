@@ -7,11 +7,11 @@ The root supplied-first extended prompt is a preserved proposal, not an active r
 
 **Historical v11.2 PROCEDURE update:** prompt 1 applies [ROSTER_AVAILABILITY_PROTOCOL](../../ROSTER_AVAILABILITY_PROTOCOL.md) to both sides and every applicable starter/bench/absence field, including local-language discovery and a final late-change check. Evidence stays in existing card fields/A3/A8/C20; mini-log-7 and earlier issued records retain their formats. The v11.1 workshop reading exclusion remains in force.
 
-**P-2026.10.15-v12.0 · Markdown/CSV/text only** (retains v11.1 PROCEDURE: prompts 1–3 never read `research/model_shadow/` or `ml/` before their own freeze; prompt 8 may change `ml/` under CURRENT_RULES §0). Original v11.0 revision class: FORMAT + PROCEDURE (mini-log-7 / mini-settlement-6, authority mode, form windows, mixture pricing, lifecycle and custody controls; CURRENT_RULES §11 explains the classes). Previous suite: [P-2026.10.11-v10](../../archive/superseded_2026-10-12/research/prompts/README.md). Use each complete task below; prompt 1 now contains its own common core and sport instructions. [Current rules](../../CURRENT_RULES.md) and [templates](../../CARD_AND_LOG_TEMPLATES.md) are required companions. No real ID, log part, league fact or retrospective figure is hard-coded in these prompts: they cover any sport and competition, and league-specific facts come from the rules files, [league profiles](../../LEAGUE_PROFILES.md), [SOURCES](../../SOURCES.md) and the archive.
+**P-2026.10.15-v13.0 · Markdown/CSV/text only** (supersedes the old v11.1 primary-model exclusion: prompts 1–3 may run/read the named primary runtime/bundle under PRIMARY_PREDICTION_PROTOCOL; unadmitted shadows and decision-lab remain excluded; prompt 8 may change ml/ under CURRENT_RULES §0). Original v11.0 revision class: FORMAT + PROCEDURE (mini-log-7 / mini-settlement-6, authority mode, form windows, mixture pricing, lifecycle and custody controls; CURRENT_RULES §11 explains the classes). Previous suite: [P-2026.10.11-v10](../../archive/superseded_2026-10-12/research/prompts/README.md). Use each complete task below; prompt 1 now contains its own common core and sport instructions. [Current rules](../../CURRENT_RULES.md) and [templates](../../CARD_AND_LOG_TEMPLATES.md) are required companions. No real ID, log part, league fact or retrospective figure is hard-coded in these prompts: they cover any sport and competition, and league-specific facts come from the rules files, [league profiles](../../LEAGUE_PROFILES.md), [SOURCES](../../SOURCES.md) and the archive.
 
 | # | Task | Writes |
 |---|---|---|
-| [1](1_GAME_CARD.md) | One individual game card | Active local mini and its permitted evidence appendix |
+| [1](1_GAME_CARD.md) | One individual game card | Active local mini and its named primary input/bundle/evidence scope |
 | [2](2_START_LOCAL_MINI.md) | Start local mini | New mini only |
 | [3](3_SETTLE_LOCAL_MINI.md) | Freeze, settle, retrospect | New local settlement package |
 | [4](4_CANONICAL_IMPORT.md) | Canonical import | Active log suffix, status/state/scoreboard, new import report |
@@ -26,9 +26,13 @@ Order: **2 → 1 for each event → 3 → 4**, then next mini; 5–8 as needed. 
 
 [TIMING-2026.10.15-v1](../../TIMING_RESEARCH_PROTOCOL.md) removes fixed manual research/freeze lead targets. Every sport continues until comprehensive research is complete, including after start. Independently evidenced CLEAN_PRE_START_INPUTS and actual POST_START_ISSUE are separate labels and a separate research score cohort; clean pre-start-issued prospective/model criteria are not backdated or relaxed. v12.0 is a STATISTICAL/measurement-policy + PROCEDURE release; score formulas, selection and mini formats unchanged. Earlier v11 release paragraphs above are historical.
 
+## Primary ML/RL lane
+
+[PRIMARY-2026.10.15-v1](../../PRIMARY_PREDICTION_PROTOCOL.md) supersedes the old blanket model-reading exclusion for the named primary runtime/bundle. New individual predictions are MODEL_ASSISTED_PRIMARY_V1, with actual fitted distributions, sports-only bandit action/feedback and explicit unqualified status. Old DATA_HOLD/shadow artifacts and the market decision lab remain excluded.
+
 ## Reading receipt
 
-**Exclusion (CR-2026.10.14-R1).** Prompts 1–3 do not open, search or cite `research/model_shadow/` or `ml/` before their own card is frozen; a receipt that lists either is invalid for a card.
+**Current model gate:** named primary runtime/model receipts are permitted under PRIMARY_PREDICTION_PROTOCOL; old blanket exclusion text in historical release notes is superseded. The market decision lab stays excluded.
 
 Before dependent work, open actual files and print:
 

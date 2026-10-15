@@ -1,10 +1,10 @@
 # Method: current authority
 
-**ACTIVE: MDS-2026.10.15-v12.0 · CR-2026.10.15-R1 · SCV-2026.10.15-v8 · SEL-2026.10.12-v3.** Current allocation and destination are in [CURRENT_STATE](CURRENT_STATE.md). Rules: [CURRENT_RULES](CURRENT_RULES.md).
+**ACTIVE: MDS-2026.10.15-v13.0 · CR-2026.10.15-R2 · SCV-2026.10.15-v9 · SEL-2026.10.12-v3.** Current allocation and destination are in [CURRENT_STATE](CURRENT_STATE.md). Rules: [CURRENT_RULES](CURRENT_RULES.md).
 
 1. Read every control in one authority mode (published main pinned to a SHA, or the local working tree), record revision/time, and disclose differences and gaps.
 2. Apply the comprehensive both-side availability search in [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md), including local-language discovery for obscure competitions; verify the event, endpoint, cutoff, known-at availability and actual issue state. Complete the research without a fixed countdown deadline, continuing after start when needed. Apply [TIMING_RESEARCH_PROTOCOL](TIMING_RESEARCH_PROTOCOL.md): pre-start input quality and actual issue time are separate; freeze the completed original only at issuance.
-3. Read each side's L5/L10/L15/L20, season and league form from dated pre-cutoff games, counted once and shrunk to one rate. Build one supported distribution, expected scores and sensitivity cases. Price from the declared low/base/high mixture whenever an input is labelled uncertain; otherwise retain explicit qualitative research or NO_FORECAST.
+3. Read each side's L5/L10/L15/L20, season and league form from dated pre-cutoff games, counted once and shrunk to one rate. Fit the supported primary ML distributions and run the sporting bandit under PRIMARY_PREDICTION_PROTOCOL. Use the selected saved grid for expected scores/probabilities; manual form blends and low/base/high cases are separate diagnostics, not fitted feature effects. Material unsupported uncertainty retains qualitative research or NO_FORECAST.
 4. Freeze a reproducible candidate recipe. Primary candidates rank by p_card; supplied contracts are reference only. Dependence and shadow alternatives are separate disclosures.
 5. Freeze a league-only comparator on each supported identical row. Never invent a missing baseline.
 6. Retain up to four candidates. Only original Ranks 1–2 count as primary wins. Report coverage and unresolved evidence alongside decisive rates.
@@ -12,7 +12,7 @@
 8. Import every block exactly once, retain original bytes, reconcile current state and publish scoped commits when authorized.
 9. Evaluate same-row proper scores and event/week uncertainty. A documentation improvement is not demonstrated predictive improvement.
 
-The repository remains Markdown/CSV/text for every card, log and rule. The one exception is the maintainer model workshop `ml/` (CURRENT_RULES §0, owner instruction 2026-10-14): it fits development and shadow models and writes Markdown/CSV under `research/model_shadow/`. No model output is a card input, and prompts 1–3 never read it before their own freeze. Executable validators and automated daily jobs remain unavailable. All cards are RESEARCH_ONLY_NOT_CERTIFIED. New formats are mini-log-7 and mini-settlement-6; canonical-md-1 remains the import wrapper. Older minis and issued cards retain their own versions and semantics.
+Primary cards now use the owner-authorised [ML/RL primary runtime](PRIMARY_PREDICTION_PROTOCOL.md). Numeric p_card comes from a newly fitted sporting distribution selected by a sports-only delayed-feedback bandit, with exact source/input/output/code receipts. This is experimental primary use, not certified skill. The named primary bundle and feedback lane may be read/run during card research; the market decision lab and unadmitted historical forecasts remain excluded. Unsupported endpoints/data/fit failures retain research with NO_FORECAST rather than claiming a model ran. Code remains confined to ml/; output is Markdown/CSV/text. Old cards retain their own methods and formats.
 
 The preserved v11 implementation carried out the user's October 12 instruction to carry out the 38 audit recommendations and the 10 prediction recommendations in order. Changes:
 - archive repair;
