@@ -1,6 +1,6 @@
 # PROMPT 4 — Verify and import the complete settlement package
 
-**P-2026.10.15-v15.0 · CANONICAL_IMPORT · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: active log suffix, current status/state/scoreboard and a new import report with preserved inputs. Never rewrite issued cores, closed parts or grades. Publish when this full prompt is invoked unless the user requests local-only.
+**P-2026.10.15-v16.0 · CANONICAL_IMPORT · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: active log suffix, current status/state/scoreboard and a new import report with preserved inputs. Never rewrite issued cores, closed parts or grades. Publish when this full prompt is invoked unless the user requests local-only.
 
 ## Inputs
 
@@ -45,3 +45,9 @@ Report planned/applied/skipped/conflicting units, custody/readback evidence, pre
 Stage exact intended paths, inspect the full staged diff/scope, run relevant checks and commit/push without force when authorized. Fetch and compare remote SHA and key artifact contents. Preserve concurrent work.
 
 Return package/destination/report links, all dispositions, canonical continuity, effective settlements/queues, paired-score coverage, byte identities and actual commit/remote status. A failed dependent append never erases completed verified work.
+
+## Mandatory ML execution coverage (EXEC-v1)
+
+**Strict per-event execution:** read [ML_EXECUTION_PROTOCOL](../../ML_EXECUTION_PROTOCOL.md). Every new game requires an actual `primary execute` attempt and retained success/failure receipt even without a pre-existing league baseline/profile, plus its `ML_EXECUTION_MANIFEST.csv` row. Build the comparator from reviewed exact-competition history where possible; missing paired scoring never waives fitting/learning. No numeric success is claimed for unsupported/failed runs. Require C21 and `primary verify-log` before completion/import, preserve real capability gaps as INCOMPLETE execution, and keep full independent research. Successful settled bundles require source-backed feedback or a named pending/blocked reason; baselines, analyst comparisons and absent feedback never manufacture a learning observation.
+
+Before new EXEC-v1 import, verify every source mini card against its execution manifest with `primary verify-log` (mini-log-8), check C21/S16, and retain attempts/bundles/feedback with resolvable paths/hashes in the preserved inputs. Do not import a missing/incomplete execution as compliant numeric ML. An evidenced failed attempt may import as its original nonnumeric research card; successful terminal models require actual feedback or a precise blocked/pending reason. Legacy cards import under original requirements with explicit historical gaps, never retroactive ML execution. Import coverage must enumerate successful, failed, missing and feedback-disposition counts.

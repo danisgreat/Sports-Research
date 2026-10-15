@@ -1,0 +1,7 @@
+Added/changed relative links checked: 119; missing 0
+Authority/format/version checks: PASS
+Eight lifecycle prompts aligned: PASS
+Eleven standalone sport instructions checked: PASS
+Markdown code fences balanced: PASS
+Actual smoke generating source unchanged: a118b15002386102b9ff614905e9e175795fdcb03f33e451565166f9ad7bf556
+Protected original raw SHA-256 checks: 777/777 unchanged

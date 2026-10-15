@@ -1,6 +1,6 @@
 # Common operating protocol for prompts 1–8
 
-**P-2026.10.15-v15.0 · CR-2026.10.15-R6 · SCV-2026.10.15-v10.** Current primary lane: PRIMARY_HEDGE_MIX_V3, a deterministic whole-grid mixture with source-known-at warm replay, one learning contribution per event, admitted policy-specific η or a labelled provisional default. This is online expert aggregation; no trained environment-control RL agent is claimed. The numbered prompts now describe this mechanism directly. The evidence horizon remains the earliest of game-log scheduled start, actual issue and verified first play; no separate runtime cutoff or forced early freeze. Research may finish after start with truthful input/issue cohorts. Formats remain mini-log-7 / mini-settlement-6 / canonical-md-1. [Primary protocol](../../PRIMARY_PREDICTION_PROTOCOL.md). Read the complete selected task; prompt1 retains eleven sport/general workflows and their own Upcoming blocks.
+**P-2026.10.15-v16.0 · CR-2026.10.15-R7 · SCV-2026.10.15-v10.** Current primary lane: PRIMARY_HEDGE_MIX_V3, a deterministic whole-grid mixture with source-known-at warm replay, one learning contribution per event, admitted policy-specific η or a labelled provisional default. This is online expert aggregation; no trained environment-control RL agent is claimed. The numbered prompts now describe this mechanism directly. The evidence horizon remains the earliest of game-log scheduled start, actual issue and verified first play; no separate runtime cutoff or forced early freeze. Research may finish after start with truthful input/issue cohorts. New formats are mini-log-8 / mini-settlement-7 / canonical-md-1; existing issued formats remain unchanged. [Primary protocol](../../PRIMARY_PREDICTION_PROTOCOL.md). Read the complete selected task; prompt1 retains eleven sport/general workflows and their own Upcoming blocks.
 
 ## 1. Resolve authority and task boundaries
 
@@ -9,7 +9,7 @@ Read CURRENT_STATE, METHOD, CURRENT_RULES, SELECTION_RULES, CARD_AND_LOG_TEMPLAT
 | Task | Authority and writes | ML/shadow handling |
 |---|---|---|
 | 1 Game card | PUBLISHED_MAIN_PINNED unless explicitly local; named mini/model-input/bundle/evidence/footer only | Named primary model/runtime/bundle allowed; source research stays sporting; no market decision lab |
-| 2 Start mini | Same authority rule; one new mini | Read primary protocol/route requirements only; no event forecast until prompt1; no event ID |
+| 2 Start mini | Same authority rule; one new mini and header-only execution manifest | Read primary protocol/route requirements only; no event forecast until prompt1; no event ID |
 | 3 Settle mini | Published pinned or explicitly local; frozen-source and new settlement package | Original keys first; verify primary bundle and source-backed effective feedback; optional sporting shadows separately scored |
 | 4 Import | LOCAL_WORKING_TREE; verified canonical suffix and current summaries | Import issued MODEL_ASSISTED_PRIMARY_V3 cores literally; model feedback/shadow rows consume no P-IDs |
 | 5 Rollover | LOCAL_WORKING_TREE; closure/new part and current pointers | Preserve independent shadow identity/locations; rollover is no model release |
@@ -56,3 +56,9 @@ Read back every deliverable; reconcile complete inventories and aggregates; exer
 ## 6. Cross-sport historical source priority
 
 Read [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md) for every game/source-data task. After brief exact archive checks, internet research is the preferred first recovery for missing/incomplete/incorrect history across every sport/competition. Use reviewed web rows in the named local mini/model evidence now, with source/time/dedup/correction receipts; do not wait for shared archive repair or substitute another league. New public sporting routes can be discovered and documented; no restricted access bypass. Source repair does not change issued originals, fit an unsupported model or prove predictive improvement.
+
+## 7. Mandatory game and mini execution
+
+**Strict per-event execution:** read [ML_EXECUTION_PROTOCOL](../../ML_EXECUTION_PROTOCOL.md). Every new game requires an actual `primary execute` attempt and retained success/failure receipt even without a pre-existing league baseline/profile, plus its `ML_EXECUTION_MANIFEST.csv` row. Build the comparator from reviewed exact-competition history where possible; missing paired scoring never waives fitting/learning. No numeric success is claimed for unsupported/failed runs. Require C21 and `primary verify-log` before completion/import, preserve real capability gaps as INCOMPLETE execution, and keep full independent research. Successful settled bundles require source-backed feedback or a named pending/blocked reason; baselines, analyst comparisons and absent feedback never manufacture a learning observation.
+
+Prompt2 initializes a header-only manifest; prompt1 executes and appends its matching row; prompt3 freezes it and actually settles eligible bundles; prompt4 verifies and retains it; prompt5 preserves pointers; prompt6 audits coverage; prompt7 repairs exact-scope inputs; prompt8 tests the complete lifecycle.

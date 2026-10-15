@@ -7,12 +7,12 @@ The root supplied-first extended prompt is a preserved proposal, not an active r
 
 **Historical v11.2 PROCEDURE update:** prompt 1 applies [ROSTER_AVAILABILITY_PROTOCOL](../../ROSTER_AVAILABILITY_PROTOCOL.md) to both sides and every applicable starter/bench/absence field, including local-language discovery and a final late-change check. Evidence stays in existing card fields/A3/A8/C20; mini-log-7 and earlier issued records retain their formats. The v11.1 workshop reading exclusion remains in force.
 
-**P-2026.10.15-v15.0 · Markdown/CSV/text only** (supersedes the old v11.1 primary-model exclusion: prompts 1–3 may run/read the named primary runtime/bundle under PRIMARY_PREDICTION_PROTOCOL; unadmitted shadows and decision-lab remain excluded; prompt 8 may change ml/ under CURRENT_RULES §0). Original v11.0 revision class: FORMAT + PROCEDURE (mini-log-7 / mini-settlement-6, authority mode, form windows, mixture pricing, lifecycle and custody controls; CURRENT_RULES §11 explains the classes). Previous suite: [P-2026.10.11-v10](../../archive/superseded_2026-10-12/research/prompts/README.md). Use each complete task below; prompt 1 now contains its own common core and sport instructions. [Current rules](../../CURRENT_RULES.md) and [templates](../../CARD_AND_LOG_TEMPLATES.md) are required companions. No real ID, log part, league fact or retrospective figure is hard-coded in these prompts: they cover any sport and competition, and league-specific facts come from the rules files, [league profiles](../../LEAGUE_PROFILES.md), [SOURCES](../../SOURCES.md) and the archive.
+**P-2026.10.15-v16.0 · Markdown/CSV/text only** (supersedes the old v11.1 primary-model exclusion: prompts 1–3 may run/read the named primary runtime/bundle under PRIMARY_PREDICTION_PROTOCOL; unadmitted shadows and decision-lab remain excluded; prompt 8 may change ml/ under CURRENT_RULES §0). Current EXEC-v1 revision class: FORMAT + PROCEDURE (mini-log-8 / mini-settlement-7, mandatory execution/manifest and C21/S16). Original v11.0 revision class: FORMAT + PROCEDURE (mini-log-7 / mini-settlement-6, authority mode, form windows, mixture pricing, lifecycle and custody controls; CURRENT_RULES §11 explains the classes). Previous suite: [P-2026.10.11-v10](../../archive/superseded_2026-10-12/research/prompts/README.md). Use each complete task below; prompt 1 now contains its own common core and sport instructions. [Current rules](../../CURRENT_RULES.md) and [templates](../../CARD_AND_LOG_TEMPLATES.md) are required companions. No real ID, log part, league fact or retrospective figure is hard-coded in these prompts: they cover any sport and competition, and league-specific facts come from the rules files, [league profiles](../../LEAGUE_PROFILES.md), [SOURCES](../../SOURCES.md) and the archive.
 
 | # | Task | Writes |
 |---|---|---|
 | [1](1_GAME_CARD.md) | One individual game card | Active local mini and its named primary input/bundle/evidence scope |
-| [2](2_START_LOCAL_MINI.md) | Start local mini | New mini only |
+| [2](2_START_LOCAL_MINI.md) | Start local mini | New mini and header-only execution manifest |
 | [3](3_SETTLE_LOCAL_MINI.md) | Freeze, settle, retrospect | New local settlement package |
 | [4](4_CANONICAL_IMPORT.md) | Canonical import | Active log suffix, status/state/scoreboard, new import report |
 | [5](5_START_THE_NEXT_COMBINED_LOG.md) | Rollover | Old log closure, new part, current pointers, changelog/report |
@@ -28,7 +28,7 @@ Order: **2 → 1 for each event → 3 → 4**, then next mini; 5–8 as needed. 
 
 ## Primary ML/RL lane
 
-[PRIMARY-2026.10.15-v3.1](../../PRIMARY_PREDICTION_PROTOCOL.md) governs actual MODEL_ASSISTED_PRIMARY_V3 per-event runs. Whole expert grids are mixed with point-in-time, deduplicated learning ledgers and admitted η or a labelled provisional default. Numbered prompts now name these fields directly. The evidence horizon is the earliest of game-log schedule, issue and verified actual start; research continues to completion under truthful timing labels. Old DATA_HOLD/shadow forecasts and the market decision lab remain excluded.
+[PRIMARY-2026.10.15-v3.2](../../PRIMARY_PREDICTION_PROTOCOL.md) governs actual MODEL_ASSISTED_PRIMARY_V3 per-event runs. Whole expert grids are mixed with point-in-time, deduplicated learning ledgers and admitted η or a labelled provisional default. Numbered prompts now name these fields directly. The evidence horizon is the earliest of game-log schedule, issue and verified actual start; research continues to completion under truthful timing labels. Old DATA_HOLD/shadow forecasts and the market decision lab remain excluded.
 
 ## Reading receipt
 
@@ -59,7 +59,7 @@ Common requirements: no fabricated data or execution claims; explicit missingnes
 
 ## Release and compatibility
 
-New minis use mini-log-7 and settlement mini-settlement-6. Existing mini-log-2 through -6 and settlement -2 through -5 stay in their original formats. New process checks expose gaps through dated addenda; they never insert absent pregame values. Historical rank/p/contract/timestamp bytes and grades remain unchanged. Implementation maps [2026-10-12-1](../verification/framework_change_2026-10-12-1/IMPLEMENTATION.md) (current) and [2026-10-11-1](../verification/framework_change_2026-10-11-1/IMPLEMENTATION.md) distinguish current controls from untested experiments and pending data work.
+New minis use mini-log-8 and settlement mini-settlement-7. Existing mini-log-2 through -7 and settlement -2 through -6 stay in their original formats. New EXEC-v1 cards appended to an older active mini retain their own manifest/attempt fields; earlier cores are not migrated. New process checks expose gaps through dated addenda; they never insert absent pregame values. Historical rank/p/contract/timestamp bytes and grades remain unchanged. Implementation maps [2026-10-12-1](../verification/framework_change_2026-10-12-1/IMPLEMENTATION.md) (current) and [2026-10-11-1](../verification/framework_change_2026-10-11-1/IMPLEMENTATION.md) distinguish current controls from untested experiments and pending data work.
 
 **Current V3 review:** [review](../verification/framework_change_2026-10-15-4/REVIEW.md), [protocol](../../PRIMARY_PREDICTION_PROTOCOL.md). Numbered task text is now directly aligned with mixture/ledger/η fields. Previous companion reinterpretations of bandit/propensity wording are historical. A learning algorithm and a passing test suite do not prove predictive improvement.
 
@@ -67,3 +67,6 @@ New minis use mini-log-7 and settlement mini-settlement-6. Existing mini-log-2 t
 
 
 **Strict research completion:** [RESEARCH_COMPLETION_PROTOCOL](../../RESEARCH_COMPLETION_PROTOCOL.md) requires full research, all applicable sport procedures and every requested contract assessment irrespective of model calibration/runtime, data/lineup gaps, kickoff or mini/write blockers. Supported automatic analyst comparisons stay NOT_PRIMARY; missing numerical ML never means stop research. The A9 evidence matrix is mandatory.
+
+
+**Mandatory ML execution release (EXEC-v1):** [ML_EXECUTION_PROTOCOL](../../ML_EXECUTION_PROTOCOL.md) requires a real per-event attempt and hash-bound manifest for every new game, even without an existing league baseline/profile; new minis use mini-log-8 and settlements mini-settlement-7. Actual source-backed terminal feedback or an explicit pending/blocked disposition is required. Supervised models plus Hedge are implemented; no trained environment-control RL policy is claimed. Historical originals and numerical V3/scoring/selection mathematics remain unchanged.

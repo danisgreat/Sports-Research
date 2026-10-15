@@ -1,6 +1,6 @@
 # PROMPT 6 — Review cards and independently verified sporting shadows
 
-**P-2026.10.15-v15.0 · COHORT_RETROSPECTIVE · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Trigger: user request or about 30 newly settled cards; neither proves statistical sufficiency. Writes: a new uniquely named report, authorized scoreboard/state summaries, dated hypothesis amendments and CHANGELOG. No original log/grade/forecast, active rule/prompt or previous report changes. The decision lab is excluded.
+**P-2026.10.15-v16.0 · COHORT_RETROSPECTIVE · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Trigger: user request or about 30 newly settled cards; neither proves statistical sufficiency. Writes: a new uniquely named report, authorized scoreboard/state summaries, dated hypothesis amendments and CHANGELOG. No original log/grade/forecast, active rule/prompt or previous report changes. The decision lab is excluded.
 
 ## 1. Freeze scope and evidence
 
@@ -44,3 +44,9 @@ Publish exact paths under invoked-task authorization, fetch and verify remote ar
 
 
 Under RESEARCH_COMPLETION_PROTOCOL, report research completion, numerical ML/analyst availability and issuance separately. Audit early exits caused by model/calibration, lineup, timing or mini blockers against the actual work, not the presence of a NO_FORECAST label. Keep automatic NOT_PRIMARY analyst comparisons out of model T2/feedback and prospective model claims; do not restamp old cards with a new completion receipt.
+
+## Mandatory ML execution coverage (EXEC-v1)
+
+**Strict per-event execution:** read [ML_EXECUTION_PROTOCOL](../../ML_EXECUTION_PROTOCOL.md). Every new game requires an actual `primary execute` attempt and retained success/failure receipt even without a pre-existing league baseline/profile, plus its `ML_EXECUTION_MANIFEST.csv` row. Build the comparator from reviewed exact-competition history where possible; missing paired scoring never waives fitting/learning. No numeric success is claimed for unsupported/failed runs. Require C21 and `primary verify-log` before completion/import, preserve real capability gaps as INCOMPLETE execution, and keep full independent research. Successful settled bundles require source-backed feedback or a named pending/blocked reason; baselines, analyst comparisons and absent feedback never manufacture a learning observation.
+
+Audit every included game and mini manifest: requested/card/executed/failed/not-run counts, exact sport/competition/endpoint, fitted versus unavailable baselines, warm/feedback learning counts and terminal feedback retained/pending/blocked. Verify EXEC-v1 records; keep historical missingness separate. Missing baselines remove only paired-score rows, never otherwise supported inference or source-backed learning. Report the actual Hedge mechanism and unsupported adapters; do not call it a trained control-RL policy or infer skill from execution coverage.

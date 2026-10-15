@@ -8,7 +8,7 @@
 |---|---|
 | Current values (IDs, active log, versions, scoreboard) | [CURRENT_STATE.md](CURRENT_STATE.md) |
 | Method and rules | [METHOD.md](METHOD.md), [CURRENT_RULES.md](CURRENT_RULES.md), [SELECTION_RULES.md](SELECTION_RULES.md) |
-| Card, mini, settlement and canonical formats; self-audit C1–C20, S1–S15 | [CARD_AND_LOG_TEMPLATES.md](CARD_AND_LOG_TEMPLATES.md) |
+| Card, mini, settlement and canonical formats; self-audit C1–C21, S1–S16 | [CARD_AND_LOG_TEMPLATES.md](CARD_AND_LOG_TEMPLATES.md) |
 | Research completion and input/issue timing | [TIMING_RESEARCH_PROTOCOL](TIMING_RESEARCH_PROTOCOL.md) (no fixed manual research deadline; no separate cutoff, the evidence horizon is the game-log scheduled start) |
 | Scoring and evaluation | [SCORING_AND_VALIDATION.md](SCORING_AND_VALIDATION.md) |
 | Verification checks | [VERIFICATION_PROTOCOL.md](VERIFICATION_PROTOCOL.md) |
@@ -83,3 +83,6 @@
 **Primary ML/RL (15 October 2026):** [PRIMARY_PREDICTION_PROTOCOL](PRIMARY_PREDICTION_PROTOCOL.md) governs new experimental model-assisted primary rows (PRIMARY-2026.10.15-v3: integrity-corrected full-information mixture, [review](research/verification/framework_change_2026-10-15-4/REVIEW.md)) and sports-only expert-loss feedback. Actual per-event execution and receipts required; no old artifact is automatically qualified.
 
 **Preferred historical recovery:** [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md) applies to every sport and competition. Missing, incomplete or incorrect local history is researched online first, with reviewed web rows usable in the named primary input scope; shared archive maintenance is separate. Source/known-at checks and unsupported-model limits remain.
+
+
+**Mandatory ML execution release (EXEC-v1):** [ML_EXECUTION_PROTOCOL](ML_EXECUTION_PROTOCOL.md) requires a real per-event attempt and hash-bound manifest for every new game, even without an existing league baseline/profile; new minis use mini-log-8 and settlements mini-settlement-7. Actual source-backed terminal feedback or an explicit pending/blocked disposition is required. Supervised models plus Hedge are implemented; no trained environment-control RL policy is claimed. Historical originals and numerical V3/scoring/selection mathematics remain unchanged.

@@ -1,0 +1,34 @@
+SYNTHETIC MECHANICS ONLY. No sporting evidence, live forecast, canonical allocation or predictive validation.
+COMMAND: python -m ml primary execute --request C:\Users\danie\Downloads\ml_execution_rule_2026-10-15\synthetic_cli\REQUEST.csv --history C:\Users\danie\Downloads\ml_execution_rule_2026-10-15\synthetic_cli\HISTORY.csv --contracts C:\Users\danie\Downloads\ml_execution_rule_2026-10-15\synthetic_cli\CONTRACTS.csv --competition-source C:\Users\danie\Downloads\ml_execution_rule_2026-10-15\synthetic_cli\COMPETITION_SOURCE.csv --out C:\Users\danie\Downloads\ml_execution_rule_2026-10-15\synthetic_cli\ATTEMPT_1
+EXIT: 0
+EXAMPLE-PRIMARY-1: EXECUTED; C:\Users\danie\Downloads\ml_execution_rule_2026-10-15\synthetic_cli\ATTEMPT_1\EXECUTION.csv;
+
+
+COMMAND: python -m ml primary verify-execution --attempt C:\Users\danie\Downloads\ml_execution_rule_2026-10-15\synthetic_cli\ATTEMPT_1
+EXIT: 0
+EXECUTED
+
+
+COMMAND: python -m ml primary settle --bundle C:\Users\danie\Downloads\ml_execution_rule_2026-10-15\synthetic_cli\ATTEMPT_1\BUNDLE --home-score 110 --away-score 95 --final-at 2023-01-01T13:00:00Z --available-at 2023-01-01T14:00:00Z --evidence C:\Users\danie\Downloads\ml_execution_rule_2026-10-15\synthetic_cli\capture.txt --evidence-sha256 3b5b7ff0329a59a16d686c9ae66f360177f2dd78d48b2db3d5f901f638bc3167 --out C:\Users\danie\Downloads\ml_execution_rule_2026-10-15\synthetic_cli\FEEDBACK.csv
+EXIT: 0
+feedback retained: C:\Users\danie\Downloads\ml_execution_rule_2026-10-15\synthetic_cli\FEEDBACK.csv; append to effective feedback inventory only after revision reconciliation
+
+
+COMMAND: python -m ml primary verify-log --manifest C:\Users\danie\Downloads\ml_execution_rule_2026-10-15\synthetic_cli\MANIFEST.csv --mini C:\Users\danie\Downloads\ml_execution_rule_2026-10-15\synthetic_cli\MINI.md
+EXIT: 0
+{'cards': 1, 'executed': 1, 'failed': 0, 'feedback_retained': 1}
+
+
+COMMAND: python -m ml primary execute --request C:\Users\danie\Downloads\ml_execution_rule_2026-10-15\synthetic_cli\NEXT_REQUEST.csv --history C:\Users\danie\Downloads\ml_execution_rule_2026-10-15\synthetic_cli\HISTORY.csv --contracts C:\Users\danie\Downloads\ml_execution_rule_2026-10-15\synthetic_cli\CONTRACTS.csv --competition-source C:\Users\danie\Downloads\ml_execution_rule_2026-10-15\synthetic_cli\COMPETITION_SOURCE.csv --feedback C:\Users\danie\Downloads\ml_execution_rule_2026-10-15\synthetic_cli\FEEDBACK.csv --out C:\Users\danie\Downloads\ml_execution_rule_2026-10-15\synthetic_cli\ATTEMPT_2
+EXIT: 0
+EXAMPLE-PRIMARY-2: EXECUTED; C:\Users\danie\Downloads\ml_execution_rule_2026-10-15\synthetic_cli\ATTEMPT_2\EXECUTION.csv;
+
+
+COMMAND: python -m ml primary execute --request C:\Users\danie\Downloads\ml_execution_rule_2026-10-15\synthetic_cli\BAD_REQUEST.csv --history C:\Users\danie\Downloads\ml_execution_rule_2026-10-15\synthetic_cli\HISTORY.csv --contracts C:\Users\danie\Downloads\ml_execution_rule_2026-10-15\synthetic_cli\CONTRACTS.csv --competition-source C:\Users\danie\Downloads\ml_execution_rule_2026-10-15\synthetic_cli\COMPETITION_SOURCE.csv --out C:\Users\danie\Downloads\ml_execution_rule_2026-10-15\synthetic_cli\FAILED_ATTEMPT
+EXIT: 1
+EXAMPLE-FAILED: FAILED; C:\Users\danie\Downloads\ml_execution_rule_2026-10-15\synthetic_cli\FAILED_ATTEMPT\EXECUTION.csv; outcome-exposed full-event primary forecast blocked
+
+
+COMMAND: python -m ml primary verify-execution --attempt C:\Users\danie\Downloads\ml_execution_rule_2026-10-15\synthetic_cli\FAILED_ATTEMPT
+EXIT: 0
+FAILED

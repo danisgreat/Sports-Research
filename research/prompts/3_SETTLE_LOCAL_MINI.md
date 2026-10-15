@@ -1,6 +1,6 @@
 # PROMPT 3 — Freeze, settle and review a local mini
 
-**P-2026.10.15-v15.0 · LOCAL_MINI_SETTLEMENT.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: a new settlement package and dated revisions; no canonical/GitHub writes. Original cards are immutable. For MODEL_ASSISTED_PRIMARY_V3, retain and verify its primary bundle, settle original keys first, then run primary settle and reconcile one effective source-backed feedback row per event before future learning. Optional sporting-shadow comparisons occur only after manual settlement; the decision lab is excluded.
+**P-2026.10.15-v16.0 · LOCAL_MINI_SETTLEMENT.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: a new settlement package and dated revisions; no canonical/GitHub writes. Original cards are immutable. For MODEL_ASSISTED_PRIMARY_V3, retain and verify its primary bundle, settle original keys first, then run primary settle and reconcile one effective source-backed feedback row per event before future learning. Optional sporting-shadow comparisons occur only after manual settlement; the decision lab is excluded.
 
 ## Inputs
 
@@ -16,7 +16,7 @@ Read common controls/protocol, scoring, verification, current status, sport/leag
 
 Copy exact original working bytes to ORIGINAL_MINI before settlement. Record FROZEN_SOURCE: path, byte count, computed SHA-256, complete block inventory, freeze time and writer hand-over. Record its frozen status through the permitted lifecycle receipt. New events go to the next authorized mini. Recheck source growth at package time; account for later blocks and routing instead of silently omitting them.
 
-Produce PREDICTION_MINI_SETTLED as the complete frozen prefix plus settlement, LOCAL_ID_MAPPING, UNRESOLVED_CARRYOVER and SETTLEMENT_MANIFEST. Use mini-settlement-6 for new packages; earlier formats remain valid. A rerun appends a new revision in a new versioned output; never overwrite an earlier package.
+Produce PREDICTION_MINI_SETTLED as the complete frozen prefix plus settlement, LOCAL_ID_MAPPING, UNRESOLVED_CARRYOVER and SETTLEMENT_MANIFEST. Use mini-settlement-7 for new packages; earlier formats remain valid. A rerun appends a new revision in a new versioned output; never overwrite an earlier package.
 
 Before scoring, preserve actual issue phase and independent pre-start-input proof under TIMING_RESEARCH_PROTOCOL. No settlement creates a pre-start freeze/issue receipt; late-issued clean-input research is separately scored and is never prospective pre-start issuance.
 
@@ -44,9 +44,15 @@ Settle shadows under their own IDs/revision chains; they consume no P-ID and ent
 
 ## 5. Verify and return
 
-Run S1–S15 and applicable original-format card checks with evidence. Compare the entire settled prefix, reconcile every source block/mapping/revision and read back every output. Check source growth, markers, unconditional/decisive denominators and queue responsibilities. Verified final time drives SLA; absent final time means UNKNOWN, an estimate is triage only.
+Run S1–S16 and applicable original-format card checks with evidence. Compare the entire settled prefix, reconcile every source block/mapping/revision and read back every output. Check source growth, markers, unconditional/decisive denominators and queue responsibilities. Verified final time drives SLA; absent final time means UNKNOWN, an estimate is triage only.
 
 Return paths, frozen-source identity, full inventory, revisions/grades, primary denominators, pending/unresolved queues, deep-review coverage, optional shadow comparison/exclusions and verification limits. Canonical import PENDING; GitHub writes NO. A retry plan is not an executed or scheduled capture.
 
 
 For new RC-v1 research records, inspect the A9 completion matrix and retain actual procedure gaps in the process review; missing calibration is separate. Analyst comparison rows labelled NOT_PRIMARY never become original primary picks or ML feedback. Old cards retain their original formats; do not retrofit a completion receipt or delay independently supported settlement because research was incomplete.
+
+## Mandatory ML execution coverage (EXEC-v1)
+
+**Strict per-event execution:** read [ML_EXECUTION_PROTOCOL](../../ML_EXECUTION_PROTOCOL.md). Every new game requires an actual `primary execute` attempt and retained success/failure receipt even without a pre-existing league baseline/profile, plus its `ML_EXECUTION_MANIFEST.csv` row. Build the comparator from reviewed exact-competition history where possible; missing paired scoring never waives fitting/learning. No numeric success is claimed for unsupported/failed runs. Require C21 and `primary verify-log` before completion/import, preserve real capability gaps as INCOMPLETE execution, and keep full independent research. Successful settled bundles require source-backed feedback or a named pending/blocked reason; baselines, analyst comparisons and absent feedback never manufacture a learning observation.
+
+Freeze the original execution manifest and referenced attempts/bundles alongside ORIGINAL_MINI. New settlement packages use mini-settlement-7 and a new effective manifest. For every successful model bundle with a verified terminal endpoint, actually run `primary settle`, retain the real feedback CSV/hash and one effective revision; lack of a frozen baseline or paired score is not a feedback blocker. Keep pending endpoints PENDING_EVENT; source/definition/endpoint/custody failures need BLOCKED_WITH_EVIDENCE and a named repair. Failed attempts are NOT_APPLICABLE_NO_MODEL. Run S16 and `primary verify-log` against the frozen new-format mini/effective manifest; retain legacy execution gaps as historical, never refit old results as pregame forecasts.

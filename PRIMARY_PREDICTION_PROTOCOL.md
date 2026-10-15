@@ -1,8 +1,14 @@
 # Primary ML and online expert aggregation
 
-**PRIMARY-2026.10.15-v3.1 · MDS-2026.10.15-v15.2 · CR-2026.10.15-R6 · SCV-2026.10.15-v10 · P-2026.10.15-v15.0.** Owner-authorised experimental primary use: MODEL_ASSISTED_PRIMARY_V3 / PRIMARY_HEDGE_MIX_V3 / EXPERIMENTAL_PRIMARY_NOT_CERTIFIED. [Review](research/verification/framework_change_2026-10-15-4/REVIEW.md). Prior controls and V2 remain recoverable in Git/archive; issued originals never migrate silently.
+**PRIMARY-2026.10.15-v3.2 · MDS-2026.10.15-v16.0 · CR-2026.10.15-R7 · SCV-2026.10.15-v10 · P-2026.10.15-v16.0.** Owner-authorised experimental primary use: MODEL_ASSISTED_PRIMARY_V3 / PRIMARY_HEDGE_MIX_V3 / EXPERIMENTAL_PRIMARY_NOT_CERTIFIED. [Review](research/verification/framework_change_2026-10-15-4/REVIEW.md). Prior controls and V2 remain recoverable in Git/archive; issued originals never migrate silently.
 
 **Mandatory completion:** [RESEARCH_COMPLETION_PROTOCOL](RESEARCH_COMPLETION_PROTOCOL.md) governs the whole research deliverable. Uncalibrated status does not block authorised experimental inference. Missing/failed inference restricts numerical ML output only: complete source research, supported automatic analyst comparisons and every contract assessment, with the A9 completion matrix. No dependency failure permits an early research exit. The numerical V3 policy and runtime are unchanged.
+
+## Mandatory execution and log coverage
+
+**Mandatory ML execution (EXEC-2026.10.15-v1).** Apply [ML_EXECUTION_PROTOCOL](ML_EXECUTION_PROTOCOL.md) to every new game and mini-log record, in every sport/league/competition. Run `python -m ml primary execute` and retain its actual success/failure receipt; a missing league profile, published baseline, calibration or prior feedback is never a skip reason. Recover exact-competition history/metadata and fit the league comparator afresh where supported. Never replace it with another league or a guessed 50%. Every new card requires an execution identity and a hash-bound manifest row; missing/incomplete execution fails C21 and log verification. Successful runs retain the fitted ML grids, Hedge weights/loss ledgers and actual baseline coverage; failed/unsupported/capability-blocked runs stay explicitly nonnumeric and cannot claim execution success. Complete all independent research. At settlement, execute source-backed feedback for successful bundles or record a precise pending/blocked disposition; future learning consumes the reconciled effective rows, never invented labels. This is supervised ML plus online expert aggregation, not a newly implemented environment-control RL policy. Old issued originals remain immutable.
+
+New logs use `primary execute --out ATTEMPT`, whose verified successful bundle is `ATTEMPT/BUNDLE`; `predict` remains available for legacy/tool compatibility and does not satisfy the new execution-manifest requirement by itself. PRIMARY_HEDGE_MIX_V3, three experts, selection and scoring mathematics are unchanged.
 
 ## 1. What produces a primary forecast
 

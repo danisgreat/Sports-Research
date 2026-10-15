@@ -1,6 +1,6 @@
 # PROMPT 8 — Implement, verify and release a framework or workshop change
 
-**P-2026.10.15-v15.0 · FRAMEWORK_CHANGE · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: declared operating Markdown/CSV/text, archived originals, fixtures and a unique verification folder. Python/tests/requirements are permitted only under ml/ by CURRENT_RULES §0. No JSON, notebooks, pickles, workflows or binaries. Publish when this full prompt is invoked unless explicitly local-only.
+**P-2026.10.15-v16.0 · FRAMEWORK_CHANGE · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: declared operating Markdown/CSV/text, archived originals, fixtures and a unique verification folder. Python/tests/requirements are permitted only under ml/ by CURRENT_RULES §0. No JSON, notebooks, pickles, workflows or binaries. Publish when this full prompt is invoked unless explicitly local-only.
 
 ## Inputs
 
@@ -55,3 +55,9 @@ Return current prompt/index and implementation/review links, before/after behavi
 
 
 Research-completion changes must exercise uncalibrated inference, missing/failed runtime, unsupported families, missing history/lineups, active-mini/lease conflicts and post-start/outcome-exposed cases. Reject an intake-only or NO_FORECAST-only deliverable as completed analysis; accept genuine exhausted gaps only with substantive A1-A9 work and the evidence matrix. Keep numerical ML guards and truthful custody intact.
+
+## Mandatory ML execution coverage (EXEC-v1)
+
+**Strict per-event execution:** read [ML_EXECUTION_PROTOCOL](../../ML_EXECUTION_PROTOCOL.md). Every new game requires an actual `primary execute` attempt and retained success/failure receipt even without a pre-existing league baseline/profile, plus its `ML_EXECUTION_MANIFEST.csv` row. Build the comparator from reviewed exact-competition history where possible; missing paired scoring never waives fitting/learning. No numeric success is claimed for unsupported/failed runs. Require C21 and `primary verify-log` before completion/import, preserve real capability gaps as INCOMPLETE execution, and keep full independent research. Successful settled bundles require source-backed feedback or a named pending/blocked reason; baselines, analyst comparisons and absent feedback never manufacture a learning observation.
+
+Verify EXEC-v1 lifecycle coverage through actual `primary execute`, rejected attempts, `primary verify-log`, delayed `primary settle` feedback and future consumption. Exercise a supported exact competition with no pre-existing archive/profile/TB-1 baseline: recover reviewed inputs, fit the league comparator from its own history, execute the ML/Hedge pipeline and retain receipts. Also reject unsupported/insufficient/unknown inputs honestly. Preserve all historical forecasts and local prompt inputs; a failed attempt is not a fitted model and passing mechanics is not predictive qualification.

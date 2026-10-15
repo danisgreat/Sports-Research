@@ -1,6 +1,6 @@
 # Operator prompts
 
-**Active suite: P-2026.10.15-v15.0** (mini-log-7 / mini-settlement-6). [Reading receipt and workflow](research/prompts/README.md). Use the complete selected prompt; its required rules/templates are linked there.
+**Active suite: P-2026.10.15-v16.0** (new minis mini-log-8 / mini-settlement-7; existing formats retained). [Reading receipt and workflow](research/prompts/README.md). Use the complete selected prompt; its required rules/templates are linked there.
 
 | # | Copy-ready prompt |
 |---|---|
@@ -27,3 +27,6 @@ All eight tasks require [COMMON_OPERATING_PROTOCOL](research/prompts/COMMON_OPER
 
 
 **Strict research completion:** [RESEARCH_COMPLETION_PROTOCOL](RESEARCH_COMPLETION_PROTOCOL.md) requires full research, all applicable sport procedures and every requested contract assessment irrespective of model calibration/runtime, data/lineup gaps, kickoff or mini/write blockers. Supported automatic analyst comparisons stay NOT_PRIMARY; missing numerical ML never means stop research. The A9 evidence matrix is mandatory.
+
+
+**Mandatory ML execution release (EXEC-v1):** [ML_EXECUTION_PROTOCOL](ML_EXECUTION_PROTOCOL.md) requires a real per-event attempt and hash-bound manifest for every new game, even without an existing league baseline/profile; new minis use mini-log-8 and settlements mini-settlement-7. Actual source-backed terminal feedback or an explicit pending/blocked disposition is required. Supervised models plus Hedge are implemented; no trained environment-control RL policy is claimed. Historical originals and numerical V3/scoring/selection mathematics remain unchanged.

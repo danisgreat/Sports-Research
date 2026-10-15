@@ -1,0 +1,15 @@
+# Mandatory ML execution across game and mini logs
+
+Owner instruction, 15 October 2026: audit every game-log and mini-log requirement, implement a strict execution rule despite absent sport/league/competition baselines, and push to main.
+
+Authority LOCAL_WORKING_TREE, main at 72d00384147cefacdd8d82c0689ae391608ae39d; origin/main fetched and equal before work. Pre-existing dirty file research/prompts/1_GAME_CARD.md contains filled basketball/soccer/tennis inputs and availability wording. Its exact working bytes are preserved externally under C:/Users/danie/Downloads/ml_execution_rule_2026-10-15/prompt1.original. Publication stages only this task's edits to the clean canonical prompt; the user's local differences remain local. No game request embedded in that dirty file is invoked by this framework-maintenance instruction.
+
+Defects: rules require per-event primary fitting and feedback but game/mini formats do not enforce a durable attempt inventory; failed CLI calls leave no standardized execution receipt; lifecycle prompts refer to bundles but do not consistently verify per-card attempt/feedback coverage. Existing reviewed-source routing already fits an exact-competition comparator without a pre-existing baseline/profile, but this is not an explicit universal no-skip rule.
+
+Scope: mandatory execution protocol, active authority/method/index/rules/templates/lifecycle prompts, new mini/settlement formats, CLI attempt/coverage verification, tests, preserved canonical document originals, and this new audit report. No issued card, old mini, canonical log, source dataset, score, allocation, threshold, numerical expert/Hedge algorithm or model qualification changes.
+
+Class FORMAT + PROCEDURE: MDS-v16.0 / CR-R7 / P-v16.0 / PRIMARY control v3.2; mini-log-8 / mini-settlement-7. SCV-v10 / SEL-v3 / PRIMARY_HEDGE_MIX_V3 unchanged. New fields require a prompt major bump under CURRENT_RULES section 11. Old active minis retain their format; new EXEC-v1 cards carry a separate subset manifest, and full-mini machine verification begins with mini-log-8.
+
+Acceptance: audit each available log/mini snapshot with hashes and evidence counts; actually fit both experts/league comparator and Hedge without archive/profile lookup via reviewed source routing; retain rejected attempts with nonzero CLI status; reject missing/duplicate/mismatched/tampered attempts; settle real synthetic frozen-grid feedback and consume it at a later event; run workshop tests; verify links/versions/archives/protected hashes and publish without force. Synthetic fixtures establish mechanics only. No invented history, baseline, execution receipt, trained control-RL policy or predictive improvement claim.
+
+Rollback: revert only this release's documents/code/formats while preserving any subsequently issued original cards, attempts and feedback under their generating versions. Git preserves the prior runtime. Archived documents retain their exact base committed blobs; external snapshots retain dirty working bytes. Never reset another writer's changes or rewrite historical forecasts during rollback.

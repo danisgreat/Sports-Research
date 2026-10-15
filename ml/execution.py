@@ -1,0 +1,189 @@
+"""Durable per-event execution attempts and strict mini-log coverage checks.
+
+This enforces execution evidence, not source truth, pre-start publication or skill.
+No pre-existing league profile or baseline probability is an input to execution.
+"""
+from __future__ import annotations
+
+from datetime import datetime, timezone
+from pathlib import Path
+import csv
+import re
+
+from ml import primary as p
+
+
+MANIFEST_FIELDS = ("card_id", "event_id", "competition", "endpoint", "execution_path",
+                   "execution_sha256", "feedback_status", "feedback_path", "feedback_sha256", "reason")
+
+
+def _now():
+    return datetime.now(timezone.utc).isoformat()
+
+
+def execute_files(request: Path, history: Path, contracts: Path, out: Path,
+                  feedback: Path | None = None, competition_source: Path | None = None) -> dict:
+    """Attempt the real primary pipeline, retaining success AND failure without overwriting.
+
+    STARTED without EXECUTION means interrupted/incomplete, never a successful run.
+    Existing predict remains available for historical compatibility; new logs use execute.
+    """
+    out.mkdir(parents=True, exist_ok=False)
+    started = dict(started_at=_now(), code_sha256=p.source_hash(), repository_head=p.repository_head())
+    (out / "STARTED.csv").write_bytes(p.csv_bytes([started]))
+    rec = dict(**started, event_id="UNKNOWN", competition="UNKNOWN", endpoint="UNKNOWN",
+               status="FAILED", stage="INPUT_LOADING", baseline_status="NO_RESULT",
+               baseline_dependency="NO_PREEXISTING_PROFILE_REQUIRED", bundle="",
+               receipt_sha256="", error_type="", error="")
+    snapshots = []
+    try:
+        paths = dict(REQUEST=request, HISTORY=history, CONTRACTS=contracts)
+        if feedback is not None:
+            paths["FEEDBACK_INPUT"] = feedback
+        if competition_source is not None:
+            paths["COMPETITION_SOURCE"] = competition_source
+        requests = p.read_rows(request)
+        if len(requests) != 1:
+            raise p.AdmissionError("exactly one event per execution required")
+        req = requests[0]
+        for key in ("event_id", "competition", "endpoint"):
+            rec[key] = req[key]
+        for name, path in paths.items():
+            raw = path.read_bytes()
+            rows = p.read_rows(path)
+            snapshots.append(dict(name=name, path=str(path.resolve()), sha256=p.digest(raw),
+                                  normalized_sha256=p.digest(p.csv_bytes(rows) if rows else b"")))
+        source = p.read_rows(competition_source) if competition_source is not None else None
+        rec["stage"] = "SCOPE_LOOKUP"
+        lg = None if source is not None else p.get_league(req["competition"])
+        rec["stage"] = "PRIMARY_PIPELINE"
+        bundle = out / "BUNDLE"
+        result = p.forecast(req, lg, p.read_rows(history), p.read_rows(contracts), bundle,
+                            p.read_rows(feedback) if feedback is not None else [], competition_source=source)
+        for snapshot in snapshots:
+            p.receipt_file(snapshot["path"], snapshot["sha256"])
+            saved = p.read_rows(bundle / (snapshot["name"] + ".csv"))
+            if p.digest(p.csv_bytes(saved) if saved else b"") != snapshot["normalized_sha256"]:
+                raise p.AdmissionError("execution input differs from fitted bundle")
+        if result["code_sha256"] != started["code_sha256"] or p.source_hash() != started["code_sha256"]:
+            raise p.AdmissionError("generating source changed during execution")
+        rec.update(status="EXECUTED", stage="BUNDLE_VERIFIED", baseline_status="FITTED_FROM_HISTORY",
+                   bundle="BUNDLE", receipt_sha256=p.digest((bundle / "RECEIPT.csv").read_bytes()))
+    except Exception as exc:
+        # Retain the actual failure. The caller exits nonzero; no fabricated probabilities or feedback.
+        rec.update(error_type=type(exc).__name__, error=str(exc))
+    rec["completed_at"] = _now()
+    (out / "INPUTS.csv").write_bytes(p.csv_bytes(snapshots) if snapshots else b"name,path,sha256\n")
+    rec["inputs_sha256"] = p.digest((out / "INPUTS.csv").read_bytes())
+    rec["started_sha256"] = p.digest((out / "STARTED.csv").read_bytes())
+    (out / "EXECUTION.csv").write_bytes(p.csv_bytes([rec]))
+    return rec
+
+
+def verify_execution(folder: Path, *, event_id=None, competition=None, endpoint=None) -> dict:
+    rows = p.read_rows(folder / "EXECUTION.csv")
+    if len(rows) != 1:
+        raise p.AdmissionError("exactly one completed execution record required")
+    rec = rows[0]
+    p.receipt_file(folder / "STARTED.csv", rec["started_sha256"])
+    p.receipt_file(folder / "INPUTS.csv", rec["inputs_sha256"])
+    starts = p.read_rows(folder / "STARTED.csv")
+    if len(starts) != 1 or any(starts[0][k] != rec[k] for k in starts[0]):
+        raise p.AdmissionError("execution start differs from completed record")
+    if p.clock(rec["completed_at"]) < p.clock(rec["started_at"]):
+        raise p.AdmissionError("execution completed before start")
+    for key, expected in (("event_id", event_id), ("competition", competition), ("endpoint", endpoint)):
+        if expected is not None and rec[key] != expected:
+            raise p.AdmissionError("execution " + key + " differs from log")
+    if rec["baseline_dependency"] != "NO_PREEXISTING_PROFILE_REQUIRED":
+        raise p.AdmissionError("baseline profile cannot be an execution prerequisite")
+    if rec["status"] == "EXECUTED":
+        if rec["bundle"] != "BUNDLE" or rec["stage"] != "BUNDLE_VERIFIED" or rec["baseline_status"] != "FITTED_FROM_HISTORY" or rec["error_type"] or rec["error"]:
+            raise p.AdmissionError("invalid successful execution disposition")
+        bundle = folder / "BUNDLE"
+        p.receipt_file(bundle / "RECEIPT.csv", rec["receipt_sha256"])
+        model = p.verify_bundle(bundle)
+        if any(model[k] != rec[k] for k in ("event_id", "competition", "endpoint", "code_sha256")):
+            raise p.AdmissionError("execution differs from verified model bundle")
+        inputs = p.read_rows(folder / "INPUTS.csv")
+        names = [r["name"] for r in inputs]
+        allowed = {"REQUEST", "HISTORY", "CONTRACTS", "FEEDBACK_INPUT", "COMPETITION_SOURCE"}
+        if len(names) != len(set(names)) or not {"REQUEST", "HISTORY", "CONTRACTS"}.issubset(names) or not set(names).issubset(allowed):
+            raise p.AdmissionError("execution input coverage missing/duplicated")
+        for row in inputs:
+            saved = p.read_rows(bundle / (row["name"] + ".csv"))
+            if p.digest(p.csv_bytes(saved) if saved else b"") != row["normalized_sha256"]:
+                raise p.AdmissionError("execution input digest differs from bundle")
+    elif rec["status"] == "FAILED":
+        if not rec["error_type"] or not rec["error"] or rec["baseline_status"] != "NO_RESULT" or rec["bundle"] or rec["stage"] not in ("INPUT_LOADING", "SCOPE_LOOKUP", "PRIMARY_PIPELINE"):
+            raise p.AdmissionError("failed execution requires actual failure evidence and no issued bundle")
+    else:
+        raise p.AdmissionError("unexecuted/incomplete execution record")
+    return rec
+
+
+def verify_log(manifest: Path, mini: Path) -> dict:
+    """Require one exact-event attempt per new-format card and verify any retained feedback.
+
+    Only use on new mandatory-execution minis, not historical cards or canonical wrappers.
+    Failed attempts are process evidence, never numeric ML output or learning labels.
+    """
+    text = mini.read_text(encoding="utf-8-sig")
+    cards = re.findall(r"<!-- BEGIN CARD (P-\d+) -->", text)
+    ends = re.findall(r"<!-- END CARD (P-\d+) -->", text)
+    if cards != ends or len(cards) != len(set(cards)):
+        raise p.AdmissionError("mini card markers duplicate/unbalanced")
+    if "MINI-LOG-FORMAT: mini-log-8" not in text:
+        raise p.AdmissionError("strict execution verifier requires mini-log-8; preserve legacy formats")
+    with manifest.open(encoding="utf-8-sig", newline="") as handle:
+        if csv.DictReader(handle).fieldnames != list(MANIFEST_FIELDS):
+            raise p.AdmissionError("execution manifest header must match registered fields")
+    rows = p.read_rows(manifest)
+    ids = [r["card_id"] for r in rows]
+    if len(ids) != len(set(ids)) or set(ids) != set(cards):
+        raise p.AdmissionError("execution manifest must cover every mini card exactly once")
+    events = [r["event_id"] for r in rows]
+    if len(events) != len(set(events)):
+        raise p.AdmissionError("duplicate event in execution manifest")
+    executed = failed = feedback_count = 0
+    for row in rows:
+        if set(row) != set(MANIFEST_FIELDS):
+            raise p.AdmissionError("unregistered/missing execution manifest fields")
+        folder = manifest.parent / row["execution_path"]
+        p.receipt_file(folder / "EXECUTION.csv", row["execution_sha256"])
+        rec = verify_execution(folder, **{k: row[k] for k in ("event_id", "competition", "endpoint")})
+        match = re.search(r"<!-- BEGIN CARD " + re.escape(row["card_id"]) + r" -->(.*?)<!-- END CARD " + re.escape(row["card_id"]) + r" -->", text, re.S)
+        body = match.group(1)
+        identity = f"- **ML execution identity:** {row['event_id']} | {row['competition']} | {row['endpoint']}"
+        if identity not in body:
+            raise p.AdmissionError("card identity differs from execution manifest")
+        statuses = re.findall(r"^- \*\*Analysis status:\*\*\s+(\S+)", body, re.M)
+        if len(statuses) != 1 or statuses[0] not in ("MODEL_ASSISTED_PRIMARY_V3", "UNCALIBRATED_QUALITATIVE", "NO_FORECAST"):
+            raise p.AdmissionError("one explicit primary analysis disposition required")
+        if statuses[0] == "MODEL_ASSISTED_PRIMARY_V3" and rec["status"] != "EXECUTED":
+            raise p.AdmissionError("numeric primary card requires successful execution")
+        if rec["status"] == "FAILED":
+            failed += 1
+            if row["feedback_status"] != "NOT_APPLICABLE_NO_MODEL" or not row["reason"]:
+                raise p.AdmissionError("failed execution cannot supply model feedback")
+        else:
+            executed += 1
+            state = row["feedback_status"]
+            if state == "FEEDBACK_RETAINED":
+                path = manifest.parent / row["feedback_path"]
+                p.receipt_file(path, row["feedback_sha256"])
+                feedback = p.read_rows(path)
+                if len(feedback) != 1 or feedback[0]["event_id"] != row["event_id"]:
+                    raise p.AdmissionError("one exact-event effective feedback row required")
+                model = p.verify_bundle(folder / "BUNDLE")
+                if Path(feedback[0]["bundle"]).resolve() != (folder / "BUNDLE").resolve():
+                    raise p.AdmissionError("feedback belongs to another execution")
+                _, count = p.feedback_losses(feedback, model["context"], feedback[0]["available_at"])
+                if count != 1:
+                    raise p.AdmissionError("retained feedback is not admitted")
+                feedback_count += 1
+            elif state not in ("PENDING_EVENT", "BLOCKED_WITH_EVIDENCE") or not row["reason"]:
+                raise p.AdmissionError("explicit pending/blocked feedback reason required")
+        if row["feedback_status"] != "FEEDBACK_RETAINED" and (row["feedback_path"] or row["feedback_sha256"]):
+            raise p.AdmissionError("non-retained feedback cannot name a learning row")
+    return dict(cards=len(cards), executed=executed, failed=failed, feedback_retained=feedback_count)

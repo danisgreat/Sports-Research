@@ -2,7 +2,7 @@
 
 A sports-only forecasting framework made of documents. It tells a research agent how to forecast, log and settle individual games across ten sports, how to use the archive of past results, and how to learn from the outcomes. **Controls and forecasts use Markdown/CSV/text.** New numerical primary forecasts execute the sporting ML/RL runtime in [`ml/`](ml/README.md), retain its immutable receipt bundle and use its selected fitted distribution. Code stays in ml/; JSON/binary artifacts remain excluded.
 
-**What is true now** (method, next ID, active log, scoreboard): [CURRENT_STATE.md](CURRENT_STATE.md). Method **MDS-2026.10.15-v15.2**, control **CR-2026.10.15-R6**, scoring **SCV-2026.10.15-v10**, selection **SEL-2026.10.12-v3**, prompts **P-2026.10.15-v15.0** (mini-log-7). [October 12 implementation map](research/verification/framework_change_2026-10-12-1/IMPLEMENTATION.md) (audit R01–R38 and prediction items PR-01–PR-10) · [October 11 roadmap](research/verification/framework_change_2026-10-11-1/IMPLEMENTATION.md). Active files and usable data: [ACTIVE_FILE_INDEX.md](ACTIVE_FILE_INDEX.md). The 2026-10-09 runtime remains removed. Development models from the `ml/` workshop are `HISTORICAL_DEVELOPMENT` only; old workshop outputs cannot substitute for a new primary run; experimental primary use is now authorised under PRIMARY_PREDICTION_PROTOCOL, with no predictive certification.
+**What is true now** (method, next ID, active log, scoreboard): [CURRENT_STATE.md](CURRENT_STATE.md). Method **MDS-2026.10.15-v16.0**, control **CR-2026.10.15-R7**, scoring **SCV-2026.10.15-v10**, selection **SEL-2026.10.12-v3**, prompts **P-2026.10.15-v16.0** (new mini-log-8). [October 12 implementation map](research/verification/framework_change_2026-10-12-1/IMPLEMENTATION.md) (audit R01–R38 and prediction items PR-01–PR-10) · [October 11 roadmap](research/verification/framework_change_2026-10-11-1/IMPLEMENTATION.md). Active files and usable data: [ACTIVE_FILE_INDEX.md](ACTIVE_FILE_INDEX.md). The 2026-10-09 runtime remains removed. Development models from the `ml/` workshop are `HISTORICAL_DEVELOPMENT` only; old workshop outputs cannot substitute for a new primary run; experimental primary use is now authorised under PRIMARY_PREDICTION_PROTOCOL, with no predictive certification.
 
 ## Rules in force
 
@@ -63,7 +63,7 @@ New numeric forecasts are experimental model-assisted primary research; historic
 
 ## Research completion timing (15 October 2026)
 
-[TIMING_RESEARCH_PROTOCOL](TIMING_RESEARCH_PROTOCOL.md) replaces scheduled lead deadlines with comprehensive research completion for every sport. Research may continue after play starts. Verified pre-start inputs with no outcome exposure can be CLEAN_PRE_START_INPUTS, while post-start issue and genuinely prospective pre-start release remain separate. [Current prompts](research/prompts/README.md) use P-2026.10.15-v15.0; no old card or model is upgraded.
+[TIMING_RESEARCH_PROTOCOL](TIMING_RESEARCH_PROTOCOL.md) replaces scheduled lead deadlines with comprehensive research completion for every sport. Research may continue after play starts. Verified pre-start inputs with no outcome exposure can be CLEAN_PRE_START_INPUTS, while post-start issue and genuinely prospective pre-start release remain separate. [Current prompts](research/prompts/README.md) use P-2026.10.15-v16.0; no old card or model is upgraded.
 
 **Primary ML/RL (15 October 2026):** [PRIMARY_PREDICTION_PROTOCOL](PRIMARY_PREDICTION_PROTOCOL.md) governs new experimental model-assisted primary rows and sports-only model-selection feedback. Actual per-event execution and receipts required; no old artifact is automatically qualified.
 
@@ -73,3 +73,6 @@ New numeric forecasts are experimental model-assisted primary research; historic
 
 
 **Strict research completion:** [RESEARCH_COMPLETION_PROTOCOL](RESEARCH_COMPLETION_PROTOCOL.md) requires full research, all applicable sport procedures and every requested contract assessment irrespective of model calibration/runtime, data/lineup gaps, kickoff or mini/write blockers. Supported automatic analyst comparisons stay NOT_PRIMARY; missing numerical ML never means stop research. The A9 evidence matrix is mandatory.
+
+
+**Mandatory ML execution release (EXEC-v1):** [ML_EXECUTION_PROTOCOL](ML_EXECUTION_PROTOCOL.md) requires a real per-event attempt and hash-bound manifest for every new game, even without an existing league baseline/profile; new minis use mini-log-8 and settlements mini-settlement-7. Actual source-backed terminal feedback or an explicit pending/blocked disposition is required. Supervised models plus Hedge are implemented; no trained environment-control RL policy is claimed. Historical originals and numerical V3/scoring/selection mathematics remain unchanged.

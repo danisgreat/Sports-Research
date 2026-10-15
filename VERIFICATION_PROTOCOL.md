@@ -1,6 +1,6 @@
 # Verification protocol
 
-**CR-2026.10.15-R6** ([previous](archive/superseded_2026-10-15-3/VERIFICATION_PROTOCOL.md); [earlier](archive/superseded_2026-10-12/VERIFICATION_PROTOCOL.md)). Markdown/CSV/text only. Checks establish their stated properties, never predictive skill. Use plain file/git commands and transparent arithmetic; do not add a validator runtime. Print `Check | PASS/FAIL/NOT_VERIFIED/N/A | evidence | limitation`.
+**CR-2026.10.15-R7** ([previous](archive/superseded_2026-10-15-3/VERIFICATION_PROTOCOL.md); [earlier](archive/superseded_2026-10-12/VERIFICATION_PROTOCOL.md)). Markdown/CSV/text only. Checks establish their stated properties, never predictive skill. Use plain file/git commands and transparent arithmetic; do not add a validator runtime. Print `Check | PASS/FAIL/NOT_VERIFIED/N/A | evidence | limitation`.
 
 ## 1. Before changes
 
@@ -67,3 +67,8 @@ Historical recovery checks: missing/header-only, partial/stale and conflicting/b
 
 
 Research-completion release checks: apply [RESEARCH_COMPLETION_PROTOCOL](RESEARCH_COMPLETION_PROTOCOL.md) to uncalibrated, missing/failed runtime, unsupported family, unconfirmed availability, missing history, active-mini/lease conflict and post-start cases. Each must preserve every independent sport procedure and contract assessment. A NO_FORECAST-only table or unattempted source route fails completion; genuine exhausted gaps pass only COMPLETE_WITH_DOCUMENTED_GAPS with evidence. A supported actual analyst calculation passes only in its labelled NOT_PRIMARY lane, never as a fake ML run, primary p_card or learning feedback. Check all eleven standalone sport workflows and their own Upcoming blocks.
+
+
+**Mandatory ML execution release (EXEC-v1):** [ML_EXECUTION_PROTOCOL](ML_EXECUTION_PROTOCOL.md) requires a real per-event attempt and hash-bound manifest for every new game, even without an existing league baseline/profile; new minis use mini-log-8 and settlements mini-settlement-7. Actual source-backed terminal feedback or an explicit pending/blocked disposition is required. Supervised models plus Hedge are implemented; no trained environment-control RL policy is claimed. Historical originals and numerical V3/scoring/selection mathematics remain unchanged.
+
+EXEC-v1 acceptance: actual fitting without pre-existing profile/archive/baseline, reviewed exact-competition routing, durable nonzero failed attempts, interrupted/missing/duplicate/wrong-event/tampered execution rejection, mini coverage, baseline conditioning and actual source-backed delayed-feedback verification. Preserve all old log/mini bytes; missing numeric comparisons never skip the execution attempt. Verification checks custody and computed mechanics, not independent source truth or actual pregame publication.

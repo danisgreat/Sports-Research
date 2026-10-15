@@ -791,12 +791,18 @@ def repository_head() -> str:
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest="command", required=True)
-    predict = sub.add_parser("predict")
-    for name in ("request", "history", "contracts", "out"):
-        predict.add_argument("--" + name, type=Path, required=True)
-    predict.add_argument("--feedback", type=Path)
-    predict.add_argument("--competition-source", type=Path, help="reviewed exact competition metadata when archive routing is missing or defective")
-    predict.add_argument("--seed", type=int, help="accepted for compatibility; V3 is deterministic and ignores it")
+    for command in ("predict", "execute"):
+        predict = sub.add_parser(command)
+        for name in ("request", "history", "contracts", "out"):
+            predict.add_argument("--" + name, type=Path, required=True)
+        predict.add_argument("--feedback", type=Path)
+        predict.add_argument("--competition-source", type=Path, help="reviewed exact competition metadata when archive routing is missing or defective")
+        predict.add_argument("--seed", type=int, help="accepted for compatibility; V3 is deterministic and ignores it")
+    check = sub.add_parser("verify-execution")
+    check.add_argument("--attempt", type=Path, required=True)
+    check_log = sub.add_parser("verify-log")
+    check_log.add_argument("--manifest", type=Path, required=True)
+    check_log.add_argument("--mini", type=Path, required=True)
     review = sub.add_parser("settle")
     for name in ("bundle", "evidence", "out"):
         review.add_argument("--" + name, type=Path, required=True)
@@ -805,6 +811,22 @@ def main(argv=None):
     for name in ("final-at", "available-at", "evidence-sha256"):
         review.add_argument("--" + name, required=True)
     args = parser.parse_args(argv)
+    if args.command == "execute":
+        from ml.execution import execute_files
+        rec = execute_files(args.request, args.history, args.contracts, args.out,
+                            args.feedback, args.competition_source)
+        print(f"{rec['event_id']}: {rec['status']}; {args.out / 'EXECUTION.csv'}; {rec['error']}")
+        if rec["status"] != "EXECUTED":
+            raise SystemExit(1)
+        return
+    if args.command == "verify-execution":
+        from ml.execution import verify_execution
+        print(verify_execution(args.attempt)["status"])
+        return
+    if args.command == "verify-log":
+        from ml.execution import verify_log
+        print(verify_log(args.manifest, args.mini))
+        return
     if args.command == "predict":
         requests = read_rows(args.request)
         if len(requests) != 1:

@@ -1,12 +1,12 @@
 # Card, mini, settlement and canonical formats
 
-**mini-log-7 · mini-settlement-6 · canonical-md-1.** Authority: MDS-2026.10.15-v15.2 / CR-2026.10.15-R6 / SCV-2026.10.15-v10 / SEL-2026.10.12-v3. [Rules](CURRENT_RULES.md) and [selection definitions](SELECTION_RULES.md) control semantics. Previous formats: [mini-log-6 / mini-settlement-5](archive/superseded_2026-10-12/CARD_AND_LOG_TEMPLATES.md).
+**mini-log-8 · mini-settlement-7 · canonical-md-1.** Authority: MDS-2026.10.15-v16.0 / CR-2026.10.15-R7 / SCV-2026.10.15-v10 / SEL-2026.10.12-v3. [Rules](CURRENT_RULES.md) and [selection definitions](SELECTION_RULES.md) control semantics. Previous formats: [mini-log-6 / mini-settlement-5](archive/superseded_2026-10-12/CARD_AND_LOG_TEMPLATES.md).
 
 <a id="local-mini-format-mini-log-2"></a>
 
 ## 1. Compatibility
 
-Old minis finish in their original format. Never insert baselines, gates, expected scores, form windows or missing cutoffs into an old card. New dated addenda may carry unresolved status or diagnostic fields without changing its original selection/scoring version. Old numeric self-audits are interpreted against the original format, with gaps documented rather than repaired by fabrication. For new minis, use the structures below. A mini-log-6 mini still open on 2026-10-12 finishes as mini-log-6; its next mini is mini-log-7. Example IDs beginning EXAMPLE are not P-IDs and must never be imported.
+Old minis finish in their original format. Never insert baselines, gates, expected scores, form windows or missing cutoffs into an old card. New dated addenda may carry unresolved status or diagnostic fields without changing its original selection/scoring version. Old numeric self-audits are interpreted against the original format, with gaps documented rather than repaired by fabrication. For new minis, use mini-log-8 / mini-settlement-7 below. Existing mini-log-2 through -7 and mini-settlement-2 through -6 remain immutable; new cards appended to an old active mini carry the execution fields and a companion manifest covering only the new EXEC-v1 cards. Run strict `verify-log` on the next new mini-log-8; manually reconcile the legacy/new subset with C21 in an old mini. A mini-log-6 mini still open on 2026-10-12 finishes as mini-log-6; its next mini now uses mini-log-8. Example IDs beginning EXAMPLE are not P-IDs and must never be imported.
 
 **What mini-log-7 adds:**
 - **Authority and lifecycle:** authority mode (R09), writer lease (R15), frozen-status pointer (R16), request intake (R22), executable queue fields (R38).
@@ -19,7 +19,7 @@ Old minis finish in their original format. Never insert baselines, gates, expect
 Create `Mini Prediction Log - <FIRST> onward - <date>/PREDICTION_MINI_RUNNING_LOG_<FIRST>_ONWARD.md`:
 
 ```markdown
-<!-- MINI-LOG-FORMAT: mini-log-7 -->
+<!-- MINI-LOG-FORMAT: mini-log-8 -->
 # Prediction Mini Running Log — <FIRST> onward
 
 ## A. Authority snapshot
@@ -54,6 +54,13 @@ Creating this mini consumes no ID. One retained event receives one permanent wor
 |---|---|---|---|---|
 <one row per request, including duplicates and blocked requests. Disposition: CARD, ADDENDUM_TO_EXISTING_ID, DUPLICATE_OF_EXISTING_ID, BLOCKED, OUT_OF_SCOPE, READ_ONLY_DRAFT or PENDING. Requests allocate no ID>
 
+## E. Mandatory ML execution manifest
+Companion: `ML_EXECUTION_MANIFEST.csv`, initialized with the header below and zero rows. Every new card appends exactly one matching event row; requests with no issued card keep their attempt pointer/reason in intake/A9. Paths are relative to the manifest folder or explicit absolute custody paths; retain/resolve them during import. Never invent a receipt or a successful run.
+
+card_id,event_id,competition,endpoint,execution_path,execution_sha256,feedback_status,feedback_path,feedback_sha256,reason
+
+`feedback_status`: PENDING_EVENT, FEEDBACK_RETAINED, BLOCKED_WITH_EVIDENCE, or NOT_APPLICABLE_NO_MODEL for a failed attempt. A non-retained row requires a substantive reason; retained feedback requires its real path/hash and one effective event revision. Mini creation runs no dummy event.
+
 # NEW LOCAL EVENT CARDS
 
 # RUNNING FOOTER
@@ -82,6 +89,9 @@ Insert immediately before the footer. Preserve earlier card/addendum bytes; only
 - **Working ID:** P-NNN — LOCAL_WORKING_ID — PENDING_CANONICAL_IMPORT
 - **Event key / native ID / aliases:** <exact identity; unknown native ID explicit>
 - **Authority:** <method/control/scoring/selection/HEAD; working differences>
+- **ML execution identity:** <exact native/stable event_id> | <exact competition path> | <endpoint>
+- **ML execution:** <EXEC-v1; actual attempt folder/EXECUTION.csv path and SHA-256; EXECUTED or FAILED; actual error/stage; C21 evidence; manifest row>
+- **Learning:** <Hedge weights/eta and warm/feedback counts from the bundle, or NOT_COMPUTED with actual failure; feedback disposition>
 - **Analysis status:** MODEL_ASSISTED_PRIMARY_V3 / EXPERIMENTAL_PRIMARY_NOT_CERTIFIED | UNCALIBRATED_QUALITATIVE | NO_FORECAST
 - **Timing:** <state; cutoff = game-log scheduled start (or earlier actual issue / verified first play, with which); research completion; actual issue time; source state/recheck time; source publication time; actual start or NOT_VERIFIED>
 - **Scheduled start:** <venue timezone, UTC and Australia/Sydney with offsets; source>
@@ -190,7 +200,7 @@ Folder `Mini Settlement - <FIRST> to <LAST> - <date>/`: ORIGINAL_MINI (exact cop
 
 ```markdown
 # SETTLEMENT AND RETROSPECTIVES
-<!-- SETTLEMENT-FORMAT: mini-settlement-6 -->
+<!-- SETTLEMENT-FORMAT: mini-settlement-7 -->
 Authority/read time: <actual receipt, including authority mode>
 Frozen original: <path; byte/line counts if measured; exact-prefix comparison result>
 FROZEN_SOURCE receipt: <source path; raw byte count; SHA-256 of raw bytes; block inventory (card IDs, addenda keys); freeze time; writer hand-over to <next mini or NONE>>
@@ -211,6 +221,7 @@ Inventory: <cards/carryovers/addenda; pending and unresolved separately>
 <one row per issued candidate, including UNRESOLVED; no invented missing ranks>
 
 **Top-two result:** <class; W/L/PUSH/VOID/UNRESOLVED; decisive denominator>
+**ML execution and feedback:** <original verified attempt/bundle; actual primary settle command/output/hash and effective feedback revision, or PENDING_EVENT / BLOCKED_WITH_EVIDENCE / NOT_APPLICABLE_NO_MODEL with precise reason; settlement manifest coverage; no baseline prerequisite>
 **Proper scores:** <paired Brier/log loss rows or NOT_COMPUTABLE reasons; evidence class of each row (headline A/B, sensitivity C/E)>
 **Shadow results:** <separate frozen RET03/RET04/XCARD6/RANK_DELTA/BASE_ONLY diagnostics or NOT_ISSUED>
 **Form-window check:** <observed score against the unadjusted and the form-adjusted expected score; error of each; NOT_APPLICABLE when no form adjustment was made>
@@ -259,6 +270,7 @@ Pending cards get state evidence, literal original reference and next check, wit
 | C18 | Line distance (units and z, or N/A) on every ranked row; baseline coverage line present; each missing BASELINE_P uses an enumerated reason |
 | C19 | Primary runtime: actual source/fit/bundle checked; mixture weights recompute from recorded losses and η; all rows match the mixed grid, model features/limits explicit. Pricing basis: primary W/P/L and p_card derive from the actual retained mixed ML grid; manual mixtures/adjustments cannot overwrite it. Material unsupported effects mean NO_FORECAST for the affected numerical ML lane; full research still proceeds. The mandatory supported fallback comparison remains UNCALIBRATED_ANALYST_SCENARIO / NOT_PRIMARY, with analyst_p, source/assumption provenance, frozen cases/weights and separate base-only diagnostics; ε and any GATE_UNRESOLVED_PRECISION / PRECISION_TIE stated |
 | C20 | Availability: comprehensive both-side starter/bench/absence search per ROSTER_AVAILABILITY_PROTOCOL completed with actual attempts and final recheck in A3/A8; projections, access/publication gaps and material uncertainty honest. Lifecycle: issuing writer and lease valid at append time; mini not frozen; request logged in the intake table; known-at line present; lineup state and issue-step times recorded |
+| C21 | EXEC-v1: real per-event execution success/failure receipt, exact identity/manifest coverage and actual verifier result; no missing-baseline exemption. A failed attempt never supplies numeric ML or feedback. No accessible runtime means execution INCOMPLETE with capability evidence, not an executed success |
 
 ## 8. Canonical entry and rollover
 
@@ -296,15 +308,18 @@ Legacy settlement markers without revision keys (mini-settlement-2 to -5) are ac
 | S13 | Revision keys unique per ID; every revision names its parent and affected keys; the effective grade per contract key follows the single parent chain; conflicting branches marked REVISION_CONFLICT and counted UNRESOLVED |
 | S14 | FROZEN_SOURCE receipt (path, raw bytes, SHA-256, block inventory) written before settlement; source growth checked at package time and any later block routed, not silently covered |
 | S15 | Every open queue item has actor, next source and field, due time with timezone, final-time basis, last attempt and scheduled-automation status; evidence strata shown in the proper-score lines |
+| S16 | Original execution/manifest frozen and verified; successful eligible terminal bundles actually settled for full-information feedback or precise pending/blocked evidence; one effective revision per event. Paired baseline gaps never skip this work; no failed/analyst row trains the model |
 
 ## 10. Acceptance examples
 
-Active and settled structural examples (mini-log-7 / mini-settlement-6): [active](research/prompts/examples/EXAMPLE_ACTIVE_MINI.md), [settled](research/prompts/examples/EXAMPLE_SETTLED_MINI.md); the v10 pair is in [legacy_mini_log_6/](research/prompts/examples/legacy_mini_log_6/EXAMPLE_ACTIVE_MINI.md). Worked checks and negative fixtures: [v11 fixtures F01–F32](research/verification/framework_change_2026-10-12-1/FIXTURES.md), [v10 verification](research/verification/framework_change_2026-10-11-1/VERIFICATION_REPORT.md). They are synthetic documentation tests, not sports forecasts or prospective evidence.
+Current mini-log-8 / mini-settlement-7 execution examples: [execution lifecycle](research/prompts/examples/ML_EXECUTION_LIFECYCLE.md). Preserved historical manual structural examples (mini-log-7 / mini-settlement-6): [active](research/prompts/examples/EXAMPLE_ACTIVE_MINI.md), [settled](research/prompts/examples/EXAMPLE_SETTLED_MINI.md); the v10 pair is in [legacy_mini_log_6/](research/prompts/examples/legacy_mini_log_6/EXAMPLE_ACTIVE_MINI.md). Worked checks and negative fixtures: [v11 fixtures F01–F32](research/verification/framework_change_2026-10-12-1/FIXTURES.md), [v10 verification](research/verification/framework_change_2026-10-11-1/VERIFICATION_REPORT.md). They are synthetic documentation tests, not sports forecasts or prospective evidence.
 
 ## 11. Timing semantics for new v12 work
 
 Use [TIMING_RESEARCH_PROTOCOL](TIMING_RESEARCH_PROTOCOL.md) in the existing Timing/Known-at/Lineup-state/A1/A3/A8/A9 fields. No added mandatory schema field or mini-format migration. Retain actual late issue time even with CLEAN_PRE_START_INPUTS; report that cohort separately. All old mini formats and issued timing/rank/p/baseline/grade bytes remain unchanged. S9/S10 additionally keep clean-input late-issued research apart from pre-start-issued prospective/shadow scores; a settlement cannot create missing pre-start proof.
 
 ## 12. Primary ML/RL receipt and feedback
+
+**Mandatory ML execution (EXEC-2026.10.15-v1).** Apply [ML_EXECUTION_PROTOCOL](ML_EXECUTION_PROTOCOL.md) to every new game and mini-log record, in every sport/league/competition. Run `python -m ml primary execute` and retain its actual success/failure receipt; a missing league profile, published baseline, calibration or prior feedback is never a skip reason. Recover exact-competition history/metadata and fit the league comparator afresh where supported. Never replace it with another league or a guessed 50%. Every new card requires an execution identity and a hash-bound manifest row; missing/incomplete execution fails C21 and log verification. Successful runs retain the fitted ML grids, Hedge weights/loss ledgers and actual baseline coverage; failed/unsupported/capability-blocked runs stay explicitly nonnumeric and cannot claim execution success. Complete all independent research. At settlement, execute source-backed feedback for successful bundles or record a precise pending/blocked disposition; future learning consumes the reconciled effective rows, never invented labels. This is supervised ML plus online expert aggregation, not a newly implemented environment-control RL policy. Old issued originals remain immutable.
 
 [PRIMARY_PREDICTION_PROTOCOL](PRIMARY_PREDICTION_PROTOCOL.md) controls new model-assisted cards in existing A4/A5/A9 metadata. Existing mini-log-7 and older formats retain their format; the declared policy/version changes, never an issued core. Settlement retains the original bundle, grades original keys first, then creates a new source-backed feedback row and reconciles the effective revision inventory before future learning. The market/decision lab remains excluded.

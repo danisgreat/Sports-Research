@@ -1,6 +1,6 @@
 # PROMPT 7 — Repair source data and admission before model use
 
-**P-2026.10.15-v15.0 · ARCHIVE_EXPANSION · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: declared sporting CSVs, provenance/source/coverage notes, supported profile updates and a new verification folder. Helpers/raw captures stay outside the repository. No original cards/logs, model parameters or implicit promotion.
+**P-2026.10.15-v16.0 · ARCHIVE_EXPANSION · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: declared sporting CSVs, provenance/source/coverage notes, supported profile updates and a new verification folder. Helpers/raw captures stay outside the repository. No original cards/logs, model parameters or implicit promotion.
 
 ## Inputs
 
@@ -50,3 +50,9 @@ Fetch and verify remote SHA/artifacts. Return event/season/endpoint scope, offic
 
 
 Source/fit/calibration and archive-write failures do not terminate independent collection/reconciliation under RESEARCH_COMPLETION_PROTOCOL. Record exact exhausted fields and complete all permitted independent work. A game request does not have to wait for bulk archive repair; route fresh reviewed evidence to the named game scope without claiming unperformed shared writes.
+
+## Mandatory ML execution coverage (EXEC-v1)
+
+**Strict per-event execution:** read [ML_EXECUTION_PROTOCOL](../../ML_EXECUTION_PROTOCOL.md). Every new game requires an actual `primary execute` attempt and retained success/failure receipt even without a pre-existing league baseline/profile, plus its `ML_EXECUTION_MANIFEST.csv` row. Build the comparator from reviewed exact-competition history where possible; missing paired scoring never waives fitting/learning. No numeric success is claimed for unsupported/failed runs. Require C21 and `primary verify-log` before completion/import, preserve real capability gaps as INCOMPLETE execution, and keep full independent research. Successful settled bundles require source-backed feedback or a named pending/blocked reason; baselines, analyst comparisons and absent feedback never manufacture a learning observation.
+
+A missing league baseline/profile triggers exact-competition sporting history and metadata recovery, not exemption from per-game ML execution. Queue the actual source/schema/endpoint defects for prompt1 and preserve known-at evidence; do not fabricate a comparator, regenerate issued cards or borrow another competition's parameters. Reviewed source-route inputs may support a fresh current attempt independently of permanent archive/profile repair.
