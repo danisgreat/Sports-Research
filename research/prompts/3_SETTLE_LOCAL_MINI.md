@@ -1,6 +1,8 @@
 # PROMPT 3 — Freeze, settle and review a local mini
 
-**P-2026.10.15-v16.0 · LOCAL_MINI_SETTLEMENT.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: a new settlement package and dated revisions; no canonical/GitHub writes. Original cards are immutable. For MODEL_ASSISTED_PRIMARY_V3, retain and verify its primary bundle, settle original keys first, then run primary settle and reconcile one effective source-backed feedback row per event before future learning. Optional sporting-shadow comparisons occur only after manual settlement; the decision lab is excluded.
+**P-2026.10.15-v16.1 · LOCAL_MINI_SETTLEMENT.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: a new settlement package and dated revisions; no canonical/GitHub writes. Original cards are immutable. For MODEL_ASSISTED_PRIMARY_V3, retain and verify its primary bundle, settle original keys first, then run primary settle and reconcile one effective source-backed feedback row per event before future learning. Optional sporting-shadow comparisons occur only after manual settlement; the decision lab is excluded.
+
+**Required repository fallback (REF-v1).** Always keep [https://github.com/danisgreat/Sports-Research/tree/main](https://github.com/danisgreat/Sports-Research/tree/main) as the standing reference. If required local files are not fully accessible (missing, unreadable, truncated or incomplete), retrieve the actual required contents from this repository before declaring them unavailable. Apply [GITHUB_REFERENCE_PROTOCOL](../../GITHUB_REFERENCE_PROTOCOL.md): resolve one main commit SHA, record exact files/read time and fallback results in the existing reading receipt, and preserve the declared authority mode. Never substitute an unpublished local mini, claim unread content or treat viewing code as executing it. If authorized remote access also fails, record the real gap and continue independent work.
 
 ## Inputs
 

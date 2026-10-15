@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-15 - Require GitHub main fallback for incomplete local access
+
+PROCEDURE: MDS-v16.1 / CR-R8 / P-v16.1. Standing reference https://github.com/danisgreat/Sports-Research/tree/main. [REF-v1](GITHUB_REFERENCE_PROTOCOL.md) requires actual required-file recovery whenever local repository files are absent, unreadable, truncated or incomplete, with exact commit/path/read-time/fallback evidence in the existing reading receipt. All eleven standalone game workflows, all eight task prompts and core/ML/source/contribution instructions aligned. Preserve pinned authority and local differences; unpublished minis are never reconstructed from a different remote original. Both-route failure blocks only dependent work; reading a page never claims ML execution. No numerical algorithm, scoring/selection, mini format, issued card, ID or grade change. [Implementation](research/verification/framework_change_2026-10-15-8/IMPLEMENTATION.md).
+
 ## 2026-10-15 - Enforce actual ML execution and feedback across game/mini logs
 
 FORMAT + PROCEDURE: MDS-v16.0 / CR-R7 / P-v16.0 / PRIMARY-v3.2; mini-log-8 / mini-settlement-7. [EXEC-v1](ML_EXECUTION_PROTOCOL.md) makes actual event-specific execution and a hash-bound manifest mandatory, with no pre-existing league baseline/profile/calibration exemption. Added `primary execute`, `verify-execution` and `verify-log`: retain actual successes/failures, verify every new mini card and feedback disposition. Fit comparator from exact reviewed history where supported; no borrowed parameters or fabricated probabilities. All eleven sport workflows and lifecycle prompts aligned. Primary V3 algorithms/selection/scoring unchanged; no unsupported adapter, calibrated performance or control-RL claim. Historical originals/IDs/grades preserved. [Audit/implementation](research/verification/framework_change_2026-10-15-7/IMPLEMENTATION.md).

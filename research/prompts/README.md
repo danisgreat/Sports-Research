@@ -1,5 +1,7 @@
 # Operator prompts 1–8
 
+**Required repository fallback (REF-v1).** Always keep [https://github.com/danisgreat/Sports-Research/tree/main](https://github.com/danisgreat/Sports-Research/tree/main) as the standing reference. If required local files are not fully accessible (missing, unreadable, truncated or incomplete), retrieve the actual required contents from this repository before declaring them unavailable. Apply [GITHUB_REFERENCE_PROTOCOL](../../GITHUB_REFERENCE_PROTOCOL.md): resolve one main commit SHA, record exact files/read time and fallback results in the existing reading receipt, and preserve the declared authority mode. Never substitute an unpublished local mini, claim unread content or treat viewing code as executing it. If authorized remote access also fails, record the real gap and continue independent work.
+
 **Historical v11.3 PROCEDURE release:** all eight prompts use [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Prompt 1 has eleven separate sport/general sections, each with its own Upcoming game input block; rugby league and union are independent. The workflow preserves manual-card independence, availability research, qualified shadow evidence, source admission and verified publication. Earlier v11.1/v11.2 controls remain in force unless explicitly superseded.
 
 The root supplied-first extended prompt is a preserved proposal, not an active replacement for P4. Use the numbered suite below.
@@ -7,7 +9,7 @@ The root supplied-first extended prompt is a preserved proposal, not an active r
 
 **Historical v11.2 PROCEDURE update:** prompt 1 applies [ROSTER_AVAILABILITY_PROTOCOL](../../ROSTER_AVAILABILITY_PROTOCOL.md) to both sides and every applicable starter/bench/absence field, including local-language discovery and a final late-change check. Evidence stays in existing card fields/A3/A8/C20; mini-log-7 and earlier issued records retain their formats. The v11.1 workshop reading exclusion remains in force.
 
-**P-2026.10.15-v16.0 · Markdown/CSV/text only** (supersedes the old v11.1 primary-model exclusion: prompts 1–3 may run/read the named primary runtime/bundle under PRIMARY_PREDICTION_PROTOCOL; unadmitted shadows and decision-lab remain excluded; prompt 8 may change ml/ under CURRENT_RULES §0). Current EXEC-v1 revision class: FORMAT + PROCEDURE (mini-log-8 / mini-settlement-7, mandatory execution/manifest and C21/S16). Original v11.0 revision class: FORMAT + PROCEDURE (mini-log-7 / mini-settlement-6, authority mode, form windows, mixture pricing, lifecycle and custody controls; CURRENT_RULES §11 explains the classes). Previous suite: [P-2026.10.11-v10](../../archive/superseded_2026-10-12/research/prompts/README.md). Use each complete task below; prompt 1 now contains its own common core and sport instructions. [Current rules](../../CURRENT_RULES.md) and [templates](../../CARD_AND_LOG_TEMPLATES.md) are required companions. No real ID, log part, league fact or retrospective figure is hard-coded in these prompts: they cover any sport and competition, and league-specific facts come from the rules files, [league profiles](../../LEAGUE_PROFILES.md), [SOURCES](../../SOURCES.md) and the archive.
+**P-2026.10.15-v16.1 · Markdown/CSV/text only** (supersedes the old v11.1 primary-model exclusion: prompts 1–3 may run/read the named primary runtime/bundle under PRIMARY_PREDICTION_PROTOCOL; unadmitted shadows and decision-lab remain excluded; prompt 8 may change ml/ under CURRENT_RULES §0). Current EXEC-v1 revision class: FORMAT + PROCEDURE (mini-log-8 / mini-settlement-7, mandatory execution/manifest and C21/S16). Original v11.0 revision class: FORMAT + PROCEDURE (mini-log-7 / mini-settlement-6, authority mode, form windows, mixture pricing, lifecycle and custody controls; CURRENT_RULES §11 explains the classes). Previous suite: [P-2026.10.11-v10](../../archive/superseded_2026-10-12/research/prompts/README.md). Use each complete task below; prompt 1 now contains its own common core and sport instructions. [Current rules](../../CURRENT_RULES.md) and [templates](../../CARD_AND_LOG_TEMPLATES.md) are required companions. No real ID, log part, league fact or retrospective figure is hard-coded in these prompts: they cover any sport and competition, and league-specific facts come from the rules files, [league profiles](../../LEAGUE_PROFILES.md), [SOURCES](../../SOURCES.md) and the archive.
 
 | # | Task | Writes |
 |---|---|---|
@@ -46,7 +48,7 @@ Sections read: <actual paths/sections>
 Current method / control / scoring / selection / formats:
 Task scope / allowed writes / publication instruction:
 Sport/source/archive inputs read: <actual paths and coverage, or task N/A>
-Required unavailable files / contradictions / dependent steps blocked:
+Required unavailable files / contradictions / dependent steps blocked (include local read failures and exact GitHub fallback URL/path/SHA/read time/result):
 ```
 
 **One mode per run (CURRENT_RULES §0).**

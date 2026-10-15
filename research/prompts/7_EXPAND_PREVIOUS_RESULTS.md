@@ -1,6 +1,8 @@
 # PROMPT 7 — Repair source data and admission before model use
 
-**P-2026.10.15-v16.0 · ARCHIVE_EXPANSION · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: declared sporting CSVs, provenance/source/coverage notes, supported profile updates and a new verification folder. Helpers/raw captures stay outside the repository. No original cards/logs, model parameters or implicit promotion.
+**P-2026.10.15-v16.1 · ARCHIVE_EXPANSION · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: declared sporting CSVs, provenance/source/coverage notes, supported profile updates and a new verification folder. Helpers/raw captures stay outside the repository. No original cards/logs, model parameters or implicit promotion.
+
+**Required repository fallback (REF-v1).** Always keep [https://github.com/danisgreat/Sports-Research/tree/main](https://github.com/danisgreat/Sports-Research/tree/main) as the standing reference. If required local files are not fully accessible (missing, unreadable, truncated or incomplete), retrieve the actual required contents from this repository before declaring them unavailable. Apply [GITHUB_REFERENCE_PROTOCOL](../../GITHUB_REFERENCE_PROTOCOL.md): resolve one main commit SHA, record exact files/read time and fallback results in the existing reading receipt, and preserve the declared authority mode. Never substitute an unpublished local mini, claim unread content or treat viewing code as executing it. If authorized remote access also fails, record the real gap and continue independent work.
 
 ## Inputs
 
