@@ -1,6 +1,6 @@
 # PROMPT 2 — Start the next local mini
 
-**P-2026.10.15-v16.1 · LOCAL_MINI_STAGING.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: one new Markdown mini and its header-only execution-manifest CSV. Creating a mini consumes no event ID. GitHub is read-only. Workshop forecasts and the decision lab are excluded.
+**P-2026.10.16-v17.0 · LOCAL_MINI_STAGING.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: one new Markdown mini and its header-only execution-manifest CSV. Creating a mini consumes no event ID. GitHub is read-only. Workshop forecasts and the decision lab are excluded.
 
 **Required repository fallback (REF-v1).** Always keep [https://github.com/danisgreat/Sports-Research/tree/main](https://github.com/danisgreat/Sports-Research/tree/main) as the standing reference. If required local files are not fully accessible (missing, unreadable, truncated or incomplete), retrieve the actual required contents from this repository before declaring them unavailable. Apply [GITHUB_REFERENCE_PROTOCOL](../../GITHUB_REFERENCE_PROTOCOL.md): resolve one main commit SHA, record exact files/read time and fallback results in the existing reading receipt, and preserve the declared authority mode. Never substitute an unpublished local mini, claim unread content or treat viewing code as executing it. If authorized remote access also fails, record the real gap and continue independent work.
 
@@ -21,7 +21,7 @@ Continue an active contiguous mini or record an authorized hand-over instead of 
 
 ## 2. Create the complete mini
 
-Use CARD_AND_LOG_TEMPLATES §2 exactly, format mini-log-8. Record authority/read time, active destination, canonical and outstanding-local snapshots, reconciled first working ID, writer, lease start/expiry, hand-over and frozen status. Initial counts are zero; highest used NONE; next working ID equals the reconciled first ID.
+Use CARD_AND_LOG_TEMPLATES §2 exactly, format mini-log-9. Record authority/read time, active destination, canonical and outstanding-local snapshots, reconciled first working ID, writer, lease start/expiry, hand-over and frozen status. Initial counts are zero; highest used NONE; next working ID equals the reconciled first ID.
 
 Carry pending events and terminal unresolved evidence separately with original IDs/local-canonical status. Each item names original reference, latest revision, open field, actor, exact next source/field, due time/zone, final-time basis or UNKNOWN, last attempt and actual automation. An open-event alert never discards a request or forces settlement.
 
@@ -37,8 +37,8 @@ Return exact path, first/next ID, format/status, authority SHA, retained carryov
 
 Historical coverage gaps route each prompt1 game to HISTORICAL_SOURCE_PROTOCOL and verified online recovery; do not prepopulate missing scores or block a mini because local archive rows are absent.
 
-## Mandatory ML execution coverage (EXEC-v1)
+## Research retention and execution disposition (RETAIN-v1)
 
-**Strict per-event execution:** read [ML_EXECUTION_PROTOCOL](../../ML_EXECUTION_PROTOCOL.md). Every new game requires an actual `primary execute` attempt and retained success/failure receipt even without a pre-existing league baseline/profile, plus its `ML_EXECUTION_MANIFEST.csv` row. Build the comparator from reviewed exact-competition history where possible; missing paired scoring never waives fitting/learning. No numeric success is claimed for unsupported/failed runs. Require C21 and `primary verify-log` before completion/import, preserve real capability gaps as INCOMPLETE execution, and keep full independent research. Successful settled bundles require source-backed feedback or a named pending/blocked reason; baselines, analyst comparisons and absent feedback never manufacture a learning observation.
+**Retain the research regardless of ML (RETAIN-v1).** Read [RESEARCH_RETENTION_PROTOCOL](../../RESEARCH_RETENTION_PROTOCOL.md). Missing/unsupported/failed ML or `No module named ml`, baseline/calibration and unavailable receipts never by themselves block recording a researched game under its next reconciled P-ID or canonical import. Run the supported model when accessible; otherwise retain RESEARCH_ONLY_NO_MODEL with actual reason, no fake receipt/model probability, and supported analyst_p separately NOT_PRIMARY. C21 verifies honest disposition, including blank execution paths for no run. Settle original contracts and retain verified targets for future training even when no expert existed; only real frozen bundles supply Hedge feedback. Preserve complete research, genuine gaps and real timing; do not backdate.
 
-Create new minis as mini-log-8 with a header-only `ML_EXECUTION_MANIFEST.csv` companion (template section E). Mini creation consumes no event ID and performs no dummy fit. Every later event must actually execute and append its own attempt/manifest row; missing league profiles never pre-exempt a competition. Verify the empty new mini/manifest with `primary verify-log`.
+Create new minis as mini-log-9 with a header-only `ML_EXECUTION_MANIFEST.csv` companion (template section E). Mini creation consumes no event ID and performs no dummy fit. Every later event must actually execute and append its own attempt/manifest row; missing league profiles never pre-exempt a competition. Verify the empty new mini/manifest with `primary verify-log`.

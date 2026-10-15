@@ -1,12 +1,12 @@
 # PROMPT 4 — Verify and import the complete settlement package
 
-**P-2026.10.15-v16.1 · CANONICAL_IMPORT · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: active log suffix, current status/state/scoreboard and a new import report with preserved inputs. Never rewrite issued cores, closed parts or grades. Publish when this full prompt is invoked unless the user requests local-only.
+**P-2026.10.16-v17.0 · CANONICAL_IMPORT · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: active log suffix, current status/state/scoreboard and a new import report with preserved inputs. Never rewrite issued cores, closed parts or grades. Publish when this full prompt is invoked unless the user requests local-only.
 
 **Required repository fallback (REF-v1).** Always keep [https://github.com/danisgreat/Sports-Research/tree/main](https://github.com/danisgreat/Sports-Research/tree/main) as the standing reference. If required local files are not fully accessible (missing, unreadable, truncated or incomplete), retrieve the actual required contents from this repository before declaring them unavailable. Apply [GITHUB_REFERENCE_PROTOCOL](../../GITHUB_REFERENCE_PROTOCOL.md): resolve one main commit SHA, record exact files/read time and fallback results in the existing reading receipt, and preserve the declared authority mode. Never substitute an unpublished local mini, claim unread content or treat viewing code as executing it. If authorized remote access also fails, record the real gap and continue independent work.
 
 ## Inputs
 
-- Settlement package and every source mini/carryover: exact paths.
+- Settlement package OR owner-authorized retention-only research mini and every source/carryover: exact paths. Settlement/ML execution is not a prerequisite for research retention.
 - Canonical destination: resolve dynamically.
 - Publication: invoked-task default or explicit local-only.
 
@@ -20,7 +20,7 @@ Snapshot the full destination working bytes/count/hash/end marker and line endin
 
 ## 2. Plan every block
 
-Require the exact original and complete settled-prefix match. Inventory every card, carryover, addendum and revision, including already-imported cards with new addenda. Map each unit to NEW_CANONICAL_EVENT, EXACT_EXISTING_SKIP, NEW_ADDENDUM_OR_REVISION, RETAINED_PENDING/UNRESOLVED or CONFLICT. Reconcile these separately for every block type.
+Require the exact complete source original; if a settlement package exists, also require its complete settled-prefix match. In retention-only mode preserve pending/unreviewed outcomes and import contiguous original research cores without inventing a settlement. Inventory every card, carryover, addendum and revision, including already-imported cards with new addenda. Map each unit to NEW_CANONICAL_EVENT, EXACT_EXISTING_SKIP, NEW_ADDENDUM_OR_REVISION, RETAINED_PENDING/UNRESOLVED or CONFLICT. Reconcile these separately for every block type.
 
 Compare full existing blocks, not only IDs. Partial/mismatched blocks stop the batch until scoped recovery. Exact reruns plan zero changes. Preserve local IDs, sequential genuinely new events and reserved ranges; no skipped/renumbered/manufactured event. Addenda and model rows consume no IDs.
 
@@ -48,8 +48,8 @@ Stage exact intended paths, inspect the full staged diff/scope, run relevant che
 
 Return package/destination/report links, all dispositions, canonical continuity, effective settlements/queues, paired-score coverage, byte identities and actual commit/remote status. A failed dependent append never erases completed verified work.
 
-## Mandatory ML execution coverage (EXEC-v1)
+## Research retention and execution disposition (RETAIN-v1)
 
-**Strict per-event execution:** read [ML_EXECUTION_PROTOCOL](../../ML_EXECUTION_PROTOCOL.md). Every new game requires an actual `primary execute` attempt and retained success/failure receipt even without a pre-existing league baseline/profile, plus its `ML_EXECUTION_MANIFEST.csv` row. Build the comparator from reviewed exact-competition history where possible; missing paired scoring never waives fitting/learning. No numeric success is claimed for unsupported/failed runs. Require C21 and `primary verify-log` before completion/import, preserve real capability gaps as INCOMPLETE execution, and keep full independent research. Successful settled bundles require source-backed feedback or a named pending/blocked reason; baselines, analyst comparisons and absent feedback never manufacture a learning observation.
+**Retain the research regardless of ML (RETAIN-v1).** Read [RESEARCH_RETENTION_PROTOCOL](../../RESEARCH_RETENTION_PROTOCOL.md). Missing/unsupported/failed ML or `No module named ml`, baseline/calibration and unavailable receipts never by themselves block recording a researched game under its next reconciled P-ID or canonical import. Run the supported model when accessible; otherwise retain RESEARCH_ONLY_NO_MODEL with actual reason, no fake receipt/model probability, and supported analyst_p separately NOT_PRIMARY. C21 verifies honest disposition, including blank execution paths for no run. Settle original contracts and retain verified targets for future training even when no expert existed; only real frozen bundles supply Hedge feedback. Preserve complete research, genuine gaps and real timing; do not backdate.
 
-Before new EXEC-v1 import, verify every source mini card against its execution manifest with `primary verify-log` (mini-log-8), check C21/S16, and retain attempts/bundles/feedback with resolvable paths/hashes in the preserved inputs. Do not import a missing/incomplete execution as compliant numeric ML. An evidenced failed attempt may import as its original nonnumeric research card; successful terminal models require actual feedback or a precise blocked/pending reason. Legacy cards import under original requirements with explicit historical gaps, never retroactive ML execution. Import coverage must enumerate successful, failed, missing and feedback-disposition counts.
+For retention-only import, accept researched model-free cards with honest status/manifest; complete source custody, identity and contiguous IDs still apply. For new-format manifests run verify-log, which accepts blank attempt paths for research-only records. No execution receipt, model, baseline or completed settlement is an ID/import prerequisite. Preserve originals and source capture; retain actual successful bundles/feedback where present and future-label queues for every event.

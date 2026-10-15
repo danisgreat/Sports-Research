@@ -1,0 +1,55 @@
+# PROMPT 4 — Verify and import the complete settlement package
+
+**P-2026.10.15-v16.1 · CANONICAL_IMPORT · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: active log suffix, current status/state/scoreboard and a new import report with preserved inputs. Never rewrite issued cores, closed parts or grades. Publish when this full prompt is invoked unless the user requests local-only.
+
+**Required repository fallback (REF-v1).** Always keep [https://github.com/danisgreat/Sports-Research/tree/main](https://github.com/danisgreat/Sports-Research/tree/main) as the standing reference. If required local files are not fully accessible (missing, unreadable, truncated or incomplete), retrieve the actual required contents from this repository before declaring them unavailable. Apply [GITHUB_REFERENCE_PROTOCOL](../../GITHUB_REFERENCE_PROTOCOL.md): resolve one main commit SHA, record exact files/read time and fallback results in the existing reading receipt, and preserve the declared authority mode. Never substitute an unpublished local mini, claim unread content or treat viewing code as executing it. If authorized remote access also fails, record the real gap and continue independent work.
+
+## Inputs
+
+- Settlement package and every source mini/carryover: exact paths.
+- Canonical destination: resolve dynamically.
+- Publication: invoked-task default or explicit local-only.
+
+## 1. Read, reconcile and snapshot
+
+Read common controls/protocol, templates §8, scoring, verification §3, original/settled bytes, mappings/manifests/queues, current state/status and relevant log entries/addenda. Print branch/HEAD/dirty inventory and reading receipt. Fetch the publication ref without overwriting local work; explain divergence.
+
+Resolve active log, highest/next ID, reserved IDs, outstanding local sequence and effective revisions from current records. Opening headers are historical. Search parts/minis by ID, event key and aliases. Genuine identity/allocation disagreement blocks dependent mutation; preserve evidence and independent work.
+
+Snapshot the full destination working bytes/count/hash/end marker and line endings. Distinguish raw source, imported literal core, destination prefix and committed blob. Check local text attributes/core.autocrlf. Line counts or zero deleted lines do not prove byte identity.
+
+## 2. Plan every block
+
+Require the exact original and complete settled-prefix match. Inventory every card, carryover, addendum and revision, including already-imported cards with new addenda. Map each unit to NEW_CANONICAL_EVENT, EXACT_EXISTING_SKIP, NEW_ADDENDUM_OR_REVISION, RETAINED_PENDING/UNRESOLVED or CONFLICT. Reconcile these separately for every block type.
+
+Compare full existing blocks, not only IDs. Partial/mismatched blocks stop the batch until scoped recovery. Exact reruns plan zero changes. Preserve local IDs, sequential genuinely new events and reserved ranges; no skipped/renumbered/manufactured event. Addenda and model rows consume no IDs.
+
+Validate known-format balanced BEGIN/END, matching IDs/revision keys, no cross-ID nesting and unique revision keys. Legacy keyless markers stay valid in their declared format. Revision branches require explicit conflict resolution, never last-row-wins.
+
+## 3. Apply append-only import
+
+Before each batch recheck HEAD, active path, destination count/hash/tail, next ID and source inventory against the plan. A change forces a new plan.
+
+Append canonical-md-1 wrappers containing complete original cores byte-for-byte. Import metadata is not a forecast timestamp. Append complete original source addenda/settlements under dated wrappers. A revision for a closed-part original goes into the active part with original/prior-revision pointers; never edit the closed part.
+
+New MODEL_ASSISTED_PRIMARY_V3 issued cards may contain their actual primary model probabilities under PRIMARY_PREDICTION_PROTOCOL; import them with original policy/receipt intact as a separate cohort. Historical manual cards and separate model shadows retain their own lane. Never insert model probabilities into an analyst original, create primary picks from shadow rows, or count separate shadow/comparator wins in card T2. Actual issued assisted-primary top two count only in their declared assisted cohort. Any permitted after-settlement comparison is separately labelled and retains original policy/cutoff/baseline coverage.
+
+## 4. Reconcile and verify completely
+
+Update state/status/scoreboard from effective settlement chains, with pending events and terminal unresolved fields separate. Headline scores use frozen same-row baselines and evidence strata; missing comparisons remain NOT_COMPUTABLE. Import does not confer certification. Preserve actual issue phase and clean-pre-start-input status separately under TIMING_RESEARCH_PROTOCOL; never relabel a legacy late card or pool late-issued research with a pre-start-issued prospective cohort.
+
+Read back EVERY imported core/source block; compare the entire old destination prefix and raw identities, inspect append locations and committed line endings. Reconcile mappings, continuity, counts, revisions, queues and outputs. Source closure requires a destination or explicit retained disposition for every source block. Never delete originals automatically.
+
+Report planned/applied/skipped/conflicting units, custody/readback evidence, pre/post state and limits. Exercise duplicate/rerun/partial-recovery failures and valid cases; label manual checks honestly.
+
+## 5. Publish and return
+
+Stage exact intended paths, inspect the full staged diff/scope, run relevant checks and commit/push without force when authorized. Fetch and compare remote SHA and key artifact contents. Preserve concurrent work.
+
+Return package/destination/report links, all dispositions, canonical continuity, effective settlements/queues, paired-score coverage, byte identities and actual commit/remote status. A failed dependent append never erases completed verified work.
+
+## Mandatory ML execution coverage (EXEC-v1)
+
+**Strict per-event execution:** read [ML_EXECUTION_PROTOCOL](../../ML_EXECUTION_PROTOCOL.md). Every new game requires an actual `primary execute` attempt and retained success/failure receipt even without a pre-existing league baseline/profile, plus its `ML_EXECUTION_MANIFEST.csv` row. Build the comparator from reviewed exact-competition history where possible; missing paired scoring never waives fitting/learning. No numeric success is claimed for unsupported/failed runs. Require C21 and `primary verify-log` before completion/import, preserve real capability gaps as INCOMPLETE execution, and keep full independent research. Successful settled bundles require source-backed feedback or a named pending/blocked reason; baselines, analyst comparisons and absent feedback never manufacture a learning observation.
+
+Before new EXEC-v1 import, verify every source mini card against its execution manifest with `primary verify-log` (mini-log-8), check C21/S16, and retain attempts/bundles/feedback with resolvable paths/hashes in the preserved inputs. Do not import a missing/incomplete execution as compliant numeric ML. An evidenced failed attempt may import as its original nonnumeric research card; successful terminal models require actual feedback or a precise blocked/pending reason. Legacy cards import under original requirements with explicit historical gaps, never retroactive ML execution. Import coverage must enumerate successful, failed, missing and feedback-disposition counts.

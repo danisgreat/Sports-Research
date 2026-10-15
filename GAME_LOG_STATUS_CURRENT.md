@@ -1,7 +1,7 @@
 <!-- BEGIN CURRENT RESEARCH QUEUE -->
 # Current canonical research queue
 
-**Next canonical ID: P-590.** Every requested event is retained, regardless of calibration: first as a local working card in the authorised mini (prompts 2 → 1 → 3), then canonically through the prompt-4 import. No card is written to the active combined log directly. *(Clarified 2026-10-12, audit R10: the earlier wording "go directly to the active combined log" described retention, not a bypass of local staging.)* Canonical IDs identify retained cards; performance certification and live/late timing are separate labels.
+**Next canonical ID: P-597.** Every requested event is retained, regardless of calibration: first as a local working card in the authorised mini, then canonically through verified prompt-4 retention import (which may precede prompt-3 settlement under RETAIN-v1). No card is written to the active combined log directly. *(Clarified 2026-10-12, audit R10: the earlier wording "go directly to the active combined log" described retention, not a bypass of local staging.)* Canonical IDs identify retained cards; performance certification and live/late timing are separate labels.
 Active Combined Log: `prediction logs/PREDICTION_LOG_COMBINED_7.md`.
 Freeze: none (custody is the git history of `main`, CURRENT_RULES §9). The last control manifest is `archive/controls/CONTROL_MANIFEST_2026-10-09-3.md`. Current authority: CURRENT_STATE.md, METHOD.md and CURRENT_RULES.md.
 
@@ -990,3 +990,17 @@ Local source inventory verifies 78/78 receipt bodies. A tracked-body export veri
 Current highest P-589 / next P-590; 105 tracked research records, 104 terminal and 1 pending P-584. This section supersedes dated allocation/queue snapshots, preserving original grades. Five new events retain their declared SUPPLIED_FIRST_V1 policy; original top two 5W/5L, separate from P_ORDER_V2. P-584 secondary 5-1 lead remains owner-unverified and pending; P-583 owner 4-2 and P-582 club corners 5/6 remain correction leads, no revision-2; P-581 corners 8/4 remain unresolved.
 
 [Complete current queue](research/verification/mini_import_P-585_P-589_2026-10-14-1/UNRESOLVED_POST_IMPORT.md): 1 pending event, 3 terminal field tasks, 13 operator-unknown events, 12 terminal final-time/SLA gaps, 5 documentary custody gaps across packages. Proposed manual due 2026-10-15T18:00:00+11:00; no automation. [Import custody/readback report](research/verification/mini_import_P-585_P-589_2026-10-14-1/CANONICAL_IMPORT_REPORT.md). Historical source ACTIVE/pending footer unchanged; separate CLOSED_IMPORTED receipt covers the supplied snapshot only, with no issuer handover or new mini. Importer fetched no sporting source; nothing is certified.
+
+
+## Current retention update - 2026-10-16T01:29:27+11:00
+This dated current update supersedes old allocation/queue snapshots only. Highest canonical P-596 / next P-597. Research retention does not require an ML/RL model, calibration, baseline or execution receipt. P-590-P-596 retained under identical local/canonical IDs; each is PENDING_SETTLEMENT / OUTCOME_NOT_REVIEWED, not a newly verified live-event state. Tracked research inventory 112 = 104 prior terminal + legacy pending P-584 + 7 awaiting outcome review. No new grades, proper scores, model forecasts or prospective claims. [Import and source readback](research/verification/framework_change_2026-10-16-1/CANONICAL_IMPORT_REPORT.md).
+
+| ID | Retained event | Current review status | Future learning |
+|---|---|---|---|
+| P-590 | India vs West Indies - 4th T20I | PENDING_SETTLEMENT / OUTCOME_NOT_REVIEWED | PENDING_SETTLEMENT; targets after source review |
+| P-591 | Siauliai vs U-BT Cluj-Napoca - EuroCup | PENDING_SETTLEMENT / OUTCOME_NOT_REVIEWED | PENDING_SETTLEMENT; targets after source review |
+| P-592 | Casademont Zaragoza Women vs Basket Landes Women | PENDING_SETTLEMENT / OUTCOME_NOT_REVIEWED | PENDING_SETTLEMENT; targets after source review |
+| P-593 | Real Salt Lake vs San Jose Earthquakes | PENDING_SETTLEMENT / OUTCOME_NOT_REVIEWED | PENDING_SETTLEMENT; targets after source review |
+| P-594 | Seoul Samsung Thunders vs Changwon LG Sakers | PENDING_SETTLEMENT / OUTCOME_NOT_REVIEWED | PENDING_SETTLEMENT; targets after source review |
+| P-595 | Tamara Zidansek vs Joelle Lilly Sophie Steur | PENDING_SETTLEMENT / OUTCOME_NOT_REVIEWED | PENDING_SETTLEMENT; targets after source review |
+| P-596 | Arlan Kokshetau vs HC Saryarka - Pro Hokei Ligasy game 92 | PENDING_SETTLEMENT / OUTCOME_NOT_REVIEWED | PENDING_SETTLEMENT; targets after source review |

@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-16 - Retain research P-IDs without an ML model and preserve future learning labels
+
+Owner requires researched events to be recorded/canonically retained regardless of model/runtime/adapter/baseline/calibration/receipt availability. [RETAIN-v1](RESEARCH_RETENTION_PROTOCOL.md) supersedes EXEC-v1 issuance blocking. FORMAT + PROCEDURE: MDS-v17 / CR-2026.10.16-R1 / P-v17 / SCV-v11; mini-log-9 / mini-settlement-8. C21 and verify-log accept honest research-only no-run dispositions; model probability/feedback still requires actual frozen predictions. Source-reviewed terminal labels can be retained by ml.research_learning for future training admission without any existing model; no automatic calibration or fake Hedge reward. All standalone sport/lifecycle instructions aligned. [Implementation](research/verification/framework_change_2026-10-16-1/IMPLEMENTATION.md).
+
 ## 2026-10-15 - Require GitHub main fallback for incomplete local access
 
 PROCEDURE: MDS-v16.1 / CR-R8 / P-v16.1. Standing reference https://github.com/danisgreat/Sports-Research/tree/main. [REF-v1](GITHUB_REFERENCE_PROTOCOL.md) requires actual required-file recovery whenever local repository files are absent, unreadable, truncated or incomplete, with exact commit/path/read-time/fallback evidence in the existing reading receipt. All eleven standalone game workflows, all eight task prompts and core/ML/source/contribution instructions aligned. Preserve pinned authority and local differences; unpublished minis are never reconstructed from a different remote original. Both-route failure blocks only dependent work; reading a page never claims ML execution. No numerical algorithm, scoring/selection, mini format, issued card, ID or grade change. [Implementation](research/verification/framework_change_2026-10-15-8/IMPLEMENTATION.md).

@@ -1,5 +1,8 @@
 # Scoreboard: current measurement and preserved historical results
 
+## Research retention import - 2026-10-16T01:29:27+11:00
+Seven retained records P-590-P-596 added for future source-backed settlement/development; tracked inventory 112: 104 prior terminal, legacy pending P-584, 7 awaiting outcome review. New source cohorts: 3 historical manual numeric originals P-590-P-592, 3 source NO_FORECAST originals P-593-P-595 and 1 RESEARCH_ONLY_NO_MODEL P-596. No model-assisted card or verified terminal label is added by this import. No new W/L/PUSH/VOID, T2, Brier/calibration/baseline score or prospective eligibility is inferred. Preserve every original rank/probability/status and actual timing; P-596 source-reported analyst probabilities are NOT_PRIMARY. [Complete import](../verification/framework_change_2026-10-16-1/CANONICAL_IMPORT_REPORT.md). Earlier dated scoreboard snapshots below are unchanged.
+
 ## Current import measurement - 14 October 2026 (SCV-2026.10.12-v7)
 
 **Separate declared SUPPLIED_FIRST_V1 / SF-2 cohort P-585-P-589:** paired frozen same-row coverage **4/10 primary rows, 2/5 events, 1 ISO event week (2026-W42)**. Paired card Brier 0.251668318, baseline 0.229513269, difference **+0.022155049**; paired card log loss 0.696473369, baseline 0.648152595, difference +0.048320774. Event-equal and week-equal differences equal these row-equal differences because both paired events contribute two rows in the same week. **INSUFFICIENT_EVIDENCE**: one week, timing/known-at/lineage unverified, uncalibrated scenarios, no prospective certification or model promotion. This package's declared user-supplement policy is preserved, not adopted as current P_ORDER_V2 or pooled with its gate cohort.

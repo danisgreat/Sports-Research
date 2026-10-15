@@ -446,6 +446,8 @@ def feedback_losses(feedback: list[dict], context: str, before, *, return_rows=F
         if row["event_id"] in seen:
             raise AdmissionError("duplicate/revision-conflicting feedback; resolve to one effective row")
         seen.add(row["event_id"])
+        if row.get("record_kind") == "RESEARCH_TRAINING_CANDIDATE" or "label_key" in row:
+            raise AdmissionError("research settlement targets are not frozen expert feedback; use future training admission")
         if clock(row["available_at"]) > clock(before):
             continue  # Future feedback cannot change today's weights.
         receipt_file(row["bundle"] + "/RECEIPT.csv", row["receipt_sha256"])

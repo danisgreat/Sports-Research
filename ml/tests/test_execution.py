@@ -49,7 +49,7 @@ def test_real_fit_and_hedge_without_archive_or_registered_baseline(inputs, monke
     assert set(p._parse_vector(model['mixture_weights']))==set(p.ARMS)
     assert all(0 <= float(r['baseline_p']) <= 1 for r in p.read_rows(kwargs['out']/'BUNDLE'/'PREDICTIONS.csv'))
     paths = manifest(inputs, rec)
-    assert verify_log(*paths)==dict(cards=1, executed=1, failed=0, feedback_retained=0)
+    assert verify_log(*paths)==dict(cards=1, executed=1, failed=0, feedback_retained=0, research_only=0)
     with pytest.raises(FileExistsError):
         execute_files(**kwargs)
 
@@ -148,3 +148,27 @@ def test_empty_new_mini_passes_but_interrupted_attempt_and_legacy_are_not_upgrad
     mini.write_text('<!-- MINI-LOG-FORMAT: mini-log-7 -->\n',encoding='utf-8')
     with pytest.raises(p.AdmissionError,match='legacy'):verify_log(manifest_path,mini)
     with pytest.raises(FileNotFoundError):verify_execution(tmp_path)
+
+
+@pytest.mark.parametrize('reason', ['NOT_RUN_CAPABILITY_BLOCKED: No module named ml',
+                                    'NOT_IMPLEMENTED: no exact sport adapter',
+                                    'NOT_RUN_DATA_UNAVAILABLE: reviewed history missing'])
+def test_research_card_retained_without_model_receipt_or_probability(tmp_path, reason):
+    mini=tmp_path/'mini.md';path=tmp_path/'manifest.csv'
+    mini.write_text('<!-- MINI-LOG-FORMAT: mini-log-9 -->\n<!-- BEGIN CARD P-900002 -->\n'
+                    '- **Analysis status:** RESEARCH_ONLY_NO_MODEL\n'
+                    '- **ML execution identity:** EXAMPLE-RESEARCH | Ice Hockey/EXAMPLE | FULL_GAME\n'
+                    '- **Model p_card:** NOT_ESTIMATED\n'
+                    '<!-- END CARD P-900002 -->\n',encoding='utf-8')
+    row=dict.fromkeys(MANIFEST_FIELDS,'')
+    row.update(card_id='P-900002',event_id='EXAMPLE-RESEARCH',competition='Ice Hockey/EXAMPLE',endpoint='FULL_GAME',
+               feedback_status='NOT_APPLICABLE_NO_MODEL',reason=reason)
+    path.write_bytes(p.csv_bytes([row]))
+    result=verify_log(path,mini)
+    assert result==dict(cards=1,executed=0,failed=0,feedback_retained=0,research_only=1)
+    # Identical evidence cannot claim a model prediction or fabricated expert-loss feedback.
+    mini.write_text(mini.read_text(encoding='utf-8').replace('RESEARCH_ONLY_NO_MODEL','MODEL_ASSISTED_PRIMARY_V3'),encoding='utf-8')
+    with pytest.raises(p.AdmissionError,match='numeric primary'):verify_log(path,mini)
+    mini.write_text(mini.read_text(encoding='utf-8').replace('MODEL_ASSISTED_PRIMARY_V3','RESEARCH_ONLY_NO_MODEL'),encoding='utf-8')
+    row['feedback_status']='FEEDBACK_RETAINED';path.write_bytes(p.csv_bytes([row]))
+    with pytest.raises(p.AdmissionError,match='invented expert feedback'):verify_log(path,mini)

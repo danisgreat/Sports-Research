@@ -1,0 +1,2 @@
+card_id,event_id,competition,endpoint,execution_path,execution_sha256,feedback_status,feedback_path,feedback_sha256,reason
+P-596,PHL:2026-27:REGULAR:G92:ARLAN-SARYARKA:2026-10-15,Ice Hockey/Pro Hokei Ligasy,FULL_GAME_CONVENTION_UNVERIFIED,,,NOT_APPLICABLE_NO_MODEL,,,"No verified event-specific model output; original external environment reportedly No module named ml; retrospective research retention only, no model/receipt invented"

@@ -123,18 +123,19 @@ def verify_execution(folder: Path, *, event_id=None, competition=None, endpoint=
 
 
 def verify_log(manifest: Path, mini: Path) -> dict:
-    """Require one exact-event attempt per new-format card and verify any retained feedback.
+    """Require an honest execution disposition per card, not a model as an ID prerequisite.
 
     Only use on new mandatory-execution minis, not historical cards or canonical wrappers.
-    Failed attempts are process evidence, never numeric ML output or learning labels.
+    Research-only cards may have no executable runtime/receipt. Verified settled labels
+    can later train a model; they cannot invent a frozen expert's historical loss.
     """
     text = mini.read_text(encoding="utf-8-sig")
     cards = re.findall(r"<!-- BEGIN CARD (P-\d+) -->", text)
     ends = re.findall(r"<!-- END CARD (P-\d+) -->", text)
     if cards != ends or len(cards) != len(set(cards)):
         raise p.AdmissionError("mini card markers duplicate/unbalanced")
-    if "MINI-LOG-FORMAT: mini-log-8" not in text:
-        raise p.AdmissionError("strict execution verifier requires mini-log-8; preserve legacy formats")
+    if not any("MINI-LOG-FORMAT: " + fmt in text for fmt in ("mini-log-8", "mini-log-9")):
+        raise p.AdmissionError("research verifier requires mini-log-8/9; preserve legacy formats")
     with manifest.open(encoding="utf-8-sig", newline="") as handle:
         if csv.DictReader(handle).fieldnames != list(MANIFEST_FIELDS):
             raise p.AdmissionError("execution manifest header must match registered fields")
@@ -145,25 +146,35 @@ def verify_log(manifest: Path, mini: Path) -> dict:
     events = [r["event_id"] for r in rows]
     if len(events) != len(set(events)):
         raise p.AdmissionError("duplicate event in execution manifest")
-    executed = failed = feedback_count = 0
+    executed = failed = feedback_count = research_only = 0
     for row in rows:
         if set(row) != set(MANIFEST_FIELDS):
             raise p.AdmissionError("unregistered/missing execution manifest fields")
-        folder = manifest.parent / row["execution_path"]
-        p.receipt_file(folder / "EXECUTION.csv", row["execution_sha256"])
-        rec = verify_execution(folder, **{k: row[k] for k in ("event_id", "competition", "endpoint")})
         match = re.search(r"<!-- BEGIN CARD " + re.escape(row["card_id"]) + r" -->(.*?)<!-- END CARD " + re.escape(row["card_id"]) + r" -->", text, re.S)
         body = match.group(1)
         identity = f"- **ML execution identity:** {row['event_id']} | {row['competition']} | {row['endpoint']}"
         if identity not in body:
             raise p.AdmissionError("card identity differs from execution manifest")
         statuses = re.findall(r"^- \*\*Analysis status:\*\*\s+(\S+)", body, re.M)
-        if len(statuses) != 1 or statuses[0] not in ("MODEL_ASSISTED_PRIMARY_V3", "UNCALIBRATED_QUALITATIVE", "NO_FORECAST"):
+        if len(statuses) != 1 or statuses[0] not in ("MODEL_ASSISTED_PRIMARY_V3", "RESEARCH_ONLY_NO_MODEL", "UNCALIBRATED_QUALITATIVE", "NO_FORECAST"):
             raise p.AdmissionError("one explicit primary analysis disposition required")
+        if not row["execution_path"]:
+            if row["execution_sha256"]:
+                raise p.AdmissionError("execution hash without an actual attempt path")
+            if statuses[0] == "MODEL_ASSISTED_PRIMARY_V3":
+                raise p.AdmissionError("numeric primary card requires successful execution")
+            if not row["reason"].strip() or row["feedback_status"] != "NOT_APPLICABLE_NO_MODEL" or row["feedback_path"] or row["feedback_sha256"]:
+                raise p.AdmissionError("research-only retention requires honest missing-model reason and no invented expert feedback")
+            research_only += 1
+            continue
+        folder = manifest.parent / row["execution_path"]
+        p.receipt_file(folder / "EXECUTION.csv", row["execution_sha256"])
+        rec = verify_execution(folder, **{k: row[k] for k in ("event_id", "competition", "endpoint")})
         if statuses[0] == "MODEL_ASSISTED_PRIMARY_V3" and rec["status"] != "EXECUTED":
             raise p.AdmissionError("numeric primary card requires successful execution")
         if rec["status"] == "FAILED":
             failed += 1
+            research_only += 1
             if row["feedback_status"] != "NOT_APPLICABLE_NO_MODEL" or not row["reason"]:
                 raise p.AdmissionError("failed execution cannot supply model feedback")
         else:
@@ -186,4 +197,5 @@ def verify_log(manifest: Path, mini: Path) -> dict:
                 raise p.AdmissionError("explicit pending/blocked feedback reason required")
         if row["feedback_status"] != "FEEDBACK_RETAINED" and (row["feedback_path"] or row["feedback_sha256"]):
             raise p.AdmissionError("non-retained feedback cannot name a learning row")
-    return dict(cards=len(cards), executed=executed, failed=failed, feedback_retained=feedback_count)
+    return dict(cards=len(cards), executed=executed, failed=failed, feedback_retained=feedback_count,
+                research_only=research_only)

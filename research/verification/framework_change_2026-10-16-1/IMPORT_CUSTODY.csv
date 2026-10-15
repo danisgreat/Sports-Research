@@ -1,0 +1,23 @@
+check,value
+source_path,C:\Users\danie\Downloads\PREDICTION_MINI_RUNNING_LOG_P-590_ONWARD_WITH_P596_RESEARCH_INTAKE_NOT_ISSUED.md
+source_bytes,235973
+source_sha256,afe30653573806136e44a3a0c1fdaacca86ae27bb95ecd3725b34061ec08883c
+retention_time,2026-10-16T01:29:27+11:00
+canonical_path,prediction logs/PREDICTION_LOG_COMBINED_7.md
+prefix_bytes,1719563
+prefix_sha256,c6b4f862eb2bb6bc35c7371c2876ce70416e742385da1e33f970ce3b56404094
+appended_bytes,206109
+after_bytes,1925672
+after_sha256,050415b7c59236fc46b24ca83f579282a6b940da431d0af55ddf2705369d92eb
+imported_ids,P-590..P-596
+next_canonical,P-597
+next_working,P-597
+old_core_readbacks,6
+new_research_record,1
+new_settlements,0
+new_model_forecasts,0
+p596_cards,1
+p596_executed,0
+p596_failed,0
+p596_feedback_retained,0
+p596_research_only,1

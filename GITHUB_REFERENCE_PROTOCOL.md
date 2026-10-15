@@ -1,6 +1,6 @@
 # Required GitHub reference when local access is incomplete
 
-**REF-2026.10.15-v1 · MDS-2026.10.15-v16.1 · CR-2026.10.15-R8 · P-2026.10.15-v16.1.** Standing owner instruction: refer to [Sports Research on GitHub — main](https://github.com/danisgreat/Sports-Research/tree/main) whenever local files are not fully accessible. This PROCEDURE release changes access/recovery steps only; numerical policy, scoring, selection and log formats are unchanged.
+**REF-2026.10.15-v1 · MDS-2026.10.16-v17.0 · CR-2026.10.16-R1 · P-2026.10.16-v17.0.** Standing owner instruction: refer to [Sports Research on GitHub — main](https://github.com/danisgreat/Sports-Research/tree/main) whenever local files are not fully accessible. This PROCEDURE release changes access/recovery steps only; numerical policy, scoring, selection and log formats are unchanged.
 
 ## Required recovery
 
@@ -12,3 +12,5 @@
 6. If both local access and authorized GitHub routes fail, record actual attempts/errors and the exact unread dependency. Complete all independent work under [RESEARCH_COMPLETION_PROTOCOL](RESEARCH_COMPLETION_PROTOCOL.md). No rule permits fabricated file content, compliance, source evidence or execution.
 
 Reading GitHub code or a receipt is not executing ML/RL. [ML_EXECUTION_PROTOCOL](ML_EXECUTION_PROTOCOL.md) still requires actual run/feedback evidence. This reference rule grants no additional GitHub write/publication permission and does not change any issued original, model probability, ID, grade or format.
+
+**Research retention before model availability (RETAIN-v1).** [RESEARCH_RETENTION_PROTOCOL](RESEARCH_RETENTION_PROTOCOL.md) supersedes EXEC-v1's model prerequisite for recording/import. Write every identified researched event under its reconciled working P-ID and canonically retain it through verified import even if the model/adapter/runtime/module/baseline/calibration/receipt is absent or failed. Use RESEARCH_ONLY_NO_MODEL, explicit execution reason and blank nonexistent artifact paths; keep model p_card NOT_ESTIMATED and supported analyst_p NOT_PRIMARY. Missing ML never by itself blocks the ID or a source-backed settlement. Retain verified settled labels for future model development with source/known-at/revision/feature status; only actual frozen experts can supply Hedge losses. Never invent probabilities, execution, final scores or pregame timing. Identity/custody/write conflicts remain real blockers.
