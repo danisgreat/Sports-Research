@@ -1,6 +1,6 @@
 # PROMPT 1 — Research and append one individual game card
 
-**Mode:** LOCAL_MINI_STAGING. **Writes:** the named active local mini plus its named primary-model input/bundle and sporting feedback folder, including evidence and mutable footer. **GitHub repository (`main` branch):** read-only mode (no canonical or remote writes). Authority mode `PUBLISHED_MAIN_PINNED` (CURRENT_RULES §0) unless the user runs this inside the repository and asks for local controls (`LOCAL_WORKING_TREE`). Print the mode, the full SHA and any difference between published and local controls. Do not settle, retrospect, change rules or allocate canonical status. Prompt suite P-2026.10.15-v14.0, mini-log-7.
+**Mode:** LOCAL_MINI_STAGING. **Writes:** the named active local mini plus its named primary-model input/bundle and sporting feedback folder, including evidence and mutable footer. **GitHub repository (`main` branch):** read-only mode (no canonical or remote writes). Authority mode `PUBLISHED_MAIN_PINNED` (CURRENT_RULES §0) unless the user runs this inside the repository and asks for local controls (`LOCAL_WORKING_TREE`). Print the mode, the full SHA and any difference between published and local controls. Do not settle, retrospect, change rules or allocate canonical status. Prompt suite P-2026.10.15-v14.1, mini-log-7.
 
 Inputs: `Event: <participants, league/format, date/time/timezone or official event link>`; `Active mini: <path>`; `Supplied contracts: <exact text/lines, or none>`; `Specific research constraints: <if any>`. Treat estimated starts as estimates until verified. Locate accessible inputs first; ask only for information essential to resolve ambiguity. This is the complete game prompt; nothing from prompt 2 needs to be pasted with it. Apply the matching sport section (1–7) below.
 
@@ -40,13 +40,15 @@ Follow official field-owner (league match centre / box score) → structured pro
 
 Verify rotation, minutes, injuries, rest/travel, and especially **confirmed starting fives and active bench/reserve availability**; probable is not confirmed. Distinguish fact, historical estimate and analyst assumption. Inspect actual archive contents under `Previous Sports Results/Basketball/<league>/...` and print files, logical rows read, season/endpoint filters, latest usable date and missingness. Use only results known before cutoff; a date alone does not prove a same-day game had finished. Do not use postgame narrative or full-season aggregates from after cutoff. A profile older than one season triggers STALE_PROFILE, a current-source check and sensitivity; missing replacement data does not justify a fabricated refresh.
 
+**Historical data recovery (HIST-2026.10.15-v1).** Apply [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md) across this sport and the exact league/competition. Inspect local coverage/provenance briefly; for any missing, incomplete, stale, incorrect or disputed required history, online sporting-source research is the preferred first recovery option, before proxies, waiting for archive repair or data-missing issuance. Search the actual organizer/federation, both teams and permitted historical providers, including original-language discovery for obscure competitions. Reconcile event/field/endpoint conflicts, deduplicate local/web overlap, preserve sources/known-at/retrieval/capture hashes and record true usable n. Use reviewed normalized web history in this game’s form/baseline/ML input now; queue permanent archive changes separately. If archive routing is absent/defective, supply evidence-backed --competition-source metadata with row source_kind under the primary protocol. Internet availability never creates an unsupported model or permits future/target outcome leakage. Record real attempts and unresolved fields; never invent confirmation or missing scores.
+
 **Form windows and known-at (PR-01, R28).**
 - Print each side's (team or player) L5, L10, L15, L20, season to date and league level, from dated games before the cutoff, with the true n of each window: CARD_AND_LOG_TEMPLATES §3b, ARCHIVE_USE_GUIDE recipe R2.
-- Use the archive where it holds the games; otherwise use a SOURCES route (ESPN team schedule, MLB statsapi, StatMuse, Tennis Abstract) and say which.
+- Reuse healthy reviewed archive rows; for missing, incomplete, stale or incorrect history, research the exact competition online first under HISTORICAL_SOURCE_PROTOCOL, including official/local-language routes. State actual local/web coverage and reconciled corrections; no major-league substitution.
 - Exclude archive rows flagged as duplicates, awarded results, forfeits or abandonments.
 - The windows overlap and count as one piece of evidence. The fitted model learns team/time effects from the admitted history. The shrunk L20/season and four-window blend are comparison diagnostics; neither manually shifts the fitted centre. Record any disagreement and unsupported material mechanisms.
 - A short-window swing is width, not a lean, unless a named, current mechanism explains it.
-- Print the archive capture date. An input whose availability before the cutoff cannot be shown is `KNOWN_AT_UNVERIFIED` and may not decide Rank 1.
+- Print archive/web capture and source publication/availability times separately. An input whose availability before the cutoff cannot be shown is `KNOWN_AT_UNVERIFIED` and may not decide Rank 1.
 
 ## 4. Distribution, expected score and comparator
 
@@ -118,13 +120,15 @@ Follow official board/ICC match center → ESPNcricinfo/structured provider → 
 
 Confirm playing XI, toss result, batting order, bowling allocations/quotas, pitch report, weather/dew and rain resources; probable is not confirmed. Distinguish fact, historical estimate and analyst assumption. Inspect actual archive contents under `Previous Sports Results/Cricket T20/<competition>/..., Cricket One-Day Format/<competition>/... or Cricket Tests/<competition>/...` and print files, logical rows read, format/tournament filters, latest usable date and missingness. Use only results known before cutoff. Do not use postgame narrative or full-season aggregates from after cutoff.
 
+**Historical data recovery (HIST-2026.10.15-v1).** Apply [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md) across this sport and the exact league/competition. Inspect local coverage/provenance briefly; for any missing, incomplete, stale, incorrect or disputed required history, online sporting-source research is the preferred first recovery option, before proxies, waiting for archive repair or data-missing issuance. Search the actual organizer/federation, both teams and permitted historical providers, including original-language discovery for obscure competitions. Reconcile event/field/endpoint conflicts, deduplicate local/web overlap, preserve sources/known-at/retrieval/capture hashes and record true usable n. Use reviewed normalized web history in this game’s form/baseline/ML input now; queue permanent archive changes separately. If archive routing is absent/defective, supply evidence-backed --competition-source metadata with row source_kind under the primary protocol. Internet availability never creates an unsupported model or permits future/target outcome leakage. Record real attempts and unresolved fields; never invent confirmation or missing scores.
+
 **Form windows and known-at (PR-01, R28).**
 - Print each side's (team or player) L5, L10, L15, L20, season to date and league level, from dated games before the cutoff, with the true n of each window: CARD_AND_LOG_TEMPLATES §3b, ARCHIVE_USE_GUIDE recipe R2.
-- Use the archive where it holds the games; otherwise use a SOURCES route (ESPN team schedule, MLB statsapi, StatMuse, Tennis Abstract) and say which.
+- Reuse healthy reviewed archive rows; for missing, incomplete, stale or incorrect history, research the exact competition online first under HISTORICAL_SOURCE_PROTOCOL, including official/local-language routes. State actual local/web coverage and reconciled corrections; no major-league substitution.
 - Exclude archive rows flagged as duplicates, awarded results, forfeits or abandonments.
 - The windows overlap and count as one piece of evidence. The fitted model learns team/time effects from the admitted history. The shrunk L20/season and four-window blend are comparison diagnostics; neither manually shifts the fitted centre. Record any disagreement and unsupported material mechanisms.
 - A short-window swing is width, not a lean, unless a named, current mechanism explains it.
-- Print the archive capture date. An input whose availability before the cutoff cannot be shown is `KNOWN_AT_UNVERIFIED` and may not decide Rank 1.
+- Print archive/web capture and source publication/availability times separately. An input whose availability before the cutoff cannot be shown is `KNOWN_AT_UNVERIFIED` and may not decide Rank 1.
 
 ## 4. Distribution, expected score and comparator
 
@@ -196,13 +200,15 @@ Follow official league scoreboard (MLB Gameday, KBO, NPB official, etc.) → str
 
 Verify starting pitcher identity and expected workload, confirmed batting lineup/platoon, bullpen availability, park factors, weather and rest; probable is not confirmed. Unknown pitcher weights stay assumptions, not facts. Inspect actual archive contents under `Previous Sports Results/Baseball/<league>/...` and print files, logical rows read, season/endpoint filters, latest usable date and missingness. Use only results known before cutoff. Do not use postgame narrative or full-season aggregates from after cutoff.
 
+**Historical data recovery (HIST-2026.10.15-v1).** Apply [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md) across this sport and the exact league/competition. Inspect local coverage/provenance briefly; for any missing, incomplete, stale, incorrect or disputed required history, online sporting-source research is the preferred first recovery option, before proxies, waiting for archive repair or data-missing issuance. Search the actual organizer/federation, both teams and permitted historical providers, including original-language discovery for obscure competitions. Reconcile event/field/endpoint conflicts, deduplicate local/web overlap, preserve sources/known-at/retrieval/capture hashes and record true usable n. Use reviewed normalized web history in this game’s form/baseline/ML input now; queue permanent archive changes separately. If archive routing is absent/defective, supply evidence-backed --competition-source metadata with row source_kind under the primary protocol. Internet availability never creates an unsupported model or permits future/target outcome leakage. Record real attempts and unresolved fields; never invent confirmation or missing scores.
+
 **Form windows and known-at (PR-01, R28).**
 - Print each side's (team or player) L5, L10, L15, L20, season to date and league level, from dated games before the cutoff, with the true n of each window: CARD_AND_LOG_TEMPLATES §3b, ARCHIVE_USE_GUIDE recipe R2.
-- Use the archive where it holds the games; otherwise use a SOURCES route (ESPN team schedule, MLB statsapi, StatMuse, Tennis Abstract) and say which.
+- Reuse healthy reviewed archive rows; for missing, incomplete, stale or incorrect history, research the exact competition online first under HISTORICAL_SOURCE_PROTOCOL, including official/local-language routes. State actual local/web coverage and reconciled corrections; no major-league substitution.
 - Exclude archive rows flagged as duplicates, awarded results, forfeits or abandonments.
 - The windows overlap and count as one piece of evidence. The fitted model learns team/time effects from the admitted history. The shrunk L20/season and four-window blend are comparison diagnostics; neither manually shifts the fitted centre. Record any disagreement and unsupported material mechanisms.
 - A short-window swing is width, not a lean, unless a named, current mechanism explains it.
-- Print the archive capture date. An input whose availability before the cutoff cannot be shown is `KNOWN_AT_UNVERIFIED` and may not decide Rank 1.
+- Print archive/web capture and source publication/availability times separately. An input whose availability before the cutoff cannot be shown is `KNOWN_AT_UNVERIFIED` and may not decide Rank 1.
 
 ## 4. Distribution, expected score and comparator
 
@@ -274,13 +280,15 @@ Follow official field-owner / federation match center → structured provider (F
 
 Confirm starting XI, goalkeeper, bench/rotation, injuries, schedule congestion; probable is not confirmed. Inspect actual archive contents under `Previous Sports Results/Soccer/<league>/...` and print files, logical rows read, season/endpoint filters, latest usable date and missingness. Use only results known before cutoff. Do not use postgame narrative or full-season aggregates from after cutoff.
 
+**Historical data recovery (HIST-2026.10.15-v1).** Apply [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md) across this sport and the exact league/competition. Inspect local coverage/provenance briefly; for any missing, incomplete, stale, incorrect or disputed required history, online sporting-source research is the preferred first recovery option, before proxies, waiting for archive repair or data-missing issuance. Search the actual organizer/federation, both teams and permitted historical providers, including original-language discovery for obscure competitions. Reconcile event/field/endpoint conflicts, deduplicate local/web overlap, preserve sources/known-at/retrieval/capture hashes and record true usable n. Use reviewed normalized web history in this game’s form/baseline/ML input now; queue permanent archive changes separately. If archive routing is absent/defective, supply evidence-backed --competition-source metadata with row source_kind under the primary protocol. Internet availability never creates an unsupported model or permits future/target outcome leakage. Record real attempts and unresolved fields; never invent confirmation or missing scores.
+
 **Form windows and known-at (PR-01, R28).**
 - Print each side's (team or player) L5, L10, L15, L20, season to date and league level, from dated games before the cutoff, with the true n of each window: CARD_AND_LOG_TEMPLATES §3b, ARCHIVE_USE_GUIDE recipe R2.
-- Use the archive where it holds the games; otherwise use a SOURCES route (ESPN team schedule, MLB statsapi, StatMuse, Tennis Abstract) and say which.
+- Reuse healthy reviewed archive rows; for missing, incomplete, stale or incorrect history, research the exact competition online first under HISTORICAL_SOURCE_PROTOCOL, including official/local-language routes. State actual local/web coverage and reconciled corrections; no major-league substitution.
 - Exclude archive rows flagged as duplicates, awarded results, forfeits or abandonments.
 - The windows overlap and count as one piece of evidence. The fitted model learns team/time effects from the admitted history. The shrunk L20/season and four-window blend are comparison diagnostics; neither manually shifts the fitted centre. Record any disagreement and unsupported material mechanisms.
 - A short-window swing is width, not a lean, unless a named, current mechanism explains it.
-- Print the archive capture date. An input whose availability before the cutoff cannot be shown is `KNOWN_AT_UNVERIFIED` and may not decide Rank 1.
+- Print archive/web capture and source publication/availability times separately. An input whose availability before the cutoff cannot be shown is `KNOWN_AT_UNVERIFIED` and may not decide Rank 1.
 
 ## 4. Distribution, expected score and comparator
 
@@ -352,13 +360,15 @@ Follow official league game sheet / match reports → structured provider → qu
 
 Confirm starting goalies or supported mixture, lines/scratches, special teams, rest and travel; probable is not confirmed. Unconfirmed goalie sensitivity must reach totals/ranks. Inspect actual archive contents under `Previous Sports Results/Ice Hockey/<league>/...` and print files, logical rows read, season/endpoint filters, latest usable date and missingness. Use only results known before cutoff. Do not use postgame narrative or full-season aggregates from after cutoff.
 
+**Historical data recovery (HIST-2026.10.15-v1).** Apply [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md) across this sport and the exact league/competition. Inspect local coverage/provenance briefly; for any missing, incomplete, stale, incorrect or disputed required history, online sporting-source research is the preferred first recovery option, before proxies, waiting for archive repair or data-missing issuance. Search the actual organizer/federation, both teams and permitted historical providers, including original-language discovery for obscure competitions. Reconcile event/field/endpoint conflicts, deduplicate local/web overlap, preserve sources/known-at/retrieval/capture hashes and record true usable n. Use reviewed normalized web history in this game’s form/baseline/ML input now; queue permanent archive changes separately. If archive routing is absent/defective, supply evidence-backed --competition-source metadata with row source_kind under the primary protocol. Internet availability never creates an unsupported model or permits future/target outcome leakage. Record real attempts and unresolved fields; never invent confirmation or missing scores.
+
 **Form windows and known-at (PR-01, R28).**
 - Print each side's (team or player) L5, L10, L15, L20, season to date and league level, from dated games before the cutoff, with the true n of each window: CARD_AND_LOG_TEMPLATES §3b, ARCHIVE_USE_GUIDE recipe R2.
-- Use the archive where it holds the games; otherwise use a SOURCES route (ESPN team schedule, MLB statsapi, StatMuse, Tennis Abstract) and say which.
+- Reuse healthy reviewed archive rows; for missing, incomplete, stale or incorrect history, research the exact competition online first under HISTORICAL_SOURCE_PROTOCOL, including official/local-language routes. State actual local/web coverage and reconciled corrections; no major-league substitution.
 - Exclude archive rows flagged as duplicates, awarded results, forfeits or abandonments.
 - The windows overlap and count as one piece of evidence. The fitted model learns team/time effects from the admitted history. The shrunk L20/season and four-window blend are comparison diagnostics; neither manually shifts the fitted centre. Record any disagreement and unsupported material mechanisms.
 - A short-window swing is width, not a lean, unless a named, current mechanism explains it.
-- Print the archive capture date. An input whose availability before the cutoff cannot be shown is `KNOWN_AT_UNVERIFIED` and may not decide Rank 1.
+- Print archive/web capture and source publication/availability times separately. An input whose availability before the cutoff cannot be shown is `KNOWN_AT_UNVERIFIED` and may not decide Rank 1.
 
 ## 4. Distribution, expected score and comparator
 
@@ -430,13 +440,15 @@ Follow official tour match center (ATP / WTA) → structured provider → qualit
 
 Verify event/player identity, round, tour, surface, best-of format, tiebreak rules, fitness, workload, serve/return data and appropriate benchmark; probable is not confirmed. Inspect current tennis archive/provider coverage rather than assuming it is empty. Use only results known before cutoff. Do not use postgame narrative or full-season aggregates from after cutoff.
 
+**Historical data recovery (HIST-2026.10.15-v1).** Apply [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md) across this sport and the exact league/competition. Inspect local coverage/provenance briefly; for any missing, incomplete, stale, incorrect or disputed required history, online sporting-source research is the preferred first recovery option, before proxies, waiting for archive repair or data-missing issuance. Search the actual organizer/federation, both teams and permitted historical providers, including original-language discovery for obscure competitions. Reconcile event/field/endpoint conflicts, deduplicate local/web overlap, preserve sources/known-at/retrieval/capture hashes and record true usable n. Use reviewed normalized web history in this game’s form/baseline/ML input now; queue permanent archive changes separately. If archive routing is absent/defective, supply evidence-backed --competition-source metadata with row source_kind under the primary protocol. Internet availability never creates an unsupported model or permits future/target outcome leakage. Record real attempts and unresolved fields; never invent confirmation or missing scores.
+
 **Form windows and known-at (PR-01, R28).**
 - Print each side's (team or player) L5, L10, L15, L20, season to date and league level, from dated games before the cutoff, with the true n of each window: CARD_AND_LOG_TEMPLATES §3b, ARCHIVE_USE_GUIDE recipe R2.
-- Use the archive where it holds the games; otherwise use a SOURCES route (ESPN team schedule, MLB statsapi, StatMuse, Tennis Abstract) and say which.
+- Reuse healthy reviewed archive rows; for missing, incomplete, stale or incorrect history, research the exact competition online first under HISTORICAL_SOURCE_PROTOCOL, including official/local-language routes. State actual local/web coverage and reconciled corrections; no major-league substitution.
 - Exclude archive rows flagged as duplicates, awarded results, forfeits or abandonments.
 - The windows overlap and count as one piece of evidence. The fitted model learns team/time effects from the admitted history. The shrunk L20/season and four-window blend are comparison diagnostics; neither manually shifts the fitted centre. Record any disagreement and unsupported material mechanisms.
 - A short-window swing is width, not a lean, unless a named, current mechanism explains it.
-- Print the archive capture date. An input whose availability before the cutoff cannot be shown is `KNOWN_AT_UNVERIFIED` and may not decide Rank 1.
+- Print archive/web capture and source publication/availability times separately. An input whose availability before the cutoff cannot be shown is `KNOWN_AT_UNVERIFIED` and may not decide Rank 1.
 
 ## 4. Distribution, expected score and comparator
 
@@ -508,13 +520,15 @@ Follow official league match center → structured provider → quality corrobor
 
 Verify the final starting side, interchange/reserves, spine/halves, kicking, possession/territory, discipline, workload and weather; probable is not confirmed. Inspect actual archive contents under `Previous Sports Results/Rugby League/<competition>/...` and print files, logical rows read, competition/stage filters, latest usable date and missingness. Use only results known before cutoff. Do not use postgame narrative or full-season aggregates from after cutoff.
 
+**Historical data recovery (HIST-2026.10.15-v1).** Apply [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md) across this sport and the exact league/competition. Inspect local coverage/provenance briefly; for any missing, incomplete, stale, incorrect or disputed required history, online sporting-source research is the preferred first recovery option, before proxies, waiting for archive repair or data-missing issuance. Search the actual organizer/federation, both teams and permitted historical providers, including original-language discovery for obscure competitions. Reconcile event/field/endpoint conflicts, deduplicate local/web overlap, preserve sources/known-at/retrieval/capture hashes and record true usable n. Use reviewed normalized web history in this game’s form/baseline/ML input now; queue permanent archive changes separately. If archive routing is absent/defective, supply evidence-backed --competition-source metadata with row source_kind under the primary protocol. Internet availability never creates an unsupported model or permits future/target outcome leakage. Record real attempts and unresolved fields; never invent confirmation or missing scores.
+
 **Form windows and known-at (PR-01, R28).**
 - Print each side's (team or player) L5, L10, L15, L20, season to date and league level, from dated games before the cutoff, with the true n of each window: CARD_AND_LOG_TEMPLATES §3b, ARCHIVE_USE_GUIDE recipe R2.
-- Use the archive where it holds the games; otherwise use a SOURCES route (ESPN team schedule, MLB statsapi, StatMuse, Tennis Abstract) and say which.
+- Reuse healthy reviewed archive rows; for missing, incomplete, stale or incorrect history, research the exact competition online first under HISTORICAL_SOURCE_PROTOCOL, including official/local-language routes. State actual local/web coverage and reconciled corrections; no major-league substitution.
 - Exclude archive rows flagged as duplicates, awarded results, forfeits or abandonments.
 - The windows overlap and count as one piece of evidence. The fitted model learns team/time effects from the admitted history. The shrunk L20/season and four-window blend are comparison diagnostics; neither manually shifts the fitted centre. Record any disagreement and unsupported material mechanisms.
 - A short-window swing is width, not a lean, unless a named, current mechanism explains it.
-- Print the archive capture date. An input whose availability before the cutoff cannot be shown is `KNOWN_AT_UNVERIFIED` and may not decide Rank 1.
+- Print archive/web capture and source publication/availability times separately. An input whose availability before the cutoff cannot be shown is `KNOWN_AT_UNVERIFIED` and may not decide Rank 1.
 
 ## 4. Distribution, expected score and comparator
 
@@ -586,13 +600,15 @@ Follow official league match center → structured provider → quality corrobor
 
 Verify the starting XV, replacements and front-row eligibility, halves/kicking, possession/territory, discipline, workload and weather; probable is not confirmed. Inspect actual archive contents under `Previous Sports Results/Rugby Union/<competition>/...` and print files, logical rows read, competition/stage filters, latest usable date and missingness. Use only results known before cutoff. Do not use postgame narrative or full-season aggregates from after cutoff.
 
+**Historical data recovery (HIST-2026.10.15-v1).** Apply [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md) across this sport and the exact league/competition. Inspect local coverage/provenance briefly; for any missing, incomplete, stale, incorrect or disputed required history, online sporting-source research is the preferred first recovery option, before proxies, waiting for archive repair or data-missing issuance. Search the actual organizer/federation, both teams and permitted historical providers, including original-language discovery for obscure competitions. Reconcile event/field/endpoint conflicts, deduplicate local/web overlap, preserve sources/known-at/retrieval/capture hashes and record true usable n. Use reviewed normalized web history in this game’s form/baseline/ML input now; queue permanent archive changes separately. If archive routing is absent/defective, supply evidence-backed --competition-source metadata with row source_kind under the primary protocol. Internet availability never creates an unsupported model or permits future/target outcome leakage. Record real attempts and unresolved fields; never invent confirmation or missing scores.
+
 **Form windows and known-at (PR-01, R28).**
 - Print each side's (team or player) L5, L10, L15, L20, season to date and league level, from dated games before the cutoff, with the true n of each window: CARD_AND_LOG_TEMPLATES §3b, ARCHIVE_USE_GUIDE recipe R2.
-- Use the archive where it holds the games; otherwise use a SOURCES route (ESPN team schedule, MLB statsapi, StatMuse, Tennis Abstract) and say which.
+- Reuse healthy reviewed archive rows; for missing, incomplete, stale or incorrect history, research the exact competition online first under HISTORICAL_SOURCE_PROTOCOL, including official/local-language routes. State actual local/web coverage and reconciled corrections; no major-league substitution.
 - Exclude archive rows flagged as duplicates, awarded results, forfeits or abandonments.
 - The windows overlap and count as one piece of evidence. The fitted model learns team/time effects from the admitted history. The shrunk L20/season and four-window blend are comparison diagnostics; neither manually shifts the fitted centre. Record any disagreement and unsupported material mechanisms.
 - A short-window swing is width, not a lean, unless a named, current mechanism explains it.
-- Print the archive capture date. An input whose availability before the cutoff cannot be shown is `KNOWN_AT_UNVERIFIED` and may not decide Rank 1.
+- Print archive/web capture and source publication/availability times separately. An input whose availability before the cutoff cannot be shown is `KNOWN_AT_UNVERIFIED` and may not decide Rank 1.
 
 ## 4. Distribution, expected score and comparator
 
@@ -664,13 +680,15 @@ Follow official AFL match centre / AFLW app → structured provider → quality 
 
 Verify teams, ruck/midfield, clearances, inside-50/scoring-shot creation, conversion, defence, rest/venue/weather; probable is not confirmed. Inspect actual archive contents under `Previous Sports Results/Aussie Rules/...` and print files, logical rows read, competition/season filters, latest usable date and missingness. Use only results known before cutoff. Do not use postgame narrative or full-season aggregates from after cutoff.
 
+**Historical data recovery (HIST-2026.10.15-v1).** Apply [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md) across this sport and the exact league/competition. Inspect local coverage/provenance briefly; for any missing, incomplete, stale, incorrect or disputed required history, online sporting-source research is the preferred first recovery option, before proxies, waiting for archive repair or data-missing issuance. Search the actual organizer/federation, both teams and permitted historical providers, including original-language discovery for obscure competitions. Reconcile event/field/endpoint conflicts, deduplicate local/web overlap, preserve sources/known-at/retrieval/capture hashes and record true usable n. Use reviewed normalized web history in this game’s form/baseline/ML input now; queue permanent archive changes separately. If archive routing is absent/defective, supply evidence-backed --competition-source metadata with row source_kind under the primary protocol. Internet availability never creates an unsupported model or permits future/target outcome leakage. Record real attempts and unresolved fields; never invent confirmation or missing scores.
+
 **Form windows and known-at (PR-01, R28).**
 - Print each side's (team or player) L5, L10, L15, L20, season to date and league level, from dated games before the cutoff, with the true n of each window: CARD_AND_LOG_TEMPLATES §3b, ARCHIVE_USE_GUIDE recipe R2.
-- Use the archive where it holds the games; otherwise use a SOURCES route (ESPN team schedule, MLB statsapi, StatMuse, Tennis Abstract) and say which.
+- Reuse healthy reviewed archive rows; for missing, incomplete, stale or incorrect history, research the exact competition online first under HISTORICAL_SOURCE_PROTOCOL, including official/local-language routes. State actual local/web coverage and reconciled corrections; no major-league substitution.
 - Exclude archive rows flagged as duplicates, awarded results, forfeits or abandonments.
 - The windows overlap and count as one piece of evidence. The fitted model learns team/time effects from the admitted history. The shrunk L20/season and four-window blend are comparison diagnostics; neither manually shifts the fitted centre. Record any disagreement and unsupported material mechanisms.
 - A short-window swing is width, not a lean, unless a named, current mechanism explains it.
-- Print the archive capture date. An input whose availability before the cutoff cannot be shown is `KNOWN_AT_UNVERIFIED` and may not decide Rank 1.
+- Print archive/web capture and source publication/availability times separately. An input whose availability before the cutoff cannot be shown is `KNOWN_AT_UNVERIFIED` and may not decide Rank 1.
 
 ## 4. Distribution, expected score and comparator
 
@@ -742,13 +760,15 @@ Follow official NFL Game Center / college box score → structured provider → 
 
 Verify QB, line/skill/defensive availability, 90-minute pregame inactives list, efficiency, drive/play pace, pressure, special teams, rest/weather; probable is not confirmed. Inspect actual archive contents under `Previous Sports Results/American Football/<league>/...` and print files, logical rows read, season/week filters, latest usable date and missingness. Use only results known before cutoff. Do not use postgame narrative or full-season aggregates from after cutoff.
 
+**Historical data recovery (HIST-2026.10.15-v1).** Apply [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md) across this sport and the exact league/competition. Inspect local coverage/provenance briefly; for any missing, incomplete, stale, incorrect or disputed required history, online sporting-source research is the preferred first recovery option, before proxies, waiting for archive repair or data-missing issuance. Search the actual organizer/federation, both teams and permitted historical providers, including original-language discovery for obscure competitions. Reconcile event/field/endpoint conflicts, deduplicate local/web overlap, preserve sources/known-at/retrieval/capture hashes and record true usable n. Use reviewed normalized web history in this game’s form/baseline/ML input now; queue permanent archive changes separately. If archive routing is absent/defective, supply evidence-backed --competition-source metadata with row source_kind under the primary protocol. Internet availability never creates an unsupported model or permits future/target outcome leakage. Record real attempts and unresolved fields; never invent confirmation or missing scores.
+
 **Form windows and known-at (PR-01, R28).**
 - Print each side's (team or player) L5, L10, L15, L20, season to date and league level, from dated games before the cutoff, with the true n of each window: CARD_AND_LOG_TEMPLATES §3b, ARCHIVE_USE_GUIDE recipe R2.
-- Use the archive where it holds the games; otherwise use a SOURCES route (ESPN team schedule, MLB statsapi, StatMuse, Tennis Abstract) and say which.
+- Reuse healthy reviewed archive rows; for missing, incomplete, stale or incorrect history, research the exact competition online first under HISTORICAL_SOURCE_PROTOCOL, including official/local-language routes. State actual local/web coverage and reconciled corrections; no major-league substitution.
 - Exclude archive rows flagged as duplicates, awarded results, forfeits or abandonments.
 - The windows overlap and count as one piece of evidence. The fitted model learns team/time effects from the admitted history. The shrunk L20/season and four-window blend are comparison diagnostics; neither manually shifts the fitted centre. Record any disagreement and unsupported material mechanisms.
 - A short-window swing is width, not a lean, unless a named, current mechanism explains it.
-- Print the archive capture date. An input whose availability before the cutoff cannot be shown is `KNOWN_AT_UNVERIFIED` and may not decide Rank 1.
+- Print archive/web capture and source publication/availability times separately. An input whose availability before the cutoff cannot be shown is `KNOWN_AT_UNVERIFIED` and may not decide Rank 1.
 
 ## 4. Distribution, expected score and comparator
 
@@ -820,13 +840,15 @@ Follow official governing body / field owner match center → structured provide
 
 Verify confirmed participant readiness, lineups and availability; probable is not confirmed. Inspect archive if available. If sources cannot support an authoritative model, use UNCALIBRATED_QUALITATIVE or NO_FORECAST.
 
+**Historical data recovery (HIST-2026.10.15-v1).** Apply [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md) across this sport and the exact league/competition. Inspect local coverage/provenance briefly; for any missing, incomplete, stale, incorrect or disputed required history, online sporting-source research is the preferred first recovery option, before proxies, waiting for archive repair or data-missing issuance. Search the actual organizer/federation, both teams and permitted historical providers, including original-language discovery for obscure competitions. Reconcile event/field/endpoint conflicts, deduplicate local/web overlap, preserve sources/known-at/retrieval/capture hashes and record true usable n. Use reviewed normalized web history in this game’s form/baseline/ML input now; queue permanent archive changes separately. If archive routing is absent/defective, supply evidence-backed --competition-source metadata with row source_kind under the primary protocol. Internet availability never creates an unsupported model or permits future/target outcome leakage. Record real attempts and unresolved fields; never invent confirmation or missing scores.
+
 **Form windows and known-at (PR-01, R28).**
 - Print each side's (team or player) L5, L10, L15, L20, season to date and league level, from dated games before the cutoff, with the true n of each window: CARD_AND_LOG_TEMPLATES §3b, ARCHIVE_USE_GUIDE recipe R2.
-- Use the archive where it holds the games; otherwise use a SOURCES route (ESPN team schedule, MLB statsapi, StatMuse, Tennis Abstract) and say which.
+- Reuse healthy reviewed archive rows; for missing, incomplete, stale or incorrect history, research the exact competition online first under HISTORICAL_SOURCE_PROTOCOL, including official/local-language routes. State actual local/web coverage and reconciled corrections; no major-league substitution.
 - Exclude archive rows flagged as duplicates, awarded results, forfeits or abandonments.
 - The windows overlap and count as one piece of evidence. The fitted model learns team/time effects from the admitted history. The shrunk L20/season and four-window blend are comparison diagnostics; neither manually shifts the fitted centre. Record any disagreement and unsupported material mechanisms.
 - A short-window swing is width, not a lean, unless a named, current mechanism explains it.
-- Print the archive capture date. An input whose availability before the cutoff cannot be shown is `KNOWN_AT_UNVERIFIED` and may not decide Rank 1.
+- Print archive/web capture and source publication/availability times separately. An input whose availability before the cutoff cannot be shown is `KNOWN_AT_UNVERIFIED` and may not decide Rank 1.
 
 ## 4. Distribution, expected score and comparator
 

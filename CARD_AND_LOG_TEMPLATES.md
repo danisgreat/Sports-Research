@@ -1,6 +1,6 @@
 # Card, mini, settlement and canonical formats
 
-**mini-log-7 · mini-settlement-6 · canonical-md-1.** Authority: MDS-2026.10.15-v15.0 / CR-2026.10.15-R4 / SCV-2026.10.15-v10 / SEL-2026.10.12-v3. [Rules](CURRENT_RULES.md) and [selection definitions](SELECTION_RULES.md) control semantics. Previous formats: [mini-log-6 / mini-settlement-5](archive/superseded_2026-10-12/CARD_AND_LOG_TEMPLATES.md).
+**mini-log-7 · mini-settlement-6 · canonical-md-1.** Authority: MDS-2026.10.15-v15.1 / CR-2026.10.15-R5 / SCV-2026.10.15-v10 / SEL-2026.10.12-v3. [Rules](CURRENT_RULES.md) and [selection definitions](SELECTION_RULES.md) control semantics. Previous formats: [mini-log-6 / mini-settlement-5](archive/superseded_2026-10-12/CARD_AND_LOG_TEMPLATES.md).
 
 <a id="local-mini-format-mini-log-2"></a>
 
@@ -121,6 +121,8 @@ Insert immediately before the footer. Preserve earlier card/addendum bytes; only
 #### A1. Identity, timing and state
 #### A2. Frozen supplied contracts and candidate recipe
 #### A3. Evidence and archive inputs
+
+Apply [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md): record actual archive triage, preferred online recovery attempts, local/web row and field coverage, correction/exclusion reconciliation, source publication/retrieval/capture identities, true form n and final unresolved dispositions. Named mini/model evidence may include reviewed web HISTORY.csv and exact COMPETITION_SOURCE.csv; no automatic shared archive edit.
 
 Complete [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md) for both sides in this existing evidence appendix: starters/starting role, selected bench/replacements, reported injuries/illness/suspensions/absences and final late changes, with exact-game sources/times and actual failed/escalated searches. Preserve each field's confirmed/projected/missing/conflicting state; N/A needs a sport/format reason. Existing lineup metadata summarises this evidence, not just the starting side.
 #### A4. Distribution, baseline, expected-score arithmetic and sensitivity
@@ -247,7 +249,7 @@ Pending cards get state evidence, literal original reference and next check, wit
 | C10 | Contract definitions, field capture and actual scheduling status |
 | C11 | Timing protocol: evidence horizon = game-log scheduled start (no separate cutoff), independent retrieval/completion/issue/state; no fixed deadline; pre-start input proof and actual issue phase separate; honest outcome exposure |
 | C12 | Market blindness, supported evidence with times, lineage unknowns |
-| C13 | Actual archive window/sample/coverage and point-in-time availability |
+| C13 | Actual archive/web window/sample/coverage, online-first gap recovery, correction/dedup ledger and point-in-time availability; no-data claimed only after actual source attempts |
 | C14 | Frozen same-row baseline and independent league-only parameters, or explicit unavailable reason |
 | C15 | Expected-score arithmetic/units/covariance and missingness; decision block/appendix complete |
 | C16 | Written card and footer read back; earlier blocks unchanged; audit has actual evidence, not just check names |

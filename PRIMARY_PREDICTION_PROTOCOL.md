@@ -1,6 +1,6 @@
 # Primary ML and online expert aggregation
 
-**PRIMARY-2026.10.15-v3 · MDS-2026.10.15-v15.0 · CR-2026.10.15-R4 · SCV-2026.10.15-v10 · P-2026.10.15-v14.0.** Owner-authorised experimental primary use: MODEL_ASSISTED_PRIMARY_V3 / PRIMARY_HEDGE_MIX_V3 / EXPERIMENTAL_PRIMARY_NOT_CERTIFIED. [Review](research/verification/framework_change_2026-10-15-4/REVIEW.md). Prior controls and V2 remain recoverable in Git/archive; issued originals never migrate silently.
+**PRIMARY-2026.10.15-v3 · MDS-2026.10.15-v15.1 · CR-2026.10.15-R5 · SCV-2026.10.15-v10 · P-2026.10.15-v14.1.** Owner-authorised experimental primary use: MODEL_ASSISTED_PRIMARY_V3 / PRIMARY_HEDGE_MIX_V3 / EXPERIMENTAL_PRIMARY_NOT_CERTIFIED. [Review](research/verification/framework_change_2026-10-15-4/REVIEW.md). Prior controls and V2 remain recoverable in Git/archive; issued originals never migrate silently.
 
 ## 1. What produces a primary forecast
 
@@ -51,3 +51,9 @@ Current fitted features are team identity, prior scores and time decay. Confirme
 The preserved 41,752-game replay reported better mean home-win Brier than random Exp3, but used different history/state/feedback and included DATA_HOLD leagues; its pooled interval treated competition-weeks as separate clusters, and its 200-seed comparator is Monte Carlo. It is **historical proxy evidence**, not a test or parameter qualification for this V3 runtime. Corrected replay code retains coverage, shared calendar-week pooling, failures and paired rows in a new output folder; old generated reports are never restamped. Passing tests establishes mechanics only. Prospective calibration, incremental advantage, practical-effect/power design and production readiness remain unproven/BLOCKED_DESIGN.
 
 No odds, stakes, returns, CLV, fantasy, market moves or decision-lab inputs enter primary models, expert losses or ranks. `ml/decision/` remains a separate historical paper experiment. Actual primary execution is authorised; source truth and performance claims still need their own evidence.
+
+## 6. Preferred online historical recovery (HIST-v1)
+
+[HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md) requires verified web research first for missing, incomplete or incorrect exact-competition archive history across all sports. Reviewed web rows can train the current model without a permanent archive refresh. Optional HISTORY source_kind=ARCHIVE_REVIEWED / WEB_RECOVERED / WEB_CORRECTED; unknown labels fail. The receipt records web/archive/unspecified row coverage. The original source/time/score/identity gates and V3 learning policy are unchanged.
+
+When archive routing is missing/defective, `primary predict --competition-source COMPETITION_SOURCE.csv` accepts one reviewed exact-scope metadata row, defined in the history protocol, instead of relying on that archive's discovered config. Every history row then needs an explicit source_kind. Metadata must match request, supported sport/endpoint/tie/innings/bonus configuration and source evidence known by the horizon. This does not release old DATA_HOLD data or models; it admits a fresh reviewed route and fresh row set. No unsupported engine is inferred from internet availability. The source config snapshot/hash is retained and checked against MODEL_CONFIG; old bundles without this optional sidecar remain readable. Research is performed by the operator/browser workflow, not an unattended built-in web scraper.

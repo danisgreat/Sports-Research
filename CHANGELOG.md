@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-15 — Prefer verified internet recovery for missing or faulty history
+
+Owner requests online historical research as first recovery when Previous Sports Results is absent, incomplete or incorrect, across all sports/leagues/competitions. PROCEDURE: MDS-v15.1 / CR-R5 / P-v14.1; SCV-v10, primary V3 and scoring/selection/mini formats unchanged. [Historical source protocol](HISTORICAL_SOURCE_PROTOCOL.md): all eleven sport workflows directly require source discovery, field reconciliation, known-at/custody and honest usable coverage before data-missing issuance. Fresh reviewed web history can enter current ML/form inputs without waiting for shared archive repair; explicit evidence-backed competition-source routing supports missing/defective archive config. No old DATA_HOLD artifact, unsupported model or predictive qualification is promoted. [Implementation](research/verification/framework_change_2026-10-15-5/IMPLEMENTATION.md).
+
 ## 2026-10-15 — Primary mixture integrity review
 
 Owner authorises review, verified bug fixes and main publication of the other session's changes. STATISTICAL source-policy + PROCEDURE: MDS-v15 / CR-R4 / SCV-v10 / P-v14; PRIMARY_HEDGE_MIX_V3. Corrects warm known-at leakage, duplicate history/feedback weight, parameter admission, retained learning ledgers, nonfinite validation and replay failure/pooling integrity. All eleven sport/Upcoming workflows retained and direct prompt wording aligned. Prior replay remains immutable proxy evidence; no new predictive advantage or RL-agent qualification is claimed. [Review](research/verification/framework_change_2026-10-15-4/REVIEW.md).

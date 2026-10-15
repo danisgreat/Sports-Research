@@ -1,6 +1,6 @@
 # PROMPT 7 — Repair source data and admission before model use
 
-**P-2026.10.15-v14.0 · ARCHIVE_EXPANSION · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: declared sporting CSVs, provenance/source/coverage notes, supported profile updates and a new verification folder. Helpers/raw captures stay outside the repository. No original cards/logs, model parameters or implicit promotion.
+**P-2026.10.15-v14.1 · ARCHIVE_EXPANSION · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: declared sporting CSVs, provenance/source/coverage notes, supported profile updates and a new verification folder. Helpers/raw captures stay outside the repository. No original cards/logs, model parameters or implicit promotion.
 
 ## Inputs
 
@@ -15,6 +15,8 @@ Declare competition/era/season naming, event grain, stage/endpoint, native ident
 For source availability gaps, discover the actual organizer/federation and both teams with original game sheets, local language, medical/disciplinary releases and official scorer routes. Document fields actually obtainable and announcement/access limitations. No universal publication promise.
 
 ## 2. Collect observed fields without defaults
+
+Apply [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md) across the actual sport/league/competition: internet discovery is first recovery for absent, incomplete or incorrect local history. Preserve old rows/captures, resolve exact fields/identities and record local-versus-web reconciliation. A card may already use a reviewed local evidence dataset; permanent archive repair here reconciles that dataset without reissuing its original forecast.
 
 Record exact source URL, native ID, field/value, publication/update/retrieval time, capture/snapshot hash and collector lineage. Keep source bodies/helpers outside the repository when required. Write DATA_PROVENANCE: every column classified OBSERVED, DERIVED, MISSING, CONFLICTING or checked against a named source; schema/transformation rules, identities, canonical mapping, coverage and exclusions.
 

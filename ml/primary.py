@@ -25,7 +25,7 @@ import numpy as np
 import pandas as pd
 import scipy
 
-from ml.config import League, get_league
+from ml.config import League, SPORT_RULES, get_league
 from ml.core.distributions import ScoreGrid
 from ml.evaluation.backtest import make_model
 from ml.models.baseline import LeagueBaseline
@@ -84,6 +84,52 @@ def receipt_file(path, expected: str) -> bytes:
     return data
 
 
+def reviewed_source_league(request: dict, row: dict, *, check_evidence=True) -> League:
+    """Explicit source-reviewed routing when the local archive is absent or defective.
+
+    This admits competition metadata, never old archive rows or an unsupported engine.
+    Sporting source discovery/field review is performed by the research workflow.
+    """
+    columns = {"sport", "competition", "endpoint", "tie_rule", "extra_fraction", "winner_bonus", "overs_cap",
+               "source_url", "available_at", "review_status", "evidence_path", "evidence_sha256",
+               "archive_disposition", "reason"}
+    if set(row) != columns:
+        raise AdmissionError("competition source config requires exact reviewed fields; extra/market columns prohibited")
+    sport, competition = row["sport"], row["competition"]
+    if not sport.strip() or not competition.strip() or "/" in competition or "\\" in competition or competition in (".", ".."):
+        raise AdmissionError("invalid exact competition identity")
+    path = sport + "/" + competition
+    if path != request["competition"] or row["endpoint"] != request["endpoint"]:
+        raise AdmissionError("reviewed competition source scope differs from request")
+    rules = SPORT_RULES.get(sport, {})
+    if rules.get("engine") not in ("gaussian", "count", "dixon_coles", "cricket"):
+        raise AdmissionError("unsupported sport engine; online data does not create a primary adapter")
+    if row["endpoint"] != rules["endpoint"] or row["tie_rule"] != rules.get("tie_rule", "draw"):
+        raise AdmissionError("reviewed format/endpoint requires an unsupported adapter")
+    horizon, _ = information_horizon(request)
+    if row["review_status"] != "RESEARCH_INPUT_REVIEWED" or not row["source_url"].startswith("https://") or clock(row["available_at"]) > horizon:
+        raise AdmissionError("competition metadata requires reviewed source evidence known by the horizon")
+    if row["archive_disposition"] not in ("MISSING", "INCOMPLETE", "INCORRECT") or not row["reason"].strip():
+        raise AdmissionError("declare the actual archive defect and source-recovery reason")
+    if check_evidence:
+        receipt_file(row["evidence_path"], row["evidence_sha256"])
+    extra, bonus = float(row["extra_fraction"]), float(row["winner_bonus"])
+    if not math.isfinite(extra) or not 0 <= extra <= 1 or not math.isfinite(bonus) or bonus != rules.get("winner_bonus", 1):
+        raise AdmissionError("invalid or unsupported competition extra-time configuration")
+    needs_extra = row["tie_rule"] in ("overtime", "overtime_residual")
+    if (needs_extra and extra <= 0) or (not needs_extra and extra != 0):
+        raise AdmissionError("extra-time fraction incompatible with reviewed tie rule")
+    cap = float(row["overs_cap"]) if row["overs_cap"] else None
+    if rules["engine"] == "cricket":
+        if cap is None or not math.isfinite(cap) or cap != rules["overs_cap"]:
+            raise AdmissionError("unsupported cricket innings format")
+    elif cap is not None:
+        raise AdmissionError("non-cricket competition cannot declare overs")
+    return League(path, sport, competition, "SOURCE_REVIEWED:" + path, rules["engine"],
+                  endpoint=row["endpoint"], tie_rule=row["tie_rule"], extra_fraction=extra,
+                  winner_bonus=int(bonus), negbin=rules.get("negbin", False), overs_cap=cap)
+
+
 def admit_history(rows: list[dict], cutoff, target: str, competition: str, endpoint: str) -> pd.DataFrame:
     """Source custody is checked, never represented as field-owner certification."""
     limit = clock(cutoff)
@@ -91,6 +137,8 @@ def admit_history(rows: list[dict], cutoff, target: str, competition: str, endpo
     identities = set()
     records = []
     for r in rows:
+        if r.get("source_kind", "") not in ("", "ARCHIVE_REVIEWED", "WEB_RECOVERED", "WEB_CORRECTED"):
+            raise AdmissionError("unknown historical source kind")
         if r["competition"] != competition or r["endpoint"] != endpoint or r["event_id"] == target or r["event_id"] in identities:
             raise AdmissionError("wrong scope, target event leakage or duplicate training event")
         identities.add(r["event_id"])
@@ -448,6 +496,22 @@ def verify_bundle(folder: Path) -> dict:
     if len(rows) != 1 or rows[0]["policy"] not in (POLICY, LEGACY_POLICY):
         raise AdmissionError("unknown bundle policy/receipt")
     rec = rows[0]
+    if rec.get("competition_source_sha256"):
+        receipt_file(folder / "COMPETITION_SOURCE.csv", rec["competition_source_sha256"])
+        source = read_rows(folder / "COMPETITION_SOURCE.csv")
+        request = read_rows(folder / "REQUEST.csv")
+        if len(source) != 1 or len(request) != 1:
+            raise AdmissionError("exactly one frozen competition source/request required")
+        reviewed = reviewed_source_league(request[0], source[0], check_evidence=False)
+        frozen = read_rows(folder / "MODEL_CONFIG.csv")
+        if len(frozen) != 1 or any(frozen[0][f.name] != repr(getattr(reviewed, f.name)) for f in fields(reviewed)):
+            raise AdmissionError("reviewed competition source differs from frozen model config")
+    if "history_web_rows" in rec:
+        history = read_rows(folder / "HISTORY.csv")
+        counts = (sum(r.get("source_kind") in ("WEB_RECOVERED", "WEB_CORRECTED") for r in history),
+                  sum(r.get("source_kind") == "ARCHIVE_REVIEWED" for r in history), sum(not r.get("source_kind") for r in history))
+        if counts != tuple(int(rec[k]) for k in ("history_web_rows", "history_archive_rows", "history_unspecified_rows")):
+            raise AdmissionError("history source coverage differs from frozen inputs")
     for name in ("PREDICTIONS", "GRIDS", "FORMS", "HISTORY", "CONTRACTS", "REQUEST", "FEEDBACK_INPUT", "MODEL_CONFIG"):
         receipt_file(folder / (name + ".csv"), rec[name.lower() + "_sha256"])
     if rec["policy"] == POLICY:
@@ -558,20 +622,26 @@ def information_horizon(request: dict) -> tuple[pd.Timestamp, str]:
     return horizon, source
 
 
-def forecast(request: dict, lg: League, history: list[dict], contracts: list[dict], output: Path,
-             feedback: list[dict] | None = None, rng=None) -> dict:
+def forecast(request: dict, lg: League | None, history: list[dict], contracts: list[dict], output: Path,
+             feedback: list[dict] | None = None, rng=None, *, competition_source: list[dict] | None = None) -> dict:
     """``rng`` is accepted for call compatibility and ignored: the V3 primary distribution is deterministic."""
     generating_code = source_hash()
     allowed_request = {"event_id", "competition", "home", "away", "scheduled_start", "issue_at", "actual_start", "endpoint", "venue", "outcome_exposure", "candidate_recipe"}
     if "cutoff" in request:
         raise AdmissionError("no separate cutoff: supply scheduled_start (the expected start in the game log)")
-    allowed_history = {"event_id", "competition", "endpoint", "date", "final_at", "available_at", "status", "admission", "source_url", "evidence_path", "evidence_sha256", "season", "home", "away", "hs", "as_", "reg_hs", "reg_as", "decision", "stage", "bat", "bowl", "venue", "runs", "legal_balls", "wickets"}
+    allowed_history = {"event_id", "competition", "endpoint", "date", "final_at", "available_at", "status", "admission", "source_url", "evidence_path", "evidence_sha256", "source_kind", "season", "home", "away", "hs", "as_", "reg_hs", "reg_as", "decision", "stage", "bat", "bowl", "venue", "runs", "legal_balls", "wickets"}
     allowed_contract = {"contract_key", "family", "side", "line", "endpoint", "definition", "action"}
     if set(request) - allowed_request or any(set(r) - allowed_history for r in history) or any(set(r) - allowed_contract for r in contracts):
         raise AdmissionError("unregistered input columns (including market fields) are prohibited")
     if request["home"] == request["away"] or not request["event_id"].strip():
         raise AdmissionError("invalid identity")
     cutoff, horizon_source = information_horizon(request)  # 'cutoff' below = this horizon, never a separate time
+    if competition_source is not None:
+        if len(competition_source) != 1:
+            raise AdmissionError("exactly one reviewed competition source configuration required")
+        lg = reviewed_source_league(request, competition_source[0])
+    if lg is None:
+        raise AdmissionError("competition configuration missing: research exact metadata from sporting sources")
     issue = clock(request["issue_at"])
     if request["competition"] != lg.path or request["endpoint"] != lg.endpoint:
         raise AdmissionError("request/competition model scope mismatch")
@@ -580,6 +650,8 @@ def forecast(request: dict, lg: League, history: list[dict], contracts: list[dic
     start = clock(request["actual_start"]) if request.get("actual_start") else None
     phase = "TIMING_UNVERIFIED" if start is None else ("PREGAME" if issue < start else "POST_START_ISSUE")
     train = admit_history(history, cutoff, request["event_id"], lg.path, lg.endpoint)
+    if competition_source is not None and any(not r.get("source_kind") for r in history):
+        raise AdmissionError("reviewed source route requires each history row labelled ARCHIVE_REVIEWED, WEB_RECOVERED or WEB_CORRECTED")
     experts, line = fit_experts_and_line(lg, train, cutoff, request["home"], request["away"], request.get("venue", ""))
     forms = form_rows(train, request["home"], request["away"], cricket=lg.engine == "cricket")
     coverage = "SHORT" if min(int(r["n"]) for r in forms if r["window"] == "L20") < 20 else "FULL20"
@@ -645,6 +717,8 @@ def forecast(request: dict, lg: League, history: list[dict], contracts: list[dic
                  "FEEDBACK_LOSSES": csv_bytes(fb_rows) if fb_rows else b"event_id,available_at,receipt_sha256,loss_RATINGS_FAST,loss_RATINGS_SLOW,loss_LEAGUE_BASELINE\n",
                  "ETA_ADMISSION": ETA_TABLE.read_bytes() if ETA_TABLE.exists() else b"competition,policy,eta,tune_end,frozen_at,evidence_path,evidence_sha256\n",
                  "FEEDBACK_INPUT": csv_bytes(feedback) if feedback else b"event_id\n"}
+    if competition_source is not None:
+        artifacts["COMPETITION_SOURCE"] = csv_bytes(competition_source)
     rec = dict(policy=POLICY, event_id=request["event_id"], competition=lg.path, endpoint=lg.endpoint,
                information_horizon=cutoff.isoformat(), horizon_source=horizon_source,
                scheduled_start=clock(request["scheduled_start"]).isoformat(), issue_at=issue.isoformat(), actual_issue_phase=phase,
@@ -655,6 +729,10 @@ def forecast(request: dict, lg: League, history: list[dict], contracts: list[dic
                eta=f"{eta:.17g}", eta_source=eta_source, eta_table_sha256=eta_sha,
                warm_start_games=n_warm, feedback_events=n_fb, league_line=f"{line:.17g}",
                training_rows=len(train),
+               config_origin="REVIEWED_SPORTING_SOURCE" if competition_source is not None else "ARCHIVE_DISCOVERY",
+               history_web_rows=sum(r.get("source_kind") in ("WEB_RECOVERED", "WEB_CORRECTED") for r in history),
+               history_archive_rows=sum(r.get("source_kind") == "ARCHIVE_REVIEWED" for r in history),
+               history_unspecified_rows=sum(not r.get("source_kind") for r in history),
                numpy_version=np.__version__, pandas_version=pd.__version__, scipy_version=scipy.__version__,
                expert_recipe="FAST_half_life90_SLOW365_ridge8_cov_inflation1.1;cricket_C2_ridge20_venue20_inflation1.1",
                issue_clock_status="DECLARED_ISSUE_NOT_INDEPENDENTLY_PUBLISHED", model_id=f"PRIMARY_FRESH_FIT_V3:{lg.path}:{MIX_ARM}",
@@ -717,6 +795,7 @@ def main(argv=None):
     for name in ("request", "history", "contracts", "out"):
         predict.add_argument("--" + name, type=Path, required=True)
     predict.add_argument("--feedback", type=Path)
+    predict.add_argument("--competition-source", type=Path, help="reviewed exact competition metadata when archive routing is missing or defective")
     predict.add_argument("--seed", type=int, help="accepted for compatibility; V3 is deterministic and ignores it")
     review = sub.add_parser("settle")
     for name in ("bundle", "evidence", "out"):
@@ -731,9 +810,10 @@ def main(argv=None):
         if len(requests) != 1:
             raise AdmissionError("exactly one event per request")
         req = requests[0]
-        rec = forecast(req, get_league(req["competition"]), read_rows(args.history), read_rows(args.contracts),
+        source = read_rows(args.competition_source) if args.competition_source else None
+        rec = forecast(req, None if source is not None else get_league(req["competition"]), read_rows(args.history), read_rows(args.contracts),
                        args.out, read_rows(args.feedback) if args.feedback else [],
-                       np.random.default_rng(args.seed) if args.seed is not None else None)
+                       np.random.default_rng(args.seed) if args.seed is not None else None, competition_source=source)
         print(f"{rec['event_id']}: {rec['selected_arm']} weights {rec['mixture_weights']}; {rec['qualification']}; {args.out}")
     else:
         result = settle(args.bundle, args.home_score, args.away_score, args.final_at, args.available_at,

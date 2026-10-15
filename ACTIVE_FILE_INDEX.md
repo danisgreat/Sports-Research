@@ -81,3 +81,5 @@
 | [State Level AFL / WAFL](Previous%20Sports%20Results/State%20Level%20AFL/WAFL/) | 126 (1900–2025) | 10,019 | 13 | no | — |
 
 **Primary ML/RL (15 October 2026):** [PRIMARY_PREDICTION_PROTOCOL](PRIMARY_PREDICTION_PROTOCOL.md) governs new experimental model-assisted primary rows (PRIMARY-2026.10.15-v3: integrity-corrected full-information mixture, [review](research/verification/framework_change_2026-10-15-4/REVIEW.md)) and sports-only expert-loss feedback. Actual per-event execution and receipts required; no old artifact is automatically qualified.
+
+**Preferred historical recovery:** [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md) applies to every sport and competition. Missing, incomplete or incorrect local history is researched online first, with reviewed web rows usable in the named primary input scope; shared archive maintenance is separate. Source/known-at checks and unsupported-model limits remain.

@@ -1,6 +1,6 @@
 # PROMPT 2 — Start the next local mini
 
-**P-2026.10.15-v14.0 · LOCAL_MINI_STAGING.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: one new Markdown mini. Creating a mini consumes no event ID. GitHub is read-only. Workshop forecasts and the decision lab are excluded.
+**P-2026.10.15-v14.1 · LOCAL_MINI_STAGING.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: one new Markdown mini. Creating a mini consumes no event ID. GitHub is read-only. Workshop forecasts and the decision lab are excluded.
 
 ## Inputs
 
@@ -32,3 +32,5 @@ Model-shadow IDs remain separate from P-IDs. Read PRIMARY_PREDICTION_PROTOCOL; p
 Read back the complete mini. Check authority, allocation continuity, writer lease, zero initial counts, queue/intake coverage and footer agreement. Earlier minis, cards and canonical status/logs must remain unchanged. Structural examples use EXAMPLE IDs.
 
 Return exact path, first/next ID, format/status, authority SHA, retained carryovers/alerts and actual reading/write/readback evidence. Settlement/canonical import NOT_PERFORMED; GitHub writes NO. If writing failed, return a complete READ_ONLY_DRAFT / NOT_ISSUED artifact without claiming creation.
+
+Historical coverage gaps route each prompt1 game to HISTORICAL_SOURCE_PROTOCOL and verified online recovery; do not prepopulate missing scores or block a mini because local archive rows are absent.

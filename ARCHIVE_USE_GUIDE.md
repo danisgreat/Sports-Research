@@ -4,6 +4,8 @@
 
 **Version ARC-2026.10.09-v1 (Markdown and CSV only).** Every card, settlement and retrospective consults the archive **whenever it holds rows that bear on the event**, and says what it found. This page tells you where the rows are, which columns to trust, how to avoid leakage, how to turn rows into the numbers a card needs, and what to write when nothing is available. It replaces the archive builders and the canonical export scripts that were removed on 2026-10-09 (last copies at commit `37203fc2b`).
 
+**Preferred recovery (HIST-2026.10.15-v1):** [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md) governs all sports and competitions. After brief coverage/quality checks, search online first for missing, incomplete or incorrect history; reviewed sporting-source rows may enter current form/baseline/ML inputs without a permanent archive rebuild. Healthy archive rows remain reusable; preserve conflicts and queue shared repair separately.
+
 The archive is a research aid. A row proves what was recorded about a past game. It does not prove forecasting skill, and an empty or header-only file is **missing data, not a finding**.
 
 ## 1. Where the rows are
@@ -74,7 +76,7 @@ Small samples and noisy recent games: prior learning notes L-20260919-01/02 ques
 **Recipe R2 in full (form windows).**
 
 1. **Rows.**
-   - For each side, list its dated competitive games before the cutoff, newest first. Use the archive file or a SOURCES route: the ESPN team schedule `site.api.espn.com/apis/site/v2/sports/<sport>/<league>/teams/<id>/schedule`, MLB statsapi, StatMuse for US leagues, Tennis Abstract for players.
+   - For each side, list its dated competitive games before the cutoff, newest first. Reuse healthy reviewed archive rows; for any missing/incomplete/incorrect history, research the exact competition online first under HISTORICAL_SOURCE_PROTOCOL, including local-language organizer/federation/team archives. Do not use an unrelated major-league endpoint.
    - Exclude rows the archive flags as duplicate listings, awarded results, forfeits or abandonments, and say so.
    - An undated row cannot enter a window.
 2. **Windows.** L5, L10, L15 and L20 (true n if fewer), season to date, and the league level from LEAGUE_PROFILES. For each, give scored, conceded and margin per game, plus the home/away split for L10 and L20. Print the table in template §3b.

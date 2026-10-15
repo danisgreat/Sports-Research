@@ -1,6 +1,6 @@
 # Common operating protocol for prompts 1–8
 
-**P-2026.10.15-v14.0 · CR-2026.10.15-R4 · SCV-2026.10.15-v10.** Current primary lane: PRIMARY_HEDGE_MIX_V3, a deterministic whole-grid mixture with source-known-at warm replay, one learning contribution per event, admitted policy-specific η or a labelled provisional default. This is online expert aggregation; no trained environment-control RL agent is claimed. The numbered prompts now describe this mechanism directly. The evidence horizon remains the earliest of game-log scheduled start, actual issue and verified first play; no separate runtime cutoff or forced early freeze. Research may finish after start with truthful input/issue cohorts. Formats remain mini-log-7 / mini-settlement-6 / canonical-md-1. [Primary protocol](../../PRIMARY_PREDICTION_PROTOCOL.md). Read the complete selected task; prompt1 retains eleven sport/general workflows and their own Upcoming blocks.
+**P-2026.10.15-v14.1 · CR-2026.10.15-R5 · SCV-2026.10.15-v10.** Current primary lane: PRIMARY_HEDGE_MIX_V3, a deterministic whole-grid mixture with source-known-at warm replay, one learning contribution per event, admitted policy-specific η or a labelled provisional default. This is online expert aggregation; no trained environment-control RL agent is claimed. The numbered prompts now describe this mechanism directly. The evidence horizon remains the earliest of game-log scheduled start, actual issue and verified first play; no separate runtime cutoff or forced early freeze. Research may finish after start with truthful input/issue cohorts. Formats remain mini-log-7 / mini-settlement-6 / canonical-md-1. [Primary protocol](../../PRIMARY_PREDICTION_PROTOCOL.md). Read the complete selected task; prompt1 retains eleven sport/general workflows and their own Upcoming blocks.
 
 ## 1. Resolve authority and task boundaries
 
@@ -50,3 +50,7 @@ The decision lab is paper research under CURRENT_RULES §5a. The existing stakin
 ## 5. Return a concrete, verified result
 
 Read back every deliverable; reconcile complete inventories and aggregates; exercise relevant negative and legitimate edge cases; preserve unrelated files. Report the paths and actual operation performed, authority and versions, request/row/event coverage, unresolved gates and next actions. Describe manual walkthroughs as manual and executed tests as executed. Separate what changed, what was measured, and what remains unproven. Claim publication only after remote readback.
+
+## 6. Cross-sport historical source priority
+
+Read [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md) for every game/source-data task. After brief exact archive checks, internet research is the preferred first recovery for missing/incomplete/incorrect history across every sport/competition. Use reviewed web rows in the named local mini/model evidence now, with source/time/dedup/correction receipts; do not wait for shared archive repair or substitute another league. New public sporting routes can be discovered and documented; no restricted access bypass. Source repair does not change issued originals, fit an unsupported model or prove predictive improvement.
