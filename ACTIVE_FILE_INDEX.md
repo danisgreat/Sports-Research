@@ -9,7 +9,7 @@
 | Current values (IDs, active log, versions, scoreboard) | [CURRENT_STATE.md](CURRENT_STATE.md) |
 | Method and rules | [METHOD.md](METHOD.md), [CURRENT_RULES.md](CURRENT_RULES.md), [SELECTION_RULES.md](SELECTION_RULES.md) |
 | Card, mini, settlement and canonical formats; self-audit C1–C20, S1–S15 | [CARD_AND_LOG_TEMPLATES.md](CARD_AND_LOG_TEMPLATES.md) |
-| Research completion and input/issue timing | [TIMING_RESEARCH_PROTOCOL](TIMING_RESEARCH_PROTOCOL.md) (no fixed manual research deadline) |
+| Research completion and input/issue timing | [TIMING_RESEARCH_PROTOCOL](TIMING_RESEARCH_PROTOCOL.md) (no fixed manual research deadline; no separate cutoff, the evidence horizon is the game-log scheduled start) |
 | Scoring and evaluation | [SCORING_AND_VALIDATION.md](SCORING_AND_VALIDATION.md) |
 | Verification checks | [VERIFICATION_PROTOCOL.md](VERIFICATION_PROTOCOL.md) |
 | Operator prompts 1–8 | [research/prompts/README.md](research/prompts/README.md), [common operating protocol](research/prompts/COMMON_OPERATING_PROTOCOL.md), [PROMPTS.md](PROMPTS.md) |
@@ -80,4 +80,4 @@
 | [State Level AFL / VFLW](Previous%20Sports%20Results/State%20Level%20AFL/VFLW/) | 5 (2021–2025) | 460 | 13 | no | — |
 | [State Level AFL / WAFL](Previous%20Sports%20Results/State%20Level%20AFL/WAFL/) | 126 (1900–2025) | 10,019 | 13 | no | — |
 
-**Primary ML/RL (15 October 2026):** [PRIMARY_PREDICTION_PROTOCOL](PRIMARY_PREDICTION_PROTOCOL.md) governs new experimental model-assisted primary rows and sports-only model-selection feedback. Actual per-event execution and receipts required; no old artifact is automatically qualified.
+**Primary ML/RL (15 October 2026):** [PRIMARY_PREDICTION_PROTOCOL](PRIMARY_PREDICTION_PROTOCOL.md) governs new experimental model-assisted primary rows (PRIMARY-2026.10.15-v2: full-information mixture of fitted experts, [policy replay](research/model_shadow/PRIMARY_POLICY_REPLAY/RESULTS.md)) and sports-only expert-loss feedback. Actual per-event execution and receipts required; no old artifact is automatically qualified.

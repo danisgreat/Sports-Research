@@ -28,7 +28,7 @@ Order: **2 → 1 for each event → 3 → 4**, then next mini; 5–8 as needed. 
 
 ## Primary ML/RL lane
 
-[PRIMARY-2026.10.15-v1](../../PRIMARY_PREDICTION_PROTOCOL.md) supersedes the old blanket model-reading exclusion for the named primary runtime/bundle. New individual predictions are MODEL_ASSISTED_PRIMARY_V1, with actual fitted distributions, sports-only bandit action/feedback and explicit unqualified status. Old DATA_HOLD/shadow artifacts and the market decision lab remain excluded.
+[PRIMARY-2026.10.15-v2](../../PRIMARY_PREDICTION_PROTOCOL.md) supersedes the old blanket model-reading exclusion for the named primary runtime/bundle. New individual predictions are MODEL_ASSISTED_PRIMARY_V2, with actual fitted distributions combined by a sports-only full-information mixture learned from settled expert losses, and explicit unqualified status. Wherever a prompt says "bandit" or "selected arm", read the v2 mixture. There is no separate cutoff: wherever a prompt says "cutoff" or "Requested cutoff", the evidence horizon is the game-log scheduled start, with lineups, confirmed starters, bench and news gathered up until then; that field carries only other user constraints. Old DATA_HOLD/shadow artifacts and the market decision lab remain excluded.
 
 ## Reading receipt
 

@@ -121,4 +121,4 @@ Calculate the baseline from its own league-only inputs; do not reuse team-adjust
 
 ## 10. Primary model source
 
-For MODEL_ASSISTED_PRIMARY_V1 the [primary runtime](PRIMARY_PREDICTION_PROTOCOL.md) supplies the selected coherent event distribution. The sporting bandit selects the whole expert, not a stake or an after-the-result winning row. P_ORDER_V2, original ranks, family/gate/precision/90% rules and same-row baseline definitions remain. The operator validates the full candidate recipe and family checks; a runtime success is not automatic gate PASS or calibrated/qualified use.
+For MODEL_ASSISTED_PRIMARY_V2 the [primary runtime](PRIMARY_PREDICTION_PROTOCOL.md) supplies the mixed coherent event distribution. The sporting mixture weights whole expert distributions from their earlier settled losses, never a stake or an after-the-result winning row. P_ORDER_V2, original ranks, family/gate/precision/90% rules and same-row baseline definitions remain. The operator validates the full candidate recipe and family checks; a runtime success is not automatic gate PASS or calibrated/qualified use.

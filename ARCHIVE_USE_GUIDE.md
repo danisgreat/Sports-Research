@@ -49,7 +49,7 @@ Headers differ by sport. Always print the header row of the file you open and us
 
 ## 3. The point-in-time rule (no leakage)
 
-1. Use only results known final and available before the card's explicit input cutoff. Exclude the forecast event and future games. For same-day rows require actual availability evidence; date-only records cannot establish this. If timestamps are absent, restrict to safely earlier dates and disclose the limitation.
+1. Use only results known final and available by the card's cutoff, which is the game-log scheduled start (no separate earlier cutoff; TIMING_RESEARCH_PROTOCOL §1). Exclude the forecast event and future games. For same-day rows require actual availability evidence; date-only records cannot establish this. If timestamps are absent, restrict to safely earlier dates and disclose the limitation.
 2. A current-season file is a snapshot. Open it and read the **last `Date`**. If the last date is older than the games you need, say so and use [SOURCES.md](SOURCES.md) for the missing recent games.
 3. Season-level profiles in [LEAGUE_PROFILES.md](LEAGUE_PROFILES.md) were built from whole seasons. They are fine as priors for an upcoming event. Do not use them to "forecast" a game inside the same seasons after the fact.
 4. A rule or environment change makes old rows unreliable. Compare season means before pooling years (BASE_RATES_REGISTER names examples: WNBA 2026 scored 10.7 points per game above 2024 and 2025; NRL six-again from 2020). Say which seasons you pooled and why.

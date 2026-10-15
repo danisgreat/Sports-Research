@@ -1,7 +1,18 @@
-"""Experimental primary sporting forecasts and delayed-feedback model selection.
+"""Experimental primary sporting forecasts from a full-information expert mixture.
 
-No market/staking imports. A context-specific Exp3 bandit selects a WHOLE fitted
-score distribution, so every contract retains coherent winner/total/push masses.
+No market/staking imports. Three fitted experts (two team-rating decay windows and the league-only
+baseline) are combined into ONE primary distribution: the exponentially weighted mixture of their complete
+score grids, so every contract keeps coherent winner/total/push masses.
+
+Weights (PRIMARY_HEDGE_MIX_V2) come from every expert's loss on the same questions, from two sources that are
+both known by the information horizon (the game-log scheduled start, or an earlier issue/actual start):
+  1. a warm start: weekly rolling refits over the last 30 game-weeks of admitted history before the horizon;
+  2. settled earlier primary bundles of the same competition/endpoint, where all three frozen expert grids are
+     scored against the evidence-backed final (full information: no expert's loss is unobserved).
+This replaced PRIMARY_EXP3_V1 (random single-expert selection by a delayed Exp3 bandit) after a 41,752-game
+historical replay (research/model_shadow/PRIMARY_POLICY_REPLAY/RESULTS.md): the mixture had lower home-win Brier
+than Exp3 in 23 of 28 competitions and was never worse; a randomly selected expert can never beat the mixture
+with the same weights in expectation (Brier/log loss are convex). No V1 bundle was ever issued.
 Only hash-verified immutable prediction bundles can supply later feedback.
 """
 from __future__ import annotations
@@ -28,9 +39,12 @@ from ml.models.baseline import LeagueBaseline
 from ml.models.common import FitError, residual_draw_share
 from ml.models.cricket import FirstInningsModel, CricketParams
 
-POLICY = "PRIMARY_EXP3_V1"
+POLICY = "PRIMARY_HEDGE_MIX_V2"
 ARMS = ("RATINGS_FAST", "RATINGS_SLOW", "LEAGUE_BASELINE")
-GAMMA = 0.10
+MIX_ARM = "HEDGE_MIX"
+WARM_WEEKS = 30          # warm start: the last 30 game-weeks before the cutoff (however far back, e.g. after an off-season)
+DEFAULT_ETA = 2.0        # used when the replay table has no row for the competition (labelled in the receipt)
+ETA_TABLE = Path(__file__).resolve().parents[1] / "research" / "model_shadow" / "PRIMARY_POLICY_REPLAY" / "RESULTS.csv"
 
 
 class AdmissionError(ValueError):
@@ -88,7 +102,7 @@ def admit_history(rows: list[dict], cutoff, target: str, competition: str, endpo
         identities.add(r["event_id"])
         date, final, known = clock(r["date"]), clock(r["final_at"]), clock(r["available_at"])
         if not date <= final <= known <= limit or not date < limit.normalize():
-            raise AdmissionError("training event/final/source not known before cutoff; same-day rows excluded")
+            raise AdmissionError("training event/final/source not known by the information horizon (game-log scheduled start); same-day rows excluded")
         if r["status"] != "FINAL" or r["admission"] != "RESEARCH_INPUT_REVIEWED" or not r["source_url"].startswith("https://"):
             raise AdmissionError("terminal/source review receipt required")
         token = (r["evidence_path"], r["evidence_sha256"])
@@ -140,20 +154,14 @@ def form_rows(train: pd.DataFrame, home: str, away: str, cricket=False) -> list[
     return rows
 
 
-def fit_experts(lg: League, train: pd.DataFrame, cutoff, home: str, away: str, venue=""):
-    as_of = clock(cutoff).tz_localize(None)
+def _check_scope(lg: League, train: pd.DataFrame) -> None:
     if lg.data_warnings:
         raise AdmissionError("competition DATA_HOLD: " + ";".join(lg.data_warnings))
     if lg.engine not in ("gaussian", "count", "dixon_coles", "cricket"):
         raise AdmissionError("unsupported exact sport/endpoint; no major-league substitution")
-    if home not in set(train.home) | set(train.away) or away not in set(train.home) | set(train.away):
-        raise AdmissionError("unseen participant: no silent prior as a primary model")
-    fitting = train.copy()
-    if lg.tie_rule != "draw" and lg.engine != "cricket":
-        # Fit regulation scoring, then add extras ONCE. Preserve final labels for
-        # extra-time winner and residual-draw estimates.
-        fitting["hs"], fitting["as_"] = train.reg_hs, train.reg_as
     if lg.engine == "cricket":
+        if lg.endpoint != "FIRST_INNINGS_FULL_LENGTH" or not all(c in train for c in ("runs", "bat", "bowl", "venue")):
+            raise AdmissionError("cricket requires exact full-length first-innings labels; phases unsupported")
         balls = pd.to_numeric(train.legal_balls, errors="coerce")
         wickets = pd.to_numeric(train.wickets, errors="coerce")
         cap = float(lg.overs_cap) * 6
@@ -162,6 +170,18 @@ def fit_experts(lg: League, train: pd.DataFrame, cutoff, home: str, away: str, v
             raise AdmissionError("short/unknown-length innings cannot train a full-innings endpoint")
         if not (train.home.eq(train.bat) & train.away.eq(train.bowl) & train.hs.eq(train.runs) & train.as_.eq(0)).all():
             raise AdmissionError("innings coordinates must be batting runs versus zero auxiliary; home=bat, away=bowl")
+
+
+def _fit_models(lg: League, train: pd.DataFrame, as_of: pd.Timestamp):
+    """Fit the three experts once; return {arm: pricer(home, away, venue) -> (grid, flags)} and the league line.
+
+    Identical fitting to PRIMARY_EXP3_V1: regulation scores for non-draw endpoints (extras added once by the tie rule),
+    final labels for the extra-time winner and residual draw share, fixed predeclared recipes.
+    """
+    fitting = train.copy()
+    if lg.tie_rule != "draw" and lg.engine != "cricket":
+        fitting["hs"], fitting["as_"] = train.reg_hs, train.reg_as
+
     def final_labels(model):
         if hasattr(model, "residual_draw") and hasattr(model, "sd_margin"):
             model.residual_draw = residual_draw_share(train, model.sd_margin)
@@ -169,29 +189,128 @@ def fit_experts(lg: League, train: pd.DataFrame, cutoff, home: str, away: str, v
             extra = train[train.decision.isin(["Overtime", "Shootout", "EXTRAS"])]
             model.p_home_extra = float((extra.hs > extra.as_).mean()) if len(extra) >= 20 else .5
         return model
-    experts = {}
-    for arm, days in zip(ARMS[:2], (90.0, 365.0)):
-        if lg.engine == "cricket":
-            if lg.endpoint != "FIRST_INNINGS_FULL_LENGTH" or not all(c in train for c in ("runs", "bat", "bowl", "venue")):
-                raise AdmissionError("cricket requires exact full-length first-innings labels; phases unsupported")
-            model = FirstInningsModel("C2", CricketParams(days, 20.0, 20.0, 1.1)).fit(train, as_of)
-            experts[arm] = ScoreGrid(model.pmf(home, away, venue)[:, None])
-        else:
-            params = dict(half_life_days=days, ridge=8.0)
-            if lg.engine == "gaussian":
-                params["cov_inflation"] = 1.1
-            model = make_model(lg, params)
-            model.fit(fitting, as_of) if lg.engine == "gaussian" else model.fit(fitting, as_of, int(train.season.max()))
-            final_labels(model)
-            experts[arm], flags = model.grid(home, away)
-            if flags:
-                raise AdmissionError("primary model flags require review: " + ";".join(flags))
+
+    pricers = {}
     if lg.engine == "cricket":
-        baseline = FirstInningsModel("C0", CricketParams(365.0, 20.0, 20.0, 1.1)).fit(train, as_of)
-        experts[ARMS[2]] = ScoreGrid(baseline.pmf(home, away, venue)[:, None])
-    else:
-        experts[ARMS[2]] = final_labels(LeagueBaseline(lg).fit(fitting)).grid()
-    return experts
+        for arm, days in zip(ARMS[:2], (90.0, 365.0)):
+            m = FirstInningsModel("C2", CricketParams(days, 20.0, 20.0, 1.1)).fit(train, as_of)
+            pricers[arm] = (lambda m: lambda h, a, v="": (ScoreGrid(m.pmf(h, a, v)[:, None]), []))(m)
+        base = FirstInningsModel("C0", CricketParams(365.0, 20.0, 20.0, 1.1)).fit(train, as_of)
+        pricers[ARMS[2]] = lambda h, a, v="": (ScoreGrid(base.pmf(h, a, v)[:, None]), [])
+        return pricers, float(base.line)
+    for arm, days in zip(ARMS[:2], (90.0, 365.0)):
+        params = dict(half_life_days=days, ridge=8.0)
+        if lg.engine == "gaussian":
+            params["cov_inflation"] = 1.1
+        model = make_model(lg, params)
+        model.fit(fitting, as_of) if lg.engine == "gaussian" else model.fit(fitting, as_of, int(train.season.max()))
+        final_labels(model)
+        pricers[arm] = (lambda m: lambda h, a, v="": m.grid(h, a))(model)
+    base = final_labels(LeagueBaseline(lg).fit(fitting))
+    bgrid = base.grid()
+    pricers[ARMS[2]] = lambda h, a, v="": (bgrid, [])
+    return pricers, float(base.total_line)
+
+
+def expert_loss(grid: ScoreGrid, hs: int, as_: int, line: float, cricket: bool) -> float:
+    """Common-question loss for weighting: mean Brier of P(home wins) and P(total over the league line).
+
+    Cricket first innings: Brier of P(runs over the league line) only (the auxiliary zero has no winner meaning).
+    """
+    y_over = float(hs + as_ > line)
+    p_over = grid.total(line, "OVER").win
+    if cricket:
+        return (p_over - y_over) ** 2
+    y_home = float(hs > as_)
+    return 0.5 * ((grid.winner()[0] - y_home) ** 2 + (p_over - y_over) ** 2)
+
+
+def warm_start(lg: League, train: pd.DataFrame, as_of: pd.Timestamp) -> tuple[np.ndarray, int]:
+    """Every expert's summed loss on the admitted games of the last WARM_WEEKS game-weeks before the cutoff.
+
+    Each game is priced by experts refitted on games strictly before the Monday of its week. Weeks with fewer than
+    30 earlier games or a failed fit are skipped. Unseen teams are skipped (as at issue).
+    """
+    cricket = lg.engine == "cricket"
+    train = train[train.date < as_of.normalize()]  # strictly earlier calendar days, whatever the caller passes
+    if train.empty:
+        return np.zeros(len(ARMS)), 0
+    starts = (train.date.dt.normalize() - pd.to_timedelta(train.date.dt.weekday, unit="D"))
+    recent = train
+    total, n = np.zeros(len(ARMS)), 0
+    for ws in sorted(starts.unique())[-WARM_WEEKS:]:
+        ws = pd.Timestamp(ws)
+        earlier = train[train.date < ws]
+        if len(earlier) < 30:
+            continue
+        try:
+            pricers, line = _fit_models(lg, earlier, ws)
+        except FitError:
+            continue
+        known = set(earlier.home) | set(earlier.away)
+        week = recent[(starts == ws) & recent.home.isin(known) & recent.away.isin(known)]
+        for g in week.itertuples():
+            losses = []
+            for arm in ARMS:
+                grid, _ = pricers[arm](g.home, g.away, getattr(g, "venue", "") or "")
+                losses.append(expert_loss(grid, int(g.hs), int(g.as_), line, cricket))
+            total += np.array(losses)
+            n += 1
+    return total, n
+
+
+def mix_grids(grids: list[ScoreGrid], weights) -> ScoreGrid:
+    """Weighted mixture of complete score grids on their union support: a valid joint distribution."""
+    w = np.asarray(weights, float)
+    if len(w) != len(grids) or np.any(w < 0) or abs(w.sum() - 1) > 1e-9:
+        raise AdmissionError("mixture weights must be a probability vector over the experts")
+    h0 = min(g.h0 for g in grids)
+    a0 = min(g.a0 for g in grids)
+    h1 = max(g.h0 + g.p.shape[0] for g in grids)
+    a1 = max(g.a0 + g.p.shape[1] for g in grids)
+    out = np.zeros((h1 - h0, a1 - a0))
+    for wi, g in zip(w, grids):
+        out[g.h0 - h0:g.h0 - h0 + g.p.shape[0], g.a0 - a0:g.a0 - a0 + g.p.shape[1]] += wi * g.p
+    return ScoreGrid(out / out.sum(), h0, a0)
+
+
+def hedge_weights(cumulative: np.ndarray, eta: float) -> np.ndarray:
+    z = -eta * (np.asarray(cumulative, float) - np.min(cumulative))
+    e = np.exp(z)
+    return e / e.sum()
+
+
+def eta_for(lg: League) -> tuple[float, str, str]:
+    """Learning rate chosen on tune seasons by the historical replay; a labelled default otherwise."""
+    if not ETA_TABLE.exists():
+        return DEFAULT_ETA, "DEFAULT_NO_REPLAY_TABLE", "NONE"
+    data = ETA_TABLE.read_bytes()
+    table = pd.read_csv(io.BytesIO(data))
+    row = table[table["competition"] == lg.path] if "competition" in table else table.iloc[:0]
+    if row.empty or "eta" not in row or pd.isna(row["eta"].iloc[0]):
+        return DEFAULT_ETA, "DEFAULT_NO_REPLAY_ROW", digest(data)
+    return float(row["eta"].iloc[0]), "REPLAY_TUNE_SEASONS", digest(data)
+
+
+def fit_experts(lg: League, train: pd.DataFrame, cutoff, home: str, away: str, venue=""):
+    """The three experts' grids for one event, with every PRIMARY_EXP3_V1 admission gate unchanged."""
+    grids, _ = fit_experts_and_line(lg, train, cutoff, home, away, venue)
+    return grids
+
+
+def fit_experts_and_line(lg: League, train: pd.DataFrame, cutoff, home: str, away: str, venue=""):
+    as_of = clock(cutoff).tz_localize(None)
+    _check_scope(lg, train)
+    if home not in set(train.home) | set(train.away) or away not in set(train.home) | set(train.away):
+        raise AdmissionError("unseen participant: no silent prior as a primary model")
+    pricers, line = _fit_models(lg, train, as_of)
+    experts = {}
+    for arm in ARMS:
+        grid, flags = pricers[arm](home, away, venue)
+        if flags:
+            raise AdmissionError("primary model flags require review: " + ";".join(flags))
+        experts[arm] = grid
+    return experts, line
 
 
 def price(grid: ScoreGrid, contract: dict, endpoint: str) -> tuple[float, float, float]:
@@ -219,17 +338,30 @@ def price(grid: ScoreGrid, contract: dict, endpoint: str) -> tuple[float, float,
     return masses.win, masses.push, masses.loss
 
 
-def probabilities(feedback: list[dict], context: str, before) -> np.ndarray:
-    """Delayed Exp3: updates only the chosen arm, with its frozen behaviour probability."""
-    logs = np.zeros(len(ARMS))
+def _parse_vector(text: str) -> dict:
+    out = {}
+    for part in text.split(";"):
+        name, value = part.split(":", 1)
+        out[name] = float(value)
+    if set(out) != set(ARMS) or not all(math.isfinite(v) for v in out.values()):
+        raise AdmissionError("frozen expert vector must name exactly the three experts")
+    return out
+
+
+def feedback_losses(feedback: list[dict], context: str, before) -> tuple[np.ndarray, int]:
+    """Full-information delayed feedback: every expert's frozen loss on earlier settled bundles of this context.
+
+    A row counts only if it was available before ``before``; it is re-derived from the hash-verified bundle and the
+    evidence-backed final, so a row cannot carry an invented loss.
+    """
+    total, n = np.zeros(len(ARMS)), 0
     seen = set()
-    ready = []
     for row in feedback:
         if row["event_id"] in seen:
             raise AdmissionError("duplicate/revision-conflicting feedback; resolve to one effective row")
         seen.add(row["event_id"])
         if clock(row["available_at"]) > clock(before):
-            continue  # Future reward cannot change today's action.
+            continue  # Future feedback cannot change today's weights.
         receipt_file(row["bundle"] + "/RECEIPT.csv", row["receipt_sha256"])
         rec = verify_bundle(Path(row["bundle"]))
         if rec["event_id"] != row["event_id"] or rec["context"] != row["context"]:
@@ -238,32 +370,20 @@ def probabilities(feedback: list[dict], context: str, before) -> np.ndarray:
             continue
         if not clock(rec["issue_at"]) < clock(row["final_at"]) <= clock(row["available_at"]):
             raise AdmissionError("feedback was not observable after actual issue/final")
-        action, prob, reward = rec["selected_arm"], float(rec["behaviour_probability"]), float(row["reward"])
-        if not 0 < prob <= 1 or not 0 <= reward <= 1 or not math.isfinite(reward):
-            raise AdmissionError("invalid propensity/reward")
-        # Reward must be reconstructed from immutable rows and the evidence-backed final.
         expected = settle(Path(row["bundle"]), int(row["home_score"]), int(row["away_score"]),
                           row["final_at"], row["available_at"], row["evidence_path"], row["evidence_sha256"])
-        if expected is None or abs(float(expected["reward"]) - reward) > 1e-12:
-            raise AdmissionError("feedback reward differs from frozen contract grades")
-        ready.append((clock(row["available_at"]), row["event_id"], ARMS.index(action), prob, reward))
-    for _, _, arm, prob, reward in sorted(ready):
-        logs[arm] += GAMMA * reward / (len(ARMS) * prob)
-        logs -= logs.max()
-    weights = np.exp(logs)
-    return (1 - GAMMA) * weights / weights.sum() + GAMMA / len(ARMS)
+        losses = []
+        for arm in ARMS:
+            value = float(row["loss_" + arm])
+            if not math.isfinite(value) or abs(float(expected["loss_" + arm]) - value) > 1e-12:
+                raise AdmissionError("feedback loss differs from the frozen expert grids and evidence final")
+            losses.append(value)
+        total += np.array(losses)
+        n += 1
+    return total, n
 
 
-def verify_bundle(folder: Path) -> dict:
-    rows = read_rows(folder / "RECEIPT.csv")
-    if len(rows) != 1 or rows[0]["policy"] != POLICY:
-        raise AdmissionError("unknown bundle policy/receipt")
-    rec = rows[0]
-    for name in ("PREDICTIONS", "GRIDS", "FORMS", "HISTORY", "CONTRACTS", "REQUEST", "FEEDBACK_INPUT", "MODEL_CONFIG"):
-        receipt_file(folder / (name + ".csv"), rec[name.lower() + "_sha256"])
-    prop = dict((x.split(":")[0], float(x.split(":")[1])) for x in rec["action_probabilities"].split(";"))
-    if set(prop) != set(ARMS) or not all(0 < v <= 1 for v in prop.values()) or abs(sum(prop.values()) - 1) > 1e-12 or float(rec["behaviour_probability"]) != prop[rec["selected_arm"]]:
-        raise AdmissionError("frozen behaviour distribution/selected propensity invalid")
+def _load_grids(folder: Path) -> dict:
     grids = {}
     state_rows = read_rows(folder / "GRIDS.csv")
     if set(r["arm"] for r in state_rows) != set(ARMS):
@@ -281,11 +401,33 @@ def verify_bundle(folder: Path) -> dict:
         for r, (h, a) in zip(cells, points):
             masses[h-h0, a-a0] = float(r["mass"])
         grids[arm] = ScoreGrid(masses, h0, a0)
+    return grids
+
+
+def verify_bundle(folder: Path) -> dict:
+    rows = read_rows(folder / "RECEIPT.csv")
+    if len(rows) != 1 or rows[0]["policy"] != POLICY:
+        raise AdmissionError("unknown bundle policy/receipt")
+    rec = rows[0]
+    for name in ("PREDICTIONS", "GRIDS", "FORMS", "HISTORY", "CONTRACTS", "REQUEST", "FEEDBACK_INPUT", "MODEL_CONFIG"):
+        receipt_file(folder / (name + ".csv"), rec[name.lower() + "_sha256"])
+    if rec["selected_arm"] != MIX_ARM:
+        raise AdmissionError("primary distribution must be the frozen expert mixture")
+    weights = _parse_vector(rec["mixture_weights"])
+    cumulative = _parse_vector(rec["cumulative_losses"])
+    w = np.array([weights[a] for a in ARMS])
+    if np.any(w < 0) or abs(w.sum() - 1) > 1e-12:
+        raise AdmissionError("frozen mixture weights are not a probability vector")
+    recomputed = hedge_weights(np.array([cumulative[a] for a in ARMS]), float(rec["eta"]))
+    if np.max(np.abs(recomputed - w)) > 1e-12:
+        raise AdmissionError("mixture weights differ from the frozen losses and learning rate")
+    grids = _load_grids(folder)
+    mix = mix_grids([grids[a] for a in ARMS], w)
     for row in read_rows(folder / "PREDICTIONS.csv"):
-        w, p, l = price(grids[rec["selected_arm"]], row, rec["endpoint"])
-        if max(abs(w-float(row["win"])), abs(p-float(row["push"])), abs(l-float(row["loss"]))) > 1e-10:
-            raise AdmissionError("issued row not derived from frozen selected model")
-        expected = w/(w+l) if w+l > 0 else "NOT_COMPUTED"
+        win, push, loss = price(mix, row, rec["endpoint"])
+        if max(abs(win-float(row["win"])), abs(push-float(row["push"])), abs(loss-float(row["loss"]))) > 1e-10:
+            raise AdmissionError("issued row not derived from frozen expert mixture")
+        expected = win/(win+loss) if win+loss > 0 else "NOT_COMPUTED"
         if expected != "NOT_COMPUTED" and abs(float(row["p_card"]) - expected) > 1e-10:
             raise AdmissionError("decisive probability differs from frozen W/P/L")
         bw, _, bl = price(grids[ARMS[2]], row, rec["endpoint"])
@@ -301,67 +443,93 @@ def verify_bundle(folder: Path) -> dict:
 
 
 def settle(folder: Path, home_score: int, away_score: int, final_at, available_at,
-           evidence_path, evidence_sha256) -> dict | None:
+           evidence_path, evidence_sha256) -> dict:
+    """Score every frozen expert on the common questions (full information) and the issued top two (diagnostic)."""
     rec = verify_bundle(folder)
     if any(not math.isfinite(s) or s < 0 or s != int(s) for s in (home_score, away_score)):
         raise AdmissionError("invalid final score")
-    if rec["endpoint"] == "FIRST_INNINGS_FULL_LENGTH" and away_score != 0:
+    cricket = rec["endpoint"] == "FIRST_INNINGS_FULL_LENGTH"
+    if cricket and away_score != 0:
         raise AdmissionError("first-innings settlement uses batting runs and a zero auxiliary coordinate")
     if not clock(rec["issue_at"]) < clock(final_at) <= clock(available_at):
         raise AdmissionError("terminal feedback before issue/final")
     receipt_file(evidence_path, evidence_sha256)
-    rows = read_rows(folder / "PREDICTIONS.csv")
-    losses = []
+    grids = _load_grids(folder)
+    line = float(rec["league_line"])
+    expert = {"loss_" + arm: expert_loss(grids[arm], int(home_score), int(away_score), line, cricket) for arm in ARMS}
+    primary = []
     final = ScoreGrid(np.ones((1, 1)), home_score, away_score)
-    for row in rows:
+    for row in read_rows(folder / "PREDICTIONS.csv"):
         if row["rank"] not in ("1", "2"):
             continue
         win, push, loss = price(final, row, rec["endpoint"])
         if push == 1:
             continue
-        losses.append((float(row["p_card"]) - win) ** 2)
-    if not losses:
-        return None  # No all-push/void reward or invented zero loss.
-    return dict(event_id=rec["event_id"], context=rec["context"], reward=1 - float(np.mean(losses)),
+        primary.append((float(row["p_card"]) - win) ** 2)
+    return dict(event_id=rec["event_id"], context=rec["context"], **expert,
+                primary_top2_brier=float(np.mean(primary)) if primary else "NOT_COMPUTED",
                 home_score=int(home_score), away_score=int(away_score), final_at=clock(final_at).isoformat(),
                 available_at=clock(available_at).isoformat(), bundle=str(folder.resolve()),
                 receipt_sha256=digest((folder / "RECEIPT.csv").read_bytes()),
                 evidence_path=str(Path(evidence_path).resolve()), evidence_sha256=evidence_sha256)
 
 
+def information_horizon(request: dict) -> tuple[pd.Timestamp, str]:
+    """The latest instant whose information may enter the forecast: there is no separate cutoff.
+
+    It is the game's scheduled (expected) start as recorded in the game log, so lineups, confirmed starters,
+    bench and news are researched up to then. It moves earlier only when the forecast was issued earlier
+    (nothing after the issue can have been used) or play verifiably began earlier than scheduled.
+    """
+    if "cutoff" in request:
+        raise AdmissionError("no separate cutoff: supply scheduled_start (the expected start in the game log)")
+    if not str(request.get("scheduled_start", "")).strip():
+        raise AdmissionError("scheduled_start from the game log is required; it is the information horizon")
+    bounds = [(clock(request["scheduled_start"]), "SCHEDULED_START"), (clock(request["issue_at"]), "ISSUE_AT")]
+    if request.get("actual_start"):
+        bounds.append((clock(request["actual_start"]), "ACTUAL_START"))
+    horizon, source = min(bounds, key=lambda b: b[0])  # ties resolve to the scheduled start (listed first)
+    return horizon, source
+
+
 def forecast(request: dict, lg: League, history: list[dict], contracts: list[dict], output: Path,
              feedback: list[dict] | None = None, rng=None) -> dict:
-    allowed_request = {"event_id", "competition", "home", "away", "cutoff", "issue_at", "actual_start", "endpoint", "venue", "outcome_exposure", "candidate_recipe"}
+    """``rng`` is accepted for call compatibility and ignored: the V2 primary distribution is deterministic."""
+    allowed_request = {"event_id", "competition", "home", "away", "scheduled_start", "issue_at", "actual_start", "endpoint", "venue", "outcome_exposure", "candidate_recipe"}
+    if "cutoff" in request:
+        raise AdmissionError("no separate cutoff: supply scheduled_start (the expected start in the game log)")
     allowed_history = {"event_id", "competition", "endpoint", "date", "final_at", "available_at", "status", "admission", "source_url", "evidence_path", "evidence_sha256", "season", "home", "away", "hs", "as_", "reg_hs", "reg_as", "decision", "stage", "bat", "bowl", "venue", "runs", "legal_balls", "wickets"}
     allowed_contract = {"contract_key", "family", "side", "line", "endpoint", "definition", "action"}
     if set(request) - allowed_request or any(set(r) - allowed_history for r in history) or any(set(r) - allowed_contract for r in contracts):
         raise AdmissionError("unregistered input columns (including market fields) are prohibited")
-    cutoff, issue = clock(request["cutoff"]), clock(request["issue_at"])
-    if cutoff > issue or request["home"] == request["away"] or not request["event_id"].strip():
-        raise AdmissionError("invalid identity or cutoff after issue")
+    if request["home"] == request["away"] or not request["event_id"].strip():
+        raise AdmissionError("invalid identity")
+    cutoff, horizon_source = information_horizon(request)  # 'cutoff' below = this horizon, never a separate time
+    issue = clock(request["issue_at"])
     if request["competition"] != lg.path or request["endpoint"] != lg.endpoint:
         raise AdmissionError("request/competition model scope mismatch")
     if request.get("outcome_exposure", "") != "NONE_RECORDED":
         raise AdmissionError("outcome-exposed full-event primary forecast blocked")
     start = clock(request["actual_start"]) if request.get("actual_start") else None
-    if start is not None and cutoff >= start:
-        raise AdmissionError("evidence horizon must precede actual first play")
     phase = "TIMING_UNVERIFIED" if start is None else ("PREGAME" if issue < start else "POST_START_ISSUE")
     train = admit_history(history, cutoff, request["event_id"], lg.path, lg.endpoint)
-    experts = fit_experts(lg, train, cutoff, request["home"], request["away"], request.get("venue", ""))
+    experts, line = fit_experts_and_line(lg, train, cutoff, request["home"], request["away"], request.get("venue", ""))
     forms = form_rows(train, request["home"], request["away"], cricket=lg.engine == "cricket")
     coverage = "SHORT" if min(int(r["n"]) for r in forms if r["window"] == "L20") < 20 else "FULL20"
     recipe = request.get("candidate_recipe", "")
     if not recipe.strip():
-        raise AdmissionError("freeze a candidate recipe ID before model selection")
-    context = f"{POLICY}|{lg.path}|{lg.endpoint}|{coverage}|{phase}|{recipe}"
+        raise AdmissionError("freeze a candidate recipe ID before pricing")
+    # Expert losses on common questions are comparable across recipes, coverage and timing phases, so the
+    # full-information context pools them per competition and endpoint (V1's finer partition starved learning).
+    context = f"{POLICY}|{lg.path}|{lg.endpoint}"
     if any(r["event_id"] == request["event_id"] for r in (feedback or [])):
         raise AdmissionError("target feedback cannot enter its own prediction")
-    probs = probabilities(feedback or [], context, issue)
-    # Fresh system randomness by default; seed is an explicit experimental replay option.
-    rng = rng if rng is not None else np.random.default_rng(secrets.randbits(128))
-    selected = int(rng.choice(len(ARMS), p=probs))
-    grid = experts[ARMS[selected]]
+    warm, n_warm = warm_start(lg, train, cutoff.tz_localize(None))
+    fb, n_fb = feedback_losses(feedback or [], context, cutoff)  # only feedback published by the horizon
+    cumulative = warm + fb
+    eta, eta_source, eta_sha = eta_for(lg)
+    weights = hedge_weights(cumulative, eta)
+    grid = mix_grids([experts[a] for a in ARMS], weights)
     if not contracts or len({r["contract_key"] for r in contracts}) != len(contracts):
         raise AdmissionError("empty candidate slate or duplicate contract keys")
     priced = []
@@ -380,7 +548,7 @@ def forecast(request: dict, lg: League, history: list[dict], contracts: list[dic
         priced.append(dict(contract_key=contract["contract_key"], family=contract["family"], side=contract["side"],
                            line=contract["line"], endpoint=lg.endpoint, definition=contract["definition"], action=contract["action"],
                            win=win, push=push, loss=loss, p_card=pc if pc is not None else "NOT_COMPUTED",
-                           baseline_p=bp, selected_arm=ARMS[selected], rank="", role="DIAGNOSTIC"))
+                           baseline_p=bp, selected_arm=MIX_ARM, rank="", role="DIAGNOSTIC"))
     eligible = [r for r in priced if isinstance(r["p_card"], float) and r["p_card"] <= .90]
     eligible.sort(key=lambda r: (-r["p_card"], r["contract_key"]))
     while eligible and lg.sport == "Baseball" and eligible[0]["family"] == "handicap" and float(eligible[0]["line"]) == 1.5 and eligible[0]["p_card"] < .65:
@@ -396,16 +564,20 @@ def forecast(request: dict, lg: League, history: list[dict], contracts: list[dic
                  "MODEL_CONFIG": csv_bytes([{f.name: repr(getattr(lg, f.name)) for f in fields(lg)}]),
                  "FEEDBACK_INPUT": csv_bytes(feedback) if feedback else b"event_id\n"}
     rec = dict(policy=POLICY, event_id=request["event_id"], competition=lg.path, endpoint=lg.endpoint,
-               cutoff=cutoff.isoformat(), issue_at=issue.isoformat(), actual_issue_phase=phase,
+               information_horizon=cutoff.isoformat(), horizon_source=horizon_source,
+               scheduled_start=clock(request["scheduled_start"]).isoformat(), issue_at=issue.isoformat(), actual_issue_phase=phase,
                source_status="HASH_CUSTODY_CHECKED_NOT_OWNER_CERTIFIED", qualification="EXPERIMENTAL_PRIMARY_NOT_CERTIFIED",
-               selected_arm=ARMS[selected], behaviour_probability=float(probs[selected]), context=context,
-               action_probabilities=";".join(f"{a}:{p:.17g}" for a, p in zip(ARMS, probs)),
-               training_rows=len(train), gamma=GAMMA,
+               selected_arm=MIX_ARM, context=context, coverage=coverage,
+               mixture_weights=";".join(f"{a}:{x:.17g}" for a, x in zip(ARMS, weights)),
+               cumulative_losses=";".join(f"{a}:{x:.17g}" for a, x in zip(ARMS, cumulative)),
+               eta=f"{eta:.17g}", eta_source=eta_source, eta_table_sha256=eta_sha,
+               warm_start_games=n_warm, feedback_events=n_fb, league_line=f"{line:.17g}",
+               training_rows=len(train),
                numpy_version=np.__version__, pandas_version=pd.__version__, scipy_version=scipy.__version__,
                expert_recipe="FAST_half_life90_SLOW365_ridge8_cov_inflation1.1;cricket_C2_ridge20_venue20_inflation1.1",
-               issue_clock_status="DECLARED_ISSUE_NOT_INDEPENDENTLY_PUBLISHED", model_id=f"PRIMARY_FRESH_FIT_V1:{lg.path}:{ARMS[selected]}",
+               issue_clock_status="DECLARED_ISSUE_NOT_INDEPENDENTLY_PUBLISHED", model_id=f"PRIMARY_FRESH_FIT_V2:{lg.path}:{MIX_ARM}",
                candidate_recipe=recipe, model_features="team identity, prior scores, time decay; no fitted availability effects",
-               feedback_sha256=digest(csv_bytes(feedback)) if feedback else "NONE_COLD_START",
+               feedback_sha256=digest(csv_bytes(feedback)) if feedback else "NONE",
                code_sha256=source_hash(), repository_head=repository_head(), generated_at=datetime.now(timezone.utc).isoformat(),
                **grid.summary(), **{k.lower() + "_sha256": digest(v) for k, v in artifacts.items()})
     # Atomic publication: existing bundles never overwritten, even for a rerun.
@@ -417,9 +589,10 @@ def forecast(request: dict, lg: League, history: list[dict], contracts: list[dic
             (temporary / (name + ".csv")).write_bytes(data)
         (temporary / "RECEIPT.csv").write_bytes(csv_bytes([rec]))
         (temporary / "FORECAST.md").write_text(
-            f"# Experimental primary forecast {request['event_id']}\n\n{ARMS[selected]} selected by {POLICY}; "
-            f"behaviour probability {probs[selected]:.9f}. {phase}; source truth/calibration/skill NOT_CERTIFIED. "
-            "No staking/market inputs. All issued rows use one selected complete distribution. "
+            f"# Experimental primary forecast {request['event_id']}\n\n{POLICY}: primary distribution = expert mixture "
+            f"({'; '.join(f'{a} {x:.3f}' for a, x in zip(ARMS, weights))}), weights from {n_warm} warm-start games and "
+            f"{n_fb} settled bundles (eta {eta:g}, {eta_source}). {phase}; source truth/calibration/skill NOT_CERTIFIED. "
+            "No staking/market inputs. All issued rows use one complete mixture distribution. "
             "Archive form windows may be short; availability effects are not fitted features. "
             "Gate/family/precision and complete candidate-universe checks remain required by the card operator.\n",
             encoding="utf-8")
@@ -459,7 +632,7 @@ def main(argv=None):
     for name in ("request", "history", "contracts", "out"):
         predict.add_argument("--" + name, type=Path, required=True)
     predict.add_argument("--feedback", type=Path)
-    predict.add_argument("--seed", type=int, help="explicit research replay; never search seeds after results")
+    predict.add_argument("--seed", type=int, help="accepted for compatibility; V2 is deterministic and ignores it")
     review = sub.add_parser("settle")
     for name in ("bundle", "evidence", "out"):
         review.add_argument("--" + name, type=Path, required=True)
@@ -476,12 +649,10 @@ def main(argv=None):
         rec = forecast(req, get_league(req["competition"]), read_rows(args.history), read_rows(args.contracts),
                        args.out, read_rows(args.feedback) if args.feedback else [],
                        np.random.default_rng(args.seed) if args.seed is not None else None)
-        print(f"{rec['event_id']}: {rec['selected_arm']}; {rec['qualification']}; {args.out}")
+        print(f"{rec['event_id']}: {rec['selected_arm']} weights {rec['mixture_weights']}; {rec['qualification']}; {args.out}")
     else:
         result = settle(args.bundle, args.home_score, args.away_score, args.final_at, args.available_at,
                         args.evidence, args.evidence_sha256)
-        if result is None:
-            raise AdmissionError("no decisive original primary rows; no bandit update")
         with args.out.open("xb") as f:
             f.write(csv_bytes([result]))
         print(f"feedback retained: {args.out}; append to effective feedback inventory only after revision reconciliation")

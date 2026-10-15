@@ -1,0 +1,62 @@
+# Operator prompts 1–8
+
+**Historical v11.3 PROCEDURE release:** all eight prompts use [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Prompt 1 has eleven separate sport/general sections, each with its own Upcoming game input block; rugby league and union are independent. The workflow preserves manual-card independence, availability research, qualified shadow evidence, source admission and verified publication. Earlier v11.1/v11.2 controls remain in force unless explicitly superseded.
+
+The root supplied-first extended prompt is a preserved proposal, not an active replacement for P4. Use the numbered suite below.
+
+
+**Historical v11.2 PROCEDURE update:** prompt 1 applies [ROSTER_AVAILABILITY_PROTOCOL](../../ROSTER_AVAILABILITY_PROTOCOL.md) to both sides and every applicable starter/bench/absence field, including local-language discovery and a final late-change check. Evidence stays in existing card fields/A3/A8/C20; mini-log-7 and earlier issued records retain their formats. The v11.1 workshop reading exclusion remains in force.
+
+**P-2026.10.15-v13.0 · Markdown/CSV/text only** (supersedes the old v11.1 primary-model exclusion: prompts 1–3 may run/read the named primary runtime/bundle under PRIMARY_PREDICTION_PROTOCOL; unadmitted shadows and decision-lab remain excluded; prompt 8 may change ml/ under CURRENT_RULES §0). Original v11.0 revision class: FORMAT + PROCEDURE (mini-log-7 / mini-settlement-6, authority mode, form windows, mixture pricing, lifecycle and custody controls; CURRENT_RULES §11 explains the classes). Previous suite: [P-2026.10.11-v10](../../archive/superseded_2026-10-12/research/prompts/README.md). Use each complete task below; prompt 1 now contains its own common core and sport instructions. [Current rules](../../CURRENT_RULES.md) and [templates](../../CARD_AND_LOG_TEMPLATES.md) are required companions. No real ID, log part, league fact or retrospective figure is hard-coded in these prompts: they cover any sport and competition, and league-specific facts come from the rules files, [league profiles](../../LEAGUE_PROFILES.md), [SOURCES](../../SOURCES.md) and the archive.
+
+| # | Task | Writes |
+|---|---|---|
+| [1](1_GAME_CARD.md) | One individual game card | Active local mini and its named primary input/bundle/evidence scope |
+| [2](2_START_LOCAL_MINI.md) | Start local mini | New mini only |
+| [3](3_SETTLE_LOCAL_MINI.md) | Freeze, settle, retrospect | New local settlement package |
+| [4](4_CANONICAL_IMPORT.md) | Canonical import | Active log suffix, status/state/scoreboard, new import report |
+| [5](5_START_THE_NEXT_COMBINED_LOG.md) | Rollover | Old log closure, new part, current pointers, changelog/report |
+| [6](6_COMBINED_LOG_RETROSPECTIVE.md) | Cohort review | New report, scoreboard/state, dated hypotheses/changelog |
+| [7](7_EXPAND_PREVIOUS_RESULTS.md) | Archive repair | Declared CSV/source/coverage/profile paths |
+| [8](8_IMPROVE_THE_FRAMEWORK.md) | Framework improvement | Declared operating documents, archive copies, examples/report |
+
+Order: **2 → 1 for each event → 3 → 4**, then next mini; 5–8 as needed. Prompts 1–3 refer to the GitHub repository (`main` branch) in read-only mode and never publish or edit canonical logs. Prompts 4–8 publish only when the invocation authorizes it; their Publish steps are explicit instructions when the complete prompt is invoked. A review-only or local-only user request overrides publication.
+
+## Completion-based research timing
+
+[TIMING-2026.10.15-v1](../../TIMING_RESEARCH_PROTOCOL.md) removes fixed manual research/freeze lead targets. Every sport continues until comprehensive research is complete, including after start. Independently evidenced CLEAN_PRE_START_INPUTS and actual POST_START_ISSUE are separate labels and a separate research score cohort; clean pre-start-issued prospective/model criteria are not backdated or relaxed. v12.0 is a STATISTICAL/measurement-policy + PROCEDURE release; score formulas, selection and mini formats unchanged. Earlier v11 release paragraphs above are historical.
+
+## Primary ML/RL lane
+
+[PRIMARY-2026.10.15-v1](../../PRIMARY_PREDICTION_PROTOCOL.md) supersedes the old blanket model-reading exclusion for the named primary runtime/bundle. New individual predictions are MODEL_ASSISTED_PRIMARY_V1, with actual fitted distributions, sports-only bandit action/feedback and explicit unqualified status. Old DATA_HOLD/shadow artifacts and the market decision lab remain excluded.
+
+## Reading receipt
+
+**Current model gate:** named primary runtime/model receipts are permitted under PRIMARY_PREDICTION_PROTOCOL; old blanket exclusion text in historical release notes is superseded. The market decision lab stays excluded.
+
+Before dependent work, open actual files and print:
+
+```text
+READING RECEIPT
+Authority mode: PUBLISHED_MAIN_PINNED <full SHA> OR LOCAL_WORKING_TREE <branch/HEAD>
+Repository / branch / HEAD / read time with timezone:
+Relevant working differences (control files that differ between published and local, and which version this run applied):
+Read in full: <actual files>
+Sections read: <actual paths/sections>
+Current method / control / scoring / selection / formats:
+Task scope / allowed writes / publication instruction:
+Sport/source/archive inputs read: <actual paths and coverage, or task N/A>
+Required unavailable files / contradictions / dependent steps blocked:
+```
+
+**One mode per run (CURRENT_RULES §0).**
+- Prompts 1–3 and every agent outside the repository use `PUBLISHED_MAIN_PINNED`: all controls come from one printed commit of `origin/main`.
+- Prompts 4–8, and a local run whose user asks for local controls, use `LOCAL_WORKING_TREE`: print HEAD and every uncommitted control difference, and say which version governed.
+
+Do not pretend dirty working files equal HEAD, and never mix revisions inside one run. Read archived issued cards under their original versions. An opening log header is historical; derive current allocation from state/status and canonical entries, including latest dated addenda. Stop allocation on genuine current disagreement, not merely an old opening snapshot.
+
+Common requirements: no fabricated data or execution claims; explicit missingness; market blindness; frozen original cards; append-only corrections; one event/one permanent ID; unresolved evidence retained; full write/readback. If files cannot be written, return READ_ONLY_DRAFT / NOT_ISSUED complete artifacts and make no claim that IDs advanced or a mini changed.
+
+## Release and compatibility
+
+New minis use mini-log-7 and settlement mini-settlement-6. Existing mini-log-2 through -6 and settlement -2 through -5 stay in their original formats. New process checks expose gaps through dated addenda; they never insert absent pregame values. Historical rank/p/contract/timestamp bytes and grades remain unchanged. Implementation maps [2026-10-12-1](../verification/framework_change_2026-10-12-1/IMPLEMENTATION.md) (current) and [2026-10-11-1](../verification/framework_change_2026-10-11-1/IMPLEMENTATION.md) distinguish current controls from untested experiments and pending data work.
