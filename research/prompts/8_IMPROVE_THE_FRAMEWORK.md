@@ -1,6 +1,6 @@
 # PROMPT 8 — Implement, verify and release a framework or workshop change
 
-**P-2026.10.15-v14.1 · FRAMEWORK_CHANGE · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: declared operating Markdown/CSV/text, archived originals, fixtures and a unique verification folder. Python/tests/requirements are permitted only under ml/ by CURRENT_RULES §0. No JSON, notebooks, pickles, workflows or binaries. Publish when this full prompt is invoked unless explicitly local-only.
+**P-2026.10.15-v15.0 · FRAMEWORK_CHANGE · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: declared operating Markdown/CSV/text, archived originals, fixtures and a unique verification folder. Python/tests/requirements are permitted only under ml/ by CURRENT_RULES §0. No JSON, notebooks, pickles, workflows or binaries. Publish when this full prompt is invoked unless explicitly local-only.
 
 ## Inputs
 
@@ -52,3 +52,6 @@ Release only the authorized scope whose evidence gates passed. A tested developm
 Stage exact reviewed paths and inspect staged diff/status. Recheck source/artifact hashes and concurrent writes immediately before commit. Publish without force under authorization; fetch/compare main or named destination SHA and read back key artifacts. A remote advance needs normal reconciliation, never history overwrite.
 
 Return current prompt/index and implementation/review links, before/after behaviour, exact versions, measured checks/results, qualified versus blocked scopes, effects on in-progress minis, remaining data/experiment tasks and verified commit/remote state. Rollback targets the changed code/config/scope only, preserving canonical history and all failed forecasts.
+
+
+Research-completion changes must exercise uncalibrated inference, missing/failed runtime, unsupported families, missing history/lineups, active-mini/lease conflicts and post-start/outcome-exposed cases. Reject an intake-only or NO_FORECAST-only deliverable as completed analysis; accept genuine exhausted gaps only with substantive A1-A9 work and the evidence matrix. Keep numerical ML guards and truthful custody intact.

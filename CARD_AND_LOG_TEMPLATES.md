@@ -1,6 +1,6 @@
 # Card, mini, settlement and canonical formats
 
-**mini-log-7 · mini-settlement-6 · canonical-md-1.** Authority: MDS-2026.10.15-v15.1 / CR-2026.10.15-R5 / SCV-2026.10.15-v10 / SEL-2026.10.12-v3. [Rules](CURRENT_RULES.md) and [selection definitions](SELECTION_RULES.md) control semantics. Previous formats: [mini-log-6 / mini-settlement-5](archive/superseded_2026-10-12/CARD_AND_LOG_TEMPLATES.md).
+**mini-log-7 · mini-settlement-6 · canonical-md-1.** Authority: MDS-2026.10.15-v15.2 / CR-2026.10.15-R6 / SCV-2026.10.15-v10 / SEL-2026.10.12-v3. [Rules](CURRENT_RULES.md) and [selection definitions](SELECTION_RULES.md) control semantics. Previous formats: [mini-log-6 / mini-settlement-5](archive/superseded_2026-10-12/CARD_AND_LOG_TEMPLATES.md).
 
 <a id="local-mini-format-mini-log-2"></a>
 
@@ -127,17 +127,19 @@ Apply [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md): record actual
 Complete [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md) for both sides in this existing evidence appendix: starters/starting role, selected bench/replacements, reported injuries/illness/suspensions/absences and final late changes, with exact-game sources/times and actual failed/escalated searches. Preserve each field's confirmed/projected/missing/conflicting state; N/A needs a sport/format reason. Existing lineup metadata summarises this evidence, not just the starting side.
 #### A4. Distribution, baseline, expected-score arithmetic and sensitivity
 
-For new primary cards include PRIMARY_PREDICTION_PROTOCOL receipt: exact runtime/bundle path, source/known-at review, event/endpoint/model/code/input/grid hashes, mixture weights with their cumulative losses, admitted η/default and its evidence snapshot, hashed WARM_START/FEEDBACK_LOSSES ledgers with unique event IDs, warm-start and feedback counts, information horizon and its source, policy/context/recipe, model source/status and actual generation/declared issue. Copy original numeric rows from PREDICTIONS.csv and expected moments from the mixed grid; retain all FORMS.csv true sample sizes and model feature/availability limits. No run means ML_NOT_RUN/NO_FORECAST, not an invented manual numeric replacement.
+For new primary cards include PRIMARY_PREDICTION_PROTOCOL receipt: exact runtime/bundle path, source/known-at review, event/endpoint/model/code/input/grid hashes, mixture weights with their cumulative losses, admitted η/default and its evidence snapshot, hashed WARM_START/FEEDBACK_LOSSES ledgers with unique event IDs, warm-start and feedback counts, information horizon and its source, policy/context/recipe, model source/status and actual generation/declared issue. Copy original numeric rows from PREDICTIONS.csv and expected moments from the mixed grid; retain all FORMS.csv true sample sizes and model feature/availability limits. No run means ML_NOT_RUN for the affected numerical ML lane, followed by the full automatic analyst comparison/qualitative procedure in RESEARCH_COMPLETION_PROTOCOL, never an invented ML replacement. Retain separate analyst_p calculations in A4/A5 as NOT_PRIMARY; they do not fill p_card or numerical gate fields.
 #### A5. Full priced universe or labelled subset; W/P/L/V by row
 #### A6. Adjustments, regimes and unadjusted comparison
 #### A7. Family checks and shadow records
 #### A8. Sources, failures, capture/refresh plan
 #### A9. Integrity receipt and readback
+
+Include the mandatory [research-completion matrix](RESEARCH_COMPLETION_PROTOCOL.md#4-completion-receipt-and-return) with actual evidence/outcomes for every procedure, every supplied row and all seven sport steps. Report research coverage, numerical ML availability and issuance status separately. COMPLETE_WITH_DOCUMENTED_GAPS requires completed applicable attempts and full analysis, not just missing-field labels. An unattempted applicable step means INCOMPLETE; retain completed work. A blocked mini write returns a complete no-ID A1–A9 draft without invented original mini bytes.
 SPORTS_ONLY_MARKET_BLIND: <result> · OUTCOME_EXPOSURE: <actual state> · SETTLEMENT: NOT_PERFORMED · CANONICAL_IMPORT: PENDING
 <!-- END CARD P-NNN -->
 ```
 
-NO_FORECAST retains identity, reason, evidence, timing and follow-up, with an empty candidate table explicitly labelled NO_RANKED_ROWS. Qualitative cards may rank supported directions but do not create numeric probabilities or numerical PASS. Copy every original supplied contract even if unsupported; no four-row padding.
+NO_FORECAST retains the full completed A1–A9 research, sport procedures, every contract’s evidence/reasoned assessment, calculation attempts, sensitivity and completion matrix, plus identity, reason, evidence, timing and follow-up, with an empty candidate table explicitly labelled NO_RANKED_ROWS. Qualitative cards may rank supported directions but do not create numeric probabilities or numerical PASS. Copy every original supplied contract even if unsupported; no four-row padding.
 
 ### 3a. Expected score
 
@@ -251,11 +253,11 @@ Pending cards get state evidence, literal original reference and next check, wit
 | C12 | Market blindness, supported evidence with times, lineage unknowns |
 | C13 | Actual archive/web window/sample/coverage, online-first gap recovery, correction/dedup ledger and point-in-time availability; no-data claimed only after actual source attempts |
 | C14 | Frozen same-row baseline and independent league-only parameters, or explicit unavailable reason |
-| C15 | Expected-score arithmetic/units/covariance and missingness; decision block/appendix complete |
+| C15 | Expected-score arithmetic/units/covariance and missingness; decision block/appendix complete; RESEARCH_COMPLETION_PROTOCOL A9 matrix evidenced, all applicable procedures attempted and every supplied row substantively assessed; model/administrative blockers did not terminate independent work |
 | C16 | Written card and footer read back; earlier blocks unchanged; audit has actual evidence, not just check names |
 | C17 | Form windows: L5/L10/L15/L20/season/league printed per side with true n, from dated pre-cutoff games; flagged archive rows excluded; blend/k/arithmetic retained as comparison diagnostics where supported; windows not counted as separate confirmations; fitted primary centre is not manually overwritten; explicit manual comparisons retain their adjustment/unadjusted pair (or ARCHIVE_UNAVAILABLE with the route tried) |
 | C18 | Line distance (units and z, or N/A) on every ranked row; baseline coverage line present; each missing BASELINE_P uses an enumerated reason |
-| C19 | Primary runtime: actual source/fit/bundle checked; mixture weights recompute from recorded losses and η; all rows match the mixed grid, model features/limits explicit. Pricing basis: primary W/P/L and p_card derive from the actual retained mixed ML grid; manual mixtures/adjustments cannot overwrite it. Material unsupported effects mean NO_FORECAST. An explicitly requested manual comparison retains frozen mixture weights/p_base and base-only diagnostics; ε and any GATE_UNRESOLVED_PRECISION / PRECISION_TIE stated |
+| C19 | Primary runtime: actual source/fit/bundle checked; mixture weights recompute from recorded losses and η; all rows match the mixed grid, model features/limits explicit. Pricing basis: primary W/P/L and p_card derive from the actual retained mixed ML grid; manual mixtures/adjustments cannot overwrite it. Material unsupported effects mean NO_FORECAST for the affected numerical ML lane; full research still proceeds. The mandatory supported fallback comparison remains UNCALIBRATED_ANALYST_SCENARIO / NOT_PRIMARY, with analyst_p, source/assumption provenance, frozen cases/weights and separate base-only diagnostics; ε and any GATE_UNRESOLVED_PRECISION / PRECISION_TIE stated |
 | C20 | Availability: comprehensive both-side starter/bench/absence search per ROSTER_AVAILABILITY_PROTOCOL completed with actual attempts and final recheck in A3/A8; projections, access/publication gaps and material uncertainty honest. Lifecycle: issuing writer and lease valid at append time; mini not frozen; request logged in the intake table; known-at line present; lineup state and issue-step times recorded |
 
 ## 8. Canonical entry and rollover

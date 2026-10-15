@@ -1,6 +1,8 @@
 # Primary ML and online expert aggregation
 
-**PRIMARY-2026.10.15-v3 · MDS-2026.10.15-v15.1 · CR-2026.10.15-R5 · SCV-2026.10.15-v10 · P-2026.10.15-v14.1.** Owner-authorised experimental primary use: MODEL_ASSISTED_PRIMARY_V3 / PRIMARY_HEDGE_MIX_V3 / EXPERIMENTAL_PRIMARY_NOT_CERTIFIED. [Review](research/verification/framework_change_2026-10-15-4/REVIEW.md). Prior controls and V2 remain recoverable in Git/archive; issued originals never migrate silently.
+**PRIMARY-2026.10.15-v3.1 · MDS-2026.10.15-v15.2 · CR-2026.10.15-R6 · SCV-2026.10.15-v10 · P-2026.10.15-v15.0.** Owner-authorised experimental primary use: MODEL_ASSISTED_PRIMARY_V3 / PRIMARY_HEDGE_MIX_V3 / EXPERIMENTAL_PRIMARY_NOT_CERTIFIED. [Review](research/verification/framework_change_2026-10-15-4/REVIEW.md). Prior controls and V2 remain recoverable in Git/archive; issued originals never migrate silently.
+
+**Mandatory completion:** [RESEARCH_COMPLETION_PROTOCOL](RESEARCH_COMPLETION_PROTOCOL.md) governs the whole research deliverable. Uncalibrated status does not block authorised experimental inference. Missing/failed inference restricts numerical ML output only: complete source research, supported automatic analyst comparisons and every contract assessment, with the A9 completion matrix. No dependency failure permits an early research exit. The numerical V3 policy and runtime are unchanged.
 
 ## 1. What produces a primary forecast
 
@@ -44,7 +46,7 @@ Settle exact original keys first using official terminal fields and frozen defin
 
 ## 5. Scope, prediction evidence and honest failure
 
-Supported exact competition configurations: joint-normal points, Dixon-Coles soccer regulation, count baseball/hockey, limited-overs cricket full first innings. Local endpoint/tie configuration governs; fit regulation before adding extras once. DATA_HOLD configuration, unsupported engine, unknown participant or failed/flagged fit blocks numerical primary use. No transfer of a major league's parameters to an obscure league. Tennis, field hockey, multi-day cricket and phase/player markets have no adapter here: retain NOT_IMPLEMENTED/NO_FORECAST and requested research. Remote agents lacking execution must obtain a real bundle or retain ML_NOT_RUN/NO_FORECAST, never invent a run.
+Supported exact competition configurations: joint-normal points, Dixon-Coles soccer regulation, count baseball/hockey, limited-overs cricket full first innings. Local endpoint/tie configuration governs; fit regulation before adding extras once. DATA_HOLD configuration, unsupported engine, unknown participant or failed/flagged fit blocks numerical primary use. No transfer of a major league's parameters to an obscure league. Tennis, field hockey, multi-day cricket and phase/player markets have no adapter here: retain NOT_IMPLEMENTED/NO_FORECAST and requested research. Remote agents lacking execution must seek an accessible actual runtime/verified exact-event bundle, record genuine capability failures, and complete the mandatory supported analyst comparison/qualitative analysis under RESEARCH_COMPLETION_PROTOCOL. ML_NOT_RUN/NO_FORECAST applies only to unavailable numerical ML rows; never invent a run or stop the rest of the analysis.
 
 Current fitted features are team identity, prior scores and time decay. Confirmed starters, bench, injuries/illness/suspensions, tactical/format/weather evidence remain mandatory research; their effects are not fitted features. Material unsupported scenarios require qualitative/NO_FORECAST or a separately implemented/tested adapter. No silent hand mixture or form-centre overwrite. Historical manual, V1/V2/V3 assisted, independent shadow and market decision-lab cohorts stay separate; only each card's original top two count in its own T2 cohort.
 

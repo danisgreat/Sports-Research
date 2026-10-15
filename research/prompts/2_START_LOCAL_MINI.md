@@ -1,6 +1,6 @@
 # PROMPT 2 — Start the next local mini
 
-**P-2026.10.15-v14.1 · LOCAL_MINI_STAGING.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: one new Markdown mini. Creating a mini consumes no event ID. GitHub is read-only. Workshop forecasts and the decision lab are excluded.
+**P-2026.10.15-v15.0 · LOCAL_MINI_STAGING.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: one new Markdown mini. Creating a mini consumes no event ID. GitHub is read-only. Workshop forecasts and the decision lab are excluded.
 
 ## Inputs
 
@@ -15,7 +15,7 @@ Read current state/method/rules/selection/templates, the prompt index/common pro
 
 Resolve highest/next canonical ID, reserved IDs, active log, outstanding local minis/unimported IDs and writer leases from current records. Opening headers are historical. Search record bodies and mappings. A genuine disagreement blocks allocation while independent identity/source research continues; do not run retired allocators, skip, reuse or renumber an ID.
 
-Continue an active contiguous mini or record an authorized hand-over instead of creating competing allocations. An exact existing requested mini returns ALREADY_EXISTS with zero new allocation. A frozen mini routes new events to the next authorized mini.
+Continue an active contiguous mini or record an authorized hand-over instead of creating competing allocations. An exact existing requested mini returns ALREADY_EXISTS with zero new allocation. This concludes only duplicate mini creation: if the invocation also requests a game, continue prompt1 in that eligible active mini. Lease/identity/access conflicts block writes only; execute RESEARCH_COMPLETION_PROTOCOL and return a complete no-ID A1–A9 draft. Never treat an existing mini as a reason to abandon requested analysis. A frozen mini routes new events to the next authorized mini.
 
 ## 2. Create the complete mini
 

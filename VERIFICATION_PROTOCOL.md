@@ -1,6 +1,6 @@
 # Verification protocol
 
-**CR-2026.10.15-R5** ([previous](archive/superseded_2026-10-15-3/VERIFICATION_PROTOCOL.md); [earlier](archive/superseded_2026-10-12/VERIFICATION_PROTOCOL.md)). Markdown/CSV/text only. Checks establish their stated properties, never predictive skill. Use plain file/git commands and transparent arithmetic; do not add a validator runtime. Print `Check | PASS/FAIL/NOT_VERIFIED/N/A | evidence | limitation`.
+**CR-2026.10.15-R6** ([previous](archive/superseded_2026-10-15-3/VERIFICATION_PROTOCOL.md); [earlier](archive/superseded_2026-10-12/VERIFICATION_PROTOCOL.md)). Markdown/CSV/text only. Checks establish their stated properties, never predictive skill. Use plain file/git commands and transparent arithmetic; do not add a validator runtime. Print `Check | PASS/FAIL/NOT_VERIFIED/N/A | evidence | limitation`.
 
 ## 1. Before changes
 
@@ -64,3 +64,6 @@ A byte comparison proves identity, not source truth. A git SHA is not proof a ca
 Primary V3 integrity checks: warm training final/available time <= simulated refit; current labels available by issue horizon; no flagged expert in learning; history/feedback event deduplication and score/orientation consistency; finite positive admitted η with exact-policy/timing evidence, otherwise explicit provisional default; cumulative losses match both saved ledgers; no NaN masses/duplicate vector keys; pre-publication bundle verification and code stability. Verify replay coverage/failures, shared calendar-week pooling, DATA_HOLD exclusion, empty outputs and immutable reruns. Old proxy scores never validate the new runtime automatically.
 
 Historical recovery checks: missing/header-only, partial/stale and conflicting/bad local archives must trigger actual exact-competition online source research before a data-missing disposition. Verify field-level correction/deduplication and known-at evidence. Fresh normalized web history and reviewed competition-source routing must work without archive discovery, while wrong scope/hash/format/future source/unreviewed metadata/market columns and unsupported engines still reject. Count local/web origin honestly and retain the frozen source-config snapshot. No shared archive write is implied by game research.
+
+
+Research-completion release checks: apply [RESEARCH_COMPLETION_PROTOCOL](RESEARCH_COMPLETION_PROTOCOL.md) to uncalibrated, missing/failed runtime, unsupported family, unconfirmed availability, missing history, active-mini/lease conflict and post-start cases. Each must preserve every independent sport procedure and contract assessment. A NO_FORECAST-only table or unattempted source route fails completion; genuine exhausted gaps pass only COMPLETE_WITH_DOCUMENTED_GAPS with evidence. A supported actual analyst calculation passes only in its labelled NOT_PRIMARY lane, never as a fake ML run, primary p_card or learning feedback. Check all eleven standalone sport workflows and their own Upcoming blocks.

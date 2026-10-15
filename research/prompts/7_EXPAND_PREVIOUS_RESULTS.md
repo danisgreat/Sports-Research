@@ -1,6 +1,6 @@
 # PROMPT 7 — Repair source data and admission before model use
 
-**P-2026.10.15-v14.1 · ARCHIVE_EXPANSION · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: declared sporting CSVs, provenance/source/coverage notes, supported profile updates and a new verification folder. Helpers/raw captures stay outside the repository. No original cards/logs, model parameters or implicit promotion.
+**P-2026.10.15-v15.0 · ARCHIVE_EXPANSION · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: declared sporting CSVs, provenance/source/coverage notes, supported profile updates and a new verification folder. Helpers/raw captures stay outside the repository. No original cards/logs, model parameters or implicit promotion.
 
 ## Inputs
 
@@ -47,3 +47,6 @@ Invalidate affected model artifact/data identities explicitly; do not rerun or m
 Read back every changed CSV/note, reconcile added/repaired/unchanged rows and source mappings, inspect exact scope, verify preserved originals and relevant negative/valid fixtures. Publish exact permitted paths under invoked-task authorization; no large ignored exports, raw market captures, cache/binary files or unrelated stage-all.
 
 Fetch and verify remote SHA/artifacts. Return event/season/endpoint scope, official/collected counts, actual verified field coverage, missingness/conflicts, known-at limits, profile readiness, affected model gates, file links and publication status.
+
+
+Source/fit/calibration and archive-write failures do not terminate independent collection/reconciliation under RESEARCH_COMPLETION_PROTOCOL. Record exact exhausted fields and complete all permitted independent work. A game request does not have to wait for bulk archive repair; route fresh reviewed evidence to the named game scope without claiming unperformed shared writes.

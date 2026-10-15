@@ -1,6 +1,6 @@
 # PROMPT 6 — Review cards and independently verified sporting shadows
 
-**P-2026.10.15-v14.1 · COHORT_RETROSPECTIVE · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Trigger: user request or about 30 newly settled cards; neither proves statistical sufficiency. Writes: a new uniquely named report, authorized scoreboard/state summaries, dated hypothesis amendments and CHANGELOG. No original log/grade/forecast, active rule/prompt or previous report changes. The decision lab is excluded.
+**P-2026.10.15-v15.0 · COHORT_RETROSPECTIVE · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Trigger: user request or about 30 newly settled cards; neither proves statistical sufficiency. Writes: a new uniquely named report, authorized scoreboard/state summaries, dated hypothesis amendments and CHANGELOG. No original log/grade/forecast, active rule/prompt or previous report changes. The decision lab is excluded.
 
 ## 1. Freeze scope and evidence
 
@@ -41,3 +41,6 @@ For each finding record evidence, actual defect/mechanism, exact proposed change
 Produce RETROSPECTIVE_REPORT with complete inventory, cohort calculations, supported findings/limits and priorities. Reconcile all totals and independently check representative arithmetic. Update authorized summaries without changing grades or claiming new qualification.
 
 Publish exact paths under invoked-task authorization, fetch and verify remote artifacts. Return scope, paired-data sufficiency, results/coverage, exclusions/unresolved queues, findings, test priorities and commit/remote status.
+
+
+Under RESEARCH_COMPLETION_PROTOCOL, report research completion, numerical ML/analyst availability and issuance separately. Audit early exits caused by model/calibration, lineup, timing or mini blockers against the actual work, not the presence of a NO_FORECAST label. Keep automatic NOT_PRIMARY analyst comparisons out of model T2/feedback and prospective model claims; do not restamp old cards with a new completion receipt.

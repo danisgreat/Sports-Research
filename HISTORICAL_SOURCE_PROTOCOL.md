@@ -1,6 +1,6 @@
 # Historical source recovery across every sport and competition
 
-**HIST-2026.10.15-v1 · MDS-2026.10.15-v15.1 · CR-2026.10.15-R5 · P-2026.10.15-v14.1.** Owner instruction: when Previous Sports Results does not contain the needed history, is incomplete or is incorrect, **verified internet research is the preferred first recovery option**. This applies to every sport, league, tournament, cup, season, regional/lower division, women's/youth competition and obscure event. Healthy reviewed archive rows remain reusable. This is a source/research procedure, not a fitted-model or performance qualification.
+**HIST-2026.10.15-v1 · MDS-2026.10.15-v15.2 · CR-2026.10.15-R6 · P-2026.10.15-v15.0.** Owner instruction: when Previous Sports Results does not contain the needed history, is incomplete or is incorrect, **verified internet research is the preferred first recovery option**. This applies to every sport, league, tournament, cup, season, regional/lower division, women's/youth competition and obscure event. Healthy reviewed archive rows remain reusable. This is a source/research procedure, not a fitted-model or performance qualification.
 
 ## 1. Choose the source path before giving up on a field
 

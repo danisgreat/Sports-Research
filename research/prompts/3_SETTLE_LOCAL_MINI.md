@@ -1,6 +1,6 @@
 # PROMPT 3 — Freeze, settle and review a local mini
 
-**P-2026.10.15-v14.1 · LOCAL_MINI_SETTLEMENT.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: a new settlement package and dated revisions; no canonical/GitHub writes. Original cards are immutable. For MODEL_ASSISTED_PRIMARY_V3, retain and verify its primary bundle, settle original keys first, then run primary settle and reconcile one effective source-backed feedback row per event before future learning. Optional sporting-shadow comparisons occur only after manual settlement; the decision lab is excluded.
+**P-2026.10.15-v15.0 · LOCAL_MINI_SETTLEMENT.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: a new settlement package and dated revisions; no canonical/GitHub writes. Original cards are immutable. For MODEL_ASSISTED_PRIMARY_V3, retain and verify its primary bundle, settle original keys first, then run primary settle and reconcile one effective source-backed feedback row per event before future learning. Optional sporting-shadow comparisons occur only after manual settlement; the decision lab is excluded.
 
 ## Inputs
 
@@ -47,3 +47,6 @@ Settle shadows under their own IDs/revision chains; they consume no P-ID and ent
 Run S1–S15 and applicable original-format card checks with evidence. Compare the entire settled prefix, reconcile every source block/mapping/revision and read back every output. Check source growth, markers, unconditional/decisive denominators and queue responsibilities. Verified final time drives SLA; absent final time means UNKNOWN, an estimate is triage only.
 
 Return paths, frozen-source identity, full inventory, revisions/grades, primary denominators, pending/unresolved queues, deep-review coverage, optional shadow comparison/exclusions and verification limits. Canonical import PENDING; GitHub writes NO. A retry plan is not an executed or scheduled capture.
+
+
+For new RC-v1 research records, inspect the A9 completion matrix and retain actual procedure gaps in the process review; missing calibration is separate. Analyst comparison rows labelled NOT_PRIMARY never become original primary picks or ML feedback. Old cards retain their original formats; do not retrofit a completion receipt or delay independently supported settlement because research was incomplete.
