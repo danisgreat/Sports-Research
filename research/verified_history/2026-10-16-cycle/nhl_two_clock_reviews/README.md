@@ -1,0 +1,3 @@
+# Two independently verified results with differing source start times
+
+The strict automated match withheld these games because ESPN lists starts 30 and 35 minutes later than the NHL owner schedule. Manual review verified a unique same-day participant pairing, identical final scores and identical three-period totals at both sources. The owner scheduled time remains event_at. Actual start time is NOT_VERIFIED and is neither inferred nor needed for a current historical-result backfill. The time disagreement is preserved in REVIEW.csv; it is not a prospective pre-start certification. Current review timestamps are recorded, and final_at is the current observed-final upper bound. Earlier strict-match dispositions remain immutable.

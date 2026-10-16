@@ -1,0 +1,6 @@
+scope_level,scope,unique_settled_games,ml_admissible_games,frozen_model_forecasts,hedge_feedback_games,prospective_eval_games
+ALL,ALL,1686,0,0,0,0
+SPORT,Baseball,374,0,0,0,0
+SPORT,Ice Hockey,1312,0,0,0,0
+COMPETITION,Baseball/MLB,374,0,0,0,0
+COMPETITION,Ice Hockey/NHL,1312,0,0,0,0

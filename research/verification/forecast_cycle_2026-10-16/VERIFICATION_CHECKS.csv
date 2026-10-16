@@ -1,0 +1,33 @@
+check,result,evidence
+deduplicated_real_labels,PASS,374 MLB + 1312 NHL; one effective result per event
+no_quarantine,PASS,six completed shared-store ingests
+six_ingests,PASS,INGEST_RECEIPTS.csv is the append-only commit marker
+provider_identity_unique,PASS,bare P-ID admission blocked by runtime
+sport_counts,PASS,"{'Baseball/MLB': 374, 'Ice Hockey/NHL': 1312}"
+full_nhl_regular_season,PASS,32 clubs x 82 appearances / 2 = 1312 distinct games
+regulation_endpoint_consistency,PASS,all admitted regulation coordinates validate; no final-as-regulation extra-time rows
+all_store_source_captures,PASS,10 distinct capture/hash pairs verified
+all_detected_id_collisions_accounted,PASS,source/body hashes verify; unresolved grade links retained
+protected_GAME_PREDICTION_RANK_LOG.csv,PASS,issued/canonical/rank source unchanged
+protected_GAME_LOG_STATUS_CURRENT.md,PASS,issued/canonical/rank source unchanged
+protected_prediction logs/PREDICTION_LOG_COMBINED.md,PASS,issued/canonical/rank source unchanged
+protected_prediction logs/PREDICTION_LOG_COMBINED_2.md,PASS,issued/canonical/rank source unchanged
+protected_prediction logs/PREDICTION_LOG_COMBINED_3.md,PASS,issued/canonical/rank source unchanged
+protected_prediction logs/PREDICTION_LOG_COMBINED_4.md,PASS,issued/canonical/rank source unchanged
+protected_prediction logs/PREDICTION_LOG_COMBINED_5.md,PASS,issued/canonical/rank source unchanged
+protected_prediction logs/PREDICTION_LOG_COMBINED_6.md,PASS,issued/canonical/rank source unchanged
+protected_prediction logs/PREDICTION_LOG_COMBINED_7.md,PASS,issued/canonical/rank source unchanged
+eleven_owner_game_blocks,PASS,owner-entered lines byte-identical after existing Git newline normalization
+control_archive_raw_bytes,PASS,40 prior control files preserved exactly
+registry_chain,PASS,two active experimental releases; pre-publication MLB-CYCLE-1 retired; no qualified model
+append_only_research/model_registry/MODEL_REGISTRY.csv,PASS,existing committed prefix preserved
+append_only_research/learning_status/REVIEW_LOG.csv,PASS,existing committed prefix preserved
+append_only_RESEARCH_SOURCE_REGISTER.md,PASS,existing committed prefix preserved
+frozen_MLB-CYCLE-2,PASS,current normalized code digest matches frozen release
+frozen_NHL-CYCLE-2,PASS,current normalized code digest matches frozen release
+six_real_data_model_fits,PASS,all actual fit parameters and valid grid mass retained; no issued sporting forecast
+honest_context_missingness,PASS,current-capture backfill has no historical pregame context; synthetic feature influence only
+real_known_outcome_failure,PASS,"actual FORECAST failure, complete input/traceback custody; private store only"
+prospective_MLB,PASS,zero future paired events; no qualification claimed
+prospective_NHL,PASS,zero future paired events; no qualification claimed
+final_full_test_suite,PASS,python -m pytest ml/tests -q --tb=short: 412 passed in 283.25s

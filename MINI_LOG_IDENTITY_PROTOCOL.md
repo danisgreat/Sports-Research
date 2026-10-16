@@ -1,6 +1,6 @@
 # Local mini identity, canonical import and document delivery
 
-**MINI-2026.10.16-v1 · MDS/P v19.2 · CR-2026.10.16-R6 · RETAIN-v2.** Owner instruction: canonical P-IDs are assigned during prompt 4 canonical import, never during research/pregame or local settlement. Every prompt-1 game request updates its mini and returns the complete updated Markdown document. This applies to all eleven sport/general workflows. New formats are mini-log-10 / mini-settlement-10; canonical-md-1 and numerical selection/scoring/model rules are unchanged.
+**MINI-2026.10.16-v1 · MDS/P v19.2 · CR-2026.10.16-R7 · RETAIN-v2.** Owner instruction: canonical P-IDs are assigned during prompt 4 canonical import, never during research/pregame or local settlement. Every prompt-1 game request updates its mini and returns the complete updated Markdown document. This applies to all eleven sport/general workflows. New formats are mini-log-10 / mini-settlement-10; canonical-md-1 and numerical selection/scoring/model rules are unchanged.
 
 ## 1. Stable local identity without canonical allocation
 

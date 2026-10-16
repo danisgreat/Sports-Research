@@ -205,6 +205,8 @@ def run_decision_lab() -> None:
 
 
 LEARN_COMMANDS = {"ingest": "ml.research_ingest", "features": "ml.features", "training": "ml.training_admission",
+                  "cycle": "ml.cycle", "workflow": "ml.workflow",
+                  "historical-identity": "ml.historical_identity", "historical-backfill": "ml.historical_backfill",
                   "learning-status": "ml.learning_status", "registry": "ml.registry",
                   "prospective": "ml.evaluation.prospective", "calibration": "ml.calibration", "hedge-study": "ml.hedge",
                   "v3-backtest": "ml.evaluation.v3_backtest", "bkb-features": "ml.models.basketball_features",

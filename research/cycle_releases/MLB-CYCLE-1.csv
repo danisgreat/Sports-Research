@@ -1,0 +1,2 @@
+policy,version,competition,endpoint,frozen_at,code_sha256,model_spec,fast_days,slow_days,ridge,feedback_half_life_events,weight_floor,eta_cap,minimum_weeks,minimum_events,minimum_brier_effect,status,parameter_evidence
+RESEARCH_FORECAST_CYCLE_V1,MLB-CYCLE-1,Baseball/MLB,FULL_GAME_INCL_EXTRAS,2026-10-16T11:08:22.166896+00:00,b8ac169f01838474f164d856293f203aad09cf01b4d5e99e61d0ea3b04cab526,CONTEXT_FINAL_V1,90.0,365.0,32.0,20.0,0.05,0.5,8,50,0.01,EXPERIMENTAL_NOT_QUALIFIED,PREDECLARED_FAMILY_DEFAULTS_NOT_TUNED

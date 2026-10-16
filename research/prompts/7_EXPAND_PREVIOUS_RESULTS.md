@@ -4,7 +4,7 @@
 
 **Persistent research and corroboration (EXH-v1).** Apply [RESEARCH_EXHAUSTIVENESS_PROTOCOL](../../RESEARCH_EXHAUSTIVENESS_PROTOCOL.md) to every required field in research, logging, settlement and verification. If a source is incomplete, open alternatives and verify material facts with another independent source; track every remaining field and attempt. Unresolved facts/corroboration never qualify as complete information. New settlements use mini-settlement-10 with a visible source-discovery/reuse section, three source/attempt/closure CSVs and S17; older originals retain their rules and bytes. Consult [RESEARCH_SOURCE_REGISTER](../../RESEARCH_SOURCE_REGISTER.md) and prior package registers, recheck actual coverage, and continue discovery beyond them.
 
-**P-2026.10.16-v19.2 · PROCEDURE · LOCAL_WORKING_TREE.** Read COMMON_OPERATING_PROTOCOL, CURRENT_RULES, HISTORICAL_SOURCE_PROTOCOL, ROSTER_AVAILABILITY_PROTOCOL, RESULTS_REBUILD_PLAN, SOURCES and actual target schemas. Writes: explicitly named market-free CSV/provenance/coverage/profile paths and a new verification folder. Raw captures/helpers stay externally; code stays under ml/. Original cards/logs/reports remain immutable.
+**P-2026.10.16-v20.0 · PROCEDURE · LOCAL_WORKING_TREE.** Read COMMON_OPERATING_PROTOCOL, CURRENT_RULES, HISTORICAL_SOURCE_PROTOCOL, ROSTER_AVAILABILITY_PROTOCOL, RESULTS_REBUILD_PLAN, SOURCES and actual target schemas. Writes: explicitly named market-free CSV/provenance/coverage/profile paths and a new verification folder. Raw captures/helpers stay externally; code stays under ml/. Original cards/logs/reports remain immutable.
 
 ## 1. Declare the target
 
@@ -27,3 +27,6 @@ Verify every changed file/row/source map, preserved originals and relevant negat
 ## Persistent sourcing and information closure (EXH-v1)
 
 Consult and freshly check shared/prior source observations, then pursue missing fields across owner, structured and local-language routes with independent corroboration. Record all actual discoveries and partial/failed attempts using the source-register templates; map every declared collection requirement and exception. Append dated shared route observations only in authorized scope. A source list, header-only export, single collector or exhausted attempt does not establish complete data.
+
+
+**Connected cycle handoff (CYCLE-v1).** Apply [FORECAST_CYCLE_PROTOCOL](../../FORECAST_CYCLE_PROTOCOL.md). Preserve and verify actual workflow attempts and frozen version/contract identities. For contextual bundles, run `python -m ml cycle settle` with the verified structured settlement export into the authorised local/shared scope; preserve expert feedback and OUTCOMES.csv. Research-only labels never fabricate an expert loss. Prompt 4 re-ingests source exports idempotently into the shared store and records actual counts, quarantine and custody. Reconcile collided historical aliases by source/body addresses, never P-ID alone. Use `cycle evaluate` for frozen paired Brier/log-loss/calibration reports; insufficient future data remains INSUFFICIENT_EVIDENCE. No historical grade or model promotion follows automatically.

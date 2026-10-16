@@ -1,0 +1,2 @@
+ingest_seq,ingested_at,export_path,export_sha256,schema_version,code_sha256,observations,new_events,new_results,corroborating,corrections,quarantined,exact_duplicates
+1,2026-10-16T11:14:17.457180+00:00,research\verification\forecast_cycle_2026-10-16\KNOWN_RESULT_REJECTION\EXPORT,984b3a1c41e40213f9ffd27266731e6e7c0e587b016359efb224a00133c4b0c2,LEARN-STORE-2026.10.16-v1,7896284b92b84350bd7afb48dea6853934ec451261dca955a432216ba9e53211,2,1,1,1,0,0,0

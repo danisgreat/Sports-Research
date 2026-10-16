@@ -163,6 +163,11 @@ def admit_history(rows: list[dict], cutoff, target: str, competition: str, endpo
             rec[col] = int(value)
         if rec["reg_hs"] > rec["hs"] or rec["reg_as"] > rec["as_"]:
             raise AdmissionError("regulation score exceeds final score")
+        from ml.endpoint import regulation_pair
+        try:
+            regulation_pair(r)
+        except ValueError as exc:
+            raise AdmissionError(str(exc)) from exc
         # Cricket fields are explicit; no conversion from match winner/total to an innings label.
         for col in ("bat", "bowl", "venue", "legal_balls", "wickets"):
             rec[col] = r.get(col, "")
@@ -647,6 +652,8 @@ def forecast(request: dict, lg: League | None, history: list[dict], contracts: l
     issue = clock(request["issue_at"])
     if request["competition"] != lg.path or request["endpoint"] != lg.endpoint:
         raise AdmissionError("request/competition model scope mismatch")
+    if lg.sport == "Baseball" and lg.endpoint == "FULL_GAME_INCL_EXTRAS":
+        raise AdmissionError("BASEBALL_FINAL_ENDPOINT_REQUIRES_CYCLE_V1: legacy uncensored nine-inning winner/extras model is retired for new full-game forecasts")
     if request.get("outcome_exposure", "") != "NONE_RECORDED":
         raise AdmissionError("outcome-exposed full-event primary forecast blocked")
     start = clock(request["actual_start"]) if request.get("actual_start") else None

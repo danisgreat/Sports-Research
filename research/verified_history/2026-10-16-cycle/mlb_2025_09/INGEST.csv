@@ -1,0 +1,2 @@
+ingest_seq,ingested_at,export_path,export_sha256,schema_version,code_sha256,observations,new_events,new_results,corroborating,corrections,quarantined,exact_duplicates
+1,2026-10-16T10:56:07.240970+00:00,research\verified_history\2026-10-16-cycle\mlb_2025_09\EXPORT,69699ecea7340c5a28a48665c20972b17cbac50d97bd537fcff0d396b34f0165,LEARN-STORE-2026.10.16-v1,2528100f1c9fb052ba7828c501881227b76870494ccdeaaa3e69ce8e60feb611,744,372,372,372,0,0,0

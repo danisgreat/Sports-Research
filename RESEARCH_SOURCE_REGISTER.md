@@ -31,3 +31,17 @@ These eleven routes were opened during the preceding 16 October 2026 import, pre
 Append full observed capabilities and package/receipt pointers when an authorized task admits new or revised observations. Consult failures to avoid unchanged retry loops; recheck when access/publication changes. An empty section is not completed research. Open fields stay in the closure ledger.
 
 Full record: IDs, discovery/last-check, phase/sport/competition/exact scope, publisher/owner/collector, URL/navigation/query/language/pagination, observed/missing fields, publication/retrieval, access, evidence/hash, corroborating IDs/comparison, reuse instructions/limits/status. Copy the full source-register row or cite an immutable package row and hash. A home-page link alone is insufficient.
+
+
+## CYCLE-v1 current web captures and exhaustive reuse index - 16 October 2026
+
+Owner-authorised research/training implementation. These routes were actually fetched now. Exact raw HTTP hashes, URLs, retrieval times, failures, normalized owner/independent captures and per-event dispositions are retained in the linked scopes. Reuse these as discovery paths, re-open the exact required endpoint/date, and continue to another source if any required field is absent. Captured current historical facts are known now; no past pregame timing, player confirmation or operator certification is inferred.
+
+| Source ID | Public route actually used | Fields and coverage | Reuse evidence |
+|---|---|---|---|
+| SRC-CYCLE-MLB-OWNER | https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2025-09-01&endDate=2025-09-30&hydrate=linescore,gameInfo | MLB native IDs, regular-season final scores and inning runs | [Captures/receipts](research/verified_history/2026-10-16-cycle/mlb_2025_09_rev2/README.md) |
+| SRC-CYCLE-MLB-ESPN | https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20250901&limit=100 | Dated independent daily finals and innings; every actual date URL in HTTP_RECEIPTS.csv | [Captures/receipts](research/verified_history/2026-10-16-cycle/mlb_2025_09_rev2/README.md) |
+| SRC-CYCLE-NHL-OWNER | https://api-web.nhle.com/v1/club-schedule-season/TOR/20242025 | League clubs discovered from official season opponents, then all club schedules independently deduplicated by native ID | [Captures/receipts](research/verified_history/2026-10-16-cycle/nhl_all_2024_25_rev2/README.md) |
+| SRC-CYCLE-NHL-ESPN | https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates=20250401&limit=100 | Independent daily finals and three-period totals; date-specific URLs and failures in HTTP_RECEIPTS.csv | [Captures/receipts](research/verified_history/2026-10-16-cycle/nhl_all_2024_25_rev2/README.md) |
+
+Final verified sporting-result coverage: 374 MLB September-2025 games plus all 1,312 regular-season NHL 2024-25 games, 1,686 distinct provider events. Six append-only ingests, no quarantine. ESPN/NHL code aliases were checked and normalized. Two MLB listed clocks differ by ten minutes and retain the field-owner schedule; two NHL clock differences (30/35 minutes) received [explicit manual review](research/verified_history/2026-10-16-cycle/nhl_two_clock_reviews/REVIEW.csv). Actual-start times remain NOT_VERIFIED and are not needed for current result learning; they cannot qualify historical forecasts. Earlier strict-match dispositions remain in their original folders. Final-at is the observed-final upper bound, not an invented whistle time. These route observations do not close unrelated original-card identity, contract, operator or roster gaps.

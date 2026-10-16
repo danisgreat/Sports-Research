@@ -290,6 +290,9 @@ def build_rows(rank_log: Path = RANK_LOG) -> tuple[pd.DataFrame, pd.DataFrame]:
     # Cross-check Ranks 1-2 with the effective final-settlement reconciliation (P-126..P-576).
     recon = pd.read_csv(RECON, dtype=str)
     recon["grade_eff"] = recon.literal_grade.map(_grade)
+    # An issued alias is not a unique event. Never transfer a settlement across collided P-IDs.
+    collided = set(id_collisions().card)
+    recon = recon[~recon.id.isin(collided)]
     merged = R.merge(recon[["id", "rank", "grade_eff"]].rename(columns={"id": "card"}).assign(rank=lambda d: d["rank"].astype(int)),
                      on=["card", "rank"], how="left")
     diff = merged[merged.grade_eff.notna() & (merged.grade_eff != merged.grade)][["card", "rank", "grade", "grade_eff"]]
@@ -323,6 +326,9 @@ def build_rows(rank_log: Path = RANK_LOG) -> tuple[pd.DataFrame, pd.DataFrame]:
                           source=str(INV_590.relative_to(ROOT)),
                           cohort="LEGACY_ORIGINAL_RANK" if literal else "LEGACY_ANALYST_NOT_PRIMARY", baseline=math.nan))
     R = pd.concat([R, pd.DataFrame(extra)], ignore_index=True)
+    R["identity_status"] = np.where(R.card.isin(collided), "COLLIDING_ALIAS_GRADE_LINK_UNRESOLVED", "NO_DETECTED_ALIAS_COLLISION")
+    R["literal_grade"] = R.grade
+    R.loc[R.card.isin(collided), "grade"] = "UNRESOLVED"
     # Imported P-577..P-582 rows also exist in the rank log; prefer the rank-log row and record agreement.
     R["n"] = R.card.map(card_num)
     R["informational_r2"] = (R.grade_basis == "ORIGINAL_RANK_2_INFORMATIONAL")
@@ -451,7 +457,7 @@ def write(out: dict, folder: Path, receipt: dict) -> None:
         raise FileExistsError(folder)
     tmp = folder.parent / ("." + folder.name + "." + secrets.token_hex(6))
     tmp.mkdir(parents=True)
-    cols = ["card", "rank", "cohort", "era", "date", "date_basis", "week", "sport", "family", "contract", "p", "q",
+    cols = ["card", "rank", "cohort", "era", "date", "date_basis", "week", "sport", "family", "contract", "p", "q", "identity_status", "literal_grade",
             "baseline", "grade", "counted_slot", "informational_r2", "record_status", "grade_basis", "source"]
     out["rows"][cols].to_csv(tmp / "CARD_ROWS.csv", index=False, lineterminator="\n")
     sections = [("Slots, all literal ranks", out["slots"]), ("Slots excluding colliding IDs (sensitivity)", out["slots_without_collisions"]), ("Slots by era", out["slots_era"]),

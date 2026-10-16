@@ -1,0 +1,2 @@
+contract_key,family,side,line,endpoint,definition,action
+HOME,winner,HOME,,FULL_GAME_INCL_EXTRAS,FROZEN_FRAMEWORK_CONVENTION,THREE_WAY_DRAW_LOSES

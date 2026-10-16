@@ -1,0 +1,2 @@
+policy,version,competition,endpoint,frozen_at,code_sha256,model_spec,fast_days,slow_days,ridge,feedback_half_life_events,weight_floor,eta_cap,minimum_weeks,minimum_events,minimum_brier_effect,status,parameter_evidence
+RESEARCH_FORECAST_CYCLE_V1,NHL-CYCLE-2,Ice Hockey/NHL,FULL_GAME_INCL_OT_SO,2026-10-16T11:13:45.656790+00:00,d5a7063aca3c7d463aa5d2f6634d642878ab1844f13c8a4dacd654afb0260a5a,CONTEXT_FINAL_V1,90.0,365.0,24.0,20.0,0.05,0.5,8,50,0.01,EXPERIMENTAL_NOT_QUALIFIED,PREDECLARED_FAMILY_DEFAULTS_NOT_TUNED

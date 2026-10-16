@@ -1,0 +1,2 @@
+checked_at,python,platform,executable,repository_root,repository_head,code_sha256,primary_policy,numpy,pandas,scipy,pinned_version_drift,status
+2026-10-16T11:14:17.087788+00:00,3.14.6,Windows-11-10.0.26300-SP0,C:\Users\danie\AppData\Local\Python\pythoncore-3.14-64\python.exe,C:\Users\danie\Desktop\Sports Research,d066b489179deebf98e4eb4172b16f274e40e3bb,7896284b92b84350bd7afb48dea6853934ec451261dca955a432216ba9e53211,PRIMARY_HEDGE_MIX_V3,2.5.2,3.0.5,1.18.1,NONE,RUNTIME_AVAILABLE

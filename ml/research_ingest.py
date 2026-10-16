@@ -160,12 +160,18 @@ def resolve_event(store_events: pd.DataFrame, aliases: pd.DataFrame, competition
     if native:
         hit = comp[comp.native_event_id == native]
         if len(hit):
+            if len(hit) != 1:
+                raise p.AdmissionError("IDENTITY_COLLISION: duplicate native event IDs")
             return hit.iloc[0].event_uid
         alias = aliases[aliases.alias_native_event_id == f"{competition}|{native}"]
         if len(alias):
+            if len(alias) != 1:
+                raise p.AdmissionError("IDENTITY_COLLISION: ambiguous alias")
             return alias.iloc[0].event_uid
     surrogate = surrogate_id(event_at, home, away)
     hit = comp[(comp.native_event_id == surrogate)]
+    if len(hit) > 1:
+        raise p.AdmissionError("IDENTITY_COLLISION: ambiguous date/participant identity")
     return hit.iloc[0].event_uid if len(hit) else None
 
 
@@ -336,16 +342,25 @@ class _Batch:
             raise p.AdmissionError("exact Sport/Competition identity and two distinct participants required")
         if native.startswith("DATE:"):
             raise p.AdmissionError("native_event_id may not use the reserved DATE: surrogate prefix")
+        if __import__('re').fullmatch(r'P-\d+', native):
+            raise p.AdmissionError("CANONICAL_ALIAS_NOT_EVENT_ID: use a provider ID or stable local event key, not an issued P-ID")
+        if comp.startswith('Baseball/') and not native:
+            raise p.AdmissionError("DOUBLEHEADER_NATIVE_ID_REQUIRED: date/participants cannot distinguish same-day baseball games")
         events, aliases = self.events(), self.aliases()
         uid = resolve_event(events, aliases, comp, native, row[when_field], home, away)
         if uid is not None:
             ev = events[events.event_uid == uid].iloc[0]
+            if p.clock(ev.event_at).date() != p.clock(row[when_field]).date():
+                raise p.AdmissionError("IDENTITY_COLLISION: native ID reused on another UTC date; reconcile explicitly")
             if (ev.home, ev.away) != (home, away):
                 raise p.AdmissionError("ORIENTATION_CONFLICT: participants differ from the stored event")
             if ev.endpoint and row.get("endpoint") and ev.endpoint != row["endpoint"]:
                 raise p.AdmissionError("ENDPOINT_CONFLICT: endpoint differs from the stored event")
             if native and ev.native_event_id != native and ev.identity_basis == "DATE_PARTICIPANTS":
                 key = f"{comp}|{native}"
+                existing_aliases = aliases[aliases.event_uid == uid]
+                if len(existing_aliases) and not (existing_aliases.alias_native_event_id == key).all():
+                    raise p.AdmissionError("IDENTITY_COLLISION: multiple native IDs claim one date/participant surrogate")
                 if not (aliases.alias_native_event_id == key).any():
                     self.new["EVENT_ALIASES.csv"].append(dict(event_uid=uid, alias_native_event_id=key,
                                                               ingest_seq=self.seq))
@@ -386,10 +401,14 @@ def _game_values(row) -> dict:
         raise p.AdmissionError("unknown game status")
     values = dict(status=status, decision=row["decision"].strip(), final_at="")
     if status == "FINAL":
-        for col in ("hs", "as_", "reg_hs", "reg_as"):
+        for col in ("hs", "as_"):
             values[col] = str(_int(row[col], col))
-        if int(values["reg_hs"]) > int(values["hs"]) or int(values["reg_as"]) > int(values["as_"]):
-            raise p.AdmissionError("regulation score exceeds final score")
+        from ml.endpoint import regulation_pair
+        try:
+            reg = regulation_pair(row)
+        except ValueError as exc:
+            raise p.AdmissionError(str(exc)) from exc
+        values["reg_hs"], values["reg_as"] = (str(v) for v in reg) if reg is not None else ("NOT_OBSERVED", "NOT_OBSERVED")
         event, final, known = p.clock(row["event_at"]), p.clock(row["final_at"]), p.clock(row["known_at"])
         if not event <= final <= known:
             raise p.AdmissionError("CHRONOLOGY: event_at <= final_at <= known_at required")

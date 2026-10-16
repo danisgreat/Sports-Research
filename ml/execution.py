@@ -174,12 +174,12 @@ def verify_log(manifest: Path, mini: Path) -> dict:
         if identity not in body:
             raise p.AdmissionError("card identity differs from execution manifest")
         statuses = re.findall(r"^- \*\*Analysis status:\*\*\s+(\S+)", body, re.M)
-        if len(statuses) != 1 or statuses[0] not in ("MODEL_ASSISTED_PRIMARY_V3", "RESEARCH_ONLY_NO_MODEL", "UNCALIBRATED_QUALITATIVE", "NO_FORECAST"):
+        if len(statuses) != 1 or statuses[0] not in ("MODEL_ASSISTED_PRIMARY_V3", "MODEL_ASSISTED_CYCLE_V1", "RESEARCH_ONLY_NO_MODEL", "UNCALIBRATED_QUALITATIVE", "NO_FORECAST"):
             raise p.AdmissionError("one explicit primary analysis disposition required")
         if not row["execution_path"]:
             if row["execution_sha256"]:
                 raise p.AdmissionError("execution hash without an actual attempt path")
-            if statuses[0] == "MODEL_ASSISTED_PRIMARY_V3":
+            if statuses[0] in ("MODEL_ASSISTED_PRIMARY_V3", "MODEL_ASSISTED_CYCLE_V1"):
                 raise p.AdmissionError("numeric primary card requires successful execution")
             if not row["reason"].strip() or row["feedback_status"] != "NOT_APPLICABLE_NO_MODEL" or row["feedback_path"] or row["feedback_sha256"]:
                 raise p.AdmissionError("research-only retention requires honest missing-model reason and no invented expert feedback")
@@ -187,8 +187,20 @@ def verify_log(manifest: Path, mini: Path) -> dict:
             continue
         folder = manifest.parent / row["execution_path"]
         p.receipt_file(folder / "EXECUTION.csv", row["execution_sha256"])
-        rec = verify_execution(folder, **{k: row[k] for k in ("event_id", "competition", "endpoint")})
-        if statuses[0] == "MODEL_ASSISTED_PRIMARY_V3" and rec["status"] != "EXECUTED":
+        record = p.read_rows(folder / "EXECUTION.csv")[0]
+        cycle_attempt = record.get("entrypoint") == "python -m ml.workflow research"
+        if cycle_attempt:
+            from ml.workflow import verify
+            rec = verify(folder)
+            if any(rec[k] != row[k] for k in ("event_id", "competition", "endpoint")):
+                raise p.AdmissionError("workflow identity differs from mini manifest")
+            if statuses[0] == "MODEL_ASSISTED_CYCLE_V1" and rec["adapter"] != "context":
+                raise p.AdmissionError("cycle primary status requires the contextual cycle adapter")
+        else:
+            rec = verify_execution(folder, **{k: row[k] for k in ("event_id", "competition", "endpoint")})
+            if statuses[0] == "MODEL_ASSISTED_CYCLE_V1":
+                raise p.AdmissionError("cycle primary status requires a cycle execution")
+        if statuses[0] in ("MODEL_ASSISTED_PRIMARY_V3", "MODEL_ASSISTED_CYCLE_V1") and rec["status"] != "EXECUTED":
             raise p.AdmissionError("numeric primary card requires successful execution")
         if rec["status"] == "FAILED":
             failed += 1
@@ -204,10 +216,18 @@ def verify_log(manifest: Path, mini: Path) -> dict:
                 feedback = p.read_rows(path)
                 if len(feedback) != 1 or feedback[0]["event_id"] != row["event_id"]:
                     raise p.AdmissionError("one exact-event effective feedback row required")
-                model = p.verify_bundle(folder / "BUNDLE")
+                if cycle_attempt and rec["adapter"] == "context":
+                    from ml import cycle
+                    model = cycle.verify_bundle(folder / "BUNDLE")
+                else:
+                    model = p.verify_bundle(folder / "BUNDLE")
                 if Path(feedback[0]["bundle"]).resolve() != (folder / "BUNDLE").resolve():
                     raise p.AdmissionError("feedback belongs to another execution")
-                _, count = p.feedback_losses(feedback, model["context"], feedback[0]["available_at"])
+                if cycle_attempt and rec["adapter"] == "context":
+                    cycle.verify_settlement(path.parent)
+                    count = 1
+                else:
+                    _, count = p.feedback_losses(feedback, model["context"], feedback[0]["available_at"])
                 if count != 1:
                     raise p.AdmissionError("retained feedback is not admitted")
                 feedback_count += 1

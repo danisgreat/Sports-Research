@@ -1,5 +1,9 @@
 # Full-history retrospective and runtime/baseline tooling — 16 October 2026, P-001 to P-600
 
+## 2026-10-16 — MDS/P v20.0 / CR-R7 / CYCLE-v1
+
+STATISTICAL + PROCEDURE, owner-authorised: connected research/ingest/forecast/settlement cycle, stdlib execution/failure receipts, competition-local contextual final-endpoint models, separate fitted baseball winner class, explicit missing regulation, source-addressed collision repair and unsafe-grade-join exclusion, verified online historical backfill, delayed discounted expert feedback and frozen paired prospective evaluation. No prospective skill or full historical grade-link closure is claimed. All eleven owner-entered Upcoming game blocks and existing issued/canonical records are preserved. [Implementation](research/verification/forecast_cycle_2026-10-16/IMPLEMENTATION.md).
+
 Prompt 6 over every card (user request), then the changes the findings make necessary (P-2026.10.16-v19.2 / MDS-v19.2 / CR-2026.10.16-R6 / LEARN-v1.1, PROCEDURE + workshop code). [Report](research/verification/retrospective_2026-10-16-full/RETROSPECTIVE_REPORT.md) · [Implementation](research/verification/retrospective_2026-10-16-full/IMPLEMENTATION.md).
 
 - **Full history** (599 records; 562 cards with graded counted slots; committed rank log at `b86f89d37`): Rank 1 63.0%, Rank 2 56.5%, Ranks 3–4 55.6%. Rank 1 beats the same card's lower rows (+7.7 points) and is mildly overconfident (−4.6 points; slope 0.82). A chronological calibration study selected IDENTITY (NO_CHANGE). Frozen baselines exist on 4 events only, and no model ever priced a card. 21 ID collisions were found, and headlines are robust to excluding them.

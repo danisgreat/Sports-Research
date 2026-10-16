@@ -64,6 +64,9 @@ def build_rows(store: ri.Store, competition: str, endpoint: str, *, min_games: i
         if lab.status not in ri.FINAL_STATUSES:
             excluded.append(dict(**ident, reason="NOT_FINAL:" + lab.status))
             continue
+        if lab.reg_hs == "NOT_OBSERVED" or lab.reg_as == "NOT_OBSERVED":
+            excluded.append(dict(**ident, reason="REGULATION_NOT_OBSERVED: final-endpoint cycle may use the label; regulation release cannot"))
+            continue
         if ev.native_event_id in quarantined:
             excluded.append(dict(**ident, reason="OPEN_QUARANTINE: unresolved conflicting or unreviewed observation"))
             continue

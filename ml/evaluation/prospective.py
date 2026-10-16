@@ -105,12 +105,17 @@ def _grade(rows: pd.DataFrame, outcomes: pd.DataFrame) -> pd.DataFrame:
         raise p.AdmissionError("exact outcome fields required")
     if outcomes.duplicated(["event_id", "contract_key"]).any():
         raise p.AdmissionError("duplicate outcome rows: reconcile one effective settlement first")
+    if not outcomes.result.isin(("WIN", "LOSS", "PUSH", "VOID", "UNRESOLVED")).all():
+        raise p.AdmissionError("unknown outcome result")
     merged = rows.merge(outcomes, on=["event_id", "contract_key"], how="left")
     merged["y"] = merged.result.map({"WIN": 1.0, "LOSS": 0.0})
     late = merged.available_at.notna() & (merged.available_at.map(lambda t: p.clock(t) if isinstance(t, str) else pd.NaT)
                                            <= merged.issued_at.map(p.clock))
     if late.any():
         raise p.AdmissionError("outcome available before the forecast was issued: not prospective")
+    for r in merged[merged.result.notna()].itertuples():
+        if not p.clock(r.issued_at) < p.clock(r.final_at) <= p.clock(r.available_at):
+            raise p.AdmissionError("invalid prospective final/availability chronology")
     return merged
 
 
@@ -141,8 +146,17 @@ def weeks_needed(sd_week: float, delta: float, alpha: float = 0.05, power: float
 def evaluate(ledger: list[dict], outcomes: pd.DataFrame, champion: str, candidate: str, *, delta: float,
              slope_band=(0.8, 1.25), coverage_tolerance: float = 0.05) -> dict:
     """``champion``/``candidate`` are 'model_id:model_version'. ``delta`` is the preregistered Brier improvement."""
+    if not math.isfinite(delta) or delta <= 0 or champion == candidate:
+        raise p.AdmissionError("distinct model versions and finite positive preregistered effect required")
+    if not ledger:
+        return dict(disposition="INSUFFICIENT_EVIDENCE", reason="no frozen forecasts", pairs=0)
     frame = pd.DataFrame(ledger)
     frame["tag"] = frame.model_id + ":" + frame.model_version
+    if frame.duplicated(["tag", "event_id", "contract_key"]).any():
+        raise p.AdmissionError("duplicate model/event/contract")
+    for _, g in frame.groupby("tag"):
+        if any(g[c].nunique() != 1 for c in ("code_sha256", "param_version")):
+            raise p.AdmissionError("model version changed source or parameters within prospective cohort")
     eligible = frame[(frame.evidence_status == "PRE_START_VERIFIED") &
                      (frame.issued_at.map(p.clock) < frame.scheduled_start.map(p.clock))]
     graded = _grade(eligible, outcomes)
@@ -150,19 +164,27 @@ def evaluate(ledger: list[dict], outcomes: pd.DataFrame, champion: str, candidat
     keys = ["event_id", "contract_key"]
     union = len(pd.concat([champ[keys], cand[keys]]).drop_duplicates())
     pair = champ.merge(cand, on=keys, suffixes=("_c", "_k"))
+    for column in ("competition", "endpoint", "family", "side", "line", "scheduled_start"):
+        if (pair[column+"_c"] != pair[column+"_k"]).any():
+            raise p.AdmissionError("identical-contract comparison mismatch: " + column)
     pair = pair[pair.y_c.notna()]
     if pair.empty:
         return dict(disposition="INSUFFICIENT_EVIDENCE", reason="no settled identical pre-start contracts", pairs=0)
     pair["week"] = iso_week(pair.scheduled_start_c.map(lambda t: p.clock(t).tz_localize(None)))
     pair["d_brier"] = (pair.p_k.astype(float) - pair.y_c) ** 2 - (pair.p_c.astype(float) - pair.y_c) ** 2
     iv = paired_week_interval(pair.d_brier, pair.event_id, pair.week)
+    pc, pk, y = pair.p_c.astype(float), pair.p_k.astype(float), pair.y_c
+    pair["d_log_loss"] = -np.log(np.clip(np.where(y == 1, pk, 1-pk), 1e-12, 1)) + np.log(np.clip(np.where(y == 1, pc, 1-pc), 1e-12, 1))
+    log_iv = paired_week_interval(pair.d_log_loss, pair.event_id, pair.week)
     need = weeks_needed(iv["sd_w"], delta)
     per = {}
     for tag, rows in ((champion, champ), (candidate, cand)):
-        rows = rows[rows.y.notna()]
+        coverage_rows = rows[rows.y.notna()]
+        # Both probability, loss and calibration summaries use the very same paired rows.
+        rows = coverage_rows.merge(pair[keys], on=keys, how="inner", validate="one_to_one")
         q = rows.p.astype(float)
         fit = calibration_fit(q, rows.y)
-        per[tag] = dict(rows=len(rows), events=rows.event_id.nunique(), coverage=len(rows) / union if union else math.nan,
+        per[tag] = dict(rows=len(rows), events=rows.event_id.nunique(), coverage=len(coverage_rows) / union if union else math.nan,
                         brier=float(((q - rows.y) ** 2).mean()),
                         log_loss=float(-np.mean(np.log(np.clip(np.where(rows.y == 1, q, 1 - q), 1e-12, 1)))),
                         slope=fit["slope"], intercept=fit["intercept"], **_ranking(rows))
@@ -186,7 +208,7 @@ def evaluate(ledger: list[dict], outcomes: pd.DataFrame, champion: str, candidat
         disposition, reason = "NO_CHANGE", "candidate worse on paired Brier"
     else:
         disposition, reason = "NO_CHANGE", "no resolvable difference at the registered effect size"
-    return dict(disposition=disposition, reason=reason, pairs=len(pair), interval=iv, weeks_needed=need,
+    return dict(disposition=disposition, reason=reason, pairs=len(pair), interval=iv, log_loss_interval=log_iv, weeks_needed=need,
                 models=per, unsettled_share=float(unsettled), breakdown=pd.DataFrame(breakdown))
 
 

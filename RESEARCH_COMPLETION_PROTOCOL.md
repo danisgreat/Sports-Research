@@ -8,7 +8,7 @@
 
 **Required repository fallback (REF-v1).** Always keep [https://github.com/danisgreat/Sports-Research/tree/main](https://github.com/danisgreat/Sports-Research/tree/main) as the standing reference. If required local files are not fully accessible (missing, unreadable, truncated or incomplete), retrieve the actual required contents from this repository before declaring them unavailable. Apply [GITHUB_REFERENCE_PROTOCOL](GITHUB_REFERENCE_PROTOCOL.md): resolve one main commit SHA, record exact files/read time and fallback results in the existing reading receipt, and preserve the declared authority mode. Never substitute an unpublished local mini, claim unread content or treat viewing code as executing it. If authorized remote access also fails, record the real gap and continue independent work.
 
-**RC-2026.10.16-v2 · MDS-2026.10.16-v19.2 · CR-2026.10.16-R6 · P-2026.10.16-v19.2.** Owner instruction, 15 October 2026: complete the analysis, procedures and research regardless of calibration or other problems. Applies to every requested game, including obscure, regional, women's, youth and lower-tier competitions. [Current rules](CURRENT_RULES.md) govern numerical selection, custody and truthful timing.
+**RC-2026.10.16-v2 · MDS-2026.10.16-v20.0 · CR-2026.10.16-R7 · P-2026.10.16-v20.0.** Owner instruction, 15 October 2026: complete the analysis, procedures and research regardless of calibration or other problems. Applies to every requested game, including obscure, regional, women's, youth and lower-tier competitions. [Current rules](CURRENT_RULES.md) govern numerical selection, custody and truthful timing.
 
 ## 1. Strict rule: no dependency failure ends independent research
 

@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "C:\Users\danie\Desktop\Sports Research\ml\workflow.py", line 66, in execute
+    result=cycle.forecast(Path(store),req,p.read_rows(out/'CONTRACTS.csv'),out/'RELEASE.csv',bundle,feedback_root)
+  File "C:\Users\danie\Desktop\Sports Research\ml\cycle.py", line 205, in forecast
+    raise p.AdmissionError("outcome exposure blocks forecast; retain research")
+ml.primary.AdmissionError: outcome exposure blocks forecast; retain research
