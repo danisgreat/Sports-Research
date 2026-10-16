@@ -1,6 +1,8 @@
 # Starters, bench and availability research
 
-**AVAIL-2026.10.15-v2.** Mandatory for every requested game under [CURRENT_RULES §5b](CURRENT_RULES.md#5-sources-event-state-and-time), including obscure, lower-tier, women's, youth, reserve and international competitions. Source routes: [SOURCES §3.11](SOURCES.md#311-field-fallback-and-official-social-use-by-sport). This is a research procedure; it does not establish predictive improvement or guarantee that teams publish all information before a request arrives.
+**Online exact-game confirmation:** Open current official selection/lineup evidence for both sides and each applicable role in HISTORICAL_SOURCE_PROTOCOL §2. Record names, starter/bench/reserve/inactive designation, exact event, URL and publication/retrieval times. Compare conflicting reports as needed. Record CONFIRMED, PROJECTED, NOT_YET_PUBLISHED, UNAVAILABLE or CONFLICTING per field; retain the overall card lineup-state vocabulary. Last-game selection, season rosters and postgame participation never prove pregame confirmation. Recheck around actual release and immediately before issue.
+
+**AVAIL-2026.10.16-v3.** Mandatory for every requested game under [CURRENT_RULES §5b](CURRENT_RULES.md#5-sources-event-state-and-time), including obscure, lower-tier, women's, youth, reserve and international competitions. Source routes: [SOURCES §3.11](SOURCES.md#311-field-fallback-and-official-social-use-by-sport). This is a research procedure; it does not establish predictive improvement or guarantee that teams publish all information before a request arrives.
 
 ## 1. The requirement
 

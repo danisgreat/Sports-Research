@@ -1,65 +1,21 @@
-# PROMPT 7 — Repair source data and admission before model use
+# PROMPT 7 — Build reviewed online history in a declared scope
 
-**P-2026.10.16-v17.0 · ARCHIVE_EXPANSION · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: declared sporting CSVs, provenance/source/coverage notes, supported profile updates and a new verification folder. Helpers/raw captures stay outside the repository. No original cards/logs, model parameters or implicit promotion.
+**P-2026.10.16-v17.1 · PROCEDURE · LOCAL_WORKING_TREE.** Read COMMON_OPERATING_PROTOCOL, CURRENT_RULES, HISTORICAL_SOURCE_PROTOCOL, ROSTER_AVAILABILITY_PROTOCOL, RESULTS_REBUILD_PLAN, SOURCES and actual target schemas. Writes: explicitly named market-free CSV/provenance/coverage/profile paths and a new verification folder. Raw captures/helpers stay externally; code stays under ml/. Original cards/logs/reports remain immutable.
 
-**Required repository fallback (REF-v1).** Always keep [https://github.com/danisgreat/Sports-Research/tree/main](https://github.com/danisgreat/Sports-Research/tree/main) as the standing reference. If required local files are not fully accessible (missing, unreadable, truncated or incomplete), retrieve the actual required contents from this repository before declaring them unavailable. Apply [GITHUB_REFERENCE_PROTOCOL](../../GITHUB_REFERENCE_PROTOCOL.md): resolve one main commit SHA, record exact files/read time and fallback results in the existing reading receipt, and preserve the declared authority mode. Never substitute an unpublished local mini, claim unread content or treat viewing code as executing it. If authorized remote access also fails, record the real gap and continue independent work.
+## 1. Declare the target
 
-## Inputs
+Resolve sport/competition/season/era, event grain/endpoint, stable IDs/aliases, timezone, known-at/corrections, online source plan, official fixture denominator and exact output paths. The old results store is retired. Do not restore it from Git, recreate its directory tree by default or generate placeholder seasons. A rebuild needs explicit scope/destination, separate from game research. Preserve affected operating originals.
 
-Specify sport/competition, seasons, fields/endpoints and source gaps, or discover priorities from current card availability/archive/baseline gaps. Any competition, including obscure leagues, is eligible for research. Do not equate missing familiar-provider coverage with nonexistent data.
+## 2. Collect observed online fields
 
-## 1. Freeze target and source plan
+Apply HISTORICAL_SOURCE_PROTOCOL to actual organizer/federation/league scorecards and both teams' dated results. Escalate to permitted providers and original-language sources; compare where needed. Game-sized work seeks both sides' L5/L10/L15/L20 with true n; season work reconciles its declared fixture population. Record URL, event/field/value, publication/available/retrieved times, capture hash and lineage. Seek exact-game confirmed players/roles/replacements under ROSTER_AVAILABILITY_PROTOCOL where in scope. Historical participation is not pregame publication proof.
 
-Read common controls/protocol, archive guide/README/coverage/source notes, SOURCES/availability protocol, relevant sport/profile/base-rate definitions, schemas, target files and latest learning. Print authority/HEAD/dirty inventory and actual receipt.
+## 3. Normalize, validate and admit
 
-Declare competition/era/season naming, event grain, stage/endpoint, native identity/doubleheaders/reschedules, official fixture denominator, timezone, known-at and correction rules, current coverage and exclusions. Preserve repaired originals before mutation. Choose one canonical folder per competition; aliases are not additional games.
+Use canonical event IDs and alias mappings; separate events/results/periods/lineups/source observations/corrections as needed. Classify OBSERVED/DERIVED/MISSING/CONFLICTING. No guessed times, fabricated periods, zero defaults or balancing scores. Check IDs, duplicates/reschedules/doubleheaders, season naming, types, final status, score equations, endpoints and official fixture completeness. Verify all changed rows where feasible; otherwise list exact checked IDs, sample method and unchecked remainder. Preserve conflicting evidence and field-specific use restrictions.
 
-For source availability gaps, discover the actual organizer/federation and both teams with original game sheets, local language, medical/disciplinary releases and official scorer routes. Document fields actually obtainable and announcement/access limitations. No universal publication promise.
+Separate event date and source availability/correction time. Date-only labels do not establish point-in-time features. Publish actual expected/collected/eligible/excluded counts, missingness and conflicts. New profiles need an independently verified population; retired profiles/models are never promoted implicitly. Game research may already use its own fresh reviewed inputs without waiting for this work.
 
-## 2. Collect observed fields without defaults
+## 4. Read back and publish exact scope
 
-Apply [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md) across the actual sport/league/competition: internet discovery is first recovery for absent, incomplete or incorrect local history. Preserve old rows/captures, resolve exact fields/identities and record local-versus-web reconciliation. A card may already use a reviewed local evidence dataset; permanent archive repair here reconciles that dataset without reissuing its original forecast.
-
-Record exact source URL, native ID, field/value, publication/update/retrieval time, capture/snapshot hash and collector lineage. Keep source bodies/helpers outside the repository when required. Write DATA_PROVENANCE: every column classified OBSERVED, DERIVED, MISSING, CONFLICTING or checked against a named source; schema/transformation rules, identities, canonical mapping, coverage and exclusions.
-
-Historical results retrieved now can be labels; they are not automatically historical pregame features. Record availability and correction times separately from event date. Unknown availability means exploratory date-only replay, not verified point-in-time admission. Same-game scores, awards, prose, actual lineup and late medical updates cannot populate earlier features.
-
-Preserve schema/order/types. New fields need an explicit migration; use a permitted sidecar for otherwise unrepresentable evidence. Never fabricate fixed start times, attendance, referees, approximate rounds, default OT flags, half-final period scores or missing health status. Observed zero stays zero; unobserved zero is not data. Keep raw values and interpretations separate.
-
-A suspicious constant/default pattern is SUSPECTED_DEFAULT until source/definition/season checks resolve it. Legitimate constants stay. Proven builder defaults are excluded from measurement with raw evidence preserved. No blanket automatic removal of every unusual score or cancelled season without field evidence.
-
-## 3. Validate population, identities and endpoints
-
-Count logical CSV records with CSV-aware facilities, not physical lines minus one unless embedded-newline absence is proven. Check headers/types, native IDs, duplicate/alias scope, dates/stages, zero/missingness, final state and endpoint equations. Reconcile home/away/total/margin/winner and period sums under actual era rules.
-
-Do not invent balancing period values. A row may be usable for final scores and unusable for periods/start-time/form. Retain conflicts with flags, source and disposition. Classify cancelled, suspended, replayed, awarded, forfeited and shortened events before comparison to the official fixture population.
-
-Verify the full changed set where feasible; otherwise disclose total versus checked. Independently inspect a declared spread including early/middle/late dates, zeros, ties, extras and doubleheaders; at least ten or all if fewer. List exact checked IDs and disagreements. Domain count is not independent lineage.
-
-## 4. State profile and model readiness honestly
-
-Publish coverage/gaps/as-of time and field-specific admission. A previous training_eligible or LABEL_A label applies only to its actual verified rows/snapshot; stale exports or a league-name allowlist do not transfer it to new inputs. Record direct yearly-source hashes and source-to-event mapping.
-
-Recompute profiles from a defined vetted population with seasons/stage/endpoint/n/missingness/means/SD/covariance. Archive the prior row, compare windows and set effective time; do not use a future whole-season profile for earlier forecasts. Insufficient evidence retains a stale labelled prior and DATA_PENDING. Register a prospective old/new profile comparison before claiming predictive gain.
-
-Invalidate affected model artifact/data identities explicitly; do not rerun or modify the workshop implicitly. Queue exact league/field tasks for prompt 8 and preserve old model reports/receipts.
-
-## 5. Verify, publish and return
-
-Read back every changed CSV/note, reconcile added/repaired/unchanged rows and source mappings, inspect exact scope, verify preserved originals and relevant negative/valid fixtures. Publish exact permitted paths under invoked-task authorization; no large ignored exports, raw market captures, cache/binary files or unrelated stage-all.
-
-Fetch and verify remote SHA/artifacts. Return event/season/endpoint scope, official/collected counts, actual verified field coverage, missingness/conflicts, known-at limits, profile readiness, affected model gates, file links and publication status.
-
-
-Source/fit/calibration and archive-write failures do not terminate independent collection/reconciliation under RESEARCH_COMPLETION_PROTOCOL. Record exact exhausted fields and complete all permitted independent work. A game request does not have to wait for bulk archive repair; route fresh reviewed evidence to the named game scope without claiming unperformed shared writes.
-
-## Research retention and execution disposition (RETAIN-v1)
-
-**Retain the research regardless of ML (RETAIN-v1).** Read [RESEARCH_RETENTION_PROTOCOL](../../RESEARCH_RETENTION_PROTOCOL.md). Missing/unsupported/failed ML or `No module named ml`, baseline/calibration and unavailable receipts never by themselves block recording a researched game under its next reconciled P-ID or canonical import. Run the supported model when accessible; otherwise retain RESEARCH_ONLY_NO_MODEL with actual reason, no fake receipt/model probability, and supported analyst_p separately NOT_PRIMARY. C21 verifies honest disposition, including blank execution paths for no run. Settle original contracts and retain verified targets for future training even when no expert existed; only real frozen bundles supply Hedge feedback. Preserve complete research, genuine gaps and real timing; do not backdate.
-
-A missing league baseline/profile triggers exact-competition sporting history and metadata recovery, not exemption from per-game ML execution. Queue the actual source/schema/endpoint defects for prompt1 and preserve known-at evidence; do not fabricate a comparator, regenerate issued cards or borrow another competition's parameters. Reviewed source-route inputs may support a fresh current attempt independently of permanent archive/profile repair.
-
-
-**Model use and mandatory running-log record (owner clarification, 16 October 2026).** Use the supported ML/RL mechanisms when they are available for the exact sport, competition and endpoint. Whether a model exists or not, assign the reconciled permanent P-ID, append the researched game card to the active running mini-log, read it back and advance its footer. A missing sport-specific model must not leave an otherwise recordable game as intake-only, unissued or without an ID. With no verified model output, record RESEARCH_ONLY_NO_MODEL, the actual reason and supported analyst work; never invent model probabilities or receipts. Carry that same P-ID through verified canonical import; do not allocate another ID. Before an authorized import, the local card may truthfully say PENDING_IMPORT; that status never cancels its ID or running-log entry. Identity/allocation conflicts, frozen or inaccessible originals and real write failures still block only the affected mutation. Verified settlements remain available for future model development in both paths.
-
-See [RETAIN-v1](../../RESEARCH_RETENTION_PROTOCOL.md). This is an editorial clarification of the existing two-path behavior; no model, numerical policy or format change.
+Verify every changed file/row/source map, preserved originals and relevant negative/valid cases. Inspect staged scope and publish only with task authorization. No raw captures/caches or unrelated edits. Fetch and compare remote commit/artifacts. Return actual coverage, admitted fields, true n, unresolved gaps, known-at limits and publication status. A plan or passing test is not a completed/certified rebuild.

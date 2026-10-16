@@ -1,4 +1,0 @@
-# FIBA AmeriCup Officiating & Refereeing Corps — 2008 Season
-
-- **Status:** INACTIVE (Inter-Tournament Cycle).
-- **Reason:** This tournament operates on a periodic cycle and was not contested in 2008. No tournament officiating corps was assembled.

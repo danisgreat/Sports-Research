@@ -1,5 +1,8 @@
 # Historical Markdown link index
 
+**Results-store retirement, 16 October 2026:** Original historical references remain documentary evidence. They can be inspected at [the pre-removal commit](https://github.com/danisgreat/Sports-Research/tree/2ea94f6f718d1f43c7af9e567008495114ef9cef/Previous%20Sports%20Results), but must not be restored or reused as new-card facts. HISTORICAL_SOURCE_PROTOCOL replaces this dependency.
+
+
 **Generated 2026-09-28 from the retained Markdown tree.** This is a path audit, not a statement that the linked source was independently verified. The scanner detects conventional inline local links with balanced parentheses; unusual reference syntax, unlinked text paths, and links with titles require separate inspection.
 
 The original link text in frozen ledgers has been preserved. Where a deleted target existed in reachable Git history, the recovery link points to an immutable commit and original path. A Git file link is documentary provenance, not a live source receipt. Where no reachable version was found, the target is explicitly unavailable; no substitute content has been inferred.

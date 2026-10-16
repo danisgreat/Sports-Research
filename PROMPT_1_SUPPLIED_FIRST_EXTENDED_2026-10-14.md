@@ -1,5 +1,7 @@
 # PROMPT 1 — Supplied-first individual game-card research and local-mini append
 
+**Online history and confirmed players (HIST-2026.10.16-v2 / AVAIL-2026.10.16-v3).** For every game, research both sides' L5/L10/L15/L20 online under [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md), with opened sources, dated game rows and true n. Seek exact-game confirmed players, starting roles, bench/replacements and absences under [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md); projected players remain unconfirmed. The retired local results store and its derived profiles are not required inputs or fallbacks. Earlier archive-first directions are superseded.
+
 **Extended edition · 14 October 2026 · prompt revision SF-2 · selection policy `SUPPLIED_FIRST_V1`.**
 
 Research the requested event thoroughly. Assess **every exact user-supplied proposition**, show which is most likely to succeed under its frozen definition, and retain reproducible issue-time records. Preserve the complete sport-specific workflow below. Unsupported facts or probabilities remain explicitly missing.
@@ -426,11 +428,11 @@ Apply SF10/SF11: search all relevant local mini/carryover and canonical bodies/s
 
 Verify the named mini, format, writer/lease, freeze status, current canonical allocation and outstanding local sequence. Do not reserve, skip, collide, renumber or consume a canonical ID. Keep analysis cutoff, research completion, actual issue and state recheck separate. Complete the two-step lineup/repricing target when timing permits; research comprehensively if late. Recheck actual state immediately before issue. Outcome exposure prevents prospective pregame credit, even with a reconstructed earlier cutoff.
 
-### 3. Evidence, roster and archive
+### 3. Evidence, roster and online history
 
 Follow official field-owner (league match centre / box score) → structured provider (RealGM, ESPN, etc.) → quality corroboration routes. For each decisive claim retain URL, exact field/value or brief extract, source publication/update time when known, retrieval time and provenance/lineage. Log inaccessible/stale/conflicting sources. Three domains are not three independent collectors. No odds/tips/previews/fantasy inputs.
 
-Verify rotation, minutes, injuries, rest/travel, and especially **confirmed starting fives and active bench/reserve availability**; probable is not confirmed. Distinguish fact, historical estimate and analyst assumption. Inspect actual archive contents under `Previous Sports Results/Basketball/<league>/...` and print files, logical rows read, season/endpoint filters, latest usable date and missingness. Use only results known before cutoff; a date alone does not prove a same-day game had finished. Do not use postgame narrative or full-season aggregates from after cutoff. Check profile freshness against the pinned recipe and competition/rules era; where the applicable rule flags STALE_PROFILE, investigate current sources and price supported sensitivity. Missing replacement data does not justify a fabricated refresh.
+Verify rotation, minutes, injuries, rest/travel, and especially **confirmed starting fives and active bench/reserve availability**; probable is not confirmed. Distinguish fact, historical estimate and analyst assumption. Research the exact competition's prior games online under HISTORICAL_SOURCE_PROTOCOL and print source URLs, dated event rows, true window n, endpoint filters, latest usable date and missingness. Use only results known before cutoff; a date alone does not prove a same-day game had finished. Do not use postgame narrative or full-season aggregates from after cutoff. Check profile freshness against the pinned recipe and competition/rules era; where the applicable rule flags STALE_PROFILE, investigate current sources and price supported sensitivity. Missing replacement data does not justify a fabricated refresh.
 
 #### Mandatory historical-form implementation for this sport (FR1–FR6)
 
@@ -509,11 +511,11 @@ Apply SF10/SF11: search all relevant local mini/carryover and canonical bodies/s
 
 Verify the named mini, format, writer/lease, freeze status, current canonical allocation and outstanding local sequence. Do not reserve, skip, collide, renumber or consume a canonical ID. Keep analysis cutoff, research completion, actual issue and state recheck separate. Complete the two-step lineup/repricing target when timing permits; research comprehensively if late. Recheck actual state immediately before issue. Outcome exposure prevents prospective pregame credit, even with a reconstructed earlier cutoff.
 
-### 3. Evidence, XI and archive
+### 3. Evidence, XI and online history
 
 Follow official board/ICC match center → ESPNcricinfo/structured provider → quality corroboration routes. For each decisive claim retain URL, exact field/value or brief extract, source publication/update time when known, retrieval time and provenance/lineage. Log inaccessible/stale/conflicting sources. Three domains are not three independent collectors. No odds/tips/previews/fantasy inputs.
 
-Confirm playing XI, toss result, batting order, bowling allocations/quotas, pitch report, weather/dew and rain resources; probable is not confirmed. Distinguish fact, historical estimate and analyst assumption. Inspect actual archive contents under `Previous Sports Results/Cricket/...` and print files, logical rows read, format/tournament filters, latest usable date and missingness. Use only results known before cutoff. Do not use postgame narrative or full-season aggregates from after cutoff.
+Confirm playing XI, toss result, batting order, bowling allocations/quotas, pitch report, weather/dew and rain resources; probable is not confirmed. Distinguish fact, historical estimate and analyst assumption. Research the exact competition's prior games online under HISTORICAL_SOURCE_PROTOCOL and print source URLs, dated event rows, true window n, endpoint filters, latest usable date and missingness. Use only results known before cutoff. Do not use postgame narrative or full-season aggregates from after cutoff.
 
 #### Mandatory historical-form implementation for this sport (FR1–FR6)
 
@@ -596,7 +598,7 @@ Verify the named mini, format, writer/lease, freeze status, current canonical al
 
 Follow official league scoreboard (MLB Gameday, KBO, NPB official, etc.) → structured provider (MyKBO, etc.) → quality corroboration routes. For each decisive claim retain URL, exact field/value or brief extract, source publication/update time when known, retrieval time and provenance/lineage. Log inaccessible/stale/conflicting sources. Three domains are not three independent collectors. No odds/tips/previews/fantasy inputs.
 
-Verify starting pitcher identity and expected workload, confirmed batting lineup/platoon, bullpen availability, park factors, weather and rest; probable is not confirmed. Unknown pitcher weights stay assumptions, not facts. Inspect actual archive contents under `Previous Sports Results/Baseball/<league>/...` and print files, logical rows read, season/endpoint filters, latest usable date and missingness. Use only results known before cutoff. Do not use postgame narrative or full-season aggregates from after cutoff.
+Verify starting pitcher identity and expected workload, confirmed batting lineup/platoon, bullpen availability, park factors, weather and rest; probable is not confirmed. Unknown pitcher weights stay assumptions, not facts. Research the exact competition's prior games online under HISTORICAL_SOURCE_PROTOCOL and print source URLs, dated event rows, true window n, endpoint filters, latest usable date and missingness. Use only results known before cutoff. Do not use postgame narrative or full-season aggregates from after cutoff.
 
 #### Mandatory historical-form implementation for this sport (FR1–FR6)
 
@@ -675,11 +677,11 @@ Apply SF10/SF11: search all relevant local mini/carryover and canonical bodies/s
 
 Verify the named mini, format, writer/lease, freeze status, current canonical allocation and outstanding local sequence. Do not reserve, skip, collide, renumber or consume a canonical ID. Keep analysis cutoff, research completion, actual issue and state recheck separate. Complete the two-step lineup/repricing target when timing permits; research comprehensively if late. Recheck actual state immediately before issue. Outcome exposure prevents prospective pregame credit, even with a reconstructed earlier cutoff.
 
-### 3. Evidence, XI and archive
+### 3. Evidence, XI and online history
 
 Follow official field-owner / federation match center → structured provider (FBref, official club reporting, etc.) → quality corroboration routes. For each decisive claim retain URL, exact field/value or brief extract, source publication/update time when known, retrieval time and provenance/lineage. Log inaccessible/stale/conflicting sources. Three domains are not three independent collectors. No odds/tips/previews/fantasy inputs.
 
-Confirm starting XI, goalkeeper, bench/rotation, injuries, schedule congestion; probable is not confirmed. Inspect actual archive contents under `Previous Sports Results/Soccer/<league>/...` and print files, logical rows read, season/endpoint filters, latest usable date and missingness. Use only results known before cutoff. Do not use postgame narrative or full-season aggregates from after cutoff.
+Confirm starting XI, goalkeeper, bench/rotation, injuries, schedule congestion; probable is not confirmed. Research the exact competition's prior games online under HISTORICAL_SOURCE_PROTOCOL and print source URLs, dated event rows, true window n, endpoint filters, latest usable date and missingness. Use only results known before cutoff. Do not use postgame narrative or full-season aggregates from after cutoff.
 
 #### Mandatory historical-form implementation for this sport (FR1–FR6)
 
@@ -762,7 +764,7 @@ Verify the named mini, format, writer/lease, freeze status, current canonical al
 
 Follow official league game sheet / match reports → structured provider → quality corroboration routes. For each decisive claim retain URL, exact field/value or brief extract, source publication/update time when known, retrieval time and provenance/lineage. Log inaccessible/stale/conflicting sources. Three domains are not three independent collectors. No odds/tips/previews/fantasy inputs.
 
-Confirm starting goalies or supported mixture, lines/scratches, special teams, rest and travel; probable is not confirmed. Unconfirmed goalie sensitivity must reach totals/ranks. Inspect actual archive contents under `Previous Sports Results/Ice Hockey/<league>/...` and print files, logical rows read, season/endpoint filters, latest usable date and missingness. Use only results known before cutoff. Do not use postgame narrative or full-season aggregates from after cutoff.
+Confirm starting goalies or supported mixture, lines/scratches, special teams, rest and travel; probable is not confirmed. Unconfirmed goalie sensitivity must reach totals/ranks. Research the exact competition's prior games online under HISTORICAL_SOURCE_PROTOCOL and print source URLs, dated event rows, true window n, endpoint filters, latest usable date and missingness. Use only results known before cutoff. Do not use postgame narrative or full-season aggregates from after cutoff.
 
 #### Mandatory historical-form implementation for this sport (FR1–FR6)
 
@@ -928,7 +930,7 @@ Verify the named mini, format, writer/lease, freeze status, current canonical al
 
 Follow official league match center → structured provider → quality corroboration routes. For each decisive claim retain URL, exact field/value or brief extract, source publication/update time when known, retrieval time and provenance/lineage. Log inaccessible/stale/conflicting sources. Three domains are not three independent collectors. No odds/tips/previews/fantasy inputs.
 
-Verify team/bench/spine or halves/front row, kicking, possession/territory, discipline, workload and weather; probable is not confirmed. Inspect actual archive contents under `Previous Sports Results/Rugby/...` and print files, logical rows read, competition/stage filters, latest usable date and missingness. Use only results known before cutoff. Do not use postgame narrative or full-season aggregates from after cutoff.
+Verify team/bench/spine or halves/front row, kicking, possession/territory, discipline, workload and weather; probable is not confirmed. Research the exact competition's prior games online under HISTORICAL_SOURCE_PROTOCOL and print source URLs, dated event rows, true window n, endpoint filters, latest usable date and missingness. Use only results known before cutoff. Do not use postgame narrative or full-season aggregates from after cutoff.
 
 #### Mandatory historical-form implementation for this sport (FR1–FR6)
 
@@ -1007,11 +1009,11 @@ Apply SF10/SF11: search all relevant local mini/carryover and canonical bodies/s
 
 Verify the named mini, format, writer/lease, freeze status, current canonical allocation and outstanding local sequence. Do not reserve, skip, collide, renumber or consume a canonical ID. Keep analysis cutoff, research completion, actual issue and state recheck separate. Complete the two-step lineup/repricing target when timing permits; research comprehensively if late. Recheck actual state immediately before issue. Outcome exposure prevents prospective pregame credit, even with a reconstructed earlier cutoff.
 
-### 3. Evidence, lineup and archive
+### 3. Evidence, lineup and online history
 
 Follow official AFL match centre / AFLW app → structured provider → quality corroboration routes. For each decisive claim retain URL, exact field/value or brief extract, source publication/update time when known, retrieval time and provenance/lineage. Log inaccessible/stale/conflicting sources. Three domains are not three independent collectors. No odds/tips/previews/fantasy inputs.
 
-Verify teams, ruck/midfield, clearances, inside-50/scoring-shot creation, conversion, defence, rest/venue/weather; probable is not confirmed. Inspect actual archive contents under `Previous Sports Results/AFL/...` and print files, logical rows read, competition/season filters, latest usable date and missingness. Use only results known before cutoff. Do not use postgame narrative or full-season aggregates from after cutoff.
+Verify teams, ruck/midfield, clearances, inside-50/scoring-shot creation, conversion, defence, rest/venue/weather; probable is not confirmed. Research the exact competition's prior games online under HISTORICAL_SOURCE_PROTOCOL and print source URLs, dated event rows, true window n, endpoint filters, latest usable date and missingness. Use only results known before cutoff. Do not use postgame narrative or full-season aggregates from after cutoff.
 
 #### Mandatory historical-form implementation for this sport (FR1–FR6)
 
@@ -1090,11 +1092,11 @@ Apply SF10/SF11: search all relevant local mini/carryover and canonical bodies/s
 
 Verify the named mini, format, writer/lease, freeze status, current canonical allocation and outstanding local sequence. Do not reserve, skip, collide, renumber or consume a canonical ID. Keep analysis cutoff, research completion, actual issue and state recheck separate. Complete the two-step lineup/repricing target when timing permits; research comprehensively if late. Recheck actual state immediately before issue. Outcome exposure prevents prospective pregame credit, even with a reconstructed earlier cutoff.
 
-### 3. Evidence, inactives and archive
+### 3. Evidence, inactives and online history
 
 Follow official NFL Game Center / college box score → structured provider → quality corroboration routes. For each decisive claim retain URL, exact field/value or brief extract, source publication/update time when known, retrieval time and provenance/lineage. Log inaccessible/stale/conflicting sources. Three domains are not three independent collectors. No odds/tips/previews/fantasy inputs.
 
-Verify QB, line/skill/defensive availability, official pregame inactives list at the competition-specific announcement time, efficiency, drive/play pace, pressure, special teams, rest/weather; probable is not confirmed. Inspect actual archive contents under `Previous Sports Results/American Football/<league>/...` and print files, logical rows read, season/week filters, latest usable date and missingness. Use only results known before cutoff. Do not use postgame narrative or full-season aggregates from after cutoff.
+Verify QB, line/skill/defensive availability, official pregame inactives list at the competition-specific announcement time, efficiency, drive/play pace, pressure, special teams, rest/weather; probable is not confirmed. Research the exact competition's prior games online under HISTORICAL_SOURCE_PROTOCOL and print source URLs, dated event rows, true window n, endpoint filters, latest usable date and missingness. Use only results known before cutoff. Do not use postgame narrative or full-season aggregates from after cutoff.
 
 #### Mandatory historical-form implementation for this sport (FR1–FR6)
 
@@ -1173,11 +1175,11 @@ Apply SF10/SF11: search all relevant local mini/carryover and canonical bodies/s
 
 Verify the named mini, format, writer/lease, freeze status, current canonical allocation and outstanding local sequence. Do not reserve, skip, collide, renumber or consume a canonical ID. Keep analysis cutoff, research completion, actual issue and state recheck separate. Complete the two-step lineup/repricing target when timing permits; research comprehensively if late. Recheck actual state immediately before issue. Outcome exposure prevents prospective pregame credit, even with a reconstructed earlier cutoff.
 
-### 3. Evidence and archive
+### 3. Evidence and online history
 
 Follow official governing body / field owner match center → structured providers → quality corroboration routes. For each decisive claim retain URL, exact field/value or brief extract, source publication/update time when known, retrieval time and provenance/lineage. Log inaccessible/stale/conflicting sources. Three domains are not three independent collectors. No odds/tips/previews/fantasy inputs.
 
-Verify confirmed participant readiness, lineups and availability; probable is not confirmed. Inspect archive if available. If sources cannot support numerical modelling, retain supported qualitative research; use NO_FORECAST only when a responsible sporting direction is unsupported.
+Verify confirmed participant readiness, lineups and availability; probable is not confirmed. Research exact participants' prior games online under HISTORICAL_SOURCE_PROTOCOL. If sources cannot support numerical modelling, retain supported qualitative research; use NO_FORECAST only when a responsible sporting direction is unsupported.
 
 #### Mandatory historical-form implementation for this sport (FR1–FR6)
 

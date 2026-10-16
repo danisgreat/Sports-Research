@@ -1,6 +1,10 @@
 # Required GitHub reference when local access is incomplete
 
-**REF-2026.10.15-v1 · MDS-2026.10.16-v17.0 · CR-2026.10.16-R1 · P-2026.10.16-v17.0.** Standing owner instruction: refer to [Sports Research on GitHub — main](https://github.com/danisgreat/Sports-Research/tree/main) whenever local files are not fully accessible. This PROCEDURE release changes access/recovery steps only; numerical policy, scoring, selection and log formats are unchanged.
+**Retired-data exception:** Required recovery applies to current controls and genuine missing active inputs. Intentional store deletion is not an access failure: never restore it or its retired profiles from old commits for new research. Research those facts online.
+
+**Online history and confirmed players (HIST-2026.10.16-v2 / AVAIL-2026.10.16-v3).** For every game, research both sides' L5/L10/L15/L20 online under [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md), with opened sources, dated game rows and true n. Seek exact-game confirmed players, starting roles, bench/replacements and absences under [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md); projected players remain unconfirmed. The retired local results store and its derived profiles are not required inputs or fallbacks. Earlier archive-first directions are superseded.
+
+**REF-2026.10.15-v1 · MDS-2026.10.16-v17.1 · CR-2026.10.16-R2 · P-2026.10.16-v17.1.** Standing owner instruction: refer to [Sports Research on GitHub — main](https://github.com/danisgreat/Sports-Research/tree/main) whenever local files are not fully accessible. This PROCEDURE release changes access/recovery steps only; numerical policy, scoring, selection and log formats are unchanged.
 
 ## Required recovery
 

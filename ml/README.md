@@ -1,12 +1,14 @@
 > **Primary ML/RL owner amendment (15 October 2026):** [PRIMARY_PREDICTION_PROTOCOL](../PRIMARY_PREDICTION_PROTOCOL.md) permits the separate receipt-bound primary runtime and its full-information sporting mixture (PRIMARY_HEDGE_MIX_V3, which replaced the Exp3 bandit on 15 October 2026). Older statements below barring all model card inputs describe the prior independent-manual lane and are superseded for this new named lane. Existing historical artifacts remain unqualified; market/decision-lab outputs stay excluded.
 
+**Online history and confirmed players (HIST-2026.10.16-v2 / AVAIL-2026.10.16-v3).** For every game, research both sides' L5/L10/L15/L20 online under [HISTORICAL_SOURCE_PROTOCOL](../HISTORICAL_SOURCE_PROTOCOL.md), with opened sources, dated game rows and true n. Seek exact-game confirmed players, starting roles, bench/replacements and absences under [ROSTER_AVAILABILITY_PROTOCOL](../ROSTER_AVAILABILITY_PROTOCOL.md); projected players remain unconfirmed. The retired local results store and its derived profiles are not required inputs or fallbacks. Earlier archive-first directions are superseded.
+
 **Required repository fallback (REF-v1).** Always keep [https://github.com/danisgreat/Sports-Research/tree/main](https://github.com/danisgreat/Sports-Research/tree/main) as the standing reference. If required local files are not fully accessible (missing, unreadable, truncated or incomplete), retrieve the actual required contents from this repository before declaring them unavailable. Apply [GITHUB_REFERENCE_PROTOCOL](../GITHUB_REFERENCE_PROTOCOL.md): resolve one main commit SHA, record exact files/read time and fallback results in the existing reading receipt, and preserve the declared authority mode. Never substitute an unpublished local mini, claim unread content or treat viewing code as executing it. If authorized remote access also fails, record the real gap and continue independent work.
 
 # `ml/` — primary sporting runtime and maintainer model workshop
 
 **Repeat bug audit:** [implementation and coverage](../research/verification/ml_bug_audit_2026-10-14-1/IMPLEMENTATION.md) repairs source parsing, grids, chronology, failure handling, reports, shadow outcomes and decision mechanics. Read the [additional artifact admission notice](../research/model_shadow/BUG_AUDIT_ADMISSION_2026-10-14.md) before using old outputs with the new implementation. Fixed historical fit/grid smoke checks are not predictive validation; fresh model outputs need controlled regeneration.
 
-**Historical workshop review (14 October 2026):** CR-2026.10.14-R3 / prompt suite v11.3. Current primary release is CR-2026.10.16-R1 / PRIMARY-2026.10.16-v3.3 / prompt suite v17.0 under PRIMARY_PREDICTION_PROTOCOL; `python -m ml.evaluation.primary_replay` runs the corrected historical policy proxy into a new V3 output folder; the old replay is recoverable at 869a4776e. Read the [actual implementation review](../research/verification/framework_change_2026-10-14-5/ML_WORKSHOP_REVIEW.md) and [artifact admission](../research/model_shadow/ARTIFACT_PROVENANCE.md). Historical model outputs retain their original generating source; corrected report replays have new receipts. No model is promoted. That historical review reported 60 executed checks; current primary/integrity test results are in the new primary verification report. Neither establishes predictive qualification.
+**Historical workshop review (14 October 2026):** CR-2026.10.14-R3 / prompt suite v11.3. Current primary release is CR-2026.10.16-R2 / PRIMARY-2026.10.16-v3.3 / prompt suite v17.0 under PRIMARY_PREDICTION_PROTOCOL; `python -m ml.evaluation.primary_replay` runs the corrected historical policy proxy into a new V3 output folder; the old replay is recoverable at 869a4776e. Read the [actual implementation review](../research/verification/framework_change_2026-10-14-5/ML_WORKSHOP_REVIEW.md) and [artifact admission](../research/model_shadow/ARTIFACT_PROVENANCE.md). Historical model outputs retain their original generating source; corrected report replays have new receipts. No model is promoted. That historical review reported 60 executed checks; current primary/integrity test results are in the new primary verification report. Neither establishes predictive qualification.
 
 **Authority:** CURRENT_RULES §0 (model workshop exception) and §5a (decision-lab firewall), CR-2026.10.14-R1; framework change [2026-10-14-3](../research/verification/framework_change_2026-10-14-3/IMPLEMENTATION.md); design in [ML_RL_IMPLEMENTATION_FRAMEWORK_2026-10-14.md](../ML_RL_IMPLEMENTATION_FRAMEWORK_2026-10-14.md).
 
@@ -17,7 +19,7 @@ This is the only place in the repository where code may live. A maintainer runs 
 ```text
 python -m pip install -r ml/requirements.txt
 python -m pytest ml/tests                          # 40+ checks; C-ML-01..18 of the framework's §12
-python -m ml discover                              # every competition folder in the archive, with status and reason
+python -m ml discover                              # optional reviewed-history discovery; empty when no root exists
 python -m ml run-all --workers 8                   # every modellable competition, card calibration, decision lab, STATUS
 python -m ml competition "Basketball/NBL" "Soccer/Premier League"   # selected competitions by archive path
 python -m ml cards | decision-lab | index
@@ -27,7 +29,7 @@ Intermediate full predictions are written outside the repository to `ML_CACHE` (
 
 ## One process for every competition
 
-The workshop has no list of "main leagues". `ml/config.py` walks `Previous Sports Results/<Sport>/<Competition>/` and, for every folder:
+The workshop has no list of "main leagues". `ml/config.py` walks `research/reviewed_history/<Sport>/<Competition>/` and, for every folder:
 
 1. **Classifies it.**
    - header-only;
@@ -96,7 +98,7 @@ The workshop has no list of "main leagues". `ml/config.py` walks `Previous Sport
 
 Primary inference/settlement CLI: `python -m ml primary predict --help` / `python -m ml primary settle --help`. This actually fits/reloads saved distributions and uses delayed sporting feedback; it does not run the staking lab. Source-known-at history, reviewed field/endpoint evidence, actual run receipts and immutable outputs required.
 
-**Preferred historical recovery:** [HISTORICAL_SOURCE_PROTOCOL](../HISTORICAL_SOURCE_PROTOCOL.md) applies to every sport and competition. Missing, incomplete or incorrect local history is researched online first, with reviewed web rows usable in the named primary input scope; shared archive maintenance is separate. Source/known-at checks and unsupported-model limits remain.
+**Mandatory online history:** [HISTORICAL_SOURCE_PROTOCOL](../HISTORICAL_SOURCE_PROTOCOL.md) applies to every sport and competition. Every game history is researched and verified online, regardless of local data, with reviewed web rows usable in the named primary input scope; shared archive maintenance is separate. Source/known-at checks and unsupported-model limits remain.
 
 
 **Research retention before model availability (RETAIN-v1).** [RESEARCH_RETENTION_PROTOCOL](../RESEARCH_RETENTION_PROTOCOL.md) supersedes EXEC-v1's model prerequisite for recording/import. Write every identified researched event under its reconciled working P-ID and canonically retain it through verified import even if the model/adapter/runtime/module/baseline/calibration/receipt is absent or failed. Use RESEARCH_ONLY_NO_MODEL, explicit execution reason and blank nonexistent artifact paths; keep model p_card NOT_ESTIMATED and supported analyst_p NOT_PRIMARY. Missing ML never by itself blocks the ID or a source-backed settlement. Retain verified settled labels for future model development with source/known-at/revision/feature status; only actual frozen experts can supply Hedge losses. Never invent probabilities, execution, final scores or pregame timing. Identity/custody/write conflicts remain real blockers.

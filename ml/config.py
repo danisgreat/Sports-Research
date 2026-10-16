@@ -1,6 +1,7 @@
 """Competition discovery and configuration for the model workshop.
 
-Every competition folder under ``Previous Sports Results/<Sport>/<Competition>/`` is discovered automatically.
+Optional maintainer discovery uses ``research/reviewed_history/<Sport>/<Competition>/``.
+The retired store is never read or restored; new primary runs use reviewed web metadata/history.
 Its columns, stage vocabulary, extra-time rule, tune/test seasons and comparator constants are derived from the
 files themselves plus a small table of sport rules. Overrides exist only for facts a file cannot show
 (franchise renames, the TB-1 constants that PROBABILITY_TOOLKIT §4.3 validated for nine leagues).
@@ -16,7 +17,7 @@ from dataclasses import dataclass, field, replace
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-ARCHIVE = REPO_ROOT / "Previous Sports Results"
+ARCHIVE = REPO_ROOT / "research" / "reviewed_history"
 SHADOW_ROOT = REPO_ROOT / "research" / "model_shadow"
 
 csv.field_size_limit(10**9)
@@ -262,6 +263,8 @@ def _discover_cached(only_path: str | None = None) -> tuple:
     from ml.data.archive import stage_of, flag_state, missing_text, score_int  # local import: archive imports config
 
     out: list[Discovery] = []
+    if not ARCHIVE.is_dir():
+        return ()
     for sport_dir in sorted(p for p in ARCHIVE.iterdir() if p.is_dir() and not p.name.startswith("_")):
         sport = sport_dir.name
         if only_path is not None and sport != only_path.split("/", 1)[0]:

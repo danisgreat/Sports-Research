@@ -1,4 +1,7 @@
 <!-- MINI-LOG-FORMAT: mini-log-7 -->
+
+**Online history and confirmed players (HIST-2026.10.16-v2 / AVAIL-2026.10.16-v3).** For every game, research both sides' L5/L10/L15/L20 online under [HISTORICAL_SOURCE_PROTOCOL](../../../HISTORICAL_SOURCE_PROTOCOL.md), with opened sources, dated game rows and true n. Seek exact-game confirmed players, starting roles, bench/replacements and absences under [ROSTER_AVAILABILITY_PROTOCOL](../../../ROSTER_AVAILABILITY_PROTOCOL.md); projected players remain unconfirmed. The retired local results store and its derived profiles are not required inputs or fallbacks. Earlier archive-first directions are superseded.
+
 # FORMAT EXAMPLE — synthetic active mini
 
 NOT_ISSUED / NOT_IMPORTABLE. EXAMPLE IDs are documentation identifiers, never P-IDs. Every team, event, time and probability below is a stipulated toy fixture, not observed sports evidence. Do not copy these values into a real card. The previous mini-log-6 pair is kept unchanged in [legacy_mini_log_6/](legacy_mini_log_6/EXAMPLE_ACTIVE_MINI.md).
@@ -53,7 +56,7 @@ Examples consume no P-ID. Production rules are in CARD_AND_LOG_TEMPLATES §2.
 - **Baseline:** BASELINE_LEAGUE_V1_TOY — stipulated independent fixture masses .30/.30/.25/.15 on the same four states; no real league fit or archive sample claimed
 - **Regime flags / context:** NONE / synthetic arithmetic
 - **Settlement fields / capture plan:** toy final A/B points; fixture-only source; no live capture, scheduled job NO
-- **Rules read / archive check:** CURRENT_RULES §§2–8; SELECTION_RULES §§2–3/5/9; SCORING_AND_VALIDATION §§1–3; ARCHIVE_USE_GUIDE recipe R2 (toy rows in A3); archive N/A synthetic
+- **Rules read / archive check:** CURRENT_RULES §§2–8; SELECTION_RULES §§2–3/5/9; SCORING_AND_VALIDATION §§1–3; ARCHIVE_USE_GUIDE online form recipe R2 (toy rows in A3); ONLINE_HISTORY N/A synthetic; real cards require opened online history/player sources
 - **Evidence receipt:** all inputs stipulated in A3; no external sporting source
 - **Known-at:** N/A synthetic; no archive capture; no KNOWN_AT_UNVERIFIED input
 - **Lineup state / issue step:** N/A (toy sport has no lineup); hypothetical research completion 10:01Z, issue freeze 10:02Z when complete; no countdown requirement

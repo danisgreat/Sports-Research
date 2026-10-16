@@ -1,10 +1,15 @@
 # Current baseline authority - 2026-10-01
 
+**Historical register:** Earlier numerical rows/queries retain their dated research scope. Any archive-derived population is retired for new use; independently re-establish values online. No numerical refresh is claimed.
+
+**Online history and confirmed players (HIST-2026.10.16-v2 / AVAIL-2026.10.16-v3).** For every game, research both sides' L5/L10/L15/L20 online under [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md), with opened sources, dated game rows and true n. Seek exact-game confirmed players, starting roles, bench/replacements and absences under [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md); projected players remain unconfirmed. The retired local results store and its derived profiles are not required inputs or fallbacks. Earlier archive-first directions are superseded.
+
+
 **Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
 
 > **Current authority (October 5):** [METHOD.md](METHOD.md) and [CURRENT_RULES.md](CURRENT_RULES.md) govern new work. Requested qualitative or explicitly uncalibrated research receives canonical Part 6 IDs regardless of calibration; numerical performance certification is separate. Read current IDs/freeze from the [status register](GAME_LOG_STATUS_CURRENT.md), unresolved items from the [carryover](research/verification/closure_2026-10-05/carryover.md), and [current implementation evidence](research/verification/implementation_2026-10-05/REPORT.md). Earlier method, queue, freeze and eligibility statements below retain their historical scope.
 
-For new cards, baselines come from cutoff-restricted population score distributions and the league rows in [LEAGUE_PROFILES.md](LEAGUE_PROFILES.md), computed by hand ([ARCHIVE_USE_GUIDE.md](ARCHIVE_USE_GUIDE.md) §4). The code that once generated baseline distributions was removed on 2026-10-09; state the event, endpoint and cutoff beside any baseline you print. Never replace an unresolved historical baseline with 0.500 or a diagnostic literal. Archive labels require canonical deduplication/source validation and explicit availability assumptions before an as-of query.
+For new cards, derive baselines from a separate online-sourced exact-competition population under HISTORICAL_SOURCE_PROTOCOL and SELECTION_RULES §9. Earlier numbers are historical and require independent online verification before reuse; no deleted-store fallback.
 
 The historical register below retains earlier descriptive population estimates and missing cells. It does not establish current predictive skill, universal probability widths or qualification of another competition. New family-specific comparisons and uncertainty are recorded in the October development report; opened data remain development evidence.
 

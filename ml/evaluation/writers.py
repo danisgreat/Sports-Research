@@ -224,7 +224,7 @@ def write_league(res: dict, rec: dict) -> None:
             f"| Engine | `{lg.engine}` |",
             f"| Contracts priced | winner{' (3-way)' if lg.tie_rule == 'draw' else ''}, any handicap line, any total "
             "line, from one score grid |",
-            f"| Population | competitive games from the archive (`Previous Sports Results/{lg.path}`); "
+            f"| Population | competitive games from the archive (`research/reviewed_history/{lg.path}`); "
             f"pre-season excluded; rows read {load.rows_read}, kept {load.rows_kept}, dropped {load.dropped or 'none'} |",
             "| Label tier | B / development only; field-owner admission for these exact rows and fields is not established |",
             "| Inputs | prior results only (dates strictly before the fit date). No lineups, injuries, weather, rest "
@@ -311,7 +311,7 @@ def write_cricket(res: dict, rec: dict) -> dict:
             "input.", "",
             "| Field | Value |", "|---|---|",
             f"| Contract | runs of the team batting first, full-length innings ({lg.overs_cap:.0f} overs bowled or all out) |",
-            f"| Population | scorecards in `Previous Sports Results/{lg.path}`; excluded: {res['dropped']} |",
+            f"| Population | scorecards in `research/reviewed_history/{lg.path}`; excluded: {res['dropped']} |",
             f"| Hold reasons | {hold_reasons(verdict, lg.data_warnings) or 'none'} |",
             "| Ladder | C0 league-only (time-decayed mean and SD) · C1 + shrunk venue effect · C2 + batting and bowling "
             "team strengths (weighted ridge) · C2PRE = 50/50 unfitted symmetric batting-order scenario; toss fairness does not establish this weight |",

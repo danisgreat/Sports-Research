@@ -1,5 +1,8 @@
 **Current use (2026-10-12, v11; R11).** This is an arithmetic reference, not a fitted model. CURRENT_RULES §7, SELECTION_RULES §§2–3/9 and SCORING_AND_VALIDATION govern new work: primary p ordering (from the declared mixture where required), separate shadows, unconditional W/P/L/V, supported joint bounds, a precision rule at thresholds, and a frozen league-only baseline. Use a formula/table only within its assumptions and actually show the calculation. Never claim an exact enumeration merely from a model name. The older validation/baseline claims below describe their historical tests, not current calibration.
 
+**Online history and confirmed players (HIST-2026.10.16-v2 / AVAIL-2026.10.16-v3).** For every game, research both sides' L5/L10/L15/L20 online under [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md), with opened sources, dated game rows and true n. Seek exact-game confirmed players, starting roles, bench/replacements and absences under [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md); projected players remain unconfirmed. The retired local results store and its derived profiles are not required inputs or fallbacks. Earlier archive-first directions are superseded.
+
+
 **Which sections are operative.** Retired text stays in place for reading old cards, each part with a local banner.
 
 | Section | Status under v11 |
@@ -437,7 +440,7 @@ The walk-off asymmetry makes home and away different: home wins end by exactly o
 
 ## 4. The team baseline by hand — TB-1-MD (`TEAM_BASELINE_P`)
 
-> **v11 status (R11).** TB-1-MD uses team inputs. It is a **team-model aid and comparator**, printed as `TEAM_BASELINE_P`, and never `BASELINE_P`, which is always the league-only `BASELINE_LEAGUE_V1` (SELECTION_RULES §9). The "Sides/Totals anchor on TB-1-MD?" columns and the phrases "anchors on `BASELINE_P`" / "never the anchor" below describe the retired v9 anchoring procedure. They are NON-OPERATIVE. The arithmetic, constants and historical validation remain usable as a reference. The k constants also feed ARCHIVE_USE_GUIDE recipe R2 (form windows).
+> **v11 status (R11).** TB-1-MD uses team inputs. It is a **team-model aid and comparator**, printed as `TEAM_BASELINE_P`, and never `BASELINE_P`, which is always the league-only `BASELINE_LEAGUE_V1` (SELECTION_RULES §9). The "Sides/Totals anchor on TB-1-MD?" columns and the phrases "anchors on `BASELINE_P`" / "never the anchor" below describe the retired v9 anchoring procedure. They are NON-OPERATIVE. The arithmetic, constants and historical validation remain usable as a reference. The k constants also feed ARCHIVE_USE_GUIDE online form recipe R2 (form windows).
 
 This is the same season-to-date rating that the removed `tools/team_baseline.py` computed ([recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)). It is calculated from one standings page, so it needs no code.
 

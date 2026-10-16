@@ -1,5 +1,7 @@
 # Research-only record without an installed model
 
+**Online history and confirmed players (HIST-2026.10.16-v2 / AVAIL-2026.10.16-v3).** For every game, research both sides' L5/L10/L15/L20 online under [HISTORICAL_SOURCE_PROTOCOL](../../../HISTORICAL_SOURCE_PROTOCOL.md), with opened sources, dated game rows and true n. Seek exact-game confirmed players, starting roles, bench/replacements and absences under [ROSTER_AVAILABILITY_PROTOCOL](../../../ROSTER_AVAILABILITY_PROTOCOL.md); projected players remain unconfirmed. The retired local results store and its derived profiles are not required inputs or fallbacks. Earlier archive-first directions are superseded.
+
 FORMAT EXAMPLE / NOT_IMPORTABLE. EXAMPLE identifiers are not allocated P-IDs and the examples are not sports evidence. New formats are mini-log-9 / mini-settlement-8 under [RETAIN-v1](../../../RESEARCH_RETENTION_PROTOCOL.md).
 
 If a researched game has no adapter or the environment returns `No module named ml`, write the researched event under the next reconciled P-ID rather than abandon it. Print RESEARCH_ONLY_NO_MODEL; keep model p_card NOT_ESTIMATED and supported analyst_p separately NOT_PRIMARY. Record actual evidence, issue/first-play/exposure times and incomplete research honestly. Update the footer only after the actual append/readback. An inaccessible original, collision or write failure remains a separate reason the mutation cannot complete.

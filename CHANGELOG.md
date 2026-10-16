@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-16 — mandatory online history and confirmed players (v17.1 / CR-R2)
+
+PROCEDURE + DATA RETIREMENT. Owner requested deletion of the results store believed corrupted. Retired it and store-derived profiles; replaced store-first/fallback directions across all sports and eleven game workflows with online L5/L10/L15/L20 research, true n, source/known-at evidence and comparison where needed. AVAIL-v3 strengthens existing exact-game player confirmation. Fresh reviewed web primary inputs need no store; optional workshop discovery tolerates an absent reviewed-history root. No numeric selection/scoring/format, ID/grade or issued-original changes. See research/verification/framework_change_2026-10-16-3/IMPLEMENTATION.md and RESULTS_REBUILD_PLAN.md. No rebuild/model regeneration or predictive qualification claimed.
+
 ## 2026-10-16 - Retain research P-IDs without an ML model and preserve future learning labels
 
 Owner requires researched events to be recorded/canonically retained regardless of model/runtime/adapter/baseline/calibration/receipt availability. [RETAIN-v1](RESEARCH_RETENTION_PROTOCOL.md) supersedes EXEC-v1 issuance blocking. FORMAT + PROCEDURE: MDS-v17 / CR-2026.10.16-R1 / P-v17 / SCV-v11; mini-log-9 / mini-settlement-8. C21 and verify-log accept honest research-only no-run dispositions; model probability/feedback still requires actual frozen predictions. Source-reviewed terminal labels can be retained by ml.research_learning for future training admission without any existing model; no automatic calibration or fake Hedge reward. All standalone sport/lifecycle instructions aligned. [Implementation](research/verification/framework_change_2026-10-16-1/IMPLEMENTATION.md).

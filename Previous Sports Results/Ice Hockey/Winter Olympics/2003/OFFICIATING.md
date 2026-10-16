@@ -1,4 +1,0 @@
-# Winter Olympics Officiating & Refereeing Corps — 2003 Season
-
-- **Status:** INACTIVE (Inter-Tournament Cycle).
-- **Reason:** This tournament operates on a periodic cycle and was not contested in 2003. No tournament officiating corps was assembled.

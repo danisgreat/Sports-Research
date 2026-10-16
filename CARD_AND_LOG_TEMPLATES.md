@@ -1,8 +1,10 @@
 # Card, mini, settlement and canonical formats
 
+**Online history and confirmed players (HIST-2026.10.16-v2 / AVAIL-2026.10.16-v3).** For every game, research both sides' L5/L10/L15/L20 online under [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md), with opened sources, dated game rows and true n. Seek exact-game confirmed players, starting roles, bench/replacements and absences under [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md); projected players remain unconfirmed. The retired local results store and its derived profiles are not required inputs or fallbacks. Earlier archive-first directions are superseded.
+
 **Required repository fallback (REF-v1).** Always keep [https://github.com/danisgreat/Sports-Research/tree/main](https://github.com/danisgreat/Sports-Research/tree/main) as the standing reference. If required local files are not fully accessible (missing, unreadable, truncated or incomplete), retrieve the actual required contents from this repository before declaring them unavailable. Apply [GITHUB_REFERENCE_PROTOCOL](GITHUB_REFERENCE_PROTOCOL.md): resolve one main commit SHA, record exact files/read time and fallback results in the existing reading receipt, and preserve the declared authority mode. Never substitute an unpublished local mini, claim unread content or treat viewing code as executing it. If authorized remote access also fails, record the real gap and continue independent work.
 
-**mini-log-9 · mini-settlement-8 · canonical-md-1.** Authority: MDS-2026.10.16-v17.0 / CR-2026.10.16-R1 / SCV-2026.10.16-v11 / SEL-2026.10.12-v3. [Rules](CURRENT_RULES.md) and [selection definitions](SELECTION_RULES.md) control semantics. Previous formats: [mini-log-6 / mini-settlement-5](archive/superseded_2026-10-12/CARD_AND_LOG_TEMPLATES.md).
+**mini-log-9 · mini-settlement-8 · canonical-md-1.** Authority: MDS-2026.10.16-v17.1 / CR-2026.10.16-R2 / SCV-2026.10.16-v11 / SEL-2026.10.12-v3. [Rules](CURRENT_RULES.md) and [selection definitions](SELECTION_RULES.md) control semantics. Previous formats: [mini-log-6 / mini-settlement-5](archive/superseded_2026-10-12/CARD_AND_LOG_TEMPLATES.md).
 
 <a id="local-mini-format-mini-log-2"></a>
 
@@ -105,9 +107,9 @@ Insert immediately before the footer. Preserve earlier card/addendum bytes; only
 - **Baseline:** <BASELINE_LEAGUE_V1 recipe, cohort dates/n, parameters, cutoff/provenance or BASELINE_UNAVAILABLE reason>
 - **Regime flags / context:** <approved flags; other context separately>
 - **Settlement fields / capture plan:** <row-to-provider/field mapping; due time; responsible action; scheduled job YES/NO>
-- **Rules read / archive check:** <paths/sections; actual files/rows/date window/filters/findings/gaps>
+- **Rules read / archive check:** <paths/sections; ONLINE_HISTORY source URLs/evidence paths, rows/date window/filters/true n/findings/gaps>
 - **Evidence receipt:** <decisive claim/source/field/extract/source time/retrieval time/lineage; detail in A3>
-- **Known-at:** <archive capture date; any KNOWN_AT_UNVERIFIED input and confirmation it does not decide Rank 1>
+- **Known-at:** <web evidence capture/publication/available times; any KNOWN_AT_UNVERIFIED input and confirmation it does not decide Rank 1>
 - **Lineup state / issue step:** <CONFIRMED (source, time) or LINEUP_UNCONFIRMED; actual research-completion/availability-check times; complete-search result; no required countdown>
 - **Pricing basis:** <BASE (no input labelled uncertain) or MIXTURE low/base/high = <w1/w2/w3>, with the uncertain input named>
 - **Form windows:** <per side: L5/L10/L15/L20/season/league for the scored and conceded rate, with n; the blended rate used; full table in A3 (§3b)>
@@ -135,7 +137,7 @@ Insert immediately before the footer. Preserve earlier card/addendum bytes; only
 #### A2. Frozen supplied contracts and candidate recipe
 #### A3. Evidence and archive inputs
 
-Apply [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md): record actual archive triage, preferred online recovery attempts, local/web row and field coverage, correction/exclusion reconciliation, source publication/retrieval/capture identities, true form n and final unresolved dispositions. Named mini/model evidence may include reviewed web HISTORY.csv and exact COMPETITION_SOURCE.csv; no automatic shared archive edit.
+Apply [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md): record mandatory online searches/source comparison and web row/field coverage, correction/exclusion reconciliation, source publication/retrieval/capture identities, true form n and final unresolved dispositions. Named mini/model evidence may include reviewed web HISTORY.csv and exact COMPETITION_SOURCE.csv; no automatic shared archive edit.
 
 Complete [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md) for both sides in this existing evidence appendix: starters/starting role, selected bench/replacements, reported injuries/illness/suspensions/absences and final late changes, with exact-game sources/times and actual failed/escalated searches. Preserve each field's confirmed/projected/missing/conflicting state; N/A needs a sport/format reason. Existing lineup metadata summarises this evidence, not just the starting side.
 #### A4. Distribution, baseline, expected-score arithmetic and sensitivity
@@ -170,7 +172,7 @@ For team scores X,Y: E(T)=E(X)+E(Y), E(M)=E(X)−E(Y); Var(T)=Var(X)+Var(Y)+2Cov
 
 ### 3b. Form windows (A3; PR-01, recipe R2)
 
-One table per side. Use dated games before the cutoff only, and compute it as ARCHIVE_USE_GUIDE recipe R2 says.
+One table per side. Use dated games before the cutoff only, and compute it as ARCHIVE_USE_GUIDE online form recipe R2 says.
 
 | Window | n | Dates (first–last) | Scored per game | Conceded per game | Margin per game | Opponents' mean rating or rank (if available) | Games from previous season | Flags |
 |---|---:|---|---:|---:|---:|---|---:|---|
@@ -187,7 +189,7 @@ Below each table print:
 - the roster-continuity note for any games from the previous season;
 - the sentence "windows overlap; counted once".
 
-A window shorter than its label prints its true n. A missing window prints `ARCHIVE_UNAVAILABLE:<reason>` or the SOURCES route used. Excluded flagged rows (for example the archive's duplicate or awarded-result flags) are listed.
+A window shorter than its label prints its true n. A missing window prints `HISTORICAL_DATA_UNAVAILABLE:<reason>` with actual online routes tried. Excluded flagged rows (for example source-supported duplicate or awarded-result exclusions) are listed.
 
 ## 4. Addenda
 
@@ -265,11 +267,11 @@ Pending cards get state evidence, literal original reference and next check, wit
 | C10 | Contract definitions, field capture and actual scheduling status |
 | C11 | Timing protocol: evidence horizon = game-log scheduled start (no separate cutoff), independent retrieval/completion/issue/state; no fixed deadline; pre-start input proof and actual issue phase separate; honest outcome exposure |
 | C12 | Market blindness, supported evidence with times, lineage unknowns |
-| C13 | Actual archive/web window/sample/coverage, online-first gap recovery, correction/dedup ledger and point-in-time availability; no-data claimed only after actual source attempts |
+| C13 | Actual online window/sample/coverage and source comparison, correction/dedup ledger and point-in-time availability; no-data claimed only after actual source attempts |
 | C14 | Frozen same-row baseline and independent league-only parameters, or explicit unavailable reason |
 | C15 | Expected-score arithmetic/units/covariance and missingness; decision block/appendix complete; RESEARCH_COMPLETION_PROTOCOL A9 matrix evidenced, all applicable procedures attempted and every supplied row substantively assessed; model/administrative blockers did not terminate independent work |
 | C16 | Written card and footer read back; earlier blocks unchanged; audit has actual evidence, not just check names |
-| C17 | Form windows: L5/L10/L15/L20/season/league printed per side with true n, from dated pre-cutoff games; flagged archive rows excluded; blend/k/arithmetic retained as comparison diagnostics where supported; windows not counted as separate confirmations; fitted primary centre is not manually overwritten; explicit manual comparisons retain their adjustment/unadjusted pair (or ARCHIVE_UNAVAILABLE with the route tried) |
+| C17 | Form windows: L5/L10/L15/L20/season/league printed per side with true n, from dated pre-cutoff games; flagged online rows excluded; blend/k/arithmetic retained as comparison diagnostics where supported; windows not counted as separate confirmations; fitted primary centre is not manually overwritten; explicit manual comparisons retain their adjustment/unadjusted pair (or HISTORICAL_DATA_UNAVAILABLE with online routes tried) |
 | C18 | Line distance (units and z, or N/A) on every ranked row; baseline coverage line present; each missing BASELINE_P uses an enumerated reason |
 | C19 | Primary runtime: actual source/fit/bundle checked; mixture weights recompute from recorded losses and η; all rows match the mixed grid, model features/limits explicit. Pricing basis: primary W/P/L and p_card derive from the actual retained mixed ML grid; manual mixtures/adjustments cannot overwrite it. Material unsupported effects mean NO_FORECAST for the affected numerical ML lane; full research still proceeds. The mandatory supported fallback comparison remains UNCALIBRATED_ANALYST_SCENARIO / NOT_PRIMARY, with analyst_p, source/assumption provenance, frozen cases/weights and separate base-only diagnostics; ε and any GATE_UNRESOLVED_PRECISION / PRECISION_TIE stated |
 | C20 | Availability: comprehensive both-side starter/bench/absence search per ROSTER_AVAILABILITY_PROTOCOL completed with actual attempts and final recheck in A3/A8; projections, access/publication gaps and material uncertainty honest. Lifecycle: issuing writer and lease valid at append time; mini not frozen; request logged in the intake table; known-at line present; lineup state and issue-step times recorded |
