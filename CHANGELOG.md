@@ -1,3 +1,7 @@
+# Cohort retrospective — 16 October 2026, P-577 to P-600
+
+Prompt 6 (P-2026.10.16-v19.1, LEARN-v1 §§6–8), user-requested, outcome-exposed. New report folder [retrospective_2026-10-16](research/verification/retrospective_2026-10-16/RETROSPECTIVE_REPORT.md) with DATA_INVENTORY and COHORT_TABLES. Counted cohorts kept separate: C1+C2 primary 10W/2L against 10.53 expected; C3 SUPPLIED_FIRST_V1 5W/5L against 5.72; frozen baseline +0.0107 on 4 events (`INSUFFICIENT_EVIDENCE`); legacy analyst diagnostics MSE 0.2861 with an extra-time cluster flagged for field-owner re-verification. V3 executed on 0 of 24 cards (7 documented `No module named ml`); the learning store is empty. Eight review dispositions appended to REVIEW_LOG; HYPOTHESIS_REGISTER gains dated status lines and RET-08–RET-13 (`PROPOSED_NOT_TESTED`); scoreboard and CURRENT_STATE gain dated summaries. No original log, grade, forecast, ID, rule, prompt, model or registry entry changed.
+
 # Framework change — 16 October 2026, learning pipeline from the external improvement review
 
 MDS/P v19.1 / CR-2026.10.16-R5 / LEARN-v1. PROCEDURE + workshop code. The owner asked to implement the necessary and better parts of the external review of `ba4fefaee`; its code claims were verified first. [LEARNING_PIPELINE_PROTOCOL](LEARNING_PIPELINE_PROTOCOL.md) adds four auditable layers: research data, models, online selection and prospective evidence.

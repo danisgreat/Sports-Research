@@ -1,5 +1,9 @@
 # Scoreboard: current measurement and preserved historical results
 
+## Cohort retrospective 2026-10-16 (P-577–P-600; descriptive, grades unchanged)
+
+[Report](../verification/retrospective_2026-10-16/RETROSPECTIVE_REPORT.md). Counted cohorts (policies kept separate): C1 pre-v10 P-577–P-579 and C2 v10 P-580–P-582, primary 10W/2L (83.3%, 55.2–95.3%) against 10.53 expected, Brier 0.1367; C3 SUPPLIED_FIRST_V1 P-585–P-589, primary 5W/5L (50.0%, 23.7–76.3%) against 5.72 expected, Brier 0.2364. Frozen same-row baseline on 8 primary rows / 4 events / 2 weeks: card − baseline Brier +0.0107, `INSUFFICIENT_EVIDENCE`. Legacy P-590–P-600 analyst diagnostics (NOT_PRIMARY): 37 rows, MSE 0.2861. PRIMARY_HEDGE_MIX_V3 executions 0 of 24; LEARN-v1 counters 0. No skill, calibration or model qualification is claimed; every earlier section below is unchanged.
+
 ## Current legacy settlement import — 2026-10-16T15:18:45+11:00
 
 Highest canonical **P-600**; next **P-601**; active Combined Log remains Part 7. Inventory **116 retained research records = 115 terminal sporting-result reviews + 1 legacy pending P-584** (104 prior terminal + eleven P-590-P-600 result reviews). Four originals P-597-P-600 added; seven existing originals P-590-P-596 skipped; one P-590 reconciliation addendum and eleven revision-1 settlements retained. [Complete import/readback](../verification/mini_import_P-590_P-600_2026-10-16-1/CANONICAL_IMPORT_REPORT.md).

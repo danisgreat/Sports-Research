@@ -158,3 +158,29 @@ Owner authorises MODEL_ASSISTED_PRIMARY_V1 / PRIMARY_EXP3_V1 as experimental pri
 ## 15 October 2026 — Primary V3 integrity amendment
 
 PRIMARY_HEDGE_MIX_V3 / MODEL_ASSISTED_PRIMARY_V3 corrects known-at warm fitting, duplicate observations, exact-policy/timed parameter admission and ledger receipts. IMPLEMENTED_INTEGRITY / PREDICTIVE_EFFECT_NOT_TESTED. This supersedes no old experiment observations or acceptance thresholds. The prior 41,752-game policy replay uses different state/history/feedback and clustering; it cannot qualify V3 or tune its default. Online aggregation is not a trained RL agent. A matching chronological/prospective comparison, practical effect and power remain BLOCKED_DESIGN.
+
+## Retrospective 2026-10-16 (P-577 to P-600)
+
+Source: [research/verification/retrospective_2026-10-16/RETROSPECTIVE_REPORT.md](research/verification/retrospective_2026-10-16/RETROSPECTIVE_REPORT.md) (inputs and tables in `COHORT_TABLES.md`). Dated status lines and new proposals only; the registrations above are unchanged.
+
+**Dated status lines (2026-10-16).**
+- FC10-BASELINE-v1 (RET-02): 4 paired events (P-581, P-582, P-587, P-589) in 2 ISO weeks; primary card − baseline Brier +0.0107 (card worse); `RECORDING_ACTIVE`, design inputs still unregistered.
+- FC10-GATE-v1 (RET-03): 3 events with the shadow gate printed, 1 shadow PASS (P-581, whose Rank 1 lost).
+- FC10-PAIR-v1 (RET-04 / XCARD-6): 3 events graded; RET04 shadow Rank 2 3–0, XCARD6 3–0 (mechanically protected).
+- FC10-PROFILE-v1 (RET-01): 0 NBL events.
+- RET-06: 0/1 KBO at evidence A (P-583, `NO_FORECAST`, box conflict open). RET-07: gate numbers on 11/11 counted cards.
+- XCARD-5 / SEL-1: 2 of 8 week-blocks, 0 PASS. XCARD-4 (tennis): 2 counted tennis cards, Rank 1 0–2, no paired method.
+- Primary V3: 0 executions on 24 cards (7 documented `No module named ml`); LEARN-v1 counters all 0 (store empty).
+
+**Failure classes.** Counted Rank-1 losses 3: P-577 `TENNIS_IID_UNDERDISPERSION` (hypothesis; 89.9% ceiling Under, 35 games), P-581 `SMALL_SAMPLE_STRENGTH_OVERREACH` / `OVERCONFIDENT_PROBABILITY` (hypotheses; z +2.36), P-585 `MODEL_TAIL_REALISATION / WEAK_RANK1` (52.5%).
+
+**New proposals (all `PROPOSED_NOT_TESTED`).**
+
+| ID | Priority | Addresses | Proposal | Acceptance test | Minimum sample | Rollback condition | Status |
+|---|---|---|---|---|---|---|---|
+| RET-08 | P1 | 0/24 V3 runs; 7 `No module named ml` | Executable runtime route for prompt 1 (pinned checkout + requirements, or named maintainer executor) and a capability receipt on every card | ≥ 80% of the next 40 V3-supported cards carry an executed verified bundle or a data/admission (not capability) failure | 40 cards | Revert an executor route that returns an unverified bundle | PROPOSED_NOT_TESTED |
+| RET-09 | P1 | Empty learning store; legacy extra-time cluster (4 of 7, P ≈ 0.0004 at 6%) | Backfill RESEARCH_EXPORTs for P-577–P-600 under prompt 7/8 after field-owner re-verification of every extra-time result, then ingest | learning-status counts the cohort; every quarantine has a reason; 0 unverified extra-time results | 33 terminal events | Failed rows stay quarantined, never edited | PROPOSED_NOT_TESTED |
+| RET-10 | P1 | Baseline coverage 8/22 primary rows | Every supplied line prints a same-line BASELINE_LEAGUE_V1 from the prior completed season, or an enumerated reason | ≥ 80% primary baseline coverage on the next 40 cards; FC10-BASELINE reaches 8 weeks | 40 cards / 8 weeks | Drop if independent recomputations differ by > 2 points on > 10% of rows | PROPOSED_NOT_TESTED |
+| RET-11 | P2 | Tennis Rank 1 0–2; primary tennis NOT_IMPLEMENTED | Freeze TENNIS_EXPERIMENTAL_HEDGE_V1 as a prospective shadow on every tennis request | Prospective evaluation on identical contracts reaches its preregistered delta, else INSUFFICIENT_EVIDENCE reported | 8 weeks + preregistered sample | Stop if > 20% of tennis requests cannot be priced | PROPOSED_NOT_TESTED |
+| RET-12 | P2 | Margin mean \|z\| 1.05; 2/10 inside the 50% band | Report realised-margin coverage of the card's central 50% and 80% bands by sport | Coverage intervals contain 50% and 80% | 40 cards | None (monitoring) | PROPOSED_NOT_TESTED |
+| RET-13 | P2 | P-577, P-596, P-598 definition ambiguity | Every supplied contract states unit, period and action before pricing; ambiguous text frozen with both readings and an operator query | 0 UNKNOWN_DEFINITION grades from unrecorded definitions in 40 cards | 40 cards | Revert if > 10% of contracts lose numeric assessment | PROPOSED_NOT_TESTED |
