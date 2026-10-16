@@ -436,6 +436,8 @@ def verify(folder):
     if len(receipts)!=1 or receipts[0].get("policy")!=POLICY:
         raise TennisAdmissionError("wrong/missing receipt")
     receipt=receipts[0]
+    if receipt.get("code_sha256")!=sha(Path(__file__).read_bytes()):
+        raise TennisAdmissionError("tennis runtime version differs from issued code; recover issuing commit")
     for k,v in receipt.items():
         if k.startswith("sha256_"):
             file=k[len("sha256_"):]
@@ -445,7 +447,35 @@ def verify(folder):
     if len(req)!=1 or req[0]["event_id"]!=receipt["event_id"]:
         raise TennisAdmissionError("bundle event identity mismatch")
     g=read_grids(folder)
+    # Independently reconstruct the published mixture weights from its retained
+    # feedback inventory, not from the cumulative vector written in the receipt.
+    hist=rows(folder/"HISTORY.csv")
+    _,horizon,count=prepare(req[0],hist)
+    try:
+        feed=rows(folder/"FEEDBACK_INPUT.csv")
+    except Exception as e:
+        raise TennisAdmissionError("feedback input cannot be read") from e
+    if len(hist)!=int(receipt["history_count"]) or horizon.isoformat()!=receipt["horizon"]:
+        raise TennisAdmissionError("training inventory/horizon does not match receipt")
+    accum=[0.0]*len(ARMS); admitted_feedback=0
+    for row in feed:
+        if row.get("competition")!=req[0]["competition"] or row.get("policy")!=POLICY or row.get("event_id")==req[0]["event_id"]:
+            raise TennisAdmissionError("feedback ledger wrong scope")
+        if stamp(row["available_at"])>horizon:
+            continue
+        admitted_feedback+=1
+        for i,a in enumerate(ARMS):
+            x=float(row["loss_"+a])
+            if not math.isfinite(x) or not 0<=x<=1:
+                raise TennisAdmissionError("feedback ledger has invalid loss")
+            accum[i]+=x
+    unscaled=[math.exp(-ETA*(v-min(accum))) for v in accum]
+    expected_weights={a:v/sum(unscaled) for a,v in zip(ARMS,unscaled)}
+    if admitted_feedback!=int(receipt["feedback_count"]):
+        raise TennisAdmissionError("feedback count does not match frozen receipt")
     ws=json.loads(receipt["weights"])
+    if set(ws)!=set(expected_weights) or any(abs(ws[a]-expected_weights[a])>1e-12 for a in ARMS):
+        raise TennisAdmissionError("frozen weights disagree with feedback ledger")
     if set(ws)!=set(ARMS) or any(not isinstance(x,(int,float)) or not math.isfinite(x) or x<0 for x in ws.values()) or abs(sum(ws.values())-1)>1e-9:
         raise TennisAdmissionError("invalid frozen weights")
     expected=mixed({a:g[a] for a in ARMS},[ws[a] for a in ARMS])
@@ -461,6 +491,8 @@ def verify(folder):
         for field in ("win","push","loss","p_card"):
             if m[field] is None or abs(float(p[field])-m[field])>1e-9:
                 raise TennisAdmissionError("bundle probability mismatch")
+        if abs(float(p["baseline_p"])-price(g["COHORT_BASE"],c)["p_card"])>1e-9:
+            raise TennisAdmissionError("baseline probability mismatch")
     return receipt
 
 
