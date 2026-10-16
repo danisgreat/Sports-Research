@@ -1,0 +1,93 @@
+check,result,evidence
+old_full_raw_prefix,PASS,2078770 bytes; sha256 0a6564c6f4d468f4668ed34ac7ab4a2a96f856f00a43b0901a54fb1e202a99d7
+old_only_closure_appended,PASS,closure bytes 2548; sha256 815349ef670d92fd6e3f4d3d5d5f98c0278927ae28c292f5d1a16bba2b8a1349
+old_prior_committed_prefix,PASS,Raw pre-task Git blob and full working prefix identical; no normalization
+new_exact_header,PASS,5047 bytes; sha256 9b9484b7ad48c297996e2d55703ef908af7aa147d7ce1842fbda845c3e3f6303
+new_zero_BEGIN_CANONICAL_RESEARCH,PASS,No copied or placeholder cards/revisions
+new_zero_BEGIN_RESEARCH_ADDENDUM,PASS,No copied or placeholder cards/revisions
+new_zero_BEGIN_SETTLEMENT,PASS,No copied or placeholder cards/revisions
+new_zero_##_P-,PASS,No copied or placeholder cards/revisions
+new_opening_marker,PASS,Single header terminator
+one_closure,PASS,Single Part 7 closure
+new_snapshot,PASS,Authority/time/control/format/reservations present
+unchanged_original_inventory,PASS,51 unique originals P-550 through P-600; legacy transaction-token wrappers included
+global_highest_unchanged,PASS,P-600
+next_unchanged,PASS,P-601
+live_state_pointer,PASS,Part 8
+live_status_pointer,PASS,Part 8
+dynamic_index,PASS,No stale hard-coded part
+historical_snapshots_retained,PASS,Dated October 16 snapshots retained; dated rollover supersedes live routing only
+both_queues,PASS,P-584 pending; terminal evidence queue and exact disposition pointers retained
+execution_repair_custody,PASS,Independent source/manifest/repair/model/feedback index pointers
+readback_prediction logs/PREDICTION_LOG_COMBINED_7.md,PASS,Full authored output read back
+readback_prediction logs/PREDICTION_LOG_COMBINED_8.md,PASS,Full authored output read back
+readback_CURRENT_STATE.md,PASS,Full authored output read back
+readback_GAME_LOG_STATUS_CURRENT.md,PASS,Full authored output read back
+readback_ACTIVE_FILE_INDEX.md,PASS,Full authored output read back
+readback_CHANGELOG.md,PASS,Full authored output read back
+readback_research/verification/combined_rollover_2026-10-17/README.md,PASS,Full authored output read back
+readback_research/verification/combined_rollover_2026-10-17/QUEUE_CONTINUITY.md,PASS,Full authored output read back
+readback_research/verification/combined_rollover_2026-10-17/READING_RECEIPT.md,PASS,Full authored output read back
+link_0,PASS,prediction logs/PREDICTION_LOG_COMBINED_7.md: ../research/verification/mini_import_P-590_P-600_2026-10-16-1/CANONICAL_IMPORT_REPORT.md
+link_1,PASS,prediction logs/PREDICTION_LOG_COMBINED_7.md: ../research/verification/combined_rollover_2026-10-17/README.md
+link_2,PASS,prediction logs/PREDICTION_LOG_COMBINED_7.md: ../research/verification/combined_rollover_2026-10-17/QUEUE_CONTINUITY.md
+link_3,PASS,prediction logs/PREDICTION_LOG_COMBINED_7.md: PREDICTION_LOG_COMBINED_8.md
+link_4,PASS,prediction logs/PREDICTION_LOG_COMBINED_7.md: ../CURRENT_STATE.md
+link_5,PASS,prediction logs/PREDICTION_LOG_COMBINED_8.md: ../CURRENT_STATE.md
+link_6,PASS,prediction logs/PREDICTION_LOG_COMBINED_8.md: ../GAME_LOG_STATUS_CURRENT.md
+link_7,PASS,prediction logs/PREDICTION_LOG_COMBINED_8.md: PREDICTION_LOG_COMBINED.md
+link_8,PASS,prediction logs/PREDICTION_LOG_COMBINED_8.md: PREDICTION_LOG_COMBINED_2.md
+link_9,PASS,prediction logs/PREDICTION_LOG_COMBINED_8.md: PREDICTION_LOG_COMBINED_3.md
+link_10,PASS,prediction logs/PREDICTION_LOG_COMBINED_8.md: PREDICTION_LOG_COMBINED_4.md
+link_11,PASS,prediction logs/PREDICTION_LOG_COMBINED_8.md: PREDICTION_LOG_COMBINED_5.md
+link_12,PASS,prediction logs/PREDICTION_LOG_COMBINED_8.md: PREDICTION_LOG_COMBINED_6.md
+link_13,PASS,prediction logs/PREDICTION_LOG_COMBINED_8.md: PREDICTION_LOG_COMBINED_7.md
+link_14,PASS,prediction logs/PREDICTION_LOG_COMBINED_8.md: ../research/verification/combined_rollover_2026-10-17/README.md
+link_15,PASS,prediction logs/PREDICTION_LOG_COMBINED_8.md: ../research/verification/mini_import_P-590_P-600_2026-10-16-1/UNRESOLVED_POST_IMPORT.md
+link_16,PASS,prediction logs/PREDICTION_LOG_COMBINED_8.md: ../research/verification/mini_import_P-590_P-600_2026-10-16-1/CARRYOVER_DISPOSITIONS.csv
+link_17,PASS,prediction logs/PREDICTION_LOG_COMBINED_8.md: ../research/verification/mini_import_P-585_P-589_2026-10-14-1/UNRESOLVED_POST_IMPORT.md
+link_18,PASS,prediction logs/PREDICTION_LOG_COMBINED_8.md: ../research/verification/combined_rollover_2026-10-17/QUEUE_CONTINUITY.md
+link_19,PASS,prediction logs/PREDICTION_LOG_COMBINED_8.md: ../RESEARCH_SOURCE_REGISTER.md
+link_20,PASS,prediction logs/PREDICTION_LOG_COMBINED_8.md: ../research/active_minis/P-590_ONWARD/ML_EXECUTION_MANIFEST.csv
+link_21,PASS,prediction logs/PREDICTION_LOG_COMBINED_8.md: ../research/verification/mini_import_P-590_P-600_2026-10-16-1/VERIFICATION.md
+link_22,PASS,prediction logs/PREDICTION_LOG_COMBINED_8.md: ../research/verification/forecast_cycle_2026-10-16/IMPLEMENTATION.md
+link_23,PASS,prediction logs/PREDICTION_LOG_COMBINED_8.md: ../research/verification/forecast_cycle_2026-10-16/HISTORICAL_REPAIR_QUEUE.csv
+link_24,PASS,prediction logs/PREDICTION_LOG_COMBINED_8.md: ../research/cycle_releases/CURRENT_RELEASES.csv
+link_25,PASS,prediction logs/PREDICTION_LOG_COMBINED_8.md: ../research/model_registry/MODEL_REGISTRY.csv
+link_26,PASS,prediction logs/PREDICTION_LOG_COMBINED_8.md: ../research/learning_status/README.md
+link_27,PASS,prediction logs/PREDICTION_LOG_COMBINED_8.md: ../research/prospective/README.md
+link_28,PASS,prediction logs/PREDICTION_LOG_COMBINED_8.md: ../research/model_shadow/README.md
+link_29,PASS,research/verification/combined_rollover_2026-10-17/README.md: ../../../prediction%20logs/PREDICTION_LOG_COMBINED_7.md
+link_30,PASS,research/verification/combined_rollover_2026-10-17/README.md: ../../../prediction%20logs/PREDICTION_LOG_COMBINED_8.md
+link_31,PASS,research/verification/combined_rollover_2026-10-17/README.md: QUEUE_CONTINUITY.md
+link_32,PASS,research/verification/combined_rollover_2026-10-17/README.md: READING_RECEIPT.md
+link_33,PASS,research/verification/combined_rollover_2026-10-17/README.md: VERIFICATION_CHECKS.csv
+link_34,PASS,research/verification/combined_rollover_2026-10-17/README.md: FILE_IDENTITIES.csv
+link_35,PASS,research/verification/combined_rollover_2026-10-17/QUEUE_CONTINUITY.md: ../mini_import_P-585_P-589_2026-10-14-1/UNRESOLVED_POST_IMPORT.md
+link_36,PASS,research/verification/combined_rollover_2026-10-17/QUEUE_CONTINUITY.md: ../mini_import_P-590_P-600_2026-10-16-1/UNRESOLVED_POST_IMPORT.md
+link_37,PASS,research/verification/combined_rollover_2026-10-17/QUEUE_CONTINUITY.md: ../mini_import_P-590_P-600_2026-10-16-1/CARRYOVER_DISPOSITIONS.csv
+link_38,PASS,research/verification/combined_rollover_2026-10-17/QUEUE_CONTINUITY.md: ../mini_import_P-585_P-589_2026-10-14-1/UNRESOLVED_POST_IMPORT.md
+link_39,PASS,research/verification/combined_rollover_2026-10-17/QUEUE_CONTINUITY.md: ../mini_import_P-577_P-584_2026-10-13-1/UNRESOLVED_POST_IMPORT.md
+link_40,PASS,research/verification/combined_rollover_2026-10-17/QUEUE_CONTINUITY.md: ../../../RESEARCH_SOURCE_REGISTER.md
+link_41,PASS,research/verification/combined_rollover_2026-10-17/QUEUE_CONTINUITY.md: ../mini_import_P-590_P-600_2026-10-16-1/SOURCE_RECHECK.csv
+link_42,PASS,research/verification/combined_rollover_2026-10-17/QUEUE_CONTINUITY.md: ../mini_import_P-590_P-600_2026-10-16-1/SOURCE_FILE_INVENTORY.csv
+link_43,PASS,research/verification/combined_rollover_2026-10-17/QUEUE_CONTINUITY.md: ../mini_import_P-590_P-600_2026-10-16-1/inputs/
+link_44,PASS,research/verification/combined_rollover_2026-10-17/QUEUE_CONTINUITY.md: ../../active_minis/P-590_ONWARD/ML_EXECUTION_MANIFEST.csv
+link_45,PASS,research/verification/combined_rollover_2026-10-17/QUEUE_CONTINUITY.md: ../mini_import_P-590_P-600_2026-10-16-1/VERIFICATION.md
+link_46,PASS,research/verification/combined_rollover_2026-10-17/QUEUE_CONTINUITY.md: ../forecast_cycle_2026-10-16/IMPLEMENTATION.md
+link_47,PASS,research/verification/combined_rollover_2026-10-17/QUEUE_CONTINUITY.md: ../forecast_cycle_2026-10-16/HISTORICAL_REPAIR_QUEUE.csv
+link_48,PASS,research/verification/combined_rollover_2026-10-17/QUEUE_CONTINUITY.md: ../../cycle_releases/CURRENT_RELEASES.csv
+link_49,PASS,research/verification/combined_rollover_2026-10-17/QUEUE_CONTINUITY.md: ../../model_registry/MODEL_REGISTRY.csv
+link_50,PASS,research/verification/combined_rollover_2026-10-17/QUEUE_CONTINUITY.md: ../../learning_store/README.md
+link_51,PASS,research/verification/combined_rollover_2026-10-17/QUEUE_CONTINUITY.md: ../../learning_status/REVIEW_LOG.csv
+link_52,PASS,research/verification/combined_rollover_2026-10-17/QUEUE_CONTINUITY.md: ../../prospective/README.md
+link_53,PASS,research/verification/combined_rollover_2026-10-17/QUEUE_CONTINUITY.md: ../../model_shadow/README.md
+unrelated_tracked_preservation,PASS,"2184 pre-existing tracked files byte-identical, including Prompt 1, earlier parts, rank CSV, all code/model/store/queue files"
+prompt1_excluded_unchanged,PASS,Pre-existing local edit preserved
+no_part9,PASS,No skipped/hidden partial rollover
+exact_rerun,PASS,ALREADY_COMPLETED: exact Part 7-to-8 rollover; zero writes; no Part 9
+rerun_zero_writes,PASS,All output hashes unchanged
+mismatched_rerun_rejected,PASS,Mismatched external expected digest cannot authorize overwrite or Part 9
+rejected_rerun_zero_writes,PASS,All repository outputs remain exact
+committed_raw_identity_prediction logs/PREDICTION_LOG_COMBINED_7.md,PASS,Path attributes retain exact mixed-ending log bytes
+committed_raw_identity_prediction logs/PREDICTION_LOG_COMBINED_8.md,PASS,Path attributes retain exact mixed-ending log bytes

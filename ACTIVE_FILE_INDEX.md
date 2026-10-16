@@ -32,7 +32,7 @@
 | Archive use, recipes (R2 form windows) and integrity rules | [ARCHIVE_USE_GUIDE.md](ARCHIVE_USE_GUIDE.md) |
 | Sport rules and lessons (v11 precedence banner at the top of each) | `RULES_<SPORT>.md`, [LEAGUE_RULES_CRICKET.md](LEAGUE_RULES_CRICKET.md), [LEAGUE_RULES_SOCCER.md](LEAGUE_RULES_SOCCER.md) |
 | Current queue and canonical status | [GAME_LOG_STATUS_CURRENT.md](GAME_LOG_STATUS_CURRENT.md) (current section at the top; later sections are dated history) |
-| Active Combined Log | named in CURRENT_STATE (Part 7 on 2026-10-12) |
+| Active Combined Log | resolved dynamically from [CURRENT_STATE](CURRENT_STATE.md) |
 | Contribution and publication rules | [CONTRIBUTING.md](CONTRIBUTING.md) |
 | Recovery of removed or moved paths | [HISTORICAL_LINK_INDEX.md](HISTORICAL_LINK_INDEX.md) |
 | Learning pipeline: research export, learning store, features, training releases, studies, prospective shadows, review levels, model registry | [LEARNING_PIPELINE_PROTOCOL.md](LEARNING_PIPELINE_PROTOCOL.md), [research/learning_store/](research/learning_store/README.md), [research/model_registry/MODEL_REGISTRY.csv](research/model_registry/MODEL_REGISTRY.csv), [research/learning_status/](research/learning_status/README.md) |

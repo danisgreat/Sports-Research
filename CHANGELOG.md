@@ -1,3 +1,7 @@
+# Combined Log rollover — 17 October 2026
+
+Part 7 closed at 2,078,770 bytes / 51 canonical originals P-550–P-600; Part 8 opened with continuity and queue pointers only. Highest P-600 / next P-601 unchanged; zero IDs consumed. Entire old prefix and unrelated Prompt 1 edit preserved. Live state/status/index updated; earlier dated snapshots, evidence and model/learning artifacts retained. [Rollover receipt](research/verification/combined_rollover_2026-10-17/README.md). No framework version change.
+
 # Full-history retrospective and runtime/baseline tooling — 16 October 2026, P-001 to P-600
 
 ## 2026-10-16 — MDS/P v20.0 / CR-R7 / CYCLE-v1

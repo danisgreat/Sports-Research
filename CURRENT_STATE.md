@@ -62,8 +62,8 @@ FORMAT + PROCEDURE: MDS-v16.0 / CR-R7 / P-v16.0 / PRIMARY-v3.2; SCV-v10 and SEL-
 | Highest committed canonical ID | **P-600** |
 | Next canonical ID | **P-601** (equal to the line in GAME_LOG_STATUS_CURRENT.md) |
 | Reserved IDs | P-518 to P-522 |
-| Active Combined Log | [prediction logs/PREDICTION_LOG_COMBINED_7.md](prediction%20logs/PREDICTION_LOG_COMBINED_7.md) |
-| Previous parts | Parts 1 to 6, immutable; Part 6 keeps its original P-518 to P-522 source block |
+| Active Combined Log | [prediction logs/PREDICTION_LOG_COMBINED_8.md](prediction%20logs/PREDICTION_LOG_COMBINED_8.md) |
+| Previous parts | Parts 1 to 7, immutable; Part 6 keeps its original P-518 to P-522 source block; Part 7 closed with 51 originals P-550 to P-600 |
 | Final settlement register | **116 retained records: 115 terminal sporting-result reviews + 1 legacy pending P-584**. P-590-P-600 source cohort: 23W/21L/2 definition-unresolved rows, conditional sporting grades only; no operator/model certification. [Current import](research/verification/mini_import_P-590_P-600_2026-10-16-1/CANONICAL_IMPORT_REPORT.md). Earlier dated scoreboards retain their original figures. |
 
 ## Selection rules (provisional until the prospective window completes)
@@ -146,3 +146,8 @@ See [RETAIN-v2](RESEARCH_RETENTION_PROTOCOL.md). This owner update changes local
 Highest canonical **P-600**; next **P-601**; active Combined Log remains Part 7. Inventory **116 retained research records = 115 terminal sporting-result reviews + 1 legacy pending P-584** (104 prior terminal + eleven P-590-P-600 result reviews). Four originals P-597-P-600 added; seven existing originals P-590-P-596 skipped; one P-590 reconciliation addendum and eleven revision-1 settlements retained. [Complete import/readback](research/verification/mini_import_P-590_P-600_2026-10-16-1/CANONICAL_IMPORT_REPORT.md).
 
 The supplied package reports **23 conditional sporting WIN / 21 LOSS / 2 UNRESOLVED** across 46 dependent supplied-contract rows; all eleven events still lack complete operator-action terms and exact final-at/SLA evidence. P-596 Saryarka ML and P-598 Huima −8.5 ML remain UNKNOWN_DEFINITION. These grades retain original rules and analyst roles; no current online-history/lineup compliance, fitted primary model, certified performance or pregame availability is backfilled. Model primary/baseline paired scores remain NOT_COMPUTABLE for this cohort; 37 descriptive analyst rows remain NOT_PRIMARY. Prior score cohorts retain their original figures. Raw carryover: 17 items, 2 closed by canonical-core/owner-result capture, 15 open; older P-581-P-584 and prior operator/time/custody queues remain. No automation scheduled.
+
+
+## Combined Log rollover — 2026-10-17T02:17:38+11:00
+
+Active destination: [Part 8](prediction%20logs/PREDICTION_LOG_COMBINED_8.md); Part 7 closed after 2,078,770 bytes / 51 originals P-550–P-600. Highest P-600 / next P-601 and reserved P-518–P-522 unchanged; zero IDs consumed. Pending P-584, terminal evidence and execution/learning repair queues continue at their exact existing dispositions. [Rollover custody, both queues and readback](research/verification/combined_rollover_2026-10-17/README.md). This dated navigation update supersedes earlier active-part snapshots only; no forecast, settlement, training or model change.

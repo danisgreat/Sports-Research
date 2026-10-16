@@ -13762,3 +13762,18 @@ Original: Part 7 canonical research P-600; prior revision NONE; original source 
 
 ## Canonical current-state addendum — 2026-10-16T15:18:45+11:00
 Highest P-600; next P-601; four new retained events P-597-P-600, seven exact-existing originals P-590-P-596 skipped, one P-590 source addendum and eleven first settlement revisions. 116 tracked research records: 104 earlier terminal records, eleven newly terminal sporting-score reviews with definitions/evidence limits, legacy pending P-584. Package source grades 23W/21L/2 UNRESOLVED over 46 dependent contract rows; all operator actions unverified. These are separate descriptive sporting diagnostics, never model T2 or prospective scores. 37 analyst diagnostic rows remain NOT_PRIMARY, paired model scores NOT_COMPUTABLE. P-596 canonical original separately captured; missing original full draft remains a historical research-completeness limit. No earlier source footer/control/forecast is rewritten. Complete queues and receipts in the linked import report.
+
+
+<!-- BEGIN COMBINED LOG CLOSURE 2026-10-17-7-to-8 -->
+## Part 7 closure — 2026-10-17T02:17:38+11:00
+
+**CLOSED.** Owner-invoked prompt 5; authority LOCAL_WORKING_TREE at main `ca03fdf844b3c29c723b1d6244024b195604fff8`. Trigger: **2,078,770 raw bytes** (>1.5 MB) and **51 canonical originals** (>=50), P-550–P-600 inclusive. Documentary carryover references and addenda are not additional originals. The latest complete import is [P-590–P-600](../research/verification/mini_import_P-590_P-600_2026-10-16-1/CANONICAL_IMPORT_REPORT.md); its source and readback are complete for import custody, not sporting/operator evidence closure. No partial import was found.
+
+Pre-closure identity: 2,078,770 bytes, SHA-256 `0a6564c6f4d468f4668ed34ac7ab4a2a96f856f00a43b0901a54fb1e202a99d7`; prior Git blob `b4c5023d46a97c560bf789a284d77712151bd222`. The entire original working prefix, including this part's historical opening snapshot and mixed line endings, is unchanged. Closure is the only appended material. [Rollover custody and checks](../research/verification/combined_rollover_2026-10-17/README.md).
+
+Highest global canonical ID **P-600**; next **P-601**, unchanged. P-518–P-522 remain reserved historical documentary identities. Zero IDs allocated or reserved; no forecast or settlement added. Global retained inventory remains 116 records: 115 terminal sporting-result reviews and one legacy pending P-584.
+
+Pending-event queue: P-584 remains pending at its last effective disposition. Terminal unresolved-evidence queue: all operator, definition, field-owner, final-time, source-at-issue, custody and learning-admission gaps remain open. Exact dispositions, actors, next sources, prior manual due dates/unknown clocks and attempts are retained through [queue continuity](../research/verification/combined_rollover_2026-10-17/QUEUE_CONTINUITY.md), including all 15 open latest-package carryover items and prior queues. No new evidence, due-time reset, retry or scheduled automation is asserted.
+
+Successor: **[ACTIVE Part 8](PREDICTION_LOG_COMBINED_8.md)**. Future revisions for originals in this closed part append to the active part with the original and prior-revision pointers; do not edit this closed part. Current routing is [CURRENT_STATE](../CURRENT_STATE.md). Model/shadow/execution/feedback and source-register custody remain at their existing independent paths, linked in the rollover receipt. This is research-only, market-blind continuity, not model qualification or promotion.
+<!-- END COMBINED LOG CLOSURE 2026-10-17-7-to-8 -->

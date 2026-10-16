@@ -2,8 +2,14 @@
 # Current canonical research queue
 
 **Next canonical ID: P-601.** Every requested event is retained, regardless of calibration: first as a local working card in the authorised mini, then canonically through verified prompt-4 retention import (which may precede prompt-3 settlement under RETAIN-v1). No card is written to the active combined log directly. *(Clarified 2026-10-12, audit R10: the earlier wording "go directly to the active combined log" described retention, not a bypass of local staging.)* Canonical IDs identify retained cards; performance certification and live/late timing are separate labels.
-Active Combined Log: `prediction logs/PREDICTION_LOG_COMBINED_7.md`.
+Active Combined Log: `prediction logs/PREDICTION_LOG_COMBINED_8.md`.
 Freeze: none (custody is the git history of `main`, CURRENT_RULES §9). The last control manifest is `archive/controls/CONTROL_MANIFEST_2026-10-09-3.md`. Current authority: CURRENT_STATE.md, METHOD.md and CURRENT_RULES.md.
+
+
+## Combined Log rollover — 2026-10-17T02:17:38+11:00
+
+Active destination: [Part 8](prediction%20logs/PREDICTION_LOG_COMBINED_8.md); Part 7 closed after 2,078,770 bytes / 51 originals P-550–P-600. Highest P-600 / next P-601 and reserved P-518–P-522 unchanged; zero IDs consumed. Pending P-584, terminal evidence and execution/learning repair queues continue at their exact existing dispositions. [Rollover custody, both queues and readback](research/verification/combined_rollover_2026-10-17/README.md). This dated navigation update supersedes earlier active-part snapshots only; no forecast, settlement, training or model change.
+
 
 | ID | Event | Tracking alias | Status |
 |---|---|---|---|
