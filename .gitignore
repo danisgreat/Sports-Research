@@ -14,3 +14,11 @@ research/data/benchmark/
 research/data/cricsheet_odi/
 research/data/greek_cache/
 research/data/nrl_cache/
+
+# Cloud storage sync and temporary directories
+.tmp.driveupload/
+*.driveupload*
+
+# Windows shell metadata and machine-local editor preferences.
+desktop.ini
+.vscode/

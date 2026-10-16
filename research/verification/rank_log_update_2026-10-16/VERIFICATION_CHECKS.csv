@@ -1,0 +1,46 @@
+check,result,evidence
+original_unchanged_before_apply,PASS,actual source CSV still matches pre-edit raw snapshot
+source_GAME_PREDICTION_RANK_LOG.csv,PASS,source/control/local-edit raw SHA256 unchanged before apply
+source_prediction logs/PREDICTION_LOG_COMBINED_7.md,PASS,source/control/local-edit raw SHA256 unchanged before apply
+source_GAME_LOG_STATUS_CURRENT.md,PASS,source/control/local-edit raw SHA256 unchanged before apply
+source_CURRENT_STATE.md,PASS,source/control/local-edit raw SHA256 unchanged before apply
+source_SCORING_AND_VALIDATION.md,PASS,source/control/local-edit raw SHA256 unchanged before apply
+source_research/verification/mini_import_P-585_P-589_2026-10-14-1/IMPORTED_ROW_INVENTORY.csv,PASS,source/control/local-edit raw SHA256 unchanged before apply
+source_research/verification/mini_import_P-590_P-600_2026-10-16-1/EFFECTIVE_SETTLEMENT_ROWS.csv,PASS,source/control/local-edit raw SHA256 unchanged before apply
+source_research/verification/final_settlement_2026-10-09/REPORT.md,PASS,source/control/local-edit raw SHA256 unchanged before apply
+source_research/verification/mini_import_P-590_P-600_2026-10-16-1/UNRESOLVED_POST_IMPORT.md,PASS,source/control/local-edit raw SHA256 unchanged before apply
+source_research/verification/rank_log_update_2026-10-14/RECEIPT.md,PASS,source/control/local-edit raw SHA256 unchanged before apply
+source_research/verification/retrospective_2026-10-16/COHORT_TABLES.md,PASS,source/control/local-edit raw SHA256 unchanged before apply
+source_.gitignore,PASS,source/control/local-edit raw SHA256 unchanged before apply
+artifact_literal_readback,PASS,all2322x20 authored string fields equal approved source-derived plan
+schema_preserved,PASS,same20 columns; no workbook/formula/schema conversion
+splice_semantics,PASS,raw original records reused only when every field matches; all authored updates retained
+unchanged_rows_byte_preserved,PASS,2033 original rows outside50 refreshed cards retain exact raw record bytes
+row_card_coverage,PASS,599 cards P001-P600 except pending584; 2322 rows
+no_duplicate_keys,PASS,zero duplicate card/rank/exact-proposition keys
+no_ragged_rows,PASS,all records have20 fields; no extra/missing columns
+no_control_characters,PASS,no embedded invalid control characters
+P418_no_invented_ranks,PASS,"record-level historical VOID, missing original contracts explicit; no new per-rank forecast"
+all_source_rows_mapped,PASS,222 canonical ranked settlement rows +20 supplied-first +46 legacy conditional rows all read back against source grade and source line
+legacy_50_refreshed,PASS,212 prior rows become223 effective rows; missing11 ranks recovered without probabilities
+legacy_probabilities_immutable,PASS,existing probabilities/q retained by original rank; newly recovered ranks remain blank
+five_false_pushes_corrected,PASS,the5 old P literals now follow the canonical WIN/LOSS corrections
+P519_correct_final,PASS,owner final69-39 total108; Rank1 Under89.5 LOSS; fabricated earlier score remains a warning
+P136_retirement_void,PASS,"historical framework retirement convention preserved, not operator certification"
+new585_589_outcomes,PASS,20 original supplied-first rows; 9W9L2PUSH
+new585_589_top_two,PASS,5W5L original primary rows in supplied-first historical cohort
+new590_600_outcomes,PASS,46 conditional sporting propositions; 23W21L2definition-unresolved
+two_definitions_stay_open,PASS,no guessed action/endpoint or coerced grade
+analyst_roles_not_promoted,PASS,all46 legacy rows retain analyst/supplied roles; no model-probability or feedback claim
+no_invented_numeric_ranks,PASS,unranked supplied rows and analyst diagnostic orders retain blank numeric rank and exact role in notes
+P584_not_settled,PASS,pending event deliberately excluded under existing terminal-only CSV convention
+changed_status_citations,PASS,changed/appended status_source lines point to their exact card where a status-table entry exists; historical block fallback explicit
+canonical_state_preserved,PASS,CSV projection allocates no IDs and changes no canonical source
+reject_duplicate_projection_key,PASS,duplicated final row rejected by the same uniqueness invariant
+missing_rank_probability_stays_blank,PASS,known rank with missing probability retained honestly
+blank_versus_zero_preserved,PASS,literal blanks/numbers preserved through artifact worksheet authoring and raw-record assembly
+raw_original_archived,PASS,full UTF8-BOM/CRLF original archived locally and externally before replacement
+saved_csv_full_readback,PASS,2322rows/20columns saved and fully parsed/read back
+sources_and_unrelated_edit_unchanged,PASS,all frozen input/control/status/log files and pre-existing.gitignore edit unchanged after write
+downstream_reader_and_final_metadata_readback,PASS,Existing rank-log reader parses2322 rows. Artifact matrix equals final plan; final adjustment removes only generated metadata trailing whitespace. All2033 unchanged original raw records and source/probability fields preserved.
+final_csv_whitespace_sources_and_scope,PASS,"Default CSV git diff whitespace check passes; final saved raw hash and frozen inputs checked. Concurrent unrelated edits observed and not touched: ml/evaluation/prospective.py, ml/run.py. No task staging/commit/push."

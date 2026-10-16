@@ -3,6 +3,7 @@ archive/superseded_2026-10-14-3/** -text
 archive/superseded_2026-10-14-4/** -text
 archive/superseded_2026-10-14-5/** -text
 archive/superseded_2026-10-14-6/** -text
+archive/rank_log_2026-10-16/** -text
 research/model_shadow/** -text
 PROMPT_1_SUPPLIED_FIRST_EXTENDED_2026-10-14.md -text
 # LEARN-v1 append-only and hash-chained CSVs: keep exact LF bytes on every clone.
