@@ -203,6 +203,10 @@ def run_decision_lab() -> None:
 
 
 def main(argv: list[str]) -> None:
+    if argv and argv[0] == "tennis":
+        from ml.tennis_primary import main as tennis_main
+        tennis_main(argv[1:])
+        return
     if argv and argv[0] == "primary":
         from ml.primary import main as primary_main
         primary_main(argv[1:])
