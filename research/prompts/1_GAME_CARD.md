@@ -9,18 +9,16 @@ Inputs: `Event: <participants, league/format, date/time/timezone or official eve
 BASKETBALL
 ----------------------------
 
-## Upcoming game — BASKETBALL
+Upcoming game — BASKETBALL
 
-**Inactive template:** run only when the user fills or explicitly invokes this sport’s event. Empty examples allocate no ID and trigger no forecast.
-
-- Event / official link: <participants and exact game identity>
-- Competition details: <League / season / stage; teams; full-game versus regulation/period endpoint; selected five and active bench.>
-- Scheduled start: <local date/time, venue timezone; verify UTC and Australia/Sydney>
-- Active local mini: <exact path>
-- Supplied contracts: <copy every exact proposition/line/period/action term, or NONE>
-- Research constraints: <actual request; only-confirmed issuance if expressly required>
+- Competition details: <Aanekosken Huima vs Lappeenrannan NMKY, Finland 1A>
+- Scheduled start: <2:00 PM AEDT, 16 October 2026 (can be delayed, so continue research and processes as normal)>
+- Supplied contracts: <Huima -8.5 ML>, <NMKY +8.5>, <Combined Total Points: Over/Under 162.5 Points>,
+- Research constraints: <continue pre game research even if game starts, continue until research is properly done>
 
 Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md) and the complete seven-step sport workflow below. Use the owner-authorised [PRIMARY_PREDICTION_PROTOCOL](../../PRIMARY_PREDICTION_PROTOCOL.md): actual fitted ML and deterministic full-information expert-mixture results supply the new primary card. Historical/unadmitted workshop outputs and the market decision lab remain excluded. Maintainers may separately freeze an eligible sporting shadow after this primary card is frozen and before the actual event starts; that uses its own model ID/receipt and never replaces this card.
+
+**Current evidence requirement:** Open the exact competition's online prior-game sources for both sides' L5/L10/L15/L20 on every request; report dated rows, URLs, true n, source comparison/conflicts and known-at limits under [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md). Seek exact-game confirmed players, starting roles, selected bench/replacements and current absences under [ROSTER_AVAILABILITY_PROTOCOL](../../ROSTER_AVAILABILITY_PROTOCOL.md), including local-language escalation and the final availability recheck. Retired files/profiles, projected selections and postgame participation never substitute for those checks. Complete research despite model gaps and preserve the reconciled running-log P-ID.
 
 ## 1. Read and establish authority
 
@@ -42,7 +40,7 @@ For a new event, reconcile the mini's next working ID with current canonical sta
 
 Mandatory for this sport: verify both sides' L5/L10/L15/L20 online under HISTORICAL_SOURCE_PROTOCOL and seek exact-game confirmed players/roles, bench/replacements and absences under ROSTER_AVAILABILITY_PROTOCOL. Record opened URLs, true n, source/time evidence, comparison/conflicts and unresolved fields; projections remain unconfirmed.
 
-**Availability research (AVAIL-2026.10.16-v3).** Read and apply [ROSTER_AVAILABILITY_PROTOCOL](../../ROSTER_AVAILABILITY_PROTOCOL.md) §§1–6 for both sides: exact starters/starting role, selected bench/replacements, current injuries/illness/suspensions/absences, and late changes. Complete its official match → both teams → eligibility/medical → permitted provider → local-language/obscure-competition escalation before reporting a missing field. Record actual searches, evidence/times and failures in the existing Evidence receipt/A3/A8; update the existing lineup-state metadata and audit C20. A roster, probable starter or predicted side is not confirmation. Recheck around the actual competition release window and immediately before freeze; re-price changed inputs. Never invent a healthy roster, bench or confirmation. If material gaps survive the full search, retain supported scenarios or qualitative/NO_FORECAST research with the exact reason. Read/run only the named primary model/receipt lane under PRIMARY_PREDICTION_PROTOCOL; market/decision-lab material remains prohibited.
+**Availability research (AVAIL-2026.10.16-v3).** Read and apply [ROSTER_AVAILABILITY_PROTOCOL](../../ROSTER_AVAILABILITY_PROTOCOL.md) §§1–6 for both sides: exact starters/starting role, selected bench/replacements, current injuries/illness/suspensions/absences, and late changes. Complete its official match → both teams → eligibility/medical → permitted provider → local-language/obscure-competition escalation before reporting a missing field. Record actual searches, evidence/times and failures in the existing Evidence receipt/A3/A8; update the existing lineup-state metadata and audit C20. A roster, probable starter or predicted side is not confirmation. Recheck around the actual competition release window; re-price changed inputs. Never invent a healthy roster, bench or confirmation. If material gaps survive the full search, retain supported scenarios or qualitative/NO_FORECAST research with the exact reason. Read/run only the named primary model/receipt lane under PRIMARY_PREDICTION_PROTOCOL; market/decision-lab material remains prohibited.
 
 Follow official field-owner (league match centre / box score) → structured provider (RealGM, ESPN, etc.) → quality corroboration routes. For each decisive claim retain URL, exact field/value or brief extract, source publication/update time when known, retrieval time and provenance/lineage. Log inaccessible/stale/conflicting sources. Three domains are not three independent collectors. No odds/tips/previews/fantasy inputs.
 
@@ -103,16 +101,14 @@ CRICKET
 
 ## Upcoming game — CRICKET
 
-**Inactive template:** run only when the user fills or explicitly invokes this sport’s event. Empty examples allocate no ID and trigger no forecast.
-
-- Event / official link: <participants and exact game identity>
-- Competition details: <Format / competition / innings target; teams; pre-/post-toss horizon; scheduled legal balls, XI and substitute categories.>
-- Scheduled start: <local date/time, venue timezone; verify UTC and Australia/Sydney>
-- Active local mini: <exact path>
-- Supplied contracts: <copy every exact proposition/line/period/action term, or NONE>
-- Research constraints: <actual request; only-confirmed issuance if expressly required>
+- Competition details: <India vs West Indies, 4th T20 Match>
+- Scheduled start: <12:30 AM AEDT, 15 October 2026 (can be delayed)>
+- Supplied contracts: <West Indies 1st Innings Runs at end of 20 overs: Over/Under 200.5 Runs>, <West Indies 1st Innings Runs at end of Powerplay (6 overs): Over/Under 57.5 Runs>,
+- Research constraints: <continue pre game research even if game starts, continue until research is properly done>
 
 Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md) and the complete seven-step sport workflow below. Use the owner-authorised [PRIMARY_PREDICTION_PROTOCOL](../../PRIMARY_PREDICTION_PROTOCOL.md): actual fitted ML and deterministic full-information expert-mixture results supply the new primary card. Historical/unadmitted workshop outputs and the market decision lab remain excluded. Maintainers may separately freeze an eligible sporting shadow after this primary card is frozen and before the actual event starts; that uses its own model ID/receipt and never replaces this card.
+
+**Current evidence requirement:** Open the exact competition's online prior-game sources for both sides' L5/L10/L15/L20 on every request; report dated rows, URLs, true n, source comparison/conflicts and known-at limits under [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md). Seek exact-game confirmed players, starting roles, selected bench/replacements and current absences under [ROSTER_AVAILABILITY_PROTOCOL](../../ROSTER_AVAILABILITY_PROTOCOL.md), including local-language escalation and the final availability recheck. Retired files/profiles, projected selections and postgame participation never substitute for those checks. Complete research despite model gaps and preserve the reconciled running-log P-ID.
 
 ## 1. Read and establish authority
 
@@ -206,6 +202,8 @@ BASEBALL
 
 Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md) and the complete seven-step sport workflow below. Use the owner-authorised [PRIMARY_PREDICTION_PROTOCOL](../../PRIMARY_PREDICTION_PROTOCOL.md): actual fitted ML and deterministic full-information expert-mixture results supply the new primary card. Historical/unadmitted workshop outputs and the market decision lab remain excluded. Maintainers may separately freeze an eligible sporting shadow after this primary card is frozen and before the actual event starts; that uses its own model ID/receipt and never replaces this card.
 
+**Current evidence requirement:** Open the exact competition's online prior-game sources for both sides' L5/L10/L15/L20 on every request; report dated rows, URLs, true n, source comparison/conflicts and known-at limits under [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md). Seek exact-game confirmed players, starting roles, selected bench/replacements and current absences under [ROSTER_AVAILABILITY_PROTOCOL](../../ROSTER_AVAILABILITY_PROTOCOL.md), including local-language escalation and the final availability recheck. Retired files/profiles, projected selections and postgame participation never substitute for those checks. Complete research despite model gaps and preserve the reconciled running-log P-ID.
+
 ## 1. Read and establish authority
 
 **Required repository fallback (REF-v1).** Always keep [https://github.com/danisgreat/Sports-Research/tree/main](https://github.com/danisgreat/Sports-Research/tree/main) as the standing reference. If required local files are not fully accessible (missing, unreadable, truncated or incomplete), retrieve the actual required contents from this repository before declaring them unavailable. Apply [GITHUB_REFERENCE_PROTOCOL](../../GITHUB_REFERENCE_PROTOCOL.md): resolve one main commit SHA, record exact files/read time and fallback results in the existing reading receipt, and preserve the declared authority mode. Never substitute an unpublished local mini, claim unread content or treat viewing code as executing it. If authorized remote access also fails, record the real gap and continue independent work.
@@ -287,16 +285,14 @@ SOCCER
 
 ## Upcoming game — SOCCER
 
-**Inactive template:** run only when the user fills or explicitly invokes this sport’s event. Empty examples allocate no ID and trigger no forecast.
-
-- Event / official link: <participants and exact game identity>
-- Competition details: <League / cup stage; teams; regulation/ET terms; confirmed XI, goalkeeper, substitutes and suspensions.>
-- Scheduled start: <local date/time, venue timezone; verify UTC and Australia/Sydney>
-- Active local mini: <exact path>
-- Supplied contracts: <copy every exact proposition/line/period/action term, or NONE>
-- Research constraints: <actual request; only-confirmed issuance if expressly required>
+- Game details: <BG Pathaum United vs Adelaide United, AFC Champions League Two>
+- Scheduled start: <11:15 PM AEDT, 15 October 2026 (Can be delayed)>
+- Supplied contracts: <Combined 1st half goals: Over/Under 0.5 Goals>, <Combined total goals: Over/Under 2.5 Goals>, <Combined Total Corners: Over/Under 10.5 Corners>
+- Research constraints: <continue pre game analysis/research/process even if it goes past start time>
 
 Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md) and the complete seven-step sport workflow below. Use the owner-authorised [PRIMARY_PREDICTION_PROTOCOL](../../PRIMARY_PREDICTION_PROTOCOL.md): actual fitted ML and deterministic full-information expert-mixture results supply the new primary card. Historical/unadmitted workshop outputs and the market decision lab remain excluded. Maintainers may separately freeze an eligible sporting shadow after this primary card is frozen and before the actual event starts; that uses its own model ID/receipt and never replaces this card.
+
+**Current evidence requirement:** Open the exact competition's online prior-game sources for both sides' L5/L10/L15/L20 on every request; report dated rows, URLs, true n, source comparison/conflicts and known-at limits under [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md). Seek exact-game confirmed players, starting roles, selected bench/replacements and current absences under [ROSTER_AVAILABILITY_PROTOCOL](../../ROSTER_AVAILABILITY_PROTOCOL.md), including local-language escalation and the final availability recheck. Retired files/profiles, projected selections and postgame participation never substitute for those checks. Complete research despite model gaps and preserve the reconciled running-log P-ID.
 
 ## 1. Read and establish authority
 
@@ -379,7 +375,6 @@ ICE HOCKEY
 
 ## Upcoming game — ICE HOCKEY
 
-**Inactive template:** run only when the user fills or explicitly invokes this sport’s event. Empty examples allocate no ID and trigger no forecast.
 
 - Event / official link: <participants and exact game identity>
 - Competition details: <League / stage; teams; regulation/OT/SO terms; confirmed goalie, selected roster and scratches.>
@@ -389,6 +384,8 @@ ICE HOCKEY
 - Research constraints: <actual request; only-confirmed issuance if expressly required>
 
 Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md) and the complete seven-step sport workflow below. Use the owner-authorised [PRIMARY_PREDICTION_PROTOCOL](../../PRIMARY_PREDICTION_PROTOCOL.md): actual fitted ML and deterministic full-information expert-mixture results supply the new primary card. Historical/unadmitted workshop outputs and the market decision lab remain excluded. Maintainers may separately freeze an eligible sporting shadow after this primary card is frozen and before the actual event starts; that uses its own model ID/receipt and never replaces this card.
+
+**Current evidence requirement:** Open the exact competition's online prior-game sources for both sides' L5/L10/L15/L20 on every request; report dated rows, URLs, true n, source comparison/conflicts and known-at limits under [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md). Seek exact-game confirmed players, starting roles, selected bench/replacements and current absences under [ROSTER_AVAILABILITY_PROTOCOL](../../ROSTER_AVAILABILITY_PROTOCOL.md), including local-language escalation and the final availability recheck. Retired files/profiles, projected selections and postgame participation never substitute for those checks. Complete research despite model gaps and preserve the reconciled running-log P-ID.
 
 ## 1. Read and establish authority
 
@@ -471,16 +468,16 @@ TENNIS
 
 ## Upcoming game — TENNIS
 
-**Inactive template:** run only when the user fills or explicitly invokes this sport’s event. Empty examples allocate no ID and trigger no forecast.
 
-- Event / official link: <participants and exact game identity>
-- Competition details: <Tour / event / round / surface; players or doubles pairs; best-of/tiebreak/retirement terms; fitness/withdrawals.>
-- Scheduled start: <local date/time, venue timezone; verify UTC and Australia/Sydney>
-- Active local mini: <exact path>
-- Supplied contracts: <copy every exact proposition/line/period/action term, or NONE>
-- Research constraints: <actual request; only-confirmed issuance if expressly required>
+- Competition details: <Ann Li vs Janice Tjen, WTA Wuhan - Round 3>
+- Scheduled start: <12:00 AM AEDT, 16 October 2026 (Can be delayed, continue research as normal regardless)>
+- Active local mini: <current path>
+- Supplied contracts: <Li -3.5 Handicap>, <Tjen +3.5 Handicap>, <Combined Total Games Over/Under 21.5 Games>
+
 
 Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md) and the complete seven-step sport workflow below. Use the owner-authorised [PRIMARY_PREDICTION_PROTOCOL](../../PRIMARY_PREDICTION_PROTOCOL.md): actual fitted ML and deterministic full-information expert-mixture results supply the new primary card. Historical/unadmitted workshop outputs and the market decision lab remain excluded. Maintainers may separately freeze an eligible sporting shadow after this primary card is frozen and before the actual event starts; that uses its own model ID/receipt and never replaces this card.
+
+**Current evidence requirement:** Open the exact competition's online prior-game sources for both sides' L5/L10/L15/L20 on every request; report dated rows, URLs, true n, source comparison/conflicts and known-at limits under [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md). Seek exact-game confirmed players, starting roles, selected bench/replacements and current absences under [ROSTER_AVAILABILITY_PROTOCOL](../../ROSTER_AVAILABILITY_PROTOCOL.md), including local-language escalation and the final availability recheck. Retired files/profiles, projected selections and postgame participation never substitute for those checks. Complete research despite model gaps and preserve the reconciled running-log P-ID.
 
 ## 1. Read and establish authority
 
@@ -574,6 +571,8 @@ RUGBY LEAGUE
 
 Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md) and the complete seven-step sport workflow below. Use the owner-authorised [PRIMARY_PREDICTION_PROTOCOL](../../PRIMARY_PREDICTION_PROTOCOL.md): actual fitted ML and deterministic full-information expert-mixture results supply the new primary card. Historical/unadmitted workshop outputs and the market decision lab remain excluded. Maintainers may separately freeze an eligible sporting shadow after this primary card is frozen and before the actual event starts; that uses its own model ID/receipt and never replaces this card.
 
+**Current evidence requirement:** Open the exact competition's online prior-game sources for both sides' L5/L10/L15/L20 on every request; report dated rows, URLs, true n, source comparison/conflicts and known-at limits under [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md). Seek exact-game confirmed players, starting roles, selected bench/replacements and current absences under [ROSTER_AVAILABILITY_PROTOCOL](../../ROSTER_AVAILABILITY_PROTOCOL.md), including local-language escalation and the final availability recheck. Retired files/profiles, projected selections and postgame participation never substitute for those checks. Complete research despite model gaps and preserve the reconciled running-log P-ID.
+
 ## 1. Read and establish authority
 
 **Required repository fallback (REF-v1).** Always keep [https://github.com/danisgreat/Sports-Research/tree/main](https://github.com/danisgreat/Sports-Research/tree/main) as the standing reference. If required local files are not fully accessible (missing, unreadable, truncated or incomplete), retrieve the actual required contents from this repository before declaring them unavailable. Apply [GITHUB_REFERENCE_PROTOCOL](../../GITHUB_REFERENCE_PROTOCOL.md): resolve one main commit SHA, record exact files/read time and fallback results in the existing reading receipt, and preserve the declared authority mode. Never substitute an unpublished local mini, claim unread content or treat viewing code as executing it. If authorized remote access also fails, record the real gap and continue independent work.
@@ -665,6 +664,8 @@ RUGBY UNION
 - Research constraints: <actual request; only-confirmed issuance if expressly required>
 
 Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md) and the complete seven-step sport workflow below. Use the owner-authorised [PRIMARY_PREDICTION_PROTOCOL](../../PRIMARY_PREDICTION_PROTOCOL.md): actual fitted ML and deterministic full-information expert-mixture results supply the new primary card. Historical/unadmitted workshop outputs and the market decision lab remain excluded. Maintainers may separately freeze an eligible sporting shadow after this primary card is frozen and before the actual event starts; that uses its own model ID/receipt and never replaces this card.
+
+**Current evidence requirement:** Open the exact competition's online prior-game sources for both sides' L5/L10/L15/L20 on every request; report dated rows, URLs, true n, source comparison/conflicts and known-at limits under [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md). Seek exact-game confirmed players, starting roles, selected bench/replacements and current absences under [ROSTER_AVAILABILITY_PROTOCOL](../../ROSTER_AVAILABILITY_PROTOCOL.md), including local-language escalation and the final availability recheck. Retired files/profiles, projected selections and postgame participation never substitute for those checks. Complete research despite model gaps and preserve the reconciled running-log P-ID.
 
 ## 1. Read and establish authority
 
@@ -758,6 +759,8 @@ AFL / AFLW
 
 Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md) and the complete seven-step sport workflow below. Use the owner-authorised [PRIMARY_PREDICTION_PROTOCOL](../../PRIMARY_PREDICTION_PROTOCOL.md): actual fitted ML and deterministic full-information expert-mixture results supply the new primary card. Historical/unadmitted workshop outputs and the market decision lab remain excluded. Maintainers may separately freeze an eligible sporting shadow after this primary card is frozen and before the actual event starts; that uses its own model ID/receipt and never replaces this card.
 
+**Current evidence requirement:** Open the exact competition's online prior-game sources for both sides' L5/L10/L15/L20 on every request; report dated rows, URLs, true n, source comparison/conflicts and known-at limits under [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md). Seek exact-game confirmed players, starting roles, selected bench/replacements and current absences under [ROSTER_AVAILABILITY_PROTOCOL](../../ROSTER_AVAILABILITY_PROTOCOL.md), including local-language escalation and the final availability recheck. Retired files/profiles, projected selections and postgame participation never substitute for those checks. Complete research despite model gaps and preserve the reconciled running-log P-ID.
+
 ## 1. Read and establish authority
 
 **Required repository fallback (REF-v1).** Always keep [https://github.com/danisgreat/Sports-Research/tree/main](https://github.com/danisgreat/Sports-Research/tree/main) as the standing reference. If required local files are not fully accessible (missing, unreadable, truncated or incomplete), retrieve the actual required contents from this repository before declaring them unavailable. Apply [GITHUB_REFERENCE_PROTOCOL](../../GITHUB_REFERENCE_PROTOCOL.md): resolve one main commit SHA, record exact files/read time and fallback results in the existing reading receipt, and preserve the declared authority mode. Never substitute an unpublished local mini, claim unread content or treat viewing code as executing it. If authorized remote access also fails, record the real gap and continue independent work.
@@ -839,16 +842,15 @@ AMERICAN FOOTBALL
 
 ## Upcoming game — AMERICAN FOOTBALL
 
-**Inactive template:** run only when the user fills or explicitly invokes this sport’s event. Empty examples allocate no ID and trigger no forecast.
-
-- Event / official link: <participants and exact game identity>
-- Competition details: <NFL / conference / school / stage; teams; starting QB/roles, inactives; competition-season tie/OT terms.>
-- Scheduled start: <local date/time, venue timezone; verify UTC and Australia/Sydney>
-- Active local mini: <exact path>
-- Supplied contracts: <copy every exact proposition/line/period/action term, or NONE>
-- Research constraints: <actual request; only-confirmed issuance if expressly required>
+- Competition details: <SEA Seahawks @ DEN Broncos, NFL Regular Season>
+- Scheduled start: <11:15 AM, AEDT, 16 October 2026>
+- Active local mini: <current path>
+- Supplied contracts: <Seahawks -2.5>, <Broncos +2.5>, <Combined Total Points: Over/Under 40.5 Points>
+- Research constraints: <continue pre game research even if game starts, continue until research is properly done>
 
 Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md) and the complete seven-step sport workflow below. Use the owner-authorised [PRIMARY_PREDICTION_PROTOCOL](../../PRIMARY_PREDICTION_PROTOCOL.md): actual fitted ML and deterministic full-information expert-mixture results supply the new primary card. Historical/unadmitted workshop outputs and the market decision lab remain excluded. Maintainers may separately freeze an eligible sporting shadow after this primary card is frozen and before the actual event starts; that uses its own model ID/receipt and never replaces this card.
+
+**Current evidence requirement:** Open the exact competition's online prior-game sources for both sides' L5/L10/L15/L20 on every request; report dated rows, URLs, true n, source comparison/conflicts and known-at limits under [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md). Seek exact-game confirmed players, starting roles, selected bench/replacements and current absences under [ROSTER_AVAILABILITY_PROTOCOL](../../ROSTER_AVAILABILITY_PROTOCOL.md), including local-language escalation and the final availability recheck. Retired files/profiles, projected selections and postgame participation never substitute for those checks. Complete research despite model gaps and preserve the reconciled running-log P-ID.
 
 ## 1. Read and establish authority
 
@@ -941,6 +943,8 @@ OTHER SPORTS
 - Research constraints: <actual request; only-confirmed issuance if expressly required>
 
 Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md) and the complete seven-step sport workflow below. Use the owner-authorised [PRIMARY_PREDICTION_PROTOCOL](../../PRIMARY_PREDICTION_PROTOCOL.md): actual fitted ML and deterministic full-information expert-mixture results supply the new primary card. Historical/unadmitted workshop outputs and the market decision lab remain excluded. Maintainers may separately freeze an eligible sporting shadow after this primary card is frozen and before the actual event starts; that uses its own model ID/receipt and never replaces this card.
+
+**Current evidence requirement:** Open the exact competition's online prior-game sources for both sides' L5/L10/L15/L20 on every request; report dated rows, URLs, true n, source comparison/conflicts and known-at limits under [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md). Seek exact-game confirmed players, starting roles, selected bench/replacements and current absences under [ROSTER_AVAILABILITY_PROTOCOL](../../ROSTER_AVAILABILITY_PROTOCOL.md), including local-language escalation and the final availability recheck. Retired files/profiles, projected selections and postgame participation never substitute for those checks. Complete research despite model gaps and preserve the reconciled running-log P-ID.
 
 ## 1. Read and establish authority
 

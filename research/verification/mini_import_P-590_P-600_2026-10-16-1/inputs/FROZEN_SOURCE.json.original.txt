@@ -1,0 +1,66 @@
+{
+  "freeze_at": "2026-10-16T14:45:37.712106+11:00",
+  "original_source_path": "/mnt/data/PREDICTION_MINI_RUNNING_LOG_P590_P600_WITH_NUMERIC_CONTRACT_PROBABILITIES.md",
+  "frozen_copy_path": "/mnt/data/SPORTS_MINI_P590_P600_SETTLEMENT_2026-10-16_rev1/ORIGINAL_MINI.md",
+  "raw_bytes": 321284,
+  "sha256": "d5fcc5e247113154efcbdb15586644e7a3249e76b98c4af9431b10540bf6463c",
+  "full_card_inventory": [
+    {
+      "id": "P-590",
+      "sha256": "56800a7dacba1585259b2cc9c3e02595caa7e408eafba9f2868518aa59ff2c54",
+      "bytes": 26367
+    },
+    {
+      "id": "P-591",
+      "sha256": "a5373545464dd32983d91cc1f0f75454d8826ee21c95e7ec3da8d4d7febb2c4a",
+      "bytes": 34638
+    },
+    {
+      "id": "P-592",
+      "sha256": "a9e895b0771b6011464a5260ffe5e627f3c99f9a07ed1f4f8de524c112aed189",
+      "bytes": 28747
+    },
+    {
+      "id": "P-593",
+      "sha256": "05fe0a5c29574d22d63811a238360b7416dcae242bf389fd20596a8f2f8fbc6e",
+      "bytes": 40329
+    },
+    {
+      "id": "P-594",
+      "sha256": "90e7bc7ca076c4dbd13fe45a54a0c1c0b2f6d595bfc288382b4967cf6b1fbe2a",
+      "bytes": 31118
+    },
+    {
+      "id": "P-595",
+      "sha256": "8dd9ce18fe4c96447b232978651024ca005dd5d1cb09c589cd310ba6b5ccf57d",
+      "bytes": 31438
+    },
+    {
+      "id": "P-597",
+      "sha256": "95e577ede7ccdc56b6aeec9c8e86d76e77da5bb412869998cd4f4d64a349efed",
+      "bytes": 15713
+    },
+    {
+      "id": "P-598",
+      "sha256": "36da4abaf5b29e84df17c4fbba83b0028edab746dbe0e1d56aedb56514c85341",
+      "bytes": 21814
+    },
+    {
+      "id": "P-599",
+      "sha256": "40c8143d4297cb991e21cc4e2bee889463e0fd5613a1106f4b21a31b9cd50073",
+      "bytes": 21721
+    },
+    {
+      "id": "P-600",
+      "sha256": "fde527c2cb8b2d66e6b7e302465ae2bdd6fc3eae5b12ca56148300a41dc59d32",
+      "bytes": 22131
+    }
+  ],
+  "p596_gap": "original local frozen file has a pointer only, canonical P596 original verified separately at pinned GitHub main; do not reconstruct",
+  "footer_count": 1,
+  "addenda": [
+    "P-590"
+  ],
+  "canonical_head_seen": "2ea94f6f718d1f43c7af9e567008495114ef9cef",
+  "writer_handover": "frozen snapshot for settlement package only; no externally enforceable writer lease or GitHub frozen-status mutation"
+}

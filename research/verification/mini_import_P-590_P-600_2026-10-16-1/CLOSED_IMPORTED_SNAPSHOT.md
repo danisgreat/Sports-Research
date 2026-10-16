@@ -1,0 +1,5 @@
+# Closed imported frozen snapshot
+
+This custody receipt covers only source SHA-256 `d5fcc5e247113154efcbdb15586644e7a3249e76b98c4af9431b10540bf6463c`,321284 bytes, and the supplied rev1 settlement package. Every card/source block/queue has a canonical destination or retained-input disposition. Highest P-600; next P-601. Frozen source/settlement original footer remains unchanged. This closes import accounting, not all operator/evidence questions.
+
+The exact existing P-596 canonical retention narrative is separately captured. No missing earlier draft was reconstructed. The source package and repository research/active_minis/P-590_ONWARD mini remain untouched; no live writer handover or claim that another writer stopped is made. Their old canonical-allocation/footer snapshots are historical and must be reconciled with current state/status before a future append. A new mini requires its own owner-invoked setup; none is silently created here. Next research must use current online-history/player controls, preserving all past originals.

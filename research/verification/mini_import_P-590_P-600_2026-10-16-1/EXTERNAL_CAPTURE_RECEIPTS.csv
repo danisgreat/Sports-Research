@@ -1,0 +1,4 @@
+name,url,retrieved_at,sha256,bytes,error
+nba_live_box,https://cdn.nba.com/static/json/liveData/boxscore/boxscore_0012600020.json,2026-10-16T15:15:29.058514+11:00,,,HTTP Error 403: Forbidden
+espn_nba,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20261015,2026-10-16T15:15:29.068063+11:00,58608c64d77e78954145d17a4099250c429882cdaba969c54656d5b1a5716f58,40238,
+espn_nfl,https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261015,2026-10-16T15:15:29.069239+11:00,14c012a5a6b20ab0c9eb23b721f6b3403535a3a469bf6262fe6335908bb1d957,22621,

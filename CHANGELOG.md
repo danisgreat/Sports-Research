@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-16 — complete P-590-P-600 legacy settlement import and prompt alignment
+
+Four new canonical originals P-597-P-600, seven exact existing skips, one P-590 source addendum, eleven revision-1 sporting reviews; highest P-600 / next P-601. Full1925672-byte prior Part7 prefix and all original cores preserved. Source cohort23W/21L/2 unknown-definition rows remains conditional sporting diagnostics, no operator or primary-model certification. All37 analyst diagnostic calculations checked without model promotion; old queues/timing/source gaps retained. P-596 existing canonical retention core captured separately, never the missing earlier full draft. Full report: [import](research/verification/mini_import_P-590_P-600_2026-10-16-1/CANONICAL_IMPORT_REPORT.md).
+
+EDITORIAL clarification of existing v17.1 rules: all eleven sport/general first-Read instruction bodies repeat mandatory online L5/L10/L15/L20 and confirmed-player requirements; every actual owner-entered Upcoming block remains byte-identical. Legacy settlement/import keeps original rule versions and truthful evidence gaps. Filled current game inputs are explicitly included in this owner's authorized prompt publication; unrelated local work excluded. No numerical/scoring/selection/format or method version change. Base prompt/control copies: archive/prompt_alignment_2026-10-16_P590_P600.
+
+
 ## 2026-10-16 — mandatory online history and confirmed players (v17.1 / CR-R2)
 
 PROCEDURE + DATA RETIREMENT. Owner requested deletion of the results store believed corrupted. Retired it and store-derived profiles; replaced store-first/fallback directions across all sports and eleven game workflows with online L5/L10/L15/L20 research, true n, source/known-at evidence and comparison where needed. AVAIL-v3 strengthens existing exact-game player confirmation. Fresh reviewed web primary inputs need no store; optional workshop discovery tolerates an absent reviewed-history root. No numeric selection/scoring/format, ID/grade or issued-original changes. See research/verification/framework_change_2026-10-16-3/IMPLEMENTATION.md and RESULTS_REBUILD_PLAN.md. No rebuild/model regeneration or predictive qualification claimed.

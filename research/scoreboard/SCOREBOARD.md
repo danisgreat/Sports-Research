@@ -1,5 +1,14 @@
 # Scoreboard: current measurement and preserved historical results
 
+## Current legacy settlement import — 2026-10-16T15:18:45+11:00
+
+Highest canonical **P-600**; next **P-601**; active Combined Log remains Part 7. Inventory **116 retained research records = 115 terminal sporting-result reviews + 1 legacy pending P-584** (104 prior terminal + eleven P-590-P-600 result reviews). Four originals P-597-P-600 added; seven existing originals P-590-P-596 skipped; one P-590 reconciliation addendum and eleven revision-1 settlements retained. [Complete import/readback](../verification/mini_import_P-590_P-600_2026-10-16-1/CANONICAL_IMPORT_REPORT.md).
+
+The supplied package reports **23 conditional sporting WIN / 21 LOSS / 2 UNRESOLVED** across 46 dependent supplied-contract rows; all eleven events still lack complete operator-action terms and exact final-at/SLA evidence. P-596 Saryarka ML and P-598 Huima −8.5 ML remain UNKNOWN_DEFINITION. These grades retain original rules and analyst roles; no current online-history/lineup compliance, fitted primary model, certified performance or pregame availability is backfilled. Model primary/baseline paired scores remain NOT_COMPUTABLE for this cohort; 37 descriptive analyst rows remain NOT_PRIMARY. Prior score cohorts retain their original figures. Raw carryover: 17 items, 2 closed by canonical-core/owner-result capture, 15 open; older P-581-P-584 and prior operator/time/custody queues remain. No automation scheduled.
+
+Descriptive analyst diagnostics only: 37 rows (19 sporting wins, 18 losses), mean squared error 0.2860831243, mean log loss 0.7704050973, recomputed against original package analyst probabilities. This is not fitted-model Brier/calibration, not an independent 37-event sample and not a same-row baseline comparison. Original P-590-P-592 descriptive rank-1 1W/2L; row-2 1W/2L includes an explicitly informational P-590 row, so it is not promoted into a model T2 denominator. No verified new model feedback is generated.
+
+
 ## Research retention import - 2026-10-16T01:29:27+11:00
 Seven retained records P-590-P-596 added for future source-backed settlement/development; tracked inventory 112: 104 prior terminal, legacy pending P-584, 7 awaiting outcome review. New source cohorts: 3 historical manual numeric originals P-590-P-592, 3 source NO_FORECAST originals P-593-P-595 and 1 RESEARCH_ONLY_NO_MODEL P-596. No model-assisted card or verified terminal label is added by this import. No new W/L/PUSH/VOID, T2, Brier/calibration/baseline score or prospective eligibility is inferred. Preserve every original rank/probability/status and actual timing; P-596 source-reported analyst probabilities are NOT_PRIMARY. [Complete import](../verification/framework_change_2026-10-16-1/CANONICAL_IMPORT_REPORT.md). Earlier dated scoreboard snapshots below are unchanged.
 

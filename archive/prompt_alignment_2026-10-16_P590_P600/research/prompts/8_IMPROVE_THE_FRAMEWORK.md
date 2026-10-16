@@ -1,0 +1,72 @@
+# PROMPT 8 — Implement, verify and release a framework or workshop change
+
+**Online history and confirmed players (HIST-2026.10.16-v2 / AVAIL-2026.10.16-v3).** For every game, research both sides' L5/L10/L15/L20 online under [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md), with opened sources, dated game rows and true n. Seek exact-game confirmed players, starting roles, bench/replacements and absences under [ROSTER_AVAILABILITY_PROTOCOL](../../ROSTER_AVAILABILITY_PROTOCOL.md); projected players remain unconfirmed. The retired local results store and its derived profiles are not required inputs or fallbacks. Earlier archive-first directions are superseded.
+
+**P-2026.10.16-v17.1 · FRAMEWORK_CHANGE · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: declared operating Markdown/CSV/text, archived originals, fixtures and a unique verification folder. Python/tests/requirements are permitted only under ml/ by CURRENT_RULES §0. No JSON, notebooks, pickles, workflows or binaries. Publish when this full prompt is invoked unless explicitly local-only.
+
+**Required repository fallback (REF-v1).** Always keep [https://github.com/danisgreat/Sports-Research/tree/main](https://github.com/danisgreat/Sports-Research/tree/main) as the standing reference. If required local files are not fully accessible (missing, unreadable, truncated or incomplete), retrieve the actual required contents from this repository before declaring them unavailable. Apply [GITHUB_REFERENCE_PROTOCOL](../../GITHUB_REFERENCE_PROTOCOL.md): resolve one main commit SHA, record exact files/read time and fallback results in the existing reading receipt, and preserve the declared authority mode. Never substitute an unpublished local mini, claim unread content or treat viewing code as executing it. If authorized remote access also fails, record the real gap and continue independent work.
+
+## Inputs
+
+- User instruction or concrete finding, with exact scope.
+- Relevant retrospective/source/model evidence and prior exposure, or discover.
+- Allowed writes, independent/assisted/shadow lanes and publication instruction.
+- Workshop targets, if requested: exact competition/endpoint/model/config and evidence question.
+- Decision-lab audit only when expressly authorized; its material remains outside card learning.
+
+## 1. Read current authority and inspect actual mechanisms
+
+Read common controls/protocol, scoring/verification/hypotheses, contribution rules, latest three changelog entries, affected prompts/dependencies, latest completed retrospective and relevant learning. For workshop work read source/tests, model cards, generated artifact and run receipts. An unfinished report, placeholder or unavailable STATUS is not implemented evidence. Print branch/HEAD/dirty inventory and a full receipt; fetch the publication ref without overwriting work.
+
+Assess data admission/known-at, coherent physical support/endpoints, same-row baselines, chronology/tuning/calibration separation, independent prospective freeze, artifact loading and operational failure paths separately. Tests prove only their actual checks. Exposed historical evaluation cannot become untouched/prospective by renaming it.
+
+## 2. Write a concrete proposal and dependency map
+
+Create a unique framework_change_<date>-<run> folder with CHANGE_PROPOSAL and IMPLEMENTATION. Record instruction/date, defects and exact file/evidence, scope, classification, before/after behaviour, dependencies/versions, verification and rollback.
+
+For every recommendation state adopt/adapt/shadow/defer/reject, exact change/task/owner, acceptance evidence, remaining sample/design requirements and status. Administrative/source/integrity repairs can be authorized without pretending a predictive test passed. Selection/model/threshold/qualification changes need their own frozen comparison.
+
+Archive replaced working documents byte-for-byte, including dirty baselines. Store retired code as text outside active execution or in permitted workshop version history. Preserve issued originals, grades, old hypotheses and dated reports. Do not erase concurrent work or finish another process's partial artifact by inventing values.
+
+## 3. Implement in dependency order
+
+1. Establish authorized scope and evidence lane, then data/source/identity/availability contracts.
+2. Complete preregistration before confirmatory use: scope, candidate/baseline, horizon, primary metric, meaningful effect, precision/dependence/power, missingness, multiplicity and stopping. Unknown design inputs keep promotion BLOCKED_DESIGN.
+3. Implement numerical contracts and serious simple baselines before complex challengers. Winner/handicap/total/push must be projections of a compatible event state; cricket/tennis/extras require their own structure.
+4. Fit/tune/calibrate/evaluate chronologically with all attempted candidates logged. Each transform, player cluster, rating, encoder and roster state must be training/cutoff-safe. A calibrator must not use the outcomes being evaluated.
+5. Implement actual shadow guards: code/data/config/input identity, timing, committed receipt retrieval, unchanged bytes, per-event reveal, exact settlement convention and revision validation. A locally written receipt is not proof of commitment. An earliest-start slate release cannot expose later manual forecasts.
+6. Align rules/templates/prompts/examples/source registers/status/indexes together. FORMAT/STATISTICAL changes bump prompt major; PROCEDURE bumps minor; truly editorial wording keeps version. Old minis/cards retain their semantics.
+
+For RL/decision work, verify observable action-time inputs and delayed feedback, exact logged behaviour probabilities and support, identical opportunities/baselines, payoffs/costs/reserved cash/settlement time and limitations. CLV-based reward is a surrogate; a drawdown penalty is not CVaR or a hard guarantee. Date-only prices permit an assumption-labelled paper replay, not verified execution. RL cannot be promoted by a favourable seed or inherited forecasts.
+
+## 4. Verify implementation and artifact integrity
+
+Run relevant focused tests and the required workshop suite, python -m pytest ml/tests, when code changes. Every material new check needs a rejecting negative case and a legitimate edge case. Exercise deterministic/rerun recovery, future-input injection, wrong source/schema/hash, uncommitted receipt, early reveal, incomplete/duplicate final and endpoint mismatch as relevant. Use throwaway EXAMPLE IDs, no live P-IDs.
+
+An altered generating code/config/data hash invalidates current-artifact claims. Regenerate affected outputs from an actual controlled run or retain the old run with its exact recoverable implementation and label it historical/unqualified; never hand-edit generated scores or stamp a new receipt onto old numbers. Record failures/limits instead of publishing missing runs as complete.
+
+Check generated scopes/coverage/receipts against actual source/population and code. A league-name LABEL_A allowlist is not field-owner admission. Store raw market data outside the research repository, export permitted aggregates only, and verify forecast/model files contain no market fields. Logs and card learning never ingest decision-lab signals.
+
+Run VERIFICATION_PROTOCOL §6: versions/dependencies/links, archive hashes, old-format preservation, actual readback, full intended diff, allowed types/paths and protected-record identities. Label manual walkthroughs and executed tests accurately. Summarise model quality, calibration, predictive evidence and operational readiness separately.
+
+## 5. Release, rollback and report
+
+Release only the authorized scope whose evidence gates passed. A tested development candidate stays development/shadow until its registered prospective evidence, sufficient precision and owner-approved exact-scope integration exist. Owner-authorised experimental primary use follows PRIMARY_PREDICTION_PROTOCOL and actual receipt-bound per-event execution; a prompt rewrite alone is not a fitted model or predictive qualification. Rejection/inconclusive/data-hold results remain visible.
+
+Stage exact reviewed paths and inspect staged diff/status. Recheck source/artifact hashes and concurrent writes immediately before commit. Publish without force under authorization; fetch/compare main or named destination SHA and read back key artifacts. A remote advance needs normal reconciliation, never history overwrite.
+
+Return current prompt/index and implementation/review links, before/after behaviour, exact versions, measured checks/results, qualified versus blocked scopes, effects on in-progress minis, remaining data/experiment tasks and verified commit/remote state. Rollback targets the changed code/config/scope only, preserving canonical history and all failed forecasts.
+
+
+Research-completion changes must exercise uncalibrated inference, missing/failed runtime, unsupported families, missing history/lineups, active-mini/lease conflicts and post-start/outcome-exposed cases. Reject an intake-only or NO_FORECAST-only deliverable as completed analysis; accept genuine exhausted gaps only with substantive A1-A9 work and the evidence matrix. Keep numerical ML guards and truthful custody intact.
+
+## Research retention and execution disposition (RETAIN-v1)
+
+**Retain the research regardless of ML (RETAIN-v1).** Read [RESEARCH_RETENTION_PROTOCOL](../../RESEARCH_RETENTION_PROTOCOL.md). Missing/unsupported/failed ML or `No module named ml`, baseline/calibration and unavailable receipts never by themselves block recording a researched game under its next reconciled P-ID or canonical import. Run the supported model when accessible; otherwise retain RESEARCH_ONLY_NO_MODEL with actual reason, no fake receipt/model probability, and supported analyst_p separately NOT_PRIMARY. C21 verifies honest disposition, including blank execution paths for no run. Settle original contracts and retain verified targets for future training even when no expert existed; only real frozen bundles supply Hedge feedback. Preserve complete research, genuine gaps and real timing; do not backdate.
+
+Verify EXEC-v1 lifecycle coverage through actual `primary execute`, rejected attempts, `primary verify-log`, delayed `primary settle` feedback and future consumption. Exercise a supported exact competition with no pre-existing archive/profile/TB-1 baseline: recover reviewed inputs, fit the league comparator from its own history, execute the ML/Hedge pipeline and retain receipts. Also reject unsupported/insufficient/unknown inputs honestly. Preserve all historical forecasts and local prompt inputs; a failed attempt is not a fitted model and passing mechanics is not predictive qualification.
+
+
+**Model use and mandatory running-log record (owner clarification, 16 October 2026).** Use the supported ML/RL mechanisms when they are available for the exact sport, competition and endpoint. Whether a model exists or not, assign the reconciled permanent P-ID, append the researched game card to the active running mini-log, read it back and advance its footer. A missing sport-specific model must not leave an otherwise recordable game as intake-only, unissued or without an ID. With no verified model output, record RESEARCH_ONLY_NO_MODEL, the actual reason and supported analyst work; never invent model probabilities or receipts. Carry that same P-ID through verified canonical import; do not allocate another ID. Before an authorized import, the local card may truthfully say PENDING_IMPORT; that status never cancels its ID or running-log entry. Identity/allocation conflicts, frozen or inaccessible originals and real write failures still block only the affected mutation. Verified settlements remain available for future model development in both paths.
+
+See [RETAIN-v1](../../RESEARCH_RETENTION_PROTOCOL.md). This is an editorial clarification of the existing two-path behavior; no model, numerical policy or format change.

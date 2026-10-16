@@ -1,7 +1,7 @@
 <!-- BEGIN CURRENT RESEARCH QUEUE -->
 # Current canonical research queue
 
-**Next canonical ID: P-597.** Every requested event is retained, regardless of calibration: first as a local working card in the authorised mini, then canonically through verified prompt-4 retention import (which may precede prompt-3 settlement under RETAIN-v1). No card is written to the active combined log directly. *(Clarified 2026-10-12, audit R10: the earlier wording "go directly to the active combined log" described retention, not a bypass of local staging.)* Canonical IDs identify retained cards; performance certification and live/late timing are separate labels.
+**Next canonical ID: P-601.** Every requested event is retained, regardless of calibration: first as a local working card in the authorised mini, then canonically through verified prompt-4 retention import (which may precede prompt-3 settlement under RETAIN-v1). No card is written to the active combined log directly. *(Clarified 2026-10-12, audit R10: the earlier wording "go directly to the active combined log" described retention, not a bypass of local staging.)* Canonical IDs identify retained cards; performance certification and live/late timing are separate labels.
 Active Combined Log: `prediction logs/PREDICTION_LOG_COMBINED_7.md`.
 Freeze: none (custody is the git history of `main`, CURRENT_RULES §9). The last control manifest is `archive/controls/CONTROL_MANIFEST_2026-10-09-3.md`. Current authority: CURRENT_STATE.md, METHOD.md and CURRENT_RULES.md.
 
@@ -1004,3 +1004,24 @@ This dated current update supersedes old allocation/queue snapshots only. Highes
 | P-594 | Seoul Samsung Thunders vs Changwon LG Sakers | PENDING_SETTLEMENT / OUTCOME_NOT_REVIEWED | PENDING_SETTLEMENT; targets after source review |
 | P-595 | Tamara Zidansek vs Joelle Lilly Sophie Steur | PENDING_SETTLEMENT / OUTCOME_NOT_REVIEWED | PENDING_SETTLEMENT; targets after source review |
 | P-596 | Arlan Kokshetau vs HC Saryarka - Pro Hokei Ligasy game 92 | PENDING_SETTLEMENT / OUTCOME_NOT_REVIEWED | PENDING_SETTLEMENT; targets after source review |
+
+
+## Current legacy settlement import — 2026-10-16T15:18:45+11:00
+
+Highest canonical **P-600**; next **P-601**; active Combined Log remains Part 7. Inventory **116 retained research records = 115 terminal sporting-result reviews + 1 legacy pending P-584** (104 prior terminal + eleven P-590-P-600 result reviews). Four originals P-597-P-600 added; seven existing originals P-590-P-596 skipped; one P-590 reconciliation addendum and eleven revision-1 settlements retained. [Complete import/readback](research/verification/mini_import_P-590_P-600_2026-10-16-1/CANONICAL_IMPORT_REPORT.md).
+
+The supplied package reports **23 conditional sporting WIN / 21 LOSS / 2 UNRESOLVED** across 46 dependent supplied-contract rows; all eleven events still lack complete operator-action terms and exact final-at/SLA evidence. P-596 Saryarka ML and P-598 Huima −8.5 ML remain UNKNOWN_DEFINITION. These grades retain original rules and analyst roles; no current online-history/lineup compliance, fitted primary model, certified performance or pregame availability is backfilled. Model primary/baseline paired scores remain NOT_COMPUTABLE for this cohort; 37 descriptive analyst rows remain NOT_PRIMARY. Prior score cohorts retain their original figures. Raw carryover: 17 items, 2 closed by canonical-core/owner-result capture, 15 open; older P-581-P-584 and prior operator/time/custody queues remain. No automation scheduled.
+
+| ID | Effective revision | Current status |
+|---|---|---|
+| P-590 | P-590-SETTLEMENT-R1-20261016; parent ORIGINAL_CARD | TERMINAL_SPORTING_REVIEW / OPERATOR_UNKNOWN / NOT_CERTIFIED |
+| P-591 | P-591-SETTLEMENT-R1-20261016; parent ORIGINAL_CARD | TERMINAL_SPORTING_REVIEW / OPERATOR_UNKNOWN / NOT_CERTIFIED |
+| P-592 | P-592-SETTLEMENT-R1-20261016; parent ORIGINAL_CARD | TERMINAL_SPORTING_REVIEW / OPERATOR_UNKNOWN / NOT_CERTIFIED |
+| P-593 | P-593-SETTLEMENT-R1-20261016; parent ORIGINAL_CARD | TERMINAL_SPORTING_REVIEW / OPERATOR_UNKNOWN / NOT_CERTIFIED |
+| P-594 | P-594-SETTLEMENT-R1-20261016; parent ORIGINAL_CARD | TERMINAL_SPORTING_REVIEW / OPERATOR_UNKNOWN / NOT_CERTIFIED |
+| P-595 | P-595-SETTLEMENT-R1-20261016; parent ORIGINAL_CARD | TERMINAL_SPORTING_REVIEW / OPERATOR_UNKNOWN / NOT_CERTIFIED |
+| P-596 | P-596-SETTLEMENT-R1-20261016; parent ORIGINAL_CARD | TERMINAL_SPORTING_REVIEW / OPERATOR_UNKNOWN / NOT_CERTIFIED / ONE_DEFINITION_UNRESOLVED |
+| P-597 | P-597-SETTLEMENT-R1-20261016; parent ORIGINAL_CARD | TERMINAL_SPORTING_REVIEW / OPERATOR_UNKNOWN / NOT_CERTIFIED |
+| P-598 | P-598-SETTLEMENT-R1-20261016; parent ORIGINAL_CARD | TERMINAL_SPORTING_REVIEW / OPERATOR_UNKNOWN / NOT_CERTIFIED / ONE_DEFINITION_UNRESOLVED |
+| P-599 | P-599-SETTLEMENT-R1-20261016; parent ORIGINAL_CARD | TERMINAL_SPORTING_REVIEW / OPERATOR_UNKNOWN / NOT_CERTIFIED |
+| P-600 | P-600-SETTLEMENT-R1-20261016; parent ORIGINAL_CARD | TERMINAL_SPORTING_REVIEW / OPERATOR_UNKNOWN / NOT_CERTIFIED |

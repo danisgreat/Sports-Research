@@ -1,0 +1,5 @@
+# Prompt alignment after legacy settlement import
+
+Editorial clarification of existing v17.1 source, retention and original-policy rules; no numerical/scoring/selection/schema/version change. Prompt 1 repeats the mandatory opened online L5/L10/L15/L20 and exact-game player requirements directly after each sport's first Read paragraph. All eleven current owner-entered Upcoming game blocks are byte-identical to the pre-task working file, including populated Basketball, Cricket, Soccer, Tennis and American Football details. The complete current prompt, including those owner-authorized populated inputs, is published in this task; .gitignore remains excluded.
+
+Prompts 2/3/4/8, the common protocol and index clarify new-card source requirements, legacy original-policy settlement, exact separately captured canonical cores, grouped source-corpus deduplication and preservation of filled event inputs. Older issued cards, minis and source footers are not migrated or rewritten. Base committed prompt versions are archived separately under archive/prompt_alignment_2026-10-16_P590_P600; the actual working baseline/input hashes remain in the external task workspace.

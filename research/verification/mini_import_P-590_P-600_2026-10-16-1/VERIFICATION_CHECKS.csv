@@ -1,0 +1,29 @@
+check,result,evidence
+complete_raw_log_prefix,PASS,1925672 unchanged bytes; 050415b7c59236fc46b24ca83f579282a6b940da431d0af55ddf2705369d92eb
+frozen_source_and_settled_prefix,PASS,"321284 source bytes, exact complete prefix"
+all_source_files_unchanged,PASS,11 source files unchanged
+all_retained_inputs_exact,PASS,"all11 source bodies, including three JSON extension mappings"
+all_imported_source_bodies_exact,PASS,17 full readbacks
+all_original_cores,PASS,"all old cores unchanged, four new cores exact"
+one_new_card_597,PASS,exactly one canonical wrapper
+one_new_card_598,PASS,exactly one canonical wrapper
+one_new_card_599,PASS,exactly one canonical wrapper
+one_new_card_600,PASS,exactly one canonical wrapper
+new_marker_integrity,PASS,"balanced exact keys, no duplicate blocks or cross-ID nesting"
+negative_missing_END,PASS,missing END rejected
+negative_mismatched_ID,PASS,wrong END ID rejected
+negative_duplicate_revision,PASS,repeated addendum marker rejected
+negative_source_tamper,PASS,one extra source byte fails frozen hash
+rerun_zero_new_cards,PASS,four exact-existing skips; no additional ID
+negative_partial_existing_core,PASS,partial import rejected instead of append
+46_unique_effective_keys,PASS,11 unbranched first revisions; repeated documentary corpus not counted
+all_revision_rerun_existing,PASS,all11 revision wrappers present; identical reimport plans no revision append
+37_analyst_arithmetic,PASS,all squared/log errors recomputed; NOT_PRIMARY
+eleven_input_blocks_preserved,PASS,"actual working input bytes unchanged, including populated Basketball example"
+eleven_instruction_updates,PASS,each first-Read instruction body updated
+allocator_and_inventory,PASS,highest600 next601;116 retained records
+protected_prior_artifacts,PASS,"927 prior tracked historical artifacts unchanged (raw for -text, declared CRLF/LF normalization only otherwise)"
+unrelated_gitignore,PASS,exact pre-task local edits retained
+prior_event_key_collisions,PASS,four declared exact-event/native keys absent from prior canonical corpus
+new_authored_log_whitespace,PASS,literal source whitespace retained; authored wrapper lines clean
+new_operating_relative_links,PASS,zero missing newly introduced operating/report link destinations

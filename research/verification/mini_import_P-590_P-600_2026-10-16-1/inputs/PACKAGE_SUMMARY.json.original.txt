@@ -1,0 +1,20 @@
+{
+  "snapshot_frozen_sha256": "d5fcc5e247113154efcbdb15586644e7a3249e76b98c4af9431b10540bf6463c",
+  "grade_counts": {
+    "LOSS": 21,
+    "WIN": 23,
+    "UNRESOLVED": 2
+  },
+  "contract_count": 46,
+  "event_count": 11,
+  "unique_settlement_revision_count": 11,
+  "P596_source_original_missing_in_local_source": true,
+  "no_primary_model_feedback": true,
+  "formal_operator_terms_unverified": true,
+  "produced_at": "2026-10-16T14:49:51+11:00",
+  "research_only_analyst_scored_rows": 37,
+  "primary_model_scored_rows": 0,
+  "settled_document_prefix_preserved": true,
+  "original_card_blocks_hash_verified": 10,
+  "artifact_staging_complete": true
+}

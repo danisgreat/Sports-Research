@@ -12605,3 +12605,1160 @@ Owner expressly authorizes recording despite absent ML. P-590-P-595 cores remain
 
 ## Canonical retention state addendum - 2026-10-16T01:29:27+11:00
 Highest canonical ID P-596; next P-597. Seven records added without gaps, preserving reserved P-518-P-522 and all old cores. Tracked research inventory 112: 104 previously terminal, legacy pending P-584, seven new records awaiting outcome review. No new sporting grade or model performance score is calculated. P-596 has no primary model probabilities; source-reported analyst numbers remain NOT_PRIMARY. [Import report](../research/verification/framework_change_2026-10-16-1/CANONICAL_IMPORT_REPORT.md).
+
+
+## Complete settlement-package import P-590-P-600 — 2026-10-16T15:18:45+11:00
+
+Owner-authorized import under LOCAL_WORKING_TREE a7ff44505070d0cead9d53da9ce0c943ddfe0287. Source mini-log-7 / historical per-card methods retained; current online-history/player requirements are not backfilled into old cards. Full package, source map and limits: [import report](../research/verification/mini_import_P-590_P-600_2026-10-16-1/CANONICAL_IMPORT_REPORT.md). Original import time is not a forecast timestamp. No model/primary/prospective certification.
+
+<!-- BEGIN CANONICAL RESEARCH P-597 -->
+## P-597 — retained historical research
+Import: 2026-10-16T15:18:45+11:00; source original core SHA-256 95e577ede7ccdc56b6aeec9c8e86d76e77da5bb412869998cd4f4d64a349efed; unchanged local/canonical ID. Original per-card rule/policy, timing, probabilities, statuses and source gaps remain literal. RESEARCH_ONLY_NO_MODEL / no authenticated fitted primary bundle; retain analyst diagnostics separately NOT_PRIMARY. Any PENDING_IMPORT wording inside the frozen core is historical.
+
+<!-- BEGIN CARD P-597 -->
+## Card · P-597 · BASKETBALL / Lithuania URBO-NKL 2026–27 · Alytaus Patriotai vs Šakių Vytis-VDU
+
+- **Working ID:** P-597, local research-retention card using the currently next canonical number; **PENDING_CANONICAL_IMPORT**, not yet a newly committed canonical record.
+- **Stable event key:** `NKL:2026-27:RS:2026-10-15:ALYTAUS-PATRIOTAI:SAKIU-VYTIS-VDU`. Sportradar secondary ID 75109764; exact official native game ID NOT_VERIFIED.
+- **Authority:** PUBLISHED_MAIN_PINNED GitHub `main` @ `5f25adf5533ac5cadbad84c708ca54235e808637` (verified fresh); MDS-2026.10.16-v17.0 / CR-2026.10.16-R1 / SCV-v11 / SEL-v3 / RETAIN-v1. Existing mini is historical `mini-log-7`, not silently upgraded to mini-log-9.
+- **Classification:** `RESEARCH_ONLY_NO_MODEL / NOT_PRIMARY / POST_SCHEDULED_START_ISSUE / NOT_PROSPECTIVE_CERTIFIED`. No event-specific verified primary ML bundle or model p_card.
+- **Scheduled start corrected:** 2026-10-15 18:00 Europe/Vilnius (EEST +03:00) = 15:00 UTC = **2026-10-16 02:00 AEDT**. Supplied time 14:00 AEDT was wrong. Venue **Alytaus sporto ir rekreacijos centras**, Alytus, Lithuania.
+- **Actual research-record creation:** `2026-10-16T02:04:53+11:00`. It is after the corrected scheduled start; actual first-tip time and target-result exposure at exact issue NOT_INDEPENDENTLY_VERIFIED. No backdated pregame timestamp.
+- **Requested contracts:** (1) Alytus ML, (2) Vytis ML, (3) combined Over 168.5, (4) combined Under 168.5, full game including OT *conditional on matching operator definition*. Sports rules and operator void/overtime wording not independently captured.
+- **Missing model:** NOT_RUN_CAPABILITY_BLOCKED — current environment has no locally available repository `ml` runtime; a local capability attempt `python -m ml primary execute --help` returned exit code 1 and `/opt/pyvenv/bin/python: No module named ml`. This is a failed capability check, **not** an actual P-597 per-event model execution, receipt or grid. RETAIN-v1 permits the research-only record; no executed model is claimed.
+- **Manifest disposition:** `execution_path=""`; `execution_sha256=""`; `feedback_status=NOT_APPLICABLE_NO_MODEL`; `feedback_path=""`; `feedback_sha256=""`; `reason="primary_runtime_not_available_local;research_only_retained"`.
+- **Future learning:** PENDING_SETTLEMENT; after official final/line/operator action verification, capture sourced endpoint labels and source-known-at limitations. No fictitious Hedge weights/losses.
+- **Settled:** NO. **GitHub writes:** NO. **Research record:** retained only in the supplied local append copy; remotely canonical only after verified prompt-4 import.
+
+### A1. Identity, timing, same-event and custody
+
+Official URBO-NKL team fixture pages and Alytus ticketing identify Alytaus Patriotai (home) vs Šakių Vytis-VDU (away), **15 Oct at 18:00 Lithuanian local time**, 2026–27 regular season. This is **NKL, not Lithuania's top-division LKL**. Distinct from the 2025–26 Alytaus Alytus roster/history, which must not be automatically merged into the new Patriotai entity. The prior published canonical record P-596 is Arlan–Saryarka (different fixture), and P-590 already denotes the completed India–West Indies fourth T20I. No second P-590 allocation. External parallel mini writer/technical lease NOT_INDEPENDENTLY_VERIFIED; this file is not remotely published.
+
+This user-supplied record started with the wrong league/time; the source correction was researched and frozen in this research-retention record, not hidden.
+
+### A2. All four exact supplied contracts and eligibility
+
+| Supplied original | Resolved sporting meaning | Model p_card | Research conclusion |
+|---|---|---|---|
+| Alytus ML | Alytaus Patriotai to win full game, subject to operator OT rules | NOT_ESTIMATED | Weaker qualitative case: 1–3 current-season results and large negative score differential |
+| Vytis ML | Šakių Vytis-VDU to win full game, subject to operator OT rules | NOT_ESTIMATED | **Preferred qualitative direction**: 2–0 current start, 2025–26 NKL third-place finish; small sample/rotation uncertainty |
+| Combined Over 168.5 points | Total at least 169 under the resolved full-game scoring scope | NOT_ESTIMATED | Indeterminate/weak possible over, historical six-game pooled mean ≈172.33, but no fitted spread or calibrated interval |
+| Combined Under 168.5 points | Total at most 168 under the same completed-game scope | NOT_ESTIMATED | Indeterminate, with three of four Alytus games below the line, offset by two Vytis games above |
+
+No numerical primary Rank 1/Rank 2, PASS gate, calibrated probability or qualified joint failure is claimed. Qualitative preference ordering is Vytis ML, then **indeterminate between Over/Under 168.5**, then Alytus ML; this is NOT the model's deterministic P_ORDER_V2 top-two ranking.
+
+### A3. Exact-scope observed history and availability
+
+**Alytaus Patriotai** (new NKL team, four verified current-season results through 10 Oct):
+| Date | Side/fixture | Alytus PF | Alytus PA | Total | Result |
+|---|---|---:|---:|---:|---|
+| 2026-09-28 | H v Kauno Žalgiris-2 | 83 | 108 | 191 | L |
+| 2026-10-01 | A @ Jurbarkas-Karys-Manvesta | 68 | 96 | 164 | L |
+| 2026-10-08 | H v Marijampolės Sūduva | 80 | 87 | 167 | L in OT |
+| 2026-10-10 | H v Kauno r. Atletas | 86 | 75 | 161 | W |
+
+**Šakių Vytis-VDU** (two verified 2026–27 NKL games through 6 Oct):
+| Date | Fixture | Vytis PF | Vytis PA | Total | Result |
+|---|---|---:|---:|---:|---|
+| 2026-10-01 | A @ Ukmergės Stekas | 90 | 89 | 179 | W in OT |
+| 2026-10-06 | H v Klaipėdos Neptūnas-II | 88 | 84 | 172 | W |
+
+Season-to-date observed calculations: Alytus **317 PF / 366 PA**, n=4, **79.25 scored, 91.50 conceded, −12.25 margin per game**, W–L 1–3; Vytis **178 PF / 173 PA**, n=2, **89.00 scored, 86.50 conceded, +2.50 margin per game**, W–L 2–0.
+
+True verified current-regime form windows (overlapping; not independent):
+| Side | L5 | L10 | L15 | L20 | Season-to-date |
+|---|---|---|---|---|---|
+| Alytus | n4, W1 L3; PF79.25, PA91.50 | n4 same | n4 same | n4 same | n4 |
+| Vytis | n2, W2 L0; PF89.00, PA86.50 | n2 same | n2 same | n2 same | n2 |
+
+The official record also shows Vytis 2025–26 bronze-medal finish, but before pooling prior-season results, reconcile exact players/coaches/competition-era; the newly established Alytus Patriotai have **no legitimate preceding-season record to borrow**. Thus no invented L20 and no pooled previous season as an admitted primary feature. Vytis retained several players but signed additional recruits: continuity is partial.
+
+Exact competition-wide league profile, opponent adjustments and release-time-captured archival rows **NOT_VERIFIED**; n6 outcomes from these teams are NOT a league-wide comparator.
+
+### A4. Transparent arithmetic, baseline and sensitivity
+
+Illustrative *unfitted* attack/defence matchup:
+`Alytus illustration = (79.25 PF + 86.50 Vytis PA)/2 = 82.875`.
+`Vytis illustration = (89.00 PF + 91.50 Alytus PA)/2 = 90.250`.
+`Total illustration = 173.125`, `Vytis-Alytus illustration = +7.375 points`.
+
+These are crude descriptive means with only n4/n2 histories, NOT a validated pace or joint-Gaussian fit, and lack an admitted competition baseline, home-court correction, overtime and player availability. No SD/covariance or numerical probabilities are invented. Full distribution, W/P/L/V, rank ε and gate: NOT_COMPUTABLE. BASELINE_LEAGUE_V1 exact-line p: NOT_ESTIMATED (no reviewed league-wide exact scope).
+
+Across those **six observed games** (not independent population): totals 191, 164, 167, 161, 179, 172; mean **172.333**, Over 168.5 = **3/6**, Under 168.5 = **3/6**. This empirical 50/50 split is NOT a model probability or replacement baseline.
+
+**Low / base / high qualitative uncertainty cases**: Alytus's Hall/Valunta scoring and 14 October Williams signing could improve offence if the newcomer was actually eligible/selected; Vytis retained a core but roster turnover makes last year's late-season rate uncertain; OT adds upper-tail points. With no confirmed minutes/lineup, do not assign invented uplift, weights or numeric scenario variance. Under can win with low-tempo/defensive execution; Over with improved Alytus shooting/Vytis efficiency.
+
+### A5. Every contract failure route and selection status
+
+- **Alytus ML**: home-court edge and one recent 86–75 win support a plausible upset; against it are three opening losses and 49-point cumulative negative differential. NEED starting-five and current Williams eligibility.
+- **Vytis ML**: 2–0 early season, consistent output (90, 88), postseason finish last campaign; failure via Alytus home correction, personnel differences and two-game sample selection bias.
+- **Over 168.5**: Vytis two observed totals 179/172 and matchup illustration 173.125 support an over lean; fail via Alytus totals 164/167/161 in three of four games and missing possession metrics.
+- **Under 168.5**: Alytus recent three totals below 168.5 support under; fail via Vytis scoring, elevated Alytus conceded average and overtime.
+
+No strict numeric ranked slate was issued. Contradictory market-derived, betting, tip or fantasy content NOT_USED.
+
+### A6. Roster/fitness/rest/competition-specific mechanics
+
+- **Alytus**: official 14 Oct announcement says 196-cm guard James 'Scooter' Williams joined. This is a signing **not proof of registered active game-day selection**. Channon Charles Hall Jr scored 27 vs Atletas (10 Oct), and Hall/Šarūnas Valunta 20 each vs Sūduva (8 Oct). Current player availability and starting-five/active bench remain **UNCONFIRMED**.
+- **Vytis**: official 24 Sep release documented retained Leliukas, Vaivada, Velutis, Rubinas and Lebskas, plus recruits. 6 Oct official box recap: Leliukas and Velutis 21 each, Rubinas 16. These are earlier-game participation, **not 15 Oct lineup confirmation**.
+- **Rest**: Alytus last confirmed played 10 Oct -> five Lithuanian calendar days between dates; Vytis last confirmed 6 Oct -> nine days. These are date gaps, not verified practice/travel or lineup workloads.
+- **Playing time**: Lithuanian NKL under basketball FIBA-style four 10-minute quarters and overtime when tied; verify exact original operator ML/total inclusion. 8 Oct Alytus and 1 Oct Vytis required OT; do not mistake those for regulation-only scores.
+- **Venue**: Alytaus sporto ir rekreacijos centras, verified event ticketing. Indoor; no fabricated weather.
+- **Availability final check**: targeted official league team pages and dated announcements inspected, but no 15 Oct starting fives and both active benches obtained; this is **LINEUP_UNCONFIRMED**, not 'healthy'.
+
+### A7. Dependence, alternative families and shadows
+
+ML model joint team-score grid NOT_RUN; therefore no model p_card, model-based primary Rank 1/2, baseline-relative gate, RET03/RET04/XCARD6 model comparison or exact joint-loss mass. The two ML rows are disjoint winner outcomes under a no-draw completed basketball game. Over and Under 168.5 are complements if same full-game action; their complementary nature is not predictive skill. Preserve them all as originally supplied; do not silently prune or upgrade analyst assessments to model cards.
+
+### A8. Evidence/source receipt and required later collection
+
+Primary source links:
+- Official Alytus games: https://nkl.lt/komandos/alytaus-patriotai/
+- Official Vytis games: https://nkl.lt/komandos/sakiu-vytis-vdu/
+- 10 Oct Alytus vs Atletas 86–75: https://nkl.lt/patriotai-atidare-pergaliu-saskaita-namuose-iveike-atleta/
+- 8 Oct Alytus vs Sūduva 80–87 (OT): https://nkl.lt/po-atkaklios-pratesimo-kovos-suduva-palauze-patriotus/
+- 1 Oct Vytis v Stekas 90–89 (OT): https://nkl.lt/pratesimo-dramoje-vytis-vdu-palauze-steka/
+- 6 Oct Vytis v Neptūnas-II 88–84: https://nkl.lt/rezultatyvus-leliuko-ir-velucio-vakaras-atnese-vyciui-vdu-pergale/
+- 14 Oct Williams recruitment: https://nkl.lt/alytaus-patriotu-marskinelius-vilkes-amerikietis-jamesas-williamsas/
+- Sept Vytis retained core: https://nkl.lt/vytis-vdu-issaugojo-branduoli-ir-pasipilde-keturiais-naujokais/
+- Official ticketed match: https://www.bilietai.lt/en/tickets/PASAL7JJC6/urbo-nkl-alytaus-patriotai-sakiu-vytis-vdu
+- Structured independent matchup corroboration: https://statshub.sportradar.com/sportradar/en/match/75109764
+
+Source dates for historic games preceded this event; exact site original-publish/HTTP retrieval/capture hashes and current game-day lineup releases NOT_CAPTURED. Recorded research file time `2026-10-16T02:04:53+11:00`. Same-day player news at the target horizon was not used to invent a confirmed five. Target live or final score was **not read or used** in the above numerical comparisons.
+
+**Source-backed settlement prerequisites:** official game ID, final state, home/away scores, 40m regulation and OT if any, first-play/final/availability timestamps, actual selected fives/bench where published, written user/operator ML/total definitions, exact side orientation, source captures. Only then append settlement revision under P-597 and, if eligible, a future training-label candidate (not Hedge feedback). Manual verification; automation NOT_SCHEDULED.
+
+### A9. Readback / audit / research completion matrix
+
+| Requirement | Work actually performed | Gap | Status |
+|---|---|---|---|
+| Authority, IDs, duplicate and time | New main RETAIN-v1; P-590 already India–WI, P-596 Arlan; next P-597, corrected NKL 02:00 AEDT | External parallel writers and first actual tip time unverified | DONE_WITH_GAPS |
+| Both teams selected five, bench, absences | Official league pages, dated roster/recruitment articles, key previous box scores checked | No official event-day confirmed five/bench/injury list | EXHAUSTED_WITH_EVIDENCE |
+| Archive/local and independent web history | Local repo archive directory not verified populated for NKL; source-owner team pages and local-language official news recovered six played rows | Native official row IDs, capture hashes, complete historic league baseline | DONE_WITH_GAPS |
+| Both-side L5/L10/L15/L20 | True n4/n2, no fabricated older game carry | Longer Vytis cross-season verified match inventory | DONE_WITH_GAPS |
+| Sport mechanisms | Home, rest, OT, individual player reports, opponent averages and sensitivity | Actual rotation/confirmed debut | DONE_WITH_GAPS |
+| Primary ML | No locally executable `ml` package, no target-bundle attempt | Model execution/bundle missing; no fake receipt | NOT_RUN_CAPABILITY_BLOCKED |
+| Analyst arithmetic | Six source-backed scores; n4/n2 means and descriptive 173.125 total | Validated SD/covariance/competition comparator | DONE_DESCRIPTIVE_ONLY |
+| Four contract assessments | Four exact supplied rows, distinct failure mechanisms, conditional endpoint labels | No model p_card or numerical rank | DONE |
+| Issuance/write and settlement | Local owner-directed P-597 research card; no pre-start certification; no final imported/graded | Canonical import and future official settlement | LOCAL_ONLY |
+
+**Overall research status:** `RESEARCH_RETAINED_WITH_DOCUMENTED_GAPS`; model unavailable, no model forecast. Complete league-wide L20 and confirmed fives absent; no certification, no reconstructed probabilities. The user expressly permits continuation after start; that changes neither timing truth nor outcome-exposure controls.
+
+**C21:** Honest RESEARCH_ONLY_NO_MODEL manifest fields (no execution path/hash, feedback N/A); no claimed model execution. **C1–C20:** identity, source and literal contract documentation supported; pregame time, model, exact baseline, active five, external writer lock and primary ranked-slate gates NOT_VERIFIED/NOT_APPLICABLE as stated. **Settlement:** NOT_PERFORMED.
+<!-- END CARD P-597 -->
+
+<!-- END CANONICAL RESEARCH P-597 -->
+
+<!-- BEGIN CANONICAL RESEARCH P-598 -->
+## P-598 — retained historical research
+Import: 2026-10-16T15:18:45+11:00; source original core SHA-256 36da4abaf5b29e84df17c4fbba83b0028edab746dbe0e1d56aedb56514c85341; unchanged local/canonical ID. Original per-card rule/policy, timing, probabilities, statuses and source gaps remain literal. RESEARCH_ONLY_NO_MODEL / no authenticated fitted primary bundle; retain analyst diagnostics separately NOT_PRIMARY. Any PENDING_IMPORT wording inside the frozen core is historical.
+
+<!-- BEGIN CARD P-598 -->
+## Card · P-598 · BASKETBALL / Finland Men's I Divisioona A 2026–27 · Äänekosken Huima vs Lappeenrannan NMKY
+
+- **Local working ID:** P-598. **LOCAL_MINI_STAGING; PENDING_CANONICAL_IMPORT**. P-597 (Alytaus Patriotai vs Vytis-VDU) already exists in earlier local continuation and is NOT overwritten, reused or silently imported. Canonical GitHub `main` next remains P-597 at verification snapshot; P-598 is NOT YET A COMMITTED CANONICAL ID.
+- **Event key:** `FIN-MD1A:2026-27:RS:R2:2026-10-15:HUIMA:LRNMKY` (declared stable surrogate; official match native ID NOT_VERIFIED).
+- **Authority:** `PUBLISHED_MAIN_PINNED` SHA `2ea94f6f718d1f43c7af9e567008495114ef9cef`; MDS-2026.10.16-v17.0 / CR-2026.10.16-R1 / RETAIN-v1 / SCV-v11 / SEL-v3 / PRIMARY_HEDGE_MIX_V3. Current local mini base supplied from the previous user-facing turn; no GitHub write.
+- **True scheduled time:** 2026-10-15 **18:30** in `Europe/Helsinki` (EEST +03:00), UTC 15:30 on 15 Oct, **2026-10-16 02:30 AEDT** (+11:00). The request's **14:00 AEDT** is incorrect. Actual tip / first play NOT_VERIFIED.
+- **Fixture:** Finnish men's I Divisioona A (division 1A, not Korisliiga top division), regular-season **Round 2**, Huima home, Lappeenrannan NMKY away. Venue `Äänekosken Liikuntatalo`, Koulunmäenkatu 2, Äänekoski. The competition has 12 teams, double round robin (22 games each), and best-of-five top-eight playoffs.
+- **Record time:** `2026-10-16T02:30:50+11:00` (actual time; do not backdate). Source page gave schedule, not verified first-tip. **Timing disposition:** `POST_SCHEDULED_START_ISSUE / NOT_PROSPECTIVE_ELIGIBLE` because the actual recording time 02:30:50 AEDT followed scheduled 02:30 AEDT. Actual first play and whether any outcome was exposed to the research inputs remain NOT_VERIFIED. The original card is not backdated and contains no target-game result.
+- **Analysis:** `RESEARCH_ONLY_NO_MODEL / NOT_PRIMARY / NOT_CERTIFIED / RESEARCH_RETAINED_WITH_GAPS`.
+- **ML execution:** current container attempted `PYTHONNOUSERSITE=1 python -S -m ml primary execute --help` from `/mnt/data`, exit 1, `/opt/pyvenv/bin/python: No module named ml`. This is a **local capability check**, not an actual source-data event-fit/execute attempt, and creates NO event execution bundle. Record `NOT_RUN_CAPABILITY_BLOCKED`; execution_path/SHA blank; feedback_status `NOT_APPLICABLE_NO_MODEL`.
+- **Future-learning status:** `PENDING_SETTLEMENT / OUTCOME_NOT_REVIEWED`; do not use any later final in the original evidence, and never invent Hedge feedback without frozen model experts.
+- **Original supplied contracts retained:** (1) `Huima -8.5 ML` [internally ambiguous: -8.5 signifies spread/handicap, while ML signifies moneyline], (2) `NMKY +8.5`, (3) `Combined Total Points: Over 162.5`, (4) `Combined Total Points: Under 162.5`. Interpret first as **Huima -8.5 points handicap conditionally**, with `ML` ambiguity/unknown operator contract explicitly unresolved. Every proposition here is assumed full game incl. overtime **only if confirmed by operator action**.
+
+### Decision block — research-only, without invented p_card
+
+| Row | Supplied contract | p_card | Evidence-based assessment | Eligible model primary rank |
+|---|---|---|---|---|
+| 1 | `Huima -8.5 ML` | NOT_ESTIMATED | Huima may be the outright qualitative favourite on cross-season form, but **-8.5 spread not established**; `ML` label conflicting | NO_MODEL / UNKNOWN_DEFINITION |
+| 2 | `NMKY +8.5` | NOT_ESTIMATED | Potential cover given unconfirmed player changes and sample uncertainty; neither side is robustly favoured at this line | NO_MODEL |
+| 3 | `Total Over 162.5` | NOT_ESTIMATED | Opening games show 180 for Huima and 152 for NMKY; over possible but needs tempo/rotation | NO_MODEL |
+| 4 | `Total Under 162.5` | NOT_ESTIMATED | Cross-season descriptive windows favour a lower scoring environment, but regime/rosters uncertain: **weak qualitative lean only** | NO_MODEL |
+
+**Potential outright winner (non-numeric): Äänekosken Huima, weak/uncertain.** This is NOT Huima -8.5 cover, not a fitted ML pick and not a model Rank 1. **Top-two primary:** NONE / NO NUMERIC PRIMARY. **Baseline:** NOT_ESTIMATED (same-line Finnish I Div A reviewed cohort unavailable). **Model expected score, means/SD/covariance, gate and joint loss:** NOT_COMPUTABLE. **Settlement:** NOT PERFORMED.
+
+#### A1. Fixture identity / timing / duplicate search
+
+Official home-venue/ticket source and Lappeenranta event page agree **Thursday 15 October 2026, 18:30 EEST**, Huima home at Äänekosken Liikuntatalo. The Finland Basket federation schedule report dated 14 October corroborates Round 2. User schedule conversion corrected to 02:30 AEDT on 16 October. Do not treat the published calendar block's nominal 20:30 ending as actual final time. Search in the pinned canonical records and prior local P-590–P-597 card headings did not reveal this Huima–NMKY same-event key. This is a distinct match from P-597 Alytus/Vytis and prior P-596 Arlan/Saryarka. Source retention no new pregame clock proof. External writer/lease beyond provided mini snapshot NOT_VERIFIED.
+
+#### A2. Candidate family, action and supplied-contract preservation
+
+- Row 1 literal `Huima -8.5 ML` is conceptually conflicting: **moneyline is a win bet without a points handicap**; conditional handicap resolution requires Huima win by at least 9 points. A literal outright Huima ML is a different line. Never silently equate them or grade without a documented rule.
+- Row 2 `NMKY +8.5` requires NMKY lose by no more than eight or win, assuming conventional full-match spread.
+- Rows 3 and 4 are complementary at 162.5: Over requires 163+ points; Under 162 or fewer, on identical full-game scope, no integer push at .5. Abandonment/OT action remains UNKNOWN_DEFINITION.
+- Derived team totals and alternative cushions were *not* frozen/priced numerically; no model grid and no forced fourth pick. Case of Huima -8.5 and NMKY +8.5 is mechanically complementary on a decisive game/identical operator actions, not two independent evidentiary trials.
+
+#### A3. Archive, independent history and form windows (do not invent n)
+
+**Archive check:** GitHub `Previous Sports Results/Basketball` category was listed at the pinned state. No competition folder named Finland I Divisioona A / Finland 1A was found in that root listing; **0 local competition rows examined, NOT data-nonexistence proof**. The pregame evidence is external. First official 2026–27 results corroborated by Finnish Basketball Federation 14 Oct recap and independent secondary match index:
+
+| Competition date | Side | Verified league result | Team PF | Team PA | W/L | Match combined |
+|---|---|---|---:|---:|---|---:|
+| 2026-10-09 | Huima @ Jyväskylä Basketball Academy | JBA 94–86 Huima | 86 | 94 | L | 180 |
+| 2026-10-08 | NMKY home vs Karkkila | NMKY 71–81 Karkkila | 71 | 81 | L | 152 |
+
+**Official box insight:** Huima trailed 94–86 after leading 50–41 at halftime (second half 36–53); Ethan Pickett 28 points, 7 rebounds, 9 assists; Michael Pietrzyk 25 points. NMKY led Karkkila 42–40 at halftime but lost rebounding **29–45**; Jalen Charity 19 points, 8 rebounds; Quintton Jackson II 8 assists. These players appeared in the **previous** match; that does NOT confirm current starters or active bench.
+
+**Secondary history recovery (basketballstats.net; older 2025–26 results reproduced as an indexed match list, current same-game outcomes deliberately excluded; independently verify before fitting):**
+
+| Rank newest first | Huima previous scored–allowed | Date | NMKY previous scored–allowed | Date |
+|---:|---|---|---|---|
+| 1 | 86–94 | 2026-10-09 | 71–81 | 2026-10-08 |
+| 2 | 70–65 | 2026-03-15 | 51–83 | 2026-03-15 |
+| 3 | 73–84 | 2026-03-06 | 76–101 | 2026-03-08 |
+| 4 | 78–69 | 2026-02-27 | 69–78 | 2026-02-27 |
+| 5 | 100–79 | 2026-02-23 | 61–80 | 2026-02-20 |
+| 6 | 62–101 | 2026-02-18 | 73–65 | 2026-02-12 |
+| 7 | 59–70 | 2026-02-12 | 78–70 | 2026-02-07 |
+| 8 | 82–98 | 2026-02-07 | 54–65 | 2026-01-29 |
+| 9 | 85–92 | 2026-01-29 | 75–114 | 2026-01-22 |
+| 10 | 68–80 | 2026-01-23 | 77–80 | 2026-01-17 |
+| 11 | 95–100 | 2026-01-18 | 63–102 | 2026-01-08 |
+| 12 | 91–95 | 2026-01-09 | 81–106 | 2026-01-04 |
+
+**L5/L10/L15/L20 / season/league with TRUE observation count and no extrapolation:**
+
+| Team and window | Distinct results actually found | W–L | Scored mean | Conceded mean | Total mean | Treatment |
+|---|---:|---|---:|---:|---:|---|
+| Huima current season | n=1 | 0–1 | 86.0 | 94.0 | 180.0 | Official observed |
+| NMKY current season | n=1 | 0–1 | 71.0 | 81.0 | 152.0 | Official observed |
+| Huima L5 | n=5 | 3–2 | 81.4 | 78.2 | 159.6 | Secondary cross-season descriptive |
+| NMKY L5 | n=5 | 0–5 | 65.6 | 84.6 | 150.2 | Secondary cross-season descriptive |
+| Huima L10 | n=10 | 3–7 | 76.3 | 83.2 | 159.5 | Secondary cross-season descriptive |
+| NMKY L10 | n=10 | 2–8 | 68.5 | 81.7 | 150.2 | Secondary cross-season descriptive |
+| Huima L15 | 12 rows recovered of 15 sought | 3–9 across available 12 | 79.08 across 12 | 85.58 across 12 | 164.67 across 12 | **PARTIAL, L15 NOT_COMPUTABLE**; do not call 12 the genuine last 15 |
+| NMKY L15 | 12 rows recovered of 15 sought | 2–10 across available 12 | 69.08 across 12 | 85.42 across 12 | 154.50 across 12 | **PARTIAL, L15 NOT_COMPUTABLE** |
+| Huima / NMKY L20 | 12 recovered of 20 per side | N/A for complete L20 | N/A | N/A | N/A | **INCOMPLETE**, no fabricated final 8 |
+| League comparator / same-line baseline | Not fully recovered | N/A | N/A | N/A | N/A | NOT_ESTIMATED |
+
+These windows share most rows: not independent signals, and earlier-season turnover may materially invalidate carryover. Historic indexed match dates predate the fixture, but their **point-in-time webpage existence/publication and same-event known-at** are not independently captured; historical data is research diagnostics only until admitted. No target outcome or future match was included.
+
+**Separate preseason:** club announcement 16 Sep (updated 20 Sep) records Huima **83–89 NMKY** in a **12 September exhibition** at this venue. This is not a league L5 result. A 19 September reverse-venue exhibition is announced but its completed final score was not verified, hence not added. The 27 February competitive H2H (Huima won 78–69) is already included above and is not double-counted.
+
+#### A4. Analyst-only transparent scenarios and numerical limits
+
+Current-season one-game matchup (not model fit): Huima=(Huima 86 scored + NMKY 81 conceded)/2 = **83.5**; NMKY=(NMKY 71 scored + Huima 94 conceded)/2 = **82.5**; combined **166.0**, margin Huima **+1.0**. Extremely unstable, n=1 per team.
+
+L5 descriptive cross-season alternative: Huima=(81.4+84.6)/2 = **83.0**; NMKY=(65.6+78.2)/2 = **71.9**; combined **154.9**, margin Huima **+11.1**. L10 alternative: Huima=(76.3+81.7)/2 = **79.0**; NMKY=(68.5+83.2)/2 = **75.85**; combined **154.85**, margin Huima **+3.15**. These are **UNCALIBRATED_ANALYST_SCENARIO / NOT_PRIMARY**, not probability forecasts and not fitted pace×efficiency. The exact line 162.5 lies above the L5/L10 descriptive totals and below the single-game 166.0 case. Huima -8.5 is **not robust across scenario windows** (+1.0, +11.1, +3.15). No basis to invent weights across samples, residual variance, team correlation, home-court points, OT addition, win likelihood, p_card or a precise ranking.
+
+Required numeric p(W/P/L/V): NOT_COMPUTABLE in each row, due to lacking verified full distribution and definition. A source-data only baseline at this exact family/line also NOT_COMPUTABLE. Model moment SD, full score grid, covariance, exact joint failure, RET04/XCARD6/SHADOW_BASE_ONLY and 0.62/0.04 gates are NOT_APPLICABLE, not PASS.
+
+#### A5. Every contract, opposing evidence and sensitivity
+
+1. `Huima -8.5 ML`: last-five illustration margin +11.1 and home venue support potential cover; first 2026 league loss and long-window +3.15 strongly weaken it. ML vs spread definition conflict blocks exact operator claim. **No numeric primary**; weak-to-indeterminate -8.5 side.
+2. `NMKY +8.5`: last-ten illustrative margin +3.15 for Huima, 12 Sep NMKY preseason win and one-game illustration +1.0 for Huima make NMKY +8.5 conceivable; recent NMKY offence very weak (71 in opener, 65.6 L5), potentially defeats this. **No numeric primary**; indeterminate.
+3. `Over 162.5`: Huima opener 180, NMKY scored 89 in their 12 Sep exhibition win over Huima, and current one-game scenario 166 support it; NMKY opener 152 and cross-season means near 155 oppose. **No numeric primary**; indeterminate, possible upper tail.
+4. `Under 162.5`: L5 and L10 recovered past totals mean ~150–160, combined illustrative L5/L10 154.9/154.85. Fail route: pace, shooting efficiency, offensive rebounding/turnovers, rotation shifts, overtime; first Huima league game 180. **Weak qualitative under lean**, not a probability.
+
+#### A6. Lineups, personnel, venue, rest and physical rules
+
+- Official prior-round appearance **not** exact-game confirmed starter: Huima's Ethan Pickett (28 points/7 rebounds/9 assists) and Michael Pietrzyk (25) on 9 Oct. NMKY's Jalen Charity (19/8) and Quintton Jackson II (8 assists) on 8 Oct. **Both starting five lineups: UNCONFIRMED. Both selected benches: UNCONFIRMED. Injuries, suspensions, late scratches: NOT_VERIFIED**, not assumed clear.
+- Availability research route: Finnish Basket Federation 14 Oct weekly recap, team competition pages and Lappeenranta club schedule/preseason announcement. No 15 Oct signed game-day starting five/bench/medical report located via those read sources. Further specific team posts/actual official scorer and lineup can affect model eligibility; recording remains valid under RETAIN-v1.
+- Rest by dates: Huima last league game 9 Oct → six Finnish calendar days before fixture; NMKY 8 Oct → seven days. Actual practice/travel/flight minutes not documented.
+- Rules: Finnish federation competition is 40-minute FIBA-style (four 10-minute quarters); typical overtime five minutes where required. Explicit operator full-game vs regulation, abandoned/void and OT terms not supplied. Venue indoor, no speculative weather adjustment.
+- Team styles: NMKY allowed Karkkila to win rebounds 45–29 and scored poorly inside arc (40% 2PT). Huima had strong individual offence but conceded 53 second-half points to JBA. One game is insufficient to extrapolate possession/efficiency trends or name a confirmed team weakness.
+
+#### A7. Candidate selection / dependence and shadows
+
+Preserve exact four supplied rows. Neither numeric fitted model nor certified same-line baseline exists; no P_ORDER_V2 numeric Rank 1/2, RET03 or precision gate. `Huima -8.5` and `NMKY +8.5` are complements conditional on conventional matching point handicap settled on the same final; Over/Under 162.5 are complementary conditional on matching total scope. Two complementary rows cannot both lose on the same complete match under matching definitions, but **the mechanically protected construction does not prove predictive skill**. Correlations between handicap and total across a joint distribution NOT_ESTIMATED. No altered user thresholds or synthetic easier ladders.
+
+#### A8. Sources, evidence limitations and settlement plan
+
+**Official organizer field owner:**
+- https://basket.fi/uutiset/divarikatsaus-viikko-41-2026/ (published 14 Oct 2026; official Round 1 results/players)
+- https://basket.fi/uutiset/miesten-i-divisioona-a-kausiennakko-2026-27/ (published 7 Oct 2026; official competition format)
+- https://www.namikalappeenranta.fi/tapahtuma/aanekosken-huima-lrnmky/ (exact venue, fixture and 18:30 clock)
+- https://www.visitaanekoski.fi/tapahtumat/4741/miesten-koripallo-1.divisioona-a (independent city/event schedule)
+- https://www.namikalappeenranta.fi/2026/09/edustuksen-harjoitusottelut-ja-kauden-avaus/ (preseason 12 Sep 83–89)
+**Second-tier historic scores, not field-owner certified:**
+- https://basketballstats.net/teams/aanekosken-huima (12-indexed previous match rows; original scorecard hashes/last-update date not captured)
+- https://basketballstats.net/teams/lappeenrannan-nmky (12-indexed previous rows)
+
+**Source known-at:** 14 Oct federation report and 7 Oct preview precede scheduled event date; actual HTTP capture byte hashes and contemporaneous receipt times absent. Previous-season secondary results compiled from retrospective indexed pages, not sufficient to assert formally admitted cutoff-safe features. Exact current-event official native ID, current starting five/bench, local competition profile, original operator rules and official first-tip are not verified. Do not infer result from site calendar or date passage. No original card grades entered. No odds/tips/fantasy/market data used.
+
+When expressly asked to settle, obtain official final game state, quarter+OT scores, time basis, original lines/action convention and final/result known-at metadata; review original four keys and append dated revision under P-598, then export source-backed future model training labels (no Hedge expert losses without verified issued expert bundle). This is a **separate authorized settlement**.
+
+#### A9. Verification, honest execution and research-completion matrix
+
+**Reading receipt:** Pin published `main` SHA `2ea94f6f718d1f43c7af9e567008495114ef9cef` at current task start, document versions MDS-v17.0, CR-R1, RETAIN-v1, EXEC-v2, sport basketball rules, original mini-log-7 custody path and full previously supplied local mirror. `CURRENT_STATE.md` and `GAME_LOG_STATUS_CURRENT.md` both give canonical highest P-596/next P-597. Previous local continuation card P-597 was actually read with one marker and footer next P-598. GitHub active mini original P-590–P-596 SHA blob `a389353649cf663a71af8d829302f5899c63b494` read via connected GitHub; the previous local continuation mirrors old user mini with a P-596 **source pointer** rather than raw P-596 canonical card. **This gap persists; current local continuation is not a byte-identical authorized GitHub import source.** Do not claim full repo file bytes were reconstituted from earlier copy or silently overwrite source. No newer actual remote state verified after initial pin until final recheck.
+
+| Required procedure | What was actually checked | Unresolved | Status |
+|---|---|---|---|
+| Authority / duplicate / timing / IDs | Repo pinned highest 596, local P-597 existing, new P-598 unique; actual local time `2026-10-16T02:30:50+11:00`, Finland schedule 18:30 EEST vs user 14:00 AEDT | GitHub canonical import/parallel writer, actual tip | CHECKED_WITH_GAPS |
+| Both-side starters / bench / absences | Official 14 Oct recap names prior participants; official club scheduling route visited | Exact 15 Oct starters, selected bench, injury release and final pre-tip recheck | INCOMPLETE |
+| Archive and web historical recovery | Finnish division archive folder not found; 12 older date/score entries per team on secondary sites plus official single-match check | Full official historical game ledger and source publication hashes | PARTIAL |
+| L5/L10/L15/L20, season and league | True L5/L10 calculated from indexed results; 12/15 and 12/20 recovered, n1 season; no invented n20 | Three/eight older prior matches per team and competition baseline | L15/L20 INCOMPLETE |
+| Sport mechanisms | Home, rest, roster uncertainties, first-half collapse/rebounds, 40m OT conventions | Actual game tempo, starters, operator OT scope | PARTIAL |
+| Actual primary execution | Local `python -S -m ml primary execute --help` returned No module named ml | No actual event-specific fitted attempt or bundle | NOT_RUN_CAPABILITY_BLOCKED |
+| Supported analyst comparison | Three reproducible 1-game/L5/L10 descriptive scenario means/margins, no invented weights | SD/covariance/league-specific numeric parameters | DONE_UNCALIBRATED_NOT_PRIMARY |
+| All requested contract assessments | All four original rows, exact threshold/evidence/countercases, -8.5 ML ambiguity explicit | Unknown operator ML vs spread terms and no p_card | DONE_WITH_GAPS |
+| Append/readback / settlement | Local P-598 added once; originals and P-597 preserved; companion manifest honest and blank paths | Canonical import not authorized here, settlement not requested | LOCAL_ONLY |
+
+**Audit C1–C21:** C1 pinned main/reference PASS; C2 competition identity PASS; C3 local sequence/P-597 preservation PASS_LOCAL, external writer lock NOT_VERIFIED; C4 UTC/EEST/AEDT conversion PASS; C5 actual-first-tip/issued pre-start proof NOT_VERIFIED; C6 exact original four rows PASS, row1 definition conflict OPEN; C7 confirmed current 5/bench FAIL_UNVERIFIED; C8 40-minute rules supported/OT operator UNKNOWN; C9 historical 20-game profile PARTIAL; C10 actual fitted ML NOT_RUN_CAPABILITY_BLOCKED; C11 expected score only descriptive illustrative arithmetic, no grid; C12 same-line league baseline MISSING; C13 no true p_card/primary ranks; C14 W/P/L/V no executable distribution; C15 sensitivity qualitative + three examples; C16 complement dependence explained; C17 earlier cards unchanged after local readback; C18 source URLs/provenance with timestamp gaps; C19 no fictitious shadow/results; C20 escalation official league→club→secondary, lineup not fully proven; **C21 PASS_DISPOSITION_RESEARCH_ONLY** with no model artifact paths and no synthetic feedback. This is **retention acceptance**, not a certification of fully completed historical/source research.
+
+**Research completion:** `PARTIAL_WITH_DOCUMENTED_MISSING_DATA`; record under RETAIN-v1 regardless of ML; not a supported numerically ranked pregame forecast. Actual game result **NOT ACCESSED/NOT USED** here. No settlement, no GitHub write, no ML model feedback, no scheduled automation.
+<!-- END CARD P-598 -->
+
+<!-- END CANONICAL RESEARCH P-598 -->
+
+<!-- BEGIN CANONICAL RESEARCH P-599 -->
+## P-599 — retained historical research
+Import: 2026-10-16T15:18:45+11:00; source original core SHA-256 40c8143d4297cb991e21cc4e2bee889463e0fd5613a1106f4b21a31b9cd50073; unchanged local/canonical ID. Original per-card rule/policy, timing, probabilities, statuses and source gaps remain literal. RESEARCH_ONLY_NO_MODEL / no authenticated fitted primary bundle; retain analyst diagnostics separately NOT_PRIMARY. Any PENDING_IMPORT wording inside the frozen core is historical.
+
+<!-- BEGIN CARD P-599 -->
+## Card · P-599 · American Football / NFL 2026 regular season Week 6 · Seattle Seahawks @ Denver Broncos
+
+- **Working ID:** P-599, local continuation; `PENDING_CANONICAL_IMPORT`. This ID follows separately retained local P-597 Alytus/Vytis and P-598 Huima/NMKY. Published main currently ends P-596; neither P-597 nor P-598 is independently confirmed imported. Do **not** import P-599 out of sequence or reuse either prior number.
+- **Event ID:** NFL 2026 REG Week 6; SEA@DEN 2026-10-15, official game centre `https://www.nfl.com/games/seahawks-at-broncos-2026-reg-6`; structured secondary game ID `f03343eb-bec5-4d70-aa42-c06d56f5cc3a` (provider-specific).
+- **Authority:** `PUBLISHED_MAIN_PINNED`, GitHub `danisgreat/Sports-Research` `main` commit `2ea94f6f718d1f43c7af9e567008495114ef9cef`; MDS-2026.10.16-v17.0 / CR-2026.10.16-R1 / P-v17 / RETAIN-v1; active mini's original mini-log-7 preserved. Exact user's 4 sporting contracts retained; no wagers, odds, market movements, fantasy or tipster forecasts used.
+- **Scheduled kickoff:** **2026-10-15 20:15 EDT (UTC−04:00) = 2026-10-16 00:15 UTC = 2026-10-16 11:15 AEDT**. Denver 18:15 MDT. Venue Empower Field at Mile High, Denver. **Record created:** `2026-10-16T11:11:42+11:00`. Do not equate publication timestamp with actual first play; actual first-play timestamp NOT_VERIFIED separately. Model inputs restricted to final Week 5 results and documented injury releases no later than the scheduled kickoff. Opponent game's live/final score NOT_USED.
+- **Issuer status:** `RESEARCH_ONLY_NO_MODEL / UNCALIBRATED_ANALYST_SCENARIO / NOT_PRIMARY / NOT_CERTIFIED`; actual runtime check `python -m ml primary execute --help` exited 1, `No module named ml`, in `/mnt/data`; no actual primary bundle, fitted expert grids or official ML `p_card`. **Unlike p_card, the four numerical analyst_p below were genuinely calculated** from a reproducible count-based empirical league joint distribution.
+- **Future learning:** `PENDING_SETTLEMENT / NO_ORIGINAL_ML_EXPERT_FEEDBACK`; a later separate settlement can attach verified scores/contract labels, never invent a historical model prediction or change these issued analyst estimates.
+
+### Decision block — all supplied lines and actual computed estimates
+
+| Analyst order | Original supplied contract | Sporting endpoint | **analyst_p (uncalibrated)** | PRIMARY_V3 p_card | Assessment |
+|---:|---|---|---:|---|---|
+| 1 | **Combined Total Over 40.5** | Full final game, total ≥41 including qualifying OT | **64.36%** | NOT_ESTIMATED | Strongest relative numerical lean *within provisional model*, not certified |
+| 2 | **Seahawks −2.5** | Seattle final margin ≥3 | **50.68%** | NOT_ESTIMATED | Near coin flip; very sensitive to actual QB/secondary and scoring margin distribution |
+| 3 | **Broncos +2.5** | Denver loses by ≤2, ties or wins | **49.32%** | NOT_ESTIMATED | Complement of Seattle −2.5 in same model; not independent evidence |
+| 4 | **Combined Total Under 40.5** | Final total ≤40 | **35.64%** | NOT_ESTIMATED | Complement of Over 40.5; not independent evidence |
+
+**Potential outright winner (illustrative model, not a supplied contract):** Seattle 56.32%, Denver 43.54%, tie 0.14% as in the historical-residual regular-season distribution; no claim that a real-time ML model produced this. A tie remains possible in NFL regular-season OT. **Analyst Rank 1/2 are NOT a valid `P_ORDER_V2` primary model slate**. No probability-based official selection gate or certified shadow comparison.
+
+### A1. Exact fixture, stage, time and duplicate check
+
+Official Seattle Week 6 game centre and NFL listing show both sides 3–2; Seattle is **away** and Denver **home**, Week 6 Thursday 15 October US / Friday 16 October Melbourne; Empower Field at Mile High. This fixture differs from every earlier P-590–P-598 local card title. Official game-centre identity: `https://www.seahawks.com/game-day/2026/reg-week6/seahawks-at-broncos/`; NFL official: `https://www.nfl.com/games/seahawks-at-broncos-2026-reg-6`. Research issue after verified local file write `2026-10-16T11:11:42+11:00`; initial source retrieval hours and server-modified times not individually captured. No retrospective change to original cards. It is at most a *scheduled-pre-start* research card; actual first play is independently unverified, so clean prospective verification is NOT_CLAIMED.
+
+### A2. Frozen contract definitions, candidate universe and disposition
+
+Original references: Seahawks −2.5; Broncos +2.5; Combined Over 40.5; Combined Under 40.5. These are full-game outcomes under the model's **regulation+any played OT** assumption. Correct original operator wording/abandonment rules UNKNOWN; prior to confirmed bookmaker-independent settlement this is a **sporting endpoint assumption**, not adjudicated operator action. No 2.5/40.5 arithmetic push on an integer final NFL score; W/L complement holds if both sides have the exact same settlement scope. Competing full-game moneyline and team totals remain diagnostic only; no line-shopping and no derived line inflation.
+
+### A3. Source-reviewed completed history; L5/L10/L15/L20
+
+2026 regular season Weeks 1–5 (all dated before target kickoff), official schedule:
+
+| Team | Week 1 | Week 2 | Week 3 | Week 4 | Week 5 | W–L | Scored / allowed per game |
+|---|---|---|---|---|---|---|---|
+| SEA | W 13–10 NE | W 31–7 ARI | L 31–33 WAS | W 30–23 LAC | L 29–32 SF | 3–2 | **26.80 / 21.00** |
+| DEN | L 10–31 KC | W 20–13 JAX | W 30–26 LAR | L 14–24 SF | W 23–17 LAC | 3–2 | **19.40 / 22.20** |
+
+Both clubs' previous 2025–26 regular season rows and trailing L20 from the actual 2025–2023 NFL GitHub CSV archive were read and parsed. Explicit historical years/paths:
+`Previous Sports Results/American Football/NFL/2023/2023_games.csv` (272 verified parseable regular rows), corresponding 2024 file (272), 2025 file (272 including a 40–40 tie). These are **816 historical final scores**, not 816 independent sports predictions or verified pregame available feature snapshots.
+
+| Team | Window | True games | W–L | Points for/game | Points against/game |
+|---|---|---:|---:|---:|---:|
+| SEA | L5 / 2026 season | 5 | 3–2 | 26.80 | 21.00 |
+| SEA | L10 | 10 | 8–2 | 26.70 | 18.00 |
+| SEA | L15 | 15 | 12–3 | 28.27 | 17.40 |
+| SEA | L20 | 20 | 16–4 | 28.65 | 18.15 |
+| DEN | L5 / 2026 season | 5 | 3–2 | 19.40 | 22.20 |
+| DEN | L10 | 10 | 7–3 | 21.40 | 20.40 |
+| DEN | L15 | 15 | 12–3 | 22.33 | 19.67 |
+| DEN | L20 | 20 | 16–4 | 22.50 | 19.05 |
+
+These windows overlap and are **not multiplied as independent evidence**. Previous-season opponent quality and pregame freshness of some archive aggregates remain unverified. Historical 2025 last-20-only prior rates used in the estimator: Seattle scored 27.15, allowed 17.35; Denver scored 24.50, allowed 18.75. League 2023–25 reference: home margin ~+2.2, final-game total ~45.13; total historical SD ~13.5; margin SD ~14.3. 816-game line frequency Over 40.5 about 62.75%; that is a league diagnostic, not a matched frozen `BASELINE_LEAGUE_V1` forecast.
+
+### A4. Actual analyst distribution and probability arithmetic
+
+**Method:** maximum-entropy / exponential tilting of the *816 recorded NFL final-score pairs* to a transparent match-specific target mean. Every NFL game contributes a **joint observed** (total points, Seattle-perspective signed margin) sample, so exact NFL scoring outcomes, three-/seven-point margins and joint dependence are preserved. This is a sporting-only, independent **analyst calculation**, not a trained primary model, certified calibrated probability or simulated possession-by-possession NFL match.
+
+**Estimate target team means** (all values in points; numbers are explicit sensitivity assumptions, not inferred weights from fitted validation):
+
+1. 60% this season's five-game rate + 40% verified prior L20 each team: SEA attack 26.94; DEN conceded 20.82; DEN attack 21.44; SEA conceded 19.54.
+2. Baseline cross-attack/defence centres: SEA `(26.94+20.82)/2 = 23.88`; DEN `(21.44+19.54)/2 = 20.49`.
+3. Home adjustment using rounded historical **Denver/home advantage +2.2 margin points**: subtract 1.1 from Seattle and add 1.1 to Denver ⇒ SEA **22.78**, DEN **21.59**.
+4. Bounded *assumed*, not independently fitted, personnel effects: +1.0 Seattle expected points for Surtain/Hufanga out (Moss active); +0.5 Denver expected points for Seattle's linebacker shortage. Thus target expected SEA **23.78**, DEN **22.09**, combined **45.87**, Seattle-minus-Denver **+1.69**. The chosen increments are subjective scenario parameters, NOT official injury impact estimates or previously calibrated adjustments.
+
+Let each historical completed game have `T_i = home_score + away_score`, `M_i = away_score - home_score`, and its discrete valid score tuple. Assign
+
+`w_i = exp(λ_T × (T_i − 45) + λ_M × M_i) / Σ_j exp(λ_T × (T_j − 45) + λ_M × M_j)`.
+
+Solve the two moment equations `Σ w_i T_i = 45.87`, `Σ w_i M_i = 1.69` by Newton iteration with the empirical 2×2 covariance Hessian. **Executed fitted tilt parameters:** `λ_T = +0.004666688907978182`, `λ_M = +0.019478392639179734`, using 816 final games; normalized weights sum to one. Under these weights, sum event indicator over exact final-score lattice for each contract. This parameterization is **not** an evidence-backed trained NFL team scoring system and does not claim opponent-adjusted predictive calibration.
+
+- `P(SEA −2.5) = Σ w_i 1{M_i ≥ 3} = 0.5067833842`.
+- `P(DEN +2.5) = Σ w_i 1{M_i ≤ 2} = 0.4932166158`.
+- `P(Over 40.5) = Σ w_i 1{T_i ≥ 41} = 0.6436499573`.
+- `P(Under 40.5) = Σ w_i 1{T_i ≤ 40} = 0.3563500427`.
+
+**Full sporting W/P/L/V under these assumptions:** All four have `PUSH=0`, `VOID=0`; P(W) as shown and P(L)=1−P(W). All four decisive denominators W+L=1. Model `p_card=NOT_ESTIMATED` throughout. Estimated final score means total =45.87, Seattle-perspective margin=+1.69, weighted total SD=13.69, margin SD=14.07, sample weighted correlation ≈−0.0194. This correlation is empirical *after reweighting*, not a measured team-specific game-script relationship.
+
+**NFL key-margin preservation:** Seattle win by exactly 3: 7.92%; Seattle by 7: 4.87%; Denver by 3: 6.40%; Denver by 7: 3.51%. The model includes integer scoring and preserved empirical margin clustering; it is **not** a drive-level model and does not independently fit 2026 key-number propensities.
+
+### A5. Full supplied contract analysis, failure routes and dependence
+
+- **Seahawks −2.5 (50.68%)**: 2026 offense stronger than DEN's (26.8 vs 19.4 points/game), with Surtain/Hufanga inactive. Failure: altitude/Denver home advantage, Seattle turnover exposure, short week, SEA defensive injury, and Seattle wins of just 1–2 points. The 3-point key number is material, so no uncorrected continuous Gaussian shortcut was used.
+- **Broncos +2.5 (49.32%)**: home setting, rebound potential for Bo Nix-led offense and Seattle's LB absence support the cushion. Failure: Denver secondary without elite coverage personnel and SEA's receiving strength. Pure complement of SEA−2.5, **not** independent protection in a performance study.
+- **Over 40.5 (64.36%)**: five-game SEA average total 47.8, Denver 41.6; 2023–25 NFL game score distribution and SEA receiver availability support a plausible game above 40.5. Failure: short rest, turnover-driven slow drives, red-zone failures, defensive adjustment, unusual low tempo. A team average is not a fitted possession model.
+- **Under 40.5 (35.64%)**: short-week execution and Denver offense 19.4 scored/game support low outcome possibility. Failure: 2026 SEA scoring and depleted DEN secondary. Complement of Over40.5.
+
+**Joint dependence:** Under40.5 AND SEA−2.5 occurs at **19.12%**, which is the simultaneous failure of analyst Rank1 Over and Rank2 Broncos+2.5 **only if** Rank2 were Broncos+2.5; actual analyst Rank2 here SEA−2.5, so simultaneous loss is **Under40.5 AND Denver+2.5 = 16.52%**. This is joint model mass from the same weighted 816 historical games, not independent-product arithmetic, verified prospective coverage or profitable protection. Note that different quantities are not inherently independent; main top-two policy remains NOT_APPLICABLE because there is no fitted primary model.
+
+### A6. Availability, weather, rest, QB and scenario sensitivity
+
+**Verified official pre-start game-day inactives:**
+- SEA: LB Drake Thomas, LB Chazz Surratt, RB Robert Henry Jr., CB Avery Smith, WR Montorie Foster Jr., NT Brandon Pili, emergency QB Jalen Milroe; Zach Charbonnet (knee) ruled OUT according to the official injury report. WR Jaxon Smith-Njigba ACTIVE, DT Leonard Williams cleared, rookie Tyrice Knight expected alongside Ernest Jones IV at LB. Source: `https://www.seahawks.com/news/seahawks-at-broncos-week-6-inactives` and `https://www.nfl.com/injuries/league/2026/reg6`.
+- DEN: CB Patrick Surtain II and S Talanoa Hufanga OUT; CB Riley Moss ACTIVE (after questionable designation), plus active reinforcements Taylor Rapp and Sean Fresch Jr. Source: `https://www.denverbroncos.com/news/cb-riley-moss-active-for-broncos-week-6-game-vs-seahawks`. Official inactives also list Sam Ehlinger (emergency third QB), Dallen Bentley, Kage Casey, Tyler Onyedim, Jordan Jackson.
+- Offensive QB expectation: Sam Darnold (SEA), Bo Nix (DEN) from team materials; **no full independently timestamped first-play QB confirmation**, complete personnel snap counts or active 53 roster across both sides.
+- Rest: each team played on October 11, then Thursday October 15 local US, a standard shortened week; Seattle travelled to Denver at altitude. No numerical pace/QB/travel effect can be isolated from these data. Weather secondary pre-event forecast about 52°F/7 mph/clear; original field-owner forecast and actual kickoff measurements not independently verified, so no numerical weather factor fitted.
+
+**Executed target-mean stress cases:** In each case the exact same empirical 816-game joint distribution was reweighted anew (not a calibration CI):
+
+| Scenario | SEA-minus-DEN mean | Total mean | SEA−2.5 | DEN+2.5 | Over40.5 | Under40.5 |
+|---|---:|---:|---:|---:|---:|---:|
+| Lower-scoring, DEN-favoured | −1.50 | 42.00 | 42.42% | 57.58% | 53.79% | 46.21% |
+| **Base** | **+1.69** | **45.87** | **50.68%** | **49.32%** | **64.36%** | **35.64%** |
+| Higher-scoring, SEA-favoured | +5.00 | 49.50 | 59.40% | 40.60% | 72.99% | 27.01% |
+
+These are sensitivity scenarios, **not quantified credible intervals**, and model misspecification could cause errors outside them. Relative ranking of the supplied *side* rows changes across scenarios. Report that fragility; do not conceal it under a single-decimal probability.
+
+### A7. Selection, gates, uncertainty and baseline
+
+Four literal supplied contracts are evaluated from one full-match mathematical score distribution. Analyst ordering is Over40.5 64.36%, SEA−2.5 50.68%, DEN+2.5 49.32%, Under40.5 35.64%. Two complementary pairs, each summing to 100% (rounding aside). `BASELINE_LEAGUE_V1` same-line frozen p: **NOT_EXECUTED**; simple empirical 816-game over-line rate approximately 62.75% as a nonmatched sanity check. No primary p_card, normalised expert mixture, ε gate, Rank1 primary qualification, SHADOW_RANK_DELTA, SHADOW_BASE_ONLY, RET04, XCARD6, alternative quantity primary or actual Hedge-learning receipt. Unlike NFL bookmaker projections, these are **not prices** and do not imply edge/stakes.
+
+### A8. Sources, capability attempts and outstanding validation
+
+- Primary exact game: https://www.nfl.com/games/seahawks-at-broncos-2026-reg-6 ; https://www.seahawks.com/game-day/2026/reg-week6/seahawks-at-broncos/ .
+- Team 2026 completed fixtures and scoring: https://www.seahawks.com/schedule/ ; https://www.nfl.com/schedules/2026/by-team/denver-broncos ; https://www.denverbroncos.com/game-day/2026/reg/broncos-at-49ers .
+- NFL official game-week injury report: https://www.nfl.com/injuries/league/2026/reg6 ; club inactives https://www.seahawks.com/news/seahawks-at-broncos-week-6-inactives ; https://www.denverbroncos.com/news/cb-riley-moss-active-for-broncos-week-6-game-vs-seahawks .
+- Local historical model input: GitHub pinned main file paths `Previous Sports Results/American Football/NFL/{2023,2024,2025}/{YEAR}_games.csv`, 816 logical regular-season rows; 2023 blob `84ea7fe8acf2bb78210c18cd43fba06c2c5f1443`, 2024 `b972d430f381be2b5fadd3cb4fff9f810fe14e78`, 2025 `781e756b8db04ec494158fcc8ce2e31d5acaa2f8`. These historical CSVs lack guaranteed point-in-time per-field capture and some scores may need separate official game-by-game validation.
+- Secondary no-numeric-adjustment weather source: https://www.forecasterhq.com/tools/nfl-weather/game/seahawks-at-broncos-week-6 (unverified official owner).
+- `python -m ml primary execute --help` actually attempted locally; nonzero with `/opt/pyvenv/bin/python: No module named ml`. No MODEL_ASSISTED_PRIMARY_V3 success/receipt, no CI performance claim and no fabricated paths. Exact baseline and 90-minute complete selected offensive/defensive packages absent. No settled outcome/source capture was read.
+- Draft reading receipt: pinned `main` HEAD `2ea94f6f718d1f43c7af9e567008495114ef9cef`; read CURRENT_STATE, GAME_LOG_STATUS_CURRENT, RULES_AMERICAN_FOOTBALL, ARCHIVE_USE_GUIDE, RESEARCH_RETENTION_PROTOCOL, ML_EXECUTION_PROTOCOL and COMMON_OPERATING_PROTOCOL. Earlier turns read CURRENT_RULES/METHOD/TEMPLATES; sections applied prospectively from published v17. Full selected pasted 165-line American Football workflow was read as user input. The 235,973-byte earlier original mini plus newer local append P-597/P-598 and GitHub P-590–596 canonical identity were inspected. **Do not claim full repo copies of all controls were read during this run**; other dependency sections are referenced, not fully re-fetched.
+- Mandatory result adjudication later: original contract scope; official final + per-period, actual play and completed time; supplemental source; scoring and performance eligibility review. `PENDING_SETTLEMENT` only; no current score or postgame capture at original issue.
+
+### A9. Integrity and completion matrix
+
+| Procedure | Actual work | Limit / next verification | Status |
+|---|---|---|---|
+| Authority, ID and duplicate | GitHub canonical P-596 next P-597; local P-597 and P-598 retained before P-599; official SEA@DEN game centre | Concurrent external writer lease unverified; P-599 must not import before P-597/598 | DONE_WITH_GAPS |
+| Both sides QB/selected and inactives | Club and NFL official game-day inactives for both; Sam Darnold / Bo Nix context | Full start snap/healthy 53-player selected roster unverified | DONE_WITH_GAPS |
+| Historical archive, recovery and known-at | Actual pinned 2023/24/25 CSVs parsed (816 games) + official five-game 2026 schedules | Some historical raw owner provenance and release timestamps unverified | DONE_WITH_GAPS |
+| L5/L10/L15/L20, season and league | Full actual n=5/10/15/20 both teams; league n=816; means checked | Cross-season regime continuity and opponent/venue-adjusted ratings unvalidated | DONE |
+| NFL mechanics, special teams and QB/venue/rest/weather | Short week, key NFL margins, NFL OT tie possibility, official inactives, Denver home/altitude | No fitted per-drive scoring / turnover process or verified weather perturbation | DONE_WITH_GAPS |
+| Actual ML primary | Tested import; No module named ml; PRIMARY p_card genuinely absent | Runtime must run in admitted repo environment with reviewed current NFL metadata | NOT_RUN_CAPABILITY_BLOCKED |
+| Analyst model and actual calculation | 816-state empirical joint reweight: two moments, two solved tilts, full W/L, 4 rows and 3 scenario variants | Mean weights and injury increments uncalibrated and not separately out-of-sample validated | DONE_UNCALIBRATED |
+| Four supplied rows, joint protection and exact baseline | Four calculated; complements sum to 1; correct 3/7 mass and joint failure | True policy baseline and fit-to-current-team quality unavailable | DONE_WITH_GAPS |
+| Custody, timing and append | Timestamped local P-599 card; preceding P-590–595 and P-597/598 cores preserved; manifest blank ML paths; pending import | Original P-596 remains GitHub-authoritative source pointer in the local mirror; no write to GitHub | LOCAL_ONLY |
+
+**Self-audit:** C1/C2 authority and game identity PASS; C3 local card sequence PASS with GitHub concurrent custody NOT_VERIFIED; C4 schedule offset PASS; C5 actual first play/official clean prospective evidence NOT_VERIFIED; C6 supplied 4/4 PASS; C7 official inactive releases and likely QBs PASS_WITH_GAPS; C8 regular-season overtime/OT settlement requires explicit original operator term; C9 actual historical 816 unique games and 5 current games used with disclosed stage/date; C10 local ML failed honestly; C11 actual coherent score-state empirical weighting calculations; C12 same-line official frozen baseline NOT_COMPUTED; C13 analyst ranks NOT primary; C14 all four W/L and no push shown; C15 all 3 scenario calculations; C16 exact joint and 3/7 mass; C17 prior original blocks unchanged; C18 pregame field source clocks partially known; C19 NOT_CERTIFIED no shadow; C20 NFL and both clubs availability escalation with incomplete full team list; **C21 PASS_RESEARCH_ONLY** truthful `NOT_APPLICABLE_NO_MODEL` manifest and blank execution/feedback paths.
+
+**Research completion:** `COMPLETE_NUMERICAL_ANALYST_COMPARISON_WITH_DOCUMENTED_MODEL_AND_SOURCE_GAPS`. No betting/market information used for modelling. **Settlement NOT_PERFORMED. GitHub `main` READ-ONLY. No canonical import. No automatic schedule or notification created.**
+<!-- END CARD P-599 -->
+
+<!-- END CANONICAL RESEARCH P-599 -->
+
+<!-- BEGIN CANONICAL RESEARCH P-600 -->
+## P-600 — retained historical research
+Import: 2026-10-16T15:18:45+11:00; source original core SHA-256 fde527c2cb8b2d66e6b7e302465ae2bdd6fc3eae5b12ca56148300a41dc59d32; unchanged local/canonical ID. Original per-card rule/policy, timing, probabilities, statuses and source gaps remain literal. RESEARCH_ONLY_NO_MODEL / no authenticated fitted primary bundle; retain analyst diagnostics separately NOT_PRIMARY. Any PENDING_IMPORT wording inside the frozen core is historical.
+
+<!-- BEGIN CARD P-600 -->
+## Card — P-600 — Basketball / NBA preseason — Oklahoma City Thunder @ Houston Rockets (16 October 2026 AEDT)
+
+- **Canonical-identity candidate:** P-600 **LOCAL WORKING ID** after P-597 (Alytaus Patriotai–Vytis), P-598 (Huima–NMKY) and P-599 (Seattle–Denver) in the supplied continuous local mini. **NOT_CANONICALLY_IMPORTED.** Published GitHub main still highest P-596 / next P-597 and must import all outstanding cards contiguously; P-600 may NOT be imported on its own.
+- **Native NBA game ID:** `0012600020` · derived surrogate `NBA:2026:PRE:0012600020:OKC-HOU` · **league stage: PRESEASON** (not regular season).
+- **Authority:** `PUBLISHED_MAIN_PINNED`, GitHub main SHA `2ea94f6f718d1f43c7af9e567008495114ef9cef`, MDS-2026.10.16-v17.0 / CR-2026.10.16-R1 / RETAIN-v1 / PRIMARY-v3.3, historical mini-log-7 continuation. Existing remote active mini is unchanged.
+- **Scheduled:** 2026-10-15 19:30 CDT (America/Chicago, UTC−05) = 2026-10-16 00:30 UTC = 2026-10-16 11:30 AEDT (Australia/Melbourne UTC+11). **Venue:** Toyota Center, Houston. Actual first tip NOT_VERIFIED.
+- **Local record creation:** `2026-10-16T11:24:21+11:00`. Timing: BEFORE/AFTER scheduled start determined from this literal timestamp; **actual-first-tip and outcome exposure independently unverified**. This is not evidence of independently published pre-tip freeze.
+- **Requested rows (exact):** Thunder −2.5 points; Rockets +2.5 points; full-game combined Over 227.5; full-game combined Under 227.5. Assumed completed game including any overtime; operator-specific abandoned/void policy UNKNOWN_DEFINITION.
+- **Numerical classification:** `RESEARCH_ONLY_NO_MODEL / UNCALIBRATED_ANALYST_SCENARIO / NOT_PRIMARY`; four conditional `analyst_p` estimates, all `p_card=NOT_ESTIMATED`. **LINEUP_UNCONFIRMED / PRESEASON_MINUTES_UNVERIFIED**.
+- **Model capability:** actual `python -m ml primary execute ...` attempted locally at 2026-10-16T00:22:13.883704+00:00 and returned `No module named ml`; no fitted model prediction, grid, warm-start, η, Hedge ledger, or verified primary receipt. Real local failure log `P600_MODEL_EXECUTION_CAPABILITY_RECEIPT.txt`, SHA256 `03461316b41735967123561020133ece9f9be38a90f848cbf8cad0495cf5bc01`. No `EXECUTION.csv` was fabricated. EXEC-v2/RETAIN-v1 permits recorded research with manifest's execution path/hash blank.
+- **Learning:** PENDING_SETTLEMENT / OUTCOME_NOT_REVIEWED / feedback `NOT_APPLICABLE_NO_MODEL`; verified target labels for future model training only after owner/source review. No prior prediction altered.
+
+### Decision block — supplied contracts ranked by analyst probability only
+
+| Diagnostic rank | Contract | `analyst_p` | Model `p_card` | Conditional success/failure / research status |
+|---|---|---:|---|---|
+| 1 | **Combined Over 227.5 points** | **66.31%** | NOT_ESTIMATED | At least 228 points; likely if preseason high pace/bench scoring persists; loss at 227 or less |
+| 2 | **Rockets +2.5** | **63.42%** | NOT_ESTIMATED | Rockets win, tie impossible in final NBA result, or lose by 1–2; loses if OKC wins by ≥3 |
+| 3 | Thunder −2.5 | 36.58% | NOT_ESTIMATED | OKC win by ≥3; loses otherwise |
+| 4 | Combined Under 227.5 | 33.69% | NOT_ESTIMATED | ≤227 total; loses at ≥228 |
+
+**Potential winner (uncalibrated):** Houston Rockets ~58.6% under the same margin-normal scenario (Thunder outright ~41.4%). Qualitative answer is **Houston**, but preseason rotations can reverse the sign. Ranked pair is **NOT a qualified P_ORDER_V2 model PICK** and does not pass a primary numerical gate without verified p_card. Exact contract pair complements: 100.0% and 100.0%.
+
+### A1. Match verification, prior keys, source time and scope
+
+Official NBA game centre `https://www.nba.com/game/okc-vs-hou-0012600020` and Rockets team event page `https://www.nba.com/rockets/game/0012600020-thunder-vs-rockets-houston-tx-10-15-2026/event-details` identify this preseason fixture, NBA ID and 19:30 Houston clock; verified external search before this file creation. Prior local IDs P-597/P-598/P-599 and published canonical P-590–P-596 match different games. No matching local card native key or aliases found in source mini body before append. Cross-writer external lease cannot be proved; remote GitHub is read-only. Source retrieval-time HTTP archive bytes, data-availability timestamps and digest captures outside this file are NOT_SAVED; do not claim point-in-time certified features from mutable pages.
+
+### A2. Supplied contract definitions and directions
+
+Four original contract lines retained without moving thresholds. Half-point line means **zero ordinary score-based pushes**, conditional on both teams completing the recorded preseason game under the exact same contract action. Full-game totals and points spread convention includes OT in this *illustrative sporting scoring model*; exact user/operator settlement contract legal definitions were not supplied. 
+
+Pair dependence: Thunder −2.5 + Rockets +2.5 cover the same full-time game margin in opposite directions; Over/Under 227.5 are strict complements on the common total. Do not treat complement pairs as four independent observations, or one good source as independent additional source families.
+
+### A3. Roster, starters/bench/medical and recorded form
+
+- Official Thunder 14 October medical update confirms rookie Otega Oweh had surgery for a ruptured right Achilles, **season out**: `https://www.nba.com/thunder/news/release-medical-update-261014`.
+- Thunder four completed 2026 preseason games: 6 Oct 110–116 New Orleans; 7 Oct 126–128 Milwaukee; 12 Oct 110–113 Atlanta; 13 Oct 114–112 Indiana **in overtime**. Thunder **1–3**, PF **115.00/game**, PA **117.25/game**, observed totals **226, 254, 223, 226**. Source: `https://basketball.realgm.com/nba/teams/Oklahoma-City-Thunder/33/Schedule/9028`; `https://www.foxsports.com/nba/oklahoma-city-thunder-team-schedule?seasonType=Preseason`.
+- Rockets two completed preseason games: 9 Oct **135–117** Dallas in Macau; 11 Oct **115–132** Dallas in Macau; Rockets **1–1**, PF **125.00**, PA **124.50**, totals **252, 247**. Source: `https://www.foxsports.com/nba/houston-rockets-team-schedule?seasonType=Preseason` and `https://www.houstonchronicle.com/sports/rockets/article/houston-dallas-macao-score-22472184.php`.
+- Confirmed *last-game nonparticipation*, not an exact-game withdrawal: Kevin Durant, Fred VanVleet and Alperen Şengün missed Houston's 11 Oct game. Fred VanVleet featured on 9 Oct, scoring 17 in 24 minutes; no guarantee of 15 Oct minutes. `https://www.houstonchronicle.com/sports/rockets/article/houston-dallas-macao-score-22472184.php`; `https://www.houstonchronicle.com/sports/rockets/article/rockets-preseason-film-review-22472045.php`.
+- A pregame secondary article lists projected starting fives, explicitly **PROBABLE NOT CONFIRMED**, and mentions Oweh. Neither team's *actual Oct 15* selected five and active bench, reserve minutes, medical list or late scratch announcement was verified. `https://www.aol.com/articles/watch-thunder-vs-rockets-preseason-110321000.html`. An official October 15 full game roster/box at the established first-tip time still needs capture.
+- Thunder played 13 Oct, Houston last played 11 Oct, so nominal calendar-date gap 2 vs 4 days. Houston returned from Macau, so actual travel/time-zone sleep effects uncertain. No automatic fixed home/fatigue adjustments applied beyond **explicit illustrative** +1.5 Houston home margin shift. Recent regime contains offseason roster changes and shortened star minutes, not modeled possession-by-possession.
+
+**Verified same-sport NBA-team-only historical preseason form** (2026 through 13/11 October, then earlier Octobers with distinct rosters; no regular-season cross-contamination; Oklahoma City 2024 exhibition versus *New Zealand Breakers* excluded from NBA-v-NBA corpus):
+
+| Team / sample | Actual n | W–L | Scored/game | Allowed/game | Total/game | Margin/game |
+|---|---:|---:|---:|---:|---:|---:|
+| Oklahoma City Thunder L5 | 5 | 2–3 | 110.80 | 112.00 | 222.80 | -1.20 |
+| Oklahoma City Thunder L10 | 10 | 5–5 | 111.70 | 112.40 | 224.10 | -0.70 |
+| Oklahoma City Thunder L15 | 15 | 8–7 | 112.40 | 110.93 | 223.33 | +1.47 |
+| Oklahoma City Thunder L20 | 19 | 10–9 | 114.32 | 112.16 | 226.47 | +2.16 |
+| Houston Rockets L5 | 5 | 4–1 | 130.60 | 123.80 | 254.40 | +6.80 |
+| Houston Rockets L10 | 10 | 8–2 | 125.70 | 117.20 | 242.90 | +8.50 |
+| Houston Rockets L15 | 15 | 12–3 | 120.73 | 111.47 | 232.20 | +9.27 |
+| Houston Rockets L20 | 15 | 12–3 | 120.73 | 111.47 | 232.20 | +9.27 |
+
+Cross-season L20 means only *19 actual eligible games for OKC and 15 for Houston*; neither is invented. The last-5 windows overlap other windows and are one form diagnostic, not multiple model inputs. The year-specific 2025 predecessor pre-season is not a known 2026 lineup. Sources: `https://basketball.realgm.com/nba/teams/Oklahoma-City-Thunder/33/Schedule/2026` (2025 game dates), `https://basketball.realgm.com/nba/preseason/team/Oklahoma-City-Thunder/33/schedule/2025` (2024), `https://basketball.realgm.com/nba/preseason/team/Oklahoma-City-Thunder/33/schedule/2024` (2023); equivalent Houston `https://basketball.realgm.com/nba/teams/Houston-Rockets/10/Schedule/2026`, `https://basketball.realgm.com/nba/preseason/team/Houston-Rockets/10/schedule/2025`, `https://basketball.realgm.com/nba/preseason/team/Houston-Rockets/10/schedule/2024`. 2025 preseason Houston 4-game 131.25 PPG also agrees with `https://www.foxsports.com/nba/team-stats?category=scoring&season=2025&seasonType=pre` (rounded 131.3).
+
+**Current-season source rows and current lineup regimes:**
+
+| Date | Team | Opponent | Points for | Points against | Total |
+|---|---|---|---:|---:|---:|
+| 2026-10-13 | OKC | IND | 114 | 112 | 226 |
+| 2026-10-12 | OKC | ATL | 110 | 113 | 223 |
+| 2026-10-07 | OKC | MIL | 126 | 128 | 254 |
+| 2026-10-06 | OKC | NOP | 110 | 116 | 226 |
+| 2026-10-11 | HOU | DAL | 115 | 132 | 247 |
+| 2026-10-09 | HOU | DAL | 135 | 117 | 252 |
+
+### A4. Reproducible statistic-based analyst scenario (NOT fitted/certified)
+
+First calculate **prior-year 2025 preseason** for same teams: OKC 6 games scored **109.50**, allowed **109.17**; Houston 4 games scored **131.25**, allowed **120.75**. **2026 current**: OKC n4 115.00/117.25, Houston n2 125.00/124.50. The prior-year cohort is a competing *preseason comparison*, not the same current roster.
+
+For each club's scored and conceded centre, use an explicitly chosen diagnostic 60% weight on 2026 and 40% on 2025 preseason (no claim this weight was trained):
+
+```
+OKC attack = 0.60×115.00 + 0.40×109.50 = 112.80
+OKC allowed = 0.60×117.25 + 0.40×109.1667 = 114.0167
+HOU attack = 0.60×125.00 + 0.40×131.25 = 127.50
+HOU allowed = 0.60×124.50 + 0.40×120.75 = 123.00
+Expected OKC raw = (112.80 + 123.00)/2 = 117.90
+Expected HOU raw = (127.50 + 114.0167)/2 = 120.7583
+Raw total = 238.6583, raw OKC-HOU margin = −2.8583
+Illustrative HOU home-margin correction +1.5 POINTS, total preserved:
+Expected OKC = 117.15, Expected HOU = 121.5083;
+T = 238.6583, M = OKC-HOU = −4.3583
+```
+
+The +1.5 is an **analyst stress input**, not a uniquely sourced or fitted NBA preseason effect; some home component may already be present in current scoring. For completed-game scenario maths assume **joint** `(T, M)` with independent Gaussian marginal shocks `T ~ Normal(238.6583, 26.5²)` and `M ~ Normal(−4.3583, 20.0²)`. The choice `σ_T=26.5` is rounded from sample SD **26.48** of the ten earlier **2025** preseason *team-game* totals (OKC six + Houston four, not league representative). The margin-width 20.0 is deliberately wider than the observed ~12.5 from those ten games to allow preseason playing-time, opponent and roster uncertainty; it is an assumption, NOT an estimated game residual or validated covariance. T–M correlation set to 0 for illustration, not established by a fitted grid. This joint normal can produce impossible basketball scores at extreme tails; it is an approximation, no exact play-by-play inference.
+
+Let `Φ` denote the standard normal CDF:
+
+```
+P(Over 227.5) = 1 − Φ[(227.5−238.6583)/26.5] = 0.66314772
+P(Under 227.5) = Φ[(227.5−238.6583)/26.5] = 0.33685228
+P(OKC −2.5) = 1 − Φ[(2.5−(−4.3583))/20] = 0.36583058
+P(HOU +2.5) = Φ[(2.5−(−4.3583))/20] = 0.63416942
+```
+
+Under completed-game and the continuous approximation, W/L probabilities equal win/lose mass; PUSH=0 on both half-points; V=0 conditioned on official completed action. If cancellation/operator void: probability is unmodeled UNKNOWN_DEFINITION, not set to zero in the external bet/contract. **Primary p_card remains NOT_ESTIMATED** for all rows; same-line BASELINE_LEAGUE_V1 is NOT_ESTIMATED because an actual reviewed, complete previous NBA preseason game-population feed plus required fit baseline was not executed. NBA regular-season 2023–2025 baseline of 229.08 (LEAGUE_PROFILES) is NOT a preseason prior/baseline.
+
+**Model probabilities are not these estimates.** No run, no Hedge weights, data hash or primary test metrics exist. This analyst comparison should only be compared within its declared assumptions.
+
+### A5. Four-line assessment and failure scenarios
+
+- **Over 227.5 — 66.31% (`analyst_p`).** For: OKC 2026 game totals 226/254/223/226, Houston 252/247 and current offense. Against: Three of OKC four totals ≤227, Houston's two high results against Dallas in unusual China schedule, possible fourth-quarter bench slowdown, star-minute restrictions. A modest downward score-regime correction can reverse evidence.
+- **Rockets +2.5 — 63.42%.** For: Houston preseason 2026 scored 125/game, OKC conceded 117.25/game, home venue/rest difference, Houston 2025 preseason prior. Against: OKC's regular-season quality and defenders, Houston unclear stars/closing unit; ~20-point assumed margin SD; could lose outright by 3+.
+- **Thunder −2.5 — 36.58%.** For: prior regular-season strength, SGA/defensive ceiling, season-opener-adjacent rotation if core plays; contrary case is Houston's strong preseason attack and home rotation. A genuine pregame SGA/SGA minutes status not verified, so no numeric extra talent bonus.
+- **Under 227.5 — 33.69%.** For: modest effective shooting minutes/pace, reserve lineups, OKC three of four 2026 totals at or below 226; against high Houston preseason offence, recent 2025 high results and late blowout bench scoring. This is not a separate independent forecast from Over.
+
+### A6. Uncertainty analysis, pair dependence and conditional winner
+
+| Assumption group | Total centre | OKC−HOU margin | Over 227.5 | Under 227.5 | Thunder −2.5 | Rockets +2.5 |
+|---|---:|---:|---:|---:|---:|---:|
+| Low scoring, Houston stronger (T−8, M−6) | 230.66 | -10.36 | 54.74% | 45.26% | 26.01% | 73.99% |
+| Central diagnostic | 238.66 | -4.36 | 66.31% | 33.69% | 36.58% | 63.42% |
+| High scoring, OKC stronger (T+8, M+6) | 246.66 | +1.64 | 76.51% | 23.49% | 48.29% | 51.71% |
+
+Sensitivity cases are **not calibrated confidence intervals**. Each case has 26.5 total SD and 20 margin SD, with zero correlation assumption. Thunder win-by-3 / Rockets lose-by-3 is not a push (Thunder −2.5 covers); NBA regular/preseason tie resolved by overtime under the assumed endpoint; an unresolved actual overtime rule/operator action is explicitly separate. Model's implied Rockets outright share for continuous margin ~58.63% (OKC ~41.37%).
+
+The top two analyst rows are **Over 227.5 and Rockets +2.5**, different quantities; under the *assumed independent* total/margin shocks both lose if total ≤227 and Thunder wins by ≥3: illustrative joint `0.1232` (~12.32%). This is NOT an actual verified joint game-grid probability and does not establish low tail dependence. Do not claim XCARD6/RET04/model shadow, calibration, two-decisive utility, or official primary gate. The analyst lead between first and second is 2.90 pp (less than the numerical PRIMARY rule's 4 pp lead, but primary gate is **NOT_APPLICABLE** to analyst_p).
+
+### A7. Playing conditions and settlement endpoints
+
+NBA exhibition/preseason basketball uses 12-minute quarters and standard game points; relevant overtime may extend totals and spread. Confirm any preseason-specific fourth-quarter or OT stipulations from exact game feed before score/action settlement. Venue indoor; weather not assigned a shooting correction. Score source endpoint must include the entire completed game consistent with user contract terms; verify normal OT scoring and any shortened/abandoned game. There are no integer point-push possibilities for these half-point contracts. The player late-change risk is material and cannot be reduced to an unsupported single figure.
+
+### A8. Evidence register and missing-field custody
+
+**Organiser:** `https://www.nba.com/game/okc-vs-hou-0012600020` · `https://www.nba.com/rockets/game/0012600020-thunder-vs-rockets-houston-tx-10-15-2026/event-details` — name/venue/date/time, current game shown pregame at original research.
+
+**Current 2026 outcomes:** `https://basketball.realgm.com/nba/teams/Oklahoma-City-Thunder/33/Schedule/9028`; `https://www.foxsports.com/nba/oklahoma-city-thunder-team-schedule?seasonType=Preseason`; `https://www.foxsports.com/nba/houston-rockets-team-schedule?seasonType=Preseason`; Houston publication (11 Oct) `https://www.houstonchronicle.com/sports/rockets/article/houston-dallas-macao-score-22472184.php`.
+
+**Historic preseason exact stage:** `https://basketball.realgm.com/nba/teams/Oklahoma-City-Thunder/33/Schedule/2026`; `https://basketball.realgm.com/nba/preseason/team/Oklahoma-City-Thunder/33/schedule/2025`; `https://basketball.realgm.com/nba/preseason/team/Oklahoma-City-Thunder/33/schedule/2024`; corresponding Houston `https://basketball.realgm.com/nba/teams/Houston-Rockets/10/Schedule/2026`, `https://basketball.realgm.com/nba/preseason/team/Houston-Rockets/10/schedule/2025`, `https://basketball.realgm.com/nba/preseason/team/Houston-Rockets/10/schedule/2024`. These are secondary compiled records, not independent post-issue immutable score snapshots. Relevant local GitHub `Previous Sports Results/Basketball/NBA/2024/2024_games.csv` and `/2025/2025_games.csv` are regular-season-focused; their headers and early rows were checked but no supported preseason score rows used. No stage substitution.
+
+**Availability:** `https://www.nba.com/thunder/news/release-medical-update-261014` official Oweh surgery/out, 14 Oct release; Houston's 11 Oct DNP `https://www.houstonchronicle.com/sports/rockets/article/houston-dallas-macao-score-22472184.php`; probable-only `https://www.aol.com/articles/watch-thunder-vs-rockets-preseason-110321000.html`. Actual match starters, both full selected benches, minutes limits, official latest injury/inactive report, and actual first tip cannot be certified by the retrieved documents. No retrospective score, operator line definition, archive capture hash, or a fabricated release time was used. This file itself is an execution record dated 2026-10-16T11:24:21+11:00. No direct betting/odds input for probabilities.
+
+**Final data capture plan:** At owner-requested settlement, use official NBA ID 0012600020 and corresponding box/gamebook; capture total, regulation, overtime, starters/bench and minutes, final state, real final/result availability timestamp, published operator action, evidence URLs/hashes. Do not settle poststart propositions with hindsight model scores; original analyst numbers remain as dated and uncalibrated.
+
+### A9. Integrity / A1–A9 mandatory completion matrix
+
+| Procedure | Actual executed evidence | Outstanding evidence or uncertainty | Status |
+|---|---|---|---|
+| Authority / exact event / duplicate / time | Pinned SHA, native NBA 0012600020, locally P-597–P-599 already allocated, scheduled 11:30 AEDT | First actual tip and unseen external writer lease unverified | DONE_WITH_GAPS |
+| Starters / bench / absences | Club medical Oweh, Houston last-game DNP and projected lineup, official NBA game event | Actual Oct15 confirmed five for both sides and active bench, current injury/inactives | LINEUP_UNCONFIRMED |
+| Archive triage, web history & known-at | Repository NBA CSV inventory checked; RealGM 2023–26 preseason history excludes NZ Breakers | Field-owner per-game immutable captures and league-wide preseason completeness | DONE_WITH_GAPS |
+| Form L5/L10/L15/L20 / season | 19 eligible OKC, 15 HOU across years; current 4/2; actual n printed | Cross-roster profile instability; 2026 full league comparator unavailable | DONE |
+| Match mechanisms / competition rules | pace/rotations, home, rest, player DNP, OT/48 min | Exact game-specific minutes and operator action | DONE_WITH_GAPS |
+| Actual ML run | Capability test returned `No module named ml`, failure evidence saved | No imported runtime, no model bundle; C21 no-model disposition | BLOCKED_CAPABILITY |
+| Analyst arithmetic | 60/40 time-shrink, raw score, explicit +1.5, normal 26.5/20, four CDF outputs and low/base/high | Parameters not fitted or independently calibrated, covariance unknown | DONE_NOT_PRIMARY |
+| All four exact requested rows and candidate pair | Four `analyst_p`, complementary checks and correct margins, rank order | No numerical PRIMARY gate/p_card, no qualified winner | DONE |
+| League baseline / joint / sensitivity | Preseason-only sampled 2025 SD, explicitly hypothetical joint, sensitivity grid | Actual BASELINE_LEAGUE_V1 league-wide probability NOT_ESTIMATED | DONE_WITH_GAPS |
+| Local append / readback / future learning | One proposed P-600 card, companion manifest and unchanged older cores | Canonical P-597–P-600 import pending, actual writer lease unverified, source P-596 local pointer | LOCAL_ONLY |
+
+**C1–C21 result:** Research truthful PUBLISHED_MAIN_PINNED, exact event, sources, four requested contracts, arithmetic, no model impersonation, no uncertified official lineup; C21 `HONEST_NO_MODEL` with blank execution-path and SHA fields. P-600 appended as local record, NOT_CANONICALLY_ISSUED until verified import. **GITHUB WRITES NO. SETTLEMENT NOT_PERFORMED.**
+<!-- END CARD P-600 -->
+
+<!-- END CANONICAL RESEARCH P-600 -->
+
+<!-- BEGIN RESEARCH ADDENDUM P-590 2026-10-16-source-reconciliation-1 -->
+Original: current Part 7 canonical P-590; source research reconciliation, not a settlement revision or new ID. Imported 2026-10-16T15:18:45+11:00; source SHA-256 f8bcb77e6c27d091120e893344f66d2315c823fe9bf44b409fe6dc498159bbae.
+
+<!-- BEGIN ADDENDUM P-590 2026-10-16T02:04:53+11:00 -->
+## Dated source-reconciliation note — P-590 India vs West Indies, 4th T20I
+
+**No new P-ID. No change to the original P-590 probabilities, ranks, release phase or original issue-time research. No formal settlement performed.**
+
+Verified official Windies results list the 14 October 2026 Hyderabad match West Indies **247/3 in 20 overs** and India **223/9 in 19.3 overs**, West Indies by 24 runs (the Indian innings wicket/status notation differs across scorecards; retain this conflict rather than reinterpret the original 20-over West Indies contract). A contemporaneous published match report records West Indies **79/1 after six overs**, requiring official over-by-over scorecard corroboration before a settlement-grade terminal label.
+
+Original supplied West Indies first-innings Over/Under 200.5 and first-six-over Over/Under 57.5 remain frozen. On the reported sporting values 247 and 79, both **over** thresholds are numerically exceeded; these are source observations only and **not a graded settlement revision**. Actual operator reduced-over/void/action terms remain UNKNOWN_DEFINITION. The match began **2026-10-14 19:00 IST = 2026-10-15 00:30 AEDT**; original P-590 was already labelled late/outcome-exposed at allocation. The new result is never used to change that historical forecast.
+
+Evidence: https://www.windiescricket.com/results/comp_id/9060/ and https://indianexpress.com/article/sports/cricket/keemo-paul-5-wickets-west-indies-defeat-india-tie-series-10922062/ ; secondary scorecard https://www.cricbuzz.com/live-cricket-scorecard/151598/west-indies-vs-india .
+
+**Status:** RESEARCH_RESULT_OBSERVED / PENDING_FORMAL_SETTLEMENT / NOT_PROSPECTIVE / FUTURE_LABEL_PENDING_SOURCE_REVIEW. Research note created 2026-10-16T02:04:53+11:00. No ML execution/feedback or GitHub write.
+<!-- END ADDENDUM P-590 2026-10-16T02:04:53+11:00 -->
+<!-- END RESEARCH ADDENDUM P-590 2026-10-16-source-reconciliation-1 -->
+
+<!-- BEGIN IMPORTED LEGACY SETTLEMENT SOURCE 2026-10-16-P590-P600 -->
+Documentary source corpus only. Effective event revisions are the eleven RESEARCH ADDENDUM wrappers below, keyed once per event/revision/contract. Do not count this verbatim source group as another settlement, forecast or performance cohort. Original package assertions are source claims and are qualified by the importer's independent receipt. Raw source-group SHA-256 fc61d0e253c93bde741a7badc7a8898e1e7f896c5e264c500ab7cef7460b79d9.
+
+
+<!-- BEGIN SETTLEMENT REVISION 1 2026-10-16 -->
+# P-590–P-600 — Settlement revision 1 (LOCAL_MINI_SETTLEMENT)
+
+**Settlement review:** 2026-10-16T14:49:51+11:00 · **Authority:** pinned published GitHub `main` `2ea94f6f718d1f43c7af9e567008495114ef9cef` (read-only). **Original frozen source:** `ORIGINAL_MINI.md` · 321,284 bytes · SHA-256 `d5fcc5e247113154efcbdb15586644e7a3249e76b98c4af9431b10540bf6463c` · frozen 2026-10-16T14:45:37.712106+11:00.
+
+**Corpus caution:** The local mini contains only ten embedded card bodies: P-590–P-595 and P-597–P-600. Canonical P-596 is a **source pointer**, not a local raw card block. The original P-596 research card remains at the [published canonical original](https://github.com/danisgreat/Sports-Research/blob/2ea94f6f718d1f43c7af9e567008495114ef9cef/research/verification/framework_change_2026-10-16-1/P596_RESEARCH_CARD.md). No missing source bytes were invented or substituted into `ORIGINAL_MINI`. This package is therefore a **PARTIAL_CUSTODY_SETTLEMENT** for P-596 until that canonical original is archived verbatim as a separate source capture. All 11 events are inventoried; no ID was created/renumbered.
+
+**Status distinction:** `WIN/LOSS` below are completed-game **sporting-score grades** under the stated frozen scope. The original operator terms (OT/shootout action, injury/retirement, abandonment and void rules) were not supplied for all 46 rows. **Do not represent these as operator-confirmed payouts.** Two ambiguous propositions have sporting grade `UNRESOLVED`. No postgame information changes an original forecast or known-at timestamp.
+
+**Sporting row inventory:** 46 exact supplied propositions = **23 W, 21 L, 2 unresolved**, 0 score-based pushes, 0 independently confirmed voids. Final operator-action ledger: 46 pending confirmation (including two unresolved proposition interpretations). No formal production performance denominators are upgraded.
+
+## Event-level settlement
+
+### P-590 — India vs West Indies 4th T20I
+
+**Verified target:** WI 247/3 (20 overs); WI 79/1 after 6 overs; India 223. **Provenance:** OWNER_TEAM_AND_REPORT: [source](https://www.mumbaiindians.com/news/indvwi-4th-t20i-report-tilak-nitish-put-on-a-fight-but-windies-overpower-india-to-level-series-2-2). **Recorded review:** 2026-10-16T14:49:51+11:00; exact official final-at `UNKNOWN`; no SLA asserted.
+
+| Original frozen supplied contract | Sporting grade | Preserved original uncalibrated p | Original ordering | Definition / limit |
+|---|---|---:|---|---|
+| West Indies powerplay Under 57.5 runs | **LOSS** | 0.583000 | ORIGINAL_RANK_1 | STANDARD COMPLETED 6 OVERS |
+| West Indies innings Under 200.5 runs | **LOSS** | 0.569000 | ORIGINAL_RANK_2_INFORMATIONAL | STANDARD COMPLETED 20 OVERS |
+| West Indies innings Over 200.5 runs | **WIN** | 0.431000 | ORIGINAL_RANK_3 | STANDARD COMPLETED 20 OVERS |
+| West Indies powerplay Over 57.5 runs | **WIN** | 0.417000 | ORIGINAL_RANK_4 | STANDARD COMPLETED 6 OVERS |
+
+**Settlement key:** `P-590-SETTLEMENT-R1-20261016` · parent ORIGINAL_CARD · affected frozen supplied keys 4 · source capture read time 2026-10-16T14:49:51+11:00. **Original probabilities/lineups/ranks untouched.**
+
+**R1–R12 process review (event-specific, concise):** R1 event/identity `P-590` preserved; R2 original lines 4 retained; R3 endpoint `CRICKET_FIRST_INNINGS` reviewed; R4 official/corroborating provenance `OWNER_TEAM_AND_REPORT`; R5 issue cohort historical (see original, unchanged); R6 original lineup/availability known-at is not backfilled; R7 model bundle existence not authenticated; R8 original analyst versus model distinction preserved; R9 material failure route includes unverified roster/variance/endpoint; R10 no retrospective candidate/line/rank replacement; R11 outcome does not certify calibration from one event; R12 original research defects/unknown operator terms remain queued; future feature/label admission requires independent review.
+
+### P-591 — Šiauliai vs U-BT Cluj-Napoca
+
+**Verified target:** Šiauliai 75–94 Cluj; total 169; Cluj margin +19. **Provenance:** ABA_COMPETITION_RECAP: [source](https://www.aba-liga.com/news/55315). **Recorded review:** 2026-10-16T14:49:51+11:00; exact official final-at `UNKNOWN`; no SLA asserted.
+
+| Original frozen supplied contract | Sporting grade | Preserved original uncalibrated p | Original ordering | Definition / limit |
+|---|---|---:|---|---|
+| Combined Under 172.5 points | **WIN** | 0.639000 | ORIGINAL_RANK_1 | FULL GAME INCLUDING OT |
+| U-BT Cluj-Napoca −4.5 points | **WIN** | 0.551000 | ORIGINAL_RANK_2 | FULL GAME INCLUDING OT |
+| Šiauliai +4.5 points | **LOSS** | 0.449000 | ORIGINAL_RANK_3 | FULL GAME INCLUDING OT |
+| Combined Over 172.5 points | **LOSS** | 0.361000 | ORIGINAL_RANK_4 | FULL GAME INCLUDING OT |
+
+**Settlement key:** `P-591-SETTLEMENT-R1-20261016` · parent ORIGINAL_CARD · affected frozen supplied keys 4 · source capture read time 2026-10-16T14:49:51+11:00. **Original probabilities/lineups/ranks untouched.**
+
+**R1–R12 process review (event-specific, concise):** R1 event/identity `P-591` preserved; R2 original lines 4 retained; R3 endpoint `BASKETBALL_FULL_GAME` reviewed; R4 official/corroborating provenance `ABA_COMPETITION_RECAP`; R5 issue cohort historical (see original, unchanged); R6 original lineup/availability known-at is not backfilled; R7 model bundle existence not authenticated; R8 original analyst versus model distinction preserved; R9 material failure route includes unverified roster/variance/endpoint; R10 no retrospective candidate/line/rank replacement; R11 outcome does not certify calibration from one event; R12 original research defects/unknown operator terms remain queued; future feature/label admission requires independent review.
+
+### P-592 — Casademont Zaragoza vs Basket Landes Women
+
+**Verified target:** Zaragoza 76–75 Landes after OT; regulation 68–68; full total 151. **Provenance:** BOTH_CLUBS_REPORT: [source](https://www.casademontzaragoza.es/noticias/un-thriller-para-abrir-con-victoria-la-semana-de-cuatro-partidos-en-casa) · [corroboration](https://www.basket-landes.com/event/saragosse-vs-basket-landes/). **Recorded review:** 2026-10-16T14:49:51+11:00; exact official final-at `UNKNOWN`; no SLA asserted.
+
+| Original frozen supplied contract | Sporting grade | Preserved original uncalibrated p | Original ordering | Definition / limit |
+|---|---|---:|---|---|
+| Combined Under 137.5 points | **LOSS** | 0.518510 | ORIGINAL_RANK_1 | FULL GAME INCLUDING OT |
+| Zaragoza Women −6.5 points | **LOSS** | 0.514590 | ORIGINAL_RANK_2 | FULL GAME INCLUDING OT |
+| Basket Landes Women +6.5 points | **WIN** | 0.485410 | ORIGINAL_RANK_3 | FULL GAME INCLUDING OT |
+| Combined Over 137.5 points | **WIN** | 0.481490 | ORIGINAL_RANK_4 | FULL GAME INCLUDING OT |
+
+**Settlement key:** `P-592-SETTLEMENT-R1-20261016` · parent ORIGINAL_CARD · affected frozen supplied keys 4 · source capture read time 2026-10-16T14:49:51+11:00. **Original probabilities/lineups/ranks untouched.**
+
+**R1–R12 process review (event-specific, concise):** R1 event/identity `P-592` preserved; R2 original lines 4 retained; R3 endpoint `BASKETBALL_FULL_GAME_OT` reviewed; R4 official/corroborating provenance `BOTH_CLUBS_REPORT`; R5 issue cohort historical (see original, unchanged); R6 original lineup/availability known-at is not backfilled; R7 model bundle existence not authenticated; R8 original analyst versus model distinction preserved; R9 material failure route includes unverified roster/variance/endpoint; R10 no retrospective candidate/line/rank replacement; R11 outcome does not certify calibration from one event; R12 original research defects/unknown operator terms remain queued; future feature/label admission requires independent review.
+
+### P-593 — Real Salt Lake vs San Jose Earthquakes
+
+**Verified target:** HT 0–0; FT 1–1; corners RSL 5, San Jose 5 =10. **Provenance:** OFFICIAL_RSL_MATCH_RECAP: [source](https://www.rsl.com/news/rsl-suffer-heartbreak-at-the-death-in-1-1-draw-with-san-jose) · [corroboration](https://www.thescore.com/mls/event/93472). **Recorded review:** 2026-10-16T14:49:51+11:00; exact official final-at `UNKNOWN`; no SLA asserted.
+
+| Original frozen supplied contract | Sporting grade | Preserved original uncalibrated p | Original ordering | Definition / limit |
+|---|---|---:|---|---|
+| First-half combined goals Over 0.5 | **LOSS** | 0.757837 | ANALYST_ONLY | SOCCER 45 MIN PLUS STOPPAGE |
+| First-half combined goals Under 0.5 | **WIN** | 0.242163 | ANALYST_ONLY | SOCCER 45 MIN PLUS STOPPAGE |
+| Full-time combined goals Over 2.5 | **LOSS** | 0.609867 | ANALYST_ONLY | SOCCER 90 MIN PLUS STOPPAGE |
+| Full-time combined goals Under 2.5 | **WIN** | 0.390133 | ANALYST_ONLY | SOCCER 90 MIN PLUS STOPPAGE |
+| Full-time combined corners Over 10.5 | **LOSS** | 0.540111 | ANALYST_ONLY | OFFICIAL TEAM CORNER SUM 5 PLUS 5 |
+| Full-time combined corners Under 10.5 | **WIN** | 0.459889 | ANALYST_ONLY | OFFICIAL TEAM CORNER SUM 5 PLUS 5 |
+
+**Settlement key:** `P-593-SETTLEMENT-R1-20261016` · parent ORIGINAL_CARD · affected frozen supplied keys 6 · source capture read time 2026-10-16T14:49:51+11:00. **Original probabilities/lineups/ranks untouched.**
+
+**Goal/corner field-owner reconciliation:** RSL official scoring notes both goals after minute 78 and both clubs awarded 5 corners. First-half 0–0; final 1–1; corners exactly 10. Separate provided corners stats agree.
+
+**R1–R12 process review (event-specific, concise):** R1 event/identity `P-593` preserved; R2 original lines 6 retained; R3 endpoint `SOCCER_REGULATION` reviewed; R4 official/corroborating provenance `OFFICIAL_RSL_MATCH_RECAP`; R5 issue cohort historical (see original, unchanged); R6 original lineup/availability known-at is not backfilled; R7 model bundle existence not authenticated; R8 original analyst versus model distinction preserved; R9 material failure route includes unverified roster/variance/endpoint; R10 no retrospective candidate/line/rank replacement; R11 outcome does not certify calibration from one event; R12 original research defects/unknown operator terms remain queued; future feature/label admission requires independent review.
+
+### P-594 — Seoul Samsung Thunders vs Changwon LG Sakers
+
+**Verified target:** Samsung 93–86 LG; regulation total 179; Samsung margin +7. **Provenance:** YONHAP_NEWS_WIRE_PLUS_SCORE_OWNER: [source](https://www.yna.co.kr/amp/view/AKR20261015177600007) · [corroboration](https://sports.daum.net/match/80109201). **Recorded review:** 2026-10-16T14:49:51+11:00; exact official final-at `UNKNOWN`; no SLA asserted.
+
+| Original frozen supplied contract | Sporting grade | Preserved original uncalibrated p | Original ordering | Definition / limit |
+|---|---|---:|---|---|
+| Samsung +1.5 points | **WIN** | 0.535200 | ANALYST_DIAGNOSTIC_2 | FULL GAME INCLUDING OT |
+| LG −1.5 points | **LOSS** | 0.464800 | ANALYST_DIAGNOSTIC_3 | FULL GAME INCLUDING OT |
+| Combined Over 160.5 points | **WIN** | 0.421900 | ANALYST_DIAGNOSTIC_4 | FULL GAME INCLUDING OT |
+| Combined Under 160.5 points | **LOSS** | 0.578100 | ANALYST_DIAGNOSTIC_1 | FULL GAME INCLUDING OT |
+
+**Settlement key:** `P-594-SETTLEMENT-R1-20261016` · parent ORIGINAL_CARD · affected frozen supplied keys 4 · source capture read time 2026-10-16T14:49:51+11:00. **Original probabilities/lineups/ranks untouched.**
+
+**R1–R12 process review (event-specific, concise):** R1 event/identity `P-594` preserved; R2 original lines 4 retained; R3 endpoint `BASKETBALL_FULL_GAME` reviewed; R4 official/corroborating provenance `YONHAP_NEWS_WIRE_PLUS_SCORE_OWNER`; R5 issue cohort historical (see original, unchanged); R6 original lineup/availability known-at is not backfilled; R7 model bundle existence not authenticated; R8 original analyst versus model distinction preserved; R9 material failure route includes unverified roster/variance/endpoint; R10 no retrospective candidate/line/rank replacement; R11 outcome does not certify calibration from one event; R12 original research defects/unknown operator terms remain queued; future feature/label admission requires independent review.
+
+### P-595 — Tamara Zidanšek vs Joelle Lilly Sophie Steur
+
+**Verified target:** Zidanšek 6–2, 6–1; games Z12/S3; total 15; margin Z+9. **Provenance:** TWO_SPECIALIST_PROVIDERS: [source](https://www.sofascore.com/sk/tennis/match/joelle-lilly-sophie-steur-tamara-zidansek/ZfUszntc) · [corroboration](https://tennistonic.com/stat-tournaments/wta/17310/27035-61183/tamara-zidansek-vs-joelle-steur/). **Recorded review:** 2026-10-16T14:49:51+11:00; exact official final-at `UNKNOWN`; no SLA asserted.
+
+| Original frozen supplied contract | Sporting grade | Preserved original uncalibrated p | Original ordering | Definition / limit |
+|---|---|---:|---|---|
+| Zidanšek −3.5 games | **WIN** | 0.472600 | ANALYST_ONLY | COMPLETED MATCH 2 SETS |
+| Steur +3.5 games | **LOSS** | 0.527400 | ANALYST_ONLY | COMPLETED MATCH 2 SETS |
+| Total games Over 20.5 | **LOSS** | 0.466700 | ANALYST_ONLY | COMPLETED MATCH 2 SETS |
+| Total games Under 20.5 | **WIN** | 0.533300 | ANALYST_ONLY | COMPLETED MATCH 2 SETS |
+
+**Settlement key:** `P-595-SETTLEMENT-R1-20261016` · parent ORIGINAL_CARD · affected frozen supplied keys 4 · source capture read time 2026-10-16T14:49:51+11:00. **Original probabilities/lineups/ranks untouched.**
+
+**R1–R12 process review (event-specific, concise):** R1 event/identity `P-595` preserved; R2 original lines 4 retained; R3 endpoint `TENNIS_COMPLETE_MATCH` reviewed; R4 official/corroborating provenance `TWO_SPECIALIST_PROVIDERS`; R5 issue cohort historical (see original, unchanged); R6 original lineup/availability known-at is not backfilled; R7 model bundle existence not authenticated; R8 original analyst versus model distinction preserved; R9 material failure route includes unverified roster/variance/endpoint; R10 no retrospective candidate/line/rank replacement; R11 outcome does not certify calibration from one event; R12 original research defects/unknown operator terms remain queued; future feature/label admission requires independent review.
+
+### P-596 — Arlan Kokshetau vs HC Saryarka
+
+**Verified target:** Regulation 3–3, final registered Arlan 4–3 after shootout (Б); total regulation 6, recorded final 7. **Provenance:** OFFICIAL_CLUB_SCHEDULE: [source](https://pro.ligasy.kz/ru/team/11-saryarqa?id_tab=articles&id_team=11&start=40) · [corroboration](https://www.scoremania.com/ice-hockey-live-centre/league/championship/194/info). **Recorded review:** 2026-10-16T14:49:51+11:00; exact official final-at `UNKNOWN`; no SLA asserted.
+
+| Original frozen supplied contract | Sporting grade | Preserved original uncalibrated p | Original ordering | Definition / limit |
+|---|---|---:|---|---|
+| Arlan Kokshetau +1.5 goals | **WIN** | 0.637000 | ANALYST_ONLY | REGULATION OR FULL SCORING BOTH COVER |
+| Saryarka ML | **UNRESOLVED** | 0.603400 | ANALYST_ONLY | UNKNOWN REGULATION VS SHOOTOUT ML ACTION |
+| Combined goals Over 5.5 | **WIN** | 0.589300 | ANALYST_ONLY | REGULATION 6 OR RECORDED FINAL 7 BOTH OVER |
+| Combined goals Under 5.5 | **LOSS** | 0.410700 | ANALYST_ONLY | REGULATION 6 OR RECORDED FINAL 7 BOTH OVER |
+
+**Settlement key:** `P-596-SETTLEMENT-R1-20261016` · parent ORIGINAL_CARD · affected frozen supplied keys 4 · source capture read time 2026-10-16T14:49:51+11:00. **Original probabilities/lineups/ranks untouched.**
+
+**Shootout endpoint alert:** published official entry is `4:3 Б`, i.e. recorded 4–3 after shootout from 3–3 regulation. Arlan +1.5 and Over 5.5 grade the same across regulation/final; **Saryarka ML is unresolved until the two-way/three-way and extra-time written action is supplied**.
+
+**R1–R12 process review (event-specific, concise):** R1 event/identity `P-596` preserved; R2 original lines 4 retained; R3 endpoint `HOCKEY_REGULATION_SHOOTOUT` reviewed; R4 official/corroborating provenance `OFFICIAL_CLUB_SCHEDULE`; R5 issue cohort historical (see original, unchanged); R6 original lineup/availability known-at is not backfilled; R7 model bundle existence not authenticated; R8 original analyst versus model distinction preserved; R9 material failure route includes unverified roster/variance/endpoint; R10 no retrospective candidate/line/rank replacement; R11 outcome does not certify calibration from one event; R12 original research defects/unknown operator terms remain queued; future feature/label admission requires independent review.
+
+### P-597 — Alytaus Patriotai vs Šakių Vytis-VDU
+
+**Verified target:** Alytus 110–105 Vytis after OT (regulation 96–96); full total 215. **Provenance:** OFFICIAL_NKL_MATCH_RECAP: [source](https://nkl.lt/43-taskus-pelniusio-hallo-sou-ir-patriotu-triumfas-pratesimo-dramoje/). **Recorded review:** 2026-10-16T14:49:51+11:00; exact official final-at `UNKNOWN`; no SLA asserted.
+
+| Original frozen supplied contract | Sporting grade | Preserved original uncalibrated p | Original ordering | Definition / limit |
+|---|---|---:|---|---|
+| Alytus ML | **WIN** | NOT_ESTIMATED | NO_NUMERIC_RANK | FULL GAME INCLUDING OT |
+| Vytis ML | **LOSS** | NOT_ESTIMATED | NO_NUMERIC_RANK | FULL GAME INCLUDING OT |
+| Combined Over 168.5 points | **WIN** | NOT_ESTIMATED | NO_NUMERIC_RANK | FULL GAME INCLUDING OT |
+| Combined Under 168.5 points | **LOSS** | NOT_ESTIMATED | NO_NUMERIC_RANK | FULL GAME INCLUDING OT |
+
+**Settlement key:** `P-597-SETTLEMENT-R1-20261016` · parent ORIGINAL_CARD · affected frozen supplied keys 4 · source capture read time 2026-10-16T14:49:51+11:00. **Original probabilities/lineups/ranks untouched.**
+
+**R1–R12 process review (event-specific, concise):** R1 event/identity `P-597` preserved; R2 original lines 4 retained; R3 endpoint `BASKETBALL_FULL_GAME_OT` reviewed; R4 official/corroborating provenance `OFFICIAL_NKL_MATCH_RECAP`; R5 issue cohort historical (see original, unchanged); R6 original lineup/availability known-at is not backfilled; R7 model bundle existence not authenticated; R8 original analyst versus model distinction preserved; R9 material failure route includes unverified roster/variance/endpoint; R10 no retrospective candidate/line/rank replacement; R11 outcome does not certify calibration from one event; R12 original research defects/unknown operator terms remain queued; future feature/label admission requires independent review.
+
+### P-598 — Äänekosken Huima vs Lappeenrannan NMKY
+
+**Verified target:** Huima 88–85 LrNMKY after OT; regulation 74–74; total 173. **Provenance:** TWO_SECONDARY_RESULTS: [source](https://sportscore.com/basketball/match/lappeenrannan-nmky-vs-huima/) · [corroboration](https://basketballstats.net/teams/aanekosken-huima). **Recorded review:** 2026-10-16T14:49:51+11:00; exact official final-at `UNKNOWN`; no SLA asserted.
+
+| Original frozen supplied contract | Sporting grade | Preserved original uncalibrated p | Original ordering | Definition / limit |
+|---|---|---:|---|---|
+| Huima −8.5 ML (ambiguous spread vs ML) | **UNRESOLVED** | NOT_ESTIMATED | NO_NUMERIC_RANK | UNKNOWN DEFINITION: IF SPREAD LOSS IF MONEYLINE WIN |
+| NMKY +8.5 points | **WIN** | NOT_ESTIMATED | NO_NUMERIC_RANK | FULL GAME OT |
+| Combined Over 162.5 points | **WIN** | NOT_ESTIMATED | NO_NUMERIC_RANK | FULL GAME OT |
+| Combined Under 162.5 points | **LOSS** | NOT_ESTIMATED | NO_NUMERIC_RANK | FULL GAME OT |
+
+**Settlement key:** `P-598-SETTLEMENT-R1-20261016` · parent ORIGINAL_CARD · affected frozen supplied keys 4 · source capture read time 2026-10-16T14:49:51+11:00. **Original probabilities/lineups/ranks untouched.**
+
+**Proposition-definition alert:** `Huima −8.5 ML` is contradictory. A −8.5 **handicap** loses because Huima won by only 3; Huima **moneyline** wins because Huima won 88–85. No automatic interpretation and no numeric performance scoring for this row.
+
+**R1–R12 process review (event-specific, concise):** R1 event/identity `P-598` preserved; R2 original lines 4 retained; R3 endpoint `BASKETBALL_FULL_GAME_OT` reviewed; R4 official/corroborating provenance `TWO_SECONDARY_RESULTS`; R5 issue cohort historical (see original, unchanged); R6 original lineup/availability known-at is not backfilled; R7 model bundle existence not authenticated; R8 original analyst versus model distinction preserved; R9 material failure route includes unverified roster/variance/endpoint; R10 no retrospective candidate/line/rank replacement; R11 outcome does not certify calibration from one event; R12 original research defects/unknown operator terms remain queued; future feature/label admission requires independent review.
+
+### P-599 — Seattle Seahawks @ Denver Broncos
+
+**Verified target:** Denver 17–14 Seattle after OT; final total 31; Denver margin +3. **Provenance:** SINGLE_POSTGAME_SECONDARY_REPORT: [source](https://www.milehighreport.com/denver-broncos-scores-results/188997/broncos-vs-seahawks-final-score-tnf-week-6). **Recorded review:** 2026-10-16T14:49:51+11:00; exact official final-at `UNKNOWN`; no SLA asserted.
+
+| Original frozen supplied contract | Sporting grade | Preserved original uncalibrated p | Original ordering | Definition / limit |
+|---|---|---:|---|---|
+| Seahawks −2.5 points | **LOSS** | 0.506800 | ANALYST_DIAGNOSTIC_2 | NFL OT INCLUDED |
+| Broncos +2.5 points | **WIN** | 0.493200 | ANALYST_DIAGNOSTIC_3 | NFL OT INCLUDED |
+| Combined Over 40.5 points | **LOSS** | 0.643600 | ANALYST_DIAGNOSTIC_1 | NFL OT INCLUDED |
+| Combined Under 40.5 points | **WIN** | 0.356400 | ANALYST_DIAGNOSTIC_4 | NFL OT INCLUDED |
+
+**Settlement key:** `P-599-SETTLEMENT-R1-20261016` · parent ORIGINAL_CARD · affected frozen supplied keys 4 · source capture read time 2026-10-16T14:49:51+11:00. **Original probabilities/lineups/ranks untouched.**
+
+**Evidence grade caution:** 17–14 after OT currently supported by postgame secondary reporting, while some sports-owner schedule pages still display pregame/stale content. Result should be owner-gamebook-confirmed before future training admission.
+
+**R1–R12 process review (event-specific, concise):** R1 event/identity `P-599` preserved; R2 original lines 4 retained; R3 endpoint `NFL_FULL_GAME_OT` reviewed; R4 official/corroborating provenance `SINGLE_POSTGAME_SECONDARY_REPORT`; R5 issue cohort historical (see original, unchanged); R6 original lineup/availability known-at is not backfilled; R7 model bundle existence not authenticated; R8 original analyst versus model distinction preserved; R9 material failure route includes unverified roster/variance/endpoint; R10 no retrospective candidate/line/rank replacement; R11 outcome does not certify calibration from one event; R12 original research defects/unknown operator terms remain queued; future feature/label admission requires independent review.
+
+### P-600 — Oklahoma City Thunder @ Houston Rockets
+
+**Verified target:** Houston 116–89 Oklahoma City; total 205; Houston margin +27. **Provenance:** TWO_POSTGAME_SOURCES: [source](https://www.cbssports.com/nba/gametracker/recap/NBA_20261015_OKC%40HOU/) · [corroboration](https://www.houstonchronicle.com/sports/rockets/article/houston-oklahoma-city-preseason-score-22478186.php). **Recorded review:** 2026-10-16T14:49:51+11:00; exact official final-at `UNKNOWN`; no SLA asserted.
+
+| Original frozen supplied contract | Sporting grade | Preserved original uncalibrated p | Original ordering | Definition / limit |
+|---|---|---:|---|---|
+| Thunder −2.5 points | **LOSS** | 0.365800 | ANALYST_DIAGNOSTIC_3 | NBA PRESEASON FULL FINAL |
+| Rockets +2.5 points | **WIN** | 0.634200 | ANALYST_DIAGNOSTIC_2 | NBA PRESEASON FULL FINAL |
+| Combined Over 227.5 points | **LOSS** | 0.663100 | ANALYST_DIAGNOSTIC_1 | NBA PRESEASON FULL FINAL |
+| Combined Under 227.5 points | **WIN** | 0.336900 | ANALYST_DIAGNOSTIC_4 | NBA PRESEASON FULL FINAL |
+
+**Settlement key:** `P-600-SETTLEMENT-R1-20261016` · parent ORIGINAL_CARD · affected frozen supplied keys 4 · source capture read time 2026-10-16T14:49:51+11:00. **Original probabilities/lineups/ranks untouched.**
+
+**Preseason regime caution:** 116–89 after full four quarters appears in postgame reporting and CBS final game tracker; previous `analyst_p` is NOT a trained NBA preseason model and must not enter primary model feedback.
+
+**R1–R12 process review (event-specific, concise):** R1 event/identity `P-600` preserved; R2 original lines 4 retained; R3 endpoint `NBA_PRESEASON_FULL_GAME` reviewed; R4 official/corroborating provenance `TWO_POSTGAME_SOURCES`; R5 issue cohort historical (see original, unchanged); R6 original lineup/availability known-at is not backfilled; R7 model bundle existence not authenticated; R8 original analyst versus model distinction preserved; R9 material failure route includes unverified roster/variance/endpoint; R10 no retrospective candidate/line/rank replacement; R11 outcome does not certify calibration from one event; R12 original research defects/unknown operator terms remain queued; future feature/label admission requires independent review.
+
+## Frozen rank-1 losses — eight-part review
+
+### P-590 — original Rank 1 sporting LOSS
+
+1. **Exact claim:** West Indies first-six-overs UNDER 57.5; original research estimate 58.3%.
+2. **Verified outcome:** West Indies 79/1 at exactly six full overs: first-six-overs Under 57.5 loses.
+3. **Original-distribution check:** 79 runs exceeds line by 21.5; the early 13.17 run-rate outran the fragile uncalibrated scenario centre.
+4. **Preissue evidence limits:** Original card is late/outcome-exposed and not a certified clean pre-start-issued forecast; toss/playing XI evidence cannot now be presumed known at original issue.
+5. **Failure mechanism:** High-pace powerplay realization and/or a poorly controlled upper tail; one event cannot apportion model versus randomness.
+6. **Cutoff-only counterfactual:** Use only verified pre-cutoff batting order/bowling roles/pitch, and an independently fitted six-over scoring tail; do not condition on the 79-run result.
+7. **Failure class:** Uncalibrated short-phase intensity/tail exposure plus retrospective timing; not evidence of a calibrated-system failure.
+8. **Testable correction:** Collect independent T20I first-six-over scoring distributions and exact cutoff records; test probabilistic residual calibration and fat-tail sensitivity.
+
+### P-592 — original Rank 1 sporting LOSS
+
+1. **Exact claim:** Combined full-game UNDER 137.5; original probability 51.851%, match including overtime.
+2. **Verified outcome:** Zaragoza 76–75 Basket Landes after overtime gives 151; the Under 137.5 loses.
+3. **Original-distribution check:** At 40 minutes it was 68–68 (136 total), but 8+7 overtime points moved the final to 151: +13.5 above the full-game line.
+4. **Preissue evidence limits:** FIBA overtime-on-tied-regulation is knowable ex ante; actual tie and OT not known. Original lineup and full distribution cannot be reconstructed from outcome.
+5. **Failure mechanism:** The model/scenario near-even Under edge did not absorb this realized OT tail; it is not proof of a systematic pace error.
+6. **Cutoff-only counterfactual:** At the same cutoff, integrate OT probability and five-minute scoring as a distinct conditional branch; never revise the original p after seeing OT.
+7. **Failure class:** Full-game endpoint/OT-tail miss, with high inherent binary uncertainty at p≈0.52.
+8. **Testable correction:** Audit same-scope EuroLeague Women overtime rates, conditional extra-period scoring, and held-out Under 137.5 skill without pooling incompatible leagues.
+
+## Matched original Rank-1 win control
+
+P-591 Under 172.5 won at 169, but its 63.9% is an uncalibrated late-study scenario, not proof of reliable calibration. Original league and score distribution uncertainties remain the same as when it could have lost. P-590 and P-592 rank-1 losses and P-591 rank-1 win are reported in a **historical/uncalibrated descriptive cohort only**, not primary T2 skill.
+
+## Selection/proper-score accounting
+
+- **Verified fitted primary model bundle and p_card:** 0/11 events. Therefore primary Brier, log loss, NDCG@2 and calibrated Rank-1 / Wins@2 are **NOT_COMPUTABLE**, not zeros. Historical initial cards P-590–P-592 display numeric `p_card` labels but explicitly `UNCALIBRATED_ANALYST_SCENARIO`; these must not be silently promoted to verified fitted primary forecasts. P-597–P-600 remain uncannonically imported local records.
+
+- **Original descriptive top-two (P-590–P-592 only):** P-590 rank 1 loss; original row 2 marked informational and also loss. P-591 R1 win / R2 win. P-592 R1 loss / R2 loss. Thus original **Rank-1 1W/2L; rank-2 rows 1W/2L (but P-590 rank 2 explicitly informational)**, separate uncalibrated historical cohort. No retroactive selection of another winning row.
+
+- **Analyst diagnostics:** Only preserved `analyst_p` values may receive explicitly descriptive squared-error diagnostics. Not primary Brier; do not count informational complements as independent games. No model outcome-calibration or independent performance claim. Missing `BASELINE_P` stays missing; no frozen/predicted baseline is reconstructed. Numerical expected-score residuals appear only where the original issued record defined comparable moments; P-596 source boundary remains intact.
+
+## S1–S16 and retention verification
+
+- **S1:** Frozen raw source referenced; exact working ID/proposition inventory 46 rows checked.
+
+- **S2:** Event identity and chronological time zones preserved; P596 official shootout state separate.
+
+- **S3:** Exact original contracts frozen and graded only from sporting-score truth.
+
+- **S4:** Definitive game results supported; P598 and P599 still need owner-level result corroboration for training.
+
+- **S5:** No one-way invented operator win/void; ambiguous ML/handicap remain unresolved.
+
+- **S6:** Only original card role/rank and uncalibrated p used, never reforecast.
+
+- **S7:** Rank-1 and top-two original cohorts separated from analyst diagnostic and info rows.
+
+- **S8:** No SHADOW comparison attempted; no admitted independently frozen shadow artifacts.
+
+- **S9:** Time cohorts preserved; no clean pre-start claim inferred from retrospective settlement.
+
+- **S10:** All 11 events have result evidence and pending formal operator reviews.
+
+- **S11:** No primary proper score without verified fitted p_card or same-row BASELINE_P.
+
+- **S12:** Manifest/mapping/settled copy/frozen checksum/readback generated and checked.
+
+- **S13:** Unique revision identity once per P-ID, parent ORIGINAL_CARD, same 46 frozen keys; no branch conflicts discovered within package.
+
+- **S14:** FROZEN_SOURCE copied before revision, SHA-256 and 10 true local markers, explicit missing P596 body; source-growth check at close.
+
+- **S15:** Queue actor / source / missing field / due `NEXT_OWNER_INVOKED_REVIEW`, exact final time unknown, no fake automation.
+
+- **S16:** All 11 researched events considered, model feedback N/A without verified bundle, future outcome targets remain source-reviewed candidates pending feature admission.
+
+## Mandatory target admission / pending repair
+
+Existing frozen records can support eventual training targets **only after reviewer approval** of sporting score, endpoint, original contract definition, deduplication, event/revision, data availability, feature-known-at status. The settlement package does **not** call `ml.research_learning retain` because no reviewed `LABELS.csv` with field-specific `final_at` / `available_at` / evidence hashes is available. It creates no invented model feedback, calibration observations or training admissions. Manifest `model_feedback_status=NOT_APPLICABLE_NO_VERIFIED_BUNDLE` on all rows. Exact final time remains unknown for every event; no SLA is claimed.
+
+**Authority reading receipt:** `PUBLISHED_MAIN_PINNED` SHA `2ea94f6f718d1f43c7af9e567008495114ef9cef`; read current `CURRENT_STATE`, `GAME_LOG_STATUS_CURRENT`, `RESEARCH_RETENTION_PROTOCOL`, `CARD_AND_LOG_TEMPLATES` settlement §§6/9, `SCORING_AND_VALIDATION`, `TIMING_RESEARCH_PROTOCOL`, `research/prompts/COMMON_OPERATING_PROTOCOL`, `research/prompts/README`, supplied settlement prompt, actual ten original card bodies and P596 canonical source pointer. Sport rules referenced in earlier cards. No cached workshop/decision-lab data. Original-format mini-log-7 preserved; new package mini-settlement-8 envelope. Local source is a continuation derived from separately supplied bytes; external writer lease not enforceable here. No GitHub write or canonical import; output is a new local revision.
+
+**Outcome source retrieval:** sourced public articles/final-score records found on 2026-10-16 AEDT before this local package; the retrospective retrieval time does **not** establish original source publication time or original first-play time. Fixture result truth is not a backdated prediction.
+
+**Settled-prefix / GitHub status:** This file is generated by appending settlement to the exactly copied `ORIGINAL_MINI.md`, preserving all original bytes. GitHub remains read-only; canonical next remains P-597 at pinned state. Outstanding local P-597–P-600 require separate authorized verified contiguous import, not automatic settlement import. Future new cards should go in the next authorized mini after this freeze.
+<!-- END SETTLEMENT REVISION 1 2026-10-16 -->
+
+<!-- END IMPORTED LEGACY SETTLEMENT SOURCE 2026-10-16-P590-P600 -->
+
+<!-- BEGIN RESEARCH ADDENDUM P-590 2026-10-16-settlement-revision-1 -->
+### Effective source settlement reference — P-590
+Original: Part 7 canonical research P-590; prior revision NONE; original source revision `P-590-SETTLEMENT-R1-20261016`, parent ORIGINAL_CARD; 4 affected source keys, listed in retained SETTLEMENT_MANIFEST.csv. Import 2026-10-16T15:18:45+11:00. Source event-section SHA-256 f73673d45db17bb69ef9ce3ef06b5691099e817380165cebefac33df11f2176a. Sporting-score convention only; OPERATOR_ACTION_PENDING / RESEARCH_ONLY_NOT_CERTIFIED. This is the effective event wrapper; the full legacy source group is documentary duplication and contributes no second grades. No model feedback or primary score is created.
+
+### P-590 — India vs West Indies 4th T20I
+
+**Verified target:** WI 247/3 (20 overs); WI 79/1 after 6 overs; India 223. **Provenance:** OWNER_TEAM_AND_REPORT: [source](https://www.mumbaiindians.com/news/indvwi-4th-t20i-report-tilak-nitish-put-on-a-fight-but-windies-overpower-india-to-level-series-2-2). **Recorded review:** 2026-10-16T14:49:51+11:00; exact official final-at `UNKNOWN`; no SLA asserted.
+
+| Original frozen supplied contract | Sporting grade | Preserved original uncalibrated p | Original ordering | Definition / limit |
+|---|---|---:|---|---|
+| West Indies powerplay Under 57.5 runs | **LOSS** | 0.583000 | ORIGINAL_RANK_1 | STANDARD COMPLETED 6 OVERS |
+| West Indies innings Under 200.5 runs | **LOSS** | 0.569000 | ORIGINAL_RANK_2_INFORMATIONAL | STANDARD COMPLETED 20 OVERS |
+| West Indies innings Over 200.5 runs | **WIN** | 0.431000 | ORIGINAL_RANK_3 | STANDARD COMPLETED 20 OVERS |
+| West Indies powerplay Over 57.5 runs | **WIN** | 0.417000 | ORIGINAL_RANK_4 | STANDARD COMPLETED 6 OVERS |
+
+**Settlement key:** `P-590-SETTLEMENT-R1-20261016` · parent ORIGINAL_CARD · affected frozen supplied keys 4 · source capture read time 2026-10-16T14:49:51+11:00. **Original probabilities/lineups/ranks untouched.**
+
+**R1–R12 process review (event-specific, concise):** R1 event/identity `P-590` preserved; R2 original lines 4 retained; R3 endpoint `CRICKET_FIRST_INNINGS` reviewed; R4 official/corroborating provenance `OWNER_TEAM_AND_REPORT`; R5 issue cohort historical (see original, unchanged); R6 original lineup/availability known-at is not backfilled; R7 model bundle existence not authenticated; R8 original analyst versus model distinction preserved; R9 material failure route includes unverified roster/variance/endpoint; R10 no retrospective candidate/line/rank replacement; R11 outcome does not certify calibration from one event; R12 original research defects/unknown operator terms remain queued; future feature/label admission requires independent review.
+
+
+<!-- END RESEARCH ADDENDUM P-590 2026-10-16-settlement-revision-1 -->
+
+<!-- BEGIN RESEARCH ADDENDUM P-591 2026-10-16-settlement-revision-1 -->
+### Effective source settlement reference — P-591
+Original: Part 7 canonical research P-591; prior revision NONE; original source revision `P-591-SETTLEMENT-R1-20261016`, parent ORIGINAL_CARD; 4 affected source keys, listed in retained SETTLEMENT_MANIFEST.csv. Import 2026-10-16T15:18:45+11:00. Source event-section SHA-256 060a1fb475503d3e9e1464c34d8efbd0f622307942f3a9faa890f0925df674a4. Sporting-score convention only; OPERATOR_ACTION_PENDING / RESEARCH_ONLY_NOT_CERTIFIED. This is the effective event wrapper; the full legacy source group is documentary duplication and contributes no second grades. No model feedback or primary score is created.
+
+### P-591 — Šiauliai vs U-BT Cluj-Napoca
+
+**Verified target:** Šiauliai 75–94 Cluj; total 169; Cluj margin +19. **Provenance:** ABA_COMPETITION_RECAP: [source](https://www.aba-liga.com/news/55315). **Recorded review:** 2026-10-16T14:49:51+11:00; exact official final-at `UNKNOWN`; no SLA asserted.
+
+| Original frozen supplied contract | Sporting grade | Preserved original uncalibrated p | Original ordering | Definition / limit |
+|---|---|---:|---|---|
+| Combined Under 172.5 points | **WIN** | 0.639000 | ORIGINAL_RANK_1 | FULL GAME INCLUDING OT |
+| U-BT Cluj-Napoca −4.5 points | **WIN** | 0.551000 | ORIGINAL_RANK_2 | FULL GAME INCLUDING OT |
+| Šiauliai +4.5 points | **LOSS** | 0.449000 | ORIGINAL_RANK_3 | FULL GAME INCLUDING OT |
+| Combined Over 172.5 points | **LOSS** | 0.361000 | ORIGINAL_RANK_4 | FULL GAME INCLUDING OT |
+
+**Settlement key:** `P-591-SETTLEMENT-R1-20261016` · parent ORIGINAL_CARD · affected frozen supplied keys 4 · source capture read time 2026-10-16T14:49:51+11:00. **Original probabilities/lineups/ranks untouched.**
+
+**R1–R12 process review (event-specific, concise):** R1 event/identity `P-591` preserved; R2 original lines 4 retained; R3 endpoint `BASKETBALL_FULL_GAME` reviewed; R4 official/corroborating provenance `ABA_COMPETITION_RECAP`; R5 issue cohort historical (see original, unchanged); R6 original lineup/availability known-at is not backfilled; R7 model bundle existence not authenticated; R8 original analyst versus model distinction preserved; R9 material failure route includes unverified roster/variance/endpoint; R10 no retrospective candidate/line/rank replacement; R11 outcome does not certify calibration from one event; R12 original research defects/unknown operator terms remain queued; future feature/label admission requires independent review.
+
+
+<!-- END RESEARCH ADDENDUM P-591 2026-10-16-settlement-revision-1 -->
+
+<!-- BEGIN RESEARCH ADDENDUM P-592 2026-10-16-settlement-revision-1 -->
+### Effective source settlement reference — P-592
+Original: Part 7 canonical research P-592; prior revision NONE; original source revision `P-592-SETTLEMENT-R1-20261016`, parent ORIGINAL_CARD; 4 affected source keys, listed in retained SETTLEMENT_MANIFEST.csv. Import 2026-10-16T15:18:45+11:00. Source event-section SHA-256 6aaf940a83e8ebfd3050a925321fd0236ccef2d92b1b8277ccefc99631d8d3f7. Sporting-score convention only; OPERATOR_ACTION_PENDING / RESEARCH_ONLY_NOT_CERTIFIED. This is the effective event wrapper; the full legacy source group is documentary duplication and contributes no second grades. No model feedback or primary score is created.
+
+### P-592 — Casademont Zaragoza vs Basket Landes Women
+
+**Verified target:** Zaragoza 76–75 Landes after OT; regulation 68–68; full total 151. **Provenance:** BOTH_CLUBS_REPORT: [source](https://www.casademontzaragoza.es/noticias/un-thriller-para-abrir-con-victoria-la-semana-de-cuatro-partidos-en-casa) · [corroboration](https://www.basket-landes.com/event/saragosse-vs-basket-landes/). **Recorded review:** 2026-10-16T14:49:51+11:00; exact official final-at `UNKNOWN`; no SLA asserted.
+
+| Original frozen supplied contract | Sporting grade | Preserved original uncalibrated p | Original ordering | Definition / limit |
+|---|---|---:|---|---|
+| Combined Under 137.5 points | **LOSS** | 0.518510 | ORIGINAL_RANK_1 | FULL GAME INCLUDING OT |
+| Zaragoza Women −6.5 points | **LOSS** | 0.514590 | ORIGINAL_RANK_2 | FULL GAME INCLUDING OT |
+| Basket Landes Women +6.5 points | **WIN** | 0.485410 | ORIGINAL_RANK_3 | FULL GAME INCLUDING OT |
+| Combined Over 137.5 points | **WIN** | 0.481490 | ORIGINAL_RANK_4 | FULL GAME INCLUDING OT |
+
+**Settlement key:** `P-592-SETTLEMENT-R1-20261016` · parent ORIGINAL_CARD · affected frozen supplied keys 4 · source capture read time 2026-10-16T14:49:51+11:00. **Original probabilities/lineups/ranks untouched.**
+
+**R1–R12 process review (event-specific, concise):** R1 event/identity `P-592` preserved; R2 original lines 4 retained; R3 endpoint `BASKETBALL_FULL_GAME_OT` reviewed; R4 official/corroborating provenance `BOTH_CLUBS_REPORT`; R5 issue cohort historical (see original, unchanged); R6 original lineup/availability known-at is not backfilled; R7 model bundle existence not authenticated; R8 original analyst versus model distinction preserved; R9 material failure route includes unverified roster/variance/endpoint; R10 no retrospective candidate/line/rank replacement; R11 outcome does not certify calibration from one event; R12 original research defects/unknown operator terms remain queued; future feature/label admission requires independent review.
+
+
+<!-- END RESEARCH ADDENDUM P-592 2026-10-16-settlement-revision-1 -->
+
+<!-- BEGIN RESEARCH ADDENDUM P-593 2026-10-16-settlement-revision-1 -->
+### Effective source settlement reference — P-593
+Original: Part 7 canonical research P-593; prior revision NONE; original source revision `P-593-SETTLEMENT-R1-20261016`, parent ORIGINAL_CARD; 6 affected source keys, listed in retained SETTLEMENT_MANIFEST.csv. Import 2026-10-16T15:18:45+11:00. Source event-section SHA-256 8297e0d1a02079713f5e083bed48d3eacb3835c21fffbfbebc1d7c880ec17163. Sporting-score convention only; OPERATOR_ACTION_PENDING / RESEARCH_ONLY_NOT_CERTIFIED. This is the effective event wrapper; the full legacy source group is documentary duplication and contributes no second grades. No model feedback or primary score is created.
+
+### P-593 — Real Salt Lake vs San Jose Earthquakes
+
+**Verified target:** HT 0–0; FT 1–1; corners RSL 5, San Jose 5 =10. **Provenance:** OFFICIAL_RSL_MATCH_RECAP: [source](https://www.rsl.com/news/rsl-suffer-heartbreak-at-the-death-in-1-1-draw-with-san-jose) · [corroboration](https://www.thescore.com/mls/event/93472). **Recorded review:** 2026-10-16T14:49:51+11:00; exact official final-at `UNKNOWN`; no SLA asserted.
+
+| Original frozen supplied contract | Sporting grade | Preserved original uncalibrated p | Original ordering | Definition / limit |
+|---|---|---:|---|---|
+| First-half combined goals Over 0.5 | **LOSS** | 0.757837 | ANALYST_ONLY | SOCCER 45 MIN PLUS STOPPAGE |
+| First-half combined goals Under 0.5 | **WIN** | 0.242163 | ANALYST_ONLY | SOCCER 45 MIN PLUS STOPPAGE |
+| Full-time combined goals Over 2.5 | **LOSS** | 0.609867 | ANALYST_ONLY | SOCCER 90 MIN PLUS STOPPAGE |
+| Full-time combined goals Under 2.5 | **WIN** | 0.390133 | ANALYST_ONLY | SOCCER 90 MIN PLUS STOPPAGE |
+| Full-time combined corners Over 10.5 | **LOSS** | 0.540111 | ANALYST_ONLY | OFFICIAL TEAM CORNER SUM 5 PLUS 5 |
+| Full-time combined corners Under 10.5 | **WIN** | 0.459889 | ANALYST_ONLY | OFFICIAL TEAM CORNER SUM 5 PLUS 5 |
+
+**Settlement key:** `P-593-SETTLEMENT-R1-20261016` · parent ORIGINAL_CARD · affected frozen supplied keys 6 · source capture read time 2026-10-16T14:49:51+11:00. **Original probabilities/lineups/ranks untouched.**
+
+**Goal/corner field-owner reconciliation:** RSL official scoring notes both goals after minute 78 and both clubs awarded 5 corners. First-half 0–0; final 1–1; corners exactly 10. Separate provided corners stats agree.
+
+**R1–R12 process review (event-specific, concise):** R1 event/identity `P-593` preserved; R2 original lines 6 retained; R3 endpoint `SOCCER_REGULATION` reviewed; R4 official/corroborating provenance `OFFICIAL_RSL_MATCH_RECAP`; R5 issue cohort historical (see original, unchanged); R6 original lineup/availability known-at is not backfilled; R7 model bundle existence not authenticated; R8 original analyst versus model distinction preserved; R9 material failure route includes unverified roster/variance/endpoint; R10 no retrospective candidate/line/rank replacement; R11 outcome does not certify calibration from one event; R12 original research defects/unknown operator terms remain queued; future feature/label admission requires independent review.
+
+
+<!-- END RESEARCH ADDENDUM P-593 2026-10-16-settlement-revision-1 -->
+
+<!-- BEGIN RESEARCH ADDENDUM P-594 2026-10-16-settlement-revision-1 -->
+### Effective source settlement reference — P-594
+Original: Part 7 canonical research P-594; prior revision NONE; original source revision `P-594-SETTLEMENT-R1-20261016`, parent ORIGINAL_CARD; 4 affected source keys, listed in retained SETTLEMENT_MANIFEST.csv. Import 2026-10-16T15:18:45+11:00. Source event-section SHA-256 8ed46327647ab2547df028c014d88a30ccd5530c2e086a2df8291baec9617136. Sporting-score convention only; OPERATOR_ACTION_PENDING / RESEARCH_ONLY_NOT_CERTIFIED. This is the effective event wrapper; the full legacy source group is documentary duplication and contributes no second grades. No model feedback or primary score is created.
+
+### P-594 — Seoul Samsung Thunders vs Changwon LG Sakers
+
+**Verified target:** Samsung 93–86 LG; regulation total 179; Samsung margin +7. **Provenance:** YONHAP_NEWS_WIRE_PLUS_SCORE_OWNER: [source](https://www.yna.co.kr/amp/view/AKR20261015177600007) · [corroboration](https://sports.daum.net/match/80109201). **Recorded review:** 2026-10-16T14:49:51+11:00; exact official final-at `UNKNOWN`; no SLA asserted.
+
+| Original frozen supplied contract | Sporting grade | Preserved original uncalibrated p | Original ordering | Definition / limit |
+|---|---|---:|---|---|
+| Samsung +1.5 points | **WIN** | 0.535200 | ANALYST_DIAGNOSTIC_2 | FULL GAME INCLUDING OT |
+| LG −1.5 points | **LOSS** | 0.464800 | ANALYST_DIAGNOSTIC_3 | FULL GAME INCLUDING OT |
+| Combined Over 160.5 points | **WIN** | 0.421900 | ANALYST_DIAGNOSTIC_4 | FULL GAME INCLUDING OT |
+| Combined Under 160.5 points | **LOSS** | 0.578100 | ANALYST_DIAGNOSTIC_1 | FULL GAME INCLUDING OT |
+
+**Settlement key:** `P-594-SETTLEMENT-R1-20261016` · parent ORIGINAL_CARD · affected frozen supplied keys 4 · source capture read time 2026-10-16T14:49:51+11:00. **Original probabilities/lineups/ranks untouched.**
+
+**R1–R12 process review (event-specific, concise):** R1 event/identity `P-594` preserved; R2 original lines 4 retained; R3 endpoint `BASKETBALL_FULL_GAME` reviewed; R4 official/corroborating provenance `YONHAP_NEWS_WIRE_PLUS_SCORE_OWNER`; R5 issue cohort historical (see original, unchanged); R6 original lineup/availability known-at is not backfilled; R7 model bundle existence not authenticated; R8 original analyst versus model distinction preserved; R9 material failure route includes unverified roster/variance/endpoint; R10 no retrospective candidate/line/rank replacement; R11 outcome does not certify calibration from one event; R12 original research defects/unknown operator terms remain queued; future feature/label admission requires independent review.
+
+
+<!-- END RESEARCH ADDENDUM P-594 2026-10-16-settlement-revision-1 -->
+
+<!-- BEGIN RESEARCH ADDENDUM P-595 2026-10-16-settlement-revision-1 -->
+### Effective source settlement reference — P-595
+Original: Part 7 canonical research P-595; prior revision NONE; original source revision `P-595-SETTLEMENT-R1-20261016`, parent ORIGINAL_CARD; 4 affected source keys, listed in retained SETTLEMENT_MANIFEST.csv. Import 2026-10-16T15:18:45+11:00. Source event-section SHA-256 078d095b12d47ff207f5929fc773249a67e4dbcdc12ce93623368cc918d41a55. Sporting-score convention only; OPERATOR_ACTION_PENDING / RESEARCH_ONLY_NOT_CERTIFIED. This is the effective event wrapper; the full legacy source group is documentary duplication and contributes no second grades. No model feedback or primary score is created.
+
+### P-595 — Tamara Zidanšek vs Joelle Lilly Sophie Steur
+
+**Verified target:** Zidanšek 6–2, 6–1; games Z12/S3; total 15; margin Z+9. **Provenance:** TWO_SPECIALIST_PROVIDERS: [source](https://www.sofascore.com/sk/tennis/match/joelle-lilly-sophie-steur-tamara-zidansek/ZfUszntc) · [corroboration](https://tennistonic.com/stat-tournaments/wta/17310/27035-61183/tamara-zidansek-vs-joelle-steur/). **Recorded review:** 2026-10-16T14:49:51+11:00; exact official final-at `UNKNOWN`; no SLA asserted.
+
+| Original frozen supplied contract | Sporting grade | Preserved original uncalibrated p | Original ordering | Definition / limit |
+|---|---|---:|---|---|
+| Zidanšek −3.5 games | **WIN** | 0.472600 | ANALYST_ONLY | COMPLETED MATCH 2 SETS |
+| Steur +3.5 games | **LOSS** | 0.527400 | ANALYST_ONLY | COMPLETED MATCH 2 SETS |
+| Total games Over 20.5 | **LOSS** | 0.466700 | ANALYST_ONLY | COMPLETED MATCH 2 SETS |
+| Total games Under 20.5 | **WIN** | 0.533300 | ANALYST_ONLY | COMPLETED MATCH 2 SETS |
+
+**Settlement key:** `P-595-SETTLEMENT-R1-20261016` · parent ORIGINAL_CARD · affected frozen supplied keys 4 · source capture read time 2026-10-16T14:49:51+11:00. **Original probabilities/lineups/ranks untouched.**
+
+**R1–R12 process review (event-specific, concise):** R1 event/identity `P-595` preserved; R2 original lines 4 retained; R3 endpoint `TENNIS_COMPLETE_MATCH` reviewed; R4 official/corroborating provenance `TWO_SPECIALIST_PROVIDERS`; R5 issue cohort historical (see original, unchanged); R6 original lineup/availability known-at is not backfilled; R7 model bundle existence not authenticated; R8 original analyst versus model distinction preserved; R9 material failure route includes unverified roster/variance/endpoint; R10 no retrospective candidate/line/rank replacement; R11 outcome does not certify calibration from one event; R12 original research defects/unknown operator terms remain queued; future feature/label admission requires independent review.
+
+
+<!-- END RESEARCH ADDENDUM P-595 2026-10-16-settlement-revision-1 -->
+
+<!-- BEGIN RESEARCH ADDENDUM P-596 2026-10-16-settlement-revision-1 -->
+### Effective source settlement reference — P-596
+Original: Part 7 canonical research P-596; prior revision NONE; original source revision `P-596-SETTLEMENT-R1-20261016`, parent ORIGINAL_CARD; 4 affected source keys, listed in retained SETTLEMENT_MANIFEST.csv. Import 2026-10-16T15:18:45+11:00. Source event-section SHA-256 91c41eacf8aa6e3db895ffe508067d1c9d9c4d72d1a4b2a0cd2540cd9b96488a. Sporting-score convention only; OPERATOR_ACTION_PENDING / RESEARCH_ONLY_NOT_CERTIFIED. This is the effective event wrapper; the full legacy source group is documentary duplication and contributes no second grades. No model feedback or primary score is created.
+
+### P-596 — Arlan Kokshetau vs HC Saryarka
+
+**Verified target:** Regulation 3–3, final registered Arlan 4–3 after shootout (Б); total regulation 6, recorded final 7. **Provenance:** OFFICIAL_CLUB_SCHEDULE: [source](https://pro.ligasy.kz/ru/team/11-saryarqa?id_tab=articles&id_team=11&start=40) · [corroboration](https://www.scoremania.com/ice-hockey-live-centre/league/championship/194/info). **Recorded review:** 2026-10-16T14:49:51+11:00; exact official final-at `UNKNOWN`; no SLA asserted.
+
+| Original frozen supplied contract | Sporting grade | Preserved original uncalibrated p | Original ordering | Definition / limit |
+|---|---|---:|---|---|
+| Arlan Kokshetau +1.5 goals | **WIN** | 0.637000 | ANALYST_ONLY | REGULATION OR FULL SCORING BOTH COVER |
+| Saryarka ML | **UNRESOLVED** | 0.603400 | ANALYST_ONLY | UNKNOWN REGULATION VS SHOOTOUT ML ACTION |
+| Combined goals Over 5.5 | **WIN** | 0.589300 | ANALYST_ONLY | REGULATION 6 OR RECORDED FINAL 7 BOTH OVER |
+| Combined goals Under 5.5 | **LOSS** | 0.410700 | ANALYST_ONLY | REGULATION 6 OR RECORDED FINAL 7 BOTH OVER |
+
+**Settlement key:** `P-596-SETTLEMENT-R1-20261016` · parent ORIGINAL_CARD · affected frozen supplied keys 4 · source capture read time 2026-10-16T14:49:51+11:00. **Original probabilities/lineups/ranks untouched.**
+
+**Shootout endpoint alert:** published official entry is `4:3 Б`, i.e. recorded 4–3 after shootout from 3–3 regulation. Arlan +1.5 and Over 5.5 grade the same across regulation/final; **Saryarka ML is unresolved until the two-way/three-way and extra-time written action is supplied**.
+
+**R1–R12 process review (event-specific, concise):** R1 event/identity `P-596` preserved; R2 original lines 4 retained; R3 endpoint `HOCKEY_REGULATION_SHOOTOUT` reviewed; R4 official/corroborating provenance `OFFICIAL_CLUB_SCHEDULE`; R5 issue cohort historical (see original, unchanged); R6 original lineup/availability known-at is not backfilled; R7 model bundle existence not authenticated; R8 original analyst versus model distinction preserved; R9 material failure route includes unverified roster/variance/endpoint; R10 no retrospective candidate/line/rank replacement; R11 outcome does not certify calibration from one event; R12 original research defects/unknown operator terms remain queued; future feature/label admission requires independent review.
+
+
+<!-- END RESEARCH ADDENDUM P-596 2026-10-16-settlement-revision-1 -->
+
+<!-- BEGIN RESEARCH ADDENDUM P-597 2026-10-16-settlement-revision-1 -->
+### Effective source settlement reference — P-597
+Original: Part 7 canonical research P-597; prior revision NONE; original source revision `P-597-SETTLEMENT-R1-20261016`, parent ORIGINAL_CARD; 4 affected source keys, listed in retained SETTLEMENT_MANIFEST.csv. Import 2026-10-16T15:18:45+11:00. Source event-section SHA-256 569afe339fc9b453b0000e96f285ea09a2ae639d11f0f5e8baefdb302e17e874. Sporting-score convention only; OPERATOR_ACTION_PENDING / RESEARCH_ONLY_NOT_CERTIFIED. This is the effective event wrapper; the full legacy source group is documentary duplication and contributes no second grades. No model feedback or primary score is created.
+
+### P-597 — Alytaus Patriotai vs Šakių Vytis-VDU
+
+**Verified target:** Alytus 110–105 Vytis after OT (regulation 96–96); full total 215. **Provenance:** OFFICIAL_NKL_MATCH_RECAP: [source](https://nkl.lt/43-taskus-pelniusio-hallo-sou-ir-patriotu-triumfas-pratesimo-dramoje/). **Recorded review:** 2026-10-16T14:49:51+11:00; exact official final-at `UNKNOWN`; no SLA asserted.
+
+| Original frozen supplied contract | Sporting grade | Preserved original uncalibrated p | Original ordering | Definition / limit |
+|---|---|---:|---|---|
+| Alytus ML | **WIN** | NOT_ESTIMATED | NO_NUMERIC_RANK | FULL GAME INCLUDING OT |
+| Vytis ML | **LOSS** | NOT_ESTIMATED | NO_NUMERIC_RANK | FULL GAME INCLUDING OT |
+| Combined Over 168.5 points | **WIN** | NOT_ESTIMATED | NO_NUMERIC_RANK | FULL GAME INCLUDING OT |
+| Combined Under 168.5 points | **LOSS** | NOT_ESTIMATED | NO_NUMERIC_RANK | FULL GAME INCLUDING OT |
+
+**Settlement key:** `P-597-SETTLEMENT-R1-20261016` · parent ORIGINAL_CARD · affected frozen supplied keys 4 · source capture read time 2026-10-16T14:49:51+11:00. **Original probabilities/lineups/ranks untouched.**
+
+**R1–R12 process review (event-specific, concise):** R1 event/identity `P-597` preserved; R2 original lines 4 retained; R3 endpoint `BASKETBALL_FULL_GAME_OT` reviewed; R4 official/corroborating provenance `OFFICIAL_NKL_MATCH_RECAP`; R5 issue cohort historical (see original, unchanged); R6 original lineup/availability known-at is not backfilled; R7 model bundle existence not authenticated; R8 original analyst versus model distinction preserved; R9 material failure route includes unverified roster/variance/endpoint; R10 no retrospective candidate/line/rank replacement; R11 outcome does not certify calibration from one event; R12 original research defects/unknown operator terms remain queued; future feature/label admission requires independent review.
+
+
+<!-- END RESEARCH ADDENDUM P-597 2026-10-16-settlement-revision-1 -->
+
+<!-- BEGIN RESEARCH ADDENDUM P-598 2026-10-16-settlement-revision-1 -->
+### Effective source settlement reference — P-598
+Original: Part 7 canonical research P-598; prior revision NONE; original source revision `P-598-SETTLEMENT-R1-20261016`, parent ORIGINAL_CARD; 4 affected source keys, listed in retained SETTLEMENT_MANIFEST.csv. Import 2026-10-16T15:18:45+11:00. Source event-section SHA-256 3880bd06e50bab7ebfeb84c8eed0dd8e3150f8f50e122824df38b0e01902752b. Sporting-score convention only; OPERATOR_ACTION_PENDING / RESEARCH_ONLY_NOT_CERTIFIED. This is the effective event wrapper; the full legacy source group is documentary duplication and contributes no second grades. No model feedback or primary score is created.
+
+### P-598 — Äänekosken Huima vs Lappeenrannan NMKY
+
+**Verified target:** Huima 88–85 LrNMKY after OT; regulation 74–74; total 173. **Provenance:** TWO_SECONDARY_RESULTS: [source](https://sportscore.com/basketball/match/lappeenrannan-nmky-vs-huima/) · [corroboration](https://basketballstats.net/teams/aanekosken-huima). **Recorded review:** 2026-10-16T14:49:51+11:00; exact official final-at `UNKNOWN`; no SLA asserted.
+
+| Original frozen supplied contract | Sporting grade | Preserved original uncalibrated p | Original ordering | Definition / limit |
+|---|---|---:|---|---|
+| Huima −8.5 ML (ambiguous spread vs ML) | **UNRESOLVED** | NOT_ESTIMATED | NO_NUMERIC_RANK | UNKNOWN DEFINITION: IF SPREAD LOSS IF MONEYLINE WIN |
+| NMKY +8.5 points | **WIN** | NOT_ESTIMATED | NO_NUMERIC_RANK | FULL GAME OT |
+| Combined Over 162.5 points | **WIN** | NOT_ESTIMATED | NO_NUMERIC_RANK | FULL GAME OT |
+| Combined Under 162.5 points | **LOSS** | NOT_ESTIMATED | NO_NUMERIC_RANK | FULL GAME OT |
+
+**Settlement key:** `P-598-SETTLEMENT-R1-20261016` · parent ORIGINAL_CARD · affected frozen supplied keys 4 · source capture read time 2026-10-16T14:49:51+11:00. **Original probabilities/lineups/ranks untouched.**
+
+**Proposition-definition alert:** `Huima −8.5 ML` is contradictory. A −8.5 **handicap** loses because Huima won by only 3; Huima **moneyline** wins because Huima won 88–85. No automatic interpretation and no numeric performance scoring for this row.
+
+**R1–R12 process review (event-specific, concise):** R1 event/identity `P-598` preserved; R2 original lines 4 retained; R3 endpoint `BASKETBALL_FULL_GAME_OT` reviewed; R4 official/corroborating provenance `TWO_SECONDARY_RESULTS`; R5 issue cohort historical (see original, unchanged); R6 original lineup/availability known-at is not backfilled; R7 model bundle existence not authenticated; R8 original analyst versus model distinction preserved; R9 material failure route includes unverified roster/variance/endpoint; R10 no retrospective candidate/line/rank replacement; R11 outcome does not certify calibration from one event; R12 original research defects/unknown operator terms remain queued; future feature/label admission requires independent review.
+
+
+<!-- END RESEARCH ADDENDUM P-598 2026-10-16-settlement-revision-1 -->
+
+<!-- BEGIN RESEARCH ADDENDUM P-599 2026-10-16-settlement-revision-1 -->
+### Effective source settlement reference — P-599
+Original: Part 7 canonical research P-599; prior revision NONE; original source revision `P-599-SETTLEMENT-R1-20261016`, parent ORIGINAL_CARD; 4 affected source keys, listed in retained SETTLEMENT_MANIFEST.csv. Import 2026-10-16T15:18:45+11:00. Source event-section SHA-256 a482a68ed411d8f716b3f68fd8a3ad6fa91d651a0f5902e90a9a3b653c05484b. Sporting-score convention only; OPERATOR_ACTION_PENDING / RESEARCH_ONLY_NOT_CERTIFIED. This is the effective event wrapper; the full legacy source group is documentary duplication and contributes no second grades. No model feedback or primary score is created.
+
+### P-599 — Seattle Seahawks @ Denver Broncos
+
+**Verified target:** Denver 17–14 Seattle after OT; final total 31; Denver margin +3. **Provenance:** SINGLE_POSTGAME_SECONDARY_REPORT: [source](https://www.milehighreport.com/denver-broncos-scores-results/188997/broncos-vs-seahawks-final-score-tnf-week-6). **Recorded review:** 2026-10-16T14:49:51+11:00; exact official final-at `UNKNOWN`; no SLA asserted.
+
+| Original frozen supplied contract | Sporting grade | Preserved original uncalibrated p | Original ordering | Definition / limit |
+|---|---|---:|---|---|
+| Seahawks −2.5 points | **LOSS** | 0.506800 | ANALYST_DIAGNOSTIC_2 | NFL OT INCLUDED |
+| Broncos +2.5 points | **WIN** | 0.493200 | ANALYST_DIAGNOSTIC_3 | NFL OT INCLUDED |
+| Combined Over 40.5 points | **LOSS** | 0.643600 | ANALYST_DIAGNOSTIC_1 | NFL OT INCLUDED |
+| Combined Under 40.5 points | **WIN** | 0.356400 | ANALYST_DIAGNOSTIC_4 | NFL OT INCLUDED |
+
+**Settlement key:** `P-599-SETTLEMENT-R1-20261016` · parent ORIGINAL_CARD · affected frozen supplied keys 4 · source capture read time 2026-10-16T14:49:51+11:00. **Original probabilities/lineups/ranks untouched.**
+
+**Evidence grade caution:** 17–14 after OT currently supported by postgame secondary reporting, while some sports-owner schedule pages still display pregame/stale content. Result should be owner-gamebook-confirmed before future training admission.
+
+**R1–R12 process review (event-specific, concise):** R1 event/identity `P-599` preserved; R2 original lines 4 retained; R3 endpoint `NFL_FULL_GAME_OT` reviewed; R4 official/corroborating provenance `SINGLE_POSTGAME_SECONDARY_REPORT`; R5 issue cohort historical (see original, unchanged); R6 original lineup/availability known-at is not backfilled; R7 model bundle existence not authenticated; R8 original analyst versus model distinction preserved; R9 material failure route includes unverified roster/variance/endpoint; R10 no retrospective candidate/line/rank replacement; R11 outcome does not certify calibration from one event; R12 original research defects/unknown operator terms remain queued; future feature/label admission requires independent review.
+
+
+<!-- END RESEARCH ADDENDUM P-599 2026-10-16-settlement-revision-1 -->
+
+<!-- BEGIN RESEARCH ADDENDUM P-600 2026-10-16-settlement-revision-1 -->
+### Effective source settlement reference — P-600
+Original: Part 7 canonical research P-600; prior revision NONE; original source revision `P-600-SETTLEMENT-R1-20261016`, parent ORIGINAL_CARD; 4 affected source keys, listed in retained SETTLEMENT_MANIFEST.csv. Import 2026-10-16T15:18:45+11:00. Source event-section SHA-256 445ac09601311d3b29ab0d4a0e9abbe04e087165e601370a0354447d326ebd67. Sporting-score convention only; OPERATOR_ACTION_PENDING / RESEARCH_ONLY_NOT_CERTIFIED. This is the effective event wrapper; the full legacy source group is documentary duplication and contributes no second grades. No model feedback or primary score is created.
+
+### P-600 — Oklahoma City Thunder @ Houston Rockets
+
+**Verified target:** Houston 116–89 Oklahoma City; total 205; Houston margin +27. **Provenance:** TWO_POSTGAME_SOURCES: [source](https://www.cbssports.com/nba/gametracker/recap/NBA_20261015_OKC%40HOU/) · [corroboration](https://www.houstonchronicle.com/sports/rockets/article/houston-oklahoma-city-preseason-score-22478186.php). **Recorded review:** 2026-10-16T14:49:51+11:00; exact official final-at `UNKNOWN`; no SLA asserted.
+
+| Original frozen supplied contract | Sporting grade | Preserved original uncalibrated p | Original ordering | Definition / limit |
+|---|---|---:|---|---|
+| Thunder −2.5 points | **LOSS** | 0.365800 | ANALYST_DIAGNOSTIC_3 | NBA PRESEASON FULL FINAL |
+| Rockets +2.5 points | **WIN** | 0.634200 | ANALYST_DIAGNOSTIC_2 | NBA PRESEASON FULL FINAL |
+| Combined Over 227.5 points | **LOSS** | 0.663100 | ANALYST_DIAGNOSTIC_1 | NBA PRESEASON FULL FINAL |
+| Combined Under 227.5 points | **WIN** | 0.336900 | ANALYST_DIAGNOSTIC_4 | NBA PRESEASON FULL FINAL |
+
+**Settlement key:** `P-600-SETTLEMENT-R1-20261016` · parent ORIGINAL_CARD · affected frozen supplied keys 4 · source capture read time 2026-10-16T14:49:51+11:00. **Original probabilities/lineups/ranks untouched.**
+
+**Preseason regime caution:** 116–89 after full four quarters appears in postgame reporting and CBS final game tracker; previous `analyst_p` is NOT a trained NBA preseason model and must not enter primary model feedback.
+
+**R1–R12 process review (event-specific, concise):** R1 event/identity `P-600` preserved; R2 original lines 4 retained; R3 endpoint `NBA_PRESEASON_FULL_GAME` reviewed; R4 official/corroborating provenance `TWO_POSTGAME_SOURCES`; R5 issue cohort historical (see original, unchanged); R6 original lineup/availability known-at is not backfilled; R7 model bundle existence not authenticated; R8 original analyst versus model distinction preserved; R9 material failure route includes unverified roster/variance/endpoint; R10 no retrospective candidate/line/rank replacement; R11 outcome does not certify calibration from one event; R12 original research defects/unknown operator terms remain queued; future feature/label admission requires independent review.
+
+
+<!-- END RESEARCH ADDENDUM P-600 2026-10-16-settlement-revision-1 -->
+
+## Canonical current-state addendum — 2026-10-16T15:18:45+11:00
+Highest P-600; next P-601; four new retained events P-597-P-600, seven exact-existing originals P-590-P-596 skipped, one P-590 source addendum and eleven first settlement revisions. 116 tracked research records: 104 earlier terminal records, eleven newly terminal sporting-score reviews with definitions/evidence limits, legacy pending P-584. Package source grades 23W/21L/2 UNRESOLVED over 46 dependent contract rows; all operator actions unverified. These are separate descriptive sporting diagnostics, never model T2 or prospective scores. 37 analyst diagnostic rows remain NOT_PRIMARY, paired model scores NOT_COMPUTABLE. P-596 canonical original separately captured; missing original full draft remains a historical research-completeness limit. No earlier source footer/control/forecast is rewritten. Complete queues and receipts in the linked import report.
