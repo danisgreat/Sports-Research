@@ -4,7 +4,7 @@
 
 **Persistent research and corroboration (EXH-v1).** Apply [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md) to every required field in research, logging, settlement and verification. If a source is incomplete, open alternatives and verify material facts with another independent source; track every remaining field and attempt. Unresolved facts/corroboration never qualify as complete information. New settlements use mini-settlement-10 with a visible source-discovery/reuse section, three source/attempt/closure CSVs and S17; older originals retain their rules and bytes. Consult [RESEARCH_SOURCE_REGISTER](RESEARCH_SOURCE_REGISTER.md) and prior package registers, recheck actual coverage, and continue discovery beyond them.
 
-**HIST-2026.10.16-v3 · MDS-2026.10.16-v19.0 · CR-2026.10.16-R4 · P-2026.10.16-v19.0.** Mandatory for every new game, across major, minor, regional, women's, youth, reserve and international competitions. Online research is required even when a local copy exists. The former results store was retired by owner instruction on 16 October 2026; do not read it, restore it from old Git commits, or use its derived profiles as fallback facts for a new forecast. GitHub recovery of current required controls remains required. Historical citations preserve custody only. This procedure is not predictive qualification.
+**HIST-2026.10.16-v3 · MDS-2026.10.16-v19.1 · CR-2026.10.16-R5 · P-2026.10.16-v19.1.** Mandatory for every new game, across major, minor, regional, women's, youth, reserve and international competitions. Online research is required even when a local copy exists. The former results store was retired by owner instruction on 16 October 2026; do not read it, restore it from old Git commits, or use its derived profiles as fallback facts for a new forecast. GitHub recovery of current required controls remains required. Historical citations preserve custody only. This procedure is not predictive qualification.
 
 ## 1. Research and confirm the previous games online
 
@@ -50,3 +50,7 @@ Freeze metadata/history/evidence/config snapshots and verify hashes. Discovery o
 ## 5. Completion and audit
 
 Record actual searches, accepted rows/sources, comparison/conflict dispositions, true window n/date coverage, endpoint/known-at exclusions, separate league-fit coverage, and both sides' confirmed/unconfirmed players in existing Evidence receipt/A3/A8/A9 and C20. Unperformed searches fail completion; genuine missing publication remains unconfirmed. Searches/tests do not certify source truth or predictive skill. Rebuilding is separately scoped under prompt 7 and [RESULTS_REBUILD_PLAN](RESULTS_REBUILD_PLAN.md).
+
+## 5. Reuse of reviewed rows (LEARN-v1)
+
+Every dated prior-game row opened under this protocol is also written to the card's structured research export ([LEARNING_PIPELINE_PROTOCOL](LEARNING_PIPELINE_PROTOCOL.md) §2), one row per source, with known-at time and capture hash. After prompt 4 ingests it, the learning store can regenerate primary HISTORY.csv for later games (`python -m ml ingest history`) under the same admission gates. A row researched in several minis is stored once with several source observations. Conflicting values are quarantined until a reviewed WEB_CORRECTED observation resolves them. The retired results store is never a source.

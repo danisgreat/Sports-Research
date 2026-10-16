@@ -4,6 +4,8 @@ python -m ml discover                        list every competition folder with 
 python -m ml run-all [--workers N]           every modellable competition, then card calibration, decision lab, STATUS
 python -m ml competition "Basketball/NBL"    one or more competitions by archive path
 python -m ml cards | decision-lab | index
+python -m ml ingest | features | training | learning-status | registry | prospective | calibration | hedge-study |
+             v3-backtest | bkb-features ...   LEARN-v1 learning pipeline (LEARNING_PIPELINE_PROTOCOL.md)
 Outputs: research/model_shadow/** (Markdown + market-free CSV). Full predictions go to the cache directory outside the
 repository (env ML_CACHE, default ../Sports-Research-workshop-cache).
 """
@@ -202,7 +204,17 @@ def run_decision_lab() -> None:
     write_decision_lab(run(pred, model_id=lg.model_id), finish_receipt(rec, [("prediction inputs", rec["prediction_source_sha256"], prediction_digest), ("market inputs", rec["local_market_capture_sha256"], market_digest)]))
 
 
+LEARN_COMMANDS = {"ingest": "ml.research_ingest", "features": "ml.features", "training": "ml.training_admission",
+                  "learning-status": "ml.learning_status", "registry": "ml.registry",
+                  "prospective": "ml.evaluation.prospective", "calibration": "ml.calibration", "hedge-study": "ml.hedge",
+                  "v3-backtest": "ml.evaluation.v3_backtest", "bkb-features": "ml.models.basketball_features"}
+
+
 def main(argv: list[str]) -> None:
+    if argv and argv[0] in LEARN_COMMANDS:
+        import importlib
+        importlib.import_module(LEARN_COMMANDS[argv[0]]).main(argv[1:])
+        return
     if argv and argv[0] == "tennis":
         from ml.tennis_primary import main as tennis_main
         tennis_main(argv[1:])

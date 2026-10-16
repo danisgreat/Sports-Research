@@ -5,3 +5,9 @@ archive/superseded_2026-10-14-5/** -text
 archive/superseded_2026-10-14-6/** -text
 research/model_shadow/** -text
 PROMPT_1_SUPPLIED_FIRST_EXTENDED_2026-10-14.md -text
+# LEARN-v1 append-only and hash-chained CSVs: keep exact LF bytes on every clone.
+research/learning_store/** -text
+research/training_releases/** -text
+research/prospective/** -text
+research/model_registry/** -text
+research/learning_status/** -text

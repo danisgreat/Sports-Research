@@ -1,0 +1,3 @@
+# Prospective shadow ledger (LEARN-v1)
+
+`SHADOW_LEDGER.csv` is created by the first `python -m ml prospective freeze`. It is append-only and hash-chained: each row stores the hash of its predecessor, so an edited or reordered earlier row fails `python -m ml prospective verify`. A PRE_START_VERIFIED row must be issued and frozen before the scheduled start, and the ledger must be committed before the start to claim publication. Shadow rows never appear on cards, consume no P-ID and never offset primary results. Evaluation and dispositions: [LEARNING_PIPELINE_PROTOCOL](../../LEARNING_PIPELINE_PROTOCOL.md) §7.

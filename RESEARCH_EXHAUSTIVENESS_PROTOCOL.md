@@ -2,7 +2,7 @@
 
 **Local keys until import; updated mini after every game (MINI-v1).** Apply [MINI_LOG_IDENTITY_PROTOCOL](MINI_LOG_IDENTITY_PROTOCOL.md). Prompts 1–3 use stable local event keys and never assign/reserve canonical P-IDs; prompt 4 alone assigns them during verified import. After each prompt-1 game request, append the research/addendum, update and read back the mini, and return its complete updated .md document. Preserve every owner-entered Upcoming game block and all earlier issued bytes. New formats: mini-log-10 / mini-settlement-10; earlier records retain their original formats.
 
-**EXH-2026.10.16-v1 · MDS/P v19.0 · CR-R4.** Owner instruction, 16 October 2026: pursue the full information needed for every research/log/settlement requirement, switch sources when one is incomplete, verify findings with another source and retain newly discovered routes for future use. Applies to all sports, competitions, requested contracts and every lifecycle task. New settlements use mini-settlement-10; mini-log-10 follows MINI-v1 local-key identity and cumulative-document delivery. No statistical threshold, scoring formula or original issued record is changed.
+**EXH-2026.10.16-v1 · MDS/P v19.1 · CR-R5.** Owner instruction, 16 October 2026: pursue the full information needed for every research/log/settlement requirement, switch sources when one is incomplete, verify findings with another source and retain newly discovered routes for future use. Applies to all sports, competitions, requested contracts and every lifecycle task. New settlements use mini-settlement-10; mini-log-10 follows MINI-v1 local-key identity and cumulative-document delivery. No statistical threshold, scoring formula or original issued record is changed.
 
 ## 1. No early exit; no false closure
 

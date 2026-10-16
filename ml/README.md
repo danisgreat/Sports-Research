@@ -86,6 +86,16 @@ The workshop has no list of "main leagues". `ml/config.py` walks `research/revie
 | `evaluation/card_calibration.py` | Calibration audit of the cards' own stated probabilities |
 | `decision/` | Firewalled paper study: de-vig (multiplicative, power, Shin), shrunk fractional Kelly, LinTS bandit, full-information learner |
 | `shadow/lane.py` | Freeze → commit hash → reveal after start → settle; market-column guard |
+| `research_ingest.py` | LEARN-v1 store: deduplicated events, result/statistic revisions, availability snapshots, quarantine, receipts; primary HISTORY bridge |
+| `features.py` | FEAT-v1 point-in-time features with true n and missingness; frozen snapshots |
+| `training_admission.py` | Immutable, reproducible training releases; candidate linkage; exclusion reasons |
+| `models/basketball_features.py` | BKB-FEATURE-RIDGE-C1 challenger and its chronological ablation against the exact V3 experts |
+| `evaluation/v3_backtest.py` | V3-equivalent rolling-origin backtest and per-event expert ledger |
+| `hedge.py` | Learning-rate, forgetting, ESS-floor, AdaHedge and contextual weighting study; regime alerts |
+| `calibration.py` | Chronological calibration study; coherent grid raking |
+| `evaluation/prospective.py` | Hash-chained shadow ledger; paired champion/candidate evaluation; dispositions |
+| `learning_status.py` | Learning counters and evidence-aware review triggers |
+| `registry.py` | Hash-chained model registry with transition rules |
 
 ## Rules this code enforces
 
@@ -111,3 +121,24 @@ See [RETAIN-v1](../RESEARCH_RETENTION_PROTOCOL.md). This is an editorial clarifi
 ## Tennis singles: separate experimental development lane
 
 `python -m ml tennis predict|verify|settle` runs the independently versioned [`TENNIS_EXPERIMENTAL_HEDGE_V1`](TENNIS_EXPERIMENTAL.md) model (`tennis_primary.py`): hierarchical surface-specific serve/return estimates, a chronological Elo expert, exact best-of-3/5 match/game-score distributions, full-information Hedge feedback and source-bound immutable forecast receipts. [`test_tennis_primary.py`](tests/test_tennis_primary.py) contains synthetic unit/integration checks. **This is not certified, has no real-data prospective validation and is not yet part of the `MODEL_ASSISTED_PRIMARY_V3` tennis adapter.** The existing primary tennis `NOT_IMPLEMENTED` disposition remains truthful until separately authorised, validated integration. Do not merge its rows into the primary performance cohort or rewrite past cards.
+
+## LEARN-v1 learning pipeline
+
+[LEARNING_PIPELINE_PROTOCOL](../LEARNING_PIPELINE_PROTOCOL.md) (16 October 2026) connects research to learning without changing PRIMARY_HEDGE_MIX_V3. Every command writes a new output or appends to an append-only file, with receipts:
+
+```text
+python -m ml ingest add --export RESEARCH_EXPORT/<key> --store research/learning_store [--dry-run]
+python -m ml ingest history --store research/learning_store --competition C --endpoint E --horizon ISO --exclude-event ID --out HISTORY.csv
+python -m ml features --store research/learning_store --competition C --endpoint E --home H --away A --as-of ISO [--snapshot ...]
+python -m ml training build --store research/learning_store --competition C --endpoint E --release-id R --out-root research/training_releases [--candidates research/training_candidates]
+python -m ml training verify --release research/training_releases/R
+python -m ml bkb-features ablate --release ... --competition-source COMPETITION_SOURCE.csv --tune-start ISO --test-start ISO --out DIR
+python -m ml v3-backtest --store research/learning_store --competition-source COMPETITION_SOURCE.csv --eval-start ISO --out DIR
+python -m ml hedge-study --ledger DIR/LEDGER.csv --tune-end ISO --out DIR2
+python -m ml calibration --predictions PRED.csv --tune-start ISO --tune-end ISO --out DIR
+python -m ml prospective freeze|verify|evaluate ...
+python -m ml learning-status --store research/learning_store --review-log research/learning_status/REVIEW_LOG.csv [...]
+python -m ml registry verify|current|append ...
+```
+
+Tests: `test_learning_store.py` (dedup, quarantine, revisions, interrupted ingest, point-in-time features, reproducible releases), `test_learning_models.py` (challenger coherence and leakage guard, identical-game ablation, Hedge schedules against V3, delayed feedback, V3-equivalent backtest, calibration and grid raking), `test_learning_governance.py` (shadow ledger, paired evaluation and power, registry transitions, review clocks), `test_learning_lifecycle.py` (one synthetic competition from duplicate minis through forecast, settlement, feedback, correction, release and counters) and `test_prompt_consistency.py`. All use synthetic EXAMPLE data. They establish mechanics, not predictive quality. No real-data ablation, backtest or study has been run yet.

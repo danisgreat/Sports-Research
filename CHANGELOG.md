@@ -1,3 +1,15 @@
+# Framework change — 16 October 2026, learning pipeline from the external improvement review
+
+MDS/P v19.1 / CR-2026.10.16-R5 / LEARN-v1. PROCEDURE + workshop code. The owner asked to implement the necessary and better parts of the external review of `ba4fefaee`; its code claims were verified first. [LEARNING_PIPELINE_PROTOCOL](LEARNING_PIPELINE_PROTOCOL.md) adds four auditable layers: research data, models, online selection and prospective evidence.
+
+- Prompt 1 writes a structured RESEARCH_EXPORT (prior-game rows per source, target, dated availability, team statistics). The paragraph is identical in all eleven workflows, and every owner-entered Upcoming block is byte-identical.
+- Prompt 4 ingests the export into an append-only, deduplicated, point-in-time `research/learning_store/` (five researches of one match = one event; conflicts quarantined; reviewed corrections are revisions).
+- Point-in-time FEAT-v1 features feed immutable, byte-reproducible training releases that link research-only candidates.
+- New studies: the BKB-FEATURE-RIDGE-C1 basketball challenger and its window/tail ablation against the exact V3 experts; a V3-equivalent backtest; Hedge learning-rate, forgetting, ESS-floor and context studies with regime alerts; and chronological calibration with coherent grid raking.
+- New governance: a hash-chained prospective shadow ledger with paired, power-aware evaluation and dispositions; learning counters with interim (~100) and comprehensive (~300) review triggers plus per-sport and per-competition clocks (prompts 3/6); promotion gates (prompt 8); a hash-chained model registry seeded from Git history; and a prompt dependency map with consistency tests.
+
+PRIMARY_HEDGE_MIX_V3, selection, scoring and formats are unchanged, as are highest P-600 / next P-601 and every issued record. Nothing has been run on real data or promoted. CI and branch protection remain owner decisions. [Proposal and dispositions](research/verification/framework_change_2026-10-16-6/CHANGE_PROPOSAL.md) · [Implementation](research/verification/framework_change_2026-10-16-6/IMPLEMENTATION.md) · [Verification](research/verification/framework_change_2026-10-16-6/VERIFICATION.md).
+
 # Framework change — 16 October 2026, local mini keys and per-game document delivery
 
 MDS/P v19.0 / CR-2026.10.16-R4 / MINI-v1 / RETAIN-v2. FORMAT + PROCEDURE: prompts 1–3 use stable local event keys; only prompt 4 assigns new canonical P-IDs through a source-preserving mapping. Every prompt-1 request appends/reuses the local card, reads back and returns the complete updated cumulative mini .md. New mini-log-10 / mini-settlement-10 with C22/S18. All eleven populated Upcoming blocks and earlier issued records are preserved. The execution verifier accepts new local keys, retains legacy8/9 P-card support and rejects malformed/nested/orphan markers. Numerical model/scoring/selection rules and highest P-600 / next P-601 are unchanged. No forecast or historical model output is regenerated.

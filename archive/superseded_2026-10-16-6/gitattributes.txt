@@ -1,0 +1,7 @@
+# Preserve forensic originals and generated evidence exactly across Windows clones.
+archive/superseded_2026-10-14-3/** -text
+archive/superseded_2026-10-14-4/** -text
+archive/superseded_2026-10-14-5/** -text
+archive/superseded_2026-10-14-6/** -text
+research/model_shadow/** -text
+PROMPT_1_SUPPLIED_FIRST_EXTENDED_2026-10-14.md -text

@@ -6,7 +6,7 @@
 
 **Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** For every game, research both sides' L5/L10/L15/L20 online under [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md), with opened sources, dated game rows and true n. Seek exact-game confirmed players, starting roles, bench/replacements and absences under [ROSTER_AVAILABILITY_PROTOCOL](../../ROSTER_AVAILABILITY_PROTOCOL.md); projected players remain unconfirmed. The retired local results store and its derived profiles are not required inputs or fallbacks. Earlier archive-first directions are superseded.
 
-**P-2026.10.16-v19.0 · FRAMEWORK_CHANGE · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: declared operating Markdown/CSV/text, archived originals, fixtures and a unique verification folder. Python/tests/requirements are permitted only under ml/ by CURRENT_RULES §0. No JSON, notebooks, pickles, workflows or binaries. Publish when this full prompt is invoked unless explicitly local-only.
+**P-2026.10.16-v19.1 · FRAMEWORK_CHANGE · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: declared operating Markdown/CSV/text, archived originals, fixtures and a unique verification folder. Python/tests/requirements are permitted only under ml/ by CURRENT_RULES §0. No JSON, notebooks, pickles, workflows or binaries. Publish when this full prompt is invoked unless explicitly local-only.
 
 **Required repository fallback (REF-v1).** Always keep [https://github.com/danisgreat/Sports-Research/tree/main](https://github.com/danisgreat/Sports-Research/tree/main) as the standing reference. If required local files are not fully accessible (missing, unreadable, truncated or incomplete), retrieve the actual required contents from this repository before declaring them unavailable. Apply [GITHUB_REFERENCE_PROTOCOL](../../GITHUB_REFERENCE_PROTOCOL.md): resolve one main commit SHA, record exact files/read time and fallback results in the existing reading receipt, and preserve the declared authority mode. Never substitute an unpublished local mini, claim unread content or treat viewing code as executing it. If authorized remote access also fails, record the real gap and continue independent work.
 
@@ -83,3 +83,15 @@ When the task asks to align prompt instructions while retaining event details, s
 ## Persistent sourcing and information closure (EXH-v1)
 
 Propagate EXH-v1, mini-settlement-10 and S17 consistently through current rules, all sport workflows, templates/examples and source reuse. Preserve earlier issued formats, canonical IDs, current prompt-1 game-input bytes and immutable reports. Verify negative single-source/mirror/partial/conflict/unavailable cases; never claim research was performed because its template exists.
+
+## Data, training, calibration, shadow and promotion gates (LEARN-v1)
+
+Apply [LEARNING_PIPELINE_PROTOCOL](../../LEARNING_PIPELINE_PROTOCOL.md) §§3–8 to every model, parameter, calibration or learning-rate change:
+
+1. **Data:** inputs come from the learning store with point-in-time views; quarantine and missingness are reported; no retired-store or market data.
+2. **Training data:** an immutable training release that `python -m ml training verify` rebuilds byte-identically.
+3. **Chronological evidence:** development, tuning, calibration and evaluation windows are separate and in time order. Backtests, ablations and Hedge/calibration studies carry receipts and evidence classes. Every attempted candidate is logged.
+4. **Prospective shadow:** freeze the candidate before each start in the hash-chained ledger, alongside the unchanged champion, with a preregistered minimum effect `delta`, metric and stopping rule.
+5. **Decision:** promotion only after `python -m ml prospective evaluate` returns PROMOTION_ELIGIBLE, without unacceptable calibration or coverage deterioration, and the owner approves. Record each state change with `python -m ml registry append`. A rollback is a new ROLLED_BACK row naming the restored version.
+
+No new model may retroactively change issued probabilities, ranks, grades or feedback. Run `python -m pytest ml/tests`, including the end-to-end lifecycle and prompt-consistency tests. A CI workflow file or branch protection requires an explicit owner amendment.

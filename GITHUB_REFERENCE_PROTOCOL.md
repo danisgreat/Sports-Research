@@ -8,7 +8,7 @@
 
 **Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** For every game, research both sides' L5/L10/L15/L20 online under [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md), with opened sources, dated game rows and true n. Seek exact-game confirmed players, starting roles, bench/replacements and absences under [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md); projected players remain unconfirmed. The retired local results store and its derived profiles are not required inputs or fallbacks. Earlier archive-first directions are superseded.
 
-**REF-2026.10.15-v1 · MDS-2026.10.16-v19.0 · CR-2026.10.16-R4 · P-2026.10.16-v19.0.** Standing owner instruction: refer to [Sports Research on GitHub — main](https://github.com/danisgreat/Sports-Research/tree/main) whenever local files are not fully accessible. This PROCEDURE release changes access/recovery steps only; numerical policy, scoring, selection and log formats are unchanged.
+**REF-2026.10.15-v1 · MDS-2026.10.16-v19.1 · CR-2026.10.16-R5 · P-2026.10.16-v19.1.** Standing owner instruction: refer to [Sports Research on GitHub — main](https://github.com/danisgreat/Sports-Research/tree/main) whenever local files are not fully accessible. This PROCEDURE release changes access/recovery steps only; numerical policy, scoring, selection and log formats are unchanged.
 
 ## Required recovery
 

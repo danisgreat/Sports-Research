@@ -1,6 +1,6 @@
 # Retain local research independently of model availability
 
-**RETAIN-2026.10.16-v2 · MDS/P v19.0 · CR-2026.10.16-R4.** Owner update: prompts 1–3 retain researched events under stable local event keys. Canonical P-IDs are assigned only during prompt 4 import. After every prompt-1 game request, deliver the complete updated mini .md. This supersedes RETAIN-v1's pregame working/permanent P-ID assignment while preserving model-independent research retention, original source bytes, truthful timing and numerical PRIMARY_HEDGE_MIX_V3 policy.
+**RETAIN-2026.10.16-v2 · MDS/P v19.1 · CR-2026.10.16-R5.** Owner update: prompts 1–3 retain researched events under stable local event keys. Canonical P-IDs are assigned only during prompt 4 import. After every prompt-1 game request, deliver the complete updated mini .md. This supersedes RETAIN-v1's pregame working/permanent P-ID assignment while preserving model-independent research retention, original source bytes, truthful timing and numerical PRIMARY_HEDGE_MIX_V3 policy.
 
 Read [MINI_LOG_IDENTITY_PROTOCOL](MINI_LOG_IDENTITY_PROTOCOL.md), [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md), [GITHUB_REFERENCE_PROTOCOL](GITHUB_REFERENCE_PROTOCOL.md) and [PRIMARY_PREDICTION_PROTOCOL](PRIMARY_PREDICTION_PROTOCOL.md).
 
@@ -38,6 +38,8 @@ python -m ml.research_learning verify --candidate research/training_candidates/P
 LABELS.csv retains schema event_id,competition,endpoint,label_key,label_value,label_unit,event_at,final_at,available_at,source_url,evidence_path,evidence_sha256,definition_status,review_status,revision_id,feature_status. review_status is TERMINAL_LABEL_REVIEWED; units GOALS/POINTS/RUNS/GAMES/SETS/WICKETS/BALLS or OUTCOME (WIN/LOSS/PUSH/VOID). The exporter allocates no ID. Reviewed labels are RESEARCH_TRAINING_CANDIDATE / LABELS_RETAINED_NOT_MODEL_FEEDBACK. Independent future-training source/scope/point-in-time/effective-revision admission remains required; a trusted target does not establish pre-start feature availability or prospective skill.
 
 Existing expert feedback: only an actually issued frozen expert bundle supplies its own loss via primary settle. Without one retain verified targets and mark expert feedback NOT_APPLICABLE_NO_MODEL. Never manufacture probabilities, propensities, losses or model feedback. Preserve one effective native-event contribution and existing warm/feedback deduplication.
+
+**Candidate-to-training admission (LEARN-v1).** A verified candidate is linked into an immutable training release by `python -m ml training build --candidates research/training_candidates` when its event's structured research export has been ingested. A candidate without exported history is listed as CANDIDATE_WITHOUT_STRUCTURED_HISTORY, never dropped and never given invented features ([LEARNING_PIPELINE_PROTOCOL](LEARNING_PIPELINE_PROTOCOL.md) §5). Linking a label to features does not create expert feedback.
 
 ## 5. Counts and custody
 
