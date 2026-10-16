@@ -67,6 +67,10 @@ def test_prompt1_keeps_eleven_sport_workflows_each_with_the_learning_export():
         assert re.search(r"^Read \[COMMON_OPERATING_PROTOCOL\]", s, re.M), "each Upcoming block is followed by Read"
         assert s.count("## 7. Write, audit and return") == 1 and s.count("**Mandatory output after every game request:**") == 1
         learn = re.findall(r"^\*\*Structured research export \(LEARN-v1\)\.\*\*.*$", s, re.M)
-        assert len(learn) == 1
-        paragraphs.append(learn[0])
-    assert len(set(paragraphs)) == 1, "the LEARN-v1 paragraph must be identical in every sport workflow"
+        runtime = re.findall(r"^\*\*Runtime, baseline and contract definitions \(RET-08 / RET-10 / RET-13\)\.\*\*.*$", s, re.M)
+        assert len(learn) == 1 and len(runtime) == 1
+        paragraphs.append((learn[0], runtime[0]))
+    assert len(set(paragraphs)) == 1, "the LEARN-v1 and runtime paragraphs must be identical in every sport workflow"
+    tennis = [s for s in sections if s.startswith("## Upcoming game — TENNIS")]
+    assert len(tennis) == 1 and "python -m ml prospective rows --kind tennis" in tennis[0]
+    assert sum("python -m ml prospective rows --kind tennis" in s for s in sections) == 1

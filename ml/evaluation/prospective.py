@@ -190,12 +190,61 @@ def evaluate(ledger: list[dict], outcomes: pd.DataFrame, champion: str, candidat
                 models=per, unsettled_share=float(unsettled), breakdown=pd.DataFrame(breakdown))
 
 
+def _common(model_id, version, role, event_id, competition, endpoint, issued_at, start, release, params, code, status):
+    return dict(model_id=model_id, model_version=version, role=role, event_id=event_id, competition=competition,
+                endpoint=endpoint, issued_at=issued_at, scheduled_start=start, training_release=release,
+                param_version=params, code_sha256=code, evidence_status=status)
+
+
+def _status(issued_at, start, now) -> str:
+    return "PRE_START_VERIFIED" if p.clock(issued_at) < p.clock(start) and now < p.clock(start) else "TIMING_UNVERIFIED"
+
+
+def rows_from_primary_bundle(folder: Path, role: str = "CHAMPION", now=None) -> list[dict]:
+    """Shadow-ledger rows from a verified PRIMARY_HEDGE_MIX bundle (every priced contract, original ranks kept)."""
+    rec = p.verify_bundle(Path(folder))
+    req = p.read_rows(Path(folder) / "REQUEST.csv")[0]
+    now = p.clock(now) if now is not None else pd.Timestamp.now(tz="UTC")
+    base = _common(rec["policy"], rec["model_id"], role, rec["event_id"], rec["competition"], rec["endpoint"],
+                   rec["issue_at"], req["scheduled_start"], "BUNDLE_HISTORY:" + rec["history_sha256"][:16],
+                   f"eta={rec['eta']};{rec['eta_source']}", rec["code_sha256"], _status(rec["issue_at"], req["scheduled_start"], now))
+    out = []
+    for r in p.read_rows(Path(folder) / "PREDICTIONS.csv"):
+        if r["p_card"] == "NOT_COMPUTED":
+            continue
+        out.append(dict(forecast_id=f"{rec['policy']}:{rec['event_id']}", contract_key=r["contract_key"], family=r["family"],
+                        side=r["side"], line=r["line"], p=r["p_card"], rank=r["rank"], **base))
+    return out
+
+
+def rows_from_tennis_bundle(folder: Path, role: str = "CANDIDATE", now=None) -> list[dict]:
+    """Shadow-ledger rows from a verified TENNIS_EXPERIMENTAL_HEDGE_V1 bundle; rank = descending p."""
+    from ml import tennis_primary as t
+    t.verify(Path(folder))
+    rec = t.rows(Path(folder) / "RECEIPT.csv")[0]
+    req = t.rows(Path(folder) / "REQUEST.csv")[0]
+    now = p.clock(now) if now is not None else pd.Timestamp.now(tz="UTC")
+    preds = [r for r in t.rows(Path(folder) / "PREDICTIONS.csv") if r.get("p_card") not in ("", "None", None)]
+    preds.sort(key=lambda r: (-float(r["p_card"]), r["contract_key"]))
+    base = _common(rec["policy"], "1", role, rec["event_id"], req["competition"], f"COMPLETED_BEST_OF_{req['best_of']}",
+                   req["issue_at"], req["scheduled_start"], "BUNDLE_HISTORY:" + rec["sha256_HISTORY.csv"][:16],
+                   f"eta={rec['eta']}", rec["code_sha256"], _status(req["issue_at"], req["scheduled_start"], now))
+    return [dict(forecast_id=f"{rec['policy']}:{rec['event_id']}", contract_key=r["contract_key"], family=r["family"],
+                 side=r["side"], line=r.get("line", ""), p=r["p_card"], rank=str(i), **base)
+            for i, r in enumerate(preds, 1)]
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = parser.add_subparsers(dest="command", required=True)
     fz = sub.add_parser("freeze")
     fz.add_argument("--ledger", type=Path, required=True)
     fz.add_argument("--rows", type=Path, required=True)
+    rw = sub.add_parser("rows", help="shadow rows from a verified primary or tennis bundle")
+    rw.add_argument("--bundle", type=Path, required=True)
+    rw.add_argument("--kind", choices=("primary", "tennis"), required=True)
+    rw.add_argument("--role", choices=("CHAMPION", "CANDIDATE"), required=True)
+    rw.add_argument("--out", type=Path, required=True)
     vf = sub.add_parser("verify")
     vf.add_argument("--ledger", type=Path, required=True)
     ev = sub.add_parser("evaluate")
@@ -205,7 +254,13 @@ def main(argv=None):
     ev.add_argument("--candidate", required=True)
     ev.add_argument("--delta", type=float, required=True, help="preregistered minimum Brier improvement")
     args = parser.parse_args(argv)
-    if args.command == "freeze":
+    if args.command == "rows":
+        make = rows_from_primary_bundle if args.kind == "primary" else rows_from_tennis_bundle
+        rows = make(args.bundle, args.role)
+        with args.out.open("xb") as f:
+            f.write(p.csv_bytes(rows))
+        print(f"{len(rows)} shadow rows ({rows[0]['evidence_status'] if rows else 'none'}) -> {args.out}")
+    elif args.command == "freeze":
         print(f"froze {len(freeze(args.ledger, p.read_rows(args.rows)))} rows")
     elif args.command == "verify":
         print(f"chain intact: {len(verify_ledger(args.ledger))} rows")

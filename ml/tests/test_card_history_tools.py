@@ -1,0 +1,117 @@
+"""Full-history card table, capability receipt, standalone league baseline and shadow-row adapters."""
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+import pytest
+
+from ml import capability
+from ml import league_baseline as lb
+from ml import primary as p
+from ml.evaluation import card_history as ch
+from ml.evaluation import prospective as P
+from ml.tests.test_primary import inputs  # noqa: F401  (pytest fixture)
+from ml.tests import test_tennis_primary as tt
+
+
+@pytest.mark.parametrize("text,sport", [
+    ("BASEBALL / KBO — LG Twins @ Lotte Giants", "Baseball"),
+    ("American Football / NCAA FBS — Coastal Carolina @ Delaware", "American Football"),
+    ("Welsh Fire Women v Trent Rockets Women, The Hundred", "Cricket"),
+    ("Al Ahli Saudi FC vs Auckland FC — FIFA Intercontinental Cup", "Soccer"),
+    ("Independiente del Valle vs Deportes Tolima Under 2.5 goals", "Soccer"),
+    ("Auckland vs Bay of Plenty — Hilux NPC Round 5", "Rugby Union"),
+    ("Brisbane Broncos vs Melbourne Storm", "Rugby League"),
+    ("Falcons @ Dolphins preseason", "American Football"),
+    ("Sun @ Fever", "Basketball"),
+    ("Kei Nishikori vs Michael Antonius Sonego +6.5 games", "Tennis"),
+    ("Vincent Weaver vs Aryan Jit Singh", "UNCLASSIFIED"),
+])
+def test_sport_rules_prefer_explicit_labels_and_never_guess(text, sport):
+    assert ch.classify_sport(text) == sport
+
+
+@pytest.mark.parametrize("contract,family", [
+    ("U156.5", "TOTAL"), ("PP O47.5", "PERIOD"), ("1H Over 0.5", "PERIOD"), ("Hanwha ML", "WINNER"),
+    ("Aces -4.5", "HANDICAP"), ("Bangladesh first innings Over 250.5", "TOTAL"), ("BTTS — Yes", "BTTS"),
+    ("Logan McDonald 1+ goal", "PLAYER"), ("Combined corners Over 10.5", "CORNERS"), ("this leg", "OTHER"),
+])
+def test_family_rules(contract, family):
+    assert ch.classify_family(contract) == family
+
+
+def test_grades_eras_and_probabilities_are_literal():
+    assert [ch._grade(x) for x in ("W", "L", "P", "V", "U", "L/W")] == ["WIN", "LOSS", "PUSH", "VOID", "UNRESOLVED", "CONFLICT"]
+    assert ch._p("62%") == pytest.approx(.62) and ch._p("0.899") == pytest.approx(.899) and np.isnan(ch._p("q"))
+    assert ch.era_of("2026-09-25") == "E2" and ch.era_of("2026-10-12") == "E4" and ch.era_of(None) == "UNDATED"
+
+
+def test_repository_history_table_invariants():
+    R, diff = ch.build_rows()
+    assert R.card.nunique() >= 599 and "P-584" not in set(R.card)  # pending event excluded by design
+    assert not R[R.cohort == "LEGACY_ANALYST_NOT_PRIMARY"].counted_slot.any()
+    assert not R[R.informational_r2].counted_slot.any()
+    assert R[(R.card == "P-217") & (R["rank"] == 1)].grade.iloc[0] == "LOSS"  # effective final settlement
+    assert set(diff.columns) == {"card", "rank", "grade", "grade_eff"}
+    counted = R[R.counted_slot & (R["rank"] > 0)]
+    assert not counted.duplicated(["card", "rank"]).any()  # one counted row per card slot, no double import
+
+
+def test_collision_detector_flags_shifted_ids_and_ignores_result_headings(tmp_path):
+    log = tmp_path / "PREDICTION_LOG_COMBINED.md"
+    log.write_text("## P-900 — Astros @ Mets\n\n## P-900 — Astros 5-3 Mets — settlement\n\n"
+                   "## P-901 — Red Sox @ Yankees\n\n### P-901 — Falcons @ Dolphins preseason\n", encoding="utf-8")
+    c = ch.id_collisions([log])
+    assert list(c.card) == ["P-901"]
+
+
+def test_rank1_tests_detect_rank1_advantage_over_lower_rows():
+    rows = []
+    for k in range(40):
+        week = f"2026-W{30 + k % 10}"
+        for rank, y in ((1, 1.0 if k % 5 else 0.0), (3, 0.0 if k % 2 else 1.0), (4, 0.0)):
+            rows.append(dict(card=f"P-{k}", rank=rank, y=y, p=.7 if rank == 1 else .5, week=week, cohort="RANK_LOG_LITERAL"))
+    res = ch.rank1_tests(pd.DataFrame(rows))
+    assert res["rank1_vs_lower"]["mean"] > 0 and res["rank1_vs_lower"]["k_weeks"] == 10
+    assert res["calibration"]["card_weighted_mean"] == pytest.approx(0.8 - 0.7)
+
+
+def test_capability_receipt_reports_the_actual_runtime():
+    rec = capability.receipt()
+    assert rec["status"] == "RUNTIME_AVAILABLE" and rec["primary_policy"] == p.POLICY and len(rec["code_sha256"]) == 64
+
+
+def test_standalone_baseline_equals_the_v3_league_expert(inputs):  # noqa: F811
+    req, lg, history, contracts, tmp, _ = inputs
+    p.forecast(req, lg, history, contracts, tmp / "bundle")
+    v3 = {r["contract_key"]: float(r["baseline_p"]) for r in p.read_rows(tmp / "bundle" / "PREDICTIONS.csv")}
+    from ml import config
+    import ml.league_baseline as mod
+    mod_get = mod.get_league
+    mod.get_league = lambda path: lg
+    try:
+        rows = lb.baseline_rows(req, history, contracts)
+    finally:
+        mod.get_league = mod_get
+    assert {r["contract_key"]: r["baseline_p"] for r in rows} == pytest.approx(v3)
+    assert all(r["role"] == "COMPARATOR_NOT_P_CARD" for r in rows)
+    with pytest.raises(p.AdmissionError):
+        lb.baseline_rows(dict(req, cutoff="2023-01-01T00:00:00Z"), history, contracts)
+
+
+def test_bundle_adapters_freeze_into_the_shadow_ledger(inputs, tmp_path):  # noqa: F811
+    req, lg, history, contracts, tmp, _ = inputs
+    p.forecast(req, lg, history, contracts, tmp / "b")
+    rows = P.rows_from_primary_bundle(tmp / "b", now="2023-01-01T10:30:00Z")
+    assert rows and {r["evidence_status"] for r in rows} == {"PRE_START_VERIFIED"}
+    P.freeze(tmp_path / "L.csv", rows, now="2023-01-01T10:30:00Z")
+    late = P.rows_from_primary_bundle(tmp / "b", now="2023-01-02T00:00:00Z")
+    assert {r["evidence_status"] for r in late} == {"TIMING_UNVERIFIED"}
+    treq, matches, tcontracts, _ = tt.fixture(tmp_path)
+    from ml import tennis_primary as t
+    t.forecast(treq, matches, tcontracts, [], tmp_path / "tb")
+    trows = P.rows_from_tennis_bundle(tmp_path / "tb", now=treq["issue_at"])
+    assert [r["rank"] for r in trows] == [str(i) for i in range(1, len(trows) + 1)]
+    assert all(float(a["p"]) >= float(b["p"]) for a, b in zip(trows, trows[1:]))
+    P.freeze(tmp_path / "L.csv", trows, now=treq["issue_at"])
+    assert len(P.verify_ledger(tmp_path / "L.csv")) == len(rows) + len(trows)

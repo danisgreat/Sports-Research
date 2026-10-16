@@ -1,5 +1,9 @@
 # Scoreboard: current measurement and preserved historical results
 
+## Full-history retrospective 2026-10-16 (P-001–P-600; descriptive, grades unchanged)
+
+[Report](../verification/retrospective_2026-10-16-full/RETROSPECTIVE_REPORT.md) · generated tables in `HISTORY/`. 599 card records (P-584 pending), 562 with graded counted slots: Rank 1 352–207 (63.0%, 58.9–66.9), Rank 2 298–229 (56.5%, 52.3–60.7), Ranks 3–4 572–457 (55.6%). 837 stated-p rows: Brier 0.2247 against in-sample climatology 0.2410, calibration slope 0.82; Rank 1 mildly overconfident (−4.6 points). Frozen same-row baselines on 4 events only; no model-priced card in the history. In-sample figures are descriptive, not skill against a baseline; every earlier section below is unchanged.
+
 ## Cohort retrospective 2026-10-16 (P-577–P-600; descriptive, grades unchanged)
 
 [Report](../verification/retrospective_2026-10-16/RETROSPECTIVE_REPORT.md). Counted cohorts (policies kept separate): C1 pre-v10 P-577–P-579 and C2 v10 P-580–P-582, primary 10W/2L (83.3%, 55.2–95.3%) against 10.53 expected, Brier 0.1367; C3 SUPPLIED_FIRST_V1 P-585–P-589, primary 5W/5L (50.0%, 23.7–76.3%) against 5.72 expected, Brier 0.2364. Frozen same-row baseline on 8 primary rows / 4 events / 2 weeks: card − baseline Brier +0.0107, `INSUFFICIENT_EVIDENCE`. Legacy P-590–P-600 analyst diagnostics (NOT_PRIMARY): 37 rows, MSE 0.2861. PRIMARY_HEDGE_MIX_V3 executions 0 of 24; LEARN-v1 counters 0. No skill, calibration or model qualification is claimed; every earlier section below is unchanged.

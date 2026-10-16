@@ -4,7 +4,7 @@
 
 **Persistent research and corroboration (EXH-v1).** Apply [RESEARCH_EXHAUSTIVENESS_PROTOCOL](../../RESEARCH_EXHAUSTIVENESS_PROTOCOL.md) to every required field in research, logging, settlement and verification. If a source is incomplete, open alternatives and verify material facts with another independent source; track every remaining field and attempt. Unresolved facts/corroboration never qualify as complete information. New settlements use mini-settlement-10 with a visible source-discovery/reuse section, three source/attempt/closure CSVs and S17; older originals retain their rules and bytes. Consult [RESEARCH_SOURCE_REGISTER](../../RESEARCH_SOURCE_REGISTER.md) and prior package registers, recheck actual coverage, and continue discovery beyond them.
 
-**P-2026.10.16-v19.1 · PROCEDURE · LOCAL_WORKING_TREE.** Read COMMON_OPERATING_PROTOCOL, CURRENT_RULES, HISTORICAL_SOURCE_PROTOCOL, ROSTER_AVAILABILITY_PROTOCOL, RESULTS_REBUILD_PLAN, SOURCES and actual target schemas. Writes: explicitly named market-free CSV/provenance/coverage/profile paths and a new verification folder. Raw captures/helpers stay externally; code stays under ml/. Original cards/logs/reports remain immutable.
+**P-2026.10.16-v19.2 · PROCEDURE · LOCAL_WORKING_TREE.** Read COMMON_OPERATING_PROTOCOL, CURRENT_RULES, HISTORICAL_SOURCE_PROTOCOL, ROSTER_AVAILABILITY_PROTOCOL, RESULTS_REBUILD_PLAN, SOURCES and actual target schemas. Writes: explicitly named market-free CSV/provenance/coverage/profile paths and a new verification folder. Raw captures/helpers stay externally; code stays under ml/. Original cards/logs/reports remain immutable.
 
 ## 1. Declare the target
 

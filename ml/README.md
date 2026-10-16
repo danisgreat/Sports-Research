@@ -139,6 +139,10 @@ python -m ml calibration --predictions PRED.csv --tune-start ISO --tune-end ISO 
 python -m ml prospective freeze|verify|evaluate ...
 python -m ml learning-status --store research/learning_store --review-log research/learning_status/REVIEW_LOG.csv [...]
 python -m ml registry verify|current|append ...
+python -m ml capability [--out CAPABILITY_RECEIPT.csv]
+python -m ml baseline --request REQUEST.csv --history HISTORY.csv --contracts CONTRACTS.csv --out BASELINE.csv
+python -m ml prospective rows --bundle DIR --kind primary|tennis --role CHAMPION|CANDIDATE --out ROWS.csv
+python -m ml card-history --rank-log GAME_PREDICTION_RANK_LOG.csv --out DIR
 ```
 
-Tests: `test_learning_store.py` (dedup, quarantine, revisions, interrupted ingest, point-in-time features, reproducible releases), `test_learning_models.py` (challenger coherence and leakage guard, identical-game ablation, Hedge schedules against V3, delayed feedback, V3-equivalent backtest, calibration and grid raking), `test_learning_governance.py` (shadow ledger, paired evaluation and power, registry transitions, review clocks), `test_learning_lifecycle.py` (one synthetic competition from duplicate minis through forecast, settlement, feedback, correction, release and counters) and `test_prompt_consistency.py`. All use synthetic EXAMPLE data. They establish mechanics, not predictive quality. No real-data ablation, backtest or study has been run yet.
+Tests: `test_learning_store.py` (dedup, quarantine, revisions, interrupted ingest, point-in-time features, reproducible releases), `test_learning_models.py` (challenger coherence and leakage guard, identical-game ablation, Hedge schedules against V3, delayed feedback, V3-equivalent backtest, calibration and grid raking), `test_learning_governance.py` (shadow ledger, paired evaluation and power, registry transitions, review clocks), `test_card_history_tools.py` (sport/family rules, effective-grade precedence, collision detection, Rank-1 tests, capability receipt, baseline equality with V3, shadow adapters), `test_learning_lifecycle.py` (one synthetic competition from duplicate minis through forecast, settlement, feedback, correction, release and counters) and `test_prompt_consistency.py`. All use synthetic EXAMPLE data. They establish mechanics, not predictive quality. No real-data ablation, backtest or study has been run yet.

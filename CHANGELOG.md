@@ -1,3 +1,16 @@
+# Full-history retrospective and runtime/baseline tooling — 16 October 2026, P-001 to P-600
+
+Prompt 6 over every card (user request), then the changes the findings make necessary (P-2026.10.16-v19.2 / MDS-v19.2 / CR-2026.10.16-R6 / LEARN-v1.1, PROCEDURE + workshop code). [Report](research/verification/retrospective_2026-10-16-full/RETROSPECTIVE_REPORT.md) · [Implementation](research/verification/retrospective_2026-10-16-full/IMPLEMENTATION.md).
+
+- **Full history** (599 records; 562 cards with graded counted slots; committed rank log at `b86f89d37`): Rank 1 63.0%, Rank 2 56.5%, Ranks 3–4 55.6%. Rank 1 beats the same card's lower rows (+7.7 points) and is mildly overconfident (−4.6 points; slope 0.82). A chronological calibration study selected IDENTITY (NO_CHANGE). Frozen baselines exist on 4 events only, and no model ever priced a card. 21 ID collisions were found, and headlines are robust to excluding them.
+- **New tools:** `python -m ml capability` (runtime receipt), `python -m ml baseline` (standalone BASELINE_LEAGUE_V1, tested equal to V3's league expert), `python -m ml prospective rows` (V3 and tennis bundles into the shadow ledger) and `python -m ml card-history` (reproducible prompt-6 tables).
+- **Prompts:** prompt 1 adds one identical runtime/baseline/contract-definition paragraph to all eleven workflows (Upcoming blocks byte-identical) and a tennis shadow step; prompt 6 uses the history tool.
+- **Records:** REVIEW_LOG gains 12 rows (ALL `DATA_REPAIR_REQUIRED`, tennis `PROSPECTIVE_SHADOW`, other model sports `INSUFFICIENT_EVIDENCE`); HYPOTHESIS_REGISTER gains RET-14 to RET-16.
+- **Tests:** 395 pass.
+- **Unchanged:** V3, selection, scoring, formats, IDs and grades.
+- **Excluded:** another session's uncommitted rank-log refresh was neither used nor staged.
+- **Correction:** the earlier cohort review's review-log `recorded_at` values (20:45) post-date their commit (20:35:59); this is disclosed in the implementation record, and the append-only rows are not rewritten.
+
 # Cohort retrospective — 16 October 2026, P-577 to P-600
 
 Prompt 6 (P-2026.10.16-v19.1, LEARN-v1 §§6–8), user-requested, outcome-exposed. New report folder [retrospective_2026-10-16](research/verification/retrospective_2026-10-16/RETROSPECTIVE_REPORT.md) with DATA_INVENTORY and COHORT_TABLES. Counted cohorts kept separate: C1+C2 primary 10W/2L against 10.53 expected; C3 SUPPLIED_FIRST_V1 5W/5L against 5.72; frozen baseline +0.0107 on 4 events (`INSUFFICIENT_EVIDENCE`); legacy analyst diagnostics MSE 0.2861 with an extra-time cluster flagged for field-owner re-verification. V3 executed on 0 of 24 cards (7 documented `No module named ml`); the learning store is empty. Eight review dispositions appended to REVIEW_LOG; HYPOTHESIS_REGISTER gains dated status lines and RET-08–RET-13 (`PROPOSED_NOT_TESTED`); scoreboard and CURRENT_STATE gain dated summaries. No original log, grade, forecast, ID, rule, prompt, model or registry entry changed.

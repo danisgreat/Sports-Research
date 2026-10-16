@@ -8,7 +8,7 @@
 
 **Required repository fallback (REF-v1).** Always keep [https://github.com/danisgreat/Sports-Research/tree/main](https://github.com/danisgreat/Sports-Research/tree/main) as the standing reference. If required local files are not fully accessible (missing, unreadable, truncated or incomplete), retrieve the actual required contents from this repository before declaring them unavailable. Apply [GITHUB_REFERENCE_PROTOCOL](GITHUB_REFERENCE_PROTOCOL.md): resolve one main commit SHA, record exact files/read time and fallback results in the existing reading receipt, and preserve the declared authority mode. Never substitute an unpublished local mini, claim unread content or treat viewing code as executing it. If authorized remote access also fails, record the real gap and continue independent work.
 
-**CR-2026.10.16-R5** ([previous](archive/superseded_2026-10-15-3/VERIFICATION_PROTOCOL.md); [earlier](archive/superseded_2026-10-12/VERIFICATION_PROTOCOL.md)). Markdown/CSV/text only. Checks establish their stated properties, never predictive skill. Use plain file/git commands and transparent arithmetic; do not add a validator runtime. Print `Check | PASS/FAIL/NOT_VERIFIED/N/A | evidence | limitation`.
+**CR-2026.10.16-R6** ([previous](archive/superseded_2026-10-15-3/VERIFICATION_PROTOCOL.md); [earlier](archive/superseded_2026-10-12/VERIFICATION_PROTOCOL.md)). Markdown/CSV/text only. Checks establish their stated properties, never predictive skill. Use plain file/git commands and transparent arithmetic; do not add a validator runtime. Print `Check | PASS/FAIL/NOT_VERIFIED/N/A | evidence | limitation`.
 
 ## 1. Before changes
 

@@ -1,6 +1,6 @@
 # Learning pipeline: research → store → features → releases → models → prospective evidence
 
-**LEARN-2026.10.16-v1 · MDS-2026.10.16-v19.1 · CR-2026.10.16-R5 · P-2026.10.16-v19.1.** Owner instruction, 16 October 2026: implement the necessary and better parts of the external improvement review so that every researched and settled game becomes reusable, point-in-time-safe learning data, and model changes depend on chronological and prospective evidence rather than on the arrival of new games. PROCEDURE + workshop code. **PRIMARY_HEDGE_MIX_V3, its η, experts, selection and scoring are unchanged.** Nothing here qualifies a model, changes an issued card, probability, rank, grade, ID or feedback row, or admits market data.
+**LEARN-2026.10.16-v1.1 · MDS-2026.10.16-v19.2 · CR-2026.10.16-R6 · P-2026.10.16-v19.2.** Owner instruction, 16 October 2026: implement the necessary and better parts of the external improvement review so that every researched and settled game becomes reusable, point-in-time-safe learning data, and model changes depend on chronological and prospective evidence rather than on the arrival of new games. PROCEDURE + workshop code. **PRIMARY_HEDGE_MIX_V3, its η, experts, selection and scoring are unchanged.** Nothing here qualifies a model, changes an issued card, probability, rank, grade, ID or feedback row, or admits market data.
 
 Read with [PRIMARY_PREDICTION_PROTOCOL](PRIMARY_PREDICTION_PROTOCOL.md), [RESEARCH_RETENTION_PROTOCOL](RESEARCH_RETENTION_PROTOCOL.md), [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md), [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md) and [SCORING_AND_VALIDATION](SCORING_AND_VALIDATION.md). Code: [ml/](ml/README.md#learn-v1-learning-pipeline). Implementation record: [framework_change_2026-10-16-6](research/verification/framework_change_2026-10-16-6/IMPLEMENTATION.md).
 
@@ -79,3 +79,12 @@ Validate with `python -m ml ingest add --export RESEARCH_EXPORT/<key> --store <c
 - **Player impact ratings and roster continuity.** These need player-level game statistics that the store does not yet ingest. Availability enters only as confirmed counts and flags.
 - **Contextual bandits, deep networks and pooled cross-league ratings.** Not built. Section 6 states the conditions under which they could be studied.
 - **Any run on real data.** All new tools were exercised on synthetic EXAMPLE data. Real ablations, backtests and studies start once reviewed exports have been ingested, and each needs its own receipt.
+
+## 10. Runtime capability, standalone baseline, shadow adapters and card history (v1.1, 16 October 2026)
+
+Added after the full-history retrospective ([retrospective_2026-10-16-full](research/verification/retrospective_2026-10-16-full/RETROSPECTIVE_REPORT.md)), which found that no fitted model priced any of 599 cards and only four events carried a frozen same-row baseline:
+
+- `python -m ml capability [--out CAPABILITY_RECEIPT.csv]` — the runtime receipt every card records before ML_NOT_RUN (Python, pinned libraries, checkout root, HEAD, code hash).
+- `python -m ml baseline --request … --history … --contracts … [--competition-source …] --out BASELINE.csv` — BASELINE_LEAGUE_V1 on the card's exact contracts from reviewed history, identical to V3's LEAGUE_BASELINE expert (tested), usable when the full primary run cannot price the event. A comparator, never p_card.
+- `python -m ml prospective rows --bundle … --kind primary|tennis --role CHAMPION|CANDIDATE --out ROWS.csv` — converts a verified V3 or tennis bundle into shadow-ledger rows (PRE_START_VERIFIED only when issued and converted before the start) for `prospective freeze`.
+- `python -m ml card-history --rank-log … --out …` — the reproducible full-history card table for prompt 6.

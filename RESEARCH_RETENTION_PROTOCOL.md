@@ -1,6 +1,6 @@
 # Retain local research independently of model availability
 
-**RETAIN-2026.10.16-v2 · MDS/P v19.1 · CR-2026.10.16-R5.** Owner update: prompts 1–3 retain researched events under stable local event keys. Canonical P-IDs are assigned only during prompt 4 import. After every prompt-1 game request, deliver the complete updated mini .md. This supersedes RETAIN-v1's pregame working/permanent P-ID assignment while preserving model-independent research retention, original source bytes, truthful timing and numerical PRIMARY_HEDGE_MIX_V3 policy.
+**RETAIN-2026.10.16-v2 · MDS/P v19.2 · CR-2026.10.16-R6.** Owner update: prompts 1–3 retain researched events under stable local event keys. Canonical P-IDs are assigned only during prompt 4 import. After every prompt-1 game request, deliver the complete updated mini .md. This supersedes RETAIN-v1's pregame working/permanent P-ID assignment while preserving model-independent research retention, original source bytes, truthful timing and numerical PRIMARY_HEDGE_MIX_V3 policy.
 
 Read [MINI_LOG_IDENTITY_PROTOCOL](MINI_LOG_IDENTITY_PROTOCOL.md), [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md), [GITHUB_REFERENCE_PROTOCOL](GITHUB_REFERENCE_PROTOCOL.md) and [PRIMARY_PREDICTION_PROTOCOL](PRIMARY_PREDICTION_PROTOCOL.md).
 

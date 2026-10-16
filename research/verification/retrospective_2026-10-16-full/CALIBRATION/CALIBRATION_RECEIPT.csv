@@ -1,0 +1,2 @@
+evidence_class,selected,params,n_fit,test_events,raw_brier,calibrated_brier,raw_slope,calibrated_slope,predictions_sha256,tune_start,tune_end,code_sha256,generated_at,deployment
+CALIBRATION_STUDY_NOT_DEPLOYED,IDENTITY,{},610,227,0.2071653776006837,0.2071653776006837,0.751517188202287,0.751517188202287,772a87a9b5621db663a9cde6bbdf9f69906e71ca6853e7424d049eb58d754f5a,2026-09-14T00:00:00Z,2026-09-26T00:00:00Z,790cb6fc6165043c9d0cbef875f0a261fd02c177d06f22ffe6e7b25f954a6d69,2026-10-16T10:02:48.756141+00:00,NONE_STUDY_ONLY
