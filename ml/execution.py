@@ -123,19 +123,37 @@ def verify_execution(folder: Path, *, event_id=None, competition=None, endpoint=
 
 
 def verify_log(manifest: Path, mini: Path) -> dict:
-    """Require an honest execution disposition per card, not a model as an ID prerequisite.
+    """Verify local research dispositions without allocating canonical IDs.
 
     Only use on new mandatory-execution minis, not historical cards or canonical wrappers.
     Research-only cards may have no executable runtime/receipt. Verified settled labels
     can later train a model; they cannot invent a frozen expert's historical loss.
     """
     text = mini.read_text(encoding="utf-8-sig")
-    cards = re.findall(r"<!-- BEGIN CARD (P-\d+) -->", text)
-    ends = re.findall(r"<!-- END CARD (P-\d+) -->", text)
-    if cards != ends or len(cards) != len(set(cards)):
-        raise p.AdmissionError("mini card markers duplicate/unbalanced")
-    if not any("MINI-LOG-FORMAT: " + fmt in text for fmt in ("mini-log-8", "mini-log-9")):
-        raise p.AdmissionError("research verifier requires mini-log-8/9; preserve legacy formats")
+    formats = re.findall(r"<!-- MINI-LOG-FORMAT: (\S+) -->", text)
+    if text.count("MINI-LOG-FORMAT:") != 1 or len(formats) != 1 or formats[0] not in ("mini-log-8", "mini-log-9", "mini-log-10"):
+        raise p.AdmissionError("research verifier requires one mini-log-8/9/10 format; preserve legacy formats")
+    cards, active = [], None
+    markers = re.findall(r"<!-- (BEGIN|END) CARD ([^\r\n]*?) -->", text)
+    if len(markers) != len(re.findall(r"<!--\s*(?:BEGIN|END)\s+CARD\b", text)):
+        raise p.AdmissionError("malformed mini card marker")
+    for action, key in markers:
+        local = re.fullmatch(r"LOCAL-[A-Z0-9]+-G([0-9]{4,})", key)
+        valid_local = local is not None and int(local[1]) > 0
+        legacy = formats[0] != "mini-log-10" and re.fullmatch(r"P-\d+", key)
+        if not (valid_local or legacy):
+            raise p.AdmissionError("card identity must be a stable local key; P-IDs are legacy8/9 only")
+        if action == "BEGIN":
+            if active is not None or key in cards:
+                raise p.AdmissionError("mini card markers duplicate/nested")
+            active = key
+            cards.append(key)
+        elif active != key:
+            raise p.AdmissionError("mini card markers orphaned/unbalanced")
+        else:
+            active = None
+    if active is not None:
+        raise p.AdmissionError("mini card markers unbalanced")
     with manifest.open(encoding="utf-8-sig", newline="") as handle:
         if csv.DictReader(handle).fieldnames != list(MANIFEST_FIELDS):
             raise p.AdmissionError("execution manifest header must match registered fields")

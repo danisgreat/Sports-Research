@@ -1,3 +1,9 @@
+# Framework change — 16 October 2026, local mini keys and per-game document delivery
+
+MDS/P v19.0 / CR-2026.10.16-R4 / MINI-v1 / RETAIN-v2. FORMAT + PROCEDURE: prompts 1–3 use stable local event keys; only prompt 4 assigns new canonical P-IDs through a source-preserving mapping. Every prompt-1 request appends/reuses the local card, reads back and returns the complete updated cumulative mini .md. New mini-log-10 / mini-settlement-10 with C22/S18. All eleven populated Upcoming blocks and earlier issued records are preserved. The execution verifier accepts new local keys, retains legacy8/9 P-card support and rejects malformed/nested/orphan markers. Numerical model/scoring/selection rules and highest P-600 / next P-601 are unchanged. No forecast or historical model output is regenerated.
+
+[Implementation](research/verification/framework_change_2026-10-16-5/IMPLEMENTATION.md) · [Verification](research/verification/framework_change_2026-10-16-5/VERIFICATION.md) · [Local identity/delivery protocol](MINI_LOG_IDENTITY_PROTOCOL.md).
+
 # Changelog
 
 ## 2026-10-16 — persistent all-field sourcing and settlement source reuse (v18.0 / CR-R3)

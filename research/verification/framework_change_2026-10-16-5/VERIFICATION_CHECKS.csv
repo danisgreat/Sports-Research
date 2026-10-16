@@ -1,0 +1,51 @@
+check,result,evidence
+all_untouched_tracked_bytes,PASS,1790 original tracked files unchanged; mismatches []
+unrelated_gitignore_preserved,PASS,pre-existing local edit untouched; excluded from publication
+all11_owner_inputs_exact,PASS,all actual pre-task Upcoming game bytes through first Read unchanged
+all11_local_identity_workflows,PASS,each standalone identity gate defers canonical allocation
+all11_updated_md_outputs,PASS,"each workflow requires complete cumulative .md delivery, duplicate and blocked status"
+all11_protocol_readings,PASS,every standalone sport/general workflow reads local identity/delivery protocol
+all11_current_writes_checks,PASS,all write/audit sections use local keys and current checks
+sport_RULES_AFL.md,PASS,cross-sport MINI-v1 authority
+sport_RULES_AMERICAN_FOOTBALL.md,PASS,cross-sport MINI-v1 authority
+sport_RULES_BASEBALL.md,PASS,cross-sport MINI-v1 authority
+sport_RULES_BASKETBALL.md,PASS,cross-sport MINI-v1 authority
+sport_RULES_CRICKET.md,PASS,cross-sport MINI-v1 authority
+sport_RULES_ICE_HOCKEY.md,PASS,cross-sport MINI-v1 authority
+sport_RULES_NHL.md,PASS,cross-sport MINI-v1 authority
+sport_RULES_NRL_RUGBY.md,PASS,cross-sport MINI-v1 authority
+sport_RULES_RUGBY_UNION.md,PASS,cross-sport MINI-v1 authority
+sport_RULES_SOCCER.md,PASS,cross-sport MINI-v1 authority
+sport_RULES_TENNIS.md,PASS,cross-sport MINI-v1 authority
+prompt_1_GAME_CARD.md,PASS,all lifecycle prompts aligned to local identity/import allocation/delivery
+prompt_2_START_LOCAL_MINI.md,PASS,all lifecycle prompts aligned to local identity/import allocation/delivery
+prompt_3_SETTLE_LOCAL_MINI.md,PASS,all lifecycle prompts aligned to local identity/import allocation/delivery
+prompt_4_CANONICAL_IMPORT.md,PASS,all lifecycle prompts aligned to local identity/import allocation/delivery
+prompt_5_START_THE_NEXT_COMBINED_LOG.md,PASS,all lifecycle prompts aligned to local identity/import allocation/delivery
+prompt_6_COMBINED_LOG_RETROSPECTIVE.md,PASS,all lifecycle prompts aligned to local identity/import allocation/delivery
+prompt_7_EXPAND_PREVIOUS_RESULTS.md,PASS,all lifecycle prompts aligned to local identity/import allocation/delivery
+prompt_8_IMPROVE_THE_FRAMEWORK.md,PASS,all lifecycle prompts aligned to local identity/import allocation/delivery
+release_METHOD.md,PASS,v19 control/format release; old historical notes retain old scope
+release_CURRENT_RULES.md,PASS,v19 control/format release; old historical notes retain old scope
+release_CURRENT_STATE.md,PASS,v19 control/format release; old historical notes retain old scope
+release_CARD_AND_LOG_TEMPLATES.md,PASS,v19 control/format release; old historical notes retain old scope
+release_README.md,PASS,v19 control/format release; old historical notes retain old scope
+release_PROMPTS.md,PASS,v19 control/format release; old historical notes retain old scope
+release_research/prompts/README.md,PASS,v19 control/format release; old historical notes retain old scope
+release_research/prompts/COMMON_OPERATING_PROTOCOL.md,PASS,v19 control/format release; old historical notes retain old scope
+removed_active_early_canonical_instructions,PASS,[]
+new_mini_template_local_only,PASS,new mini/card template keyed locally
+new_settlement_template_handoff,PASS,new source mapping remains NOT_ASSIGNED until import
+complete_card_and_settlement_checklists,PASS,C1-C22 and S1-S18 present; C22 document delivery; S18 mapping
+source_registers_remain_required,PASS,EXH-v1 source discovery/search/closure section preserved
+namespace_and_native_ids_distinct,PASS,local card key independent of native event ID and canonical P-ID
+duplicate_and_blocked_delivery_rules,PASS,duplicate returns full file; blocked original/write never fabricates mini
+prompt4_mapping_and_recovery_rules,PASS,reviewed specification; not an executed allocator claim
+canonical_export_deferred,PASS,existing P-only label exporter never forces early canonical allocation
+canonical_state_unchanged,PASS,highest600 next601; logs/status/scoreboard preserved by raw hash checks
+changelog_history_exact_suffix,PASS,new release prepended; every old changelog byte retained
+all_archived_working_bodies,PASS,45 exact raw pre-task working bodies
+cumulative_fixture_preserves_first_card,PASS,actual first-card bytes identical after second example request
+cumulative_fixture_complete,PASS,"actual complete cumulative .md example includes intake, both cards and current footer"
+fixtures_not_live_evidence,PASS,"synthetic, no source fetch/model run or real canonical assignment"
+new_relative_links,PASS,[]

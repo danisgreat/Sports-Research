@@ -1,18 +1,20 @@
 # Card, mini, settlement and canonical formats
 
-**Persistent research and corroboration (EXH-v1).** Apply [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md) to every required field in research, logging, settlement and verification. If a source is incomplete, open alternatives and verify material facts with another independent source; track every remaining field and attempt. Unresolved facts/corroboration never qualify as complete information. New settlements use mini-settlement-9 with a visible source-discovery/reuse section, three source/attempt/closure CSVs and S17; older originals retain their rules and bytes. Consult [RESEARCH_SOURCE_REGISTER](RESEARCH_SOURCE_REGISTER.md) and prior package registers, recheck actual coverage, and continue discovery beyond them.
+**Local keys until import; updated mini after every game (MINI-v1).** Apply [MINI_LOG_IDENTITY_PROTOCOL](MINI_LOG_IDENTITY_PROTOCOL.md). Prompts 1–3 use stable local event keys and never assign/reserve canonical P-IDs; prompt 4 alone assigns them during verified import. After each prompt-1 game request, append the research/addendum, update and read back the mini, and return its complete updated .md document. Preserve every owner-entered Upcoming game block and all earlier issued bytes. New formats: mini-log-10 / mini-settlement-10; earlier records retain their original formats.
+
+**Persistent research and corroboration (EXH-v1).** Apply [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md) to every required field in research, logging, settlement and verification. If a source is incomplete, open alternatives and verify material facts with another independent source; track every remaining field and attempt. Unresolved facts/corroboration never qualify as complete information. New settlements use mini-settlement-10 with a visible source-discovery/reuse section, three source/attempt/closure CSVs and S17; older originals retain their rules and bytes. Consult [RESEARCH_SOURCE_REGISTER](RESEARCH_SOURCE_REGISTER.md) and prior package registers, recheck actual coverage, and continue discovery beyond them.
 
 **Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** For every game, research both sides' L5/L10/L15/L20 online under [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md), with opened sources, dated game rows and true n. Seek exact-game confirmed players, starting roles, bench/replacements and absences under [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md); projected players remain unconfirmed. The retired local results store and its derived profiles are not required inputs or fallbacks. Earlier archive-first directions are superseded.
 
 **Required repository fallback (REF-v1).** Always keep [https://github.com/danisgreat/Sports-Research/tree/main](https://github.com/danisgreat/Sports-Research/tree/main) as the standing reference. If required local files are not fully accessible (missing, unreadable, truncated or incomplete), retrieve the actual required contents from this repository before declaring them unavailable. Apply [GITHUB_REFERENCE_PROTOCOL](GITHUB_REFERENCE_PROTOCOL.md): resolve one main commit SHA, record exact files/read time and fallback results in the existing reading receipt, and preserve the declared authority mode. Never substitute an unpublished local mini, claim unread content or treat viewing code as executing it. If authorized remote access also fails, record the real gap and continue independent work.
 
-**mini-log-9 · mini-settlement-9 · canonical-md-1.** Authority: MDS-2026.10.16-v18.0 / CR-2026.10.16-R3 / SCV-2026.10.16-v11 / SEL-2026.10.12-v3. [Rules](CURRENT_RULES.md) and [selection definitions](SELECTION_RULES.md) control semantics. Previous formats: [mini-log-6 / mini-settlement-5](archive/superseded_2026-10-12/CARD_AND_LOG_TEMPLATES.md).
+**mini-log-10 · mini-settlement-10 · canonical-md-1.** Authority: MDS-2026.10.16-v19.0 / CR-2026.10.16-R4 / SCV-2026.10.16-v11 / SEL-2026.10.12-v3. [Rules](CURRENT_RULES.md) and [selection definitions](SELECTION_RULES.md) control semantics. Previous formats: [mini-log-6 / mini-settlement-5](archive/superseded_2026-10-12/CARD_AND_LOG_TEMPLATES.md).
 
 <a id="local-mini-format-mini-log-2"></a>
 
 ## 1. Compatibility
 
-Old minis finish in their original format. Never insert baselines, gates, expected scores, form windows or missing cutoffs into an old card. New dated addenda may carry unresolved status or diagnostic fields without changing its original selection/scoring version. Old numeric self-audits are interpreted against the original format, with gaps documented rather than repaired by fabrication. For new minis, use mini-log-9 / mini-settlement-9 below. Existing mini-log-2 through -8 and mini-settlement-2 through -8 remain immutable; new cards appended to an old active mini carry the execution fields and a companion manifest covering the new research records, including honest no-model rows. Run `verify-log` on the next new mini-log-9; manually reconcile the legacy/new subset with C21 in an old mini. A mini-log-6 mini still open on 2026-10-12 finishes as mini-log-6; its next mini now uses mini-log-9. Example IDs beginning EXAMPLE are not P-IDs and must never be imported.
+Old minis finish in their original format. Never insert baselines, gates, expected scores, form windows or missing cutoffs into an old card. New dated addenda may carry unresolved status or diagnostic fields without changing its original selection/scoring version. Old numeric self-audits are interpreted against the original format, with gaps documented rather than repaired by fabrication. For new minis, use mini-log-10 / mini-settlement-10 below. Existing mini-log-2 through -9 and mini-settlement-2 through -9 remain immutable; new cards appended to an old active mini carry the execution fields and a companion manifest covering the new research records, including honest no-model rows. Run `verify-log` on the next new mini-log-10; manually reconcile the legacy/new subset with C21 in an old mini. A mini-log-6 mini still open on 2026-10-12 finishes as mini-log-6; its next mini now uses mini-log-10. Example IDs beginning EXAMPLE are not P-IDs and must never be imported.
 
 **What mini-log-7 adds:**
 - **Authority and lifecycle:** authority mode (R09), writer lease (R15), frozen-status pointer (R16), request intake (R22), executable queue fields (R38).
@@ -22,11 +24,11 @@ Old minis finish in their original format. Never insert baselines, gates, expect
 
 ## 2. Mini
 
-Create `Mini Prediction Log - <FIRST> onward - <date>/PREDICTION_MINI_RUNNING_LOG_<FIRST>_ONWARD.md`:
+Create `Mini Prediction Log - <MINI_KEY> - <date>/PREDICTION_MINI_RUNNING_LOG_<MINI_KEY>.md` (no proposed canonical number in the name):
 
 ```markdown
-<!-- MINI-LOG-FORMAT: mini-log-9 -->
-# Prediction Mini Running Log — <FIRST> onward
+<!-- MINI-LOG-FORMAT: mini-log-10 -->
+# Prediction Mini Running Log — <MINI_KEY>
 
 ## A. Authority snapshot
 | Field | Value |
@@ -37,8 +39,9 @@ Create `Mini Prediction Log - <FIRST> onward - <date>/PREDICTION_MINI_RUNNING_LO
 | Method / control / scoring / selection | <versions> |
 | Active Combined Log | <resolved path> |
 | Highest committed / next canonical ID | <current values> |
-| Outstanding local minis and IDs | <contiguous inventory or NONE> |
-| First working ID | <reconciled next local ID> |
+| Outstanding local minis and keys | <inventory or NONE; legacy source aliases distinguished> |
+| MINI_KEY / first local event key | <unique uppercase/digit namespace> / LOCAL-<MINI_KEY>-G0001 |
+| New canonical ID / assignment stage | NOT_ASSIGNED / PROMPT_4_IMPORT |
 | Issuing writer / lease start / lease expiry | <named session or person / ISO time / ISO time> |
 | Lease hand-overs | <from → to, time, reason; or NONE> |
 | Frozen for settlement | NO, or YES: <FROZEN_SOURCE receipt path> |
@@ -48,7 +51,7 @@ Create `Mini Prediction Log - <FIRST> onward - <date>/PREDICTION_MINI_RUNNING_LO
 SPORTS_ONLY / MARKET_BLIND · RESEARCH_ONLY_NOT_CERTIFIED · CANONICAL_IMPORT_STATUS: PENDING
 
 ## B. Local ID rules
-Creating this mini consumes no ID. One retained event receives one permanent working ID; canonical status requires import. Addenda/carryovers consume none. No silent skipping, reuse or renumbering. Only a complete written/read-back card advances the footer. Only the issuing writer appends cards. Another writer must wait for lease expiry or a recorded hand-over. Never append to a mini marked frozen; route the event to the next authorised mini.
+Creating this mini consumes no canonical ID. One new event receives one stable LOCAL-<MINI_KEY>-G0001-style local key; canonical P-ID assignment happens only in prompt 4. Addenda/duplicates consume no local ordinal or canonical ID. Preserve local keys and issued source labels. Only an actual written/read-back new card advances the local footer. Return the complete updated .md after every game request under MINI_LOG_IDENTITY_PROTOCOL. Only the issuing writer appends cards. Another writer must wait for lease expiry or a recorded hand-over. Never append to a mini marked frozen; route the event to the next authorised mini.
 
 ## C. Carryover and evidence queue
 | ID | Event key | Queue | Original card / frozen pick table | Latest revision | Open field | Responsible actor | Next source + exact field | Due (ISO, tz) | Final-time basis | Last attempt | Scheduled automation |
@@ -73,7 +76,8 @@ card_id,event_id,competition,endpoint,execution_path,execution_sha256,feedback_s
 <!-- BEGIN FOOTER -->
 | Field | Value |
 |---|---|
-| Highest new working ID used / next working ID | NONE / <FIRST> |
+| Last local event key / next local event key | NONE / LOCAL-<MINI_KEY>-G0001 |
+| New canonical IDs assigned | NONE; assignment only in PROMPT_4_IMPORT |
 | Repository next-ID snapshot | <value> |
 | New cards / numeric / qualitative / NO_FORECAST | 0 / 0 / 0 / 0 |
 | Pending events / unresolved evidence records | <counts separately> |
@@ -86,13 +90,14 @@ Carryovers preserve canonical or LOCAL_UNIMPORTED status accurately; never call 
 
 ## 3. Card
 
-Insert immediately before the footer. Preserve earlier card/addendum bytes; only the mutable running footer changes. No heading inside a local card starts `## P-`.
+Insert immediately before the footer. Preserve earlier card/addendum bytes; update only the mutable intake/queue/execution-manifest/footer fields needed for the current request. Return the complete cumulative updated .md under MINI_LOG_IDENTITY_PROTOCOL. No heading inside a local card starts `## P-`.
 
 ```markdown
-<!-- BEGIN CARD P-NNN -->
-## Card · P-NNN · <sport / league> · <event> · <local event date>
+<!-- BEGIN CARD LOCAL-<MINI_KEY>-G0001 -->
+## Card · LOCAL-<MINI_KEY>-G0001 · <sport / league> · <event> · <local event date>
 
-- **Working ID:** P-NNN — LOCAL_WORKING_ID — PENDING_CANONICAL_IMPORT
+- **Local event key:** LOCAL-<MINI_KEY>-G0001 — LOCAL_UNIMPORTED_EVENT
+- **Canonical ID / assignment stage:** NOT_ASSIGNED / PROMPT_4_IMPORT
 - **Event key / native ID / aliases:** <exact identity; unknown native ID explicit>
 - **Authority:** <method/control/scoring/selection/HEAD; working differences>
 - **ML execution identity:** <exact native/stable event_id> | <exact competition path> | <endpoint>
@@ -153,7 +158,7 @@ For new primary cards include PRIMARY_PREDICTION_PROTOCOL receipt: exact runtime
 
 Include the mandatory [research-completion matrix](RESEARCH_COMPLETION_PROTOCOL.md#4-completion-receipt-and-return) with actual evidence/outcomes for every procedure, every supplied row and all seven sport steps. Report research coverage, numerical ML availability and issuance status separately. New-run COMPLETE requires verified field closure under RESEARCH_EXHAUSTIVENESS_PROTOCOL; completed attempts with missing facts/corroboration remain INFORMATION_INCOMPLETE. COMPLETE_WITH_DOCUMENTED_GAPS is retained only in historical originals. An unattempted applicable step means INCOMPLETE; retain completed work. A blocked mini write returns a complete no-ID A1–A9 draft without invented original mini bytes.
 SPORTS_ONLY_MARKET_BLIND: <result> · OUTCOME_EXPOSURE: <actual state> · SETTLEMENT: NOT_PERFORMED · CANONICAL_IMPORT: PENDING
-<!-- END CARD P-NNN -->
+<!-- END CARD LOCAL-<MINI_KEY>-G0001 -->
 ```
 
 NO_FORECAST retains the full completed A1–A9 research, sport procedures, every contract’s evidence/reasoned assessment, calculation attempts, sensitivity and completion matrix, plus identity, reason, evidence, timing and follow-up, with an empty candidate table explicitly labelled NO_RANKED_ROWS. Qualitative cards may rank supported directions but do not create numeric probabilities or numerical PASS. Copy every original supplied contract even if unsupported; no four-row padding.
@@ -195,7 +200,7 @@ A window shorter than its label prints its true n. A missing window prints `HIST
 
 ## 4. Addenda
 
-Use `<!-- BEGIN ADDENDUM P-NNN <timestamp-key> -->` and matching END; heading `### Addendum · P-NNN · <ISO timestamp>`. Record parent ID, original version, what changed, source/time, reason and current implications. No new P-ID, no edits to original ranks. A pregame reforecast table uses p_reforecast and is NOT_PRIMARY; it cannot replace original settlement. Post-event material is explicitly diagnostic. A mini's footer changes only for actual new cards or queue updates, never to pretend addenda allocate IDs.
+Use `<!-- BEGIN ADDENDUM <original-record-key> <timestamp-key> -->` and matching END; heading `### Addendum · <original-record-key> · <ISO timestamp>`. Record parent ID, original version, what changed, source/time, reason and current implications. No new P-ID, no edits to original ranks. A pregame reforecast table uses p_reforecast and is NOT_PRIMARY; it cannot replace original settlement. Post-event material is explicitly diagnostic. A mini's footer changes only for actual new cards or queue updates, never to pretend addenda allocate IDs.
 
 ## 5. Capture and contract evidence
 
@@ -203,16 +208,21 @@ Map each row to quantity, unit, provider, exact field, period, action/void rule 
 
 ## 6. Settlement package
 
-Folder `Mini Settlement - <FIRST> to <LAST> - <date>/`: ORIGINAL_MINI (exact copy), PREDICTION_MINI_SETTLED file, LOCAL_ID_MAPPING.md, UNRESOLVED_CARRYOVER.md, SETTLEMENT_MANIFEST.md, SOURCE_DISCOVERY_REGISTER.csv, SOURCE_SEARCH_ATTEMPTS.csv and REQUIREMENT_CLOSURE.csv. Settled file = frozen bytes followed by the section below; on later runs preserve the earlier settled file and append a versioned revision in a new output, never overwrite it.
+Folder `Mini Settlement - <MINI_KEY> - <date>/`: ORIGINAL_MINI (exact copy), PREDICTION_MINI_SETTLED file, LOCAL_ID_MAPPING.md, UNRESOLVED_CARRYOVER.md, SETTLEMENT_MANIFEST.md, SOURCE_DISCOVERY_REGISTER.csv, SOURCE_SEARCH_ATTEMPTS.csv and REQUIREMENT_CLOSURE.csv. Settled file = frozen bytes followed by the section below; on later runs preserve the earlier settled file and append a versioned revision in a new output, never overwrite it.
 
 ```markdown
 # SETTLEMENT AND RETROSPECTIVES
-<!-- SETTLEMENT-FORMAT: mini-settlement-9 -->
+<!-- SETTLEMENT-FORMAT: mini-settlement-10 -->
 Authority/read time: <actual receipt, including authority mode>
 Frozen original: <path; byte/line counts if measured; exact-prefix comparison result>
 FROZEN_SOURCE receipt: <source path; raw byte count; SHA-256 of raw bytes; block inventory (card IDs, addenda keys); freeze time; writer hand-over to <next mini or NONE>>
 Source growth check: <at package time the source still has the frozen byte count, or GROWTH_DETECTED: blocks after the snapshot and where they were routed>
 Inventory: <cards/carryovers/addenda; pending and unresolved separately>
+
+## Local identity and canonical handoff
+
+LOCAL_ID_MAPPING: <source mini/key, native event identity, canonical ID NOT_ASSIGNED / PENDING_PROMPT_4_IMPORT for each new unimported event; existing canonical references distinguished; no planned P-numbers>
+Record key in every local settlement marker: <original local key or verified existing canonical reference; never assign a new P-ID here>
 
 ## Source discovery, corroboration and reuse register
 
@@ -229,8 +239,8 @@ Shared/prior registers consulted: <exact files/source IDs actually opened; fresh
 <For every remaining information requirement: event/side/field, primary/second-source or independent check, status/conflict/lineage, actual attempted routes, next source/action, actor/due time and real automation status. Incomplete facts never become COMPLETE by exhausting attempts.>
 
 
-<!-- BEGIN SETTLEMENT P-NNN revision-1 -->
-### Settlement · P-NNN · <event> · <actual review time>
+<!-- BEGIN SETTLEMENT <original-record-key> revision-1 -->
+### Settlement · <original-record-key> · <event> · <actual review time>
 **Revision:** revision-1 · parent NONE (or revision-<n−1>) · effective <ISO time> · affected contract keys <ALL or list> · changes <old → new, with reason; NONE for the first>
 **Card state:** SETTLED | PARTIALLY_SETTLED | PENDING_EVENT | UNRESOLVED_EVIDENCE | NO_FORECAST
 **Original card / prior revision:** <source pointers>
@@ -262,19 +272,19 @@ Shared/prior registers consulted: <exact files/source IDs actually opened; fresh
 **R11. Hypothesis:** <testable proposal, PROPOSED_NOT_TESTED>
 **R12. Disposition:** <NO_CHANGE/MONITOR/PROPOSE_EXPERIMENT/process candidate; next action for gaps>
 <Rank-1 LOSS: eight-part deep review required by CURRENT_RULES §3>
-<!-- END SETTLEMENT P-NNN revision-1 -->
+<!-- END SETTLEMENT <original-record-key> revision-1 -->
 ```
 
 Pending cards get state evidence, literal original reference and next check, with result-dependent R sections N/A. Terminal unresolved rows retain the supported settlement work and open questions. Manifest inventories each source block, local/canonical status, latest revision, grades/counts, outputs, prefix check and import PENDING. No guessed hash or byte-comparison PASS.
 
-**Later revisions (R17).** A rerun or correction appends `<!-- BEGIN SETTLEMENT P-NNN revision-<n> -->` with the next unused n for that ID, its parent and the affected contract keys. It never re-uses a key or edits an earlier block. UNRESOLVED_CARRYOVER.md uses the queue columns of §2-C, so that every open item has an actor, a route, a due time and a scheduling status.
+**Later revisions (R17).** A rerun or correction appends `<!-- BEGIN SETTLEMENT <original-record-key> revision-<n> -->` with the next unused n for that ID, its parent and the affected contract keys. It never re-uses a key or edits an earlier block. UNRESOLVED_CARRYOVER.md uses the queue columns of §2-C, so that every open item has an actor, a route, a due time and a scheduling status.
 
 ## 7. Card self-audit
 
 | Check | Required evidence |
 |---|---|
 | C1 | Actual authority, format, full required reading and working scope |
-| C2 | Exact event/endpoint, duplicate search across minis/status/log bodies, continuous working ID |
+| C2 | Exact event/endpoint, duplicate search across minis/status/log bodies, stable local namespace/key; prompts 1–3 assign/reserve no canonical P-ID; prompt 4 performs mapped canonical allocation |
 | C3 | Candidate recipe frozen; keys unique; primary numeric p descending; supplied dispositions; ≤4 supported rows |
 | C4 | Recompute row W/P/L/V, p and result masses including draw/tie; rounding tolerance declared (normally ≤0.001); monotonicity/complements |
 | C5 | Gate alternative from declared universe, p/gap/floor arithmetic; RET03 explicitly shadow |
@@ -288,16 +298,17 @@ Pending cards get state evidence, literal original reference and next check, wit
 | C13 | EXH-v1 field-level persistent research, second-source corroboration/lineage, source/attempt/closure records; actual online window/sample/coverage and source comparison, correction/dedup ledger and point-in-time availability; no-data claimed only after actual source attempts |
 | C14 | Frozen same-row baseline and independent league-only parameters, or explicit unavailable reason |
 | C15 | Expected-score arithmetic/units/covariance and missingness; decision block/appendix complete; RESEARCH_COMPLETION_PROTOCOL A9 matrix evidenced, all applicable procedures attempted and every supplied row substantively assessed; model/administrative blockers did not terminate independent work |
-| C16 | Written card and footer read back; earlier blocks unchanged; audit has actual evidence, not just check names |
+| C16 | Complete cumulative mini/card/footer read back; earlier cores unchanged; current research/intake/manifest/local totals agree; audit has actual evidence |
 | C17 | Form windows: L5/L10/L15/L20/season/league printed per side with true n, from dated pre-cutoff games; flagged online rows excluded; blend/k/arithmetic retained as comparison diagnostics where supported; windows not counted as separate confirmations; fitted primary centre is not manually overwritten; explicit manual comparisons retain their adjustment/unadjusted pair (or HISTORICAL_DATA_UNAVAILABLE with online routes tried) |
 | C18 | Line distance (units and z, or N/A) on every ranked row; baseline coverage line present; each missing BASELINE_P uses an enumerated reason |
 | C19 | Primary runtime: actual source/fit/bundle checked; mixture weights recompute from recorded losses and η; all rows match the mixed grid, model features/limits explicit. Pricing basis: primary W/P/L and p_card derive from the actual retained mixed ML grid; manual mixtures/adjustments cannot overwrite it. Material unsupported effects mean NO_FORECAST for the affected numerical ML lane; full research still proceeds. The mandatory supported fallback comparison remains UNCALIBRATED_ANALYST_SCENARIO / NOT_PRIMARY, with analyst_p, source/assumption provenance, frozen cases/weights and separate base-only diagnostics; ε and any GATE_UNRESOLVED_PRECISION / PRECISION_TIE stated |
 | C20 | EXH-v1: no single-source stop for material player fields; missing facts/corroboration remain information-incomplete. Availability: comprehensive both-side starter/bench/absence search per ROSTER_AVAILABILITY_PROTOCOL completed with actual attempts and final recheck in A3/A8; projections, access/publication gaps and material uncertainty honest. Lifecycle: issuing writer and lease valid at append time; mini not frozen; request logged in the intake table; known-at line present; lineup state and issue-step times recorded |
-| C21 | RETAIN-v1: exact record identity and honest execution disposition/manifest; verified successful bundle only for model claims. Missing model/runtime/receipt permits research-only recording/import with blank nonexistent paths and actual reason, never a fake model probability. Retention is separate from completed-research and predictive certification |
+| C21 | RETAIN-v2: exact record identity and honest execution disposition/manifest; verified successful bundle only for model claims. Missing model/runtime/receipt permits research-only recording/import with blank nonexistent paths and actual reason, never a fake model probability. Retention is separate from completed-research and predictive certification |
+| C22 | After every prompt-1 game request, complete updated .md file linked/attached or fully supplied inline; includes earlier records, new full research and current footer. Duplicates return the complete current mini; real access/write failures return explicit BLOCKED/draft status without invented prior bytes or false write claims |
 
 ## 8. Canonical entry and rollover
 
-Keep canonical-md-1: `<!-- BEGIN CANONICAL RESEARCH P-NNN -->`, heading `## P-NNN — <sport/league/event/date>`, actual import note, original card core unchanged from Working ID through integrity receipt, then matching END. Preserve complete original mini in import inputs. The wrapper heading may differ; original core must not. Import note is metadata, never a new forecast timestamp.
+Keep canonical-md-1: `<!-- BEGIN CANONICAL RESEARCH P-NNN -->`, heading `## P-NNN — <sport/league/event/date>`, actual import note, explicit local-to-canonical mapping and original card core unchanged from Local event key (legacy Working ID) through integrity receipt, then matching END. Preserve complete original mini in import inputs. The wrapper heading may differ; original core must not. Import note is metadata, never a new forecast timestamp.
 
 Dated additions use `<!-- BEGIN RESEARCH ADDENDUM P-NNN <date>-<sequence> -->` and matching END, enclosing the entire original addendum/settlement block. Maintain a source-to-destination map, with explicit revisions; skip identical existing blocks. A canonical reference repeated in carryover is not a new card.
 
@@ -332,7 +343,8 @@ Legacy settlement markers without revision keys (mini-settlement-2 to -5) are ac
 | S14 | FROZEN_SOURCE receipt (path, raw bytes, SHA-256, block inventory) written before settlement; source growth checked at package time and any later block routed, not silently covered |
 | S15 | Every open queue item has actor, next source and field, due time with timezone, final-time basis, last attempt and scheduled-automation status; evidence strata shown in the proper-score lines |
 | S16 | Settle every retained research event whether a model existed or not; retain verified terminal targets/source/time/revision/feature status for future development. Real frozen bundles additionally support actual expert feedback; no bundle means NOT_APPLICABLE_NO_MODEL for expert losses, not exclusion of future training targets |
-| S17 | New mini-settlement-9: visible Source discovery, corroboration and reuse register; all three CSV sidecars; every required field mapped, actual alternate/independent searches and discrepancies evidenced, source reuse limits and failed routes retained, COMPLETE only with closed fields, local/shared register scope and complete readback verified. Legacy settlement-8 and older retain their own checks. |
+| S17 | New mini-settlement-10: visible Source discovery, corroboration and reuse register; all three CSV sidecars; every required field mapped, actual alternate/independent searches and discrepancies evidenced, source reuse limits and failed routes retained, COMPLETE only with closed fields, local/shared register scope and complete readback verified. Legacy settlement-8 and older retain their own checks. |
+| S18 | Local-key/source alias mappings and markers are preserved; new unimported cards remain NOT_ASSIGNED / PROMPT_4_IMPORT; known canonical references are not new allocations; final mapping deferred to prompt 4 |
 
 ## 10. Acceptance examples
 
@@ -346,11 +358,13 @@ Use [TIMING_RESEARCH_PROTOCOL](TIMING_RESEARCH_PROTOCOL.md) in the existing Timi
 
 ## 12. Primary ML/RL receipt and feedback
 
-**Research retention before model availability (RETAIN-v1).** [RESEARCH_RETENTION_PROTOCOL](RESEARCH_RETENTION_PROTOCOL.md) supersedes EXEC-v1's model prerequisite for recording/import. Write every identified researched event under its reconciled working P-ID and canonically retain it through verified import even if the model/adapter/runtime/module/baseline/calibration/receipt is absent or failed. Use RESEARCH_ONLY_NO_MODEL, explicit execution reason and blank nonexistent artifact paths; keep model p_card NOT_ESTIMATED and supported analyst_p NOT_PRIMARY. Missing ML never by itself blocks the ID or a source-backed settlement. Retain verified settled labels for future model development with source/known-at/revision/feature status; only actual frozen experts can supply Hedge losses. Never invent probabilities, execution, final scores or pregame timing. Identity/custody/write conflicts remain real blockers.
+**Research retention before model availability (RETAIN-v2).** Retain every identified researched event under its stable local event key regardless of ML/runtime/baseline/calibration availability; use RESEARCH_ONLY_NO_MODEL and an honest execution disposition when needed. Prompts 1–3 neither assign nor reserve canonical P-IDs. Prompt 1 appends the full research card to the mini, updates its intake/footer, reads back the result and returns the complete updated Markdown document after every game request. Prompt 4 alone reconciles duplicates and assigns canonical P-IDs at import, preserving local originals and a local-to-canonical map. Verified labels remain future-development candidates; only real frozen bundles supply expert feedback. See RESEARCH_RETENTION_PROTOCOL and MINI_LOG_IDENTITY_PROTOCOL. Identity/custody/write conflicts remain real blockers; missing ML does not discard research.
 
 [PRIMARY_PREDICTION_PROTOCOL](PRIMARY_PREDICTION_PROTOCOL.md) controls new model-assisted cards in existing A4/A5/A9 metadata. Existing mini-log-7 and older formats retain their format; the declared policy/version changes, never an issued core. Settlement retains the original bundle, grades original keys first, then creates a new source-backed feedback row and reconciles the effective revision inventory before future learning. The market/decision lab remains excluded.
 
 
-**Model use and mandatory running-log record (owner clarification, 16 October 2026).** Use the supported ML/RL mechanisms when they are available for the exact sport, competition and endpoint. Whether a model exists or not, assign the reconciled permanent P-ID, append the researched game card to the active running mini-log, read it back and advance its footer. A missing sport-specific model must not leave an otherwise recordable game as intake-only, unissued or without an ID. With no verified model output, record RESEARCH_ONLY_NO_MODEL, the actual reason and supported analyst work; never invent model probabilities or receipts. Carry that same P-ID through verified canonical import; do not allocate another ID. Before an authorized import, the local card may truthfully say PENDING_IMPORT; that status never cancels its ID or running-log entry. Identity/allocation conflicts, frozen or inaccessible originals and real write failures still block only the affected mutation. Verified settlements remain available for future model development in both paths.
+**Local research record and updated-document delivery (owner update, 16 October 2026).** Use a stable local event key during research and local settlement; do not assign, reserve or advance any canonical P-ID. Append the researched card regardless of model availability, update intake and the local footer, verify the full mini and return its complete updated .md file after each game request. Prompt 4 alone assigns canonical IDs after duplicate/identity reconciliation and records the immutable local-to-canonical mapping. An already assigned canonical ID remains a reference, never a new pregame allocation. Preserve issued originals and actual timing. See MINI_LOG_IDENTITY_PROTOCOL.
 
-See [RETAIN-v1](RESEARCH_RETENTION_PROTOCOL.md). This is an editorial clarification of the existing two-path behavior; no model, numerical policy or format change.
+See [RETAIN-v2](RESEARCH_RETENTION_PROTOCOL.md). This owner update changes local identity and delivery procedures; numerical model, selection and scoring formulas are unchanged.
+
+**Settlement S18 — local-to-canonical handoff.** Check local-key markers/mappings/manifest consistency; unimported new events remain NOT_ASSIGNED / PROMPT_4_IMPORT; known canonical references and legacy source aliases are distinguished. Prompt 4 supplies the final canonical mapping in new import evidence without rewriting frozen originals. Settlement-10 runs S1–S18; settlement-9 retains S1–S17; settlement-8 retains S1–S16.
