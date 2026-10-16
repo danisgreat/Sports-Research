@@ -1,8 +1,10 @@
 # Starters, bench and availability research
 
+**Persistent research and corroboration (EXH-v1).** Apply [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md) to every required field in research, logging, settlement and verification. If a source is incomplete, open alternatives and verify material facts with another independent source; track every remaining field and attempt. Unresolved facts/corroboration never qualify as complete information. New settlements use mini-settlement-9 with a visible source-discovery/reuse section, three source/attempt/closure CSVs and S17; older originals retain their rules and bytes. Consult [RESEARCH_SOURCE_REGISTER](RESEARCH_SOURCE_REGISTER.md) and prior package registers, recheck actual coverage, and continue discovery beyond them.
+
 **Online exact-game confirmation:** Open current official selection/lineup evidence for both sides and each applicable role in HISTORICAL_SOURCE_PROTOCOL §2. Record names, starter/bench/reserve/inactive designation, exact event, URL and publication/retrieval times. Compare conflicting reports as needed. Record CONFIRMED, PROJECTED, NOT_YET_PUBLISHED, UNAVAILABLE or CONFLICTING per field; retain the overall card lineup-state vocabulary. Last-game selection, season rosters and postgame participation never prove pregame confirmation. Recheck around actual release and immediately before issue.
 
-**AVAIL-2026.10.16-v3.** Mandatory for every requested game under [CURRENT_RULES §5b](CURRENT_RULES.md#5-sources-event-state-and-time), including obscure, lower-tier, women's, youth, reserve and international competitions. Source routes: [SOURCES §3.11](SOURCES.md#311-field-fallback-and-official-social-use-by-sport). This is a research procedure; it does not establish predictive improvement or guarantee that teams publish all information before a request arrives.
+**AVAIL-2026.10.16-v4.** Mandatory for every requested game under [CURRENT_RULES §5b](CURRENT_RULES.md#5-sources-event-state-and-time), including obscure, lower-tier, women's, youth, reserve and international competitions. Source routes: [SOURCES §3.11](SOURCES.md#311-field-fallback-and-official-social-use-by-sport). This is a research procedure; it does not establish predictive improvement or guarantee that teams publish all information before a request arrives.
 
 ## 1. The requirement
 
@@ -14,7 +16,7 @@ Never manufacture confirmation to avoid `LINEUP_UNCONFIRMED`. Confirmation is a 
 
 ## 2. Search every relevant route
 
-For each side and each relevant availability field, apply the following sequence. Once an authoritative exact-game field is confirmed, stop searching for duplicate proof of that field, but complete the other fields and the final late-change check. Log unavailable steps with their reason; do not pretend every step succeeded.
+For each side and each relevant availability field, apply the following sequence. After an authoritative exact-game observation, verify the material field through another independent source under RESEARCH_EXHAUSTIVENESS_PROTOCOL. Keep searching missing roles, bench/absences, conflicting values and corroboration; only a fully verified field may close. Complete the final late-change check. Log unavailable steps with their reason; do not pretend every step succeeded.
 
 1. **Resolve the competition.** Confirm official competition/season/stage, participant spelling and local aliases, game ID, date and venue timezone. Find the competition's organizer/federation site and the official pages of both teams through that organizer or their own verified domains. Registration lists, competition squads and national-team squads are context, not game selections.
 2. **Open the exact match.** Inspect the official match centre's lineup, roster/team sheet, substitutes, scratches/inactives and status tabs. Use the original team-sheet PDF or published image where that is how the competition releases selections. Read names and positions from the actual legible original; a thumbnail or search snippet is discovery only. Check the publication state/time and correct game.

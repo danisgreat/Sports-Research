@@ -1,0 +1,57 @@
+check,result,evidence
+all_untouched_tracked_files,PASS,1738 unmodified tracked-file hashes; mismatches []
+all11_owner_game_inputs,PASS,actual working game inputs unchanged byte-for-byte
+all11_standalone_workflows,PASS,new persistence instruction inside every standalone first-Read body
+sport_RULES_AFL.md,PASS,EXH-v1 applied
+sport_RULES_AMERICAN_FOOTBALL.md,PASS,EXH-v1 applied
+sport_RULES_BASEBALL.md,PASS,EXH-v1 applied
+sport_RULES_BASKETBALL.md,PASS,EXH-v1 applied
+sport_RULES_CRICKET.md,PASS,EXH-v1 applied
+sport_RULES_ICE_HOCKEY.md,PASS,EXH-v1 applied
+sport_RULES_NRL_RUGBY.md,PASS,EXH-v1 applied
+sport_RULES_RUGBY_UNION.md,PASS,EXH-v1 applied
+sport_RULES_SOCCER.md,PASS,EXH-v1 applied
+sport_RULES_TENNIS.md,PASS,EXH-v1 applied
+sport_RULES_NHL.md,PASS,EXH-v1 applied
+lifecycle_1_GAME_CARD.md,PASS,persistence/source reuse applies; task write boundaries retained
+lifecycle_2_START_LOCAL_MINI.md,PASS,persistence/source reuse applies; task write boundaries retained
+lifecycle_3_SETTLE_LOCAL_MINI.md,PASS,persistence/source reuse applies; task write boundaries retained
+lifecycle_4_CANONICAL_IMPORT.md,PASS,persistence/source reuse applies; task write boundaries retained
+lifecycle_5_START_THE_NEXT_COMBINED_LOG.md,PASS,persistence/source reuse applies; task write boundaries retained
+lifecycle_6_COMBINED_LOG_RETROSPECTIVE.md,PASS,persistence/source reuse applies; task write boundaries retained
+lifecycle_7_EXPAND_PREVIOUS_RESULTS.md,PASS,persistence/source reuse applies; task write boundaries retained
+lifecycle_8_IMPROVE_THE_FRAMEWORK.md,PASS,persistence/source reuse applies; task write boundaries retained
+current_version_CURRENT_RULES.md,PASS,current major format release18; scoring/selection unchanged
+current_version_CURRENT_STATE.md,PASS,current major format release18; scoring/selection unchanged
+current_version_METHOD.md,PASS,current major format release18; scoring/selection unchanged
+current_version_CARD_AND_LOG_TEMPLATES.md,PASS,current major format release18; scoring/selection unchanged
+current_version_research/prompts/README.md,PASS,current major format release18; scoring/selection unchanged
+new_settlement9_and_S17,PASS,new format9; old8 retains S1-S16
+schema_SOURCE_DISCOVERY_REGISTER.csv,PASS,"unique complete header, referenced by actual settlement section/prompt; no invented observations"
+schema_SOURCE_SEARCH_ATTEMPTS.csv,PASS,"unique complete header, referenced by actual settlement section/prompt; no invented observations"
+schema_REQUIREMENT_CLOSURE.csv,PASS,"unique complete header, referenced by actual settlement section/prompt; no invented observations"
+no_single_source_exceptions,PASS,old early-stop/optional corroboration exception removed
+all_research_domains,PASS,"scope covers research, model procedures, definitions, settlement and custody"
+no_false_gap_closure,PASS,attempt exhaustion and legacy labels do not turn unknown facts complete
+scope_preserved,PASS,local research cannot gain global writes/publication
+eleven_seeded_observations,PASS,all11 exact prior route observations/limitations; not newly fetched
+source_seed_honesty,PASS,dated route discovery is not source/current availability certification
+all_archived_original_bodies,PASS,44 exact base bodies; explicit wrappers preserve prior EOF blanks
+no_canonical_allocation_change,PASS,highest600 next601; all log/status/scoreboard hashes unchanged
+fixture_two_independent_matching_fields,PASS,synthetic specified rule outcome; no real external research/operational validator claimed
+fixture_single_owner_source,PASS,synthetic specified rule outcome; no real external research/operational validator claimed
+fixture_feed_mirror,PASS,synthetic specified rule outcome; no real external research/operational validator claimed
+fixture_lineage_unknown,PASS,synthetic specified rule outcome; no real external research/operational validator claimed
+fixture_wrong_event_or_endpoint,PASS,synthetic specified rule outcome; no real external research/operational validator claimed
+fixture_conflicting_values,PASS,synthetic specified rule outcome; no real external research/operational validator claimed
+fixture_partial_page,PASS,synthetic specified rule outcome; no real external research/operational validator claimed
+fixture_score_done_bench_missing,PASS,synthetic specified rule outcome; no real external research/operational validator claimed
+fixture_blocked_private_terms,PASS,synthetic specified rule outcome; no real external research/operational validator claimed
+fixture_late_source_not_pregame,PASS,synthetic specified rule outcome; no real external research/operational validator claimed
+fixture_old_route_not_rechecked,PASS,synthetic specified rule outcome; no real external research/operational validator claimed
+fixture_independent_arithmetic,PASS,synthetic specified rule outcome; no real external research/operational validator claimed
+fixture_unsupported_numeric_not_fabricated,PASS,synthetic specified rule outcome; no real external research/operational validator claimed
+fixture_real_tennis_bench_na,PASS,synthetic specified rule outcome; no real external research/operational validator claimed
+fixture_false_na_for_missing_field,PASS,synthetic specified rule outcome; no real external research/operational validator claimed
+visible_section_in_template_and_example,PASS,source section visible; example explicitly synthetic
+new_relative_links,PASS,zero missing new operating/template/report targets

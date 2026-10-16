@@ -1,5 +1,7 @@
 # Scoring and validation
 
+**Persistent research and corroboration (EXH-v1).** Apply [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md) to every required field in research, logging, settlement and verification. If a source is incomplete, open alternatives and verify material facts with another independent source; track every remaining field and attempt. Unresolved facts/corroboration never qualify as complete information. New settlements use mini-settlement-9 with a visible source-discovery/reuse section, three source/attempt/closure CSVs and S17; older originals retain their rules and bytes. Consult [RESEARCH_SOURCE_REGISTER](RESEARCH_SOURCE_REGISTER.md) and prior package registers, recheck actual coverage, and continue discovery beyond them.
+
 **SCV-2026.10.16-v11.** New views use these definitions; historical published scores remain unchanged and labelled by their original version ([v6](archive/superseded_2026-10-12/SCORING_AND_VALIDATION.md)). [CURRENT_RULES](CURRENT_RULES.md) controls claims. Fitted experimental primary models are available through PRIMARY_PREDICTION_PROTOCOL; no model is predictive-performance certified. v8 separates pre-start input quality from actual issue phase with no fixed lead deadline; prior v7 added request coverage (§1), evidence-stratified views (§2a), shadow scoring for SHADOW_RANK_DELTA and SHADOW_BASE_ONLY (§6), and deterministic revision resolution in the scoreboard (§7).
 
 ## 1. Units, probability and coverage

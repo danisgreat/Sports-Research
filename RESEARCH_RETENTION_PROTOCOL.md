@@ -1,5 +1,7 @@
 # Retain research under P-IDs independently of model availability
 
+**Persistent research and corroboration (EXH-v1).** Apply [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md) to every required field in research, logging, settlement and verification. If a source is incomplete, open alternatives and verify material facts with another independent source; track every remaining field and attempt. Unresolved facts/corroboration never qualify as complete information. New settlements use mini-settlement-9 with a visible source-discovery/reuse section, three source/attempt/closure CSVs and S17; older originals retain their rules and bytes. Consult [RESEARCH_SOURCE_REGISTER](RESEARCH_SOURCE_REGISTER.md) and prior package registers, recheck actual coverage, and continue discovery beyond them.
+
 **RETAIN-2026.10.16-v1 · MDS-2026.10.16-v17.0 · CR-2026.10.16-R1 · P-2026.10.16-v17.0 · SCV-2026.10.16-v11.** Owner instruction: store researched events under their reconciled P-IDs even when no ML/RL model, runtime, baseline or execution receipt exists, so verified settlements can support future development. Supersedes EXEC-v1's model-execution prerequisite for recording/import. It does not change the numerical PRIMARY_HEDGE_MIX_V3 policy or invent an RL agent.
 
 ## 1. Recording is independent of a numerical model
@@ -16,7 +18,7 @@ Attempt the supported primary route when it is actually available. Retain real s
 
 The existing execution-disposition manifest keeps one row per new card. For no actual attempt artifact, leave execution_path/execution_sha256 empty, set feedback_status=NOT_APPLICABLE_NO_MODEL, leave feedback paths/hashes empty and record the observed reason. Actual artifact paths, if provided, must verify. C21 passes for this honest research-only disposition. MODEL_ASSISTED_PRIMARY_V3 still requires its actual verified successful bundle. `primary verify-log` accepts this distinction for mini-log-8/9 and never approves a missing-model card as a model forecast.
 
-New minis use mini-log-9 / mini-settlement-8; earlier minis retain their original formats and new process information as dated additions. Add a future-learning disposition: PENDING_SETTLEMENT, LABEL_CANDIDATE_RETAINED, or BLOCKED_WITH_EVIDENCE, with the label/custody pointer or actual missing field. A research card's original conclusions and timestamps never change retrospectively.
+New minis use mini-log-9 / mini-settlement-9; earlier minis retain their original formats and new process information as dated additions. Add a future-learning disposition: PENDING_SETTLEMENT, LABEL_CANDIDATE_RETAINED, or BLOCKED_WITH_EVIDENCE, with the label/custody pointer or actual missing field. A research card's original conclusions and timestamps never change retrospectively.
 
 ## 3. Canonical import can precede settlement
 

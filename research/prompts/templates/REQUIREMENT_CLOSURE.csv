@@ -1,0 +1,1 @@
+requirement_id,event_id,phase,side,field,required_scope,known_at_horizon,primary_source_or_check,corroborating_source_or_check,collector_independence,comparison_result,field_status,remaining_issue,next_source,next_action,actor,due_at,automation_status

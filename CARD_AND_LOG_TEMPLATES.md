@@ -1,16 +1,18 @@
 # Card, mini, settlement and canonical formats
 
-**Online history and confirmed players (HIST-2026.10.16-v2 / AVAIL-2026.10.16-v3).** For every game, research both sides' L5/L10/L15/L20 online under [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md), with opened sources, dated game rows and true n. Seek exact-game confirmed players, starting roles, bench/replacements and absences under [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md); projected players remain unconfirmed. The retired local results store and its derived profiles are not required inputs or fallbacks. Earlier archive-first directions are superseded.
+**Persistent research and corroboration (EXH-v1).** Apply [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md) to every required field in research, logging, settlement and verification. If a source is incomplete, open alternatives and verify material facts with another independent source; track every remaining field and attempt. Unresolved facts/corroboration never qualify as complete information. New settlements use mini-settlement-9 with a visible source-discovery/reuse section, three source/attempt/closure CSVs and S17; older originals retain their rules and bytes. Consult [RESEARCH_SOURCE_REGISTER](RESEARCH_SOURCE_REGISTER.md) and prior package registers, recheck actual coverage, and continue discovery beyond them.
+
+**Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** For every game, research both sides' L5/L10/L15/L20 online under [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md), with opened sources, dated game rows and true n. Seek exact-game confirmed players, starting roles, bench/replacements and absences under [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md); projected players remain unconfirmed. The retired local results store and its derived profiles are not required inputs or fallbacks. Earlier archive-first directions are superseded.
 
 **Required repository fallback (REF-v1).** Always keep [https://github.com/danisgreat/Sports-Research/tree/main](https://github.com/danisgreat/Sports-Research/tree/main) as the standing reference. If required local files are not fully accessible (missing, unreadable, truncated or incomplete), retrieve the actual required contents from this repository before declaring them unavailable. Apply [GITHUB_REFERENCE_PROTOCOL](GITHUB_REFERENCE_PROTOCOL.md): resolve one main commit SHA, record exact files/read time and fallback results in the existing reading receipt, and preserve the declared authority mode. Never substitute an unpublished local mini, claim unread content or treat viewing code as executing it. If authorized remote access also fails, record the real gap and continue independent work.
 
-**mini-log-9 · mini-settlement-8 · canonical-md-1.** Authority: MDS-2026.10.16-v17.1 / CR-2026.10.16-R2 / SCV-2026.10.16-v11 / SEL-2026.10.12-v3. [Rules](CURRENT_RULES.md) and [selection definitions](SELECTION_RULES.md) control semantics. Previous formats: [mini-log-6 / mini-settlement-5](archive/superseded_2026-10-12/CARD_AND_LOG_TEMPLATES.md).
+**mini-log-9 · mini-settlement-9 · canonical-md-1.** Authority: MDS-2026.10.16-v18.0 / CR-2026.10.16-R3 / SCV-2026.10.16-v11 / SEL-2026.10.12-v3. [Rules](CURRENT_RULES.md) and [selection definitions](SELECTION_RULES.md) control semantics. Previous formats: [mini-log-6 / mini-settlement-5](archive/superseded_2026-10-12/CARD_AND_LOG_TEMPLATES.md).
 
 <a id="local-mini-format-mini-log-2"></a>
 
 ## 1. Compatibility
 
-Old minis finish in their original format. Never insert baselines, gates, expected scores, form windows or missing cutoffs into an old card. New dated addenda may carry unresolved status or diagnostic fields without changing its original selection/scoring version. Old numeric self-audits are interpreted against the original format, with gaps documented rather than repaired by fabrication. For new minis, use mini-log-9 / mini-settlement-8 below. Existing mini-log-2 through -8 and mini-settlement-2 through -7 remain immutable; new cards appended to an old active mini carry the execution fields and a companion manifest covering the new research records, including honest no-model rows. Run `verify-log` on the next new mini-log-9; manually reconcile the legacy/new subset with C21 in an old mini. A mini-log-6 mini still open on 2026-10-12 finishes as mini-log-6; its next mini now uses mini-log-9. Example IDs beginning EXAMPLE are not P-IDs and must never be imported.
+Old minis finish in their original format. Never insert baselines, gates, expected scores, form windows or missing cutoffs into an old card. New dated addenda may carry unresolved status or diagnostic fields without changing its original selection/scoring version. Old numeric self-audits are interpreted against the original format, with gaps documented rather than repaired by fabrication. For new minis, use mini-log-9 / mini-settlement-9 below. Existing mini-log-2 through -8 and mini-settlement-2 through -8 remain immutable; new cards appended to an old active mini carry the execution fields and a companion manifest covering the new research records, including honest no-model rows. Run `verify-log` on the next new mini-log-9; manually reconcile the legacy/new subset with C21 in an old mini. A mini-log-6 mini still open on 2026-10-12 finishes as mini-log-6; its next mini now uses mini-log-9. Example IDs beginning EXAMPLE are not P-IDs and must never be imported.
 
 **What mini-log-7 adds:**
 - **Authority and lifecycle:** authority mode (R09), writer lease (R15), frozen-status pointer (R16), request intake (R22), executable queue fields (R38).
@@ -149,7 +151,7 @@ For new primary cards include PRIMARY_PREDICTION_PROTOCOL receipt: exact runtime
 #### A8. Sources, failures, capture/refresh plan
 #### A9. Integrity receipt and readback
 
-Include the mandatory [research-completion matrix](RESEARCH_COMPLETION_PROTOCOL.md#4-completion-receipt-and-return) with actual evidence/outcomes for every procedure, every supplied row and all seven sport steps. Report research coverage, numerical ML availability and issuance status separately. COMPLETE_WITH_DOCUMENTED_GAPS requires completed applicable attempts and full analysis, not just missing-field labels. An unattempted applicable step means INCOMPLETE; retain completed work. A blocked mini write returns a complete no-ID A1–A9 draft without invented original mini bytes.
+Include the mandatory [research-completion matrix](RESEARCH_COMPLETION_PROTOCOL.md#4-completion-receipt-and-return) with actual evidence/outcomes for every procedure, every supplied row and all seven sport steps. Report research coverage, numerical ML availability and issuance status separately. New-run COMPLETE requires verified field closure under RESEARCH_EXHAUSTIVENESS_PROTOCOL; completed attempts with missing facts/corroboration remain INFORMATION_INCOMPLETE. COMPLETE_WITH_DOCUMENTED_GAPS is retained only in historical originals. An unattempted applicable step means INCOMPLETE; retain completed work. A blocked mini write returns a complete no-ID A1–A9 draft without invented original mini bytes.
 SPORTS_ONLY_MARKET_BLIND: <result> · OUTCOME_EXPOSURE: <actual state> · SETTLEMENT: NOT_PERFORMED · CANONICAL_IMPORT: PENDING
 <!-- END CARD P-NNN -->
 ```
@@ -201,16 +203,31 @@ Map each row to quantity, unit, provider, exact field, period, action/void rule 
 
 ## 6. Settlement package
 
-Folder `Mini Settlement - <FIRST> to <LAST> - <date>/`: ORIGINAL_MINI (exact copy), PREDICTION_MINI_SETTLED file, LOCAL_ID_MAPPING.md, UNRESOLVED_CARRYOVER.md, SETTLEMENT_MANIFEST.md. Settled file = frozen bytes followed by the section below; on later runs preserve the earlier settled file and append a versioned revision in a new output, never overwrite it.
+Folder `Mini Settlement - <FIRST> to <LAST> - <date>/`: ORIGINAL_MINI (exact copy), PREDICTION_MINI_SETTLED file, LOCAL_ID_MAPPING.md, UNRESOLVED_CARRYOVER.md, SETTLEMENT_MANIFEST.md, SOURCE_DISCOVERY_REGISTER.csv, SOURCE_SEARCH_ATTEMPTS.csv and REQUIREMENT_CLOSURE.csv. Settled file = frozen bytes followed by the section below; on later runs preserve the earlier settled file and append a versioned revision in a new output, never overwrite it.
 
 ```markdown
 # SETTLEMENT AND RETROSPECTIVES
-<!-- SETTLEMENT-FORMAT: mini-settlement-8 -->
+<!-- SETTLEMENT-FORMAT: mini-settlement-9 -->
 Authority/read time: <actual receipt, including authority mode>
 Frozen original: <path; byte/line counts if measured; exact-prefix comparison result>
 FROZEN_SOURCE receipt: <source path; raw byte count; SHA-256 of raw bytes; block inventory (card IDs, addenda keys); freeze time; writer hand-over to <next mini or NONE>>
 Source growth check: <at package time the source still has the frozen byte count, or GROWTH_DETECTED: blocks after the snapshot and where they were routed>
 Inventory: <cards/carryovers/addenda; pending and unresolved separately>
+
+## Source discovery, corroboration and reuse register
+
+Information completion: <COMPLETE only if every required field is closed under EXH-v1; otherwise INFORMATION_INCOMPLETE with exact remaining fields>
+Requirement closure: <REQUIREMENT_CLOSURE.csv; all events, sides, contracts, procedures, corroboration and custody covered>
+Source attempts: <SOURCE_SEARCH_ATTEMPTS.csv; actual queries/routes, partial/failed accesses, fields found and next actions>
+Reusable source observations: <SOURCE_DISCOVERY_REGISTER.csv; all used/rechecked/new sources, stable IDs, scope and dated observations>
+Shared/prior registers consulted: <exact files/source IDs actually opened; fresh checks, discoveries and candidate shared additions; no claim of silent shared writes>
+
+| Source ID / exact scope | URL / navigation / language | Fields observed and still missing | Publisher / collector / independent corroboration IDs | Publication / retrieval / last check | Evidence path/hash / access / reuse limits / next route |
+|---|---|---|---|---|---|
+<one truthful row per source observation; failures and unsupported reuse stay visible; no invented sources or independence>
+
+<For every remaining information requirement: event/side/field, primary/second-source or independent check, status/conflict/lineage, actual attempted routes, next source/action, actor/due time and real automation status. Incomplete facts never become COMPLETE by exhausting attempts.>
+
 
 <!-- BEGIN SETTLEMENT P-NNN revision-1 -->
 ### Settlement · P-NNN · <event> · <actual review time>
@@ -219,6 +236,7 @@ Inventory: <cards/carryovers/addenda; pending and unresolved separately>
 **Original card / prior revision:** <source pointers>
 **Final event / verified final time:** <facts, endpoint, sources; unknown explicit>
 **Definition status:** <sporting convention; operator verified/unknown separately>
+**Requirement/source closure:** <required fields; primary/corroborating source IDs or independent check; COMPLETE or INFORMATION_INCOMPLETE; unresolved facts and next routes; registry/attempt sidecars>
 **Expected vs final:** <frozen expected, observed, error and z or precise missing reason>
 
 | Rank | Exact original proposition | Original p_card | Original BASELINE_P | Grade | Evidence | Counts toward wins | Basis / definition / time |
@@ -267,14 +285,14 @@ Pending cards get state evidence, literal original reference and next check, wit
 | C10 | Contract definitions, field capture and actual scheduling status |
 | C11 | Timing protocol: evidence horizon = game-log scheduled start (no separate cutoff), independent retrieval/completion/issue/state; no fixed deadline; pre-start input proof and actual issue phase separate; honest outcome exposure |
 | C12 | Market blindness, supported evidence with times, lineage unknowns |
-| C13 | Actual online window/sample/coverage and source comparison, correction/dedup ledger and point-in-time availability; no-data claimed only after actual source attempts |
+| C13 | EXH-v1 field-level persistent research, second-source corroboration/lineage, source/attempt/closure records; actual online window/sample/coverage and source comparison, correction/dedup ledger and point-in-time availability; no-data claimed only after actual source attempts |
 | C14 | Frozen same-row baseline and independent league-only parameters, or explicit unavailable reason |
 | C15 | Expected-score arithmetic/units/covariance and missingness; decision block/appendix complete; RESEARCH_COMPLETION_PROTOCOL A9 matrix evidenced, all applicable procedures attempted and every supplied row substantively assessed; model/administrative blockers did not terminate independent work |
 | C16 | Written card and footer read back; earlier blocks unchanged; audit has actual evidence, not just check names |
 | C17 | Form windows: L5/L10/L15/L20/season/league printed per side with true n, from dated pre-cutoff games; flagged online rows excluded; blend/k/arithmetic retained as comparison diagnostics where supported; windows not counted as separate confirmations; fitted primary centre is not manually overwritten; explicit manual comparisons retain their adjustment/unadjusted pair (or HISTORICAL_DATA_UNAVAILABLE with online routes tried) |
 | C18 | Line distance (units and z, or N/A) on every ranked row; baseline coverage line present; each missing BASELINE_P uses an enumerated reason |
 | C19 | Primary runtime: actual source/fit/bundle checked; mixture weights recompute from recorded losses and η; all rows match the mixed grid, model features/limits explicit. Pricing basis: primary W/P/L and p_card derive from the actual retained mixed ML grid; manual mixtures/adjustments cannot overwrite it. Material unsupported effects mean NO_FORECAST for the affected numerical ML lane; full research still proceeds. The mandatory supported fallback comparison remains UNCALIBRATED_ANALYST_SCENARIO / NOT_PRIMARY, with analyst_p, source/assumption provenance, frozen cases/weights and separate base-only diagnostics; ε and any GATE_UNRESOLVED_PRECISION / PRECISION_TIE stated |
-| C20 | Availability: comprehensive both-side starter/bench/absence search per ROSTER_AVAILABILITY_PROTOCOL completed with actual attempts and final recheck in A3/A8; projections, access/publication gaps and material uncertainty honest. Lifecycle: issuing writer and lease valid at append time; mini not frozen; request logged in the intake table; known-at line present; lineup state and issue-step times recorded |
+| C20 | EXH-v1: no single-source stop for material player fields; missing facts/corroboration remain information-incomplete. Availability: comprehensive both-side starter/bench/absence search per ROSTER_AVAILABILITY_PROTOCOL completed with actual attempts and final recheck in A3/A8; projections, access/publication gaps and material uncertainty honest. Lifecycle: issuing writer and lease valid at append time; mini not frozen; request logged in the intake table; known-at line present; lineup state and issue-step times recorded |
 | C21 | RETAIN-v1: exact record identity and honest execution disposition/manifest; verified successful bundle only for model claims. Missing model/runtime/receipt permits research-only recording/import with blank nonexistent paths and actual reason, never a fake model probability. Retention is separate from completed-research and predictive certification |
 
 ## 8. Canonical entry and rollover
@@ -314,8 +332,11 @@ Legacy settlement markers without revision keys (mini-settlement-2 to -5) are ac
 | S14 | FROZEN_SOURCE receipt (path, raw bytes, SHA-256, block inventory) written before settlement; source growth checked at package time and any later block routed, not silently covered |
 | S15 | Every open queue item has actor, next source and field, due time with timezone, final-time basis, last attempt and scheduled-automation status; evidence strata shown in the proper-score lines |
 | S16 | Settle every retained research event whether a model existed or not; retain verified terminal targets/source/time/revision/feature status for future development. Real frozen bundles additionally support actual expert feedback; no bundle means NOT_APPLICABLE_NO_MODEL for expert losses, not exclusion of future training targets |
+| S17 | New mini-settlement-9: visible Source discovery, corroboration and reuse register; all three CSV sidecars; every required field mapped, actual alternate/independent searches and discrepancies evidenced, source reuse limits and failed routes retained, COMPLETE only with closed fields, local/shared register scope and complete readback verified. Legacy settlement-8 and older retain their own checks. |
 
 ## 10. Acceptance examples
+
+Current settlement-9 structure: [synthetic source-section example](research/prompts/examples/EXAMPLE_SOURCE_REGISTER_SETTLEMENT_9.md). CSV headers: [discovery](research/prompts/templates/SOURCE_DISCOVERY_REGISTER.csv), [attempts](research/prompts/templates/SOURCE_SEARCH_ATTEMPTS.csv), [closure](research/prompts/templates/REQUIREMENT_CLOSURE.csv). These are not live evidence.
 
 Current retention examples: [research-only lifecycle](research/prompts/examples/RESEARCH_ONLY_LIFECYCLE.md). Previous mini-log-8 / mini-settlement-7 execution examples (execution prerequisite superseded for new research retention): [execution lifecycle](research/prompts/examples/ML_EXECUTION_LIFECYCLE.md). Preserved historical manual structural examples (mini-log-7 / mini-settlement-6): [active](research/prompts/examples/EXAMPLE_ACTIVE_MINI.md), [settled](research/prompts/examples/EXAMPLE_SETTLED_MINI.md); the v10 pair is in [legacy_mini_log_6/](research/prompts/examples/legacy_mini_log_6/EXAMPLE_ACTIVE_MINI.md). Worked checks and negative fixtures: [v11 fixtures F01–F32](research/verification/framework_change_2026-10-12-1/FIXTURES.md), [v10 verification](research/verification/framework_change_2026-10-11-1/VERIFICATION_REPORT.md). They are synthetic documentation tests, not sports forecasts or prospective evidence.
 

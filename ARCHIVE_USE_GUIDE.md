@@ -1,6 +1,8 @@
 # Online form calculations and evidence checks
 
-**HIST-2026.10.16-v2.** This compatibility filename now describes calculations on source-reviewed online rows. It requires no local results archive. [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md) governs mandatory L5/L10/L15/L20 internet research and [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md) governs confirmed players. Old coverage counts/defect tables are historical only.
+**Persistent research and corroboration (EXH-v1).** Apply [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md) to every required field in research, logging, settlement and verification. If a source is incomplete, open alternatives and verify material facts with another independent source; track every remaining field and attempt. Unresolved facts/corroboration never qualify as complete information. New settlements use mini-settlement-9 with a visible source-discovery/reuse section, three source/attempt/closure CSVs and S17; older originals retain their rules and bytes. Consult [RESEARCH_SOURCE_REGISTER](RESEARCH_SOURCE_REGISTER.md) and prior package registers, recheck actual coverage, and continue discovery beyond them.
+
+**HIST-2026.10.16-v3.** This compatibility filename now describes calculations on source-reviewed online rows. It requires no local results archive. [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md) governs mandatory L5/L10/L15/L20 internet research and [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md) governs confirmed players. Old coverage counts/defect tables are historical only.
 
 ## Recipe R2: form windows
 
@@ -51,6 +53,6 @@ R2 arithmetic is retained as a disclosed team-form diagnostic. PRIMARY_PREDICTIO
 
 ## Evidence receipt and integrity
 
-Use the existing Archive check field as `ONLINE_HISTORY: <source URLs/evidence paths; rows read; dates; L5/L10/L15/L20 true n; exclusions; unresolved gaps>`. Its name is retained for format compatibility, not a folder-scan requirement. A3 carries row evidence. Settlement uses the official exact-game result and source comparison where needed. Retrospectives preserve original evidence and may add separately sourced comparisons.
+Use the existing Archive check field as `ONLINE_HISTORY: <source URLs/evidence paths; rows read; dates; L5/L10/L15/L20 true n; exclusions; unresolved gaps>`. Its name is retained for format compatibility, not a folder-scan requirement. A3 carries row evidence. Settlement uses the official exact-game result and mandatory independent source corroboration. Retrospectives preserve original evidence and may add separately sourced comparisons.
 
 Deduplicate IDs/reschedules/aliases; distinguish observed zero and unknown. Check score/period/total equations under actual era/endpoint without invented balancing values. Separate event, available and capture times. Classify fields OBSERVED, DERIVED, MISSING or CONFLICTING. Suspicious constants require source review. Prompt 7 applies only to explicitly authorized rebuild destinations, never implicit recreation.

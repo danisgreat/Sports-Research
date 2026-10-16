@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-16 — persistent all-field sourcing and settlement source reuse (v18.0 / CR-R3)
+
+FORMAT + PROCEDURE. EXH-v1 requires alternative-source pursuit for every missing research/log/settlement field, independent second-source verification, field-level attempts/closure and truthful INFORMATION_INCOMPLETE when a real gap survives. Single-authoritative-source early stops are superseded; process exhaustion never closes a fact. New mini-settlement-9 adds a visible Source discovery, corroboration and reuse register, three CSVs and S17. Mini-log-9, scoring11, selection3 and numerical policies unchanged.
+
+All sport rules and eight prompts are aligned; eleven populated prompt1 input blocks remain exact. RESEARCH_SOURCE_REGISTER seeds eleven previously opened, preserved observations, not re-fetched/certified here. Coverage, failed routes, unknown lineage, fresh checks and shared-write boundaries remain explicit. No legacy card/settlement/report/ID/grade is retrofitted or resolved. [Implementation](research/verification/framework_change_2026-10-16-4/IMPLEMENTATION.md).
+
+
 ## 2026-10-16 — complete P-590-P-600 legacy settlement import and prompt alignment
 
 Four new canonical originals P-597-P-600, seven exact existing skips, one P-590 source addendum, eleven revision-1 sporting reviews; highest P-600 / next P-601. Full1925672-byte prior Part7 prefix and all original cores preserved. Source cohort23W/21L/2 unknown-definition rows remains conditional sporting diagnostics, no operator or primary-model certification. All37 analyst diagnostic calculations checked without model promotion; old queues/timing/source gaps retained. P-596 existing canonical retention core captured separately, never the missing earlier full draft. Full report: [import](research/verification/mini_import_P-590_P-600_2026-10-16-1/CANONICAL_IMPORT_REPORT.md).
