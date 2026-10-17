@@ -1,0 +1,8 @@
+check_id,check,method,result,evidence
+V01,Archive copies match recorded hashes,sha256 of 19 archived originals vs ARCHIVE_HASHES.csv,PASS,archive/superseded_2026-10-17-2/ARCHIVE_HASHES.csv
+V02,No new broken relative links,links in 12 edited or new documents compared with archived originals (URL-decoded),PASS,implementation link resolves once this folder exists
+V03,Protected records unchanged,git status limited to the declared controls; prompts; .gitattributes; new protocol; archive and this folder,PASS,peer untracked nba-gap-fill folder not staged
+V04,Prompt-1 owner game blocks unchanged,11 Upcoming blocks extracted from archived and edited prompt 1 and compared,PASS,11 of 11 identical
+V05,Prompt consistency,python -m pytest ml/tests/test_prompt_consistency.py -q,PASS,24 passed
+V06,Full suite,python -m pytest ml/tests -q,PASS,432 passed in 278.40 s
+V07,No CR bytes or control characters in edited controls,byte scan of every edited Markdown file,PASS,0 CR; 0 control characters

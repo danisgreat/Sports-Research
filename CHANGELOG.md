@@ -1,3 +1,15 @@
+# Google Drive exchange and mirror (DRIVE-v1) — 17 October 2026
+
+## 2026-10-17 — MDS/P v20.2 / CR-2026.10.17-R2 / DRIVE-v1
+
+PROCEDURE, owner instruction. The owner's Google Drive folder `1ChlwkiOvd8c4MTaLC5BvkLniWogrm8Lj` may now be used to upload changes, prompts 1 and 2 may refer to it, and every authorised publication goes to GitHub and then to the Drive mirror. New [GOOGLE_DRIVE_EXCHANGE_PROTOCOL](GOOGLE_DRIVE_EXCHANGE_PROTOCOL.md):
+- **Reading.** GitHub `main` stays authoritative. A Drive mirror copy is used only when `DRIVE_SYNC_RECEIPT.md` lists it as current. An uploaded but uncommitted mini, runtime pack or attempt may be used after identity and custody checks.
+- **Uploading.** A session that cannot push writes complete files with an `UPLOAD_MANIFEST.md` to `uploads/<date>/<label>/`. An upload is not a commit, freeze or publication.
+- **Importing.** A checkout session imports uploads through the normal gates, then renames the upload folder `__IMPORTED_<sha>`.
+- **Publishing.** Every push is followed by mirroring the committed bytes to Drive and rewriting `DRIVE_SYNC_RECEIPT.md`. Files that could not be mirrored are listed, and their stale copies are moved aside.
+
+A DRIVE-v1 paragraph sits beside REF-v1 in CURRENT_RULES §0, CURRENT_STATE, README, PROMPTS, ACTIVE_FILE_INDEX, CONTRIBUTING and COMMON_OPERATING_PROTOCOL; prompts 1 and 2 gain their own header paragraph and a one-clause mode change, and GITHUB_REFERENCE_PROTOCOL steps 5–6 point to Drive. Suite version in every prompt; DEPENDENCY_MAP rows for prompts 1, 2 and COMMON. Owner-entered prompt-1 game blocks are unchanged. No model, scoring, selection, ID, grade or format change. [Implementation](research/verification/framework_change_2026-10-17-2/IMPLEMENTATION.md).
+
 # Browser-chat execution (CHAT-EXEC-v1) — 17 October 2026
 
 ## 2026-10-17 — MDS/P v20.1 / CR-2026.10.17-R1 / CHAT-EXEC-v1
