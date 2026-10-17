@@ -1,0 +1,110 @@
+source,stat,definition
+BASKETBALL_REFERENCE,BREF_PROVIDER_FG3_PCT,Basketball-Reference game-basic Team Totals; provider percentages are labelled fractions
+BASKETBALL_REFERENCE,BREF_PROVIDER_FG_PCT,Basketball-Reference game-basic Team Totals; provider percentages are labelled fractions
+BASKETBALL_REFERENCE,BREF_PROVIDER_FT_PCT,Basketball-Reference game-basic Team Totals; provider percentages are labelled fractions
+CBS_SPORTS,CBS_PROVIDER_3P_PCT,Provider percentage scale 0-100
+CBS_SPORTS,CBS_PROVIDER_FG_PCT,Provider percentage scale 0-100
+CBS_SPORTS,CBS_PROVIDER_FT_PCT,Provider percentage scale 0-100
+CBS_SPORTS,CBS_PROVIDER_TOTAL_REB,Provider Turnovers is not promoted to total TOV; Total Rebounds includes separately reported team rebounds
+CBS_SPORTS,CBS_PROVIDER_TURNOVERS,Provider Turnovers is not promoted to total TOV; Total Rebounds includes separately reported team rebounds
+ESPN_CORE,2PA,The number of 2-point field goals attempted for a team or player.
+ESPN_CORE,2PM,The number of 2-point field goals made for a team or player.
+ESPN_CORE,3PA,The number of times a 3pt field goal was attempted.
+ESPN_CORE,3PM,The number of times a 3pt field goal was made.
+ESPN_CORE,AST,"The number of times a player who passes the ball to a teammate in a way that leads to a score by field goal, meaning that he or she was ""assisting"" in the basket. There is some judgment involved in deciding whether a passer should be credited with an assist."
+ESPN_CORE,BLK,"Short for blocked shot, number of times when a defensive player legally deflects a field goal attempt from an offensive player."
+ESPN_CORE,DRB,The number of times when the defense obtains the possession of the ball after a missed shot by the offense.
+ESPN_CORE,ESPN_CORE_PROVIDER_ASSISTTURNOVERRATIO,The average number of assists a player or team records per turnover
+ESPN_CORE,ESPN_CORE_PROVIDER_AVG48ASSISTS,The average number of assists per 48 minutes.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVG48BLOCKS,The average number of blocks per 48 minutes.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVG48DEFENSIVEREBOUNDS,The average number of defensive rebounds per 48 minutes.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVG48DISQUALIFICATIONS,The average number of disqualifications per 48 minutes.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVG48EJECTIONS,The average number of ejections per 48 minutes.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVG48FIELDGOALSATTEMPTED,The average number of fieldgoals attempted per 48 minutes.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVG48FIELDGOALSMADE,The average number of fieldgoals made per 48 minutes.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVG48FLAGRANTFOULS,The average number of flagrant fouls committed per 48 minutes.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVG48FOULS,The average number of fouls committed per 48 minutes.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVG48FREETHROWSATTEMPTED,The average number of free throws attempted per 48 minutes.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVG48FREETHROWSMADE,The average number of Free Throws made per 48 minutes.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVG48OFFENSIVEREBOUNDS,The average number of offenseive rebounds per 48 minutes.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVG48POINTS,The average number of points scored per 48 minutes.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVG48REBOUNDS,The average number of rebounds per 48 minutes.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVG48STEALS,The average number of steals per 48 minutes.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVG48TECHNICALFOULS,The average number of technical fouls committed per 48 minutes.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVG48THREEPOINTFIELDGOALSATTEMPTED,The average number of 3-pointers attempted per 48 minutes.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVG48THREEPOINTFIELDGOALSMADE,The average per number of 3-Pointers made per 48 minutes.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVG48TURNOVERS,The average number of turnovers per 48 minutes.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVGASSISTS,The average assists per game.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVGBLOCKS,The average blocks per game.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVGDEFENSIVEREBOUNDS,The average defensive rebounds per game.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVGDISQUALIFICATIONS,The average number of disqualifications per game.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVGEJECTIONS,The average ejections per game.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVGESTIMATEDPOSSESSIONS,The average number of estimated possessions per game for a team or player.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVGFIELDGOALSATTEMPTED,The average field goals attempted per game.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVGFIELDGOALSMADE,The average field goals made per game.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVGFLAGRANTFOULS,The average number of flagrant fouls per game.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVGFOULS,The average fouls committed per game.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVGFREETHROWSATTEMPTED,The average free throw shots attempted per game.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVGFREETHROWSMADE,The average free throw shots made per game.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVGMINUTES,The average number of minutes per game.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVGOFFENSIVEREBOUNDS,The average offensive rebounds per game.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVGPOINTS,The average number of points scored per game.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVGREBOUNDS,The average rebounds per game.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVGSTEALS,The average steals per game.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVGTEAMREBOUNDS,The average number of rebounds for a team per game.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVGTEAMTURNOVERS,The average number of turnovers for a team per game.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVGTECHNICALFOULS,The average number of technical fouls per game.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVGTHREEPOINTFIELDGOALSATTEMPTED,The average three point field goals attempted per game.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVGTHREEPOINTFIELDGOALSMADE,The average three point field goals made per game.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVGTOTALTURNOVERS,The average number of total turnovers for a team per game.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVGTURNOVERS,The average turnovers committed per game.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVGTWOPOINTFIELDGOALSATTEMPTED,The number of 2-point field goals attempted per game for a team or player.
+ESPN_CORE,ESPN_CORE_PROVIDER_AVGTWOPOINTFIELDGOALSMADE,The number of 2-point field goals made per game for a team or player.
+ESPN_CORE,ESPN_CORE_PROVIDER_BLOCKFOULRATIO,The average number of blocks a player or record per foul committed.
+ESPN_CORE,ESPN_CORE_PROVIDER_BRICKINDEX,How many points a player costs his team with his shooting compared with the league average on a per-40-minute basis. ((52.8 - TS%) x (FGA + (FTA x 0.44))) / (Min/40) .
+ESPN_CORE,ESPN_CORE_PROVIDER_DISQUALIFICATIONS,The number of times a player reached the foul limit.
+ESPN_CORE,ESPN_CORE_PROVIDER_DOUBLEDOUBLE,"The number of times double digit values were accumulated in 2 of the following categories: points, rebounds, assists, steals, and blocked shots"
+ESPN_CORE,ESPN_CORE_PROVIDER_EJECTIONS,The number of times a player or coach is removed from the game as a result of a serious offense.
+ESPN_CORE,ESPN_CORE_PROVIDER_ESTIMATEDPOSSESSIONS,An estimation of the number of possessions for a team or player.
+ESPN_CORE,ESPN_CORE_PROVIDER_FASTBREAKPOINTS,The number of points scored on fast breaks.
+ESPN_CORE,ESPN_CORE_PROVIDER_FIELDGOALPCT,The ratio of field goals made to field goals attempted: FGM / FGA
+ESPN_CORE,ESPN_CORE_PROVIDER_FIELDGOALS,Field Goal makes and attempts.
+ESPN_CORE,ESPN_CORE_PROVIDER_FLAGRANTFOULS,The number of fouls that the officials thought were unnecessary or excessive.
+ESPN_CORE,ESPN_CORE_PROVIDER_FREETHROWPCT,The ratio of free throws made to free throws attempted: FTM / FTA
+ESPN_CORE,ESPN_CORE_PROVIDER_FREETHROWS,Free Throw makes and attempts.
+ESPN_CORE,ESPN_CORE_PROVIDER_GAMESPLAYED,Games Played
+ESPN_CORE,ESPN_CORE_PROVIDER_GAMESSTARTED,The number of games started by an athlete.
+ESPN_CORE,ESPN_CORE_PROVIDER_LARGESTLEAD,Largest amount of points this team lead by at any one time.
+ESPN_CORE,ESPN_CORE_PROVIDER_LEADCHANGES,Amount of Lead Changes during the game.
+ESPN_CORE,ESPN_CORE_PROVIDER_LEADPERCENTAGE,Percentage of time the team lead during the game.
+ESPN_CORE,ESPN_CORE_PROVIDER_NBARATING,"Custom formula to rate the performance of a player based on points, assists, steals, blocks, turnovers, rebounds, three pointers, and free throws"
+ESPN_CORE,ESPN_CORE_PROVIDER_OFFENSIVEREBOUNDPCT,The percentage of the number of times they obtain the possession of the ball after a missed shot.
+ESPN_CORE,ESPN_CORE_PROVIDER_POINTSINPAINT,"The amount of points scored in the area known as ""the Paint""(the rectangle between the foul line and the baseline)."
+ESPN_CORE,ESPN_CORE_PROVIDER_POINTSPERESTIMATEDPOSSESSIONS,The number of points per estimated possession for a team or player
+ESPN_CORE,ESPN_CORE_PROVIDER_REBOUNDS,The total number of rebounds (offensive and defensive).
+ESPN_CORE,ESPN_CORE_PROVIDER_SCORINGEFFICIENCY,The efficiency with which a team or player scores the basketball.
+ESPN_CORE,ESPN_CORE_PROVIDER_SHOOTINGEFFICIENCY,The efficiency with which a team or player shoots the basketball.
+ESPN_CORE,ESPN_CORE_PROVIDER_STEALFOULRATIO,The average number of steals a player or team records per foul committed.
+ESPN_CORE,ESPN_CORE_PROVIDER_STEALTURNOVERRATIO,The number of steals per turnover
+ESPN_CORE,ESPN_CORE_PROVIDER_TEAMASSISTTURNOVERRATIO,The number of assists per turnover for a team
+ESPN_CORE,ESPN_CORE_PROVIDER_TECHNICALFOULS,The number of times an player or coach was called for a technical foul (unsportsmanlike conduct or violations).
+ESPN_CORE,ESPN_CORE_PROVIDER_THREEPOINTFIELDGOALPCT,The ratio of 3pt field goals made to 3pt field goals attempted: 3PM / 3PA.
+ESPN_CORE,ESPN_CORE_PROVIDER_THREEPOINTPCT,The ratio of 3pt field goals made to 3pt field goals attempted: 3PM / 3PA.
+ESPN_CORE,ESPN_CORE_PROVIDER_TOTALTECHNICALFOULS,The total number of technical fouls for a team or player
+ESPN_CORE,ESPN_CORE_PROVIDER_TRIPLEDOUBLE,"The number of times double digit values were accumulated in 3 of the following categories: points, rebounds, assists, steals, and blocked shots"
+ESPN_CORE,ESPN_CORE_PROVIDER_TURNOVERPOINTS,The amount of points resulting from the possession following a turnover.
+ESPN_CORE,ESPN_CORE_PROVIDER_TWOPOINTFIELDGOALPCT,The percentage of 2-points fields goals made by a team or player.
+ESPN_CORE,ESPN_CORE_PROVIDER_VORP,Value Over Replacement Player.
+ESPN_CORE,FGA,The number of times a 2pt field goal was attempted.
+ESPN_CORE,FGM,The number of times a 2pt field goal was made.
+ESPN_CORE,FTA,The number of times a free throw was attempted.
+ESPN_CORE,FTM,The number of times a free throw was made.
+ESPN_CORE,ORB,The number of times when the offense obtains the possession of the ball after a missed shot.
+ESPN_CORE,PF,The number of times a player had illegal contact with the opponent.
+ESPN_CORE,PLAYER_TOV,The number of times a player loses possession to the other team.
+ESPN_CORE,PTS,The number of points scored.
+ESPN_CORE,REB,The total number of rebounds for a team or player
+ESPN_CORE,STL,The number of times a defensive player forced a turnover by intercepting or deflecting a pass or a dribble of an offensive player.
+ESPN_CORE,TEAM_TOV,The number of turnovers for the team.
+ESPN_CORE,TOV,The number of turnovers plus team turnovers for the team.
+NBA_WEB,TOV,Explicit postgameCharts.turnoversTotal; team/player components retained separately
