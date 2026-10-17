@@ -1,0 +1,8 @@
+check_id,check,method,result,evidence
+V01,Archive copies match recorded hashes,sha256 of 19 archived originals vs ARCHIVE_HASHES.csv,PASS,archive/superseded_2026-10-17-4/ARCHIVE_HASHES.csv
+V02,No new broken relative links,links in every edited document compared with archived originals; new protocol links resolved,PASS,implementation link resolves once this folder exists
+V03,Prompt-1 owner game blocks unchanged,11 Upcoming blocks extracted from archived and edited prompt 1 and compared,PASS,11 of 11 identical
+V04,External-chat prompts read-only and pinned to latest main,test_external_chat_prompts_are_read_only_and_pinned_to_latest_main on prompts 1/2/3,PASS,3 passed
+V05,Prompt 4 intake present,test_prompt4_is_the_intake_point_for_external_chat_output,PASS,1 passed
+V06,Prompt consistency after final wording fixes,python -m pytest ml/tests/test_prompt_consistency.py -q,PASS,32 passed
+V07,Full suite,python -m pytest ml/tests -q,PASS,442 passed in 311.38 s

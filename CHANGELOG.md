@@ -1,3 +1,18 @@
+# Execution environments: prompts 1–3 external chat, prompts 4–8 here (ENV-v1) — 17 October 2026
+
+## 2026-10-17 — MDS/P v22.0 / CR-2026.10.17-R4 / ENV-v1
+
+FORMAT + PROCEDURE, owner instruction: prompts 1, 2 and 3 run in an external chat with internet access and access to the GitHub repository; prompts 4–8 run here. New [EXECUTION_ENVIRONMENT_PROTOCOL](EXECUTION_ENVIRONMENT_PROTOCOL.md):
+- **Who runs what.** Prompts 1–3 are EXTERNAL_CHAT: latest `main` pinned by SHA; no code, writes, hashes or local controls. Prompts 4–8 are REPOSITORY_AGENT with LOCAL_WORKING_TREE.
+- **Reading.** External chats resolve and read the repository through raw GitHub URLs at the pinned SHA, within a per-prompt reading budget of named sections (one sport workflow, not all eleven). The full control set, about 276,000 tokens for one card, is more than a chat can hold.
+- **Prompt 1 delivery.** The new card, intake row and replacement footer, with placement instructions. The full mini comes back too only when it fits without truncation (FULL_MINI or CARD_DELTA; C22 updated). A real 11-card mini was about 80,000 tokens.
+- **Prompt 2** returns the new mini.
+- **Prompt 3** returns a settlement document that names the frozen mini and its inventory. Its byte count and SHA-256 are PENDING_PROMPT_4; source tables are Markdown.
+- **Prompt 4** gains "0. External-chat intake": assemble card deltas, compute bytes and SHA-256, complete FROZEN_SOURCE, join PREDICTION_MINI_SETTLED, run a structural check, save CSV sidecars and report defects.
+- **Where it is stated.** CURRENT_RULES §0 authority modes, §1 reading gate and §8 freezing; the COMMON task table; the prompt index receipt gains an Environment line.
+- **Tests** require EXTERNAL_CHAT, latest `main` and the protocol in prompts 1–3, forbid local-authority and file-write phrases there, and require prompt 4's intake.
+- **Unchanged.** Owner game blocks (11/11), probabilities, selection, scoring, IDs and records. Originals are archived in `archive/superseded_2026-10-17-4/`. [Implementation](research/verification/framework_change_2026-10-17-4/IMPLEMENTATION.md).
+
 # No-code game research; ML/RL moved to prompts 6 and 8 (MLSCOPE-v1) — 17 October 2026
 
 ## 2026-10-17 — MDS/P v21.0 / CR-2026.10.17-R3 / MLSCOPE-v1 / NOCODE-v1 / DRIVE-v2

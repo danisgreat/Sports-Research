@@ -82,3 +82,19 @@ def test_game_research_prompts_give_no_commands_to_run(name):
     body = text(name)
     assert not re.search(r"`python |python -m |`git |pip install", body), f"{name} must not instruct running code"
     assert "PRIMARY_PREDICTION_PROTOCOL" not in body and "FORECAST_CYCLE_PROTOCOL" not in body
+
+
+@pytest.mark.parametrize("name", ["1_GAME_CARD", "2_START_LOCAL_MINI", "3_SETTLE_LOCAL_MINI"])
+def test_external_chat_prompts_are_read_only_and_pinned_to_latest_main(name):
+    """ENV-v1: prompts 1-3 run in an external chat; they never use local controls or claim file writes."""
+    body = text(name)
+    assert "EXECUTION_ENVIRONMENT_PROTOCOL" in body and "EXTERNAL_CHAT" in body
+    assert "latest `main`" in body
+    for phrase in ("explicitly local", "or from the local working tree", "Copy exact original working bytes",
+                   "complete frozen prefix plus settlement", "working attachment/download"):
+        assert phrase not in body, f"{name}: {phrase}"
+
+
+def test_prompt4_is_the_intake_point_for_external_chat_output():
+    body = text("4_CANONICAL_IMPORT")
+    assert "## 0. External-chat intake (ENV-v1)" in body and "PENDING_PROMPT_4" in body
