@@ -1,5 +1,7 @@
 # Selection, baseline and settlement rules
 
+**ML/RL scope (MLSCOPE-v1).** Owner instruction, 17 October 2026: ML/RL is not part of game research. Prompts 1–5 run no code, runtime pack, model, shadow or learning command and read no model output. Prompt 1 researches the game and derives every p_card by hand as ANALYST_PRIMARY_V1 / UNCALIBRATED_ANALYST_PRIMARY, using [PROBABILITY_TOOLKIT](PROBABILITY_TOOLKIT.md) arithmetic with every input and step shown. Prompts 2–5 create, settle, import and roll over records by hand. ML/RL runs only in prompt 6 (combined-log retrospective: learning-store ingest, model feedback, shadow settlement and comparisons) and prompt 8 (workshop code, releases, shadows and promotion decisions). Its findings reach game research only as reviewed Markdown changes (toolkit constants, base rates, rules) released through prompt 8. This rule supersedes any older text requiring prompts 1–5 to run ML, CYCLE-v1, CHAT-EXEC-v1, a capability receipt, an execution manifest or a learning-store export.
+
 **SEL-2026.10.12-v3 · primary policy P_ORDER_V2 (unchanged order rule; priced from the declared mixture where CURRENT_RULES §7 requires one).** Numerical thresholds are PROVISIONAL, not proven accuracy guarantees. Applies to new v11 and later cards; unchanged selection rules, with timing governed by [TIMING_RESEARCH_PROTOCOL](TIMING_RESEARCH_PROTOCOL.md); old selections keep their original policy ([SEL v2](archive/superseded_2026-10-12/SELECTION_RULES.md)). [CURRENT_RULES](CURRENT_RULES.md) controls.
 
 ## 1. Constants and scope
@@ -121,6 +123,6 @@ Calculate the baseline from its own league-only inputs; do not reuse team-adjust
 - **Fill route:** a reason that names a missing profile row is also listed for prompt 7, so the gap gets filled rather than repeated.
 - **TB-1-MD is a team model aid.** TB-1-MD (PROBABILITY_TOOLKIT §4) uses team inputs, so it is never `BASELINE_LEAGUE_V1`.
 
-## 10. Primary model source
+## 10. Primary probability source
 
-For MODEL_ASSISTED_PRIMARY_V3 the [primary runtime](PRIMARY_PREDICTION_PROTOCOL.md) supplies the mixed coherent event distribution. The sporting mixture weights whole expert distributions from their earlier settled losses, never a stake or an after-the-result winning row. P_ORDER_V2, original ranks, family/gate/precision/90% rules and same-row baseline definitions remain. The operator validates the full candidate recipe and family checks; a runtime success is not automatic gate PASS or calibrated/qualified use.
+New cards: the ANALYST_PRIMARY_V1 hand-built coherent distribution (CURRENT_RULES §7, [PROBABILITY_TOOLKIT](PROBABILITY_TOOLKIT.md)) supplies every p_card; no model runtime is used in prompts 1–5 (MLSCOPE-v1). P_ORDER_V2, original ranks, family/gate/precision/90% rules and same-row baseline definitions remain. Historical MODEL_ASSISTED_PRIMARY_V3 cards keep their original [model source](PRIMARY_PREDICTION_PROTOCOL.md) and cohort. A workshop model may only be compared with cards in prompt 6 or frozen as a shadow under prompt 8; it never supplies p_card.

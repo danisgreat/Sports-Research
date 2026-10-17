@@ -122,12 +122,18 @@ def verify_execution(folder: Path, *, event_id=None, competition=None, endpoint=
     return rec
 
 
-def verify_log(manifest: Path, mini: Path) -> dict:
+ANALYST_STATUSES = ("ANALYST_PRIMARY_V1", "UNCALIBRATED_QUALITATIVE", "NO_FORECAST")
+MODEL_STATUSES = ("MODEL_ASSISTED_PRIMARY_V3", "MODEL_ASSISTED_CYCLE_V1")
+
+
+def verify_log(manifest: Path | None, mini: Path) -> dict:
     """Verify local research dispositions without allocating canonical IDs.
 
-    Only use on new mandatory-execution minis, not historical cards or canonical wrappers.
-    Research-only cards may have no executable runtime/receipt. Verified settled labels
-    can later train a model; they cannot invent a frozen expert's historical loss.
+    Only use on new minis, not historical cards or canonical wrappers. Under MLSCOPE-v1 a
+    no-code mini has no execution manifest: pass ``manifest=None`` and every card must carry
+    exactly one hand-derived disposition (ANALYST_STATUSES). Legacy model minis keep their
+    manifest. Research-only cards may have no executable runtime/receipt. Verified settled
+    labels can later train a model; they cannot invent a frozen expert's historical loss.
     """
     text = mini.read_text(encoding="utf-8-sig")
     formats = re.findall(r"<!-- MINI-LOG-FORMAT: (\S+) -->", text)
@@ -154,6 +160,16 @@ def verify_log(manifest: Path, mini: Path) -> dict:
             active = None
     if active is not None:
         raise p.AdmissionError("mini card markers unbalanced")
+    if manifest is None:
+        analyst = qualitative = 0
+        for key in cards:
+            body = re.search(r"<!-- BEGIN CARD " + re.escape(key) + r" -->(.*?)<!-- END CARD " + re.escape(key) + r" -->", text, re.S).group(1)
+            statuses = re.findall(r"^- \*\*Analysis status:\*\*\s+(\S+)", body, re.M)
+            if len(statuses) != 1 or statuses[0] not in ANALYST_STATUSES:
+                raise p.AdmissionError("a no-code mini needs one hand-derived analysis status per card; model cards need their manifest")
+            analyst += statuses[0] == "ANALYST_PRIMARY_V1"
+            qualitative += statuses[0] != "ANALYST_PRIMARY_V1"
+        return dict(cards=len(cards), analyst_primary=analyst, qualitative_or_no_forecast=qualitative)
     with manifest.open(encoding="utf-8-sig", newline="") as handle:
         if csv.DictReader(handle).fieldnames != list(MANIFEST_FIELDS):
             raise p.AdmissionError("execution manifest header must match registered fields")
@@ -174,12 +190,12 @@ def verify_log(manifest: Path, mini: Path) -> dict:
         if identity not in body:
             raise p.AdmissionError("card identity differs from execution manifest")
         statuses = re.findall(r"^- \*\*Analysis status:\*\*\s+(\S+)", body, re.M)
-        if len(statuses) != 1 or statuses[0] not in ("MODEL_ASSISTED_PRIMARY_V3", "MODEL_ASSISTED_CYCLE_V1", "RESEARCH_ONLY_NO_MODEL", "UNCALIBRATED_QUALITATIVE", "NO_FORECAST"):
+        if len(statuses) != 1 or statuses[0] not in MODEL_STATUSES + ("RESEARCH_ONLY_NO_MODEL",) + ANALYST_STATUSES:
             raise p.AdmissionError("one explicit primary analysis disposition required")
         if not row["execution_path"]:
             if row["execution_sha256"]:
                 raise p.AdmissionError("execution hash without an actual attempt path")
-            if statuses[0] in ("MODEL_ASSISTED_PRIMARY_V3", "MODEL_ASSISTED_CYCLE_V1"):
+            if statuses[0] in MODEL_STATUSES:
                 raise p.AdmissionError("numeric primary card requires successful execution")
             if not row["reason"].strip() or row["feedback_status"] != "NOT_APPLICABLE_NO_MODEL" or row["feedback_path"] or row["feedback_sha256"]:
                 raise p.AdmissionError("research-only retention requires honest missing-model reason and no invented expert feedback")

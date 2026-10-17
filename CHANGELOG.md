@@ -1,3 +1,17 @@
+# No-code game research; ML/RL moved to prompts 6 and 8 (MLSCOPE-v1) — 17 October 2026
+
+## 2026-10-17 — MDS/P v21.0 / CR-2026.10.17-R3 / MLSCOPE-v1 / NOCODE-v1 / DRIVE-v2
+
+STATISTICAL + PROCEDURE, owner instruction: "ML/RL doesn't seem to be implemented when I want to do research for each individual game log", so it moves to the combined-log retrospective and the framework-improvement prompts.
+- **Prompt 1** runs no code in ChatGPT or any other chat: no Python, code interpreter, runtime pack or command. It researches the game and derives every p_card by hand from one coherent distribution: league anchor → shrunk team strength from verified online history → listed adjustments → benchmark width → PROBABILITY_TOOLKIT conversion, with checks against TEAM_BASELINE_P and the same-line BASELINE_P. Results are labelled ANALYST_PRIMARY_V1 / UNCALIBRATED_ANALYST_PRIMARY.
+- **Prompt 1 sport workflows.** In each of the eleven, the ML paragraphs (CYCLE-v1 execution, PRIMARY_V3 pricing, LEARN-v1 CSV export and ingest commands, runtime capability receipt, tennis shadow commands) are replaced by the analyst-probability, Markdown learning-record and contract-definition paragraphs. The pre-ML hand-built distribution text for each sport is restored from `archive/superseded_2026-10-15-2/`.
+- **Prompts 1 and 2** read the latest `main` branch on GitHub.
+- **Prompts 2–5** drop the execution manifest, `primary verify-log`, `primary settle`, `cycle settle`, learning-store ingest and learning-status commands.
+- **Prompts 6 and 8.** Prompt 6 gains the ML/RL review (ingest, feedback, shadows, paired comparisons). Prompt 8 owns all workshop changes. Their findings reach cards only as reviewed Markdown changes.
+- **Google Drive** is an optional drop box (DRIVE-v2). The DRIVE-v1 mirror, sync receipt and push-to-both requirement are withdrawn.
+- **Code.** `ml.execution.verify_log` checks a no-code mini without a manifest (`verify-log --mini` only) and accepts ANALYST_PRIMARY_V1. The prompt-consistency test now requires the no-code paragraphs and fails if prompts 1–3 or 5 instruct running code.
+- **Unchanged.** Owner-entered prompt-1 game blocks (11/11), existing issued records, IDs and grades. Originals are archived in `archive/superseded_2026-10-17-3/`. [Implementation](research/verification/framework_change_2026-10-17-3/IMPLEMENTATION.md).
+
 # Google Drive exchange and mirror (DRIVE-v1) — 17 October 2026
 
 ## 2026-10-17 — MDS/P v20.2 / CR-2026.10.17-R2 / DRIVE-v1

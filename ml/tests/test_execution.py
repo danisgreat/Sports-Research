@@ -172,3 +172,31 @@ def test_research_card_retained_without_model_receipt_or_probability(tmp_path, r
     mini.write_text(mini.read_text(encoding='utf-8').replace('MODEL_ASSISTED_PRIMARY_V3','RESEARCH_ONLY_NO_MODEL'),encoding='utf-8')
     row['feedback_status']='FEEDBACK_RETAINED';path.write_bytes(p.csv_bytes([row]))
     with pytest.raises(p.AdmissionError,match='invented expert feedback'):verify_log(path,mini)
+
+
+def test_no_code_analyst_mini_verifies_without_a_manifest(tmp_path):
+    """MLSCOPE-v1: a prompt-1 mini priced by hand has no execution manifest and claims no model."""
+    mini=tmp_path/'mini.md'
+    cards=[('LOCAL-EXAMPLE-G0001','ANALYST_PRIMARY_V1'),('LOCAL-EXAMPLE-G0002','UNCALIBRATED_QUALITATIVE')]
+    mini.write_text('<!-- MINI-LOG-FORMAT: mini-log-10 -->\n'+''.join(
+        f'<!-- BEGIN CARD {k} -->\n- **Analysis status:** {s} / EXAMPLE\n<!-- END CARD {k} -->\n' for k,s in cards),encoding='utf-8')
+    assert verify_log(None,mini)==dict(cards=2,analyst_primary=1,qualitative_or_no_forecast=1)
+    assert p.main(['verify-log','--mini',str(mini)]) is None
+    # A model claim without its manifest, or a card without a disposition, is refused.
+    mini.write_text(mini.read_text(encoding='utf-8').replace('ANALYST_PRIMARY_V1','MODEL_ASSISTED_CYCLE_V1'),encoding='utf-8')
+    with pytest.raises(p.AdmissionError,match='hand-derived'):verify_log(None,mini)
+    mini.write_text('<!-- MINI-LOG-FORMAT: mini-log-10 -->\n<!-- BEGIN CARD LOCAL-EXAMPLE-G0001 -->\n<!-- END CARD LOCAL-EXAMPLE-G0001 -->\n',encoding='utf-8')
+    with pytest.raises(p.AdmissionError,match='hand-derived'):verify_log(None,mini)
+
+
+def test_analyst_card_in_a_legacy_manifest_mini_needs_no_execution(tmp_path):
+    mini=tmp_path/'mini.md';path=tmp_path/'manifest.csv'
+    mini.write_text('<!-- MINI-LOG-FORMAT: mini-log-10 -->\n<!-- BEGIN CARD LOCAL-EXAMPLE-G0003 -->\n'
+                    '- **Analysis status:** ANALYST_PRIMARY_V1\n'
+                    '- **ML execution identity:** EXAMPLE-ANALYST | Basketball/EXAMPLE | FULL_GAME\n'
+                    '<!-- END CARD LOCAL-EXAMPLE-G0003 -->\n',encoding='utf-8')
+    row=dict.fromkeys(MANIFEST_FIELDS,'')
+    row.update(card_id='LOCAL-EXAMPLE-G0003',event_id='EXAMPLE-ANALYST',competition='Basketball/EXAMPLE',endpoint='FULL_GAME',
+               feedback_status='NOT_APPLICABLE_NO_MODEL',reason='MLSCOPE-v1: priced by hand, no model')
+    path.write_bytes(p.csv_bytes([row]))
+    assert verify_log(path,mini)['research_only']==1

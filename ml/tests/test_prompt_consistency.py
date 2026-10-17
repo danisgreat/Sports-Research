@@ -57,7 +57,7 @@ def test_dependency_map_covers_every_prompt_in_both_directions():
         assert set(listed) == named, f"{name}: map {sorted(set(listed) ^ named)} out of date"
 
 
-def test_prompt1_keeps_eleven_sport_workflows_each_with_the_learning_export():
+def test_prompt1_keeps_eleven_sport_workflows_each_with_the_no_code_paragraphs():
     body = text("1_GAME_CARD")
     starts = [m.start() for m in re.finditer(r"^(## )?Upcoming game — ", body, re.M)]
     assert len(starts) == 11
@@ -66,11 +66,19 @@ def test_prompt1_keeps_eleven_sport_workflows_each_with_the_learning_export():
     for s in sections:
         assert re.search(r"^Read \[COMMON_OPERATING_PROTOCOL\]", s, re.M), "each Upcoming block is followed by Read"
         assert s.count("## 7. Write, audit and return") == 1 and s.count("**Mandatory output after every game request:**") == 1
-        learn = re.findall(r"^\*\*Structured research export \(LEARN-v1\)\.\*\*.*$", s, re.M)
-        runtime = re.findall(r"^\*\*Runtime, baseline and contract definitions \(RET-08 / RET-10 / RET-13\)\.\*\*.*$", s, re.M)
-        assert len(learn) == 1 and len(runtime) == 1
-        paragraphs.append((learn[0], runtime[0]))
-    assert len(set(paragraphs)) == 1, "the LEARN-v1 and runtime paragraphs must be identical in every sport workflow"
-    tennis = [s for s in sections if s.startswith("## Upcoming game — TENNIS")]
-    assert len(tennis) == 1 and "python -m ml prospective rows --kind tennis" in tennis[0]
-    assert sum("python -m ml prospective rows --kind tennis" in s for s in sections) == 1
+        found = [re.findall(r"^\*\*" + re.escape(title) + r"\*\*.*$", s, re.M) for title in (
+            "Analyst primary probability (ANALYST_PRIMARY_V1, no code).",
+            "Learning record (LEARN-v2).",
+            "Contract definitions and comparator (RET-10 / RET-13).")]
+        assert all(len(f) == 1 for f in found)
+        paragraphs.append(tuple(f[0] for f in found))
+    assert len(set(paragraphs)) == 1, "the analyst, learning-record and definitions paragraphs must be identical in every sport workflow"
+    assert body.count("**No code in game research (NOCODE-v1, MLSCOPE-v1).**") == 1
+
+
+@pytest.mark.parametrize("name", ["1_GAME_CARD", "2_START_LOCAL_MINI", "3_SETTLE_LOCAL_MINI", "5_START_THE_NEXT_COMBINED_LOG"])
+def test_game_research_prompts_give_no_commands_to_run(name):
+    """MLSCOPE-v1: prompts 1-3 and 5 are research frameworks; ML/RL commands belong to prompts 6 and 8."""
+    body = text(name)
+    assert not re.search(r"`python |python -m |`git |pip install", body), f"{name} must not instruct running code"
+    assert "PRIMARY_PREDICTION_PROTOCOL" not in body and "FORECAST_CYCLE_PROTOCOL" not in body

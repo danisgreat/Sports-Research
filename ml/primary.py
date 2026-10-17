@@ -810,7 +810,7 @@ def main(argv=None):
     check = sub.add_parser("verify-execution")
     check.add_argument("--attempt", type=Path, required=True)
     check_log = sub.add_parser("verify-log")
-    check_log.add_argument("--manifest", type=Path, required=True)
+    check_log.add_argument("--manifest", type=Path, help="legacy model minis only; omit for a no-code ANALYST_PRIMARY_V1 mini")
     check_log.add_argument("--mini", type=Path, required=True)
     review = sub.add_parser("settle")
     for name in ("bundle", "evidence", "out"):

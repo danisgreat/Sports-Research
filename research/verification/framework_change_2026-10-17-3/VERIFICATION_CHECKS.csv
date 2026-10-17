@@ -1,0 +1,9 @@
+check_id,check,method,result,evidence
+V01,Archive copies match recorded hashes,sha256 of 32 archived originals vs ARCHIVE_HASHES.csv (restore cycles re-verified),PASS,archive/superseded_2026-10-17-3/ARCHIVE_HASHES.csv
+V02,No new broken relative links,links in every edited document compared with archived originals (URL-decoded),PASS,implementation link resolves once this folder exists
+V03,Prompt-1 owner game blocks unchanged,11 Upcoming blocks extracted from archived and edited prompt 1 and compared,PASS,11 of 11 identical
+V04,No-code prompts,test_game_research_prompts_give_no_commands_to_run on prompts 1/2/3/5 (no python/git/pip instruction; no PRIMARY_PREDICTION or FORECAST_CYCLE dependency),PASS,4 passed
+V05,Prompt consistency,python -m pytest ml/tests/test_prompt_consistency.py -q (versions; links; regenerated dependency map; three identical no-code paragraphs in 11 workflows),PASS,28 passed
+V06,No-code mini verifier,new verify_log(None) and ANALYST_PRIMARY_V1 manifest-row tests,PASS,ml/tests/test_execution.py 21 passed
+V07,Full suite,python -m pytest ml/tests -q,PASS,438 passed in 308.13 s
+V08,No control characters added,byte scan of edited Markdown,PASS,only pre-existing SOURCES.md (not edited)

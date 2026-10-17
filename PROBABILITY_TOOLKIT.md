@@ -28,6 +28,8 @@
 
 # Probability toolkit — every number a card needs, by hand
 
+**ML/RL scope (MLSCOPE-v1).** Owner instruction, 17 October 2026: ML/RL is not part of game research. Prompts 1–5 run no code, runtime pack, model, shadow or learning command and read no model output. Prompt 1 researches the game and derives every p_card by hand as ANALYST_PRIMARY_V1 / UNCALIBRATED_ANALYST_PRIMARY, using [PROBABILITY_TOOLKIT](PROBABILITY_TOOLKIT.md) arithmetic with every input and step shown. Prompts 2–5 create, settle, import and roll over records by hand. ML/RL runs only in prompt 6 (combined-log retrospective: learning-store ingest, model feedback, shadow settlement and comparisons) and prompt 8 (workshop code, releases, shadows and promotion decisions). Its findings reach game research only as reviewed Markdown changes (toolkit constants, base rates, rules) released through prompt 8. This rule supersedes any older text requiring prompts 1–5 to run ML, CYCLE-v1, CHAT-EXEC-v1, a capability receipt, an execution manifest or a learning-store export.
+
 **Opened 2026-09-28; usage clarified 2026-10-11.** Agents read Markdown and CSV and use transparent arithmetic. No executable runtime or registry is restored. The tables below are calculation aids, not a substitute for missing inputs or an unperformed complex calculation.
 
 The old tools are removed from the tree. Maintainers can recover them from the pinned commits in the [Historical Link Index](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents); the model never opens them.
