@@ -60,27 +60,31 @@ def test_dependency_map_covers_every_prompt_in_both_directions():
         assert set(listed) == named, f"{name}: map {sorted(set(listed) ^ named)} out of date"
 
 
-def test_prompt1_core_indexes_eleven_sport_files_each_with_the_no_code_paragraphs():
+SHARED_TITLES = ("Analyst primary probability (ANALYST_PRIMARY_V1, no code).", "Learning record (LEARN-v2).",
+                 "Contract definitions and comparator (RET-10 / RET-13).", "Mandatory output after every game request:",
+                 "Pricing basis (PR-03).", "Retain the research (RETAIN-v3).", "Strict research completion (RC-2026.10.16-v2).",
+                 "Current evidence requirement:")
+
+
+def test_prompt1_core_holds_the_shared_steps_and_indexes_eleven_sport_files():
     core = text("1_GAME_CARD")
     assert len(SPORT_FILES) == 11
     assert all(f"]({name}.md)" in core for name in SPORT_FILES), "the core must link every sport file"
     assert "Upcoming game — " not in core, "Upcoming game blocks live in the sport files"
     assert core.count("**No code in game research (NOCODE-v1, MLSCOPE-v1).**") == 1
-    paragraphs = []
+    shared = core[core.index("## Shared steps for every sport"):]
+    for title in SHARED_TITLES:
+        assert len(re.findall(r"^\*\*" + re.escape(title) + r"\*\*", shared, re.M)) == 1, f"core must hold {title} once"
+    for step in ("Before step 1", "Step 1 —", "Step 3 —", "Step 4 —", "Step 5 —", "Step 7 —"):
+        assert f"### {step}" in shared
     for name in SPORT_FILES:
         s = text(name)
         assert "](../1_GAME_CARD.md)" in s, f"{name}: must point to the core"
         assert len(re.findall(r"^(## )?Upcoming game — ", s, re.M)) == 1, f"{name}: exactly one Upcoming game block"
         assert re.search(r"^Read \[COMMON_OPERATING_PROTOCOL\]", s, re.M), "each Upcoming block is followed by Read"
-        assert s.count("## 7. Write, audit and return") == 1 and s.count("**Mandatory output after every game request:**") == 1
-        found = [re.findall(r"^\*\*" + re.escape(title) + r"\*\*.*$", s, re.M) for title in (
-            "Analyst primary probability (ANALYST_PRIMARY_V1, no code).",
-            "Learning record (LEARN-v2).",
-            "Contract definitions and comparator (RET-10 / RET-13).",
-            "Mandatory output after every game request:")]
-        assert all(len(f) == 1 for f in found), name
-        paragraphs.append(tuple(f[0] for f in found))
-    assert len(set(paragraphs)) == 1, "the shared paragraphs must be identical in every sport file"
+        assert all(len(re.findall(rf"^## {n}\. ", s, re.M)) == 1 for n in range(1, 8)), f"{name}: steps 1-7 keep their headings"
+        assert not any(re.search(r"^\*\*" + re.escape(t) + r"\*\*", s, re.M) for t in SHARED_TITLES), f"{name}: shared rule duplicated"
+        assert s.count("shared rules ([prompt 1 core](../1_GAME_CARD.md))") == 5, f"{name}: steps 1, 3, 4, 5 and 7 point to the core"
 
 
 @pytest.mark.parametrize("name", ["1_GAME_CARD", "2_START_LOCAL_MINI", "3_SETTLE_LOCAL_MINI", "5_START_THE_NEXT_COMBINED_LOG"]

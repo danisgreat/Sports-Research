@@ -1,3 +1,15 @@
+# Shared sport rules moved into the prompt 1 core — 17 October 2026
+
+## 2026-10-17 — MDS/P v22.2 / CR-2026.10.17-R6
+
+PROCEDURE, owner instruction. The 19 paragraphs that were identical in all eleven prompt-1 sport files now appear once, in the core (`research/prompts/1_GAME_CARD.md`), under **Shared steps for every sport**: before step 1, then steps 1, 3, 4, 5 and 7. Steps 2 and 6 had no shared rules.
+- **Sport files** (about 10 KB each, down from 23 KB) keep their step headings, their own instructions, the `Read [COMMON…]` line and their Upcoming game block. Each affected step points to the core's shared rules.
+- **Wording.** Every moved paragraph is unchanged apart from link depth and one cross-reference: the analyst method's "use the sport family below" now reads "use the sport file's step-4 distribution family".
+- **Size.** An external chat reads core plus one sport file, about 32 KB.
+- **Checks.** Owner game blocks are byte-identical (11/11). The consistency test checks that the core holds each shared rule once and that no sport file repeats one. DEPENDENCY_MAP is regenerated.
+
+Requirements, outputs and probabilities are unchanged. Originals are archived in `archive/superseded_2026-10-17-6/`. [Implementation](research/verification/framework_change_2026-10-17-6/IMPLEMENTATION.md).
+
 # Prompt 1 split into a core file and eleven sport files — 17 October 2026
 
 ## 2026-10-17 — MDS/P v22.1 / CR-2026.10.17-R5
