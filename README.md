@@ -20,7 +20,7 @@
 
 A sports-only forecasting framework made of documents. It tells a research agent how to forecast, log and settle individual games across ten sports, how to verify past results online, and how to learn from the outcomes. **Controls and forecasts use Markdown/CSV/text.** New numerical primary forecasts are derived by hand with transparent arithmetic (ANALYST_PRIMARY_V1); the ML/RL workshop in [`ml/`](ml/README.md) is used only in the combined-log retrospective (prompt 6) and framework changes (prompt 8). Code stays in ml/; JSON/binary artifacts remain excluded.
 
-**What is true now** (method, next ID, active log, scoreboard): [CURRENT_STATE.md](CURRENT_STATE.md). Method **MDS-2026.10.17-v22.0**, control **CR-2026.10.17-R4**, scoring **SCV-2026.10.16-v11**, selection **SEL-2026.10.12-v3**, prompts **P-2026.10.17-v22.0** (new mini-log-10). Game research (prompts 1–5) runs no code in any chat; an optional Google Drive drop box exists ([GOOGLE_DRIVE_EXCHANGE_PROTOCOL](GOOGLE_DRIVE_EXCHANGE_PROTOCOL.md)) and nothing must be pushed there. [October 12 implementation map](research/verification/framework_change_2026-10-12-1/IMPLEMENTATION.md) (audit R01–R38 and prediction items PR-01–PR-10) · [October 11 roadmap](research/verification/framework_change_2026-10-11-1/IMPLEMENTATION.md). Active files and usable data: [ACTIVE_FILE_INDEX.md](ACTIVE_FILE_INDEX.md). The 2026-10-09 runtime remains removed. Development models from the `ml/` workshop are `HISTORICAL_DEVELOPMENT` only; old workshop outputs cannot substitute for a new primary run; experimental primary use is now authorised under PRIMARY_PREDICTION_PROTOCOL, with no predictive certification.
+**What is true now** (method, next ID, active log, scoreboard): [CURRENT_STATE.md](CURRENT_STATE.md). Method **MDS-2026.10.17-v22.1**, control **CR-2026.10.17-R5**, scoring **SCV-2026.10.16-v11**, selection **SEL-2026.10.12-v3**, prompts **P-2026.10.17-v22.1** (new mini-log-10). Game research (prompts 1–5) runs no code in any chat; an optional Google Drive drop box exists ([GOOGLE_DRIVE_EXCHANGE_PROTOCOL](GOOGLE_DRIVE_EXCHANGE_PROTOCOL.md)) and nothing must be pushed there. [October 12 implementation map](research/verification/framework_change_2026-10-12-1/IMPLEMENTATION.md) (audit R01–R38 and prediction items PR-01–PR-10) · [October 11 roadmap](research/verification/framework_change_2026-10-11-1/IMPLEMENTATION.md). Active files and usable data: [ACTIVE_FILE_INDEX.md](ACTIVE_FILE_INDEX.md). The 2026-10-09 runtime remains removed. Development models from the `ml/` workshop are `HISTORICAL_DEVELOPMENT` only; old workshop outputs cannot substitute for a new primary run; experimental primary use is now authorised under PRIMARY_PREDICTION_PROTOCOL, with no predictive certification.
 
 **Learning from research (LEARN-v1):** [LEARNING_PIPELINE_PROTOCOL](LEARNING_PIPELINE_PROTOCOL.md) turns every researched and settled game into deduplicated, point-in-time learning data (store → features → immutable training releases) and gates any model change behind chronological studies, prospective shadows and an owner decision. The primary model is unchanged.
 
@@ -71,7 +71,7 @@ Prompts 1 to 3 are run by an external chat with internet access that reads the l
 
 ## Sports covered
 
-Baseball (MLB, KBO, NPB), cricket, basketball (NBA, WNBA, NBL, European and Asian leagues), ice hockey, tennis, soccer, rugby league, rugby union, Australian rules (AFL, AFLW) and American football. Each has a sport block in [prompt 1](research/prompts/1_GAME_CARD.md) that sets the research list, the distribution to build by hand and the family checks.
+Baseball (MLB, KBO, NPB), cricket, basketball (NBA, WNBA, NBL, European and Asian leagues), ice hockey, tennis, soccer, rugby league, rugby union, Australian rules (AFL, AFLW) and American football. Each has its own [prompt 1 sport file](research/prompts/1_sports/), used with the [prompt 1 core](research/prompts/1_GAME_CARD.md), that sets the research list, the distribution to build by hand and the family checks.
 
 ## Honesty and limits
 
@@ -79,7 +79,7 @@ New numeric forecasts are uncalibrated analyst probabilities built by hand; hist
 
 ## October 14 ML review and complete prompts
 
-[Implementation review](research/verification/framework_change_2026-10-14-5/ML_WORKSHOP_REVIEW.md) · [full prompts 1–8](research/prompts/README.md) · [individual game prompt with eleven sport/upcoming-game sections](research/prompts/1_GAME_CARD.md) · [artifact admission](research/model_shadow/ARTIFACT_PROVENANCE.md). Useful development mechanisms exist, but prospective predictive skill and RL benefits remain unestablished. Control CR-2026.10.14-R3; suite P-2026.10.14-v11.3.
+[Implementation review](research/verification/framework_change_2026-10-14-5/ML_WORKSHOP_REVIEW.md) · [full prompts 1–8](research/prompts/README.md) · [individual game prompt: core](research/prompts/1_GAME_CARD.md) and [eleven sport files](research/prompts/1_sports/) · [artifact admission](research/model_shadow/ARTIFACT_PROVENANCE.md). Useful development mechanisms exist, but prospective predictive skill and RL benefits remain unestablished. Control CR-2026.10.14-R3; suite P-2026.10.14-v11.3.
 
 ## Research completion timing (15 October 2026)
 

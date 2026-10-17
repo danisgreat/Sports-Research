@@ -32,7 +32,7 @@
 | Research completion and input/issue timing | [TIMING_RESEARCH_PROTOCOL](TIMING_RESEARCH_PROTOCOL.md) (no fixed manual research deadline; no separate cutoff, the evidence horizon is the game-log scheduled start) |
 | Scoring and evaluation | [SCORING_AND_VALIDATION.md](SCORING_AND_VALIDATION.md) |
 | Verification checks | [VERIFICATION_PROTOCOL.md](VERIFICATION_PROTOCOL.md) |
-| Operator prompts 1–8 | [research/prompts/README.md](research/prompts/README.md), [common operating protocol](research/prompts/COMMON_OPERATING_PROTOCOL.md), [PROMPTS.md](PROMPTS.md) |
+| Operator prompts 1–8 (prompt 1 = core plus one file in [research/prompts/1_sports/](research/prompts/1_sports/)) | [research/prompts/README.md](research/prompts/README.md), [common operating protocol](research/prompts/COMMON_OPERATING_PROTOCOL.md), [PROMPTS.md](PROMPTS.md) |
 | Experiments and their status | [HYPOTHESIS_REGISTER.md](HYPOTHESIS_REGISTER.md) |
 | Hand probability method for every card (ANALYST_PRIMARY_V1) and arithmetic aids | [PROBABILITY_TOOLKIT.md](PROBABILITY_TOOLKIT.md) |
 | League levels, base rates | [LEAGUE_PROFILES.md](LEAGUE_PROFILES.md), [BASE_RATES_REGISTER.md](BASE_RATES_REGISTER.md) |

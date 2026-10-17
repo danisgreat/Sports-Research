@@ -14,11 +14,11 @@
 
 **Execution environments (ENV-v1).** Prompts 1–3 run in an external chat with internet access and read-only access to the GitHub repository at the latest `main` commit: no code, no repository writes, no hashes, a section-level reading budget, and every output returned in the reply for the owner to save. Prompts 4–8 run in this repository as the repository agent (`LOCAL_WORKING_TREE`); prompt 4 is the only intake point for external-chat output and computes the byte counts and SHA-256 the chat cannot. Details: [EXECUTION_ENVIRONMENT_PROTOCOL](EXECUTION_ENVIRONMENT_PROTOCOL.md).
 
-**Active suite: P-2026.10.17-v22.0** (ENV-v1: prompts 1–3 in an external chat with internet access and read-only GitHub at the latest `main`, prompts 4–8 in this repository with prompt-4 intake; MLSCOPE-v1 / NOCODE-v1: no-code game research with ANALYST_PRIMARY_V1 hand-derived probabilities in prompts 1–5, ML/RL only in prompts 6 and 8; optional DRIVE-v2 drop box under [GOOGLE_DRIVE_EXCHANGE_PROTOCOL](GOOGLE_DRIVE_EXCHANGE_PROTOCOL.md); new minis mini-log-10 / mini-settlement-10; existing formats retained; learning records and review levels under [LEARNING_PIPELINE_PROTOCOL](LEARNING_PIPELINE_PROTOCOL.md); dependency map in [research/prompts/DEPENDENCY_MAP.md](research/prompts/DEPENDENCY_MAP.md)). [Reading receipt and workflow](research/prompts/README.md). Use the complete selected prompt; its required rules/templates are linked there.
+**Active suite: P-2026.10.17-v22.1** (prompt 1 = core plus one sport file in [research/prompts/1_sports/](research/prompts/1_sports/); ENV-v1: prompts 1–3 in an external chat with internet access and read-only GitHub at the latest `main`, prompts 4–8 in this repository with prompt-4 intake; MLSCOPE-v1 / NOCODE-v1: no-code game research with ANALYST_PRIMARY_V1 hand-derived probabilities in prompts 1–5, ML/RL only in prompts 6 and 8; optional DRIVE-v2 drop box under [GOOGLE_DRIVE_EXCHANGE_PROTOCOL](GOOGLE_DRIVE_EXCHANGE_PROTOCOL.md); new minis mini-log-10 / mini-settlement-10; existing formats retained; learning records and review levels under [LEARNING_PIPELINE_PROTOCOL](LEARNING_PIPELINE_PROTOCOL.md); dependency map in [research/prompts/DEPENDENCY_MAP.md](research/prompts/DEPENDENCY_MAP.md)). [Reading receipt and workflow](research/prompts/README.md). Use the complete selected prompt; its required rules/templates are linked there.
 
 | # | Copy-ready prompt |
 |---|---|
-| 1 | [Individual game card, including sport blocks](research/prompts/1_GAME_CARD.md) |
+| 1 | [Individual game card: core](research/prompts/1_GAME_CARD.md) plus [one sport file](research/prompts/1_sports/) |
 | 2 | [Start a local mini](research/prompts/2_START_LOCAL_MINI.md) |
 | 3 | [Settle and review the mini](research/prompts/3_SETTLE_LOCAL_MINI.md) |
 | 4 | [Import into the active Combined Log](research/prompts/4_CANONICAL_IMPORT.md) |
@@ -33,7 +33,7 @@ These prompts improve evidence, consistency and measurement. Predictive improvem
 
 Availability procedure: [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md), mandatory for every prompt-1 game.
 
-All eight tasks require [COMMON_OPERATING_PROTOCOL](research/prompts/COMMON_OPERATING_PROTOCOL.md). Use [prompt 1](research/prompts/1_GAME_CARD.md) for eleven separate sport/general Upcoming game blocks. The supplied-first root draft is reference only; current P4/selection rules govern.
+All eight tasks require [COMMON_OPERATING_PROTOCOL](research/prompts/COMMON_OPERATING_PROTOCOL.md). Use the [prompt 1 core](research/prompts/1_GAME_CARD.md) with one of the eleven [sport files](research/prompts/1_sports/), each holding its own Upcoming game block. The supplied-first root draft is reference only; current P4/selection rules govern.
 
 **Primary ML/RL (15 October 2026; scope narrowed 17 October 2026):** [PRIMARY_PREDICTION_PROTOCOL](PRIMARY_PREDICTION_PROTOCOL.md) now governs workshop models used only in prompts 6 and 8 (MLSCOPE-v1); game cards are ANALYST_PRIMARY_V1.
 

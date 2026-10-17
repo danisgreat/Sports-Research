@@ -1,3 +1,19 @@
+# Prompt 1 split into a core file and eleven sport files — 17 October 2026
+
+## 2026-10-17 — MDS/P v22.1 / CR-2026.10.17-R5
+
+PROCEDURE, owner instruction. Prompt 1 is now:
+- **a core**, `research/prompts/1_GAME_CARD.md` (7 KB): shared rules, no-code, external chat, latest `main`, delivery and the sport-file index;
+- **eleven sport files** in `research/prompts/1_sports/` (about 23 KB each): each holds its sport's complete seven-step workflow and its own Upcoming game block.
+
+**What moved and what checks it.**
+- Sections and game blocks moved byte-for-byte; 11 of 11 are identical once the relative links are adjusted for the new folder depth.
+- An external chat reads the core plus one sport file, about 31 KB instead of 254 KB.
+- ENV-v1's reading budget, CURRENT_RULES §1, COMMON, PROMPTS, README, ACTIVE_FILE_INDEX, the prompt index, prompt 8 and the regenerated DEPENDENCY_MAP (one row per sport file) describe the new layout.
+- The consistency tests check every sport file for version, links, dependencies, one game block, the identical shared paragraphs and no commands, and check that the core links all eleven.
+
+Requirements, outputs and probabilities are unchanged. Originals are archived in `archive/superseded_2026-10-17-5/`. [Implementation](research/verification/framework_change_2026-10-17-5/IMPLEMENTATION.md).
+
 # Execution environments: prompts 1–3 external chat, prompts 4–8 here (ENV-v1) — 17 October 2026
 
 ## 2026-10-17 — MDS/P v22.0 / CR-2026.10.17-R4 / ENV-v1

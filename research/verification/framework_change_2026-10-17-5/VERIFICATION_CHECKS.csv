@@ -1,0 +1,6 @@
+check_id,check,method,result,evidence
+V01,Archive copies match recorded hashes,sha256 of 18 archived Markdown originals vs ARCHIVE_HASHES.csv,PASS,archive/superseded_2026-10-17-5/ARCHIVE_HASHES.csv
+V02,Owner game blocks moved byte-for-byte,11 Upcoming blocks from the archived prompt 1 vs the first block of each sport file in original order,PASS,11 of 11 identical
+V03,Sections otherwise unchanged,each sport file after its intro with one ../ removed from relative links vs the original section,PASS,11 of 11 identical
+V04,Prompt consistency,python -m pytest ml/tests/test_prompt_consistency.py -q,PASS,76 passed
+V05,Full suite,python -m pytest ml/tests -q,PASS,486 passed in 291.76 s
