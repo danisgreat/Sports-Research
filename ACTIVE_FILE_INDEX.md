@@ -36,7 +36,7 @@
 | Contribution and publication rules | [CONTRIBUTING.md](CONTRIBUTING.md) |
 | Recovery of removed or moved paths | [HISTORICAL_LINK_INDEX.md](HISTORICAL_LINK_INDEX.md) |
 | Learning pipeline: research export, learning store, features, training releases, studies, prospective shadows, review levels, model registry | [LEARNING_PIPELINE_PROTOCOL.md](LEARNING_PIPELINE_PROTOCOL.md), [research/learning_store/](research/learning_store/README.md), [research/model_registry/MODEL_REGISTRY.csv](research/model_registry/MODEL_REGISTRY.csv), [research/learning_status/](research/learning_status/README.md) |
-| Primary runtime (named lane allowed for prompts 1–3) and separate workshop | [ml/README.md](ml/README.md), outputs in [research/model_shadow/](research/model_shadow/README.md), design [ML_RL_IMPLEMENTATION_FRAMEWORK_2026-10-14.md](ML_RL_IMPLEMENTATION_FRAMEWORK_2026-10-14.md) |
+| Primary runtime (named lane allowed for prompts 1–3) and separate workshop | [ml/README.md](ml/README.md) (browser-chat runtime pack/run/accept: `python -m ml.chat`, returned attempts in `research/cycle_attempts/`, captures in `research/chat_captures/`), outputs in [research/model_shadow/](research/model_shadow/README.md), design [ML_RL_IMPLEMENTATION_FRAMEWORK_2026-10-14.md](ML_RL_IMPLEMENTATION_FRAMEWORK_2026-10-14.md) |
 
 **History, not instructions:** `archive/`, `prediction logs/` parts 1–6, dated folders under `research/verification/`, `research/issued_research/`, LEARNING_REGISTER / LEARNINGS_INDEX (lessons, with promotion status), FRAMEWORK_RETROSPECTIVE_2026-10-09, NUMERICAL_MODEL_REGISTER (design notes), VALIDATION_EVIDENCE.
 

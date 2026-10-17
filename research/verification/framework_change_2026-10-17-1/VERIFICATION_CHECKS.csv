@@ -1,0 +1,16 @@
+check_id,check,method,result,evidence
+V01,Archive copies match recorded hashes,sha256 of 19 archived originals vs ARCHIVE_HASHES.csv,PASS,archive/superseded_2026-10-17-1/ARCHIVE_HASHES.csv
+V02,No new broken relative links,links in 10 edited documents compared with archived originals (URL-decoded),PASS,only pre-existing historical CHANGELOG links remain broken
+V03,Protected records unchanged,git status on prediction logs; GAME_LOG_STATUS_CURRENT; rank log; learning store; prospective ledger; selection/scoring/templates/method,PASS,empty status
+V04,Owner game blocks preserved,10 Upcoming blocks byte-compared with pre-change working copy; basketball template restored,PASS,research/prompts/1_GAME_CARD.md
+V05,Focused CHAT-EXEC tests,python -m pytest ml/tests/test_chat_execution.py,PASS,20 passed
+V06,Prompt consistency,python -m pytest ml/tests/test_prompt_consistency.py,PASS,24 passed
+V07,Full workshop suite,python -m pytest ml/tests -q,PASS,432 passed in 301.71s
+V08,Release digest matches code,CURRENT_RELEASES source_code_sha256 vs ml.cycle.code_hash,PASS,0303f967ae0f1562e772f1d09a1f518374328e3177ece7d31507d5b708f73287
+V09,Registry chain,python -m ml registry verify,PASS,16 entries intact
+V10,Initial frozen evaluations,python -m ml cycle evaluate for NHL-CYCLE-3 and MLB-CYCLE-3,PASS,INSUFFICIENT_EVIDENCE 0 paired events (no fabricated metrics)
+V11,Pack from commit outside checkout,python -m ml.chat pack then unzip without .git,PASS,commit 84c9d5718; 105 files; 753326 bytes
+V12,Older-stack execution,Python 3.12.10 pandas 2.2.3 numpy 1.26.4 scipy 1.13.1 chat run on FUT game NHL:2026020121,PASS,EXECUTED PRE_START; workflow verify EXECUTED
+V13,Retrospective guard,chat run on started game NHL:2026020119 with release frozen later,PASS (rejection),FAILED release frozen after information horizon; receipts returned
+V14,Accept freeze,accept upload into scratch root,PASS,8 rows PRE_START_VERIFIED; ledger chain intact
+V15,Staged file types,staged paths limited to md/csv/py/txt and .gitattributes; no json/html/zip/db; desktop.ini ignored,PASS,checked at commit

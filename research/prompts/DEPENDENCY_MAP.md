@@ -1,6 +1,6 @@
 # Prompt dependency map
 
-**P-2026.10.16-v20.0.** The authoritative list of root control documents each standalone prompt names, for reading receipts and maintenance. Every prompt also inherits [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md) and its reading list. `ml/tests/test_prompt_consistency.py` enforces this map in both directions. It checks that every listed control exists and is named by its prompt, and that every root control a prompt names is listed here. It also checks prompt versions, relative links, the eleven prompt-1 sport workflows and their identical LEARN-v1 paragraph. When a prompt gains or loses a dependency, update this map in the same change (prompt 8).
+**P-2026.10.17-v20.1.** The authoritative list of root control documents each standalone prompt names, for reading receipts and maintenance. Every prompt also inherits [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md) and its reading list. `ml/tests/test_prompt_consistency.py` enforces this map in both directions. It checks that every listed control exists and is named by its prompt, and that every root control a prompt names is listed here. It also checks prompt versions, relative links, the eleven prompt-1 sport workflows and their identical LEARN-v1 paragraph. When a prompt gains or loses a dependency, update this map in the same change (prompt 8).
 
 | Prompt | Root controls it names |
 |---|---|

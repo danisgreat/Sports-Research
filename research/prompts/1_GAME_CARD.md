@@ -8,19 +8,21 @@
 
 **Learning export (LEARN-v1).** Every game request also writes the structured research export of [LEARNING_PIPELINE_PROTOCOL](../../LEARNING_PIPELINE_PROTOCOL.md) §2 so verified research can feed the named local execution store immediately and the shared learning store after prompt 4 import. The new experimental cycle is versioned separately; historical cards never change.
 
-**Mode:** LOCAL_MINI_STAGING. **Writes:** the named active local mini plus its named primary-model input/bundle and sporting feedback folder, including evidence, its RESEARCH_EXPORT CSVs (LEARN-v1) and mutable footer. **GitHub repository (`main` branch):** read-only mode (no canonical or remote writes). Authority mode `PUBLISHED_MAIN_PINNED` (CURRENT_RULES §0) unless the user runs this inside the repository and asks for local controls (`LOCAL_WORKING_TREE`). Print the mode, the full SHA and any difference between published and local controls. Do not settle, retrospect, change rules or assign/reserve canonical P-IDs. Use local event keys; prompt 4 assigns canonical IDs at import. Prompt suite P-2026.10.16-v20.0 (LEARN-v1 structured research export; runtime capability receipt, standalone baseline and contract-definition gate), new minis mini-log-10 (existing minis keep their original format).
+**Mode:** LOCAL_MINI_STAGING. **Writes:** the named active local mini plus its named primary-model input/bundle and sporting feedback folder, including evidence, its RESEARCH_EXPORT CSVs (LEARN-v1) and mutable footer. **GitHub repository (`main` branch):** read-only mode (no canonical or remote writes). Authority mode `PUBLISHED_MAIN_PINNED` (CURRENT_RULES §0) unless the user runs this inside the repository and asks for local controls (`LOCAL_WORKING_TREE`). Print the mode, the full SHA and any difference between published and local controls. Do not settle, retrospect, change rules or assign/reserve canonical P-IDs. Use local event keys; prompt 4 assigns canonical IDs at import. Prompt suite P-2026.10.17-v20.1 (LEARN-v1 structured research export; runtime capability receipt, standalone baseline and contract-definition gate; CHAT-EXEC-v1 browser-chat execution), new minis mini-log-10 (existing minis keep their original format).
 
 Inputs: `Event: <participants, league/format, date/time/timezone or official event link>`; `Active mini: <path>`; `Supplied contracts: <exact text/lines, or none>`; `Specific research constraints: <if any>`. Treat estimated starts as estimates until verified. Locate accessible inputs first; ask only for information essential to resolve ambiguity. This is the complete game prompt; nothing from prompt 2 needs to be pasted with it. Apply the matching sport section (1–7) below.
+
+**Browser-chat execution (CHAT-EXEC-v1).** A read-only GitHub connector lets a web chat read the repository, never run it. When this prompt runs in a web chat without a checkout, use the chat's Python sandbox with the owner's runtime pack `SR_RUNTIME_<commit>.zip` (made on a checkout by `python -m ml.chat pack --out <folder outside the repository>`); if no pack is attached, ask for it once, then continue the full research without it. Unzip the pack, change into the folder that holds `ml/` and `research/`, and run `python -m ml capability` (pinned-version drift is recorded, not blocking). Before the scheduled start write `GAME.csv` with columns `local_key,competition,native_event_id,season,scheduled_start,home,away,venue,source_url` (competition exactly as listed in `research/cycle_releases/CURRENT_RELEASES.csv`; team names exactly as stored, which the command lists on refusal; native ID as `PROVIDER:ID`, never a P-ID; start with its UTC offset), `LINES.csv` with columns `label,family,side,line` (family `winner`, `handicap` or `total`; sides `HOME`/`AWAY`/`DRAW`, `HOME`/`AWAY` or `OVER`/`UNDER`; a handicap line is added to the named side, so "away +1.5" is `handicap,AWAY,1.5`; winner line empty) and a `.txt` copy of the opened fixture source. Then run `python -m ml.chat run --game GAME.csv --lines LINES.csv --capture SOURCE.txt --out OUT --confirm-no-outcome-seen`, passing the confirmation only if no live score, result or post-start report of this game was opened. Copy every `p_card`, `baseline_p` and model rank from `OUT/RESULT.csv` into the card unchanged as MODEL_ASSISTED_CYCLE_V1; record the printed status, timing, attempt path, execution SHA-256 and the pack's `CHAT_PACK_RECEIPT.csv` commit in A4/A9 and the execution manifest; return the `OUT/UPLOAD_*.zip` with the mini. Only full-game winner, handicap and total contracts in a competition with an active release are priced. A refusal (unsupported family, unknown team, no release, release frozen after the start, outcome seen) or a FAILED attempt keeps those rows RESEARCH_ONLY_NO_MODEL with the printed reason; the analyst fallback remains NOT_PRIMARY. The sandbox ledger is not authoritative. Pre-start status needs the owner to run `python -m ml.chat accept --attempt UPLOAD.zip --local-key <key>` and commit before the start, or to upload the zip's `research/` folders to the repository through GitHub before the start and later run `accept --freeze-basis commit`. Never retype, round into the card or adjust model numbers.
 
 BASKETBALL
 ----------------------------
 
 Upcoming game — BASKETBALL
 
-- Competition details: <Aanekosken Huima vs Lappeenrannan NMKY, Finland 1A>
-- Scheduled start: <2:00 PM AEDT, 16 October 2026 (can be delayed, so continue research and processes as normal)>
-- Supplied contracts: <Huima -8.5 ML>, <NMKY +8.5>, <Combined Total Points: Over/Under 162.5 Points>,
-- Research constraints: <continue pre game research even if game starts, continue until research is properly done>
+- Competition details: <>
+- Scheduled start: <>
+- Supplied contracts: <>
+- Research constraints: <>
 
 Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md), [MINI_LOG_IDENTITY_PROTOCOL](../../MINI_LOG_IDENTITY_PROTOCOL.md) and the complete seven-step sport workflow below. Use the owner-authorised [PRIMARY_PREDICTION_PROTOCOL](../../PRIMARY_PREDICTION_PROTOCOL.md): actual fitted ML and deterministic full-information expert-mixture results supply the new primary card. Historical/unadmitted workshop outputs and the market decision lab remain excluded. Maintainers may separately freeze an eligible sporting shadow after this primary card is frozen and before the actual event starts; that uses its own model ID/receipt and never replaces this card.
 
@@ -309,8 +311,8 @@ SOCCER
 
 ## Upcoming game — SOCCER
 
-- Game details: <BG Pathaum United vs Adelaide United, AFC Champions League Two>
-- Scheduled start: <11:15 PM AEDT, 15 October 2026 (Can be delayed)>
+- Game details: <Al Dhufra SCC vs Dubai United>
+- Scheduled start: <12:05 AM AEDT, 17 October 2026 (Can be delayed)>
 - Supplied contracts: <Combined 1st half goals: Over/Under 0.5 Goals>, <Combined total goals: Over/Under 2.5 Goals>, <Combined Total Corners: Over/Under 10.5 Corners>
 - Research constraints: <continue pre game analysis/research/process even if it goes past start time>
 
@@ -405,9 +407,7 @@ ICE HOCKEY
 
 ## Upcoming game — ICE HOCKEY
 
-
-- Event / official link: <participants and exact game identity>
-- Competition details: <League / stage; teams; regulation/OT/SO terms; confirmed goalie, selected roster and scratches.>
+- Competition details: <>
 - Scheduled start: <local date/time, venue timezone; verify UTC and Australia/Sydney>
 - Active local mini: <exact path>
 - Supplied contracts: <copy every exact proposition/line/period/action term, or NONE>
