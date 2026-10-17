@@ -1,0 +1,26 @@
+check,result,evidence
+unique_game_source_native,PASS,27832
+one_row_per_game_per_source,PASS,[]
+unique_reconciled_events,PASS,9600
+scope_status_known_at,PASS,All non-finals have blank outcome scores; inclusive UTC cutoff; actual retrieval known_at
+nonfinal_negative_case,PASS,In-memory corrupted nonfinal is rejected without modifying evidence
+backdated_negative_case,PASS,In-memory backdated source is rejected
+regular_only_candidates,PASS,No play-in/playoffs/cup final/preseason/special-game candidates
+candidate_components_corroborated,PASS,Both sides FGA/ORB/TOV/FTA agree across at least two publishers
+no_2026_27_regular_candidate,PASS,Regular season after cutoff is excluded
+all_declared_seasons_observed,PASS,2019-20 through 2026-27 preseason
+all_game_ids_real_or_blank,PASS,"NBA IDs come from captured official schedule, never generated"
+aliases_cover_every_source_row,PASS,One provenance mapping per source fact
+period_regulation_final_arithmetic,PASS,34480 checked side/source equations; missing periods never filled
+allstar_not_regulation,PASS,No target-score game enters 48-minute regulation labels
+orlando_neutral_normalization,PASS,471 source rows; reported flag retained separately
+raw_capture_custody,PASS,12032 distinct externally preserved captures; all hashes/lengths reproduced
+capture_tamper_negative_case,PASS,Altered in-memory capture fails original digest
+long_schema_unique_numeric_provenance,PASS,1199155 source/team/stat rows; exact 14-column export schema; no pregame admission
+nba_turnover_definition,PASS,TOV equals observed PLAYER_TOV + TEAM_TOV; neither component invented
+arithmetic_issues_excluded_from_fit,PASS,3 actual upstream arithmetic issues retained
+all_score_conflicts_quarantined,PASS,1 disagreeing score events
+no_ingestion_fit_claim,PASS,Evidence only; historical feature timing limitation explicit
+protected_tracked_bytes,PASS,"2195 pre-existing tracked files unchanged, including learning store, model versions, logs and dirty Prompt 1"
+allowed_file_types,PASS,Fact CSV and Markdown only; helpers/raw/notebook external
+github_single_file_limit,PASS,Season/source partitions below 95 MB each

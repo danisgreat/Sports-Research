@@ -1,0 +1,7 @@
+source,role,route,coverage_limit,independence
+ESPN_SCOREBOARD,PRIMARY_PROVIDER,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard,Monthly plus investigated daily records; clock errors/special-stage labels retained,DISTINCT_PUBLISHER_UPSTREAM_NOT_ESTABLISHED
+ESPN_SUMMARY,PRIMARY_TEAM_BOX,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/summary,2271 retained summaries; targeted follow-up plus recorded failed requests; sports-only projection,SAME_ESPN_LINEAGE
+ESPN_SCRIMMAGE_ARTICLE,EXHIBITION_FINAL_CHECK,https://www.espn.com/nba/story/_/id/29524639/nba-scrimmage-schedule-results-every-game-disney-bubble,33 final pairs; no pregame/UTC arena claim,SAME_ESPN_LINEAGE
+BASKETBALL_REFERENCE,REQUESTED_RESULT_CHECK_AND_TEAM_COUNTS,https://www.basketball-reference.com/leagues/NBA_2020_games.html,Eight ending-year schedules; 210 team logs; preseason/special coverage incomplete,DISTINCT_PUBLISHER_UPSTREAM_NOT_ESTABLISHED
+NBA_ARCHIVE,SUPPLEMENTARY_FIELD_OWNER_IDS_BOXES,https://data.nba.com/data/10s/v2015/json/mobile_teams/nba/2019/league/00_full_schedule.json,Seven seasons accessible; 2026-27 unavailable; stale/provisional source rows retained,FIELD_OWNER;PROVIDER_UPSTREAM_DEPENDENCE_POSSIBLE
+NBA_CDN,FAILED_SOURCE_ATTEMPT,https://cdn.nba.com/static/json/staticData/scheduleLeagueV2.json,HTTP403; no access bypass,NOT_APPLICABLE

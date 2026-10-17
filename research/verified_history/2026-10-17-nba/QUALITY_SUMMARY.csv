@@ -1,0 +1,16 @@
+check,n,result
+source_rows,27832,MEASURED_FINAL_AUDIT
+unique_events,9600,MEASURED_FINAL_AUDIT
+owner_rows,9581,MEASURED_FINAL_AUDIT
+future_first_fit_candidates,8235,MEASURED_FINAL_AUDIT
+regular_final_candidates,8289,MEASURED_FINAL_AUDIT
+stat_rows,1199155,MEASURED_FINAL_AUDIT
+score_conflicts,1,MEASURED_FINAL_AUDIT
+stat_conflict_events,75,MEASURED_FINAL_AUDIT
+quarantine_rows,259,MEASURED_FINAL_AUDIT
+open_requirements,5318,MEASURED_FINAL_AUDIT
+raw_captures,12032,MEASURED_FINAL_AUDIT
+checks,25,MEASURED_FINAL_AUDIT
+arithmetic_issues,3,MEASURED_FINAL_AUDIT
+period_comparisons,62008,MEASURED_FINAL_AUDIT
+period_disagreements,4,MEASURED_FINAL_AUDIT
