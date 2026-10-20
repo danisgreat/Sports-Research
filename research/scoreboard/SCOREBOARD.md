@@ -1,5 +1,15 @@
 # Scoreboard: current measurement and preserved historical results
 
+## Cohort retrospective 2026-10-21 (P-601–P-622; descriptive, grades unchanged)
+
+[Report](../verification/retrospective_2026-10-21/RETROSPECTIVE_REPORT.md) · [tables](../verification/retrospective_2026-10-21/COHORT_TABLES.md). Two ISO weeks, outcome-exposed, `INSUFFICIENT_EVIDENCE`.
+- **ANALYST_PRIMARY_V1 (P-612–P-622, 11 cards).** Rank 1 6W/5L (54.5%, 28.0–78.7), Rank 2 5W/5L/1P; Hit@2 8/11; 0 covering pairs. Brier 0.2041 / log loss 0.5907 on 21 decisive slot rows; 11 wins against 12.86 expected.
+- **Rank 1 by stated p.** 5W/0L at p ≥ 0.60; 1W/5L below, all five losses under the 0.62 gate.
+- **Frozen BASELINE_P.** 8 of 50 rows (P-612, P-621): card − baseline Brier +0.0244.
+- **Research-only P-601–P-611.** 25W/25L/2U, NOT_PRIMARY (analyst MSE 0.2429 on 44 rows).
+- **Card-history on the refreshed committed rank log (through P-600).** Rank 1 342–201 (63.0%), Rank 2 293–219 (57.2%). This supersedes the 2026-10-16 tool figures because collided aliases are now graded UNRESOLVED; no grade changed.
+- **Not yet in these figures.** P-606's settlement score (117–98 recorded, 116–98 actual; grades unaffected) and the unresolved P-604 corners await settlement revisions.
+
 ## Full-history retrospective 2026-10-16 (P-001–P-600; descriptive, grades unchanged)
 
 [Report](../verification/retrospective_2026-10-16-full/RETROSPECTIVE_REPORT.md) · generated tables in `HISTORY/`. 599 card records (P-584 pending), 562 with graded counted slots: Rank 1 352–207 (63.0%, 58.9–66.9), Rank 2 298–229 (56.5%, 52.3–60.7), Ranks 3–4 572–457 (55.6%). 837 stated-p rows: Brier 0.2247 against in-sample climatology 0.2410, calibration slope 0.82; Rank 1 mildly overconfident (−4.6 points). Frozen same-row baselines on 4 events only; no model-priced card in the history. In-sample figures are descriptive, not skill against a baseline; every earlier section below is unchanged.

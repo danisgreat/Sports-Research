@@ -20,7 +20,23 @@
 
 **Previous release — MDS/P v19.1 / CR-R5 / LEARN-v1:** PROCEDURE + workshop code. [LEARNING_PIPELINE_PROTOCOL](LEARNING_PIPELINE_PROTOCOL.md) makes verified research reusable for learning. Prompt 1 writes a structured research export, prompt 4 ingests it into the append-only, deduplicated, point-in-time `research/learning_store/`, and point-in-time features feed immutable training releases. New studies: a basketball feature challenger, a V3-equivalent backtest, Hedge schedule and calibration studies. New governance: a hash-chained prospective shadow ledger with paired evaluation and dispositions, learning counters with interim (~100) and comprehensive (~300) review triggers plus per-sport and per-competition clocks, and a hash-chained [model registry](research/model_registry/MODEL_REGISTRY.csv). PRIMARY_HEDGE_MIX_V3, selection, scoring, card/mini/settlement formats, highest P-600 / next P-601 and every issued record are unchanged. The store is empty until the first prompt 4 ingest. Nothing has been run on real data or promoted. [Implementation](research/verification/framework_change_2026-10-16-6/IMPLEMENTATION.md).
 
-**Latest cohort retrospective (16 October 2026):** [P-577–P-600](research/verification/retrospective_2026-10-16/RETROSPECTIVE_REPORT.md), user-requested, outcome-exposed. Counted cohorts won about what their own probabilities said (C1+C2 10/12, C3 5/10); frozen-baseline evidence 4 events, `INSUFFICIENT_EVIDENCE`; V3 executions 0 of 24 (runtime unreachable in the operator environment); learning store empty. Review dispositions recorded in `research/learning_status/REVIEW_LOG.csv` (ALL `DATA_REPAIR_REQUIRED`; tennis `PROSPECTIVE_SHADOW` recommendation; other model sports `INSUFFICIENT_EVIDENCE`). No rule, grade, ID or model changed.
+**Latest cohort retrospective (21 October 2026):** [P-601–P-622](research/verification/retrospective_2026-10-21/RETROSPECTIVE_REPORT.md), user-requested, outcome-exposed, 2 ISO weeks, `INSUFFICIENT_EVIDENCE`. Results:
+- ANALYST_PRIMARY_V1 primary slots 11W/10L/1P (Rank 1 6W/5L, Rank 2 5W/5L/1P), Brier 0.2041 on 21 rows. Rank 1 went 5W/0L at p ≥ 0.60 and 1W/5L below.
+- Frozen BASELINE_P on 8 of 50 rows (+0.0244).
+- Research-only P-601–P-611 diagnostics stay NOT_PRIMARY.
+
+First real ingest of card outcomes:
+- Learning store `ingest_seq` 7: 21 events, 4 corroborating sources, 8 corner statistics, 0 quarantined.
+- 22 research-only label candidates under `research/training_candidates/`.
+- One unpaired local HEDGE_MIX_V3 shadow (A-League, no card) settled descriptively.
+
+Data repairs proposed, not applied:
+- The P-606 settlement score should be 116–98, not 117–98 (no grade changes).
+- A candidate single source gives P-604 corners as 13.
+
+Review rows were appended to REVIEW_LOG under USER_REQUEST / MINI_SETTLEMENT levels, so the INTERIM/SPORT/COMPETITION clocks still count toward their thresholds. No rule, grade, ID, forecast or model changed.
+
+**Previous cohort retrospective (16 October 2026):** [P-577–P-600](research/verification/retrospective_2026-10-16/RETROSPECTIVE_REPORT.md), user-requested, outcome-exposed. Counted cohorts won about what their own probabilities said (C1+C2 10/12, C3 5/10); frozen-baseline evidence 4 events, `INSUFFICIENT_EVIDENCE`; V3 executions 0 of 24 (runtime unreachable in the operator environment); learning store empty. Review dispositions recorded in `research/learning_status/REVIEW_LOG.csv` (ALL `DATA_REPAIR_REQUIRED`; tennis `PROSPECTIVE_SHADOW` recommendation; other model sports `INSUFFICIENT_EVIDENCE`). No rule, grade, ID or model changed.
 
 **Previous release — MDS/P v19.0 / CR-R4 / MINI-v1 / RETAIN-v2:** FORMAT + PROCEDURE: local-key research/settlement, canonical P-ID assignment only in prompt 4, and complete updated mini .md delivery after every game request. New mini-log-10 / mini-settlement-10, C22/S18; EXH-v1 persists. Highest P-600 / next P-601 and all existing records/numerical policies unchanged. [Implementation](research/verification/framework_change_2026-10-16-5/IMPLEMENTATION.md).
 

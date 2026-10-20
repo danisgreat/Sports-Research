@@ -1,0 +1,29 @@
+scope_level,scope,unique_settled_games,ml_admissible_games,frozen_model_forecasts,hedge_feedback_games,prospective_eval_games
+ALL,ALL,1707,0,0,0,0
+SPORT,Baseball,375,0,0,0,0
+SPORT,Basketball,9,0,0,0,0
+SPORT,Cricket One-Day Format,1,0,0,0,0
+SPORT,Cricket T20,1,0,0,0,0
+SPORT,Ice Hockey,1314,0,0,0,0
+SPORT,Rugby Union,1,0,0,0,0
+SPORT,Soccer,6,0,0,0,0
+COMPETITION,Baseball/KBO,1,0,0,0,0
+COMPETITION,Baseball/MLB,374,0,0,0,0
+COMPETITION,Basketball/B.League One,1,0,0,0,0
+COMPETITION,Basketball/B.League Premier,1,0,0,0,0
+COMPETITION,Basketball/Czech Women's 1. Liga,1,0,0,0,0
+COMPETITION,Basketball/LBA Serie A,1,0,0,0,0
+COMPETITION,Basketball/NBA Preseason,2,0,0,0,0
+COMPETITION,Basketball/NBL,2,0,0,0,0
+COMPETITION,Basketball/PBA,1,0,0,0,0
+COMPETITION,Cricket One-Day Format/ODI Tri-Series,1,0,0,0,0
+COMPETITION,Cricket T20/Women's T20I,1,0,0,0,0
+COMPETITION,Ice Hockey/Liiga,1,0,0,0,0
+COMPETITION,Ice Hockey/NHL,1313,0,0,0,0
+COMPETITION,Rugby Union/International Test,1,0,0,0,0
+COMPETITION,Soccer/Algeria Ligue 1,1,0,0,0,0
+COMPETITION,Soccer/Chinese Super League,1,0,0,0,0
+COMPETITION,Soccer/Indian Super League,1,0,0,0,0
+COMPETITION,Soccer/J1 League,1,0,0,0,0
+COMPETITION,Soccer/LaLiga,1,0,0,0,0
+COMPETITION,Soccer/UAE Pro League,1,0,0,0,0

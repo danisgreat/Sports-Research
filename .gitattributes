@@ -16,6 +16,8 @@ research/training_releases/** -text
 research/prospective/** -text
 research/model_registry/** -text
 research/learning_status/** -text
+research/training_candidates/** -text
+research/verification/retrospective_2026-10-21/** -text
 # CHAT-EXEC-v1: hashed captures, returned attempts and settlement feedback keep exact bytes on every clone.
 research/chat_captures/** -text
 research/cycle_attempts/** -text

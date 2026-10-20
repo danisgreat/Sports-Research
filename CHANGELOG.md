@@ -1,3 +1,23 @@
+# Cohort retrospective — 21 October 2026, P-601 to P-622
+
+Prompt 6 (P-2026.10.17-v22.2, MLSCOPE-v1 ML/RL review, LEARN-v1 §§6–8), user-requested and outcome-exposed. New report folder: [retrospective_2026-10-21](research/verification/retrospective_2026-10-21/RETROSPECTIVE_REPORT.md), with DATA_INVENTORY, COHORT_TABLES/ROWS and a card-history run on the committed rank log.
+
+**Results.** ANALYST_PRIMARY_V1 primary 11W/10L/1P, Brier 0.2041 (21 rows); frozen baseline on 8 of 50 rows; `INSUFFICIENT_EVIDENCE` (2 weeks).
+
+**ML/RL steps.**
+- First ingest of card outcomes into the learning store (`ingest_seq` 7: 21 events, 0 quarantined; captures outside the repository).
+- 22 research-only label candidates in `research/training_candidates/`.
+- `primary settle` on one unpaired local HEDGE_MIX_V3 shadow.
+- Twelve REVIEW_LOG rows at USER_REQUEST / MINI_SETTLEMENT levels, so the threshold clocks keep counting.
+
+**Findings.** P-606's settlement score should be 116–98, not 117–98. A candidate single source gives P-604 corners as 13. `card-history` and the rank log stop at P-600. `verify-execution` fails on older bundles. The cards' history tables cannot be ingested.
+
+**Register and summaries.** HYPOTHESIS_REGISTER gains dated status lines and RET-17–RET-21 (`PROPOSED_NOT_TESTED`). SCOREBOARD and CURRENT_STATE gain dated summaries.
+
+**Byte custody.** `.gitattributes` gains two `-text` rules (training candidates and this report folder), so the hashed bytes survive Windows clones.
+
+**Unchanged.** No original log, grade, forecast, ID, rule, prompt, model or registry entry.
+
 # Shared sport rules moved into the prompt 1 core — 17 October 2026
 
 ## 2026-10-17 — MDS/P v22.2 / CR-2026.10.17-R6

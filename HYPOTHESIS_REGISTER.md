@@ -202,3 +202,24 @@ Source: [research/verification/retrospective_2026-10-16-full/RETROSPECTIVE_REPOR
 | RET-14 | P1 | 21 IDs with two events in original headings (block P-139–P-153; P-155, P-156, P-160, P-272, P-370, P-415) | Prompt 7 identity repair from the frozen original bodies, recorded as dated identity addenda; never renumber | Every colliding ID has one verified event mapping or UNRESOLVED_IDENTITY; the card-history collision list reconciles | 21 IDs | None (additive) | PROPOSED_NOT_TESTED |
 | RET-15 | P1 | Empty learning store; history unusable for learning | Extend RET-09 to the full history in supported sports, field-owner re-verifying each result, E3–E4 first | learning-status counts ≥ 80% of supported-sport terminal cards; every quarantine has a reason | Supported-sport cards P-001–P-600 | Quarantine, never edit | PROPOSED_NOT_TESTED |
 | RET-16 | P2 | American football 7–12, AFL 13–14, rugby league 9–10 at Rank 1 | Freeze BASELINE_P beside every Rank 1 in these sports; paired Brier per sport | Paired card − baseline Brier interval per sport | 8 weeks and 30 events per sport | None (monitoring) | PROPOSED_NOT_TESTED |
+
+## Retrospective 2026-10-21 (P-601 to P-622)
+
+Source: [research/verification/retrospective_2026-10-21/RETROSPECTIVE_REPORT.md](research/verification/retrospective_2026-10-21/RETROSPECTIVE_REPORT.md). This section adds dated status lines and new proposals only. Registrations above are unchanged.
+
+**Dated status lines (2026-10-21, 11 ANALYST_PRIMARY_V1 cards, 2 ISO weeks).**
+- **RET-10 (baseline coverage).** 8/50 primary-cohort rows (16%) and 4/22 primary slots carry a frozen BASELINE_P, so the acceptance test (≥ 80% on 40 cards) is failing on this cohort. Paired card − baseline Brier is +0.0244 on 2 events: `INSUFFICIENT_EVIDENCE`.
+- **RET-12 (margin coverage).** Margin z RMS 1.46 (n = 6; P-614 −2.31, P-618 +2.42). Totals z RMS 0.48 (n = 10, none beyond ±1). Both are descriptive.
+- **RET-13 (definitions).** P-616 has one grade-changing overtime-definition question (UNRESOLVED_DEFINITION, operator unknown). The card declared its own full-game convention.
+- **RET-15 (learning store).** It now holds 21 events from this cohort (`ingest_seq` 7, 0 quarantined). The cards' prior-game tables remain un-ingested (no captures).
+- **Rank 1 by stated p.** 5W/0L at p ≥ 0.60 and 1W/5L below (n = 11). This is consistent with the full-history band table. No registration changes.
+
+**New proposals (all `PROPOSED_NOT_TESTED`).**
+
+| ID | Priority | Addresses | Proposal | Acceptance test | Minimum sample | Rollback condition | Status |
+|---|---|---|---|---|---|---|---|
+| RET-17 | P1 | `card-history` stops at P-600; rank log not refreshed past P-600 | Read every `mini_import_*/EFFECTIVE_SETTLEMENT_ROWS.csv`; refresh the rank log through the latest import in a dedicated task | card-history reproduces this report's COHORT_ROWS figures for P-612–P-622 exactly | This cohort | Revert if any earlier cohort's figures change without a recorded grade revision | PROPOSED_NOT_TESTED |
+| RET-18 | P1 | P-606 settlement score 117 v actual 116 (recap-video title) | Settlement checklist: the final score comes from a box score or linescore with a sum check, never a headline or video title | 0 score mismatches when the next 40 settlements are recaptured | 40 settlements | None (control) | PROPOSED_NOT_TESTED |
+| RET-19 | P2 | Totals z RMS 0.48 v margins 1.46 | Report realised totals coverage beside RET-12 margins. Consider PROBABILITY_TOOLKIT σ constants only after 40 cards per family | Central 50%/80% coverage intervals contain 50%/80% per family | 40 cards per family | None (monitoring) | PROPOSED_NOT_TESTED |
+| RET-20 | P2 | `primary verify-execution` KeyError on a 17-Oct attempt | Version-gated or backward-compatible bundle verification | Retained old attempts verify, or fail with an explicit version error | Existing retained attempts | Revert if a current-schema bundle fails | PROPOSED_NOT_TESTED |
+| RET-21 | P2 | Card prior-game tables not ingestible (ENV-v1 chats cannot capture or hash) | Prompt 7/8 recapture of prior-game rows from keyless field-owner routes for imported events, or a registered transcription-to-quarantine path | ≥ 80% of the next cohort's history rows admitted, or each quarantined with a reason | Next cohort | Stop if recapture cost exceeds the owner's budget | PROPOSED_NOT_TESTED |

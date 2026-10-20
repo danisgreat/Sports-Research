@@ -1,0 +1,25 @@
+canonical_id,effective_revision,labels,disposition
+P-601,revision-1,8,RETAIN
+P-602,revision-1,8,RETAIN
+P-603,revision-1,6,RETAIN
+P-603,revision-2,2,RETAIN
+P-604,revision-1,6,RETAIN
+P-604,revision-2,0,"NO_ADMISSIBLE_LABELS (UNRESOLVED,UNRESOLVED)"
+P-605,revision-1,6,RETAIN
+P-606,revision-1,6,RETAIN
+P-607,revision-1,6,RETAIN
+P-608,revision-1,6,RETAIN
+P-609,revision-1,6,RETAIN
+P-610,revision-2,6,RETAIN
+P-611,revision-2,6,RETAIN
+P-612,revision-1,6,RETAIN
+P-613,revision-1,6,RETAIN
+P-614,revision-1,6,RETAIN
+P-615,revision-1,6,RETAIN
+P-616,revision-1,4,"RETAIN (excluded: definition,definition,definition,definition)"
+P-617,revision-1,8,RETAIN
+P-618,revision-1,6,RETAIN
+P-619,revision-1,10,RETAIN
+P-620,revision-1,0,EXCLUDED_PENDING_EVENT (Test result 22 Oct; no FINAL ingested)
+P-621,revision-1,6,RETAIN
+P-622,revision-1,6,RETAIN
