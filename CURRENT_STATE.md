@@ -77,12 +77,12 @@ FORMAT + PROCEDURE: MDS-v16.0 / CR-R7 / P-v16.0 / PRIMARY-v3.2; SCV-v10 and SEL-
 | Mini-log format | `mini-log-10` (in-progress `mini-log-2` through `mini-log-9` retain their format and issued cores) |
 | Settlement format | `mini-settlement-10` with source discovery, attempts and closure / S1-S18 (settlement-9 and earlier retain original formats) |
 | Freeze | None. Custody is the git history of `main` (CURRENT_RULES §9). Cards record the HEAD SHA they read. The last control manifest, `CONTROL_MANIFEST_2026-10-09-3.md`, is in [archive/controls/](archive/controls/). |
-| Highest committed canonical ID | **P-600** |
-| Next canonical ID | **P-601** (equal to the line in GAME_LOG_STATUS_CURRENT.md) |
+| Highest committed canonical ID | **P-622** |
+| Next canonical ID | **P-623** (equal to the line in GAME_LOG_STATUS_CURRENT.md) |
 | Reserved IDs | P-518 to P-522 |
 | Active Combined Log | [prediction logs/PREDICTION_LOG_COMBINED_8.md](prediction%20logs/PREDICTION_LOG_COMBINED_8.md) |
 | Previous parts | Parts 1 to 7, immutable; Part 6 keeps its original P-518 to P-522 source block; Part 7 closed with 51 originals P-550 to P-600 |
-| Final settlement register | **116 retained records: 115 terminal sporting-result reviews + 1 legacy pending P-584**. P-590-P-600 source cohort: 23W/21L/2 definition-unresolved rows, conditional sporting grades only; no operator/model certification. [Current import](research/verification/mini_import_P-590_P-600_2026-10-16-1/CANONICAL_IMPORT_REPORT.md). Earlier dated scoreboards retain their original figures. |
+| Final settlement register | **138 retained records: 137 terminal sporting-result reviews + 1 legacy pending P-584** (P-620's contracts are terminal; only its qualitative Test-winner call awaits the result). Latest import P-601–P-622 (2026-10-21): research-only P-601–P-611 analyst rows 25W/25L/2 unresolved (NOT_PRIMARY, no primary denominator); ANALYST_PRIMARY_V1 P-612–P-622 rows 25W/23L/2 push, primary ranks 1–2 11W/10L/1 push, mean Brier 0.204 (n=21, uncalibrated, no pre-start issue verified; P-612–P-618 are NOT_ISSUED drafts). Conditional sporting grades only; no operator/model certification. One card held (LOCAL-20261018MELILL01-G0004, intake marker defect). [Current import](research/verification/mini_import_P-601_P-622_2026-10-21-1/CANONICAL_IMPORT_REPORT.md); previous [P-590–P-600 import](research/verification/mini_import_P-590_P-600_2026-10-16-1/CANONICAL_IMPORT_REPORT.md). Earlier dated scoreboards retain their original figures. |
 
 ## Selection rules (provisional until the prospective window completes)
 

@@ -1,7 +1,7 @@
 <!-- BEGIN CURRENT RESEARCH QUEUE -->
 # Current canonical research queue
 
-**Next canonical ID: P-601.** Every requested event is retained, regardless of calibration: first as a local working card in the authorised mini, then canonically through verified prompt-4 retention import (which may precede prompt-3 settlement under RETAIN-v1). No card is written to the active combined log directly. *(Clarified 2026-10-12, audit R10: the earlier wording "go directly to the active combined log" described retention, not a bypass of local staging.)* Canonical IDs identify retained cards; performance certification and live/late timing are separate labels.
+**Next canonical ID: P-623.** Every requested event is retained, regardless of calibration: first as a local working card in the authorised mini, then canonically through verified prompt-4 retention import (which may precede prompt-3 settlement under RETAIN-v1). No card is written to the active combined log directly. *(Clarified 2026-10-12, audit R10: the earlier wording "go directly to the active combined log" described retention, not a bypass of local staging.)* Canonical IDs identify retained cards; performance certification and live/late timing are separate labels.
 Active Combined Log: `prediction logs/PREDICTION_LOG_COMBINED_8.md`.
 Freeze: none (custody is the git history of `main`, CURRENT_RULES §9). The last control manifest is `archive/controls/CONTROL_MANIFEST_2026-10-09-3.md`. Current authority: CURRENT_STATE.md, METHOD.md and CURRENT_RULES.md.
 
@@ -1031,3 +1031,32 @@ The supplied package reports **23 conditional sporting WIN / 21 LOSS / 2 UNRESOL
 | P-598 | P-598-SETTLEMENT-R1-20261016; parent ORIGINAL_CARD | TERMINAL_SPORTING_REVIEW / OPERATOR_UNKNOWN / NOT_CERTIFIED / ONE_DEFINITION_UNRESOLVED |
 | P-599 | P-599-SETTLEMENT-R1-20261016; parent ORIGINAL_CARD | TERMINAL_SPORTING_REVIEW / OPERATOR_UNKNOWN / NOT_CERTIFIED |
 | P-600 | P-600-SETTLEMENT-R1-20261016; parent ORIGINAL_CARD | TERMINAL_SPORTING_REVIEW / OPERATOR_UNKNOWN / NOT_CERTIFIED |
+
+## Current canonical import — 2026-10-21T01:07:13+11:00
+
+Highest canonical **P-622**; next **P-623**; reserved P-518–P-522 unchanged; active Combined Log Part 8. Twenty-two new events P-601–P-622 imported from five frozen local minis in declared order (79B3 → MELILL01 → Q7N4 → K9V4 → X7Q4); the empty mini 2026101710538263F6ED consumed none; LOCAL-20261018MELILL01-G0004 is held for an intake marker defect (no ID). Inventory **138 retained research records = 137 terminal sporting-result reviews + 1 legacy pending P-584**. Research-only P-601–P-611: 25W/25L/2 unresolved analyst rows, NOT_PRIMARY. ANALYST_PRIMARY_V1 P-612–P-622: primary ranks 1–2 **11W/10L/1 push**, mean Brier 0.204 (n=21), uncalibrated; no pre-start issue verified; P-612–P-618 are NOT_ISSUED drafts reported in their own cohort. Open: P-604 corners, P-616 operator OT definition, P-620 Test result (winner call only), operator terms and final times. [Import report, custody and readback](research/verification/mini_import_P-601_P-622_2026-10-21-1/CANONICAL_IMPORT_REPORT.md); [queue](research/verification/mini_import_P-601_P-622_2026-10-21-1/UNRESOLVED_POST_IMPORT.md).
+
+| ID | Effective revision | Current status |
+|---|---|---|
+| P-601 | R1 (2026-10-21-settlement-revision-1) | TERMINAL_SPORTING_REVIEW / RESEARCH_ONLY_NOT_PRIMARY / OPERATOR_UNKNOWN |
+| P-602 | R1 | TERMINAL_SPORTING_REVIEW / RESEARCH_ONLY_NOT_PRIMARY / OPERATOR_UNKNOWN |
+| P-603 | R1; corner keys R2 (parent R1) | TERMINAL_SPORTING_REVIEW / RESEARCH_ONLY_NOT_PRIMARY / CORNERS_SINGLE_SOURCE |
+| P-604 | R1; corner keys R2 (parent R1) | TERMINAL_SPORTING_REVIEW / RESEARCH_ONLY_NOT_PRIMARY / TWO_CORNER_ROWS_UNRESOLVED |
+| P-605 | R1 | TERMINAL_SPORTING_REVIEW / RESEARCH_ONLY_NOT_PRIMARY / OPERATOR_UNKNOWN |
+| P-606 | R1 | TERMINAL_SPORTING_REVIEW / RESEARCH_ONLY_NOT_PRIMARY / OPERATOR_UNKNOWN |
+| P-607 | R1 | TERMINAL_SPORTING_REVIEW / RESEARCH_ONLY_NOT_PRIMARY / OPERATOR_UNKNOWN |
+| P-608 | R1 | TERMINAL_SPORTING_REVIEW / RESEARCH_ONLY_NOT_PRIMARY / OPERATOR_UNKNOWN |
+| P-609 | R1 | TERMINAL_SPORTING_REVIEW / RESEARCH_ONLY_NOT_PRIMARY / OPERATOR_UNKNOWN |
+| P-610 | R2 (parent R1, was PENDING_EVENT) | TERMINAL_SPORTING_REVIEW / RESEARCH_ONLY_NOT_PRIMARY / OPERATOR_UNKNOWN |
+| P-611 | R2 (parent R1, was PENDING_EVENT) | TERMINAL_SPORTING_REVIEW / RESEARCH_ONLY_NOT_PRIMARY / OPERATOR_UNKNOWN |
+| P-612 | R1 | TERMINAL_SPORTING_REVIEW / ANALYST_PRIMARY_V1 / NOT_ISSUED_DRAFT / OPERATOR_UNKNOWN |
+| P-613 | R1 | TERMINAL_SPORTING_REVIEW / ANALYST_PRIMARY_V1 / NOT_ISSUED_DRAFT / OPERATOR_UNKNOWN |
+| P-614 | R1 | TERMINAL_SPORTING_REVIEW / ANALYST_PRIMARY_V1 / NOT_ISSUED_DRAFT / OPERATOR_LABEL_UNVERIFIED |
+| P-615 | R1 | TERMINAL_SPORTING_REVIEW / ANALYST_PRIMARY_V1 / NOT_ISSUED_DRAFT / OPERATOR_UNKNOWN |
+| P-616 | R1 | TERMINAL_SPORTING_REVIEW / ANALYST_PRIMARY_V1 / NOT_ISSUED_DRAFT / OT_DEFINITION_GRADE_CHANGING |
+| P-617 | R1 | TERMINAL_SPORTING_REVIEW / ANALYST_PRIMARY_V1 / NOT_ISSUED_DRAFT / OPERATOR_UNKNOWN |
+| P-618 | R1 | TERMINAL_SPORTING_REVIEW / ANALYST_PRIMARY_V1 / NOT_ISSUED_DRAFT / OPERATOR_UNKNOWN |
+| P-619 | R1 | TERMINAL_SPORTING_REVIEW / ANALYST_PRIMARY_V1 / OPERATOR_UNKNOWN |
+| P-620 | R1 | TERMINAL_SPORTING_REVIEW (contracts) / ANALYST_PRIMARY_V1 / TEST_RESULT_PENDING_FOR_WINNER_CALL |
+| P-621 | R1 | TERMINAL_SPORTING_REVIEW / ANALYST_PRIMARY_V1 / OPERATOR_UNKNOWN |
+| P-622 | R1 | TERMINAL_SPORTING_REVIEW / ANALYST_PRIMARY_V1 / OPERATOR_UNKNOWN |
