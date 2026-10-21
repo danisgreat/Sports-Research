@@ -96,8 +96,8 @@ FORMAT + PROCEDURE: MDS-v16.0 / CR-R7 / P-v16.0 / PRIMARY-v3.2; SCV-v10 and SEL-
 | Highest committed canonical ID | **P-622** |
 | Next canonical ID | **P-623** (equal to the line in GAME_LOG_STATUS_CURRENT.md) |
 | Reserved IDs | P-518 to P-522 |
-| Active Combined Log | [prediction logs/PREDICTION_LOG_COMBINED_8.md](prediction%20logs/PREDICTION_LOG_COMBINED_8.md) |
-| Previous parts | Parts 1 to 7, immutable; Part 6 keeps its original P-518 to P-522 source block; Part 7 closed with 51 originals P-550 to P-600 |
+| Active Combined Log | [prediction logs/PREDICTION_LOG_COMBINED_9.md](prediction%20logs/PREDICTION_LOG_COMBINED_9.md) |
+| Previous parts | Parts 1 to 8, immutable; Part 6 keeps its original P-518 to P-522 source block; Part 7 closed with 51 originals P-550 to P-600; Part 8 closed with 22 originals P-601 to P-622 |
 | Final settlement register | **138 retained records: 137 terminal sporting-result reviews + 1 legacy pending P-584** (P-620's contracts are terminal; only its qualitative Test-winner call awaits the result). Latest import P-601–P-622 (2026-10-21): research-only P-601–P-611 analyst rows 25W/25L/2 unresolved (NOT_PRIMARY, no primary denominator); ANALYST_PRIMARY_V1 P-612–P-622 rows 25W/23L/2 push, primary ranks 1–2 11W/10L/1 push, mean Brier 0.204 (n=21, uncalibrated, no pre-start issue verified; P-612–P-618 are NOT_ISSUED drafts). Conditional sporting grades only; no operator/model certification. One card held (LOCAL-20261018MELILL01-G0004, intake marker defect). [Current import](research/verification/mini_import_P-601_P-622_2026-10-21-1/CANONICAL_IMPORT_REPORT.md); previous [P-590–P-600 import](research/verification/mini_import_P-590_P-600_2026-10-16-1/CANONICAL_IMPORT_REPORT.md). Earlier dated scoreboards retain their original figures. |
 
 ## Selection rules (provisional until the prospective window completes)
@@ -185,3 +185,8 @@ The supplied package reports **23 conditional sporting WIN / 21 LOSS / 2 UNRESOL
 ## Combined Log rollover — 2026-10-17T02:17:38+11:00
 
 Active destination: [Part 8](prediction%20logs/PREDICTION_LOG_COMBINED_8.md); Part 7 closed after 2,078,770 bytes / 51 originals P-550–P-600. Highest P-600 / next P-601 and reserved P-518–P-522 unchanged; zero IDs consumed. Pending P-584, terminal evidence and execution/learning repair queues continue at their exact existing dispositions. [Rollover custody, both queues and readback](research/verification/combined_rollover_2026-10-17/README.md). This dated navigation update supersedes earlier active-part snapshots only; no forecast, settlement, training or model change.
+
+
+## Combined Log rollover — 2026-10-21T02:30:23+11:00
+
+Active destination: [Part 9](prediction%20logs/PREDICTION_LOG_COMBINED_9.md); Part 8 closed with 851,514 pre-closure raw bytes and 22 originals P-601–P-622, on the owner's explicit request (default thresholds not reached). Highest P-622 / next P-623 and reserved P-518–P-522 are unchanged; zero IDs consumed. Pending P-584, P-620's winner-call/learning fields, terminal evidence/definition/custody and independent execution/learning queues continue without closure or clock reset. [Rollover receipt and byte verification](research/verification/combined_rollover_2026-10-21-1/README.md). Earlier dated openings/import summaries retain their historical routing.

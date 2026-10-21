@@ -1,0 +1,16 @@
+check,result
+trigger,EXPLICIT_OWNER_REQUEST; 851514 bytes / 22 cards; thresholds not reached
+import_readback,50 byte ranges verified
+prefix,851514 original bytes unchanged; closure only
+part9,header-only; zero canonical/card/addendum/settlement blocks
+ids,highest P-622; next P-623; reserved P-518-P-522 unchanged
+live_pointers,CURRENT_STATE/status/README Part 9; index dynamic
+idempotency,actual exact rerun ALREADY_COMPLETED; zero writes
+occupied_successor,rejected before write
+prefix_drift,rejected before write
+partial_closure,rejected before write
+pointer_drift,rejected before write
+protected_files,2668 baseline files; only six allowed rollover targets changed
+frozen_history_inputs,19 pre-rollover identities verified via current/snapshot bytes
+history_code_tests,500 passed; production code unchanged since preceding task
+git_metadata,86 verified shell-metadata files quarantined externally; fetch succeeds

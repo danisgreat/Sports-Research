@@ -71,6 +71,14 @@ The workshop has no list of "main leagues". `ml/config.py` walks `research/revie
    - A competition added to the archive later is picked up by the next run with no code change, as long as its sport is in `SPORT_RULES` and its files use recognisable columns.
    - Facts a results file cannot show (franchise renames) go in `OVERRIDES`.
 
+## Current history reporting (21 October 2026)
+
+`python -m ml card-history --out <new-folder>` combines the historical rank log with supported inventories discovered under `research/verification/mini_import_*/`. It reads all numbered Combined Log parts, including parts 8, 10 and later; no import cutoff is hard-coded. Effective settlement inventories take precedence over original-row inventories within one package. Unknown schemas, duplicate effective contracts and overlapping packages require explicit reconciliation.
+
+The output includes `CARD_ROWS.csv`, `CANONICAL_COVERAGE.csv` and `CARD_HISTORY.md`. Coverage and primary scores are separated by probability cohort; research-only analyst values are diagnostic and excluded from primary scores and calibration. Canonical records with no contract rows are shown for review, including legitimate pending/no-forecast records. Original ranks, grades and missing baselines remain literal. This does not infer issuance timing, operator action or prospective eligibility, or rewrite the historical rank log.
+
+The receipt hashes all discovered inventories, mapping files and log parts; missing optional files are marked MISSING. Changed inputs or source during the run reject the report. See [the repair and measured checks](../research/verification/history_reporting_2026-10-21-1/IMPLEMENTATION.md). This reporting code changes the aggregate `ml/` digest; prior model/release receipts keep their original digest and are not regenerated or promoted by this work.
+
 ## Layout
 
 | Module | What it does |

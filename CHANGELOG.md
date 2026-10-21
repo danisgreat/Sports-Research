@@ -1,3 +1,11 @@
+# Combined Log rollover — Part 8 to Part 9, 21 October 2026
+
+Owner-requested prompt 5. Part 8 contains 851,514 pre-closure raw bytes and 22 originals P-601–P-622; explicit request is the trigger because default thresholds were not reached. Append-only closure, empty Part 9 opening, current routing/README updates and preserved queues; highest P-622, next P-623 and reserved P-518–P-522 unchanged. [Receipt](research/verification/combined_rollover_2026-10-21-1/README.md). The separately authorised history-reporting repair and its 500-test verification are included in publication. No card, grade, settlement or model release changes.
+
+# History-reporting integrity repair — 21 October 2026
+
+Owner-requested fix for review point 2. `card-history` now discovers supported import inventories and numbered Combined Log parts instead of stopping at P-600/Part 7. It retains original probability roles, excludes research-only diagnostics from primary scores and calibration, reports cohort-level counts/Brier/baseline coverage and exposes canonical records without contract rows. Receipts include all consumed sources and reject inputs changed during execution. Existing records, the historical rank log, old reports, forecast/scoring policies and model releases remain unchanged. [Proposal](research/verification/history_reporting_2026-10-21-1/CHANGE_PROPOSAL.md) · [implementation and checks](research/verification/history_reporting_2026-10-21-1/IMPLEMENTATION.md).
+
 # Cohort retrospective — 21 October 2026, P-601 to P-622
 
 Prompt 6 (P-2026.10.17-v22.2, MLSCOPE-v1 ML/RL review, LEARN-v1 §§6–8), user-requested and outcome-exposed. New report folder: [retrospective_2026-10-21](research/verification/retrospective_2026-10-21/RETROSPECTIVE_REPORT.md), with DATA_INVENTORY, COHORT_TABLES/ROWS and a card-history run on the committed rank log.

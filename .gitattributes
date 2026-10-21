@@ -34,3 +34,11 @@ archive/superseded_2026-10-17-5/** -text
 research/verification/framework_change_2026-10-17-5/** -text
 archive/superseded_2026-10-17-6/** -text
 research/verification/framework_change_2026-10-17-6/** -text
+
+# Exact custody for the history repair and Part 8-to-9 rollover.
+archive/history_reporting_2026-10-21-1/** -text
+research/verification/history_reporting_2026-10-21-1/** -text
+research/verification/combined_rollover_2026-10-21-1/** -text
+"prediction logs/PREDICTION_LOG_COMBINED_8.md" -text
+"prediction logs/PREDICTION_LOG_COMBINED_9.md" -text
+GAME_LOG_STATUS_CURRENT.md -text

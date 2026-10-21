@@ -1,0 +1,12 @@
+Final verification: 21 October 2026
+Command: python -m pytest ml/tests -q -p no:cacheprovider
+Environment: PYTHONDONTWRITEBYTECODE=1
+Exit code: 0
+Result: 500 passed in 282.39s (0:04:42)
+
+Actual CLI:
+python -m ml card-history --out research/verification/history_reporting_2026-10-21-1/HISTORY_FINAL
+Exit code: 0
+Result: 2424 rows / 621 cards
+
+Detailed receipt and data checks: READBACK_CHECKS.csv and IMPLEMENTATION.md.

@@ -5705,3 +5705,18 @@ Original: Part 8 canonical research P-622; prior revision: NONE. Source `inputs/
 **R11. Hypothesis:** `PROPOSED_NOT_TESTED` — opponent-adjusted powerplay rates (Zimbabwe vs full-member new-ball attacks only) would centre lower.
 **R12. Disposition:** `MONITOR`; no Rank-1 loss.
 <!-- END RESEARCH ADDENDUM P-622 2026-10-21-settlement-revision-1 -->
+
+
+<!-- BEGIN COMBINED LOG CLOSURE 2026-10-21-8-to-9 -->
+## Part 8 closure — 2026-10-21T02:30:23+11:00
+
+**CLOSED.** Owner-invoked prompt 5, explicit rollover request; authority LOCAL_WORKING_TREE at main `476def8e29420f66335c09de74134495e367d234`. Measured before closure: **851,514 raw bytes**, **22 canonical originals P-601–P-622**. The default 1.5 MB / 50-card thresholds were not reached; the owner's explicit request is the trigger. The [latest import](../research/verification/mini_import_P-601_P-622_2026-10-21-1/CANONICAL_IMPORT_REPORT.md) is complete: all 50 source/core readback ranges match their hashes, and canonical/addendum markers are balanced. A held source card and open information queues are not an unfinished canonical append.
+
+Pre-closure identity: 851,514 bytes, SHA-256 `2d799865a2346731e10b2f37f625a7dee1c1c4317f9925e2d42299f73fa379d2`; Git blob `19578585d0428475833f83e843a798a6503c5c21`. The complete original prefix, historical opening and every issued/imported core remain byte-for-byte unchanged. Only this closure is appended. [Snapshot, continuity and verification](../research/verification/combined_rollover_2026-10-21-1/README.md).
+
+Highest global canonical ID **P-622**; next **P-623**, unchanged; reserved **P-518–P-522** remain reserved. Retained inventory remains 138 records: 137 terminal sporting-result reviews and legacy pending P-584. No allocation, forecast, settlement, copied card or model promotion.
+
+Pending queue: P-584 remains pending; P-620's Test-winner call/final innings learning record remain pending separately from its terminal contracts. Terminal evidence/definition/custody/source and execution/learning repair queues retain their existing revisions, actors, next sources, due times and unknown final clocks. [Both queues and independent custody](../research/verification/combined_rollover_2026-10-21-1/QUEUE_CONTINUITY.md). No new retrieval, queue closure, due-time reset or scheduled automation.
+
+Successor: **[ACTIVE Part 9](PREDICTION_LOG_COMBINED_9.md)**. Future revisions for closed-part originals append to the active part with original and prior-revision pointers. Resolve live routing from [CURRENT_STATE](../CURRENT_STATE.md). Source registers, manifests, bundles, feedback, learning and shadow identities stay in their independent locations. RESEARCH_ONLY / MARKET_BLIND; no qualification change.
+<!-- END COMBINED LOG CLOSURE 2026-10-21-8-to-9 -->

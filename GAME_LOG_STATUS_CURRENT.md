@@ -2,7 +2,7 @@
 # Current canonical research queue
 
 **Next canonical ID: P-623.** Every requested event is retained, regardless of calibration: first as a local working card in the authorised mini, then canonically through verified prompt-4 retention import (which may precede prompt-3 settlement under RETAIN-v1). No card is written to the active combined log directly. *(Clarified 2026-10-12, audit R10: the earlier wording "go directly to the active combined log" described retention, not a bypass of local staging.)* Canonical IDs identify retained cards; performance certification and live/late timing are separate labels.
-Active Combined Log: `prediction logs/PREDICTION_LOG_COMBINED_8.md`.
+Active Combined Log: `prediction logs/PREDICTION_LOG_COMBINED_9.md`.
 Freeze: none (custody is the git history of `main`, CURRENT_RULES §9). The last control manifest is `archive/controls/CONTROL_MANIFEST_2026-10-09-3.md`. Current authority: CURRENT_STATE.md, METHOD.md and CURRENT_RULES.md.
 
 
@@ -1060,3 +1060,8 @@ Highest canonical **P-622**; next **P-623**; reserved P-518–P-522 unchanged; a
 | P-620 | R1 | TERMINAL_SPORTING_REVIEW (contracts) / ANALYST_PRIMARY_V1 / TEST_RESULT_PENDING_FOR_WINNER_CALL |
 | P-621 | R1 | TERMINAL_SPORTING_REVIEW / ANALYST_PRIMARY_V1 / OPERATOR_UNKNOWN |
 | P-622 | R1 | TERMINAL_SPORTING_REVIEW / ANALYST_PRIMARY_V1 / OPERATOR_UNKNOWN |
+
+
+## Combined Log rollover — 2026-10-21T02:30:23+11:00
+
+Active destination: [Part 9](prediction%20logs/PREDICTION_LOG_COMBINED_9.md); Part 8 closed with 851,514 pre-closure raw bytes and 22 originals P-601–P-622, on the owner's explicit request (default thresholds not reached). Highest P-622 / next P-623 and reserved P-518–P-522 are unchanged; zero IDs consumed. Pending P-584, P-620's winner-call/learning fields, terminal evidence/definition/custody and independent execution/learning queues continue without closure or clock reset. [Rollover receipt and byte verification](research/verification/combined_rollover_2026-10-21-1/README.md). Earlier dated openings/import summaries retain their historical routing.

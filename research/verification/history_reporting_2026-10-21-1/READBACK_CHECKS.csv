@@ -1,0 +1,9 @@
+check,result
+original_2322_rows,UNCHANGED_ON_EIGHT_FIELDS
+rows,2424
+cards,621
+highest_card,P-622
+primary_brier,0.20409252380952383
+primary_baseline_rows,8
+receipt_inputs_verified,19
+code_sha256,73e95ff94b2c978d56a193676ace502572ddfbe51b295d6569cf9470e4e27c27
