@@ -1,0 +1,2 @@
+local_key,status,reason,competition,release,mini_path,mini_sha256,card_block_sha256,scheduled_start,run_at,timing_at_generation,attempt_path,ledger_model_rows,ledger_card_rows
+LOCAL-20261022F6K3OJNO-G0004,NOT_RUN_NO_RELEASE,"no active release for this competition; active: Baseball/MLB, Ice Hockey/NHL",Basketball/NBA,,research/active_minis/20261022F6K3OJNO.md,2bffeeb370a5fe76ffd2a19281db939a4b63c08f61f75d8b31457dbb094f2de8,8f68f1c2e885125cd9baa7eb3f6d85ab4998741544041c49854734d26acd234c,2026-10-21T23:00:00+00:00,2026-10-21T23:17:14.940519+00:00,,,0,0
