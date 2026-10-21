@@ -210,7 +210,8 @@ LEARN_COMMANDS = {"ingest": "ml.research_ingest", "features": "ml.features", "tr
                   "learning-status": "ml.learning_status", "registry": "ml.registry",
                   "prospective": "ml.evaluation.prospective", "calibration": "ml.calibration", "hedge-study": "ml.hedge",
                   "v3-backtest": "ml.evaluation.v3_backtest", "bkb-features": "ml.models.basketball_features",
-                  "card-history": "ml.evaluation.card_history", "capability": "ml.capability", "baseline": "ml.league_baseline"}
+                  "card-history": "ml.evaluation.card_history", "capability": "ml.capability", "baseline": "ml.league_baseline",
+                  "pregame": "ml.pregame"}
 
 
 def main(argv: list[str]) -> None:

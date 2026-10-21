@@ -1,3 +1,17 @@
+# Everything runs here; model shadow after the card — MDS/P v23.0 / CR-2026.10.22-R1, 22 October 2026
+
+Owner instruction: run the game logs in this repository, not in an external chat; run ML/RL as needed; judge models over at least 8 weeks or 50 games; check whether simulation helps; keep researching verifiable internet sources; assign canonical IDs only in the settlement phase. Prompt 8, STATISTICAL + PROCEDURE.
+
+- **ENV-v2:** all eight prompts run as the repository agent with internet research and end with a commit and push ([EXECUTION_ENVIRONMENT_PROTOCOL](EXECUTION_ENVIRONMENT_PROTOCOL.md)). ENV-v1 is retired for new work; its outputs still enter through prompt 4.
+- **MLSCOPE-v2:** the analyst card is priced first and read back; then `python -m ml pregame run` freezes the model, league baseline and card p_card on identical contracts, or records NOT_RUN_NO_RELEASE / NOT_RUN_STALE_RELEASE / NOT_RUN_INPUT_REFUSED. Prompt 3 settles shadows (`cycle settle`), prompt 6 evaluates (`pregame status`, `cycle evaluate`, `pregame compare-card`), prompt 8 releases. Floors: 8 settled weeks and 50 settled paired games before any decision; a progress review is due at whichever comes first.
+- **MINI-v2:** canonical IDs are assigned only in the settlement phase: prompt 3 runs the prompt-4 import after settling.
+- **RELEASE-SCOPE-v1:** releases freeze the forecast cycle's import closure only (`ml/code_identity.py`). NHL-CYCLE-3 / MLB-CYCLE-3 had gone stale; NHL-CYCLE-4 / MLB-CYCLE-4 replace them with identical parameters.
+- **Code:** `ml/pregame.py`, `ml/code_identity.py`, `ml/tests/test_pregame.py`; `ml/cycle.py` and `ml/chat.py` use the new digest; prompt-consistency tests rewritten for ENV-v2 / MLSCOPE-v2.
+- **Simulation review:** [SIMULATION_REVIEW](research/verification/framework_change_2026-10-22-1/SIMULATION_REVIEW.md). Exact calculation suffices; NFL key numbers, hockey one-goal and baseball one-run margins need structural handling; Monte Carlo only in repository code for path-dependent families.
+- **New active mini** [20261022F6K3OJNO](research/active_minis/20261022F6K3OJNO.md) carries the unsettled OKC @ SAS card (original key kept) and the Díaz Acosta v Basilashvili chat draft (G0001, NOT_ISSUED).
+
+Archived originals: [archive/superseded_2026-10-22-1/](archive/superseded_2026-10-22-1/). [Proposal](research/verification/framework_change_2026-10-22-1/CHANGE_PROPOSAL.md) · [Implementation](research/verification/framework_change_2026-10-22-1/IMPLEMENTATION.md). No ID, grade, forecast or issued record changed.
+
 # Combined Log rollover — Part 8 to Part 9, 21 October 2026
 
 Owner-requested prompt 5. Part 8 contains 851,514 pre-closure raw bytes and 22 originals P-601–P-622; explicit request is the trigger because default thresholds were not reached. Append-only closure, empty Part 9 opening, current routing/README updates and preserved queues; highest P-622, next P-623 and reserved P-518–P-522 unchanged. [Receipt](research/verification/combined_rollover_2026-10-21-1/README.md). The separately authorised history-reporting repair and its 500-test verification are included in publication. No card, grade, settlement or model release changes.

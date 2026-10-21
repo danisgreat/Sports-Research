@@ -69,12 +69,14 @@ def test_mirrored_schemas_match_the_learning_store():
 
 def test_archive_digest_reproduces_the_release_code_digest():
     files = {f.relative_to(chat.ROOT).as_posix(): f.read_bytes() for f in (chat.ROOT / "ml").rglob("*.py")}
-    assert chat.archive_code_digest(files) == code_digest()
-    # Line endings never change the digest; any source byte does.
+    assert chat.archive_code_digest(files) == C.code_hash()
+    # Line endings never change the digest; any byte of the cycle's own source does (RELEASE-SCOPE-v1).
     crlf = {k: v.replace(b"\r\n", b"\n").replace(b"\n", b"\r\n") for k, v in files.items()}
-    assert chat.archive_code_digest(crlf) == code_digest()
-    edited = dict(files, **{"ml/chat.py": files["ml/chat.py"] + b"# edit\n"})
-    assert chat.archive_code_digest(edited) != code_digest()
+    assert chat.archive_code_digest(crlf) == C.code_hash()
+    edited = dict(files, **{"ml/cycle.py": files["ml/cycle.py"] + b"# edit\n"})
+    assert chat.archive_code_digest(edited) != C.code_hash()
+    helper = dict(files, **{"ml/chat.py": files["ml/chat.py"] + b"# edit\n"})
+    assert chat.archive_code_digest(helper) == C.code_hash()
 
 
 def test_run_executes_verifies_and_packages_then_accept_freezes_pre_start(runtime):

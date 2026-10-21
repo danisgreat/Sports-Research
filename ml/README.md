@@ -6,7 +6,7 @@
 
 # `ml/` — primary sporting runtime and maintainer model workshop
 
-**ML/RL scope (MLSCOPE-v1).** Owner instruction, 17 October 2026: ML/RL is not part of game research. Prompts 1–5 run no code, runtime pack, model, shadow or learning command and read no model output. Prompt 1 researches the game and derives every p_card by hand as ANALYST_PRIMARY_V1 / UNCALIBRATED_ANALYST_PRIMARY, using [PROBABILITY_TOOLKIT](../PROBABILITY_TOOLKIT.md) arithmetic with every input and step shown. Prompts 2–5 create, settle, import and roll over records by hand. ML/RL runs only in prompt 6 (combined-log retrospective: learning-store ingest, model feedback, shadow settlement and comparisons) and prompt 8 (workshop code, releases, shadows and promotion decisions). Its findings reach game research only as reviewed Markdown changes (toolkit constants, base rates, rules) released through prompt 8. This rule supersedes any older text requiring prompts 1–5 to run ML, CYCLE-v1, CHAT-EXEC-v1, a capability receipt, an execution manifest or a learning-store export.
+**ML/RL scope (MLSCOPE-v2).** Owner instruction, 22 October 2026: models run where they are needed, beside the analyst card and never inside it. Prompt 1 researches the game online and prices every p_card as ANALYST_PRIMARY_V1 / UNCALIBRATED_ANALYST_PRIMARY from one declared distribution ([PROBABILITY_TOOLKIT](../PROBABILITY_TOOLKIT.md); code may do the arithmetic, with every input and step printed). Only after the card is written to the mini does prompt 1 run the pregame model shadow, which freezes the model and league-baseline rows, and the card's own p_card, on the same contracts when the competition has an active release, or records NOT_RUN_NO_RELEASE. Model output never changes a card's p_card, ranks or picks. Prompt 3 settles the shadow with the card; prompt 6 ingests and evaluates; prompt 8 builds releases and decides promotion. A model is judged only after at least 8 weeks and 50 paired games; a progress review falls due when either is reached first. RL has no forecasting role: online expert weighting updates at settlement. Details: [FORECAST_CYCLE_PROTOCOL](../FORECAST_CYCLE_PROTOCOL.md). Supersedes MLSCOPE-v1, NOCODE-v1 and any older text that forbids code or models in prompts 1–5.
 
 **Repeat bug audit:** [implementation and coverage](../research/verification/ml_bug_audit_2026-10-14-1/IMPLEMENTATION.md) repairs source parsing, grids, chronology, failure handling, reports, shadow outcomes and decision mechanics. Read the [additional artifact admission notice](../research/model_shadow/BUG_AUDIT_ADMISSION_2026-10-14.md) before using old outputs with the new implementation. Fixed historical fit/grid smoke checks are not predictive validation; fresh model outputs need controlled regeneration.
 
@@ -153,6 +153,8 @@ python -m ml capability [--out CAPABILITY_RECEIPT.csv]
 python -m ml baseline --request REQUEST.csv --history HISTORY.csv --contracts CONTRACTS.csv --out BASELINE.csv
 python -m ml prospective rows --bundle DIR --kind primary|tennis --role CHAMPION|CANDIDATE --out ROWS.csv
 python -m ml card-history --rank-log GAME_PREDICTION_RANK_LOG.csv --out DIR
+python -m ml pregame run --mini MINI.md --game GAME.csv --lines LINES.csv --capture SOURCE.txt --confirm-no-outcome-seen   # prompt 1, after the card
+python -m ml pregame status | compare-card --release R.csv --out DIR   # lane progress (8 weeks / 50 games) and card v model
 python -m ml.chat pack --out DIR_OUTSIDE_REPO           # CHAT-EXEC-v1 runtime pack for a web-chat sandbox
 python -m ml.chat run --game GAME.csv --lines LINES.csv --capture SOURCE.txt --out OUT --confirm-no-outcome-seen
 python -m ml.chat accept --attempt UPLOAD.zip --local-key LOCAL-<MINI_KEY>-G0001 [--freeze-basis commit]
@@ -160,6 +162,10 @@ python -m ml.chat accept --attempt UPLOAD.zip --local-key LOCAL-<MINI_KEY>-G0001
 
 Tests: `test_learning_store.py` (dedup, quarantine, revisions, interrupted ingest, point-in-time features, reproducible releases), `test_learning_models.py` (challenger coherence and leakage guard, identical-game ablation, Hedge schedules against V3, delayed feedback, V3-equivalent backtest, calibration and grid raking), `test_learning_governance.py` (shadow ledger, paired evaluation and power, registry transitions, review clocks), `test_card_history_tools.py` (sport/family rules, effective-grade precedence, collision detection, Rank-1 tests, capability receipt, baseline equality with V3, shadow adapters), `test_learning_lifecycle.py` (one synthetic competition from duplicate minis through forecast, settlement, feedback, correction, release and counters) and `test_prompt_consistency.py`. All use synthetic EXAMPLE data. They establish mechanics, not predictive quality. No real-data ablation, backtest or study has been run yet.
 
+
+## Pregame shadow and release scope (22 October 2026)
+
+`ml/pregame.py` runs the cycle in this repository after the analyst card is written (MLSCOPE-v2): it refuses unless the card's markers are in the mini and every `card_p` is printed in the card, records NOT_RUN_NO_RELEASE / NOT_RUN_STALE_RELEASE / NOT_RUN_INPUT_REFUSED honestly, and freezes the model, league baseline and card p_card on identical contract keys. `ml/code_identity.py` defines the release code digest as the import closure of `ml.cycle` and `ml.workflow` (RELEASE-SCOPE-v1), so editing files outside it no longer retires a release; `test_pregame.py` checks the closure against the modules actually loaded. Details: [FORECAST_CYCLE_PROTOCOL](../FORECAST_CYCLE_PROTOCOL.md).
 
 ## Connected game workflow (CYCLE-v1)
 

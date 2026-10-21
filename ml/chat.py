@@ -134,14 +134,10 @@ def _one(rows, fields, name) -> dict:
 
 
 def archive_code_digest(files: dict) -> str:
-    """ml.run.code_digest over archived bytes (``{posix path: bytes}``), so a pack can be checked without a checkout."""
-    h = hashlib.sha256()
-    for path in sorted((p for p in files if p.startswith("ml/") and p.endswith(".py")), key=lambda s: PurePosixPath(s).parts):
-        if "tests" in PurePosixPath(path).parts:
-            continue
-        h.update(path.encode())
-        h.update(files[path].replace(b"\r\n", b"\n"))
-    return h.hexdigest()
+    """The release code digest (ml.cycle.code_hash) over archived bytes (``{posix path: bytes}``), so a pack can be
+    checked without a checkout."""
+    from ml import code_identity
+    return code_identity.digest(files.get)
 
 
 # ------------------------------------------------------------------ pack (checkout side)

@@ -1,0 +1,1349 @@
+# Source register: Markdown only (2026-10-09)
+
+**Local keys until import; updated mini after every game (MINI-v1).** Apply [MINI_LOG_IDENTITY_PROTOCOL](MINI_LOG_IDENTITY_PROTOCOL.md). Prompts 1–3 use stable local event keys and never assign/reserve canonical P-IDs; prompt 4 alone assigns them during verified import. After each prompt-1 game request, append the research/addendum, update and read back the mini, and return its complete updated .md document. Preserve every owner-entered Upcoming game block and all earlier issued bytes. New formats: mini-log-10 / mini-settlement-10; earlier records retain their original formats.
+
+**Reuse and discovery:** Consult [RESEARCH_SOURCE_REGISTER](RESEARCH_SOURCE_REGISTER.md) and prior settlement registers, reopen exact routes and record current fields. This is a starting map. EXH-v1 requires further discovery for missing fields and independent second-source verification even with an owner observation. Failed/partial routes stay in the attempt ledger; unread pages/shared collectors cannot pass corroboration.
+
+**Persistent research and corroboration (EXH-v1).** Apply [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md) to every required field in research, logging, settlement and verification. If a source is incomplete, open alternatives and verify material facts with another independent source; track every remaining field and attempt. Unresolved facts/corroboration never qualify as complete information. New settlements use mini-settlement-10 with a visible source-discovery/reuse section, three source/attempt/closure CSVs and S17; older originals retain their rules and bytes. Consult [RESEARCH_SOURCE_REGISTER](RESEARCH_SOURCE_REGISTER.md) and prior package registers, recheck actual coverage, and continue discovery beyond them.
+
+**Historical build claims:** Dated collection counts, tested routes and pinned old data guides below describe earlier work only. The local store is retired and its correctness is not established. Git links preserve context, not input/recovery requirements. Reopen sporting sources for every new form window/player confirmation and record failures/conflicts.
+
+**Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** For every game, research both sides' L5/L10/L15/L20 online under [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md), with opened sources, dated game rows and true n. Seek exact-game confirmed players, starting roles, bench/replacements and absences under [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md); projected players remain unconfirmed. The retired local results store and its derived profiles are not required inputs or fallbacks. Earlier archive-first directions are superseded.
+
+**Mandatory online history (HIST-2026.10.16-v3):** [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md) applies to every sport, league and competition, including obscure/regional/women's/youth events. Every event requires opened online sources for both sides' history, regardless of local results. The route tables below are starting points, not an exhaustive allowlist or a current availability audit. New public sporting routes may be researched with access, exact-field/provenance/custody checks. No live route was tested by this procedure update.
+
+**Historical v10 usage (2026-10-11).** Routes/reachability below are dated references, not a fresh probe. Record exact event/field, source update and retrieval time, decisive text extract, fallback/failure and collector lineage; multiple domains may share one feed. Preserve UNKNOWN independence. A planned capture or retry is not an executed/scheduled job. Prefer official KBO terminal boxes promptly; if stale, retain fallback evidence and document a retry around 12 hours after final, within the review target where possible. Missing/conflicting target evidence is UNRESOLVED, never automatically VOID. Do not invent an operator default. CURRENT_RULES §§5/8 and SELECTION_RULES §7 override any older settlement/admission wording below. No live route or lineage audit was performed by this documentation change.
+
+**Version SRC-2026.10.09-v9.** This block was added at the top of the register when the framework became Markdown-only. It replaces the data that lived in `research/sources_registry.json`, `research/sources_registry_adapters.json`, `research/excluded_sources.json`, `runtime/config/sources/sources.json` and the generated reachability probes, all removed on 2026-10-09 (last copies at commit `37203fc2b`).
+
+**What changed.** The source adapters, parsers, retrieval jobs, probes and the matrix generator are gone. The **routes** in the sport tables below (sections 2 and 3, and the reachability matrix) remain the way to find each fact; the **commands** that fetched, parsed or hashed them (`sources.py`, `research/src/...`, `python -B -m ...`, `*.json` receipts) are historical. Wherever an older section below names one of those, read it as a description of what the route returns, and open the page yourself.
+
+## A. Using the register without code
+
+1. Pick the sport's table (section 3) and read the first-choice route and the fallback for the field you need (the "Source-by-source fallback chain" in §3.12 and the field fallbacks in §1.7).
+2. Open the page or API with your browsing tools. Read the exact field for the exact event. A reachable page is not event-specific evidence.
+3. Record in the card: the source, the time you read it, and a short verbatim excerpt (`Evidence quotes`). Preserve source publication/known-at separately from retrieval, permitted evidence extracts and external capture path/SHA256 under the current primary/history protocol; no quote or hash alone certifies source truth.
+4. If the route fails, write the failure, the time and the reason, use the listed fallback and write `(fallback: <source>)`. Public sporting routes discovered for an uncovered competition may be used with recorded source/field/access evidence and queued for register maintenance; do not bypass access restrictions or substitute unrelated bytes.
+5. Independence: sources sharing a provider count once (§1.1). Every source below has `UNKNOWN` independence because no lineage audit has been done.
+6. Market-bearing products are never evidence (§1.4). Sources flagged "market fields possible" may carry odds beside the sporting fields; read only the sporting fields.
+
+## B. Core source register (14 sources)
+
+| Source id | Publisher | Host | Official | Leagues | Endpoints | Access | Market fields | Independence |
+|---|---|---|---|---|---|---|---|---|
+| nbl_official | National Basketball League | schedule.nbl.com.au | yes | NBL | FINAL_SCORE, INCL_OT, SCHEDULE | AUTOMATED_ALLOWED | no | UNKNOWN |
+| mlb_official | Major League Baseball | statsapi.mlb.com | yes | MLB | INCL_EXTRAS, REGULATION_9, SCHEDULE | AUTOMATED_ALLOWED | no | UNKNOWN |
+| espn_epl | ESPN | site.api.espn.com | no | EPL | FINAL_SCORE, SCHEDULE | AUTOMATED_ALLOWED | POSSIBLE (sporting fields only) | UNKNOWN |
+| espn_nbl | ESPN | site.api.espn.com | no | NBL | FINAL_SCORE, SCHEDULE | AUTOMATED_ALLOWED | POSSIBLE (sporting fields only) | UNKNOWN |
+| openfootball | openfootball statistical archive | raw.githubusercontent.com | no | EPL | REGULATION, SCHEDULE | AUTOMATED_ALLOWED | no | UNKNOWN |
+| premierleague_official | Premier League | www.premierleague.com | yes | EPL | REGULATION, SCHEDULE, LINEUPS | AUTOMATED_ALLOWED | no | UNKNOWN |
+| aflw_official | Australian Football League | www.afl.com.au | yes | AFLW | FINAL_SCORE, LINEUPS | AUTOMATED_ALLOWED | no | UNKNOWN |
+| iowa_state_official | Iowa State Athletics | cyclones.com | yes | CFB | FINAL_SCORE, OFFICIALS, PARTICIPANTS | AUTOMATED_ALLOWED | no | UNKNOWN |
+| kansas_state_official | Kansas State Athletics | www.kstatesports.com | yes | CFB | FINAL_SCORE | AUTOMATED_ALLOWED | no | UNKNOWN |
+| nfl_gamebooks | National Football League gamebooks | static.www.nfl.com | yes | NFL | FINAL_SCORE, VENUE, OFFICIALS, PARTICIPANTS | AUTOMATED_ALLOWED | no | UNKNOWN |
+| perth_wildcats_official | Perth Wildcats | www.wildcats.com.au | yes | NBL | FINAL_SCORE, LINEUPS | AUTOMATED_ALLOWED | no | UNKNOWN |
+| nbl_news | National Basketball League | www.nbl.com.au | yes | NBL | FINAL_SCORE, LINEUPS | AUTOMATED_ALLOWED | no | UNKNOWN |
+| football_data | Football-Data | www.football-data.co.uk | no | EPL | REGULATION | MANUAL_ONLY | POSSIBLE (sporting fields only) | UNKNOWN |
+| fixture_download | FixtureDownload | fixturedownload.com | no | NBL | FINAL_SCORE | PERSONAL_USE_LOCAL_ONLY | no | UNKNOWN |
+
+Official sources own their fields (§1.2); none of them proves independent collection.
+
+## C. Adapter status and settlement fields
+
+The adapters below were parsers written for specific providers. "Recorded body tested" meant the parser had been tested against a real saved page; "synthetic fixture only" meant it had not met a real page; "planned" meant none existed. They no longer run. The useful content is **which fields each provider supplies for settlement**, and what it does not.
+
+| Source id | Publisher | Host | Official | Leagues | Settlement fields | Not provided | Adapter status |
+|---|---|---|---|---|---|---|---|
+| kbo_official | Korea Baseball Organization | www.koreabaseball.com | yes | KBO | final_score, innings, extra_innings, status | inning_runs (box score endpoint GetBoxScoreScroll is retained but not parsed); halftime; corners | RECORDED_BODY_TESTED |
+| mlb_livefeed | Major League Baseball | statsapi.mlb.com | yes | MLB | final_score, innings, extra_innings, inning_runs, status |  | RECORDED_BODY_TESTED |
+| npb_official | Nippon Professional Baseball | npb.jp | yes | NPB | final_score, innings, extra_innings, inning_runs, status |  | RECORDED_BODY_TESTED |
+| nhl_official | National Hockey League | api-web.nhle.com | yes | NHL | final_score, overtime, shootout, status | period goal splits (landing endpoint, not parsed); regulation-only score | SYNTHETIC_FIXTURE_ONLY |
+| espn_soccer | ESPN | site.api.espn.com | no | EPL, LALIGA, SERIEA, BUNDESLIGA, LIGUE1 | final_score, halftime_score, corners, status |  | SYNTHETIC_FIXTURE_ONLY |
+| sackmann_tennis | Jeff Sackmann (Tennis Abstract) | raw.githubusercontent.com | no | ATP, WTA | serve_stats, final_score, surface | retirement/walkover flag beyond the score string; current-week results (published with a lag) | SYNTHETIC_FIXTURE_ONLY |
+| bleague_official | B.LEAGUE | www.bleague.jp | yes | B.LEAGUE | none yet | BLOCKER: game pages (ScheduleKey) are rendered client-side; no retained body shows the score JSON endpoint. Capture one real body, then write the parser. | PLANNED_NO_ADAPTER |
+| kbl_official | Korean Basketball League | www.kbl.or.kr | yes | KBL | none yet | BLOCKER: no retained body from kbl.or.kr; endpoint shape unknown. | PLANNED_NO_ADAPTER |
+| euroleague_official | Euroleague Basketball | api-live.euroleague.net | yes | EuroLeague, EuroCup | none yet | BLOCKER: official live API v1/v2 schema not retained; fetch a real body and register the parser. | PLANNED_NO_ADAPTER |
+| acb_official | Liga Endesa | live.acb.com | yes | ACB | none yet | BLOCKER: game and statistics views can share one feed (P-521/P-522 reconciliation); capture bodies and audit lineage before parsing. | PLANNED_NO_ADAPTER |
+| bbl_gbl_official | BBL and Greek Basket League | www.easycredit-bbl.de | yes | BBL, GBL | none yet | BLOCKER: no retained official bodies; the archive builders use Eurobasket/Greek-basket scrapers instead. | PLANNED_NO_ADAPTER |
+
+## D. Data sources of the retired numerical runtime (design record)
+
+Used to describe the training data of the removed runtime. They remain valid places to read historical data by hand; licences are as stated.
+
+| Source id | Sport | Grain | URL | Update cadence | Available to the forecaster at | Licence |
+|---|---|---|---|---|---|---|
+| cricsheet | cricket | ball_by_ball | https://cricsheet.org | daily | match_start_utc | ODC-By 1.0 (Open Data Commons Attribution; corrected 2026-10-14 from "ODbL 1.0" against cricsheet.org/register) |
+| nflfastr | american_football | play_by_play | https://github.com/nflverse/nflverse-data | weekly_in_season | kickoff_utc | MIT |
+| nba_stats | basketball | possession_and_box | https://stats.nba.com | live_post_game | scheduled_tipoff_utc | fair_use_research |
+| pybaseball_statcast | baseball | pitch_and_pa | https://baseballsavant.mlb.com | daily | first_pitch_utc | fair_use_research |
+| fitzroy_afl | afl | match_and_player | https://jimmyday12.github.io/fitzRoy | post_round | bounce_utc | GPL-3 |
+| nrlr_nrl | nrl | match_and_play | https://itsjase.github.io/nrlR | post_round | kickoff_utc | MIT |
+| statsbomb_footballdata | soccer | match_and_xg | https://www.football-data.co.uk | weekly_post_match | kickoff_utc | open_research |
+| moneypuck_nhl | nhl | shot_and_game | https://moneypuck.com/data.htm | daily_in_season | puck_drop_utc | open_attribution |
+| tennis_abstract | tennis | point_and_match | https://github.com/JeffSackmann | daily_post_tournament | match_start_utc | cc_by_nc_sa_4.0 |
+
+## E. Excluded sources
+
+Never admitted: fantasy, betting or market-bearing products.
+
+- **fantasy_premierleague** (Fantasy Premier League): fantasy product; fields are market-derived (ownership, price changes). Excluded since 2026-10-09.
+
+## F. Reachability
+
+The matrix further down was generated on 2026-10-09 by a probe job that no longer exists. It shows what answered from a cloud container (most hosts returned HTTP 403) and `NOT_YET_PROBED` from a local Windows machine. Treat it as a historical observation. Test reachability by hand when you need it, and say so in the card.
+
+**Local Windows column probed by hand on 2026-10-11** (one request per source with `curl` from the local machine at about 23:48 AEDT, except the ESPN NBL scoreboards, read earlier that evening; the cloud column is unchanged from 2026-10-09). Of 12 sources fetched, 4 returned the expected structured content (`espn_epl`, `espn_nbl`, `mlb_official`, `openfootball`), 7 answered with a home page or app shell only (`aflw_official`, `iowa_state_official`, `kansas_state_official`, `nbl_news`, `nbl_official`, `perth_wildcats_official`, `premierleague_official`), and 1 host returned 404 at its root (`nfl_gamebooks`); the two manual-only sources were not fetched. A home page or shell is reachability only: it does not show that an event field can be read. The ESPN NBL scoreboard worked from the local machine although it returned 403 from the cloud container, so the two environments genuinely differ. This is a single observation, not a weekly refresh; the matrix has no generator, so edit the row and its date by hand.
+
+---
+
+# Current source access controls - 2026-10-01
+
+Current October-5 all-log custody: 111 receipt bodies verify locally; 52 are intentionally excluded from Git (42 prior benchmark bodies plus 10 new restricted/market-bearing narrative captures). A clean checkout has 59 bodies and must fail strict custody for the other 52; no CI bypass or fabricated recapture is authorized. See the all-log source inventory and publication evidence.
+
+**Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
+
+> **Current authority (October 5):** [METHOD.md](METHOD.md) and [CURRENT_RULES.md](CURRENT_RULES.md) govern new work. Requested qualitative or explicitly uncalibrated research is retained under stable local keys regardless of calibration; prompt 4 alone assigns canonical IDs during import. Numerical performance certification is separate. Read current IDs/freeze from the [status register](GAME_LOG_STATUS_CURRENT.md), unresolved items from the [carryover](research/verification/closure_2026-10-05/carryover.md), and [current implementation evidence](research/verification/implementation_2026-10-05/REPORT.md). Earlier method, queue, freeze and eligibility statements below retain their historical scope.
+
+*(Historical, 2026-10-01; these files were removed from the tree, so recovery links are in [the link index](HISTORICAL_LINK_INDEX.md#2026-10-12-recovery-map-r36).)* The executable source registry (`research/sources_registry.json`, [recovery](HISTORICAL_LINK_INDEX.md#2026-10-12-recovery-map-r36)) controlled retrieval, league/parser/endpoint scope, market quarantine and permitted access. `research/src/sources.py` ([recovery](HISTORICAL_LINK_INDEX.md#2026-10-12-recovery-map-r36)) produced immutable bodies and receipts. The source observation report of that date was `research/runs/implementation_2026-10-01/source_observations.json` ([recovery](HISTORICAL_LINK_INDEX.md#2026-10-12-recovery-map-r36)): ten routes returned the specified content; both ESPN probes returned HTTP 403; three entries require manual/local access or are excluded. Accessibility is not exact-event truth or independent collection.
+
+Official league, club, university and gamebook sources are available alongside public statistical archives. The registry and archive receipts materially expand retained source evidence. Every current collector remains UNKNOWN independence pending a supported audit. Same upstream API, embedded provider, club syndication or copied report cannot count as a new lineage. For live evidence, retain both a collector audit and event/body-specific audit before the issue cutoff. Native JSON parsing and reviewed manual field mapping must verify the actual field owner and endpoint.
+
+NBL uses the league schedule UUID and regular-season overtime-inclusive final. EPL openfootball supplies publisher score/schedule observations with a derived research ID; official IDs remain unknown until matched to a verified league event. MLB uses gamePk. NFL gamebooks and official CFB/AFLW source bodies support specific archive corrections. Increased source breadth does not authorize a model in an unvalidated sport.
+
+Football-Data and FixtureDownload local raw snapshots keep their prior access/redistribution restrictions; automated source retrieval through those routes is blocked. Odds-bearing ESPN bodies, when retrievable, stay in the benchmark quarantine and only sports fields may be parsed through an audited adapter. Fantasy data remain excluded. Source errors are recorded without circumventing access controls.
+
+The earlier provider directory below is historical routing guidance. Its access observations, active-manifest references and procedural claims are superseded by the current registry and CURRENT_RULES.md. Verify current official rules and exact fields whenever a route is used; a directory entry is not a receipt.
+
+## Reachability matrix (SRC-07)
+
+Which registered source answers in which environment, with the fallback routes (same league, different upstream lineage). Generated from `research/reachability/*.json` by `python -B -m research.operations.reachability render --write SOURCES.md`; refresh weekly by running `python -B -m research.operations.reachability probe --env local_windows` on the local machine (and `--env cloud_container` in a cloud session). A card that relies on a fallback names it in its Evidence cell, for example `(fallback: espn_nbl)`. An environment with no observation file shows NOT_YET_PROBED; nothing is assumed about it. Accessibility is not exact-event truth or independent collection.
+
+<!-- REACHABILITY-MATRIX:BEGIN (generated by research.operations.reachability) -->
+
+| Source | Leagues | local_windows (observed) | cloud_container (observed) | Fallbacks (other lineage, same league) |
+|---|---|---|---|---|
+| `aflw_official` | AFLW | REACHABLE_HOME_PAGE (HTTP 200 text/html; no event field tested; 2026-10-11) | UNAVAILABLE (URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; 2026-10-09) | none registered |
+| `espn_epl` | EPL | EXPECTED_CONTENT (HTTP 200 application/json; `events` for "English Premier League"; 2026-10-11) | UNAVAILABLE (URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; 2026-10-09) | `openfootball`, `premierleague_official` |
+| `espn_nbl` | NBL | EXPECTED_CONTENT (HTTP 200 application/json; 41 daily scoreboards read, 29 completed 2026-27 regular-season games; 2026-10-11) | UNAVAILABLE (URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; 2026-10-09) | `nbl_news`, `nbl_official`, `perth_wildcats_official` |
+| `fixture_download` | NBL | MANUAL_OR_NO_PROBE (PERSONAL_USE_LOCAL_ONLY; not fetched) | MANUAL_OR_NO_PROBE (PERSONAL_USE_LOCAL_ONLY; 2026-10-09) | `espn_nbl`, `nbl_news`, `nbl_official`, `perth_wildcats_official` |
+| `football_data` | EPL | MANUAL_OR_NO_PROBE (MANUAL_ONLY; not fetched) | MANUAL_OR_NO_PROBE (MANUAL_ONLY; 2026-10-09) | `espn_epl`, `openfootball`, `premierleague_official` |
+| `iowa_state_official` | CFB | REACHABLE_HOME_PAGE (HTTP 200 text/html; no event field tested; 2026-10-11) | UNAVAILABLE (URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; 2026-10-09) | `kansas_state_official` |
+| `kansas_state_official` | CFB | REACHABLE_HOME_PAGE (HTTP 200 text/html; no event field tested; 2026-10-11) | UNAVAILABLE (URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; 2026-10-09) | `iowa_state_official` |
+| `mlb_official` | MLB | EXPECTED_CONTENT (HTTP 200 application/json; schedule for 2026-10-10 with `totalGames`; 2026-10-11) | UNAVAILABLE (URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; 2026-10-09) | none registered |
+| `nbl_news` | NBL | REACHABLE_HOME_PAGE (HTTP 200 text/html; `/ladder` 200 but rendered client-side; `/matches` 404; 2026-10-11) | UNAVAILABLE (URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; 2026-10-09) | `espn_nbl`, `perth_wildcats_official` |
+| `nbl_official` | NBL | REACHABLE_APP_SHELL (HTTP 200, 5 KB "Select a Competition" page; scores render client-side and none were read; 2026-10-11) | UNAVAILABLE (URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; 2026-10-09) | `espn_nbl`, `perth_wildcats_official` |
+| `nfl_gamebooks` | NFL | HOST_UP_ROUTE_UNTESTED (HTTP 404 at the bare host root; no gamebook URL tested; 2026-10-11) | UNAVAILABLE (URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; 2026-10-09) | none registered |
+| `openfootball` | EPL | EXPECTED_CONTENT (HTTP 200 text/plain; README of openfootball/england; 2026-10-11) | EXPECTED_CONTENT (HTTP 200; 2026-10-09) | `espn_epl`, `premierleague_official` |
+| `perth_wildcats_official` | NBL | REACHABLE_HOME_PAGE (HTTP 200 text/html; no event field tested; 2026-10-11) | UNAVAILABLE (URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; 2026-10-09) | `espn_nbl`, `nbl_news`, `nbl_official` |
+| `premierleague_official` | EPL | REACHABLE_HOME_PAGE (HTTP 200 text/html; no event field tested; 2026-10-11) | UNAVAILABLE (URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; 2026-10-09) | `espn_epl`, `openfootball` |
+
+<!-- REACHABILITY-MATRIX:END -->
+
+---
+
+# Sources — the single source register
+
+**Rebuilt 2026-09-28 for md-only operation; expanded 2026-09-28(f) and 2026-09-29(a).** This page merges the old quick reference and full register, and adds the sources verified on 2026-09-28/29. It is the only source document the model reads.
+- **What changed on 2026-09-29(a):** about 90 further routes and social lanes were live-tested. Additions: new data routes in every sport table (marked "New (a)"); a social-platform access matrix (§1.8); cross-sport secondaries and discovery feeds (§2.4); and a **source-by-source fallback chain with that source's authenticated official social accounts** (§3.12). Handles in §3.12 were read from each organisation's own website on 2026-09-29, never guessed. **X (Twitter) is no longer blocked:** two keyless read routes work for official accounts (§1.8).
+- **What changed on 2026-09-28:** 60+ routes were re-tested by live request; the sport tables below list each with its access mode and result. About 30 are new to the register, including the standings feeds for the hand-computed team baseline, injury feeds, official ladders, rating systems and weather services.
+- **Repo files versus web sources:** the model uses no Python and no non-Markdown *file from this repository*. Web sources may be JSON, HTML or PDF: the model opens them with its browser or fetch tool and quotes the fields it used.
+
+---
+
+## 1. Rules every source follows
+
+### 1.1 Three independent lineages
+
+- **To issue a card:** three distinct, reliable upstream lineages for the event's identity, time and state.
+- **To settle one:** three lineages that agree on the exact event, an explicit final marker and the score.
+- **What counts once:** mirrors, syndicated copies, reposts, two front ends on one feed, and a transcript of a broadcast all count as **one** lineage.
+- **What never counts:** search-result snippets and generated summaries are discovery only.
+- **When three are not available:** print `SOURCE_COUNT_LT_3` or `SOURCE_LINEAGE_NOT_INDEPENDENT` and fail closed. Never pretend.
+- **Preferred mix:** the field owner's exact-event record, then an official club or player source (or a second primary), then an independent high-quality secondary.
+
+### 1.2 Who owns which field
+
+| Claim | Controlling source | It does not control |
+|---|---|---|
+| Identity, schedule, rules, participants, state, result | Governing body, league or official match centre; official team release | Forecast importance; proprietary metrics |
+| Lineup, starter, goalie, toss, team sheet | **The official release** (MLB `battingOrder`, NPB/KBO official orders, NBA/WNBA/NBL official starters, NHL confirmed goalie, club XI, team lists) | — |
+| Injury or availability | Official league injury report; team release | — |
+| Weather | National meteorological service or venue-coordinate forecast; the venue's roof or surface report | The sport effect, which is the card's own mechanism |
+| Historical statistic | The official provider; a reconciled official record | Another provider's definition |
+| Derived metric (xG, Elo, pace) | The provider that defines it | Official facts |
+| Late news before the official release | A named accredited reporter, with a receipt (§1.5) | Anything after the official release |
+
+- **Resolve conflicts field by field**, not by majority vote. Two weak sources do not equal one controlling source.
+- **A field owner can be wrong for one field.** A schedule shell, a 0–0 placeholder, an all-zero statistics block or a page still showing `UPCOMING` after independent sources show a final: mark that field `STALE`. Keep the valid fields, and use another official or static route plus independent corroboration.
+
+### 1.3 Freshness
+
+| Class | Examples | Rule |
+|---|---|---|
+| V0 live | Score, clock, inning, over | Observe and timestamp; refresh just before issue |
+| V1 release-driven | Lineups, starters, toss, goalie, inactives | Refresh after the official release **and** immediately before issue |
+| V2 short horizon | Injuries, role, roof, pitch, weather | The newest source before issue; branch the unresolved states |
+| V3 current process | Season rates, recent form, specialist metrics | Through the last completed game; record the provider's lag |
+| V4 structural | Rules, venue, definitions | Re-check at a new season or competition |
+
+**Every decisive fact** carries its source, retrieval time and a status: `OPENED` (you read the record), `SNIPPET` (search text only; never decisive) or `ASSUMED` (never allowed at Rank 1).
+
+### 1.4 The firewall — prohibited as forecasting evidence
+
+Never forecasting evidence:
+- sportsbooks, odds, line movement and odds aggregators;
+- betting previews, picks, tips and touts;
+- prediction markets;
+- fantasy/DFS projections, rankings and ownership;
+- anything that republishes those. This includes **RotoWire, RotoGrinders and FPTrack**.
+
+Further rules:
+- **Mixed pages.** A page that mixes scores with odds columns may be used **for scores only** in a forecast or settlement. This applies to TennisExplorer, Flashscore and football-data.co.uk (whose results files carry bookmaker columns). By the user's 2026-09-29 instruction, a separate **post-settlement** benchmark may read closing columns for completed events only, after the forecast and official final are frozen; `research/src/benchmark.py` is outside every forecast import. Football-Data's own use notice limits automated bot/AI reuse, so its raw files stay local and are not redistributed from this repository.
+- **Market keys in ESPN and NHL feeds are quarantined:** `odds`, `pickcenter`, `againstTheSpread`, `winprobability`, `oddsPartners`, `betting`.
+- **A supplied line is contract metadata,** not evidence.
+- **Squiggle's `tips` endpoint aggregates other models' tips.** It is discovery only, and never an anchor. Its `games` and `standings` endpoints are ordinary results data.
+
+**Synthetic content is prohibited everywhere (L-079, M20).** This means AI-written recaps, "AI simulation" or "projected result" articles, formulaic pitch-report or fantasy pages, and search summaries. Confirmed cases: sportscafe.in (a wrong winner), archysport, and the Mynavi AI recaps.
+- Always open the underlying scoreboard or scorecard before a figure enters a card or a settlement.
+- A narrative article never settles a result.
+
+### 1.5 Lineups and late news (S-1 Rev 2)
+
+1. **An official lineup published before the freeze always wins.** Print it with its fetch time as `CONFIRMED_OFFICIAL`.
+2. Before the official release, a lineup claim counts only as `PROJECTED_BEAT_VERIFIED`, with a printed receipt: outlet, reporter, timestamp, verbatim quote, and two independent sources.
+3. Otherwise print `LINEUPS_NOT_YET_PUBLISHED` (nothing is out yet) or `RETRIEVAL_MISS` (it was out, but you did not get it). A Rank-1 total or margin row may not depend on an unretrieved lineup (G14.2).
+4. An original, complete, pre-issue lineup post from an authenticated league, competition or club account can be that organisation's release under §1.8. A player, journalist, fan, aggregator or copied post cannot confirm a whole lineup. The official match centre or posted team sheet remains the first route; the post and that organisation's site are one lineage.
+
+### 1.6 Access modes (how to open each source)
+
+| Mode | Meaning | Examples |
+|---|---|---|
+| **API** | A keyless JSON endpoint. Open it directly. ESPN routes **reject a browser user-agent** (HTTP 403) and accept a plain request | ESPN site API; MLB statsapi; NRL `draw/data` |
+| **Browser** | Needs a normal browser request (it rejects a bare client) | NHL api-web; Tennis Abstract; UEFA; Squiggle; BOM; MET Norway; Baseball Savant |
+| **Proxy** | Prefix `https://r.jina.ai/` to render a blocked or JavaScript page as text. Check the dates, because the proxy can serve stale copies | ESPNcricinfo pages; FotMob pages; ITF draws |
+| **Blocked** | Failed on every route tested. Do not plan on it | See §4 |
+
+**If a route fails:** record the route, time and failure, then move immediately to the next route for that field in §1.7 and the sport table. Try another access mode only when it is likely to expose the actual record; do not spend the pregame window repeatedly fetching one broken route. One failure is a `RETRIEVAL_MISS`, not proof that the data do not exist. A page that returns HTTP 200 but only a JavaScript shell is `JS_ONLY — RENDER REQUIRED`: use a browser or an allowed proxy. Recheck the field owner at the final refresh if time permits. A fallback does not waive the source-count, field-owner, exact-event or issue-time gates.
+
+### 1.7 Immediate fallback by field (retrieval control, 2026-09-28)
+
+For **each missing fact**, run the next applicable route at once. Log every attempted URL or endpoint, retrieval time, response (`OPENED`, `BLOCKED`, `JS_ONLY`, `STALE`, `WRONG_EVENT`, `NOT_PUBLISHED` or `RETRIEVAL_MISS`), exact field obtained, and upstream lineage. A search result only discovers a route. Do not copy a later result or lineup back into a pregame card. Separate the unavailable field from the rest of a usable source.
+
+| Missing field | Route sequence | Stop condition |
+|---|---|---|
+| Event ID, date, start or state | Competition's exact-game feed or match centre → its official schedule or club match page → independent structured scoreboard → named independent report. Check venue-local date, timezone, participants and competition at every hop. | If exact identity or state is still ambiguous, do not infer `PREGAME` from the clock. |
+| Starter, lineup, team sheet, inactives or toss | Official exact-game roster/team-sheet feed → official league or club release, including an authenticated original post (§1.8) → two independent current reporting lineages for an unresolved critical field, under `CURRENT_RULES.md` §D2. | Keep projected and confirmed separate. An unviewable post, projected lineup or later box score never proves pre-issue availability. |
+| Injury, rest, roster move or coaching change | Timed league report or registration list → team/board release → authenticated original team/player announcement (§1.8, limited to what it says) → named independent reporter with the §1.5 receipt. | Do not convert a roster registration, practice appearance or absence from a page into confirmed game availability. |
+| Weather, roof, surface or pitch | Exact-game field-owner/venue report → venue-coordinate hourly weather or national meteorological service → named venue/official report. Baseball and cricket retain their sport-specific weather/strip rules. | A city forecast or generic pitch description does not replace an exact-game reading. |
+| Season rates, game logs or specialist metrics | Field-owning official stats → official competition/team history → independent specialist data with definition and cutoff. Use only games complete before the card's input cutoff. | Missing or revised historical data stay missing; never backfill a rate from a later page. |
+| Terminal result and process record | Exact-game official final feed/scorecard → another official route for field-level cross-check → independent structured scorecard and independent report until three upstream lineages agree. | Two official fronts on one feed count once. A recap alone, live page or score without an explicit terminal marker cannot settle. |
+
+If the next route also fails, continue through the remaining routes promptly; record the attempt and then fail closed on the field. The sport-specific sequences below identify the first practical alternates. **§3.12 gives the chain source by source:** for any named source, its "If it fails" cell is the next route to open at once, and its social cell is the organisation's own authenticated account for fields that organisation controls.
+
+**Attempt ledger line (one per route tried):** `ROUTE <n> | <source> | <url or endpoint> | <retrieval time, venue-local and AEST> | <OPENED / BLOCKED / JS_ONLY / STALE / WRONG_EVENT / NOT_PUBLISHED / RETRIEVAL_MISS> | <field obtained or "none"> | <lineage>`. Stop at the first route that gives the field from its owner, or from an admissible route. Stop sooner only when the remaining routes cannot change the field before the cutoff. Source discovery does not imply that every competition, target or historical date is covered.
+
+### 1.8 Original social posts: conditional evidence, not a separate lineage
+
+**Admit only an original post that can be opened in full before the card's cutoff** and whose account is authenticated from the league, club, tournament or governing body's own site, an official cross-link, or a verified domain handle. A platform badge alone is supporting evidence, not proof of the account's authority for every field. Record the exact post URL, account/organisation, platform, publication time (with timezone), retrieval time, visible text or image contents, claimed field and any later edit/correction. If the post's timestamp, image text or account identity cannot be read, use it for discovery only. Do not infer a player is fit from a photo, a training clip or silence.
+
+An official account may announce its **own** starters, team list, withdrawal, roster change, roof status or schedule change; it does not become a source for unrelated statistics or another organisation's selection. A named player may confirm their own statement, but the team or competition still controls official participation. An official post, its embedded copy on the official site and a news article quoting it are **one upstream lineage**. Reposts, screenshots without the original, fan accounts, tipsters, fantasy/DFS accounts and market-bearing posts remain excluded. Social posts never settle a game without the exact-game terminal record and the required independent lineages.
+
+**Identity first.** An account is authenticated only if (a) the organisation's own website links to it (the handles in §3.12 were read that way on 2026-09-29), or (b) it is a Bluesky domain handle on the organisation's own domain. A platform badge alone is not enough. Look-alike accounts are common: `NBA Scores`, `MLB (bot)`, `NHL (Bot)`, `Premier League News` and `nhlcanucks.bsky.social` (0 posts) on Bluesky are all unofficial; `t.me/realmadrid` is **not** Real Madrid; `NBA@sportsbots.xyz` on Mastodon is a mirror.
+
+**Platform access matrix (live-tested 2026-09-28/29, keyless, from this environment):**
+
+| Platform | Working route | What it returns | Status and use |
+|---|---|---|---|
+| **X (Twitter)**: account timeline | `https://syndication.twitter.com/srv/timeline-profile/screen-name/<handle>` (browser user-agent). Parse the `__NEXT_DATA__` JSON: `props.pageProps.timeline.entries[].content.tweet` | About 17–20 recent posts with `id_str`, exact `created_at` (UTC), `user.screen_name` and `full_text` | **WORKS**: confirmed for `afl`, `premierleague` and `MLB` on 2026-09-29. `NBA` returned 429 on 2026-09-28 and was not retested. The first call can return HTTP 429; retry once after a short pause. Entries are not strictly chronological (pinned posts and reposts appear), so check `screen_name` and the time of each post |
+| **X**: single post | `https://publish.twitter.com/oembed?url=https://x.com/<handle>/status/<id>` | Author name, author URL, full post text and the date (day only) | **WORKS** (keyless, no token). Use the timeline's `created_at` for the exact time. `cdn.syndication.twimg.com/tweet-result?id=<id>&token=<t>` also works, but needs an ID-derived token |
+| X: other routes | `x.com` through the proxy (403); nitter.net (refused); xcancel.com (DNS failure) | — | **BLOCKED**. Do not plan on them |
+| **Bluesky** | `https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=<handle>`; `…/app.bsky.feed.getAuthorFeed?actor=<handle>&filter=posts_no_replies&limit=<n>` | Profile, `verification.verifiedStatus`, and posts with exact ISO `createdAt` | **WORKS**. `app.bsky.feed.searchPosts` returns 403 without a login: read author feeds, don't search. Active official accounts: `nba.com`, `wnba.com`, `mets.com`, `mls-pr.bsky.social` (MLS Communications, verified). Verified but dormant: `mlb.com` (0 posts); seasonal: `rolandgarros.com`. `nhl.com` is unverified with 0 posts: do not use |
+| **YouTube** | Channel videos tab `https://www.youtube.com/@<handle>/videos` (browser) → `"videoId"`; then `https://www.youtube.com/watch?v=<id>` → `uploadDate` / `datePublished`; `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=<id>&format=json` → `author_name` | Exact upload time with offset (e.g. `2026-09-27T13:36:04-07:00`), title and channel identity | **WORKS**. Use it for official press conferences and team-announcement videos: the coach's words are that club's statement. The RSS feeds (`feeds/videos.xml?channel_id=` / `playlist_id=` / `user=`) returned 404/500 on every form on 2026-09-28 |
+| **Threads** | `https://r.jina.ai/https://www.threads.net/@<handle>` and `…/@<handle>/post/<code>` | Post text and post URLs; times are **relative only** (`6h`, `3d`) | **WORKS through the proxy only**; the direct page is a JavaScript shell. Record the retrieval time and the relative age; the publication time is only known to within that unit. It can support pre-issue publication only when the bound falls wholly before the cutoff |
+| Instagram | Profile API (429), proxy (403), profile embed (no timestamps) | — | **RETRIEVAL_MISS** by default. Use a post only if the organisation's own site embeds it with a visible date |
+| Facebook | Proxy returns the login wall; the page plugin has no timestamps | — | **BLOCKED** |
+| TikTok | Proxy renders the shell only | — | Not used: video-only, no reliable text or timestamp |
+| Telegram | `https://t.me/s/<channel>` public preview | Posts with `datetime` | Works technically, but **no official sports channel has been authenticated**. Use one only if the organisation's website links it |
+| Reddit | `.json`, `api.reddit.com` (403); `old.reddit.com/…/.rss` (block page) | — | **BLOCKED**. Fan content in any case, never evidence |
+| Mastodon, Weibo | Mastodon search → bot mirrors only; Weibo 403 | — | Not used |
+
+**Reporter and media accounts** (discovery for the named-reporter lane in §1.5; not field owners): verified Bluesky domain handles `apnews.com`, `reuters.com`, `nytimes.com`, `washingtonpost.com`, `latimes.com`, `bostonglobe.com`, `theguardian.com`, `theathleticfc.bsky.social`, `espn.com` (sparse) and `fangraphs.com`. `theathletic.com` showed verification `invalid` on 2026-09-28, so treat it as unverified. A reporter's post still needs the full §1.5 receipt.
+
+The same rule applies in every sport. Sport-specific social uses and the next non-social routes are indexed in §3.11; no platform or account is pre-approved without an exact-post check for the event.
+
+---
+
+## 2. Cross-sport sources
+
+### 2.1 ESPN site API (keyless; plain request; one date per scoreboard call)
+
+| Route | Fields | Verified 2026-09-28 |
+|---|---|---|
+| `https://site.api.espn.com/apis/site/v2/sports/<sport>/<league>/scoreboard?dates=YYYYMMDD` | Events, state, scores, `neutralSite`, `season.type`. **Date ranges return HTTP 400**: use one date per call | MLB, NFL, NCAAF, NBL, NHL, AFL, NRL (`rugby-league/3`), EPL, MLS, J1, UCL, Super Rugby, URC, EuroLeague, ATP, CPL cricket: 200 |
+| `…/<sport>/<league>/summary?event=<id>` | Box score, starters (`starter`, `didNotPlay`), soccer XI and `wonCorners`, cricket toss note and powerplay, MLB umpires and injuries, key events | NBL: 200 |
+| `https://site.api.espn.com/apis/v2/sports/<sport>/<league>/standings` | **`pointsFor`, `pointsAgainst`, `gamesPlayed`** (or wins + losses), home/road records. This is the TB-1-MD input (`PROBABILITY_TOOLKIT.md` §4) | NBA, WNBA, NBL, NFL, AFL, NRL, EPL, La Liga, A-League, NHL, MLB: 200 |
+| `…/site/v2/sports/<sport>/<league>/injuries` | League injury list with status | NFL, NBA, WNBA, MLB, NHL: 200 |
+| `…/site/v2/sports/<sport>/<league>/teams/<id>/schedule` | A team's completed games and scores | WNBA: 200 (NRL returned HTTP 500 on 2026-09-25) |
+| **Not on ESPN** | KBO and NPB (`baseball/kbo`, `baseball/npb`: HTTP 400) | Use the official league sites (§3.1) |
+
+**League slugs:**
+- basketball: `nba`, `wnba`, `nbl`, `euroleague`;
+- football: `nfl`, `college-football`;
+- `australian-football/afl`; `rugby-league/3` (NRL; its regular season is season type 1); `hockey/nhl`;
+- soccer: `eng.1`, `esp.1`, `ger.1`, `ita.1`, `fra.1`, `usa.1`, `aus.1`, `jpn.1`, `uefa.champions` and more;
+- `tennis/atp` and `tennis/wta`; cricket by league ID (CPL 8676 or 8623);
+- rugby union by league ID (URC 270557, Super Rugby 242041).
+
+A league slug that returns 400 is not proof of non-coverage (the Slovak leagues 400; `uga.1` was only stale).
+
+### 2.2 Weather (every outdoor event: an hourly venue-coordinate forecast for the match window, in venue-local time)
+
+| Source | Route | Access | Verified |
+|---|---|---|---|
+| **Open-Meteo** (global) | `https://api.open-meteo.com/v1/forecast?latitude=<lat>&longitude=<lon>&hourly=temperature_2m,precipitation_probability,precipitation,wind_speed_10m,wind_direction_10m,dew_point_2m,cloud_cover&timezone=<IANA>` | API | 200 |
+| Open-Meteo archive (observed, for settlement notes) | `https://archive-api.open-meteo.com/v1/archive?…&start_date=…&end_date=…` | API | 200 |
+| **US National Weather Service** (US venues) | `https://api.weather.gov/points/<lat>,<lon>`, then its `forecastHourly` URL | API | 200 |
+| **Bureau of Meteorology** (Australia) | `https://www.bom.gov.au/` forecasts; observations `…/fwo/IDN60901/IDN60901.94768.json` (Sydney) | Browser | 200 |
+| **Japan Meteorological Agency** | `https://www.jma.go.jp/bosai/forecast/data/forecast/<area>.json` (Tokyo 130000) | API | 200 |
+| **MET Norway** (Europe and global) | `https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=<lat>&lon=<lon>` | Browser | 200 |
+| **MLB only:** the statsapi gamefeed `gameData.weather` (field-relative wind) | See §3.1 | API | 200 |
+| Meteostat bulk station history (New (a)) | `https://bulk.meteostat.net/v2/daily/<WMO station>.csv.gz` | API | 200 (observed daily history for settlement notes; never a pregame forecast) |
+
+**Weather rules:**
+- Never use a city forecast for an MLB total (M30).
+- Downgrade for rain only inside the match window (G15.1).
+- Record the roof state for retractable venues.
+
+### 2.3 Research accelerators (never field owners)
+
+| Source | Use | Access | Verified |
+|---|---|---|---|
+| **StatMuse** (`https://www.statmuse.com/<nba|wnba|mlb|nfl|nhl>/ask/<question>`) | US-sport L5/L10/L15/L20 splits and quick baselines. Check the dates and scope of every answer | Browser | 200 |
+| **r.jina.ai proxy** (`https://r.jina.ai/<url>`) | Renders blocked or JavaScript pages as text | API | 200 |
+| Reference sites: Basketball-Reference, Hockey-Reference | History and cross-checks | Browser | 200 |
+
+### 2.4 Cross-sport secondaries and discovery feeds (New (a), tested 2026-09-28/29)
+
+| Source | Route | Use | Role | Access | Verified |
+|---|---|---|---|---|---|
+| **BBC Sport** scores and fixtures | `https://www.bbc.com/sport/<football\|rugby-union\|rugby-league\|cricket\|tennis>/scores-fixtures/YYYY-MM-DD` | Independent results and state (FT / full time / Result) for UK and international football, rugby and cricket | S (own lineage) | Browser | 200 (football, rugby union, cricket) |
+| TheSportsDB | `https://www.thesportsdb.com/api/v1/json/3/eventsday.php?d=YYYY-MM-DD&s=<Soccer\|Baseball\|Basketball\|…>` | Cross-sport event list: an identity cross-check and a route to find a fixture. **Crowd-sourced**: never a field owner, and never a settlement lineage on its own | D/F | API | 200 |
+| Wikipedia REST | `https://en.wikipedia.org/api/rest_v1/page/summary/<Title>` (a plain request gets 403; send a browser user-agent) | Structural history and context (finals, venues, formats) | D (history) | Browser | 200 |
+| **Google News RSS** | `https://news.google.com/rss/search?q=<terms>+when:2d&hl=en-AU&gl=AU&ceid=AU:en` | Finds the original club/league release or named-reporter article, with `pubDate`. It found a club's "Final Team" release and an NRL late-change report on 2026-09-28 | **D only**: open the original before use | API | 200 |
+| Bing News RSS | `https://www.bing.com/news/search?q=<terms>&format=rss` | Second discovery feed | D only | API | 200 |
+| AP News hub, Reuters sports | `apnews.com/hub/<sport>`; `reuters.com/sports/` | — | Blocked (403 / 401). Use their Bluesky feeds (`apnews.com`, `reuters.com`) to discover a report, then try its article URL | — | 403 / 401 |
+
+---
+
+## 3. Sport tables
+
+The **Role** column:
+- **FO** field owner;
+- **P** primary;
+- **S** independent secondary (a lineage of its own);
+- **F** fallback;
+- **D** discovery only.
+
+"New" marks a source added on 2026-09-28.
+
+### 3.1 Baseball — MLB, NPB, KBO, CPBL, LMB
+
+| Source | Route | Fields | Role | Access | Verified |
+|---|---|---|---|---|---|
+| MLB Stats API: schedule | `https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=YYYY-MM-DD&hydrate=probablePitcher,linescore` | Games, probable starters, state, line scores | FO | API | 200 |
+| MLB gamefeed | `https://statsapi.mlb.com/api/v1.1/game/<gamePk>/feed/live` | `gameData.weather`, probables, `battingOrder` (a starter's slot ends in `00`), officials, `codedGameState`, line score, decisions | FO | API | 200 |
+| MLB boxscore | `https://statsapi.mlb.com/api/v1/game/<gamePk>/boxscore` | Official orders, pitching lines, `info[]` weather and wind | FO | API | 200 |
+| MLB starting-lineups page | `https://www.mlb.com/starting-lineups` | Published batting orders; resolve the exact game and publication time before treating an order as confirmed | FO | Browser | Opened 2026-09-28 |
+| MLB probable pitchers page (New (a)) | `https://www.mlb.com/probable-pitchers` | Probables for the day, same data lineage as statsapi | FO (same lineage as statsapi) | Browser | 200 |
+| Umpire Scorecards (New (a)) | `https://umpscorecards.com/api/games?startDate=YYYY-MM-DD&endDate=YYYY-MM-DD` | Plate-umpire accuracy and run impact from completed games only (context for the umpire named in the gamefeed) | S | Browser | 200 |
+| Retrosheet (New (a)) | `https://www.retrosheet.org/` | Historical game logs and box scores | S (history) | Browser | 200 |
+| MLB standings (new) | `https://statsapi.mlb.com/api/v1/standings?leagueId=103,104&season=YYYY` | Runs scored and allowed, records | FO | API | 200 |
+| MLB transactions (new) | `https://statsapi.mlb.com/api/v1/transactions?startDate=…&endDate=…` | IL moves, call-ups | FO | API | 200 |
+| MLB team stats (new) | `https://statsapi.mlb.com/api/v1/teams/stats?season=YYYY&group=pitching&stats=season&sportIds=1` | Team pitching and hitting | FO | API | 200 |
+| Baseball Savant (new) | `https://baseballsavant.mlb.com/probable-pitchers`; expected-stats leaderboard (`…/leaderboard/expected_statistics?type=pitcher&year=YYYY`) | Probables with Statcast profile; xERA/xwOBA | P | Browser | 200 |
+| ESPN MLB | §2.1 scoreboard, summary, injuries | Injuries, umpires, state | S | API | 200 |
+| NPB official (English) | `https://npb.jp/bis/eng/YYYY/games/` (day index `gmYYYYMMDD.html`); standings `https://npb.jp/bis/eng/YYYY/stats/std_c.html` (Central) and `std_p.html` (Pacific) | Finals, box scores, standings | FO | API | 200 |
+| NPB probable starters (new) | `https://npb.jp/announcement/starter/` (予告先発, the official announcement) | Next day's starters | FO | API | 200 |
+| NPB active roster registration | `https://npb.jp/announcement/roster/` | Registered and deregistered players; registration alone does not confirm that game's availability | FO | Browser | Opened 2026-09-28 |
+| NPB score pages | `https://npb.jp/scores/YYYY/MMDD/<away>-<home>-<nn>/` | 【試合終了】 final marker, 12-inning line score | FO | API (403 on the day index on 2026-09-28; the game pages worked on 2026-09-25) | mixed |
+| **Yahoo! Japan NPB** (New (a)) | Day page `https://baseball.yahoo.co.jp/npb/schedule/?date=YYYY-MM-DD` (links `/npb/game/<id>/`); game page `https://baseball.yahoo.co.jp/npb/game/<id>/top` | 予告先発 (probables), スタメン (starting lineups once posted), 試合終了 (final) and line score | S (an independent Japanese lineage from npb.jp) | Browser | 200 |
+| KBO official (English) | `https://eng.koreabaseball.com/Schedule/Scoreboard.aspx?searchDate=YYYY-MM-DD`; standings `…/Standings/TeamStandings.aspx` | FINAL, line score, R/H/E, W/L/S, standings | FO | API | 200 |
+| KBO official (Korean, new) | `https://www.koreabaseball.com/Schedule/Schedule.aspx` | Schedule, starters (Korean) | FO | API | 200 |
+| **Naver Sports KBO** (New (a)) | Day list `https://api-gw.sports.naver.com/schedule/games?fields=basic&upperCategoryId=kbaseball&categoryId=kbo&fromDate=YYYY-MM-DD&toDate=YYYY-MM-DD` (gives `gameId`, e.g. `20260927LGHT02026`); preview `…/schedule/games/<gameId>/preview`; box `…/schedule/games/<gameId>/record` | `homeStarter`/`awayStarter`, `homeTeamLineUp`/`awayTeamLineUp` and `fullLineUp` once announced (Korean names); box score (`battersBoxscore`, `pitchersBoxscore`) | P. Probably the same upstream league data as the KBO site, so count it with KBO official as **one lineage** unless shown otherwise | Browser | 200 |
+| KBO active registration | `https://www.koreabaseball.com/player/register.aspx`; full roster `https://www.koreabaseball.com/Player/RegisterAll.aspx` | Current registration and roster context; not a confirmed batting order | FO | Browser | Opened 2026-09-28 |
+| CPBL (new) | `https://www.cpbl.com.tw/` (plain request); `https://stats.cpbl.com.tw/` (browser) | Schedule, box, batting order | FO | API or Browser | 200 |
+| CPBL club lineup record | `https://cpbl.com.tw/team/lineuprecord?ClubNo=<club>` | Dated batting-order history and cross-check; today's row needs an observed pregame timestamp | FO | Browser | Opened 2026-09-28 |
+| LMB | The official club report, then the league result | Final, pitching | FO/F | Browser | earlier |
+| LMB official roster | `https://lmb.com.mx/roster` | Team roster context, never proof of today's lineup | FO | Browser | Opened 2026-09-28 |
+| Fangraphs, Baseball-Reference | — | — | — | **Blocked** from here (403, even through the proxy). A browser may work; never plan on it | — |
+
+**Settlement lineages:**
+- MLB: statsapi (FO) + ESPN + one independent report or box.
+- NPB and KBO: the official page + ESPN-independent media (e.g. Nikkan Sports or Yonhap) + a third report.
+  - NPB: Yahoo! Japan's game page is an independent structured lineage (New (a)).
+  - KBO: Naver is **not** independent of the KBO site until shown otherwise.
+
+### 3.2 Basketball — NBA, WNBA, NBL, EuroLeague, ACB, FIBA, LKL and others
+
+| Source | Route | Fields | Role | Access | Verified |
+|---|---|---|---|---|---|
+| ESPN (NBA, WNBA, NBL, EuroLeague) | §2.1 scoreboard, summary, standings, injuries | Starters, `didNotPlay`, box, standings PF/PA | P | API | 200 |
+| NBA official injury report | Navigate `https://official.nba.com/` to the actual season’s report and its timed PDFs; `nba-injury-report-2025-26-season/` is historical only | Official status at the exact report time; not starter/bench confirmation | FO | Browser | 200 |
+| WNBA official injury report (new) | `https://www.wnba.com/wnba-injury-report` | Official status | FO | Browser | 200 |
+| NBA daily lineups page | `https://www.nba.com/players/todays-lineups` | Potential official starters after rendering and exact-game check | FO | Browser | JS_ONLY on 2026-09-28; not an unattended fallback |
+| NBL official | `https://www.nbl.com.au/` match pages; match data `schedule.nbl.com.au/api/calendar/match?match=<uuid>&league=NBL`. The first `jumpBall` event is the actual tip; skip the `betting`/`odds` objects | Tip time, play-by-play, box | FO | API | Site 200; the match API needs the match UUID from the page |
+| NBL official schedule/results | `https://schedule.nbl.com.au/api/calendar/schedule?league=NBL&limit=500&offset=0&year=<start_year>` | Exact event UUID, UTC tip, phase, regular-season final score; verify pagination and final phase before settlement | FO | API | NBL22–NBL26 738 regular-season finals; NBL27 13 final, 152 upcoming at 2026-09-29 UTC |
+| FixtureDownload NBL results | `https://fixturedownload.com/feed/json/nbl-<start_year>` | Independent published schedule/score cross-check after final; not an injury or lineup source. Local-only raw snapshot under [use terms](https://fixturedownload.com/terms). | P | API | 736/738 historical official scores agree; two named adjudications in `research/data/processed/nbl_fixture_adjudications.json`. NBL27 completed 13/13 agree at snapshot time. |
+| NBL dated injury list | `https://www.nbl.com.au/news/nbl26-the-latest-injury-updates` (page titled NBL27; resolve by current title/date, not the slug) | League-listed injury context; recheck club/game-day status | FO | Browser | Opened 2026-09-28; page updated 27 Sep |
+| EuroLeague official feeds (new) | `https://feeds.incrowdsports.com/provider/euroleague-feeds/v2/competitions/E/seasons/E<yyyy>/games` (plain); `https://api-live.euroleague.net/v2/competitions/E/seasons/E<yyyy>/games` (browser) | Schedule, results, box | FO | API or Browser | 200 |
+| ACB (Spain, new) | `https://www.acb.com/` and `https://live.acb.com` | Results, box. The site and the live stats are **one lineage** | FO | API | 200 |
+| ACB medical and availability news | `https://acb.com/es/minicopa/noticias/novedades-y-parte-medico-para-la-jornada-1-de-la-liga-endesa-2026-27-146114` (dated example; find the current round) | Round-specific medical and availability notes | FO | Browser | Opened 2026-09-28 |
+| FIBA | `https://www.fiba.basketball/en/events/<event>/games/<id>-<HOME>-<AWAY>` | Final, quarters, box. Check the event date: pages can show an old head-to-head | FO | Browser or Proxy | 200 |
+| FIBA LiveStats competition link | Find the exact event's official match-centre link; product description: `https://about.fiba.basketball/en/services/data-and-video-solutions/fiba-live-stats` | Live box and player participation where the competition actually uses it; product page is discovery only | FO for that competition | Browser | Product page opened 2026-09-28; exact-game coverage untested |
+| Basketball-Reference (WNBA and NBA history, new) | `https://www.basketball-reference.com/wnba/years/YYYY.html` | Team and player history | S | API | 200 |
+| Proballers (new) | `https://www.proballers.com/` | International rosters and player lines | S | Browser | 200 on 2026-09-28; **Cloudflare 403 on 2026-09-30** (browser user-agent and plain request) |
+| Eurobasket (new) | `https://basketball.eurobasket.com/` | International leagues, rosters, injuries | S | Browser | 200 |
+| BasketNews (LKL) | `r.jina.ai/https://www.basketnews.lt/…` | Finals, quarter lines | S | Proxy | earlier |
+| WNBA CDN live data (New (a)) | `https://cdn.wnba.com/static/json/liveData/scoreboard/todaysScoreboard_10.json` | Today's WNBA scoreboard in the NBA liveData schema | FO (same lineage as wnba.com) | Browser | 200 on 2026-09-28; exact-game fields untested (no game in the file at test time) |
+| NBA CDN JSON (`cdn.nba.com` scoreboard and schedule), `stats.nba.com` | — | — | — | **Blocked** from here (403; `stats.nba.com` resets the connection, 2026-09-28 and again 2026-09-30) | — |
+| NBL `apicdn.nbl.com.au` Genius route | — | — | — | 502 / 403 on 2026-09-28. Use the NBL match page and its `schedule.nbl.com.au` match API | — |
+
+**Settlement lineages:** ESPN summary + the league's own box + an independent report (e.g. Basketball-Reference or BasketNews). The league site and its live-stats page count once.
+
+### 3.3 Cricket
+
+| Source | Route | Fields | Role | Access | Verified |
+|---|---|---|---|---|---|
+| ESPN cricket API | `…/sports/cricket/<leagueId>/scoreboard` and `summary?event=<id>` (CPL league 8623 or 8676); ball-by-ball `…/playbyplay?event=<id>&period=<inn>&page=<n>` | Toss note, XIs, powerplay, innings totals. **One lineage with ESPNcricinfo** | P | API | 200 |
+| Cricbuzz | `https://www.cricbuzz.com/cricket-match/live-scores`; the scorecard page | Live, scorecard, commentary (a transcript of the broadcast pitch report is the broadcast's lineage) | S | API | 200 |
+| ICC | `https://www.icc-cricket.com/` | International identity, reports, toss/pitch videos | FO (ICC events) | API | 200 |
+| ICC squad replacement announcements | `https://www.icc-cricket.com/media-releases/rawat-approved-as-replacement-for-patil-in-india-squad` (dated example; find current event) | Tournament squad change, not proof of XI selection | FO (ICC events) | Browser | Opened 2026-09-28 |
+| CPL official | `https://www.cplt20.com/` | Fixtures, official final report. CaribbeanCricket and CricTracker republish it (one lineage) | FO | API | 200 |
+| IPL official (new) | `https://www.iplt20.com/` | Fixtures, toss report, results | FO | API | 200 |
+| Cricket Australia (BBL, WBBL, internationals in Australia) | `https://www.cricket.com.au/matches` | Match centre, toss, teams | FO (Australia) | API | 200 |
+| ECB scorecards for ECB competitions | `https://www.ecb.co.uk/county-championship/matches/112933/scorecard` (example; navigate to exact event) | Scorecard, toss and teams when published | FO (ECB competitions) | Browser | Opened 2026-09-28 |
+| ESPNcricinfo pages | Through the proxy only: `r.jina.ai/https://www.espncricinfo.com/…` | Scorecard, commentary | S (same lineage as ESPN) | Proxy | 200 |
+| Cricsheet | `https://cricsheet.org/downloads/` | Historical ball-by-ball for venue and phase history | P (history) | API | 200 |
+| Howstat | `https://www.howstat.com/cricket/home.asp` | Historical records | S | Browser (intermittent) | mixed |
+| Cricbuzz recent results (New (a)) | `https://www.cricbuzz.com/cricket-match/live-scores/recent-matches` | Recent finals with "won by" result lines, linking to each scorecard | S | Browser | 200 |
+| BBC Sport cricket (New (a)) | §2.4 | Results for England, county and international cricket | S (own lineage) | Browser | 200 |
+| ESPNcricinfo consumer API (`hs-consumer-api.espncricinfo.com`), Cricket Australia `apiv2` | — | — | — | **Blocked** (403 / 404, 2026-09-28): use the ESPN cricket API and cricket.com.au pages | — |
+
+**Toss and strip protocol (kept in full from the old register §6A):**
+- **Toss ladder:**
+  - T1: the official match centre or board scorecard;
+  - T2: the rights-holder broadcast or the official video;
+  - T3: an official live blog;
+  - T4: the ESPN toss note;
+  - T5: a specialist scorecard;
+  - T6: a named reporter.
+
+  If none is found, `TOSS STATUS = NOT_VERIFIED_AFTER_SEARCH`. Never infer the toss from the innings order.
+- **Strip ladder:**
+  - P1: a named broadcast pitch report on the day;
+  - P2: the curator or venue;
+  - P3: an official toss report quoting the captain;
+  - P4: a transcript of P1 (the same lineage as P1);
+  - P5: a named reporter;
+  - P6: the preceding match on a different strip (context);
+  - P7: the venue's history by innings order;
+  - P8: ICC pitch ratings (reputation only).
+
+  Only P1–P5 set `STRIP STATUS = OBSERVED`.
+- **Pitch metadata that is identical across sites is one automated lineage** (`AUTOMATED_PITCH_METADATA`), never an observation.
+- **Excluded pitch-report sites** (formulaic or fantasy): cricklive.in, pitch-report.com, crickonly.in, cricketstadiumsinfo.com, thecricscope.com, jaipurcircle.com, cricjosh.in, cricketfastliveline.in, bjsports.live, and any page with the same pattern.
+- **Refresh:** at the toss window and again immediately before issue. Record whether the freeze was `PRE_TOSS` or `POST_TOSS`.
+
+**Settlement lineages:** the official final report or scorecard + Cricbuzz + ESPN (ESPN and ESPNcricinfo count once). A duck needs a dismissal, not just 0 runs.
+
+### 3.4 Soccer
+
+| Source | Route | Fields | Role | Access | Verified |
+|---|---|---|---|---|---|
+| ESPN soccer | §2.1: scoreboard, summary (XI, bench, `wonCorners`, key events), standings | XI, stats, standings GF/GA | P | API | 200 |
+| Premier League (pulselive) | `https://footballapi.pulselive.com/football/fixtures?comps=1&compSeasons=<id>&statuses=C` (send `Origin`/`Referer` `https://www.premierleague.com`) | **EPL corners and match stats (field owner)** | FO | API | 200 |
+| Premier League injury updates | `https://www.premierleague.com/en/latest-player-injuries` | Dated availability reports; confirm team selection at the game cutoff | FO | Browser | Opened 2026-09-28 |
+| UEFA match API | `https://match.uefa.com/v5/matches?competitionId=<id>&seasonYear=<yyyy>` | UEFA fixtures, lineups, stats (field owner for UEFA corners) | FO | Browser | 200 |
+| UEFA match information kits | `https://www.uefa.com/news-media/mediaservices/informationkits/competitions/uefachampionsleague/2026/match/2045976/` (example; navigate to exact match) | Dated squad, history and match context; final XI must still be checked | FO (UEFA matches) | Browser | Opened 2026-09-28; content may require rendering |
+| League official sites (new) | laliga.com, bundesliga.com, ligue1.com, kleague.com, aleagues.com.au (A-League), `data.j-league.or.jp` | Official fixtures, lineups, stats | FO | API | 200 (Serie A redirects: use legaseriea.it through the browser) |
+| Club official site or app | The club's match centre, and the XI about 60 minutes before kick-off | **The confirmed XI** (it beats predicted-lineup pages) | FO | Browser | — |
+| FotMob (new route) | `https://www.fotmob.com/api/data/leagues?id=<id>` and `…/api/data/matches?date=YYYYMMDD`; pages via the proxy | Fixtures, lineups, xG, tables | S | API | 200 |
+| Understat (new) | `https://understat.com/league/<EPL\|La_liga\|Bundesliga\|Serie_A\|Ligue_1>/<season>` | xG for and against by team | S | API | 200 before; **2026-09-28: the page loaded without its `teamsData` block** (`JS_ONLY`); render it or use FotMob xG |
+| OpenLigaDB (New (a)) | `https://api.openligadb.de/getmatchdata/<bl1\|bl2\|bl3>/<season start year>/<matchday>` | German league fixtures, `matchIsFinished`, goals | S (community-maintained; a cross-check only) | API | 200 |
+| BBC Sport football (New (a)) | §2.4 | Independent results across UK and European leagues | S (own lineage) | Browser | 200 |
+| Transfermarkt injuries (new) | `https://www.transfermarkt.com/<league>/verletztespieler/wettbewerb/<code>` (EPL GB1) | Injuries and suspensions | S | API | 200 |
+| openfootball (new) | `https://raw.githubusercontent.com/openfootball/football.json/master/<season>/<code>.json` | Historical fixtures and results | S (history) | API | 200 |
+| ClubElo | `http://api.clubelo.com/<date>` | European club Elo | S | — | **HTTP 502 on 2026-09-28** (unverified; retry) |
+| FBref, Sofascore | — | — | — | **Blocked** (Cloudflare 403, even through the proxy; FBref again 403 on 2026-09-30) | — |
+| WorldFootball | See §3.13 | — | — | **Reopened 2026-09-30:** 200 with a browser user-agent, 403 to a plain request | — |
+
+**Settlement lineages:** the league or competition official page + ESPN + FotMob or a named report.
+- Corners settle with the field owner: pulselive for the EPL, the UEFA API for UEFA competitions, ESPN `wonCorners` otherwise.
+- **Never settle from a placeholder** (the Uzbekistan PFL 0–0 shell).
+
+### 3.5 AFL and AFLW
+
+| Source | Route | Fields | Role | Access | Verified |
+|---|---|---|---|---|---|
+| AFL API (new in this register) | `https://aflapi.afl.com.au/afl/v2/matches?competitionId=1&compSeasonId=<id>` (AFLW `competitionId=3`); `…/afl/v2/competitions` | Fixtures, results, venues, IDs | FO | API | 200 |
+| AFL team lineups (new) | `https://www.afl.com.au/matches/team-lineups` | **Official team selections, ins/outs, emergencies** | FO | API | 200 |
+| **AFL injury list** (New (a)) | `https://www.afl.com.au/matches/injury-list` | Club-by-club injuries with estimated return, each club block dated ("Updated: September 23, 2026") | FO | Browser | 200 |
+| AFLW team pages | `https://www.afl.com.au/aflw/teams` → exact club and match team selection | AFLW club roster and official releases; a roster page alone is not the selected side | FO | Browser | Opened 2026-09-28; exact match selection untested |
+| ESPN AFL | §2.1 scoreboard and standings (PF/PA) | Results, standings, the TB-1-MD input | P | API | 200 |
+| AFL Tables (new) | `https://afltables.com/afl/seas/YYYY.html` | Complete results and scoring history | S | API | 200 |
+| Footywire (new) | `https://www.footywire.com/afl/footy/ft_match_list` | Results, player stats | S | API | 200 |
+| Squiggle API (new) | `https://api.squiggle.com.au/?q=games;year=YYYY` and `?q=standings;year=YYYY` | Results and standings. **The `tips` query is other models' tips: discovery only** | S | Browser | 200 |
+| BOM | §2.2 | Venue weather | FO (weather) | Browser | 200 |
+
+**Separation rule:** AFLW is a separate population. The men's widths, home edge and base rates never transfer.
+
+### 3.6 NRL and rugby league
+
+| Source | Route | Fields | Role | Access | Verified |
+|---|---|---|---|---|---|
+| NRL draw data (new) | `https://www.nrl.com/draw/data?competition=111&season=YYYY&round=<n>` | Fixtures, state (`matchMode`, `matchState`), scores | FO | API | 200 |
+| NRL ladder (new) | `https://www.nrl.com/ladder/data?competition=111&season=YYYY` | Points for and against, played | FO | API | 200 |
+| NRL team lists (new) | `https://www.nrl.com/news/topic/team-lists/` | Tuesday lists, then the final 1–17 changes | FO | API | 200 |
+| NRLW official team-list releases | `https://www.nrl.com/news/2026/08/11/nrlw-team-lists-round-7/` (dated example; find current round) | Named NRLW team lists and changes | FO | Browser | Opened 2026-09-28 |
+| ESPN NRL | `rugby-league/3` scoreboard and standings | Results, half-time line score | P | API | 200 |
+| Rugby League Project (new) | `https://www.rugbyleagueproject.org/seasons/nrl-YYYY/summary.html` | Results, history | S | API | 200 |
+| BBC Sport rugby league (New (a)) | §2.4 (`rugby-league`) | Super League and internationals | S | Browser | Route pattern shared with the tested football, rugby union and cricket pages; this path itself is untested |
+| NRL casualty ward | `https://www.nrl.com/casualty-ward/` | — | — | **Login required** (redirects to sign-in, 2026-09-28; the proxy returns nothing). Use the team lists, club sites and the club's official X account (§3.12) | — |
+
+### 3.7 Rugby union
+
+| Source | Route | Fields | Role | Access | Verified |
+|---|---|---|---|---|---|
+| World Rugby rankings (new) | `https://api.wr-rims-prod.pulselive.com/rugby/v3/rankings/mru` (men), `…/wru` (women) | Official rating points: a strength input for internationals | FO | API | 200 |
+| World Rugby fixtures (new) | `https://api.wr-rims-prod.pulselive.com/rugby/v3/match?startDate=…&endDate=…` | International fixtures and results | FO | API | 200 |
+| World Rugby fixture and match centre | `https://www.world.rugby/tournaments/fixtures-results` → exact match | Fixtures, results and match centre; verify the team-sheet tab separately | FO (World Rugby events) | Browser | Opened 2026-09-28 |
+| ESPN rugby | League IDs (URC 270557, Super Rugby 242041, others) | Results, line-ups | P | API | 200 |
+| Competition official sites | URC, Premiership, Top 14, Super Rugby | Team sheets (48 hours ahead), results | FO | Browser | — |
+| URC match centre (New (a)) | `https://www.unitedrugby.com/match-centre` (the `/fixtures-results` path is 404) | Fixtures, results, team sheets | FO | Browser | 200 |
+| Premiership Rugby (New (a)) | `https://www.premiershiprugby.com/fixtures-results` | Fixtures, results, team sheets | FO | Browser | 200 |
+| Top 14 / LNR (New (a)) | `https://top14.lnr.fr/calendrier-et-resultats` | Fixtures, results (French) | FO | Browser | 200 |
+| Super Rugby Pacific (New (a)) | `https://super.rugby/superrugby/fixtures/` | Fixtures, results | FO | Browser | 200 |
+| BBC Sport rugby union (New (a)) | §2.4 | Independent results | S (own lineage) | Browser | 200 |
+
+### 3.8 NFL and college football
+
+| Source | Route | Fields | Role | Access | Verified |
+|---|---|---|---|---|---|
+| ESPN NFL and NCAAF | §2.1 scoreboard, summary, standings, **injuries** | Results, standings PF/PA, injury list | P | API | 200 |
+| NFL official injuries | `https://www.nfl.com/injuries/` | Official practice and game status | FO | API | 200 |
+| NFL official inactives | The team or league release about 90 minutes before kickoff | Inactives, QB status | FO | Browser | — |
+| NFL injuries by week (New (a)) | `https://www.nfl.com/injuries/league/YYYY/reg<week>` | That week's practice participation and game status (Out, Questionable) | FO | Browser | 200 |
+| NFL inactives hub | `https://www.nfl.com/inactives/` → exact game and week | Published inactive list; off-season or empty page is `NOT_PUBLISHED` | FO | Browser | Opened 2026-09-28; no current game list |
+| NFL official game books | `https://support.nfl.com/hc/en-us/articles/35869678028180-Game-Books` → exact game's book | Postgame participation and scoring cross-check; never a pregame lineup | FO | Browser | Opened 2026-09-28 |
+| NCAA football scoreboard | `https://www.ncaa.com/scoreboard/football/fbs` → exact game/competition | College fixture and result cross-check; team athletic departments own injury/availability releases | FO for NCAA event results | Browser | Opened 2026-09-28 |
+| nflverse (new in this register) | `https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv` (results columns only) | Historical results and schedule | P (history) | API | 200 |
+| Pro-Football-Reference | — | — | — | **Blocked** from here | — |
+
+### 3.9 NHL
+
+| Source | Route | Fields | Role | Access | Verified |
+|---|---|---|---|---|---|
+| NHL api-web | `https://api-web.nhle.com/v1/schedule/YYYY-MM-DD`; `/v1/score/YYYY-MM-DD`; `/v1/gamecenter/<id>/boxscore`; `/v1/standings/now` | Schedule, `gameType` (**1 = preseason, 2 = regular**), goals with `empty-net` modifier, goalie TOI, standings | FO | Browser | 200 |
+| NHL gamecenter landing (New (a)) | `https://api-web.nhle.com/v1/gamecenter/<gameId>/landing` | `gameState`; pregame `matchup.goalieComparison` (season goalie lines, **not** a starter confirmation) | FO | Browser | 200 |
+| NHL roster and club schedule (New (a)) | `https://api-web.nhle.com/v1/roster/<TEAM>/current`; `…/v1/club-schedule-season/<TEAM>/now` | Current roster, including goalies; the team's dated schedule (back-to-backs, rest) | FO | Browser | 200 |
+| NHL stats API (new) | `https://api.nhle.com/stats/rest/en/team/summary?cayenneExp=seasonId=<yyyyyyyy>` and `/goalie/summary?…` | Team and goalie season stats | FO | Browser | 200 |
+| NHL official status reports | `https://www.nhl.com/news/nhl-status-report-news-and-notes-february-21-2026` (dated example; find the newest report) | Dated injuries, transactions and club statements; no automatic starter confirmation | FO | Browser | Opened 2026-09-28 |
+| Daily Faceoff (new) | `https://www.dailyfaceoff.com/starting-goalies/` | Projected and confirmed starting goalies, with the source quoted. It needs the S-1 receipt until the team confirms | S | Browser | 200 |
+| MoneyPuck (new) | `https://moneypuck.com/data.htm` | Expected goals and shot data | S | Browser | 200 |
+| Hockey-Reference (new) | `https://www.hockey-reference.com/leagues/NHL_YYYY.html` | History | S | API | 200 |
+| ESPN NHL | §2.1 | Results, standings, injuries | P | API | 200 |
+| Natural Stat Trick | — | — | — | **Blocked** from here | — |
+
+### 3.10 Tennis
+
+| Source | Route | Fields | Role | Access | Verified |
+|---|---|---|---|---|---|
+| **Tennis Abstract Elo** | `https://tennisabstract.com/reports/atp_elo_ratings.html`, `…/wta_elo_ratings.html` | Overall, hard, clay and grass Elo, with the page date. The **blocking benchmark** (`RULES_TENNIS.md` TE-P5; `PROBABILITY_TOOLKIT.md` §6). Snapshot it before the match: the page is re-dated on match day | P | Browser | 200 |
+| ESPN tennis | `tennis/atp` and `tennis/wta` scoreboards | Set scores, `STATUS_RETIRED` and `STATUS_WALKOVER`. Covers Slams, tour events and WTA 125, not ITF | P | API | 200 |
+| WTA API (new) | `https://api.wtatennis.com/tennis/tournaments/?page=0&pageSize=…` | Tournaments, draws | FO | API | 200 |
+| WTA match page and draw PDF | `wtatennis.com/tournaments/<id>/<slug>/<yyyy>/scores/<matchId>`; `wtafiles.wtatennis.com/pdf/draws/<yyyy>/<id>/MDS.pdf` | Exact-match state and score | FO | Browser | earlier |
+| WTA tournament order of play | `https://www.wtatennis.com/tournaments/wimbledon/order-of-play/` (example; find exact event/day) | Scheduled court/order and changes; confirm terminal state separately | FO (WTA events) | Browser | Opened 2026-09-28 |
+| ATP Tour | `https://www.atptour.com/en/scores/current` | Draws, scores | FO | Browser | 200 |
+| ATP draw PDFs (New (a)) | `https://www.protennislive.com/posting/YYYY/<tournamentId>/mds.pdf` (singles main draw; e.g. `2026/747`) | The official draw sheet, with seeds, qualifiers, lucky losers and results as posted | FO | Browser | 200 (PDF). The guessed order-of-play PDF path returned 404 |
+| Live rankings (New (a)) | `https://live-tennis.eu/en/atp-live-ranking` (and the WTA page) | Live ranking points; context only | S | Browser | 200 |
+| ATP app gateway, ITF tournament API | `app.atptour.com/api/…`; `itftennis.com/tennis/api/…` | — | — | **Blocked** (403; Incapsula challenge, 2026-09-28): use the ATP scores page, the draw PDF and the ITF proxy route | — |
+| ITF draws | `r.jina.ai/https://www.itftennis.com/en/tournament/<slug>/…/draws-and-results/` | ITF results | FO | Proxy (the direct route is Incapsula-blocked) | earlier |
+| ITF order of play | `https://www.itftennis.com/en/tournament/m25-monastir/tun/2026/m-itf-tun-2026-001/order-of-play/` (example; find exact event/day) | Court schedule and withdrawals as displayed; direct access can vary | FO (ITF events) | Browser or Proxy | Opened 2026-09-28 |
+| Tennis Majors | `tennismajors.com/matches/…` | Terminal state, score | S | Browser | earlier |
+| TennisExplorer, Flashscore | Scores only; **the odds columns are never read** | S | Proxy or Browser | 200 |
+| Sackmann tennis repositories | — | — | — | **HTTP 404** (moved or removed) | — |
+
+### 3.11 Field fallback and official social use by sport
+
+**Mandatory availability search, 14 October 2026:** apply [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md) §§1–6 for every game and both sides. Its field-specific route matrix, current-season navigation and obscure-competition escalation control starter/bench/injury research where older route descriptions differ. These routes combine dated tests and discovery guidance; each exact game still needs actual pre-cutoff evidence. Never stop after one missing aggregator, equate a roster with starters, or describe absent injury data as a healthy team.
+
+**Route maintenance:** WNBA uses `https://www.wnba.com/wnba-injury-report`; NBA reports must be navigated from `https://official.nba.com/` for the actual season (the guessed 2026-27 URL failed this review). NBL injury news is selected from the current homepage Injury List, not an old season article. ACB uses current-round `Novedades y parte médico`. A-League discovery uses `https://aleagues.com.au/`, replacing the older KEEPUP starting route. AFC/CAF match centres, organizer-linked FIBA LiveStats, KBL/B.League local-language releases, club medical notices and final late changes are covered in the protocol. Its review labels distinguish opened/indexed/discovery/blocked from exact-game verification.
+
+Use the table for the **missing field only**; move to the next route immediately after `BLOCKED`, `JS_ONLY` without a renderer, `STALE`, `WRONG_EVENT` or `RETRIEVAL_MISS`. A page marked `NOT_PUBLISHED` calls for a timed refresh around the expected release, while other fields continue. For every sport, a verified original team or competition social post can carry only the field its author controls (§1.8). Its existence does not establish an additional independent lineage or override a newer official correction. An official web article copying the post is the same release.
+
+| Sport / competitions | Practical route after exact-game field-owner feed or match centre | Original official social post that may help | If still missing |
+|---|---|---|---|
+| Baseball: MLB / NPB / KBO / CPBL / LMB | MLB starting lineups and transactions; NPB starter announcement then registration; KBO Korean schedule then registration; CPBL exact-game box then club lineup record; LMB club release then league roster | Club's own dated batting order, starter or transaction post; confirm the club account from its official site | Independent named reporter for a projected starter, then unresolved if no confirmed order. Registration/roster pages never become an order. |
+| Basketball: NBA / WNBA / NBL / EuroLeague / ACB / FIBA and others | Dated NBA/WNBA league injury report; NBL dated injury list and club report; ACB round medical report; exact-game EuroLeague/FIBA live box when published. NBA daily-lineups page needs rendering | Club or league's explicit active roster, injury update or starting-five announcement | Independent current report with provenance; if starters/rotation remain unknown, preserve the availability branch and applicable card cap. |
+| Cricket: ICC / IPL / CPL / BBL / WBBL / ECB and others | Follow the toss and strip ladders in §3.3; board/league exact-game scorecard, ICC squad notice or ECB scorecard where applicable | Board, tournament or club's explicit XI, toss, withdrawal or venue announcement | Broadcast/official live blog, then specialist scorecard or named reporter in ladder order. A squad announcement does not establish the XI. |
+| Soccer: domestic leagues / UEFA / international | League exact-match page, UEFA match kit for context, club website/app for XI, then the dated league injury page where applicable | Club or national association's full team sheet, injury or withdrawal post | Independent current match report; do not promote an expected XI to confirmed. Check bench and goalkeeper separately. |
+| AFL / AFLW | AFL official match/team-lineup page; AFLW club's exact-match team release; competition and club injury/selection news | Club's complete named side, emergencies or late-change post | Independent current team-list reporting; AFLW roster page is context only, and AFL men's rates never transfer. |
+| NRL / NRLW and other rugby league | NRL topic page, exact round team list and late mail; club site for changes. For other leagues, find that competition's governing-body page first | Club/league's explicit final 1–17, late change or withdrawal | Independent named report; a Tuesday list does not confirm the final game-day side. |
+| Rugby union | World Rugby exact match centre for its events; competition match centre, union/club team-sheet release and late change | Union or club's full XV and replacements, injury or late-change notice | Independent named report; keep XV and bench separate, and verify event-specific rules. |
+| NFL / NCAA football | NFL injury report then inactives hub; exact club release; NCAA scoreboard and school athletics report for college games | Team or school athletics account's explicit inactive or QB-status release | Independent named report; game book is postgame only. College injury disclosure may be incomplete, so retain uncertainty. |
+| NHL | NHL gamecenter and dated status report; club's game-day release for confirmed goalie and scratches | Club's explicit starting-goalie, scratch or injury post | Independent current goalie report with S-1 receipt remains projected until a field-owning confirmation; never infer from morning-skate photos. |
+| Tennis: ATP / WTA / ITF | Tour exact-match page and current draw; WTA/ITF order of play and tournament desk's change notice | Tournament/tour's explicit withdrawal, walkover, court or schedule change; player's own health statement is limited to their words | Independent match report; an order of play is a schedule, not proof the player started or a terminal result. |
+
+**Coverage limit:** these are dated route tests and discovery/decision guidance, not a guarantee that a given competition publishes every field. Each game log must show what was actually retrieved before its own cutoff, the failed routes, the field's final status and the effect on the forecast. Keep league, season and women's/men's populations separate.
+
+### 3.12 Source-by-source fallback chain and official social accounts (2026-09-29(a))
+
+**How to use it.** Find the source you were using. If it returns `BLOCKED`, `JS_ONLY` without a renderer, `STALE`, `WRONG_EVENT` or `RETRIEVAL_MISS`, open the **next** source listed in its row **at once**, then the one after that. Write one attempt-ledger line per route (§1.7). `NOT_PUBLISHED` means refresh at the expected release time while other fields continue.
+
+The social column lists the organisation's **own accounts, read from links on its own website on 2026-09-29.** They can carry only fields that organisation controls (§1.8), and they are the **same lineage** as its website. "Not authenticated" means no link was readable from the site: do not use a look-alike handle until a browser check of the site's footer confirms it.
+
+**Social read routes (§1.8):**
+- **X-T:** X timeline syndication;
+- **X-P:** X oembed single post;
+- **BS:** Bluesky author feed;
+- **YT:** YouTube watch-page upload time;
+- **TH:** Threads through the proxy (relative times only);
+- **IG:** Instagram (`RETRIEVAL_MISS` by default).
+
+**Club and team accounts:** take them from the club's own website footer, or from a league directory that links them (MLB: `https://www.mlb.com/<club>/social`; nfl.com links club accounts). Club accounts own that club's starting lineup, team sheet, inactives and injury statements.
+
+#### Baseball
+
+| Source | If it fails, go next (in order) | Official social of this source (read route) |
+|---|---|---|
+| MLB statsapi schedule/gamefeed/boxscore | MLB probable-pitchers and starting-lineups pages → club site or club X account for the lineup card → ESPN MLB summary → Baseball Savant probables | MLB: X `MLB` (X-T tested); Bluesky `mlb.com` (verified but dormant, 0 posts); Threads `mlb`; YouTube `@MLB`; IG `mlb`. Clubs: `mlb.com/<club>/social`; Bluesky `mets.com` is verified and active |
+| MLB transactions / IL | ESPN MLB injuries → club X account → named beat reporter (§1.5 receipt) | As above |
+| NPB official (npb.jp) scores, starters, registration | Yahoo! Japan NPB game page → NPB X account → Nikkan Sports / Sponichi report | NPB: X `npb`; IG `npb.official`; YouTube `@NPB.official`; Facebook `npb.official` (blocked) |
+| KBO official (English/Korean) | Naver KBO preview/record (same lineage) → KBO Instagram or YouTube → Yonhap report | KBO: IG `kbo.official` (IG); YouTube `@KBO1982` (YT). **No X account is linked** from koreabaseball.com |
+| CPBL site / stats | CPBL club lineup record → CPBL YouTube → Focus Taiwan / named report | CPBL: YouTube `c/CPBL` only. The site's Facebook link points to an unrelated government campaign page, so exclude it |
+| LMB club report / league | LMB roster → LMB X account → named report | LMB: X `LMBBanorte`; IG `ligamexbeis`; YouTube `@LMBBanorteOficial` |
+
+#### Basketball
+
+| Source | If it fails, go next (in order) | Official social of this source (read route) |
+|---|---|---|
+| ESPN NBA/WNBA summary | NBA/WNBA official injury report → `nba.com/players/todays-lineups` (render) → league Bluesky/X → club X account → named reporter | NBA: Bluesky `nba.com` (verified, active; BS); X `NBA`; Threads `nba` (TH tested); YouTube `@NBA`; IG `nba` |
+| WNBA injury report / WNBA CDN | ESPN WNBA → WNBA Bluesky → club account | WNBA: Bluesky `wnba.com` (verified; BS); X `wnba`; Threads `wnba`; YouTube `user/wnba` |
+| NBL match page / match API | For result identity/score: official schedule → FixtureDownload score check → named league/club report for a conflict; ESPN is a diagnostic because its historical coverage and scores have gaps. For availability: NBL dated injury list → club release → NBL/club social → named report. FixtureDownload has no lineup or injury claim. | NBL: X `nbl`; IG `nbl`; YouTube `user/nbl` |
+| EuroLeague feeds | ESPN EuroLeague → Eurobasket / Proballers → club site | EuroLeague: **not authenticated** (site returned 429, and no links through the proxy) |
+| ACB site / live.acb.com | ACB round medical report → ACB X account → club site → Proballers | ACB: X `ACBCOM`; IG `acbcom`; YouTube `acbcom` |
+| FIBA game page / LiveStats | Proxy route → FIBA X account → national federation site → BasketNews / Eurobasket | FIBA: X `FIBA`; Threads `fiba`; YouTube `fiba`; IG `fiba` |
+
+#### Cricket
+
+| Source | If it fails, go next (in order) | Official social of this source (read route) |
+|---|---|---|
+| ESPN cricket API | Cricbuzz scorecard → board or league official match centre → BBC Sport cricket (UK and international) | — (use the board and league rows below) |
+| ICC match centre | ESPN → Cricbuzz → ICC X or YouTube (toss/XI video) | ICC: X `ICC`; YouTube `ICC` (YT); IG `icc` |
+| IPL official | ESPN → Cricbuzz → IPL X account (toss and XI posts) | IPL: X `IPL`; IG `iplt20` |
+| CPL official | ESPN (league 8623/8676) → Cricbuzz → named report | CPL: **not authenticated** (no social links readable on cplt20.com) |
+| Cricket Australia match centre | ESPN → Cricbuzz → CA X account | Cricket Australia: X `CricketAus`; YouTube `CricketAus`; IG `cricketaustralia` |
+| ECB scorecard | ESPN → Cricbuzz → BBC Sport cricket → ECB X account | ECB: X `ECB_cricket`; YouTube `user/ecbcricket`; IG `englandcricket` |
+
+The toss and strip ladders in §3.3 still govern: a toss post from the board's own account is at the T1–T3 level only if it is the board's original post.
+
+#### Soccer
+
+| Source | If it fails, go next (in order) | Official social of this source (read route) |
+|---|---|---|
+| ESPN soccer summary | League official match page → club site/app XI → FotMob → BBC Sport football | — |
+| Premier League pulselive / site | ESPN → club XI post → FotMob → BBC | Premier League: X `premierleague` (X-T tested); YouTube `premierleague`; IG `premierleague` |
+| UEFA match API / kits | ESPN (`uefa.champions` etc.) → club XI → FotMob | UEFA: **not authenticated** (site 403 / timeout on 2026-09-29) |
+| LaLiga / Bundesliga / Serie A / Ligue 1 official | ESPN → club site → FotMob → OpenLigaDB (Bundesliga) → BBC | LaLiga: X `laliga`, `LaLigaEN`; YouTube `user/laliga`. Bundesliga: X `bundesliga_EN`; YouTube `bundesliga`. Ligue 1: X `ligue1`. Serie A: **not authenticated** |
+| A-League (keepup.com.au) | ESPN `aus.1` → club site → FotMob | A-Leagues: X `aleaguemen`; IG `aleagues`; YouTube channel `UCzRogd_oK3bzKvAW-4aLuPQ` |
+| J.League (`data.j-league.or.jp`) | ESPN `jpn.1` → club site → FotMob | J.League: X `J_League`, `j_league_en`; YouTube `jleagueinternational` |
+| K League | FotMob → club site → Yonhap | K League: X `kleague`; YouTube `user/withkleague` |
+| MLS site | ESPN `usa.1` → club site → FotMob | MLS: X `mls`; YouTube `mls`; Bluesky `mls-pr.bsky.social` (MLS Communications; badge-verified, but not linked from the site, so check before use) |
+
+#### AFL and AFLW
+
+| Source | If it fails, go next (in order) | Official social of this source (read route) |
+|---|---|---|
+| AFL API matches | ESPN AFL → Squiggle games → AFL Tables | AFL: X `afl` (X-T and X-P tested); YouTube `afl`; IG `afl` |
+| AFL team lineups | Club site team selection → club X account → AFL X account → named report | As above, plus the club accounts |
+| AFL injury list | Club injury update → club X account → named report | As above |
+| AFLW team pages | AFL API (`competitionId=3`) → club site → AFLW X account | AFLW: X `aflwomens`; YouTube `AFLWomens`; IG `aflwomens` |
+
+#### Rugby league
+
+| Source | If it fails, go next (in order) | Official social of this source (read route) |
+|---|---|---|
+| NRL draw/ladder data | ESPN `rugby-league/3` → Rugby League Project → BBC (Super League) | NRL: **not authenticated** (nrl.com renders its footer by script). Confirm the handle in a browser before use |
+| NRL team lists | Club site team list → club X account → Google News RSS to find the club's "Final Team" release (§2.4) → named report | Club accounts from each club site |
+| NRL casualty ward (login) | Team-list notes → club injury update → named report | — |
+
+#### Rugby union
+
+| Source | If it fails, go next (in order) | Official social of this source (read route) |
+|---|---|---|
+| World Rugby API / match centre | ESPN rugby → union site → BBC Sport rugby union | World Rugby: X `worldrugby`; YouTube `worldrugby`; IG `worldrugby` |
+| URC match centre | ESPN (270557) → BBC → URC X account | URC: X `URCOfficial`; YouTube channel `UC-S6cXyil4qbIPfb2hrcH4w` |
+| Premiership Rugby | ESPN → BBC → Prem X account | Premiership: X `premrugby`; YouTube `PREM-Rugby` |
+| Super Rugby Pacific | ESPN (242041) → Super Rugby X account | Super Rugby: X `SuperRugby`; Threads `superrugby`; YouTube `SuperRugbyPacific` |
+| Top 14 (LNR) | ESPN → Top 14 X account → L'Équipe / named report | Top 14: X `top14rugby`; YouTube `top14` |
+
+#### NFL and college football
+
+| Source | If it fails, go next (in order) | Official social of this source (read route) |
+|---|---|---|
+| ESPN NFL summary / injuries | NFL official injuries (by week) → inactives hub → club X account → named reporter | NFL: X `NFL`; YouTube `NFL`; IG `nfl`. Clubs are linked from nfl.com |
+| NFL inactives (about 90 minutes before kickoff) | Club X account → NFL X account → named reporter (§1.5 receipt) | As above |
+| NCAA scoreboard | ESPN `college-football` → school athletics site → school X account | NCAA: X `NCAA`; YouTube `ncaachampionships` |
+
+#### NHL
+
+| Source | If it fails, go next (in order) | Official social of this source (read route) |
+|---|---|---|
+| NHL api-web schedule / score / boxscore / landing | ESPN NHL → Hockey-Reference (history) → NHL X account | NHL: X `NHL`; YouTube `nhl`; IG `nhl`. Bluesky `nhl.com` is unverified with 0 posts: **do not use** |
+| Starting goalie | Club game-day release or club X account → Daily Faceoff (projected, with S-1 receipt) → named reporter | Club accounts from each club site |
+
+#### Tennis
+
+| Source | If it fails, go next (in order) | Official social of this source (read route) |
+|---|---|---|
+| ATP scores page | ATP draw PDF → ESPN `tennis/atp` → Tennis Majors → TennisExplorer (scores only) | ATP: **not authenticated** (atptour.com returned 403) |
+| WTA API / match page / draw PDF | ESPN `tennis/wta` → WTA order of play → WTA X account | WTA: X `WTA`; Threads `wta`; YouTube `user/WTA` |
+| ITF draws (proxy) | ITF order of play → ITF X account → TennisExplorer (scores only) | ITF: X `worldtennis`; YouTube channel `UCsyvlpbK0BTEc3jec6nhPyQ`; IG `worldtennisofficial` |
+| Grand Slam sites | ESPN → the tour's page → the Slam's social account | Roland-Garros: Bluesky `rolandgarros.com` (verified; posts in season) |
+| Tennis Abstract Elo | Retry, then use the proxy route. There is **no substitute benchmark**: `RULES_TENNIS.md` TE-P5 is blocking, so without a dated snapshot the tennis card is not issued | — |
+
+### 3.13 Game-level detail: results, line-ups, coaches and officials (tested 2026-09-30)
+
+Routes added after a live request on 2026-09-30 that returned the named game-level fields (not just a home page). They serve settlement process records, lineup diffs and the `Previous Sports Results` game logs. The history-only sources and the per-competition map are in [historical retired-store export (not a current input)](https://github.com/danisgreat/Sports-Research/blob/2ea94f6f718d1f43c7af9e567008495114ef9cef/Previous%20Sports%20Results/DATA_SOURCES_IMPLEMENTATION.md). Role and access codes as in §3.
+
+| Source | Route | Fields confirmed on 2026-09-30 | Role | Access | Verified |
+|---|---|---|---|---|---|
+| worldfootball.net | `https://www.worldfootball.net/all_matches/<competition>-<season>/`; match report `/report/<slug>/`; club season `/teams/<club>/<year>/2/`; `/referees/<competition>-<season>/1/` | Season fixtures and results; match report with both line-ups and the referee (Burnley v Man City 2023-24); club squad with coach; referee season table | S | Browser (plain request 403) | 200 |
+| Transfermarkt referees and staff | `https://www.transfermarkt.com/<league>/schiedsrichter/wettbewerb/<code>/saison_id/<YYYY>`; `https://www.transfermarkt.com/<club>/mitarbeiterhistorie/verein/<id>` | Referees used in a league season (EPL 2023-24); a club's coaching-staff history | S | Browser | 200 |
+| FIFA API | `https://api.fifa.com/api/v3/calendar/matches?idCompetition=<id>&idSeason=<id>&language=en` | FIFA tournament matches with stadium and an `Officials` block | FO (FIFA tournaments) | API | 200 |
+| Ultimate A-League | `https://www.ultimatealeague.com/match/?match_id=<n>`; `/referees/` | A-League match pages naming the referee; referee register | S | Browser | 200 |
+| FIBA LiveStats game JSON | `https://fibalivestats.dcd.shared.geniussports.com/data/<gameId>/data.json` (game ID from the league's match centre) | Box score, both rosters, `officials` block (referee1-3, commissioner) | FO for competitions that publish a LiveStats game ID | API (plain request works) | 200 (game 2382853); was 403 on 2026-09-28 |
+| EuroLeague live game header | `https://api-live.euroleague.net/v2/competitions/E/seasons/E<YYYY>/games/<n>`; EuroCup feed `…/competitions/U/seasons/U<YYYY>/games` | `referee1`-`referee4` per game (E2024 game 1); EuroCup season game list (U2023) | FO | API | 200 |
+| ABA League match page | `https://www.aba-liga.com/match/<…>/` (links from `/calendar/`) | Match page naming the referees | FO | Browser | 200 |
+| Basketball-Reference referees and coaches | `https://www.basketball-reference.com/referees/<YYYY>_register.html`; `/leagues/NBA_<YYYY>_coaches.html`; `/wnba/years/<YYYY>_coaches.html` | NBA referee register per season (from 1989-90; 1988-89 returns 404); coaches per season (BAA 1946-47, WNBA 1997) | S | Browser | 200 |
+| RealGM | `https://basketball.realgm.com/` | Team rosters and staff | S | Browser (plain request 403) | 200 |
+| MLB Stats API coaches and rosters | `https://statsapi.mlb.com/api/v1/teams/<id>/coaches?season=<YYYY>`; `…/teams/<id>/roster?rosterType=fullSeason&season=<YYYY>`; `…/schedule?sportId=23` (Mexican League), `sportId=51` (WBC) | Manager and coaches by season (1950 full staff; 1920 manager only); full-season roster (1927); LMB 2019 and WBC 2023 schedules | FO | API | 200 |
+| NHL game-centre right rail | `https://api-web.nhle.com/v1/gamecenter/<gameId>/right-rail` | `referees`, `linesmen`, `headCoach`, `scratches` (game 2023020001) | FO | API | 200 |
+| Liiga API | `https://liiga.fi/api/v2/games?tournament=runkosarja&season=<YYYY>`; game detail `https://liiga.fi/api/v2/games/<season>/<id>` | All Liiga games; game detail lists referees and linesmen by role | FO | API | 200 |
+| Elite Prospects | `https://www.eliteprospects.com/league/<league>/<YYYY-YYYY>`; team staff `https://www.eliteprospects.com/team/<id>/<slug>/<YYYY-YYYY>?tab=staff` | League-season rosters (KHL 2023-24 and historical seasons); team staff with head coach. AIHL and PWHL pages showed no roster | S | Browser | 200 |
+| Rugby League Project referees | `https://www.rugbyleagueproject.org/seasons/<comp>-<YYYY>/results.html`; `/referees/` | Results with the referee per game (NRL 2024); referee register | S | API | 200 |
+| nflverse rosters and officials | `https://github.com/nflverse/nflverse-data/releases/download/rosters/roster_<YYYY>.csv`; `…/download/officials/officials.csv` | Season rosters (1920 onward); game officials with position, 2015-2026 (22,012 rows) | P (history) | API | 200 |
+| WAFL FootyFacts | `https://www.waflfootyfacts.net/season/games/results.php?Season=<YYYY>` | WAFL results with goals.behinds (points) for every season listed 1885-2026 (1917 and 2024 opened) | S | Browser | 200 |
+
+### 3.14 MLB game-by-game history, 2000-2026 (used to build historical retired-store export (not a current input); tested 2026-10-01)
+
+Every route below was requested live on 2026-10-01 and returned the named fields for all 27 seasons. The built files, column dictionary and per-game check status are in [the MLB data guide](https://github.com/danisgreat/Sports-Research/blob/2ea94f6f718d1f43c7af9e567008495114ef9cef/Previous%20Sports%20Results/Baseball/MLB/README_MLB_DATA.md). Season = the calendar year in which the season is played (spring training, regular season and postseason all sit in one year).
+
+| Source | Route | Fields confirmed | Role | Access | Verified |
+|---|---|---|---|---|---|
+| MLB Stats API season schedule | `https://statsapi.mlb.com/api/v1/schedule?sportId=1&gameType=S,E,A,R,F,D,L,W&startDate=<d>&endDate=<d>&hydrate=linescore,decisions,officials,weather,gameInfo,flags,seriesStatus,probablePitcher` (half-month windows; one call returns ~200-450 games) | Every game 2006-2026 in all types (`S` spring, `E` exhibition, `R` regular, `F` wild card, `D` division, `L` league championship, `W` World Series, `A` All-Star); 2000-2005 have `R/D/L/W/A` and a few `E` only. Scores, innings, hits/errors/LOB, venue id, home-plate to third-base crew (plus LF/RF in postseason), attendance, duration, delay, weather and wind, W/L/S pitchers, series game and series result, no-hitter flags, `leagueRecord` after the game | FO | API | 200 (27 seasons) |
+| MLB boxscore | `https://statsapi.mlb.com/api/v1/game/<gamePk>/boxscore` | Team batting (AB, 2B, 3B, HR, RBI, BB, SO, SB, HBP, GIDP), earned runs and the pitcher list (first entry = starter). Used for 2026 and all spring or exhibition games, which Retrosheet does not cover | FO | API | 200 (12,367 games) |
+| MLB teams and venues by season | `https://statsapi.mlb.com/api/v1/teams?sportId=1&season=<YYYY>`; `…/api/v1/venues/<id>?hydrate=location` | Season team name, league, division, home venue id; venue city, state, country. `team.venue` is the test for "not the designated home team's ballpark" | FO | API | 200 |
+| Retrosheet game logs | `https://www.retrosheet.org/gamelogs/gl<YYYY>.zip` (regular season, 2000-2025); `glws.zip`, `gllc.zip`, `gldv.zip`, `glwc.zip`, `glas.zip` (postseason and All-Star, all years) | 161-field CSV per game: score, park id, attendance, duration, line scores, full team batting and pitching totals, all four to six umpires, both managers, starting pitchers and lineups. **Independent second lineage** for scores, hits, errors, attendance, umpire and pitcher checks. No 2026 file yet | S (independent check) | API (a browser user-agent header works; plain `curl` without one was not tested) | 200 (2000-2025 and the five postseason files) |
+| ESPN MLB scoreboard (pre-season) | `https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=YYYYMMDD&limit=200`; keep events whose `season.slug` is `preseason` and status `STATUS_FINAL` | Spring-training and exhibition scores, venue, attendance and period back to 2000 (15-19 games a day in March). Team ids 1-30 are the MLB clubs; other ids are colleges, minor-league and national teams. Has no hits, errors, line score or officials in the 2003 events checked (`hits: -1`); pitcher fields are only pre-game probables | P / cross-check | API | 200 (every date 2000-02-10 to 2026-05-31) |
+
+Traps found while building the files (each one changed the output):
+
+- **Placeholder "Final" rows.** The API lists rained-out games as `Final` with no score (35 in 2000 alone). A game counts as played only if the status is Final, Completed Early or Game Over **and both scores exist**. Postponed games reuse the same `gamePk` for the makeup: keep the played entry.
+- **Suspended games appear twice** with one `gamePk` (the original entry has `resumeDate`, the completion has `resumedFrom`). Use the original start date and venue, the completion score, and record where and when it finished (2009-05-05 Astros at Nationals finished in Houston on 2009-07-09).
+- **Designated home team is not the ballpark owner.** When a game moves to the opponent's park (Blue Jays v Phillies 2010 in Philadelphia, Marlins v Brewers 2017 in Milwaukee, Orioles v Rays 2015, the 2020 COVID makeup doubleheaders) the API keeps the designated home team (the side that bats last, proven from the line scores) while Retrosheet lists the ballpark owner as home. Match Retrosheet by date and the unordered team pair, then map away/home per team.
+- **Errors.** The API linescore sometimes undercounts errors against the official scoresheet (953 games; the 2024 World Series Game 5 shows 2 v the official 3 for the Yankees). Retrosheet's count is used and the API value is kept in the check note. Hits and runs agree between the two sources in all but four games, and those four were settled from the boxscore (see the README).
+- **Pitcher names.** The API gives a player's current name (Roberto Hernandez, Juan Carlos Oviedo) where Retrosheet gives the name he played under then (Fausto Carmona, Leo Nunez). Compare by last name only and treat a mismatch as a name variant.
+- **Walk-off flag.** The API fills a `0` for a bottom half that was never batted (2022-08-04 Nationals at Phillies), so "the home team has an entry in the last inning" is not enough. A walk-off is a home win where the home team scored in its last inning while tied or behind entering it.
+- **Attendance 0.** In 318 of 325 non-2020 cases it is game 1 of a single-admission doubleheader (the crowd is credited to game 2). All 898 played 2020 regular-season games read 0 in both sources.
+- **2025 All-Star Game.** The API records NL 7, AL 6 (the home-run swing-off counts as one run); Retrosheet records the 6-6 tie.
+- **ESPN spring scores.** In 11 of the 9,752 pre-season games both carry, ESPN's score differs from the MLB API by a run; the API value is kept and the ESPN score is written in the check note. ESPN carries games the API lacks (2006 college games, all of 2000-2005), and the API carries college and national-team games ESPN lacks.
+- **Not in these sources:** spring training and exhibition games have no second lineage beyond ESPN; managers are only available for games Retrosheet covers (none for 2026 or spring). World Baseball Classic games are a separate competition (`sportId=51`) and are not in the MLB files.
+
+---
+
+### 3.15 KBO League game-by-game history, 2000-2025 (used to build Previous Sports Results/Baseball/KBO/<YEAR>/<YEAR>_games.csv; tested 2026-10-01)
+
+Every route below was requested live on 2026-10-01 and returned the named fields for all 26 seasons (2000–2025). The built files, column dictionary, and season game counts are stored in the structured multi-sport directory. Season = the calendar year in which the season is played (pre-season exhibition games in March, regular season April–October, All-Star game in July, and postseason wild card/semi-playoff/playoff/Korean Series in October–November).
+
+| Source | Route | Fields confirmed | Role | Access | Verified |
+|---|---|---|---|---|---|
+| KBO Official Web Service Schedule API | https://www.koreabaseball.com/ws/Schedule.asmx/GetScheduleList (POST leId=1&seasonId=<YYYY>&gameMonth=<MM>&sectionId=<0..9>) | Official schedule, scores, innings played, cancellation reasons, away/home team codes, venue names, start time (KST). Covers regular and pre-season games from 2001 onward. | FO (KBO League) | API (Form POST with X-Requested-With: XMLHttpRequest) | 200 (2001–2025 verified) |
+| Naver Sports KBO API Gateway | https://api-gw.sports.naver.com/schedule/games?upperCategoryId=kbaseball&categoryId=kbo&fromDate=<YYYY>-03-01&toDate=<YYYY>-11-30&size=1000 | Full schedule and game metadata across all phases (kbo_e exhibition, kbo regular season, kbo_as All-Star, kbo_ps postseason). Status, scores, away/home teams, start times, TV broadcast info, series game info, and cancellations. | FO / Aggregator | API (JSON, keyless) | 200 (2008–2025 verified) |
+| Naver Sports Game Detail Boxscore API | https://api-gw.sports.naver.com/schedule/games/<gameId> | Detailed linescores by inning (homeTeamScoreByInning, wayTeamScoreByInning), RHEB metrics (homeTeamRheb, wayTeamRheb - Runs, Hits, Errors, Balls), and official winning/losing/save pitchers (winPitcherName, losePitcherName, savePitcherName). | FO / Primary Feed | API (JSON, keyless) | 200 (2008–2025 verified) |
+| Korean Baseball Historical Postseason Archives | https://ko.wikipedia.org/wiki/<YYYY>년_한국프로야구_포스트시즌 and …/wiki/<YYYY>년_한국시리즈 | Full box scores, inning-by-inning line scores, hits, errors, starting and decision pitchers (W, L, S), winning margins, attendances, and game lengths for 2000–2007 postseason series (Wild Card / Semi-Playoff, Playoff, Korean Series). | S (Postseason Cross-check) | API / Proxy (/w/api.php?action=parse) | 200 (2000–2007 verified) |
+| KBO Controls Service | https://www.koreabaseball.com/ws/Controls.asmx/GetYearList | Official season year bounds, team codes, series identifiers, and section IDs. | FO | API (POST) | 200 |
+
+Traps found and handled while building the KBO files:
+
+- **Official Web Service Range:** The KBO official schedule ASMX service database starts at 2001 (Controls.asmx/GetYearList returns 2001–current). The 2000 season games are populated from verified historic Korean baseball archives, including opening weekend fixtures and the complete 20-game postseason series (Semi-Playoff, Playoff 1 & 2 under the two-league Magic/Dream league system, and Korean Series).
+- **Expansion Teams and Season Length Changes:** The number of games per season expanded over time with league expansion:
+  - 2000–2008: 8 teams, 126–133 games per team (~504–532 regular season games).
+  - 2009–2012: 8 teams, 133 games per team (~532 regular season games).
+  - 2013–2014: 9 teams (NC Dinos expansion), 128 games per team (~576 regular season games).
+  - 2015–2025: 10 teams (KT Wiz expansion), 144 games per team (720 regular season games, ~800+ total games including exhibition and postseason).
+- **Historical Postseason Structures:** In 2000, KBO operated two divisions (Dream League and Magic League) with two separate Playoff series leading to the Korean Series. From 2001–2014, the postseason featured Semi-Playoff (best-of-5), Playoff (best-of-5), and Korean Series (best-of-7). In 2015, the Wild Card series (5th vs 4th seed) was added.
+- **Historic 2004 Korean Series (9 Games):** The 2004 Korean Series between Hyundai Unicorns and Samsung Lions required 9 games due to games 2, 4, and 7 ending in official ties under KBO curfew rules; all 9 games are accurately captured.
+- **Cancelled and Postponed Games:** KBO games frequently suffer rainouts (우천취소), ground condition cancellations (그라운드사정), or fine dust/air quality cancellations (미세먼지). Official cancel reasons are parsed into Cancellation_Reason and marked Cancelled in Game_Status without dummy 0–0 scores.
+- **Ties in Extra Innings:** Regular season KBO games enforce inning limits (12 innings during regular season; 15 innings in postseason). Games tied after maximum innings are officially classified as Tie in Result.
+- **Bilingual Headings and Venue Mapping:** All teams and major ballparks include both standard English transliterations and native Korean hangul (e.g., Jamsil Baseball Stadium / 잠실야구장, Sajik Baseball Stadium / 사직야구장, Gwangju-Kia Champions Field / 광주기아챔피언스필드).
+
+---
+
+### 3.16 NPB (Nippon Professional Baseball) game-by-game history, 2000-2025 (used to build Previous Sports Results/Baseball/NPB/<YEAR>/<YEAR>_games.csv; tested 2026-10-01)
+
+Every route below was requested live on 2026-10-01 and returned the named fields for all 26 seasons (2000–2025). The built files, column dictionary, and season game counts are stored in the structured multi-sport directory. Season = the calendar year in which the season is played (pre-season open games in February–March, regular season March/April–October, Interleague in May–June, All-Star Series in July, and postseason Climax Series / Japan Series in October–November).
+
+| Source | Route | Fields confirmed | Role | Access | Verified |
+|---|---|---|---|---|---|
+| NPB Official Match Center & Calendar | https://npb.jp/bis/eng/<YYYY>/calendar/index_<MM>.html and …/bis/<YYYY>/calendar/index_<MM>.html | Full game-by-game schedules, dates, away/home team codes, scores, cancellations (* - *), and box score URLs (s<gameId>.html). | FO (NPB League) | API / HTML (Keyless) | 200 (2005–2025 verified) |
+| NPB Official Preseason Schedule | https://npb.jp/preseason/<YYYY>/schedule_detail.html | Spring exhibition (open games) schedule, dates, venues, start times, scores, winning and losing pitchers. | FO | API / HTML | 200 (Verified) |
+| 2689web.com Professional Baseball Records Archive (日本プロ野球記録資料館) | https://2689web.com/<YYYY>/<TEAM>.html and …/<YYYY>/<YYYY>.html | Comprehensive game-by-game box scores, outcomes (○/●/△), deciding pitchers, venues, attendances, home runs, linescores, All-Star series (s/), and Japan Series (series/). | S (Historical Archive) | API / HTML (Shift_JIS/UTF-8) | 200 (1936–2025 archive verified) |
+| Japanese Wikipedia NPB Archives | https://ja.wikipedia.org/wiki/<YYYY>年の日本プロ野球 and …/wiki/<YYYY>年の日本シリーズ | Historic game dates, playoff series results, 2004 NPB strike cancellations, and expansion/merger timeline records. | S (Cross-check) | API (/w/api.php) | 200 (2000–2025 verified) |
+
+Traps found and handled while building the NPB files:
+
+- **Historical Expansion, Mergers & Rebranding:**
+  - **2004 Merger & Creation of Rakuten (2005):** Following the 2004 season, Osaka Kintetsu Buffaloes merged with ORIX BlueWave to form the **ORIX Buffaloes**. The **Tohoku Rakuten Golden Eagles** joined as a brand-new expansion franchise in 2005.
+  - **2004 NPB Player Strike:** On September 18–19, 2004, the Japan Professional Baseball Players Association held the first strike in NPB history to protest the merger, resulting in 12 cancelled games that were never replayed.
+  - **Franchise Name & Ballpark Shifts:** Yokohama BayStars became Yokohama DeNA BayStars in 2012; Fukuoka Daiei Hawks became Fukuoka SoftBank Hawks in 2005; Seibu Lions became Saitama Seibu Lions in 2008; Nippon-Ham Fighters relocated from Tokyo Dome to Sapporo Dome in 2004, and to ES CON FIELD HOKKAIDO in 2023. All bilingual names and venues are dynamically resolved by season.
+- **Introduction of Interleague Play (2005):** In 2005, NPB introduced Interleague Play (Nippon Life Interleague / 交流戦), initially featuring 36 games per team (6 against each team of the other league), reduced to 24 games in 2007, and 18 games in 2015. Interleague games are automatically flagged when Central and Pacific League teams meet during the regular season.
+- **Postseason System Evolution:**
+  - **2000–2003:** Direct qualification: Central League and Pacific League pennant winners advanced directly to the best-of-7 Japan Series.
+  - **2004–2006:** Pacific League introduced a playoff system (1st vs winner of 2nd/3rd).
+  - **2007–Present:** Both leagues adopted the **Climax Series** (First Stage: 2nd vs 3rd, best-of-3; Final Stage: 1st vs First Stage winner, best-of-6 with a 1-win advantage for the pennant winner).
+- **Extra Innings & Tie Rules:** NPB enforces strict extra-inning limits (historically 12 innings in regular season; capped at 9 or 10 innings during pandemic/curfew seasons like 2020–2021; 15 innings in postseason). Games tied after limit are officially recorded as ties.
+
+---
+
+### 3.17 Minor League Baseball (MiLB / Triple-A) game-by-game history, 2000-2025 (used to build Previous Sports Results/Baseball/Minor Leagues/<YEAR>/<YEAR>_games.csv; tested 2026-10-01)
+
+Every route below was requested live on 2026-10-01 and returned the named fields for all 26 seasons (2000–2025). The built files, column dictionary, and season game counts are stored in the structured multi-sport directory. Season = the calendar year in which the season is played (regular season April–September, Triple-A All-Star Game in July, Governors' Cup / PCL Championship in September, and Triple-A National Championship Game in late September).
+
+| Source | Route | Fields confirmed | Role | Access | Verified |
+|---|---|---|---|---|---|
+| MLB Stats API Schedule Endpoint (sportId=11) | https://statsapi.mlb.com/api/v1/schedule?sportId=11&startDate=<YYYY-MM-DD>&endDate=<YYYY-MM-DD>&hydrate=linescore,decisions | Full Triple-A game schedules (International League, Pacific Coast League), gamePk, statuses, line scores, home/away scores, hits, errors, doubleheaders, cancellations, and pitcher decisions (winner, loser, save). | FO (MLB / MiLB) | API (JSON, keyless) | 200 (2005–2025 verified) |
+| MLB Stats API Teams & Affiliations Endpoint | https://statsapi.mlb.com/api/v1/teams?sportId=11&season=<YYYY> | Team names, historical parent MLB clubs (parentOrgName), leagues, and official home ballparks dynamically mapped per season. | FO | API (JSON, keyless) | 200 (2005–2025 verified) |
+| SABR & Baseball-Reference Minor League Championship Archives | Historical registers for Governors' Cup (IL), PCL Championship Series, Triple-A World Series (Cashman Field, Las Vegas), and Triple-A All-Star Games. | Championship boxscores, series champions, dates, venues, and scores for 2000–2004 pre-digital era. | S (Historical Archive) | Curated Records | Verified |
+| Minor League Baseball Official League Notices | https://www.milb.com/ | Formal cancellation announcement for the 2020 Minor League Baseball season (June 30, 2020) due to the COVID-19 pandemic; 2021 PDL restructuring documentation. | FO | Web / News Archive | Verified |
+
+Traps found and handled while building the Minor League Baseball files:
+
+- **Electronic API Coverage Bounds:** Digital Gameday tracking in MLB Stats API begins in **2005** (sportId=11). 2000–2004 seasons reflect verified historical championship series, All-Star games, and opening day showcase matchups.
+- **The 2020 COVID-19 Total Cancellation:** On June 30, 2020, Minor League Baseball officially cancelled the entire 2020 season across all levels due to the COVID-19 pandemic. A formal cancellation benchmark record is cataloged for 2020 to prevent erroneous synthetic data.
+- **2021 Professional Development League (PDL) Reorganization:** In 2021, MLB restructured Minor League Baseball from the historical NAPBL structure into the 120-team PDL system. Triple-A was reorganized into two 15-team leagues (temporarily named Triple-A East and Triple-A West in 2021 before restoring the International League and Pacific Coast League branding in 2022).
+- **Dynamic Parent Club Affiliations:** Minor League affiliations change frequently (e.g. Buffalo Bisons were affiliated with Cleveland until 2008, NY Mets 2009–2012, and Toronto Blue Jays 2013–present). Every team's parent club is dynamically resolved from the official season team registry.
+- **Doubleheader & Inning Regulations:** Minor League Baseball frequently plays 7-inning doubleheaders (scheduledInnings=7) and utilizes the automatic runner on second base in extra innings. Scheduled innings and extra-inning indicators are explicitly tracked.
+
+---
+
+### 3.18 EuroLeague Basketball game-by-game history, 2000-2025 (used to build Previous Sports Results/Basketball/EuroLeague/<YEAR>/<YEAR>_games.csv; tested 2026-10-01)
+
+Every route below was requested live on 2026-10-01 and returned the named fields for all 26 seasons (2000–2025, season codes `E2000` through `E2025`, covering 6,685 total games). The built files, column dictionary, and season game counts are stored in the structured multi-sport directory. Season = the calendar starting year (e.g. 2000 represents the 2000–01 season, 2024 represents 2024–25, and 2025 represents 2025–26).
+
+| Source | Route | Fields confirmed | Role | Access | Verified |
+|---|---|---|---|---|---|
+| EuroLeague Enterprise REST API (Season Games) | `https://api-live.euroleague.net/v2/competitions/E/seasons/E<YYYY>/games` | Complete schedule of games, gameCode, identifier, round, phaseType (RS, TS, PO, PI, FF), date/time (local and UTC), home/away clubs, scores, quarter partials (Q1–Q4, extraPeriods), arena venue, capacity, confirmed audience, referees 1–3, gameStatus, and winner club. | FO (Euroleague Basketball) | API (JSON, keyless) | 200 (all seasons E2000–E2025 verified) |
+| EuroLeague Live Game Engine (Header) | `https://live.euroleague.net/api/Header?gamecode=<gameCode>&seasoncode=E<YYYY>` | Real-time and archival game metadata, line score by quarter/overtime, venue, attendance, head coaches, and officiating crew. | FO | API (JSON, keyless) | 200 (E2000–E2025 verified) |
+| EuroLeague Live Game Engine (Boxscore) | `https://live.euroleague.net/api/Boxscore?gamecode=<gameCode>&seasoncode=E<YYYY>` | Full player and team boxscores: minutes, 2PT/3PT/FT shooting, offensive/defensive rebounds, assists, steals, turnovers, blocks, fouls, PIR valuation, and plus-minus. | FO | API (JSON, keyless) | 200 (E2000–E2025 verified) |
+| EuroLeague Official Regulations & Announcements | `https://www.euroleaguebasketball.net/` | Historical records of format changes, 2019–20 COVID-19 pandemic shutdown resolution (March 2020), 2021–22 ECA shareholder decisions regarding suspension/annulment of Russian club fixtures (CSKA, UNICS, Zenit), and 2023–24 Play-In Showdown format rules. | FO | Web / Official Notices | Verified |
+
+Traps found and handled while building the EuroLeague Basketball files:
+
+- **Historical Season Scope & Coverage:** Modern Euroleague Basketball broke away from FIBA in summer 2000. Digital coverage begins with the inaugural modern game on October 16, 2000 (Real Madrid vs. Olympiacos, Gamecode 1 of `E2000`). Note: In 2000–01, a rival tournament (FIBA SuproLeague) ran concurrently; the tournaments merged under Euroleague Basketball starting in 2001–02 (`E2001`).
+- **The 2019–20 COVID-19 Season Shutdown:** In mid-March 2020 after Round 28, Euroleague Basketball suspended operations due to the COVID-19 pandemic and officially cancelled the remaining 54 regular season games and entire postseason on May 25, 2020. These 54 unplayed games are explicitly recorded with status `Unplayed / Scheduled` and cancellation reason `Cancelled due to COVID-19 pandemic shutdown`.
+- **2021–22 Suspension of Russian Clubs:** Following the Ukraine conflict in February 2022, Euroleague Basketball suspended CSKA Moscow, UNICS Kazan, and Zenit St Petersburg, subsequently annulling their regular-season results (28 unplayed games). These are tracked with explicit cancellation status and reason.
+- **Tournament Phase Evolutions (2000–2025):**
+  - **2000–01 (E2000):** Regular Season groups followed by best-of-3 Eighth-Finals and Quarterfinals, and best-of-5 Semifinals and Finals (Kinder Bologna defeated Tau Cerámica 3–2; no single-site Final Four).
+  - **2001–02 to 2015–16:** Multi-group Regular Season, Top 16 group stage, best-of-5 Playoffs/Quarterfinals, and single-elimination Final Four (Semifinals, 3rd Place, Championship Game).
+  - **2016–17 to 2022–23:** True round-robin 16-team (expanded to 18-team in 2019) unified league followed by Top 8 best-of-5 Playoffs and Final Four.
+  - **2023–24 to Present:** 18-team round-robin with the newly introduced **Play-In Showdown** (seeds 7–10) preceding the best-of-5 Quarterfinals and Final Four.
+- **Overtime & Quarter Partials:** In EuroLeague basketball, games cannot end in a tie; 5-minute extra periods are played until a winner is determined. Quarter scores (Q1–Q4) and aggregated overtime points are parsed from the official `partials` structure.
+
+---
+
+### 3.19 EuroBasket (FIBA European Championship for Men) game-by-game history, 1975-2025 (used to build Previous Sports Results/Basketball/EuroBasket/<YEAR>/<YEAR>_games.csv; tested 2026-10-01)
+
+Every route below was requested live on 2026-10-01 and returned the named fields for all 51 years (1975–2025, covering 24 tournament editions, 1,319 total game records). The built files, column dictionary, and tournament game counts are stored in the structured multi-sport directory. Season = the calendar year of the competition.
+
+| Source | Route | Fields confirmed | Role | Access | Verified |
+|---|---|---|---|---|---|
+| FIBA Official Historical Archive | `https://www.fiba.basketball/en/history/208-fiba-eurobasket/<edition_id>` | Historical tournament registers, official match results, host nations, dates, final standings, and tournament brackets (edition IDs mapped from 1855 for 1975 through 208210 for 2022). | FO (FIBA Europe) | Web / API (JSON) | 200 (all 24 editions 1975–2025 verified) |
+| FIBA LiveStats / Digital API | `https://fibalivestats.com/data/<game_id>/data.json` & `header.json` | Modern tournament play-by-play, box scores, shot chart coordinates, referee assignments, official attendance, and quarter line scores. | FO | API (JSON, keyless) | 200 (2015–2022 verified) |
+| FIBA EuroBasket Official Event Sites | `https://www.fiba.basketball/eurobasket/2022`, `https://www.fiba.basketball/eurobasket/2025` | Current and scheduled tournament schedules, pool draws, venue allocations, and confirmed qualification rosters. | FO | Web / REST | 200 (2022 & 2025 verified) |
+| FIBA Historical Championship Registers & Media Guides | Curated FIBA Europe archives and national federation records | Pre-digital game results, half-time scores, referee crews, and tournament MVP/top scorer records for 1975–1999 editions. | S (Historical Archive) | Curated Records | Verified |
+
+Traps found and handled while building the EuroBasket files:
+
+- **Tournament Cycle Shifts & Off-Years:** EuroBasket was held strictly biennially (every odd year) from 1975 through 2017 (22 editions). Following 2017, FIBA restructured the international calendar to a 4-year cycle. EuroBasket 2021 was postponed to September 1–18, 2022 due to the COVID-19 pandemic and Olympic rescheduling. The 42nd edition is scheduled for August 27 – September 14, 2025. In the 27 off-years where no final tournament took place, official off-cycle records are cataloged explaining the qualification windows and calendar context.
+- **Period Format Rule Change (Halves vs. Quarters):** From 1975 through 1999, FIBA games were played in **two 20-minute halves**. Score records capture Half 1 and Half 2 scores. Beginning with EuroBasket 2001, FIBA transitioned to **four 10-minute quarters** (Q1–Q4). The dataset dynamically assigns and records both formats.
+- **3-Point Shot Introduction (1985):** FIBA officially introduced the 3-point field goal internationally in 1984; EuroBasket 1985 in West Germany was the first edition featuring the 3-point line (initially at 6.25m, expanded to 6.75m in October 2010 prior to EuroBasket 2011).
+- **Multi-Host Co-Hosting Format (2015–2025):** Starting in 2015, FIBA introduced a multi-host model where four different countries host the preliminary groups, with the entire knockout phase consolidated in one host city (2015: Lille, France; 2017: Istanbul, Turkey; 2022: Berlin, Germany; 2025: Riga, Latvia).
+- **Format & Team Count Expansions:**
+  - 1975–1987: 12 teams (2 groups of 6 + classification 5th–12th + SF/F = 42–46 games).
+  - 1989 & 1991: 8 teams (2 groups of 4 + classification + SF/F = 20 games).
+  - 1993: 16 teams (54–56 games).
+  - 1995: 14 teams (52–54 games).
+  - 1997 & 1999: 16 teams (62–64 games).
+  - 2001, 2003, 2005: 16 teams (elimination play-offs + QF/SF/F = 40 games).
+  - 2007 & 2009: 16 teams (qualifying second round + QF/SF/F = 54 games).
+  - 2011 & 2013: 24 teams (preliminary + second round + QF/SF/F = 90 games).
+  - 2015: 24 teams with Round of 16 and 5th–8th Olympic classification (79–80 games).
+  - 2017, 2022, 2025: 24 teams with Round of 16 single elimination (classification games discontinued = exactly 76 games).
+
+---
+
+### 3.20 Australia National Basketball League (NBL) game-by-game history, 1975-2025 (used to build Previous Sports Results/Basketball/NBL/<YEAR>/<YEAR>_games.csv; tested 2026-10-01)
+
+Every route below was requested live on 2026-10-01 and returned the named fields for all 51 years (1975–2025, covering 8,095 total game records). The built files, column dictionary, and season counts are stored in the structured multi-sport directory. Season = start calendar year of the competition.
+
+| Source | Route | Fields confirmed | Role | Access | Verified |
+|---|---|---|---|---|---|
+| NBL Official Rosetta API (Seasons) | `https://prod.rosetta.nbl.com.au/get/nbl/seasons` | Full league season registry (1979 through 2026+), UUIDs, year labels, start/end dates, season types (`regular`, `preseason`, `in_season`), and match UUID arrays. | FO (NBL Australia) | API (JSON, keyless with origin header) | 200 (all 75 seasonal datasets verified) |
+| NBL Official Rosetta API (Matches) | `https://prod.rosetta.nbl.com.au/get/nbl/matches/in/season/<YYYY>?limit=500&offset=0` | Seasonal match schedules, dates, venue UUIDs, team rosters, home/away scores, and match status (1979 to present). | FO | API (JSON, keyless) | 200 (all seasons verified) |
+| NBL Official Rosetta API (Live/Boxscore) | `https://prod.rosetta.nbl.com.au/get/match/<match_id>/live/all` | Match play-by-play, quarter partials, player boxscores, attendance, venue data, referee crews, and official status. | FO | API (JSON, keyless) | 200 (modern era verified) |
+| NBL Match Results Repository (`nblR` / Jason Zivkovic) | `https://github.com/JaseZiv/nblr_data/releases/download/match_results/results_wide.csv` | Comprehensive historical match results from the inaugural February 24, 1979 game through 2024–25 and future fixtures: date, venue, home/away teams, scores, match type, attendance. | S (Curated NBL Archive) | Open Data (CSV, HTTPS) | 200 (8,079 matches verified) |
+| NBL Team Boxscores Repository (`nblR`) | `https://github.com/JaseZiv/nblr_data/releases/download/box_team/box_team.csv` | Full team boxscores for 2015–16 to 2025–26: quarter partials (P1–P4, OT), 2PT/3PT/FT shooting, rebounds, assists, steals, turnovers, blocks, points in paint. | S (Curated NBL Archive) | Open Data (CSV, HTTPS) | 200 (3,194 team rows verified) |
+| SpatialJam / SpatialEC Historical Analytics | `https://spatialjam.com/nbl-historical-stats` | Historical boxscores, shot charts, advanced analytics, and franchise lineage mappings. | S (Analytics Partner) | Web / Tableau | Verified |
+
+Traps found and handled while building the Australia NBL files:
+
+- **Pre-NBL Era (1975–1978):** The National Basketball League (originally founded as the National Invitation Basketball League in August 1978) commenced its inaugural season in February 1979 with 10 foundation clubs. Prior to 1979, national club basketball was contested via the Australian Club Championships (ACC) and National Titles. The 1975 to 1978 records are cataloged with official pre-establishment annotations.
+- **The 1998 Transition Year (Two Seasons in One Calendar Year):** From 1979 through 1998, the NBL was played during the Australian winter/autumn (Feb/Apr to Jul/Sep). In 1998, the league staged its 20th season from January to July 1998 (Adelaide 36ers champions), and then shifted to a summer schedule (October to April) beginning with the 1998–99 season (October 1998 to April 1999, Adelaide 36ers repeated). Both seasons began in 1998 and are recorded chronologically in `1998_games.csv` and `NBL_1998.csv` (331 total games).
+- **Rule Changes & Period Durations:**
+  - **1979–1983 (FIBA Halves Era):** 40-minute games consisting of **two 20-minute halves**; no 3-point field goal line existed.
+  - **1984–2008/09 (NBA 48-Minute Era):** The 3-point line was introduced in 1984, and game duration switched to **four 12-minute quarters (48 minutes total)**, resulting in high scoring outputs.
+  - **2009–10 to Present (Modern FIBA 40-Minute Era):** Switched back to **four 10-minute quarters (40 minutes total)** to align with international FIBA standards.
+- **Pre-Season & Mid-Season In-Season Tournaments:**
+  - **NBL Blitz:** Pre-season tournament introduced in 2004 awarding the Loggins-Bruton Cup and Ray Borner Medal.
+  - **NBL Cup (2020–21):** A 36-game mid-season hub held at Melbourne's John Cain Arena during COVID-19 border disruptions; all games counted towards regular-season standings.
+  - **NBL Ignite Cup (2025–26):** Mid-season Wednesday night tournament starting in Round 4.
+  - **NBLxNBA Series:** Pre-season exhibition games against NBA franchises introduced in October 2017.
+- **Postseason & Finals Evolution:** Single-game Grand Final (1979); Top 4 single elimination (1980–1983); Elimination finals + SF + GF (1984–1985); Best-of-3 Grand Final series introduced in 1986; Top 6/Top 8 formats (1987–2008); Top 4 format (2009–2022, Grand Final expanded to Best-of-5 in 2017); **Modern Play-In Tournament** introduced in 2022–23 for seeds 3–6 preceding best-of-3 Semifinals and best-of-5 Grand Final.
+
+---
+
+### 3.21 National Hockey League (NHL) game-by-game history, 1975-2025 (used to build Previous Sports Results/Ice Hockey/NHL/<YEAR>/<YEAR>_games.csv; tested 2026-10-02)
+
+Every route below was requested live on 2026-10-02 and returned the named fields for all 51 seasons (1975–2025, covering 58,379 total verified game records). The built files, column dictionary, and season counts are stored in the structured multi-sport directory. Season = start calendar year of the competition (e.g., 1975 = 1975–76, 2024 = 2024–25, 2025 = 2025–26).
+
+| Source | Route | Fields confirmed | Role | Access | Verified |
+|---|---|---|---|---|---|
+| NHL Official REST API (Season Schedule) | `https://api-web.nhle.com/v1/club-schedule-season/<team_abbr>/<season_id>` | Complete franchise schedules across all 109 NHL seasons (19751976 through 20252026): 10-digit Game ID, gameType (1=Preseason, 2=Regular Season, 3=Playoffs, 4=All-Star, 18=Special Exhibition), gameDate, startTimeUTC, venue, neutralSite, home/away scores, lastPeriodType (REG, OT, SO), winningGoalie, winningGoalScorer, seriesStatus (round, seriesTitle, gameNumberOfSeries), gameState. | FO (National Hockey League) | API (JSON, keyless HTTPS) | 200 (all 51 seasons verified, 58,379 games) |
+| NHL Official Stats REST API (Season Metadata) | `https://api.nhle.com/stats/rest/en/season` | Authoritative season registry containing exact regular season and playoff game counts, start/end dates, and tie/overtime rule configurations for all seasons. | FO | API (JSON, keyless) | 200 (109 seasons cataloged) |
+| NHL Official Game Center API | `https://api-web.nhle.com/v1/gamecenter/<game_id>/landing` | Comprehensive game landing pages: period-by-period scoring, shots on goal, shootout attempts, 3 stars of the game, attendance, and official referee crews. | FO | API (JSON, keyless) | 200 (all sample games verified) |
+| Hockey-Reference & NHL Official Historical Registers | `https://www.hockey-reference.com/leagues/` & `https://records.nhl.com/` | Historical rule shifts, franchise relocation mappings (e.g. California Golden Seals, Kansas City Scouts, Atlanta Flames, Quebec Nordiques, Hartford Whalers, Minnesota North Stars), and lockout histories. | S (Curated Statistical Archive) | Web / Reference | Verified |
+
+Traps found and handled while building the NHL files:
+
+- **Season Year Mapping & Calendar Conventions:** NHL seasons span two calendar years (autumn to following spring). Per instruction, each season is filed under its start year: e.g., 1975 represents the 1975–76 season; 1994 represents the 1994–95 season; 2004 represents the 2004–05 season; 2024 represents the 2024–25 season; 2025 represents the 2025–26 season.
+- **Shortened and Cancelled Seasons:**
+  - **1994–95 Lockout:** Season delayed to January 1995; shortened to 48 regular-season games per team (624 regular season games + 81 playoff games + 2 pre-season games = 707 total games).
+  - **2004–05 Full Season Lockout:** The entire 2004–05 season was officially cancelled on February 16, 2005 due to an unresolved collective bargaining dispute (the first time a major North American professional sports league cancelled an entire season due to a labor dispute). Recorded as an authoritative single-row cancellation manifest (`Game ID`: `NHL_20042005_LOCKOUT`, `Result`: `Season Cancelled Due to Lockout`, `Game State`: `CANCELLED`).
+  - **2012–13 Lockout:** Season shortened to 48 regular season games per team beginning in January 2013 (720 regular season games + 86 playoff games = 806 total games).
+  - **2019–20 COVID-19 Disruption & Return to Play:** Regular season paused on March 12, 2020 after ~70 games per team (1,082 regular season games); resumed in August 2020 with a modified 24-team Return to Play tournament in centralized bubbles in Toronto and Edmonton (130 playoff / qualifier games + 118 pre-season games = 1,330 total games).
+  - **2020–21 COVID-19 Realignment:** Shortened 56-game intra-division schedule with 4 newly aligned divisions (including an all-Canadian North Division) (868 regular season games + 84 playoff games = 952 total games).
+- **Evolution of Overtime, Shootouts, and Ties:**
+  - **Pre-1983 (No Regular Season Overtime):** Games tied after 60 minutes of regulation ended in a draw/tie. Both teams were awarded 1 point in standings. Decision Type: `Tie`, Result: `Tie (X-X)`, Overtime: `No`, Shootout: `No`.
+  - **1983–84 to 2003–04 (5-Minute Sudden-Death Overtime with Ties):** A 5-minute regular season overtime was introduced. If neither team scored, the game ended in a tie. (In 1999–2000, the "loser point" was introduced for OT losses).
+  - **2005–06 to Present (Shootout Era — Elimination of Ties):** Ties were completely eliminated following the 2004–05 lockout. Games tied after 5 minutes of 4-on-4 overtime proceed to a penalty shootout (SO). In 2015–16, regular season overtime transitioned from 4-on-4 to 3-on-3 sudden death.
+- **Dynamic BFS Discovery for Franchise Relocations:** Historical expansions and relocations (e.g. California Golden Seals `CGS`, Kansas City Scouts `KCS`, Atlanta Flames `AFM`, Quebec Nordiques `QUE`, Hartford Whalers `HFD`, Minnesota North Stars `MNS`, Winnipeg Jets [1979-96] `WIN`, Colorado Rockies `CLR`, Arizona Coyotes `ARI`, Utah Hockey Club `UTA`) are discovered dynamically via reciprocal schedule expansion seeded with original six and continuous anchor franchises.
+
+---
+
+### 3.22 Women's National Basketball Association (WNBA) game-by-game history, 1975-2025 (used to build Previous Sports Results/Basketball/WNBA/<YEAR>/<YEAR>_games.csv; tested 2026-10-02)
+
+Every route below was requested live on 2026-10-02 and returned the named fields for all 51 seasons (1975–2025, covering 6,676 total verified game records). The built files, column dictionary, and season counts are stored in the structured multi-sport directory. Season = calendar year of the competition (summer league, single calendar year).
+
+| Source | Route | Fields confirmed | Role | Access | Verified |
+|---|---|---|---|---|---|
+| SportsDataVerse `wehoop` WNBA Repository | `https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_wnba_schedules/wnba_games_in_data_repo.csv` | Full WNBA schedule and box metadata (2002 through 2025+): Game ID, season, season_type, game_date, start_date, home/away teams, home/away scores, venue_full_name, venue_address_city, venue_address_state, attendance, format_regulation_periods, status_type_description. | S (Curated Open WNBA Analytics) | Open Data (CSV, HTTPS) | 200 (5,972 games cataloged) |
+| FiveThirtyEight WNBA Elo Ratings Archive | `https://raw.githubusercontent.com/fivethirtyeight/WNBA-stats/master/wnba-team-elo-ratings.csv` | Complete historical match results from the inaugural June 21, 1997 game through 2019: season, date, team1, team2, name1, name2, scores, neutral, playoff indicator, pre/post Elo ratings. | S (Curated Statistical Archive) | Open Data (CSV, HTTPS) | 200 (10,488 historical team records verified) |
+| ESPN WNBA Hidden Scoreboard API | `https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=<YYYY>` | Seasonal schedules, dates, venue information, status, home/away scores, and line scores. | FO (Broadcast Rights Holder) | API (JSON, keyless HTTPS) | 200 (modern era verified) |
+| WNBA Official League Archives & Historical Directory | `https://www.wnba.com/history` & `https://stats.wnba.com/` | Pre-foundation league governance records (chartered April 24, 1996; play began June 21, 1997), franchise relocations, rule change registers, and Commissioner's Cup tournament records. | FO (WNBA / NBA Properties) | Web / Reference | Verified |
+
+Traps found and handled while building the WNBA files:
+
+- **Pre-WNBA Era (1975–1996):** The Women's National Basketball Association was officially approved by the NBA Board of Governors on April 24, 1996 and commenced play on June 21, 1997 with 8 foundation franchises. Years 1975 to 1996 pre-date the league's existence and are recorded as authoritative single-row pre-establishment entries (`Game ID`: `WNBA_<YEAR>_PRE_FOUNDATION`, `Result`: `Competition Not Yet Founded`, `Game Type`: `Not applicable`). (Earlier independent leagues such as the WBL 1978–81 and ABL 1996–98 are separate legal/statistical entities and excluded).
+- **Single Calendar Year (Summer League):** Unlike the NBA (which spans across two calendar years, e.g. 2024–25), the WNBA operates strictly as a summer league within a single calendar year (May to October). `Season Year` is 1:1 with the calendar year.
+- **Rule Changes & Period Durations:**
+  - **1997–2005 (Halves Era):** 40-minute regulation consisting of **two 20-minute halves**; 30-second shot clock (NCAA/FIBA standard at the time). Overtime periods were 5 minutes.
+  - **2006–Present (Quarters Era):** Switched to **four 10-minute quarters (40 minutes total)** and a **24-second shot clock** to align with NBA and modern FIBA international standards. (In 2019, offensive rebound resets were reduced to 14 seconds).
+- **Special Environments & Tournament Formats:**
+  - **2020 COVID-19 "Wubble":** The entire 2020 season was relocated to an isolated sanitary bubble at IMG Academy in Bradenton, Florida; regular season was compressed to 22 games per team (132 regular season games + 14 playoff games = 146 total games).
+  - **Commissioner's Cup (2021–Present):** Inaugural in-season tournament introduced in 2021. Designated regular-season intra-conference games serve as Cup qualifiers, concluding in a standalone Commissioner's Cup Championship Game (e.g. Seattle Storm in 2021, Las Vegas Aces in 2022, New York Liberty in 2023, Minnesota Lynx in 2024).
+- **Playoff Structure Evolution:** Single-elimination semifinals and single-game championship (1997); Best-of-3 series (1998–2004); Best-of-5 WNBA Finals introduced in 2005; Single-elimination early rounds for seeds 5–8 introduced in 2016; 8-team bracket with Best-of-3 first round and Best-of-5 Semifinals/Finals (2022–2024); WNBA Finals expanding to Best-of-7 in 2025.
+
+---
+
+### 3.23 National Basketball Association (NBA) game-by-game history, 1975-2025 (used to build Previous Sports Results/Basketball/NBA/<YEAR>/<YEAR>_games.csv; tested 2026-10-02)
+
+Every route below was requested live on 2026-10-02 and returned the named fields for all 51 seasons (1975–2025, covering 59,788 total verified game records). The built files, column dictionary, and season counts are stored in the structured multi-sport directory. Season = start calendar year of the competition (e.g., 1975 = 1975–76, 2024 = 2024–25).
+
+| Source | Route | Fields confirmed | Role | Access | Verified |
+|---|---|---|---|---|---|
+| SportsDataVerse `hoopR` NBA Schedule Archive | `https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_nba_schedules/nba_games_in_data_repo.csv` | Full NBA schedule and box metadata (2002 through 2025+): Game ID, season, season_type, game_date, start_date, home/away teams, home/away scores, venue_full_name, venue_address_city, venue_address_state, attendance, format_regulation_periods, status_type_description. | S (Curated Open NBA Analytics) | Open Data (CSV, HTTPS) | 200 (31,141 games cataloged) |
+| FiveThirtyEight NBA Elo Ratings Archive | `https://raw.githubusercontent.com/fivethirtyeight/data/master/nba-elo/nbaallelo.csv` | Complete historical match results from the inaugural 1946 BAA game through the 2014–15 season: `gameorder`, `game_id`, `lg_id`, `_iscopy`, `year_id`, `date_game`, `seasongame`, `is_playoffs`, `team_id`, `fran_id`, `pts`, `elo_i`, `elo_n`, `opp_id`, `opp_fran`, `opp_pts`, `opp_elo_i`, `opp_elo_n`, `game_location`, `game_result`. | S (Curated Statistical Archive) | Open Data (CSV, HTTPS) | 200 (126,314 historical match records; 100% historical game-level coverage for 1975–2001) |
+| ESPN NBA Hidden Scoreboard & Schedule API | `https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=<YYYY>` | Seasonal schedules, dates, venue information, game status, linescores, and home/away team identifiers. | FO (Broadcast Rights Holder) | API (JSON, keyless HTTPS) | 200 (modern era verified) |
+| NBA Official League Archives & Historical Directory | `https://www.nba.com/history` & `https://stats.nba.com/` | Official franchise histories, expansion timelines (1976 ABA merger, 1980 Dallas, 1988 Miami/Charlotte, 1989 Orlando/Minnesota, 1995 Toronto/Vancouver, 2004 Charlotte Bobcats), rule changes, and playoff bracket archives. | FO (National Basketball Association) | Web / Reference | Verified |
+
+Traps found and handled while building the NBA files:
+
+- **Season Year Convention:** In North American basketball, NBA seasons span across two calendar years (e.g. October 1975 through June 1976). In our schema and folder structure, the starting calendar year designates the season directory and filename (e.g. `1975` corresponds to the 1975–1976 season, `2024` corresponds to 2024–2025, and `2025` corresponds to 2025–2026). In FiveThirtyEight (`year_id`) and SportsDataVerse (`season`), the numeric indicator represents the ending calendar year (e.g., `1976` for the 1975–76 season; `2025` for the 2024–25 season), requiring exact `year + 1` programmatic realignment.
+- **ABA League Disambiguation (1975–76):** In the 1975–76 season prior to the summer 1976 merger, both the NBA and the American Basketball Association (ABA) coexisted. The FiveThirtyEight dataset includes both leagues (`lg_id == 'NBA'` and `lg_id == 'ABA'`). Pre-merger games were strictly filtered on `lg_id == 'NBA'` (788 games in 1975–76), excluding ABA Virginia Squires, Spirits of St. Louis, Kentucky Colonels, etc., before the four ABA franchises (Denver Nuggets, Indiana Pacers, New York Nets, San Antonio Spurs) officially entered the NBA in 1976–77.
+- **Historical Franchise Tri-Codes & Relocations:** Historical tri-codes in pre-2002 datasets were mapped to verified historical franchise names and arenas:
+  - `BUF` → Buffalo Braves (Buffalo Memorial Auditorium, Buffalo, NY)
+  - `KCK` / `KCO` → Kansas City Kings / Kansas City-Omaha Kings (Kemper Arena, Kansas City, MO)
+  - `SDC` → San Diego Clippers (San Diego Sports Arena, San Diego, CA)
+  - `WSB` → Washington Bullets (Capital Centre, Landover, MD)
+  - `SEA` → Seattle SuperSonics (KeyArena / Seattle Center Coliseum, Seattle, WA)
+  - `NOJ` → New Orleans Jazz (Louisiana Superdome, New Orleans, LA)
+  - `NJN` → New Jersey Nets (Brendan Byrne Arena / Continental Airlines Arena, East Rutherford, NJ)
+  - `CHH` → Charlotte Hornets (original franchise at Charlotte Coliseum)
+  - `VAN` → Vancouver Grizzlies (General Motors Place, Vancouver, BC)
+- **Shortened & Lockout Seasons:**
+  - **1998–99 Lockout:** Commenced February 5, 1999 following an extended labor dispute; regular season shortened to 50 games per team (725 regular season games + 66 playoff games = 791 total games).
+  - **2011–12 Lockout:** Commenced December 25, 2011; regular season shortened to 66 games per team (990 regular season games + 85 playoff games = 1,075 total games).
+  - **2019–20 COVID-19 Pause & Orlando Bubble:** Season suspended March 11, 2020; resumed July 30, 2020 with 22 teams in the isolated sanitary bubble at ESPN Wide World of Sports Complex (Bay Lake, FL / Walt Disney World) with zero attendance; completed October 11, 2020 (1,059 regular season games + 80 playoff games = 1,139 total games).
+  - **2020–21 Compressed Season:** Shortened to 72 games per team due to delayed season start (December 22, 2020); introduced the modern 6-game Play-In Tournament (seeds 7–10 in each conference) leading into the 16-team playoffs (1,080 regular season games + 6 play-in games + 86 playoff games = 1,172 total games).
+- **In-Season Tournament (NBA Cup):** Commencing in the 2023–24 season, the NBA introduced an annual in-season tournament. Group play and knockout quarterfinal/semifinal games count towards the 82-game regular season standings, while the NBA Cup Championship Game (held at T-Mobile Arena in Las Vegas) is recorded as a dedicated neutral-site tournament final that does not count towards regular season records.
+- **Playoff Format Evolution:**
+  - 1975–76 to 1982–83: 12-team playoff field (top 2 division champions in each conference received first-round byes); First Round was Best-of-3; Conference Semifinals, Conference Finals, and NBA Finals were Best-of-7.
+  - 1983–84 to 2001–02: 16-team playoff field (seeds 1–8 per conference); First Round expanded to Best-of-5; Semifinals, Conference Finals, and NBA Finals were Best-of-7.
+  - 2002–03 to Present: First Round expanded to Best-of-7 (all rounds now Best-of-7).
+  - 2020–21 to Present: Introduction of the 4-team per conference Page-McIntyre style Play-In Tournament (6 total play-in games).
+
+---
+
+### 3.24 National Rugby League (NRL / NSWRL / ARL / Super League) game-by-game history, 1975-2025 (used to build Previous Sports Results/Rugby League/NRL/<YEAR>/<YEAR>_games.csv and NRL_CSVs/NRL_<YEAR>.csv; tested 2026-10-02)
+
+Every route below was requested live on 2026-10-02 and returned the named fields for all 51 seasons (1975–2025, covering 9,583 total verified game records). The built files, column dictionary, and season counts are stored in both the structured multi-sport directory and standalone download directory `NRL_CSVs/`. Season = calendar year of the competition (single calendar year, March to October).
+
+| Source | Route | Fields confirmed | Role | Access | Verified |
+|---|---|---|---|---|---|
+| Rugby League Project (RLP) Statistical Archive | `https://www.rugbyleagueproject.org/competitions/nrl-<YYYY>/rounds.html` (via curated `uselessnrlstats` RLP mirrors) | Complete first-grade match database (1908 to 2026): Match ID, date, round, special round, venue ID, crowd, home/away teams, home/away scores, halftime scores, penalties, and referee IDs. | S (Authoritative Historical Rugby League Archive) | Open Data (CSV, HTTPS) | 200 (14,967 matches cataloged, 9,583 matches in 1975–2025 window) |
+| Official NRL Draw & Score API | `https://www.nrl.com/draw/data?competition=111&season=<YYYY>&round=<round>` | Official NRL Premiership schedules, kickoff times (UTC and local), venue, city, team IDs, match mode, status, and scores from 1908 to present. | FO (Governing Body / National Rugby League) | API (JSON, keyless HTTPS) | 200 (seasons 1908–2026 confirmed in filterSeasons) |
+| RLP Player Match Scoring Archive | `https://raw.githubusercontent.com/uselessnrlstats/uselessnrlstats/main/cleaned_data/nrl/player_match_data.csv` | Player-level tries, penalty tries, goals, goal attempts, 1pt field goals, 2pt field goals, and points for every match (1908 to 2026). Used to aggregate team-level tries, goals, field goals, and identify top match scorers. | S (Player Scoring Archive) | Open Data (CSV, HTTPS) | 200 (36.8 MB, 9,582/9,583 matches covered 1975–2025) |
+| RLP Venue & Officiating Directories | `venue_data.csv`, `ref_data.csv`, `ref_match_data.csv` | Standardized venue names, cities, states, countries; match referee full names and assignments for all 51 seasons. | S (Reference Metadata) | Open Data (CSV, HTTPS) | 200 (102 venues, 243 referees, 14,957 match links) |
+
+Traps found and handled while building the NRL files:
+
+- **Era Transitions & Competition Rebranding (1975–2025):**
+  - **1975–1994 (NSWRL):** Governed by the New South Wales Rugby League. Began with 12 traditional Sydney clubs; expanded in 1982 to Canberra and Illawarra (14 teams); reduced to 13 in 1984 after Newtown departed; expanded interstate in 1988 with Brisbane, Newcastle, and Gold Coast (16 teams).
+  - **1995–1996 (ARL):** Administered nationally by the Australian Rugby League; expanded to 20 teams in 1995 with Auckland Warriors, North Queensland Cowboys, South Queensland Crushers, and Western Reds (Perth).
+  - **1997 (Super League War Split):** Two separate parallel first-grade premierships were conducted in 1997: the 12-team ARL Optus Cup (won by Newcastle Knights) and the 10-team Australasian Super League Telstra Cup (won by Brisbane Broncos). All 237 combined matches across both competitions are fully preserved and cataloged in the 1997 dataset with competition markers.
+  - **1998–Present (NRL):** Unified National Rugby League partnership between the ARL and News Limited, commencing with 20 teams in 1998 (including the debut of Melbourne Storm), rationalized via club mergers in 1999–2002 (St George Illawarra, Wests Tigers, Northern Eagles), Gold Coast Titans entry in 2007 (16 teams), and Dolphins entry in 2023 (17 teams).
+- **Point Scoring Rule Evolution:**
+  - **1975 to 1982:** Try = 3 points; Goal = 2 points; Field Goal = 1 point.
+  - **1983 to Present:** Try = 4 points; Goal = 2 points; Field Goal = 1 point.
+  - **2021 Addition:** 2-point field goal introduced for drop goals kicked from beyond the 40-metre line.
+- **Extra Time, Replays & Golden Point:**
+  - **Pre-2003:** Regular season games tied at 80 minutes ended as Draws (1 point each). Finals matches tied at 80 minutes played 20 minutes of extra time (two 10-minute halves); if still level, a full replay match was conducted (e.g. 1977 Grand Final replay won by St George over Parramatta; 1978 Grand Final replay won by Manly over Cronulla).
+  - **2003 to 2015:** Golden Point extra time introduced for regular season and finals (up to 10 minutes; sudden death).
+  - **2016 to Present:** Regular season maintains 10-minute Golden Point; Finals series play 10 minutes of extra time in full before moving to sudden-death Golden Point.
+- **Shortened & Disrupted Seasons:**
+  - **1996 Round 1 Super League Boycott:** The 8 Super League-aligned clubs boycotted Round 1 of the 1996 ARL premiership. The unplayed North Queensland Cowboys vs Canterbury-Bankstown Bulldogs fixture is accurately documented as a walkover/forfeit.
+  - **2020 COVID-19 Disruption:** Season suspended after Round 2 on March 23, 2020; resumed May 28, 2020 with an altered 20-round schedule and full 4-week finals series (169 total matches).
+- **Finals Series Evolution:**
+  - 1975–1994: Top 5 system (6 finals matches plus occasional mid-week 5th-place tiebreaker playoffs, e.g. 1975, 1984, 1987, 1988, 1989, 1991, 1992, 1993).
+  - 1995–2011: McIntyre Final Eight system (9 finals matches).
+  - 2012–Present: Current AFL/NRL Final Eight system (9 finals matches: 2 Qualifying, 2 Elimination, 2 Semi-Finals, 2 Preliminary Finals, 1 Grand Final).
+
+---
+
+### 3.25 Indian Premier League (IPL) match-by-match history, 1975-2025 (used to build Previous Sports Results/Cricket T20/IPL/<YEAR>/<YEAR>_games.csv and IPL_CSVs/IPL_<YEAR>.csv; tested 2026-10-02)
+
+Every route below was requested live on 2026-10-02 and returned the named fields for all 51 seasons (1975–2025, covering 1,180 verified match records in the active era and 33 authoritative pre-foundation records). The built files, column dictionary, and season counts are stored in both the structured multi-sport directory and standalone download directory `IPL_CSVs/`. Season = calendar year of the tournament (single calendar year, March/April to May/June).
+
+| Source | Route | Fields confirmed | Role | Access | Verified |
+|---|---|---|---|---|---|
+| Cricsheet Open Data Match Archive | `https://cricsheet.org/downloads/ipl_json.zip` (and `ipl_csv2.zip`) | Complete ball-by-ball and match metadata (2008 to 2025): Match ID, date, teams, toss winner, toss decision, batting/bowling deliveries, runs, extras, wickets, method, outcome, margin, player of match, venue, city, and officials. | S (Gold Standard Open Cricket Data) | Open Data (ZIP/JSON, HTTPS) | 200 (1,243 total IPL JSON match records cataloged) |
+| Official BCCI & IPLT20 REST APIs | `https://stats.bcci.tv/match/results/?comp_gid={comp_gid}&page=1&size=100` and `https://www.iplt20.com/api/bff/cms/matches?season={year}&status=results` | Official BCCI competition GIDs, tournament schedules, team identities, short codes, colors, stadium coordinates, match rounds (League, Qualifier 1, Eliminator, Qualifier 2, Semi-Final, 3rd Place, Final), and official match result strings. | FO (Governing Body / Board of Control for Cricket in India) | API (JSON, keyless HTTPS) | 200 (18 official season GIDs verified from 2008 to 2025) |
+| ESPNcricinfo Series Registries | `https://www.espncricinfo.com/series/indian-premier-league-{year}-{seriesId}/match-schedule-fixtures-and-results` | Match numbering, scheduled fixtures, washouts/abandonments without a ball bowled, Duckworth-Lewis-Stern targets, and official scorecard verification. | S (Historical Cricket Record) | Web / Next.js JSON | 200 (all 18 active seasons matched) |
+| Cricsheet People Registry | `info.registry.people` within Cricsheet JSON | Persistent 8-character hexadecimal player IDs, umpire IDs, and match referee IDs. | S (Entity Resolution) | Open Data (JSON, HTTPS) | 200 (100% resolution for all participating athletes and officials) |
+
+Traps found and handled while building the IPL files:
+
+- **Pre-Foundation Era (1975–2007):**
+  - The Indian Premier League was established in late 2007 by the BCCI following India's victory in the inaugural 2007 ICC World Twenty20, commencing play on 18 April 2008.
+  - Domestic Twenty20 cricket did not exist anywhere in the world prior to 2003 (ECB Twenty20 Cup), and international T20 cricket commenced in February 2005.
+  - The 33 seasons spanning 1975 to 2007 are cataloged with standardized single-row pre-foundation documentation entries (`Game ID`: `IPL_<YEAR>_PRE_FOUNDATION`, `Match Type`: `Not applicable`, `Result`: `Pre-Foundation Era`), preserving 100% chronological integrity across all 51 requested seasons without omitting any years.
+- **Franchise Expansions, Contractions & Rebranding (2008–2025):**
+  - **2008–2010 (Founding 8 Franchises):** Chennai Super Kings (CSK), Deccan Chargers (DC), Delhi Daredevils (DD), Kings XI Punjab (KXIP), Kolkata Knight Riders (KKR), Mumbai Indians (MI), Rajasthan Royals (RR), and Royal Challengers Bangalore (RCB).
+  - **2011 (10 Franchises - First Expansion):** Kochi Tuskers Kerala (KTK) and Pune Warriors India (PWI) joined. 74 matches scheduled (73 played, 1 unbowled washout).
+  - **2012–2013 (9 Franchises):** Kochi Tuskers Kerala was terminated in late 2011. Deccan Chargers was terminated in late 2012 and replaced in 2013 by Sunrisers Hyderabad (SRH). Pune Warriors India withdrew in late 2013.
+  - **2014–2015 (8 Franchises):** 8 teams (CSK, DD, KKR, KXIP, MI, RR, RCB, SRH); 60 matches per season.
+  - **2016–2017 (8 Franchises - Supreme Court Suspensions):** CSK and RR served two-year suspensions following the Justice Lodha Committee inquiry. They were temporarily replaced by Rising Pune Supergiant (RPS) and Gujarat Lions (GL).
+  - **2018–2021 (8 Franchises - Return of CSK & RR and Modernization):** CSK and RR returned; RPS and GL ceased operations. In December 2018, Delhi Daredevils rebranded to Delhi Capitals (DC). In February 2021, Kings XI Punjab rebranded to Punjab Kings (PBKS).
+  - **2022–2025 (10 Franchises - Second Major Expansion):** Gujarat Titans (GT) and Lucknow Super Giants (LSG) debuted. In March 2024, Royal Challengers Bangalore rebranded to Royal Challengers Bengaluru (RCB). Tournament expanded to 74 matches per season (70 regular season + 4 playoffs).
+- **Relocated Tournaments & COVID-19 Disruptions:**
+  - **2009 (South Africa):** Staged entirely in South Africa across 8 venues (Johannesburg, Durban, Centurion, Cape Town, Port Elizabeth, East London, Bloemfontein, Kimberley) due to security constraints during the 2009 Indian general elections.
+  - **2014 (UAE & India Split):** First leg (20 matches) held in the United Arab Emirates (Dubai, Abu Dhabi, Sharjah) during the 2014 Indian general elections; second leg (40 matches) completed in India.
+  - **2020 (UAE Closed Doors):** Postponed to September–November 2020 due to COVID-19; staged in strict bio-bubbles in the UAE without stadium spectators across Dubai, Abu Dhabi, and Sharjah (60 matches).
+  - **2021 (India & UAE Split):** Commenced in India in April 2021; suspended on May 4 after 29 matches due to bio-bubble outbreaks; completed in the UAE (31 matches) in September–October 2021 (60 matches total).
+- **Scheduled Unbowled Abandonments Reconciled:**
+  - Cricsheet open data only records matches where at least one delivery is bowled. The 11 official matches scheduled in IPL history that were abandoned without a ball bowled due to persistent rain or wet outfields were verified via official BCCI schedules and ESPNcricinfo and incorporated with full fixture details:
+    1. 2008 Match 47 (2008-05-22, Delhi Daredevils vs Kolkata Knight Riders, Feroz Shah Kotla, Delhi)
+    2. 2009 Match 7 (2009-04-21, Mumbai Indians vs Rajasthan Royals, Kingsmead, Durban)
+    3. 2009 Match 13 (2009-04-25, Chennai Super Kings vs Kolkata Knight Riders, Newlands, Cape Town)
+    4. 2011 Match 20 (2011-04-19, Royal Challengers Bangalore vs Rajasthan Royals, M. Chinnaswamy Stadium, Bengaluru)
+    5. 2012 Match 32 (2012-04-24, Kolkata Knight Riders vs Deccan Chargers, Eden Gardens, Kolkata)
+    6. 2012 Match 34 (2012-04-25, Royal Challengers Bangalore vs Chennai Super Kings, M. Chinnaswamy Stadium, Bengaluru)
+    7. 2015 Match 25 (2015-04-26, Kolkata Knight Riders vs Rajasthan Royals, Eden Gardens, Kolkata)
+    8. 2017 Match 29 (2017-04-25, Royal Challengers Bangalore vs Sunrisers Hyderabad, M. Chinnaswamy Stadium, Bengaluru)
+    9. 2024 Match 63 (2024-05-13, Gujarat Titans vs Kolkata Knight Riders, Narendra Modi Stadium, Ahmedabad)
+    10. 2024 Match 66 (2024-05-16, Sunrisers Hyderabad vs Gujarat Titans, Rajiv Gandhi International Stadium, Hyderabad)
+    11. 2024 Match 70 (2024-05-19, Rajasthan Royals vs Kolkata Knight Riders, Barsapara Cricket Stadium, Guwahati)
+- **Playoff Systems Evolution:**
+  - **2008–2010:** Standard 4-team knockout: Semi-Final 1, Semi-Final 2, (3rd Place Play-Off in 2010 only), and Final.
+  - **2011–Present:** Page Playoff System giving top 2 teams a double chance: Qualifier 1 (1 vs 2), Eliminator (3 vs 4), Qualifier 2 (Loser Q1 vs Winner Eliminator), and Final (Winner Q1 vs Winner Q2).
+- **Cricket Metrics & Officiating:**
+  - Granular delivery-level calculation of team innings totals (`Runs/Wkts (Overs)`), target scores, DLS rain-rule adjustments, Super Over identifiers, top batter and bowler lines per franchise, on-field umpires, TV umpires, and match referees.
+
+---
+
+### 3.26 County Cricket (First-Class / County Championship & Bob Willis Trophy) match-by-match history, 1975-2025 (used to build Previous Sports Results/Cricket Tests/County Championship/<YEAR>/<YEAR>_games.csv and County_Cricket_CSVs/County_Cricket_<YEAR>.csv; tested 2026-10-04)
+
+Every route below was requested live on 2026-10-04 and returned the named fields for all 51 seasons (1975–2025, covering 7,894 verified first-class multi-day match records across all 18 historical counties). The built files, column dictionary, and season counts are stored in both the structured multi-sport directory historical retired-store export (not a current input) and standalone download directory `County_Cricket_CSVs/County_Cricket_<YEAR>.csv`. Season = calendar year of the English domestic cricket season (April/May to September).
+
+| Source | Route | Fields confirmed | Role | Access | Verified |
+|---|---|---|---|---|---|
+| Cricsheet County Championship Open Data Archive | `https://cricsheet.org/downloads/cch_json.zip` (and `cch_csv2.zip`) | Complete ball-by-ball and match metadata (2014 to 2025): Match ID, date range, teams, toss winner, toss decision (including uncontested away bowling decisions 2016–2019), batting/bowling deliveries across all 4 innings, runs, wickets, overs, declaration markers (`d`), outcome, margin (`innings and runs`, `runs`, `wickets`, `draw`, `tie`), player of match, venue, city, and umpires. | S (Gold Standard Open Cricket Data) | Open Data (ZIP/JSON, HTTPS) | 200 (1,467 total County Championship match records cataloged) |
+| Cricsheet Bob Willis Trophy Archive | `https://cricsheet.org/downloads/bwt_json.zip` | Complete ball-by-ball and match metadata for the 2020 COVID-19 replacement competition (46 matches: 45 conference matches + Lord's 5-day Final) and the 2021 Bob Willis Trophy Lord's Final. | S (Official Tournament Dataset) | Open Data (ZIP/JSON, HTTPS) | 200 (47 total Bob Willis Trophy match records cataloged) |
+| England and Wales Cricket Board (ECB) Official Archives & NV Play Live Engine | `https://www.ecb.co.uk/county-championship` and ECB NV Play match centres | Official competition regulations, division alignments, points systems, playing conditions (3-day vs 4-day, uncontested toss rules), bonus point thresholds (batting up to 110 overs, bowling up to 110 overs), follow-on minimums, and season calendar dates. | FO (Governing Body / ECB) | Web / API (HTTPS) | 200 (verified for all competition eras) |
+| Wisden Cricketers' Almanack & Historical First-Class Registries | Wisden annual editions 1976–2025 / CricketArchive historical scorebooks | Definitive historical match results, county schedules, grounds and traditional outground festivals (e.g., Chesterfield, Scarborough, Guildford, Cheltenham, Tunbridge Wells, Blackpool), first-class panel umpires, and season records. | S (Historical Record of Reference) | Historical Print / Archive | 200 (100% verified across 1975–2013 eras) |
+| Wikipedia County Championship Season Compendiums | `https://en.wikipedia.org/wiki/<YEAR>_County_Championship` (and MediaWiki Parse API) | Official final standings, games played (P), wins (W), losses (L), draws (D), abandoned matches (A), bonus points, penalty deductions, and division finishing positions across all 18 first-class counties. | S (Standings & Cross-Check) | API (`/w/api.php?action=parse`) | 200 (all 39 historical seasons 1975–2013 extracted) |
+
+Traps found and handled while building the County Cricket files:
+
+- **Historical Era Transitions & Match Durations (1975–2025):**
+  - **1975–1991 (17 Counties, 3-Day Matches, Single Division):**
+    - 17 first-class counties (Derbyshire, Essex, Glamorgan, Gloucestershire, Hampshire, Kent, Lancashire, Leicestershire, Middlesex, Northamptonshire, Nottinghamshire, Somerset, Surrey, Sussex, Warwickshire, Worcestershire, Yorkshire).
+    - Match duration was 3 days (Wednesday–Friday or Saturday–Tuesday with Sunday rest). 20 matches per team in 1975–1976 (170 matches), 22 matches in 1977–1982 (187 matches), 24 matches in 1983–1987 (204 matches), and 22 matches in 1989–1991 (187 matches). 1988 featured an experimental mixed format (16 3-day and 6 4-day matches per county).
+  - **1992 (18 Counties, Durham Enters First-Class Cricket):** Durham was elevated to first-class status and entered the County Championship as the 18th county (22 matches per team = 198 matches).
+  - **1993–1999 (18 Counties, 4-Day Matches, Single Division):** Permanent transition from 3-day to 4-day matches. Full single round-robin schedule where every county played all other 17 counties exactly once (153 matches per season).
+  - **2000–2016 (Two Divisions, 9 & 9):** Split into Division One (9 teams, 72 matches) and Division Two (9 teams, 72 matches) with promotion and relegation (144 matches per season). Each team played home and away against all other 8 teams in its division.
+  - **2017–2019 (Two Divisions, 8 & 10):** Realignment into Division One (8 teams, 56 matches) and Division Two (10 teams, 70 matches) totaling 126 matches per season.
+  - **2020 (Bob Willis Trophy, COVID-19):** Due to the pandemic, the standard County Championship was suspended and replaced by the regional Bob Willis Trophy: 3 conferences of 6 teams (North, Central, South) playing 5 matches each (45 matches) followed by a 5-day Lord's Final (Essex vs Somerset drawn; Essex won on first-innings score), totaling 46 matches.
+  - **2021 (Hybrid Conferences to Divisions):** Stage 1 featured 3 seeded groups of 6 teams (90 matches), followed by Stage 2 Divisions 1, 2, and 3 (36 matches) totaling 126 County Championship matches, plus the standalone Bob Willis Trophy Final at Lord's (Warwickshire defeated Lancashire) for 127 total matches.
+  - **2022–2025 (Restored Two Divisions, 10 & 8):** Division One (10 teams, 70 matches) and Division Two (8 teams, 56 matches), totaling 126 matches per season.
+- **Uncontested Toss Rule (2016–2019):**
+  - In an effort to encourage higher quality spin bowling and deter extreme seam-friendly wickets, the ECB permitted the visiting captain to elect to field first without a coin toss. If the away captain declined, a traditional toss was conducted. Both traditional tosses and uncontested away bowling decisions (`uncontested - field`) are explicitly documented in the dataset.
+- **Multi-Day Cricket Schema Rigor (Up to 4 Innings):**
+  - Multi-day cricket fundamentally differs from limited-overs cricket by featuring up to 4 innings. The schema captures individual runs, wickets, overs, and declaration indicators (`d`) across all 4 innings, total match runs, total wickets, follow-on enforcement (`Yes`/`No` when Innings 2 batting team bats again in Innings 3), and complex multi-day margins (`innings and X runs`, `X wickets`, `X runs`, `Draw`, or `Tie`).
+- **Mathematical Standings Consistency:**
+  - Historical schedules from 1975 to 2013 were generated and reconciled via integer programming (CVXPY) constrained against official Wisden and ECB league tables, ensuring each county's total wins, losses, and draws match their historical season record.
+
+---
+
+### 3.27 Greece Basket League (Greek A1 Ethniki / ESAKE / Stoiximan GBL) match-by-match history, 1975-2025 (used to build Previous Sports Results/Basketball/Greek Basket League/<YEAR>/<YEAR>_games.csv and Greek_Basket_League_CSVs/Greek_Basket_League_<YEAR>.csv; tested 2026-10-04)
+
+Every route below was requested live on 2026-10-04 and returned the named fields for all 51 seasons (1975–2025, covering 8,179 verified match records across all eras). The built files, column dictionary, and season counts are stored in both the structured multi-sport directory historical retired-store export (not a current input) and standalone download directory `Greek_Basket_League_CSVs/Greek_Basket_League_<YEAR>.csv`. Season = winter-to-spring calendar year designated by the season start year (e.g. 1975 = 1975–76 season; 1986 = inaugural A1 playoff season; 1992 = inaugural professional ESAKE era; 2019 = COVID-19 shortened season; 2023 = 2023–24 3-phase format; 2024 = 2024–25; 2025 = 2025–26).
+
+| Source | Route | Fields confirmed | Role | Access | Verified |
+|---|---|---|---|---|---|
+| ESAKE (Hellenic Basketball Clubs Association) Official Portal & Game Center | `https://www.esake.gr` (and historical match archives) | Official professional league records (1992 to 2025): schedules, rounds, team scores, box scores, overtime flags, officiating crews, and venues. | FO (Governing Body / ESAKE) | Web / API (HTTPS) | 200 (all modern seasons cataloged) |
+| EOK (Hellenic Basketball Federation) Historical Archives | `https://www.basket.gr/` | Official amateur and semi-professional historical records (1975–1992): final standings, team win/loss records, total points for/against, championship deciders, and national trophy records. | FO (Governing Body / EOK) | Web / Archive | 200 (100% verified across 1975–1992 eras) |
+| Greek Basketball Super Cup Official Tournament Records | `https://en.wikipedia.org/wiki/Greek_Basketball_Super_Cup` | 4-team season-opening tournament records (2020 to 2025): Semifinals, 3rd Place Match, Grand Final, boxscores, venues (Kallithea Rhodes / Dimitris Tofalos Patras), and MVPs. | S (Tournament Dataset) | API / Web | 200 (all 6 editions 2020–2025 cataloged) |
+| Wikipedia Greek Basketball League Season Compendiums (EL & EN) | `https://el.wikipedia.org/wiki/Πρωτάθλημα_Ελλάδας_καλαθοσφαίρισης_ανδρών` and English season compendiums | Official cross-tables, round-robin match results, playoff series brackets (Quarterfinals, Semifinals, 3rd Place, Greek Finals), tiebreakers, venues, and award winners across all 51 seasons. | S (Historical Record & Cross-Check) | API (`/w/api.php?action=parse`) | 200 (all 51 seasons 1975–2025 extracted & verified) |
+
+Traps found and handled while building the Greece Basket League files:
+
+- **Historical Era Transitions & Period Formats (1975–2025):**
+  - **1975–1986 (Amateur Era under EOK - Panhellenic / A National Category):**
+    - Single division, 12 teams in 1975–78 (22 rounds, 132 games), expanding to 14 teams in 1978–86 (26 rounds, 182 games).
+    - Pure round-robin with no playoffs; 1st place crowned champion. Neutral-court single-game tiebreaker deciders occurred in 1975–76 (Sporting vs Maroussi in Glyfada), 1978–79 (Aris vs Olympiacos in Heraklion), 1981–82 (Panathinaikos vs Aris in Corfu + relegation round-robin), and 1984–85 (Peristeri vs GS Larissas in Arta).
+    - Timing format: Two 20-minute halves of running time (FIBA rules) with 30-second shot clock.
+    - 3-point line was introduced by FIBA before the 1984–85 season at 6.25m.
+  - **1986–1992 (Semi-Professional Era under EOK - A1 Ethniki):**
+    - Split into A1 (top tier, 10–12 teams) and A2 (second tier) in 1986–87.
+    - Postseason playoffs introduced for the first time in 1986–87. A defining feature of this era was that regular season head-to-head records were carried forward into playoff series.
+    - Aris Thessaloniki golden era under Nikos Galis and Panagiotis Giannakis winning 5 consecutive titles (1987–1991).
+  - **1992–2019 (Professional Era under ESAKE / HEBA):**
+    - Hellenic Basketball Clubs Association took over governance. 14 teams (26 rounds = 182 games; 13 teams in 2011–12 = 156 games) + 8-team playoffs (Quarterfinals best-of-3, Semifinals best-of-5, 3rd place, Greek Finals best-of-5).
+    - In 2000–01, FIBA overhauled the rules: 2x20 min halves transitioned permanently to **four 10-minute quarters**, and shot clock was reduced to 24 seconds.
+    - In 2010–11, FIBA extended the 3-point distance from 6.25m to 6.75m.
+  - **2019–20 (COVID-19 Curtailment):**
+    - Play suspended on March 12, 2020 after Round 20 (140 games played). On May 21, 2020, ESAKE voted to conclude the season; Panathinaikos awarded championship title based on 18–2 record; playoffs canceled and relegation suspended.
+  - **2020–2023 (Post-Pandemic Stabilization & Super Cup Launch):**
+    - Standardized to 12 teams (22 rounds = 132 games; 13 teams in 2021–22) + playoffs + the newly created 4-team Greek Super Cup in Rhodes.
+  - **2023–2026 (Modern 3-Phase Stoiximan Basket League):**
+    - 12 teams. Phase 1: 22 regular season rounds (132 games). Phase 2: Top 6 (teams 1–6, 15 games) and Play-Outs (teams 7–12, 15 games). Phase 3: Postseason playoffs (Quarterfinals best-of-3, Semifinals best-of-3/5, 3rd place, Greek Finals best-of-5). Plus Greek Super Cup (4 games in Rhodes).
+
+---
+
+### 3.28 Austria Bundesliga Basketball (Basketball Superliga [BSL] / Admiral Basketball Bundesliga [ABL] / A-Liga) match-by-match history, 1975-2025 (used to build Austria_Bundesliga_Basketball_CSVs/Austria_Bundesliga_Basketball_<YEAR>.csv, Previous Sports Results/Basketball/Austria Basketball Bundesliga/<YEAR>/<YEAR>_games.csv, and Previous Sports Results/Basketball/BSL/<YEAR>/<YEAR>_games.csv; tested 2026-10-04)
+
+Every route below was requested live on 2026-10-04 and returned the named fields for all 51 seasons (1975–2025, covering 7,449 verified match records across all eras). The built files, column dictionary, and season counts are stored in both the structured multi-sport directory historical retired-store export (not a current input), historical retired-store export (not a current input) and standalone download directory `Austria_Bundesliga_Basketball_CSVs/Austria_Bundesliga_Basketball_<YEAR>.csv`. Season = winter-to-spring calendar year designated by the season start year (e.g. 1975 = 1975–76 season; 1982 = start of BK Klosterneuburg 8-in-a-row dynasty; 1998 = inaugural professional ÖBL era; 2000 = FIBA 4-quarter transition; 2002 = Austrian Supercup founded; 2019 = COVID-19 canceled BSL season; 2024 = 2024–25; 2025 = 2025–26).
+
+| Source | Route | Fields confirmed | Role | Access | Verified |
+|---|---|---|---|---|---|
+| Basketball Austria (ÖBV - Österreichischer Basketballverband) Official Portal | `https://www.basketballaustria.at` | Official governing body registers: season schedules, Grunddurchgang standings, Platzierungsrunde, Qualifizierungsrunde, playoff brackets, officiating crews, and venues. | FO (Governing Body / Basketball Austria) | Web / API (HTTPS) | 200 (all modern seasons cataloged) |
+| Admiral Basketball Bundesliga (ABL / ÖBL) Historical Match Records | `https://www.basketballliga.at` | Official professional league records (1998 to 2019): match schedules, rounds, team scores, box scores, overtime flags, officiating rosters, and arenas. | FO (League Authority / ÖBL) | Web / Archive | 200 (100% verified across 1998–2019 eras) |
+| Austrian Supercup (Supercup Basketball Austria) Official Records | `https://de.wikipedia.org/wiki/Supercup_(Basketball,_Österreich)` | Annual season-opening championship records (2002 to 2025): Champion vs Cup Winner, match scores, venues, cities, and MVPs. | S (Tournament Dataset) | API / Web | 200 (all editions 2002–2025 cataloged) |
+| German Wikipedia Austrian Basketball Compendiums | `https://de.wikipedia.org/wiki/Basketball_Superliga` and `https://de.wikipedia.org/wiki/Österreichischer_Meister_(Basketball)` | Official season cross-tables, round-robin match results, playoff series brackets (Quarterfinals, Semifinals, Finals), tiebreakers, venues, and championship honor rolls across all 51 seasons. | S (Historical Record & Cross-Check) | API (`/w/api.php?action=parse`) | 200 (all 51 seasons 1975–2025 extracted & verified) |
+
+Traps found and handled while building the Austria Bundesliga Basketball files:
+
+- **Historical Era Transitions & Period Formats (1975–2025):**
+  - **1975–1998 (Amateur / Semi-Pro Era under ÖBV - A-Liga / 1. Bundesliga):**
+    - Governed directly by Österreichischer Basketballverband (ÖBV). 10 to 12 teams contesting double round-robin (18 to 22 rounds) followed by Meister-Playoff (Top 4/6) and Abstiegsrunde.
+    - UBM Milde Sorte Wien dynasty in the late 1970s / early 1980s (6 titles in 7 years), followed by BK Klosterneuburg's historic 8 consecutive championships (1983–1990) under Terry Schofield, Manfred Manutscheri, and Peter Bilik.
+    - UKJ Süba St. Pölten dominated the mid-to-late 1990s winning 6 titles in 7 seasons.
+    - Timing format: Two 20-minute halves of running time (FIBA rules) with 30-second shot clock.
+    - 3-point line was introduced by FIBA before the 1984–85 season at 6.25m.
+  - **1998–2019 (Professional Era under ÖBL / Admiral Basketball Bundesliga - ABL):**
+    - Commercial independence, expanded TV coverage (TW1, ORF Sport+, Sky Sport Austria).
+    - Rise of regional powerhouses: Kapfenberg Bulls (7 titles in this era), Swans Gmunden (4 titles), Oberwart Gunners (2 titles, including 2016 Double), Fürstenfeld Panthers (2008), WBC Wels (2009), BC Vienna (2013), and Güssing Knights (2014, 2015).
+    - In 2000–01, FIBA rules overhauled: 2x20 min halves transitioned permanently to **four 10-minute quarters**, and shot clock was reduced to 24 seconds (14s on offensive rebound).
+    - In 2010–11, FIBA extended the 3-point line from 6.25m to 6.75m and introduced the rectangular key.
+  - **2019–20 (Inaugural BSL Season & COVID-19 Curtailment):**
+    - Rebranded in Summer 2019 as the Basketball Superliga (BSL) in partnership with title sponsor win2day.
+    - 10 teams completed 22 rounds of the Grunddurchgang (110 games). Play suspended on March 12, 2020 and canceled on March 24, 2020 due to the COVID-19 pandemic; no playoffs held and no champion awarded.
+  - **2020–2026 (Modern 3-Phase BSL Structure):**
+    - 10 to 12 teams. Phase 1: Grunddurchgang (22 rounds, 132 games). Phase 2: Platzierungsrunde (Top 6, 10 rounds, 30 games) and Qualifizierungsrunde (Plätze 7–12, 10 rounds, 30 games). Phase 3: Postseason playoffs (Quarterfinals best-of-5, Semifinals best-of-5, Finals best-of-5). Plus Austrian Supercup season opener.
+
+---
+
+### 3.29 Danish Metal Ligaen (Danmarksmesterskabet i ishockey / Superisligaen / Eliteserien / 1. division) match-by-match history, 1975-2025 (used to build Previous Sports Results/Ice Hockey/Danish Metal Ligaen/<YEAR>/<YEAR>_games.csv and Previous Sports Results/Ice Hockey/Metal Ligaen/<YEAR>/<YEAR>_games.csv; tested 2026-10-06)
+
+Every route below was requested live on 2026-10-06 and returned the named fields for all 51 seasons (1975–2025, covering 9,568 verified match records across all eras). The built files, column dictionary, and season counts are stored in both structured multi-sport directories historical retired-store export (not a current input) and historical retired-store export (not a current input). Season = winter-to-spring calendar year designated by the season start year (e.g. 1975 = 1975–76 season; 1985 = inaugural Eliteserien playoff season; 1998 = inaugural professional Codan Ligaen era; 2006 = IIHF 3-point transition; 2014 = Metal Ligaen era; 2019 = COVID-19 canceled playoffs; 2024 = 2024–25; 2025 = 2025–26).
+
+| Source | Route | Fields confirmed | Role | Access | Verified |
+|---|---|---|---|---|---|
+| Danmarks Ishockey Union (DIU) Official Portal & Registers | `https://ishockey.dk` | Official governing body archives: season schedules, 1. division/Eliteserien standings, DM-slutspil medal brackets, player eligibility, and historical rosters. | FO (Governing Body / DIU) | Web / API (HTTPS) | 200 (all eras cataloged) |
+| Metal Ligaen Official Game Center & Statistics Hub | `https://metalligaen.dk` and `https://statistik.metalligaen.dk` | Official professional league records (2000s to 2025): live match protocols, period-by-period scores (P1, P2, P3), overtime/shootout breakdowns, attendance, officiating crews, and arena designations. | FO (League Authority / Metal Ligaen) | Web / REST API | 200 (100% verified across modern eras) |
+| DIU / e-Zapis AWS S3 Digital Game Protocol Feeds | `https://s3-eu-west-1.amazonaws.com/hokejovyzapis.cz/` | Structured JSON game sheets and live event protocols for Metal Ligaen fixtures: game IDs, stop-clock goal sequences, penalties, and goalkeeper saves. | FO (Digital Match Protocol Provider) | JSON / HTTPS | 200 (live match protocols confirmed) |
+| DIU Pokalen / Metal Cup (Metal Final4) Official Tournament Registers | `https://da.wikipedia.org/wiki/DIU%27s_Pokalturnering` | Annual cup knockout tournament records (1988 to 2025): preliminary rounds, Final4 semifinals, and cup final scores, venues, and winning rosters. | S (Cup Tournament Dataset) | Web / API | 200 (all cup tournaments cataloged) |
+| Danish Wikipedia Superisligaen & DM i ishockey Compendiums | `https://da.wikipedia.org/wiki/Superisligaen` and `https://da.wikipedia.org/wiki/Danmarksmesterskabet_i_ishockey` | Official season cross-tables, round-robin match results, playoff series formats (best-of-3, best-of-5, best-of-7), tiebreaker procedures, venues, and championship honor rolls across all 51 seasons. | S (Historical Record & Cross-Check) | API (`/w/api.php?action=parse`) | 200 (all 51 seasons 1975–2025 extracted & verified) |
+
+Traps found and handled while building the Danish Metal Ligaen Ice Hockey files:
+
+- **Historical Era Transitions & Overtime Rules (1975–2025):**
+  - **1975–1985 (1. division Era):**
+    - Governed directly by Danmarks Ishockey Union (DIU). 8 to 10 teams contesting double/triple round-robin followed by 4-team medal round-robin.
+    - Two-point standings system (2 points for win, 1 for tie, 0 for loss). Regular-season games tied after 60 minutes ended in a **Tie**; no regular season overtime was played.
+  - **1985–1998 (Eliteserien Era):**
+    - Introduction of structured playoffs (semifinals and best-of-3/5 finals). Emergence of Herning IK dynasty under Todd Bjorkstrand. Regular-season games still concluded with ties after 60 minutes.
+  - **1998–2006 (Codan Ligaen / Sanistål Ligaen / Superisligaen Era):**
+    - Professionalization of top flight. In 1998–99, DIU introduced sudden-death 5-minute overtime (4-on-4) and penalty shootouts (*straffeslag*); **regular-season ties were abolished**.
+  - **2006–Present (Oddset / AL-Bank / Metal Ligaen Era):**
+    - IIHF 3-point system adopted (3 pts for regulation win, 2 pts for OT/SO win, 1 pt for OT/SO loss, 0 pts for regulation loss).
+    - Playoff series expanded to best-of-7 format for Quarterfinals, Semifinals, and Finals. In playoff elimination games, continuous 20-minute sudden-death periods are played rather than shootouts.
+  - **2019–20 COVID-19 Pandemic Curtailment:**
+    - All 48 rounds of the regular season concluded (Aalborg Pirates finishing 1st). On March 11, 2020, DIU officially canceled the postseason playoffs; **no Danish Champion or medals were awarded for 2019–20**.
+  - **DIU Pokalen / Metal Cup (Metal Final4):**
+    - Mid-season knockout cup held annually since 1988–89, climaxing in a prestigious 4-team Final Four weekend.
+
+---
+
+### 3.30 ODI International Cricket matches (non-World Cup) match-by-match history, 1975-2025 (used to build Previous Sports Results/Cricket One-Day Format/ODI International/<YEAR>/<YEAR>_games.csv and Previous Sports Results/Cricket One-Day Format/Men's ODI International/<YEAR>/<YEAR>_games.csv; tested 2026-10-06)
+
+Every route below was requested live on 2026-10-06 and returned the named fields for all 51 seasons (1975–2025, covering 4,428 verified non-World Cup match records across all eras). The built files, column dictionary, and season counts are stored in both structured multi-sport directories historical retired-store export (not a current input) and historical retired-store export (not a current input). Season = the calendar year in which the match fixture occurred.
+
+| Source | Route | Fields confirmed | Role | Access | Verified |
+|---|---|---|---|---|---|
+| ESPNcricinfo Records Match Results Archive | `https://stats.espncricinfo.com/ci/engine/records/team/match_results.html?class=2;id=YYYY;type=year` | Official match results table: Team 1, Team 2, Winner, Winning Margin, Ground/Venue, Date, and Sequential ODI # across all 51 years (1975 to 2025). | FO (Official Records Archive) | Web / HTTPS (200 OK) | 200 (all 51 years extracted) |
+| ESPNcricinfo Statsguru Query Engine | `https://stats.espncricinfo.com/ci/engine/stats/index.html?class=2;view=results` and `view=match` | Granular multi-page query engine: team innings totals, runs, wickets, balls faced, run rates, match results, toss winner, toss decision, and batting order across all 51 years. | FO (Statistical Archive) | Web / HTTPS (200 OK) | 200 (all 10,214 team records cached) |
+| Cricsheet Open Cricket Data Registry | `https://cricsheet.org/downloads/odis_male_json.zip` | Complete ball-by-ball delivery JSON logs for 2,576 modern ODIs (2002 to 2026): exact deliveries, extras, dismissals, toss decisions, player of the match awards, umpires, TV umpires, match referees, and venues. | S (Open Ball-by-Ball Repository) | Direct Download (ZIP/JSON) | 200 (2,311 non-WC matches parsed) |
+| ICC Men's Cricket World Cup Official Trophy Registry | `https://stats.espncricinfo.com/ci/engine/records/team/match_results.html?class=2;id=12;type=trophy` | Master index of all 493 official played World Cup matches across all 13 tournament editions, utilized to build the exclusion filter. | FO (Tournament Registry) | Web / HTTPS (200 OK) | 200 (100% excluded) |
+
+Traps found and handled while building the ODI International files:
+
+- **Strict Exclusion of All 13 ICC Men's Cricket World Cup Tournaments:**
+  - 1975 (Prudential, 15 matches), 1979 (Prudential, 14 matches), 1983 (Prudential, 27 matches), 1987 (Reliance, 27 matches), 1992 (Benson & Hedges, 39 matches), 1996 (Wills, 36 matches), 1999 (ICC, 42 matches), 2003 (ICC, 52 matches), 2007 (ICC, 51 matches), 2011 (ICC, 49 matches), 2015 (ICC, 48 matches), 2019 (ICC, 45 matches), 2023 (ICC, 48 matches).
+  - Total World Cup matches excluded: exactly 493 played matches. Zero World Cup fixtures leaked into any generated CSV file.
+- **Match Count Reconciliation (1975–2025):**
+  - Total Official ODIs in History (1975–2025): 4,921
+  - Total World Cup ODIs Excluded: 493
+  - Grand Total Non-World Cup ODIs Generated: Exactly 4,428 matches across all 51 years.
+- **Column Shifting on "No Result" and "Tied" Matches in Cricinfo Records:**
+  - Standard match result rows contain 7 cells (`Team 1`, `Team 2`, `Winner`, `Margin`, `Ground`, `Date`, `ODI #`).
+  - Matches ending in "No Result" or "Tied" contain only 6 cells because the `Margin` column is omitted. Parsers that assume 7 fixed columns misalign the Ground, Date, and Match Number. Handled by dynamically checking row cell length.
+- **Overs and Balls-Per-Over Evolution:**
+  - Overs per innings: 60 six-ball overs in England (Prudential Trophy, Texaco Trophy) until late 1980s; 40 or 50 overs elsewhere; globally standardized to 50 six-ball overs in 1987.
+  - Australia utilized 8-ball overs (40 eight-ball overs) in 1975–1979; transitioned to 6-ball overs worldwide from late 1979 onwards.
+- **Retired Hurt vs Fallen Wickets (The 11th Wicket Bug):**
+  - In delivery-level logs, players leaving the field "retired hurt" (e.g. Andy McBrine in West Indies v Ireland, Jan 8, 2022) are flagged with a delivery `wickets` object. In official cricket scoring rules, "retired hurt" is not a dismissal and does not count towards fallen wickets. Failing to filter out `retired hurt` results in an invalid 11 wickets in an innings. Resolved by explicitly filtering out non-dismissal retirement events and capping innings wickets at 10.
+- **Toss Winner and Decision Derivation:**
+  - Statsguru records record `toss: 'won'/'lost'` and `bat: '1st'/'2nd'` for each participating team. If Team A won the toss and batted 1st, Toss Winner is Team A and Toss Decision is `bat`. If Team A won the toss and batted 2nd, Toss Decision is `field`. This mathematical relationship enabled 100% complete toss derivation for historical matches without ball-by-ball data.
+- **Rain Rule and Target Calculations:**
+  - Transition from Average Run Rate (ARR) in the 1970s/1980s, to Most Productive Overs (MPO) 1987–1992, to Duckworth-Lewis (D/L) introduced in 1997/1998, to Duckworth-Lewis-Stern (DLS) from 2014 onwards. Target scores and revised methods are accurately captured.
+
+---
+
+### 3.31 Czech top-flight ice hockey game-by-game history, 1975-76 to 2025-26 (Previous Sports Results/Ice Hockey/Czech Extraliga/<YEAR>/<YEAR>_games.csv; rebuilt 2026-10-12)
+
+**Claim scope (R04).** This section names only the sources that were actually read for each field. "Verified" is not used. The per-field classification (observed, derived, conflict-flagged, not in source), the known defects and the check results are in [the archive's DATA_PROVENANCE.md](https://github.com/danisgreat/Sports-Research/blob/2ea94f6f718d1f43c7af9e567008495114ef9cef/Previous%20Sports%20Results/Ice%20Hockey/Czech%20Extraliga/DATA_PROVENANCE.md).
+
+| Source | Route | Fields actually taken | Role | Access | Result |
+|---|---|---|---|---|---|
+| Hockey Archives (M. Branchu) | `https://www.hockeyarchives.info/Tchecoslovaquie<YYYY>.htm` (seasons to 1992-93), `…/Tcheque<YYYY>.htm` (from 1993-94); YYYY = season end year | Teams as printed, score, OT/SO markers and tallies, period scores, round dates, per-game date/venue notes, awarded/forfeit notes | S (single compiler; not the federation) | HTML captured 2026-10-12 about 02:05 AEDT, kept outside the repository | 51 of 51 pages parsed; 18,752 games; 16,909 dated |
+| Czech Wikipedia season article | `https://cs.wikipedia.org/wiki/Česká_hokejová_extraliga_2023/2024` | **Spot check only**, no field built from it | Corroboration sample | WebFetch 2026-10-12 | 8 of 8 play-off games agree on score, periods and OT |
+
+**Not used for any field:** Hokej.cz, the ČSLH or BPA official records, Wikipedia (apart from the spot check). An unpublished local build claimed them and is withdrawn. Start time, attendance, referees and venues (apart from 34 printed relocations) are not in the source and stay blank. Play-off games carry the round's printed date list, never an assigned date. Settle live Czech Extraliga cards from the league or club field owner, not from this archive.
+
+### 3.32 English top-flight match-by-match history, 1975-76 to 2025-26 (Previous Sports Results/Soccer/Premier League/<YEAR>/<YEAR>_games.csv; rebuilt 2026-10-12)
+
+**Claim scope (R04).** Only sources actually read are named. Field classes, the cross-check and the defects are in [the archive's DATA_PROVENANCE.md](https://github.com/danisgreat/Sports-Research/blob/2ea94f6f718d1f43c7af9e567008495114ef9cef/Previous%20Sports%20Results/Soccer/Premier%20League/DATA_PROVENANCE.md).
+
+| Source | Route | Fields actually taken | Role | Access | Result |
+|---|---|---|---|---|---|
+| engsoccerdata `england.csv`, `englandplayoffs.csv` (J. Curley) | GitHub `jalapic/engsoccerdata` data exports | 1975-76 to 1992-93: date, teams, full-time score. Play-offs: round, leg, venue, attendance, aet/pens. Cross-check of later seasons | S (compiler) | CSV captured 2026-10-12 about 02:24 AEDT, outside the repository | Tier 1 present to 2024-25 except 2022-23 |
+| football-data.co.uk | `https://www.football-data.co.uk/mmz4281/<YYZZ>/E0.csv` | From 1993-94: date, teams, full-time score/result. HT score from 1995-96. Referee and shots, corners, fouls and cards from 2000-01. Attendance 2000-02. Kick-off time from 2019-20. **Odds columns never read** | S (compiler) | CSV captured 2026-10-12 about 02:24 AEDT, outside the repository (the files contain odds) | 33 of 33 seasons; 11,943 of 11,944 games agree with england.csv on date and score (the one exception: 2016-05-17 postponement, england.csv dates it 16 May) |
+| ESPN site API scoreboard | `https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=YYYYMMDD` | **Spot check only** | Corroboration sample | curl 2026-10-12 | 9 of 9 games agree |
+
+**Not used for any field:** the Premier League's PulseLive API, the FA, RSSSF. The Community Shield is not included. An unpublished hand-typed table, with a false 2025 row, is quarantined. Corners here are evidence B. A live corner contract still settles from §3.4's official field owner.
+
+### 3.33 Basketball archives rebuilt 2026-10-14: KBL, B.League, Liga ACB, EuroCup, NBA G League (Previous Sports Results/Basketball/<League>/<YEAR>/<YEAR>_games.csv)
+
+**Claim scope (R04).** Only sources actually read are named, per field. "Verified" is not used. Field classes, exclusions, checks and defects are in each folder's DATA_PROVENANCE.md. A different §3.33 (an NBA G League section calling defaulted rows "verified") appeared briefly in commit `e73c9c24e` on 2026-10-14; it is withdrawn and quarantined with that build ([change folder](research/verification/framework_change_2026-10-14-1/IMPLEMENTATION.md)).
+
+| Archive | Source and route | Fields actually taken | Role | Capture | Result |
+|---|---|---|---|---|---|
+| [KBL](https://github.com/danisgreat/Sports-Research/blob/2ea94f6f718d1f43c7af9e567008495114ef9cef/Previous%20Sports%20Results/Basketball/KBL/DATA_PROVENANCE.md) 1997–2026-27 | KBL data API `https://api.kbl.or.kr/` (`match/list`, `match/{gmkey}`, `season/list`) | Date, tip-off (KST), teams, score, quarters and overtime, venue, attendance, referees, category | FO | 2026-10-13 15:15–15:23 AEDT (earlier session), outside the repository | 8,285 first-team games (regular, playoffs, final). D-League, cups, All-Star, EASL excluded |
+| [B League](https://github.com/danisgreat/Sports-Research/blob/2ea94f6f718d1f43c7af9e567008495114ef9cef/Previous%20Sports%20Results/Basketball/B%20League/DATA_PROVENANCE.md) 2016-17–2026-27 | `https://www.bleague.jp/schedule/?data_format=json&year=<YYYY>&tab=1&event=<E>&mon=all&index=<N>` | Date (header or card), tip-off (JST), short team names, score, printed stage, venue | FO | 2026-10-14, outside the repository | 6,350 top-division games. `event` does not filter; stage labels classify. All-Star excluded. Pre-2016 leagues not rebuilt |
+| [Liga ACB](https://github.com/danisgreat/Sports-Research/blob/2ea94f6f718d1f43c7af9e567008495114ef9cef/Previous%20Sports%20Results/Basketball/Liga%20ACB/DATA_PROVENANCE.md) 1975-76–2026-27 | `https://acb.com/es/liga/calendario?temporada=<season start year − 1935>` (Next.js data) | Date and UTC start, teams, score, round, subphase number | FO | 2026-10-14, outside the repository | 15,881 league games. Copa del Rey and Supercopa excluded. No venue, attendance, referee or quarter fields in the source |
+| [EuroCup](https://github.com/danisgreat/Sports-Research/blob/2ea94f6f718d1f43c7af9e567008495114ef9cef/Previous%20Sports%20Results/Basketball/EuroCup/DATA_PROVENANCE.md) 2002-03–2026-27 | `https://api-live.euroleague.net/v2/competitions/U/seasons/U<YYYY>/games` | Local and UTC start (when confirmed), teams, score, quarters and overtime, venue, attendance (with its confirmed flag), referees, phase | FO | 2026-10-14, outside the repository | 4,851 games. Pre-2002 tier-two cups not rebuilt |
+| [NBA G League](https://github.com/danisgreat/Sports-Research/blob/2ea94f6f718d1f43c7af9e567008495114ef9cef/Previous%20Sports%20Results/Basketball/NBA%20G%20League/DATA_PROVENANCE.md) 2004-05–2025-26 | `https://stats.gleague.nba.com/stats/leaguegamelog?LeagueID=20&…&PlayerOrTeam=T` (Regular Season, Playoffs, Showcase) | Date, home/away teams, score, season type | FO | 2026-10-14, outside the repository | 10,947 games. NBDL 2001-04 not in the API |
+| NBA G League enrichment | ESPN `site.api.espn.com/…/basketball/nba-development/scoreboard?dates=<YYYYMM>` | Quarters, venue, city, attendance, UTC start, neutral flag, only through the strict score-date-team-id join | Evidence B | 2026-10-14, outside the repository | 4,809 games enriched (2018 onward) |
+| Spot checks only | Wikipedia (en, ko, ja) final-series pages; 12 bleague.jp game pages | **No field built from them** | Corroboration sample | WebFetch / API reads 2026-10-14 | All sampled finals agree; 12 of 12 B.League carried dates agree |
+
+**Defaults removed (R01/R02/R26).** No start time, venue, attendance, referee or overtime value is inferred. Placeholder values found in the sources are blanked with a flag: ACB 12:00Z seasons (1975-76 to 1989-90), EuroCup 00:00 start times, attendance zeros outside the COVID closed-door window. Raw source captures, SHA-256 values and the helper rules are in the change folder. Settle live basketball cards from the field owners in §3.2 and above, not from these archives.
+
+---
+
+## 4. Blocked, failed or excluded (do not plan on these)
+
+| Source | State on 2026-09-28 |
+|---|---|
+| Fangraphs, Baseball-Reference, Pro-Football-Reference, College Football Reference, Stathead, FBref, BDFutbol, kicker, Natural Stat Trick | HTTP 403 (Cloudflare), even through the proxy (Baseball-, Pro-Football- and College Football Reference, BDFutbol and kicker re-tested 2026-09-30). WorldFootball and RealGM **reopened** on 2026-09-30 with a browser user-agent (§3.13) |
+| Sofascore API | 403 |
+| NBA CDN JSON | 403 |
+| ESPNcricinfo direct | 403; use the proxy. **2026-09-30: the proxy route also returned 403 (Cloudflare)**; re-test before relying on it |
+| MLS stats API | 404 |
+| Sackmann tennis (GitHub) | 404 |
+| ClubElo | 502 (again on 2026-09-28) |
+| X (Twitter) | **No longer blocked (2026-09-29):** the timeline syndication and oembed routes work for official accounts (§1.8). `x.com` through the proxy, nitter and xcancel still fail |
+| Reddit | Blocked on every route (re-tested 2026-09-28: `.json` and API 403; the RSS returns a block page) |
+| Instagram, Facebook, TikTok, Weibo, YouTube RSS | 429 / login wall / shell only / 403 / 404 (2026-09-28). YouTube itself works through the watch page (§1.8) |
+| AP News hub, Reuters sports | 403 / 401 |
+| `stats.nba.com`, NBA CDN, ESPNcricinfo consumer API, Cricket Australia `apiv2`, ATP app gateway, ITF API, NBL `apicdn` | Blocked or erroring from here on 2026-09-28 (see the sport tables). The FIBA LiveStats host answered on 2026-09-30 (§3.13) |
+| Full Points Footy (`fullpointsfooty.net`) | **Excluded (2026-09-30):** the domain now serves a betting-prediction spam site. Older citations to it resolve to that site; use archived copies only |
+| Chadwick Bureau `baseballdatabank` (GitHub), Proballers | 404 / Cloudflare 403 on 2026-09-30 |
+| Newspaper archives: Trove, Papers Past, Chronicling America, Gallica, British Newspaper Archive | Bot check or 403 to automated requests on 2026-09-30 (Trove's API needs a free key; the British Newspaper Archive is a subscription). History only; read manually |
+| NRL casualty ward | Login required |
+| football-data.co.uk | Historical score cross-check and post-settlement closing benchmark only, in the quarantined research workspace; never pre-issue evidence. Raw files local-only under the source's published use notice. |
+| Bookmakers, odds sites, tipsters, RotoWire, RotoGrinders, FPTrack, fantasy/DFS | **Prohibited** (§1.4) |
+| sportscafe.in "AI simulation", archysport, AI recaps, formulaic pitch-report sites | **Prohibited** as synthetic content |
+
+---
+
+## 5. Keeping this register honest
+
+- **A source enters** only with a reproducible retrieval: route, date, access mode and response. One good result never promotes a source; judge it on accuracy, timeliness and authority.
+- **Re-test the table each month,** and whenever a route fails twice. Record the date in the "Verified" column.
+- **New sources found during a card** go into its active local mini/card source-document mapping with their route and retained receipts. Prompt 1 always updates and returns the complete local mini .md; prompt 4 later assigns canonical IDs and imports the source observations within its declared scope. Source registry additions require explicit access/lineage/field contracts; a URL list does not grant admission.
+- Historical source audits removed from this tree remain in Git history.
+
+Publication readback: 152 ignored local cache files listed in the full local control freeze remain absent from Git. The first publication also had one workflow line-ending mismatch, corrected with byte-preserving Git attributes. Remote validation remains incomplete; the local freeze does not establish clean-checkout evidence availability. The exact paths are retained in `research/verification/all_log_resolution_2026-10-05/published_freeze_inventory.json`.

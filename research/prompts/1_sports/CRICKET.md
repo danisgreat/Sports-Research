@@ -1,6 +1,6 @@
 # PROMPT 1 — sport file: CRICKET
 
-**P-2026.10.17-v22.2 · prompt 1 sport file.** Use this file together with the [prompt 1 core](../1_GAME_CARD.md): read the core first, then this file. The core holds every rule shared by all sports, including the shared rules of steps 1, 3, 4, 5 and 7; this file holds this sport's own instructions for steps 1–7. At each step apply the core's shared rules for that step together with this file's. Fill in the Upcoming game block below; it is the only part the owner edits. Do not read the other sport files.
+**P-2026.10.22-v23.0 · prompt 1 sport file.** Use this file together with the [prompt 1 core](../1_GAME_CARD.md): read the core first, then this file. The core holds every rule shared by all sports, including the shared rules of steps 1, 3, 4, 5 and 7; this file holds this sport's own instructions for steps 1–7. At each step apply the core's shared rules for that step together with this file's. Fill in the Upcoming game block below; it is the only part the owner edits. Do not read the other sport files.
 
 CRICKET
 ----------------------------
@@ -12,7 +12,7 @@ CRICKET
 - Supplied contracts: <West Indies 1st Innings Runs at end of 20 overs: Over/Under 200.5 Runs>, <West Indies 1st Innings Runs at end of Powerplay (6 overs): Over/Under 57.5 Runs>,
 - Research constraints: <continue pre game research even if game starts, continue until research is properly done>
 
-Read [COMMON_OPERATING_PROTOCOL](../COMMON_OPERATING_PROTOCOL.md), [MINI_LOG_IDENTITY_PROTOCOL](../../../MINI_LOG_IDENTITY_PROTOCOL.md) and the complete seven-step sport workflow below. The primary card is ANALYST_PRIMARY_V1: researched and priced by hand under NOCODE-v1 (prompt header). No model, runtime, shadow or decision-lab output is read or used; ML/RL belongs to prompts 6 and 8.
+Read [COMMON_OPERATING_PROTOCOL](../COMMON_OPERATING_PROTOCOL.md), [MINI_LOG_IDENTITY_PROTOCOL](../../../MINI_LOG_IDENTITY_PROTOCOL.md) and the complete seven-step sport workflow below. The primary card is ANALYST_PRIMARY_V1, researched online and priced by the analyst (prompt header). No model, shadow or decision-lab output is read before the card is written; the model shadow runs afterwards (MLSCOPE-v2, core step 7).
 
 Also apply the core's **Before step 1 — evidence standard** ([prompt 1 core](../1_GAME_CARD.md)).
 
@@ -20,7 +20,7 @@ Also apply the core's **Before step 1 — evidence standard** ([prompt 1 core](.
 
 Also apply the core's **Step 1 — Read and establish authority** shared rules ([prompt 1 core](../1_GAME_CARD.md)).
 
-Read COMMON_OPERATING_PROTOCOL and every control from the latest commit of the GitHub repository's `main` branch, pinned by its full SHA for the run, in read-only mode (`PUBLISHED_MAIN_PINNED`) (EXTERNAL_CHAT); this prompt never uses local controls. Print the [reading receipt](../README.md) after opening CURRENT_STATE, METHOD, CURRENT_RULES, SELECTION_RULES, CARD_AND_LOG_TEMPLATES, RULES_CRICKET, LEAGUE_RULES_CRICKET, [SOURCES §3.3](../../../SOURCES.md#33-cricket) (cricket routes), ARCHIVE_USE_GUIDE, BASE_RATES_REGISTER, this prompt, the complete active mini, GAME_LOG_STATUS_CURRENT and relevant canonical event records. Read them within the ENV-v1 reading budget (named sections of large files; only this sport's workflow) and record the latest `main` SHA, exactly what was read and the read time. Apply current controls over historical sport-engine notes.
+Read COMMON_OPERATING_PROTOCOL and every control from the local working tree (`LOCAL_WORKING_TREE`, ENV-v2), recording branch, HEAD SHA and any uncommitted control changes. Print the [reading receipt](../README.md) after opening CURRENT_STATE, METHOD, CURRENT_RULES, SELECTION_RULES, CARD_AND_LOG_TEMPLATES, RULES_CRICKET, LEAGUE_RULES_CRICKET, [SOURCES §3.3](../../../SOURCES.md#33-cricket) (cricket routes), ARCHIVE_USE_GUIDE, BASE_RATES_REGISTER, this prompt, the complete active mini, GAME_LOG_STATUS_CURRENT and relevant canonical event records. Read the named sections of large files and only this sport's workflow, and record the HEAD SHA, exactly what was read and the read time. Apply current controls over historical sport-engine notes.
 
 ## 2. Identity, duplicate and timing gate
 

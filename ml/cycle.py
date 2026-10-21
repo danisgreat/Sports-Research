@@ -32,8 +32,9 @@ def now():
 
 
 def code_hash():
-    from ml.run import code_digest
-    return code_digest()  # stable across LF/CRLF checkouts; the frozen policy is still exact source
+    # The cycle's own import closure only (RELEASE-SCOPE-v1); stable across LF/CRLF checkouts.
+    from ml import code_identity
+    return code_identity.digest(code_identity.checkout_reader(Path(__file__).resolve().parents[1]))
 
 
 def write_rows(path, rows, fields=()):

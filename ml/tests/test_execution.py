@@ -182,6 +182,12 @@ def test_no_code_analyst_mini_verifies_without_a_manifest(tmp_path):
         f'<!-- BEGIN CARD {k} -->\n- **Analysis status:** {s} / EXAMPLE\n<!-- END CARD {k} -->\n' for k,s in cards),encoding='utf-8')
     assert verify_log(None,mini)==dict(cards=2,analyst_primary=1,qualitative_or_no_forecast=1)
     assert p.main(['verify-log','--mini',str(mini)]) is None
+    # The status may be written as code; a backtick-wrapped NOT_A_STATUS is still refused below.
+    mini.write_text(mini.read_text(encoding='utf-8').replace('** ANALYST_PRIMARY_V1 /','** `ANALYST_PRIMARY_V1 /'),encoding='utf-8')
+    assert verify_log(None,mini)['analyst_primary']==1
+    bad=tmp_path/'bad.md'
+    bad.write_text(mini.read_text(encoding='utf-8').replace('`ANALYST_PRIMARY_V1','`NOT_A_STATUS'),encoding='utf-8')
+    with pytest.raises(p.AdmissionError,match='hand-derived'):verify_log(None,bad)
     # A model claim without its manifest, or a card without a disposition, is refused.
     mini.write_text(mini.read_text(encoding='utf-8').replace('ANALYST_PRIMARY_V1','MODEL_ASSISTED_CYCLE_V1'),encoding='utf-8')
     with pytest.raises(p.AdmissionError,match='hand-derived'):verify_log(None,mini)

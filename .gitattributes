@@ -42,3 +42,11 @@ research/verification/combined_rollover_2026-10-21-1/** -text
 "prediction logs/PREDICTION_LOG_COMBINED_8.md" -text
 "prediction logs/PREDICTION_LOG_COMBINED_9.md" -text
 GAME_LOG_STATUS_CURRENT.md -text
+
+# v23.0 (ENV-v2 / MLSCOPE-v2): archived originals, received minis, the active mini and pregame receipts keep exact bytes.
+archive/superseded_2026-10-22-1/** -text
+research/verification/framework_change_2026-10-22-1/** -text
+research/verification/review_2026-10-21_league_neutral_ml_sim/** -text
+research/active_minis/received/** -text
+research/active_minis/20261022F6K3OJNO.md -text
+research/pregame/** -text

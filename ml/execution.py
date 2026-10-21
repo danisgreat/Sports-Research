@@ -164,7 +164,8 @@ def verify_log(manifest: Path | None, mini: Path) -> dict:
         analyst = qualitative = 0
         for key in cards:
             body = re.search(r"<!-- BEGIN CARD " + re.escape(key) + r" -->(.*?)<!-- END CARD " + re.escape(key) + r" -->", text, re.S).group(1)
-            statuses = re.findall(r"^- \*\*Analysis status:\*\*\s+(\S+)", body, re.M)
+            # A status may be written as code (`ANALYST_PRIMARY_V1 / ...`); the backtick is formatting, not the value.
+            statuses = [s.strip("`") for s in re.findall(r"^- \*\*Analysis status:\*\*\s+(\S+)", body, re.M)]
             if len(statuses) != 1 or statuses[0] not in ANALYST_STATUSES:
                 raise p.AdmissionError("a no-code mini needs one hand-derived analysis status per card; model cards need their manifest")
             analyst += statuses[0] == "ANALYST_PRIMARY_V1"
