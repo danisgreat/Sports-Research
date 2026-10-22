@@ -43,6 +43,8 @@ Under MLSCOPE-v3 (v24.0) the declared reference is frozen before each card and t
 
 ## Reading receipt
 
+**External-chat game requests (REQ-v2):** paste-ready prompt-1 requests per sport for a research chat outside the repository are in [external_requests/](external_requests/README.md); the repository agent takes their CARD_DELTA in, lints, ledgers and freezes it.
+
 **Current model gate (MLSCOPE-v3):** prompt 1 reads model output only through the reference stage it runs before the card and, after the card is written and read back, the freeze block; the freeze never changes the card and the reference is never edited. Prompts 3, 6 and 8 settle, evaluate and release models. The market decision lab stays excluded from cards.
 
 Before dependent work, open actual files and print:

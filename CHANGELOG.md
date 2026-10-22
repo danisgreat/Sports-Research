@@ -1,3 +1,7 @@
+# External-chat game requests per sport — REQ-v2, 22 October 2026
+
+Owner request: a better, sport-specific version of the free-text game request for an external research chat. Added [research/prompts/external_requests/](research/prompts/external_requests/README.md): eleven paste-ready requests, one per prompt-1 sport file, each with the exact `main` files and sections to read, the tier and reference to compute before research, a value-ranked research table with publication times and verified routes, what to compute, the simulation rule, the SEL v4 selection (probability for every contract, the most-likely four, information list, abstain) and the CARD_DELTA format for intake. Procedure addition only: no statistical rule, prompt version or issued record changed. GAME_REQUEST_TEMPLATE and the prompt index link to it.
+
 # Reference-first cards, adjustment ledger, linted picks, tiers and league lane — MDS/P v24.0 / CR-2026.10.22-R2, 22 October 2026
 
 Owner instruction: implement every improvement in the [framework revamp review](research/verification/review_2026-10-22_framework_revamp/REPORT.md) and push to main. Prompt 8, STATISTICAL + FORMAT + PROCEDURE. Disposition of REV-01 to REV-22 (adopted, partly adopted, deferred and why): [IMPLEMENTATION](research/verification/framework_change_2026-10-22-2/IMPLEMENTATION.md); decisions and before/after: [CHANGE_PROPOSAL](research/verification/framework_change_2026-10-22-2/CHANGE_PROPOSAL.md).
