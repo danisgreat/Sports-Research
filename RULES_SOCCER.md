@@ -1,29 +1,12 @@
-> **Primary ML/RL (15 October 2026):** [PRIMARY_PREDICTION_PROTOCOL](PRIMARY_PREDICTION_PROTOCOL.md) supplies actual model-assisted original probabilities in the supported exact competition/endpoint. Keep these sport-specific physical/source/family checks. Unsupported model/phase/participant regimes remain NO_FORECAST, not another league's model. This amendment overrides older blanket manual-model exclusions, not sporting truth or the market firewall.
+> **Authority.** [CORE](CORE.md) and [CURRENT_RULES](CURRENT_RULES.md) govern new work; this page holds this sport's rules, and earlier statements below keep their historical scope.
 
-**Executable forecast cycle (CYCLE-v1).** Apply [FORECAST_CYCLE_PROTOCOL](FORECAST_CYCLE_PROTOCOL.md). New contextual forecasts use MODEL_ASSISTED_CYCLE_V1 with a frozen exact-competition release, actual execution receipt, identical-contract baseline shadows and verified settlement feedback. Existing V3/tennis adapters retain their own cohorts; missing/unsupported inputs require a real failure receipt and retained research. This statistical/procedure release authorises experimental execution, not predictive qualification.
+**Executable forecast cycle (CYCLE-v1).** Defined in [FORECAST_CYCLE_PROTOCOL](FORECAST_CYCLE_PROTOCOL.md); summarised in [CORE](CORE.md) §7.
 
-**Local keys until settlement; updated mini after every game (MINI-v2).** Apply [MINI_LOG_IDENTITY_PROTOCOL](MINI_LOG_IDENTITY_PROTOCOL.md). Research and mini creation (prompts 1–2) use stable local event keys and never assign or reserve canonical P-IDs. A canonical P-ID is assigned only in an event's settlement phase: prompt 3 settles the event and then runs the prompt-4 import, which assigns the ID. After each prompt-1 game request the repository agent appends the card to the active mini under `research/active_minis/`, updates intake and footer, reads the file back, and commits and pushes it. Preserve every owner-entered Upcoming game block and all earlier issued bytes. Formats: mini-log-10 / mini-settlement-10; earlier records retain their original formats.
+**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](MINI_LOG_IDENTITY_PROTOCOL.md); summarised in [CORE](CORE.md) §2.
 
-**Persistent research and corroboration (EXH-v1).** Apply [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md) to every required field in research, logging, settlement and verification. If a source is incomplete, open alternatives and verify material facts with another independent source; track every remaining field and attempt. Unresolved facts/corroboration never qualify as complete information. New settlements use mini-settlement-10 with a visible source-discovery/reuse section, three source/attempt/closure CSVs and S17; older originals retain their rules and bytes. Consult [RESEARCH_SOURCE_REGISTER](RESEARCH_SOURCE_REGISTER.md) and prior package registers, recheck actual coverage, and continue discovery beyond them.
+**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
 
-**Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** For every game, research both sides' L5/L10/L15/L20 online under [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md), with opened sources, dated game rows and true n. Seek exact-game confirmed players, starting roles, bench/replacements and absences under [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md); projected players remain unconfirmed. The retired local results store and its derived profiles are not required inputs or fallbacks. Earlier archive-first directions are superseded.
-
-> **Manual research timing (15 October 2026):** [TIMING_RESEARCH_PROTOCOL](TIMING_RESEARCH_PROTOCOL.md) supersedes older fixed advance research/freeze targets. Complete this sport's research even after play starts when needed. Record verified pre-start inputs, actual issue phase and outcome exposure separately; freeze only the completed original. A post-start-issued card remains in its own research cohort, not a pre-start-release claim.
-
-> **v11 precedence (2026-10-12, audit R09/R11).** [CURRENT_RULES](CURRENT_RULES.md), [SELECTION_RULES](SELECTION_RULES.md), [SCORING_AND_VALIDATION](SCORING_AND_VALIDATION.md), [CARD_AND_LOG_TEMPLATES](CARD_AND_LOG_TEMPLATES.md) and prompt 1 govern new work (MDS-2026.10.12-v11.0). This file remains the sport's reference for playing rules, mechanisms, sources and historical lessons. **Non-operative here:**
-
-> **Mandatory availability research (14 October 2026):** apply [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md) §§1–6 under CURRENT_RULES §5b for every competition in this sport. Research both sides' starters/starting role, selected bench/replacements and current medical/absence/eligibility reports separately; use official team sheets, local-language discovery for obscure leagues and a final late-change recheck. Record evidence and actual failed attempts in existing A3/A8/C20. Probable players, rosters and missing injury reports never become confirmation.
-> - RM-1 q ranking, q tiers, `TOP2_QUALITY` and cushion-term ranking: new cards rank by p_card (P_ORDER_V2).
-> - TB-1 / TB-1-MD "anchoring": `BASELINE_P` is always the league-only `BASELINE_LEAGUE_V1`, and TB-1-MD is a printed team-model reference only.
-> - Row-level numeric caps and grade caps not restated in CURRENT_RULES.
-> - Steps of the retired RULES_GENERAL / GFA algorithm.
-> - Any instruction to rank or settle that conflicts with the controls above.
->
-> The two "October 5" authority notes below are historical. Authority mode now follows CURRENT_RULES §0: a run uses either the pinned published main or the local working tree, never both. Recent form follows ARCHIVE_USE_GUIDE online form recipe R2 (L5/L10/L15/L20 counted once).
-
-> **Current authority (October 5):** [METHOD.md](METHOD.md) and [CURRENT_RULES.md](CURRENT_RULES.md) govern new work. Requested qualitative or explicitly uncalibrated research is retained under stable local keys regardless of calibration; prompt 4 alone assigns canonical IDs during import. Numerical performance certification is separate. Read current IDs/freeze from the [status register](GAME_LOG_STATUS_CURRENT.md), unresolved items from the [carryover](research/verification/closure_2026-10-05/carryover.md), and [current implementation evidence](research/verification/implementation_2026-10-05/REPORT.md). Earlier method, queue, freeze and eligibility statements below retain their historical scope.
-
-**Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
+**Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
 
 # Soccer analysis rules
 
@@ -103,30 +86,22 @@ Numerical-engine design notes (the engine code was removed on 2026-10-09; comput
 3. **Regime Conditioning**: Red cards, key starter rotation (especially starting goalkeeper and primary goalscorer), and match state (leading/trailing dynamics) condition transition intensities.
 4. **Independent Training**: Fit exclusively on `H0-SOCCER-v1` via StatsBomb / Football-Data.co.uk; D0 is strictly reserved for qualitative error diagnostics.
 
-
 ## 1. Identity and contract
-
 
 Resolve competition, season/rules era, leg/tie state, venue, regulation versus extra time/penalties, winner versus qualify/advance, draw-no-bet/double-chance terms, team/game total, corners/cards, and player statistic. Friendlies, youth, reserve, senior competitive matches, and two-leg ties are different populations.
 
-
 ## 2. High-value inputs
 
-
 ### Participants and minutes
-
 
 - Confirm starting XI, goalkeeper, bench, formation, material absences, expected minutes, rotation, set-piece and penalty takers.
 - Model the replacement and substitution phase. In friendlies, separate starting-XI and mass-substitution regimes.
 - Use current role/system fit rather than club reputation.
 - In sparse local, youth, reserve, inaugural, or otherwise low-information competitions, unresolved official XIs/goalkeepers plus weak role continuity cap side, double-chance and handicap rows at `FORCED RANK`/`MEDIUM-LOW`. Historical team records do not remove participant uncertainty.
 
-
 ### Goal process
 
-
 Use opponent-adjusted:
-
 
 - dynamic attack and defence strength;
 - shots and xG for/against;
@@ -135,15 +110,11 @@ Use opponent-adjusted:
 - field tilt/territory and pressing where defined;
 - expected possession and score-state tactics.
 
-
 Recent goals, finishing streaks, and clean sheets are outcomes. Separate creation, finishing, goalkeeping, and opponent quality.
-
 
 ### Corner process
 
-
 Corners require their own model:
-
 
 - team corners for/conceded;
 - crosses and blocked crosses;
@@ -152,48 +123,33 @@ Corners require their own model:
 - current score/leading/trailing state;
 - substitutions and width.
 
-
 Shots, possession, xG, box touches, or class do not directly imply corners.
-
 
 Before a corner contract can receive `LEAN` or `SUPPORTED`, the card must contain the available target-event chain: expected corner exposure, team for/opponent-conceded rates, direct width/cross/block/end-line/clearance/set-play evidence, score-state branches, and the exact settlement provider/definition. If a decisive layer is missing, record its missingness and cap the row at `FORCED RANK` with LOW or MEDIUM-LOW evidence.
 
-
 ### Player shot-on-target process
-
 
 For player SOT contracts, decompose the event rate into:
 
-
 `expected minutes × opponent-adjusted shots per minute × role/box-shot share × on-target conversion`.
-
 
 Adjust for starting/substitution probability, teammate shot competition, formation and set-piece role, opponent shot suppression and likely score state. A recent SOT streak is diagnostic only. Freeze whether blocked shots, woodwork and deflections count under the named provider; provider definitions are not interchangeable.
 
-
 ### Context
-
 
 Record rest/travel, congestion, table/tie incentives, venue and home effect estimated in the relevant league/era, match-window weather, referee only when relevant, and verified tactical changes. Old H2H is descriptive unless lineup/coach/system continuity is meaningful.
 
-
 ## 3. Model
-
 
 Exposure units are expected minutes, possession/attacking sequences, shots/xG events, set pieces, and corner-causing events. Use dynamic hierarchical attack/defence strengths and a score-dependence model such as a validated Dixon–Coles/bivariate framework rather than unadjusted recent-goal Poisson.
 
-
 Maintain linked goal, shot/player-event, corner, and discipline processes through shared possession, lineup, and score state. Derive winner, handicap, total, BTTS, and team total from the goal process; derive shots, assists, cards, corners, and other player/event contracts from their corresponding process while preserving cross-process dependence.
-
 
 For two-leg ties, use an explicit pregame mixture over at least: no early goal, early goal by the aggregate-trailing team, early goal by the aggregate-leading team, and material dismissal/injury branches. Each branch updates qualification pressure, attacking exposure, counterattack space and the remaining goal/corner distributions; a static aggregate adjustment is insufficient.
 
-
 For numerical training, goal candidates begin with empirical and independent-Poisson baselines, then challenge them with Dixon–Coles/bivariate/dynamic hierarchical and state-simulation forms. Corners retain separate Poisson, negative-binomial and compound/cluster-aware candidates; player SOT retains minutes × shot-rate × on-target components. Boosted or quantile methods estimate these underlying event distributions, never one unrelated classifier per bookmaker line. Shared possession/score state may link processes, but goals cannot substitute for corner or SOT labels. All candidates remain unfit and unvalidated.
 
-
 ## 4. Structural controls
-
 
 1. **Regulation winner and advance are distinct.**
 2. **Rotation changes effective strength.** Class gap is a prior, not protection.
@@ -225,39 +181,29 @@ For numerical training, goal candidates begin with empirical and independent-Poi
 28. **Condition on the exact knockout population; do not assume a universal negative scoring sign.** Retrieve competition/round/leg/aggregate-state history and compare its scoring and opportunity environment with relevant league evidence. Use a direction only when those data and current mechanisms support it; missing or sparse knockout evidence is uncertainty, not an automatic Under or downward centre shift. Keep the pregame regime separate from control 12’s post-goal change and from card/injury transitions. L-064 is narrowed to this process requirement; any signed adjustment remains a prospective candidate.
 29. **A prior leg or a recent head-to-head result is context, not a cause.** Per RULES_GENERAL (archived) §11.3E (G17.1), a team's result in the first leg of the same tie, or in its immediately preceding match, may support a "response"/"bounce back" lean only with a named, currently active mechanism (a specific tactical change, a returning player, a disclosed rotation consequence); otherwise it carries no directional weight. Record the series/aggregate-state block from RULES_GENERAL (archived) §5 for every two-leg tie.
 
-
 ## 5. Live state
-
 
 Store score, clock/stoppage, red/yellow cards, substitutions, formation/tactical state, shots/xG when available, set pieces/corners, and who is chasing. Recompute remaining goal and corner events; do not extrapolate the first-half rate.
 
-
 ## 6. Sources and settlement
-
 
 - Official competition match centres, lineups, disciplinary records, gamebooks and finals control.
 - Club official sources support availability and planned rotation.
 - Reputable Opta-derived or defined xG providers may support process features after coverage/definition checks.
 - Government weather services and official venues control conditions.
 
-
 Settle regulation, extra-time, advance, corners, cards, and player statistics under the exact contract and named official provider.
-
 
 When an official result is not recoverable, two independent high-quality current sources may support a provisional field under RULES_GENERAL. Aggregator agreement does not make niche statistics settleable when their provider/definition was not frozen.
 
-
 Method references:
-
 
 - [Dixon and Coles, Modelling Association Football Scores (1997)](https://doi.org/10.1111/1467-9876.00065).
 - [Stats Perform/Opta event definitions](https://www.statsperform.com/opta-event-definitions/) for shots, blocked shots and shots-on-target semantics.
 - [Forecasting corner kicks with a compound Poisson distribution](https://arxiv.org/abs/2112.13001) as evidence that corner counts may be overdispersed and clustered; Poisson, negative-binomial and cluster-aware forms remain numerical challengers, not active defaults.
 - [Player-level shot-output forecasting](https://escholarship.org/uc/item/21j688ph) as supporting research for separating expected minutes from per-90 shot rate; it does not establish an active coefficient or probability model here.
 
-
 ## 7. Upcoming-game research sequence
-
 
 1. Freeze competition, tie/leg state, regulation/extra-time/penalty/advance terms, provider metric and full candidate slate.
 2. Retrieve official squad/availability/rotation evidence, then confirmed XI, goalkeeper, formation, bench and set-piece/penalty roles; refresh immediately after lineups and just before kickoff.
@@ -265,18 +211,13 @@ Method references:
 4. Build corners, cards and player SOT from their own exposure/rate/provider definitions. Goals, possession, shots or class may be context, but never substitute for the settled target.
 5. Derive 1X2, draw-no-bet, double chance, totals, BTTS and handicaps from the regulation goal grid when their terms match. Player/niche outputs retain separate target distributions and dependence links.
 
-
 Official competition/club sources own current facts. StatsBomb Open Data is a selective historical candidate; Opta or another provider owns only its own event definitions. Never merge xG or event labels across providers without a versioned reconciliation.
-
 
 ## 8. SFA-SOCCER — sport forecast algorithm
 
-
 Algorithm ID: `SFA-SOCCER`. Effective **2026-09-02**. Instantiates `GFA-2` (RULES_GENERAL (archived) §11) with soccer content. Process composition only; no fitted weight, scenario weight or published probability is introduced. Senior, reserve, youth, women's, friendly and inaugural-competition populations are separate, and goals, corners, cards and player events are separate processes throughout.
 
-
 ### 8.1 Blocking preconditions
-
 
 | Precondition | Requirement | Failure output |
 |---|---|---|
@@ -285,12 +226,9 @@ Algorithm ID: `SFA-SOCCER`. Effective **2026-09-02**. Instantiates `GFA-2` (RULE
 | `SO-P3` derivative provider | For corners, cards, shots or shots-on-target: the exact provider and definition, including blocked-shot, woodwork and deflection treatment | `UNKNOWN_DEFINITION`; the row cannot reach `LEAN` or `SUPPORTED` |
 | `SO-P4` schedule identity | Verified start date/time from the competition or association when an aggregator conflicts | Event identity stays quarantined; prospective eligibility withheld |
 
-
 ### 8.2 Exposure chain
 
-
 Goals, corners and player events each run their own chain. They share possession, lineup and score state but never share a rate.
-
 
 | Step | Output |
 |---|---|
@@ -302,9 +240,7 @@ Goals, corners and player events each run their own chain. They share possession
 | `SO-S6` | Discipline and dismissal process, with the asymmetric rebuild that follows a red card |
 | `SO-S7` | One regulation score grid plus linked corner, card and player objects, with cross-process dependence preserved |
 
-
 ### 8.3 Mandatory branch set
-
 
 | Branch | Content |
 |---|---|
@@ -317,9 +253,7 @@ Goals, corners and player events each run their own chain. They share possession
 | `SO-B7` | Dismissal or injury asymmetry state |
 | `SO-B8` | Two-leg regime switch where applicable: no early goal, early goal by the aggregate-trailing side, early goal by the aggregate-leading side |
 
-
 ### 8.4 Contract derivation map
-
 
 | Contract | Queried from | Extra condition the mechanism must predict |
 |---|---|---|
@@ -330,9 +264,7 @@ Goals, corners and player events each run their own chain. They share possession
 | Total corners and team corners | `SO-S4` only | Corner share and corner total are different questions; a chasing side can win the race inside a low total |
 | Player shots or shots on target | `SO-S5` only | Start probability, teammate competition and the frozen provider definition |
 
-
 ### 8.5 Kill-path library
-
 
 | Kill path | Defeats | Evidence origin |
 |---|---|---|
@@ -348,9 +280,7 @@ Goals, corners and player events each run their own chain. They share possession
 | Knockout-stakes risk-aversion suppressing tempo below the teams' open-league goal rate | An early-goal or total-Over row anchored to league/H2H scoring frequency in a cup/playoff/two-leg fixture | §4 control 28, CL-P267-01 |
 | A prior leg or recent result used as a "response" cause with no named current mechanism | A bounce-back/reversal lean lacking G17.1 support | §4 control 29, RULES_GENERAL (archived) §11.3E (G17.1) |
 
-
 ### 8.6 Sport ordering overrides
-
 
 1. A corner, card or player row lacking any layer of its own chain, or lacking a frozen provider definition, may not exceed `FORCED RANK` and may not occupy a top slot above an opposing full-target contract.
 2. `align` is `PROXY` for any row justified by possession, territory, shots or class rather than by the settled event. `PROXY` rows sort below `PARTIAL` rows at G24 key 1.
@@ -358,9 +288,7 @@ Goals, corners and player events each run their own chain. They share possession
 4. Late scoring, a late penalty or a chasing corner sequence belongs to its own phase branch and may never be used to backfill an earlier phase row.
 5. Recent goal counts, clean-sheet runs, finishing streaks and old head-to-head are `E — diagnostic only`.
 
-
 ### 8.7 Pre-issue checklist
-
 
 1. `SO-P1`–`SO-P4` status printed, with XI and keeper release status.
 2. Competition and matchup goal baseline stated before any line.
@@ -380,15 +308,11 @@ Goals, corners and player events each run their own chain. They share possession
 16. Deficit attribution (G14.1) recorded for every weak, absent, returning or small-sample participant: which side's distribution moved and through which exposure step.
 17. Streak persistence-versus-reversion audit (G17.1) recorded for every Under/Over or scoreless run and for any prior-leg/series "response" lean; for a knockout/cup/two-leg fixture, control 28's exact-regime comparison and supported-direction audit completed before any early-goal row is ranked.
 
-
 ### 8.8 Recency, head-to-head and trend windows
-
 
 Implements `GFA-2` step G13.1 (RULES_GENERAL (archived) §11.3B) and runs at that point in the algorithm, not at the end. Retrieval of L5/L10/L15/L20 for both sides and for the head-to-head series is mandatory; a window that does not exist is recorded with its true count and a missingness code.
 
-
 Populate one windowed table per side with these metrics, and one head-to-head table:
-
 
 | Window metric | Content |
 |---|---|
@@ -398,21 +322,15 @@ Populate one windowed table per side with these metrics, and one head-to-head ta
 | Corner process | Corners won and conceded, with crosses and end-line entries where the provider defines them |
 | Decision-driving players | Each player's own last 5/10/15/20 appearances: minutes, shots, shots on target and role |
 
-
 **Head-to-head continuity.** Continuity means the same managers, a comparable XI and the same competition tier. A head-to-head record spanning a managerial change or promotion fails continuity.
-
 
 **Descriptive recency windows (G13.1; revised 2026-09-17).** Retrieve L5/L10/L15/L20 and continuity-qualified H2H with unique-event counts. These windows overlap. Monotonicity and dispersion among their averages are not a statistical trend/noise test. Report direction descriptively; estimate recency decay and opponent/regime effects using time-ordered validation. See SCORING_AND_VALIDATION section 5.
 
-
 **De-duplication.** The windows overlap by construction and share matches with the head-to-head and venue series. Shrink from unique underlying events under G9; never treat L5, L10, L15 and L20 as four confirmations.
-
 
 ### 8.9 Environment and conditions
 
-
 Implements `GFA-2` step G15.1 (RULES_GENERAL (archived) §11.3C). Venue classification for this sport is normally **OUTDOOR unless the venue has a closed roof**.
-
 
 | Field | Use in this sport |
 |---|---|
@@ -421,18 +339,13 @@ Implements `GFA-2` step G15.1 (RULES_GENERAL (archived) §11.3C). Venue classifi
 | Temperature | Congestion and substitution timing in heat |
 | Surface and pitch state | Official venue source, including hybrid or artificial surfaces |
 
-
 Failure to obtain the match-window forecast for an outdoor or open-roof event yields `WEATHER_NOT_AVAILABLE`, widened total and margin distributions, and a `LEAN` cap on every weather-dependent row. No factor above carries an automatic total direction.
-
 
 ### 8.10 Base-rate anchors and derived stat lanes
 
-
 **Anchoring (G12.1).** Anchor the first-half Over 0.5 line on the competition frequency of a scoreless first half, and full totals on the competition goal environment. A first-half goal line and a team-total Under are far apart before any analysis and must not be ranked as if they started level.
 
-
 **Derived and low-salience fields that are available and routinely skipped:**
-
 
 | Field | Note |
 |---|---|
@@ -441,11 +354,8 @@ Failure to obtain the match-window forecast for an outdoor or open-roof event yi
 | Rest days and travel since the last fixture | Entered through minutes and rotation, not as a label |
 | Score-state splits | Shot and corner rates when level, leading and trailing, which is what `SO-B4` and `SO-B5` actually need |
 
-
 ## 9. Sport and competition rules reference
 
-
 Added 2026-09-04. The IFAB Laws of the Game, the shared competition variables that decide settlement (extra time, penalties, substitution regimes, VAR, points and tiebreak systems, promotion/relegation, playoff/liguilla/split formats, foreign-player limits, points deductions), and a dedicated section for every soccer competition in the prediction logs — Premier League, Carabao Cup, Bundesliga, 2. Bundesliga, LaLiga, Serie A, Coppa Italia, Eredivisie, Jupiler Pro League, Danish Superliga, DBU Pokalen, Championnat National, Brasileirão Série A, Argentine Liga Profesional (and Primera C / reserve fixtures), Roshn Saudi League, Chinese Super League, Chinese FA Cup, Egyptian Premier League, Israeli competitions, Kazakhstan Premier League, Armenian Premier League and Cup, Uzbekistan Pro League, MOL Cup, the Sikkim S-League, NWSL, MLS NEXT Pro, Liga MX and Liga MX Femenil, Leagues Cup, the UEFA club competitions (Conference League, Women's Champions League, Women's Europa Cup), CONMEBOL Libertadores, the FIFA Intercontinental Cup, and the club friendlies (KCC Pre-Season Cup, Coupang Play Series, ASEAN club competition) — all in **[LEAGUE_RULES_SOCCER.md](LEAGUE_RULES_SOCCER.md)**.
-
 
 That file is the reference for `§1` identity (competition, leg/tie state, regulation vs extra time/penalties, advance vs win) and `§6` settlement. It does not change `SFA-SOCCER`. Its **maintenance note** carries the season-boundary rules-currency check and the new-competition onboarding requirement (RULES_GENERAL (archived) §3, `G2`): the August restart of the European leagues, and any new season / edition elsewhere, triggers a re-verification of the IFAB Laws in force plus the competition's format, substitution/VAR/foreign-player rules and any points deductions before the first card; a new soccer competition must be fully documented there before it is forecast.

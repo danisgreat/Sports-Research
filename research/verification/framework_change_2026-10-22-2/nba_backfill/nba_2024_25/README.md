@@ -1,0 +1,3 @@
+# Verified basketball backfill
+
+Provider A (ESPN scoreboard, one request per date, regular season only) and provider B (Basketball-Reference monthly schedule) are separate lineages. A game is ingested only when both agree on the participants, the final score and whether overtime was played, and the pair is unique. Regulation comes from ESPN's period scores. `final_at` is the current observed-final upper bound and `known_at` is the later of the two retrievals, so these rows cannot enter a historical pregame replay. Raw HTTP bodies stay in the external cache named in HTTP_RECEIPTS.csv. Every provider-A game has a disposition in RECONCILIATION.csv. No odds, lines or market fields are read.

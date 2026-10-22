@@ -1,11 +1,10 @@
 > **Current authority (October 5):** [METHOD.md](METHOD.md) and [CURRENT_RULES.md](CURRENT_RULES.md) govern new work. Requested qualitative or explicitly uncalibrated research receives canonical Part 6 IDs regardless of calibration; numerical performance certification is separate. Read current IDs/freeze from the [status register](GAME_LOG_STATUS_CURRENT.md), unresolved items from the [carryover](research/verification/closure_2026-10-05/carryover.md), and [current implementation evidence](research/verification/implementation_2026-10-05/REPORT.md). Earlier method, queue, freeze and eligibility statements below retain their historical scope.
 
-**Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
+> **Authority.** [CORE](CORE.md) and [CURRENT_RULES](CURRENT_RULES.md) govern new work; this page holds this sport's rules, and earlier statements below keep their historical scope.
 
 # Cricket — sport and competition rules reference
 
 > **Status (md-only, 2026-09-28):** reference material for identity, format and settlement. No scope is prospectively validated; every card is LEARNING_ONLY. Live rules: `CURRENT_RULES.md` and the sport file's §0.
-
 
 Status: **ACTIVE — reference**
 Created: **2026-09-04**
@@ -201,11 +200,9 @@ A "powerplay Over/Under" contract frozen against an assumed six-over phase and s
 
 P-217 settlement clarification: the actual officially completed revised innings was 16 overs, GAW 185/5. The fixed 20-over target is preserved; research Over/Under grades use that revised completed-innings convention explicitly, with no extrapolated 20-over score and OPERATOR_ACTION UNKNOWN_DEFINITION. ESPN reports the mandatory PP ending at 4.5 (24/2), which must not replace the frozen six-completed-over target. P-305/P-311 batting-first conditions were met by the actual toss. [Details (historical; pinned Git 3fbf0c981b40)](https://github.com/danisgreat/Sports-Research/blob/3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa/archive/mini_logs/PREDICTION_MINI_LOG_SETTLEMENT_2026-09-06.md). No competition playing law or operator rule has been invented/changed.
 
-
 ## Exact exposure and retrospective correction - 2026-09-12
 
 Keep P-364's completed innings/45-over targets separate from its still-live Test winner. P-366's fixed-20-over targets remain terminal censored after the actual 19-over match; P-217's inherited revised-16-over research convention does not automatically govern a different frozen contract. P-262's official CPL phase record is Falcons 43/1 at six and 183/4 at 20, illustrating resources and phase dependence, not a new competition law. No new ICC/league playing-condition change was established in this pass. See RULES_CRICKET and the recovered historical retrospective.
-
 
 <!-- DEEP-RESEARCH-IMPLEMENTATION-2026-09-19-V42 -->
 ## 2026-09-19(c) — source firewall precedence

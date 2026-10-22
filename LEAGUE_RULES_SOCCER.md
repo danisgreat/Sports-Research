@@ -1,11 +1,10 @@
 > **Current authority (October 5):** [METHOD.md](METHOD.md) and [CURRENT_RULES.md](CURRENT_RULES.md) govern new work. Requested qualitative or explicitly uncalibrated research receives canonical Part 6 IDs regardless of calibration; numerical performance certification is separate. Read current IDs/freeze from the [status register](GAME_LOG_STATUS_CURRENT.md), unresolved items from the [carryover](research/verification/closure_2026-10-05/carryover.md), and [current implementation evidence](research/verification/implementation_2026-10-05/REPORT.md). Earlier method, queue, freeze and eligibility statements below retain their historical scope.
 
-**Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
+> **Authority.** [CORE](CORE.md) and [CURRENT_RULES](CURRENT_RULES.md) govern new work; this page holds this sport's rules, and earlier statements below keep their historical scope.
 
 # Soccer — sport and competition rules reference
 
 > **Status (md-only, 2026-09-28):** reference material for identity, format and settlement. No scope is prospectively validated; every card is LEARNING_ONLY. Live rules: `CURRENT_RULES.md` and the sport file's §0.
-
 
 Status: **ACTIVE — reference**
 Created: **2026-09-04**
@@ -340,11 +339,9 @@ Resolve before any rate or contract work, per RULES_SOCCER.md §1:
 6. **Table stakes** if the card touches a title/relegation/European place: the **tiebreak order** (GD-first vs head-to-head-first), whether a **playoff match** can occur, whether **relegation is suspended**, and whether it is decided by a **multi-season average**.
 7. **Data environment:** VAR present or not; public data depth; sparse-competition evidence ceiling (RULES_SOCCER.md control 13) for the lower and exotic competitions above.
 
-
 ## Verified competition-metadata corrections - 2026-09-12
 
 P-176/P-178/P-179 are Ligue 3 2026-27 round-four fixtures. P-179 was a 1-1 league draw, not a National 2 cup tie decided by shootout; in-play penalty goals must not become shootout settlement. P-233/P-234/P-235 were Chinese FA Cup quarterfinals on 1 September, not R16. These corrections are backed by exact L'Equipe and Xinhua/Titan records in audit_2026-09-12/historical_queue_evidence.md. They do not establish any corner total or require a general cup scoring coefficient. P-265's separate Leagues Cup semifinal ended Toluca 2-0 Leon, with first goal at 41 minutes, verified from club/competition reports; its later corner adjudication remains a documentary gap.
-
 
 ## 2026-09-15 — competition sections found missing by `P-374` and `P-377`
 

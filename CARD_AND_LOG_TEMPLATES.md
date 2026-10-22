@@ -1,18 +1,18 @@
 # Card, mini, settlement and canonical formats
 
-**ML/RL scope (MLSCOPE-v2).** Owner instruction, 22 October 2026: models run where they are needed, beside the analyst card and never inside it. Prompt 1 researches the game online and prices every p_card as ANALYST_PRIMARY_V1 / UNCALIBRATED_ANALYST_PRIMARY from one declared distribution ([PROBABILITY_TOOLKIT](PROBABILITY_TOOLKIT.md); code may do the arithmetic, with every input and step printed). Only after the card is written to the mini does prompt 1 run the pregame model shadow, which freezes the model and league-baseline rows, and the card's own p_card, on the same contracts when the competition has an active release, or records NOT_RUN_NO_RELEASE. Model output never changes a card's p_card, ranks or picks. Prompt 3 settles the shadow with the card; prompt 6 ingests and evaluates; prompt 8 builds releases and decides promotion. A model is judged only after at least 8 weeks and 50 paired games; a progress review falls due when either is reached first. RL has no forecasting role: online expert weighting updates at settlement. Details: [FORECAST_CYCLE_PROTOCOL](FORECAST_CYCLE_PROTOCOL.md). Supersedes MLSCOPE-v1, NOCODE-v1 and any older text that forbids code or models in prompts 1–5.
+**ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](FORECAST_CYCLE_PROTOCOL.md); summarised in [CORE](CORE.md) §7.
 
-**Execution environment (ENV-v2).** Owner instruction, 22 October 2026: every prompt, 1 to 8, runs in this repository as the repository agent (`LOCAL_WORKING_TREE`), with internet access for research. Controls are read from the local working tree; GitHub `main` is the published copy, and every run that changes files ends with a commit and push. The external-chat route (ENV-v1) is retired for new work; anything it produced earlier is still imported as before. Details: [EXECUTION_ENVIRONMENT_PROTOCOL](EXECUTION_ENVIRONMENT_PROTOCOL.md).
+**Execution environment (ENV-v2).** Defined in [EXECUTION_ENVIRONMENT_PROTOCOL](EXECUTION_ENVIRONMENT_PROTOCOL.md); summarised in [CORE](CORE.md) §1.
 
-**Executable forecast cycle (CYCLE-v1).** Apply [FORECAST_CYCLE_PROTOCOL](FORECAST_CYCLE_PROTOCOL.md). New contextual forecasts use MODEL_ASSISTED_CYCLE_V1 with a frozen exact-competition release, actual execution receipt, identical-contract baseline shadows and verified settlement feedback. Existing V3/tennis adapters retain their own cohorts; missing/unsupported inputs require a real failure receipt and retained research. This statistical/procedure release authorises experimental execution, not predictive qualification.
+**Executable forecast cycle (CYCLE-v1).** Defined in [FORECAST_CYCLE_PROTOCOL](FORECAST_CYCLE_PROTOCOL.md); summarised in [CORE](CORE.md) §7.
 
-**Local keys until settlement; updated mini after every game (MINI-v2).** Apply [MINI_LOG_IDENTITY_PROTOCOL](MINI_LOG_IDENTITY_PROTOCOL.md). Research and mini creation (prompts 1–2) use stable local event keys and never assign or reserve canonical P-IDs. A canonical P-ID is assigned only in an event's settlement phase: prompt 3 settles the event and then runs the prompt-4 import, which assigns the ID. After each prompt-1 game request the repository agent appends the card to the active mini under `research/active_minis/`, updates intake and footer, reads the file back, and commits and pushes it. Preserve every owner-entered Upcoming game block and all earlier issued bytes. Formats: mini-log-10 / mini-settlement-10; earlier records retain their original formats.
+**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](MINI_LOG_IDENTITY_PROTOCOL.md); summarised in [CORE](CORE.md) §2.
 
-**Persistent research and corroboration (EXH-v1).** Apply [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md) to every required field in research, logging, settlement and verification. If a source is incomplete, open alternatives and verify material facts with another independent source; track every remaining field and attempt. Unresolved facts/corroboration never qualify as complete information. New settlements use mini-settlement-10 with a visible source-discovery/reuse section, three source/attempt/closure CSVs and S17; older originals retain their rules and bytes. Consult [RESEARCH_SOURCE_REGISTER](RESEARCH_SOURCE_REGISTER.md) and prior package registers, recheck actual coverage, and continue discovery beyond them.
+**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
 
-**Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** For every game, research both sides' L5/L10/L15/L20 online under [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md), with opened sources, dated game rows and true n. Seek exact-game confirmed players, starting roles, bench/replacements and absences under [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md); projected players remain unconfirmed. The retired local results store and its derived profiles are not required inputs or fallbacks. Earlier archive-first directions are superseded.
+**Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
 
-**Required repository fallback (REF-v1).** Always keep [https://github.com/danisgreat/Sports-Research/tree/main](https://github.com/danisgreat/Sports-Research/tree/main) as the standing reference. If required local files are not fully accessible (missing, unreadable, truncated or incomplete), retrieve the actual required contents from this repository before declaring them unavailable. Apply [GITHUB_REFERENCE_PROTOCOL](GITHUB_REFERENCE_PROTOCOL.md): resolve one main commit SHA, record exact files/read time and fallback results in the existing reading receipt, and preserve the declared authority mode. Never substitute an unpublished local mini, claim unread content or treat viewing code as executing it. If authorized remote access also fails, record the real gap and continue independent work.
+**Required repository fallback (REF-v1).** Defined in [GITHUB_REFERENCE_PROTOCOL](GITHUB_REFERENCE_PROTOCOL.md); summarised in [CORE](CORE.md) §1.
 
 **mini-log-10 · mini-settlement-10 · canonical-md-1.** Authority: MDS-2026.10.16-v20.0 / CR-2026.10.16-R7 / SCV-2026.10.16-v11 / SEL-2026.10.12-v3. [Rules](CURRENT_RULES.md) and [selection definitions](SELECTION_RULES.md) control semantics. Previous formats: [mini-log-6 / mini-settlement-5](archive/superseded_2026-10-12/CARD_AND_LOG_TEMPLATES.md).
 
@@ -145,7 +145,7 @@ Insert immediately before the footer. Preserve earlier card/addendum bytes; upda
 **Potential winner:** <result probabilities including allowed draw/tie, or NOT_ESTIMATED>
 **Supplied rows not selected:** <each exact line/p or missing reason and disposition>
 
-**Model shadow (MLSCOPE-v2, frozen after this card):** <added after the card is written and read back: disposition EXECUTED / NOT_RUN_NO_RELEASE / NOT_RUN_STALE_RELEASE / NOT_RUN_INPUT_REFUSED / FAILED, release, timing, receipt path; when executed, model p, league baseline p and model rank per full-game contract. Never changes p_card, ranks, picks or the gate.>
+**Model shadow (MLSCOPE-v3, frozen after this card):** <added after the card is written and read back, beside the Reference block that was frozen before it: disposition EXECUTED / NOT_RUN_NO_RELEASE / NOT_RUN_STALE_RELEASE / NOT_RUN_INPUT_REFUSED / FAILED, release, timing, receipt path; when executed, model p, league baseline p and model rank per full-game contract. Never changes p_card, ranks, picks or the gate.>
 
 ### Appendix
 #### A1. Identity, timing and state
@@ -206,6 +206,59 @@ Below each table print:
 
 A window shorter than its label prints its true n. A missing window prints `HISTORICAL_DATA_UNAVAILABLE:<reason>` with actual online routes tried. Excluded flagged rows (for example source-supported duplicate or awarded-result exclusions) are listed.
 
+### 3c. Card under P-2026.10.22-v24.0 (REFMODEL-v1 / LEDGER-v1 / PICKS-v2)
+
+Cards written under v24.0 add four header lines to the card above and replace the decision block with the one below; the appendix A1-A9 and the form windows (3b) are unchanged except that A4 holds the reference and A6 the adjustment ledger.
+
+````markdown
+- **Procedure:** REFMODEL-v1 + LEDGER-v1 + PICKS-v2 (P-2026.10.22-v24.0); fast card YES/NO (if YES: full-card addendum pointer or PENDING)
+- **Tier / reference:** <A|B|C by `ml reference tier`>; reference <TB2-MD:NBA | TB1-MD:<league> | RELEASE:<id> | BASELINE_LEAGUE_V1:<source> | NONE>; status <EXECUTED | BASELINE_ONLY | NOT_RUN_…>; frozen <UTC time, before the first probability was written>; receipt <path> (SHA-256 of rows and inputs); flags (TB1_EARLY_SEASON, LM_PRIOR_BLEND, STALE_PROFILE)
+- **Model stage:** <EXECUTED (release, timing, receipt) | NOT_RUN_NO_RELEASE | NOT_RUN_STALE_RELEASE | NOT_RUN_INPUT_REFUSED | FAILED | NOT_APPLICABLE>; role <REFERENCE | CHALLENGER | SHADOW_AFTER_CARD>
+- **Width floors:** margin <floor, basis>, total <floor, basis>; exception <NONE | reason>
+
+### Decision block
+<One-sentence assessment and the principal uncertainty. Abstain flag: **no strong pick** or the strongest supported rows.>
+
+**Probability table** (every supplied contract; unselected rows included)
+
+| Contract | Source | Reference p | Baseline p | Model p | Final p | W / P / L | Line distance (units / SD) | Moved by |
+|---|---|---:|---:|---:|---:|---|---|---|
+
+**Winner:** <probability for each side, and the draw where the competition allows one>
+**Most-likely list** (up to four rows by final p; each SUPPLIED or ANALYST_DERIVED): <rows with their distance from the centre; note any near-certain analyst-chosen alternative line as label-only evidence>
+**Information list** (rows moved at least 0.03 from the reference): <rows, the facts, their ledger rows, or NONE>
+**Joint failure of the first two ranked rows:** <exact, Fréchet bounds, or MECHANICALLY_PROTECTED / counted as one pick>
+**Reference pair and adjusted pair:** <printed whenever an adjustment changes the list or an information row; ADJUSTMENT_DEPENDENT / LARGE_ADJUSTMENT flags>
+**Model challenger:** <model p beside the reference, or why not run>
+**Supplied rows not ranked:** <each exact line, p, disposition>
+
+**Adjustment ledger** (A6; one row per confirmed fact)
+
+| # | Fact | Source / published / retrieved | Corroboration | Target | Effect row | Size (interval) | Entry (FULL / HALF / SCENARIO) | Overlap checked |
+|---|---|---|---|---|---|---|---|---|
+
+<!-- BEGIN PICKS_V2 LOCAL-<MINI_KEY>-G0001 -->
+```text
+tier: B
+competition: <Sport/Competition>
+reference_id: TB2-MD:NBA
+reference_status: EXECUTED
+reference_frozen_at: <UTC time>
+model_stage: EXECUTED
+abstain: NO
+fast_card: NO
+timing: PREGAME
+scheduled_start: <UTC time>
+issued_at: <UTC time>
+
+label,family,quantity,side,line,line_source,reference_p,baseline_p,model_p,final_p,w,p,l,line_implied_p,centre,sd,z,most_likely_rank,information_row
+HOME_ML,WINNER,MARGIN,HOME,,SUPPLIED,0.6200,0.5900,0.5800,0.6600,0.6600,0.0000,0.3400,,5.0,14.1,-0.35,1,Y
+```
+<!-- END PICKS_V2 LOCAL-<MINI_KEY>-G0001 -->
+````
+
+The picks block is the machine-readable twin of the decision block. Columns: `label` (the contract key), `family` (WINNER, HANDICAP, TOTAL, TEAM_TOTAL, PERIOD, PLAYER, CORNERS, OTHER), `quantity` (MARGIN, TOTAL, TEAM_TOTAL, PERIOD, PLAYER, COUNT, N/A), `side`, `line`, `line_source` (SUPPLIED or ANALYST_DERIVED), `reference_p` / `baseline_p` / `model_p` (a probability, `NONE`, or for the baseline `MISSING:<reason>`), `final_p`, `w` / `p` / `l` (unconditional masses, summing to one), `line_implied_p` (`0.5` on supplied two-way lines, blank otherwise), `centre` and `sd` (the margin or total distribution behind the row), `z` (line distance in SD), `most_likely_rank` (1-4 or blank), `information_row` (`Y` iff |final − reference| ≥ 0.03). Header values: `tier` A/B/C; `reference_status` EXECUTED, BASELINE_ONLY, NOT_AVAILABLE, NOT_RUN_NO_RELEASE, NOT_RUN_STALE_RELEASE, NOT_RUN_INPUT_REFUSED, NOT_RUN_NO_TB1_CONSTANTS or FAILED; `model_stage` EXECUTED, NOT_RUN_NO_RELEASE, NOT_RUN_STALE_RELEASE, NOT_RUN_INPUT_REFUSED, FAILED or NOT_APPLICABLE; `timing` PREGAME, POST_START_ISSUE or TIMING_UNVERIFIED; optional `width_floor_exception`. Run `python -m ml card lint --mini <mini> --key <key>`; then `python -m ml ledger add …`.
+
 ## 4. Addenda
 
 Use `<!-- BEGIN ADDENDUM <original-record-key> <timestamp-key> -->` and matching END; heading `### Addendum · <original-record-key> · <ISO timestamp>`. Record parent ID, original version, what changed, source/time, reason and current implications. No new P-ID, no edits to original ranks. A pregame reforecast table uses p_reforecast and is NOT_PRIMARY; it cannot replace original settlement. Post-event material is explicitly diagnostic. A mini's footer changes only for actual new cards or queue updates, never to pretend addenda allocate IDs.
@@ -245,7 +298,6 @@ Shared/prior registers consulted: <exact files/source IDs actually opened; fresh
 <one truthful row per source observation; failures and unsupported reuse stay visible; no invented sources or independence>
 
 <For every remaining information requirement: event/side/field, primary/second-source or independent check, status/conflict/lineage, actual attempted routes, next source/action, actor/due time and real automation status. Incomplete facts never become COMPLETE by exhausting attempts.>
-
 
 <!-- BEGIN SETTLEMENT <original-record-key> revision-1 -->
 ### Settlement · <original-record-key> · <event> · <actual review time>
@@ -312,7 +364,12 @@ Pending cards get state evidence, literal original reference and next check, wit
 | C19 | Primary runtime: actual source/fit/bundle checked; mixture weights recompute from recorded losses and η; all rows match the mixed grid, model features/limits explicit. Pricing basis: primary W/P/L and p_card derive from the actual retained mixed ML grid; manual mixtures/adjustments cannot overwrite it. Material unsupported effects mean NO_FORECAST for the affected numerical ML lane; full research still proceeds. The mandatory supported fallback comparison remains UNCALIBRATED_ANALYST_SCENARIO / NOT_PRIMARY, with analyst_p, source/assumption provenance, frozen cases/weights and separate base-only diagnostics; ε and any GATE_UNRESOLVED_PRECISION / PRECISION_TIE stated |
 | C20 | EXH-v1: no single-source stop for material player fields; missing facts/corroboration remain information-incomplete. Availability: comprehensive both-side starter/bench/absence search per ROSTER_AVAILABILITY_PROTOCOL completed with actual attempts and final recheck in A3/A8; projections, access/publication gaps and material uncertainty honest. Lifecycle: issuing writer and lease valid at append time; mini not frozen; request logged in the intake table; known-at line present; lineup state and issue-step times recorded |
 | C21 | RETAIN-v3: exact record identity and an honest probability-method disposition. ANALYST_PRIMARY_V1 cards disclose the distribution family, every input with its source, the toolkit sections and the arithmetic; no runtime, manifest or receipt is required. Legacy model cards keep their original execution evidence. Never a fabricated probability. Retention is separate from completed-research and predictive certification |
-| C22 | ENV-v1 delivery after every prompt-1 game request: the complete new card between its markers, the new intake row(s) and the complete replacement footer, with placement instructions; the full mini as well when it fits without truncation (FULL_MINI, otherwise CARD_DELTA). Duplicates return ALREADY_RECORDED or an addendum; a missing or unreadable mini gives READ_ONLY_DRAFT / BLOCKED_NO_MINI. Never a silent truncation or a claimed file save |
+| C22 | ENV-v2 delivery after every prompt-1 game request (the repository agent writes the file and commits; the CARD_DELTA text applies only to an agent outside the repository): the complete new card between its markers, the new intake row(s) and the complete replacement footer, with placement instructions; the full mini as well when it fits without truncation (FULL_MINI, otherwise CARD_DELTA). Duplicates return ALREADY_RECORDED or an addendum; a missing or unreadable mini gives READ_ONLY_DRAFT / BLOCKED_NO_MINI. Never a silent truncation or a claimed file save |
+| C23 | v24.0 reference: the tier is printed and equals `ml reference tier`; the reference was frozen (receipt, rows hash, UTC time) before the first probability was written and is unedited; a failed reference is recorded with its status, never hidden |
+| C24 | v24.0 ledger: every number that differs from the reference has an adjustment row with source, publication time, retrieval time, corroboration, effect row, size and entry size; no double count with a rating or the form windows; widths at or above the floor or an exception written; scenarios carry weights fixed before pricing |
+| C25 | v24.0 picks block: `python -m ml card lint` passes (its output is quoted in A9), `ledger add` ran once, the block is inside the card markers and agrees with the decision block |
+| C26 | v24.0 content: probability for every supplied contract, winner, most-likely list with line distances and SUPPLIED/ANALYST_DERIVED labels, information list, abstain flag consistent with the numbers, covering pairs counted once |
+| C27 | v24.0 timing: fast card flag and addendum pointer; `PREGAME`, `POST_START_ISSUE` or `TIMING_UNVERIFIED` with the request, completion, freeze and push times; commit SHA and push time reported only after remote readback |
 
 ## 8. Canonical entry and rollover
 
@@ -353,6 +410,7 @@ Legacy settlement markers without revision keys (mini-settlement-2 to -5) are ac
 | S16 | Settle every retained research event whether a model existed or not; retain verified terminal targets/source/time/revision/feature status for future development. Real frozen bundles additionally support actual expert feedback; no bundle means NOT_APPLICABLE_NO_MODEL for expert losses, not exclusion of future training targets |
 | S17 | New mini-settlement-10: visible Source discovery, corroboration and reuse register; all three CSV sidecars; every required field mapped, actual alternate/independent searches and discrepancies evidenced, source reuse limits and failed routes retained, COMPLETE only with closed fields, local/shared register scope and complete readback verified. Legacy settlement-8 and older retain their own checks. |
 | S18 | Local-key/source alias mappings and markers are preserved; new unimported cards remain NOT_ASSIGNED / PROMPT_4_IMPORT; known canonical references are not new allocations; final mapping deferred to prompt 4 |
+| S19 | v24.0 ledger settlement: `RESULTS.csv` (local_key, label, grade) and `ACTUALS.csv` (margin and total) written from box-score or linescore evidence with a sum check; benchmark rows only if the owner supplied them, entered after the verified final, probability only; `ledger score` run when the scope is large enough, reported with intervals and strata (SCV-v12) |
 
 ## 10. Acceptance examples
 
@@ -366,13 +424,10 @@ Use [TIMING_RESEARCH_PROTOCOL](TIMING_RESEARCH_PROTOCOL.md) in the existing Timi
 
 ## 12. Primary ML/RL receipt and feedback
 
-**Research retention before model availability (RETAIN-v2).** Retain every identified researched event under its stable local event key regardless of ML/runtime/baseline/calibration availability; use RESEARCH_ONLY_NO_MODEL and an honest execution disposition when needed. Prompts 1–3 neither assign nor reserve canonical P-IDs. Prompt 1 appends the full research card to the mini, updates its intake/footer, reads back the result and returns the complete updated Markdown document after every game request. Prompt 4 alone reconciles duplicates and assigns canonical P-IDs at import, preserving local originals and a local-to-canonical map. Verified labels remain future-development candidates; only real frozen bundles supply expert feedback. See RESEARCH_RETENTION_PROTOCOL and MINI_LOG_IDENTITY_PROTOCOL. Identity/custody/write conflicts remain real blockers; missing ML does not discard research.
+**Research retention before model availability (RETAIN-v2).** Defined in [RESEARCH_RETENTION_PROTOCOL](RESEARCH_RETENTION_PROTOCOL.md); summarised in [CORE](CORE.md) §2.
 
 [PRIMARY_PREDICTION_PROTOCOL](PRIMARY_PREDICTION_PROTOCOL.md) controls new model-assisted cards in existing A4/A5/A9 metadata. Existing mini-log-7 and older formats retain their format; the declared policy/version changes, never an issued core. Settlement retains the original bundle, grades original keys first, then creates a new source-backed feedback row and reconciles the effective revision inventory before future learning. The market/decision lab remains excluded.
 
-
-**Local research record and updated-document delivery (owner update, 16 October 2026).** Use a stable local event key during research and local settlement; do not assign, reserve or advance any canonical P-ID. Append the researched card regardless of model availability, update intake and the local footer, read the full mini back and commit it after each game request (ENV-v2). Canonical IDs are assigned only in the settlement phase, when prompt 3 hands the settled event to the prompt-4 import, which reconciles duplicates and identity and records the immutable local-to-canonical mapping. An already assigned canonical ID remains a reference, never a new pregame allocation. Preserve issued originals and actual timing. See MINI_LOG_IDENTITY_PROTOCOL.
-
-See [RETAIN-v2](RESEARCH_RETENTION_PROTOCOL.md). This owner update changes local identity and delivery procedures; numerical model, selection and scoring formulas are unchanged.
+**Local research record and updated-document delivery (owner update, 16 October 2026).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](MINI_LOG_IDENTITY_PROTOCOL.md); summarised in [CORE](CORE.md) §2.
 
 **Settlement S18 — local-to-canonical handoff.** Check local-key markers/mappings/manifest consistency; unimported new events remain NOT_ASSIGNED / PROMPT_4_IMPORT; known canonical references and legacy source aliases are distinguished. Prompt 4 supplies the final canonical mapping in new import evidence without rewriting frozen originals. Settlement-10 runs S1–S18; settlement-9 retains S1–S17; settlement-8 retains S1–S16.

@@ -1,29 +1,12 @@
-> **Primary ML/RL (15 October 2026):** [PRIMARY_PREDICTION_PROTOCOL](PRIMARY_PREDICTION_PROTOCOL.md) supplies actual model-assisted original probabilities in the supported exact competition/endpoint. Keep these sport-specific physical/source/family checks. Unsupported model/phase/participant regimes remain NO_FORECAST, not another league's model. This amendment overrides older blanket manual-model exclusions, not sporting truth or the market firewall.
+> **Authority.** [CORE](CORE.md) and [CURRENT_RULES](CURRENT_RULES.md) govern new work; this page holds this sport's rules, and earlier statements below keep their historical scope.
 
-**Executable forecast cycle (CYCLE-v1).** Apply [FORECAST_CYCLE_PROTOCOL](FORECAST_CYCLE_PROTOCOL.md). New contextual forecasts use MODEL_ASSISTED_CYCLE_V1 with a frozen exact-competition release, actual execution receipt, identical-contract baseline shadows and verified settlement feedback. Existing V3/tennis adapters retain their own cohorts; missing/unsupported inputs require a real failure receipt and retained research. This statistical/procedure release authorises experimental execution, not predictive qualification.
+**Executable forecast cycle (CYCLE-v1).** Defined in [FORECAST_CYCLE_PROTOCOL](FORECAST_CYCLE_PROTOCOL.md); summarised in [CORE](CORE.md) §7.
 
-**Local keys until settlement; updated mini after every game (MINI-v2).** Apply [MINI_LOG_IDENTITY_PROTOCOL](MINI_LOG_IDENTITY_PROTOCOL.md). Research and mini creation (prompts 1–2) use stable local event keys and never assign or reserve canonical P-IDs. A canonical P-ID is assigned only in an event's settlement phase: prompt 3 settles the event and then runs the prompt-4 import, which assigns the ID. After each prompt-1 game request the repository agent appends the card to the active mini under `research/active_minis/`, updates intake and footer, reads the file back, and commits and pushes it. Preserve every owner-entered Upcoming game block and all earlier issued bytes. Formats: mini-log-10 / mini-settlement-10; earlier records retain their original formats.
+**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](MINI_LOG_IDENTITY_PROTOCOL.md); summarised in [CORE](CORE.md) §2.
 
-**Persistent research and corroboration (EXH-v1).** Apply [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md) to every required field in research, logging, settlement and verification. If a source is incomplete, open alternatives and verify material facts with another independent source; track every remaining field and attempt. Unresolved facts/corroboration never qualify as complete information. New settlements use mini-settlement-10 with a visible source-discovery/reuse section, three source/attempt/closure CSVs and S17; older originals retain their rules and bytes. Consult [RESEARCH_SOURCE_REGISTER](RESEARCH_SOURCE_REGISTER.md) and prior package registers, recheck actual coverage, and continue discovery beyond them.
+**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
 
-**Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** For every game, research both sides' L5/L10/L15/L20 online under [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md), with opened sources, dated game rows and true n. Seek exact-game confirmed players, starting roles, bench/replacements and absences under [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md); projected players remain unconfirmed. The retired local results store and its derived profiles are not required inputs or fallbacks. Earlier archive-first directions are superseded.
-
-> **Manual research timing (15 October 2026):** [TIMING_RESEARCH_PROTOCOL](TIMING_RESEARCH_PROTOCOL.md) supersedes older fixed advance research/freeze targets. Complete this sport's research even after play starts when needed. Record verified pre-start inputs, actual issue phase and outcome exposure separately; freeze only the completed original. A post-start-issued card remains in its own research cohort, not a pre-start-release claim.
-
-> **v11 precedence (2026-10-12, audit R09/R11).** [CURRENT_RULES](CURRENT_RULES.md), [SELECTION_RULES](SELECTION_RULES.md), [SCORING_AND_VALIDATION](SCORING_AND_VALIDATION.md), [CARD_AND_LOG_TEMPLATES](CARD_AND_LOG_TEMPLATES.md) and prompt 1 govern new work (MDS-2026.10.12-v11.0). This file remains the sport's reference for playing rules, mechanisms, sources and historical lessons. **Non-operative here:**
-
-> **Mandatory availability research (14 October 2026):** apply [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md) §§1–6 under CURRENT_RULES §5b for every competition in this sport. Research both sides' starters/starting role, selected bench/replacements and current medical/absence/eligibility reports separately; use official team sheets, local-language discovery for obscure leagues and a final late-change recheck. Record evidence and actual failed attempts in existing A3/A8/C20. Probable players, rosters and missing injury reports never become confirmation.
-> - RM-1 q ranking, q tiers, `TOP2_QUALITY` and cushion-term ranking: new cards rank by p_card (P_ORDER_V2).
-> - TB-1 / TB-1-MD "anchoring": `BASELINE_P` is always the league-only `BASELINE_LEAGUE_V1`, and TB-1-MD is a printed team-model reference only.
-> - Row-level numeric caps and grade caps not restated in CURRENT_RULES.
-> - Steps of the retired RULES_GENERAL / GFA algorithm.
-> - Any instruction to rank or settle that conflicts with the controls above.
->
-> The two "October 5" authority notes below are historical. Authority mode now follows CURRENT_RULES §0: a run uses either the pinned published main or the local working tree, never both. Recent form follows ARCHIVE_USE_GUIDE online form recipe R2 (L5/L10/L15/L20 counted once).
-
-> **Current authority (October 5):** [METHOD.md](METHOD.md) and [CURRENT_RULES.md](CURRENT_RULES.md) govern new work. Requested qualitative or explicitly uncalibrated research is retained under stable local keys regardless of calibration; prompt 4 alone assigns canonical IDs during import. Numerical performance certification is separate. Read current IDs/freeze from the [status register](GAME_LOG_STATUS_CURRENT.md), unresolved items from the [carryover](research/verification/closure_2026-10-05/carryover.md), and [current implementation evidence](research/verification/implementation_2026-10-05/REPORT.md). Earlier method, queue, freeze and eligibility statements below retain their historical scope.
-
-**Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
+**Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
 
 # Basketball analysis rules
 
@@ -99,34 +82,24 @@ Numerical-engine design notes (the engine code was removed on 2026-10-09; comput
 3. **Player Rotation & Minutes Exposure**: Team efficiency adjusts dynamically for confirmed starters, bench rotation minutes, and replacement-level usage transfers.
 4. **Independent Training**: Fit exclusively on `H0-BASKETBALL-NBA-v1`; D0 is strictly reserved for qualitative error diagnostics.
 
-
-
 ## 1. Identity and contract
-
 
 Resolve league, season/rules era, regulation/OT treatment, venue, scheduled start, quarter/half/full-game phase, team/player statistic, line, and operator terms. NBA, WNBA, NCAA, FIBA, domestic leagues, summer league, and preseason have different clocks, foul rules, rotations, and overtime environments.
 
-
 A phase already completed at issue is SETTLED_AT_ISSUE and unranked.
-
 
 ## 2. High-value inputs
 
-
 ### Participants and minutes
-
 
 - Use the newest official injury/availability report and confirmed starting five.
 - Separate active status from expected minutes, role, usage, and closing-lineup probability.
 - Model replacement minutes and lineup combinations; uncertain minutes widen the distribution rather than making all player projections worthless.
 - Record rest, back-to-back, travel, altitude, and recent overtime.
 
-
 ### Possession process
 
-
 Use opponent-adjusted:
-
 
 - possessions/pace and transition share;
 - half-court efficiency and shot quality;
@@ -136,24 +109,17 @@ Use opponent-adjusted:
 - lineup-specific offence/defence;
 - foul/bonus and late-game behaviour.
 
-
 Raw points per game and recent shooting percentage do not substitute for possessions and shot profile.
-
 
 ## 3. Model
 
-
 Exposure units are minutes, possessions, lineup stints, usage, and shot/rebound/turnover opportunities. Estimate possessions and per-possession efficiency jointly, with lineup branches and overdispersed shooting outcomes.
-
 
 Model Q1, Q2, first half, second half, and full game as related but distinct segments. Derive all totals, spreads, winners, and props from one coherent joint game distribution.
 
-
 For numerical training, benchmark a conditional empirical/joint score distribution and simple regularized possession × efficiency model before a possession/lineup state simulator. Candidate nonlinear models estimate possession, efficiency, shot/rebound/turnover or distribution parameters—not unrelated classifiers for each total/spread. The A2 candidate samples remaining possessions, lineup stints, shot/FT/turnover/rebound outcomes, foul/bonus, late fouling, blowout and overtime, then produces one joint team-score distribution. Direct bivariate Normal/Student-t or distributional boosting forms are challengers only with discrete/support, tail, covariance and held-out calibration checks. None is currently fit or validated.
 
-
 ## 4. Structural controls
-
 
 1. **Nested rows are dependent.** One Q1/H1/full-game pace thesis gets one PRIMARY_FORMAL row unless another phase has independent evidence.
 2. **Q1 pace does not determine Q2.** Use rotation, matchup, fouls, possessions, and shot quality for the next segment.
@@ -175,27 +141,20 @@ For numerical training, benchmark a conditional empirical/joint score distributi
 18. **Late blowouts are multi-axis states.** Separate favourite starter reduction, favourite bench offensive quality/pace, favourite defensive-intensity change, underdog response scoring and closing-margin compression. Garbage time can raise the total while preserving or widening the margin; never apply one automatic scoring or compression sign.
 19. **Roster names become exposure before effects.** For every decision-driving player, distinguish available, confirmed starter, bench/closing role, expected minutes, lineup stints, usage and replacement quality. A deep roster can sustain a scoring tail with fewer starter minutes; availability of a star is not the same as full-event star-lineup exposure.
 
-
 ## 5. Live state
-
 
 Store score, quarter/clock, possession estimate, lineups on court, fouls/bonus, timeouts, rotations/minutes, shot profile, turnovers, offensive rebounds, injuries, and current pace. Rebuild remaining possessions and each later segment independently.
 
-
 ## 6. Sources and settlement
-
 
 - Official league match centres and play-by-play control state/final.
 - Official injury reports and team releases control availability.
 - The [NBA statistics glossary](https://www.nba.com/stats/help/glossary) controls NBA definitions; use the equivalent official competition source elsewhere.
 - Reputable play-by-play/tracking sources may support lineup and shot-quality features after coverage checks.
 
-
 Settle from the official final and named statistic provider, preserving regulation/OT and phase boundaries.
 
-
 ## 7. Upcoming-game research sequence
-
 
 1. Verify league/rules, regulation/OT terms, phase and statistic provider; freeze the complete candidate slate.
 2. Retrieve official injury/availability status and likely starters before process history. Recheck the official release and confirmed lineup near tip.
@@ -204,18 +163,13 @@ Settle from the official final and named statistic provider, preserving regulati
 5. When current roster evidence conflicts with old H2H/cover history, show the baseline/current-regime mixture and make the spread ranking explain why the named separation branch is or is not subordinate.
 6. Build the team-score budget at the supplied total and spread, then derive team scores, winner, total and margin from the joint game object. If the line is inside the stated central corridor or ordinary branches cross both sides without explicit weights, cap the directional evidence at LOW under RULES_GENERAL (archived). Player props use a linked `participation × minutes × usage/opportunity × rate` target, not team score alone.
 
-
 Official league/team sources control current facts; official metric glossaries and audited play-by-play/tracking sources control their defined fields. Query/reference sites may cross-check trends but never override injuries, starters, rules or the operator's price.
-
 
 ## 8. SFA-BASKETBALL — sport forecast algorithm
 
-
 Algorithm ID: `SFA-BASKETBALL`. Effective **2026-09-02**. Instantiates `GFA-2` (RULES_GENERAL (archived) §11) with basketball content. Process composition only; no fitted weight, scenario weight or published probability is introduced. NBA, WNBA, NCAA, FIBA, EuroLeague, domestic, summer-league and preseason populations are never pooled.
 
-
 ### 8.1 Blocking preconditions
-
 
 | Precondition | Requirement | Failure output |
 |---|---|---|
@@ -224,9 +178,7 @@ Algorithm ID: `SFA-BASKETBALL`. Effective **2026-09-02**. Instantiates `GFA-2` (
 | `BK-P3` phase identity | Which segment each supplied row settles on: Q1, Q2, H1, H2, full game, and whether overtime is included | A completed segment is `SETTLED_AT_ISSUE` and unranked |
 | `BK-P4` operator endpoint | Regulation or including overtime, for every total, spread and team total | Label `UNKNOWN_DEFINITION` and keep the overtime branch explicit |
 
-
 ### 8.2 Exposure chain
-
 
 | Step | Output |
 |---|---|
@@ -238,12 +190,9 @@ Algorithm ID: `SFA-BASKETBALL`. Effective **2026-09-02**. Instantiates `GFA-2` (
 | `BK-S6` | Segment linkage: Q1, Q2, H1, H2 and full game as related but separately parameterised states, each with its own rotations |
 | `BK-S7` | One joint team-score object with lineup branches and overdispersed shooting, from which every contract is queried |
 
-
 Raw points per game and a recent shooting percentage never substitute for `BK-S2`–`BK-S4`.
 
-
 ### 8.3 Mandatory branch set
-
 
 | Branch | Content |
 |---|---|
@@ -256,12 +205,9 @@ Raw points per game and a recent shooting percentage never substitute for `BK-S2
 | `BK-B7` | Foul, bonus and late intentional fouling adding free-throw possessions |
 | `BK-B8` | Overtime under the exact operator endpoint |
 
-
 `BK-B3`–`BK-B6` are the mismatch state tree. They must be enumerated separately for any double-digit spread; a large handicap and an Under may never be treated as independent safety plays.
 
-
 ### 8.4 Contract derivation map
-
 
 | Contract | Queried from | Extra condition the mechanism must predict |
 |---|---|---|
@@ -271,9 +217,7 @@ Raw points per game and a recent shooting percentage never substitute for `BK-S2
 | Q1, Q2, H1, H2 | The segment's own rotations and possessions | A prior segment is neither a ceiling nor a continuation rule |
 | Player props | `participation x minutes x usage/opportunity x rate` | Teammate competition, defensive matchup and closing-lineup role |
 
-
 ### 8.5 Kill-path library
-
 
 | Kill path | Defeats | Evidence origin |
 |---|---|---|
@@ -286,9 +230,7 @@ Raw points per game and a recent shooting percentage never substitute for `BK-S2
 | A missing rim protector, rebound anchor, primary creator or closer | Old head-to-head and cover history retained at high evidence | §4 control 12 |
 | Q2 rotation and foul state differing from Q1 | An H1 row inherited from a Q1 pace read | §4 controls 1–3 |
 
-
 ### 8.6 Sport ordering overrides
-
 
 1. Nested Q1, H1 and full-game rows sharing one pace thesis contribute one `PRIMARY_FORMAL` row. A derivative segment reaches a top slot only on independent segment evidence.
 2. An extreme spread is not `OUTSIDE` corridor by size alone. Classify it from the factorised separation estimate in `BK-B3`–`BK-B6`.
@@ -296,9 +238,7 @@ Raw points per game and a recent shooting percentage never substitute for `BK-S2
 4. Minutes uncertainty widens the distribution. It never converts an availability binary into a full-workload assumption, and it never makes a player projection worthless.
 5. Cover counts, recent scoring averages and reputation are `E — diagnostic only`.
 
-
 ### 8.7 Pre-issue checklist
-
 
 1. `BK-P1`–`BK-P4` status printed, with the availability release time.
 2. Minutes and lineup-stint distribution stated for every decision-driving player, including replacements.
@@ -318,15 +258,11 @@ Raw points per game and a recent shooting percentage never substitute for `BK-S2
 16. Winner-and-cushion reconciliation (G30.1) whenever Rank #1 is an underdog cushion, with the outright-win and narrow-loss branch ordering stated. Example separation kill path for this sport: a fourth-quarter closing-lineup run.
 17. Deficit attribution (G14.1) recorded for every weak, absent, returning or small-sample participant: which side's distribution moved and through which exposure step.
 
-
 ### 8.8 Recency, head-to-head and trend windows
-
 
 Implements `GFA-2` step G13.1 (RULES_GENERAL (archived) §11.3B) and runs at that point in the algorithm, not at the end. Retrieval of L5/L10/L15/L20 for both sides and for the head-to-head series is mandatory; a window that does not exist is recorded with its true count and a missingness code.
 
-
 Populate one windowed table per side with these metrics, and one head-to-head table:
-
 
 | Window metric | Content |
 |---|---|
@@ -337,21 +273,15 @@ Populate one windowed table per side with these metrics, and one head-to-head ta
 | Margin shape | Final margins in each window, held separately from the win-loss count |
 | Decision-driving players | Each player's own last 5/10/15/20 games: minutes, usage and the contract's stat |
 
-
 **Head-to-head continuity.** Continuity means the same rotation and coach. A two-game head-to-head phase pattern cannot control a current segment, and a meeting played before a trade, an injury return or a coaching change fails continuity.
-
 
 **Descriptive recency windows (G13.1; revised 2026-09-17).** Retrieve L5/L10/L15/L20 and continuity-qualified H2H with unique-event counts. These windows overlap. Monotonicity and dispersion among their averages are not a statistical trend/noise test. Report direction descriptively; estimate recency decay and opponent/regime effects using time-ordered validation. See SCORING_AND_VALIDATION section 5.
 
-
 **De-duplication.** The windows overlap by construction and share matches with the head-to-head and venue series. Shrink from unique underlying events under G9; never treat L5, L10, L15 and L20 as four confirmations.
-
 
 ### 8.9 Environment and conditions
 
-
 Implements `GFA-2` step G15.1 (RULES_GENERAL (archived) §11.3C). Venue classification for this sport is normally **INDOOR**.
-
 
 | Field | Use in this sport |
 |---|---|
@@ -359,21 +289,15 @@ Implements `GFA-2` step G15.1 (RULES_GENERAL (archived) §11.3C). Venue classifi
 | Altitude | Denver, Mexico City and similar venues, entered through conditioning and pace, not as a label |
 | Rest, travel and back-to-back | Segmented by half under §8.6, never a full-game scalar |
 
-
 Failure to obtain the match-window forecast for an outdoor or open-roof event yields `WEATHER_NOT_AVAILABLE`, widened total and margin distributions, and a `LEAN` cap on every weather-dependent row. No factor above carries an automatic total direction.
-
 
 ### 8.10 Base-rate anchors and derived stat lanes
 
-
 **Anchoring (G12.1).** Anchor spreads on the league frequency of covering at that number and totals on the competition scoring environment. A double-digit handicap is `CONJUNCT` and anchors below a match total of similar apparent confidence.
-
 
 StatMuse is an accepted research accelerator for this sport under `SOURCES.md`, using the verified query patterns recorded there. Every returned row is date-checked and reconciled against the official league source before it is decision-driving, and StatMuse never controls participants, availability, rules, state or settlement.
 
-
 **Derived and low-salience fields that are available and routinely skipped:**
-
 
 | Field | Note |
 |---|---|
@@ -381,45 +305,31 @@ StatMuse is an accepted research accelerator for this sport under `SOURCES.md`, 
 | Foul and bonus state | Feeds `BK-B7` free-throw possessions |
 | Officiating crew pace and foul rate | Conditional only, and only where current data support it |
 
-
 ## 9. Sport and competition rules reference
-
 
 Added 2026-09-04; last reviewed 2026-09-04. Standing reference for the playing rules of basketball and the competition-specific rules of every basketball competition in the prediction logs. Supports `BK-P3` (rule set and duration) and §6 settlement; introduces no rate, weight or ordering rule. **The single most important identity fact in basketball is which rule set applies — FIBA, WNBA or NBA — because it changes game length, the foul/bonus economy, overtime, and the three-point distance.**
 
-
 **Maintenance (RULES_GENERAL (archived) §3, `G2`).** Before the first card of a new WNBA season, a new FIBA qualifier window, or a new tournament edition, re-verify the rule set (FIBA / WNBA / NBA), the roster and expansion state, the playoff/finals format and any in-season-tournament structure against the official body, and update this section **before** issuing the card. Basketball adds structural events regularly (the NBA play-in tournament, in-season cups, WNBA's move to a best-of-seven final and 15-team league). The first time a new basketball competition is forecast (an NBA card, a EuroLeague card, another national league), document its full rules — including whether it is FIBA or NBA rules — here first.
-
 
 ### 9.1 Universal basketball rules
 
-
 **Objective.** Two teams of five on court. Score by putting the ball through the opponent's basket: **2 points** inside the three-point arc, **3 points** beyond it, **1 point** per free throw. Most points at the end wins; a tie forces overtime.
-
 
 **Game clock.** Four quarters. **Stop clock** — the game clock stops on every whistle, made basket in the last minutes, timeout and out-of-bounds. Quarter length is rule-set-specific (§9.2).
 
-
 **Shot clock.** The offence must attempt a shot that hits the rim within **24 seconds**. After an offensive rebound the shot clock resets to **14** (FIBA, WNBA, NBA all use 14). Failure = shot-clock violation, ball over.
-
 
 **Possession and restarts.** Opening tip-off is a jump ball. Thereafter, held balls and other tie situations are resolved by the **alternating-possession arrow** in FIBA and the WNBA; the **NBA still uses jump balls** for held balls. After a made basket the opponent inbounds from the baseline without the clock starting until the ball is touched in-bounds.
 
-
 **Fouls.** A personal foul is illegal contact. Shooting fouls → free throws (2, or 3 beyond the arc, or 1 + the basket if it went in). Non-shooting fouls → inbound, unless the team is **in the bonus / penalty** (over the team-foul limit for the period), in which case → free throws. **Player foul-out** limit and **team-foul bonus** thresholds are rule-set-specific (§9.2). **Technical fouls** (unsportsmanlike conduct, illegal substitution, etc.) and **unsportsmanlike/flagrant fouls** (excessive contact) award free throws **and** possession.
-
 
 **Violations.** Traveling, double dribble, carrying, 3-second (offensive) lane violation, 5-second closely guarded (FIBA/college), 8-second backcourt (FIBA/WNBA/NBA), backcourt ("over and back"), goaltending / basket interference, out of bounds, kicked ball.
 
-
 **Substitutions and timeouts.** Unlimited substitutions at dead balls. Timeout counts, who may call one, and when, are rule-set-specific.
-
 
 **Overtime.** **5 minutes**, repeated until a winner — in every professional rule set. Team fouls usually carry over or reset per rule set (NBA/WNBA: fouls carry; FIBA: bonus is per period and OT counts with the 4th quarter). Full-game betting contracts **include overtime** unless the operator states "regulation only" (RULES_BASKETBALL.md §1; the log's WNBA cards state this explicitly).
 
-
 ### 9.2 Rule-set differences — FIBA vs WNBA vs NBA
-
 
 | Element | FIBA | WNBA | NBA |
 |---|---|---|---|
@@ -436,30 +346,21 @@ Added 2026-09-04; last reviewed 2026-09-04. Standing reference for the playing r
 | Coach's challenge | Competition-dependent (some FIBA events use one) | Yes (one) | Yes (one, retained if successful) |
 | Continuous vs stop clock in low minutes | Stop clock throughout | Stop clock | Stop clock |
 
-
 **Analytical consequences.** A FIBA game is ~17% shorter than an NBA game (40 vs 48 min) and its foul economy is different: fewer fouls to foul out (5) and a quarter-reset bonus mean **star foul trouble bites earlier** and free-throw volume is lower per minute. FIBA's "no defensive 3 seconds" plus a live-off-the-rim ball favour **interior defence and second-chance points**. Never transfer an NBA or WNBA per-game total or pace figure into a FIBA game without rescaling to 40 minutes and the FIBA foul environment.
-
 
 ### 9.3 WNBA
 
-
 **Structure (2026).** **15 teams** (Portland Fire and Toronto Tempo added for 2026), nominal Eastern/Western conferences but a **single league table for playoff seeding**. **44-game** regular season. Rosters **11–12 players** (hard salary cap frequently forces 11). WNBA plays under its own rule book, which is close to the NBA's but on a **40-minute** game (four 10-minute quarters).
-
 
 **In-season tournament.** The **Commissioner's Cup** — designated early-season games count both for the standings and a separate Cup table; the two Cup finalists play a standalone final that does **not** count in the standings. Treat a Commissioner's Cup final as its own event/population.
 
-
 **Playoffs (2026).** **Top 8 by record**, no conference requirement. **First round: best-of-three** (higher seed hosts Games 1 and 2). **Semi-finals: best-of-five.** **Finals: best-of-seven**, 2-2-1-1-1 (higher seed hosts Games 1, 2, 5, 7) — best-of-seven since 2025. Higher seed has home-court throughout. No play-in tournament (that is NBA-only).
-
 
 **Settlement (WNBA).** Full-game lines include overtime. Quarter/half lines settle at the buzzer of that period. Player-prop providers differ on whether OT counts toward player totals — freeze the provider. A forfeit/abandonment is operator-specific.
 
-
 ### 9.4 FIBA national-team competitions
 
-
 All FIBA events use the **FIBA rule set** (§9.2): 40-minute games, 5 fouls out, per-quarter bonus at 5, alternating possession, live-off-the-rim ball.
-
 
 **FIBA Basketball World Cup 2027 — Qualifiers (the "Qualifiers" and "Pre-Qualifiers" cards).**
 - **80 teams** across four regions (Africa 16, Americas 16, Asia/Oceania 16, Europe 32). **Six windows**, Nov 2025 → Mar 2027 (Africa five windows). Each window is a ~9-day FIBA international break with **two games per team**.
@@ -469,32 +370,22 @@ All FIBA events use the **FIBA rule set** (§9.2): 40-minute games, 5 fouls out,
 - **Standings within a group:** points (win 2, loss 1, forfeit 0), then, if level, the **mini-league of results between the tied teams** (head-to-head points, then head-to-head point difference, then head-to-head points scored), then overall point difference. Note this is **not** net-points-first like some leagues.
 - **Roster:** 12 players per game from a wider registered pool; **NBA and top-league players are frequently unavailable in qualifier windows** because the windows fall inside club seasons — participant identity and effective strength are highly window-dependent. A qualifier "national team" is often a domestic-league + second-tier-Europe roster, not the World Cup roster.
 
-
 **FIBA Women's Basketball World Cup 2026 and its warm-ups.** Same FIBA rules. Warm-up / preparation games are **friendlies** — treat as a phased, rotation-heavy population (RULES_GENERAL (archived) friendly handling), not competitive form.
-
 
 ### 9.5 LNBP (Mexico) and the 2026 Copa Value
 
-
 **Onboarding status: `PARTIAL / BLOCKING FOR A FUTURE CARD`.** P-279 was the first Copa Value card and was issued before this competition existed in the reference section, so it failed the new-competition onboarding requirement in RULES_GENERAL (archived) §3. This subsection repairs the verified reference facts after the event; it does not retroactively make P-279 compliant and it is not permission to forecast the next Copa/LNBP event until the unresolved fields below are closed.
-
 
 **Verified 2026 competition identity.** The Copa Value is an LNBP mid-season tournament for the top eight teams after the first half of the 2026 regular season. The 2026 edition runs 3–6 September at the Gimnasio Marcelino González in Zacatecas, using a single-game, single-elimination bracket: four quarterfinals, two semifinals and a final. Mineros is the arena's resident team and therefore had a real host/home-floor state against Abejas; the single-site label must not be converted into neutral-court treatment. The [Government of Zacatecas event release](https://www.zacatecas.gob.mx/zacatecas-epicentro-del-basquetbol-nacional-con-la-copa-value-2026-gobernador-david-monreal/) owns the host venue/date/format statement; the dated [NTR Zacatecas match report](https://ntrzacatecas.com/2026/09/mineros-avanza-a-las-semifinales-de-la-copa-value/) confirms that Mineros–Abejas was a quarterfinal, that Mineros won 96–86 and that the winner advanced to the 5 September semifinal. Named reporting may corroborate those fields but does not own the league's playing rules.
 
-
 **Playing-law and roster gap.** No accessible 2026 LNBP/Copa Value regulations or field-owner rulebook was recovered in the P-279 promote/archive audit. Do **not** infer from the league's professional status, FIBA affiliation, a live-score front end or a sportsbook that the exact LNBP clock, bonus, challenge, roster/import, overtime, abandonment or player-eligibility provisions equal another FIBA competition. [FIBA's official download page](https://about.fiba.basketball/en/services/resource-hub/downloads) states that the 2026 FIBA rules become effective on **1 October 2026**; on 3 September the 2024 FIBA edition was still the current international rule baseline. That date distinction does not establish which edition or local variations LNBP adopted.
-
 
 Before another LNBP or Copa Value card, obtain an exact current league regulation, competition bulletin or field-owner statement and record all of the following at `BK-P1`/`G2`: period length and clock; foul-out/bonus/challenge rules; overtime and tie resolution; Copa bracket/seeding and any reseeding; home/bench designation at the single site; roster size and game-day activation; foreign/import-player and replacement eligibility; postponement/forfeit/abandonment treatment; and whether the Copa result affects the regular-season table. Until that packet is complete, `BK-P1 = FAIL`, the event is not forecastable, and no LNBP rate may be pooled with a generic FIBA population.
 
-
 **Settlement.** Freeze the operator's own regulation-versus-overtime, postponement, abandonment and player-prop terms. Without them, full-game side/total action is `UNKNOWN_DEFINITION` even if a research settlement is direction-invariant. P-279 did not require overtime and every recovered high-quality final agreed on 96–86, so its winner, ±5.5 and 169.5 result fields are direction-invariant; that does not validate an unstated operator rule. Quarter/player detail remains provisional unless an exact LNBP field-owner box or a provider with a frozen definition is recovered. Fox Sports México's statement that Mineros won all four quarters conflicts with the provisional 20–23 third-quarter row and may not control phase settlement.
-
 
 **Source state at review (2026-09-04; superseded for results by §"2026-09-17(b)" — the domain now returns HTTP 200 with a JavaScript-only shell, and the per-Jornada finals are recoverable by rendering `lnbp.mx/<Team>/team_results.html`).** `https://lnbp.mx/` identifies the field owner but returned HTTP 403 to the scripted research route; the official mobile-app listing did not expose a validated API, stable event IDs, correction history or use/retention terms. Use the exact LNBP record when accessible; otherwise seek an official club/static report and then two independent dated high-quality reports for a provisional final. Never upgrade the fallback into a league-wide structured-stat source.
 
-
 ### 9.6 Identity checklist (basketball)
-
 
 Resolve before any rate work: **rule set (FIBA / WNBA / NBA / other league)** and therefore game length, foul-out limit, bonus threshold, three-point distance and overtime economy; competition and stage (regular season / in-season cup / qualifier window / knockout / friendly); roster availability for the specific window; whether the contract is **regulation-only or includes overtime**; the standings tiebreak system if the card touches qualification; and the operator's forfeit/abandonment rule.

@@ -1,29 +1,12 @@
-> **Primary ML/RL (15 October 2026):** [PRIMARY_PREDICTION_PROTOCOL](PRIMARY_PREDICTION_PROTOCOL.md) supplies actual model-assisted original probabilities in the supported exact competition/endpoint. Keep these sport-specific physical/source/family checks. Unsupported model/phase/participant regimes remain NO_FORECAST, not another league's model. This amendment overrides older blanket manual-model exclusions, not sporting truth or the market firewall.
+> **Authority.** [CORE](CORE.md) and [CURRENT_RULES](CURRENT_RULES.md) govern new work; this page holds this sport's rules, and earlier statements below keep their historical scope.
 
-**Executable forecast cycle (CYCLE-v1).** Apply [FORECAST_CYCLE_PROTOCOL](FORECAST_CYCLE_PROTOCOL.md). New contextual forecasts use MODEL_ASSISTED_CYCLE_V1 with a frozen exact-competition release, actual execution receipt, identical-contract baseline shadows and verified settlement feedback. Existing V3/tennis adapters retain their own cohorts; missing/unsupported inputs require a real failure receipt and retained research. This statistical/procedure release authorises experimental execution, not predictive qualification.
+**Executable forecast cycle (CYCLE-v1).** Defined in [FORECAST_CYCLE_PROTOCOL](FORECAST_CYCLE_PROTOCOL.md); summarised in [CORE](CORE.md) §7.
 
-**Local keys until settlement; updated mini after every game (MINI-v2).** Apply [MINI_LOG_IDENTITY_PROTOCOL](MINI_LOG_IDENTITY_PROTOCOL.md). Research and mini creation (prompts 1–2) use stable local event keys and never assign or reserve canonical P-IDs. A canonical P-ID is assigned only in an event's settlement phase: prompt 3 settles the event and then runs the prompt-4 import, which assigns the ID. After each prompt-1 game request the repository agent appends the card to the active mini under `research/active_minis/`, updates intake and footer, reads the file back, and commits and pushes it. Preserve every owner-entered Upcoming game block and all earlier issued bytes. Formats: mini-log-10 / mini-settlement-10; earlier records retain their original formats.
+**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](MINI_LOG_IDENTITY_PROTOCOL.md); summarised in [CORE](CORE.md) §2.
 
-**Persistent research and corroboration (EXH-v1).** Apply [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md) to every required field in research, logging, settlement and verification. If a source is incomplete, open alternatives and verify material facts with another independent source; track every remaining field and attempt. Unresolved facts/corroboration never qualify as complete information. New settlements use mini-settlement-10 with a visible source-discovery/reuse section, three source/attempt/closure CSVs and S17; older originals retain their rules and bytes. Consult [RESEARCH_SOURCE_REGISTER](RESEARCH_SOURCE_REGISTER.md) and prior package registers, recheck actual coverage, and continue discovery beyond them.
+**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
 
-**Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** For every game, research both sides' L5/L10/L15/L20 online under [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md), with opened sources, dated game rows and true n. Seek exact-game confirmed players, starting roles, bench/replacements and absences under [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md); projected players remain unconfirmed. The retired local results store and its derived profiles are not required inputs or fallbacks. Earlier archive-first directions are superseded.
-
-> **Manual research timing (15 October 2026):** [TIMING_RESEARCH_PROTOCOL](TIMING_RESEARCH_PROTOCOL.md) supersedes older fixed advance research/freeze targets. Complete this sport's research even after play starts when needed. Record verified pre-start inputs, actual issue phase and outcome exposure separately; freeze only the completed original. A post-start-issued card remains in its own research cohort, not a pre-start-release claim.
-
-> **v11 precedence (2026-10-12, audit R09/R11).** [CURRENT_RULES](CURRENT_RULES.md), [SELECTION_RULES](SELECTION_RULES.md), [SCORING_AND_VALIDATION](SCORING_AND_VALIDATION.md), [CARD_AND_LOG_TEMPLATES](CARD_AND_LOG_TEMPLATES.md) and prompt 1 govern new work (MDS-2026.10.12-v11.0). This file remains the sport's reference for playing rules, mechanisms, sources and historical lessons. **Non-operative here:**
-
-> **Mandatory availability research (14 October 2026):** apply [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md) §§1–6 under CURRENT_RULES §5b for every competition in this sport. Research both sides' starters/starting role, selected bench/replacements and current medical/absence/eligibility reports separately; use official team sheets, local-language discovery for obscure leagues and a final late-change recheck. Record evidence and actual failed attempts in existing A3/A8/C20. Probable players, rosters and missing injury reports never become confirmation.
-> - RM-1 q ranking, q tiers, `TOP2_QUALITY` and cushion-term ranking: new cards rank by p_card (P_ORDER_V2).
-> - TB-1 / TB-1-MD "anchoring": `BASELINE_P` is always the league-only `BASELINE_LEAGUE_V1`, and TB-1-MD is a printed team-model reference only.
-> - Row-level numeric caps and grade caps not restated in CURRENT_RULES.
-> - Steps of the retired RULES_GENERAL / GFA algorithm.
-> - Any instruction to rank or settle that conflicts with the controls above.
->
-> The two "October 5" authority notes below are historical. Authority mode now follows CURRENT_RULES §0: a run uses either the pinned published main or the local working tree, never both. Recent form follows ARCHIVE_USE_GUIDE online form recipe R2 (L5/L10/L15/L20 counted once).
-
-> **Current authority (October 5):** [METHOD.md](METHOD.md) and [CURRENT_RULES.md](CURRENT_RULES.md) govern new work. Requested qualitative or explicitly uncalibrated research is retained under stable local keys regardless of calibration; prompt 4 alone assigns canonical IDs during import. Numerical performance certification is separate. Read current IDs/freeze from the [status register](GAME_LOG_STATUS_CURRENT.md), unresolved items from the [carryover](research/verification/closure_2026-10-05/carryover.md), and [current implementation evidence](research/verification/implementation_2026-10-05/REPORT.md). Earlier method, queue, freeze and eligibility statements below retain their historical scope.
-
-**Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
+**Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
 
 # Tennis analysis rules
 
@@ -90,15 +73,11 @@ Numerical-engine design notes (the engine code was removed on 2026-10-09; comput
 3. **Regime Conditioning**: Surface (Clay, Hard, Grass, Indoor) and tournament format (Best-of-3 vs Best-of-5) condition serve/return transition kernels.
 4. **Independent Training**: Fit exclusively on `H0-TENNIS-v1` (Tennis Abstract / OnCourt / Jeff Sackmann match charting); D0 is strictly reserved for qualitative error diagnostics.
 
-
 ## 1. Identity and contract
-
 
 Resolve tour/competition and level, event, round, surface and indoor/outdoor state, best-of format, final-set tiebreak rules, ball/altitude where verified, and whether the match is singles or doubles. Freeze each contract's retirement/walkover, completed-set, super-tiebreak, dead-heat and void rules from the named operator. A match winner, set handicap and total games contract can settle differently after retirement and are not interchangeable.
 
-
 ## 2. Participants, exposure and current regime
-
 
 - Confirm the exact players, handedness, current entry/ranking status, draw/round and scheduled start from the official event/tour source.
 - Record current surface, the player's recent surface-specific schedule, match duration, rest, travel, qualifying workload, medical timeout/retirement history and credible current injury reporting.
@@ -106,21 +85,15 @@ Resolve tour/competition and level, event, round, surface and indoor/outdoor sta
 - Use opponent-adjusted serve and return points won, first-serve-in rate, first/second-serve points won, break-point creation/saving, hold/break rates, ace/double-fault shape and tiebreak exposure where definitions and sample are reliable.
 - Shrink tiny current samples toward an appropriate tour/level/surface prior. Do not let one tournament or one match become the baseline.
 
-
 ## 3. Matchup and continuity
-
 
 Trace handedness, serve direction/return position, backhand/forehand tolerance, rally length, movement, height/bounce, net use and pressure-point performance through the current surface. Head-to-head is decision-driving only when surface, format, competitive level, fitness and technical/role continuity are material; an old indoor-hard meeting cannot control a current clay match.
 
-
 When ranking, older H2H, rankings and broad season aggregates must be explicitly reconciled against current surface form and serve-return stability under RULES_GENERAL's regime-dominance audit. If they conflict and the current sample is weak, widen the match distribution and lower evidence quality instead of choosing whichever history supports the preferred side.
-
 
 ## 4. Joint match model
 
-
 Exposure units are service points, return points, games, sets and match-completion state. Build one coherent qualitative or future numerical match process:
-
 
 1. participation and completion/retirement branches;
 2. surface- and opponent-adjusted point-on-serve distributions for both players;
@@ -128,15 +101,11 @@ Exposure units are service points, return points, games, sets and match-completi
 4. set score and tiebreak branches;
 5. match winner, set handicap and total-games queries derived from the same simulated or qualitative score tree.
 
-
 Best-of-three totals require explicit straight-set and three-set mixture weights. Best-of-five totals require separate three-, four- and five-set mixture weights before within-set closeness is applied. A player can be the better winner while a broad opponent +1.5-set cushion is more likely; that relationship must come from the shared match tree, not from independent narratives. Total games depend on set count and within-set closeness, so a deciding-set branch can rescue player set cushions and the Over without making those rows independent.
-
 
 The tree is two-sided. For each player, represent at least: ordinary straight-set control, close straight sets/tiebreaks, and a deciding-set win where supported. A perceived underdog may win quickly; never couple all underdog-win probability to a long or three-set match. First-set contracts use an explicit opening-set state derived from early hold/break/return pressure and current start patterns; they do not inherit the full-match winner ranking.
 
-
 ## 5. Structural controls
-
 
 1. **Surface is a regime variable.** Overall ranking and all-surface records never override a material surface-specific serve/return change without reconciliation.
 2. **Current stability is decomposed.** Distinguish first-serve entry, first/second-serve conversion, return pressure and break-point opportunity; one win/loss streak is not a mechanism.
@@ -151,27 +120,20 @@ The tree is two-sided. For each player, represent at least: ordinary straight-se
 11. **Kill paths include opponent control.** For a favourite handicap, “favourite wins narrowly” is incomplete whenever a credible opponent win—especially straight-set control—also defeats the contract.
 12. **Winner, handicap and total must pass a scoreline-coherence check.** If the tree strongly prefers one player and that player's game handicap, an Over requires an explicit close-set or extra-set mechanism. Write at least one representative scoreline for Rank #1 and verify that it is compatible with the other leading directions before freezing the order.
 
-
 ## 6. Live state
-
 
 Store set/game/point score, server, tiebreak state, elapsed time, verified injury/medical state and current serve-return point counts. Recalculate only the remaining point/game/set tree. Do not extrapolate a short hot serving spell as a permanent rate change, and do not use a stale scoreboard when participant orientation or server is uncertain.
 
-
 ## 7. Sources and settlement
-
 
 - Official ATP, WTA, ITF, event and governing competition pages control identity, draw, format, score and official result where exposed.
 - Official event/tour statistics control only their defined serve/return fields.
 - Reputable specialist score/stat pages may cross-check current results and fill research fields, but they do not override an official correction and require provider/definition continuity.
 - Player/social reporting can evidence a statement or injury report only when account identity and publication time are verified; official event status controls withdrawals and walkovers.
 
-
 Settle from the official final and exact operator retirement rules. If an official stat field is unavailable, use two independent high-quality sources and mark the field provisional; do not infer total games or set scores from the winner alone.
 
-
 ## 8. Upcoming-game research sequence
-
 
 1. Freeze competition/round, surface, format/tiebreak and operator retirement terms.
 2. Verify draw identity, schedule, current withdrawal/fitness state, rest/travel and qualifying workload.
@@ -181,15 +143,11 @@ Settle from the official final and exact operator retirement rules. If an offici
 6. For first-set rows, freeze a separate opening-set sub-tree and show why it differs from or agrees with the full-match state.
 7. Refresh official participant/status fields immediately before issue and log unresolved definitions or missing statistics.
 
-
 ## 9. SFA-TENNIS — sport forecast algorithm
-
 
 Algorithm ID: `SFA-TENNIS`. Effective **2026-09-02**. Instantiates `GFA-2` (RULES_GENERAL (archived) §11) with tennis content. Process composition only; no fitted weight, scenario weight or published probability is introduced, and no tennis target, source, dataset or model is approved or fit. ATP, WTA, Challenger, ITF, junior, UTR and exhibition levels are separate populations and their rates are not exchangeable.
 
-
 ### 9.1 Blocking preconditions
-
 
 | Precondition | Requirement | Failure output |
 |---|---|---|
@@ -199,9 +157,7 @@ Algorithm ID: `SFA-TENNIS`. Effective **2026-09-02**. Instantiates `GFA-2` (RULE
 | `TE-P4` current status | Verified withdrawal, medical, rest, travel and qualifying-workload state | Record the missingness code; never infer fitness from a result list |
 | `TE-P5` independent benchmark (added 2026-09-25; R-2 of the 2026-09-22 audit; enforces control 13) | Dated Tennis Abstract Elo, overall and surface-specific (ATP `tennisabstract.com/reports/atp_elo_ratings.html`; WTA `tennisabstract.com/reports/wta_elo_ratings.html`), **snapshotted before the event** with its page date. The card prints the implied best-of-three or best-of-five win probability beside its own winner mass. If the two differ by more than 10 percentage points, the card names the current mechanism or rebuilds the serve/return tree before issue | `BENCHMARK_NOT_RETRIEVED`: no winner, games-handicap or total row may be Rank #1. The benchmark is a check, never a probability source or calibration target |
 
-
 ### 9.2 Exposure chain
-
 
 | Step | Output |
 |---|---|
@@ -214,15 +170,11 @@ Algorithm ID: `SFA-TENNIS`. Effective **2026-09-02**. Instantiates `GFA-2` (RULE
 | `TE-S7` | Set-count mixture: explicit weights over two and three sets, or over three, four and five sets, before within-set closeness is applied |
 | `TE-S8` | One match tree from which winner, set handicap, total games, set betting and first-set rows are all queried |
 
-
 Sparse current samples shrink toward an appropriate tour, level and surface prior. One tournament or one match is never the baseline.
-
 
 ### 9.3 Mandatory branch set
 
-
 Both players receive the full set. A perceived underdog's win probability may never be attached only to long matches.
-
 
 | Branch | Content |
 |---|---|
@@ -235,9 +187,7 @@ Both players receive the full set. A perceived underdog's win probability may ne
 | `TE-B7` | Best-of-five extension states: three-, four- and five-set endpoints held separately |
 | `TE-B8` | Retirement, walkover or withdrawal state under the frozen operator terms |
 
-
 ### 9.4 Contract derivation map
-
 
 | Contract | Queried from | Extra condition the mechanism must predict |
 |---|---|---|
@@ -248,9 +198,7 @@ Both players receive the full set. A perceived underdog's win probability may ne
 | First set | Its own opening-set sub-tree from early hold, break and return pressure | Why the opening state differs from or agrees with the full-match state |
 | Player props | Service and return point counts from `TE-S2`/`TE-S3` times expected games | The provider's own definition |
 
-
 ### 9.5 Kill-path library
-
 
 | Kill path | Defeats | Evidence origin |
 |---|---|---|
@@ -263,9 +211,7 @@ Both players receive the full set. A perceived underdog's win probability may ne
 | A cushion supported by close sets, tiebreak exposure and margin resistance, which lengthens the same match | An Under co-ranked in the top half with that cushion; the evidence that promotes the handicap is the evidence that adds games | C-PL11-TEN-CUSHION-LENGTH (P-245) |
 | Sparse crossover or junior-adult evidence concentrating several ranks on one player | A slate whose top rows all depend on one thin read | C-PL2-TEN-CROSSOVER-RANK |
 
-
 ### 9.6 Sport ordering overrides
-
 
 1. Winner, handicap and total must pass the G25 coherence gate together. Write at least one representative scoreline for Rank #1 and check it against every other leading row before freezing the order.
 2. Rows drawn from one match tree are dependent. Only one is `PRIMARY_FORMAL` unless a row has independent target-specific evidence, such as a first-set state.
@@ -276,9 +222,7 @@ Both players receive the full set. A perceived underdog's win probability may ne
 7. A games handicap is evaluated by **aggregate games**, independently of the set winner: Player A +h wins when games_A − games_B + h > 0 (subject to exact action/retirement terms). It does not contain every match-win branch. An underdog can cover in short straight sets, and can win the match while losing a positive games handicap. Keep the independently constructed set-count mixture at `TE-S7`; ranking a cushion does not itself raise set count. Reconcile all rows by querying the same set/game tree (L-068).
 8. When a cushion is ranked first, the potential winner is named from the same branch mass under G30.1. If the favourite is still named, identify the close-loss states that separate the two claims.
 
-
 ### 9.7 Pre-issue checklist
-
 
 1. `TE-P1`–`TE-P4` status printed, including retirement terms.
 2. Surface- and level-adjusted serve and return baselines stated before any line, with shrinkage disclosed.
@@ -300,15 +244,11 @@ Both players receive the full set. A perceived underdog's win probability may ne
 18. **Matchup holds (`TE-S4`; added 2026-09-25):** each player's hold against this opponent is derived from serve × return, with the numerators and denominators shown.
 19. **Decisive-branch disclosure (§9.4; added 2026-09-25):** P(decisive straight sets) and P(three sets) are printed beside any best-of-three total from 18.5 to 21.5.
 
-
 ### 9.8 Recency, head-to-head and trend windows
-
 
 Implements `GFA-2` step G13.1 (RULES_GENERAL (archived) §11.3B) and runs at that point in the algorithm, not at the end. Retrieval of L5/L10/L15/L20 for both sides and for the head-to-head series is mandatory; a window that does not exist is recorded with its true count and a missingness code.
 
-
 Populate one windowed table per side with these metrics, and one head-to-head table:
-
 
 | Window metric | Content |
 |---|---|
@@ -318,21 +258,15 @@ Populate one windowed table per side with these metrics, and one head-to-head ta
 | Hold and break | Hold and break percentage, and tiebreak frequency and record |
 | Match length | Set counts and total games in each window, which is what a total-games line actually needs |
 
-
 **Head-to-head continuity.** Continuity means the same surface, comparable level and no material technical, fitness or ranking change since. An older indoor-hard meeting fails continuity for a current clay match, which is the exact failure logged when ranking and an old meeting outranked current surface form.
-
 
 **Descriptive recency windows (G13.1; revised 2026-09-17).** Retrieve L5/L10/L15/L20 and continuity-qualified H2H with unique-event counts. These windows overlap. Monotonicity and dispersion among their averages are not a statistical trend/noise test. Report direction descriptively; estimate recency decay and opponent/regime effects using time-ordered validation. See SCORING_AND_VALIDATION section 5.
 
-
 **De-duplication.** The windows overlap by construction and share matches with the head-to-head and venue series. Shrink from unique underlying events under G9; never treat L5, L10, L15 and L20 as four confirmations.
-
 
 ### 9.9 Environment and conditions
 
-
 Implements `GFA-2` step G15.1 (RULES_GENERAL (archived) §11.3C). Venue classification for this sport is normally **OUTDOOR unless the event is indoors or the roof is closed**.
-
 
 | Field | Use in this sport |
 |---|---|
@@ -341,18 +275,13 @@ Implements `GFA-2` step G15.1 (RULES_GENERAL (archived) §11.3C). Venue classifi
 | Temperature, humidity and altitude | Ball flight and court speed; heat rules and extended breaks change match length |
 | Ball type and court speed rating where the event publishes it | Directly affects hold rate and therefore total games |
 
-
 Failure to obtain the match-window forecast for an outdoor or open-roof event yields `WEATHER_NOT_AVAILABLE`, widened total and margin distributions, and a `LEAN` cap on every weather-dependent row. No factor above carries an automatic total direction.
-
 
 ### 9.10 Base-rate anchors and derived stat lanes
 
-
 **Anchoring (G12.1).** Anchor total games on the tour-and-surface distribution for that format, and set handicaps on the frequency of straight-set results at that level. Best-of-three and best-of-five anchors are separate.
 
-
 **Derived and low-salience fields that are available and routinely skipped:**
-
 
 | Field | Note |
 |---|---|
@@ -360,45 +289,31 @@ Failure to obtain the match-window forecast for an outdoor or open-roof event yi
 | Qualifying and recent match load | Entered through fitness and match sharpness, in both directions |
 | Retirement and medical-timeout history | Feeds the `TE-B8` branch, with the operator terms frozen |
 
-
 ## 10. Sport and competition rules reference
-
 
 Added 2026-09-04; last reviewed 2026-09-04. Standing reference for the rules of tennis scoring and the tour-by-tour format and administrative differences for every tennis body in the prediction logs: **Grand Slams (US Open)**, the **ATP Tour** and **ATP Challenger Tour**, the **WTA Tour**, the **ITF World Tennis Tour** (M15/M25 etc.), and the **UTR Pro Tennis Tour**. Supports `TE-P` identity (`§1`) and `§7` settlement; introduces no rate, weight or ordering rule.
 
-
 **Maintenance (RULES_GENERAL (archived) §3, `G2`).** The tours revise the rulebook most years (the 2022 final-set tiebreak alignment, on-court coaching becoming permanent in 2025, the spread of electronic line-calling, changes to medical-timeout and bathroom-break rules). Before the first card of a new Grand Slam, a new season on any tour, or a competition format not seen before (a Davis Cup / Billie Jean King Cup tie, a United Cup, an exhibition), re-verify the match format (best-of-3 vs 5, ad vs no-ad, standard vs match-tiebreak decider), the deciding-set rule, the coaching and line-calling rules, and the event's own draw/advancement structure, and update this section **before** issuing the card. The first time a new circuit is forecast (WTA 125, ATP Finals, a team event, a senior/legends event), document its full format and any format flexibility here first.
-
 
 ### 10.1 Scoring — universal
 
-
 **Point → game.** Points score **15, 30, 40, game**. At **40–40 ("deuce")** a player must win two points in a row: the first is **"advantage"**, the second wins the game; lose the point at advantage and it returns to deuce. This is **"ad scoring"** and is standard in all professional singles. **"No-ad"** (the first player to 4 points wins the game, a single deciding point at 3–3) is used in most professional **doubles**, in college tennis, and optionally in some development events.
-
 
 **Game → set.** First to **6 games, winning by 2**. At **6–6** a **tiebreak** is played (see §10.2). A set won 7–6 always went to a tiebreak; 7–5 did not.
 
-
 **Tiebreak (the standard 7-point one).** First to **7 points, win by 2**. Players serve 1 point, then 2 each thereafter; change ends every 6 points. The set is recorded as 7–6.
-
 
 **Set → match.** **Best-of-three sets** (win 2) everywhere except **men's Grand Slam singles**, which is **best-of-five** (win 3). Best-of-three and best-of-five are **separate populations** — never share an anchor (RULES_TENNIS.md §9.10).
 
-
 **Serving.** Players alternate serving each game. The server gets two attempts per point (a "let" on a serve clipping the net is re-taken). A **double fault** loses the point. Ends are changed after the 1st game and every two games thereafter.
-
 
 **On-court officiating.** Chair umpire + line calls (electronic line-calling — "Hawk-Eye Live" — is now used at the US Open and most tour hard-court events, removing line judges and player challenges; clay events still use ball marks). A **25-second shot clock** between points, **90 seconds** at changeovers, **120 seconds** at set breaks, ~5-minute warm-up.
 
-
 **Stoppages.** One **medical timeout** (3 minutes of treatment) per treatable condition. Limited **bathroom/attire breaks** (generally one break, 3 minutes). **Heat rule** (a 10-minute break, typically after the 2nd set in best-of-3 / 3rd set in best-of-5) applies at hot venues including the US Open. Rain / bad light suspends play — outdoor matches resume from the exact score, sometimes the next day; roofed courts (Arthur Ashe and Louis Armstrong at the US Open) continue.
-
 
 **Coaching (2025 onward).** **Coaching from the player box is now permitted** on the ATP and WTA Tours and at the Grand Slams — short verbal cues and hand signals only, when the player is at the same end, without disrupting play. Coaches may not leave the box. This is a change from the old "no coaching in singles" rule and slightly dampens the in-match momentum swings the older rule produced.
 
-
 ### 10.2 Final-set format — the key rule that varies
-
 
 | Body | Non-final sets at 6–6 | **Deciding set at 6–6** |
 |---|---|---|
@@ -408,60 +323,42 @@ Added 2026-09-04; last reviewed 2026-09-04. Standing reference for the rules of 
 | **ITF World Tennis Tour** | 7-point tiebreak | **7-point tiebreak** |
 | Doubles (most tour & Slam), in place of a 3rd set | — | **10-point match tiebreak** replaces the deciding set entirely |
 
-
 Before 2022 every Slam had a **different** deciding-set rule (the US Open used a first-to-7 tiebreak at 6–6, the Australian Open a 10-pointer at 6–6, Wimbledon a 7-pointer at 12–12, Roland Garros advantage sets). Any head-to-head or "total games" history from before 2022 must be checked for which rule was in force — this directly affects deciding-set length and the total-games distribution.
-
 
 ### 10.3 Grand Slam / US Open
 
-
 **Draw.** 128 players in the singles main draw, single elimination, 7 rounds. **32 seeds.** A separate **128-player qualifying draw** (3 rounds of best-of-3) fills 16 main-draw places; "US Open Qualifying" cards in the log are these matches.
-
 
 **Format.** Men's singles **best-of-five**; women's singles **best-of-three**. Deciding set → **10-point match tiebreak** at 6–6 (§10.2). Held over ~2 weeks on **hard courts** (New York, late August–September; night humidity and swirling wind in Ashe are real conditions factors). Roof on the two show courts.
 
-
 **Money and withdrawals.** A player who withdraws before their first-round match is replaced by a **lucky loser**; a first-round player who starts and retires still earns round-1 prize money. This changes the incentive for a compromised player to start.
-
 
 **Settlement.** Freeze the market's **match format** (games/sets totals differ hugely between Bo3 and Bo5). Set-score, total-games and handicap markets all interact with the 10-point deciding-set tiebreak. Retirement rules per §10.5.
 
-
 ### 10.4 ATP Tour, ATP Challenger Tour, WTA Tour, ITF World Tennis Tour
 
-
 All use **best-of-three sets, 7-point tiebreak in every set including the decider** (§10.2). They differ in **level, points, prize money and field quality** — which is what `SFA-TENNIS` shrinkage and continuity checks (§3, §9.8) care about:
-
 
 - **ATP Tour:** the top men's tour — **Grand Slams** (not ATP-run), **ATP Masters 1000**, **ATP 500**, **ATP 250**, and the season-ending **ATP Finals** (8 players, round-robin groups then knockout). 52-week rolling ranking. Example in log: **Winston-Salem Open** (an ATP 250, the week before the US Open).
 - **ATP Challenger Tour:** the tier below the main tour (Challenger 50/75/100/125/175 by points/prize). Winners gain the ranking points needed to break into the main tour. Fields are a mix of players ranked ~#80–#300, veterans and rising juniors. Examples in log: **ATP Challenger Augsburg (Schwaben Open)**, **ATP Challenger Zhangjiagang**.
 - **WTA Tour:** the top women's women's tour — **WTA 1000 / 500 / 250**, the **WTA Finals**, plus the Slams. 52-week rolling ranking. Women's Slam matches and all WTA matches are **best-of-three**.
 - **ITF World Tennis Tour** (men **M15/M25**, women **W15/W35/W50/W75/W100** — the number is prize money in US$ thousands): the entry level of professional tennis, below the Challenger tour. **M15/M25** fields are lightly ranked (often #300–#1000+), form and even identity data are thin, and conditions (court, altitude, balls, heat) vary widely and are often undocumented. Examples in log: **ITF M15 Maanshan (China)**, **ITF M25 Oviedo**, **ITF M25 Oldenzaal**, **ITF M25 Lausanne**. Apply heavy shrinkage and wide conditions/participant uncertainty (RULES_TENNIS.md §2, §9.8; sparse-data handling).
 
-
 **Retirements are more common the lower the level** — an ITF or Challenger player nursing an injury has more incentive to start (for points/prize money) and to retire than a top-tour player.
-
 
 ### 10.5 UTR Pro Tennis Tour (UTR PTT)
 
-
 **Operator:** Universal Tennis (UTR Sports). A circuit of ~US$25K events, ranked by the **UTR rating** rather than only ATP/WTA points, aimed at giving developing pros more match play. Example in log: **UTR PTT Clemson**.
-
 
 **Format.** A distinctive **round-robin + playoff** structure: the main draw is **8 groups of 4**, each group a round-robin (Sun–Wed); then **single-elimination playoff draws** (Thu–Sun) — three separate 8-player knockouts seeded by group finishing position (all the group winners in one draw, all the runners-up in another, etc.), so **every player is guaranteed at least 3 matches** and finishes with a definite placing.
 
-
 **Scoring.** Standard **best-of-three sets with regular (ad) scoring**; a **third-set 10-point match tiebreak** and **no-ad** are permitted for some UTR "verified" event categories but are **not** the default for the PTT $25K events — **confirm the specific event's format** from its regulations before setting any games/sets market, because a "best-of-3 with a match-tiebreak 3rd" changes the total-games and deciding-set distribution materially.
-
 
 **Settlement.** Round-robin results can involve **countback tiebreakers** (sets won, games won, head-to-head) to decide who advances — a "group decider" match can be effectively dead or effectively must-win depending on other results, which affects effort. Freeze the event's advancement rules.
 
-
 ### 10.6 Retirement, walkover and abandonment — settlement
 
-
 This is the highest-frequency tennis settlement problem (RULES_TENNIS.md §5 control set, `TE-B8`).
-
 
 - **Walkover** (a player withdraws *before* the match starts): **all markets on that match are void** at essentially every operator. The opponent advances but no bet is settled.
 - **Retirement / default mid-match:** settlement depends on the operator's stated rule —
@@ -471,11 +368,8 @@ This is the highest-frequency tennis settlement problem (RULES_TENNIS.md §5 con
 - **Games, sets, and handicap markets:** generally settled if the relevant set/threshold was already **completed** before the retirement; void otherwise.
 - **Suspended and resumed** matches (rain, darkness, curfew): bets normally stand and settle on the eventual result, even if it finishes the next day, unless the operator has a "must complete within 48 hours" clause.
 
-
 Always freeze, per RULES_TENNIS.md §1: the operator's **exact** retirement/walkover wording, and whether the "potential winner" and any set/games market is being read as regulation-completion or eventual-advancement.
 
-
 ### 10.7 Identity checklist (tennis)
-
 
 Resolve before any rate work: **tour/level** (Slam / ATP / Challenger / WTA / ITF M-or-W tier / UTR PTT) and therefore field quality and the shrinkage weight; **match format** (best-of-3 vs best-of-5; ad vs no-ad; standard vs match-tiebreak decider) and the **deciding-set rule** (10-point at a Slam, 7-point elsewhere); **surface** and indoor/outdoor + session; whether it is **main draw or qualifying**; recent **match load** (a player 3 rounds deep in qualifying, or coming off a 5-set epic); and the operator's **retirement/walkover** settlement rule for every market on the card.

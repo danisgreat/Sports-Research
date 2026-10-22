@@ -223,3 +223,16 @@ Source: [research/verification/retrospective_2026-10-21/RETROSPECTIVE_REPORT.md]
 | RET-19 | P2 | Totals z RMS 0.48 v margins 1.46 | Report realised totals coverage beside RET-12 margins. Consider PROBABILITY_TOOLKIT σ constants only after 40 cards per family | Central 50%/80% coverage intervals contain 50%/80% per family | 40 cards per family | None (monitoring) | PROPOSED_NOT_TESTED |
 | RET-20 | P2 | `primary verify-execution` KeyError on a 17-Oct attempt | Version-gated or backward-compatible bundle verification | Retained old attempts verify, or fail with an explicit version error | Existing retained attempts | Revert if a current-schema bundle fails | PROPOSED_NOT_TESTED |
 | RET-21 | P2 | Card prior-game tables not ingestible (ENV-v1 chats cannot capture or hash) | Prompt 7/8 recapture of prior-game rows from keyless field-owner routes for imported events, or a registered transcription-to-quarantine path | ≥ 80% of the next cohort's history rows admitted, or each quarantined with a reason | Next cohort | Stop if recapture cost exceeds the owner's budget | PROPOSED_NOT_TESTED |
+
+## 22 October 2026 registrations (REV-H1 to REV-H4), registered before any v24.0 card is scored
+
+Source: [framework_change_2026-10-22-2](research/verification/framework_change_2026-10-22-2/IMPLEMENTATION.md) implementing the [revamp review](research/verification/review_2026-10-22_framework_revamp/REPORT.md). Start trigger: first issued card that reads MDS-2026.10.22-v24.0 with a `PICKS_V2` block. Currently NONE; all counts below start at 0.
+
+| Hypothesis | Frozen comparison / collection floor | Acceptance design and stopping | Current status |
+|---|---|---|---|
+| REV-H1 TB-2-MD (additive attack/defence) is a better reference than TB-1-MD for points leagues | TB-2-MD versus TB-1-MD (`TEAM_BASELINE_P`) and versus the competition's release, identical frozen rows; at least 8 settled ISO weeks and 50 paired games per competition | Paired week-block interval of the Brier difference (TB-2 minus TB-1), negative favours TB-2; calibration slope reported; no promotion on fewer rows | DEV_EVIDENCE_ONLY: NBA 2023-26 (3,603 games) Brier 0.2106 against 0.2189, slope 1.04 against 2.12; NHL 0.2417 against 0.2429 and MLB 0.2427 against 0.2450 (intervals not computed). Not predictive acceptance |
+| REV-H2 LEDGER-1 (value of research) | Final p minus reference, over information rows | After at least 150 information rows over eight weeks: if the mean of final minus reference is not below zero with its interval, propose reference-only cards with confirmed-availability scenarios; if below, entry size follows λ | BLOCKED_DESIGN (variance unknown until an eight-week pilot) |
+| REV-H3 LEDGER-2 (abstention) | Abstained share and Brier of the most-likely list at p ≥ 0.65, monthly | The 0.65 floor is revisited only on 400 or more rows from this procedure | BLOCKED_DESIGN |
+| REV-H4 WIDTH-1 | Margin and total z RMS per family | In 0.85-1.15 over 40 cards per family; outside it the competition row is the first suspect | BLOCKED_DESIGN |
+
+Any amendment to these designs gets a new dated version before its new evaluation cohort. Development numbers above are in-sample to date and are not evidence of prospective skill.

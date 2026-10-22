@@ -1,6 +1,6 @@
 # PROMPT 1 — sport file: AMERICAN FOOTBALL
 
-**P-2026.10.22-v23.0 · prompt 1 sport file.** Use this file together with the [prompt 1 core](../1_GAME_CARD.md): read the core first, then this file. The core holds every rule shared by all sports, including the shared rules of steps 1, 3, 4, 5 and 7; this file holds this sport's own instructions for steps 1–7. At each step apply the core's shared rules for that step together with this file's. Fill in the Upcoming game block below; it is the only part the owner edits. Do not read the other sport files.
+**P-2026.10.22-v24.0 · prompt 1 sport file.** Use this file together with the [prompt 1 core](../1_GAME_CARD.md): read the core first, then this file. The core holds every rule shared by all sports, including the shared rules of steps 1, 3, 4, 5 and 7; this file holds this sport's own instructions for steps 1–7. At each step apply the core's shared rules for that step together with this file's. Fill in the Upcoming game block below; it is the only part the owner edits. Do not read the other sport files.
 
 AMERICAN FOOTBALL
 ----------------------------
@@ -13,7 +13,7 @@ AMERICAN FOOTBALL
 - Supplied contracts: <Seahawks -2.5>, <Broncos +2.5>, <Combined Total Points: Over/Under 40.5 Points>
 - Research constraints: <continue pre game research even if game starts, continue until research is properly done>
 
-Read [COMMON_OPERATING_PROTOCOL](../COMMON_OPERATING_PROTOCOL.md), [MINI_LOG_IDENTITY_PROTOCOL](../../../MINI_LOG_IDENTITY_PROTOCOL.md) and the complete seven-step sport workflow below. The primary card is ANALYST_PRIMARY_V1, researched online and priced by the analyst (prompt header). No model, shadow or decision-lab output is read before the card is written; the model shadow runs afterwards (MLSCOPE-v2, core step 7).
+Read [COMMON_OPERATING_PROTOCOL](../COMMON_OPERATING_PROTOCOL.md), [MINI_LOG_IDENTITY_PROTOCOL](../../../MINI_LOG_IDENTITY_PROTOCOL.md) and the complete seven-step sport workflow below. The primary card is ANALYST_PRIMARY_V1: the frozen reference plus logged adjustments (prompt header). The reference stage runs before any probability is written and the card freeze after it (MLSCOPE-v3, core step 7); no other model, shadow or decision-lab output is read. Read the [CORE](../../../CORE.md) page first.
 
 Also apply the core's **Before step 1 — evidence standard** ([prompt 1 core](../1_GAME_CARD.md)).
 
@@ -39,9 +39,13 @@ Follow official NFL Game Center / college box score → structured provider → 
 
 Verify QB, line/skill/defensive availability, 90-minute pregame inactives list, efficiency, drive/play pace, pressure, special teams, rest/weather; probable is not confirmed. Research the exact competition's prior games online under HISTORICAL_SOURCE_PROTOCOL and print source URLs, dated event rows, true window n, endpoint filters, latest usable date and missingness. Use only results known before cutoff. Do not use postgame narrative or full-season aggregates from after cutoff.
 
+**Value-ranked checklist (CHECK-v1).** Work the high-value inputs first and time each to when it is published ([RESEARCH_CHECKLISTS](../../../RESEARCH_CHECKLISTS.md), American football): High: quarterback status (weekly report; inactives 90 minutes before kick-off). Medium: other key positions and the offensive line; wind and precipitation for totals. Every confirmed fact that moves a number becomes an adjustment-ledger row with an effect-table size.
+
 ## 4. Distribution, expected score and comparator
 
 Also apply the core's **Step 4 — Distribution, expected score and comparator** shared rules ([prompt 1 core](../1_GAME_CARD.md)).
+
+**Reference for this sport (REFMODEL-v1).** NFL starts from TB-2-MD with the NFL constants, built from the ESPN standings feed, and prints `TB2_NOT_TESTED_FOR_COMPETITION`. The grid is a normal and does not model the key margins 3 and 7 (14.2% and 8.3% of games): price spreads at or next to them from the empirical margin table. College and Canadian football are tier C. Widths are never below the competition's floor in [COMPETITION_PARAMETERS](../../../COMPETITION_PARAMETERS.md) without a written exception.
 
 Build the simplest defensible coherent football distribution: use supported discrete score/drive structure or disclose an approximation; show push/key-margin mass near 3/7 and other relevant numbers. No claim to an exact drive model without its calculation. Print every parameter and its basis, formula/table, normalization, tail treatment, covariance and endpoint transitions. If the required calculation cannot be done, report a supported approximation with limitations, or qualitative research with NOT_ESTIMATED probabilities. Hand method: PROBABILITY_TOOLKIT §1.
 

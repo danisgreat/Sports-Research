@@ -1,12 +1,10 @@
 **Current use (2026-10-12, v11; R11).** This is an arithmetic reference, not a fitted model. CURRENT_RULES §7, SELECTION_RULES §§2–3/9 and SCORING_AND_VALIDATION govern new work: primary p ordering (from the declared mixture where required), separate shadows, unconditional W/P/L/V, supported joint bounds, a precision rule at thresholds, and a frozen league-only baseline. Use a formula/table only within its assumptions and actually show the calculation. Never claim an exact enumeration merely from a model name. The older validation/baseline claims below describe their historical tests, not current calibration.
 
-**Local keys until settlement; updated mini after every game (MINI-v2).** Apply [MINI_LOG_IDENTITY_PROTOCOL](MINI_LOG_IDENTITY_PROTOCOL.md). Research and mini creation (prompts 1–2) use stable local event keys and never assign or reserve canonical P-IDs. A canonical P-ID is assigned only in an event's settlement phase: prompt 3 settles the event and then runs the prompt-4 import, which assigns the ID. After each prompt-1 game request the repository agent appends the card to the active mini under `research/active_minis/`, updates intake and footer, reads the file back, and commits and pushes it. Preserve every owner-entered Upcoming game block and all earlier issued bytes. Formats: mini-log-10 / mini-settlement-10; earlier records retain their original formats.
+**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](MINI_LOG_IDENTITY_PROTOCOL.md); summarised in [CORE](CORE.md) §2.
 
-**Persistent research and corroboration (EXH-v1).** Apply [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md) to every required field in research, logging, settlement and verification. If a source is incomplete, open alternatives and verify material facts with another independent source; track every remaining field and attempt. Unresolved facts/corroboration never qualify as complete information. New settlements use mini-settlement-10 with a visible source-discovery/reuse section, three source/attempt/closure CSVs and S17; older originals retain their rules and bytes. Consult [RESEARCH_SOURCE_REGISTER](RESEARCH_SOURCE_REGISTER.md) and prior package registers, recheck actual coverage, and continue discovery beyond them.
+**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
 
-
-**Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** For every game, research both sides' L5/L10/L15/L20 online under [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md), with opened sources, dated game rows and true n. Seek exact-game confirmed players, starting roles, bench/replacements and absences under [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md); projected players remain unconfirmed. The retired local results store and its derived profiles are not required inputs or fallbacks. Earlier archive-first directions are superseded.
-
+**Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
 
 **Which sections are operative.** Retired text stays in place for reading old cards, each part with a local banner.
 
@@ -28,7 +26,7 @@
 
 # Probability toolkit — every number a card needs, by hand
 
-**ML/RL scope (MLSCOPE-v2).** Owner instruction, 22 October 2026: models run where they are needed, beside the analyst card and never inside it. Prompt 1 researches the game online and prices every p_card as ANALYST_PRIMARY_V1 / UNCALIBRATED_ANALYST_PRIMARY from one declared distribution ([PROBABILITY_TOOLKIT](PROBABILITY_TOOLKIT.md); code may do the arithmetic, with every input and step printed). Only after the card is written to the mini does prompt 1 run the pregame model shadow, which freezes the model and league-baseline rows, and the card's own p_card, on the same contracts when the competition has an active release, or records NOT_RUN_NO_RELEASE. Model output never changes a card's p_card, ranks or picks. Prompt 3 settles the shadow with the card; prompt 6 ingests and evaluates; prompt 8 builds releases and decides promotion. A model is judged only after at least 8 weeks and 50 paired games; a progress review falls due when either is reached first. RL has no forecasting role: online expert weighting updates at settlement. Details: [FORECAST_CYCLE_PROTOCOL](FORECAST_CYCLE_PROTOCOL.md). Supersedes MLSCOPE-v1, NOCODE-v1 and any older text that forbids code or models in prompts 1–5.
+**ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](FORECAST_CYCLE_PROTOCOL.md); summarised in [CORE](CORE.md) §7.
 
 **Opened 2026-09-28; usage clarified 2026-10-11.** Agents read Markdown and CSV and use transparent arithmetic. No executable runtime or registry is restored. The tables below are calculation aids, not a substitute for missing inputs or an unperformed complex calculation.
 
@@ -447,6 +445,8 @@ The walk-off asymmetry makes home and away different: home wins end by exactly o
 
 ## 4. The team baseline by hand — TB-1-MD (`TEAM_BASELINE_P`)
 
+> **v24.0 status.** For points leagues the reference a card starts from is TB-2-MD (section 4.5), computed in code by `ml.reference`; TB-1-MD below is still printed as `TEAM_BASELINE_P` for continuity and for goal leagues.
+>
 > **v11 status (R11).** TB-1-MD uses team inputs. It is a **team-model aid and comparator**, printed as `TEAM_BASELINE_P`, and never `BASELINE_P`, which is always the league-only `BASELINE_LEAGUE_V1` (SELECTION_RULES §9). The "Sides/Totals anchor on TB-1-MD?" columns and the phrases "anchors on `BASELINE_P`" / "never the anchor" below describe the retired v9 anchoring procedure. They are NON-OPERATIVE. The arithmetic, constants and historical validation remain usable as a reference. The k constants also feed ARCHIVE_USE_GUIDE online form recipe R2 (form windows).
 
 This is the same season-to-date rating that the removed `tools/team_baseline.py` computed ([recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)). It is calculated from one standings page, so it needs no code.
@@ -541,6 +541,28 @@ Historically evaluated on 2026-09-28 by the implementation and aggregate result 
 - Soccer (P6, above): TB-1-MD has resolution for results in all five top leagues, and for totals in La Liga and the Bundesliga.
 - **NRL sides are the one caution.** The hand version beat the population on 2026 (interval below 0), where the tool's interval had crossed 0. That is one season, found after the fact, so NRL sides stay anchored on the population. The result is recorded as `T-TB1MD-NRL`: re-test on NRL 2027 before anything changes.
 - The EPL and NBA/NHL/MLB home edges were measured in-sample (one cached season). Their effect on these scores is small.
+
+### 4.5 TB-2-MD, the additive form (the REFERENCE for points leagues from v24.0)
+
+TB-1-MD above sets each side's expected score to the **mean** of its own attack and the opponent's defence, which halves the margin signal: the two net ratings enter as (net_home − net_away) / 2, and its calibration slope on the stored NBA finals is 2.1. TB-2-MD keeps every constant of section 4.3 (k, widths, home edge) and **adds** the two deviations from the league mean instead:
+
+1. Ratings as in 4.2: O = (PF + k × LM) ÷ (n + k), D = (PA + k × LM) ÷ (n + k), for home (Oh, Dh) and away (Oa, Da).
+2. Expected home score = Oh + Da − LM; expected away score = Oa + Dh − LM. So **T** = (Oh + Da − LM) + (Oa + Dh − LM) and **M** = (Oh − Dh) − (Oa − Da) + HE (HE = 0 at a neutral venue).
+3. Probabilities as in 4.2 step 4 (points sports: P(home wins) = Φ(M / σ_margin), totals and handicaps as in section 1).
+
+**Worked example** (the section 4.2 NBL game: k = 5, LM = 91.25, HE = +1.57; Oh = 91.74, Dh = 86.57, Oa = 89.24, Da = 93.74): T = (91.74 + 93.74 − 91.25) + (89.24 + 86.57 − 91.25) = **178.79**; M = (91.74 − 86.57) − (89.24 − 93.74) + 1.57 = **+11.24**; P(home wins) = Φ(11.24 / 15.2) = Φ(0.74) = **0.770**, against 0.663 under the average form. The league mean matters only for T (it cancels from every margin); in the first weeks of a season blend it with the competition's verified prior mean as (n × current + 200 × prior) ÷ (n + 200), print `LM_PRIOR_BLEND`, and widen early-season totals.
+
+**Evidence** (no fitted parameter; each game predicted from the same season's earlier games only; Brier of home win; calibration slope of the outcome on logit p):
+
+| Competition (games) | TB-1-MD Brier / slope | TB-2-MD Brier / slope |
+|---|---|---|
+| NBA 2023-26 (3,603) | 0.2189 / 2.12 (SE 0.10) | **0.2106 / 1.04 (SE 0.05)** |
+| NHL 2024-25 (1,282) | 0.2429 / 1.90 (SE 0.34) | 0.2417 / 0.95 (SE 0.17) |
+| MLB 2025 (344) | 0.2450 / 2.54 (SE 0.83) | 0.2427 / 1.26 (SE 0.41) |
+
+Season by season for the NBA the paired TB-2-MD minus TB-1-MD Brier is −0.0080 [−0.0130, −0.0030] (2024-25) and −0.0100 [−0.0162, −0.0039] (2025-26). It also beat the fitted cycle mixture with online Hedge in both seasons. Details, limits and the study commands: [REFERENCE_MODEL_PROTOCOL](REFERENCE_MODEL_PROTOCOL.md) section 5. `ml.reference` computes both forms (`python -m ml reference run`).
+
+**Status.** TB-2-MD is a team-model aid and the declared reference where REFERENCE_CHOICE says so; it is never `BASELINE_P`. For goal leagues (the five soccer rows of 4.3) the average form stays, because the form was not testable on stored soccer history. Registered for prospective confirmation as `REV-H1`.
 
 ---
 

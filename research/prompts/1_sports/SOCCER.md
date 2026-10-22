@@ -1,6 +1,6 @@
 # PROMPT 1 — sport file: SOCCER
 
-**P-2026.10.22-v23.0 · prompt 1 sport file.** Use this file together with the [prompt 1 core](../1_GAME_CARD.md): read the core first, then this file. The core holds every rule shared by all sports, including the shared rules of steps 1, 3, 4, 5 and 7; this file holds this sport's own instructions for steps 1–7. At each step apply the core's shared rules for that step together with this file's. Fill in the Upcoming game block below; it is the only part the owner edits. Do not read the other sport files.
+**P-2026.10.22-v24.0 · prompt 1 sport file.** Use this file together with the [prompt 1 core](../1_GAME_CARD.md): read the core first, then this file. The core holds every rule shared by all sports, including the shared rules of steps 1, 3, 4, 5 and 7; this file holds this sport's own instructions for steps 1–7. At each step apply the core's shared rules for that step together with this file's. Fill in the Upcoming game block below; it is the only part the owner edits. Do not read the other sport files.
 
 SOCCER
 ----------------------------
@@ -12,7 +12,7 @@ SOCCER
 - Supplied contracts: <Combined 1st half goals: Over/Under 0.5 Goals>, <Combined total goals: Over/Under 2.5 Goals>, <Combined Total Corners: Over/Under 10.5 Corners>
 - Research constraints: <continue pre game analysis/research/process even if it goes past start time>
 
-Read [COMMON_OPERATING_PROTOCOL](../COMMON_OPERATING_PROTOCOL.md), [MINI_LOG_IDENTITY_PROTOCOL](../../../MINI_LOG_IDENTITY_PROTOCOL.md) and the complete seven-step sport workflow below. The primary card is ANALYST_PRIMARY_V1, researched online and priced by the analyst (prompt header). No model, shadow or decision-lab output is read before the card is written; the model shadow runs afterwards (MLSCOPE-v2, core step 7).
+Read [COMMON_OPERATING_PROTOCOL](../COMMON_OPERATING_PROTOCOL.md), [MINI_LOG_IDENTITY_PROTOCOL](../../../MINI_LOG_IDENTITY_PROTOCOL.md) and the complete seven-step sport workflow below. The primary card is ANALYST_PRIMARY_V1: the frozen reference plus logged adjustments (prompt header). The reference stage runs before any probability is written and the card freeze after it (MLSCOPE-v3, core step 7); no other model, shadow or decision-lab output is read. Read the [CORE](../../../CORE.md) page first.
 
 Also apply the core's **Before step 1 — evidence standard** ([prompt 1 core](../1_GAME_CARD.md)).
 
@@ -38,9 +38,13 @@ Follow official field-owner / federation match center → structured provider (F
 
 Confirm starting XI, goalkeeper, bench/rotation, injuries, schedule congestion; probable is not confirmed. Research the exact competition's prior games online under HISTORICAL_SOURCE_PROTOCOL and print source URLs, dated event rows, true window n, endpoint filters, latest usable date and missingness. Use only results known before cutoff. Do not use postgame narrative or full-season aggregates from after cutoff.
 
+**Value-ranked checklist (CHECK-v1).** Work the high-value inputs first and time each to when it is published ([RESEARCH_CHECKLISTS](../../../RESEARCH_CHECKLISTS.md), Soccer): High: the confirmed XI (Premier League sheets are submitted at least 75 minutes before kick-off and published from then), key absences and suspensions. Medium: team strength from expected goals (Understat; FBref's advanced data was removed in January 2026), rotation and fixture congestion, club ratings as a comparator. Corners need a named provider. Every confirmed fact that moves a number becomes an adjustment-ledger row with an effect-table size.
+
 ## 4. Distribution, expected score and comparator
 
 Also apply the core's **Step 4 — Distribution, expected score and comparator** shared rules ([prompt 1 core](../1_GAME_CARD.md)).
+
+**Reference for this sport (REFMODEL-v1).** The Premier League, La Liga, Bundesliga, Serie A and Ligue 1 start from TB-1-MD, average form, built from the ESPN standings feed (the additive form could not be tested on stored soccer history). Other leagues start from the league-only Poisson baseline when a parameter row exists, otherwise the card is tier C and prints `NONE`. Draws are explicit; a three-way winner row loses on a draw. Widths are never below the competition's floor in [COMPETITION_PARAMETERS](../../../COMPETITION_PARAMETERS.md) without a written exception.
 
 Build the simplest defensible coherent soccer distribution: use a coherent regulation score model with explicit draw, opponent-adjusted xG/shot process, supported half split for phase rows, and appropriate low-score correction. Separate provider-backed corner count models (corners need their own supported count/provider model and joint dependence; goal counts never generate corner probabilities). Print every parameter and its basis, formula/table, normalization, tail treatment, covariance and endpoint transitions. If the required calculation cannot be done, report a supported approximation with limitations, or qualitative research with NOT_ESTIMATED probabilities. Hand method: PROBABILITY_TOOLKIT §2.
 

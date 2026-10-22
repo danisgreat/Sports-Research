@@ -1,25 +1,24 @@
 # Operator prompts 1–8
 
-**Local keys until settlement; updated mini after every game (MINI-v2).** Apply [MINI_LOG_IDENTITY_PROTOCOL](../../MINI_LOG_IDENTITY_PROTOCOL.md). Research and mini creation (prompts 1–2) use stable local event keys and never assign or reserve canonical P-IDs. A canonical P-ID is assigned only in an event's settlement phase: prompt 3 settles the event and then runs the prompt-4 import, which assigns the ID. After each prompt-1 game request the repository agent appends the card to the active mini under `research/active_minis/`, updates intake and footer, reads the file back, and commits and pushes it. Preserve every owner-entered Upcoming game block and all earlier issued bytes. Formats: mini-log-10 / mini-settlement-10; earlier records retain their original formats.
+**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](../../MINI_LOG_IDENTITY_PROTOCOL.md); summarised in [CORE](../../CORE.md) §2.
 
-**Persistent research and corroboration (EXH-v1).** Apply [RESEARCH_EXHAUSTIVENESS_PROTOCOL](../../RESEARCH_EXHAUSTIVENESS_PROTOCOL.md) to every required field in research, logging, settlement and verification. If a source is incomplete, open alternatives and verify material facts with another independent source; track every remaining field and attempt. Unresolved facts/corroboration never qualify as complete information. New settlements use mini-settlement-10 with a visible source-discovery/reuse section, three source/attempt/closure CSVs and S17; older originals retain their rules and bytes. Consult [RESEARCH_SOURCE_REGISTER](../../RESEARCH_SOURCE_REGISTER.md) and prior package registers, recheck actual coverage, and continue discovery beyond them.
+**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](../../RESEARCH_EXHAUSTIVENESS_PROTOCOL.md); summarised in [CORE](../../CORE.md) §5.
 
-**Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** For every game, research both sides' L5/L10/L15/L20 online under [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md), with opened sources, dated game rows and true n. Seek exact-game confirmed players, starting roles, bench/replacements and absences under [ROSTER_AVAILABILITY_PROTOCOL](../../ROSTER_AVAILABILITY_PROTOCOL.md); projected players remain unconfirmed. The retired local results store and its derived profiles are not required inputs or fallbacks. Earlier archive-first directions are superseded.
+**Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §5.
 
-**Required repository fallback (REF-v1).** Always keep [https://github.com/danisgreat/Sports-Research/tree/main](https://github.com/danisgreat/Sports-Research/tree/main) as the standing reference. If required local files are not fully accessible (missing, unreadable, truncated or incomplete), retrieve the actual required contents from this repository before declaring them unavailable. Apply [GITHUB_REFERENCE_PROTOCOL](../../GITHUB_REFERENCE_PROTOCOL.md): resolve one main commit SHA, record exact files/read time and fallback results in the existing reading receipt, and preserve the declared authority mode. Never substitute an unpublished local mini, claim unread content or treat viewing code as executing it. If authorized remote access also fails, record the real gap and continue independent work.
+**Required repository fallback (REF-v1).** Defined in [GITHUB_REFERENCE_PROTOCOL](../../GITHUB_REFERENCE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §1.
 
 **Historical v11.3 PROCEDURE release:** all eight prompts use [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Prompt 1 has eleven separate sport/general sections, each with its own Upcoming game input block; rugby league and union are independent. The workflow preserves manual-card independence, availability research, qualified shadow evidence, source admission and verified publication. Earlier v11.1/v11.2 controls remain in force unless explicitly superseded.
 
 The root supplied-first extended prompt is a preserved proposal, not an active replacement for P4. Use the numbered suite below.
 
-
 **Historical v11.2 PROCEDURE update:** prompt 1 applies [ROSTER_AVAILABILITY_PROTOCOL](../../ROSTER_AVAILABILITY_PROTOCOL.md) to both sides and every applicable starter/bench/absence field, including local-language discovery and a final late-change check. Evidence stays in existing card fields/A3/A8/C20; mini-log-7 and earlier issued records retain their formats. The v11.1 workshop reading exclusion remains in force.
 
-**P-2026.10.22-v23.0 · Markdown/CSV/text controls** (all prompts run in this repository under ENV-v2; prompt 1 prices the card itself and then runs the pregame model shadow, prompt 3 settles it, prompt 6 evaluates and prompt 8 releases under MLSCOPE-v2; the decision lab stays excluded from cards; prompt 8 may change ml/ under CURRENT_RULES §0). Previous v17.1 revision class: PROCEDURE + DATA RETIREMENT (mandatory online history and confirmed-player research; no format change). Prior RETAIN-v1 revision class: FORMAT + PROCEDURE (mini-log-9 / mini-settlement-8, model-independent research retention and honest C21/S16 dispositions; old EXEC-v1 execution prerequisite superseded). Original v11.0 revision class: FORMAT + PROCEDURE (mini-log-7 / mini-settlement-6, authority mode, form windows, mixture pricing, lifecycle and custody controls; CURRENT_RULES §11 explains the classes). Previous suite: [P-2026.10.11-v10](../../archive/superseded_2026-10-12/research/prompts/README.md). Use each complete task below; prompt 1 now contains its own common core and sport instructions. [Current rules](../../CURRENT_RULES.md) and [templates](../../CARD_AND_LOG_TEMPLATES.md) are required companions. No real ID, log part, league fact or retrospective figure is hard-coded in these prompts: they cover any sport and competition, and league-specific facts come from the rules files, [league profiles](../../LEAGUE_PROFILES.md), [SOURCES](../../SOURCES.md) and independently verified online history.
+**P-2026.10.22-v24.0 · Markdown/CSV/text controls** (all prompts run in this repository under ENV-v2; prompt 1 freezes the declared reference, prices the card from it and freezes the card's final p, prompt 3 settles them, prompt 6 scores the ledger and prompt 8 owns references and releases under MLSCOPE-v3; the decision lab stays excluded from cards; prompt 8 may change ml/ under CURRENT_RULES §0). Previous v17.1 revision class: PROCEDURE + DATA RETIREMENT (mandatory online history and confirmed-player research; no format change). Prior RETAIN-v1 revision class: FORMAT + PROCEDURE (mini-log-9 / mini-settlement-8, model-independent research retention and honest C21/S16 dispositions; old EXEC-v1 execution prerequisite superseded). Original v11.0 revision class: FORMAT + PROCEDURE (mini-log-7 / mini-settlement-6, authority mode, form windows, mixture pricing, lifecycle and custody controls; CURRENT_RULES §11 explains the classes). Previous suite: [P-2026.10.11-v10](../../archive/superseded_2026-10-12/research/prompts/README.md). Use each complete task below; prompt 1 now contains its own common core and sport instructions. [Current rules](../../CURRENT_RULES.md) and [templates](../../CARD_AND_LOG_TEMPLATES.md) are required companions. No real ID, log part, league fact or retrospective figure is hard-coded in these prompts: they cover any sport and competition, and league-specific facts come from the rules files, [league profiles](../../LEAGUE_PROFILES.md), [SOURCES](../../SOURCES.md) and independently verified online history.
 
-**ML/RL scope (MLSCOPE-v2).** Owner instruction, 22 October 2026: models run where they are needed, beside the analyst card and never inside it. Prompt 1 researches the game online and prices every p_card as ANALYST_PRIMARY_V1 / UNCALIBRATED_ANALYST_PRIMARY from one declared distribution ([PROBABILITY_TOOLKIT](../../PROBABILITY_TOOLKIT.md); code may do the arithmetic, with every input and step printed). Only after the card is written to the mini does prompt 1 run the pregame model shadow, which freezes the model and league-baseline rows, and the card's own p_card, on the same contracts when the competition has an active release, or records NOT_RUN_NO_RELEASE. Model output never changes a card's p_card, ranks or picks. Prompt 3 settles the shadow with the card; prompt 6 ingests and evaluates; prompt 8 builds releases and decides promotion. A model is judged only after at least 8 weeks and 50 paired games; a progress review falls due when either is reached first. RL has no forecasting role: online expert weighting updates at settlement. Details: [FORECAST_CYCLE_PROTOCOL](../../FORECAST_CYCLE_PROTOCOL.md). Supersedes MLSCOPE-v1, NOCODE-v1 and any older text that forbids code or models in prompts 1–5.
+**ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](../../FORECAST_CYCLE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §7.
 
-**Execution environment (ENV-v2).** Owner instruction, 22 October 2026: every prompt, 1 to 8, runs in this repository as the repository agent (`LOCAL_WORKING_TREE`), with internet access for research. Controls are read from the local working tree; GitHub `main` is the published copy, and every run that changes files ends with a commit and push. The external-chat route (ENV-v1) is retired for new work; anything it produced earlier is still imported as before. Details: [EXECUTION_ENVIRONMENT_PROTOCOL](../../EXECUTION_ENVIRONMENT_PROTOCOL.md).
+**Execution environment (ENV-v2).** Defined in [EXECUTION_ENVIRONMENT_PROTOCOL](../../EXECUTION_ENVIRONMENT_PROTOCOL.md); summarised in [CORE](../../CORE.md) §1.
 
 | # | Task | Writes |
 |---|---|---|
@@ -40,11 +39,11 @@ Order: **2 → 1 for each event → 3 (which runs 4)**, then next mini; 5–8 as
 
 ## Primary ML/RL lane
 
-Under MLSCOPE-v2 (v23.0) the forecast cycle runs as a pregame shadow after each card, on competitions with an active release; [the primary lane](../../PRIMARY_PREDICTION_PROTOCOL.md) stays a workshop model. Prompt 1 cards are ANALYST_PRIMARY_V1, priced by the analyst before any model output is read. Old DATA_HOLD/shadow forecasts and the market decision lab remain excluded from cards.
+Under MLSCOPE-v3 (v24.0) the declared reference is frozen before each card and the forecast cycle freezes the card's own p after it, on competitions with an active release; [the primary lane](../../PRIMARY_PREDICTION_PROTOCOL.md) stays a workshop model. Prompt 1 cards are ANALYST_PRIMARY_V1: the frozen reference plus logged adjustments. Old DATA_HOLD/shadow forecasts and the market decision lab remain excluded from cards.
 
 ## Reading receipt
 
-**Current model gate (MLSCOPE-v2):** prompt 1 reads no model output until its card is written and read back; then it runs the pregame shadow, which never changes the card. Prompts 3, 6 and 8 settle, evaluate and release models. The market decision lab stays excluded from cards.
+**Current model gate (MLSCOPE-v3):** prompt 1 reads model output only through the reference stage it runs before the card and, after the card is written and read back, the freeze block; the freeze never changes the card and the reference is never edited. Prompts 3, 6 and 8 settle, evaluate and release models. The market decision lab stays excluded from cards.
 
 Before dependent work, open actual files and print:
 
@@ -78,17 +77,11 @@ New minis use mini-log-10 and settlement mini-settlement-10. Existing mini-log-2
 
 **All-sport historical source recovery:** [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md) makes verified online research the first recovery for missing, incomplete or incorrect local history. All eleven game sections apply it directly; prompt7 handles separate permanent archive repairs.
 
-
 **Strict research completion:** [RESEARCH_COMPLETION_PROTOCOL](../../RESEARCH_COMPLETION_PROTOCOL.md) requires full research, all applicable sport procedures and every requested contract assessment irrespective of model calibration/runtime, data/lineup gaps, kickoff or mini/write blockers. Supported automatic analyst comparisons stay NOT_PRIMARY; missing numerical ML never means stop research. The A9 evidence matrix is mandatory.
-
 
 **Research retention (RETAIN-v3).** Retain every identified researched event under its stable local event key. Prompts 1–3 neither assign nor reserve canonical P-IDs. Prompt 1 returns the full research card with its hand-derived probabilities, intake row and footer (and the full mini when it fits, ENV-v1) after every game request. Prompt 4 alone reconciles duplicates and assigns canonical P-IDs at import, preserving local originals and a local-to-canonical map. Verified outcomes become learning candidates in prompt 6. Identity/custody/write conflicts remain real blockers. See RESEARCH_RETENTION_PROTOCOL and MINI_LOG_IDENTITY_PROTOCOL.
 
-
-**Local research record and updated-document delivery (owner update, 16 October 2026).** Use a stable local event key during research and local settlement; do not assign, reserve or advance any canonical P-ID. Append the researched card, its intake row and footer to the active mini, read it back and commit it after each game request (ENV-v2). Canonical IDs are assigned only in the settlement phase, when prompt 3 hands the settled event to the prompt-4 import, which reconciles duplicates and identity and records the immutable local-to-canonical mapping. An already assigned canonical ID remains a reference, never a new pregame allocation. Preserve issued originals and actual timing. See MINI_LOG_IDENTITY_PROTOCOL.
-
-See [RETAIN-v2](../../RESEARCH_RETENTION_PROTOCOL.md). This owner update changes local identity and delivery procedures; numerical model, selection and scoring formulas are unchanged.
-
+**Local research record and updated-document delivery (owner update, 16 October 2026).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](../../MINI_LOG_IDENTITY_PROTOCOL.md); summarised in [CORE](../../CORE.md) §2.
 
 ## Legacy records and populated prompt inputs
 
@@ -109,7 +102,6 @@ Release P-2026.10.16-v19.1 was PROCEDURE: prompt 1 adds the structured research 
 ## Runtime receipt, baseline and definitions (current P-2026.10.16-v19.2)
 
 Current release P-2026.10.16-v19.2 is PROCEDURE, following the full-history retrospective. Every prompt-1 sport workflow adds one identical **Runtime, baseline and contract definitions** paragraph (capability receipt and bootstrap before any ML_NOT_RUN, a standalone same-line `python -m ml baseline` comparator, and a unit/period/action definition gate); the tennis workflow adds the TENNIS_EXPERIMENTAL_HEDGE_V1 prospective shadow freeze; prompt 6 builds its tables with `python -m ml card-history`. Card, mini and settlement formats, selection, scoring and the primary model are unchanged; every owner-entered Upcoming game block is byte-identical.
-
 
 ## P-2026.10.16-v20.0 — executable forecast cycle
 
@@ -139,6 +131,18 @@ PROCEDURE. Prompt 1 is split into a core file (`1_GAME_CARD.md`: shared rules, n
 
 PROCEDURE. The 19 paragraphs that were identical in all eleven sport files now appear once, in the prompt 1 core under **Shared steps for every sport**. Each sport file keeps its step headings, its own instructions and its Upcoming game block, and each affected step points to the core. The wording of every moved paragraph is unchanged except one cross-reference (the analyst method now points to the sport file's step-4 distribution family). Requirements, outputs and probabilities are unchanged.
 
-## P-2026.10.22-v23.0 — everything runs here; model shadow after the card (ENV-v2 / MLSCOPE-v2 / MINI-v2)
+## P-2026.10.22-v23.0 (superseded by v24.0) — everything runs here; model shadow after the card (ENV-v2 / MLSCOPE-v2 / MINI-v2)
 
 STATISTICAL + PROCEDURE, owner instruction 22 October 2026. All eight prompts run in this repository with internet access; the external-chat route is retired for new work. Prompt 1 still prices every card itself (ANALYST_PRIMARY_V1; code may do the arithmetic) and reads no model output before the card is written; then it runs `python -m ml pregame run`, which freezes the model, the league baseline and the card's own p_card on identical contracts, or records why it could not run. Prompt 3 settles the card, then the shadow (`cycle settle`), then runs the prompt-4 import, so canonical IDs are assigned only in the settlement phase. A model is judged only after 8 weeks and 50 paired games; a progress review is due at whichever comes first. Releases now freeze only the forecast cycle's import closure. Details: [EXECUTION_ENVIRONMENT_PROTOCOL](../../EXECUTION_ENVIRONMENT_PROTOCOL.md), [FORECAST_CYCLE_PROTOCOL](../../FORECAST_CYCLE_PROTOCOL.md) and the [implementation](../verification/framework_change_2026-10-22-1/IMPLEMENTATION.md).
+
+## P-2026.10.22-v24.0 — reference-first cards, ledger, linted picks, tiers, league lane (REFMODEL-v1 / LEDGER-v1 / PICKS-v2 / MLSCOPE-v3 / STATFREEZE-v1)
+
+Owner instruction, 22 October 2026, implementing the [framework revamp review](../verification/review_2026-10-22_framework_revamp/REPORT.md) ([implementation](../verification/framework_change_2026-10-22-2/IMPLEMENTATION.md)). STATISTICAL + FORMAT + PROCEDURE, so the prompt major version moves. What changes for the operator:
+
+- **Prompt 1** reads [CORE](../../CORE.md) (about 16 KB) instead of the old reading list. It prints the tier, freezes the reference **before** typing a probability, builds p_card as reference plus ledger adjustments, writes a linted `PICKS_V2` block, freezes the card's final p beside the reference and ledgers the rows. Late requests get a fast card first.
+- **Prompt 3** also writes RESULTS.csv and ACTUALS.csv for the ledger and settles league-day events; benchmarks only if the owner supplies them.
+- **Prompt 6** adds ledger scoring, width coverage, external comparators and a monthly dashboard.
+- **Prompt 7** builds the data the reference lane runs on: two-lineage finals, line-up snapshots, parameter rows, effect-table rows.
+- **Prompt 8** owns reference choices and statistical changes, applies the season freeze and runs the release gate first.
+- Prompts 2, 4 and 5 are unchanged in behaviour; prompt 4 carries the picks block and ledger pointers.
+- The statistical rules that cards before v24.0 followed stay as written for those cards.

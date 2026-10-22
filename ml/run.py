@@ -6,6 +6,15 @@ python -m ml competition "Basketball/NBL"    one or more competitions by archive
 python -m ml cards | decision-lab | index
 python -m ml ingest | features | training | learning-status | registry | prospective | calibration | hedge-study |
              v3-backtest | bkb-features ...   LEARN-v1 learning pipeline (LEARNING_PIPELINE_PROTOCOL.md)
+python -m ml pregame reference|run|status|compare-card   REFMODEL-v1 reference stage and card freeze (FORECAST_CYCLE_PROTOCOL.md)
+python -m ml reference tier|width|run        tier, width floor, tier B/C reference rows (REFERENCE_MODEL_PROTOCOL.md)
+python -m ml card lint                       PICKS_V2 card block linter
+python -m ml ledger add|verify|score|coverage   adjustment ledger and its scoring (ADJUSTMENT_LEDGER_PROTOCOL.md)
+python -m ml sim baseball|tennis|hockey|cricket|props   seeded simulators for path-dependent contracts (SIMULATION_PROTOCOL.md)
+python -m ml release-gate --competition X    data-quality gate before a release (REV-22)
+python -m ml backfill-basketball ...         two-lineage basketball finals into the learning store
+python -m ml context-study --competition X --test-season Y --out DIR   walk-forward development study before a lane
+python -m ml league-day freeze|settle --competition X --date D --cache DIR   freeze every fixture of a day (model, baseline, TB-2-MD), then settle it
 Outputs: research/model_shadow/** (Markdown + market-free CSV). Full predictions go to the cache directory outside the
 repository (env ML_CACHE, default ../Sports-Research-workshop-cache).
 """
@@ -211,7 +220,8 @@ LEARN_COMMANDS = {"ingest": "ml.research_ingest", "features": "ml.features", "tr
                   "prospective": "ml.evaluation.prospective", "calibration": "ml.calibration", "hedge-study": "ml.hedge",
                   "v3-backtest": "ml.evaluation.v3_backtest", "bkb-features": "ml.models.basketball_features",
                   "card-history": "ml.evaluation.card_history", "capability": "ml.capability", "baseline": "ml.league_baseline",
-                  "pregame": "ml.pregame"}
+                  "pregame": "ml.pregame", "reference": "ml.reference", "ledger": "ml.ledger", "card": "ml.picks",
+                  "sim": "ml.sim.cli", "release-gate": "ml.releasegate", "backfill-basketball": "ml.backfill_basketball", "context-study": "ml.context_study", "league-day": "ml.league_day"}
 
 
 def main(argv: list[str]) -> None:

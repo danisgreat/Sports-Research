@@ -1,0 +1,8 @@
+name,path,sha256
+REQUEST,C:\Users\danie\AppData\Local\Temp\sr_pregame_r1wl11cj\OUT\INPUTS\REQUEST.csv,dee18bb3ad8d36460e60bdc400c61778cf32834b329a2b2ccb2c42fafbdd2c41
+CONTRACTS,C:\Users\danie\AppData\Local\Temp\sr_pregame_r1wl11cj\OUT\INPUTS\CONTRACTS.csv,92d4ff41a20d06901dbd6fb679cc2a86667d51475a34a75e2b14b7ff5d9040b8
+RELEASE,C:\Users\danie\Desktop\Sports Research\research\cycle_releases\NBA-CYCLE-1.csv,82688ea9a3369d93e63abaf7d24c3868e7568b2fe5eef876d995c695d2540eef
+EXPORT/AVAILABILITY.csv,C:\Users\danie\AppData\Local\Temp\sr_pregame_r1wl11cj\OUT\INPUTS\EXPORT\AVAILABILITY.csv,f19720382afb6c13c78fdbf97fcc35fa9f860969c33ac1c56579ae5d985c0e36
+EXPORT/GAME_OBSERVATIONS.csv,C:\Users\danie\AppData\Local\Temp\sr_pregame_r1wl11cj\OUT\INPUTS\EXPORT\GAME_OBSERVATIONS.csv,4f42adf191aefce4b62b7388fb949cd48eb7fec199252ce88c7e13c13becc82d
+EXPORT/TARGET_EVENT.csv,C:\Users\danie\AppData\Local\Temp\sr_pregame_r1wl11cj\OUT\INPUTS\EXPORT\TARGET_EVENT.csv,edf6df4eb49f169fa9853e78cbecf973caf4a09b0df16a32c64ee42bf84fa068
+EXPORT/TEAM_GAME_STATS.csv,C:\Users\danie\AppData\Local\Temp\sr_pregame_r1wl11cj\OUT\INPUTS\EXPORT\TEAM_GAME_STATS.csv,11c8d3e361868be05c58814002f6790ea3bc8d8b3c38f8318335f0a0fb217252

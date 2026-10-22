@@ -1,29 +1,12 @@
-> **Primary ML/RL (15 October 2026):** [PRIMARY_PREDICTION_PROTOCOL](PRIMARY_PREDICTION_PROTOCOL.md) supplies actual model-assisted original probabilities in the supported exact competition/endpoint. Keep these sport-specific physical/source/family checks. Unsupported model/phase/participant regimes remain NO_FORECAST, not another league's model. This amendment overrides older blanket manual-model exclusions, not sporting truth or the market firewall.
+> **Authority.** [CORE](CORE.md) and [CURRENT_RULES](CURRENT_RULES.md) govern new work; this page holds this sport's rules, and earlier statements below keep their historical scope.
 
-**Executable forecast cycle (CYCLE-v1).** Apply [FORECAST_CYCLE_PROTOCOL](FORECAST_CYCLE_PROTOCOL.md). New contextual forecasts use MODEL_ASSISTED_CYCLE_V1 with a frozen exact-competition release, actual execution receipt, identical-contract baseline shadows and verified settlement feedback. Existing V3/tennis adapters retain their own cohorts; missing/unsupported inputs require a real failure receipt and retained research. This statistical/procedure release authorises experimental execution, not predictive qualification.
+**Executable forecast cycle (CYCLE-v1).** Defined in [FORECAST_CYCLE_PROTOCOL](FORECAST_CYCLE_PROTOCOL.md); summarised in [CORE](CORE.md) §7.
 
-**Local keys until settlement; updated mini after every game (MINI-v2).** Apply [MINI_LOG_IDENTITY_PROTOCOL](MINI_LOG_IDENTITY_PROTOCOL.md). Research and mini creation (prompts 1–2) use stable local event keys and never assign or reserve canonical P-IDs. A canonical P-ID is assigned only in an event's settlement phase: prompt 3 settles the event and then runs the prompt-4 import, which assigns the ID. After each prompt-1 game request the repository agent appends the card to the active mini under `research/active_minis/`, updates intake and footer, reads the file back, and commits and pushes it. Preserve every owner-entered Upcoming game block and all earlier issued bytes. Formats: mini-log-10 / mini-settlement-10; earlier records retain their original formats.
+**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](MINI_LOG_IDENTITY_PROTOCOL.md); summarised in [CORE](CORE.md) §2.
 
-**Persistent research and corroboration (EXH-v1).** Apply [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md) to every required field in research, logging, settlement and verification. If a source is incomplete, open alternatives and verify material facts with another independent source; track every remaining field and attempt. Unresolved facts/corroboration never qualify as complete information. New settlements use mini-settlement-10 with a visible source-discovery/reuse section, three source/attempt/closure CSVs and S17; older originals retain their rules and bytes. Consult [RESEARCH_SOURCE_REGISTER](RESEARCH_SOURCE_REGISTER.md) and prior package registers, recheck actual coverage, and continue discovery beyond them.
+**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
 
-**Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** For every game, research both sides' L5/L10/L15/L20 online under [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md), with opened sources, dated game rows and true n. Seek exact-game confirmed players, starting roles, bench/replacements and absences under [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md); projected players remain unconfirmed. The retired local results store and its derived profiles are not required inputs or fallbacks. Earlier archive-first directions are superseded.
-
-> **Manual research timing (15 October 2026):** [TIMING_RESEARCH_PROTOCOL](TIMING_RESEARCH_PROTOCOL.md) supersedes older fixed advance research/freeze targets. Complete this sport's research even after play starts when needed. Record verified pre-start inputs, actual issue phase and outcome exposure separately; freeze only the completed original. A post-start-issued card remains in its own research cohort, not a pre-start-release claim.
-
-> **v11 precedence (2026-10-12, audit R09/R11).** [CURRENT_RULES](CURRENT_RULES.md), [SELECTION_RULES](SELECTION_RULES.md), [SCORING_AND_VALIDATION](SCORING_AND_VALIDATION.md), [CARD_AND_LOG_TEMPLATES](CARD_AND_LOG_TEMPLATES.md) and prompt 1 govern new work (MDS-2026.10.12-v11.0). This file remains the sport's reference for playing rules, mechanisms, sources and historical lessons. **Non-operative here:**
-
-> **Mandatory availability research (14 October 2026):** apply [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md) §§1–6 under CURRENT_RULES §5b for every competition in this sport. Research both sides' starters/starting role, selected bench/replacements and current medical/absence/eligibility reports separately; use official team sheets, local-language discovery for obscure leagues and a final late-change recheck. Record evidence and actual failed attempts in existing A3/A8/C20. Probable players, rosters and missing injury reports never become confirmation.
-> - RM-1 q ranking, q tiers, `TOP2_QUALITY` and cushion-term ranking: new cards rank by p_card (P_ORDER_V2).
-> - TB-1 / TB-1-MD "anchoring": `BASELINE_P` is always the league-only `BASELINE_LEAGUE_V1`, and TB-1-MD is a printed team-model reference only.
-> - Row-level numeric caps and grade caps not restated in CURRENT_RULES.
-> - Steps of the retired RULES_GENERAL / GFA algorithm.
-> - Any instruction to rank or settle that conflicts with the controls above.
->
-> The two "October 5" authority notes below are historical. Authority mode now follows CURRENT_RULES §0: a run uses either the pinned published main or the local working tree, never both. Recent form follows ARCHIVE_USE_GUIDE online form recipe R2 (L5/L10/L15/L20 counted once).
-
-> **Current authority (October 5):** [METHOD.md](METHOD.md) and [CURRENT_RULES.md](CURRENT_RULES.md) govern new work. Requested qualitative or explicitly uncalibrated research is retained under stable local keys regardless of calibration; prompt 4 alone assigns canonical IDs during import. Numerical performance certification is separate. Read current IDs/freeze from the [status register](GAME_LOG_STATUS_CURRENT.md), unresolved items from the [carryover](research/verification/closure_2026-10-05/carryover.md), and [current implementation evidence](research/verification/implementation_2026-10-05/REPORT.md). Earlier method, queue, freeze and eligibility statements below retain their historical scope.
-
-**Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
+**Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
 
 # Baseball analysis rules
 
@@ -115,21 +98,15 @@ Numerical-engine design notes (the engine code was removed on 2026-10-09; comput
 3. **Regime Conditioning**: Pre-2008, 2008–2014, and 2015+ Statcast tracking regimes strictly demarcated; extra-inning ghost-runner regime (2020+) segregated.
 4. **Independent Training**: Fit exclusively on `H0-BASEBALL-v1` via pybaseball/Statcast; D0 is strictly reserved for qualitative error diagnostics.
 
-
 ## 1. Identity and contract
-
 
 Resolve league and level: MLB, NPB, KBO, LMB, WBSC, minor league, college, or another competition. Record season/rules era, venue, home batting entitlement, designated-hitter rule, scheduled innings, doubleheader format, extra-innings rule, probable/confirmed starters, and operator action/listed-pitcher terms.
 
-
 For MLB, use the current official rule and technology environment. The 2026 ABS challenge system weakens transfer from old home-plate zone tendencies; do not use an umpire effect without current-system evidence.
-
 
 ## 2. High-value inputs
 
-
 ### Participants and exposure
-
 
 - Complete the final starter-identity handshake for both sides against the official event page or official team/league release. Store event ID, team, role, participant ID/name and `CONFIRMED_OFFICIAL`/`PROBABLE_OFFICIAL`/unresolved status; never translate a same-day secondary preview into a confirmed starter.
 - Confirm both posted batting orders, bench, catcher, defence, starters, and material absences. If official starters or orders are not released, model explicit participant mixtures and apply the general evidence cap rather than choosing one preview lineup.
@@ -137,12 +114,9 @@ For MLB, use the current official rule and technology environment. The 2026 ABS 
 - For each starter, model batters faced, pitches, innings, and hook point separately from runs allowed.
 - For every relevant reliever, estimate availability probability and likely role. Build opener → bulk → bridge → leverage → low-leverage alternatives; workload informs availability, not performance.
 
-
 ### Starter and lineup process
 
-
 Use the current arsenal against the current lineup:
-
 
 - pitch mix, velocity, movement and location;
 - K-BB%, whiff/chase, ground/fly-ball shape, HR, barrel/hard-hit and expected contact measures where valid;
@@ -150,24 +124,17 @@ Use the current arsenal against the current lineup:
 - catcher, defence, park, and opponent quality;
 - injury/return, pitch cap, rest, and recent mechanics.
 
-
 ERA and WHIP are context, not a complete distribution. FIP/xFIP/xERA or league equivalents are supporting estimates with their definitions and limitations. Direct starter history receives weight only when current-lineup overlap and arsenal/role continuity are meaningful; never promote one prior start as ownership.
-
 
 ### Environment and context
 
-
 Record park factors with year/rolling window, dimensions, roof, venue-local game-window weather, altitude, rest/travel, series state, and home last-bat. Hot air, humidity, rain, or wind has no automatic total direction. Officials, motivation, and press comments are conditional only.
-
 
 ## 3. Model
 
-
 Exposure units are plate appearances, pitcher batters faced, pitches, innings, and live base-out state. Use a joint team-run distribution with overdispersion and explicit sequencing/HR tails rather than a naive homogeneous Poisson.
 
-
 Build:
-
 
 1. starter run-rate and exit distributions;
 2. the named relief-chain distribution;
@@ -175,15 +142,11 @@ Build:
 4. park/weather/defence adjustments;
 5. home-ninth, extra-innings, and score-state branches.
 
-
 Derive winner, run line, team total, game total, and player contracts from that same distribution.
-
 
 For numerical training, compare empirical and Poisson/negative-binomial team-run baselines with a plate-appearance/base-out A2 simulator. The structural candidate samples starter batters faced/hook state, the named relief chain, PA outcomes, base/out transitions, sequencing and HR clusters, home-ninth entitlement and extra innings. A bivariate/direct score model or boosted distribution is a challenger only after covariance, overdispersion, support, era and tail checks. All totals, run lines and winners integrate the same joint run distribution; line-specific binary classifiers cannot become the primary engine. All candidates remain unfit and unvalidated.
 
-
 ## 4. Structural controls
-
 
 1. **Short start is exposure, not an automatic Over.** More bullpen innings raise uncertainty; direction depends on the likely arms and lineup.
 2. **Recent run suppression does not erase the HR/contact tail.** Record central and short-start/two-homer branches.
@@ -209,27 +172,20 @@ For numerical training, compare empirical and Poisson/negative-binomial team-run
 22. **Extra innings are a different rate environment, not more of the same innings.** Under a rule that seeds each extra half-inning with a runner already in scoring position, assign the tie-after-nine branch its own materially higher per-inning run distribution (RULES_GENERAL (archived) §11.3, G22; branch `BB-B7`). A correct nine-inning read can still lose a total or a run line once the game reaches that state; quantify the probability of reaching a tie after nine separately from the extras scoring rate itself.
 23. **A prior game in the same series is context, not a cause.** A team's result in the immediately preceding game of the same series requires a named, currently active mechanism — the specific starter/bullpen usage it created, a lineup or rotation change it triggered, or comparable evidence — before it may support either a "bounce back"/"response" lean or a continuation lean for today's game, per RULES_GENERAL (archived) §11.3E (G17.1). Record the series score and the disclosed bullpen/lineup consequence of the prior game(s) under the series-state block (RULES_GENERAL (archived) §5); a prior blowout or a prior close loss is not itself evidence for today's direction.
 
-
 ## 5. Live state
-
 
 Store inning/half, score, outs, base state, current pitcher/pitch count, bullpen behind him, lineup slot due, challenges/reviews, weather/roof, and home batting entitlement. Recalculate remaining PA and named pitcher/reliever branches.
 
-
 ## 6. Sources and settlement
-
 
 - MLB official StatsAPI and MLB match centres control schedule, lineups, live state, box score, transactions, and final.
 - [MLB Statcast glossary](https://www.mlb.com/glossary/statcast) controls Statcast definitions; Baseball Savant supplies park and batted-ball data.
 - NPB.jp/BIS, KBO, CPBL official/advanced game pages, LMB.com.mx, WBSC, and official league/team sources control their competitions. Each league remains a separate source/definition population.
 - Government weather services and official roof reports control game-window conditions.
 
-
 Settle from the official final and named statistic provider. Preserve extra-innings and listed-player rules. Recheck documented official stat corrections for props.
 
-
 ## 7. Upcoming-game research sequence
-
 
 1. Freeze league/rules era, scheduled innings, home-last-bat/extra-inning terms, listed-pitcher/action rules and full candidate slate.
 2. Retrieve official probable/confirmed starters, posted orders, catcher/defence, transactions/injuries, roof and park-local weather; refresh lineups, starters, roof and weather before issue.
@@ -237,21 +193,15 @@ Settle from the official final and named statistic provider. Preserve extra-inni
 4. Maintain MLB, NPB and KBO as separate priors/rules/data cards; MLB Statcast-era measurements cannot be silently transferred to another league or earlier tracking regime.
 5. Derive winner, total, team totals and run lines from the joint run object. Pitcher/batter props use action probability and their own PA/batters-faced/event-rate targets.
 
-
 Official league/team sources control lineups, starters, rules and finals. Statcast/Savant controls only its defined MLB tracking metrics; projections are external challengers, not labels or ground truth.
-
 
 ## 8. SFA-BASEBALL — sport forecast algorithm
 
-
 Algorithm ID: `SFA-BASEBALL`. Effective **2026-09-02**. Instantiates `GFA-2` (RULES_GENERAL (archived) §11) with baseball content. It is a process composition of promoted controls and §4 above; it introduces no fitted weight, scenario weight or published probability. MLB, NPB, KBO, CPBL, LMB, MiLB and other leagues remain separate populations at every step.
-
 
 ### 8.1 Blocking preconditions
 
-
 Resolve these before any rate work. Each maps to a `GFA-2` gate.
-
 
 | Precondition | Requirement | Failure output |
 |---|---|---|
@@ -261,12 +211,9 @@ Resolve these before any rate work. Each maps to a `GFA-2` gate.
 | `BB-P4` termination terms | Official-game rule and the operator's suspension/shortening/action rule where supplied | Label `UNKNOWN_DEFINITION`; keep the termination branch explicit |
 | `BB-P5` home-last-bat | Which side bats last, and whether the contract endpoint includes extras | Required before any total or run-line is located |
 
-
 ### 8.2 Exposure chain
 
-
 Run in order. Each step consumes the previous step's output; none may be skipped by asserting a team-level number.
-
 
 | Step | Output |
 |---|---|
@@ -279,15 +226,11 @@ Run in order. Each step consumes the previous step's output; none may be skipped
 | `BB-S7` | Home-ninth entitlement derived from the score distribution, plus the extra-innings branch under the exact rule |
 | `BB-S8` | One joint team-run object with overdispersion, from which winner, run line, team totals, game total and player rows are queried |
 
-
 Workload informs availability, never performance. A rested arm that the likely score state never summons has no protective value.
-
 
 ### 8.3 Mandatory branch set
 
-
 Every baseball card represents all nine states, with each supplied line located against them.
-
 
 | Branch | Content |
 |---|---|
@@ -301,9 +244,7 @@ Every baseball card represents all nine states, with each supplied line located 
 | `BB-B8` | Termination order: runs before stop, stop before runs, restart and relief transition, official-game and no-action states |
 | `BB-B9` | Late separation: the game is inside one run entering the last third and the margin expands by two or more runs after both starters are gone, through the relief chain, a home-run cluster or a bullpen collapse on one side only |
 
-
 ### 8.4 Contract derivation map
-
 
 | Contract | Queried from | Extra condition the mechanism must predict |
 |---|---|---|
@@ -314,12 +255,9 @@ Every baseball card represents all nine states, with each supplied line located 
 | Pitcher props | Batters faced and pitch budget from `BB-S2` | Hook risk and lineup turn count, not season rate |
 | Batter props | Slot plate appearances from `BB-S1` | Opposing starter and the relievers that reach that slot |
 
-
 **Worked run-line slate — you rank every row, you do not pick one.** A book that lists `Team A +1.5 / Team A ML` and `Team B −1.5 / Team B ML` has supplied **four** contract rows (plus the total pair). The question is never "which do I choose" — it is "rank all four by marginal win likelihood and robustness" (RULES_GENERAL (archived) §6, and §3: never replace the supplied slate with an easier market). The prices attached (e.g. `+1.5 @ 1.67`, `ML @ 2.50` for A; `−1.5 @ 2.10`, `ML @ 1.67` for B) are **recorded as metadata with a capture time and play no part in the forecast or the rank** — `SPORTS_ONLY / MARKET_BLIND` (§4 bookmaker-independence hard gate).
 
-
 The four rows collapse to **two independent quantities** from the joint run object: `p_win = P(Team B wins)` and `p_one = P(the margin is exactly 1)`. Then, deriving from the same distribution (coherence is mandatory — G25.1):
-
 
 | Row | Wins when | Probability |
 |---|---|---|
@@ -328,15 +266,11 @@ The four rows collapse to **two independent quantities** from the joint run obje
 | `Team A +1.5` | A wins, or loses by exactly 1 | `1 − (p_win − P(B wins by exactly 1))` |
 | `Team A ML` | A wins by 1+ | `1 − p_win` |
 
-
 So `P(Team A +1.5) ≥ P(Team A ML)` and `P(Team B −1.5) ≤ P(Team B ML)` **always** — a rank order that violates this is an incoherence defect. The ordering then follows the game shape you forecast: a likely multi-run favourite game ranks `B ML ≈ B −1.5` above `A +1.5 > A ML`; a coin-flip game likely decided by one run ranks `A +1.5` and `B ML` up and both `−1.5 / underdog-ML` rows down (§4 control 4 cushion decomposition; §8.6 override 3). The **potential winner** is a separate single call with its endpoint stated (regulation vs eventual winner incl. extra innings; no automatic runner in the MLB postseason — §9.2).
-
 
 ### 8.5 Kill-path library
 
-
 Each row names a mechanism, not an outcome, and the contracts it defeats. Use it to populate `kill` in the row robustness record.
-
 
 | Kill path | Defeats | Evidence origin |
 |---|---|---|
@@ -353,12 +287,9 @@ Each row names a mechanism, not an outcome, and the contracts it defeats. Use it
 | A hitter-friendly park failing to manufacture runs that neither lineup's exposure supports | An Over ranked from venue reputation rather than a two-team component budget | C-PL11-BB-VENUE-RESTRAINT (P-244) |
 | Walk-off in a tight low-total state | A road side in a one-run corridor | §4 control 10; local lesson `M4-L10` in PREDICTION_MINI_LOG_4.md §E |
 
-
 ### 8.6 Sport ordering overrides
 
-
 These refine `GFA-2` G24 within baseball; they never reverse a `GFA-2` gate.
-
 
 1. A short start raises relief exposure and therefore uncertainty. It is not directional, so it may not move a total's `corridor` classification by itself.
 2. Before an Under outranks its Over, state why the joint `BB-B2`/`BB-B3` upper tail is subordinate. If that cannot be stated, lower evidence or change the order.
@@ -370,9 +301,7 @@ These refine `GFA-2` G24 within baseball; they never reverse a `GFA-2` gate.
 8. A weak, rehabilitating, returning or small-sample starter attaches to the **opponent's** scoring branch under G14.1. It does not widen both teams' run distributions, and a stale season line on one side does not outrank the opposing starter's current-regime run prevention.
 9. When an underdog run-line cushion is ranked first, the total is re-solved conditional on that state under G25.1: the branches that keep the underdog inside the line are branches in which the underdog scores, so the underdog's own upper tail enters the total before an Under may be ranked above the Over.
 
-
 ### 8.7 Pre-issue checklist
-
 
 1. `BB-P1`–`BB-P5` status printed, with release status per starter.
 2. Slot plate-appearance budget and both hook distributions stated.
@@ -392,15 +321,11 @@ These refine `GFA-2` G24 within baseball; they never reverse a `GFA-2` gate.
 16. Deficit attribution (G14.1) recorded for every weak, absent, returning or small-sample participant: which side's distribution moved and through which exposure step.
 17. Streak persistence-versus-reversion audit (G17.1) recorded for every hot/cold offensive or pitching run and for any prior-game/series "response" lean; extra-innings branch (`BB-B7`) modelled at its own rule-defined scoring rate, not the nine-inning rate, whenever an automatic-runner or similar rule applies.
 
-
 ### 8.8 Recency, head-to-head and trend windows
-
 
 Implements `GFA-2` step G13.1 (RULES_GENERAL (archived) §11.3B) and runs at that point in the algorithm, not at the end. Retrieval of L5/L10/L15/L20 for both sides and for the head-to-head series is mandatory; a window that does not exist is recorded with its true count and a missingness code.
 
-
 Populate one windowed table per side with these metrics, and one head-to-head table:
-
 
 | Window metric | Content |
 |---|---|
@@ -410,21 +335,15 @@ Populate one windowed table per side with these metrics, and one head-to-head ta
 | Bullpen load | Innings and appearances for each likely relief arm over the last 5 and 10 days, with back-to-back flags |
 | Target-relevant output | How often the team total, game total and run line at this line would have settled in each window |
 
-
 **Head-to-head continuity.** Continuity for baseball means the same starters, the same park and the same season roster. Two teams meeting for the fourth time in a series with different starters each day are four different matchups, and the head-to-head window is close to worthless unless the pitching matchup repeats.
-
 
 **Descriptive recency windows (G13.1; revised 2026-09-17).** Retrieve L5/L10/L15/L20 and continuity-qualified H2H with unique-event counts. These windows overlap. Monotonicity and dispersion among their averages are not a statistical trend/noise test. Report direction descriptively; estimate recency decay and opponent/regime effects using time-ordered validation. See SCORING_AND_VALIDATION section 5.
 
-
 **De-duplication.** The windows overlap by construction and share matches with the head-to-head and venue series. Shrink from unique underlying events under G9; never treat L5, L10, L15 and L20 as four confirmations.
-
 
 ### 8.9 Environment and conditions
 
-
 Implements `GFA-2` step G15.1 (RULES_GENERAL (archived) §11.3C). Venue classification for this sport is normally **OUTDOOR unless the venue has a roof**.
-
 
 | Field | Use in this sport |
 |---|---|
@@ -433,21 +352,15 @@ Implements `GFA-2` step G15.1 (RULES_GENERAL (archived) §11.3C). Venue classifi
 | Temperature and humidity | Ball carry; combine with park dimensions before any home-run branch |
 | Hourly precipitation | Feeds the `BB-B8` termination branch and the official-game rule, never an automatic Under |
 
-
 Failure to obtain the match-window forecast for an outdoor or open-roof event yields `WEATHER_NOT_AVAILABLE`, widened total and margin distributions, and a `LEAN` cap on every weather-dependent row. No factor above carries an automatic total direction.
-
 
 ### 8.10 Base-rate anchors and derived stat lanes
 
-
 **Anchoring (G12.1).** Anchor totals on the park-and-era run environment at that line, and run lines on the league frequency of one-run and two-or-more-run margins. A +1.5 run line and a game total are different propositions and never start level.
-
 
 StatMuse is an accepted research accelerator for this sport under `SOURCES.md`, using the verified query patterns recorded there. Every returned row is date-checked and reconciled against the official league source before it is decision-driving, and StatMuse never controls participants, availability, rules, state or settlement.
 
-
 **Derived and low-salience fields that are available and routinely skipped:**
-
 
 | Field | Note |
 |---|---|
@@ -456,165 +369,111 @@ StatMuse is an accepted research accelerator for this sport under `SOURCES.md`, 
 | Catcher framing and defensive alignment | Affects the same starter differently by battery |
 | Home-last-bat entitlement | Derived from the score distribution at `BB-S7`, not a fixed innings fraction |
 
-
 ## 9. Sport and competition rules reference
-
 
 Added 2026-09-04; last reviewed 2026-09-04. This section is a standing reference for the playing laws of baseball and the competition-specific rules of every baseball league that appears in the prediction logs. It supports `BB-P3`/`BB-P4` (league and rules era, termination terms) and §6 settlement; it introduces no rate, weight or ordering rule. Where a 2026 rule is cited, it is the rule in force for the 2026 seasons covered by the current log. Verify the rules era for any event outside 2026 — leagues change tie, roster, DH and postseason rules frequently.
 
-
 **Maintenance (RULES_GENERAL (archived) §3, `G2`).** Before the first card of a new season, spring training / pre-season, or postseason for any league here — MLB, NPB, KBO, LMB, MiLB and the international events all start at different times of year — re-verify the tie/extra-innings rule, the ball-strike technology in force, the import and active-roster rules, the DH rule, the pitch-clock/pace values and the postseason bracket against the official league source, and update this section **before** issuing the card. The first time a new baseball competition is forecast (a winter league, a new international event, another domestic league), document its full rules here first.
-
 
 ### 9.1 Universal playing rules (all baseball)
 
-
 **Objective and structure.** Two teams of nine alternate on offence (batting) and defence (fielding). A game is scheduled for **nine innings**; each inning has a top half (visiting team bats) and a bottom half (home team bats). A half-inning ends when the fielding team records **three outs**. The team with more **runs** after the last scheduled out wins.
-
 
 **Scoring a run.** A run scores when a baserunner legally touches first, second, third and home plate in order before the third out of the inning. A run does **not** count if the third out is a force out, a batter-runner put out before reaching first, or a preceding runner passing another — this is the "time play" rule and matters for totals settlement on the final play.
 
-
 **Home-team last bat.** If the home team leads after the top of the ninth, the bottom of the ninth is not played. If the home team scores the go-ahead run in the bottom of the ninth (or any later inning), the game ends immediately ("walk-off") — the winning margin is capped at the runs needed plus, on a home run, the batter and any runners. This is why a home favourite can never "cover" a large run line in a game it walks off by one.
-
 
 **The count.** Each plate appearance is a contest of **balls** (pitches outside the strike zone not swung at) and **strikes** (pitches in the zone, swung on and missed, or fouled with fewer than two strikes). Four balls = a **walk** (batter to first). Three strikes = a **strikeout**. A foul ball with two strikes is not a third strike (except on a bunt).
 
-
 **Reaching base:** hit (single/double/triple/home run), walk, hit-by-pitch, fielder's choice, error, dropped third strike, catcher's interference.
-
 
 **Being put out:** strikeout, ground/fly/line out caught, force out, tag out, appeal (missed base, left early on a fly), interference, running out of the baseline.
 
-
 **Batting order and substitution.** Nine hitters bat in a fixed rotation. A substitute takes the replaced player's lineup slot. **A player removed from the game cannot re-enter** (no re-entry in professional baseball). Pinch hitters and pinch runners are common; a pitching change mid-inning is unlimited subject to the three-batter minimum (below, where adopted).
-
 
 **Designated hitter (DH).** Where adopted, a tenth player bats in place of the pitcher every time the pitcher's slot comes up, without playing the field. The "Ohtani rule" (MLB, and most DH leagues) lets a team keep the DH when its starting pitcher is also the DH and is later removed as pitcher.
 
-
 **Pitching.** The starter must face at least one batter (or, where adopted, three — see below). Relievers enter freely between batters. A **balk** (illegal pitching motion with runners on) advances all runners one base.
-
 
 **Weather, official games and suspensions.** A game called by weather is an **official game** once the trailing team has had a chance to complete five innings (4½ if the home team leads) — earlier than that it is a "no game" and (in most competitions) replayed in full. Modern MLB/MiLB rules make most weather-shortened or interrupted games **suspended** and resumed from the point of stoppage rather than reverted; older eras and many other leagues revert to the last completed inning. The termination-order branch (`BB-B8`, §4 control 18) is decided by the competition's official-game rule, not by an assumption that "shortened = Under."
 
-
 **Mercy / run rule.** Not used in MLB, NPB, KBO or LMB regular seasons. Used in WBSC/college/high-school/some winter leagues (typically 10 runs after 7 innings, 15 after 5).
-
 
 **Doubleheaders.** MLB doubleheader games are nine innings (the 2020–2021 seven-inning rule was discontinued). MiLB doubleheader games remain **seven innings** each. Some winter/independent leagues also use seven.
 
-
 ### 9.2 MLB (Major League Baseball)
-
 
 **Structure.** 30 clubs, two leagues (AL/NL), three divisions each. **162-game** regular season. Universal **DH** since 2022 (both leagues).
 
-
 **Rosters.** 26 active players (28 from September 1), with a **13-pitcher maximum** (14 in September); 40-man roster; injured lists (15-day, 60-day, 7-day concussion, 15-day pitcher minimum). Option rules govern MiLB movement. Postseason rosters are **set separately for each round** (26 players), so bullpen composition can change between the Wild Card Series and the LDS.
-
 
 **Pace-of-play (in force 2023–2026).** Pitch timer **15 seconds** bases empty, **18 seconds** with a runner on (Triple-A 14/19 in 2025, tweaked 2026); a violation is an automatic ball, or an automatic strike on the batter if not set and looking at the pitcher with 8 seconds left. **Two pickoff/disengagement attempts** per plate appearance (a third that fails to retire the runner is a balk). **Five mound visits** per team per nine innings. **Three-batter minimum** for pitchers (must face three batters or end the half-inning). **Shift restriction**: four infielders, two on each side of second base, on the infield dirt at the pitch. **18-inch bases** (up from 15). Base coaches must stay in the box until the pitch is delivered (enforced from 2026).
 
-
 **ABS challenge system (new for 2026).** Full automated ball-strike calls are **not** used; instead each team gets **two challenges** of the home-plate umpire's ball/strike call per game. Only the **pitcher, catcher or batter** may challenge, immediately after the pitch, by tapping the helmet/cap, with no help from the dugout. A successful challenge is **retained**; an unsuccessful one is lost. In extra innings a team that used both challenges gets **one per extra inning** (non-accumulating); a team that kept both keeps both. Applies in the regular season and postseason. The personalised strike zone is set from measured player height and is slightly smaller than the umpire-called zone — this weakens transfer from pre-2026 umpire/framing tendencies (§1).
-
 
 **Extra innings.** Each half-inning from the 10th begins with an **automatic runner on second base** (the player who made the last out of the previous inning, or a pinch runner). **Regular season only** — the automatic runner is **not** used in the postseason, where extra innings are played under standard rules with no inning cap. This makes the tie-after-nine branch (`BB-B7`) a materially higher-scoring environment in the regular season and an ordinary-inning environment in October.
 
-
 **Standings and tiebreakers.** Since 2022 there is **no tiebreaker game** (no "Game 163"). Ties for a playoff spot or seed are broken by (1) head-to-head record, (2) intradivision record, (3) record vs. the relevant opponent group, (4) second-half record — mathematically, before the season ends.
-
 
 **Postseason (2022 format, in force 2026).** **12 teams** — three division winners and three Wild Cards per league. The **top two division winners in each league get a first-round bye**. **Wild Card Series**: best-of-three, all games at the higher seed. **Division Series (LDS)**: best-of-five (2-2-1). **Championship Series (LCS)**: best-of-seven (2-3-2). **World Series**: best-of-seven (2-3-2), home field to the pennant winner with the better regular-season record. Home-field advantage within each earlier round goes to the higher seed. No mercy rule, no tie games, no automatic runner.
 
-
 **Settlement conventions (MLB).** "Official game" for most bet types is **5 innings** (4½ if the home team is ahead); many books void full-game bets that do not reach 8½/9 unless already decided. **Listed pitcher** bets void if a named starter is changed; "action" bets stand. Run line is **−1.5 / +1.5**. Game totals **include extra innings**; **first-5-innings (F5)** markets settle at the end of the top of the 5th / bottom of the 5th and exclude the automatic runner and late bullpen. Suspended games: most books settle when the game is completed (even a day later); some void if not completed within a set window.
-
 
 ### 9.3 NPB (Nippon Professional Baseball, Japan)
 
-
 **Structure.** 12 clubs in the **Central League** and **Pacific League**, six each. **143-game** regular season plus ~18 interleague games in a late-May-to-mid-June window.
-
 
 **Designated hitter.** **Pacific League uses the DH; Central League does not** (Central League pitchers bat). The Central League has announced it will **adopt the DH from 2027** — for any 2026 Central League card the pitcher still hits, which affects the bottom of the order and the double-switch. Interleague and the Japan Series use the DH in all games.
 
-
 **Tie games.** Regular-season games are capped at **12 innings**; still level after 12 = an official **tie** (no winner). Ties are excluded from winning percentage (the Japanese standings metric). The 2020–2021 no-extra-innings pandemic rule has been discontinued. **Climax Series and Japan Series** games are capped at **15 innings**, then tie (and are replayed / added to the series as needed).
-
 
 **Rosters.** A ~70-player club control list; roughly **29 registered** with the top team ("ichi-gun") and **25 in uniform / eligible** for a given game. **Foreign-player limit: four on the active roster**, of whom no more than three may be pitchers and no more than three position players (so a 4-import active roster must mix). No pitch timer (trialed in the minors / second team). Three-batter minimum adopted.
 
-
 **Postseason — Climax Series.** Each league's top three qualify. **First Stage**: 2nd vs. 3rd, **best-of-three**, all games at the 2nd-place club, no ties advantage. **Final Stage**: First Stage winner vs. the **pennant winner**, played at the pennant winner's park, effectively **best-of-seven but the pennant winner starts 1–0** (needs 4 wins from a possible 6 games; the challenger needs 4 of 6). **Japan Series**: best-of-seven (2-3-2), DH in all games, 15-inning tie cap. No mercy rule.
-
 
 **Settlement note.** Because a regulation NPB game can end **tied**, moneyline/side bets need a stated tie rule (push, or "tie no bet"); this is unlike MLB. Totals settle on the 12-inning final. Draw is a live outcome for any NPB regular-season winner market.
 
-
 ### 9.4 KBO League (South Korea)
-
 
 **Structure.** 10 clubs, single table, no divisions. **144-game** regular season, roughly late March to early October, no Monday games. Universal **DH** (KBO has always used it).
 
-
 **Tie games.** Since **2025**, regular-season games are called a **tie after 11 innings** (previously 12), to limit pitcher workload. Ties are excluded from winning percentage and games-behind. Postseason games are called a tie only **after 15 innings**.
-
 
 **Technology and pace.** KBO uses a **full Automated Ball-Strike System (ABS)** — every pitch is called by the automated zone and relayed to the umpire — **since 2024** (this is a full auto-call, not the MLB challenge model). Pitch clock since 2024, revised for 2026 to **18 seconds** bases empty and **23 seconds** with runners on; pickoff limits and larger bases also adopted. Three-batter minimum.
 
-
 **Rosters.** 28-player first-team roster (26 dressed for a game in recent seasons); expanded in September. **Foreign players (2026):** three standard imports **plus one** additional player from an Asian country or Australia under a new "Asia quota" — **all four may appear in the same game**. Spending caps apply (roughly US$1m first-year total per standard new import; US$200k total for the Asia-quota player).
-
 
 **Postseason — step-ladder.** Top **five** teams qualify. **Wild Card**: 4th vs. 5th — the 4th seed needs **one win**, the 5th seed needs **two** (effectively best-of-three with 4th starting 1–0). **Semi-Playoff**: WC winner vs. 3rd, **best-of-five**. **Playoff**: Semi-Playoff winner vs. 2nd, **best-of-five**. **Korean Series**: Playoff winner vs. **1st** (which has rested throughout), **best-of-seven**. Higher seed has home advantage and the rest edge at every rung. No mercy rule.
 
-
 **Settlement note.** As with NPB, a **tie is a live regular-season outcome** (after 11 innings) — KBO side/handicap bets need a stated tie rule. KBO totals are settled on the 11-inning final in the regular season.
-
 
 ### 9.5 LMB (Liga Mexicana de Béisbol)
 
-
 **Structure.** A large league (about 20 clubs) split into **Zona Norte** and **Zona Sur**. Regular season runs roughly April–July (schedule length has varied; ~90+ games per club in 2026), then a four-round postseason July–September. Summer heat and altitude are significant (Mexico City ~2,240 m, Puebla, Saltillo). **DH** used.
-
 
 **Rosters.** 38-player list. **Foreign-player limit: 18** of the 38 for 2026–2027 (reduced from 20); **minimum 20 Mexican-born** players on the 38-man list. This is by far the most import-heavy of the leagues in this register — LMB rosters are close to half non-Mexican.
 
-
 **2026 rule changes.** LMB adopted an **ABS challenge system** for 2026: **two challenges** per team over nine innings, retained if successful, **one extra challenge per extra inning**. **Three-batter minimum** for all pitchers. **No automatic runner** in extra innings (this was mistakenly applied by umpires in the opening series and publicly corrected — LMB extra innings are played under standard rules).
-
 
 **Postseason.** Four best-of-seven rounds: **Primer Playoff** (six qualifiers per zone), **Series de Zona** (the three Primer Playoff winners per zone plus the best losing team as a wild card), **Series de Campeonato** (zone final, producing the Zona Norte and Zona Sur champions), and the **Serie del Rey** (Norte champion vs. Sur champion for the title). Seeding by winning percentage, then **run differential**.
 
-
 **Settlement note.** Confirm the exact schedule/round in force — LMB has changed its playoff qualifier count and regular-season length repeatedly. A "Serie de Campeonato" or "Serie del Rey" game is best-of-seven with standard extra innings.
-
 
 ### 9.6 MiLB and Triple-A (Pacific Coast League)
 
-
 **Placement.** Triple-A is one level below MLB. The two Triple-A leagues are the **Pacific Coast League (PCL)** and the **International League**. The PCL is a notoriously extreme **hitting environment** — Albuquerque, Las Vegas, Salt Lake, Reno and El Paso are high-altitude or hot-and-dry parks; PCL run environments do not transfer to MLB or to the International League.
-
 
 **Rules.** Triple-A runs **ahead of** MLB as the rules laboratory, so most MLB rules apply and some are stricter: pitch timer (14 sec bases empty / 19 with runners in 2025, adjusted 2026; a batter timeout resets the clock at Double-A/Triple-A), **automatic runner** in extra innings, **larger bases**, **shift limits**, **three-batter minimum**, pickoff limits. **ABS**: Triple-A has trialed both a full auto-call zone and the challenge system in recent seasons; the **challenge system** is the current Triple-A model, and a **checked-swing challenge** was added to the PCL from **6 May 2026**. **Doubleheaders are seven innings.** Rookie-level games are frequently seven innings due to pitching shortages.
 
-
 **Rosters and data.** ~28-player active rosters with constant MLB churn (optioned players, rehab assignments, "taxi" moves) — participant identity is more volatile than MLB and must be re-handshaken late (`BB-P1`). Statcast-grade tracking is **not** available at every Triple-A park; treat PCL batted-ball and velocity data as lower-fidelity than MLB (`SFA-BASEBALL` §8.4, and RULES_GENERAL data-priority).
-
 
 **Postseason.** A single Triple-A National Championship Game between the PCL and International League champions (regular-season-split winners), plus a longer late-season "Triple-A Final Stretch" in some years. Confirm the current structure for any postseason card.
 
-
 ### 9.7 International baseball (WBSC / WBC / Premier12 / Olympics)
-
 
 Not directly forecast in the current log but the identity template must handle it. Common features: **pool play then knockout**; a **mercy rule** (typically 15 runs after 5 innings, 10 after 7); an **extra-innings tiebreaker** that places runners on **first and second** (not just second) to open each half-inning from the 10th, sometimes with a re-set lineup; **pitch-count limits and mandatory rest** (WBC pitch-smart rules); 28-player rosters. Each event is its own rules era and its own population — do not transfer MLB/NPB/KBO rates into it.
 
-
 ### 9.8 Cross-league settlement and identity checklist (baseball)
-
 
 | Question | MLB | NPB | KBO | LMB | Triple-A |
 |---|---|---|---|---|---|
@@ -626,6 +485,5 @@ Not directly forecast in the current log but the identity template must handle i
 | Ball/strike tech (2026) | Challenge (2/game) | None | Full ABS auto-call | Challenge (2/game) | Challenge + checked-swing |
 | Import limit | None | 4 active | 3 + 1 Asia quota | 18 of 38 | None (MLB org players) |
 | Postseason champion | World Series (Bo7) | Japan Series (Bo7) | Korean Series (Bo7) | Serie del Rey (Bo7) | 1-game final |
-
 
 Always resolve, per `BB-P3`/`BB-P4`: the exact league and season, DH status, scheduled innings, the tie/extra-innings rule, the import and active-roster rules, the ball-strike technology in force, and the operator's official-game and listed-pitcher terms — before any rate work.

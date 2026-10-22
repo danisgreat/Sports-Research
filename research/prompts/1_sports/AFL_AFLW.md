@@ -1,6 +1,6 @@
 # PROMPT 1 — sport file: AFL / AFLW
 
-**P-2026.10.22-v23.0 · prompt 1 sport file.** Use this file together with the [prompt 1 core](../1_GAME_CARD.md): read the core first, then this file. The core holds every rule shared by all sports, including the shared rules of steps 1, 3, 4, 5 and 7; this file holds this sport's own instructions for steps 1–7. At each step apply the core's shared rules for that step together with this file's. Fill in the Upcoming game block below; it is the only part the owner edits. Do not read the other sport files.
+**P-2026.10.22-v24.0 · prompt 1 sport file.** Use this file together with the [prompt 1 core](../1_GAME_CARD.md): read the core first, then this file. The core holds every rule shared by all sports, including the shared rules of steps 1, 3, 4, 5 and 7; this file holds this sport's own instructions for steps 1–7. At each step apply the core's shared rules for that step together with this file's. Fill in the Upcoming game block below; it is the only part the owner edits. Do not read the other sport files.
 
 AFL / AFLW
 ----------------------------
@@ -16,7 +16,7 @@ AFL / AFLW
 - Supplied contracts: <copy every exact proposition/line/period/action term, or NONE>
 - Research constraints: <actual request; only-confirmed issuance if expressly required>
 
-Read [COMMON_OPERATING_PROTOCOL](../COMMON_OPERATING_PROTOCOL.md), [MINI_LOG_IDENTITY_PROTOCOL](../../../MINI_LOG_IDENTITY_PROTOCOL.md) and the complete seven-step sport workflow below. The primary card is ANALYST_PRIMARY_V1, researched online and priced by the analyst (prompt header). No model, shadow or decision-lab output is read before the card is written; the model shadow runs afterwards (MLSCOPE-v2, core step 7).
+Read [COMMON_OPERATING_PROTOCOL](../COMMON_OPERATING_PROTOCOL.md), [MINI_LOG_IDENTITY_PROTOCOL](../../../MINI_LOG_IDENTITY_PROTOCOL.md) and the complete seven-step sport workflow below. The primary card is ANALYST_PRIMARY_V1: the frozen reference plus logged adjustments (prompt header). The reference stage runs before any probability is written and the card freeze after it (MLSCOPE-v3, core step 7); no other model, shadow or decision-lab output is read. Read the [CORE](../../../CORE.md) page first.
 
 Also apply the core's **Before step 1 — evidence standard** ([prompt 1 core](../1_GAME_CARD.md)).
 
@@ -42,9 +42,13 @@ Follow official AFL match centre / AFLW app → structured provider → quality 
 
 Verify teams, ruck/midfield, clearances, inside-50/scoring-shot creation, conversion, defence, rest/venue/weather; probable is not confirmed. Research the exact competition's prior games online under HISTORICAL_SOURCE_PROTOCOL and print source URLs, dated event rows, true window n, endpoint filters, latest usable date and missingness. Use only results known before cutoff. Do not use postgame narrative or full-season aggregates from after cutoff.
 
+**Value-ranked checklist (CHECK-v1).** Work the high-value inputs first and time each to when it is published ([RESEARCH_CHECKLISTS](../../../RESEARCH_CHECKLISTS.md), AFL and AFLW): High: the selected 22, emergencies and late changes (Wednesday 6:20 p.m. list for Thursday games; final teams about 50-60 minutes before the bounce), venue, travel and ground familiarity. Medium: rain and wind. The Squiggle API is a post-settlement comparator, never an input. Every confirmed fact that moves a number becomes an adjustment-ledger row with an effect-table size.
+
 ## 4. Distribution, expected score and comparator
 
 Also apply the core's **Step 4 — Distribution, expected score and comparator** shared rules ([prompt 1 core](../1_GAME_CARD.md)).
+
+**Reference for this sport (REFMODEL-v1).** AFL starts from TB-2-MD with the AFL constants, built from the ESPN standings feed, and prints `TB2_NOT_TESTED_FOR_COMPETITION` until its history is ingested. AFLW and state leagues are separate competitions: league-only baseline from their own parameter rows (AFLW widths are not the men's), tier C otherwise. Widths are never below the competition's floor in [COMPETITION_PARAMETERS](../../../COMPETITION_PARAMETERS.md) without a written exception.
 
 Build the simplest defensible coherent Australian rules distribution: separate shots from accuracy; points = 6 × goals + behinds. Use competition-specific pace/length and draw/finals rules. Explain shrinkage of unusual conversion rather than assuming a rebound. Print every parameter and its basis, formula/table, normalization, tail treatment, covariance and endpoint transitions. If the required calculation cannot be done, report a supported approximation with limitations, or qualitative research with NOT_ESTIMATED probabilities. Hand method: PROBABILITY_TOOLKIT §1.
 

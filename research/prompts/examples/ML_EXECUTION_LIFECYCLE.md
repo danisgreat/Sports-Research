@@ -1,6 +1,6 @@
 # mini-log-8 / mini-settlement-7 execution lifecycle example
 
-**Online history and confirmed players (HIST-2026.10.16-v2 / AVAIL-2026.10.16-v3).** For every game, research both sides' L5/L10/L15/L20 online under [HISTORICAL_SOURCE_PROTOCOL](../../../HISTORICAL_SOURCE_PROTOCOL.md), with opened sources, dated game rows and true n. Seek exact-game confirmed players, starting roles, bench/replacements and absences under [ROSTER_AVAILABILITY_PROTOCOL](../../../ROSTER_AVAILABILITY_PROTOCOL.md); projected players remain unconfirmed. The retired local results store and its derived profiles are not required inputs or fallbacks. Earlier archive-first directions are superseded.
+**Online history and confirmed players (HIST-2026.10.16-v2 / AVAIL-2026.10.16-v3).** Defined in [HISTORICAL_SOURCE_PROTOCOL](../../../HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](../../../CORE.md) §5.
 
 FORMAT EXAMPLE ONLY / NOT_ISSUED / NOT_IMPORTABLE. Tokens below describe required fields, not an executed sporting forecast. Actual synthetic CLI evidence is listed in the [release verification report](../../verification/framework_change_2026-10-15-7/VERIFICATION_REPORT.md). Preserved earlier manual examples retain mini-log-7 and their original hypothetical numbers.
 

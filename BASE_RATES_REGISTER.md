@@ -1,16 +1,16 @@
 # Current baseline authority - 2026-10-01
 
-**Local keys until settlement; updated mini after every game (MINI-v2).** Apply [MINI_LOG_IDENTITY_PROTOCOL](MINI_LOG_IDENTITY_PROTOCOL.md). Research and mini creation (prompts 1–2) use stable local event keys and never assign or reserve canonical P-IDs. A canonical P-ID is assigned only in an event's settlement phase: prompt 3 settles the event and then runs the prompt-4 import, which assigns the ID. After each prompt-1 game request the repository agent appends the card to the active mini under `research/active_minis/`, updates intake and footer, reads the file back, and commits and pushes it. Preserve every owner-entered Upcoming game block and all earlier issued bytes. Formats: mini-log-10 / mini-settlement-10; earlier records retain their original formats.
+> **Parameters (v24.0).** Competition means, home edges, margin and total SDs and the width floors a card must respect now live in [COMPETITION_PARAMETERS](COMPETITION_PARAMETERS.md) (`research/competition_parameters/COMPETITION_PARAMETERS.csv`); this register keeps cross-sport references and regimes.
 
-**Persistent research and corroboration (EXH-v1).** Apply [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md) to every required field in research, logging, settlement and verification. If a source is incomplete, open alternatives and verify material facts with another independent source; track every remaining field and attempt. Unresolved facts/corroboration never qualify as complete information. New settlements use mini-settlement-10 with a visible source-discovery/reuse section, three source/attempt/closure CSVs and S17; older originals retain their rules and bytes. Consult [RESEARCH_SOURCE_REGISTER](RESEARCH_SOURCE_REGISTER.md) and prior package registers, recheck actual coverage, and continue discovery beyond them.
+**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](MINI_LOG_IDENTITY_PROTOCOL.md); summarised in [CORE](CORE.md) §2.
 
+**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
 
 **Historical register:** Earlier numerical rows/queries retain their dated research scope. Any archive-derived population is retired for new use; independently re-establish values online. No numerical refresh is claimed.
 
-**Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** For every game, research both sides' L5/L10/L15/L20 online under [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md), with opened sources, dated game rows and true n. Seek exact-game confirmed players, starting roles, bench/replacements and absences under [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md); projected players remain unconfirmed. The retired local results store and its derived profiles are not required inputs or fallbacks. Earlier archive-first directions are superseded.
+**Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
 
-
-**Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
+> **Authority.** [CORE](CORE.md) and [CURRENT_RULES](CURRENT_RULES.md) govern new work; this page holds this sport's rules, and earlier statements below keep their historical scope.
 
 > **Current authority (October 5):** [METHOD.md](METHOD.md) and [CURRENT_RULES.md](CURRENT_RULES.md) govern new work. Requested qualitative or explicitly uncalibrated research is retained regardless of calibration under stable local keys; prompt 4 alone assigns canonical IDs at import. Numerical performance certification is separate. Read current IDs/freeze from the [status register](GAME_LOG_STATUS_CURRENT.md), unresolved items from the [carryover](research/verification/closure_2026-10-05/carryover.md), and [current implementation evidence](research/verification/implementation_2026-10-05/REPORT.md). Earlier method, queue, freeze and eligibility statements below retain their historical scope.
 
@@ -109,7 +109,6 @@ These are too small to be identities. They are recorded because a card that depa
 | same | P(FT ≥ 3) / P(FT ≥ 5) | 35.3% / 17.6% | 17 | — |
 
 **How this was used, and the limit.** The three cards that priced a 1H Under 2.5 at 87–92% sat on the round's own 88.2% and went 3/0. `P-438` priced a 1H Under **1.5** at 84% against a round rate of 64.7% and lost. At `n = 17` that gap is ~1.6 SE — suggestive, not conclusive — so it supports **soccer control 40's disclosure requirement** (derive sibling phase lines from one printed distribution) and supports **no coefficient at all**.
-
 
 ---
 
@@ -462,7 +461,6 @@ No odds were read. This is a reference row for choosing and describing slates. I
 **What changed in the TB-1 flags** (`tools/team_baseline.py` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)) `resolution`; validity repair):
 - **Withdrawn:** NRL sides and NFL totals. NFL 2021–2025 totals were 0.2403 v 0.2423 over 1,359 games (`research/sport_models_2026-09-26/validation_results.json` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents))), so the single-season gain does not replicate.
 - **Kept:** NBA totals. The 2025-26 interval alone crosses 0 ([−0.018, +0.001]), but over 2023–26 TB-1 was 0.2129 v 0.2308 over 3,689 games.
-
 
 **The hand-computed version (2026-09-28).** TB-1-MD (`PROBABILITY_TOOLKIT.md` §4) reproduces these verdicts. It was at least as accurate as the tool's TB-1 in all nine leagues, and its NRL 2026 side gain was significant. The flags above are unchanged, and NRL is re-tested on 2027 (`T-TB1MD-NRL`).
 

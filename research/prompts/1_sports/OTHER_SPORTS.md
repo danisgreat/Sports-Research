@@ -1,6 +1,6 @@
 # PROMPT 1 — sport file: OTHER SPORTS
 
-**P-2026.10.22-v23.0 · prompt 1 sport file.** Use this file together with the [prompt 1 core](../1_GAME_CARD.md): read the core first, then this file. The core holds every rule shared by all sports, including the shared rules of steps 1, 3, 4, 5 and 7; this file holds this sport's own instructions for steps 1–7. At each step apply the core's shared rules for that step together with this file's. Fill in the Upcoming game block below; it is the only part the owner edits. Do not read the other sport files.
+**P-2026.10.22-v24.0 · prompt 1 sport file.** Use this file together with the [prompt 1 core](../1_GAME_CARD.md): read the core first, then this file. The core holds every rule shared by all sports, including the shared rules of steps 1, 3, 4, 5 and 7; this file holds this sport's own instructions for steps 1–7. At each step apply the core's shared rules for that step together with this file's. Fill in the Upcoming game block below; it is the only part the owner edits. Do not read the other sport files.
 
 OTHER SPORTS
 ----------------------------
@@ -16,7 +16,7 @@ OTHER SPORTS
 - Supplied contracts: <copy every exact proposition/line/period/action term, or NONE>
 - Research constraints: <actual request; only-confirmed issuance if expressly required>
 
-Read [COMMON_OPERATING_PROTOCOL](../COMMON_OPERATING_PROTOCOL.md), [MINI_LOG_IDENTITY_PROTOCOL](../../../MINI_LOG_IDENTITY_PROTOCOL.md) and the complete seven-step sport workflow below. The primary card is ANALYST_PRIMARY_V1, researched online and priced by the analyst (prompt header). No model, shadow or decision-lab output is read before the card is written; the model shadow runs afterwards (MLSCOPE-v2, core step 7).
+Read [COMMON_OPERATING_PROTOCOL](../COMMON_OPERATING_PROTOCOL.md), [MINI_LOG_IDENTITY_PROTOCOL](../../../MINI_LOG_IDENTITY_PROTOCOL.md) and the complete seven-step sport workflow below. The primary card is ANALYST_PRIMARY_V1: the frozen reference plus logged adjustments (prompt header). The reference stage runs before any probability is written and the card freeze after it (MLSCOPE-v3, core step 7); no other model, shadow or decision-lab output is read. Read the [CORE](../../../CORE.md) page first.
 
 Also apply the core's **Before step 1 — evidence standard** ([prompt 1 core](../1_GAME_CARD.md)).
 
@@ -42,9 +42,13 @@ Follow official governing body / field owner match center → structured provide
 
 Verify confirmed participant readiness, lineups and availability; probable is not confirmed. Research exact participants' prior games online under HISTORICAL_SOURCE_PROTOCOL. If sources cannot support an authoritative model, use UNCALIBRATED_QUALITATIVE or NO_FORECAST.
 
+**Value-ranked checklist (CHECK-v1).** Work the high-value inputs first and time each to when it is published ([RESEARCH_CHECKLISTS](../../../RESEARCH_CHECKLISTS.md), Other sports): Use the closest sport's checklist and say which. High: who plays and in what role; medium: schedule, venue and conditions. Every confirmed fact that moves a number becomes an adjustment-ledger row with an effect-table size.
+
 ## 4. Distribution, expected score and comparator
 
 Also apply the core's **Step 4 — Distribution, expected score and comparator** shared rules ([prompt 1 core](../1_GAME_CARD.md)).
+
+**Reference for this sport (REFMODEL-v1).** Tier C unless the competition has stored history: league-only anchor from a parameter row or family prior with widths +10%, or `NONE`. Widths are never below the competition's floor in [COMPETITION_PARAMETERS](../../../COMPETITION_PARAMETERS.md) without a written exception.
 
 Build the simplest defensible coherent sport distribution you can actually compute. Print every parameter and its basis, formula/table, normalization, tail treatment, covariance and endpoint transitions. If the required calculation cannot be done, report a supported approximation with limitations, or qualitative research with NOT_ESTIMATED probabilities. Hand method: PROBABILITY_TOOLKIT §1–§3.
 

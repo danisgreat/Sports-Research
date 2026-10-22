@@ -1,29 +1,12 @@
-> **Primary ML/RL (15 October 2026):** [PRIMARY_PREDICTION_PROTOCOL](PRIMARY_PREDICTION_PROTOCOL.md) supplies actual model-assisted original probabilities in the supported exact competition/endpoint. Keep these sport-specific physical/source/family checks. Unsupported model/phase/participant regimes remain NO_FORECAST, not another league's model. This amendment overrides older blanket manual-model exclusions, not sporting truth or the market firewall.
+> **Authority.** [CORE](CORE.md) and [CURRENT_RULES](CURRENT_RULES.md) govern new work; this page holds this sport's rules, and earlier statements below keep their historical scope.
 
-**Executable forecast cycle (CYCLE-v1).** Apply [FORECAST_CYCLE_PROTOCOL](FORECAST_CYCLE_PROTOCOL.md). New contextual forecasts use MODEL_ASSISTED_CYCLE_V1 with a frozen exact-competition release, actual execution receipt, identical-contract baseline shadows and verified settlement feedback. Existing V3/tennis adapters retain their own cohorts; missing/unsupported inputs require a real failure receipt and retained research. This statistical/procedure release authorises experimental execution, not predictive qualification.
+**Executable forecast cycle (CYCLE-v1).** Defined in [FORECAST_CYCLE_PROTOCOL](FORECAST_CYCLE_PROTOCOL.md); summarised in [CORE](CORE.md) §7.
 
-**Local keys until settlement; updated mini after every game (MINI-v2).** Apply [MINI_LOG_IDENTITY_PROTOCOL](MINI_LOG_IDENTITY_PROTOCOL.md). Research and mini creation (prompts 1–2) use stable local event keys and never assign or reserve canonical P-IDs. A canonical P-ID is assigned only in an event's settlement phase: prompt 3 settles the event and then runs the prompt-4 import, which assigns the ID. After each prompt-1 game request the repository agent appends the card to the active mini under `research/active_minis/`, updates intake and footer, reads the file back, and commits and pushes it. Preserve every owner-entered Upcoming game block and all earlier issued bytes. Formats: mini-log-10 / mini-settlement-10; earlier records retain their original formats.
+**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](MINI_LOG_IDENTITY_PROTOCOL.md); summarised in [CORE](CORE.md) §2.
 
-**Persistent research and corroboration (EXH-v1).** Apply [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md) to every required field in research, logging, settlement and verification. If a source is incomplete, open alternatives and verify material facts with another independent source; track every remaining field and attempt. Unresolved facts/corroboration never qualify as complete information. New settlements use mini-settlement-10 with a visible source-discovery/reuse section, three source/attempt/closure CSVs and S17; older originals retain their rules and bytes. Consult [RESEARCH_SOURCE_REGISTER](RESEARCH_SOURCE_REGISTER.md) and prior package registers, recheck actual coverage, and continue discovery beyond them.
+**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
 
-**Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** For every game, research both sides' L5/L10/L15/L20 online under [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md), with opened sources, dated game rows and true n. Seek exact-game confirmed players, starting roles, bench/replacements and absences under [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md); projected players remain unconfirmed. The retired local results store and its derived profiles are not required inputs or fallbacks. Earlier archive-first directions are superseded.
-
-> **Manual research timing (15 October 2026):** [TIMING_RESEARCH_PROTOCOL](TIMING_RESEARCH_PROTOCOL.md) supersedes older fixed advance research/freeze targets. Complete this sport's research even after play starts when needed. Record verified pre-start inputs, actual issue phase and outcome exposure separately; freeze only the completed original. A post-start-issued card remains in its own research cohort, not a pre-start-release claim.
-
-> **v11 precedence (2026-10-12, audit R09/R11).** [CURRENT_RULES](CURRENT_RULES.md), [SELECTION_RULES](SELECTION_RULES.md), [SCORING_AND_VALIDATION](SCORING_AND_VALIDATION.md), [CARD_AND_LOG_TEMPLATES](CARD_AND_LOG_TEMPLATES.md) and prompt 1 govern new work (MDS-2026.10.12-v11.0). This file remains the sport's reference for playing rules, mechanisms, sources and historical lessons. **Non-operative here:**
-
-> **Mandatory availability research (14 October 2026):** apply [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md) §§1–6 under CURRENT_RULES §5b for every competition in this sport. Research both sides' starters/starting role, selected bench/replacements and current medical/absence/eligibility reports separately; use official team sheets, local-language discovery for obscure leagues and a final late-change recheck. Record evidence and actual failed attempts in existing A3/A8/C20. Probable players, rosters and missing injury reports never become confirmation.
-> - RM-1 q ranking, q tiers, `TOP2_QUALITY` and cushion-term ranking: new cards rank by p_card (P_ORDER_V2).
-> - TB-1 / TB-1-MD "anchoring": `BASELINE_P` is always the league-only `BASELINE_LEAGUE_V1`, and TB-1-MD is a printed team-model reference only.
-> - Row-level numeric caps and grade caps not restated in CURRENT_RULES.
-> - Steps of the retired RULES_GENERAL / GFA algorithm.
-> - Any instruction to rank or settle that conflicts with the controls above.
->
-> The two "October 5" authority notes below are historical. Authority mode now follows CURRENT_RULES §0: a run uses either the pinned published main or the local working tree, never both. Recent form follows ARCHIVE_USE_GUIDE online form recipe R2 (L5/L10/L15/L20 counted once).
-
-> **Current authority (October 5):** [METHOD.md](METHOD.md) and [CURRENT_RULES.md](CURRENT_RULES.md) govern new work. Requested qualitative or explicitly uncalibrated research is retained under stable local keys regardless of calibration; prompt 4 alone assigns canonical IDs during import. Numerical performance certification is separate. Read current IDs/freeze from the [status register](GAME_LOG_STATUS_CURRENT.md), unresolved items from the [carryover](research/verification/closure_2026-10-05/carryover.md), and [current implementation evidence](research/verification/implementation_2026-10-05/REPORT.md). Earlier method, queue, freeze and eligibility statements below retain their historical scope.
-
-**Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
+**Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
 
 <!-- THREE-SOURCE-TIME-GATE-2026-09-19-CR4 -->
 
@@ -68,26 +51,19 @@ The rugby-union model (A1) is ridge ratings with key-number weights and draws al
 ### 0.4 Control index (full text in §6 and the dated sections)
 1 union is not league · 2 fifteens and sevens separate · 3 broad totals need mechanism support · 4 territory is not points · 5 points composition matters · 6 goal kicker is a regime · 7 set piece and breakdown are exposure engines · 8 cards create asymmetric tails · 9 low total ≠ close margin · 10 sevens clusters need restart/card branches · 11 sparse lineups cap evidence.
 
-
 ## 1. Identity and contract
-
 
 Resolve competition, season and law-trial era, 15s versus sevens, pool/knockout/tie state, venue, home/away/neutral status, match duration, extra-time/sudden-death/draw rules, bonus/qualification incentives, team/player/phase target, line, provider and operator settlement terms. Freeze whether the contract includes extra time.
 
-
 ## 2. Fifteen-a-side participants and exposure
-
 
 - Confirm the official starting XV, bench, late changes, captain, halfback/fly-half pairing, primary and replacement goal kickers, front-row/set-piece roles and expected substitution/minutes plan.
 - Translate absences and returns into set-piece stability, breakdown/ruck speed, territory kicking, gainline success, defensive alignment, goal-kicking and late bench state.
 - Record rest, travel, short turnaround, venue, surface and match-window weather through a named mechanism.
 
-
 ## 3. Fifteen-a-side scoring process
 
-
 Use opponent- and competition-adjusted:
-
 
 - possession sequences, territory and opposition-22 entries;
 - carries, metres/gainline success, clean breaks, defenders beaten and offloads;
@@ -99,15 +75,11 @@ Use opponent- and competition-adjusted:
 - conversion, penalty-goal and drop-goal attempt/accuracy with current kicker identity;
 - score-state decisions between goal, touch/lineout/maul and quick tap.
 
-
 Raw points, broad competition averages and recent Over/Under hit counts describe outcomes. They cannot control a total unless the current lineup, territory/entry, set-piece/breakdown, discipline, try-conversion and goal-kicking pathways support the same scoring state.
-
 
 ## 4. Rugby sevens process
 
-
 Freeze tournament stage, daily schedule, match duration, squad, rotation and recovery between games. Model:
-
 
 - possession time and possessions;
 - restart retention/regains;
@@ -118,24 +90,17 @@ Freeze tournament stage, daily schedule, match duration, squad, rotation and rec
 - penalties, yellow cards/man-down minutes and sudden separation;
 - score-state chasing and qualification incentives.
 
-
 Sevens totals and margins are cluster-prone: one restart, turnover, breakaway or card can create several linked scores. Winner, handicap and total still come from one joint score tree, but a winner lean never implies a multi-score cover.
-
 
 ## 5. Joint model
 
-
 For 15s, estimate possession/territory and scoring opportunities first, then split points into tries, conversions, penalty goals and drop goals. Use a joint team-score distribution with lineup, set-piece, discipline, weather, card, late-bench and extra-time branches.
-
 
 For sevens, use a possession/restart/turnover/line-break state process with try/conversion, card, fatigue and stage-incentive branches. Keep 15s and sevens candidates and baselines separate.
 
-
 All numerical forms are design ideas only. Suitable future baselines include empirical/shrunk joint scores and component count models; challengers may simulate possessions, territory/entries, set pieces, penalties/cards, tries and kicks. No form may publish a probability until its own target/source/H0/model cards and chronological gates pass.
 
-
 ## 6. Structural controls
-
 
 1. **Union is not league.** No tackle-set, six-again, interchange or golden-point mechanism transfers from rugby league.
 2. **Fifteens and sevens are separate populations.** Do not transfer scoring averages, margins or rest effects between them.
@@ -149,18 +114,13 @@ All numerical forms are design ideas only. Suitable future baselines include emp
 10. **Sevens clusters require restart/card branches.** A short match and small sample require wide tails, not false confidence.
 11. **Sparse lineups cap evidence.** If official teams/kickers and matchup-native process data are missing, rank as required but cap participant-sensitive totals/sides at `FORCED RANK` or `MEDIUM-LOW` evidence.
 
-
 ## 7. Live state
-
 
 For 15s store score, clock/half, cards and remaining duration, current players/substitutions, kicker, territory, opposition-22 entries, set pieces, penalties, turnovers, line breaks, tries/kicks and weather/surface. Rebuild remaining possessions and scoring composition.
 
-
 For sevens also store possession/restart state, elapsed/remaining match time, daily match load and qualification context. Do not extrapolate an early breakaway rate across the remaining short match.
 
-
 ## 8. Sources and settlement
-
 
 - World Rugby laws and competition regulations control laws, variations and scoring rules.
 - Official competition/union/tournament match centres, team sheets, disciplinary releases and finals control current facts.
@@ -168,20 +128,15 @@ For sevens also store possession/restart state, elapsed/remaining match time, da
 - Ligue Nationale de Rugby's official SuperSevens hub controls its schedule, stage, tournament reports and official results where exposed.
 - Reputable specialist rugby providers may fill defined process fields after provider/coverage checks; they do not override official team, law or final corrections.
 
-
 Settle score, phase, extra time, cards and player/team statistics under the exact provider and endpoint. If the official final is inaccessible, use two independent high-quality current sources and mark the affected field provisional.
 
-
 Method references:
-
 
 - [World Rugby Laws of the Game](https://passport.world.rugby/laws-of-the-game/).
 - [Performance Analysis in Rugby Union: a Critical Systematic Review](https://doi.org/10.1186/s40798-019-0232-x), supporting context-specific use of territory, line breaks, metres, kicking, tackles, turnovers and penalties rather than a universal outcome statistic.
 - [Performance Indicators Related to Points Scoring and Winning in International Rugby Sevens](https://pmc.ncbi.nlm.nih.gov/articles/PMC3990890/), supporting possession, restarts, set piece, phase play, turnovers, cards and scoring-rate decomposition; it does not establish an active coefficient.
 
-
 ## 9. Upcoming-game research sequence
-
 
 1. Freeze code/format, competition/law era, stage, duration, extra-time/draw/qualification and contract/provider terms.
 2. Retrieve the official fixture and teams/squad, bench/rotation, kickers and current availability; refresh immediately before start.
@@ -190,15 +145,11 @@ Method references:
 5. Stress lower, central, high-conversion, penalty-goal, card and controlled-separation states. Explain why broad scoring averages remain relevant after current matchup adjustment.
 6. Derive winner, handicap and total from one format-correct joint score tree and log all missing participant/provider fields.
 
-
 ## 10. SFA-RUGBY-UNION — sport forecast algorithm
-
 
 Algorithm ID: `SFA-RUGBY-UNION`. Effective **2026-09-02**. Instantiates `GFA-2` (RULES_GENERAL (archived) §11) with rugby-union content. Process composition only; no fitted weight, scenario weight or published probability is introduced, and no rugby-union or sevens target, source, dataset or model is approved or fit. Fifteens and sevens run separate branch sets and are never pooled with each other or with rugby league.
 
-
 ### 10.1 Blocking preconditions
-
 
 | Precondition | Requirement | Failure output |
 |---|---|---|
@@ -208,9 +159,7 @@ Algorithm ID: `SFA-RUGBY-UNION`. Effective **2026-09-02**. Instantiates `GFA-2` 
 | `RU-P4` conditions | Venue, surface and match-window weather, each entered through a named mechanism | No automatic total direction |
 | `RU-P5` sevens schedule | For sevens, the daily schedule, match load and recovery between fixtures | Widen tails; a short match with a small sample does not support confidence |
 
-
 ### 10.2 Exposure chain — fifteens
-
 
 | Step | Output |
 |---|---|
@@ -223,9 +172,7 @@ Algorithm ID: `SFA-RUGBY-UNION`. Effective **2026-09-02**. Instantiates `GFA-2` 
 | `RU-S7` | Points composition: tries, conversions, penalty goals and drop goals, split by score-state decisions between goal, touch and quick tap |
 | `RU-S8` | One joint team-score object with lineup, set-piece, discipline, weather, card, late-bench and extra-time branches |
 
-
 ### 10.3 Exposure chain — sevens
-
 
 | Step | Output |
 |---|---|
@@ -238,9 +185,7 @@ Algorithm ID: `SFA-RUGBY-UNION`. Effective **2026-09-02**. Instantiates `GFA-2` 
 | `RU-V7` | Penalties, yellow cards and man-down minutes, with sudden separation |
 | `RU-V8` | One joint score tree with cluster, card, fatigue and stage-incentive branches |
 
-
 ### 10.4 Mandatory branch set
-
 
 | Branch | Content |
 |---|---|
@@ -253,9 +198,7 @@ Algorithm ID: `SFA-RUGBY-UNION`. Effective **2026-09-02**. Instantiates `GFA-2` 
 | `RU-B7` | Weather branch, with handling, kicking, maul and set-piece effects signed separately |
 | `RU-B8` | Sevens cluster branch: restart, turnover, breakaway and card sequences producing several linked scores; and, for fifteens, the extra-time or draw state |
 
-
 ### 10.5 Contract derivation map
-
 
 | Contract | Queried from | Extra condition the mechanism must predict |
 |---|---|---|
@@ -265,9 +208,7 @@ Algorithm ID: `SFA-RUGBY-UNION`. Effective **2026-09-02**. Instantiates `GFA-2` 
 | Team total | Team marginal | That side's own entries, set piece and kicking |
 | Player and stat props | Minutes, position and the exact provider definition | Role continuity across substitutions |
 
-
 ### 10.6 Kill-path library
-
 
 | Kill path | Defeats | Evidence origin |
 |---|---|---|
@@ -280,9 +221,7 @@ Algorithm ID: `SFA-RUGBY-UNION`. Effective **2026-09-02**. Instantiates `GFA-2` 
 | Missing official teams, kickers or matchup-native process data | A participant-sensitive total or side above `FORCED RANK` | §6 control 11 |
 | Rugby-league mechanisms imported into union analysis | Any step resting on tackle sets, six-again, interchange or golden point | §6 control 1 |
 
-
 ### 10.7 Sport ordering overrides
-
 
 1. Fifteens and sevens rows are never compared using a shared scoring baseline, even within one tournament day.
 2. A total row whose points composition is unresolved between tries and penalty goals is capped at `LEAN` until `RU-B3` is written.
@@ -290,9 +229,7 @@ Algorithm ID: `SFA-RUGBY-UNION`. Effective **2026-09-02**. Instantiates `GFA-2` 
 4. Broad competition averages and recent Over counts may not supply a decisive term in the G23.1 marginal-likelihood comparison.
 5. Recent points, cover counts and reputation are `E — diagnostic only`.
 
-
 ### 10.8 Pre-issue checklist
-
 
 1. `RU-P1`–`RU-P5` status printed, including the kicker and any sevens match-load state.
 2. Format-correct competition and venue scoring baseline stated before any line.
@@ -311,15 +248,11 @@ Algorithm ID: `SFA-RUGBY-UNION`. Effective **2026-09-02**. Instantiates `GFA-2` 
 15. Winner-and-cushion reconciliation (G30.1) whenever Rank #1 is an underdog cushion, with the outright-win and narrow-loss branch ordering stated. Example separation kill path for this sport: a late try or a sequence of penalty goals.
 16. Deficit attribution (G14.1) recorded for every weak, absent, returning or small-sample participant: which side's distribution moved and through which exposure step.
 
-
 ### 10.9 Recency, head-to-head and trend windows
-
 
 Implements `GFA-2` step G13.1 (RULES_GENERAL (archived) §11.3B) and runs at that point in the algorithm, not at the end. Retrieval of L5/L10/L15/L20 for both sides and for the head-to-head series is mandatory; a window that does not exist is recorded with its true count and a missingness code.
 
-
 Populate one windowed table per side with these metrics, and one head-to-head table:
-
 
 | Window metric | Content |
 |---|---|
@@ -329,21 +262,15 @@ Populate one windowed table per side with these metrics, and one head-to-head ta
 | Points composition | The split of points between tries, conversions, penalty goals and drop goals |
 | Goal kicking | The current kicker's own last 5/10/15/20 games: attempts, success and range |
 
-
 **Head-to-head continuity.** Continuity means the same coaching group, a comparable matchday squad and the same law era. Fifteens and sevens head-to-head are never pooled, and neither is pooled with rugby league.
-
 
 **Descriptive recency windows (G13.1; revised 2026-09-17).** Retrieve L5/L10/L15/L20 and continuity-qualified H2H with unique-event counts. These windows overlap. Monotonicity and dispersion among their averages are not a statistical trend/noise test. Report direction descriptively; estimate recency decay and opponent/regime effects using time-ordered validation. See SCORING_AND_VALIDATION section 5.
 
-
 **De-duplication.** The windows overlap by construction and share matches with the head-to-head and venue series. Shrink from unique underlying events under G9; never treat L5, L10, L15 and L20 as four confirmations.
-
 
 ### 10.10 Environment and conditions
 
-
 Implements `GFA-2` step G15.1 (RULES_GENERAL (archived) §11.3C). Venue classification for this sport is normally **OUTDOOR**.
-
 
 | Field | Use in this sport |
 |---|---|
@@ -352,18 +279,13 @@ Implements `GFA-2` step G15.1 (RULES_GENERAL (archived) §11.3C). Venue classifi
 | Surface state | Official venue source |
 | Temperature and, for sevens, the day schedule | Recovery between fixtures is a sevens-specific exposure variable |
 
-
 Failure to obtain the match-window forecast for an outdoor or open-roof event yields `WEATHER_NOT_AVAILABLE`, widened total and margin distributions, and a `LEAN` cap on every weather-dependent row. No factor above carries an automatic total direction.
-
 
 ### 10.11 Base-rate anchors and derived stat lanes
 
-
 **Anchoring (G12.1).** Anchor totals on the competition scoring environment for that exact format, and margins on its margin distribution. Fifteens and sevens anchors are separate.
 
-
 **Derived and low-salience fields that are available and routinely skipped:**
-
 
 | Field | Note |
 |---|---|
@@ -371,21 +293,15 @@ Failure to obtain the match-window forecast for an outdoor or open-roof event yi
 | Card history and discipline at the set piece | Feeds the `RU-B5` man-down branch |
 | Bench composition and the substitution plan | Front-row and finisher impact by phase |
 
-
 ## 11. Sport and competition rules reference
-
 
 Added 2026-09-04; last reviewed 2026-09-04. Standing reference for the laws of rugby union (15s and 7s) and the competition rules of the two rugby competitions in the prediction logs: the **New Zealand NPC** (now the Hilux NPC) and the **French In Extenso SuperSevens**. Supports `RU-P` identity and §8 settlement; introduces no rate, weight or ordering rule.
 
-
 **Maintenance (RULES_GENERAL (archived) §3, `G2`).** World Rugby runs frequent law trials (the 20-minute red card, the goal-line drop-out, scrum/breakdown tweaks, a shot-clock) that competitions adopt at different times; SuperSevens changed its whole format for 2026. Before the first card of a new NPC or SuperSevens season, re-verify the red-card law in force, the bonus-point rules, the team count and single-division status, the playoff bracket, and (for SuperSevens) the current stage structure against the competition's site, and update this section **before** issuing the card. The first time another union or sevens competition is forecast (Super Rugby, URC, Top 14, a Test, a World Series leg), document its full rules here first, and keep 15s and 7s as separate populations.
-
 
 ### 11.1 The laws of 15-a-side rugby union
 
-
 **Field and teams.** ~100 m (goal line to goal line) × 70 m, plus in-goal areas. **15 players a side** (8 forwards, 7 backs), **8 replacements** on the bench. Substitutions are permanent except a front-rower may return to cover an injury/blood/HIA (and there are minimum front-row-cover requirements — if a team cannot field a safe front row, scrums become **uncontested** and that team plays a man short).
-
 
 **Scoring.**
 - **Try = 5 points** — grounding the ball in the opponent's in-goal.
@@ -393,24 +309,17 @@ Added 2026-09-04; last reviewed 2026-09-04. Standing reference for the laws of r
 - **Penalty goal = 3 points.**
 - **Drop goal (from open play) = 3 points.**
 
-
 **Play.** Continuous. The ball may be **carried, passed backwards or kicked** — a forward pass or knock-on is a **scrum** to the other team. Contact contests: the **tackle** (tackler must release, tackled player must release/play the ball), the **ruck** (players bind over the ball on the ground — offside lines apply), the **maul** (ball-carrier held up, teammates bind and drive). Set pieces: the **scrum** (8 v 8 contest to restart after a minor infringement) and the **lineout** (throw-in from touch, with lifting). **Offside** applies at every phase and is one of the most penalised areas.
-
 
 **Match structure.** **Two 40-minute halves** (running clock, stopped by the referee for injuries, TMO reviews, kicks at goal and scrum resets; a half only ends when the ball next becomes dead after 40:00). ~10–15 min half-time. **TMO** (Television Match Official) reviews tries and foul play. **Yellow card** = 10 minutes in the sin bin, no replacement; **red card** = off for the match — many competitions now use a **20-minute red card** (the sent-off player cannot return but a replacement enters after 20 minutes). Confirm which red-card law the competition uses.
 
-
 **Bonus points (standard union system).** In the league table: **4 for a win, 2 for a draw, 0 for a loss**, plus **1 bonus point for scoring 3 (or in some competitions 4) more tries than the opponent** ("try bonus"), plus **1 bonus point for losing by 7 points or fewer** ("losing bonus"). This makes the union table markedly different from rugby league's — a losing team routinely banks points, and blowouts are chased for the try bonus.
-
 
 **Knockouts.** Level after 80 minutes → **two 10-minute halves of extra time**; if still level, a period of **sudden-death extra time**, then a **kicking competition** (place kicks from set marks) as a last resort. Confirm per competition.
 
-
 ### 11.2 The laws of rugby sevens
 
-
 Same field, posts and scoring **values** as 15s, but:
-
 
 - **7 players a side** (3 forwards, 4 backs), **5 replacements**, 5 substitutions.
 - **Two 7-minute halves** (2 min half-time); **finals are two 10-minute halves**.
@@ -420,47 +329,32 @@ Same field, posts and scoring **values** as 15s, but:
 - **Knockouts:** level at full time → **sudden-death extra time** in periods of ~5 minutes, first score wins.
 - **Tournament format:** pools (round-robin) over 1–2 days, then a **knockout** — typically a **Cup** bracket for the top finishers and secondary placings brackets. Pool ranking by match points (win 3 / draw 2 / loss 1 / forfeit 0 in the World Rugby system), then head-to-head, then points difference, then tries.
 
-
 Sevens and 15s are **entirely separate populations** (RULES_RUGBY_UNION.md preamble, §4) — no scoring, margin or pace figure transfers between them.
-
 
 ### 11.3 New Zealand NPC (National Provincial Championship — "Hilux NPC")
 
-
 **Governing body:** New Zealand Rugby. **Sponsor:** Toyota took title sponsorship from late 2025 (previously "Bunnings NPC"), branding it the **Hilux NPC**; the women's Farah Palmer Cup and the third-tier Heartland Championship are separate competitions.
-
 
 **Structure (current format).** **14 provincial unions** in a **single division, single table** (the old Premiership/Championship two-division split with promotion/relegation has been dropped). Each team plays **10 round-robin matches** (an uneven fixture — not everyone plays everyone). August–October.
 
-
 **Table and playoffs.** Standard union points + bonus points (try bonus, losing-bonus within 7). **Top 8** advance to **quarter-finals**, then **semi-finals**, then the **NPC Final** — hosted by the higher-ranked team at each stage.
-
 
 **Ranfurly Shield.** A **challenge trophy** contested *within* selected NPC (and other) fixtures: the holder defends it in each home match; a challenger who wins takes the Shield. It does **not** affect the league table but is a major motivational and selection factor for the specific fixture in which it is on the line — flag it in the identity check.
 
-
 **Analytical notes.** NPC squads are **below Super Rugby level** and rotate heavily around All Blacks/Super Rugby availability; depth, weather (spring in New Zealand) and travel matter. It is its own scoring population — do not import Super Rugby or Test rates.
-
 
 ### 11.4 In Extenso SuperSevens (France)
 
-
 **Governing body:** Ligue Nationale de Rugby (LNR). France's domestic rugby-sevens championship.
-
 
 **2026 format (new).** From the 2026–2027 season the competition is **fully gender-equal** and restructured into **two "summer stages"** (each a two-day event: a pool phase + a "night session" on day one, direct-elimination knockouts on day two — held **21–29 August 2026**) followed by a **finals stage** (5–6 February 2027, Plenitude/Paris La Défense Arena) that crowns the French champions.
 
-
 **Field.** Men's: the **14 Top 14 clubs** plus the **French Barbarians** and **Monaco Rugby Sevens** (16). Women's: the **10 Élite 1 clubs**.
-
 
 **Rules.** Standard World Rugby sevens laws (§11.2): 2 × 7 min (10 min for a final), drop-kick conversions taken quickly, scoring team kicks off, 2-minute yellow cards, sudden-death extra time in knockouts. Each stage produces stage points toward overall standings that seed the finals.
 
-
 **Analytical notes.** SuperSevens uses **Top 14 club rosters**, but which players a club sends to a sevens weekend is highly variable and often not its 15s stars — participant identity and effective strength are very weakly predictable (`SFA-RUGBY-UNION` §10.3 sevens exposure chain; sparse-competition handling). Sevens tournaments have **large within-day variance**: a team can top its pool and lose a quarter-final to one intercept.
 
-
 ### 11.5 Identity checklist (rugby)
-
 
 Resolve before any rate work: **which code and format** (15s vs 7s — never pooled); the **competition** (NPC / SuperSevens / other) and its **bonus-point and table rules**; the **stage** (round-robin / pool / quarter-final / final) and therefore whether a **draw is possible** or the match goes to **extra time / kicks**; the **red-card law** in force (straight red vs 20-minute red); whether the **Ranfurly Shield** or a similar trophy is on the line for that specific fixture; squad availability against higher-level competitions; and the operator's market endpoint for a knockout (regulation vs eventual winner).

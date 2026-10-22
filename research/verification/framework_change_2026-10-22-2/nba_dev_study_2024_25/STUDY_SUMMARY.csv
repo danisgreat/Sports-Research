@@ -1,0 +1,21 @@
+competition,test_season,games,metric,value,detail
+Basketball/NBA,2024,1231,calibration_slope_equal-weight mixture,1.515,se 0.127; intercept -0.114; ECE 0.0508
+Basketball/NBA,2024,1231,calibration_slope_online-Hedge mixture,1.298,se 0.109; intercept -0.077; ECE 0.0272
+Basketball/NBA,2024,1231,brier_equal-weight mixture,0.2189,n 1231
+Basketball/NBA,2024,1231,brier_online-Hedge mixture,0.2172,n 1231
+Basketball/NBA,2024,1231,brier_league-only arm,0.2483,n 1231
+Basketball/NBA,2024,1231,brier_TB-1-MD (season to date),0.2186,n 1184
+Basketball/NBA,2024,1231,brier_TB-2-MD additive (season to date),0.2113,n 1184
+Basketball/NBA,2024,1231,paired_brier_TB-2-MD_minus_TB-1-MD (season to date),-0.008,"[-0.0130, -0.0030] over 24 weeks: BELOW_ZERO"
+Basketball/NBA,2024,1231,paired_brier_TB-2-MD_minus_league-only arm,-0.0385,"[-0.0492, -0.0279] over 24 weeks: BELOW_ZERO"
+Basketball/NBA,2024,1231,calibration_slope_TB-2-MD,1.003,se 0.082; intercept 0.023
+Basketball/NBA,2024,1231,calibration_slope_TB-1-MD,2.045,se 0.166; intercept -0.164
+Basketball/NBA,2024,1231,paired_brier_equal-weight mixture_minus_league-only arm,-0.0304,"[-0.0369, -0.0239] over 25 weeks: BELOW_ZERO"
+Basketball/NBA,2024,1231,paired_brier_equal-weight mixture_minus_TB-1-MD (season to date),0.0003,"[-0.0028, 0.0033] over 24 weeks: SPANS_ZERO"
+Basketball/NBA,2024,1231,paired_brier_equal-weight mixture_minus_TB-2-MD additive (season to date),0.0083,"[0.0031, 0.0135] over 24 weeks: ABOVE_ZERO"
+Basketball/NBA,2024,1231,paired_brier_online-Hedge mixture_minus_league-only arm,-0.0322,"[-0.0397, -0.0247] over 25 weeks: BELOW_ZERO"
+Basketball/NBA,2024,1231,paired_brier_online-Hedge mixture_minus_TB-1-MD (season to date),-0.0016,"[-0.0056, 0.0024] over 24 weeks: SPANS_ZERO"
+Basketball/NBA,2024,1231,paired_brier_online-Hedge mixture_minus_TB-2-MD additive (season to date),0.0064,"[0.0014, 0.0114] over 24 weeks: ABOVE_ZERO"
+Basketball/NBA,2024,1231,z_margin_sd,0.959,mean -0.018; beyond 1 SD 0.279; beyond 2 SD 0.044
+Basketball/NBA,2024,1231,z_total_sd,0.953,mean 0.028; beyond 1 SD 0.299; beyond 2 SD 0.032
+Basketball/NBA,2024,1231,mean_hedge_weights_fast_slow_league,,0.378 / 0.390 / 0.232

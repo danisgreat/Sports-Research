@@ -1,6 +1,6 @@
 # PROMPT 1 — sport file: TENNIS
 
-**P-2026.10.22-v23.0 · prompt 1 sport file.** Use this file together with the [prompt 1 core](../1_GAME_CARD.md): read the core first, then this file. The core holds every rule shared by all sports, including the shared rules of steps 1, 3, 4, 5 and 7; this file holds this sport's own instructions for steps 1–7. At each step apply the core's shared rules for that step together with this file's. Fill in the Upcoming game block below; it is the only part the owner edits. Do not read the other sport files.
+**P-2026.10.22-v24.0 · prompt 1 sport file.** Use this file together with the [prompt 1 core](../1_GAME_CARD.md): read the core first, then this file. The core holds every rule shared by all sports, including the shared rules of steps 1, 3, 4, 5 and 7; this file holds this sport's own instructions for steps 1–7. At each step apply the core's shared rules for that step together with this file's. Fill in the Upcoming game block below; it is the only part the owner edits. Do not read the other sport files.
 
 TENNIS
 ----------------------------
@@ -14,7 +14,7 @@ TENNIS
 - Supplied contracts: <Li -3.5 Handicap>, <Tjen +3.5 Handicap>, <Combined Total Games Over/Under 21.5 Games>
 
 
-Read [COMMON_OPERATING_PROTOCOL](../COMMON_OPERATING_PROTOCOL.md), [MINI_LOG_IDENTITY_PROTOCOL](../../../MINI_LOG_IDENTITY_PROTOCOL.md) and the complete seven-step sport workflow below. The primary card is ANALYST_PRIMARY_V1, researched online and priced by the analyst (prompt header). No model, shadow or decision-lab output is read before the card is written; the model shadow runs afterwards (MLSCOPE-v2, core step 7).
+Read [COMMON_OPERATING_PROTOCOL](../COMMON_OPERATING_PROTOCOL.md), [MINI_LOG_IDENTITY_PROTOCOL](../../../MINI_LOG_IDENTITY_PROTOCOL.md) and the complete seven-step sport workflow below. The primary card is ANALYST_PRIMARY_V1: the frozen reference plus logged adjustments (prompt header). The reference stage runs before any probability is written and the card freeze after it (MLSCOPE-v3, core step 7); no other model, shadow or decision-lab output is read. Read the [CORE](../../../CORE.md) page first.
 
 ## 1. Read and establish authority
 
@@ -38,9 +38,13 @@ Follow official tour match center (ATP / WTA) → structured provider → qualit
 
 Verify event/player identity, round, tour, surface, best-of format, tiebreak rules, fitness, workload, serve/return data and appropriate benchmark; probable is not confirmed. Inspect current tennis archive/provider coverage rather than assuming it is empty. Use only results known before cutoff. Do not use postgame narrative or full-season aggregates from after cutoff.
 
+**Value-ranked checklist (CHECK-v1).** Work the high-value inputs first and time each to when it is published ([RESEARCH_CHECKLISTS](../../../RESEARCH_CHECKLISTS.md), Tennis): High: surface-specific Elo (a 50/50 blend of surface and overall rating), fitness, recent workload and withdrawals. Medium: serve and return statistics. Low to medium: indoor or outdoor, altitude, balls. Retirements and walkovers follow the settlement rules. Every confirmed fact that moves a number becomes an adjustment-ledger row with an effect-table size.
+
 ## 4. Distribution, expected score and comparator
 
 Also apply the core's **Step 4 — Distribution, expected score and comparator** shared rules ([prompt 1 core](../1_GAME_CARD.md)).
+
+**Reference for this sport (REFMODEL-v1).** No reference: tier C, `NONE`. The Elo chain of PROBABILITY_TOOLKIT §6 is the card's own first estimate; game and set contracts come from the exact point-to-match recursion, with the match-level form shock integrated exactly once its sigma has been estimated from history. The card record is weakest here (Brier skill below the climatology): abstain readily. Widths are never below the competition's floor in [COMPETITION_PARAMETERS](../../../COMPETITION_PARAMETERS.md) without a written exception.
 
 Build the simplest defensible coherent tennis distribution: games/sets/winner come from compatible point-to-match construction with a supported form mixture; show calculation or label the approximation. Compare deciding-set mass with relevant tour/surface/format data, never force a global reference rate. Derive game handicaps and totals from the complete set-score states, including match-losing states. Covering −k.5 games does not imply winning the match, and set handicaps are a different quantity from game handicaps (R12). Print every parameter and its basis, formula/table, normalization, tail treatment, covariance and endpoint transitions. If the required calculation cannot be done, report a supported approximation with limitations, or qualitative research with NOT_ESTIMATED probabilities. Hand method: PROBABILITY_TOOLKIT §6.
 

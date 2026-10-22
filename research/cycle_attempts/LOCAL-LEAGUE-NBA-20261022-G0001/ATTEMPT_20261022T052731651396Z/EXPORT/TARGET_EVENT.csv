@@ -1,0 +1,2 @@
+competition,endpoint,native_event_id,season,scheduled_start,home,away,venue,source_url,known_at,capture_path,capture_sha256,collected_by
+Basketball/NBA,FULL_GAME_INCL_OT,ESPN:401909093,2026,2026-10-22T23:00:00+00:00,Philadelphia 76ers,Cleveland Cavaliers,Xfinity Mobile Arena,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20261022&limit=100,2026-10-22T05:27:31.641311+00:00,research/chat_captures/LOCAL-LEAGUE-NBA-20261022-G0001/fixture.txt,01fb320b3ec833105fa0b4b4ea29f22d7b90904427a4ddb1e8c558567a4d9d3d,LOCAL-LEAGUE-NBA-20261022-G0001

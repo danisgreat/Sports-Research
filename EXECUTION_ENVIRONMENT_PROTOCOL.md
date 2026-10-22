@@ -1,16 +1,16 @@
 # Execution environment: every prompt runs in the repository (ENV-v2)
 
-**ENV-2026.10.22-v2 · MDS-2026.10.22-v23.0 · CR-2026.10.22-R1 · P-2026.10.22-v23.0.** Owner instruction, 22 October 2026: the game logs are run here, not in an external chat. Every prompt, 1 to 8, is run in this repository by the repository agent (Claude Code on the owner's PC), with internet access for research. This supersedes ENV-v1 (17 October 2026), under which prompts 1–3 ran in an external chat; its text is archived in [archive/superseded_2026-10-22-1/](archive/superseded_2026-10-22-1/EXECUTION_ENVIRONMENT_PROTOCOL.md). Probabilities, selection, scoring and issued records are unchanged; delivery, model-shadow timing and the canonical assignment stage change (sections 3–5).
+**ENV-2026.10.22-v2 · MDS-2026.10.22-v24.0 · CR-2026.10.22-R2 · P-2026.10.22-v24.0.** Owner instruction, 22 October 2026: the game logs are run here, not in an external chat. Every prompt, 1 to 8, is run in this repository by the repository agent (Claude Code on the owner's PC), with internet access for research. This supersedes ENV-v1 (17 October 2026), under which prompts 1–3 ran in an external chat; its text is archived in [archive/superseded_2026-10-22-1/](archive/superseded_2026-10-22-1/EXECUTION_ENVIRONMENT_PROTOCOL.md). Probabilities, selection, scoring and issued records are unchanged; delivery, model-shadow timing and the canonical assignment stage change (sections 3–5).
 
 ## 1. Who runs what
 
-| Prompt | Environment | Authority | Writes | Model work (MLSCOPE-v2) |
+| Prompt | Environment | Authority | Writes | Model work (MLSCOPE-v3) |
 |---|---|---|---|---|
-| 1 Game card | REPOSITORY_AGENT, internet research | `LOCAL_WORKING_TREE` | Card, intake row and footer in the active mini; pregame receipt and frozen shadow rows; commit and push | After the card is written: `python -m ml pregame run` |
+| 1 Game card | REPOSITORY_AGENT, internet research | `LOCAL_WORKING_TREE` | Reference receipt and frozen rows; card, picks block, intake row and footer in the active mini; ledger rows; commit and push | Before the card: the reference stage (`pregame reference` or `reference run`); after it: `python -m ml pregame run` |
 | 2 Start mini | REPOSITORY_AGENT | `LOCAL_WORKING_TREE` | New mini, active-mini pointer; commit and push | None |
-| 3 Settle mini | REPOSITORY_AGENT, internet research | `LOCAL_WORKING_TREE` | Frozen-source identity, settlement document, shadow settlements, then the prompt-4 import; commit and push | `python -m ml cycle settle` for shadowed events |
+| 3 Settle mini | REPOSITORY_AGENT, internet research | `LOCAL_WORKING_TREE` | Frozen-source identity, settlement document, RESULTS.csv and ACTUALS.csv, shadow settlements, then the prompt-4 import; commit and push | `python -m ml cycle settle` for frozen events |
 | 4 Import | REPOSITORY_AGENT | `LOCAL_WORKING_TREE` | Canonical suffix, mapping, state; run by prompt 3 or alone | None |
-| 5–8 | REPOSITORY_AGENT | `LOCAL_WORKING_TREE` | As each prompt declares | 6 evaluates (`pregame status`, `cycle evaluate`, `pregame compare-card`); 8 releases |
+| 5–8 | REPOSITORY_AGENT | `LOCAL_WORKING_TREE` | As each prompt declares | 6 evaluates (`pregame status`, `cycle evaluate`, `pregame compare-card`, `ledger score`, `ledger coverage`); 8 releases |
 
 `PUBLISHED_MAIN_PINNED` remains valid only for an agent working outside the repository (the retired ENV-v1 route). Its outputs are taken in through prompt 4's intake, unchanged.
 
@@ -32,9 +32,9 @@ Research is done on the internet with the agent's own tools, from verifiable sou
 - Prompt 3 freezes the mini and records its byte count and SHA-256 itself; FROZEN_SOURCE is no longer PENDING_PROMPT_4.
 - It writes the settlement document, settles the model shadows of shadowed events and then runs prompt 4 on the frozen mini and settlement in the same session. **Canonical IDs are assigned only in this settlement phase** (MINI-v2): settled events receive their IDs; pending events stay in the carryover with canonical ID NOT_ASSIGNED and move to the next mini.
 
-## 5. Model shadow timing (MLSCOPE-v2)
+## 5. Reference and model timing (MLSCOPE-v3)
 
-The card is priced before any model output is read. The pregame command refuses to run unless the card's BEGIN and END markers are already in the mini, and it refuses a `card_p` value that is not printed in that card. The card's own p_card is frozen beside the model and the league baseline on identical contracts, so the three can be compared prospectively. Details: [FORECAST_CYCLE_PROTOCOL](FORECAST_CYCLE_PROTOCOL.md).
+The declared reference is frozen **before** the card's probabilities are written: a tier A release by `python -m ml pregame reference`, a TB-2-MD or baseline reference by `python -m ml reference run`. The pregame command refuses to freeze the card unless the card's BEGIN and END markers are already in the mini, and refuses a `card_p` value that is not printed in that card. The card's own final p_card is frozen beside the reference and the league baseline on identical contracts, so the three can be compared prospectively. A reference already frozen is reused, never rerun. Details: [FORECAST_CYCLE_PROTOCOL](FORECAST_CYCLE_PROTOCOL.md), [REFERENCE_MODEL_PROTOCOL](REFERENCE_MODEL_PROTOCOL.md).
 
 ## 6. Limits
 

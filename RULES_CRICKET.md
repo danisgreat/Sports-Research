@@ -1,29 +1,12 @@
-> **Primary ML/RL (15 October 2026):** [PRIMARY_PREDICTION_PROTOCOL](PRIMARY_PREDICTION_PROTOCOL.md) supplies actual model-assisted original probabilities in the supported exact competition/endpoint. Keep these sport-specific physical/source/family checks. Unsupported model/phase/participant regimes remain NO_FORECAST, not another league's model. This amendment overrides older blanket manual-model exclusions, not sporting truth or the market firewall.
+> **Authority.** [CORE](CORE.md) and [CURRENT_RULES](CURRENT_RULES.md) govern new work; this page holds this sport's rules, and earlier statements below keep their historical scope.
 
-**Executable forecast cycle (CYCLE-v1).** Apply [FORECAST_CYCLE_PROTOCOL](FORECAST_CYCLE_PROTOCOL.md). New contextual forecasts use MODEL_ASSISTED_CYCLE_V1 with a frozen exact-competition release, actual execution receipt, identical-contract baseline shadows and verified settlement feedback. Existing V3/tennis adapters retain their own cohorts; missing/unsupported inputs require a real failure receipt and retained research. This statistical/procedure release authorises experimental execution, not predictive qualification.
+**Executable forecast cycle (CYCLE-v1).** Defined in [FORECAST_CYCLE_PROTOCOL](FORECAST_CYCLE_PROTOCOL.md); summarised in [CORE](CORE.md) §7.
 
-**Local keys until settlement; updated mini after every game (MINI-v2).** Apply [MINI_LOG_IDENTITY_PROTOCOL](MINI_LOG_IDENTITY_PROTOCOL.md). Research and mini creation (prompts 1–2) use stable local event keys and never assign or reserve canonical P-IDs. A canonical P-ID is assigned only in an event's settlement phase: prompt 3 settles the event and then runs the prompt-4 import, which assigns the ID. After each prompt-1 game request the repository agent appends the card to the active mini under `research/active_minis/`, updates intake and footer, reads the file back, and commits and pushes it. Preserve every owner-entered Upcoming game block and all earlier issued bytes. Formats: mini-log-10 / mini-settlement-10; earlier records retain their original formats.
+**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](MINI_LOG_IDENTITY_PROTOCOL.md); summarised in [CORE](CORE.md) §2.
 
-**Persistent research and corroboration (EXH-v1).** Apply [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md) to every required field in research, logging, settlement and verification. If a source is incomplete, open alternatives and verify material facts with another independent source; track every remaining field and attempt. Unresolved facts/corroboration never qualify as complete information. New settlements use mini-settlement-10 with a visible source-discovery/reuse section, three source/attempt/closure CSVs and S17; older originals retain their rules and bytes. Consult [RESEARCH_SOURCE_REGISTER](RESEARCH_SOURCE_REGISTER.md) and prior package registers, recheck actual coverage, and continue discovery beyond them.
+**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
 
-**Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** For every game, research both sides' L5/L10/L15/L20 online under [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md), with opened sources, dated game rows and true n. Seek exact-game confirmed players, starting roles, bench/replacements and absences under [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md); projected players remain unconfirmed. The retired local results store and its derived profiles are not required inputs or fallbacks. Earlier archive-first directions are superseded.
-
-> **Manual research timing (15 October 2026):** [TIMING_RESEARCH_PROTOCOL](TIMING_RESEARCH_PROTOCOL.md) supersedes older fixed advance research/freeze targets. Complete this sport's research even after play starts when needed. Record verified pre-start inputs, actual issue phase and outcome exposure separately; freeze only the completed original. A post-start-issued card remains in its own research cohort, not a pre-start-release claim.
-
-> **v11 precedence (2026-10-12, audit R09/R11).** [CURRENT_RULES](CURRENT_RULES.md), [SELECTION_RULES](SELECTION_RULES.md), [SCORING_AND_VALIDATION](SCORING_AND_VALIDATION.md), [CARD_AND_LOG_TEMPLATES](CARD_AND_LOG_TEMPLATES.md) and prompt 1 govern new work (MDS-2026.10.12-v11.0). This file remains the sport's reference for playing rules, mechanisms, sources and historical lessons. **Non-operative here:**
-
-> **Mandatory availability research (14 October 2026):** apply [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md) §§1–6 under CURRENT_RULES §5b for every competition in this sport. Research both sides' starters/starting role, selected bench/replacements and current medical/absence/eligibility reports separately; use official team sheets, local-language discovery for obscure leagues and a final late-change recheck. Record evidence and actual failed attempts in existing A3/A8/C20. Probable players, rosters and missing injury reports never become confirmation.
-> - RM-1 q ranking, q tiers, `TOP2_QUALITY` and cushion-term ranking: new cards rank by p_card (P_ORDER_V2).
-> - TB-1 / TB-1-MD "anchoring": `BASELINE_P` is always the league-only `BASELINE_LEAGUE_V1`, and TB-1-MD is a printed team-model reference only.
-> - Row-level numeric caps and grade caps not restated in CURRENT_RULES.
-> - Steps of the retired RULES_GENERAL / GFA algorithm.
-> - Any instruction to rank or settle that conflicts with the controls above.
->
-> The two "October 5" authority notes below are historical. Authority mode now follows CURRENT_RULES §0: a run uses either the pinned published main or the local working tree, never both. Recent form follows ARCHIVE_USE_GUIDE online form recipe R2 (L5/L10/L15/L20 counted once).
-
-> **Current authority (October 5):** [METHOD.md](METHOD.md) and [CURRENT_RULES.md](CURRENT_RULES.md) govern new work. Requested qualitative or explicitly uncalibrated research is retained under stable local keys regardless of calibration; prompt 4 alone assigns canonical IDs during import. Numerical performance certification is separate. Read current IDs/freeze from the [status register](GAME_LOG_STATUS_CURRENT.md), unresolved items from the [carryover](research/verification/closure_2026-10-05/carryover.md), and [current implementation evidence](research/verification/implementation_2026-10-05/REPORT.md). Earlier method, queue, freeze and eligibility statements below retain their historical scope.
-
-**Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
+**Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
 
 # Cricket analysis rules
 
@@ -97,22 +80,15 @@ Numerical-engine design notes (the engine code was removed on 2026-10-09; comput
 3. **Limited-Overs Engine**: Ball/over-by-ball discrete state transition model conditioned on phase (Powerplay 1–6, Middle 7–40/15, Death 41–50/16–20), remaining wickets, and target-chase pressure.
 4. **Independent Training**: Fit exclusively on `H0-CRICKET-TEST-v1` and `H0-CRICKET-LO-v1` via Cricsheet JSON; D0 is strictly reserved for error diagnostics.
 
-
-
 ## 1. Identity and contract
-
 
 Resolve format and competition: Test, ODI, T20, The Hundred, domestic format, international, warm-up, or exhibition. Record innings, batting team, target/chase state, scheduled balls/overs, legal-ball definition, powerplay/field restrictions, DLS/shortening terms, winner/tie/super-over rules, and exact player/team metric.
 
-
 Never assume that a broadcaster label uses the same boundary as the user's contract. Official current-season playing conditions control.
-
 
 ### Underlying cricket target hard gate
 
-
 Freeze one exact target before modelling or mapping a line:
-
 
 | Target ID family | Outcome and endpoint |
 |---|---|
@@ -123,29 +99,21 @@ Freeze one exact target before modelling or mapping a line:
 | `SESSION_RUNS` | Runs inside an officially defined session boundary |
 | `MATCH_RESULT` | Governing result state, including draw/tie/abandonment rules |
 
-
 These are not aliases. A day total may cross innings and batting-team boundaries; an innings total stops at that innings endpoint. Pregame, end-of-day and live versions have distinct target/horizon/model IDs.
-
 
 ## 2. Toss, exact-strip and match-conditions hard gate — CR-2026.09.21-1
 
-
 For every cricket card, keep **three different evidence objects**. They are not aliases:
-
 
 - **TOSS STATUS:** `VERIFIED` / `NOT_VERIFIED_AFTER_SEARCH` / `NOT_YET_PUBLISHED` / `CONFLICTING`;
 - **STRIP STATUS (exact-match pitch report):** `OBSERVED` / `NOT_FOUND_AFTER_SEARCH` / `CONFLICTING` / `STALE_ONLY`;
 - **MATCH CONDITIONS STATUS:** `OBSERVED` / `NOT_AVAILABLE` / `CONFLICTING`.
 
-
 A card is not compliant merely because it prints one of those labels. It must show the relevant search attempts, source lineage and freshness. Toss facts, exact-strip observations, venue history and weather are stored separately so one cannot silently stand in for another.
-
 
 ### 2.1 TOSS FACT ladder
 
-
 Search the toss in this order:
-
 
 | Rank | Source lane | Use |
 |---:|---|---|
@@ -156,15 +124,11 @@ Search the toss in this order:
 | T5 | High-quality exact-match specialist scorecard/commentary | Toss corroboration |
 | T6 | Reputable independent exact-match reporting | Fallback/corroboration; identity/date/venue must match exactly |
 
-
 If this ladder does not verify the toss, record `TOSS STATUS: NOT_VERIFIED_AFTER_SEARCH`. **Do not infer the toss winner merely from which side bats first.** If the contract activates only for the batting-first/chasing side, control 32 remains binding.
-
 
 ### 2.2 STRIP/PITCH EVIDENCE ladder
 
-
 Only P1–P5 can establish the current exact-match strip. P6–P8 are context only.
-
 
 | Rank | Source lane | Evidence class | Can set `STRIP STATUS: OBSERVED`? |
 |---:|---|---|---|
@@ -177,15 +141,11 @@ Only P1–P5 can establish the current exact-match strip. P6–P8 are context on
 | P7 | Same-venue, same-format/rules-era scoring and phase baseline by innings order | `VENUE_HISTORY` | No |
 | P8 | ICC post-match pitch rating or an explicitly quoted approved historical surface metric such as PitchViz | `VENUE_REPUTATION_CONTEXT` | No |
 
-
 A previous match is a **different strip** unless a current curator/broadcast/field-owner statement explicitly confirms reuse. Weather or an automated conditions field cannot imply unreported grass, hardness, pace, seam, turn or deterioration.
-
 
 ### 2.3 Mandatory retrieval sequence before `NOT_FOUND_AFTER_SEARCH`
 
-
 At minimum:
-
 
 1. exact competition/board match centre and sanctioned scoring partner;
 2. official/rights-holder live video or verified board/competition video channel;
@@ -197,39 +157,28 @@ At minimum:
 8. P7 venue-format historical baseline, or the explicit state `INSUFFICIENT_VENUE_HISTORY`;
 9. P8 historical pitch-rating/surface context where applicable.
 
-
 For marquee international/franchise fixtures, stopping after one or two failed routes is not compliant. For sparse associate/minor domestic cricket, `NOT_FOUND_AFTER_SEARCH` is an honest outcome after the shown search.
-
 
 ### 2.4 Source-lineage fingerprint and automated metadata
 
-
 Identical or near-identical unusual structured pitch fields across different front ends — for example the same `Pitch Condition`, `Batting Condition`, pace or spin labels — are a **suspected shared upstream feed** until provenance proves independence.
-
 
 Store unattributed feed-generated labels as:
 
-
 `CLAIM_TYPE = AUTOMATED_PITCH_METADATA`
 
-
 They may be weak supporting context, but:
-
 
 - `STRIP_OBSERVATION = NO`;
 - they do not count as multiple independent pitch sources;
 - they cannot by themselves set `STRIP STATUS: OBSERVED`;
 - a specialist transcript and the original broadcast it transcribes are one lineage.
 
-
 Generic fantasy-cricket/tipping/“Dream11” pitch-report pages remain excluded.
-
 
 ### 2.5 Official-page staleness
 
-
 Official does not automatically mean current. If an official dynamic page remains `UPCOMING`, blank or otherwise stale while fresher reliable evidence shows a live/final/toss/XI state:
-
 
 1. mark the affected field `STALE`;
 2. keep still-valid identity/schedule fields if they remain correct;
@@ -237,38 +186,27 @@ Official does not automatically mean current. If an official dynamic page remain
 4. reconcile with independent high-quality evidence;
 5. do not let the stale field control the current state.
 
-
 ### 2.6 Venue-history missingness
-
 
 The same-format venue baseline is **attempted**, not presumed to exist. A new venue, a new competition, a rules-era break or insufficient comparable history can produce:
 
-
 `VENUE_HISTORY_STATUS = INSUFFICIENT_VENUE_HISTORY`
-
 
 In that state, use a broader explicitly labelled comparable prior only if appropriate and widen uncertainty. Never invent a sample merely to satisfy a checklist.
 
-
 ### 2.7 Toss-window and final refresh
 
-
 At the competition's actual toss window, refresh the official match centre, official/rights-holder video, structured toss/XI endpoint where available, specialist live commentary and official team/competition updates. Immediately before issue refresh **event state, toss, confirmed XI, late changes, exact strip, weather/radar and source conflicts**.
-
 
 Record explicitly whether the forecast freeze was `PRE_TOSS` or `POST_TOSS`.
 
 **Toss check at toss + 5 minutes (added 2026-09-25; 2026-09-22 audit).** Where the registered ESPN `summary?event=` route carries a `toss` note in `notes[]`, query it about five minutes after the competition's usual toss time and before the final refresh. In P-482 the CPL toss (about 30 minutes before the first ball, roughly 08:30 AEST) was probably public before the 08:54:41 AEST final refresh, yet it was not retrieved: a probable `RETRIEVAL_MISS` under control 32.
 
-
 ### 2.8 Toss decision as weak circumstantial context
-
 
 Once verified, the captain's decision to bat or bowl may be `D-conditional` context because captains have direct local information. It **never** becomes a pitch report by itself and never independently creates or reverses an Over/Under or winner lean. It is subordinate to an actual observed/reported strip source.
 
-
 ## 3. High-value inputs
-
 
 - Confirm toss, innings order, full XIs, batting order/roles, wicketkeeper, bowling resources, substitutes, and material availability.
 - Estimate balls faced, batting position, bowling phase/overs, wicket-taking resources, and likely death roles.
@@ -277,15 +215,11 @@ Once verified, the captain's decision to bat or bowl may be `D-conditional` cont
 - Record match-window weather, dew only when observed/forecast and mechanistically relevant, interruptions, and DLS risk.
 - Use direct H2H only with meaningful XI/role/format continuity.
 
-
 ## 4. Model
-
 
 The active MDS v2.9 method remains a qualitative rate × exposure corridor. The following numerical models are **training candidates only** under NTS-2026.09.02-v0.3. H0 is not built; none is fit, calibrated, validated, champion, or authorised to publish a probability.
 
-
 ### 4.1 Candidate probability-model ladder
-
 
 | Candidate | Cricket role | Required caution |
 |---|---|---|
@@ -299,21 +233,15 @@ The active MDS v2.9 method remains a qualitative rate × exposure corridor. The 
 | NGBoost/distributional boosting | Nonlinear conditional-distribution challenger | The chosen family can still have wrong support or tails |
 | Bayesian hierarchical state simulator | Preferred structural A2 challenger | Highest data/transition/validation burden; not promoted by architecture alone |
 
-
 Mean and standard deviation are sufficient only when they identify a tested predictive family with valid support and calibrated tails. For Test cricket, a stored PMF/CDF or posterior predictive trajectory sample is preferred because playable time, declaration, innings changes, collapse and early completion can create skewed or multimodal outcomes.
-
 
 Zero-inflated/hurdle families are not automatic defaults. A no-play day is an exposure/weather scenario with its own label/void rule, not generic evidence that normal cricket scoring follows a zero-inflated count process.
 
-
 ### 4.2 Test cricket structural A2 candidate
-
 
 Exposure units are sessions, scheduled and playable time, legal balls/overs, wickets, crease time, batter/bowler resources, ball age/new-ball cycles and innings state.
 
-
 At the frozen start state, record only prediction-time-known fields:
-
 
 - innings, batting side, score, wickets, lead/trail, day/session and target endpoint;
 - striker/non-striker, current scores/balls, batting order and replacement queue;
@@ -322,9 +250,7 @@ At the frozen start state, record only prediction-time-known fields:
 - venue/era, exact-match strip evidence, dynamic team/player strengths and matchup;
 - declaration, follow-on, chase, match-completion and draw/win incentives.
 
-
 The engine then:
-
 
 1. samples playable exposure and other discrete scenarios using only cutoff-safe information;
 2. estimates a coupled transition such as `P(runs, wicket, extras | state)`, or another factorisation that preserves run/wicket dependence;
@@ -333,51 +259,36 @@ The engine then:
 5. simulates to the exact target endpoint across scenario and parameter uncertainty;
 6. stores one predictive distribution from which every contract is derived.
 
-
 Runs and wickets may not be modelled as unrelated totals. A wicket changes subsequent rate, batter exposure, collapse risk, innings termination and possible transition to the next innings. A survival/hazard or competing-event component can model part of this process, but it is not a complete run-total distribution.
-
 
 For `TEST_DAY_RUNS_FULL`, continue across any innings/team transitions until the day endpoint. For `TEAM_FIRST_INNINGS_TOTAL`, stop at that innings endpoint even if it occurs on a later day.
 
-
 ### 4.3 Limited-overs structural candidate
-
 
 Exposure units are legal balls, wickets, batting position, batter/bowler resources, scheduled balls/overs and opening/powerplay, middle and death phases. Estimate a ball/over transition such as `P(runs, wicket, extras | state)`, conditioned on target, required rate, current resources, matchup, venue/conditions and phase. Wickets change both rate and remaining ceiling. A chase is capped by the target and may end early *[read as: censored at the target plus the winning delivery's legal overshoot; PROBABILITY_TOOLKIT §7]*; DLS/shortening is a distinct rules/state branch.
 
-
 Limited-overs and Test engines do not share fitted distributions merely because both use runs and wickets.
-
 
 ### 4.4 One CDF for every line
 
-
 For integer target `Y` with `F(k)=P(Y<=k)`:
-
 
 - `P(O185.5) = P(Y>=186) = 1-F(185)`;
 - `P(O235.5) = P(Y>=236) = 1-F(235)`;
 - `P(U235.5) = P(Y<=235) = F(235)`;
 - `P(U285.5) = P(Y<=285) = F(285)`.
 
-
 Therefore `O235.5` and `U235.5` are exact complements. `O185.5` and `U285.5` overlap and both win for `186<=Y<=285`; their joint probability is `F(285)-F(185)`, not the product of their marginals. Ask for every real line and its same-time price, but train the one target distribution. Without odds, rank likelihood only; do not claim value.
-
 
 ### 4.5 Training and evaluation
 
-
 Use match/series-grouped chronological `TRAIN -> TUNE -> CAL -> untouched TEST`, followed by immutable E1-P shadow output. Random delivery-row splits, later lineups, realised weather, post-state declarations and closing prices fail the point-in-time gate.
-
 
 Primary metrics are CRPS/ranked probability score and log score for the full distribution; randomized PIT/discrete-rank calibration; 50/80/90% interval coverage and width; and threshold Brier/log score/reliability at frozen lines. MAE/RMSE/bias are secondary point diagnostics. Required slices include target, pregame/live horizon, day/session/innings, venue/region, team/participant support, weather/exposure, declaration/innings-switch and OOD state.
 
-
 Calibrate the whole CDF or a shared monotone transformation. Separate threshold calibrators that can reverse nested-line ordering are prohibited as the production output.
 
-
 ## 5. Structural controls
-
 
 1. **Exact-ball contracts use legal deliveries.** Reconstruct from official delivery data when no phase row exists, reconciling extras and legality.
 2. **Phase does not equal innings.** A fast or slow first phase cannot determine the full total.
@@ -404,21 +315,16 @@ Calibrate the whole CDF or a shared monotone transformation. Separate threshold 
 23. **Evidence units are overlap-aware.** The same match cannot count independently as a recent-form row, same-venue row, H2H row and prior-log case. Likewise, several score fronts sharing one upstream feed are one source lineage. Preserve each useful transformation, but shrink from the unique underlying events and disclose the overlap.
 24. **A batting or bowling run is not self-correcting, and it is not self-perpetuating.** A team or player on a run of Unders, Overs, low powerplay scores, or wicket clusters neither "regresses" nor "continues" without a named, currently active mechanism under the streak persistence-versus-reversion audit (RULES_GENERAL (archived) §11.3E, G17.1) — for example a returning bowler/batter, a genuinely different attack/order faced, a strip that behaves differently from the recent venue run, or a demonstrated tactical change. Absent that, rank from the longer-run format/venue baseline (rung 6, `SOURCES.md` and widen the corridor rather than leaning on the streak's direction or its reversal. This applies equally to a chasing team's recent target-censored totals, which must first be separated from bat-first totals under control 21 before any trend across them is assessed.
 
-
 ## 6. Live state
-
 
 Store target ID/version, cutoff and endpoint; innings, score, legal balls/overs, wickets, striker/non-striker, current bowler, ball age/new-ball state, target/required rate, powerplay/field state, session/time remaining, interruptions/DLS par where official, weather/light observation and resources remaining. Rebuild future phases from current batters, wickets, bowlers, playable exposure and termination branches; never extrapolate run rate alone. A live row uses a distinct remaining-output target/model ID rather than reusing the pregame distribution.
 
-
 ## 7. Sources and settlement
-
 
 - ICC/ECB/national-board playing conditions control rules.
 - Official competition scorecards and delivery feeds control state, exact balls, result, and statistics.
 - Government weather services and official venue reporting control conditions.
 - Reputable match specialists may supply exact-match strip reports after date/event verification.
-
 
 For DLS, use the official revised target/result; do not reverse-engineer proprietary resource tables. Settle exact phases from official phase data or a legality-reconciled delivery reconstruction.
 
@@ -427,9 +333,7 @@ For DLS, use the official revised target/result; do not reverse-engineer proprie
 - **Zero is not a duck.** A batter who did not bat, or who was not out on 0, is different from a dismissed duck. Player-level rows settle from the official scorecard's dismissal field, never from a runs value alone.
 - **Over labels in summarised feeds.** An ESPN over label can be off by one (its "over 5" deliveries were the sixth over in P-482). Verify every phase checkpoint with the run-rate identity (e.g. 59 at 9.83 per over means 6.0 overs) before settling a phase row.
 
-
 ## 8. Numerical research basis
-
 
 - [Cricsheet official JSON format](https://cricsheet.org/format/json/) — candidate versioned event-data format; source approval remains pending in `SOURCES.md`
 - [A simulator for Twenty20 cricket — Davis, Perera and Swartz](https://doi.org/10.1111/anzs.12109) — limited-overs component precedent, not an active Test model
@@ -438,12 +342,9 @@ For DLS, use the official revised target/result; do not reverse-engineer proprie
 - [On the distribution of runs scored and batting strategy in Test cricket — Scarf, Shi and Akhtar](https://doi.org/10.1111/j.1467-985X.2010.00672.x) — evidence to test count-family candidates, not proof of transfer to this target
 - [NGBoost — Duan et al.](https://proceedings.mlr.press/v119/duan20a.html) and [noncrossing quantile regression — Bondell, Reich and Wang](https://doi.org/10.1093/biomet/asq048) — general distributional challengers
 
-
 These sources justify candidate components and safeguards only. Model family selection and any probability claim require the local H0, chronological and prospective gates.
 
-
 ## 9. Upcoming-game research sequence
-
 
 1. Freeze format, rules, scheduled day/innings/phase, target endpoint, toss state, DLS/shortening terms and every line before analysis. If the toss is unresolved, declare the bat-first versus bat-second/chase-censored mixture that will control the innings-total corridor.
 2. Retrieve official event/state, squad/XI/toss and rules first; exact-match strip evidence and government match-window weather/light next, running and disclosing the full §2/§6A rung-by-rung pitch-report search rather than a single query; historical ball/innings process and comparable venue/format evidence after volatile facts.
@@ -452,18 +353,13 @@ These sources justify candidate components and safeguards only. Model family sel
 5. Refresh state, XI/toss, weather/radar and surface reporting immediately before issue. A scheduled start crossing creates a new live target and remaining-exposure view. Unresolved toss/XI/strip near start invokes the LOW evidence cap.
 6. Derive every total/milestone from the exact target corridor/CDF. Locate the line against all ordinary branches; if it sits inside the central corridor or unweighted branches cross both sides, apply the general LOW-evidence coherence cap. Match winner/draw comes from the full match-resource process, not mechanically from an innings-total lean.
 
-
 Source examples in `SOURCES.md` are candidates by function. Do not make one scorecard, query site or archive a permanent mandatory source, and do not retain its data for H0 until approved.
-
 
 ## 10. SFA-CRICKET — sport forecast algorithm
 
-
 Algorithm ID: `SFA-CRICKET`. Effective **2026-09-04**. Instantiates `GFA-2` (RULES_GENERAL (archived) §11) with cricket content. Process composition only; no fitted weight, scenario weight or published probability is introduced. Test, first-class, List A, T20, T10, The Hundred and each competition remain separate populations; limited-overs and Test engines never share a fitted distribution.
 
-
 ### 10.1 Blocking preconditions
-
 
 | Precondition | Requirement | Failure output |
 |---|---|---|
@@ -473,9 +369,7 @@ Algorithm ID: `SFA-CRICKET`. Effective **2026-09-04**. Instantiates `GFA-2` (RUL
 | `CR-P4` XI and phase roles | Both XIs, batting order, likely openers, new-ball, middle and death bowlers, wicketkeeper | Unconfirmed phase participants remain role branches, never facts; dependent rows cap under RULES_GENERAL (archived) §11.5 |
 | `CR-P5` strip and conditions | `STRIP STATUS` and `MATCH CONDITIONS STATUS` recorded separately under §2 | Continue with a disclosed evidence limit and forced or low-confidence ranking; never invent the strip |
 
-
 ### 10.2 Exposure chain
-
 
 | Step | Output |
 |---|---|
@@ -488,9 +382,7 @@ Algorithm ID: `SFA-CRICKET`. Effective **2026-09-04**. Instantiates `GFA-2` (RUL
 | `CR-S7` | Termination and censoring hazards: all-out, declaration, follow-on, target reached, DLS revision, abandonment, void |
 | `CR-S8` | One corridor or CDF per frozen target, from which every nested line is integrated |
 
-
 ### 10.3 Mandatory branch set
-
 
 | Branch | Content |
 |---|---|
@@ -503,9 +395,7 @@ Algorithm ID: `SFA-CRICKET`. Effective **2026-09-04**. Instantiates `GFA-2` (RUL
 | `CR-B7` | Interruption state: DLS revision, shortened innings, no result, and the runs already scored before any stop |
 | `CR-B8` | Test-specific rearguard or declaration state where the format applies: playable balls remaining, partnership survival, new-ball cycles, bowler workload |
 
-
 ### 10.4 Contract derivation map
-
 
 | Contract | Queried from | Extra condition the mechanism must predict |
 |---|---|---|
@@ -515,9 +405,7 @@ Algorithm ID: `SFA-CRICKET`. Effective **2026-09-04**. Instantiates `GFA-2` (RUL
 | Match result | Full match-resource process, including defendability of the projected target | Never inferred mechanically from an innings-total lean |
 | Player milestone | Crease time, balls faced and dismissal hazard | Boundary sensitivity at the exact threshold |
 
-
 ### 10.5 Kill-path library
-
 
 | Kill path | Defeats | Evidence origin |
 |---|---|---|
@@ -533,9 +421,7 @@ Algorithm ID: `SFA-CRICKET`. Effective **2026-09-04**. Instantiates `GFA-2` (RUL
 | A chase-anchored phase read applied to a batting-first innings (the reverse of chasing-side powerplay inflation) | A phase Over sized on chase powerplays for a side that may bat first | P-482 (Kensington batting-first mean 35.0 v chasing 60.0; Jamaica chasing 77.0 v batting-first 50.0); control 21 extension (2026-09-25) |
 | A returning bowler/batter, genuinely different attack faced, or a strip that reads differently from the recent run | An Under/Over or a reversal ranked purely on streak length without a currently active named mechanism | §5 control 24, RULES_GENERAL (archived) §11.3E (G17.1) |
 
-
 ### 10.6 Sport ordering overrides
-
 
 1. Phase and innings rows on one innings are dependent. Only one is `PRIMARY_FORMAL` unless the other has independent phase-participant evidence.
 2. Before the toss, no innings-total row may exceed `LOW` evidence unless the direction survives both the bat-first and the chase-censored branch.
@@ -543,9 +429,7 @@ Algorithm ID: `SFA-CRICKET`. Effective **2026-09-04**. Instantiates `GFA-2` (RUL
 4. Nested lines on one target are ordered by the CDF, never by separate narratives. A higher Over may not outrank a lower Over on likelihood.
 5. Raw Over/Under counts, competition medians and old head-to-head are `E — diagnostic only`.
 
-
 ### 10.7 Pre-issue checklist
-
 
 1. `CR-P1`–`CR-P5` status printed, including both conditions statuses and the toss state.
 2. Format-and-venue baseline stated before any line.
@@ -566,15 +450,11 @@ Algorithm ID: `SFA-CRICKET`. Effective **2026-09-04**. Instantiates `GFA-2` (RUL
 16. Deficit attribution (G14.1) recorded for every weak, absent, returning or small-sample participant: which side's distribution moved and through which exposure step.
 17. **Phase rows (added 2026-09-25):** the innings-order mixture is printed before the toss, or the realised branch after it, with team and venue phase windows split by innings order and n (control 21). The toss is retrieved at the toss window, via the registered ESPN `summary` `notes[]` route where available (§2.7).
 
-
 ### 10.8 Recency, head-to-head and trend windows
-
 
 Implements `GFA-2` step G13.1 (RULES_GENERAL (archived) §11.3B) and runs at that point in the algorithm, not at the end. Retrieval of L5/L10/L15/L20 for both sides and for the head-to-head series is mandatory; a window that does not exist is recorded with its true count and a missingness code.
 
-
 Populate one windowed table per side with these metrics, and one head-to-head table:
-
 
 | Window metric | Content |
 |---|---|
@@ -584,21 +464,15 @@ Populate one windowed table per side with these metrics, and one head-to-head ta
 | Bowling resources | Each likely bowler's own last 5/10/15/20 spells: phase bowled, overs, economy and wickets |
 | Venue window | **The last 5/10/15/20 matches at this exact venue in this format and rules era, by innings order.** This is rung 6 of the conditions ladder and is mandatory |
 
-
 **Head-to-head continuity.** Continuity means the same format, a comparable XI, the same venue class and the same rules era. Cricket head-to-head across formats or across three years of squad turnover fails continuity and carries no directional weight.
-
 
 **Descriptive recency windows (G13.1; revised 2026-09-17).** Retrieve L5/L10/L15/L20 and continuity-qualified H2H with unique-event counts. These windows overlap. Monotonicity and dispersion among their averages are not a statistical trend/noise test. Report direction descriptively; estimate recency decay and opponent/regime effects using time-ordered validation. See SCORING_AND_VALIDATION section 5.
 
-
 **De-duplication.** The windows overlap by construction and share matches with the head-to-head and venue series. Shrink from unique underlying events under G9; never treat L5, L10, L15 and L20 as four confirmations.
-
 
 ### 10.9 Environment and conditions
 
-
 Implements `GFA-2` step G15.1 (RULES_GENERAL (archived) §11.3C). Venue classification for this sport is normally **OUTDOOR**.
-
 
 | Field | Use in this sport |
 |---|---|
@@ -613,18 +487,13 @@ Implements `GFA-2` step G15.1 (RULES_GENERAL (archived) §11.3C). Venue classifi
 | Wind speed, gusts and direction | Resolved against ground orientation for boundary size and for swing |
 | Hourly precipitation and forecast interruption windows | Feeds `CR-B7`, DLS and the abandonment branch |
 
-
 Failure to obtain the match-window forecast for an outdoor or open-roof event yields `WEATHER_NOT_AVAILABLE`, widened total and margin distributions, and a `LEAN` cap on every weather-dependent row. No factor above carries an automatic total direction.
-
 
 ### 10.10 Base-rate anchors and derived stat lanes
 
-
 **Anchoring (G12.1).** When a comparable same-format venue distribution exists, use it as contextual anchoring split by innings order with the sample size stated. When it does not, record `INSUFFICIENT_VENUE_HISTORY`, use a broader explicitly labelled prior if appropriate and widen uncertainty. A chase-innings line and a first-innings line at the same number are different propositions.
 
-
 **Derived and low-salience fields that are available and routinely skipped:**
-
 
 | Field | Note |
 |---|---|
@@ -633,8 +502,6 @@ Failure to obtain the match-window forecast for an outdoor or open-roof event yi
 | Start time and session structure | Day, day-night and the dew window are different conditions problems |
 | Umpire and match-referee assignment | Recorded; conditional and rarely decision-driving |
 
-
 ## 11. Sport and competition rules reference
-
 
 Added 2026-09-04. The laws of cricket, the format-level playing conditions (Test / ODI / T20 / The Hundred), and the competition-specific rules of every cricket league in the prediction logs live in **[LEAGUE_RULES_CRICKET.md](LEAGUE_RULES_CRICKET.md)**. That file is the reference for `§1` identity, the `§2` conditions gate, `§6` live state and `§7` settlement — it does not change `SFA-CRICKET`. Consult it whenever a card needs the exact innings length, powerplay structure, bowler limit, DLS minimum, Super Over rule, points system or knockout format for the competition in hand. Its **maintenance note** carries the season-boundary rules-currency check and the new-competition onboarding requirement (RULES_GENERAL (archived) §3, `G2`): at a new season / edition, re-verify the ICC playing conditions and the league's regulations before the first card; a new cricket competition must be fully documented there before it is forecast.

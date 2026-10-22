@@ -1,0 +1,3 @@
+local_key,label,family,side,line,reference_id,reference_p,w,p,l,baseline_p
+LOCAL-LEAGUE-NBA-20261022-G0002,HOME_ML,winner,HOME,,TB2-MD:NBA,0.6485,0.648482,0.0,0.351518,0.552
+LOCAL-LEAGUE-NBA-20261022-G0002,OVER_229.5,total,OVER,229.5,TB2-MD:NBA,0.4289,0.42888,0.0,0.57112,0.493

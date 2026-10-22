@@ -1,0 +1,2 @@
+local_key,status,reason,competition,release,mini_path,mini_sha256,card_block_sha256,scheduled_start,run_at,timing_at_generation,attempt_path,ledger_model_rows,ledger_card_rows,stage
+LOCAL-LEAGUE-NBA-20261022-G0001,EXECUTED,,Basketball/NBA,NBA-CYCLE-1,,,,2026-10-22T23:00:00+00:00,2026-10-22T05:27:31.316455+00:00,PRE_START,research/cycle_attempts/LOCAL-LEAGUE-NBA-20261022-G0001/ATTEMPT_20261022T052731651396Z,4,0,REFERENCE

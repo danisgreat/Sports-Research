@@ -40,7 +40,7 @@ CARD_MODEL = "ANALYST_PRIMARY_V1"
 CARD_VERSION = "CARD"
 RECEIPT_FIELDS = ("local_key", "status", "reason", "competition", "release", "mini_path", "mini_sha256",
                   "card_block_sha256", "scheduled_start", "run_at", "timing_at_generation", "attempt_path",
-                  "ledger_model_rows", "ledger_card_rows")
+                  "ledger_model_rows", "ledger_card_rows", "stage")
 REVIEW_WEEKS, REVIEW_EVENTS = 8, 50
 
 
@@ -89,26 +89,103 @@ def _write_receipt(root: Path, rec: dict) -> Path:
     return path
 
 
-def card_rows(attempt: Path, card: dict, issued_at: str) -> list[dict]:
-    """Ledger rows for the card's own p_card on exactly the contracts the bundle priced."""
+REFERENCE_MODEL = "TB2_MD_REFERENCE"
+REFERENCE_VERSION = "REF"
+CHAMPIONS = {"CARD": (CARD_MODEL, CARD_VERSION, "CARD_FROZEN_IN_MINI", "NOT_APPLICABLE_ANALYST"),
+             "TB2": (REFERENCE_MODEL, REFERENCE_VERSION, "REFERENCE_FROZEN_BEFORE_CARD", "NOT_APPLICABLE_REFERENCE")}
+
+
+def card_rows(attempt: Path, card: dict, issued_at: str, champion: str = "CARD") -> list[dict]:
+    """Ledger rows for a frozen champion (the card's own p_card, or the TB-2-MD reference) on the bundle's contracts."""
     from ml import cycle, primary as p
     from ml.evaluation import prospective as ps
+    model_id, version, source, qualification = CHAMPIONS[champion]
     rec = cycle.verify_bundle(attempt / "BUNDLE")
     status = ps._status(issued_at, rec["scheduled_start"], p.clock(issued_at))
-    base = ps._common(CARD_MODEL, CARD_VERSION, "CHAMPION", rec["event_id"], rec["competition"], rec["endpoint"],
-                      issued_at, rec["scheduled_start"], "CARD_FROZEN_IN_MINI", CARD_MODEL, "NOT_APPLICABLE_ANALYST", status)
+    base = ps._common(model_id, version, "CHAMPION", rec["event_id"], rec["competition"], rec["endpoint"],
+                      issued_at, rec["scheduled_start"], source, model_id, qualification, status)
     out = []
     for row in p.read_rows(attempt / "BUNDLE" / "PREDICTIONS.csv"):
         if row["contract_key"] not in card:
             continue
         key = p.digest(p.csv_bytes([{k: row[k] for k in ("family", "side", "line", "endpoint", "definition", "action")}]))[:24]
         value, rank = card[row["contract_key"]]
-        out.append(dict(forecast_id=rec["event_id"] + ":" + CARD_MODEL, contract_key=key, family=row["family"],
+        out.append(dict(forecast_id=rec["event_id"] + ":" + model_id, contract_key=key, family=row["family"],
                         side=row["side"], line=row["line"], p=value, rank=rank, **base))
     missing = set(card) - {r["contract_key"] for r in p.read_rows(attempt / "BUNDLE" / "PREDICTIONS.csv")}
     if missing:
         raise PregameError("card rows the bundle did not price: " + ", ".join(sorted(missing)))
     return out
+
+
+def _receipt_record(g: dict, key: str, stage: str, root: Path) -> dict:
+    return dict(local_key=key, status="", reason="", competition=g["competition"], release="", mini_path="", mini_sha256="",
+                card_block_sha256="", scheduled_start=g["scheduled_start"], run_at=chat._now().isoformat(), timing_at_generation="",
+                attempt_path="", ledger_model_rows="0", ledger_card_rows="0", stage=stage)
+
+
+def _execute_cycle(g: dict, rec: dict, game, cycle_lines: list[dict], capture, root: Path, ledger):
+    """Run and accept the competition's frozen release on the given contracts. Returns (record, results, accepted)."""
+    current = [r for r in _rows(root / chat.CURRENT) if r["competition"] == g["competition"]]
+    if not current:
+        supported = ", ".join(sorted(r["competition"] for r in _rows(root / chat.CURRENT))) or "none"
+        rec.update(status="NOT_RUN_NO_RELEASE", reason=f"no active release for this competition; active: {supported}")
+        return rec, [], None
+    release = current[0]
+    rec["release"] = release["active_experimental_release"]
+    from ml import cycle
+    frozen = _rows(root / release["release_path"])[0]["code_sha256"]
+    if frozen != cycle.code_hash():
+        rec.update(status="NOT_RUN_STALE_RELEASE",
+                   reason="the release was frozen for other forecast code; prompt 8 must freeze a new release version")
+        return rec, [], None
+    staging = Path(tempfile.mkdtemp(prefix="sr_pregame_"))
+    try:
+        lines_csv = staging / "LINES.csv"
+        lines_csv.write_bytes(chat._csv(cycle_lines, chat.LINE_FIELDS))
+        try:
+            result = chat.run(game, lines_csv, capture, staging / "OUT", confirmed=True, root=root)
+        except chat.ChatError as exc:
+            rec.update(status="NOT_RUN_INPUT_REFUSED", reason=str(exc))
+            return rec, [], None
+        accepted = chat.accept(result["upload"], g["local_key"], freeze_basis="now", ledger=ledger, root=root)
+    finally:
+        shutil.rmtree(staging, ignore_errors=True)
+    rec.update(status=accepted["status"], attempt_path=accepted["attempt_path"], ledger_model_rows=accepted["ledger_rows"],
+               timing_at_generation=(result["results"][0]["timing_at_generation"] if result["results"] else ""))
+    if accepted["status"] != "EXECUTED":
+        rec["reason"] = next((r["error"] for r in result["results"] if r["error"]), "attempt failed")
+    return rec, result["results"], accepted
+
+
+def reference(game, lines, capture, *, confirmed=False, root=ROOT, ledger=chat.LEDGER) -> dict:
+    """Tier A reference stage (REFMODEL-v1): freeze the release's model and the league baseline BEFORE the card exists."""
+    root = Path(root).resolve()
+    if not confirmed:
+        raise PregameError("pass --confirm-no-outcome-seen only if no live score, result or post-start report was opened")
+    g = chat._one(_rows(game), chat.GAME_FIELDS, "GAME.csv")
+    if not chat.LOCAL_KEY.fullmatch(g["local_key"]):
+        raise PregameError("local_key must be the card's stable key, e.g. LOCAL-<MINI_KEY>-G0001")
+    cycle_lines = [{k: row[k] for k in chat.LINE_FIELDS} for row in _rows(lines)]
+    if not cycle_lines:
+        raise PregameError("LINES.csv needs at least one contract")
+    rec = _receipt_record(g, g["local_key"], "REFERENCE", root)
+    rec, results, _ = _execute_cycle(g, rec, game, cycle_lines, capture, root, ledger)
+    folder = root / RECEIPTS / g["local_key"]
+    folder.mkdir(parents=True, exist_ok=True)
+    path = folder / f"{chat._now().strftime('%Y%m%dT%H%M%S%fZ')}_REFERENCE_CYCLE.csv"
+    path.write_bytes(chat._csv([rec], RECEIPT_FIELDS))
+    return dict(rec, receipt=str(path), results=results)
+
+
+def _reference_attempt(root: Path, key: str) -> dict | None:
+    """The newest EXECUTED tier A reference receipt for this card, if any."""
+    folder = root / RECEIPTS / key
+    for path in sorted(folder.glob("*_REFERENCE_CYCLE.csv"), reverse=True) if folder.is_dir() else []:
+        row = _rows(path)[0]
+        if row["status"] == "EXECUTED" and row["attempt_path"] and (root / row["attempt_path"]).is_dir():
+            return row
+    return None
 
 
 def run(mini, game, lines, capture, *, confirmed=False, root=ROOT, ledger=chat.LEDGER) -> dict:
@@ -125,56 +202,46 @@ def run(mini, game, lines, capture, *, confirmed=False, root=ROOT, ledger=chat.L
         if not re.search(r"(?<![\d.])" + re.escape(value) + r"(?![\d])", block):
             raise PregameError(f"{label}: card_p {value} is not printed in card {key}; copy the card's own value")
     mini_path = Path(mini).resolve()
-    rec = dict(local_key=key, status="", reason="", competition=g["competition"], release="",
-               mini_path=mini_path.relative_to(root).as_posix() if mini_path.is_relative_to(root) else str(mini_path),
-               mini_sha256=chat._sha(mini_path.read_bytes()), card_block_sha256=chat._sha(block.encode("utf-8")),
-               scheduled_start=g["scheduled_start"], run_at=chat._now().isoformat(), timing_at_generation="",
-               attempt_path="", ledger_model_rows="0", ledger_card_rows="0")
-    current = [r for r in _rows(root / chat.CURRENT) if r["competition"] == g["competition"]]
-    if not current:
-        supported = ", ".join(sorted(r["competition"] for r in _rows(root / chat.CURRENT))) or "none"
-        rec.update(status="NOT_RUN_NO_RELEASE", reason=f"no active release for this competition; active: {supported}")
-        return dict(rec, receipt=str(_write_receipt(root, rec)), results=[])
-    release = current[0]
-    rec["release"] = release["active_experimental_release"]
-    from ml import cycle
-    frozen = _rows(root / release["release_path"])[0]["code_sha256"]
-    if frozen != cycle.code_hash():
-        rec.update(status="NOT_RUN_STALE_RELEASE",
-                   reason="the release was frozen for other forecast code; prompt 8 must freeze a new release version")
-        return dict(rec, receipt=str(_write_receipt(root, rec)), results=[])
-    staging = Path(tempfile.mkdtemp(prefix="sr_pregame_"))
-    try:
-        lines_csv = staging / "LINES.csv"
-        lines_csv.write_bytes(chat._csv(cycle_lines, chat.LINE_FIELDS))
-        try:
-            result = chat.run(game, lines_csv, capture, staging / "OUT", confirmed=True, root=root)
-        except chat.ChatError as exc:
-            rec.update(status="NOT_RUN_INPUT_REFUSED", reason=str(exc))
+    rec = _receipt_record(g, key, "SHADOW", root)
+    rec.update(mini_path=mini_path.relative_to(root).as_posix() if mini_path.is_relative_to(root) else str(mini_path),
+               mini_sha256=chat._sha(mini_path.read_bytes()), card_block_sha256=chat._sha(block.encode("utf-8")))
+    earlier = _reference_attempt(root, key)
+    if earlier is not None:
+        # The model already ran before the card (REFMODEL-v1): reuse that attempt, never run or accept it again.
+        rec.update(stage="REFERENCE_REUSED", status="EXECUTED", release=earlier["release"], attempt_path=earlier["attempt_path"],
+                   timing_at_generation=earlier["timing_at_generation"], ledger_model_rows=earlier["ledger_model_rows"],
+                   reason="model frozen before the card at " + earlier["run_at"])
+        results = []
+        freeze_clock = chat._now().isoformat()
+    else:
+        rec, results, accepted = _execute_cycle(g, rec, game, cycle_lines, capture, root, ledger)
+        if accepted is None:
             return dict(rec, receipt=str(_write_receipt(root, rec)), results=[])
-        accepted = chat.accept(result["upload"], key, freeze_basis="now", ledger=ledger, root=root)
-    finally:
-        shutil.rmtree(staging, ignore_errors=True)
-    attempt = root / accepted["attempt_path"]
-    rec.update(status=accepted["status"], attempt_path=accepted["attempt_path"], ledger_model_rows=accepted["ledger_rows"],
-               timing_at_generation=(result["results"][0]["timing_at_generation"] if result["results"] else ""))
-    if accepted["status"] == "EXECUTED" and card:
+        freeze_clock = accepted["freeze_clock"]
+    if rec["status"] == "EXECUTED" and card:
         from ml.evaluation import prospective
-        rows = card_rows(attempt, card, accepted["freeze_clock"])
-        prospective.freeze(root / ledger, rows, now=accepted["freeze_clock"])
+        rows = card_rows(root / rec["attempt_path"], card, freeze_clock)
+        prospective.freeze(root / ledger, rows, now=freeze_clock)
         rec["ledger_card_rows"] = str(len(rows))
-    elif accepted["status"] != "EXECUTED":
-        rec["reason"] = next((r["error"] for r in result["results"] if r["error"]), "attempt failed")
-    return dict(rec, receipt=str(_write_receipt(root, rec)), results=result["results"])
+    return dict(rec, receipt=str(_write_receipt(root, rec)), results=results)
 
 
 def markdown(result: dict) -> str:
-    """The card's Model shadow block (recorded after the decision block; it changes no rank)."""
-    head = (f"**Model shadow (MLSCOPE-v2, frozen after this card):** `{result['status']}`"
-            + (f" · release `{result['release']}`" if result["release"] else "")
-            + (f" · {result['timing_at_generation']}" if result["timing_at_generation"] else "")
-            + (f" · receipt `{Path(result['receipt']).relative_to(ROOT).as_posix()}`"
-               if Path(result["receipt"]).is_relative_to(ROOT) else ""))
+    """The card's Model block. Reference stage: the numbers the card starts from. Shadow stage: recorded after the card."""
+    stage = result.get("stage", "SHADOW")
+    receipt = (f" · receipt `{Path(result['receipt']).relative_to(ROOT).as_posix()}`"
+               if Path(result["receipt"]).is_relative_to(ROOT) else "")
+    if stage == "REFERENCE":
+        head = (f"**Reference (REFMODEL-v1, frozen before this card):** `{result['status']}`"
+                + (f" · release `{result['release']}`" if result["release"] else "")
+                + (f" · {result['timing_at_generation']}" if result["timing_at_generation"] else "") + receipt)
+        tail = "\n\nThe analyst starts from these numbers; every departure goes in the adjustment ledger.\n"
+    else:
+        head = (f"**Model shadow (MLSCOPE-v3, frozen after this card):** `{result['status']}`"
+                + (" · reference reused" if stage == "REFERENCE_REUSED" else "")
+                + (f" · release `{result['release']}`" if result["release"] else "")
+                + (f" · {result['timing_at_generation']}" if result["timing_at_generation"] else "") + receipt)
+        tail = "\n\nThe card's p_card and ranks above are unchanged by this block.\n"
     if result["reason"]:
         head += f"\n\nReason: {result['reason']}"
     if not any(r.get("label") for r in result["results"]):
@@ -182,7 +249,7 @@ def markdown(result: dict) -> str:
     lines = ["| Contract | Model p | League baseline p | Model rank |", "|---|---:|---:|---:|"]
     for r in result["results"]:
         lines.append(f"| {r['label']} | {r['p_card']} | {r['baseline_p']} | {r['model_rank']} |")
-    return head + "\n\n" + "\n".join(lines) + "\n\nThe card's p_card and ranks above are unchanged by this block.\n"
+    return head + "\n\n" + "\n".join(lines) + tail
 
 
 # ------------------------------------------------------------------ progress and card comparison
@@ -223,18 +290,23 @@ def status(root=ROOT, ledger=chat.LEDGER) -> list[dict]:
         weeks = set(iso_week(pd.Series([p.clock(t).tz_localize(None) for t in done.values()]))) if done else set()
         card_events = {r["event_id"] for r in rows if r["model_id"] == CARD_MODEL and r["competition"] == config["competition"]
                        and r["evidence_status"] == "PRE_START_VERIFIED"}
+        ref_events = {r["event_id"] for r in rows if r["model_id"] == REFERENCE_MODEL and r["competition"] == config["competition"]
+                      and r["evidence_status"] == "PRE_START_VERIFIED"}
         min_w, min_e = int(config["minimum_weeks"]), int(config["minimum_events"])
         n_e, n_w = len(done), len(weeks)
         state = lane_state(n_e, n_w, min_e, min_w)
         out.append(dict(competition=config["competition"], release=config["version"],
                         frozen_events=len({r["event_id"] for r in model}), pre_start_events=len(events),
                         settled_events=n_e, settled_weeks=n_w, card_paired_settled=len(card_events & set(done)),
+                        reference_paired_settled=len(ref_events & set(done)),
                         minimum_events=min_e, minimum_weeks=min_w, state=state))
     return out
 
 
-def compare_card(release_path, out, root=ROOT, ledger=chat.LEDGER) -> dict:
-    """Prospective card-versus-model paired evaluation on identical frozen contracts (prompt 6)."""
+def compare_card(release_path, out, root=ROOT, ledger=chat.LEDGER, champion: str = "CARD") -> dict:
+    """Prospective champion-versus-model paired evaluation on identical frozen contracts (prompt 6).
+
+    ``champion`` is CARD (the analyst's final p_card) or TB2 (the TB-2-MD reference frozen before the card)."""
     from ml import cycle, primary as p
     from ml.core.distributions import ScoreGrid
     from ml.evaluation import prospective as ps
@@ -244,7 +316,7 @@ def compare_card(release_path, out, root=ROOT, ledger=chat.LEDGER) -> dict:
     config = cycle.release(release_path, check_code=False)
     rows = [r for r in ps.verify_ledger(root / ledger) if r["competition"] == config["competition"]
             and r["endpoint"] == config["endpoint"]
-            and ((r["model_id"] == cycle.POLICY and r["model_version"] == config["version"]) or r["model_id"] == CARD_MODEL)]
+            and ((r["model_id"] == cycle.POLICY and r["model_version"] == config["version"]) or r["model_id"] == CHAMPIONS[champion][0])]
     frozen = p.digest(p.csv_bytes([config]))
     effective = {}
     for path in sorted((root / chat.FEEDBACK).glob("*/SETTLEMENT.csv")):
@@ -262,14 +334,14 @@ def compare_card(release_path, out, root=ROOT, ledger=chat.LEDGER) -> dict:
             key = p.digest(p.csv_bytes([{k: contract[k] for k in ("family", "side", "line", "endpoint", "definition", "action")}]))[:24]
             outcomes.append(dict(event_id=event, contract_key=key, result="PUSH" if pu else "WIN" if w else "LOSS",
                                  final_at=row["final_at"], available_at=row["available_at"], evidence_sha256=row["evidence_sha256"]))
-    result = ps.evaluate(rows, pd.DataFrame(outcomes, columns=ps.OUTCOME_FIELDS), f"{CARD_MODEL}:{CARD_VERSION}",
+    result = ps.evaluate(rows, pd.DataFrame(outcomes, columns=ps.OUTCOME_FIELDS), f"{CHAMPIONS[champion][0]}:{CHAMPIONS[champion][1]}",
                          f"{cycle.POLICY}:{config['version']}", delta=float(config["minimum_brier_effect"]))
     events = result.get("interval", {}).get("n_events", 0)
     if events < int(config["minimum_events"]):
-        result.update(disposition="INSUFFICIENT_EVIDENCE", reason=f"{events} paired card events; frozen minimum {config['minimum_events']}")
+        result.update(disposition="INSUFFICIENT_EVIDENCE", reason=f"{events} paired {champion} events; frozen minimum {config['minimum_events']}")
     out = Path(out)
     out.mkdir(parents=True, exist_ok=False)
-    summary = dict(release=config["version"], champion=f"{CARD_MODEL}:{CARD_VERSION}", candidate=f"{cycle.POLICY}:{config['version']}",
+    summary = dict(release=config["version"], champion=f"{CHAMPIONS[champion][0]}:{CHAMPIONS[champion][1]}", candidate=f"{cycle.POLICY}:{config['version']}",
                    disposition=result["disposition"], reason=result["reason"], pairs=result.get("pairs", len(result.get("models", {}))),
                    events=events, k_weeks=result.get("interval", {}).get("k_weeks", 0),
                    mean_d_brier=result.get("interval", {}).get("mean", ""))
@@ -284,10 +356,15 @@ def main(argv=None):
     for name in ("mini", "game", "lines", "capture"):
         rn.add_argument("--" + name, type=Path, required=True)
     rn.add_argument("--confirm-no-outcome-seen", action="store_true")
+    rf = sub.add_parser("reference", help="tier A, before the card: freeze the release's model and the league baseline")
+    for name in ("game", "lines", "capture"):
+        rf.add_argument("--" + name, type=Path, required=True)
+    rf.add_argument("--confirm-no-outcome-seen", action="store_true")
     sub.add_parser("status", help="lane progress against the 8-week / 50-game floor")
     cc = sub.add_parser("compare-card", help="paired card-versus-model evaluation for one release")
     cc.add_argument("--release", type=Path, required=True)
     cc.add_argument("--out", type=Path, required=True)
+    cc.add_argument("--champion", choices=sorted(CHAMPIONS), default="CARD")
     args = parser.parse_args(argv)
     try:
         if args.command == "run":
@@ -295,6 +372,10 @@ def main(argv=None):
                 raise PregameError("run from the repository root")
             result = run(args.mini, args.game, args.lines, args.capture, confirmed=args.confirm_no_outcome_seen)
             print(markdown(result))
+        elif args.command == "reference":
+            if Path.cwd().resolve() != ROOT:
+                raise PregameError("run from the repository root")
+            print(markdown(reference(args.game, args.lines, args.capture, confirmed=args.confirm_no_outcome_seen)))
         elif args.command == "status":
             rows = status()
             if not rows:
@@ -302,7 +383,7 @@ def main(argv=None):
             for r in rows:
                 print(" ".join(f"{k}={v}" for k, v in r.items()))
         else:
-            for k, v in compare_card(args.release, args.out).items():
+            for k, v in compare_card(args.release, args.out, champion=args.champion).items():
                 print(f"{k}: {v}")
     except (PregameError, chat.ChatError) as exc:
         print(f"REFUSED: {exc}")

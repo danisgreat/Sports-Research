@@ -1,29 +1,12 @@
-> **Primary ML/RL (15 October 2026):** [PRIMARY_PREDICTION_PROTOCOL](PRIMARY_PREDICTION_PROTOCOL.md) supplies actual model-assisted original probabilities in the supported exact competition/endpoint. Keep these sport-specific physical/source/family checks. Unsupported model/phase/participant regimes remain NO_FORECAST, not another league's model. This amendment overrides older blanket manual-model exclusions, not sporting truth or the market firewall.
+> **Authority.** [CORE](CORE.md) and [CURRENT_RULES](CURRENT_RULES.md) govern new work; this page holds this sport's rules, and earlier statements below keep their historical scope.
 
-**Executable forecast cycle (CYCLE-v1).** Apply [FORECAST_CYCLE_PROTOCOL](FORECAST_CYCLE_PROTOCOL.md). New contextual forecasts use MODEL_ASSISTED_CYCLE_V1 with a frozen exact-competition release, actual execution receipt, identical-contract baseline shadows and verified settlement feedback. Existing V3/tennis adapters retain their own cohorts; missing/unsupported inputs require a real failure receipt and retained research. This statistical/procedure release authorises experimental execution, not predictive qualification.
+**Executable forecast cycle (CYCLE-v1).** Defined in [FORECAST_CYCLE_PROTOCOL](FORECAST_CYCLE_PROTOCOL.md); summarised in [CORE](CORE.md) §7.
 
-**Local keys until settlement; updated mini after every game (MINI-v2).** Apply [MINI_LOG_IDENTITY_PROTOCOL](MINI_LOG_IDENTITY_PROTOCOL.md). Research and mini creation (prompts 1–2) use stable local event keys and never assign or reserve canonical P-IDs. A canonical P-ID is assigned only in an event's settlement phase: prompt 3 settles the event and then runs the prompt-4 import, which assigns the ID. After each prompt-1 game request the repository agent appends the card to the active mini under `research/active_minis/`, updates intake and footer, reads the file back, and commits and pushes it. Preserve every owner-entered Upcoming game block and all earlier issued bytes. Formats: mini-log-10 / mini-settlement-10; earlier records retain their original formats.
+**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](MINI_LOG_IDENTITY_PROTOCOL.md); summarised in [CORE](CORE.md) §2.
 
-**Persistent research and corroboration (EXH-v1).** Apply [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md) to every required field in research, logging, settlement and verification. If a source is incomplete, open alternatives and verify material facts with another independent source; track every remaining field and attempt. Unresolved facts/corroboration never qualify as complete information. New settlements use mini-settlement-10 with a visible source-discovery/reuse section, three source/attempt/closure CSVs and S17; older originals retain their rules and bytes. Consult [RESEARCH_SOURCE_REGISTER](RESEARCH_SOURCE_REGISTER.md) and prior package registers, recheck actual coverage, and continue discovery beyond them.
+**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
 
-**Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** For every game, research both sides' L5/L10/L15/L20 online under [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md), with opened sources, dated game rows and true n. Seek exact-game confirmed players, starting roles, bench/replacements and absences under [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md); projected players remain unconfirmed. The retired local results store and its derived profiles are not required inputs or fallbacks. Earlier archive-first directions are superseded.
-
-> **Manual research timing (15 October 2026):** [TIMING_RESEARCH_PROTOCOL](TIMING_RESEARCH_PROTOCOL.md) supersedes older fixed advance research/freeze targets. Complete this sport's research even after play starts when needed. Record verified pre-start inputs, actual issue phase and outcome exposure separately; freeze only the completed original. A post-start-issued card remains in its own research cohort, not a pre-start-release claim.
-
-> **v11 precedence (2026-10-12, audit R09/R11).** [CURRENT_RULES](CURRENT_RULES.md), [SELECTION_RULES](SELECTION_RULES.md), [SCORING_AND_VALIDATION](SCORING_AND_VALIDATION.md), [CARD_AND_LOG_TEMPLATES](CARD_AND_LOG_TEMPLATES.md) and prompt 1 govern new work (MDS-2026.10.12-v11.0). This file remains the sport's reference for playing rules, mechanisms, sources and historical lessons. **Non-operative here:**
-
-> **Mandatory availability research (14 October 2026):** apply [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md) §§1–6 under CURRENT_RULES §5b for every competition in this sport. Research both sides' starters/starting role, selected bench/replacements and current medical/absence/eligibility reports separately; use official team sheets, local-language discovery for obscure leagues and a final late-change recheck. Record evidence and actual failed attempts in existing A3/A8/C20. Probable players, rosters and missing injury reports never become confirmation.
-> - RM-1 q ranking, q tiers, `TOP2_QUALITY` and cushion-term ranking: new cards rank by p_card (P_ORDER_V2).
-> - TB-1 / TB-1-MD "anchoring": `BASELINE_P` is always the league-only `BASELINE_LEAGUE_V1`, and TB-1-MD is a printed team-model reference only.
-> - Row-level numeric caps and grade caps not restated in CURRENT_RULES.
-> - Steps of the retired RULES_GENERAL / GFA algorithm.
-> - Any instruction to rank or settle that conflicts with the controls above.
->
-> The two "October 5" authority notes below are historical. Authority mode now follows CURRENT_RULES §0: a run uses either the pinned published main or the local working tree, never both. Recent form follows ARCHIVE_USE_GUIDE online form recipe R2 (L5/L10/L15/L20 counted once).
-
-> **Current authority (October 5):** [METHOD.md](METHOD.md) and [CURRENT_RULES.md](CURRENT_RULES.md) govern new work. Requested qualitative or explicitly uncalibrated research is retained under stable local keys regardless of calibration; prompt 4 alone assigns canonical IDs during import. Numerical performance certification is separate. Read current IDs/freeze from the [status register](GAME_LOG_STATUS_CURRENT.md), unresolved items from the [carryover](research/verification/closure_2026-10-05/carryover.md), and [current implementation evidence](research/verification/implementation_2026-10-05/REPORT.md). Earlier method, queue, freeze and eligibility statements below retain their historical scope.
-
-**Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
+**Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
 
 # Ice hockey analysis rules
 
@@ -81,15 +64,11 @@ The NHL model (A1) is regulation Poisson ratings, with OT won in proportion to s
 ### 0.7 Control index (full text in §4 and the dated sections)
 1 goalie uncertainty is a mixture · 2 shots and goals linked, not interchangeable · 3 blocked shots definition-sensitive · 4 special teams change exposure and rate · 5 score state changes pace · 6 empty-net goals are an explicit tail · 7 regulation ≠ moneyline · 8 back-to-back is mechanistic · 9 props need role and ice time · 10 external xG models are challengers · 11 shot volume is exposure · 12 sparse competitions keep a conversion cap · 13 OT geometry v operator settlement · 14 unconfirmed goalie blocks a fragile Rank-1 total. References: H-R1 totals and odd OT totals · H-R2 puck line is an empty-net market · H-R3 preseason rates · H-R4 recency · H-R5 width · H-R6 settlement receipt.
 
-
 ## 1. Identity and contract
-
 
 Resolve competition, season/rules era, venue, home/away/neutral status, scheduled start, regulation versus overtime/shootout endpoint, tie/draw availability, puck-line/total/team/player/period target, goalie/action terms and provider statistic.
 
-
 The following are distinct contracts and targets:
-
 
 - regulation three-way result;
 - moneyline including OT/SO;
@@ -98,27 +77,20 @@ The following are distinct contracts and targets:
 - period target;
 - team/player shots, points, saves and other provider events.
 
-
 A completed period or settled player-action condition at issue is handled under the general SETTLED_AT_ISSUE rule.
-
 
 ## 2. High-value inputs
 
-
 ### Participants and exposure
-
 
 - Confirm projected and, when available, official line combinations, defence pairs, power-play/penalty-kill units and scratches.
 - Treat starting goalie as a regime variable. Model start probability, recent workload/rest, injury/return state, replacement quality and pull risk.
 - Estimate skater ice time, line/unit role, shift distribution and special-teams exposure. Active does not guarantee normal minutes or role.
 - Record back-to-back/rest, travel, altitude, venue and roster/coach/system changes.
 
-
 ### Shot and goal process
 
-
 Use opponent- and manpower-adjusted:
-
 
 - shot attempts, unblocked attempts and shots on goal under the named definition;
 - shot location/angle/type, pre-shot movement/rebound context and expected-goal quality where provider-defined;
@@ -128,24 +100,17 @@ Use opponent- and manpower-adjusted:
 - power-play and penalty-kill opportunities/efficiency;
 - penalties, score state, pulled-goalie and empty-net behavior.
 
-
 Raw recent goals, save percentage, head-to-head and one hot/cold streak are outcomes, not stable rates without mechanism and opponent adjustment.
-
 
 ## 3. Model
 
-
 Exposure units are regulation minutes, shifts, ice time, shot attempts/chances, shots on goal and manpower-state possessions. Estimate shot/chance intensity and quality first, then finishing/goaltending, special teams and empty-net branches.
-
 
 Use a joint regulation goal distribution. Link it to a separate rules-correct OT/SO result process for full-match moneylines. Derive regulation winner, totals, team totals and puck lines only from the target object matching their endpoint. Player shots/points/saves use their own participation × ice-time/opportunity × event-rate distributions linked to team/score/manpower state.
 
-
 Numerical candidates begin with empirical and independent-Poisson diagnostics, then hierarchical bivariate/count distributions. The A2 candidate simulates shifts/shots, manpower state, goalies, score effects, penalties, pulled goalie, empty net, OT and shootout. Boosted/ordered score grids are challengers only after support, dispersion, covariance, tail, OOD and calibration checks. Every candidate is unfit and unvalidated.
 
-
 ## 4. Structural controls
-
 
 1. **Goalie uncertainty is a scenario mixture.** Do not use a reported expectation as confirmed fact.
 2. **Shots and goals are linked but not interchangeable.** Shot quality, finishing and goalie state mediate conversion.
@@ -162,15 +127,11 @@ Numerical candidates begin with empirical and independent-Poisson diagnostics, t
 13. **OT result geometry and operator settlement remain separate.** In sparse competitions, a verified overtime final can settle the research event path, but it does not establish whether a supplied moneyline, puck line or total included OT/SO or how shootout goals are counted. Preserve the regulation-draw/one-goal-OT branch and use `UNKNOWN_DEFINITION` until the named operator/action terms are available.
 14. **Unconfirmed goalie blocks a fragile top-ranked total.** In early-season or sparse competitions, unresolved starting goalie identity normally prevents a total from Rank #1 unless unusually deep current defensive-process evidence survives every credible goalie mixture. One low-scoring opener, old H2H or unverified expected starter cannot remove the conversion tail.
 
-
 ## 5. Live state
-
 
 Store score, period/clock, current manpower/penalties, goalie in net, shots/attempts and xG under named definitions, line/unit changes, injuries/ejections, timeouts, pull state and venue conditions. Rebuild remaining regulation exposure, goalie/pull/empty-net branches and any later OT/SO process; do not extrapolate elapsed goals per minute.
 
-
 ## 6. Sources and settlement
-
 
 - NHL/competition official rules, match centres, roster/lineup/goalie reporting, statistics and finals control official facts.
 - The [NHL hockey glossary](https://www.nhl.com/info/hockey-glossary) controls NHL official-stat definitions where applicable.
@@ -178,12 +139,9 @@ Store score, period/clock, current manpower/penalties, goalie in net, shots/atte
 - [MoneyPuck downloads](https://www.moneypuck.com/data.htm) and methodology may support specialist research only within current use/attribution terms. Its documented downloadable shot data omits blocked shots; do not silently treat it as all shot attempts.
 - Other shot/xG/line providers control only their defined metrics after coverage, method, licence and correction checks.
 
-
 Settle from the official final and named statistic provider, preserving regulation/OT/SO and shootout-score conventions. Retry official stat corrections for player props before UNSETTLEABLE.
 
-
 ## 7. Upcoming-game research sequence
-
 
 1. Freeze competition/rules, regulation/full-match endpoint, goalie/action/stat-provider terms and complete candidate slate.
 2. Retrieve official event/roster/injury state, projected goalie/lines and current specialist shot/process data; refresh confirmed goalie, scratches, lines/units and state immediately before puck drop.
@@ -192,15 +150,11 @@ Settle from the official final and named statistic provider, preserving regulati
 5. Produce one regulation joint goal object and, where required, a linked OT/SO result object. Player props retain their own ice-time/opportunity target.
 6. Derive and rank only contracts whose exact endpoints and definitions are resolved. Missing goalie confirmation widens scenarios; it does not authorise an invented starter or probability.
 
-
 ## 8. SFA-ICE-HOCKEY — sport forecast algorithm
-
 
 Algorithm ID: `SFA-ICE-HOCKEY`. Effective **2026-09-02**. Instantiates `GFA-2` (RULES_GENERAL (archived) §11) with ice-hockey content. Process composition only; no fitted weight, scenario weight or published probability is introduced, and this section does not authorise an NHL or any other probability model. Each competition remains a separate rules, data and scoring population.
 
-
 ### 8.1 Blocking preconditions
-
 
 | Precondition | Requirement | Failure output |
 |---|---|---|
@@ -209,9 +163,7 @@ Algorithm ID: `SFA-ICE-HOCKEY`. Effective **2026-09-02**. Instantiates `GFA-2` (
 | `IH-P3` operator terms | Whether the operator's moneyline, puck line or total includes overtime and shootout, and how a shootout goal is counted | `UNKNOWN_DEFINITION`; preserve the regulation-draw and one-goal-overtime branch |
 | `IH-P4` metric definition | For shot or attempt rows, whether blocked shots are included under the named provider | A dataset that omits blocked shots cannot control an all-attempt metric without reconciliation |
 
-
 ### 8.2 Exposure chain
-
 
 | Step | Output |
 |---|---|
@@ -224,12 +176,9 @@ Algorithm ID: `SFA-ICE-HOCKEY`. Effective **2026-09-02**. Instantiates `GFA-2` (
 | `IH-S7` | Late-state process: score effects, pulled goalie, empty net |
 | `IH-S8` | One regulation joint goal object, and where required a separate rules-correct overtime and shootout result object |
 
-
 Shot volume is exposure. It is never a goal total on its own.
 
-
 ### 8.3 Mandatory branch set
-
 
 | Branch | Content |
 |---|---|
@@ -242,9 +191,7 @@ Shot volume is exposure. It is never a goal total on its own.
 | `IH-B7` | Regulation-draw branch proceeding to overtime, then to a shootout where the format applies |
 | `IH-B8` | Sparse or early-season branch: wide conversion tails retained when goalie identity, shot quality or manpower context is unavailable |
 
-
 ### 8.4 Contract derivation map
-
 
 | Contract | Queried from | Extra condition the mechanism must predict |
 |---|---|---|
@@ -255,9 +202,7 @@ Shot volume is exposure. It is never a goal total on its own.
 | Team total | Team marginal | That team's own chances against the confirmed opposing goalie |
 | Player props | `participation x ice time/opportunity x event rate` | Line, unit and matchup exposure, not recent shot or point counts |
 
-
 ### 8.5 Kill-path library
-
 
 | Kill path | Defeats | Evidence origin |
 |---|---|---|
@@ -269,9 +214,7 @@ Shot volume is exposure. It is never a goal total on its own.
 | Special-teams exposure changing both rate and opportunity | A total ranked on even-strength process and a season power-play percentage | §4 control 4 |
 | A back-to-back changing goalie choice and line workload | A side ranked on team strength without a rest mechanism | §4 control 8 |
 
-
 ### 8.6 Sport ordering overrides
-
 
 1. In an early-season or sparse competition, a total row may not be Rank #1 while `IH-P2` is unresolved, unless unusually deep current defensive-process evidence survives every credible goalie branch.
 2. Regulation and full-match rows are different targets and never share a `states` count.
@@ -279,9 +222,7 @@ Shot volume is exposure. It is never a goal total on its own.
 4. Pulled-goalie and empty-net states remain in both the total and the margin `states` counts.
 5. Recent goals, save percentage, head-to-head and one hot or cold streak are `E — diagnostic only`.
 
-
 ### 8.7 Pre-issue checklist
-
 
 1. `IH-P1`–`IH-P4` status printed, with goalie release status for both sides.
 2. Competition and matchup goal baseline stated before any line.
@@ -300,15 +241,11 @@ Shot volume is exposure. It is never a goal total on its own.
 15. Winner-and-cushion reconciliation (G30.1) whenever Rank #1 is an underdog cushion, with the outright-win and narrow-loss branch ordering stated. Example separation kill path for this sport: an empty-net or special-teams swing.
 16. Deficit attribution (G14.1) recorded for every weak, absent, returning or small-sample participant: which side's distribution moved and through which exposure step.
 
-
 ### 8.8 Recency, head-to-head and trend windows
-
 
 Implements `GFA-2` step G13.1 (RULES_GENERAL (archived) §11.3B) and runs at that point in the algorithm, not at the end. Retrieval of L5/L10/L15/L20 for both sides and for the head-to-head series is mandatory; a window that does not exist is recorded with its true count and a missingness code.
 
-
 Populate one windowed table per side with these metrics, and one head-to-head table:
-
 
 | Window metric | Content |
 |---|---|
@@ -318,42 +255,30 @@ Populate one windowed table per side with these metrics, and one head-to-head ta
 | Special teams | Power-play and penalty-kill opportunities and efficiency, with the penalty environment |
 | Goaltenders | Each credible starter's own last 5/10/15/20 starts: workload, save percentage and rest |
 
-
 **Head-to-head continuity.** Continuity means the same goaltenders and comparable lines. A head-to-head record across a goalie change fails continuity, which is exactly the unresolved-starter failure recorded in the log.
-
 
 **Descriptive recency windows (G13.1; revised 2026-09-17).** Retrieve L5/L10/L15/L20 and continuity-qualified H2H with unique-event counts. These windows overlap. Monotonicity and dispersion among their averages are not a statistical trend/noise test. Report direction descriptively; estimate recency decay and opponent/regime effects using time-ordered validation. See SCORING_AND_VALIDATION section 5.
 
-
 **De-duplication.** The windows overlap by construction and share matches with the head-to-head and venue series. Shrink from unique underlying events under G9; never treat L5, L10, L15 and L20 as four confirmations.
-
 
 ### 8.9 Environment and conditions
 
-
 Implements `GFA-2` step G15.1 (RULES_GENERAL (archived) §11.3C). Venue classification for this sport is normally **INDOOR**.
-
 
 | Field | Use in this sport |
 |---|---|
 | Venue classification | Indoor; record it and move on |
 | Travel, altitude and back-to-back | Entered through goalie choice, line workload and forecheck quality |
 
-
 Failure to obtain the match-window forecast for an outdoor or open-roof event yields `WEATHER_NOT_AVAILABLE`, widened total and margin distributions, and a `LEAN` cap on every weather-dependent row. No factor above carries an automatic total direction.
-
 
 ### 8.10 Base-rate anchors and derived stat lanes
 
-
 **Anchoring (G12.1).** Anchor regulation totals on the competition goal environment and full-match moneylines on the frequency of regulation ties proceeding to overtime. Regulation and full-match rows never share an anchor.
-
 
 StatMuse is an accepted research accelerator for this sport under `SOURCES.md`, using the verified query patterns recorded there. Every returned row is date-checked and reconciled against the official league source before it is decision-driving, and StatMuse never controls participants, availability, rules, state or settlement.
 
-
 **Derived and low-salience fields that are available and routinely skipped:**
-
 
 | Field | Note |
 |---|---|
@@ -361,27 +286,19 @@ StatMuse is an accepted research accelerator for this sport under `SOURCES.md`, 
 | Empty-net and pulled-goalie behaviour | Its own branch at `IH-B6`, affecting totals and margins differently |
 | Scheduled back-to-back goalie tendencies by club | Conditional; supports the `IH-B3` mixture |
 
-
 ## 9. Sport and competition rules reference
-
 
 Added 2026-09-04; last reviewed 2026-09-04. Standing reference for the rules of ice hockey and the competition-specific rules of every ice-hockey competition in the prediction logs. Supports `IH-P` identity and §6 settlement; introduces no rate, weight or ordering rule. **Two facts dominate ice-hockey identity: the period length (the AIHL uses 15-minute periods, not 20) and the overtime/points regime, which differ by league and between regular season and playoffs.**
 
-
 **Maintenance (RULES_GENERAL (archived) §3, `G2`).** Before the first card of a new AIHL or Metal Ligaen season, or the first playoff card, re-verify the period length, the points system, the regular-season vs playoff overtime/shootout rules, the import-player limits, the team count and the playoff bracket against the league source, and update this section **before** issuing the card — both leagues have changed team counts recently, and the AIHL's 15-minute-period and finals-weekend format are unusual and worth re-confirming each year. The first time another hockey competition is forecast (NHL, an IIHF event, another European league), document its full rules — periods, points, OT — here first.
-
 
 ### 9.1 The rules of ice hockey
 
-
 **Rink and teams.** A rink ~60 m × 26–30 m with rounded corners and boards. **6 players a side** — 3 forwards, 2 defencemen, 1 goaltender — from a roster of ~20 skaters + 2 goalies. Unlimited "on the fly" line changes.
-
 
 **Objective and scoring.** Shoot the puck into the opponent's net — every **goal = 1**. Most goals wins; a regulation tie goes to overtime (§9.2).
 
-
 **Structure of play.** **Three periods** (length is league-specific — §9.3), with two intermissions and ends changed each period. The clock **stops** on every whistle (goals, offside, icing, penalties, puck out of play, goalie freeze). Face-offs restart play.
-
 
 **Key violations.**
 - **Offside:** an attacker precedes the puck over the opponent's blue line → face-off outside the zone.
@@ -389,15 +306,11 @@ Added 2026-09-04; last reviewed 2026-09-04. Standing reference for the rules of 
 - **Penalties:** **minor** (2 min), **double minor** (4), **major** (5, + game misconduct), **misconduct** (10), **match penalty**. The penalised team plays **short-handed** (a "power play" for the other team); a minor ends early if the power-play team scores. **Too many men**, high-sticking, tripping, hooking, slashing, interference, boarding, cross-checking, fighting (a major).
 - **Delayed penalty:** play continues until the offending team touches the puck, so the non-offending team often pulls its goalie for an extra attacker.
 
-
 **Goaltending / empty net.** A team trailing late routinely **pulls its goalie** for a 6th skater — this inflates late-game variance and produces empty-net goals (`IH-B6`), which matter disproportionately for totals and puck-line settlement.
-
 
 **Video review.** Goal/no-goal, offside challenges, goalie interference — scope varies by league.
 
-
 ### 9.2 Overtime, shootout and points — the regime that varies most
-
 
 | Regime | NHL regular season | NHL playoffs | IIHF tournament (group) | IIHF playoff/medal | Typical European league (incl. AIHL, Metal Ligaen) |
 |---|---|---|---|---|---|
@@ -408,56 +321,38 @@ Added 2026-09-04; last reviewed 2026-09-04. Standing reference for the rules of 
 | Points for an OT/SO loss | **1** ("loser point") | n/a | **1** | n/a | **1** |
 | Points for a regulation loss | 0 | n/a | 0 | n/a | 0 |
 
-
 **Settlement consequence.** A **"regulation" (60-minute) market** and a **"full-time / including OT" market** are different propositions — a regulation-time bet can be a **push/tie** even though the game itself always produces a winner. The **puck line** (usually ±1.5) interacts strongly with empty-net goals and the OT/SO cutoff. The **"3-way" moneyline** (home / draw / away, settled at 60 minutes) is common in European hockey and is the correct market to fade or back a tie. For AIHL/Metal Ligaen always confirm whether the operator settles the head-to-head at 60 minutes or after the shootout.
-
 
 ### 9.3 AIHL (Australian Ice Hockey League)
 
-
 **Structure (2026).** A semi-professional league of **10 teams** (Newcastle Northstars, Sydney Ice Dogs, Sydney Bears, Central Coast Rhinos, Canberra Brave, Melbourne Thunder, Melbourne Mustangs, Perth Ice, Brisbane Lightning, Adelaide Adrenaline). Regular season runs the **Australian winter (~April–August)**.
-
 
 **Period length — 15 minutes.** AIHL games are **three 15-minute periods**, not 20 — a full match is 45 minutes of play, so **per-game goal totals run well below NHL/IIHF levels** and NHL/IIHF scoring rates cannot be transferred without rescaling to 45 minutes (`SFA-ICE-HOCKEY` §8.10 anchoring; this is the single biggest AIHL-specific trap).
 
-
 **Imports.** Maximum **6 North American or European import players** plus **1 Asian import** per team — imports are typically 2–3 forwards, a goalie and 1–2 defencemen, so a small change in import availability is a large effective-strength swing.
-
 
 **Points.** **3 for a regulation win, 2 for an OT/SO win, 1 for an OT/SO loss, 0 for a regulation loss** (European-style, used since 2006).
 
-
 **Regular-season overtime.** 5-minute **3-on-3** sudden death (since 2019); scoreless → **shootout** (5 rounds, then sudden-death rounds).
-
 
 **Goodall Cup playoffs (2026).** The **top 6** regular-season teams qualify; the finals are a **single-weekend event** at one venue (O'Brien Icehouse, Docklands, 28–30 August 2026): **preliminary finals** (Fri), **semi-finals** (Sat), **Grand Final** (Sun). Preliminary and semi-final ties → **straight to a shootout** (no OT period). The **Grand Final** ties → **continuous 20-minute sudden-death OT periods** until a goal. (2026 result: Newcastle Northstars 2–1 Canberra Brave.)
 
-
 **Settlement note.** Because playoffs use different OT rules at different rounds, and the regular season is 45 minutes, freeze the exact stage and period length before setting any total or OT-related market.
-
 
 ### 9.4 Metal Ligaen (Denmark — top division)
 
-
 **Structure.** Denmark's top ice-hockey league, **9 teams** (recently reduced). Season starts late August. Each team plays **48 regular-season games** (six against each opponent — three home, three away). **Standard 20-minute periods** (IIHF).
-
 
 **Points.** **3 regulation win / 2 OT-SO win / 1 OT-SO loss / 0 regulation loss.** Regular-season ties go to 3-on-3 OT then a shootout. The regular-season winner qualifies for the **IIHF Continental Cup**.
 
-
 **Playoffs.** **Top 8** into a bracket: **Quarter-finals → "Metal4" (semi-finals) → Final**, each a **best-of-seven** series. Seeding **1 v 8, 2 v 7, 3 v 6, 4 v 5**, higher seed has home advantage (in some seasons the top seeds "pick" their opponent). Playoff OT is full sudden-death periods, no shootout.
-
 
 **Promotion/relegation** with the Danish **1. Division** applies at the bottom of the table (playout / qualification series) — confirm the season's exact mechanism if a card touches it. Import limits are lighter than the AIHL's but exist — confirm per season.
 
-
 ### 9.5 IIHF national-team context
-
 
 Not directly in the log but the identity template must handle it: IIHF rules (20-minute periods, wider rink historically, 3-2-1-0 points, 3-on-3 OT + shootout in group games, long sudden-death OT with **no shootout** in medal/elimination games), tournament format = groups then a single-elimination knockout. Olympic and World Championship rosters and rules are their own era/population.
 
-
 ### 9.6 Identity checklist (ice hockey)
-
 
 Resolve before any rate work: **league and therefore period length** (AIHL 15 min; almost everything else 20 min) and rink; the **points and overtime regime** and whether it changes for the playoffs; whether the contract is **"regulation / 60 (or 45) minutes"** or **"full-time including OT/SO"**; **import-player availability** for the specific game; goalie confirmation and back-to-back status; and the operator's settlement for the 3-way line and the puck line (empty-net and OT exposure).

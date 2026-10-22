@@ -4,6 +4,7 @@ Synthetic EXAMPLE competitions and LOCAL-EXAMPLE keys only; no live P-ID, store 
 """
 import subprocess
 import sys
+from pathlib import Path as Path_
 
 import pytest
 
@@ -136,3 +137,66 @@ def test_closure_follows_relative_and_function_level_imports():
     files = {"ml/__init__.py": b"", "ml/cycle.py": b"def f():\n    from . import helper\n",
              "ml/helper.py": b"import ml.deep\n", "ml/deep.py": b"", "ml/workflow.py": b"", "ml/unrelated.py": b""}
     assert code_identity.closure(files.get) == ["ml/__init__.py", "ml/cycle.py", "ml/deep.py", "ml/helper.py", "ml/workflow.py"]
+
+
+# ------------------------------------------------------------------ REFMODEL-v1: the model runs before the card
+def _reference(rt):
+    return pregame.reference(rt["work"] / "GAME.csv", rt["work"] / "LINES.csv", rt["work"] / "fixture.txt", confirmed=True, root=rt["root"])
+
+
+def test_reference_stage_needs_the_outcome_confirmation(runtime):
+    with pytest.raises(pregame.PregameError, match="confirm-no-outcome-seen"):
+        pregame.reference(runtime["work"] / "GAME.csv", runtime["work"] / "LINES.csv", runtime["work"] / "fixture.txt", root=runtime["root"])
+
+
+def test_reference_stage_freezes_the_model_before_any_card_exists(runtime):
+    result = _reference(runtime)
+    assert result["status"] == "EXECUTED" and result["stage"] == "REFERENCE" and result["timing_at_generation"] == "PRE_START"
+    ledger = PS.verify_ledger(runtime["root"] / chat.LEDGER)
+    assert len([r for r in ledger if r["model_id"] == C.POLICY]) == 3 and not [r for r in ledger if r["model_id"] == pregame.CARD_MODEL]
+    text = pregame.markdown(result)
+    assert "Reference (REFMODEL-v1, frozen before this card)" in text and "adjustment ledger" in text and "MLSCOPE-v3" not in text
+    receipt = Path_(result["receipt"])
+    assert receipt.name.endswith("_REFERENCE_CYCLE.csv") and chat._rows(receipt)[0]["stage"] == "REFERENCE"
+
+
+def test_run_after_a_reference_reuses_the_attempt_and_adds_only_the_card_row(runtime):
+    reference = _reference(runtime)
+    before = PS.verify_ledger(runtime["root"] / chat.LEDGER)
+    result = _run(runtime, _mini(runtime), _lines(runtime))
+    after = PS.verify_ledger(runtime["root"] / chat.LEDGER)
+    assert result["status"] == "EXECUTED" and result["stage"] == "REFERENCE_REUSED" and result["attempt_path"] == reference["attempt_path"]
+    assert len(after) == len(before) + 1 and [r for r in after if r["model_id"] == pregame.CARD_MODEL][0]["p"] == "0.612"
+    assert len([r for r in after if r["model_id"] == C.POLICY]) == 3               # the model was not run or accepted twice
+    block = pregame.markdown(result)
+    assert "reference reused" in block and "model frozen before the card" in block        # the table was printed with the Reference block
+
+
+def test_a_missing_release_at_the_reference_stage_is_recorded_and_the_card_still_runs_its_shadow_path(runtime):
+    game = dict(runtime["game"], competition="Basketball/EXAMPLE-UNRELEASED")
+    _write(runtime["work"] / "GAME.csv", [game])
+    result = _reference(runtime)
+    assert result["status"] == "NOT_RUN_NO_RELEASE" and result["results"] == []
+    later = _run(runtime, _mini(runtime), _lines(runtime))
+    assert later["status"] == "NOT_RUN_NO_RELEASE" and later["stage"] == "SHADOW"
+
+
+def test_a_reference_that_did_not_execute_is_not_reused(runtime, monkeypatch):
+    real = C.code_hash
+    monkeypatch.setattr(C, "code_hash", lambda: "0" * 64)
+    assert _reference(runtime)["status"] == "NOT_RUN_STALE_RELEASE"
+    monkeypatch.setattr(C, "code_hash", real)
+    result = _run(runtime, _mini(runtime), _lines(runtime))
+    assert result["stage"] == "SHADOW" and result["status"] == "EXECUTED" and result["ledger_card_rows"] == "1"
+
+
+def test_tb2_reference_rows_freeze_beside_the_model_and_status_counts_them(runtime):
+    reference = _reference(runtime)
+    attempt = runtime["root"] / reference["attempt_path"]
+    rows = pregame.card_rows(attempt, {"HOME_ML": ("0.5978", ""), "OVER_200.5": ("0.4100", "")}, chat._now().isoformat(), champion="TB2")
+    PS.freeze(runtime["root"] / chat.LEDGER, rows, now=chat._now().isoformat())
+    ledger = PS.verify_ledger(runtime["root"] / chat.LEDGER)
+    tb2 = [r for r in ledger if r["model_id"] == pregame.REFERENCE_MODEL]
+    assert len(tb2) == 2 and {r["role"] for r in tb2} == {"CHAMPION"} and tb2[0]["model_version"] == pregame.REFERENCE_VERSION
+    status = pregame.status(root=runtime["root"])[0]
+    assert status["reference_paired_settled"] == 0 and status["frozen_events"] == 1

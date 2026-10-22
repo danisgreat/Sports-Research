@@ -1,8 +1,14 @@
 # Selection, baseline and settlement rules
 
-**ML/RL scope (MLSCOPE-v2).** Owner instruction, 22 October 2026: models run where they are needed, beside the analyst card and never inside it. Prompt 1 researches the game online and prices every p_card as ANALYST_PRIMARY_V1 / UNCALIBRATED_ANALYST_PRIMARY from one declared distribution ([PROBABILITY_TOOLKIT](PROBABILITY_TOOLKIT.md); code may do the arithmetic, with every input and step printed). Only after the card is written to the mini does prompt 1 run the pregame model shadow, which freezes the model and league-baseline rows, and the card's own p_card, on the same contracts when the competition has an active release, or records NOT_RUN_NO_RELEASE. Model output never changes a card's p_card, ranks or picks. Prompt 3 settles the shadow with the card; prompt 6 ingests and evaluates; prompt 8 builds releases and decides promotion. A model is judged only after at least 8 weeks and 50 paired games; a progress review falls due when either is reached first. RL has no forecasting role: online expert weighting updates at settlement. Details: [FORECAST_CYCLE_PROTOCOL](FORECAST_CYCLE_PROTOCOL.md). Supersedes MLSCOPE-v1, NOCODE-v1 and any older text that forbids code or models in prompts 1–5.
+**ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](FORECAST_CYCLE_PROTOCOL.md); summarised in [CORE](CORE.md) §7.
 
-**SEL-2026.10.12-v3 · primary policy P_ORDER_V2 (unchanged order rule; priced from the declared mixture where CURRENT_RULES §7 requires one).** Numerical thresholds are PROVISIONAL, not proven accuracy guarantees. Applies to new v11 and later cards; unchanged selection rules, with timing governed by [TIMING_RESEARCH_PROTOCOL](TIMING_RESEARCH_PROTOCOL.md); old selections keep their original policy ([SEL v2](archive/superseded_2026-10-12/SELECTION_RULES.md)). [CURRENT_RULES](CURRENT_RULES.md) controls.
+**SEL-2026.10.22-v4 (cards under P-2026.10.22-v24.0 and later) · SEL-2026.10.12-v3 · primary policy P_ORDER_V2 for the most-likely list.** Numerical thresholds are PROVISIONAL, not proven accuracy guarantees. Cards before v24.0 keep SEL v3 in full ([SEL v2](archive/superseded_2026-10-12/SELECTION_RULES.md) before that). Timing is governed by [TIMING_RESEARCH_PROTOCOL](TIMING_RESEARCH_PROTOCOL.md); [CURRENT_RULES](CURRENT_RULES.md) controls.
+
+## 0. What changes under SEL v4 (v24.0 cards)
+
+Replaced rule (archived in `archive/superseded_2026-10-22-2/SELECTION_RULES.md`): sections 2 and 3, the Rank-1 gate (p at least 0.62, lead at least 0.04), the Rank-2 floor and the five required shadow selections (RET03 gate, RET04, XCARD6, RANK_DELTA, BASE_ONLY). Replacement ([ADJUSTMENT_LEDGER_PROTOCOL](ADJUSTMENT_LEDGER_PROTOCOL.md) sections 3-4): the card prints a probability for every supplied contract, the winner, a **most-likely list** of up to four rows ordered by the unrounded final p (ties by contract key; the section 4 family eligibility rules still remove an inadmissible row from the list), an **information list** (rows that moved at least 0.03 from the reference) and the abstain flag (`no strong pick` unless a ranked row reaches 0.65 or a row moved). The questions the five shadows asked are answered by the information list (does disagreeing with the reference carry information) and by the ledger comparisons (does the card beat its reference, the baseline, the line-implied 0.5). Joint failure of the first two ranked rows is still printed, exact or as Fréchet bounds, and a covering pair counts as one pick.
+
+Unchanged for v24.0 cards: the 0.90 selection ceiling, the section 4 family checks, the section 5 candidate universe and line difficulty, the section 6 regimes, the section 7 grades and evidence classes, the section 8 failure classes and the section 9 league-only baseline.
 
 ## 1. Constants and scope
 
@@ -10,8 +16,8 @@
 |---|---|
 | Ranked numeric candidates | At most four supported rows; do not pad |
 | Selection ceiling | p_card ≤ 0.90; retain true higher values outside the selected slate, never clip |
-| Rank-1 gate | p_card ≥ 0.62 and lead ≥ 0.04 over best eligible non-complementary alternative |
-| Rank-2 floor | 0.58, disclosed if unmet; no invented replacement |
+| Rank-1 gate (cards before v24.0 only) | p_card ≥ 0.62 and lead ≥ 0.04 over best eligible non-complementary alternative |
+| Rank-2 floor (cards before v24.0 only) | 0.58, disclosed if unmet; no invented replacement |
 | Joint failure | Report 0.30 target / 0.35 warning as historical provisional diagnostics, not a forced reordering rule |
 | Large adjustment | Above 0.25 SD; any size that changes top two is ADJUSTMENT_DEPENDENT |
 | Decision block | At most about 650 words, full evidence in appendix |
@@ -125,4 +131,4 @@ Calculate the baseline from its own league-only inputs; do not reuse team-adjust
 
 ## 10. Primary probability source
 
-New cards: the ANALYST_PRIMARY_V1 hand-built coherent distribution (CURRENT_RULES §7, [PROBABILITY_TOOLKIT](PROBABILITY_TOOLKIT.md)) supplies every p_card; no model runtime is used in prompts 1–5 (MLSCOPE-v1). P_ORDER_V2, original ranks, family/gate/precision/90% rules and same-row baseline definitions remain. Historical MODEL_ASSISTED_PRIMARY_V3 cards keep their original [model source](PRIMARY_PREDICTION_PROTOCOL.md) and cohort. A workshop model may only be compared with cards in prompt 6 or frozen as a shadow under prompt 8; it never supplies p_card.
+New cards: the ANALYST_PRIMARY_V1 coherent distribution built from the frozen reference plus the adjustment ledger (CURRENT_RULES section 7, [PROBABILITY_TOOLKIT](PROBABILITY_TOOLKIT.md), `ml.reference`) supplies every p_card; the reference stage runs before the card and the card's final p is frozen beside it (MLSCOPE-v3). The ordering rule, the 0.90 ceiling, family/precision rules and same-row baseline definitions remain. Historical MODEL_ASSISTED_PRIMARY_V3 cards keep their original [model source](PRIMARY_PREDICTION_PROTOCOL.md) and cohort. A workshop model reaches a card only as the frozen reference; it never overwrites p_card.

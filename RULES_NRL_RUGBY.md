@@ -1,29 +1,12 @@
-> **Primary ML/RL (15 October 2026):** [PRIMARY_PREDICTION_PROTOCOL](PRIMARY_PREDICTION_PROTOCOL.md) supplies actual model-assisted original probabilities in the supported exact competition/endpoint. Keep these sport-specific physical/source/family checks. Unsupported model/phase/participant regimes remain NO_FORECAST, not another league's model. This amendment overrides older blanket manual-model exclusions, not sporting truth or the market firewall.
+> **Authority.** [CORE](CORE.md) and [CURRENT_RULES](CURRENT_RULES.md) govern new work; this page holds this sport's rules, and earlier statements below keep their historical scope.
 
-**Executable forecast cycle (CYCLE-v1).** Apply [FORECAST_CYCLE_PROTOCOL](FORECAST_CYCLE_PROTOCOL.md). New contextual forecasts use MODEL_ASSISTED_CYCLE_V1 with a frozen exact-competition release, actual execution receipt, identical-contract baseline shadows and verified settlement feedback. Existing V3/tennis adapters retain their own cohorts; missing/unsupported inputs require a real failure receipt and retained research. This statistical/procedure release authorises experimental execution, not predictive qualification.
+**Executable forecast cycle (CYCLE-v1).** Defined in [FORECAST_CYCLE_PROTOCOL](FORECAST_CYCLE_PROTOCOL.md); summarised in [CORE](CORE.md) §7.
 
-**Local keys until settlement; updated mini after every game (MINI-v2).** Apply [MINI_LOG_IDENTITY_PROTOCOL](MINI_LOG_IDENTITY_PROTOCOL.md). Research and mini creation (prompts 1–2) use stable local event keys and never assign or reserve canonical P-IDs. A canonical P-ID is assigned only in an event's settlement phase: prompt 3 settles the event and then runs the prompt-4 import, which assigns the ID. After each prompt-1 game request the repository agent appends the card to the active mini under `research/active_minis/`, updates intake and footer, reads the file back, and commits and pushes it. Preserve every owner-entered Upcoming game block and all earlier issued bytes. Formats: mini-log-10 / mini-settlement-10; earlier records retain their original formats.
+**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](MINI_LOG_IDENTITY_PROTOCOL.md); summarised in [CORE](CORE.md) §2.
 
-**Persistent research and corroboration (EXH-v1).** Apply [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md) to every required field in research, logging, settlement and verification. If a source is incomplete, open alternatives and verify material facts with another independent source; track every remaining field and attempt. Unresolved facts/corroboration never qualify as complete information. New settlements use mini-settlement-10 with a visible source-discovery/reuse section, three source/attempt/closure CSVs and S17; older originals retain their rules and bytes. Consult [RESEARCH_SOURCE_REGISTER](RESEARCH_SOURCE_REGISTER.md) and prior package registers, recheck actual coverage, and continue discovery beyond them.
+**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
 
-**Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** For every game, research both sides' L5/L10/L15/L20 online under [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md), with opened sources, dated game rows and true n. Seek exact-game confirmed players, starting roles, bench/replacements and absences under [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md); projected players remain unconfirmed. The retired local results store and its derived profiles are not required inputs or fallbacks. Earlier archive-first directions are superseded.
-
-> **Manual research timing (15 October 2026):** [TIMING_RESEARCH_PROTOCOL](TIMING_RESEARCH_PROTOCOL.md) supersedes older fixed advance research/freeze targets. Complete this sport's research even after play starts when needed. Record verified pre-start inputs, actual issue phase and outcome exposure separately; freeze only the completed original. A post-start-issued card remains in its own research cohort, not a pre-start-release claim.
-
-> **v11 precedence (2026-10-12, audit R09/R11).** [CURRENT_RULES](CURRENT_RULES.md), [SELECTION_RULES](SELECTION_RULES.md), [SCORING_AND_VALIDATION](SCORING_AND_VALIDATION.md), [CARD_AND_LOG_TEMPLATES](CARD_AND_LOG_TEMPLATES.md) and prompt 1 govern new work (MDS-2026.10.12-v11.0). This file remains the sport's reference for playing rules, mechanisms, sources and historical lessons. **Non-operative here:**
-
-> **Mandatory availability research (14 October 2026):** apply [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md) §§1–6 under CURRENT_RULES §5b for every competition in this sport. Research both sides' starters/starting role, selected bench/replacements and current medical/absence/eligibility reports separately; use official team sheets, local-language discovery for obscure leagues and a final late-change recheck. Record evidence and actual failed attempts in existing A3/A8/C20. Probable players, rosters and missing injury reports never become confirmation.
-> - RM-1 q ranking, q tiers, `TOP2_QUALITY` and cushion-term ranking: new cards rank by p_card (P_ORDER_V2).
-> - TB-1 / TB-1-MD "anchoring": `BASELINE_P` is always the league-only `BASELINE_LEAGUE_V1`, and TB-1-MD is a printed team-model reference only.
-> - Row-level numeric caps and grade caps not restated in CURRENT_RULES.
-> - Steps of the retired RULES_GENERAL / GFA algorithm.
-> - Any instruction to rank or settle that conflicts with the controls above.
->
-> The two "October 5" authority notes below are historical. Authority mode now follows CURRENT_RULES §0: a run uses either the pinned published main or the local working tree, never both. Recent form follows ARCHIVE_USE_GUIDE online form recipe R2 (L5/L10/L15/L20 counted once).
-
-> **Current authority (October 5):** [METHOD.md](METHOD.md) and [CURRENT_RULES.md](CURRENT_RULES.md) govern new work. Requested qualitative or explicitly uncalibrated research is retained under stable local keys regardless of calibration; prompt 4 alone assigns canonical IDs during import. Numerical performance certification is separate. Read current IDs/freeze from the [status register](GAME_LOG_STATUS_CURRENT.md), unresolved items from the [carryover](research/verification/closure_2026-10-05/carryover.md), and [current implementation evidence](research/verification/implementation_2026-10-05/REPORT.md). Earlier method, queue, freeze and eligibility statements below retain their historical scope.
-
-**Local authority and all-log reconciliation (October 5):** Local working files govern; GitHub main publishes them. The latest user instruction supersedes earlier GitHub-only prompts. Current [all-log evidence](research/verification/all_log_resolution_2026-10-05/REPORT.md) accounts for all 537 slots and temporary aliases, ten repaired documentary mappings, four new sporting reviews and 53 precise carryovers. Existing IDs and frozen forecast/source bytes remain unchanged.
+**Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
 
 # Rugby league / NRL analysis rules
 
@@ -101,30 +84,22 @@ Numerical-engine design notes (the engine code was removed on 2026-10-09; comput
 3. **Regime Conditioning**: 2020 six-again rule change strictly demarcates high-pace modern NRL from legacy low-pace rugby league. Spine availability (1, 6, 7, 9) and primary goal-kicker accuracy condition transition rates.
 4. **Independent Training**: Fit exclusively on `H0-NRL-v1` via `nrlR` (ingested through isolated R script `runtime/r_ingestion/nrl_nrlr.R` (removed 2026-10-09)); D0 is strictly reserved for qualitative error diagnostics.
 
-
 ## 1. Identity and contract
-
 
 Resolve NRL, NRLW, Super League, reserve-grade, international, or another league competition; current laws/interchange rules; venue; regulation/golden-point/draw terms; team/player/phase statistic; and exact settlement provider. Do not call a Super League fixture NRL.
 
-
 ## 2. High-value inputs
 
-
 ### Participants and roles
-
 
 - Confirm the official team list, final match-day reduction/release, starting 13, bench, late changes, and current competition interchange/activation rules.
 - Identify the spine: fullback, five-eighth, halfback, hooker; primary goal kicker; playmakers and replacement tree.
 - Estimate minutes, interchange, carries, tackles, kicking role, goal-kicking share, and position changes.
 - Translate absences into set organisation, field position, ruck speed, edge defence, and conversion.
 
-
 ### Possession and field position
 
-
 Use opponent-adjusted:
-
 
 - possessions/sets and set starts;
 - completion and error rates;
@@ -135,30 +110,21 @@ Use opponent-adjusted:
 - tries, try location, goal conversion, and defensive conversion;
 - tackle load and interchange fatigue.
 
-
 Raw points and cover history do not substitute for possession and field position.
-
 
 ### Context
 
-
 Record rest, travel, turnaround, venue, match-window weather, surface, ladder/finals incentives, referee only with current relevant data, and verified tactical changes. Wet conditions can reduce handling but also create short fields and fatigue; no automatic Under.
-
 
 ## 3. Model
 
-
 Exposure units are possessions/sets, set starts, field position, carries/tackles, line-break opportunities, tries, and conversions. Estimate territory and try opportunities first, then finishing and goal-kicking. Use a joint score/margin distribution with sin-bin, intercept/short-field, fatigue, and golden-point tails.
-
 
 Derive winner, handicap, total, phase, and player contracts from the same distribution.
 
-
 For numerical training, compare empirical/simple set-and-try baselines with a sets → field position → goal-line entry → try → conversion A2 simulator. It samples completion/errors, repeat sets, penalties/six-again, ruck/fatigue, line breaks, sin-bin/send-off, kicker and golden-point states while preserving both teams' possession dependence. Direct score or boosted-distribution models are challengers only after discrete-support, scoring-combination, population and calibration checks. Elo is contextual strength, not the scoring engine. Every contract integrates the same joint score distribution. All candidates remain unfit and unvalidated.
 
-
 ## 4. Structural controls
-
 
 1. **Spine is a regime variable.** Rebuild set organisation, kicking, and edge attack for a changed spine.
 2. **Possession imbalance drives dependence.** It can raise favourite margin while suppressing the underdog contribution; total direction remains scenario-specific.
@@ -177,26 +143,19 @@ For numerical training, compare empirical/simple set-and-try baselines with a se
 15. **Halftime does not freeze full-time separation.** Carry score, possession/set starts, field position, completion/error state, spine function, bench/interchange usage, defensive workload and conditions into the second-half branch. A competitive first half can become a favourite cover through opponent suppression and fatigue without creating a high total.
 16. **Close-game winner needs terminal-event sensitivity.** In a competitive low-total branch, separately model final-five-minute field position, interchange/conditioning, spine/kicker availability, repeat sets, penalties, sin-bin/injury states and conversion/kick outcomes. A sound Under or broad cushion does not identify which side wins the last scoring sequence.
 
-
 ## 5. Live state
-
 
 Store score, clock/half, possession/set and tackle, field position, repeat-set/six-again, penalties/errors, line breaks, sin bins/send-offs, injuries, interchanges, kicker, and current ruck/territory. Recompute remaining sets and field-position distribution.
 
-
 ## 6. Sources and settlement
-
 
 - NRL official team lists, late mail, match centres, judiciary and [game/statistics resources](https://www.nrl.com/operations/the-game/) control NRL.
 - Official competition sources control Super League, NRLW, internationals, and other leagues.
 - Government weather services and venue reports control conditions.
 
-
 Settle from the official final and named provider, preserving regulation/golden-point and exact player-stat definitions.
 
-
 ## 7. Upcoming-game research sequence
-
 
 1. Freeze rugby-league competition/laws, regulation/golden-point/draw terms, player/stat provider and candidate slate.
 2. Retrieve official team lists, injury/casualty status, reductions/late mail, starting 13, bench, spine and goal kicker. Refresh at the current competition's final-update deadline and immediately before kickoff.
@@ -205,18 +164,13 @@ Settle from the official final and named provider, preserving regulation/golden-
 5. Before ranking an Under or underdog cushion, calculate one explicit favourite-only blowout path and one low-total separation path; record which mechanisms and score families make each credible.
 6. Derive joint score, winner, total and handicap from the same score object. Player props use position, minutes, carries/tackles/kicks or goal-kicking exposure and exact provider definitions.
 
-
 Official competition sources own current teams/state/rules. Historical archives are cross-check/research lanes and cannot override late mail or enter H0 before field-level approval.
-
 
 ## 8. SFA-RUGBY-LEAGUE — sport forecast algorithm
 
-
 Algorithm ID: `SFA-RUGBY-LEAGUE`. Effective **2026-09-02**. Instantiates `GFA-2` (RULES_GENERAL (archived) §11) with rugby-league content. Process composition only; no fitted weight, scenario weight or published probability is introduced. NRL, NRLW, Super League, internationals and lower grades are separate populations, and no rugby-union or sevens data enters any step.
 
-
 ### 8.1 Blocking preconditions
-
 
 | Precondition | Requirement | Failure output |
 |---|---|---|
@@ -225,9 +179,7 @@ Algorithm ID: `SFA-RUGBY-LEAGUE`. Effective **2026-09-02**. Instantiates `GFA-2`
 | `RL-P3` goal kicker | Primary goal kicker and replacement | Required before any total or margin row, because tries and conversions are dependent |
 | `RL-P4` conditions | Venue, surface and match-window weather with a named mechanism | Wet weather is bidirectional; no automatic Under |
 
-
 ### 8.2 Exposure chain
-
 
 | Step | Output |
 |---|---|
@@ -240,12 +192,9 @@ Algorithm ID: `SFA-RUGBY-LEAGUE`. Effective **2026-09-02**. Instantiates `GFA-2`
 | `RL-S7` | Fatigue state: tackle load, interchange usage, ruck speed and second-half decay for both sides |
 | `RL-S8` | One joint score and margin object with sin-bin, send-off, intercept, short-field and golden-point tails |
 
-
 Raw points and cover history never substitute for `RL-S2`–`RL-S5`.
 
-
 ### 8.3 Mandatory branch set
-
 
 | Branch | Content |
 |---|---|
@@ -258,9 +207,7 @@ Raw points and cover history never substitute for `RL-S2`–`RL-S5`.
 | `RL-B7` | Wet-weather state, with handling errors, kicking, short fields, ruck speed and goal-kicking each signed separately |
 | `RL-B8` | Golden point or draw treatment under the exact competition and operator terms |
 
-
 ### 8.4 Contract derivation map
-
 
 | Contract | Queried from | Extra condition the mechanism must predict |
 |---|---|---|
@@ -271,9 +218,7 @@ Raw points and cover history never substitute for `RL-S2`–`RL-S5`.
 | Half or phase | The segment's own possession and field-position state | Halftime never freezes full-time separation |
 | Player props | Position, minutes, carries, tackles, kicks or goal-kicking exposure | The exact provider definition |
 
-
 ### 8.5 Kill-path library
-
 
 | Kill path | Defeats | Evidence origin |
 |---|---|---|
@@ -286,9 +231,7 @@ Raw points and cover history never substitute for `RL-S2`–`RL-S5`.
 | Wet conditions creating short fields and fatigue as well as handling errors | A one-sign wet-weather Under | §4 control 4 |
 | A sin-bin rebuilding remaining possession | A margin or total row with no man-down branch | §4 control 6 |
 
-
 ### 8.6 Sport ordering overrides
-
 
 1. Before any Under or underdog cushion is ranked, write one explicit `RL-B2` favourite-only path and one `RL-B3` low-total separation path, and record which mechanisms make each credible.
 2. Total and margin are separate queries against the same score object. Neither raises the other's `states` count.
@@ -296,9 +239,7 @@ Raw points and cover history never substitute for `RL-S2`–`RL-S5`.
 4. Possession imbalance is bidirectional: it can raise the favourite's margin while suppressing the opponent's contribution, so it may not be counted only in the direction that supports the selected total.
 5. Recent cover rates, points averages and old head-to-head are `E — diagnostic only`. The single logged NRL event cannot calibrate anything.
 
-
 ### 8.7 Pre-issue checklist
-
 
 1. `RL-P1`–`RL-P4` status printed, including late mail and the confirmed spine and kicker.
 2. Competition and venue scoring baseline stated before any line.
@@ -317,15 +258,11 @@ Raw points and cover history never substitute for `RL-S2`–`RL-S5`.
 15. Winner-and-cushion reconciliation (G30.1) whenever Rank #1 is an underdog cushion, with the outright-win and narrow-loss branch ordering stated. Example separation kill path for this sport: a late try plus conversion.
 16. Deficit attribution (G14.1) recorded for every weak, absent, returning or small-sample participant: which side's distribution moved and through which exposure step.
 
-
 ### 8.8 Recency, head-to-head and trend windows
-
 
 Implements `GFA-2` step G13.1 (RULES_GENERAL (archived) §11.3B) and runs at that point in the algorithm, not at the end. Retrieval of L5/L10/L15/L20 for both sides and for the head-to-head series is mandatory; a window that does not exist is recorded with its true count and a missingness code.
 
-
 Populate one windowed table per side with these metrics, and one head-to-head table:
-
 
 | Window metric | Content |
 |---|---|
@@ -335,21 +272,15 @@ Populate one windowed table per side with these metrics, and one head-to-head ta
 | Defence | Missed tackles and points conceded, held separately from points scored |
 | Goal kicking | The current kicker's own last 5/10/15/20 games: attempts, success and range |
 
-
 **Head-to-head continuity.** Continuity means the same spine and the same kicker. A head-to-head record across a halfback or hooker change fails continuity, which is the exact failure recorded when season averages and close head-to-head history outranked a current defensive collapse.
-
 
 **Descriptive recency windows (G13.1; revised 2026-09-17).** Retrieve L5/L10/L15/L20 and continuity-qualified H2H with unique-event counts. These windows overlap. Monotonicity and dispersion among their averages are not a statistical trend/noise test. Report direction descriptively; estimate recency decay and opponent/regime effects using time-ordered validation. See SCORING_AND_VALIDATION section 5.
 
-
 **De-duplication.** The windows overlap by construction and share matches with the head-to-head and venue series. Shrink from unique underlying events under G9; never treat L5, L10, L15 and L20 as four confirmations.
-
 
 ### 8.9 Environment and conditions
 
-
 Implements `GFA-2` step G15.1 (RULES_GENERAL (archived) §11.3C). Venue classification for this sport is normally **OUTDOOR**.
-
 
 | Field | Use in this sport |
 |---|---|
@@ -358,18 +289,13 @@ Implements `GFA-2` step G15.1 (RULES_GENERAL (archived) §11.3C). Venue classifi
 | Surface state | Official venue source |
 | Temperature and humidity | Interchange usage and second-half fatigue under `RL-B4` |
 
-
 Failure to obtain the match-window forecast for an outdoor or open-roof event yields `WEATHER_NOT_AVAILABLE`, widened total and margin distributions, and a `LEAN` cap on every weather-dependent row. No factor above carries an automatic total direction.
-
 
 ### 8.10 Base-rate anchors and derived stat lanes
 
-
 **Anchoring (G12.1).** Anchor totals on the competition scoring environment and margins on the competition margin distribution. A cushion is `CONJUNCT` and does not start level with a match total.
 
-
 **Derived and low-salience fields that are available and routinely skipped:**
-
 
 | Field | Note |
 |---|---|
@@ -377,21 +303,15 @@ Failure to obtain the match-window forecast for an outdoor or open-roof event yi
 | Interchange usage and tackle load | Feeds the fatigue state at `RL-S7` |
 | Turnaround length and travel | Entered through fatigue and rotation |
 
-
 ## 9. Sport and competition rules reference
-
 
 Added 2026-09-04; last reviewed 2026-09-04. Standing reference for the laws of rugby league and the competition rules of the NRL Telstra Premiership — the only rugby-league competition in the prediction logs. Supports `RL-P` identity and §6 settlement; introduces no rate, weight or ordering rule.
 
-
 **Maintenance (RULES_GENERAL (archived) §3, `G2`).** Before the first card of a new NRL season, the pre-season Challenge, or the first finals card, re-verify the golden-point rule (regular season vs finals), the interchange/18th-man rules, the captain's-challenge and Bunker rules, the two-point field-goal rule, the team count and the finals bracket against nrl.com, and update this section **before** issuing the card — the NRL has changed the six-again, interchange, field-goal and finals rules within the last few seasons and adds an expansion team for 2028. The first time another rugby-league competition is forecast (Super League, State of Origin, an international, the NSW/Q Cup), document its full rules here first.
-
 
 ### 9.1 The laws of rugby league
 
-
 **Field and teams.** A rectangular field ~100 m (try line to try line) × 68 m, with **in-goal areas** at each end. **13 players a side** on the field, **4 interchange** players on the bench.
-
 
 **Scoring.**
 - **Try = 4 points:** grounding the ball in the opponent's in-goal.
@@ -399,35 +319,25 @@ Added 2026-09-04; last reviewed 2026-09-04. Standing reference for the laws of r
 - **Penalty goal = 2 points:** a kick at goal from a penalty.
 - **Field goal (drop goal) = 1 point** — **or 2 points if kicked from 40 m or more** (an NRL rule since 2021).
 
-
 **Possession — the six-tackle set.** The team in possession gets **six tackles** to advance and score. After the sixth tackle without a score, possession hands over (usually via a kick on the fifth or sixth). A **"six again"** (set restart) is called for a ruck infringement by the defence — the tackle count resets to zero with **no penalty and no stoppage** (introduced 2020; a major driver of fatigue-based blowouts, `SFA-RUGBY-LEAGUE` §8, §8.10). The **play-the-ball** restarts play after each tackle; the defensive line must retreat **10 m**.
-
 
 **Kicking.** A **40/20** kick (kicked from inside your own 40, bouncing into touch inside the opponent's 20) or **20/40** wins the kicking team the next set with the feed. A kick dead in-goal or into touch on the full from open play hands possession to the defending team.
 
-
 **Match structure.** **Two 40-minute halves**, running clock (stopped only for the Bunker, serious injury and other referee interventions), ~10-minute half-time. Teams change ends at half-time.
-
 
 **Officiating.** One on-field referee (the NRL trialled and dropped two referees), two touch judges, and the **Bunker** (a central video-review centre) for tries and foul play. **Captain's challenge:** each team has **one** challenge of a referee's ruling (knock-on, ball-strip, obstruction, etc.); it is **retained if successful**, lost if not.
 
-
 **Interchange and player-safety rules.** **8 interchanges** per team per game from the 4-man bench. An **18th player** may be activated if a team loses players to failed Head Injury Assessments (HIA) or foul-play send-offs beyond a threshold — a concussion/foul-play safety valve, not a free extra rotation. **Send-off (red card)** = off for the game, no replacement; **sin bin (yellow)** = 10 minutes off, no replacement; a "professional foul" in-goal can draw a sin bin plus a penalty try.
-
 
 ### 9.2 NRL Telstra Premiership — 2026
 
-
 **Structure.** **17 clubs** (10 NSW, 4 Queensland, plus Melbourne, Canberra, and the New Zealand Warriors). **27 rounds**, each club with byes (an uneven fixture, not a full double round-robin). **Magic Round** (Round 11) stages the entire round at one venue. The **State of Origin** period (three interstate representative matches, ~May–July) removes many of the best players from their clubs for those weeks — a large, predictable availability shock (`SFA-RUGBY-LEAGUE` participant handling).
 
-
 **Ladder.** Win **4**, draw **2**, loss **0**. Separated by: (1) competition points, (2) **points differential**, (3) percentage, (4) tries scored, then further tiebreakers. No bonus points.
-
 
 **Golden point (extra time).**
 - **Regular season:** if level after 80 minutes, **two 5-minute halves** of golden point — **first score of any kind wins** (a field goal, try or penalty goal). If still level after the 10 minutes, the match is a **draw**.
 - **Finals:** the same two 5-minute halves, then, if still level, **unlimited golden point until a score** — **finals cannot be drawn**.
-
 
 **Finals system (top 8).** Same structure as the AFL final-eight:
 - **Week 1:** Qualifying Finals **1 v 4**, **2 v 3** (winners get a week off and a home Preliminary Final; losers get a second life); Elimination Finals **5 v 8**, **6 v 7** (losers eliminated).
@@ -436,20 +346,15 @@ Added 2026-09-04; last reviewed 2026-09-04. Standing reference for the laws of r
 - **Week 4:** the **Grand Final** (Accor Stadium, Sydney — 4 October 2026), a fixed neutral-ish venue.
 Higher seed hosts every final before the Grand Final.
 
-
 **Pre-season.** The **NRL Pre-season Challenge** (trial matches, February) — heavily rotated, experimental lineups; treat as friendlies, not form.
 
-
 ### 9.3 Settlement (NRL)
-
 
 - Full-game line and total settle at the **end of 80 minutes for regular-season matches** — most operators settle the head-to-head and line **excluding golden point** (so a regular-season draw is a live outcome and pushes the line / settles the moneyline as "tie" or dead-heat), but **"including golden point"** markets exist — freeze which one the card is using.
 - For **finals**, there is no draw; freeze whether the market endpoint is "regulation (80 min)" or "including golden point / eventual winner."
 - The **2-point field goal** matters for margin and total settlement — a late long-range one-pointer-that-is-two can flip a handicap on a key number.
 - Try-scorer, first-try, and player run/tackle-metre props settle on the official NRL statistics provider; freeze the provider.
 
-
 ### 9.4 Identity checklist (rugby league)
-
 
 Resolve before any rate work: confirm the competition is the **NRL** (not the NSW Cup, Q Cup, Super League, or an international) and the **season's rule set** (six-again, captain's challenge, 18th-man, 2-point field goal are all current NRL); the **stage** (pre-season trial / regular season / Origin-affected round / finals bracket / Grand Final) and therefore whether a **draw is possible** and how **golden point** is handled; representative-window availability; and the operator's golden-point settlement rule for the market endpoint.

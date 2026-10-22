@@ -1,0 +1,2 @@
+competition,endpoint,native_event_id,season,scheduled_start,home,away,venue,source_url,known_at,capture_path,capture_sha256,collected_by
+Basketball/NBA,FULL_GAME_INCL_OT,ESPN:401909094,2026,2026-10-23T01:30:00+00:00,Oklahoma City Thunder,Denver Nuggets,Paycom Center,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20261022&limit=100,2026-10-22T05:28:10.208625+00:00,research/chat_captures/LOCAL-LEAGUE-NBA-20261022-G0002/fixture.txt,84e052becf2f66797ef5a34ec24e5d904d957136bb01d489b918a6e0761a4587,LOCAL-LEAGUE-NBA-20261022-G0002

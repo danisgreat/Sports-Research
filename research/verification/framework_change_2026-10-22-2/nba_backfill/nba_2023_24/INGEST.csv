@@ -1,0 +1,2 @@
+ingest_seq,ingested_at,export_path,export_sha256,schema_version,code_sha256,observations,new_events,new_results,corroborating,corrections,quarantined,exact_duplicates
+8,2026-10-22T01:33:23.163461+00:00,research\verification\framework_change_2026-10-22-2\nba_backfill\nba_2023_24\EXPORT,80d4668aee95d7980278be378f63b14e93b954e58a5a51aa7d66b6aefa0d9bed,LEARN-STORE-2026.10.16-v1,091e4708850c9452029547c317284f52393afe916cb4cc297002d5dd462d1156,2462,1231,1231,1231,0,0,0

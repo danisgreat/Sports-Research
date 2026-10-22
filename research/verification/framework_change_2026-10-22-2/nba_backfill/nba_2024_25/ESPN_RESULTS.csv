@@ -1,0 +1,1232 @@
+date,event_id,provider_id,event_at,home,away,venue,hs,as_,reg_hs,reg_as,decision,periods,season,neutral
+2024-10-22,ESPN:401704627,401704627,2024-10-22T23:30Z,Boston Celtics,New York Knicks,TD Garden,132,109,132,109,Regulation,4,2024,False
+2024-10-22,ESPN:401704628,401704628,2024-10-23T02:00Z,Los Angeles Lakers,Minnesota Timberwolves,crypto.com Arena,110,103,110,103,Regulation,4,2024,False
+2024-10-23,ESPN:401704629,401704629,2024-10-23T23:00Z,Detroit Pistons,Indiana Pacers,Little Caesars Arena,109,115,109,115,Regulation,4,2024,False
+2024-10-23,ESPN:401704630,401704630,2024-10-23T23:30Z,Atlanta Hawks,Brooklyn Nets,State Farm Arena,120,116,120,116,Regulation,4,2024,False
+2024-10-23,ESPN:401704631,401704631,2024-10-23T23:30Z,Miami Heat,Orlando Magic,Kaseya Center,97,116,97,116,Regulation,4,2024,False
+2024-10-23,ESPN:401704632,401704632,2024-10-23T23:30Z,Philadelphia 76ers,Milwaukee Bucks,Xfinity Mobile Arena,109,124,109,124,Regulation,4,2024,False
+2024-10-23,ESPN:401704633,401704633,2024-10-23T23:30Z,Toronto Raptors,Cleveland Cavaliers,Scotiabank Arena,106,136,106,136,Regulation,4,2024,False
+2024-10-23,ESPN:401704634,401704634,2024-10-24T00:00Z,Houston Rockets,Charlotte Hornets,Toyota Center (Houston),105,110,105,110,Regulation,4,2024,False
+2024-10-23,ESPN:401704635,401704635,2024-10-24T00:00Z,New Orleans Pelicans,Chicago Bulls,Smoothie King Center,123,111,123,111,Regulation,4,2024,False
+2024-10-23,ESPN:401704636,401704636,2024-10-24T01:00Z,Utah Jazz,Memphis Grizzlies,Delta Center,124,126,124,126,Regulation,4,2024,False
+2024-10-23,ESPN:401704637,401704637,2024-10-24T02:00Z,Los Angeles Clippers,Phoenix Suns,Intuit Dome,113,116,103,103,Overtime,5,2024,False
+2024-10-23,ESPN:401704638,401704638,2024-10-24T02:00Z,Portland Trail Blazers,Golden State Warriors,Moda Center,104,140,104,140,Regulation,4,2024,False
+2024-10-24,ESPN:401704639,401704639,2024-10-24T23:00Z,Washington Wizards,Boston Celtics,Capital One Arena,102,122,102,122,Regulation,4,2024,False
+2024-10-24,ESPN:401704640,401704640,2024-10-24T23:30Z,Dallas Mavericks,San Antonio Spurs,American Airlines Center,120,109,120,109,Regulation,4,2024,False
+2024-10-24,ESPN:401704641,401704641,2024-10-25T02:00Z,Denver Nuggets,Oklahoma City Thunder,Ball Arena,87,102,87,102,Regulation,4,2024,False
+2024-10-24,ESPN:401704642,401704642,2024-10-25T02:00Z,Sacramento Kings,Minnesota Timberwolves,Golden 1 Center,115,117,115,117,Regulation,4,2024,False
+2024-10-25,ESPN:401704643,401704643,2024-10-25T23:00Z,Orlando Magic,Brooklyn Nets,Kia Center,116,101,116,101,Regulation,4,2024,False
+2024-10-25,ESPN:401704644,401704644,2024-10-25T23:00Z,Toronto Raptors,Philadelphia 76ers,Scotiabank Arena,115,107,115,107,Regulation,4,2024,False
+2024-10-25,ESPN:401704645,401704645,2024-10-25T23:30Z,Atlanta Hawks,Charlotte Hornets,State Farm Arena,125,120,125,120,Regulation,4,2024,False
+2024-10-25,ESPN:401704646,401704646,2024-10-25T23:30Z,Cleveland Cavaliers,Detroit Pistons,Rocket Arena,113,101,113,101,Regulation,4,2024,False
+2024-10-25,ESPN:401704647,401704647,2024-10-25T23:30Z,New York Knicks,Indiana Pacers,Madison Square Garden,123,98,123,98,Regulation,4,2024,False
+2024-10-25,ESPN:401704648,401704648,2024-10-26T00:00Z,Houston Rockets,Memphis Grizzlies,Toyota Center (Houston),128,108,128,108,Regulation,4,2024,False
+2024-10-25,ESPN:401704649,401704649,2024-10-26T00:00Z,Milwaukee Bucks,Chicago Bulls,Fiserv Forum,122,133,122,133,Regulation,4,2024,False
+2024-10-25,ESPN:401704650,401704650,2024-10-26T01:30Z,Utah Jazz,Golden State Warriors,Delta Center,86,127,86,127,Regulation,4,2024,False
+2024-10-25,ESPN:401704651,401704651,2024-10-26T02:00Z,Los Angeles Lakers,Phoenix Suns,crypto.com Arena,123,116,123,116,Regulation,4,2024,False
+2024-10-25,ESPN:401704652,401704652,2024-10-26T02:00Z,Portland Trail Blazers,New Orleans Pelicans,Moda Center,103,105,103,105,Regulation,4,2024,False
+2024-10-26,ESPN:401704653,401704653,2024-10-26T21:00Z,Denver Nuggets,Los Angeles Clippers,Ball Arena,104,109,104,109,Regulation,4,2024,False
+2024-10-26,ESPN:401704654,401704654,2024-10-26T23:00Z,Charlotte Hornets,Miami Heat,Spectrum Center,106,114,106,114,Regulation,4,2024,False
+2024-10-26,ESPN:401704655,401704655,2024-10-26T23:00Z,Detroit Pistons,Boston Celtics,Little Caesars Arena,118,124,118,124,Regulation,4,2024,False
+2024-10-26,ESPN:401704656,401704656,2024-10-26T23:00Z,Washington Wizards,Cleveland Cavaliers,Capital One Arena,116,135,116,135,Regulation,4,2024,False
+2024-10-26,ESPN:401704657,401704657,2024-10-27T00:00Z,Chicago Bulls,Oklahoma City Thunder,United Center,95,114,95,114,Regulation,4,2024,False
+2024-10-26,ESPN:401704658,401704658,2024-10-27T00:00Z,Memphis Grizzlies,Orlando Magic,FedExForum,124,111,124,111,Regulation,4,2024,False
+2024-10-26,ESPN:401704659,401704659,2024-10-27T00:00Z,Minnesota Timberwolves,Toronto Raptors,Target Center,112,101,112,101,Regulation,4,2024,False
+2024-10-26,ESPN:401704660,401704660,2024-10-27T00:30Z,San Antonio Spurs,Houston Rockets,Frost Bank Center,109,106,109,106,Regulation,4,2024,False
+2024-10-26,ESPN:401704661,401704661,2024-10-27T02:00Z,Phoenix Suns,Dallas Mavericks,Mortgage Matchup Center,114,102,114,102,Regulation,4,2024,False
+2024-10-26,ESPN:401704662,401704662,2024-10-27T02:30Z,Los Angeles Lakers,Sacramento Kings,crypto.com Arena,131,127,131,127,Regulation,4,2024,False
+2024-10-27,ESPN:401704663,401704663,2024-10-27T19:30Z,Indiana Pacers,Philadelphia 76ers,Gainbridge Fieldhouse,114,118,105,105,Overtime,5,2024,False
+2024-10-27,ESPN:401704664,401704664,2024-10-27T22:00Z,Brooklyn Nets,Milwaukee Bucks,Barclays Center,115,102,115,102,Regulation,4,2024,False
+2024-10-27,ESPN:401704665,401704665,2024-10-27T22:00Z,Portland Trail Blazers,New Orleans Pelicans,Moda Center,125,103,125,103,Regulation,4,2024,False
+2024-10-27,ESPN:401704666,401704666,2024-10-27T23:00Z,Oklahoma City Thunder,Atlanta Hawks,Paycom Center,128,104,128,104,Regulation,4,2024,False
+2024-10-27,ESPN:401704667,401704667,2024-10-28T00:30Z,Golden State Warriors,Los Angeles Clippers,Chase Center,104,112,104,112,Regulation,4,2024,False
+2024-10-28,ESPN:401704668,401704668,2024-10-28T23:00Z,Orlando Magic,Indiana Pacers,Kia Center,119,115,119,115,Regulation,4,2024,False
+2024-10-28,ESPN:401704669,401704669,2024-10-28T23:30Z,Atlanta Hawks,Washington Wizards,State Farm Arena,119,121,119,121,Regulation,4,2024,False
+2024-10-28,ESPN:401704670,401704670,2024-10-28T23:30Z,Boston Celtics,Milwaukee Bucks,TD Garden,119,108,119,108,Regulation,4,2024,False
+2024-10-28,ESPN:401704671,401704671,2024-10-28T23:30Z,Miami Heat,Detroit Pistons,Kaseya Center,106,98,106,98,Regulation,4,2024,False
+2024-10-28,ESPN:401704672,401704672,2024-10-28T23:30Z,New York Knicks,Cleveland Cavaliers,Madison Square Garden,104,110,104,110,Regulation,4,2024,False
+2024-10-28,ESPN:401704673,401704673,2024-10-28T23:30Z,Toronto Raptors,Denver Nuggets,Scotiabank Arena,125,127,114,114,Overtime,5,2024,False
+2024-10-28,ESPN:401704674,401704674,2024-10-29T00:00Z,Memphis Grizzlies,Chicago Bulls,FedExForum,123,126,123,126,Regulation,4,2024,False
+2024-10-28,ESPN:401704675,401704675,2024-10-29T00:00Z,San Antonio Spurs,Houston Rockets,Frost Bank Center,101,106,101,106,Regulation,4,2024,False
+2024-10-28,ESPN:401704676,401704676,2024-10-29T00:30Z,Dallas Mavericks,Utah Jazz,American Airlines Center,110,102,110,102,Regulation,4,2024,False
+2024-10-28,ESPN:401704677,401704677,2024-10-29T02:00Z,Phoenix Suns,Los Angeles Lakers,Mortgage Matchup Center,109,105,109,105,Regulation,4,2024,False
+2024-10-28,ESPN:401704678,401704678,2024-10-29T02:00Z,Sacramento Kings,Portland Trail Blazers,Golden 1 Center,111,98,111,98,Regulation,4,2024,False
+2024-10-29,ESPN:401704679,401704679,2024-10-29T23:30Z,Brooklyn Nets,Denver Nuggets,Barclays Center,139,144,125,125,Overtime,5,2024,False
+2024-10-29,ESPN:401704680,401704680,2024-10-29T23:30Z,Minnesota Timberwolves,Dallas Mavericks,Target Center,114,120,114,120,Regulation,4,2024,False
+2024-10-29,ESPN:401704681,401704681,2024-10-30T01:00Z,Utah Jazz,Sacramento Kings,Delta Center,96,113,96,113,Regulation,4,2024,False
+2024-10-29,ESPN:401704682,401704682,2024-10-30T02:00Z,Golden State Warriors,New Orleans Pelicans,Chase Center,124,106,124,106,Regulation,4,2024,False
+2024-10-30,ESPN:401704683,401704683,2024-10-30T23:00Z,Charlotte Hornets,Toronto Raptors,Spectrum Center,138,133,138,133,Regulation,4,2024,False
+2024-10-30,ESPN:401704684,401704684,2024-10-30T23:00Z,Cleveland Cavaliers,Los Angeles Lakers,Rocket Arena,134,110,134,110,Regulation,4,2024,False
+2024-10-30,ESPN:401704685,401704685,2024-10-30T23:00Z,Indiana Pacers,Boston Celtics,Gainbridge Fieldhouse,135,132,124,124,Overtime,5,2024,False
+2024-10-30,ESPN:401704686,401704686,2024-10-30T23:00Z,Philadelphia 76ers,Detroit Pistons,Xfinity Mobile Arena,95,105,95,105,Regulation,4,2024,False
+2024-10-30,ESPN:401704687,401704687,2024-10-30T23:00Z,Washington Wizards,Atlanta Hawks,Capital One Arena,133,120,133,120,Regulation,4,2024,False
+2024-10-30,ESPN:401704688,401704688,2024-10-30T23:30Z,Miami Heat,New York Knicks,Kaseya Center,107,116,107,116,Regulation,4,2024,False
+2024-10-30,ESPN:401704689,401704689,2024-10-31T00:00Z,Chicago Bulls,Orlando Magic,United Center,102,99,102,99,Regulation,4,2024,False
+2024-10-30,ESPN:401704690,401704690,2024-10-31T00:00Z,Memphis Grizzlies,Brooklyn Nets,FedExForum,106,119,106,119,Regulation,4,2024,False
+2024-10-30,ESPN:401704691,401704691,2024-10-31T01:30Z,Oklahoma City Thunder,San Antonio Spurs,Paycom Center,105,93,105,93,Regulation,4,2024,False
+2024-10-30,ESPN:401704692,401704692,2024-10-31T02:00Z,Golden State Warriors,New Orleans Pelicans,Chase Center,104,89,104,89,Regulation,4,2024,False
+2024-10-30,ESPN:401704693,401704693,2024-10-31T02:30Z,Los Angeles Clippers,Portland Trail Blazers,Intuit Dome,105,106,105,106,Regulation,4,2024,False
+2024-10-31,ESPN:401704694,401704694,2024-11-01T00:00Z,Memphis Grizzlies,Milwaukee Bucks,FedExForum,122,99,122,99,Regulation,4,2024,False
+2024-10-31,ESPN:401704695,401704695,2024-11-01T00:30Z,Dallas Mavericks,Houston Rockets,American Airlines Center,102,108,102,108,Regulation,4,2024,False
+2024-10-31,ESPN:401704696,401704696,2024-11-01T01:00Z,Utah Jazz,San Antonio Spurs,Delta Center,88,106,88,106,Regulation,4,2024,False
+2024-10-31,ESPN:401704697,401704697,2024-11-01T02:30Z,Los Angeles Clippers,Phoenix Suns,Intuit Dome,119,125,119,125,Regulation,4,2024,False
+2024-11-01,ESPN:401704698,401704698,2024-11-01T23:00Z,Charlotte Hornets,Boston Celtics,Spectrum Center,109,124,109,124,Regulation,4,2024,False
+2024-11-01,ESPN:401704699,401704699,2024-11-01T23:00Z,Cleveland Cavaliers,Orlando Magic,Rocket Arena,120,109,120,109,Regulation,4,2024,False
+2024-11-01,ESPN:401704700,401704700,2024-11-01T23:00Z,Detroit Pistons,New York Knicks,Little Caesars Arena,98,128,98,128,Regulation,4,2024,False
+2024-11-01,ESPN:401704701,401704701,2024-11-01T23:30Z,Atlanta Hawks,Sacramento Kings,State Farm Arena,115,123,115,123,Regulation,4,2024,False
+2024-11-01,ESPN:401704702,401704702,2024-11-01T23:30Z,Brooklyn Nets,Chicago Bulls,Barclays Center,120,112,120,112,Regulation,4,2024,False
+2024-11-01,ESPN:401704703,401704703,2024-11-01T23:30Z,Toronto Raptors,Los Angeles Lakers,Scotiabank Arena,125,131,125,131,Regulation,4,2024,False
+2024-11-01,ESPN:401704704,401704704,2024-11-02T00:00Z,New Orleans Pelicans,Indiana Pacers,Smoothie King Center,125,118,125,118,Regulation,4,2024,False
+2024-11-01,ESPN:401704705,401704705,2024-11-02T01:30Z,Minnesota Timberwolves,Denver Nuggets,Target Center,119,116,119,116,Regulation,4,2024,False
+2024-11-01,ESPN:401704706,401704706,2024-11-02T02:00Z,Portland Trail Blazers,Oklahoma City Thunder,Moda Center,114,137,114,137,Regulation,4,2024,False
+2024-11-02,ESPN:401704707,401704707,2024-11-02T22:00Z,Charlotte Hornets,Boston Celtics,Spectrum Center,103,113,103,113,Regulation,4,2024,False
+2024-11-02,ESPN:401704708,401704708,2024-11-02T23:30Z,Philadelphia 76ers,Memphis Grizzlies,Xfinity Mobile Arena,107,124,107,124,Regulation,4,2024,False
+2024-11-02,ESPN:401704709,401704709,2024-11-02T23:30Z,Toronto Raptors,Sacramento Kings,Scotiabank Arena,131,128,120,120,Overtime,5,2024,False
+2024-11-02,ESPN:401704710,401704710,2024-11-03T00:00Z,Houston Rockets,Golden State Warriors,Toyota Center (Houston),121,127,119,119,Overtime,5,2024,False
+2024-11-02,ESPN:401704711,401704711,2024-11-03T00:00Z,Milwaukee Bucks,Cleveland Cavaliers,Fiserv Forum,113,114,113,114,Regulation,4,2024,False
+2024-11-02,ESPN:401704712,401704712,2024-11-03T00:00Z,San Antonio Spurs,Minnesota Timberwolves,Frost Bank Center,113,103,113,103,Regulation,4,2024,False
+2024-11-02,ESPN:401704713,401704713,2024-11-03T01:30Z,Washington Wizards,Miami Heat,Arena CDMX,98,118,98,118,Regulation,4,2024,True
+2024-11-02,ESPN:401704714,401704714,2024-11-03T02:00Z,Denver Nuggets,Utah Jazz,Ball Arena,129,103,129,103,Regulation,4,2024,False
+2024-11-02,ESPN:401704715,401704715,2024-11-03T02:00Z,Phoenix Suns,Portland Trail Blazers,Mortgage Matchup Center,103,97,103,97,Regulation,4,2024,False
+2024-11-02,ESPN:401704716,401704716,2024-11-03T02:30Z,Los Angeles Clippers,Oklahoma City Thunder,Intuit Dome,92,105,92,105,Regulation,4,2024,False
+2024-11-03,ESPN:401704717,401704717,2024-11-03T20:30Z,Brooklyn Nets,Detroit Pistons,Barclays Center,92,106,92,106,Regulation,4,2024,False
+2024-11-03,ESPN:401704718,401704718,2024-11-04T00:00Z,New Orleans Pelicans,Atlanta Hawks,Smoothie King Center,111,126,111,126,Regulation,4,2024,False
+2024-11-03,ESPN:401704719,401704719,2024-11-04T00:30Z,Dallas Mavericks,Orlando Magic,American Airlines Center,108,85,108,85,Regulation,4,2024,False
+2024-11-04,ESPN:401704720,401704720,2024-11-05T00:00Z,Cleveland Cavaliers,Milwaukee Bucks,Rocket Arena,116,114,116,114,Regulation,4,2024,False
+2024-11-04,ESPN:401704721,401704721,2024-11-05T00:15Z,Washington Wizards,Golden State Warriors,Capital One Arena,112,125,112,125,Regulation,4,2024,False
+2024-11-04,ESPN:401704722,401704722,2024-11-05T00:30Z,Detroit Pistons,Los Angeles Lakers,Little Caesars Arena,115,103,115,103,Regulation,4,2024,False
+2024-11-04,ESPN:401704723,401704723,2024-11-05T00:45Z,Atlanta Hawks,Boston Celtics,State Farm Arena,93,123,93,123,Regulation,4,2024,False
+2024-11-04,ESPN:401704724,401704724,2024-11-05T01:00Z,Brooklyn Nets,Memphis Grizzlies,Barclays Center,106,104,106,104,Regulation,4,2024,False
+2024-11-04,ESPN:401704725,401704725,2024-11-05T01:15Z,Miami Heat,Sacramento Kings,Kaseya Center,110,111,110,111,Regulation,4,2024,False
+2024-11-04,ESPN:401704726,401704726,2024-11-05T01:30Z,Chicago Bulls,Utah Jazz,United Center,126,135,126,135,Regulation,4,2024,False
+2024-11-04,ESPN:401704727,401704727,2024-11-05T01:45Z,Houston Rockets,New York Knicks,Toyota Center (Houston),109,97,109,97,Regulation,4,2024,False
+2024-11-04,ESPN:401704728,401704728,2024-11-05T02:00Z,Minnesota Timberwolves,Charlotte Hornets,Target Center,114,93,114,93,Regulation,4,2024,False
+2024-11-04,ESPN:401704729,401704729,2024-11-05T02:15Z,Oklahoma City Thunder,Orlando Magic,Paycom Center,102,86,102,86,Regulation,4,2024,False
+2024-11-04,ESPN:401704730,401704730,2024-11-05T02:30Z,New Orleans Pelicans,Portland Trail Blazers,Smoothie King Center,100,118,100,118,Regulation,4,2024,False
+2024-11-04,ESPN:401704731,401704731,2024-11-05T02:45Z,Dallas Mavericks,Indiana Pacers,American Airlines Center,127,134,127,134,Regulation,4,2024,False
+2024-11-04,ESPN:401704732,401704732,2024-11-05T03:00Z,Denver Nuggets,Toronto Raptors,Ball Arena,121,119,121,119,Regulation,4,2024,False
+2024-11-04,ESPN:401704733,401704733,2024-11-05T03:15Z,Phoenix Suns,Philadelphia 76ers,Mortgage Matchup Center,118,116,118,116,Regulation,4,2024,False
+2024-11-04,ESPN:401704734,401704734,2024-11-05T03:30Z,Los Angeles Clippers,San Antonio Spurs,Intuit Dome,113,104,113,104,Regulation,4,2024,False
+2024-11-06,ESPN:401704735,401704735,2024-11-07T00:00Z,Charlotte Hornets,Detroit Pistons,Spectrum Center,108,107,108,107,Regulation,4,2024,False
+2024-11-06,ESPN:401704736,401704736,2024-11-07T00:00Z,Indiana Pacers,Orlando Magic,Gainbridge Fieldhouse,118,111,118,111,Regulation,4,2024,False
+2024-11-06,ESPN:401704737,401704737,2024-11-07T00:30Z,Atlanta Hawks,New York Knicks,State Farm Arena,121,116,121,116,Regulation,4,2024,False
+2024-11-06,ESPN:401704738,401704738,2024-11-07T00:30Z,Boston Celtics,Golden State Warriors,TD Garden,112,118,112,118,Regulation,4,2024,False
+2024-11-06,ESPN:401704739,401704739,2024-11-07T01:00Z,Houston Rockets,San Antonio Spurs,Toyota Center (Houston),127,100,127,100,Regulation,4,2024,False
+2024-11-06,ESPN:401704740,401704740,2024-11-07T01:00Z,Memphis Grizzlies,Los Angeles Lakers,FedExForum,131,114,131,114,Regulation,4,2024,False
+2024-11-06,ESPN:401704741,401704741,2024-11-07T01:00Z,New Orleans Pelicans,Cleveland Cavaliers,Smoothie King Center,122,131,122,131,Regulation,4,2024,False
+2024-11-06,ESPN:401704742,401704742,2024-11-07T01:30Z,Dallas Mavericks,Chicago Bulls,American Airlines Center,119,99,119,99,Regulation,4,2024,False
+2024-11-06,ESPN:401704743,401704743,2024-11-07T02:00Z,Denver Nuggets,Oklahoma City Thunder,Ball Arena,124,122,124,122,Regulation,4,2024,False
+2024-11-06,ESPN:401704744,401704744,2024-11-07T02:00Z,Phoenix Suns,Miami Heat,Mortgage Matchup Center,115,112,115,112,Regulation,4,2024,False
+2024-11-06,ESPN:401704745,401704745,2024-11-07T03:00Z,Los Angeles Clippers,Philadelphia 76ers,Intuit Dome,110,98,110,98,Regulation,4,2024,False
+2024-11-06,ESPN:401704746,401704746,2024-11-07T03:00Z,Sacramento Kings,Toronto Raptors,Golden 1 Center,122,107,122,107,Regulation,4,2024,False
+2024-11-07,ESPN:401704747,401704747,2024-11-08T01:00Z,Chicago Bulls,Minnesota Timberwolves,United Center,119,135,119,135,Regulation,4,2024,False
+2024-11-07,ESPN:401704748,401704748,2024-11-08T01:00Z,Milwaukee Bucks,Utah Jazz,Fiserv Forum,123,100,123,100,Regulation,4,2024,False
+2024-11-07,ESPN:401704749,401704749,2024-11-08T01:00Z,San Antonio Spurs,Portland Trail Blazers,Frost Bank Center,118,105,118,105,Regulation,4,2024,False
+2024-11-08,ESPN:401704750,401704750,2024-11-09T00:00Z,Charlotte Hornets,Indiana Pacers,Spectrum Center,103,83,103,83,Regulation,4,2024,False
+2024-11-08,ESPN:401704751,401704751,2024-11-09T00:00Z,Detroit Pistons,Atlanta Hawks,Little Caesars Arena,122,121,122,121,Regulation,4,2024,False
+2024-11-08,ESPN:401704752,401704752,2024-11-09T00:00Z,Orlando Magic,New Orleans Pelicans,Kia Center,115,88,115,88,Regulation,4,2024,False
+2024-11-08,ESPN:401704753,401704753,2024-11-09T00:30Z,Boston Celtics,Brooklyn Nets,TD Garden,108,104,94,94,Overtime,5,2024,False
+2024-11-08,ESPN:401704754,401704754,2024-11-09T00:30Z,Cleveland Cavaliers,Golden State Warriors,Rocket Arena,136,117,136,117,Regulation,4,2024,False
+2024-11-08,ESPN:401704755,401704755,2024-11-09T00:30Z,New York Knicks,Milwaukee Bucks,Madison Square Garden,116,94,116,94,Regulation,4,2024,False
+2024-11-08,ESPN:401704756,401704756,2024-11-09T00:30Z,Dallas Mavericks,Phoenix Suns,American Airlines Center,113,114,113,114,Regulation,4,2024,False
+2024-11-08,ESPN:401704757,401704757,2024-11-09T01:00Z,Memphis Grizzlies,Washington Wizards,FedExForum,128,104,128,104,Regulation,4,2024,False
+2024-11-08,ESPN:401704758,401704758,2024-11-09T01:00Z,Oklahoma City Thunder,Houston Rockets,Paycom Center,126,107,126,107,Regulation,4,2024,False
+2024-11-08,ESPN:401704759,401704759,2024-11-09T02:00Z,Minnesota Timberwolves,Portland Trail Blazers,Target Center,127,102,127,102,Regulation,4,2024,False
+2024-11-08,ESPN:401704760,401704760,2024-11-09T02:00Z,Denver Nuggets,Miami Heat,Ball Arena,135,122,135,122,Regulation,4,2024,False
+2024-11-08,ESPN:401704761,401704761,2024-11-09T03:00Z,Los Angeles Lakers,Philadelphia 76ers,crypto.com Arena,116,106,116,106,Regulation,4,2024,False
+2024-11-08,ESPN:401704762,401704762,2024-11-09T03:00Z,Sacramento Kings,Los Angeles Clippers,Golden 1 Center,98,107,98,107,Regulation,4,2024,False
+2024-11-09,ESPN:401704763,401704763,2024-11-09T22:00Z,San Antonio Spurs,Utah Jazz,Frost Bank Center,110,111,110,111,Regulation,4,2024,False
+2024-11-09,ESPN:401704764,401704764,2024-11-10T00:30Z,Atlanta Hawks,Chicago Bulls,State Farm Arena,113,125,113,125,Regulation,4,2024,False
+2024-11-09,ESPN:401704765,401704765,2024-11-10T00:30Z,Cleveland Cavaliers,Brooklyn Nets,Rocket Arena,105,100,105,100,Regulation,4,2024,False
+2024-11-09,ESPN:401704766,401704766,2024-11-10T03:30Z,Los Angeles Clippers,Toronto Raptors,Intuit Dome,105,103,105,103,Regulation,4,2024,False
+2024-11-10,ESPN:401704767,401704767,2024-11-10T20:00Z,Detroit Pistons,Houston Rockets,Little Caesars Arena,99,101,99,101,Regulation,4,2024,False
+2024-11-10,ESPN:401704768,401704768,2024-11-10T20:30Z,Milwaukee Bucks,Boston Celtics,Fiserv Forum,107,113,107,113,Regulation,4,2024,False
+2024-11-10,ESPN:401704769,401704769,2024-11-10T22:00Z,Indiana Pacers,New York Knicks,Gainbridge Fieldhouse,132,121,132,121,Regulation,4,2024,False
+2024-11-10,ESPN:401704770,401704770,2024-11-10T23:00Z,Orlando Magic,Washington Wizards,Kia Center,121,94,121,94,Regulation,4,2024,False
+2024-11-10,ESPN:401704771,401704771,2024-11-11T00:00Z,Philadelphia 76ers,Charlotte Hornets,Xfinity Mobile Arena,107,105,97,97,Overtime,5,2024,False
+2024-11-10,ESPN:401704772,401704772,2024-11-11T00:00Z,Minnesota Timberwolves,Miami Heat,Target Center,94,95,94,95,Regulation,4,2024,False
+2024-11-10,ESPN:401704773,401704773,2024-11-11T00:00Z,Oklahoma City Thunder,Golden State Warriors,Paycom Center,116,127,116,127,Regulation,4,2024,False
+2024-11-10,ESPN:401704774,401704774,2024-11-11T01:00Z,Denver Nuggets,Dallas Mavericks,Ball Arena,122,120,122,120,Regulation,4,2024,False
+2024-11-10,ESPN:401704775,401704775,2024-11-11T01:00Z,Phoenix Suns,Sacramento Kings,Mortgage Matchup Center,118,127,111,111,Overtime,5,2024,False
+2024-11-10,ESPN:401704776,401704776,2024-11-11T02:00Z,Portland Trail Blazers,Memphis Grizzlies,Moda Center,89,134,89,134,Regulation,4,2024,False
+2024-11-10,ESPN:401704777,401704777,2024-11-11T02:30Z,Los Angeles Lakers,Toronto Raptors,crypto.com Arena,123,103,123,103,Regulation,4,2024,False
+2024-11-11,ESPN:401704778,401704778,2024-11-12T01:00Z,Chicago Bulls,Cleveland Cavaliers,United Center,113,119,113,119,Regulation,4,2024,False
+2024-11-11,ESPN:401704779,401704779,2024-11-12T01:00Z,Houston Rockets,Washington Wizards,Toyota Center (Houston),107,92,107,92,Regulation,4,2024,False
+2024-11-11,ESPN:401704780,401704780,2024-11-12T01:00Z,New Orleans Pelicans,Brooklyn Nets,Smoothie King Center,105,107,105,107,Regulation,4,2024,False
+2024-11-11,ESPN:401704781,401704781,2024-11-12T01:00Z,Oklahoma City Thunder,Los Angeles Clippers,Paycom Center,134,128,134,128,Regulation,4,2024,False
+2024-11-11,ESPN:401704782,401704782,2024-11-12T01:00Z,San Antonio Spurs,Sacramento Kings,Frost Bank Center,116,96,116,96,Regulation,4,2024,False
+2024-11-12,ESPN:401703370,401703370,2024-11-13T00:00Z,Boston Celtics,Atlanta Hawks,TD Garden,116,117,116,117,Regulation,4,2024,False
+2024-11-12,ESPN:401703371,401703371,2024-11-13T00:00Z,Detroit Pistons,Miami Heat,Little Caesars Arena,123,121,111,111,Overtime,5,2024,False
+2024-11-12,ESPN:401703372,401703372,2024-11-13T00:00Z,Orlando Magic,Charlotte Hornets,Kia Center,114,89,114,89,Regulation,4,2024,False
+2024-11-12,ESPN:401703373,401703373,2024-11-13T00:30Z,Philadelphia 76ers,New York Knicks,Xfinity Mobile Arena,99,111,99,111,Regulation,4,2024,False
+2024-11-12,ESPN:401703374,401703374,2024-11-13T01:00Z,Milwaukee Bucks,Toronto Raptors,Fiserv Forum,99,85,99,85,Regulation,4,2024,False
+2024-11-12,ESPN:401703375,401703375,2024-11-13T02:00Z,Utah Jazz,Phoenix Suns,Delta Center,112,120,112,120,Regulation,4,2024,False
+2024-11-12,ESPN:401703376,401703376,2024-11-13T03:00Z,Golden State Warriors,Dallas Mavericks,Chase Center,120,117,120,117,Regulation,4,2024,False
+2024-11-12,ESPN:401703377,401703377,2024-11-13T03:00Z,Portland Trail Blazers,Minnesota Timberwolves,Moda Center,122,108,122,108,Regulation,4,2024,False
+2024-11-13,ESPN:401704783,401704783,2024-11-14T00:00Z,Orlando Magic,Indiana Pacers,Kia Center,94,90,94,90,Regulation,4,2024,False
+2024-11-13,ESPN:401704784,401704784,2024-11-14T00:30Z,Brooklyn Nets,Boston Celtics,Barclays Center,114,139,114,139,Regulation,4,2024,False
+2024-11-13,ESPN:401704785,401704785,2024-11-14T00:30Z,New York Knicks,Chicago Bulls,Madison Square Garden,123,124,123,124,Regulation,4,2024,False
+2024-11-13,ESPN:401704786,401704786,2024-11-14T00:30Z,Philadelphia 76ers,Cleveland Cavaliers,Xfinity Mobile Arena,106,114,106,114,Regulation,4,2024,False
+2024-11-13,ESPN:401704787,401704787,2024-11-14T00:30Z,Oklahoma City Thunder,New Orleans Pelicans,Paycom Center,106,88,106,88,Regulation,4,2024,False
+2024-11-13,ESPN:401704788,401704788,2024-11-14T01:00Z,Houston Rockets,Los Angeles Clippers,Toyota Center (Houston),111,103,111,103,Regulation,4,2024,False
+2024-11-13,ESPN:401704789,401704789,2024-11-14T01:00Z,Milwaukee Bucks,Detroit Pistons,Fiserv Forum,127,120,111,111,Overtime,5,2024,False
+2024-11-13,ESPN:401704790,401704790,2024-11-14T01:00Z,San Antonio Spurs,Washington Wizards,Frost Bank Center,139,130,139,130,Regulation,4,2024,False
+2024-11-13,ESPN:401704791,401704791,2024-11-14T03:00Z,Los Angeles Lakers,Memphis Grizzlies,crypto.com Arena,128,123,128,123,Regulation,4,2024,False
+2024-11-13,ESPN:401704792,401704792,2024-11-14T03:00Z,Portland Trail Blazers,Minnesota Timberwolves,Moda Center,106,98,106,98,Regulation,4,2024,False
+2024-11-13,ESPN:401704793,401704793,2024-11-14T03:00Z,Sacramento Kings,Phoenix Suns,Golden 1 Center,127,104,127,104,Regulation,4,2024,False
+2024-11-14,ESPN:401704794,401704794,2024-11-15T02:00Z,Utah Jazz,Dallas Mavericks,Delta Center,115,113,115,113,Regulation,4,2024,False
+2024-11-15,ESPN:401703378,401703378,2024-11-16T00:00Z,Indiana Pacers,Miami Heat,Gainbridge Fieldhouse,111,124,111,124,Regulation,4,2024,False
+2024-11-15,ESPN:401703379,401703379,2024-11-16T00:00Z,Orlando Magic,Philadelphia 76ers,Kia Center,98,86,98,86,Regulation,4,2024,False
+2024-11-15,ESPN:401703380,401703380,2024-11-16T00:00Z,Toronto Raptors,Detroit Pistons,Scotiabank Arena,95,99,95,99,Regulation,4,2024,False
+2024-11-15,ESPN:401703381,401703381,2024-11-16T00:30Z,Atlanta Hawks,Washington Wizards,State Farm Arena,129,117,129,117,Regulation,4,2024,False
+2024-11-15,ESPN:401703382,401703382,2024-11-16T00:30Z,Cleveland Cavaliers,Chicago Bulls,Rocket Arena,144,126,144,126,Regulation,4,2024,False
+2024-11-15,ESPN:401703383,401703383,2024-11-16T00:30Z,New York Knicks,Brooklyn Nets,Madison Square Garden,124,122,124,122,Regulation,4,2024,False
+2024-11-15,ESPN:401703384,401703384,2024-11-16T00:30Z,San Antonio Spurs,Los Angeles Lakers,Frost Bank Center,115,120,115,120,Regulation,4,2024,False
+2024-11-15,ESPN:401703385,401703385,2024-11-16T01:00Z,Houston Rockets,Los Angeles Clippers,Toyota Center (Houston),125,104,125,104,Regulation,4,2024,False
+2024-11-15,ESPN:401703386,401703386,2024-11-16T01:00Z,New Orleans Pelicans,Denver Nuggets,Smoothie King Center,101,94,101,94,Regulation,4,2024,False
+2024-11-15,ESPN:401703387,401703387,2024-11-16T01:00Z,Oklahoma City Thunder,Phoenix Suns,Paycom Center,99,83,99,83,Regulation,4,2024,False
+2024-11-15,ESPN:401703388,401703388,2024-11-16T03:00Z,Golden State Warriors,Memphis Grizzlies,Chase Center,123,118,123,118,Regulation,4,2024,False
+2024-11-15,ESPN:401703389,401703389,2024-11-16T03:00Z,Sacramento Kings,Minnesota Timberwolves,Golden 1 Center,126,130,115,115,Overtime,5,2024,False
+2024-11-16,ESPN:401704795,401704795,2024-11-16T20:00Z,Charlotte Hornets,Milwaukee Bucks,Spectrum Center,115,114,115,114,Regulation,4,2024,False
+2024-11-16,ESPN:401704796,401704796,2024-11-17T01:00Z,Boston Celtics,Toronto Raptors,TD Garden,126,123,114,114,Overtime,5,2024,False
+2024-11-16,ESPN:401704797,401704797,2024-11-17T01:00Z,New Orleans Pelicans,Los Angeles Lakers,Smoothie King Center,99,104,99,104,Regulation,4,2024,False
+2024-11-16,ESPN:401704798,401704798,2024-11-17T01:30Z,Dallas Mavericks,San Antonio Spurs,American Airlines Center,110,93,110,93,Regulation,4,2024,False
+2024-11-16,ESPN:401704799,401704799,2024-11-17T03:00Z,Sacramento Kings,Utah Jazz,Golden 1 Center,121,117,121,117,Regulation,4,2024,False
+2024-11-17,ESPN:401704800,401704800,2024-11-17T20:30Z,Minnesota Timberwolves,Phoenix Suns,Target Center,120,117,120,117,Regulation,4,2024,False
+2024-11-17,ESPN:401704801,401704801,2024-11-17T22:00Z,Indiana Pacers,Miami Heat,Gainbridge Fieldhouse,119,110,119,110,Regulation,4,2024,False
+2024-11-17,ESPN:401704802,401704802,2024-11-17T23:00Z,Cleveland Cavaliers,Charlotte Hornets,Rocket Arena,128,114,128,114,Regulation,4,2024,False
+2024-11-17,ESPN:401704803,401704803,2024-11-17T23:00Z,Washington Wizards,Detroit Pistons,Capital One Arena,104,124,104,124,Regulation,4,2024,False
+2024-11-17,ESPN:401704804,401704804,2024-11-17T23:00Z,Memphis Grizzlies,Denver Nuggets,FedExForum,105,90,105,90,Regulation,4,2024,False
+2024-11-17,ESPN:401704805,401704805,2024-11-17T23:00Z,Portland Trail Blazers,Atlanta Hawks,Moda Center,114,110,114,110,Regulation,4,2024,False
+2024-11-17,ESPN:401704806,401704806,2024-11-18T00:00Z,New York Knicks,Brooklyn Nets,Madison Square Garden,114,104,114,104,Regulation,4,2024,False
+2024-11-17,ESPN:401704807,401704807,2024-11-18T00:00Z,Chicago Bulls,Houston Rockets,United Center,107,143,107,143,Regulation,4,2024,False
+2024-11-17,ESPN:401704808,401704808,2024-11-18T00:00Z,Oklahoma City Thunder,Dallas Mavericks,Paycom Center,119,121,119,121,Regulation,4,2024,False
+2024-11-17,ESPN:401704809,401704809,2024-11-18T02:00Z,Los Angeles Clippers,Utah Jazz,Intuit Dome,116,105,116,105,Regulation,4,2024,False
+2024-11-18,ESPN:401704810,401704810,2024-11-19T00:00Z,Detroit Pistons,Chicago Bulls,Little Caesars Arena,112,122,112,122,Regulation,4,2024,False
+2024-11-18,ESPN:401704811,401704811,2024-11-19T00:30Z,Miami Heat,Philadelphia 76ers,Kaseya Center,106,89,106,89,Regulation,4,2024,False
+2024-11-18,ESPN:401704812,401704812,2024-11-19T00:30Z,New York Knicks,Washington Wizards,Madison Square Garden,134,106,134,106,Regulation,4,2024,False
+2024-11-18,ESPN:401704813,401704813,2024-11-19T00:30Z,Toronto Raptors,Indiana Pacers,Scotiabank Arena,130,119,130,119,Regulation,4,2024,False
+2024-11-18,ESPN:401704814,401704814,2024-11-19T01:00Z,Milwaukee Bucks,Houston Rockets,Fiserv Forum,101,100,101,100,Regulation,4,2024,False
+2024-11-18,ESPN:401704815,401704815,2024-11-19T02:00Z,Phoenix Suns,Orlando Magic,Mortgage Matchup Center,99,109,99,109,Regulation,4,2024,False
+2024-11-18,ESPN:401704816,401704816,2024-11-19T03:00Z,Sacramento Kings,Atlanta Hawks,Golden 1 Center,108,109,108,109,Regulation,4,2024,False
+2024-11-18,ESPN:401704817,401704817,2024-11-19T03:30Z,Los Angeles Clippers,Golden State Warriors,Intuit Dome,102,99,102,99,Regulation,4,2024,False
+2024-11-19,ESPN:401703390,401703390,2024-11-20T00:00Z,Boston Celtics,Cleveland Cavaliers,TD Garden,120,117,120,117,Regulation,4,2024,False
+2024-11-19,ESPN:401703391,401703391,2024-11-20T00:30Z,Brooklyn Nets,Charlotte Hornets,Barclays Center,116,115,116,115,Regulation,4,2024,False
+2024-11-19,ESPN:401703392,401703392,2024-11-20T01:00Z,Memphis Grizzlies,Denver Nuggets,FedExForum,110,122,110,122,Regulation,4,2024,False
+2024-11-19,ESPN:401703393,401703393,2024-11-20T01:30Z,Dallas Mavericks,New Orleans Pelicans,American Airlines Center,132,91,132,91,Regulation,4,2024,False
+2024-11-19,ESPN:401703394,401703394,2024-11-20T02:30Z,San Antonio Spurs,Oklahoma City Thunder,Frost Bank Center,110,104,110,104,Regulation,4,2024,False
+2024-11-19,ESPN:401703395,401703395,2024-11-20T03:30Z,Los Angeles Lakers,Utah Jazz,crypto.com Arena,124,118,124,118,Regulation,4,2024,False
+2024-11-20,ESPN:401704818,401704818,2024-11-21T00:30Z,Cleveland Cavaliers,New Orleans Pelicans,Rocket Arena,128,100,128,100,Regulation,4,2024,False
+2024-11-20,ESPN:401704819,401704819,2024-11-21T00:30Z,Milwaukee Bucks,Chicago Bulls,Fiserv Forum,122,106,122,106,Regulation,4,2024,False
+2024-11-20,ESPN:401704820,401704820,2024-11-21T01:00Z,Houston Rockets,Indiana Pacers,Toyota Center (Houston),130,113,130,113,Regulation,4,2024,False
+2024-11-20,ESPN:401704821,401704821,2024-11-21T01:00Z,Memphis Grizzlies,Philadelphia 76ers,FedExForum,117,111,117,111,Regulation,4,2024,False
+2024-11-20,ESPN:401704822,401704822,2024-11-21T01:00Z,Oklahoma City Thunder,Portland Trail Blazers,Paycom Center,109,99,109,99,Regulation,4,2024,False
+2024-11-20,ESPN:401704823,401704823,2024-11-21T03:00Z,Phoenix Suns,New York Knicks,Mortgage Matchup Center,122,138,122,138,Regulation,4,2024,False
+2024-11-20,ESPN:401704824,401704824,2024-11-21T03:00Z,Golden State Warriors,Atlanta Hawks,Chase Center,120,97,120,97,Regulation,4,2024,False
+2024-11-20,ESPN:401704825,401704825,2024-11-21T03:30Z,Los Angeles Clippers,Orlando Magic,Intuit Dome,104,93,104,93,Regulation,4,2024,False
+2024-11-21,ESPN:401704826,401704826,2024-11-22T00:00Z,Charlotte Hornets,Detroit Pistons,Spectrum Center,123,121,109,109,Overtime,5,2024,False
+2024-11-21,ESPN:401704827,401704827,2024-11-22T00:30Z,Toronto Raptors,Minnesota Timberwolves,Scotiabank Arena,110,105,110,105,Regulation,4,2024,False
+2024-11-21,ESPN:401704828,401704828,2024-11-22T01:00Z,San Antonio Spurs,Utah Jazz,Frost Bank Center,126,118,126,118,Regulation,4,2024,False
+2024-11-21,ESPN:401704829,401704829,2024-11-22T03:30Z,Los Angeles Lakers,Orlando Magic,crypto.com Arena,118,119,118,119,Regulation,4,2024,False
+2024-11-22,ESPN:401703396,401703396,2024-11-23T00:00Z,Philadelphia 76ers,Brooklyn Nets,Xfinity Mobile Arena,113,98,113,98,Regulation,4,2024,False
+2024-11-22,ESPN:401703397,401703397,2024-11-23T00:00Z,Washington Wizards,Boston Celtics,Capital One Arena,96,108,96,108,Regulation,4,2024,False
+2024-11-22,ESPN:401703401,401703401,2024-11-23T00:30Z,New Orleans Pelicans,Golden State Warriors,Smoothie King Center,108,112,108,112,Regulation,4,2024,False
+2024-11-22,ESPN:401703398,401703398,2024-11-23T01:00Z,Milwaukee Bucks,Indiana Pacers,Fiserv Forum,129,117,129,117,Regulation,4,2024,False
+2024-11-22,ESPN:401703399,401703399,2024-11-23T01:00Z,Chicago Bulls,Atlanta Hawks,United Center,136,122,136,122,Regulation,4,2024,False
+2024-11-22,ESPN:401703400,401703400,2024-11-23T01:00Z,Houston Rockets,Portland Trail Blazers,Toyota Center (Houston),116,88,116,88,Regulation,4,2024,False
+2024-11-22,ESPN:401703402,401703402,2024-11-23T03:00Z,Denver Nuggets,Dallas Mavericks,Ball Arena,120,123,120,123,Regulation,4,2024,False
+2024-11-22,ESPN:401703403,401703403,2024-11-23T03:30Z,Los Angeles Clippers,Sacramento Kings,Intuit Dome,104,88,104,88,Regulation,4,2024,False
+2024-11-23,ESPN:401704830,401704830,2024-11-23T22:00Z,Utah Jazz,New York Knicks,Delta Center,121,106,121,106,Regulation,4,2024,False
+2024-11-23,ESPN:401704831,401704831,2024-11-24T00:00Z,Orlando Magic,Detroit Pistons,Kia Center,111,100,111,100,Regulation,4,2024,False
+2024-11-23,ESPN:401704832,401704832,2024-11-24T01:00Z,Chicago Bulls,Memphis Grizzlies,United Center,131,142,131,142,Regulation,4,2024,False
+2024-11-23,ESPN:401704833,401704833,2024-11-24T01:00Z,Houston Rockets,Portland Trail Blazers,Toyota Center (Houston),98,104,98,104,Regulation,4,2024,False
+2024-11-23,ESPN:401704834,401704834,2024-11-24T01:00Z,Milwaukee Bucks,Charlotte Hornets,Fiserv Forum,125,119,125,119,Regulation,4,2024,False
+2024-11-23,ESPN:401704835,401704835,2024-11-24T01:30Z,San Antonio Spurs,Golden State Warriors,Frost Bank Center,104,94,104,94,Regulation,4,2024,False
+2024-11-23,ESPN:401704836,401704836,2024-11-24T03:30Z,Los Angeles Lakers,Denver Nuggets,crypto.com Arena,102,127,102,127,Regulation,4,2024,False
+2024-11-24,ESPN:401704837,401704837,2024-11-24T20:30Z,Boston Celtics,Minnesota Timberwolves,TD Garden,107,105,107,105,Regulation,4,2024,False
+2024-11-24,ESPN:401704838,401704838,2024-11-24T22:00Z,Indiana Pacers,Washington Wizards,Gainbridge Fieldhouse,115,103,115,103,Regulation,4,2024,False
+2024-11-24,ESPN:401704839,401704839,2024-11-24T23:00Z,Miami Heat,Dallas Mavericks,Kaseya Center,123,118,114,114,Overtime,5,2024,False
+2024-11-24,ESPN:401704840,401704840,2024-11-24T23:00Z,Philadelphia 76ers,Los Angeles Clippers,Xfinity Mobile Arena,99,125,99,125,Regulation,4,2024,False
+2024-11-24,ESPN:401704841,401704841,2024-11-25T00:30Z,Cleveland Cavaliers,Toronto Raptors,Rocket Arena,122,108,122,108,Regulation,4,2024,False
+2024-11-24,ESPN:401704842,401704842,2024-11-25T02:00Z,Sacramento Kings,Brooklyn Nets,Golden 1 Center,103,108,103,108,Regulation,4,2024,False
+2024-11-25,ESPN:401704843,401704843,2024-11-26T00:00Z,Charlotte Hornets,Orlando Magic,Spectrum Center,84,95,84,95,Regulation,4,2024,False
+2024-11-25,ESPN:401704844,401704844,2024-11-26T00:00Z,Detroit Pistons,Toronto Raptors,Little Caesars Arena,102,100,102,100,Regulation,4,2024,False
+2024-11-25,ESPN:401704845,401704845,2024-11-26T00:00Z,Indiana Pacers,New Orleans Pelicans,Gainbridge Fieldhouse,114,110,114,110,Regulation,4,2024,False
+2024-11-25,ESPN:401704846,401704846,2024-11-26T00:30Z,Atlanta Hawks,Dallas Mavericks,State Farm Arena,119,129,119,129,Regulation,4,2024,False
+2024-11-25,ESPN:401704847,401704847,2024-11-26T00:30Z,Boston Celtics,Los Angeles Clippers,TD Garden,126,94,126,94,Regulation,4,2024,False
+2024-11-25,ESPN:401704848,401704848,2024-11-26T01:00Z,Memphis Grizzlies,Portland Trail Blazers,FedExForum,123,98,123,98,Regulation,4,2024,False
+2024-11-25,ESPN:401704849,401704849,2024-11-26T02:00Z,Denver Nuggets,New York Knicks,Ball Arena,118,145,118,145,Regulation,4,2024,False
+2024-11-25,ESPN:401704850,401704850,2024-11-26T03:00Z,Golden State Warriors,Brooklyn Nets,Chase Center,120,128,120,128,Regulation,4,2024,False
+2024-11-25,ESPN:401704851,401704851,2024-11-26T03:00Z,Sacramento Kings,Oklahoma City Thunder,Golden 1 Center,109,130,109,130,Regulation,4,2024,False
+2024-11-26,ESPN:401703404,401703404,2024-11-27T00:00Z,Washington Wizards,Chicago Bulls,Capital One Arena,108,127,108,127,Regulation,4,2024,False
+2024-11-26,ESPN:401703405,401703405,2024-11-27T00:30Z,Miami Heat,Milwaukee Bucks,Kaseya Center,103,106,103,106,Regulation,4,2024,False
+2024-11-26,ESPN:401703406,401703406,2024-11-27T01:00Z,Minnesota Timberwolves,Houston Rockets,Target Center,111,117,102,102,Overtime,5,2024,False
+2024-11-26,ESPN:401703407,401703407,2024-11-27T02:00Z,Utah Jazz,San Antonio Spurs,Delta Center,115,128,115,128,Regulation,4,2024,False
+2024-11-26,ESPN:401703408,401703408,2024-11-27T03:00Z,Phoenix Suns,Los Angeles Lakers,Mortgage Matchup Center,127,100,127,100,Regulation,4,2024,False
+2024-11-27,ESPN:401704852,401704852,2024-11-28T00:00Z,Charlotte Hornets,Miami Heat,Spectrum Center,94,98,94,98,Regulation,4,2024,False
+2024-11-27,ESPN:401704853,401704853,2024-11-28T00:00Z,Cleveland Cavaliers,Atlanta Hawks,Rocket Arena,124,135,124,135,Regulation,4,2024,False
+2024-11-27,ESPN:401704854,401704854,2024-11-28T00:00Z,Indiana Pacers,Portland Trail Blazers,Gainbridge Fieldhouse,121,114,121,114,Regulation,4,2024,False
+2024-11-27,ESPN:401704855,401704855,2024-11-28T00:00Z,Orlando Magic,Chicago Bulls,Kia Center,133,119,133,119,Regulation,4,2024,False
+2024-11-27,ESPN:401704856,401704856,2024-11-28T00:00Z,Philadelphia 76ers,Houston Rockets,Xfinity Mobile Arena,115,122,108,108,Overtime,5,2024,False
+2024-11-27,ESPN:401704857,401704857,2024-11-28T00:00Z,Washington Wizards,Los Angeles Clippers,Capital One Arena,96,121,96,121,Regulation,4,2024,False
+2024-11-27,ESPN:401704858,401704858,2024-11-28T00:30Z,Dallas Mavericks,New York Knicks,American Airlines Center,129,114,129,114,Regulation,4,2024,False
+2024-11-27,ESPN:401704859,401704859,2024-11-28T01:00Z,Memphis Grizzlies,Detroit Pistons,FedExForum,131,111,131,111,Regulation,4,2024,False
+2024-11-27,ESPN:401704860,401704860,2024-11-28T01:00Z,Minnesota Timberwolves,Sacramento Kings,Target Center,104,115,104,115,Regulation,4,2024,False
+2024-11-27,ESPN:401704861,401704861,2024-11-28T01:00Z,New Orleans Pelicans,Toronto Raptors,Smoothie King Center,93,119,93,119,Regulation,4,2024,False
+2024-11-27,ESPN:401704862,401704862,2024-11-28T01:30Z,San Antonio Spurs,Los Angeles Lakers,Frost Bank Center,101,119,101,119,Regulation,4,2024,False
+2024-11-27,ESPN:401704863,401704863,2024-11-28T02:00Z,Phoenix Suns,Brooklyn Nets,Mortgage Matchup Center,117,127,117,127,Regulation,4,2024,False
+2024-11-27,ESPN:401704864,401704864,2024-11-28T02:00Z,Utah Jazz,Denver Nuggets,Delta Center,103,122,103,122,Regulation,4,2024,False
+2024-11-27,ESPN:401704865,401704865,2024-11-28T03:00Z,Golden State Warriors,Oklahoma City Thunder,Chase Center,101,105,101,105,Regulation,4,2024,False
+2024-11-29,ESPN:401703409,401703409,2024-11-29T17:00Z,Charlotte Hornets,New York Knicks,Spectrum Center,98,99,98,99,Regulation,4,2024,False
+2024-11-29,ESPN:401703410,401703410,2024-11-29T19:30Z,Atlanta Hawks,Cleveland Cavaliers,State Farm Arena,117,101,117,101,Regulation,4,2024,False
+2024-11-29,ESPN:401703411,401703411,2024-11-29T22:00Z,Memphis Grizzlies,New Orleans Pelicans,FedExForum,120,109,120,109,Regulation,4,2024,False
+2024-11-29,ESPN:401703412,401703412,2024-11-30T00:30Z,Brooklyn Nets,Orlando Magic,Barclays Center,100,123,100,123,Regulation,4,2024,False
+2024-11-29,ESPN:401703413,401703413,2024-11-30T00:30Z,Minnesota Timberwolves,Los Angeles Clippers,Target Center,93,92,93,92,Regulation,4,2024,False
+2024-11-29,ESPN:401703414,401703414,2024-11-30T01:00Z,Indiana Pacers,Detroit Pistons,Gainbridge Fieldhouse,106,130,106,130,Regulation,4,2024,False
+2024-11-29,ESPN:401703415,401703415,2024-11-30T01:00Z,Miami Heat,Toronto Raptors,Kaseya Center,121,111,121,111,Regulation,4,2024,False
+2024-11-29,ESPN:401703416,401703416,2024-11-30T01:00Z,Chicago Bulls,Boston Celtics,United Center,129,138,129,138,Regulation,4,2024,False
+2024-11-29,ESPN:401703417,401703417,2024-11-30T03:00Z,Los Angeles Lakers,Oklahoma City Thunder,crypto.com Arena,93,101,93,101,Regulation,4,2024,False
+2024-11-29,ESPN:401703418,401703418,2024-11-30T03:00Z,Portland Trail Blazers,Sacramento Kings,Moda Center,115,106,115,106,Regulation,4,2024,False
+2024-11-30,ESPN:401704866,401704866,2024-11-30T23:00Z,Charlotte Hornets,Atlanta Hawks,Spectrum Center,104,107,104,107,Regulation,4,2024,False
+2024-11-30,ESPN:401704867,401704867,2024-12-01T00:00Z,Detroit Pistons,Philadelphia 76ers,Little Caesars Arena,96,111,96,111,Regulation,4,2024,False
+2024-11-30,ESPN:401704868,401704868,2024-12-01T01:00Z,Milwaukee Bucks,Washington Wizards,Fiserv Forum,124,114,124,114,Regulation,4,2024,False
+2024-11-30,ESPN:401704869,401704869,2024-12-01T02:00Z,Phoenix Suns,Golden State Warriors,Mortgage Matchup Center,113,105,113,105,Regulation,4,2024,False
+2024-11-30,ESPN:401704870,401704870,2024-12-01T02:30Z,Utah Jazz,Dallas Mavericks,Delta Center,94,106,94,106,Regulation,4,2024,False
+2024-12-01,ESPN:401704871,401704871,2024-12-01T20:30Z,Brooklyn Nets,Orlando Magic,Barclays Center,92,100,92,100,Regulation,4,2024,False
+2024-12-01,ESPN:401704872,401704872,2024-12-01T20:30Z,Memphis Grizzlies,Indiana Pacers,FedExForum,136,121,136,121,Regulation,4,2024,False
+2024-12-01,ESPN:401704873,401704873,2024-12-01T23:00Z,Cleveland Cavaliers,Boston Celtics,Rocket Arena,115,111,115,111,Regulation,4,2024,False
+2024-12-01,ESPN:401704874,401704874,2024-12-01T23:00Z,New York Knicks,New Orleans Pelicans,Madison Square Garden,118,85,118,85,Regulation,4,2024,False
+2024-12-01,ESPN:401704875,401704875,2024-12-01T23:00Z,Toronto Raptors,Miami Heat,Scotiabank Arena,119,116,119,116,Regulation,4,2024,False
+2024-12-01,ESPN:401704876,401704876,2024-12-02T00:00Z,Houston Rockets,Oklahoma City Thunder,Toyota Center (Houston),119,116,119,116,Regulation,4,2024,False
+2024-12-01,ESPN:401704877,401704877,2024-12-02T01:00Z,Utah Jazz,Los Angeles Lakers,Delta Center,104,105,104,105,Regulation,4,2024,False
+2024-12-01,ESPN:401704878,401704878,2024-12-02T02:00Z,Portland Trail Blazers,Dallas Mavericks,Moda Center,131,137,131,137,Regulation,4,2024,False
+2024-12-01,ESPN:401704879,401704879,2024-12-02T02:00Z,Sacramento Kings,San Antonio Spurs,Golden 1 Center,125,127,125,127,Regulation,4,2024,False
+2024-12-01,ESPN:401704880,401704880,2024-12-02T03:00Z,Los Angeles Clippers,Denver Nuggets,Intuit Dome,126,122,126,122,Regulation,4,2024,False
+2024-12-02,ESPN:401704881,401704881,2024-12-03T00:30Z,Atlanta Hawks,New Orleans Pelicans,State Farm Arena,124,112,124,112,Regulation,4,2024,False
+2024-12-02,ESPN:401704882,401704882,2024-12-03T00:30Z,Boston Celtics,Miami Heat,TD Garden,108,89,108,89,Regulation,4,2024,False
+2024-12-02,ESPN:401704883,401704883,2024-12-03T01:00Z,Chicago Bulls,Brooklyn Nets,United Center,128,102,128,102,Regulation,4,2024,False
+2024-12-02,ESPN:401704884,401704884,2024-12-03T01:00Z,Minnesota Timberwolves,Los Angeles Lakers,Target Center,109,80,109,80,Regulation,4,2024,False
+2024-12-03,ESPN:401703419,401703419,2024-12-04T00:00Z,Charlotte Hornets,Philadelphia 76ers,Spectrum Center,104,110,104,110,Regulation,4,2024,False
+2024-12-03,ESPN:401703420,401703420,2024-12-04T00:00Z,Cleveland Cavaliers,Washington Wizards,Rocket Arena,118,87,118,87,Regulation,4,2024,False
+2024-12-03,ESPN:401703421,401703421,2024-12-04T00:00Z,Detroit Pistons,Milwaukee Bucks,Little Caesars Arena,107,128,107,128,Regulation,4,2024,False
+2024-12-03,ESPN:401703422,401703422,2024-12-04T00:30Z,New York Knicks,Orlando Magic,Madison Square Garden,121,106,121,106,Regulation,4,2024,False
+2024-12-03,ESPN:401703423,401703423,2024-12-04T00:30Z,Toronto Raptors,Indiana Pacers,Scotiabank Arena,122,111,122,111,Regulation,4,2024,False
+2024-12-03,ESPN:401703424,401703424,2024-12-04T01:00Z,Oklahoma City Thunder,Utah Jazz,Paycom Center,133,106,133,106,Regulation,4,2024,False
+2024-12-03,ESPN:401703425,401703425,2024-12-04T01:30Z,Dallas Mavericks,Memphis Grizzlies,American Airlines Center,121,116,121,116,Regulation,4,2024,False
+2024-12-03,ESPN:401703426,401703426,2024-12-04T02:00Z,Phoenix Suns,San Antonio Spurs,Mortgage Matchup Center,104,93,104,93,Regulation,4,2024,False
+2024-12-03,ESPN:401703427,401703427,2024-12-04T03:00Z,Denver Nuggets,Golden State Warriors,Ball Arena,119,115,119,115,Regulation,4,2024,False
+2024-12-03,ESPN:401703428,401703428,2024-12-04T03:00Z,Sacramento Kings,Houston Rockets,Golden 1 Center,120,111,120,111,Regulation,4,2024,False
+2024-12-03,ESPN:401703429,401703429,2024-12-04T03:30Z,Los Angeles Clippers,Portland Trail Blazers,Intuit Dome,127,105,127,105,Regulation,4,2024,False
+2024-12-04,ESPN:401704885,401704885,2024-12-05T00:30Z,Boston Celtics,Detroit Pistons,TD Garden,130,120,130,120,Regulation,4,2024,False
+2024-12-04,ESPN:401704886,401704886,2024-12-05T00:30Z,Brooklyn Nets,Indiana Pacers,Barclays Center,99,90,99,90,Regulation,4,2024,False
+2024-12-04,ESPN:401704887,401704887,2024-12-05T00:30Z,Miami Heat,Los Angeles Lakers,Kaseya Center,134,93,134,93,Regulation,4,2024,False
+2024-12-04,ESPN:401704888,401704888,2024-12-05T00:30Z,Philadelphia 76ers,Orlando Magic,Xfinity Mobile Arena,102,106,102,106,Regulation,4,2024,False
+2024-12-04,ESPN:401704889,401704889,2024-12-05T01:00Z,Milwaukee Bucks,Atlanta Hawks,Fiserv Forum,104,119,104,119,Regulation,4,2024,False
+2024-12-04,ESPN:401704890,401704890,2024-12-05T03:30Z,Los Angeles Clippers,Minnesota Timberwolves,Intuit Dome,80,108,80,108,Regulation,4,2024,False
+2024-12-05,ESPN:401704891,401704891,2024-12-06T00:00Z,Cleveland Cavaliers,Denver Nuggets,Rocket Arena,126,114,126,114,Regulation,4,2024,False
+2024-12-05,ESPN:401704892,401704892,2024-12-06T00:00Z,Washington Wizards,Dallas Mavericks,Capital One Arena,101,137,101,137,Regulation,4,2024,False
+2024-12-05,ESPN:401704893,401704893,2024-12-06T00:30Z,New York Knicks,Charlotte Hornets,Madison Square Garden,125,101,125,101,Regulation,4,2024,False
+2024-12-05,ESPN:401704894,401704894,2024-12-06T00:30Z,Toronto Raptors,Oklahoma City Thunder,Scotiabank Arena,92,129,92,129,Regulation,4,2024,False
+2024-12-05,ESPN:401704895,401704895,2024-12-06T01:00Z,Memphis Grizzlies,Sacramento Kings,FedExForum,115,110,115,110,Regulation,4,2024,False
+2024-12-05,ESPN:401704896,401704896,2024-12-06T01:00Z,New Orleans Pelicans,Phoenix Suns,Smoothie King Center,126,124,126,124,Regulation,4,2024,False
+2024-12-05,ESPN:401704897,401704897,2024-12-06T01:00Z,San Antonio Spurs,Chicago Bulls,Frost Bank Center,124,139,124,139,Regulation,4,2024,False
+2024-12-05,ESPN:401704898,401704898,2024-12-06T03:00Z,Golden State Warriors,Houston Rockets,Chase Center,99,93,99,93,Regulation,4,2024,False
+2024-12-06,ESPN:401704899,401704899,2024-12-07T00:00Z,Philadelphia 76ers,Orlando Magic,Xfinity Mobile Arena,102,94,102,94,Regulation,4,2024,False
+2024-12-06,ESPN:401704900,401704900,2024-12-07T00:30Z,Atlanta Hawks,Los Angeles Lakers,State Farm Arena,134,132,119,119,Overtime,5,2024,False
+2024-12-06,ESPN:401704901,401704901,2024-12-07T00:30Z,Boston Celtics,Milwaukee Bucks,TD Garden,111,105,111,105,Regulation,4,2024,False
+2024-12-06,ESPN:401704902,401704902,2024-12-07T01:00Z,Chicago Bulls,Indiana Pacers,United Center,123,132,123,132,Regulation,4,2024,False
+2024-12-06,ESPN:401704903,401704903,2024-12-07T01:00Z,San Antonio Spurs,Sacramento Kings,Frost Bank Center,113,140,113,140,Regulation,4,2024,False
+2024-12-06,ESPN:401704904,401704904,2024-12-07T03:00Z,Golden State Warriors,Minnesota Timberwolves,Chase Center,90,107,90,107,Regulation,4,2024,False
+2024-12-06,ESPN:401704905,401704905,2024-12-07T03:00Z,Portland Trail Blazers,Utah Jazz,Moda Center,99,141,99,141,Regulation,4,2024,False
+2024-12-07,ESPN:401704906,401704906,2024-12-07T18:00Z,Charlotte Hornets,Cleveland Cavaliers,Spectrum Center,102,116,102,116,Regulation,4,2024,False
+2024-12-07,ESPN:401704907,401704907,2024-12-08T00:00Z,Washington Wizards,Denver Nuggets,Capital One Arena,122,113,122,113,Regulation,4,2024,False
+2024-12-07,ESPN:401704908,401704908,2024-12-08T00:00Z,New Orleans Pelicans,Oklahoma City Thunder,Smoothie King Center,109,119,109,119,Regulation,4,2024,False
+2024-12-07,ESPN:401704909,401704909,2024-12-08T00:30Z,New York Knicks,Detroit Pistons,Madison Square Garden,111,120,111,120,Regulation,4,2024,False
+2024-12-07,ESPN:401704910,401704910,2024-12-08T00:30Z,Toronto Raptors,Dallas Mavericks,Scotiabank Arena,118,125,118,125,Regulation,4,2024,False
+2024-12-07,ESPN:401704911,401704911,2024-12-08T01:00Z,Boston Celtics,Memphis Grizzlies,TD Garden,121,127,121,127,Regulation,4,2024,False
+2024-12-07,ESPN:401704912,401704912,2024-12-08T01:00Z,Miami Heat,Phoenix Suns,Kaseya Center,121,111,121,111,Regulation,4,2024,False
+2024-12-08,ESPN:401704913,401704913,2024-12-08T18:00Z,Chicago Bulls,Philadelphia 76ers,United Center,100,108,100,108,Regulation,4,2024,False
+2024-12-08,ESPN:401704914,401704914,2024-12-08T20:30Z,Brooklyn Nets,Milwaukee Bucks,Barclays Center,113,118,113,118,Regulation,4,2024,False
+2024-12-08,ESPN:401704915,401704915,2024-12-08T22:00Z,Indiana Pacers,Charlotte Hornets,Gainbridge Fieldhouse,109,113,109,113,Regulation,4,2024,False
+2024-12-08,ESPN:401704916,401704916,2024-12-08T23:00Z,Atlanta Hawks,Denver Nuggets,State Farm Arena,111,141,111,141,Regulation,4,2024,False
+2024-12-08,ESPN:401704917,401704917,2024-12-08T23:00Z,Miami Heat,Cleveland Cavaliers,Kaseya Center,122,113,122,113,Regulation,4,2024,False
+2024-12-08,ESPN:401704918,401704918,2024-12-08T23:30Z,Orlando Magic,Phoenix Suns,Kia Center,115,110,115,110,Regulation,4,2024,False
+2024-12-08,ESPN:401704919,401704919,2024-12-09T00:00Z,Washington Wizards,Memphis Grizzlies,Capital One Arena,112,140,112,140,Regulation,4,2024,False
+2024-12-08,ESPN:401704920,401704920,2024-12-09T00:00Z,San Antonio Spurs,New Orleans Pelicans,Frost Bank Center,121,116,121,116,Regulation,4,2024,False
+2024-12-08,ESPN:401704921,401704921,2024-12-09T01:30Z,Golden State Warriors,Minnesota Timberwolves,Chase Center,114,106,114,106,Regulation,4,2024,False
+2024-12-08,ESPN:401704922,401704922,2024-12-09T02:00Z,Los Angeles Clippers,Houston Rockets,Intuit Dome,106,117,106,117,Regulation,4,2024,False
+2024-12-08,ESPN:401704923,401704923,2024-12-09T02:00Z,Sacramento Kings,Utah Jazz,Golden 1 Center,141,97,141,97,Regulation,4,2024,False
+2024-12-08,ESPN:401704924,401704924,2024-12-09T02:30Z,Los Angeles Lakers,Portland Trail Blazers,crypto.com Arena,107,98,107,98,Regulation,4,2024,False
+2024-12-09,ESPN:401704925,401704925,2024-12-10T00:30Z,Toronto Raptors,New York Knicks,Scotiabank Arena,108,113,108,113,Regulation,4,2024,False
+2024-12-10,ESPN:401734902,401734902,2024-12-11T00:00Z,Milwaukee Bucks,Orlando Magic,Fiserv Forum,114,109,114,109,Regulation,4,2024,False
+2024-12-10,ESPN:401734903,401734903,2024-12-11T02:30Z,Oklahoma City Thunder,Dallas Mavericks,Paycom Center,118,104,118,104,Regulation,4,2024,False
+2024-12-11,ESPN:401734904,401734904,2024-12-12T00:00Z,New York Knicks,Atlanta Hawks,Madison Square Garden,100,108,100,108,Regulation,4,2024,False
+2024-12-11,ESPN:401734905,401734905,2024-12-12T02:30Z,Houston Rockets,Golden State Warriors,Toyota Center (Houston),91,90,91,90,Regulation,4,2024,False
+2024-12-12,ESPN:401736799,401736799,2024-12-13T00:30Z,Boston Celtics,Detroit Pistons,TD Garden,123,99,123,99,Regulation,4,2024,False
+2024-12-12,ESPN:401736800,401736800,2024-12-13T00:30Z,Miami Heat,Toronto Raptors,Kaseya Center,114,104,114,104,Regulation,4,2024,False
+2024-12-12,ESPN:401736801,401736801,2024-12-13T01:00Z,New Orleans Pelicans,Sacramento Kings,Smoothie King Center,109,111,109,111,Regulation,4,2024,False
+2024-12-13,ESPN:401736802,401736802,2024-12-14T00:00Z,Cleveland Cavaliers,Washington Wizards,Rocket Arena,115,105,115,105,Regulation,4,2024,False
+2024-12-13,ESPN:401736803,401736803,2024-12-14T00:00Z,Philadelphia 76ers,Indiana Pacers,Xfinity Mobile Arena,107,121,107,121,Regulation,4,2024,False
+2024-12-13,ESPN:401736804,401736804,2024-12-14T01:00Z,Minnesota Timberwolves,Los Angeles Lakers,Target Center,97,87,97,87,Regulation,4,2024,False
+2024-12-13,ESPN:401736805,401736805,2024-12-14T01:00Z,Memphis Grizzlies,Brooklyn Nets,FedExForum,135,119,135,119,Regulation,4,2024,False
+2024-12-13,ESPN:401736806,401736806,2024-12-14T01:00Z,Chicago Bulls,Charlotte Hornets,United Center,109,95,109,95,Regulation,4,2024,False
+2024-12-13,ESPN:401736807,401736807,2024-12-14T02:00Z,Denver Nuggets,Los Angeles Clippers,Ball Arena,120,98,120,98,Regulation,4,2024,False
+2024-12-13,ESPN:401736808,401736808,2024-12-14T02:30Z,Utah Jazz,Phoenix Suns,Delta Center,126,134,126,134,Regulation,4,2024,False
+2024-12-13,ESPN:401736809,401736809,2024-12-14T03:00Z,Portland Trail Blazers,San Antonio Spurs,Moda Center,116,118,116,118,Regulation,4,2024,False
+2024-12-14,ESPN:401734906,401734906,2024-12-14T21:30Z,Milwaukee Bucks,Atlanta Hawks,T-Mobile Arena,110,102,110,102,Regulation,4,2024,True
+2024-12-14,ESPN:401734907,401734907,2024-12-15T01:30Z,Oklahoma City Thunder,Houston Rockets,T-Mobile Arena,111,96,111,96,Regulation,4,2024,True
+2024-12-15,ESPN:401736810,401736810,2024-12-15T22:00Z,Indiana Pacers,New Orleans Pelicans,Gainbridge Fieldhouse,119,104,119,104,Regulation,4,2024,False
+2024-12-15,ESPN:401736811,401736811,2024-12-15T23:00Z,Washington Wizards,Boston Celtics,Capital One Arena,98,112,98,112,Regulation,4,2024,False
+2024-12-15,ESPN:401737902,401737902,2024-12-15T23:00Z,Orlando Magic,New York Knicks,Kia Center,91,100,91,100,Regulation,4,2024,False
+2024-12-15,ESPN:401736812,401736812,2024-12-16T00:00Z,San Antonio Spurs,Minnesota Timberwolves,Frost Bank Center,92,106,92,106,Regulation,4,2024,False
+2024-12-15,ESPN:401736813,401736813,2024-12-16T01:00Z,Phoenix Suns,Portland Trail Blazers,Mortgage Matchup Center,116,109,116,109,Regulation,4,2024,False
+2024-12-15,ESPN:401737912,401737912,2024-12-16T01:30Z,Golden State Warriors,Dallas Mavericks,Chase Center,133,143,133,143,Regulation,4,2024,False
+2024-12-15,ESPN:401736814,401736814,2024-12-16T02:30Z,Los Angeles Lakers,Memphis Grizzlies,crypto.com Arena,116,110,116,110,Regulation,4,2024,False
+2024-12-16,ESPN:401736815,401736815,2024-12-17T00:00Z,Charlotte Hornets,Philadelphia 76ers,Spectrum Center,108,121,108,121,Regulation,4,2024,False
+2024-12-16,ESPN:401736816,401736816,2024-12-17T00:00Z,Detroit Pistons,Miami Heat,Little Caesars Arena,125,124,114,114,Overtime,5,2024,False
+2024-12-16,ESPN:401736817,401736817,2024-12-17T00:30Z,Toronto Raptors,Chicago Bulls,Scotiabank Arena,121,122,121,122,Regulation,4,2024,False
+2024-12-16,ESPN:401736818,401736818,2024-12-17T00:30Z,Brooklyn Nets,Cleveland Cavaliers,Barclays Center,101,130,101,130,Regulation,4,2024,False
+2024-12-16,ESPN:401736819,401736819,2024-12-17T03:00Z,Sacramento Kings,Denver Nuggets,Golden 1 Center,129,130,129,130,Regulation,4,2024,False
+2024-12-16,ESPN:401736820,401736820,2024-12-17T03:30Z,Los Angeles Clippers,Utah Jazz,Intuit Dome,144,107,144,107,Regulation,4,2024,False
+2024-12-17,ESPN:401734908,401734908,2024-12-18T01:30Z,Oklahoma City Thunder,Milwaukee Bucks,T-Mobile Arena,81,97,81,97,Regulation,4,2024,True
+2024-12-19,ESPN:401704926,401704926,2024-12-20T00:00Z,Detroit Pistons,Utah Jazz,Little Caesars Arena,119,126,119,126,Regulation,4,2024,False
+2024-12-19,ESPN:401704927,401704927,2024-12-20T00:00Z,Orlando Magic,Oklahoma City Thunder,Kia Center,99,105,99,105,Regulation,4,2024,False
+2024-12-19,ESPN:401704928,401704928,2024-12-20T00:00Z,Washington Wizards,Charlotte Hornets,Capital One Arena,123,114,123,114,Regulation,4,2024,False
+2024-12-19,ESPN:401704929,401704929,2024-12-20T00:30Z,Boston Celtics,Chicago Bulls,TD Garden,108,117,108,117,Regulation,4,2024,False
+2024-12-19,ESPN:401704930,401704930,2024-12-20T00:30Z,Toronto Raptors,Brooklyn Nets,Scotiabank Arena,94,101,94,101,Regulation,4,2024,False
+2024-12-19,ESPN:401704931,401704931,2024-12-20T01:00Z,Houston Rockets,New Orleans Pelicans,Toyota Center (Houston),133,113,133,113,Regulation,4,2024,False
+2024-12-19,ESPN:401704932,401704932,2024-12-20T01:00Z,Memphis Grizzlies,Golden State Warriors,FedExForum,144,93,144,93,Regulation,4,2024,False
+2024-12-19,ESPN:401704936,401704936,2024-12-20T01:00Z,San Antonio Spurs,Atlanta Hawks,Frost Bank Center,133,126,120,120,Overtime,5,2024,False
+2024-12-19,ESPN:401704934,401704934,2024-12-20T01:30Z,Dallas Mavericks,Los Angeles Clippers,American Airlines Center,95,118,95,118,Regulation,4,2024,False
+2024-12-19,ESPN:401704935,401704935,2024-12-20T02:00Z,Phoenix Suns,Indiana Pacers,Mortgage Matchup Center,111,120,111,120,Regulation,4,2024,False
+2024-12-19,ESPN:401704933,401704933,2024-12-20T02:30Z,Minnesota Timberwolves,New York Knicks,Target Center,107,133,107,133,Regulation,4,2024,False
+2024-12-19,ESPN:401704937,401704937,2024-12-20T03:00Z,Portland Trail Blazers,Denver Nuggets,Moda Center,126,124,126,124,Regulation,4,2024,False
+2024-12-19,ESPN:401704938,401704938,2024-12-20T03:00Z,Sacramento Kings,Los Angeles Lakers,Golden 1 Center,100,113,100,113,Regulation,4,2024,False
+2024-12-20,ESPN:401704939,401704939,2024-12-21T00:00Z,Philadelphia 76ers,Charlotte Hornets,Xfinity Mobile Arena,108,98,108,98,Regulation,4,2024,False
+2024-12-20,ESPN:401704940,401704940,2024-12-21T00:30Z,Cleveland Cavaliers,Milwaukee Bucks,Rocket Arena,124,101,124,101,Regulation,4,2024,False
+2024-12-20,ESPN:401704941,401704941,2024-12-21T01:00Z,Miami Heat,Oklahoma City Thunder,Kaseya Center,97,104,97,104,Regulation,4,2024,False
+2024-12-21,ESPN:401704942,401704942,2024-12-21T23:00Z,Sacramento Kings,Los Angeles Lakers,Golden 1 Center,99,103,99,103,Regulation,4,2024,False
+2024-12-21,ESPN:401704943,401704943,2024-12-22T00:00Z,Orlando Magic,Miami Heat,Kia Center,121,114,121,114,Regulation,4,2024,False
+2024-12-21,ESPN:401704944,401704944,2024-12-22T00:30Z,Atlanta Hawks,Memphis Grizzlies,State Farm Arena,112,128,112,128,Regulation,4,2024,False
+2024-12-21,ESPN:401704945,401704945,2024-12-22T00:30Z,Brooklyn Nets,Utah Jazz,Barclays Center,94,105,94,105,Regulation,4,2024,False
+2024-12-21,ESPN:401704946,401704946,2024-12-22T01:00Z,Cleveland Cavaliers,Philadelphia 76ers,Rocket Arena,126,99,126,99,Regulation,4,2024,False
+2024-12-21,ESPN:401704947,401704947,2024-12-22T01:00Z,Chicago Bulls,Boston Celtics,United Center,98,123,98,123,Regulation,4,2024,False
+2024-12-21,ESPN:401704948,401704948,2024-12-22T01:00Z,Milwaukee Bucks,Washington Wizards,Fiserv Forum,112,101,112,101,Regulation,4,2024,False
+2024-12-21,ESPN:401704949,401704949,2024-12-22T01:00Z,Minnesota Timberwolves,Golden State Warriors,Target Center,103,113,103,113,Regulation,4,2024,False
+2024-12-21,ESPN:401704950,401704950,2024-12-22T01:00Z,New Orleans Pelicans,New York Knicks,Smoothie King Center,93,104,93,104,Regulation,4,2024,False
+2024-12-21,ESPN:401704951,401704951,2024-12-22T01:30Z,Dallas Mavericks,Los Angeles Clippers,American Airlines Center,113,97,113,97,Regulation,4,2024,False
+2024-12-21,ESPN:401704952,401704952,2024-12-22T01:30Z,San Antonio Spurs,Portland Trail Blazers,Frost Bank Center,114,94,114,94,Regulation,4,2024,False
+2024-12-21,ESPN:401704953,401704953,2024-12-22T02:00Z,Phoenix Suns,Detroit Pistons,Mortgage Matchup Center,125,133,125,133,Regulation,4,2024,False
+2024-12-22,ESPN:401704954,401704954,2024-12-22T23:00Z,Toronto Raptors,Houston Rockets,Scotiabank Arena,110,114,110,114,Regulation,4,2024,False
+2024-12-22,ESPN:401704955,401704955,2024-12-22T23:00Z,Sacramento Kings,Indiana Pacers,Golden 1 Center,95,122,95,122,Regulation,4,2024,False
+2024-12-22,ESPN:401704956,401704956,2024-12-23T00:00Z,New Orleans Pelicans,Denver Nuggets,Smoothie King Center,129,132,119,119,Overtime,5,2024,False
+2024-12-23,ESPN:401704957,401704957,2024-12-24T00:00Z,Charlotte Hornets,Houston Rockets,Spectrum Center,101,114,101,114,Regulation,4,2024,False
+2024-12-23,ESPN:401704958,401704958,2024-12-24T00:00Z,Cleveland Cavaliers,Utah Jazz,Rocket Arena,124,113,124,113,Regulation,4,2024,False
+2024-12-23,ESPN:401704959,401704959,2024-12-24T00:00Z,Orlando Magic,Boston Celtics,Kia Center,108,104,108,104,Regulation,4,2024,False
+2024-12-23,ESPN:401704960,401704960,2024-12-24T00:00Z,Philadelphia 76ers,San Antonio Spurs,Xfinity Mobile Arena,111,106,111,106,Regulation,4,2024,False
+2024-12-23,ESPN:401704961,401704961,2024-12-24T00:30Z,Atlanta Hawks,Minnesota Timberwolves,State Farm Arena,117,104,117,104,Regulation,4,2024,False
+2024-12-23,ESPN:401704962,401704962,2024-12-24T00:30Z,Miami Heat,Brooklyn Nets,Kaseya Center,110,95,110,95,Regulation,4,2024,False
+2024-12-23,ESPN:401704963,401704963,2024-12-24T00:30Z,New York Knicks,Toronto Raptors,Madison Square Garden,139,125,139,125,Regulation,4,2024,False
+2024-12-23,ESPN:401704964,401704964,2024-12-24T01:00Z,Chicago Bulls,Milwaukee Bucks,United Center,91,112,91,112,Regulation,4,2024,False
+2024-12-23,ESPN:401704965,401704965,2024-12-24T01:00Z,Memphis Grizzlies,Los Angeles Clippers,FedExForum,110,114,110,114,Regulation,4,2024,False
+2024-12-23,ESPN:401704966,401704966,2024-12-24T01:00Z,Oklahoma City Thunder,Washington Wizards,Paycom Center,123,105,123,105,Regulation,4,2024,False
+2024-12-23,ESPN:401704967,401704967,2024-12-24T01:30Z,Dallas Mavericks,Portland Trail Blazers,American Airlines Center,132,108,132,108,Regulation,4,2024,False
+2024-12-23,ESPN:401704968,401704968,2024-12-24T03:00Z,Denver Nuggets,Phoenix Suns,Ball Arena,117,90,117,90,Regulation,4,2024,False
+2024-12-23,ESPN:401704969,401704969,2024-12-24T03:00Z,Golden State Warriors,Indiana Pacers,Chase Center,105,111,105,111,Regulation,4,2024,False
+2024-12-23,ESPN:401704970,401704970,2024-12-24T03:30Z,Los Angeles Lakers,Detroit Pistons,crypto.com Arena,114,117,114,117,Regulation,4,2024,False
+2024-12-25,ESPN:401704971,401704971,2024-12-25T17:00Z,New York Knicks,San Antonio Spurs,Madison Square Garden,117,114,117,114,Regulation,4,2024,False
+2024-12-25,ESPN:401704972,401704972,2024-12-25T19:30Z,Dallas Mavericks,Minnesota Timberwolves,American Airlines Center,99,105,99,105,Regulation,4,2024,False
+2024-12-25,ESPN:401704973,401704973,2024-12-25T22:00Z,Boston Celtics,Philadelphia 76ers,TD Garden,114,118,114,118,Regulation,4,2024,False
+2024-12-25,ESPN:401704974,401704974,2024-12-26T01:00Z,Golden State Warriors,Los Angeles Lakers,Chase Center,113,115,113,115,Regulation,4,2024,False
+2024-12-25,ESPN:401704975,401704975,2024-12-26T03:30Z,Phoenix Suns,Denver Nuggets,Mortgage Matchup Center,110,100,110,100,Regulation,4,2024,False
+2024-12-26,ESPN:401704976,401704976,2024-12-27T00:00Z,Indiana Pacers,Oklahoma City Thunder,Gainbridge Fieldhouse,114,120,114,120,Regulation,4,2024,False
+2024-12-26,ESPN:401704977,401704977,2024-12-27T00:00Z,Orlando Magic,Miami Heat,Kia Center,88,89,88,89,Regulation,4,2024,False
+2024-12-26,ESPN:401704978,401704978,2024-12-27T00:00Z,Washington Wizards,Charlotte Hornets,Capital One Arena,113,110,113,110,Regulation,4,2024,False
+2024-12-26,ESPN:401704979,401704979,2024-12-27T00:30Z,Atlanta Hawks,Chicago Bulls,State Farm Arena,141,133,141,133,Regulation,4,2024,False
+2024-12-26,ESPN:401704980,401704980,2024-12-27T01:00Z,Memphis Grizzlies,Toronto Raptors,FedExForum,155,126,155,126,Regulation,4,2024,False
+2024-12-26,ESPN:401704981,401704981,2024-12-27T01:00Z,Milwaukee Bucks,Brooklyn Nets,Fiserv Forum,105,111,105,111,Regulation,4,2024,False
+2024-12-26,ESPN:401704982,401704982,2024-12-27T01:00Z,New Orleans Pelicans,Houston Rockets,Smoothie King Center,111,128,111,128,Regulation,4,2024,False
+2024-12-26,ESPN:401704983,401704983,2024-12-27T03:00Z,Portland Trail Blazers,Utah Jazz,Moda Center,122,120,122,120,Regulation,4,2024,False
+2024-12-26,ESPN:401704984,401704984,2024-12-27T03:00Z,Sacramento Kings,Detroit Pistons,Golden 1 Center,113,114,113,114,Regulation,4,2024,False
+2024-12-27,ESPN:401704985,401704985,2024-12-28T00:00Z,Orlando Magic,New York Knicks,Kia Center,85,108,85,108,Regulation,4,2024,False
+2024-12-27,ESPN:401704986,401704986,2024-12-28T00:30Z,Boston Celtics,Indiana Pacers,TD Garden,142,105,142,105,Regulation,4,2024,False
+2024-12-27,ESPN:401704987,401704987,2024-12-28T00:30Z,Brooklyn Nets,San Antonio Spurs,Barclays Center,87,96,87,96,Regulation,4,2024,False
+2024-12-27,ESPN:401704988,401704988,2024-12-28T01:00Z,Houston Rockets,Minnesota Timberwolves,Toyota Center (Houston),112,113,112,113,Regulation,4,2024,False
+2024-12-27,ESPN:401704989,401704989,2024-12-28T01:00Z,New Orleans Pelicans,Memphis Grizzlies,Smoothie King Center,124,132,124,132,Regulation,4,2024,False
+2024-12-27,ESPN:401704990,401704990,2024-12-28T02:00Z,Denver Nuggets,Cleveland Cavaliers,Ball Arena,135,149,135,149,Regulation,4,2024,False
+2024-12-27,ESPN:401704991,401704991,2024-12-28T02:00Z,Phoenix Suns,Dallas Mavericks,Mortgage Matchup Center,89,98,89,98,Regulation,4,2024,False
+2024-12-27,ESPN:401704992,401704992,2024-12-28T03:00Z,Los Angeles Clippers,Golden State Warriors,Intuit Dome,102,92,102,92,Regulation,4,2024,False
+2024-12-28,ESPN:401704993,401704993,2024-12-28T20:00Z,Atlanta Hawks,Miami Heat,State Farm Arena,120,110,120,110,Regulation,4,2024,False
+2024-12-28,ESPN:401704994,401704994,2024-12-28T23:00Z,Charlotte Hornets,Oklahoma City Thunder,Spectrum Center,94,106,94,106,Regulation,4,2024,False
+2024-12-28,ESPN:401704995,401704995,2024-12-29T00:00Z,Washington Wizards,New York Knicks,Capital One Arena,132,136,119,119,Overtime,5,2024,False
+2024-12-28,ESPN:401704996,401704996,2024-12-29T01:00Z,Chicago Bulls,Milwaukee Bucks,United Center,116,111,116,111,Regulation,4,2024,False
+2024-12-28,ESPN:401704997,401704997,2024-12-29T01:30Z,Golden State Warriors,Phoenix Suns,Chase Center,109,105,109,105,Regulation,4,2024,False
+2024-12-28,ESPN:401704998,401704998,2024-12-29T02:00Z,Denver Nuggets,Detroit Pistons,Ball Arena,134,121,134,121,Regulation,4,2024,False
+2024-12-28,ESPN:401704999,401704999,2024-12-29T02:30Z,Utah Jazz,Philadelphia 76ers,Delta Center,111,114,111,114,Regulation,4,2024,False
+2024-12-28,ESPN:401705000,401705000,2024-12-29T03:00Z,Portland Trail Blazers,Dallas Mavericks,Moda Center,126,122,126,122,Regulation,4,2024,False
+2024-12-28,ESPN:401705001,401705001,2024-12-29T03:30Z,Los Angeles Lakers,Sacramento Kings,crypto.com Arena,132,122,132,122,Regulation,4,2024,False
+2024-12-29,ESPN:401705002,401705002,2024-12-29T20:30Z,Orlando Magic,Brooklyn Nets,Kia Center,102,101,102,101,Regulation,4,2024,False
+2024-12-29,ESPN:401705003,401705003,2024-12-29T23:00Z,Boston Celtics,Indiana Pacers,TD Garden,114,123,114,123,Regulation,4,2024,False
+2024-12-29,ESPN:401705004,401705004,2024-12-29T23:00Z,Toronto Raptors,Atlanta Hawks,Scotiabank Arena,107,136,107,136,Regulation,4,2024,False
+2024-12-29,ESPN:401705005,401705005,2024-12-30T00:00Z,Houston Rockets,Miami Heat,Toyota Center (Houston),100,104,100,104,Regulation,4,2024,False
+2024-12-29,ESPN:401705006,401705006,2024-12-30T00:00Z,Oklahoma City Thunder,Memphis Grizzlies,Paycom Center,130,106,130,106,Regulation,4,2024,False
+2024-12-29,ESPN:401705007,401705007,2024-12-30T02:00Z,Minnesota Timberwolves,San Antonio Spurs,Target Center,112,110,112,110,Regulation,4,2024,False
+2024-12-30,ESPN:401705008,401705008,2024-12-31T00:00Z,Charlotte Hornets,Chicago Bulls,Spectrum Center,108,115,98,98,Overtime,5,2024,False
+2024-12-30,ESPN:401705009,401705009,2024-12-31T00:00Z,Washington Wizards,New York Knicks,Capital One Arena,106,126,106,126,Regulation,4,2024,False
+2024-12-30,ESPN:401705010,401705010,2024-12-31T01:00Z,New Orleans Pelicans,Los Angeles Clippers,Smoothie King Center,113,116,113,116,Regulation,4,2024,False
+2024-12-30,ESPN:401705011,401705011,2024-12-31T02:00Z,Utah Jazz,Denver Nuggets,Delta Center,121,132,121,132,Regulation,4,2024,False
+2024-12-30,ESPN:401705012,401705012,2024-12-31T03:00Z,Golden State Warriors,Cleveland Cavaliers,Chase Center,95,113,95,113,Regulation,4,2024,False
+2024-12-30,ESPN:401705013,401705013,2024-12-31T03:00Z,Portland Trail Blazers,Philadelphia 76ers,Moda Center,103,125,103,125,Regulation,4,2024,False
+2024-12-30,ESPN:401705014,401705014,2024-12-31T03:00Z,Sacramento Kings,Dallas Mavericks,Golden 1 Center,110,100,110,100,Regulation,4,2024,False
+2024-12-31,ESPN:401705015,401705015,2024-12-31T20:00Z,Boston Celtics,Toronto Raptors,TD Garden,125,71,125,71,Regulation,4,2024,False
+2024-12-31,ESPN:401705016,401705016,2024-12-31T20:00Z,Indiana Pacers,Milwaukee Bucks,Gainbridge Fieldhouse,112,120,112,120,Regulation,4,2024,False
+2024-12-31,ESPN:401705017,401705017,2025-01-01T00:00Z,San Antonio Spurs,Los Angeles Clippers,Frost Bank Center,122,86,122,86,Regulation,4,2024,False
+2024-12-31,ESPN:401705018,401705018,2025-01-01T01:00Z,Oklahoma City Thunder,Minnesota Timberwolves,Paycom Center,113,105,113,105,Regulation,4,2024,False
+2024-12-31,ESPN:401705019,401705019,2025-01-01T02:00Z,Phoenix Suns,Memphis Grizzlies,Mortgage Matchup Center,112,117,112,117,Regulation,4,2024,False
+2024-12-31,ESPN:401705020,401705020,2025-01-01T02:00Z,Los Angeles Lakers,Cleveland Cavaliers,crypto.com Arena,110,122,110,122,Regulation,4,2024,False
+2025-01-01,ESPN:401705021,401705021,2025-01-02T00:00Z,Detroit Pistons,Orlando Magic,Little Caesars Arena,105,96,105,96,Regulation,4,2024,False
+2025-01-01,ESPN:401705022,401705022,2025-01-02T00:00Z,Washington Wizards,Chicago Bulls,Capital One Arena,125,107,125,107,Regulation,4,2024,False
+2025-01-01,ESPN:401705023,401705023,2025-01-02T00:30Z,Miami Heat,New Orleans Pelicans,Kaseya Center,119,108,119,108,Regulation,4,2024,False
+2025-01-01,ESPN:401705024,401705024,2025-01-02T00:30Z,New York Knicks,Utah Jazz,Madison Square Garden,119,103,119,103,Regulation,4,2024,False
+2025-01-01,ESPN:401705025,401705025,2025-01-02T00:30Z,Toronto Raptors,Brooklyn Nets,Scotiabank Arena,130,113,130,113,Regulation,4,2024,False
+2025-01-01,ESPN:401705026,401705026,2025-01-02T01:00Z,Houston Rockets,Dallas Mavericks,Toyota Center (Houston),110,99,110,99,Regulation,4,2024,False
+2025-01-01,ESPN:401705027,401705027,2025-01-02T02:00Z,Denver Nuggets,Atlanta Hawks,Ball Arena,139,120,139,120,Regulation,4,2024,False
+2025-01-01,ESPN:401705028,401705028,2025-01-02T03:00Z,Sacramento Kings,Philadelphia 76ers,Golden 1 Center,113,107,113,107,Regulation,4,2024,False
+2025-01-02,ESPN:401705029,401705029,2025-01-03T00:30Z,Miami Heat,Indiana Pacers,Kaseya Center,115,128,115,128,Regulation,4,2024,False
+2025-01-02,ESPN:401705030,401705030,2025-01-03T00:30Z,Minnesota Timberwolves,Boston Celtics,Target Center,115,118,115,118,Regulation,4,2024,False
+2025-01-02,ESPN:401705031,401705031,2025-01-03T01:00Z,Milwaukee Bucks,Brooklyn Nets,Fiserv Forum,110,113,110,113,Regulation,4,2024,False
+2025-01-02,ESPN:401705032,401705032,2025-01-03T01:00Z,Oklahoma City Thunder,Los Angeles Clippers,Paycom Center,116,98,116,98,Regulation,4,2024,False
+2025-01-02,ESPN:401705033,401705033,2025-01-03T03:00Z,Golden State Warriors,Philadelphia 76ers,Chase Center,139,105,139,105,Regulation,4,2024,False
+2025-01-02,ESPN:401705034,401705034,2025-01-03T03:30Z,Los Angeles Lakers,Portland Trail Blazers,crypto.com Arena,114,106,114,106,Regulation,4,2024,False
+2025-01-03,ESPN:401705035,401705035,2025-01-04T00:00Z,Detroit Pistons,Charlotte Hornets,Little Caesars Arena,98,94,98,94,Regulation,4,2024,False
+2025-01-03,ESPN:401705036,401705036,2025-01-04T00:30Z,Toronto Raptors,Orlando Magic,Scotiabank Arena,97,106,97,106,Regulation,4,2024,False
+2025-01-03,ESPN:401705037,401705037,2025-01-04T01:00Z,Houston Rockets,Boston Celtics,Toyota Center (Houston),86,109,86,109,Regulation,4,2024,False
+2025-01-03,ESPN:401705038,401705038,2025-01-04T01:00Z,New Orleans Pelicans,Washington Wizards,Smoothie King Center,132,120,132,120,Regulation,4,2024,False
+2025-01-03,ESPN:401705039,401705039,2025-01-04T01:00Z,Oklahoma City Thunder,New York Knicks,Paycom Center,117,107,117,107,Regulation,4,2024,False
+2025-01-03,ESPN:401705040,401705040,2025-01-04T01:30Z,Dallas Mavericks,Cleveland Cavaliers,American Airlines Center,122,134,122,134,Regulation,4,2024,False
+2025-01-03,ESPN:401705041,401705041,2025-01-04T02:00Z,Denver Nuggets,San Antonio Spurs,Ball Arena,110,113,110,113,Regulation,4,2024,False
+2025-01-03,ESPN:401705042,401705042,2025-01-04T03:00Z,Sacramento Kings,Memphis Grizzlies,Golden 1 Center,138,133,138,133,Regulation,4,2024,False
+2025-01-03,ESPN:401705043,401705043,2025-01-04T03:30Z,Los Angeles Lakers,Atlanta Hawks,crypto.com Arena,119,102,119,102,Regulation,4,2024,False
+2025-01-04,ESPN:401705044,401705044,2025-01-04T23:00Z,Brooklyn Nets,Philadelphia 76ers,Barclays Center,94,123,94,123,Regulation,4,2024,False
+2025-01-04,ESPN:401705045,401705045,2025-01-05T00:00Z,Detroit Pistons,Minnesota Timberwolves,Little Caesars Arena,119,105,119,105,Regulation,4,2024,False
+2025-01-04,ESPN:401705046,401705046,2025-01-05T00:00Z,Indiana Pacers,Phoenix Suns,Gainbridge Fieldhouse,126,108,126,108,Regulation,4,2024,False
+2025-01-04,ESPN:401705047,401705047,2025-01-05T01:00Z,Miami Heat,Utah Jazz,Kaseya Center,100,136,100,136,Regulation,4,2024,False
+2025-01-04,ESPN:401705048,401705048,2025-01-05T01:00Z,Chicago Bulls,New York Knicks,United Center,139,126,139,126,Regulation,4,2024,False
+2025-01-04,ESPN:401705049,401705049,2025-01-05T01:00Z,Milwaukee Bucks,Portland Trail Blazers,Fiserv Forum,102,105,102,105,Regulation,4,2024,False
+2025-01-04,ESPN:401705050,401705050,2025-01-05T01:00Z,San Antonio Spurs,Denver Nuggets,Frost Bank Center,111,122,108,108,Overtime,5,2024,False
+2025-01-04,ESPN:401705051,401705051,2025-01-05T01:30Z,Golden State Warriors,Memphis Grizzlies,Chase Center,121,113,121,113,Regulation,4,2024,False
+2025-01-04,ESPN:401705052,401705052,2025-01-05T03:30Z,Los Angeles Clippers,Atlanta Hawks,Intuit Dome,131,105,131,105,Regulation,4,2024,False
+2025-01-05,ESPN:401705053,401705053,2025-01-05T20:30Z,Oklahoma City Thunder,Boston Celtics,Paycom Center,105,92,105,92,Regulation,4,2024,False
+2025-01-05,ESPN:401705054,401705054,2025-01-05T23:00Z,Cleveland Cavaliers,Charlotte Hornets,Rocket Arena,115,105,115,105,Regulation,4,2024,False
+2025-01-05,ESPN:401705055,401705055,2025-01-05T23:00Z,Washington Wizards,New Orleans Pelicans,Capital One Arena,98,110,98,110,Regulation,4,2024,False
+2025-01-05,ESPN:401705056,401705056,2025-01-05T23:30Z,Orlando Magic,Utah Jazz,Kia Center,92,105,92,105,Regulation,4,2024,False
+2025-01-05,ESPN:401705057,401705057,2025-01-06T00:00Z,Houston Rockets,Los Angeles Lakers,Toyota Center (Houston),119,115,119,115,Regulation,4,2024,False
+2025-01-05,ESPN:401705058,401705058,2025-01-06T01:30Z,Golden State Warriors,Sacramento Kings,Chase Center,99,129,99,129,Regulation,4,2024,False
+2025-01-06,ESPN:401705059,401705059,2025-01-07T00:00Z,Detroit Pistons,Portland Trail Blazers,Little Caesars Arena,118,115,118,115,Regulation,4,2024,False
+2025-01-06,ESPN:401705060,401705060,2025-01-07T00:00Z,Philadelphia 76ers,Phoenix Suns,Xfinity Mobile Arena,99,109,99,109,Regulation,4,2024,False
+2025-01-06,ESPN:401705061,401705061,2025-01-07T00:30Z,Brooklyn Nets,Indiana Pacers,Barclays Center,99,113,99,113,Regulation,4,2024,False
+2025-01-06,ESPN:401705062,401705062,2025-01-07T00:30Z,New York Knicks,Orlando Magic,Madison Square Garden,94,103,94,103,Regulation,4,2024,False
+2025-01-06,ESPN:401705063,401705063,2025-01-07T00:30Z,Toronto Raptors,Milwaukee Bucks,Scotiabank Arena,104,128,104,128,Regulation,4,2024,False
+2025-01-06,ESPN:401705064,401705064,2025-01-07T01:00Z,Chicago Bulls,San Antonio Spurs,United Center,114,110,114,110,Regulation,4,2024,False
+2025-01-06,ESPN:401705065,401705065,2025-01-07T01:00Z,Memphis Grizzlies,Dallas Mavericks,FedExForum,119,104,119,104,Regulation,4,2024,False
+2025-01-06,ESPN:401705066,401705066,2025-01-07T01:00Z,Minnesota Timberwolves,Los Angeles Clippers,Target Center,108,106,108,106,Regulation,4,2024,False
+2025-01-06,ESPN:401705067,401705067,2025-01-07T03:00Z,Sacramento Kings,Miami Heat,Golden 1 Center,123,118,102,102,Overtime,6,2024,False
+2025-01-07,ESPN:401705068,401705068,2025-01-08T00:00Z,Charlotte Hornets,Phoenix Suns,Spectrum Center,115,104,115,104,Regulation,4,2024,False
+2025-01-07,ESPN:401705069,401705069,2025-01-08T00:00Z,Washington Wizards,Houston Rockets,Capital One Arena,112,135,112,135,Regulation,4,2024,False
+2025-01-07,ESPN:401705070,401705070,2025-01-08T00:30Z,Dallas Mavericks,Los Angeles Lakers,American Airlines Center,118,97,118,97,Regulation,4,2024,False
+2025-01-07,ESPN:401705071,401705071,2025-01-08T01:00Z,New Orleans Pelicans,Minnesota Timberwolves,Smoothie King Center,97,104,97,104,Regulation,4,2024,False
+2025-01-07,ESPN:401705072,401705072,2025-01-08T02:00Z,Utah Jazz,Atlanta Hawks,Delta Center,121,124,121,124,Regulation,4,2024,False
+2025-01-07,ESPN:401705073,401705073,2025-01-08T03:00Z,Denver Nuggets,Boston Celtics,Ball Arena,106,118,106,118,Regulation,4,2024,False
+2025-01-07,ESPN:401705074,401705074,2025-01-08T03:00Z,Golden State Warriors,Miami Heat,Chase Center,98,114,98,114,Regulation,4,2024,False
+2025-01-08,ESPN:401705075,401705075,2025-01-09T00:00Z,Cleveland Cavaliers,Oklahoma City Thunder,Rocket Arena,129,122,129,122,Regulation,4,2024,False
+2025-01-08,ESPN:401705076,401705076,2025-01-09T00:00Z,Indiana Pacers,Chicago Bulls,Gainbridge Fieldhouse,129,113,129,113,Regulation,4,2024,False
+2025-01-08,ESPN:401705078,401705078,2025-01-09T00:00Z,Philadelphia 76ers,Washington Wizards,Xfinity Mobile Arena,109,103,109,103,Regulation,4,2024,False
+2025-01-08,ESPN:401705077,401705077,2025-01-09T00:30Z,New York Knicks,Toronto Raptors,Madison Square Garden,112,98,112,98,Regulation,4,2024,False
+2025-01-08,ESPN:401705079,401705079,2025-01-09T00:30Z,Brooklyn Nets,Detroit Pistons,Barclays Center,98,113,98,113,Regulation,4,2024,False
+2025-01-08,ESPN:401705080,401705080,2025-01-09T01:00Z,New Orleans Pelicans,Portland Trail Blazers,Smoothie King Center,100,119,100,119,Regulation,4,2024,False
+2025-01-08,ESPN:401705081,401705081,2025-01-09T02:00Z,Denver Nuggets,Los Angeles Clippers,Ball Arena,126,103,126,103,Regulation,4,2024,False
+2025-01-08,ESPN:401705082,401705082,2025-01-09T02:30Z,Milwaukee Bucks,San Antonio Spurs,Fiserv Forum,121,105,121,105,Regulation,4,2024,False
+2025-01-09,ESPN:401705083,401705083,2025-01-10T00:00Z,Cleveland Cavaliers,Toronto Raptors,Rocket Arena,132,126,132,126,Regulation,4,2024,False
+2025-01-09,ESPN:401705084,401705084,2025-01-10T00:00Z,Detroit Pistons,Golden State Warriors,Little Caesars Arena,104,107,104,107,Regulation,4,2024,False
+2025-01-09,ESPN:401705085,401705085,2025-01-10T00:00Z,Orlando Magic,Minnesota Timberwolves,Kia Center,89,104,89,104,Regulation,4,2024,False
+2025-01-09,ESPN:401705087,401705087,2025-01-10T00:30Z,Dallas Mavericks,Portland Trail Blazers,American Airlines Center,117,111,117,111,Regulation,4,2024,False
+2025-01-09,ESPN:401705086,401705086,2025-01-10T01:00Z,Memphis Grizzlies,Houston Rockets,FedExForum,115,119,115,119,Regulation,4,2024,False
+2025-01-09,ESPN:401705088,401705088,2025-01-10T02:00Z,Phoenix Suns,Atlanta Hawks,Mortgage Matchup Center,123,115,123,115,Regulation,4,2024,False
+2025-01-09,ESPN:401705089,401705089,2025-01-10T02:00Z,Utah Jazz,Miami Heat,Delta Center,92,97,92,97,Regulation,4,2024,False
+2025-01-10,ESPN:401705091,401705091,2025-01-11T00:00Z,Indiana Pacers,Golden State Warriors,Gainbridge Fieldhouse,108,96,108,96,Regulation,4,2024,False
+2025-01-10,ESPN:401705092,401705092,2025-01-11T00:00Z,Orlando Magic,Milwaukee Bucks,Kia Center,106,109,106,109,Regulation,4,2024,False
+2025-01-10,ESPN:401705093,401705093,2025-01-11T00:00Z,Philadelphia 76ers,New Orleans Pelicans,Xfinity Mobile Arena,115,123,115,123,Regulation,4,2024,False
+2025-01-10,ESPN:401705094,401705094,2025-01-11T00:30Z,Boston Celtics,Sacramento Kings,TD Garden,97,114,97,114,Regulation,4,2024,False
+2025-01-10,ESPN:401705095,401705095,2025-01-11T00:30Z,New York Knicks,Oklahoma City Thunder,Madison Square Garden,101,126,101,126,Regulation,4,2024,False
+2025-01-10,ESPN:401705096,401705096,2025-01-11T01:00Z,Chicago Bulls,Washington Wizards,United Center,138,105,138,105,Regulation,4,2024,False
+2025-01-10,ESPN:401705097,401705097,2025-01-11T02:00Z,Denver Nuggets,Brooklyn Nets,Ball Arena,124,105,124,105,Regulation,4,2024,False
+2025-01-11,ESPN:401705099,401705099,2025-01-11T22:00Z,Phoenix Suns,Utah Jazz,Mortgage Matchup Center,114,106,114,106,Regulation,4,2024,False
+2025-01-11,ESPN:401705100,401705100,2025-01-12T00:00Z,Detroit Pistons,Toronto Raptors,Little Caesars Arena,123,114,123,114,Regulation,4,2024,False
+2025-01-11,ESPN:401705101,401705101,2025-01-12T01:00Z,Minnesota Timberwolves,Memphis Grizzlies,Target Center,125,127,125,127,Regulation,4,2024,False
+2025-01-11,ESPN:401705102,401705102,2025-01-12T03:00Z,Portland Trail Blazers,Miami Heat,Moda Center,98,119,98,119,Regulation,4,2024,False
+2025-01-12,ESPN:401705105,401705105,2025-01-12T20:00Z,New York Knicks,Milwaukee Bucks,Madison Square Garden,140,106,140,106,Regulation,4,2024,False
+2025-01-12,ESPN:401705106,401705106,2025-01-12T20:00Z,Dallas Mavericks,Denver Nuggets,American Airlines Center,101,112,101,112,Regulation,4,2024,False
+2025-01-12,ESPN:401705107,401705107,2025-01-12T20:30Z,Chicago Bulls,Sacramento Kings,United Center,119,124,119,124,Regulation,4,2024,False
+2025-01-12,ESPN:401705108,401705108,2025-01-12T23:00Z,Boston Celtics,New Orleans Pelicans,TD Garden,120,119,120,119,Regulation,4,2024,False
+2025-01-12,ESPN:401705109,401705109,2025-01-12T23:00Z,Cleveland Cavaliers,Indiana Pacers,Rocket Arena,93,108,93,108,Regulation,4,2024,False
+2025-01-12,ESPN:401705110,401705110,2025-01-12T23:00Z,Orlando Magic,Philadelphia 76ers,Kia Center,104,99,104,99,Regulation,4,2024,False
+2025-01-12,ESPN:401705111,401705111,2025-01-12T23:00Z,Washington Wizards,Oklahoma City Thunder,Capital One Arena,95,136,95,136,Regulation,4,2024,False
+2025-01-12,ESPN:401705112,401705112,2025-01-13T01:00Z,Utah Jazz,Brooklyn Nets,Delta Center,112,111,102,102,Overtime,5,2024,False
+2025-01-12,ESPN:401705113,401705113,2025-01-13T02:00Z,Phoenix Suns,Charlotte Hornets,Mortgage Matchup Center,120,113,120,113,Regulation,4,2024,False
+2025-01-13,ESPN:401705114,401705114,2025-01-14T00:00Z,Washington Wizards,Minnesota Timberwolves,Capital One Arena,106,120,106,120,Regulation,4,2024,False
+2025-01-13,ESPN:401705115,401705115,2025-01-14T00:30Z,New York Knicks,Detroit Pistons,Madison Square Garden,119,124,119,124,Regulation,4,2024,False
+2025-01-13,ESPN:401705116,401705116,2025-01-14T00:30Z,Toronto Raptors,Golden State Warriors,Scotiabank Arena,104,101,104,101,Regulation,4,2024,False
+2025-01-13,ESPN:401705117,401705117,2025-01-14T01:00Z,Houston Rockets,Memphis Grizzlies,Toyota Center (Houston),120,118,120,118,Regulation,4,2024,False
+2025-01-13,ESPN:401705118,401705118,2025-01-14T03:30Z,Los Angeles Lakers,San Antonio Spurs,crypto.com Arena,102,126,102,126,Regulation,4,2024,False
+2025-01-13,ESPN:401705119,401705119,2025-01-14T03:30Z,Los Angeles Clippers,Miami Heat,Intuit Dome,109,98,109,98,Regulation,4,2024,False
+2025-01-14,ESPN:401705120,401705120,2025-01-15T00:00Z,Indiana Pacers,Cleveland Cavaliers,Gainbridge Fieldhouse,117,127,117,127,Regulation,4,2024,False
+2025-01-14,ESPN:401705121,401705121,2025-01-15T00:00Z,Philadelphia 76ers,Oklahoma City Thunder,Xfinity Mobile Arena,102,118,102,118,Regulation,4,2024,False
+2025-01-14,ESPN:401705122,401705122,2025-01-15T00:30Z,Atlanta Hawks,Phoenix Suns,State Farm Arena,122,117,122,117,Regulation,4,2024,False
+2025-01-14,ESPN:401705123,401705123,2025-01-15T01:00Z,Chicago Bulls,New Orleans Pelicans,United Center,113,119,113,119,Regulation,4,2024,False
+2025-01-14,ESPN:401705124,401705124,2025-01-15T01:00Z,Milwaukee Bucks,Sacramento Kings,Fiserv Forum,130,115,130,115,Regulation,4,2024,False
+2025-01-14,ESPN:401705125,401705125,2025-01-15T02:30Z,Dallas Mavericks,Denver Nuggets,American Airlines Center,99,118,99,118,Regulation,4,2024,False
+2025-01-14,ESPN:401705126,401705126,2025-01-15T03:00Z,Portland Trail Blazers,Brooklyn Nets,Moda Center,114,132,114,132,Regulation,4,2024,False
+2025-01-15,ESPN:401705127,401705127,2025-01-16T00:00Z,Philadelphia 76ers,New York Knicks,Xfinity Mobile Arena,119,125,109,109,Overtime,5,2024,False
+2025-01-15,ESPN:401705128,401705128,2025-01-16T00:30Z,Toronto Raptors,Boston Celtics,Scotiabank Arena,110,97,110,97,Regulation,4,2024,False
+2025-01-15,ESPN:401705129,401705129,2025-01-16T01:00Z,Chicago Bulls,Atlanta Hawks,United Center,94,110,94,110,Regulation,4,2024,False
+2025-01-15,ESPN:401705130,401705130,2025-01-16T01:00Z,Milwaukee Bucks,Orlando Magic,Fiserv Forum,122,93,122,93,Regulation,4,2024,False
+2025-01-15,ESPN:401705132,401705132,2025-01-16T01:00Z,New Orleans Pelicans,Dallas Mavericks,Smoothie King Center,119,116,119,116,Regulation,4,2024,False
+2025-01-15,ESPN:401705133,401705133,2025-01-16T01:00Z,San Antonio Spurs,Memphis Grizzlies,Frost Bank Center,115,129,115,129,Regulation,4,2024,False
+2025-01-15,ESPN:401705134,401705134,2025-01-16T02:00Z,Denver Nuggets,Houston Rockets,Ball Arena,108,128,108,128,Regulation,4,2024,False
+2025-01-15,ESPN:401705135,401705135,2025-01-16T02:00Z,Utah Jazz,Charlotte Hornets,Delta Center,112,117,112,117,Regulation,4,2024,False
+2025-01-15,ESPN:401705131,401705131,2025-01-16T02:30Z,Minnesota Timberwolves,Golden State Warriors,Target Center,115,116,115,116,Regulation,4,2024,False
+2025-01-15,ESPN:401705136,401705136,2025-01-16T03:00Z,Los Angeles Lakers,Miami Heat,crypto.com Arena,117,108,117,108,Regulation,4,2024,False
+2025-01-15,ESPN:401705137,401705137,2025-01-16T03:30Z,Los Angeles Clippers,Brooklyn Nets,Intuit Dome,126,67,126,67,Regulation,4,2024,False
+2025-01-16,ESPN:401705138,401705138,2025-01-17T00:00Z,Detroit Pistons,Indiana Pacers,Little Caesars Arena,100,111,100,111,Regulation,4,2024,False
+2025-01-16,ESPN:401705139,401705139,2025-01-17T00:00Z,Washington Wizards,Phoenix Suns,Capital One Arena,123,130,123,130,Regulation,4,2024,False
+2025-01-16,ESPN:401705140,401705140,2025-01-17T00:30Z,Oklahoma City Thunder,Cleveland Cavaliers,Paycom Center,134,114,134,114,Regulation,4,2024,False
+2025-01-16,ESPN:401705141,401705141,2025-01-17T03:00Z,Portland Trail Blazers,Los Angeles Clippers,Moda Center,89,118,89,118,Regulation,4,2024,False
+2025-01-16,ESPN:401705142,401705142,2025-01-17T03:00Z,Sacramento Kings,Houston Rockets,Golden 1 Center,132,127,132,127,Regulation,4,2024,False
+2025-01-17,ESPN:401705143,401705143,2025-01-18T00:00Z,Boston Celtics,Orlando Magic,TD Garden,121,94,121,94,Regulation,4,2024,False
+2025-01-17,ESPN:401705144,401705144,2025-01-18T00:30Z,New York Knicks,Minnesota Timberwolves,Madison Square Garden,99,116,99,116,Regulation,4,2024,False
+2025-01-17,ESPN:401705145,401705145,2025-01-18T01:00Z,Miami Heat,Denver Nuggets,Kaseya Center,113,133,113,133,Regulation,4,2024,False
+2025-01-17,ESPN:401705146,401705146,2025-01-18T01:00Z,Milwaukee Bucks,Toronto Raptors,Fiserv Forum,130,112,130,112,Regulation,4,2024,False
+2025-01-17,ESPN:401705147,401705147,2025-01-18T01:00Z,New Orleans Pelicans,Utah Jazz,Smoothie King Center,136,123,136,123,Regulation,4,2024,False
+2025-01-17,ESPN:401705150,401705150,2025-01-18T01:00Z,Chicago Bulls,Charlotte Hornets,United Center,123,125,123,125,Regulation,4,2024,False
+2025-01-17,ESPN:401705149,401705149,2025-01-18T01:30Z,Dallas Mavericks,Oklahoma City Thunder,American Airlines Center,106,98,106,98,Regulation,4,2024,False
+2025-01-17,ESPN:401705148,401705148,2025-01-18T02:30Z,San Antonio Spurs,Memphis Grizzlies,Frost Bank Center,112,140,112,140,Regulation,4,2024,False
+2025-01-17,ESPN:401705151,401705151,2025-01-18T03:30Z,Los Angeles Lakers,Brooklyn Nets,crypto.com Arena,102,101,102,101,Regulation,4,2024,False
+2025-01-18,ESPN:401705152,401705152,2025-01-18T21:00Z,Detroit Pistons,Phoenix Suns,Little Caesars Arena,121,125,121,125,Regulation,4,2024,False
+2025-01-18,ESPN:401705153,401705153,2025-01-19T00:00Z,Boston Celtics,Atlanta Hawks,TD Garden,115,119,104,104,Overtime,5,2024,False
+2025-01-18,ESPN:401705154,401705154,2025-01-19T00:00Z,Indiana Pacers,Philadelphia 76ers,Gainbridge Fieldhouse,115,102,115,102,Regulation,4,2024,False
+2025-01-18,ESPN:401705155,401705155,2025-01-19T01:30Z,Golden State Warriors,Washington Wizards,Chase Center,122,114,122,114,Regulation,4,2024,False
+2025-01-18,ESPN:401705156,401705156,2025-01-19T02:00Z,Minnesota Timberwolves,Cleveland Cavaliers,Target Center,117,124,117,124,Regulation,4,2024,False
+2025-01-18,ESPN:401705157,401705157,2025-01-19T03:00Z,Portland Trail Blazers,Houston Rockets,Moda Center,103,125,103,125,Regulation,4,2024,False
+2025-01-19,ESPN:401705158,401705158,2025-01-19T20:00Z,Miami Heat,San Antonio Spurs,Kaseya Center,128,107,128,107,Regulation,4,2024,False
+2025-01-19,ESPN:401705159,401705159,2025-01-19T23:00Z,Orlando Magic,Denver Nuggets,Kia Center,100,113,100,113,Regulation,4,2024,False
+2025-01-19,ESPN:401705160,401705160,2025-01-20T00:00Z,Milwaukee Bucks,Philadelphia 76ers,Fiserv Forum,123,109,123,109,Regulation,4,2024,False
+2025-01-19,ESPN:401705161,401705161,2025-01-20T00:00Z,Oklahoma City Thunder,Brooklyn Nets,Paycom Center,127,101,127,101,Regulation,4,2024,False
+2025-01-19,ESPN:401705162,401705162,2025-01-20T02:00Z,Los Angeles Clippers,Los Angeles Lakers,Intuit Dome,116,102,116,102,Regulation,4,2024,False
+2025-01-19,ESPN:401705163,401705163,2025-01-20T02:00Z,Portland Trail Blazers,Chicago Bulls,Moda Center,113,102,113,102,Regulation,4,2024,False
+2025-01-19,ESPN:401705164,401705164,2025-01-20T02:00Z,Sacramento Kings,Washington Wizards,Golden 1 Center,123,100,123,100,Regulation,4,2024,False
+2025-01-20,ESPN:401705165,401705165,2025-01-20T17:00Z,Charlotte Hornets,Dallas Mavericks,Spectrum Center,110,105,110,105,Regulation,4,2024,False
+2025-01-20,ESPN:401705166,401705166,2025-01-20T19:00Z,Houston Rockets,Detroit Pistons,Toyota Center (Houston),96,107,96,107,Regulation,4,2024,False
+2025-01-20,ESPN:401705167,401705167,2025-01-20T19:30Z,Memphis Grizzlies,Minnesota Timberwolves,FedExForum,108,106,108,106,Regulation,4,2024,False
+2025-01-20,ESPN:401705168,401705168,2025-01-20T20:00Z,New York Knicks,Atlanta Hawks,Madison Square Garden,119,110,119,110,Regulation,4,2024,False
+2025-01-20,ESPN:401705169,401705169,2025-01-20T20:30Z,Cleveland Cavaliers,Phoenix Suns,Rocket Arena,118,92,118,92,Regulation,4,2024,False
+2025-01-20,ESPN:401705170,401705170,2025-01-20T22:00Z,Golden State Warriors,Boston Celtics,Chase Center,85,125,85,125,Regulation,4,2024,False
+2025-01-20,ESPN:401705171,401705171,2025-01-21T01:00Z,New Orleans Pelicans,Utah Jazz,Smoothie King Center,123,119,110,110,Overtime,5,2024,False
+2025-01-20,ESPN:401705177,401705177,2025-01-21T03:30Z,Los Angeles Clippers,Chicago Bulls,Intuit Dome,99,112,99,112,Regulation,4,2024,False
+2025-01-21,ESPN:401705172,401705172,2025-01-22T00:30Z,Brooklyn Nets,New York Knicks,Barclays Center,95,99,95,99,Regulation,4,2024,False
+2025-01-21,ESPN:401705173,401705173,2025-01-22T00:30Z,Miami Heat,Portland Trail Blazers,Kaseya Center,107,116,107,116,Regulation,4,2024,False
+2025-01-21,ESPN:401705174,401705174,2025-01-22T00:30Z,Toronto Raptors,Orlando Magic,Scotiabank Arena,109,93,109,93,Regulation,4,2024,False
+2025-01-21,ESPN:401705175,401705175,2025-01-22T03:00Z,Denver Nuggets,Philadelphia 76ers,Ball Arena,144,109,144,109,Regulation,4,2024,False
+2025-01-21,ESPN:401705176,401705176,2025-01-22T03:30Z,Los Angeles Lakers,Washington Wizards,crypto.com Arena,111,88,111,88,Regulation,4,2024,False
+2025-01-22,ESPN:401705178,401705178,2025-01-23T00:30Z,Atlanta Hawks,Detroit Pistons,State Farm Arena,104,114,104,114,Regulation,4,2024,False
+2025-01-22,ESPN:401705179,401705179,2025-01-23T00:30Z,Brooklyn Nets,Phoenix Suns,Barclays Center,84,108,84,108,Regulation,4,2024,False
+2025-01-22,ESPN:401705180,401705180,2025-01-23T00:30Z,Dallas Mavericks,Minnesota Timberwolves,American Airlines Center,114,115,114,115,Regulation,4,2024,False
+2025-01-22,ESPN:401705181,401705181,2025-01-23T01:00Z,Houston Rockets,Cleveland Cavaliers,Toyota Center (Houston),109,108,109,108,Regulation,4,2024,False
+2025-01-22,ESPN:401705182,401705182,2025-01-23T01:00Z,Memphis Grizzlies,Charlotte Hornets,FedExForum,132,120,132,120,Regulation,4,2024,False
+2025-01-22,ESPN:401705184,401705184,2025-01-23T01:00Z,Oklahoma City Thunder,Utah Jazz,Paycom Center,123,114,123,114,Regulation,4,2024,False
+2025-01-22,ESPN:401705185,401705185,2025-01-23T03:00Z,Sacramento Kings,Golden State Warriors,Golden 1 Center,123,117,123,117,Regulation,4,2024,False
+2025-01-22,ESPN:401705186,401705186,2025-01-23T03:30Z,Los Angeles Clippers,Boston Celtics,Intuit Dome,113,117,103,103,Overtime,5,2024,False
+2025-01-23,ESPN:401705187,401705187,2025-01-23T19:00Z,Indiana Pacers,San Antonio Spurs,Accor Arena,110,140,110,140,Regulation,4,2024,True
+2025-01-23,ESPN:401705188,401705188,2025-01-24T00:00Z,Orlando Magic,Portland Trail Blazers,Kia Center,79,101,79,101,Regulation,4,2024,False
+2025-01-23,ESPN:401705189,401705189,2025-01-24T00:30Z,Atlanta Hawks,Toronto Raptors,State Farm Arena,119,122,119,122,Regulation,4,2024,False
+2025-01-23,ESPN:401705191,401705191,2025-01-24T01:00Z,Oklahoma City Thunder,Dallas Mavericks,Paycom Center,115,121,115,121,Regulation,4,2024,False
+2025-01-23,ESPN:401705190,401705190,2025-01-24T01:30Z,Milwaukee Bucks,Miami Heat,Fiserv Forum,125,96,125,96,Regulation,4,2024,False
+2025-01-23,ESPN:401705192,401705192,2025-01-24T02:00Z,Denver Nuggets,Sacramento Kings,Ball Arena,132,123,132,123,Regulation,4,2024,False
+2025-01-23,ESPN:401705194,401705194,2025-01-24T03:00Z,Golden State Warriors,Chicago Bulls,Chase Center,131,106,131,106,Regulation,4,2024,False
+2025-01-23,ESPN:401705195,401705195,2025-01-24T03:00Z,Los Angeles Lakers,Boston Celtics,crypto.com Arena,117,96,117,96,Regulation,4,2024,False
+2025-01-23,ESPN:401705549,401705549,2025-01-24T03:30Z,Los Angeles Clippers,Washington Wizards,Intuit Dome,110,93,110,93,Regulation,4,2024,False
+2025-01-24,ESPN:401705196,401705196,2025-01-25T00:00Z,Charlotte Hornets,Portland Trail Blazers,Spectrum Center,97,102,97,102,Regulation,4,2024,False
+2025-01-24,ESPN:401705197,401705197,2025-01-25T00:00Z,Philadelphia 76ers,Cleveland Cavaliers,Xfinity Mobile Arena,132,129,132,129,Regulation,4,2024,False
+2025-01-24,ESPN:401705198,401705198,2025-01-25T01:00Z,Memphis Grizzlies,New Orleans Pelicans,FedExForum,139,126,139,126,Regulation,4,2024,False
+2025-01-25,ESPN:401705199,401705199,2025-01-25T17:00Z,San Antonio Spurs,Indiana Pacers,Accor Arena,98,136,98,136,Regulation,4,2024,True
+2025-01-25,ESPN:401705200,401705200,2025-01-25T20:00Z,Minnesota Timberwolves,Denver Nuggets,Target Center,133,104,133,104,Regulation,4,2024,False
+2025-01-25,ESPN:401705201,401705201,2025-01-25T22:30Z,Dallas Mavericks,Boston Celtics,American Airlines Center,107,122,107,122,Regulation,4,2024,False
+2025-01-25,ESPN:401705202,401705202,2025-01-25T23:00Z,Brooklyn Nets,Miami Heat,Barclays Center,97,106,97,106,Regulation,4,2024,False
+2025-01-25,ESPN:401705203,401705203,2025-01-26T00:00Z,Charlotte Hornets,New Orleans Pelicans,Spectrum Center,123,92,123,92,Regulation,4,2024,False
+2025-01-25,ESPN:401705204,401705204,2025-01-26T00:00Z,Orlando Magic,Detroit Pistons,Kia Center,121,113,121,113,Regulation,4,2024,False
+2025-01-25,ESPN:401705205,401705205,2025-01-26T00:30Z,Atlanta Hawks,Toronto Raptors,State Farm Arena,94,117,94,117,Regulation,4,2024,False
+2025-01-25,ESPN:401705206,401705206,2025-01-26T00:30Z,Cleveland Cavaliers,Houston Rockets,Rocket Arena,131,135,131,135,Regulation,4,2024,False
+2025-01-25,ESPN:401705207,401705207,2025-01-26T00:30Z,New York Knicks,Sacramento Kings,Madison Square Garden,143,120,143,120,Regulation,4,2024,False
+2025-01-25,ESPN:401705208,401705208,2025-01-26T01:00Z,Chicago Bulls,Philadelphia 76ers,United Center,97,109,97,109,Regulation,4,2024,False
+2025-01-25,ESPN:401705209,401705209,2025-01-26T01:00Z,Memphis Grizzlies,Utah Jazz,FedExForum,125,103,125,103,Regulation,4,2024,False
+2025-01-25,ESPN:401705210,401705210,2025-01-26T01:30Z,Golden State Warriors,Los Angeles Lakers,Chase Center,108,118,108,118,Regulation,4,2024,False
+2025-01-25,ESPN:401705211,401705211,2025-01-26T02:00Z,Phoenix Suns,Washington Wizards,Mortgage Matchup Center,119,109,119,109,Regulation,4,2024,False
+2025-01-25,ESPN:401705212,401705212,2025-01-26T03:30Z,Los Angeles Clippers,Milwaukee Bucks,Intuit Dome,127,117,127,117,Regulation,4,2024,False
+2025-01-26,ESPN:401705213,401705213,2025-01-26T23:00Z,Portland Trail Blazers,Oklahoma City Thunder,Moda Center,108,118,108,118,Regulation,4,2024,False
+2025-01-27,ESPN:401705214,401705214,2025-01-28T00:00Z,Charlotte Hornets,Los Angeles Lakers,Spectrum Center,107,112,107,112,Regulation,4,2024,False
+2025-01-27,ESPN:401705215,401705215,2025-01-28T00:00Z,Cleveland Cavaliers,Detroit Pistons,Rocket Arena,110,91,110,91,Regulation,4,2024,False
+2025-01-27,ESPN:401705216,401705216,2025-01-28T00:30Z,Boston Celtics,Houston Rockets,TD Garden,112,114,112,114,Regulation,4,2024,False
+2025-01-27,ESPN:401705217,401705217,2025-01-28T00:30Z,Brooklyn Nets,Sacramento Kings,Barclays Center,96,110,96,110,Regulation,4,2024,False
+2025-01-27,ESPN:401705218,401705218,2025-01-28T00:30Z,Miami Heat,Orlando Magic,Kaseya Center,125,119,108,108,Overtime,6,2024,False
+2025-01-27,ESPN:401705219,401705219,2025-01-28T00:30Z,New York Knicks,Memphis Grizzlies,Madison Square Garden,143,106,143,106,Regulation,4,2024,False
+2025-01-27,ESPN:401705220,401705220,2025-01-28T00:30Z,Toronto Raptors,New Orleans Pelicans,Scotiabank Arena,113,104,113,104,Regulation,4,2024,False
+2025-01-27,ESPN:401705221,401705221,2025-01-28T01:00Z,Chicago Bulls,Denver Nuggets,United Center,129,121,129,121,Regulation,4,2024,False
+2025-01-27,ESPN:401705222,401705222,2025-01-28T01:00Z,Minnesota Timberwolves,Atlanta Hawks,Target Center,100,92,100,92,Regulation,4,2024,False
+2025-01-27,ESPN:401705223,401705223,2025-01-28T01:30Z,Dallas Mavericks,Washington Wizards,American Airlines Center,130,108,130,108,Regulation,4,2024,False
+2025-01-27,ESPN:401705224,401705224,2025-01-28T02:00Z,Utah Jazz,Milwaukee Bucks,Delta Center,110,125,110,125,Regulation,4,2024,False
+2025-01-27,ESPN:401705225,401705225,2025-01-28T02:30Z,Phoenix Suns,Los Angeles Clippers,Mortgage Matchup Center,111,109,111,109,Regulation,4,2024,False
+2025-01-28,ESPN:401705226,401705226,2025-01-29T00:30Z,Philadelphia 76ers,Los Angeles Lakers,Xfinity Mobile Arena,118,104,118,104,Regulation,4,2024,False
+2025-01-28,ESPN:401748705,401748705,2025-01-29T00:30Z,Atlanta Hawks,Houston Rockets,State Farm Arena,96,100,96,100,Regulation,4,2024,False
+2025-01-28,ESPN:401705227,401705227,2025-01-29T03:00Z,Golden State Warriors,Utah Jazz,Chase Center,114,103,114,103,Regulation,4,2024,False
+2025-01-28,ESPN:401705228,401705228,2025-01-29T03:00Z,Portland Trail Blazers,Milwaukee Bucks,Moda Center,125,112,125,112,Regulation,4,2024,False
+2025-01-29,ESPN:401705229,401705229,2025-01-30T00:00Z,Charlotte Hornets,Brooklyn Nets,Spectrum Center,83,104,83,104,Regulation,4,2024,False
+2025-01-29,ESPN:401705230,401705230,2025-01-30T00:00Z,Indiana Pacers,Detroit Pistons,Gainbridge Fieldhouse,133,119,133,119,Regulation,4,2024,False
+2025-01-29,ESPN:401705231,401705231,2025-01-30T00:00Z,Washington Wizards,Toronto Raptors,Capital One Arena,82,106,82,106,Regulation,4,2024,False
+2025-01-29,ESPN:401705232,401705232,2025-01-30T00:30Z,Boston Celtics,Chicago Bulls,TD Garden,122,100,122,100,Regulation,4,2024,False
+2025-01-29,ESPN:401705233,401705233,2025-01-30T00:30Z,Miami Heat,Cleveland Cavaliers,Kaseya Center,106,126,106,126,Regulation,4,2024,False
+2025-01-29,ESPN:401705234,401705234,2025-01-30T00:30Z,New York Knicks,Denver Nuggets,Madison Square Garden,122,112,122,112,Regulation,4,2024,False
+2025-01-29,ESPN:401705235,401705235,2025-01-30T00:30Z,Philadelphia 76ers,Sacramento Kings,Xfinity Mobile Arena,117,104,117,104,Regulation,4,2024,False
+2025-01-29,ESPN:401705236,401705236,2025-01-30T01:00Z,New Orleans Pelicans,Dallas Mavericks,Smoothie King Center,136,137,136,137,Regulation,4,2024,False
+2025-01-29,ESPN:401705237,401705237,2025-01-30T01:00Z,San Antonio Spurs,Los Angeles Clippers,Frost Bank Center,116,128,116,128,Regulation,4,2024,False
+2025-01-29,ESPN:401705238,401705238,2025-01-30T02:00Z,Phoenix Suns,Minnesota Timberwolves,Mortgage Matchup Center,113,121,113,121,Regulation,4,2024,False
+2025-01-29,ESPN:401705239,401705239,2025-01-30T03:00Z,Golden State Warriors,Oklahoma City Thunder,Chase Center,116,109,116,109,Regulation,4,2024,False
+2025-01-30,ESPN:401705240,401705240,2025-01-31T00:00Z,Washington Wizards,Los Angeles Lakers,Capital One Arena,96,134,96,134,Regulation,4,2024,False
+2025-01-30,ESPN:401705241,401705241,2025-01-31T00:00Z,Cleveland Cavaliers,Atlanta Hawks,Rocket Arena,137,115,137,115,Regulation,4,2024,False
+2025-01-30,ESPN:401705243,401705243,2025-01-31T02:00Z,Utah Jazz,Minnesota Timberwolves,Delta Center,113,138,113,138,Regulation,4,2024,False
+2025-01-30,ESPN:401705242,401705242,2025-01-31T02:30Z,Memphis Grizzlies,Houston Rockets,FedExForum,120,119,120,119,Regulation,4,2024,False
+2025-01-30,ESPN:401705244,401705244,2025-01-31T03:00Z,Portland Trail Blazers,Orlando Magic,Moda Center,119,90,119,90,Regulation,4,2024,False
+2025-01-31,ESPN:401705245,401705245,2025-02-01T00:00Z,Charlotte Hornets,Los Angeles Clippers,Spectrum Center,104,112,104,112,Regulation,4,2024,False
+2025-01-31,ESPN:401705246,401705246,2025-02-01T00:00Z,Detroit Pistons,Dallas Mavericks,Little Caesars Arena,117,102,117,102,Regulation,4,2024,False
+2025-01-31,ESPN:401705247,401705247,2025-02-01T00:30Z,Philadelphia 76ers,Denver Nuggets,Xfinity Mobile Arena,134,137,134,137,Regulation,4,2024,False
+2025-01-31,ESPN:401705248,401705248,2025-02-01T00:30Z,Toronto Raptors,Chicago Bulls,Scotiabank Arena,106,122,106,122,Regulation,4,2024,False
+2025-01-31,ESPN:401705249,401705249,2025-02-01T01:00Z,New Orleans Pelicans,Boston Celtics,Smoothie King Center,116,118,116,118,Regulation,4,2024,False
+2025-01-31,ESPN:401705250,401705250,2025-02-01T01:00Z,San Antonio Spurs,Milwaukee Bucks,Frost Bank Center,144,118,144,118,Regulation,4,2024,False
+2025-01-31,ESPN:401705251,401705251,2025-02-01T03:00Z,Golden State Warriors,Phoenix Suns,Chase Center,105,130,105,130,Regulation,4,2024,False
+2025-02-01,ESPN:401705252,401705252,2025-02-01T22:00Z,Indiana Pacers,Atlanta Hawks,Gainbridge Fieldhouse,132,127,132,127,Regulation,4,2024,False
+2025-02-01,ESPN:401705253,401705253,2025-02-01T22:00Z,Utah Jazz,Orlando Magic,Delta Center,113,99,113,99,Regulation,4,2024,False
+2025-02-01,ESPN:401705254,401705254,2025-02-02T00:00Z,Charlotte Hornets,Denver Nuggets,Spectrum Center,104,107,104,107,Regulation,4,2024,False
+2025-02-01,ESPN:401705255,401705255,2025-02-02T01:00Z,Houston Rockets,Brooklyn Nets,Toyota Center (Houston),98,110,98,110,Regulation,4,2024,False
+2025-02-01,ESPN:401705256,401705256,2025-02-02T01:00Z,Minnesota Timberwolves,Washington Wizards,Target Center,103,105,103,105,Regulation,4,2024,False
+2025-02-01,ESPN:401705257,401705257,2025-02-02T01:00Z,Oklahoma City Thunder,Sacramento Kings,Paycom Center,144,110,144,110,Regulation,4,2024,False
+2025-02-01,ESPN:401705258,401705258,2025-02-02T01:30Z,New York Knicks,Los Angeles Lakers,Madison Square Garden,112,128,112,128,Regulation,4,2024,False
+2025-02-01,ESPN:401705259,401705259,2025-02-02T01:30Z,San Antonio Spurs,Miami Heat,Frost Bank Center,103,105,103,105,Regulation,4,2024,False
+2025-02-01,ESPN:401705260,401705260,2025-02-02T03:00Z,Portland Trail Blazers,Phoenix Suns,Moda Center,127,108,127,108,Regulation,4,2024,False
+2025-02-02,ESPN:401705261,401705261,2025-02-02T20:00Z,Detroit Pistons,Chicago Bulls,Little Caesars Arena,127,119,127,119,Regulation,4,2024,False
+2025-02-02,ESPN:401705262,401705262,2025-02-02T20:30Z,Cleveland Cavaliers,Dallas Mavericks,Rocket Arena,144,101,144,101,Regulation,4,2024,False
+2025-02-02,ESPN:401705263,401705263,2025-02-02T20:30Z,Toronto Raptors,Los Angeles Clippers,Scotiabank Arena,115,108,115,108,Regulation,4,2024,False
+2025-02-02,ESPN:401705264,401705264,2025-02-02T23:00Z,Philadelphia 76ers,Boston Celtics,Xfinity Mobile Arena,110,118,110,118,Regulation,4,2024,False
+2025-02-02,ESPN:401705265,401705265,2025-02-03T01:30Z,Milwaukee Bucks,Memphis Grizzlies,Fiserv Forum,119,132,119,132,Regulation,4,2024,False
+2025-02-03,ESPN:401705266,401705266,2025-02-04T00:00Z,Charlotte Hornets,Washington Wizards,Spectrum Center,114,124,114,124,Regulation,4,2024,False
+2025-02-03,ESPN:401705267,401705267,2025-02-04T00:00Z,Detroit Pistons,Atlanta Hawks,Little Caesars Arena,130,132,130,132,Regulation,4,2024,False
+2025-02-03,ESPN:401705268,401705268,2025-02-04T00:30Z,New York Knicks,Houston Rockets,Madison Square Garden,124,118,124,118,Regulation,4,2024,False
+2025-02-03,ESPN:401705270,401705270,2025-02-04T01:00Z,Minnesota Timberwolves,Sacramento Kings,Target Center,114,116,114,116,Regulation,4,2024,False
+2025-02-03,ESPN:401705271,401705271,2025-02-04T01:00Z,Oklahoma City Thunder,Milwaukee Bucks,Paycom Center,125,96,125,96,Regulation,4,2024,False
+2025-02-03,ESPN:401705269,401705269,2025-02-04T01:50Z,Memphis Grizzlies,San Antonio Spurs,FedExForum,128,109,128,109,Regulation,4,2024,False
+2025-02-03,ESPN:401705272,401705272,2025-02-04T02:00Z,Denver Nuggets,New Orleans Pelicans,Ball Arena,125,113,125,113,Regulation,4,2024,False
+2025-02-03,ESPN:401705273,401705273,2025-02-04T02:00Z,Utah Jazz,Indiana Pacers,Delta Center,111,112,111,112,Regulation,4,2024,False
+2025-02-03,ESPN:401705274,401705274,2025-02-04T03:00Z,Golden State Warriors,Orlando Magic,Chase Center,104,99,104,99,Regulation,4,2024,False
+2025-02-03,ESPN:401705275,401705275,2025-02-04T03:00Z,Portland Trail Blazers,Phoenix Suns,Moda Center,121,119,107,107,Overtime,5,2024,False
+2025-02-04,ESPN:401705278,401705278,2025-02-05T00:00Z,Philadelphia 76ers,Dallas Mavericks,Xfinity Mobile Arena,118,116,118,116,Regulation,4,2024,False
+2025-02-04,ESPN:401705276,401705276,2025-02-05T00:30Z,Cleveland Cavaliers,Boston Celtics,Rocket Arena,105,112,105,112,Regulation,4,2024,False
+2025-02-04,ESPN:401705277,401705277,2025-02-05T00:30Z,Brooklyn Nets,Houston Rockets,Barclays Center,99,97,99,97,Regulation,4,2024,False
+2025-02-04,ESPN:401705279,401705279,2025-02-05T00:30Z,Toronto Raptors,New York Knicks,Scotiabank Arena,115,121,115,121,Regulation,4,2024,False
+2025-02-04,ESPN:401705280,401705280,2025-02-05T01:00Z,Chicago Bulls,Miami Heat,United Center,133,124,133,124,Regulation,4,2024,False
+2025-02-04,ESPN:401705281,401705281,2025-02-05T03:00Z,Los Angeles Clippers,Los Angeles Lakers,Intuit Dome,97,122,97,122,Regulation,4,2024,False
+2025-02-04,ESPN:401705282,401705282,2025-02-05T03:00Z,Portland Trail Blazers,Indiana Pacers,Moda Center,112,89,112,89,Regulation,4,2024,False
+2025-02-05,ESPN:401705283,401705283,2025-02-06T00:00Z,Charlotte Hornets,Milwaukee Bucks,Spectrum Center,102,112,102,112,Regulation,4,2024,False
+2025-02-05,ESPN:401705284,401705284,2025-02-06T00:00Z,Detroit Pistons,Cleveland Cavaliers,Little Caesars Arena,115,118,115,118,Regulation,4,2024,False
+2025-02-05,ESPN:401705285,401705285,2025-02-06T00:00Z,Atlanta Hawks,San Antonio Spurs,State Farm Arena,125,126,125,126,Regulation,4,2024,False
+2025-02-05,ESPN:401705286,401705286,2025-02-06T00:30Z,Brooklyn Nets,Washington Wizards,Barclays Center,102,119,102,119,Regulation,4,2024,False
+2025-02-05,ESPN:401705287,401705287,2025-02-06T00:30Z,Philadelphia 76ers,Miami Heat,Xfinity Mobile Arena,101,108,101,108,Regulation,4,2024,False
+2025-02-05,ESPN:401705288,401705288,2025-02-06T00:30Z,Toronto Raptors,Memphis Grizzlies,Scotiabank Arena,107,138,107,138,Regulation,4,2024,False
+2025-02-05,ESPN:401705289,401705289,2025-02-06T01:00Z,Minnesota Timberwolves,Chicago Bulls,Target Center,127,108,127,108,Regulation,4,2024,False
+2025-02-05,ESPN:401705291,401705291,2025-02-06T02:00Z,Utah Jazz,Golden State Warriors,Delta Center,131,128,131,128,Regulation,4,2024,False
+2025-02-05,ESPN:401705292,401705292,2025-02-06T02:00Z,Denver Nuggets,New Orleans Pelicans,Ball Arena,144,119,144,119,Regulation,4,2024,False
+2025-02-05,ESPN:401705290,401705290,2025-02-06T02:30Z,Oklahoma City Thunder,Phoenix Suns,Paycom Center,140,109,140,109,Regulation,4,2024,False
+2025-02-05,ESPN:401705293,401705293,2025-02-06T03:00Z,Sacramento Kings,Orlando Magic,Golden 1 Center,111,130,111,130,Regulation,4,2024,False
+2025-02-06,ESPN:401705294,401705294,2025-02-07T00:30Z,Boston Celtics,Dallas Mavericks,TD Garden,120,127,120,127,Regulation,4,2024,False
+2025-02-06,ESPN:401705295,401705295,2025-02-07T01:00Z,Minnesota Timberwolves,Houston Rockets,Target Center,127,114,127,114,Regulation,4,2024,False
+2025-02-06,ESPN:401705296,401705296,2025-02-07T02:00Z,Denver Nuggets,Orlando Magic,Ball Arena,112,90,112,90,Regulation,4,2024,False
+2025-02-06,ESPN:401705297,401705297,2025-02-07T03:00Z,Los Angeles Lakers,Golden State Warriors,crypto.com Arena,120,112,120,112,Regulation,4,2024,False
+2025-02-06,ESPN:401705298,401705298,2025-02-07T03:00Z,Portland Trail Blazers,Sacramento Kings,Moda Center,108,102,108,102,Regulation,4,2024,False
+2025-02-06,ESPN:401705299,401705299,2025-02-07T03:30Z,Los Angeles Clippers,Indiana Pacers,Intuit Dome,112,119,112,119,Regulation,4,2024,False
+2025-02-07,ESPN:401705300,401705300,2025-02-08T00:00Z,Charlotte Hornets,San Antonio Spurs,Spectrum Center,117,116,117,116,Regulation,4,2024,False
+2025-02-07,ESPN:401705301,401705301,2025-02-08T00:00Z,Washington Wizards,Cleveland Cavaliers,Capital One Arena,124,134,124,134,Regulation,4,2024,False
+2025-02-07,ESPN:401705302,401705302,2025-02-08T00:30Z,Atlanta Hawks,Milwaukee Bucks,State Farm Arena,115,110,115,110,Regulation,4,2024,False
+2025-02-07,ESPN:401705303,401705303,2025-02-08T00:30Z,Brooklyn Nets,Miami Heat,Barclays Center,102,86,102,86,Regulation,4,2024,False
+2025-02-07,ESPN:401705304,401705304,2025-02-08T00:30Z,Detroit Pistons,Philadelphia 76ers,Little Caesars Arena,125,112,125,112,Regulation,4,2024,False
+2025-02-07,ESPN:401705305,401705305,2025-02-08T01:00Z,Oklahoma City Thunder,Toronto Raptors,Paycom Center,121,109,121,109,Regulation,4,2024,False
+2025-02-07,ESPN:401705306,401705306,2025-02-08T03:00Z,Phoenix Suns,Utah Jazz,Mortgage Matchup Center,135,127,122,122,Overtime,5,2024,False
+2025-02-08,ESPN:401705307,401705307,2025-02-08T20:00Z,Dallas Mavericks,Houston Rockets,American Airlines Center,116,105,116,105,Regulation,4,2024,False
+2025-02-08,ESPN:401705308,401705308,2025-02-08T21:00Z,Los Angeles Lakers,Indiana Pacers,crypto.com Arena,124,117,124,117,Regulation,4,2024,False
+2025-02-08,ESPN:401705309,401705309,2025-02-09T00:00Z,Orlando Magic,San Antonio Spurs,Kia Center,112,111,112,111,Regulation,4,2024,False
+2025-02-08,ESPN:401705310,401705310,2025-02-09T00:00Z,Washington Wizards,Atlanta Hawks,Capital One Arena,111,125,111,125,Regulation,4,2024,False
+2025-02-08,ESPN:401705311,401705311,2025-02-09T01:00Z,Chicago Bulls,Golden State Warriors,United Center,111,132,111,132,Regulation,4,2024,False
+2025-02-08,ESPN:401705312,401705312,2025-02-09T01:00Z,Memphis Grizzlies,Oklahoma City Thunder,FedExForum,112,125,112,125,Regulation,4,2024,False
+2025-02-08,ESPN:401705313,401705313,2025-02-09T01:00Z,Minnesota Timberwolves,Portland Trail Blazers,Target Center,114,98,114,98,Regulation,4,2024,False
+2025-02-08,ESPN:401705314,401705314,2025-02-09T01:30Z,New York Knicks,Boston Celtics,Madison Square Garden,104,131,104,131,Regulation,4,2024,False
+2025-02-08,ESPN:401705315,401705315,2025-02-09T02:00Z,Phoenix Suns,Denver Nuggets,Mortgage Matchup Center,105,122,105,122,Regulation,4,2024,False
+2025-02-08,ESPN:401705316,401705316,2025-02-09T03:00Z,Sacramento Kings,New Orleans Pelicans,Golden 1 Center,123,118,123,118,Regulation,4,2024,False
+2025-02-08,ESPN:401705317,401705317,2025-02-09T03:30Z,Los Angeles Clippers,Utah Jazz,Intuit Dome,130,110,130,110,Regulation,4,2024,False
+2025-02-09,ESPN:401705318,401705318,2025-02-09T18:00Z,Detroit Pistons,Charlotte Hornets,Little Caesars Arena,112,102,112,102,Regulation,4,2024,False
+2025-02-09,ESPN:401705319,401705319,2025-02-09T19:00Z,Houston Rockets,Toronto Raptors,Toyota Center (Houston),94,87,94,87,Regulation,4,2024,False
+2025-02-09,ESPN:401705320,401705320,2025-02-09T19:00Z,Milwaukee Bucks,Philadelphia 76ers,Fiserv Forum,135,127,135,127,Regulation,4,2024,False
+2025-02-10,ESPN:401705321,401705321,2025-02-11T00:00Z,Cleveland Cavaliers,Minnesota Timberwolves,Rocket Arena,128,107,128,107,Regulation,4,2024,False
+2025-02-10,ESPN:401705322,401705322,2025-02-11T00:00Z,Orlando Magic,Atlanta Hawks,Kia Center,106,112,106,112,Regulation,4,2024,False
+2025-02-10,ESPN:401705323,401705323,2025-02-11T00:00Z,Washington Wizards,San Antonio Spurs,Capital One Arena,121,131,121,131,Regulation,4,2024,False
+2025-02-10,ESPN:401705324,401705324,2025-02-11T00:30Z,Brooklyn Nets,Charlotte Hornets,Barclays Center,97,89,97,89,Regulation,4,2024,False
+2025-02-10,ESPN:401705325,401705325,2025-02-11T00:30Z,Miami Heat,Boston Celtics,Kaseya Center,85,103,85,103,Regulation,4,2024,False
+2025-02-10,ESPN:401705326,401705326,2025-02-11T01:00Z,Milwaukee Bucks,Golden State Warriors,Fiserv Forum,111,125,111,125,Regulation,4,2024,False
+2025-02-10,ESPN:401705327,401705327,2025-02-11T01:00Z,Oklahoma City Thunder,New Orleans Pelicans,Paycom Center,137,101,137,101,Regulation,4,2024,False
+2025-02-10,ESPN:401705328,401705328,2025-02-11T01:30Z,Dallas Mavericks,Sacramento Kings,American Airlines Center,128,129,116,116,Overtime,5,2024,False
+2025-02-10,ESPN:401705329,401705329,2025-02-11T02:00Z,Denver Nuggets,Portland Trail Blazers,Ball Arena,146,117,146,117,Regulation,4,2024,False
+2025-02-10,ESPN:401705334,401705334,2025-02-11T03:30Z,Los Angeles Lakers,Utah Jazz,crypto.com Arena,132,113,132,113,Regulation,4,2024,False
+2025-02-11,ESPN:401705330,401705330,2025-02-12T00:00Z,Philadelphia 76ers,Toronto Raptors,Xfinity Mobile Arena,103,106,103,106,Regulation,4,2024,False
+2025-02-11,ESPN:401705331,401705331,2025-02-12T00:30Z,Indiana Pacers,New York Knicks,Gainbridge Fieldhouse,115,128,115,128,Regulation,4,2024,False
+2025-02-11,ESPN:401705332,401705332,2025-02-12T01:00Z,Chicago Bulls,Detroit Pistons,United Center,92,132,92,132,Regulation,4,2024,False
+2025-02-11,ESPN:401705333,401705333,2025-02-12T03:00Z,Phoenix Suns,Memphis Grizzlies,Mortgage Matchup Center,112,119,112,119,Regulation,4,2024,False
+2025-02-12,ESPN:401705335,401705335,2025-02-13T00:00Z,Boston Celtics,San Antonio Spurs,TD Garden,116,103,116,103,Regulation,4,2024,False
+2025-02-12,ESPN:401705336,401705336,2025-02-13T00:00Z,Orlando Magic,Charlotte Hornets,Kia Center,102,86,102,86,Regulation,4,2024,False
+2025-02-12,ESPN:401705337,401705337,2025-02-13T00:00Z,Washington Wizards,Indiana Pacers,Capital One Arena,130,134,120,120,Overtime,5,2024,False
+2025-02-12,ESPN:401705338,401705338,2025-02-13T00:30Z,Brooklyn Nets,Philadelphia 76ers,Barclays Center,100,96,100,96,Regulation,4,2024,False
+2025-02-12,ESPN:401705339,401705339,2025-02-13T00:30Z,New York Knicks,Atlanta Hawks,Madison Square Garden,149,148,137,137,Overtime,5,2024,False
+2025-02-12,ESPN:401705340,401705340,2025-02-13T00:30Z,Toronto Raptors,Cleveland Cavaliers,Scotiabank Arena,108,131,108,131,Regulation,4,2024,False
+2025-02-12,ESPN:401705341,401705341,2025-02-13T01:00Z,Chicago Bulls,Detroit Pistons,United Center,110,128,110,128,Regulation,4,2024,False
+2025-02-12,ESPN:401705342,401705342,2025-02-13T01:00Z,Minnesota Timberwolves,Milwaukee Bucks,Target Center,101,103,101,103,Regulation,4,2024,False
+2025-02-12,ESPN:401705343,401705343,2025-02-13T01:00Z,New Orleans Pelicans,Sacramento Kings,Smoothie King Center,111,119,111,119,Regulation,4,2024,False
+2025-02-12,ESPN:401705344,401705344,2025-02-13T01:00Z,Oklahoma City Thunder,Miami Heat,Paycom Center,115,101,115,101,Regulation,4,2024,False
+2025-02-12,ESPN:401705345,401705345,2025-02-13T01:30Z,Houston Rockets,Phoenix Suns,Toyota Center (Houston),119,111,119,111,Regulation,4,2024,False
+2025-02-12,ESPN:401705346,401705346,2025-02-13T02:00Z,Denver Nuggets,Portland Trail Blazers,Ball Arena,132,121,132,121,Regulation,4,2024,False
+2025-02-12,ESPN:401705347,401705347,2025-02-13T02:00Z,Utah Jazz,Los Angeles Lakers,Delta Center,131,119,131,119,Regulation,4,2024,False
+2025-02-12,ESPN:401705348,401705348,2025-02-13T02:30Z,Dallas Mavericks,Golden State Warriors,American Airlines Center,111,107,111,107,Regulation,4,2024,False
+2025-02-12,ESPN:401705349,401705349,2025-02-13T03:30Z,Los Angeles Clippers,Memphis Grizzlies,Intuit Dome,128,114,128,114,Regulation,4,2024,False
+2025-02-13,ESPN:401705350,401705350,2025-02-14T01:00Z,Houston Rockets,Golden State Warriors,Toyota Center (Houston),98,105,98,105,Regulation,4,2024,False
+2025-02-13,ESPN:401705351,401705351,2025-02-14T01:00Z,New Orleans Pelicans,Sacramento Kings,Smoothie King Center,140,133,127,127,Overtime,5,2024,False
+2025-02-13,ESPN:401705352,401705352,2025-02-14T01:30Z,Dallas Mavericks,Miami Heat,American Airlines Center,118,113,118,113,Regulation,4,2024,False
+2025-02-13,ESPN:401705353,401705353,2025-02-14T01:30Z,Minnesota Timberwolves,Oklahoma City Thunder,Target Center,116,101,116,101,Regulation,4,2024,False
+2025-02-13,ESPN:401705570,401705570,2025-02-14T02:00Z,Utah Jazz,Los Angeles Clippers,Delta Center,116,120,108,108,Overtime,5,2024,False
+2025-02-19,ESPN:401748704,401748704,2025-02-20T03:00Z,Los Angeles Lakers,Charlotte Hornets,crypto.com Arena,97,100,97,100,Regulation,4,2024,False
+2025-02-20,ESPN:401705354,401705354,2025-02-21T00:00Z,Indiana Pacers,Memphis Grizzlies,Gainbridge Fieldhouse,127,113,127,113,Regulation,4,2024,False
+2025-02-20,ESPN:401705355,401705355,2025-02-21T00:00Z,Philadelphia 76ers,Boston Celtics,Xfinity Mobile Arena,104,124,104,124,Regulation,4,2024,False
+2025-02-20,ESPN:401705356,401705356,2025-02-21T00:30Z,Atlanta Hawks,Orlando Magic,State Farm Arena,108,114,108,114,Regulation,4,2024,False
+2025-02-20,ESPN:401705357,401705357,2025-02-21T00:30Z,Brooklyn Nets,Cleveland Cavaliers,Barclays Center,97,110,97,110,Regulation,4,2024,False
+2025-02-20,ESPN:401705358,401705358,2025-02-21T00:30Z,New York Knicks,Chicago Bulls,Madison Square Garden,113,111,104,104,Overtime,5,2024,False
+2025-02-20,ESPN:401705359,401705359,2025-02-21T01:00Z,Milwaukee Bucks,Los Angeles Clippers,Fiserv Forum,116,110,116,110,Regulation,4,2024,False
+2025-02-20,ESPN:401705360,401705360,2025-02-21T02:00Z,Denver Nuggets,Charlotte Hornets,Ball Arena,129,115,129,115,Regulation,4,2024,False
+2025-02-20,ESPN:401705361,401705361,2025-02-21T02:30Z,San Antonio Spurs,Phoenix Suns,Moody Center,120,109,120,109,Regulation,4,2024,False
+2025-02-20,ESPN:401705362,401705362,2025-02-21T03:00Z,Portland Trail Blazers,Los Angeles Lakers,Moda Center,102,110,102,110,Regulation,4,2024,False
+2025-02-21,ESPN:401705363,401705363,2025-02-22T00:00Z,Cleveland Cavaliers,New York Knicks,Rocket Arena,142,105,142,105,Regulation,4,2024,False
+2025-02-21,ESPN:401705364,401705364,2025-02-22T00:00Z,Orlando Magic,Memphis Grizzlies,Kia Center,104,105,104,105,Regulation,4,2024,False
+2025-02-21,ESPN:401705365,401705365,2025-02-22T00:00Z,Washington Wizards,Milwaukee Bucks,Capital One Arena,101,104,101,104,Regulation,4,2024,False
+2025-02-21,ESPN:401705366,401705366,2025-02-22T00:30Z,Toronto Raptors,Miami Heat,Scotiabank Arena,111,120,107,107,Overtime,5,2024,False
+2025-02-21,ESPN:401705368,401705368,2025-02-22T01:30Z,San Antonio Spurs,Detroit Pistons,Moody Center,110,125,110,125,Regulation,4,2024,False
+2025-02-21,ESPN:401705369,401705369,2025-02-22T01:30Z,Dallas Mavericks,New Orleans Pelicans,American Airlines Center,111,103,111,103,Regulation,4,2024,False
+2025-02-21,ESPN:401705367,401705367,2025-02-22T02:30Z,Houston Rockets,Minnesota Timberwolves,Toyota Center (Houston),121,115,121,115,Regulation,4,2024,False
+2025-02-21,ESPN:401705370,401705370,2025-02-22T02:30Z,Utah Jazz,Oklahoma City Thunder,Delta Center,107,130,107,130,Regulation,4,2024,False
+2025-02-21,ESPN:401705371,401705371,2025-02-22T03:00Z,Sacramento Kings,Golden State Warriors,Golden 1 Center,108,132,108,132,Regulation,4,2024,False
+2025-02-22,ESPN:401705372,401705372,2025-02-22T22:00Z,Chicago Bulls,Phoenix Suns,United Center,117,121,117,121,Regulation,4,2024,False
+2025-02-22,ESPN:401705373,401705373,2025-02-23T00:30Z,Philadelphia 76ers,Brooklyn Nets,Xfinity Mobile Arena,103,105,103,105,Regulation,4,2024,False
+2025-02-22,ESPN:401705374,401705374,2025-02-23T01:30Z,Denver Nuggets,Los Angeles Lakers,Ball Arena,100,123,100,123,Regulation,4,2024,False
+2025-02-22,ESPN:401705375,401705375,2025-02-23T02:30Z,Utah Jazz,Houston Rockets,Delta Center,124,115,124,115,Regulation,4,2024,False
+2025-02-22,ESPN:401705376,401705376,2025-02-23T03:00Z,Portland Trail Blazers,Charlotte Hornets,Moda Center,141,88,141,88,Regulation,4,2024,False
+2025-02-23,ESPN:401705377,401705377,2025-02-23T18:00Z,Boston Celtics,New York Knicks,TD Garden,118,105,118,105,Regulation,4,2024,False
+2025-02-23,ESPN:401705378,401705378,2025-02-23T20:30Z,Golden State Warriors,Dallas Mavericks,Chase Center,126,102,126,102,Regulation,4,2024,False
+2025-02-23,ESPN:401705379,401705379,2025-02-23T22:00Z,Indiana Pacers,Los Angeles Clippers,Gainbridge Fieldhouse,129,111,129,111,Regulation,4,2024,False
+2025-02-23,ESPN:401705380,401705380,2025-02-23T23:00Z,Atlanta Hawks,Detroit Pistons,State Farm Arena,143,148,143,148,Regulation,4,2024,False
+2025-02-23,ESPN:401705381,401705381,2025-02-23T23:00Z,Orlando Magic,Washington Wizards,Kia Center,110,90,110,90,Regulation,4,2024,False
+2025-02-23,ESPN:401705382,401705382,2025-02-23T23:00Z,Toronto Raptors,Phoenix Suns,Scotiabank Arena,127,109,127,109,Regulation,4,2024,False
+2025-02-23,ESPN:401705383,401705383,2025-02-23T23:00Z,Milwaukee Bucks,Miami Heat,Fiserv Forum,120,113,120,113,Regulation,4,2024,False
+2025-02-23,ESPN:401705384,401705384,2025-02-24T00:00Z,New Orleans Pelicans,San Antonio Spurs,Smoothie King Center,114,96,114,96,Regulation,4,2024,False
+2025-02-23,ESPN:401705385,401705385,2025-02-24T00:00Z,Cleveland Cavaliers,Memphis Grizzlies,Rocket Arena,129,123,129,123,Regulation,4,2024,False
+2025-02-23,ESPN:401705386,401705386,2025-02-24T02:50Z,Minnesota Timberwolves,Oklahoma City Thunder,Target Center,123,130,123,130,Regulation,4,2024,False
+2025-02-24,ESPN:401705387,401705387,2025-02-25T00:00Z,Detroit Pistons,Los Angeles Clippers,Little Caesars Arena,106,97,106,97,Regulation,4,2024,False
+2025-02-24,ESPN:401705388,401705388,2025-02-25T00:00Z,Indiana Pacers,Denver Nuggets,Gainbridge Fieldhouse,116,125,116,125,Regulation,4,2024,False
+2025-02-24,ESPN:401705389,401705389,2025-02-25T00:00Z,Philadelphia 76ers,Chicago Bulls,Xfinity Mobile Arena,110,142,110,142,Regulation,4,2024,False
+2025-02-24,ESPN:401705390,401705390,2025-02-25T00:00Z,Washington Wizards,Brooklyn Nets,Capital One Arena,107,99,107,99,Regulation,4,2024,False
+2025-02-24,ESPN:401705391,401705391,2025-02-25T00:30Z,Atlanta Hawks,Miami Heat,State Farm Arena,98,86,98,86,Regulation,4,2024,False
+2025-02-24,ESPN:401705392,401705392,2025-02-25T01:00Z,Oklahoma City Thunder,Minnesota Timberwolves,Paycom Center,128,131,121,121,Overtime,5,2024,False
+2025-02-24,ESPN:401705393,401705393,2025-02-25T02:00Z,Utah Jazz,Portland Trail Blazers,Delta Center,112,114,112,114,Regulation,4,2024,False
+2025-02-24,ESPN:401705394,401705394,2025-02-25T03:00Z,Sacramento Kings,Charlotte Hornets,Golden 1 Center,130,88,130,88,Regulation,4,2024,False
+2025-02-25,ESPN:401705395,401705395,2025-02-26T00:00Z,Toronto Raptors,Boston Celtics,Scotiabank Arena,101,111,101,111,Regulation,4,2024,False
+2025-02-25,ESPN:401705396,401705396,2025-02-26T00:30Z,Orlando Magic,Cleveland Cavaliers,Kia Center,82,122,82,122,Regulation,4,2024,False
+2025-02-25,ESPN:401705397,401705397,2025-02-26T01:00Z,Houston Rockets,Milwaukee Bucks,Toyota Center (Houston),100,97,100,97,Regulation,4,2024,False
+2025-02-25,ESPN:401705398,401705398,2025-02-26T01:00Z,Memphis Grizzlies,Phoenix Suns,FedExForum,151,148,137,137,Overtime,5,2024,False
+2025-02-25,ESPN:401705399,401705399,2025-02-26T01:00Z,New Orleans Pelicans,San Antonio Spurs,Smoothie King Center,109,103,109,103,Regulation,4,2024,False
+2025-02-25,ESPN:401705400,401705400,2025-02-26T03:00Z,Golden State Warriors,Charlotte Hornets,Chase Center,128,92,128,92,Regulation,4,2024,False
+2025-02-25,ESPN:401705401,401705401,2025-02-26T03:00Z,Los Angeles Lakers,Dallas Mavericks,crypto.com Arena,107,99,107,99,Regulation,4,2024,False
+2025-02-26,ESPN:401705402,401705402,2025-02-27T00:00Z,Detroit Pistons,Boston Celtics,Little Caesars Arena,117,97,117,97,Regulation,4,2024,False
+2025-02-26,ESPN:401705403,401705403,2025-02-27T00:00Z,Indiana Pacers,Toronto Raptors,Gainbridge Fieldhouse,111,91,111,91,Regulation,4,2024,False
+2025-02-26,ESPN:401705404,401705404,2025-02-27T00:00Z,New York Knicks,Philadelphia 76ers,Madison Square Garden,110,105,110,105,Regulation,4,2024,False
+2025-02-26,ESPN:401705405,401705405,2025-02-27T00:00Z,Washington Wizards,Portland Trail Blazers,Capital One Arena,121,129,121,129,Regulation,4,2024,False
+2025-02-26,ESPN:401705406,401705406,2025-02-27T00:30Z,Brooklyn Nets,Oklahoma City Thunder,Barclays Center,121,129,121,129,Regulation,4,2024,False
+2025-02-26,ESPN:401705407,401705407,2025-02-27T00:30Z,Miami Heat,Atlanta Hawks,Kaseya Center,131,109,131,109,Regulation,4,2024,False
+2025-02-26,ESPN:401705408,401705408,2025-02-27T01:00Z,Chicago Bulls,Los Angeles Clippers,United Center,117,122,117,122,Regulation,4,2024,False
+2025-02-26,ESPN:401705409,401705409,2025-02-27T02:00Z,Utah Jazz,Sacramento Kings,Delta Center,101,118,101,118,Regulation,4,2024,False
+2025-02-26,ESPN:401705410,401705410,2025-02-27T02:50Z,Houston Rockets,San Antonio Spurs,Toyota Center (Houston),118,106,118,106,Regulation,4,2024,False
+2025-02-27,ESPN:401705411,401705411,2025-02-28T00:00Z,Orlando Magic,Golden State Warriors,Kia Center,115,121,115,121,Regulation,4,2024,False
+2025-02-27,ESPN:401705412,401705412,2025-02-28T01:00Z,Milwaukee Bucks,Denver Nuggets,Fiserv Forum,121,112,121,112,Regulation,4,2024,False
+2025-02-27,ESPN:401705413,401705413,2025-02-28T01:30Z,Dallas Mavericks,Charlotte Hornets,American Airlines Center,103,96,103,96,Regulation,4,2024,False
+2025-02-27,ESPN:401705414,401705414,2025-02-28T02:00Z,Phoenix Suns,New Orleans Pelicans,Mortgage Matchup Center,116,124,116,124,Regulation,4,2024,False
+2025-02-27,ESPN:401705415,401705415,2025-02-28T03:30Z,Los Angeles Lakers,Minnesota Timberwolves,crypto.com Arena,111,102,111,102,Regulation,4,2024,False
+2025-02-28,ESPN:401705416,401705416,2025-03-01T00:00Z,Detroit Pistons,Denver Nuggets,Little Caesars Arena,119,134,119,134,Regulation,4,2024,False
+2025-02-28,ESPN:401705417,401705417,2025-03-01T00:30Z,Atlanta Hawks,Oklahoma City Thunder,State Farm Arena,119,135,119,135,Regulation,4,2024,False
+2025-02-28,ESPN:401705418,401705418,2025-03-01T00:30Z,Boston Celtics,Cleveland Cavaliers,TD Garden,116,123,116,123,Regulation,4,2024,False
+2025-02-28,ESPN:401705419,401705419,2025-03-01T00:30Z,Brooklyn Nets,Portland Trail Blazers,Barclays Center,102,121,102,121,Regulation,4,2024,False
+2025-02-28,ESPN:401705420,401705420,2025-03-01T01:00Z,Miami Heat,Indiana Pacers,Kaseya Center,125,120,125,120,Regulation,4,2024,False
+2025-02-28,ESPN:401705421,401705421,2025-03-01T01:00Z,Chicago Bulls,Toronto Raptors,United Center,125,115,110,110,Overtime,5,2024,False
+2025-02-28,ESPN:401705422,401705422,2025-03-01T01:00Z,Memphis Grizzlies,New York Knicks,FedExForum,113,114,113,114,Regulation,4,2024,False
+2025-02-28,ESPN:401705423,401705423,2025-03-01T02:00Z,Phoenix Suns,New Orleans Pelicans,Mortgage Matchup Center,125,108,125,108,Regulation,4,2024,False
+2025-02-28,ESPN:401705424,401705424,2025-03-01T02:30Z,Utah Jazz,Minnesota Timberwolves,Delta Center,117,116,117,116,Regulation,4,2024,False
+2025-02-28,ESPN:401705425,401705425,2025-03-01T03:00Z,Los Angeles Lakers,Los Angeles Clippers,crypto.com Arena,106,102,106,102,Regulation,4,2024,False
+2025-03-01,ESPN:401705426,401705426,2025-03-01T23:00Z,Charlotte Hornets,Washington Wizards,Spectrum Center,100,113,100,113,Regulation,4,2024,False
+2025-03-01,ESPN:401705427,401705427,2025-03-02T00:00Z,Detroit Pistons,Brooklyn Nets,Little Caesars Arena,115,94,115,94,Regulation,4,2024,False
+2025-03-01,ESPN:401705428,401705428,2025-03-02T01:00Z,Houston Rockets,Sacramento Kings,Toyota Center (Houston),103,113,103,113,Regulation,4,2024,False
+2025-03-01,ESPN:401705429,401705429,2025-03-02T01:00Z,Memphis Grizzlies,San Antonio Spurs,FedExForum,128,130,128,130,Regulation,4,2024,False
+2025-03-01,ESPN:401705430,401705430,2025-03-02T01:30Z,Philadelphia 76ers,Golden State Warriors,Xfinity Mobile Arena,126,119,126,119,Regulation,4,2024,False
+2025-03-01,ESPN:401705431,401705431,2025-03-02T01:30Z,Dallas Mavericks,Milwaukee Bucks,American Airlines Center,117,132,117,132,Regulation,4,2024,False
+2025-03-02,ESPN:401705432,401705432,2025-03-02T18:00Z,Boston Celtics,Denver Nuggets,TD Garden,110,103,110,103,Regulation,4,2024,False
+2025-03-02,ESPN:401705433,401705433,2025-03-02T20:30Z,Cleveland Cavaliers,Portland Trail Blazers,Rocket Arena,133,129,119,119,Overtime,5,2024,False
+2025-03-02,ESPN:401705434,401705434,2025-03-02T22:00Z,Indiana Pacers,Chicago Bulls,Gainbridge Fieldhouse,127,112,127,112,Regulation,4,2024,False
+2025-03-02,ESPN:401705435,401705435,2025-03-02T23:00Z,Miami Heat,New York Knicks,Kaseya Center,112,116,105,105,Overtime,5,2024,False
+2025-03-02,ESPN:401705436,401705436,2025-03-02T23:00Z,Orlando Magic,Toronto Raptors,Kia Center,102,104,102,104,Regulation,4,2024,False
+2025-03-02,ESPN:401705437,401705437,2025-03-03T00:00Z,San Antonio Spurs,Oklahoma City Thunder,Frost Bank Center,132,146,132,146,Regulation,4,2024,False
+2025-03-02,ESPN:401705438,401705438,2025-03-03T01:00Z,Utah Jazz,New Orleans Pelicans,Delta Center,121,128,121,128,Regulation,4,2024,False
+2025-03-02,ESPN:401705439,401705439,2025-03-03T02:30Z,Phoenix Suns,Minnesota Timberwolves,Mortgage Matchup Center,98,116,98,116,Regulation,4,2024,False
+2025-03-02,ESPN:401705440,401705440,2025-03-03T02:30Z,Los Angeles Lakers,Los Angeles Clippers,crypto.com Arena,108,102,108,102,Regulation,4,2024,False
+2025-03-03,ESPN:401705441,401705441,2025-03-04T00:00Z,Charlotte Hornets,Golden State Warriors,Spectrum Center,101,119,101,119,Regulation,4,2024,False
+2025-03-03,ESPN:401705442,401705442,2025-03-04T00:00Z,Philadelphia 76ers,Portland Trail Blazers,Xfinity Mobile Arena,102,119,102,119,Regulation,4,2024,False
+2025-03-03,ESPN:401705443,401705443,2025-03-04T00:30Z,Miami Heat,Washington Wizards,Kaseya Center,106,90,106,90,Regulation,4,2024,False
+2025-03-03,ESPN:401705444,401705444,2025-03-04T01:00Z,Memphis Grizzlies,Atlanta Hawks,FedExForum,130,132,130,132,Regulation,4,2024,False
+2025-03-03,ESPN:401705445,401705445,2025-03-04T01:00Z,Oklahoma City Thunder,Houston Rockets,Paycom Center,137,128,137,128,Regulation,4,2024,False
+2025-03-03,ESPN:401705446,401705446,2025-03-04T01:30Z,Dallas Mavericks,Sacramento Kings,American Airlines Center,98,122,98,122,Regulation,4,2024,False
+2025-03-03,ESPN:401705447,401705447,2025-03-04T02:00Z,Utah Jazz,Detroit Pistons,Delta Center,106,134,106,134,Regulation,4,2024,False
+2025-03-04,ESPN:401705448,401705448,2025-03-05T00:00Z,Indiana Pacers,Houston Rockets,Gainbridge Fieldhouse,115,102,115,102,Regulation,4,2024,False
+2025-03-04,ESPN:401705449,401705449,2025-03-05T00:00Z,Orlando Magic,Toronto Raptors,Kia Center,113,114,113,114,Regulation,4,2024,False
+2025-03-04,ESPN:401705450,401705450,2025-03-05T00:30Z,Atlanta Hawks,Milwaukee Bucks,State Farm Arena,121,127,121,127,Regulation,4,2024,False
+2025-03-04,ESPN:401705451,401705451,2025-03-05T00:30Z,New York Knicks,Golden State Warriors,Madison Square Garden,102,114,102,114,Regulation,4,2024,False
+2025-03-04,ESPN:401705452,401705452,2025-03-05T01:00Z,Chicago Bulls,Cleveland Cavaliers,United Center,117,139,117,139,Regulation,4,2024,False
+2025-03-04,ESPN:401705453,401705453,2025-03-05T01:00Z,Minnesota Timberwolves,Philadelphia 76ers,Target Center,126,112,126,112,Regulation,4,2024,False
+2025-03-04,ESPN:401705454,401705454,2025-03-05T01:30Z,San Antonio Spurs,Brooklyn Nets,Frost Bank Center,127,113,127,113,Regulation,4,2024,False
+2025-03-04,ESPN:401705455,401705455,2025-03-05T03:00Z,Phoenix Suns,Los Angeles Clippers,Mortgage Matchup Center,119,117,119,117,Regulation,4,2024,False
+2025-03-04,ESPN:401705456,401705456,2025-03-05T03:30Z,Los Angeles Lakers,New Orleans Pelicans,crypto.com Arena,136,115,136,115,Regulation,4,2024,False
+2025-03-05,ESPN:401705457,401705457,2025-03-06T00:00Z,Boston Celtics,Portland Trail Blazers,TD Garden,128,118,128,118,Regulation,4,2024,False
+2025-03-05,ESPN:401705458,401705458,2025-03-06T00:00Z,Charlotte Hornets,Minnesota Timberwolves,Spectrum Center,110,125,110,125,Regulation,4,2024,False
+2025-03-05,ESPN:401705459,401705459,2025-03-06T00:00Z,Cleveland Cavaliers,Miami Heat,Rocket Arena,112,107,112,107,Regulation,4,2024,False
+2025-03-05,ESPN:401705460,401705460,2025-03-06T00:00Z,Washington Wizards,Utah Jazz,Capital One Arena,125,122,125,122,Regulation,4,2024,False
+2025-03-05,ESPN:401705463,401705463,2025-03-06T01:00Z,Milwaukee Bucks,Dallas Mavericks,Fiserv Forum,137,107,137,107,Regulation,4,2024,False
+2025-03-05,ESPN:401705462,401705462,2025-03-06T02:00Z,Denver Nuggets,Sacramento Kings,Ball Arena,116,110,116,110,Regulation,4,2024,False
+2025-03-05,ESPN:401705461,401705461,2025-03-06T02:30Z,Memphis Grizzlies,Oklahoma City Thunder,FedExForum,103,120,103,120,Regulation,4,2024,False
+2025-03-05,ESPN:401705464,401705464,2025-03-06T03:30Z,Los Angeles Clippers,Detroit Pistons,Intuit Dome,123,115,123,115,Regulation,4,2024,False
+2025-03-06,ESPN:401705510,401705510,2025-03-07T00:00Z,Orlando Magic,Chicago Bulls,Kia Center,123,125,123,125,Regulation,4,2024,False
+2025-03-06,ESPN:401705465,401705465,2025-03-07T00:30Z,Atlanta Hawks,Indiana Pacers,State Farm Arena,124,118,124,118,Regulation,4,2024,False
+2025-03-06,ESPN:401705466,401705466,2025-03-07T00:30Z,Boston Celtics,Philadelphia 76ers,TD Garden,123,105,123,105,Regulation,4,2024,False
+2025-03-06,ESPN:401705467,401705467,2025-03-07T00:30Z,Brooklyn Nets,Golden State Warriors,Barclays Center,119,121,119,121,Regulation,4,2024,False
+2025-03-06,ESPN:401705468,401705468,2025-03-07T01:00Z,New Orleans Pelicans,Houston Rockets,Smoothie King Center,97,109,97,109,Regulation,4,2024,False
+2025-03-06,ESPN:401705469,401705469,2025-03-07T03:00Z,Los Angeles Lakers,New York Knicks,crypto.com Arena,113,109,99,99,Overtime,5,2024,False
+2025-03-07,ESPN:401705470,401705470,2025-03-08T00:00Z,Charlotte Hornets,Cleveland Cavaliers,Spectrum Center,117,118,117,118,Regulation,4,2024,False
+2025-03-07,ESPN:401705471,401705471,2025-03-08T00:30Z,Toronto Raptors,Utah Jazz,Scotiabank Arena,118,109,118,109,Regulation,4,2024,False
+2025-03-07,ESPN:401705472,401705472,2025-03-08T00:30Z,Dallas Mavericks,Memphis Grizzlies,American Airlines Center,111,122,111,122,Regulation,4,2024,False
+2025-03-07,ESPN:401705473,401705473,2025-03-08T01:00Z,Miami Heat,Minnesota Timberwolves,Kaseya Center,104,106,104,106,Regulation,4,2024,False
+2025-03-07,ESPN:401705474,401705474,2025-03-08T01:00Z,Oklahoma City Thunder,Portland Trail Blazers,Paycom Center,107,89,107,89,Regulation,4,2024,False
+2025-03-07,ESPN:401705475,401705475,2025-03-08T03:00Z,Denver Nuggets,Phoenix Suns,Ball Arena,149,141,125,125,Overtime,5,2024,False
+2025-03-07,ESPN:401705476,401705476,2025-03-08T03:00Z,Sacramento Kings,San Antonio Spurs,Golden 1 Center,127,109,127,109,Regulation,4,2024,False
+2025-03-07,ESPN:401705477,401705477,2025-03-08T03:30Z,Los Angeles Clippers,New York Knicks,Intuit Dome,105,95,105,95,Regulation,4,2024,False
+2025-03-08,ESPN:401705478,401705478,2025-03-08T23:00Z,Charlotte Hornets,Brooklyn Nets,Spectrum Center,105,102,105,102,Regulation,4,2024,False
+2025-03-08,ESPN:401705479,401705479,2025-03-09T00:00Z,Houston Rockets,New Orleans Pelicans,Toyota Center (Houston),146,117,146,117,Regulation,4,2024,False
+2025-03-08,ESPN:401705480,401705480,2025-03-09T00:30Z,Atlanta Hawks,Indiana Pacers,State Farm Arena,120,118,120,118,Regulation,4,2024,False
+2025-03-08,ESPN:401705481,401705481,2025-03-09T00:30Z,Toronto Raptors,Washington Wizards,Scotiabank Arena,117,118,117,118,Regulation,4,2024,False
+2025-03-08,ESPN:401705482,401705482,2025-03-09T01:00Z,Miami Heat,Chicago Bulls,Kaseya Center,109,114,109,114,Regulation,4,2024,False
+2025-03-08,ESPN:401705483,401705483,2025-03-09T01:00Z,Milwaukee Bucks,Orlando Magic,Fiserv Forum,109,111,109,111,Regulation,4,2024,False
+2025-03-08,ESPN:401705484,401705484,2025-03-09T01:30Z,Boston Celtics,Los Angeles Lakers,TD Garden,111,101,111,101,Regulation,4,2024,False
+2025-03-08,ESPN:401705485,401705485,2025-03-09T01:30Z,Golden State Warriors,Detroit Pistons,Chase Center,115,110,115,110,Regulation,4,2024,False
+2025-03-09,ESPN:401705486,401705486,2025-03-09T17:00Z,Oklahoma City Thunder,Denver Nuggets,Paycom Center,127,103,127,103,Regulation,4,2024,False
+2025-03-09,ESPN:401705487,401705487,2025-03-09T19:30Z,Dallas Mavericks,Phoenix Suns,American Airlines Center,116,125,116,125,Regulation,4,2024,False
+2025-03-09,ESPN:401705489,401705489,2025-03-09T23:00Z,New Orleans Pelicans,Memphis Grizzlies,Smoothie King Center,104,107,104,107,Regulation,4,2024,False
+2025-03-09,ESPN:401705490,401705490,2025-03-09T23:30Z,Philadelphia 76ers,Utah Jazz,Xfinity Mobile Arena,126,122,126,122,Regulation,4,2024,False
+2025-03-09,ESPN:401705488,401705488,2025-03-10T00:00Z,Milwaukee Bucks,Cleveland Cavaliers,Fiserv Forum,100,112,100,112,Regulation,4,2024,False
+2025-03-09,ESPN:401705491,401705491,2025-03-10T00:00Z,Minnesota Timberwolves,San Antonio Spurs,Target Center,141,124,141,124,Regulation,4,2024,False
+2025-03-09,ESPN:401705492,401705492,2025-03-10T01:00Z,Portland Trail Blazers,Detroit Pistons,Moda Center,112,119,112,119,Regulation,4,2024,False
+2025-03-09,ESPN:401705493,401705493,2025-03-10T01:30Z,Los Angeles Clippers,Sacramento Kings,Intuit Dome,111,110,97,97,Overtime,5,2024,False
+2025-03-10,ESPN:401705494,401705494,2025-03-10T23:30Z,Atlanta Hawks,Philadelphia 76ers,State Farm Arena,132,123,132,123,Regulation,4,2024,False
+2025-03-10,ESPN:401705495,401705495,2025-03-10T23:30Z,Boston Celtics,Utah Jazz,TD Garden,114,108,114,108,Regulation,4,2024,False
+2025-03-10,ESPN:401705496,401705496,2025-03-10T23:30Z,Brooklyn Nets,Los Angeles Lakers,Barclays Center,111,108,111,108,Regulation,4,2024,False
+2025-03-10,ESPN:401705497,401705497,2025-03-10T23:30Z,Miami Heat,Charlotte Hornets,Kaseya Center,102,105,102,105,Regulation,4,2024,False
+2025-03-10,ESPN:401705498,401705498,2025-03-10T23:30Z,Toronto Raptors,Washington Wizards,Scotiabank Arena,119,104,119,104,Regulation,4,2024,False
+2025-03-10,ESPN:401705499,401705499,2025-03-11T00:00Z,Chicago Bulls,Indiana Pacers,United Center,121,103,121,103,Regulation,4,2024,False
+2025-03-10,ESPN:401705500,401705500,2025-03-11T00:00Z,Houston Rockets,Orlando Magic,Toyota Center (Houston),97,84,97,84,Regulation,4,2024,False
+2025-03-10,ESPN:401705501,401705501,2025-03-11T00:00Z,Memphis Grizzlies,Phoenix Suns,FedExForum,120,118,120,118,Regulation,4,2024,False
+2025-03-10,ESPN:401705502,401705502,2025-03-11T00:00Z,Oklahoma City Thunder,Denver Nuggets,Paycom Center,127,140,127,140,Regulation,4,2024,False
+2025-03-10,ESPN:401705503,401705503,2025-03-11T00:30Z,San Antonio Spurs,Dallas Mavericks,Frost Bank Center,129,133,129,133,Regulation,4,2024,False
+2025-03-10,ESPN:401705504,401705504,2025-03-11T02:00Z,Golden State Warriors,Portland Trail Blazers,Chase Center,130,120,130,120,Regulation,4,2024,False
+2025-03-10,ESPN:401705505,401705505,2025-03-11T02:30Z,Sacramento Kings,New York Knicks,Golden 1 Center,104,133,104,133,Regulation,4,2024,False
+2025-03-11,ESPN:401705506,401705506,2025-03-11T23:00Z,Cleveland Cavaliers,Brooklyn Nets,Rocket Arena,109,104,109,104,Regulation,4,2024,False
+2025-03-11,ESPN:401705507,401705507,2025-03-11T23:00Z,Detroit Pistons,Washington Wizards,Little Caesars Arena,123,103,123,103,Regulation,4,2024,False
+2025-03-11,ESPN:401705508,401705508,2025-03-11T23:30Z,Indiana Pacers,Milwaukee Bucks,Gainbridge Fieldhouse,115,114,115,114,Regulation,4,2024,False
+2025-03-11,ESPN:401705509,401705509,2025-03-12T00:00Z,New Orleans Pelicans,Los Angeles Clippers,Smoothie King Center,127,120,127,120,Regulation,4,2024,False
+2025-03-12,ESPN:401705511,401705511,2025-03-12T23:30Z,Atlanta Hawks,Charlotte Hornets,State Farm Arena,123,110,123,110,Regulation,4,2024,False
+2025-03-12,ESPN:401705512,401705512,2025-03-12T23:30Z,Boston Celtics,Oklahoma City Thunder,TD Garden,112,118,112,118,Regulation,4,2024,False
+2025-03-12,ESPN:401705513,401705513,2025-03-12T23:30Z,Toronto Raptors,Philadelphia 76ers,Scotiabank Arena,118,105,118,105,Regulation,4,2024,False
+2025-03-12,ESPN:401705514,401705514,2025-03-13T00:00Z,Miami Heat,Los Angeles Clippers,Kaseya Center,104,119,104,119,Regulation,4,2024,False
+2025-03-12,ESPN:401705515,401705515,2025-03-13T00:00Z,Houston Rockets,Phoenix Suns,Toyota Center (Houston),111,104,111,104,Regulation,4,2024,False
+2025-03-12,ESPN:401705516,401705516,2025-03-13T00:00Z,Memphis Grizzlies,Utah Jazz,FedExForum,122,115,122,115,Regulation,4,2024,False
+2025-03-12,ESPN:401705517,401705517,2025-03-13T00:00Z,San Antonio Spurs,Dallas Mavericks,Frost Bank Center,126,116,126,116,Regulation,4,2024,False
+2025-03-12,ESPN:401705518,401705518,2025-03-13T02:00Z,Denver Nuggets,Minnesota Timberwolves,Ball Arena,95,115,95,115,Regulation,4,2024,False
+2025-03-12,ESPN:401705519,401705519,2025-03-13T02:00Z,Portland Trail Blazers,New York Knicks,Moda Center,113,114,106,106,Overtime,5,2024,False
+2025-03-13,ESPN:401705520,401705520,2025-03-13T23:00Z,Detroit Pistons,Washington Wizards,Little Caesars Arena,125,129,125,129,Regulation,4,2024,False
+2025-03-13,ESPN:401705521,401705521,2025-03-13T23:30Z,Milwaukee Bucks,Los Angeles Lakers,Fiserv Forum,126,106,126,106,Regulation,4,2024,False
+2025-03-13,ESPN:401705522,401705522,2025-03-14T00:00Z,Chicago Bulls,Brooklyn Nets,United Center,116,110,116,110,Regulation,4,2024,False
+2025-03-13,ESPN:401705707,401705707,2025-03-14T00:00Z,New Orleans Pelicans,Orlando Magic,Smoothie King Center,93,113,93,113,Regulation,4,2024,False
+2025-03-13,ESPN:401705523,401705523,2025-03-14T02:00Z,Golden State Warriors,Sacramento Kings,Chase Center,130,104,130,104,Regulation,4,2024,False
+2025-03-14,ESPN:401705524,401705524,2025-03-14T23:00Z,Miami Heat,Boston Celtics,Kaseya Center,91,103,91,103,Regulation,4,2024,False
+2025-03-14,ESPN:401705525,401705525,2025-03-14T23:00Z,Philadelphia 76ers,Indiana Pacers,Xfinity Mobile Arena,100,112,100,112,Regulation,4,2024,False
+2025-03-14,ESPN:401705526,401705526,2025-03-14T23:30Z,Atlanta Hawks,Los Angeles Clippers,State Farm Arena,98,121,98,121,Regulation,4,2024,False
+2025-03-14,ESPN:401705527,401705527,2025-03-15T00:00Z,Houston Rockets,Dallas Mavericks,Toyota Center (Houston),133,96,133,96,Regulation,4,2024,False
+2025-03-14,ESPN:401705528,401705528,2025-03-15T00:00Z,Memphis Grizzlies,Cleveland Cavaliers,FedExForum,124,133,124,133,Regulation,4,2024,False
+2025-03-14,ESPN:401705529,401705529,2025-03-15T00:00Z,Minnesota Timberwolves,Orlando Magic,Target Center,118,111,118,111,Regulation,4,2024,False
+2025-03-14,ESPN:401705530,401705530,2025-03-15T00:00Z,San Antonio Spurs,Charlotte Hornets,Frost Bank Center,134,145,134,145,Regulation,4,2024,False
+2025-03-14,ESPN:401705531,401705531,2025-03-15T01:30Z,Denver Nuggets,Los Angeles Lakers,Ball Arena,131,126,131,126,Regulation,4,2024,False
+2025-03-14,ESPN:401705532,401705532,2025-03-15T01:30Z,Utah Jazz,Toronto Raptors,Delta Center,118,126,118,126,Regulation,4,2024,False
+2025-03-14,ESPN:401705533,401705533,2025-03-15T02:00Z,Phoenix Suns,Sacramento Kings,Mortgage Matchup Center,122,106,122,106,Regulation,4,2024,False
+2025-03-15,ESPN:401705534,401705534,2025-03-15T22:00Z,Brooklyn Nets,Boston Celtics,Barclays Center,113,115,113,115,Regulation,4,2024,False
+2025-03-15,ESPN:401705535,401705535,2025-03-15T23:00Z,Detroit Pistons,Oklahoma City Thunder,Little Caesars Arena,107,113,107,113,Regulation,4,2024,False
+2025-03-15,ESPN:401705536,401705536,2025-03-16T00:00Z,Houston Rockets,Chicago Bulls,Toyota Center (Houston),117,114,117,114,Regulation,4,2024,False
+2025-03-15,ESPN:401705537,401705537,2025-03-16T00:00Z,Memphis Grizzlies,Miami Heat,FedExForum,125,91,125,91,Regulation,4,2024,False
+2025-03-15,ESPN:401705538,401705538,2025-03-16T00:00Z,Milwaukee Bucks,Indiana Pacers,Fiserv Forum,126,119,126,119,Regulation,4,2024,False
+2025-03-15,ESPN:401705539,401705539,2025-03-16T00:30Z,San Antonio Spurs,New Orleans Pelicans,Frost Bank Center,119,115,119,115,Regulation,4,2024,False
+2025-03-15,ESPN:401705540,401705540,2025-03-16T00:30Z,Golden State Warriors,New York Knicks,Chase Center,97,94,97,94,Regulation,4,2024,False
+2025-03-15,ESPN:401705541,401705541,2025-03-16T01:00Z,Denver Nuggets,Washington Wizards,Ball Arena,123,126,123,126,Regulation,4,2024,False
+2025-03-16,ESPN:401705542,401705542,2025-03-16T17:00Z,Dallas Mavericks,Philadelphia 76ers,American Airlines Center,125,130,125,130,Regulation,4,2024,False
+2025-03-16,ESPN:401705545,401705545,2025-03-16T17:00Z,Cleveland Cavaliers,Orlando Magic,Rocket Arena,103,108,103,108,Regulation,4,2024,False
+2025-03-16,ESPN:401705543,401705543,2025-03-16T19:30Z,Los Angeles Lakers,Phoenix Suns,crypto.com Arena,107,96,107,96,Regulation,4,2024,False
+2025-03-16,ESPN:401705544,401705544,2025-03-16T22:00Z,Brooklyn Nets,Atlanta Hawks,Barclays Center,122,114,122,114,Regulation,4,2024,False
+2025-03-16,ESPN:401705546,401705546,2025-03-16T22:00Z,Portland Trail Blazers,Toronto Raptors,Moda Center,105,102,105,102,Regulation,4,2024,False
+2025-03-16,ESPN:401705547,401705547,2025-03-16T23:00Z,Minnesota Timberwolves,Utah Jazz,Target Center,128,102,128,102,Regulation,4,2024,False
+2025-03-16,ESPN:401748706,401748706,2025-03-16T23:00Z,Los Angeles Clippers,Charlotte Hornets,Intuit Dome,123,88,123,88,Regulation,4,2024,False
+2025-03-16,ESPN:401705548,401705548,2025-03-17T01:00Z,Milwaukee Bucks,Oklahoma City Thunder,Fiserv Forum,105,121,105,121,Regulation,4,2024,False
+2025-03-17,ESPN:401705550,401705550,2025-03-17T23:30Z,New York Knicks,Miami Heat,Madison Square Garden,116,95,116,95,Regulation,4,2024,False
+2025-03-17,ESPN:401705551,401705551,2025-03-18T00:00Z,Houston Rockets,Philadelphia 76ers,Toyota Center (Houston),144,137,131,131,Overtime,5,2024,False
+2025-03-17,ESPN:401705552,401705552,2025-03-18T00:00Z,Minnesota Timberwolves,Indiana Pacers,Target Center,130,132,117,117,Overtime,5,2024,False
+2025-03-17,ESPN:401705553,401705553,2025-03-18T00:00Z,New Orleans Pelicans,Detroit Pistons,Smoothie King Center,81,127,81,127,Regulation,4,2024,False
+2025-03-17,ESPN:401705555,401705555,2025-03-18T01:00Z,Utah Jazz,Chicago Bulls,Delta Center,97,111,97,111,Regulation,4,2024,False
+2025-03-17,ESPN:401705556,401705556,2025-03-18T02:00Z,Golden State Warriors,Denver Nuggets,Chase Center,105,114,105,114,Regulation,4,2024,False
+2025-03-17,ESPN:401705557,401705557,2025-03-18T02:00Z,Phoenix Suns,Toronto Raptors,Mortgage Matchup Center,129,89,129,89,Regulation,4,2024,False
+2025-03-17,ESPN:401705558,401705558,2025-03-18T02:00Z,Sacramento Kings,Memphis Grizzlies,Golden 1 Center,132,122,132,122,Regulation,4,2024,False
+2025-03-17,ESPN:401705561,401705561,2025-03-18T02:00Z,Portland Trail Blazers,Washington Wizards,Moda Center,112,97,112,97,Regulation,4,2024,False
+2025-03-17,ESPN:401754705,401754705,2025-03-18T02:30Z,Los Angeles Lakers,San Antonio Spurs,crypto.com Arena,125,109,125,109,Regulation,4,2024,False
+2025-03-18,ESPN:401705559,401705559,2025-03-18T23:00Z,Charlotte Hornets,Atlanta Hawks,Spectrum Center,102,134,102,134,Regulation,4,2024,False
+2025-03-18,ESPN:401705560,401705560,2025-03-18T23:30Z,Boston Celtics,Brooklyn Nets,TD Garden,104,96,104,96,Regulation,4,2024,False
+2025-03-18,ESPN:401705578,401705578,2025-03-19T02:00Z,Golden State Warriors,Milwaukee Bucks,Chase Center,104,93,104,93,Regulation,4,2024,False
+2025-03-18,ESPN:401705563,401705563,2025-03-19T02:30Z,Los Angeles Clippers,Cleveland Cavaliers,Intuit Dome,132,119,132,119,Regulation,4,2024,False
+2025-03-19,ESPN:401705564,401705564,2025-03-19T23:00Z,Indiana Pacers,Dallas Mavericks,Gainbridge Fieldhouse,135,131,135,131,Regulation,4,2024,False
+2025-03-19,ESPN:401705565,401705565,2025-03-19T23:00Z,Orlando Magic,Houston Rockets,Kia Center,108,116,108,116,Regulation,4,2024,False
+2025-03-19,ESPN:401705566,401705566,2025-03-19T23:30Z,Miami Heat,Detroit Pistons,Kaseya Center,113,116,113,116,Regulation,4,2024,False
+2025-03-19,ESPN:401705567,401705567,2025-03-20T00:00Z,Minnesota Timberwolves,New Orleans Pelicans,Target Center,115,119,115,119,Regulation,4,2024,False
+2025-03-19,ESPN:401705568,401705568,2025-03-20T00:00Z,Oklahoma City Thunder,Philadelphia 76ers,Paycom Center,133,100,133,100,Regulation,4,2024,False
+2025-03-19,ESPN:401705569,401705569,2025-03-20T00:00Z,San Antonio Spurs,New York Knicks,Frost Bank Center,120,105,120,105,Regulation,4,2024,False
+2025-03-19,ESPN:401705193,401705193,2025-03-20T01:00Z,Utah Jazz,Washington Wizards,Delta Center,128,112,128,112,Regulation,4,2024,False
+2025-03-19,ESPN:401705572,401705572,2025-03-20T02:00Z,Los Angeles Lakers,Denver Nuggets,crypto.com Arena,120,108,120,108,Regulation,4,2024,False
+2025-03-19,ESPN:401705573,401705573,2025-03-20T02:00Z,Phoenix Suns,Chicago Bulls,Mortgage Matchup Center,127,121,127,121,Regulation,4,2024,False
+2025-03-19,ESPN:401705574,401705574,2025-03-20T02:00Z,Portland Trail Blazers,Memphis Grizzlies,Moda Center,115,99,115,99,Regulation,4,2024,False
+2025-03-19,ESPN:401705575,401705575,2025-03-20T02:00Z,Sacramento Kings,Cleveland Cavaliers,Golden 1 Center,123,119,123,119,Regulation,4,2024,False
+2025-03-20,ESPN:401705576,401705576,2025-03-20T23:00Z,Charlotte Hornets,New York Knicks,Spectrum Center,115,98,115,98,Regulation,4,2024,False
+2025-03-20,ESPN:401705577,401705577,2025-03-20T23:00Z,Indiana Pacers,Brooklyn Nets,Gainbridge Fieldhouse,105,99,91,91,Overtime,5,2024,False
+2025-03-20,ESPN:401705571,401705571,2025-03-21T02:00Z,Golden State Warriors,Toronto Raptors,Chase Center,117,114,117,114,Regulation,4,2024,False
+2025-03-20,ESPN:401705579,401705579,2025-03-21T02:00Z,Sacramento Kings,Chicago Bulls,Golden 1 Center,116,128,116,128,Regulation,4,2024,False
+2025-03-20,ESPN:401705562,401705562,2025-03-21T02:30Z,Los Angeles Lakers,Milwaukee Bucks,crypto.com Arena,89,118,89,118,Regulation,4,2024,False
+2025-03-21,ESPN:401705580,401705580,2025-03-21T23:00Z,Washington Wizards,Orlando Magic,Capital One Arena,105,120,105,120,Regulation,4,2024,False
+2025-03-21,ESPN:401705581,401705581,2025-03-22T00:00Z,Miami Heat,Houston Rockets,Kaseya Center,98,102,98,102,Regulation,4,2024,False
+2025-03-21,ESPN:401705582,401705582,2025-03-22T00:00Z,Minnesota Timberwolves,New Orleans Pelicans,Target Center,134,93,134,93,Regulation,4,2024,False
+2025-03-21,ESPN:401705583,401705583,2025-03-22T00:00Z,Oklahoma City Thunder,Charlotte Hornets,Paycom Center,141,106,141,106,Regulation,4,2024,False
+2025-03-21,ESPN:401705584,401705584,2025-03-22T00:00Z,San Antonio Spurs,Philadelphia 76ers,Frost Bank Center,128,120,128,120,Regulation,4,2024,False
+2025-03-21,ESPN:401705585,401705585,2025-03-22T00:30Z,Dallas Mavericks,Detroit Pistons,American Airlines Center,123,117,123,117,Regulation,4,2024,False
+2025-03-21,ESPN:401705586,401705586,2025-03-22T01:30Z,Utah Jazz,Boston Celtics,Delta Center,99,121,99,121,Regulation,4,2024,False
+2025-03-21,ESPN:401705587,401705587,2025-03-22T02:00Z,Phoenix Suns,Cleveland Cavaliers,Mortgage Matchup Center,123,112,123,112,Regulation,4,2024,False
+2025-03-21,ESPN:401705588,401705588,2025-03-22T02:00Z,Portland Trail Blazers,Denver Nuggets,Moda Center,128,109,128,109,Regulation,4,2024,False
+2025-03-21,ESPN:401705589,401705589,2025-03-22T02:30Z,Los Angeles Clippers,Memphis Grizzlies,Intuit Dome,128,108,128,108,Regulation,4,2024,False
+2025-03-22,ESPN:401705590,401705590,2025-03-22T21:00Z,Indiana Pacers,Brooklyn Nets,Gainbridge Fieldhouse,108,103,108,103,Regulation,4,2024,False
+2025-03-22,ESPN:401705591,401705591,2025-03-22T23:00Z,Atlanta Hawks,Golden State Warriors,State Farm Arena,124,115,124,115,Regulation,4,2024,False
+2025-03-22,ESPN:401705592,401705592,2025-03-23T00:00Z,New York Knicks,Washington Wizards,Madison Square Garden,122,103,122,103,Regulation,4,2024,False
+2025-03-22,ESPN:401705593,401705593,2025-03-23T02:00Z,Sacramento Kings,Milwaukee Bucks,Golden 1 Center,108,114,108,114,Regulation,4,2024,False
+2025-03-22,ESPN:401705594,401705594,2025-03-23T02:30Z,Los Angeles Lakers,Chicago Bulls,crypto.com Arena,115,146,115,146,Regulation,4,2024,False
+2025-03-23,ESPN:401705595,401705595,2025-03-23T19:00Z,Detroit Pistons,New Orleans Pelicans,Little Caesars Arena,136,130,136,130,Regulation,4,2024,False
+2025-03-23,ESPN:401705596,401705596,2025-03-23T19:30Z,Utah Jazz,Cleveland Cavaliers,Delta Center,91,120,91,120,Regulation,4,2024,False
+2025-03-23,ESPN:401705597,401705597,2025-03-23T22:00Z,Atlanta Hawks,Philadelphia 76ers,State Farm Arena,132,119,132,119,Regulation,4,2024,False
+2025-03-23,ESPN:401705598,401705598,2025-03-23T22:00Z,Miami Heat,Charlotte Hornets,Kaseya Center,122,105,122,105,Regulation,4,2024,False
+2025-03-23,ESPN:401705599,401705599,2025-03-23T22:00Z,Toronto Raptors,San Antonio Spurs,Scotiabank Arena,89,123,89,123,Regulation,4,2024,False
+2025-03-23,ESPN:401705600,401705600,2025-03-23T22:00Z,Portland Trail Blazers,Boston Celtics,Moda Center,116,129,116,129,Regulation,4,2024,False
+2025-03-23,ESPN:401705601,401705601,2025-03-23T23:00Z,Houston Rockets,Denver Nuggets,Toyota Center (Houston),111,116,111,116,Regulation,4,2024,False
+2025-03-23,ESPN:401705602,401705602,2025-03-24T01:00Z,Los Angeles Clippers,Oklahoma City Thunder,Intuit Dome,101,103,101,103,Regulation,4,2024,False
+2025-03-24,ESPN:401705603,401705603,2025-03-24T23:00Z,Indiana Pacers,Minnesota Timberwolves,Gainbridge Fieldhouse,119,103,119,103,Regulation,4,2024,False
+2025-03-24,ESPN:401705604,401705604,2025-03-24T23:00Z,Orlando Magic,Los Angeles Lakers,Kia Center,118,106,118,106,Regulation,4,2024,False
+2025-03-24,ESPN:401705605,401705605,2025-03-24T23:00Z,Washington Wizards,Toronto Raptors,Capital One Arena,104,112,104,112,Regulation,4,2024,False
+2025-03-24,ESPN:401705606,401705606,2025-03-24T23:30Z,Brooklyn Nets,Dallas Mavericks,Barclays Center,101,120,101,120,Regulation,4,2024,False
+2025-03-24,ESPN:401705607,401705607,2025-03-25T00:00Z,New Orleans Pelicans,Philadelphia 76ers,Smoothie King Center,112,99,112,99,Regulation,4,2024,False
+2025-03-24,ESPN:401705608,401705608,2025-03-25T01:00Z,Denver Nuggets,Chicago Bulls,Ball Arena,119,129,119,129,Regulation,4,2024,False
+2025-03-24,ESPN:401705609,401705609,2025-03-25T02:00Z,Phoenix Suns,Milwaukee Bucks,Mortgage Matchup Center,108,106,108,106,Regulation,4,2024,False
+2025-03-24,ESPN:401705610,401705610,2025-03-25T02:00Z,Sacramento Kings,Boston Celtics,Golden 1 Center,95,113,95,113,Regulation,4,2024,False
+2025-03-25,ESPN:401705611,401705611,2025-03-25T23:00Z,Charlotte Hornets,Orlando Magic,Spectrum Center,104,111,104,111,Regulation,4,2024,False
+2025-03-25,ESPN:401705612,401705612,2025-03-25T23:00Z,Detroit Pistons,San Antonio Spurs,Little Caesars Arena,122,96,122,96,Regulation,4,2024,False
+2025-03-25,ESPN:401705613,401705613,2025-03-25T23:30Z,Miami Heat,Golden State Warriors,Kaseya Center,112,86,112,86,Regulation,4,2024,False
+2025-03-25,ESPN:401705614,401705614,2025-03-25T23:30Z,New York Knicks,Dallas Mavericks,Madison Square Garden,128,113,128,113,Regulation,4,2024,False
+2025-03-25,ESPN:401705615,401705615,2025-03-26T00:00Z,Houston Rockets,Atlanta Hawks,Toyota Center (Houston),121,114,121,114,Regulation,4,2024,False
+2025-03-25,ESPN:401705616,401705616,2025-03-26T01:00Z,Utah Jazz,Memphis Grizzlies,Delta Center,103,140,103,140,Regulation,4,2024,False
+2025-03-25,ESPN:401705617,401705617,2025-03-26T02:00Z,Portland Trail Blazers,Cleveland Cavaliers,Moda Center,111,122,111,122,Regulation,4,2024,False
+2025-03-25,ESPN:401705618,401705618,2025-03-26T02:00Z,Sacramento Kings,Oklahoma City Thunder,Golden 1 Center,105,121,105,121,Regulation,4,2024,False
+2025-03-26,ESPN:401705619,401705619,2025-03-26T23:00Z,Philadelphia 76ers,Washington Wizards,Xfinity Mobile Arena,114,119,114,119,Regulation,4,2024,False
+2025-03-26,ESPN:401705620,401705620,2025-03-26T23:30Z,Brooklyn Nets,Toronto Raptors,Barclays Center,86,116,86,116,Regulation,4,2024,False
+2025-03-26,ESPN:401705621,401705621,2025-03-26T23:30Z,Indiana Pacers,Los Angeles Lakers,Gainbridge Fieldhouse,119,120,119,120,Regulation,4,2024,False
+2025-03-26,ESPN:401705622,401705622,2025-03-26T23:30Z,New York Knicks,Los Angeles Clippers,Madison Square Garden,113,126,113,126,Regulation,4,2024,False
+2025-03-26,ESPN:401705623,401705623,2025-03-27T01:00Z,Denver Nuggets,Milwaukee Bucks,Ball Arena,127,117,127,117,Regulation,4,2024,False
+2025-03-26,ESPN:401705624,401705624,2025-03-27T02:00Z,Phoenix Suns,Boston Celtics,Mortgage Matchup Center,102,132,102,132,Regulation,4,2024,False
+2025-03-27,ESPN:401705625,401705625,2025-03-27T23:00Z,Cleveland Cavaliers,San Antonio Spurs,Rocket Arena,124,116,124,116,Regulation,4,2024,False
+2025-03-27,ESPN:401705626,401705626,2025-03-27T23:00Z,Orlando Magic,Dallas Mavericks,Kia Center,92,101,92,101,Regulation,4,2024,False
+2025-03-27,ESPN:401705627,401705627,2025-03-27T23:00Z,Washington Wizards,Indiana Pacers,Capital One Arena,109,162,109,162,Regulation,4,2024,False
+2025-03-27,ESPN:401705628,401705628,2025-03-27T23:30Z,Miami Heat,Atlanta Hawks,Kaseya Center,122,112,122,112,Regulation,4,2024,False
+2025-03-27,ESPN:401705629,401705629,2025-03-28T00:00Z,Chicago Bulls,Los Angeles Lakers,United Center,119,117,119,117,Regulation,4,2024,False
+2025-03-27,ESPN:401705630,401705630,2025-03-28T00:00Z,Oklahoma City Thunder,Memphis Grizzlies,Paycom Center,125,104,125,104,Regulation,4,2024,False
+2025-03-27,ESPN:401705631,401705631,2025-03-28T01:00Z,Utah Jazz,Houston Rockets,Delta Center,110,121,110,121,Regulation,4,2024,False
+2025-03-27,ESPN:401705632,401705632,2025-03-28T02:00Z,Sacramento Kings,Portland Trail Blazers,Golden 1 Center,128,107,128,107,Regulation,4,2024,False
+2025-03-28,ESPN:401705633,401705633,2025-03-28T23:00Z,Detroit Pistons,Cleveland Cavaliers,Little Caesars Arena,133,122,133,122,Regulation,4,2024,False
+2025-03-28,ESPN:401705634,401705634,2025-03-28T23:30Z,Brooklyn Nets,Los Angeles Clippers,Barclays Center,100,132,100,132,Regulation,4,2024,False
+2025-03-28,ESPN:401705635,401705635,2025-03-28T23:30Z,Toronto Raptors,Charlotte Hornets,Scotiabank Arena,108,97,108,97,Regulation,4,2024,False
+2025-03-28,ESPN:401705636,401705636,2025-03-29T00:00Z,Milwaukee Bucks,New York Knicks,Fiserv Forum,107,116,107,116,Regulation,4,2024,False
+2025-03-28,ESPN:401705637,401705637,2025-03-29T00:00Z,Minnesota Timberwolves,Phoenix Suns,Target Center,124,109,124,109,Regulation,4,2024,False
+2025-03-28,ESPN:401705638,401705638,2025-03-29T00:00Z,New Orleans Pelicans,Golden State Warriors,Smoothie King Center,95,111,95,111,Regulation,4,2024,False
+2025-03-28,ESPN:401705639,401705639,2025-03-29T01:00Z,Denver Nuggets,Utah Jazz,Ball Arena,129,93,129,93,Regulation,4,2024,False
+2025-03-29,ESPN:401705640,401705640,2025-03-29T21:00Z,Orlando Magic,Sacramento Kings,Kia Center,121,91,121,91,Regulation,4,2024,False
+2025-03-29,ESPN:401705641,401705641,2025-03-29T23:00Z,Washington Wizards,Brooklyn Nets,Capital One Arena,112,115,112,115,Regulation,4,2024,False
+2025-03-29,ESPN:401705642,401705642,2025-03-29T23:30Z,Philadelphia 76ers,Miami Heat,Xfinity Mobile Arena,95,118,95,118,Regulation,4,2024,False
+2025-03-29,ESPN:401705643,401705643,2025-03-30T00:00Z,Chicago Bulls,Dallas Mavericks,United Center,119,120,119,120,Regulation,4,2024,False
+2025-03-29,ESPN:401705644,401705644,2025-03-30T00:00Z,Memphis Grizzlies,Los Angeles Lakers,FedExForum,127,134,127,134,Regulation,4,2024,False
+2025-03-29,ESPN:401705645,401705645,2025-03-30T00:00Z,Oklahoma City Thunder,Indiana Pacers,Paycom Center,132,111,132,111,Regulation,4,2024,False
+2025-03-29,ESPN:401705646,401705646,2025-03-30T00:00Z,San Antonio Spurs,Boston Celtics,Frost Bank Center,111,121,111,121,Regulation,4,2024,False
+2025-03-30,ESPN:401705647,401705647,2025-03-30T19:30Z,Cleveland Cavaliers,Los Angeles Clippers,Rocket Arena,127,122,127,122,Regulation,4,2024,False
+2025-03-30,ESPN:401705648,401705648,2025-03-30T22:00Z,New York Knicks,Portland Trail Blazers,Madison Square Garden,110,93,110,93,Regulation,4,2024,False
+2025-03-30,ESPN:401705649,401705649,2025-03-30T23:00Z,Milwaukee Bucks,Atlanta Hawks,Fiserv Forum,124,145,124,145,Regulation,4,2024,False
+2025-03-30,ESPN:401705650,401705650,2025-03-30T23:00Z,Minnesota Timberwolves,Detroit Pistons,Target Center,123,104,123,104,Regulation,4,2024,False
+2025-03-30,ESPN:401705651,401705651,2025-03-30T23:00Z,New Orleans Pelicans,Charlotte Hornets,Smoothie King Center,98,94,98,94,Regulation,4,2024,False
+2025-03-30,ESPN:401705652,401705652,2025-03-30T23:00Z,San Antonio Spurs,Golden State Warriors,Frost Bank Center,106,148,106,148,Regulation,4,2024,False
+2025-03-30,ESPN:401705653,401705653,2025-03-30T23:30Z,Philadelphia 76ers,Toronto Raptors,Xfinity Mobile Arena,109,127,109,127,Regulation,4,2024,False
+2025-03-30,ESPN:401705654,401705654,2025-03-31T01:00Z,Phoenix Suns,Houston Rockets,Mortgage Matchup Center,109,148,109,148,Regulation,4,2024,False
+2025-03-31,ESPN:401705655,401705655,2025-03-31T23:00Z,Charlotte Hornets,Utah Jazz,Spectrum Center,110,106,110,106,Regulation,4,2024,False
+2025-03-31,ESPN:401705656,401705656,2025-03-31T23:00Z,Indiana Pacers,Sacramento Kings,Gainbridge Fieldhouse,111,109,111,109,Regulation,4,2024,False
+2025-03-31,ESPN:401705657,401705657,2025-03-31T23:00Z,Orlando Magic,Los Angeles Clippers,Kia Center,87,96,87,96,Regulation,4,2024,False
+2025-03-31,ESPN:401705658,401705658,2025-03-31T23:00Z,Washington Wizards,Miami Heat,Capital One Arena,94,120,94,120,Regulation,4,2024,False
+2025-03-31,ESPN:401705659,401705659,2025-03-31T23:30Z,Memphis Grizzlies,Boston Celtics,FedExForum,103,117,103,117,Regulation,4,2024,False
+2025-03-31,ESPN:401705660,401705660,2025-04-01T00:00Z,Oklahoma City Thunder,Chicago Bulls,Paycom Center,145,117,145,117,Regulation,4,2024,False
+2025-03-31,ESPN:401705661,401705661,2025-04-01T00:30Z,Dallas Mavericks,Brooklyn Nets,American Airlines Center,109,113,109,113,Regulation,4,2024,False
+2025-03-31,ESPN:401705662,401705662,2025-04-01T02:00Z,Los Angeles Lakers,Houston Rockets,crypto.com Arena,104,98,104,98,Regulation,4,2024,False
+2025-04-01,ESPN:401705663,401705663,2025-04-01T23:30Z,Atlanta Hawks,Portland Trail Blazers,State Farm Arena,113,127,113,127,Regulation,4,2024,False
+2025-04-01,ESPN:401705664,401705664,2025-04-01T23:30Z,New York Knicks,Philadelphia 76ers,Madison Square Garden,105,91,105,91,Regulation,4,2024,False
+2025-04-01,ESPN:401705667,401705667,2025-04-01T23:30Z,Milwaukee Bucks,Phoenix Suns,Fiserv Forum,133,123,133,123,Regulation,4,2024,False
+2025-04-01,ESPN:401705554,401705554,2025-04-02T00:00Z,San Antonio Spurs,Orlando Magic,Frost Bank Center,105,116,105,116,Regulation,4,2024,False
+2025-04-01,ESPN:401705665,401705665,2025-04-02T00:00Z,Chicago Bulls,Toronto Raptors,United Center,137,118,137,118,Regulation,4,2024,False
+2025-04-01,ESPN:401705666,401705666,2025-04-02T00:00Z,Memphis Grizzlies,Golden State Warriors,FedExForum,125,134,125,134,Regulation,4,2024,False
+2025-04-01,ESPN:401705668,401705668,2025-04-02T02:00Z,Denver Nuggets,Minnesota Timberwolves,Ball Arena,139,140,112,112,Overtime,6,2024,False
+2025-04-02,ESPN:401705669,401705669,2025-04-02T23:00Z,Cleveland Cavaliers,New York Knicks,Rocket Arena,124,105,124,105,Regulation,4,2024,False
+2025-04-02,ESPN:401705670,401705670,2025-04-02T23:00Z,Indiana Pacers,Charlotte Hornets,Gainbridge Fieldhouse,119,105,119,105,Regulation,4,2024,False
+2025-04-02,ESPN:401705671,401705671,2025-04-02T23:00Z,Washington Wizards,Sacramento Kings,Capital One Arena,116,111,116,111,Regulation,4,2024,False
+2025-04-02,ESPN:401705672,401705672,2025-04-02T23:30Z,Boston Celtics,Miami Heat,TD Garden,103,124,103,124,Regulation,4,2024,False
+2025-04-02,ESPN:401705673,401705673,2025-04-03T00:00Z,Houston Rockets,Utah Jazz,Toyota Center (Houston),143,105,143,105,Regulation,4,2024,False
+2025-04-02,ESPN:401705675,401705675,2025-04-03T00:30Z,Dallas Mavericks,Atlanta Hawks,American Airlines Center,120,118,120,118,Regulation,4,2024,False
+2025-04-02,ESPN:401705676,401705676,2025-04-03T01:00Z,Denver Nuggets,San Antonio Spurs,Ball Arena,106,113,106,113,Regulation,4,2024,False
+2025-04-02,ESPN:401705674,401705674,2025-04-03T01:30Z,Oklahoma City Thunder,Detroit Pistons,Paycom Center,119,103,119,103,Regulation,4,2024,False
+2025-04-02,ESPN:401705677,401705677,2025-04-03T02:30Z,Los Angeles Clippers,New Orleans Pelicans,Intuit Dome,114,98,114,98,Regulation,4,2024,False
+2025-04-03,ESPN:401705678,401705678,2025-04-03T23:00Z,Washington Wizards,Orlando Magic,Capital One Arena,97,109,97,109,Regulation,4,2024,False
+2025-04-03,ESPN:401705681,401705681,2025-04-03T23:00Z,Philadelphia 76ers,Milwaukee Bucks,Xfinity Mobile Arena,113,126,113,126,Regulation,4,2024,False
+2025-04-03,ESPN:401705679,401705679,2025-04-03T23:30Z,Brooklyn Nets,Minnesota Timberwolves,Barclays Center,90,105,90,105,Regulation,4,2024,False
+2025-04-03,ESPN:401705680,401705680,2025-04-03T23:30Z,Miami Heat,Memphis Grizzlies,Kaseya Center,108,110,108,110,Regulation,4,2024,False
+2025-04-03,ESPN:401705682,401705682,2025-04-03T23:30Z,Toronto Raptors,Portland Trail Blazers,Scotiabank Arena,103,112,103,112,Regulation,4,2024,False
+2025-04-03,ESPN:401705683,401705683,2025-04-04T02:00Z,Los Angeles Lakers,Golden State Warriors,crypto.com Arena,116,123,116,123,Regulation,4,2024,False
+2025-04-04,ESPN:401705684,401705684,2025-04-04T23:00Z,Charlotte Hornets,Sacramento Kings,Spectrum Center,102,125,102,125,Regulation,4,2024,False
+2025-04-04,ESPN:401705685,401705685,2025-04-04T23:00Z,Indiana Pacers,Utah Jazz,Gainbridge Fieldhouse,140,112,140,112,Regulation,4,2024,False
+2025-04-04,ESPN:401705686,401705686,2025-04-04T23:30Z,Boston Celtics,Phoenix Suns,TD Garden,123,103,123,103,Regulation,4,2024,False
+2025-04-04,ESPN:401705687,401705687,2025-04-04T23:30Z,Toronto Raptors,Detroit Pistons,Scotiabank Arena,105,117,105,117,Regulation,4,2024,False
+2025-04-04,ESPN:401705688,401705688,2025-04-05T00:00Z,Chicago Bulls,Portland Trail Blazers,United Center,118,113,118,113,Regulation,4,2024,False
+2025-04-04,ESPN:401705689,401705689,2025-04-05T00:00Z,Houston Rockets,Oklahoma City Thunder,Toyota Center (Houston),125,111,125,111,Regulation,4,2024,False
+2025-04-04,ESPN:401705690,401705690,2025-04-05T00:00Z,San Antonio Spurs,Cleveland Cavaliers,Frost Bank Center,113,114,113,114,Regulation,4,2024,False
+2025-04-04,ESPN:401705691,401705691,2025-04-05T02:00Z,Golden State Warriors,Denver Nuggets,Chase Center,118,104,118,104,Regulation,4,2024,False
+2025-04-04,ESPN:401705692,401705692,2025-04-05T02:30Z,Los Angeles Lakers,New Orleans Pelicans,crypto.com Arena,124,108,124,108,Regulation,4,2024,False
+2025-04-04,ESPN:401705693,401705693,2025-04-05T02:30Z,Los Angeles Clippers,Dallas Mavericks,Intuit Dome,114,91,114,91,Regulation,4,2024,False
+2025-04-05,ESPN:401705694,401705694,2025-04-05T19:00Z,Atlanta Hawks,New York Knicks,State Farm Arena,105,121,105,121,Regulation,4,2024,False
+2025-04-05,ESPN:401705695,401705695,2025-04-05T23:00Z,Detroit Pistons,Memphis Grizzlies,Little Caesars Arena,103,109,103,109,Regulation,4,2024,False
+2025-04-05,ESPN:401705696,401705696,2025-04-05T23:00Z,Philadelphia 76ers,Minnesota Timberwolves,Xfinity Mobile Arena,109,114,109,114,Regulation,4,2024,False
+2025-04-05,ESPN:401705697,401705697,2025-04-06T00:00Z,Miami Heat,Milwaukee Bucks,Kaseya Center,115,121,111,111,Overtime,5,2024,False
+2025-04-05,ESPN:401705698,401705698,2025-04-06T02:30Z,Los Angeles Clippers,Dallas Mavericks,Intuit Dome,135,104,135,104,Regulation,4,2024,False
+2025-04-06,ESPN:401705699,401705699,2025-04-06T17:00Z,Charlotte Hornets,Chicago Bulls,Spectrum Center,117,131,117,131,Regulation,4,2024,False
+2025-04-06,ESPN:401705700,401705700,2025-04-06T19:30Z,Brooklyn Nets,Toronto Raptors,Barclays Center,109,120,109,120,Regulation,4,2024,False
+2025-04-06,ESPN:401705701,401705701,2025-04-06T19:30Z,Oklahoma City Thunder,Los Angeles Lakers,Paycom Center,99,126,99,126,Regulation,4,2024,False
+2025-04-06,ESPN:401705702,401705702,2025-04-06T22:00Z,Atlanta Hawks,Utah Jazz,State Farm Arena,147,134,147,134,Regulation,4,2024,False
+2025-04-06,ESPN:401705703,401705703,2025-04-06T22:00Z,Boston Celtics,Washington Wizards,TD Garden,124,90,124,90,Regulation,4,2024,False
+2025-04-06,ESPN:401705704,401705704,2025-04-06T22:00Z,Cleveland Cavaliers,Sacramento Kings,Rocket Arena,113,120,113,120,Regulation,4,2024,False
+2025-04-06,ESPN:401705705,401705705,2025-04-06T22:00Z,Portland Trail Blazers,San Antonio Spurs,Moda Center,120,109,120,109,Regulation,4,2024,False
+2025-04-06,ESPN:401705706,401705706,2025-04-06T23:00Z,New York Knicks,Phoenix Suns,Madison Square Garden,112,98,112,98,Regulation,4,2024,False
+2025-04-06,ESPN:401705708,401705708,2025-04-07T00:00Z,Denver Nuggets,Indiana Pacers,Ball Arena,120,125,120,125,Regulation,4,2024,False
+2025-04-06,ESPN:401705709,401705709,2025-04-07T00:30Z,Golden State Warriors,Houston Rockets,Chase Center,96,106,96,106,Regulation,4,2024,False
+2025-04-06,ESPN:401754706,401754706,2025-04-07T00:30Z,New Orleans Pelicans,Milwaukee Bucks,Smoothie King Center,107,111,107,111,Regulation,4,2024,False
+2025-04-07,ESPN:401705710,401705710,2025-04-07T23:00Z,Detroit Pistons,Sacramento Kings,Little Caesars Arena,117,127,117,127,Regulation,4,2024,False
+2025-04-07,ESPN:401705711,401705711,2025-04-07T23:30Z,Miami Heat,Philadelphia 76ers,Kaseya Center,117,105,117,105,Regulation,4,2024,False
+2025-04-08,ESPN:401705712,401705712,2025-04-08T23:00Z,Charlotte Hornets,Memphis Grizzlies,Spectrum Center,100,124,100,124,Regulation,4,2024,False
+2025-04-08,ESPN:401705713,401705713,2025-04-08T23:00Z,Cleveland Cavaliers,Chicago Bulls,Rocket Arena,135,113,135,113,Regulation,4,2024,False
+2025-04-08,ESPN:401705714,401705714,2025-04-08T23:00Z,Indiana Pacers,Washington Wizards,Gainbridge Fieldhouse,104,98,104,98,Regulation,4,2024,False
+2025-04-08,ESPN:401705715,401705715,2025-04-08T23:00Z,Orlando Magic,Atlanta Hawks,Kia Center,119,112,119,112,Regulation,4,2024,False
+2025-04-08,ESPN:401705716,401705716,2025-04-08T23:30Z,Brooklyn Nets,New Orleans Pelicans,Barclays Center,119,114,119,114,Regulation,4,2024,False
+2025-04-08,ESPN:401705717,401705717,2025-04-08T23:30Z,New York Knicks,Boston Celtics,Madison Square Garden,117,119,107,107,Overtime,5,2024,False
+2025-04-08,ESPN:401705718,401705718,2025-04-09T00:00Z,Milwaukee Bucks,Minnesota Timberwolves,Fiserv Forum,110,103,110,103,Regulation,4,2024,False
+2025-04-08,ESPN:401705719,401705719,2025-04-09T00:00Z,Oklahoma City Thunder,Los Angeles Lakers,Paycom Center,136,120,136,120,Regulation,4,2024,False
+2025-04-08,ESPN:401705720,401705720,2025-04-09T02:00Z,Phoenix Suns,Golden State Warriors,Mortgage Matchup Center,95,133,95,133,Regulation,4,2024,False
+2025-04-08,ESPN:401705721,401705721,2025-04-09T02:30Z,Los Angeles Clippers,San Antonio Spurs,Intuit Dome,122,117,122,117,Regulation,4,2024,False
+2025-04-09,ESPN:401705722,401705722,2025-04-09T23:00Z,Orlando Magic,Boston Celtics,Kia Center,96,76,96,76,Regulation,4,2024,False
+2025-04-09,ESPN:401705723,401705723,2025-04-09T23:00Z,Washington Wizards,Philadelphia 76ers,Capital One Arena,103,122,103,122,Regulation,4,2024,False
+2025-04-09,ESPN:401705724,401705724,2025-04-09T23:30Z,Toronto Raptors,Charlotte Hornets,Scotiabank Arena,126,96,126,96,Regulation,4,2024,False
+2025-04-09,ESPN:401705725,401705725,2025-04-09T23:30Z,Dallas Mavericks,Los Angeles Lakers,American Airlines Center,97,112,97,112,Regulation,4,2024,False
+2025-04-09,ESPN:401705726,401705726,2025-04-10T00:00Z,Chicago Bulls,Miami Heat,United Center,119,111,119,111,Regulation,4,2024,False
+2025-04-09,ESPN:401705728,401705728,2025-04-10T01:00Z,Utah Jazz,Portland Trail Blazers,Delta Center,133,126,114,114,Overtime,5,2024,False
+2025-04-09,ESPN:401705729,401705729,2025-04-10T02:00Z,Golden State Warriors,San Antonio Spurs,Chase Center,111,114,111,114,Regulation,4,2024,False
+2025-04-09,ESPN:401705730,401705730,2025-04-10T02:00Z,Phoenix Suns,Oklahoma City Thunder,Mortgage Matchup Center,112,125,112,125,Regulation,4,2024,False
+2025-04-09,ESPN:401705731,401705731,2025-04-10T02:00Z,Sacramento Kings,Denver Nuggets,Golden 1 Center,116,124,116,124,Regulation,4,2024,False
+2025-04-09,ESPN:401705732,401705732,2025-04-10T02:30Z,Los Angeles Clippers,Houston Rockets,Intuit Dome,134,117,134,117,Regulation,4,2024,False
+2025-04-10,ESPN:401705733,401705733,2025-04-10T23:00Z,Detroit Pistons,New York Knicks,Little Caesars Arena,115,106,115,106,Regulation,4,2024,False
+2025-04-10,ESPN:401705734,401705734,2025-04-10T23:00Z,Indiana Pacers,Cleveland Cavaliers,Gainbridge Fieldhouse,114,112,114,112,Regulation,4,2024,False
+2025-04-10,ESPN:401705735,401705735,2025-04-10T23:30Z,Brooklyn Nets,Atlanta Hawks,Barclays Center,109,133,109,133,Regulation,4,2024,False
+2025-04-10,ESPN:401705727,401705727,2025-04-11T00:00Z,Milwaukee Bucks,New Orleans Pelicans,Fiserv Forum,136,111,136,111,Regulation,4,2024,False
+2025-04-10,ESPN:401705736,401705736,2025-04-11T01:30Z,Memphis Grizzlies,Minnesota Timberwolves,FedExForum,125,141,125,141,Regulation,4,2024,False
+2025-04-11,ESPN:401705737,401705737,2025-04-11T23:00Z,Detroit Pistons,Milwaukee Bucks,Little Caesars Arena,119,125,119,125,Regulation,4,2024,False
+2025-04-11,ESPN:401705738,401705738,2025-04-11T23:00Z,Indiana Pacers,Orlando Magic,Gainbridge Fieldhouse,115,129,115,129,Regulation,4,2024,False
+2025-04-11,ESPN:401705739,401705739,2025-04-11T23:00Z,Philadelphia 76ers,Atlanta Hawks,Xfinity Mobile Arena,110,124,110,124,Regulation,4,2024,False
+2025-04-11,ESPN:401705740,401705740,2025-04-11T23:30Z,Boston Celtics,Charlotte Hornets,TD Garden,130,94,130,94,Regulation,4,2024,False
+2025-04-11,ESPN:401705741,401705741,2025-04-11T23:30Z,New York Knicks,Cleveland Cavaliers,Madison Square Garden,102,108,102,108,Regulation,4,2024,False
+2025-04-11,ESPN:401705742,401705742,2025-04-12T00:00Z,Chicago Bulls,Washington Wizards,United Center,119,89,119,89,Regulation,4,2024,False
+2025-04-11,ESPN:401705743,401705743,2025-04-12T00:00Z,New Orleans Pelicans,Miami Heat,Smoothie King Center,104,153,104,153,Regulation,4,2024,False
+2025-04-11,ESPN:401705744,401705744,2025-04-12T00:30Z,Dallas Mavericks,Toronto Raptors,American Airlines Center,124,102,124,102,Regulation,4,2024,False
+2025-04-11,ESPN:401705745,401705745,2025-04-12T01:00Z,Minnesota Timberwolves,Brooklyn Nets,Target Center,117,91,117,91,Regulation,4,2024,False
+2025-04-11,ESPN:401705746,401705746,2025-04-12T01:00Z,Denver Nuggets,Memphis Grizzlies,Ball Arena,117,109,117,109,Regulation,4,2024,False
+2025-04-11,ESPN:401705747,401705747,2025-04-12T01:30Z,Utah Jazz,Oklahoma City Thunder,Delta Center,111,145,111,145,Regulation,4,2024,False
+2025-04-11,ESPN:401705748,401705748,2025-04-12T02:00Z,Phoenix Suns,San Antonio Spurs,Mortgage Matchup Center,117,98,117,98,Regulation,4,2024,False
+2025-04-11,ESPN:401705749,401705749,2025-04-12T02:00Z,Portland Trail Blazers,Golden State Warriors,Moda Center,86,103,86,103,Regulation,4,2024,False
+2025-04-11,ESPN:401705750,401705750,2025-04-12T02:00Z,Sacramento Kings,Los Angeles Clippers,Golden 1 Center,100,101,100,101,Regulation,4,2024,False
+2025-04-11,ESPN:401705751,401705751,2025-04-12T02:30Z,Los Angeles Lakers,Houston Rockets,crypto.com Arena,140,109,140,109,Regulation,4,2024,False
+2025-04-13,ESPN:401705752,401705752,2025-04-13T17:00Z,Atlanta Hawks,Orlando Magic,State Farm Arena,117,105,117,105,Regulation,4,2024,False
+2025-04-13,ESPN:401705753,401705753,2025-04-13T17:00Z,Boston Celtics,Charlotte Hornets,TD Garden,93,86,93,86,Regulation,4,2024,False
+2025-04-13,ESPN:401705754,401705754,2025-04-13T17:00Z,Brooklyn Nets,New York Knicks,Barclays Center,105,113,105,113,Regulation,4,2024,False
+2025-04-13,ESPN:401705755,401705755,2025-04-13T17:00Z,Cleveland Cavaliers,Indiana Pacers,Rocket Arena,118,126,105,105,Overtime,6,2024,False
+2025-04-13,ESPN:401705756,401705756,2025-04-13T17:00Z,Miami Heat,Washington Wizards,Kaseya Center,118,119,118,119,Regulation,4,2024,False
+2025-04-13,ESPN:401705757,401705757,2025-04-13T17:00Z,Philadelphia 76ers,Chicago Bulls,Xfinity Mobile Arena,102,122,102,122,Regulation,4,2024,False
+2025-04-13,ESPN:401705758,401705758,2025-04-13T17:00Z,Milwaukee Bucks,Detroit Pistons,Fiserv Forum,140,133,123,123,Overtime,5,2024,False
+2025-04-13,ESPN:401705759,401705759,2025-04-13T19:30Z,Houston Rockets,Denver Nuggets,Toyota Center (Houston),111,126,111,126,Regulation,4,2024,False
+2025-04-13,ESPN:401705760,401705760,2025-04-13T19:30Z,Memphis Grizzlies,Dallas Mavericks,FedExForum,132,97,132,97,Regulation,4,2024,False
+2025-04-13,ESPN:401705761,401705761,2025-04-13T19:30Z,Minnesota Timberwolves,Utah Jazz,Target Center,116,105,116,105,Regulation,4,2024,False
+2025-04-13,ESPN:401705762,401705762,2025-04-13T19:30Z,New Orleans Pelicans,Oklahoma City Thunder,Smoothie King Center,100,115,100,115,Regulation,4,2024,False
+2025-04-13,ESPN:401705763,401705763,2025-04-13T19:30Z,San Antonio Spurs,Toronto Raptors,Frost Bank Center,125,118,125,118,Regulation,4,2024,False
+2025-04-13,ESPN:401705764,401705764,2025-04-13T19:30Z,Golden State Warriors,Los Angeles Clippers,Chase Center,119,124,111,111,Overtime,5,2024,False
+2025-04-13,ESPN:401705765,401705765,2025-04-13T19:30Z,Portland Trail Blazers,Los Angeles Lakers,Moda Center,109,81,109,81,Regulation,4,2024,False
+2025-04-13,ESPN:401705766,401705766,2025-04-13T19:30Z,Sacramento Kings,Phoenix Suns,Golden 1 Center,109,98,109,98,Regulation,4,2024,False

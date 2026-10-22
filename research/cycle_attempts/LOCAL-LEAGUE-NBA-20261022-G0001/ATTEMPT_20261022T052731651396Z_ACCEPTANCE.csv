@@ -1,0 +1,2 @@
+local_key,attempt_path,execution_sha256,status,freeze_basis,freeze_clock,freeze_commit,evidence_status,ledger_path,ledger_rows,accepted_at
+LOCAL-LEAGUE-NBA-20261022-G0001,research/cycle_attempts/LOCAL-LEAGUE-NBA-20261022-G0001/ATTEMPT_20261022T052731651396Z,342892a4a2b4f4f6db7d37c948ac59e703f3f96b40e3c8e28be771aea5078eac,EXECUTED,now,2026-10-22T05:28:07.756218+00:00,,PRE_START_VERIFIED,research/prospective/CYCLE_SHADOW_LEDGER.csv,4,2026-10-22T05:28:07.756184+00:00
