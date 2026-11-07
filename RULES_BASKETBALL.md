@@ -29,7 +29,7 @@ NBA, WNBA, NBL, NCAA, FIBA, EuroLeague, LKL, LNBP, summer league and preseason a
 | BK-P1 league and clock | Rules era, period length, foul/bonus, overtime terms. A competition with no current regulation packet (LNBP 2026) stays `FAIL` | Stop; no rank, probability or direction (P-451 is the reference fail-close) |
 | BK-P2 availability | Official injury report plus both starting fives and the active roster from the official feed, with fetch time (K-1) | Start/minutes mixtures; dependent rows capped. `PROJECTED_BEAT_VERIFIED` needs the S-1 Rev 2 receipt |
 | BK-P3 phase identity | Which segment each row settles on (Q1/Q2/H1/H2/full; OT in or out) | A completed segment is `SETTLED_AT_ISSUE` and unranked |
-| BK-P4 endpoint | Regulation or including overtime for every total, spread and team total | `UNKNOWN_DEFINITION`; the OT branch stays explicit |
+| BK-P4 endpoint | (BK-OT-1, 2026-11-07) Including overtime for every total, spread, team total and winner line, unless the contract text names regulation or a segment | None: the endpoint is `FROZEN_FRAMEWORK_CONVENTION`; the OT branch stays explicit in the price |
 
 Pregame means before the actual tip. NBL: the first `jumpBall` event in the match feed (K-3). ESPN `plays[].wallclock` gives the tip for NBA/WNBA/NBL. When an injury note shares a surname with an active teammate, print first names and the official active list (`O-ROSTER-NAME-COLLISION`).
 
@@ -61,6 +61,7 @@ Pregame means before the actual tip. NBL: the first `jumpBall` event in the matc
 - Official box scores. ESPN `summary` corroborates, and gives the process record and the starter diff (`starter`, `didNotPlay`; `SOURCES.md` §2.1) (K-1). The NBL match API settles only; skip its `betting`/`odds` keys. Flashscore is an independent third lineage.
 - LNBP finals render only in a browser: `JS_ONLY — RENDER REQUIRED` is reachable, so a miss is `RETRIEVAL_MISS` (control 27).
 - Record regulation versus OT exactly (control 13) and disruption facts (ejections, injury exits with clock and score).
+- **BK-OT-1 (owner convention, 7 November 2026; CR-2026.11.07-R1).** Every basketball line includes overtime: full-game totals, spreads/handicaps, team totals and winner lines settle on the final score after all overtime periods, in every basketball competition. Only a contract whose own text names regulation, a quarter or a half settles on that segment. The endpoint is therefore `FROZEN_FRAMEWORK_CONVENTION`, never `UNKNOWN_DEFINITION`, and no operator term is needed to settle it. Price overtime as explicit mass (the regulation-tie branch), and still report whether a threshold was already crossed in regulation (control 13).
 
 ### 0.6 Withdrawn in basketball — never apply
 Derby Under suppression; the FIBA club-qualifier +5.5 possessions coefficient; `C-ABSENCE-DEFENSIVE-PENALTY`; upper-decile pace × ORtg tail sums as a ranking bar; path-count categories; 40–60% top-slot bands; normalised-edge ordering; a fixed cushion-plus-Under coupling sign; the equal-attempt 1.7-SE claim; one-result response rules.
@@ -126,14 +127,14 @@ For numerical training, benchmark a conditional empirical/joint score distributi
 3. **Small H2H phase samples are weak.** A two-game Q2 acceleration pattern cannot control a current H1 direction.
 4. **Minutes uncertainty is a distribution.** Do not use active/inactive as a full-workload binary.
 5. **Blowout and garbage time are two-sided.** They change starters' minutes, bench pace, defence, and late scoring differently by contract.
-6. **Late fouling and overtime are explicit tails.** Match the operator's inclusion rule.
+6. **Late fouling and overtime are explicit tails.** Overtime is always included (BK-OT-1, 2026-11-07); price it as explicit mass.
 7. **Rest is mechanistic.** Connect fatigue to pace, transition defence, shot quality, or minutes; no automatic Under/Over.
 8. **Player props need role coherence.** Usage, minutes, teammates, defensive matchup, and stat opportunity must point in the same direction.
 9. **Extreme spread size is not automatic safety.** For large mismatches, model opening separation, maximum-lead and closing-margin distributions separately. Rest/back-to-back, depth, bench quality, rotation intent, mercy/clock rules where applicable and garbage-time compression can move the final margin in opposite directions.
 10. **Friendly halves can be different games.** Preparation matches require starter, bench and closing-lineup mixtures. A strong first half does not validate the full-game side when creators, minutes and late-game roles are deliberately rotated.
 11. **Mismatch total and margin share a state tree.** Favourite offensive dominance can lift both margin and total, while underdog suppression can lift margin and lower the total. Derive both branches from the same possession/lineup simulation instead of treating an extreme handicap and an Under as independent safety plays.
 12. **Current roster regime must be reconciled explicitly.** A missing rim protector, rebound anchor, primary creator or closer changes minutes, paint deterrence, rebounding, turnover pressure and closing-lineup quality. Old H2H and cover counts remain priors and cannot retain a high evidence grade unless the card explains why the present replacements preserve the old mechanism.
-13. **Regulation and overtime attribution is exact.** Settle under the operator's endpoint, then report whether the threshold was already crossed in regulation. Do not describe an Over/Under miss as overtime-caused when regulation alone settled it.
+13. **Regulation and overtime attribution is exact.** Settle on the final score including overtime (BK-OT-1, 2026-11-07), then report whether the threshold was already crossed in regulation. Do not describe an Over/Under miss as overtime-caused when regulation alone settled it.
 14. **Rest is segmented, not a full-game scalar.** When a back-to-back/travel/fatigue branch is material, estimate its first-half versus second-half effect on transition defence, turnovers, defensive rebounding, shot quality, foul/bonus exposure and closing-lineup probability. If the card names a supported late-fatigue failure path, reconcile it with the side rank before issue.
 15. **Low total can coexist with favourite blowout.** In depleted-roster or depth mismatches, model the underdog scoring floor and favourite defensive suppression separately from pace. An Under centre does not make the extreme underdog spread safe.
 16. **Large spreads require factorised separation.** Before ranking a double-digit favourite, separately estimate possessions, shooting-efficiency advantage, rebound/turnover conversion, bench/rotation separation and true blowout probability. A small set of recent ugly opponent finals widens the lower tail but cannot by itself place the next game's central margin beyond the line.
@@ -152,7 +153,7 @@ Store score, quarter/clock, possession estimate, lineups on court, fouls/bonus, 
 - The [NBA statistics glossary](https://www.nba.com/stats/help/glossary) controls NBA definitions; use the equivalent official competition source elsewhere.
 - Reputable play-by-play/tracking sources may support lineup and shot-quality features after coverage checks.
 
-Settle from the official final and named statistic provider, preserving regulation/OT and phase boundaries.
+Settle from the official final and named statistic provider, preserving regulation/OT and phase boundaries. Full-game lines include overtime (BK-OT-1, 2026-11-07).
 
 ## 7. Upcoming-game research sequence
 
@@ -176,7 +177,7 @@ Algorithm ID: `SFA-BASKETBALL`. Effective **2026-09-02**. Instantiates `GFA-2` (
 | `BK-P1` league and clock | League, season/rules era, quarter or half structure, period length, foul and bonus rules, overtime terms | `GATE-TARGET` failure; do not proceed |
 | `BK-P2` availability | Newest official injury/availability report plus the confirmed starting five for both sides, re-handshaken at G31 | Model start and minutes mixtures; dependent rows cap at `FORCED RANK` / `MEDIUM-LOW` |
 | `BK-P3` phase identity | Which segment each supplied row settles on: Q1, Q2, H1, H2, full game, and whether overtime is included | A completed segment is `SETTLED_AT_ISSUE` and unranked |
-| `BK-P4` operator endpoint | Regulation or including overtime, for every total, spread and team total | Label `UNKNOWN_DEFINITION` and keep the overtime branch explicit |
+| `BK-P4` endpoint (BK-OT-1, 2026-11-07) | Including overtime, for every total, spread, team total and winner line, unless the contract text names regulation or a segment | None: `FROZEN_FRAMEWORK_CONVENTION`; keep the overtime branch explicit in the price |
 
 ### 8.2 Exposure chain
 
@@ -203,7 +204,7 @@ Raw points per game and a recent shooting percentage never substitute for `BK-S2
 | `BK-B5` | Underdog response: opponent scoring against reduced defensive intensity |
 | `BK-B6` | Underdog suppression: opponent floor state — raises margin and lowers the total |
 | `BK-B7` | Foul, bonus and late intentional fouling adding free-throw possessions |
-| `BK-B8` | Overtime under the exact operator endpoint |
+| `BK-B8` | Overtime, always included in full-game lines (BK-OT-1, 2026-11-07) |
 
 `BK-B3`–`BK-B6` are the mismatch state tree. They must be enumerated separately for any double-digit spread; a large handicap and an Under may never be treated as independent safety plays.
 

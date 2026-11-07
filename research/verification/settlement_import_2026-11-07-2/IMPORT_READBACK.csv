@@ -1,0 +1,2 @@
+label,canonical_id,local_key,source,source_offsets,core_bytes,core_sha256,destination_offsets
+P-616 2026-11-07-settlement-revision-2,P-616,LOCAL-20261018Q7N4T9B2-G0002,inputs/20261018Q7N4T9B2/20261018Q7N4T9B2_SETTLEMENT_REVISION_2.md,4385-7486,3101,701053e2bec2f9b9a2933ac142715596da69a9e89569dd2603f59881e912df3e,16885-19986

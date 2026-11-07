@@ -1077,3 +1077,11 @@ Settlement revisions for P-604, P-606 and P-620, owner-invoked prompts 3 and 4 (
 | P-620 | R2 (parent R1) | TERMINAL_SPORTING_REVIEW / ANALYST_PRIMARY_V1 / OPERATOR_UNKNOWN |
 
 All other P-601–P-622 rows keep the statuses in the 2026-10-21 table above.
+
+## BK-OT-1 settlement import — 2026-11-07T21:15:50+11:00
+
+P-616 (TNT v Converge, 114–112 OT, regulation 106–106) revision-2, appended to Part 9: its endpoint is now `FROZEN_FRAMEWORK_CONVENTION` under BK-OT-1, so U-603 is closed. Grades unchanged (Under 221.5 LOSS, TNT +2.0 PUSH, Converge −2.0 PUSH, Over 221.5 WIN); the four rows join the headline view. The other basketball events were already graded on the final score. Zero IDs consumed (highest P-622, next P-623). No grade-changing item remains open in P-601–P-622. [Import report](research/verification/settlement_import_2026-11-07-2/CANONICAL_IMPORT_REPORT.md); [queue](research/verification/settlement_import_2026-11-07-2/UNRESOLVED_POST_IMPORT.md).
+
+| ID | Effective revision | Current status |
+|---|---|---|
+| P-616 | R2 (parent R1, BK-OT-1) | TERMINAL_SPORTING_REVIEW / ANALYST_PRIMARY_V1 / NOT_ISSUED_DRAFT / ENDPOINT_FROZEN_FRAMEWORK_CONVENTION |

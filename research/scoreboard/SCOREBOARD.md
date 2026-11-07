@@ -6,6 +6,7 @@
 - **Research-only P-601–P-611.** 26W/26L/0U, NOT_PRIMARY (P-604 corners Over 10.5 WIN / Under LOSS on evidence C).
 - **ANALYST_PRIMARY_V1 (P-612–P-622).** Unchanged: primary 11W/10L/1P, Brier 0.2041 on 21 rows. P-620's innings rows now graded on B (headline view) instead of E.
 - **P-606.** Score 116–98; no grade changed. **P-620.** Qualitative winner call (Australia) wrong; no probability, no score.
+- **P-616 (BK-OT-1, 2026-11-07).** Endpoint is a framework convention: every basketball line includes overtime. Its four rows (Under LOSS, +2.0 PUSH, −2.0 PUSH, Over WIN) now sit in the headline view. Counts unchanged.
 - The 2026-10-21 section below keeps its original figures.
 
 ## Cohort retrospective 2026-10-21 (P-601–P-622; descriptive, grades unchanged)

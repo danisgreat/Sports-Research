@@ -62,7 +62,7 @@ Freeze the supported family/line-generation recipe before pricing (totals, team 
 
 ## 6. Basketball playing conditions and rules
 
-Resolve the exact competition's rules: FIBA (40 mins, four 10-min quarters) vs NBA/WNBA (48/40 mins), foul-out/bonus thresholds, and 5-minute overtime periods. Do not import NBA defaults (pace, totals, overtime rate, home edge, quarter length) into NBL, B.League, ACB, EuroLeague, or other national leagues. A raw scoring average is a labelled approximation, not a fitted pace model. Disclose missing or stale league profiles and widen uncertainty accordingly.
+Every basketball line includes overtime unless its own text names regulation or a segment (BK-OT-1, 2026-11-07; RULES_BASKETBALL §0.5): state it as the endpoint, `FROZEN_FRAMEWORK_CONVENTION`. Resolve the exact competition's rules: FIBA (40 mins, four 10-min quarters) vs NBA/WNBA (48/40 mins), foul-out/bonus thresholds, and 5-minute overtime periods. Do not import NBA defaults (pace, totals, overtime rate, home edge, quarter length) into NBL, B.League, ACB, EuroLeague, or other national leagues. A raw scoring average is a labelled approximation, not a fitted pace model. Disclose missing or stale league profiles and widen uncertainty accordingly.
 
 ## 7. Write, audit and return
 

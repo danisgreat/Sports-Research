@@ -100,7 +100,7 @@ If a file cannot be read, say which, keep going with what you have, and never pr
 - Expected possessions: the two teams' paces combined against the league pace; expected points per team from offensive rating against the opponent's defensive rating. Compare this with the reference centre and explain any gap; it is a check, not a second reference.
 - Each side's points for and against, margin and total over L5, L10, L15, L20, season, and home or away, from dated game rows (true n, opened sources).
 - Margin and total SDs at or above the competition floor in COMPETITION_PARAMETERS; overtime probability from the competition row (`store_extra_time_rate`) or the family prior.
-- For a handicap: P(margin > line) with overtime included when the contract includes it (NBA spreads and totals usually include overtime; state the contract's rule). For a total: the total distribution with the overtime tail.
+- For a handicap: P(margin > line) with overtime included: every basketball line includes overtime unless its own text names regulation or a segment (BK-OT-1, 2026-11-07). For a total: the total distribution with the overtime tail.
 - For any player row: expected minutes × rate, with the minutes uncertainty and the blowout effect on starters' minutes as width.
 - For every ranked row, the line's distance from the centre in standard deviations (`z`), so easy lines are visible as easy.
 
