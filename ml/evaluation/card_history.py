@@ -2,7 +2,7 @@
 
 Builds one row per (card, original rank) from the committed records, without re-grading anything:
 
-    GAME_PREDICTION_RANK_LOG.csv                      literal ranks/grades/stated p, P-001 onward (with source lines)
+    research/data/GAME_PREDICTION_RANK_LOG.csv                      literal ranks/grades/stated p, P-001 onward (with source lines)
     HISTORICAL_PRIMARY_RECONCILIATION.csv             effective final-settlement Rank 1/2 grades P-126–P-576
                                                       (cross-check; a disagreement is reported and the effective
                                                       grade wins for Ranks 1–2)
@@ -31,7 +31,7 @@ from ml.core.metrics import calibration_fit, iso_week, paired_week_interval, wil
 
 ROOT = Path(__file__).resolve().parents[2]
 V = ROOT / "research" / "verification"
-RANK_LOG = ROOT / "GAME_PREDICTION_RANK_LOG.csv"
+RANK_LOG = ROOT / "research" / "data" / "GAME_PREDICTION_RANK_LOG.csv"
 RECON = V / "mini_import_P-577_P-584_2026-10-13-1" / "HISTORICAL_PRIMARY_RECONCILIATION.csv"
 STATUS = ROOT / "GAME_LOG_STATUS_CURRENT.md"
 NOT_PRIMARY = {"LEGACY_ANALYST_NOT_PRIMARY", "RESEARCH_ONLY_NOT_PRIMARY"}

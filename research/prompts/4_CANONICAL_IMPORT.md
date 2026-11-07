@@ -2,17 +2,17 @@
 
 **Canonical assignment happens here, as the last step of an event's settlement phase (MINI-v2).** Prompt 3 runs this import on the mini it has just settled; it can also be run alone on an owner-supplied package. Accept local-key mini-log-10 research and mini-settlement-10 without any preassigned P-ID. Freeze/verify original source bytes, reconcile every event against canonical/native aliases, assign new canonical IDs only in this verified import, retain the final mapping separately from the frozen pre-import NOT_ASSIGNED mapping, and update actual canonical highest/next after append/readback. Exact reruns and already imported events receive no new ID. Replan unapplied rows on concurrent state changes; preserve applied IDs. Reviewed local label candidates may now be exported using mapped canonical original/settlement wrappers without rewriting source bundles or event IDs.
 
-**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](../../MINI_LOG_IDENTITY_PROTOCOL.md); summarised in [CORE](../../CORE.md) §2.
+**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](../../WORKFLOW.md#part-b-mini_log_identity_protocol); summarised in [CORE](../../CORE.md) §2.
 
-**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](../../RESEARCH_EXHAUSTIVENESS_PROTOCOL.md); summarised in [CORE](../../CORE.md) §5.
+**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](../../RESEARCH_PROTOCOL.md#part-b-research_exhaustiveness_protocol); summarised in [CORE](../../CORE.md) §5.
 
 **Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §5.
 
 **P-2026.10.22-v24.0 · CANONICAL_IMPORT · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: active log suffix, current status/state/scoreboard, a new import report with preserved inputs, and declared append-only source observations in RESEARCH_SOURCE_REGISTER, plus the append-only LEARN-v1 learning store, training-candidate folders and review log. Never rewrite issued cores, closed parts or grades. Publish when this full prompt is invoked unless the user requests local-only.
 
-**ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](../../FORECAST_CYCLE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §7.
+**ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](../../REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](../../CORE.md) §7.
 
-**Execution environment (ENV-v2).** Defined in [EXECUTION_ENVIRONMENT_PROTOCOL](../../EXECUTION_ENVIRONMENT_PROTOCOL.md); summarised in [CORE](../../CORE.md) §1.
+**Execution environment (ENV-v2).** Defined in [EXECUTION_ENVIRONMENT_PROTOCOL](../../WORKFLOW.md#part-a-execution_environment_protocol); summarised in [CORE](../../CORE.md) §1.
 
 **Required repository fallback (REF-v1).** Defined in [GITHUB_REFERENCE_PROTOCOL](../../GITHUB_REFERENCE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §1.
 
@@ -71,11 +71,11 @@ Return package/destination/report links, all dispositions, canonical continuity,
 
 ## Research retention and execution disposition (RETAIN-v1)
 
-**Retain the research (RETAIN-v3).** Defined in [RESEARCH_RETENTION_PROTOCOL](../../RESEARCH_RETENTION_PROTOCOL.md); summarised in [CORE](../../CORE.md) §2.
+**Retain the research (RETAIN-v3).** Defined in [RESEARCH_RETENTION_PROTOCOL](../../RESEARCH_PROTOCOL.md#part-c-research_retention_protocol); summarised in [CORE](../../CORE.md) §2.
 
 For retention-only import, accept researched cards with an honest probability-method disposition; complete source custody, identity and contiguous canonical allocation still apply. Check the mini structure by hand (one format marker, balanced local-key card markers, one Analysis status per card); `python -m ml primary verify-log --mini <mini>` may be used for the same structural check in the repository. No execution receipt, model, baseline or completed settlement is an ID/import prerequisite. Preserve originals and source capture; leave any legacy bundles/feedback in place for prompt 6.
 
-**Local research record and updated-document delivery (owner update, 16 October 2026).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](../../MINI_LOG_IDENTITY_PROTOCOL.md); summarised in [CORE](../../CORE.md) §2.
+**Local research record and updated-document delivery (owner update, 16 October 2026).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](../../WORKFLOW.md#part-b-mini_log_identity_protocol); summarised in [CORE](../../CORE.md) §2.
 
 ## Legacy grouped packages and current prompt continuity
 

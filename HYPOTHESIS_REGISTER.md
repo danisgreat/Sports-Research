@@ -92,7 +92,7 @@ All six were registered but never run. The candidate engines that were meant to 
 
 ## Selection-rule experiment
 
-**SEL-1** (also XCARD-5): the provisional Rank-1 gate in [SELECTION_RULES.md](SELECTION_RULES.md) §2 stays provisional until at least 8 weeks of cards have been issued with the gate label printed before the event. The test compares the Rank-1 win rate of `PASS` cards with `RANK1_UNSTABLE` cards. Until then the numbers do not change.
+**SEL-1** (also XCARD-5): the provisional Rank-1 gate in [RULES_REFERENCE.md (SELECTION_RULES)](RULES_REFERENCE.md#part-b-selection_rules) §2 stays provisional until at least 8 weeks of cards have been issued with the gate label printed before the event. The test compares the Rank-1 win rate of `PASS` cards with `RANK1_UNSTABLE` cards. Until then the numbers do not change.
 
 ## Retrospective proposals (RIP)
 
@@ -114,7 +114,7 @@ Eleven proposals came out of the P-527 to P-537 reviews. They are retained verba
 
 ## Failure-class counts feeding new proposals
 
-The failure taxonomy is [SELECTION_RULES.md](SELECTION_RULES.md) §8. The baseline counts for the 2026-10-09 cohort are in [FRAMEWORK_RETROSPECTIVE_2026-10-09.md](archive/root_documents_2026-10-14/FRAMEWORK_RETROSPECTIVE_2026-10-09.md) (its failure-class table). The next retrospective (prompt 6) adds a dated section here with the new counts and any new proposals, each with a pre-registered acceptance test, a minimum sample and a rollback condition.
+The failure taxonomy is [RULES_REFERENCE.md (SELECTION_RULES)](RULES_REFERENCE.md#part-b-selection_rules) §8. The baseline counts for the 2026-10-09 cohort are in [FRAMEWORK_RETROSPECTIVE_2026-10-09.md](archive/root_documents_2026-10-14/FRAMEWORK_RETROSPECTIVE_2026-10-09.md) (its failure-class table). The next retrospective (prompt 6) adds a dated section here with the new counts and any new proposals, each with a pre-registered acceptance test, a minimum sample and a rollback condition.
 
 ## Retrospective 2026-10-11 (new cohort P-557 to P-576)
 
@@ -145,13 +145,13 @@ Source: [research/verification/retrospective_2026-10-11/RETROSPECTIVE_REPORT.md]
 
 ## 15 October 2026 amendment - manual research timing
 
-Owner explicitly removes fixed advance research/freeze deadlines and permits research to finish after play starts. [TIMING-2026.10.15-v1](TIMING_RESEARCH_PROTOCOL.md) supersedes RET-05's five-minute/90%-buffered monitoring target for future manual work; original RET-05 registrations and all prior observations above remain unchanged. No request is suppressed or forced to issue early to meet a timing rate.
+Owner explicitly removes fixed advance research/freeze deadlines and permits research to finish after play starts. [TIMING-2026.10.15-v1](RESEARCH_PROTOCOL.md#part-e-timing_research_protocol) supersedes RET-05's five-minute/90%-buffered monitoring target for future manual work; original RET-05 registrations and all prior observations above remain unchanged. No request is suppressed or forced to issue early to meet a timing rate.
 
 New monitoring TIMING-COMPLETE-v1: retain every request and report comprehensive-search completion, source-known-at coverage, actual issue phase and outcome exposure. CLEAN_PRE_START_INPUTS / POST_START_ISSUE is a separate descriptive research cohort. No acceptance hit-rate, efficacy sample size or operational automation invented. Status IMPLEMENTED_PROCEDURE / PREDICTIVE_EFFECT_NOT_TESTED. Existing FC10/FC11/XCARD/prospective model tests retain their exact originally frozen populations and timing gates; late-issued events do not join them by this amendment. A new predictive comparison of late-issued clean-input research requires a separate prospective preregistration; design/power NOT_ESTIMATED, no promotion.
 
 ## 15 October 2026 - Primary model-selection research amendment
 
-Owner authorises MODEL_ASSISTED_PRIMARY_V1 / PRIMARY_EXP3_V1 as experimental primary use. [Protocol](PRIMARY_PREDICTION_PROTOCOL.md). Two fitted decay experts plus league-only comparator; contextual bandit learns only from available resolved original-primary sporting errors. IMPLEMENTED_MECHANISM / PREDICTIVE_EFFECT_NOT_TESTED. Old registered manual/shadow/model experiments retain their exact populations and thresholds; assisted cards do not silently join them. Confirmatory incremental skill design, practical effect and power remain BLOCKED_DESIGN/NOT_ESTIMATED, not inferred from tests or synthetic demonstrations.
+Owner authorises MODEL_ASSISTED_PRIMARY_V1 / PRIMARY_EXP3_V1 as experimental primary use. [Protocol](ML_PIPELINE.md#part-a-primary_prediction_protocol). Two fitted decay experts plus league-only comparator; contextual bandit learns only from available resolved original-primary sporting errors. IMPLEMENTED_MECHANISM / PREDICTIVE_EFFECT_NOT_TESTED. Old registered manual/shadow/model experiments retain their exact populations and thresholds; assisted cards do not silently join them. Confirmatory incremental skill design, practical effect and power remain BLOCKED_DESIGN/NOT_ESTIMATED, not inferred from tests or synthetic demonstrations.
 
 **Amendment (PRIMARY-2026.10.15-v2).** PRIMARY_EXP3_V1 is replaced by MODEL_ASSISTED_PRIMARY_V2 / PRIMARY_HEDGE_MIX_V2 before any V1 bundle was issued: a deterministic full-information mixture of the same three experts, with weights learned from every expert's losses on common questions. Basis: [policy replay](research/model_shadow/PRIMARY_POLICY_REPLAY/RESULTS.md), HISTORICAL_DEVELOPMENT, pooled home-win Brier mixture − Exp3 −0.0081 [−0.0087, −0.0074], 23/28 competitions below zero, none above. Status IMPLEMENTED_MECHANISM / PREDICTIVE_EFFECT_NOT_TESTED prospectively; the same blocked confirmatory design applies. The evidence horizon is the game-log scheduled start.
 

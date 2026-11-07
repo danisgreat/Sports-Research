@@ -1,10 +1,10 @@
-> **Authority.** [CORE](CORE.md) and [CURRENT_RULES](CURRENT_RULES.md) govern new work; this page holds this sport's rules, and earlier statements below keep their historical scope.
+> **Authority.** [CORE](CORE.md) and [CURRENT_RULES](RULES_REFERENCE.md#part-a-current_rules) govern new work; this page holds this sport's rules, and earlier statements below keep their historical scope.
 
-**Executable forecast cycle (CYCLE-v1).** Defined in [FORECAST_CYCLE_PROTOCOL](FORECAST_CYCLE_PROTOCOL.md); summarised in [CORE](CORE.md) §7.
+**Executable forecast cycle (CYCLE-v1).** Defined in [FORECAST_CYCLE_PROTOCOL](REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](CORE.md) §7.
 
-**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](MINI_LOG_IDENTITY_PROTOCOL.md); summarised in [CORE](CORE.md) §2.
+**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](WORKFLOW.md#part-b-mini_log_identity_protocol); summarised in [CORE](CORE.md) §2.
 
-**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
+**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_PROTOCOL.md#part-b-research_exhaustiveness_protocol); summarised in [CORE](CORE.md) §5.
 
 **Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
 
@@ -13,7 +13,7 @@
 **Live rules for Baseball (MLB, NPB, KBO, CPBL, LMB). Markdown-only operation, 2026-09-28.** Read §0 in full for every card: it governs this file.
 - §1 onward is the reference algorithm and the competition rules; it is consulted by citation.
 - The dated history (settlement learnings and the evidence behind every numbered control) was moved verbatim to `archive/superseded_2026-09-28/sport_history/RULES_BASEBALL_history_to_2026-09-28.md`, which is no longer in the Markdown tree. A maintainer can recover it from the pinned commit ([Git 3fbf0c981b40](https://github.com/danisgreat/Sports-Research/blob/3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa/archive/superseded_2026-09-28/sport_history/RULES_BASEBALL_history_to_2026-09-28.md); [index](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)) when a control's full text or evidence is needed. The model works from §0 and the sections below.
-- Arithmetic: `PROBABILITY_TOOLKIT.md`. Sources: `SOURCES.md` §3.1. Card and self-audit: `CARD_AND_LOG_TEMPLATES.md`. The cross-sport rules are in `CURRENT_RULES.md`, which outranks this file.
+- Arithmetic: `PROBABILITY_TOOLKIT.md`. Sources: `SOURCES.md` §3.1. Card and self-audit: `CARD_AND_LOG_TEMPLATES.md`. The cross-sport rules are in `RULES_REFERENCE.md`, which outranks this file.
 - No sport, competition or target is prospectively validated. Every card is LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.
 
 <!-- LIVE-RULES-PAGE-2026-09-26 -->
@@ -40,7 +40,7 @@ MLB, NPB, KBO, CPBL, LMB, MiLB and international baseball are separate populatio
 - NPB: the official box posts スタメン about an hour before first pitch. KBO: the English scoreboard. Native-language search for same-day news (L-067).
 
 ### 0.3 Building the run distribution — the default order (the P-491 template, 2026-09-23)
-1. **Anchor.** Partially pooled team R/G × opponent RA/G, the league row and the venue row (B-6; `BASE_RATES_REGISTER.md` §7.5). TB-1 has **no resolution in MLB**, so `BASELINE_P` is the population row (2026-09-25(e)(b)1). Print `BASELINE_P` beside every row.
+1. **Anchor.** Partially pooled team R/G × opponent RA/G, the league row and the venue row (B-6; `PARAMETERS.md` §7.5). TB-1 has **no resolution in MLB**, so `BASELINE_P` is the population row (2026-09-25(e)(b)1). Print `BASELINE_P` beside every row.
 2. **Starters, applied once.** Per-start game log (IP/ER/SO/BB) with a front-loaded/back-loaded/uniform verdict and "command held?" (control 24). Rehab pitch-count ladder for an IL return (25). Small-sample mixture (11). Season prior versus current-regime branch (13). **Recency (R-1):** recent results revise a rate only through a named mechanism (velocity, IL, role, leash); the last game is the worst predictor measured.
 3. **Channel audit.** Park, heat and same-park form are one "carry" channel; ERA, last-N starts and opponent split are one starter channel. Three or more same-signed adjustments moving the centre by over a run are netted in one line (control 26). Lineup changes go through PA by slot (27).
 4. **Relief.** A named score-state ladder for both sides (20, 36); the starter-exit transition inning with "first relief inning concedes 2+" as mass (30); freshness is not quality (6); workload informs availability only.
@@ -71,7 +71,7 @@ MLB, NPB, KBO, CPBL, LMB, MiLB and international baseball are separate populatio
 - NPB: the official page marker 【試合終了】, plus Sports Navi and Kyodo as lineages 2–3. KBO: the English scoreboard ("FINAL", W/L/S). Mynavi result pages are AI-generated: exclude them.
 - Record runs in the starter-exit transition inning (30). Keep regulation versus extras attribution exact.
 
-### 0.7 Reference numbers (2026; `BASE_RATES_REGISTER.md` §1–§3, §7.5)
+### 0.7 Reference numbers (2026; `PARAMETERS.md` §1–§3, §7.5)
 League total mean 8.95–8.98, SD 4.51–4.53. One-run games 27.6–27.8% (nine-inning games 23.9%). P(margin ≥ 2) 72.2%. r = P(margin = 1 | win) 22.9–30.1% (nearly flat). Extras 8.75% of games, adding a mean of 2.88 runs; the final margin is one run 68.5% of the time after extras. Park identity explains 4.3% of total-runs variance. Population P(total > L): 5.5 0.757 · 6.5 0.686 · 7.5 0.572 · 8.5 0.491 · 9.5 0.398 · 10.5 0.329.
 
 ### 0.8 Withdrawn in baseball — never apply
@@ -85,7 +85,7 @@ The MLB model (A1) is a team-only core. It was validated on Retrosheet 2022–20
 - **No STRONG favourites.** In 2026 the team model's favourite **never** reached 0.70; 90% of games sat at 0.50–0.60 (win Brier 0.247 against 0.250).
 - **The starter term failed its test.** It was tested leak-free on 2025–2026 (probable starters are recoverable from statsapi, which corrects the earlier claim) and did **not** improve results (preregistered verdict: not demonstrated). It improved the 2026 totals only.
 - **The cards held their own.** On 61 contracts from 34 MLB cards, the cards (0.238) were no worse than A1 (0.241), A1 with starters (0.241) or TB-1 (0.246).
-- **Rank 1 in MLB is almost never STRONG.** Say so (`TOP2_COIN_FLIP`) rather than force it (`research/predictability_2026-09-26/README.md` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)); `BASE_RATES_REGISTER.md` §7.8).
+- **Rank 1 in MLB is almost never STRONG.** Say so (`TOP2_COIN_FLIP`) rather than force it (`research/predictability_2026-09-26/README.md` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)); `PARAMETERS.md` §7.8).
 
 ### 0.9 Control index (full text in §4 and the dated sections)
 1 short start is exposure · 2 run suppression keeps the HR tail · 3 pitch limit ≠ innings · 4 cushion decomposition · 5 low total ≠ close margin · 6 bullpen freshness ≠ quality · 7 post-trade regime · 8 trend mechanism · 9 gapped/overlapping lines · 10 home batting is state-dependent · 11 small-sample starter mixture · 12 identity before quality · 13 season prior v current regime · 14 defence and unearned-run tails · 15 joint hook-tail reconciliation · 16 strong opponent doesn't erase debut variance · 17 low-total separation · 18 weather termination order · 19 stable centres keep cluster risk · 20 score-state bullpen · 21 favourite separation and clusters linked · 22 extras rate environment · 23 prior series game is context · 24 game log beats aggregates · 25 rehab pitch ladder · 26 mechanism-overlap audit · 27 PA-weighted lineup exposure · 28 opponent starter full-game branch (as corrected 2026-09-12) · 29 run-line decomposition · 30 starter-exit transition inning · 31 NPB/KBO/CPBL team totals; batting pitcher · 32 tie-permitting end states · 33 strikeout-floor props · 34 run-line identity · 35 conditional total and exact push · 36 score-state relief ladder before a run line is Rank 1 · 37 regulation-to-completion endpoint. Receipts and references: B-1 official lineup · B-2 gamefeed weather · B-3 run-centre accrual · B-4 opener caution · B-5 freeze/settlement receipts · B-6 all-park rows · B-7 first five · B-8 width benchmark · B-9 +1.5 baseline · B-10 total direction by league · B-11 `PROBABILITY_TOOLKIT.md`.

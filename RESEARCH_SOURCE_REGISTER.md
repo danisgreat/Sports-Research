@@ -1,6 +1,6 @@
 # Reusable research and settlement source observations
 
-**SRC-2026.10.16-v1 / EXH-v1.** Start research/settlement here, in SOURCES and in earlier package registers, then open and revalidate actual routes. This is a discovery index, not a complete source universe or permission to stop. [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md) requires alternative routes, independent corroboration and field closure. Missing fields need more sources even when another field is complete.
+**SRC-2026.10.16-v1 / EXH-v1.** Start research/settlement here, in SOURCES and in earlier package registers, then open and revalidate actual routes. This is a discovery index, not a complete source universe or permission to stop. [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_PROTOCOL.md#part-b-research_exhaustiveness_protocol) requires alternative routes, independent corroboration and field closure. Missing fields need more sources even when another field is complete.
 
 ## Observation and update rules
 

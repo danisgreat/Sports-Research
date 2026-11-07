@@ -1,16 +1,16 @@
 # PROMPT 8 — Implement, verify and release a framework or workshop change
 
-**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](../../MINI_LOG_IDENTITY_PROTOCOL.md); summarised in [CORE](../../CORE.md) §2.
+**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](../../WORKFLOW.md#part-b-mini_log_identity_protocol); summarised in [CORE](../../CORE.md) §2.
 
-**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](../../RESEARCH_EXHAUSTIVENESS_PROTOCOL.md); summarised in [CORE](../../CORE.md) §5.
+**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](../../RESEARCH_PROTOCOL.md#part-b-research_exhaustiveness_protocol); summarised in [CORE](../../CORE.md) §5.
 
 **Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §5.
 
 **P-2026.10.22-v24.0 · FRAMEWORK_CHANGE · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: declared operating Markdown/CSV/text, archived originals, fixtures and a unique verification folder. Python/tests/requirements are permitted only under ml/ by CURRENT_RULES §0. No JSON, notebooks, pickles, workflows or binaries. Publish when this full prompt is invoked unless explicitly local-only.
 
-**ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](../../FORECAST_CYCLE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §7.
+**ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](../../REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](../../CORE.md) §7.
 
-**Execution environment (ENV-v2).** Defined in [EXECUTION_ENVIRONMENT_PROTOCOL](../../EXECUTION_ENVIRONMENT_PROTOCOL.md); summarised in [CORE](../../CORE.md) §1.
+**Execution environment (ENV-v2).** Defined in [EXECUTION_ENVIRONMENT_PROTOCOL](../../WORKFLOW.md#part-a-execution_environment_protocol); summarised in [CORE](../../CORE.md) §1.
 
 **Required repository fallback (REF-v1).** Defined in [GITHUB_REFERENCE_PROTOCOL](../../GITHUB_REFERENCE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §1.
 
@@ -69,11 +69,11 @@ Research-completion changes must exercise uncalibrated inference, missing/failed
 
 ## Research retention and execution disposition (RETAIN-v1)
 
-**Retain the research (RETAIN-v3).** Defined in [RESEARCH_RETENTION_PROTOCOL](../../RESEARCH_RETENTION_PROTOCOL.md); summarised in [CORE](../../CORE.md) §2.
+**Retain the research (RETAIN-v3).** Defined in [RESEARCH_RETENTION_PROTOCOL](../../RESEARCH_PROTOCOL.md#part-c-research_retention_protocol); summarised in [CORE](../../CORE.md) §2.
 
 Verify EXEC-v1 lifecycle coverage through actual `primary execute`, rejected attempts, `primary verify-log`, delayed `primary settle` feedback and future consumption. Exercise a supported exact competition with no pre-existing archive/profile/TB-1 baseline: recover reviewed inputs, fit the league comparator from its own history, execute the ML/Hedge pipeline and retain receipts. Also reject unsupported/insufficient/unknown inputs honestly. Preserve all historical forecasts and local prompt inputs; a failed attempt is not a fitted model and passing mechanics is not predictive qualification.
 
-**Local research record and updated-document delivery (owner update, 16 October 2026).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](../../MINI_LOG_IDENTITY_PROTOCOL.md); summarised in [CORE](../../CORE.md) §2.
+**Local research record and updated-document delivery (owner update, 16 October 2026).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](../../WORKFLOW.md#part-b-mini_log_identity_protocol); summarised in [CORE](../../CORE.md) §2.
 
 ## Preserve owner-entered event inputs during instruction edits
 
@@ -89,7 +89,7 @@ Prompt 8 owns every `ml/` code change, release, reference choice and promotion d
 
 ## Data, training, calibration, shadow and promotion gates (LEARN-v1)
 
-Apply [LEARNING_PIPELINE_PROTOCOL](../../LEARNING_PIPELINE_PROTOCOL.md) §§3–8 to every model, parameter, calibration or learning-rate change:
+Apply [LEARNING_PIPELINE_PROTOCOL](../../ML_PIPELINE.md#part-c-learning_pipeline_protocol) §§3–8 to every model, parameter, calibration or learning-rate change:
 
 1. **Data:** inputs come from the learning store with point-in-time views; quarantine and missingness are reported; no retired-store or market data.
 2. **Training data:** an immutable training release that `python -m ml training verify` rebuilds byte-identically.
@@ -99,4 +99,4 @@ Apply [LEARNING_PIPELINE_PROTOCOL](../../LEARNING_PIPELINE_PROTOCOL.md) §§3–
 
 No new model may retroactively change issued probabilities, ranks, grades or feedback. Run `python -m pytest ml/tests`, including the end-to-end lifecycle and prompt-consistency tests. A CI workflow file or branch protection requires an explicit owner amendment.
 
-**Connected cycle handoff (CYCLE-v1).** Defined in [FORECAST_CYCLE_PROTOCOL](../../FORECAST_CYCLE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §7.
+**Connected cycle handoff (CYCLE-v1).** Defined in [FORECAST_CYCLE_PROTOCOL](../../REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](../../CORE.md) §7.

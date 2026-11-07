@@ -1,4 +1,4 @@
-> **Manual research timing (15 October 2026):** [TIMING_RESEARCH_PROTOCOL](../../TIMING_RESEARCH_PROTOCOL.md) controls completion-based cards, with no fixed lead deadline. Retired CLI notes below are design history, not a manual freeze requirement. Registered prospective pre-start-release experiments/models retain their original admission rules; late-issued clean-input research belongs to a separate cohort.
+> **Manual research timing (15 October 2026):** [TIMING_RESEARCH_PROTOCOL](../../RESEARCH_PROTOCOL.md#part-e-timing_research_protocol) controls completion-based cards, with no fixed lead deadline. Retired CLI notes below are design history, not a manual freeze requirement. Registered prospective pre-start-release experiments/models retain their original admission rules; late-issued clean-input research belongs to a separate cohort.
 
 # Fifteen experiment measures and next steps
 

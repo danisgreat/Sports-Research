@@ -121,7 +121,7 @@ Counts: 1 pending event; 3 terminal field-specific evidence tasks; 1 operator gr
 <!-- END CURRENT RESEARCH QUEUE -->
 
 ## Historical status snapshots — superseded for current queue
-**Current freeze receipt:** CONTROL_MANIFEST_2026-10-01-1.md; normalized-CRLF SHA-256 b5ab1804012de12455e8b199c63ac4e9cb42d051f000665a3550328001bb72f1. Method MDS-2026.10.01-v7.0 / CR-2026.10.01-I1. [Current rules](CURRENT_RULES.md) and [implementation evidence](IMPLEMENTATION_2026-10-01.md) govern new work.
+**Current freeze receipt:** CONTROL_MANIFEST_2026-10-01-1.md; normalized-CRLF SHA-256 b5ab1804012de12455e8b199c63ac4e9cb42d051f000665a3550328001bb72f1. Method MDS-2026.10.01-v7.0 / CR-2026.10.01-I1. [Current rules](RULES_REFERENCE.md#part-a-current_rules) and [implementation evidence](IMPLEMENTATION_2026-10-01.md) govern new work.
 
 ## Current queue and qualification - 2026-10-01
 
@@ -954,7 +954,7 @@ Full mechanical readback: [FINAL_CHECKS.json](C:/Users/danie/Desktop/Sports Rese
 
 ## October 2 local-mini diagnostic addendum — combined-log reference
 
-User-requested append at 2026-10-02T05:00:57.524535+00:00: [Part 6](prediction%20logs/PREDICTION_LOG_COMBINED_6.md) now retains the local mini forecast exhibit and four twelve-part sporting diagnostic retrospectives. Source labels P-527–P-531 remain local reservations, not assigned canonical IDs. Zero certified settlements; all formal rows remain unresolved, with P-528 unplayed at the original observation and P-531 secondary-only provisional. No renumbering or new issuance occurs. **Next canonical ID remains P-527.** Original ledger and existing cards are unchanged. [Audit and verification](research/verification/mini_settlement_2026-10-02/REPORT.md); pre-existing full-suite/custody/freeze/archive failures remain disclosed.
+User-requested append at 2026-10-02T05:00:57.524535+00:00: [Part 6](prediction%20logs/PREDICTION_LOG_COMBINED_6.md) now retains the local mini forecast exhibit and four twelve-part sporting diagnostic retrospectives. Source labels P-527–P-531 remain local reservations, not assigned canonical IDs. Zero certified settlements; all formal rows remain unresolved, with P-528 unplayed at the original observation and P-531 secondary-only provisional. No renumbering or new issuance occurs. **Next canonical ID remains P-527.** Original ledger and existing cards are unchanged. [Audit and verification](archive/verification_2026-10/mini_settlement_2026-10-02/REPORT.md); pre-existing full-suite/custody/freeze/archive failures remain disclosed.
 
 <!-- BEGIN CURRENT RESEARCH SETTLEMENT STATUS 2026-10-05 -->
 ## Current research settlement status — October 5
@@ -987,7 +987,7 @@ Canonical P-523?P-537 remain unchanged; next at this readback is P-538. Both com
 
 Local source inventory verifies 78/78 receipt bodies. A tracked-body export verifies 36/78 and fails 42 local-only quarantined bodies. Full custody remains strict and CI runs all verification steps after failures, including freeze. This updates the failure scope described in the earlier closure; it does not claim a green remote workflow. Current control CR-2026.10.05-I3 selects CONTROL_MANIFEST_2026-10-05-3.md.
 
-[Implementation, cleanup and final checks](research/verification/implementation_2026-10-05/REPORT.md). The original historical status snapshots above remain unchanged.
+[Implementation, cleanup and final checks](archive/verification_2026-10/implementation_2026-10-05/REPORT.md). The original historical status snapshots above remain unchanged.
 <!-- END CURRENT IMPLEMENTATION READBACK 2026-10-05-I2 -->
 
 

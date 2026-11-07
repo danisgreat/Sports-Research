@@ -1,10 +1,10 @@
 # Source register: Markdown only (2026-10-09)
 
-**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](MINI_LOG_IDENTITY_PROTOCOL.md); summarised in [CORE](CORE.md) §2.
+**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](WORKFLOW.md#part-b-mini_log_identity_protocol); summarised in [CORE](CORE.md) §2.
 
 **Reuse and discovery:** Consult [RESEARCH_SOURCE_REGISTER](RESEARCH_SOURCE_REGISTER.md) and prior settlement registers, reopen exact routes and record current fields. This is a starting map. EXH-v1 requires further discovery for missing fields and independent second-source verification even with an owner observation. Failed/partial routes stay in the attempt ledger; unread pages/shared collectors cannot pass corroboration.
 
-**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
+**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_PROTOCOL.md#part-b-research_exhaustiveness_protocol); summarised in [CORE](CORE.md) §5.
 
 **Historical build claims:** Dated collection counts, tested routes and pinned old data guides below describe earlier work only. The local store is retired and its correctness is not established. Git links preserve context, not input/recovery requirements. Reopen sporting sources for every new form window/player confirmation and record failures/conflicts.
 
@@ -100,7 +100,7 @@ The matrix further down was generated on 2026-10-09 by a probe job that no longe
 
 Current October-5 all-log custody: 111 receipt bodies verify locally; 52 are intentionally excluded from Git (42 prior benchmark bodies plus 10 new restricted/market-bearing narrative captures). A clean checkout has 59 bodies and must fail strict custody for the other 52; no CI bypass or fabricated recapture is authorized. See the all-log source inventory and publication evidence.
 
-> **Authority.** [CORE](CORE.md) and [CURRENT_RULES](CURRENT_RULES.md) govern new work; this page holds this sport's rules, and earlier statements below keep their historical scope.
+> **Authority.** [CORE](CORE.md) and [CURRENT_RULES](RULES_REFERENCE.md#part-a-current_rules) govern new work; this page holds this sport's rules, and earlier statements below keep their historical scope.
 
 *(Historical, 2026-10-01; these files were removed from the tree, so recovery links are in [the link index](HISTORICAL_LINK_INDEX.md#2026-10-12-recovery-map-r36).)* The executable source registry (`research/sources_registry.json`, [recovery](HISTORICAL_LINK_INDEX.md#2026-10-12-recovery-map-r36)) controlled retrieval, league/parser/endpoint scope, market quarantine and permitted access. `research/src/sources.py` ([recovery](HISTORICAL_LINK_INDEX.md#2026-10-12-recovery-map-r36)) produced immutable bodies and receipts. The source observation report of that date was `research/runs/implementation_2026-10-01/source_observations.json` ([recovery](HISTORICAL_LINK_INDEX.md#2026-10-12-recovery-map-r36)): ten routes returned the specified content; both ESPN probes returned HTTP 403; three entries require manual/local access or are excluded. Accessibility is not exact-event truth or independent collection.
 
@@ -110,7 +110,7 @@ NBL uses the league schedule UUID and regular-season overtime-inclusive final. E
 
 Football-Data and FixtureDownload local raw snapshots keep their prior access/redistribution restrictions; automated source retrieval through those routes is blocked. Odds-bearing ESPN bodies, when retrievable, stay in the benchmark quarantine and only sports fields may be parsed through an audited adapter. Fantasy data remain excluded. Source errors are recorded without circumventing access controls.
 
-The earlier provider directory below is historical routing guidance. Its access observations, active-manifest references and procedural claims are superseded by the current registry and CURRENT_RULES.md. Verify current official rules and exact fields whenever a route is used; a directory entry is not a receipt.
+The earlier provider directory below is historical routing guidance. Its access observations, active-manifest references and procedural claims are superseded by the current registry and RULES_REFERENCE.md. Verify current official rules and exact fields whenever a route is used; a directory entry is not a receipt.
 
 ## Reachability matrix (SRC-07)
 
@@ -230,7 +230,7 @@ For **each missing fact**, run the next applicable route at once. Log every atte
 | Missing field | Route sequence | Stop condition |
 |---|---|---|
 | Event ID, date, start or state | Competition's exact-game feed or match centre → its official schedule or club match page → independent structured scoreboard → named independent report. Check venue-local date, timezone, participants and competition at every hop. | If exact identity or state is still ambiguous, do not infer `PREGAME` from the clock. |
-| Starter, lineup, team sheet, inactives or toss | Official exact-game roster/team-sheet feed → official league or club release, including an authenticated original post (§1.8) → two independent current reporting lineages for an unresolved critical field, under `CURRENT_RULES.md` §D2. | Keep projected and confirmed separate. An unviewable post, projected lineup or later box score never proves pre-issue availability. |
+| Starter, lineup, team sheet, inactives or toss | Official exact-game roster/team-sheet feed → official league or club release, including an authenticated original post (§1.8) → two independent current reporting lineages for an unresolved critical field, under `RULES_REFERENCE.md` §D2. | Keep projected and confirmed separate. An unviewable post, projected lineup or later box score never proves pre-issue availability. |
 | Injury, rest, roster move or coaching change | Timed league report or registration list → team/board release → authenticated original team/player announcement (§1.8, limited to what it says) → named independent reporter with the §1.5 receipt. | Do not convert a roster registration, practice appearance or absence from a page into confirmed game availability. |
 | Weather, roof, surface or pitch | Exact-game field-owner/venue report → venue-coordinate hourly weather or national meteorological service → named venue/official report. Baseball and cricket retain their sport-specific weather/strip rules. | A city forecast or generic pitch description does not replace an exact-game reading. |
 | Season rates, game logs or specialist metrics | Field-owning official stats → official competition/team history → independent specialist data with definition and cutoff. Use only games complete before the card's input cutoff. | Missing or revised historical data stay missing; never backfill a rate from a later page. |

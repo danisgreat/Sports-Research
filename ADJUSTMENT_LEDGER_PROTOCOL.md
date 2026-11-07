@@ -5,7 +5,7 @@
 ## 1. The procedure
 
 1. Run the reference stage and print the Reference block (REFMODEL-v1).
-2. Research under [RESEARCH_CHECKLISTS](RESEARCH_CHECKLISTS.md): the value-ranked inputs for the sport, each timed to when it is published.
+2. Research under [RESEARCH_CHECKLISTS](RESEARCH_PROTOCOL.md#part-d-research_checklists): the value-ranked inputs for the sport, each timed to when it is published.
 3. For each confirmed fact that the reference cannot know, write one **adjustment row**:
 
 | Field | Content |
@@ -13,19 +13,19 @@
 | Fact | The verified claim (player out, starter confirmed, wind, rest, venue change) |
 | Source and times | URL or feed, publication time, retrieval time, corroboration (decisive facts need two independent sources) |
 | Target | The quantity it moves: home margin, away points, total, or one team's rating |
-| Effect row | The [EFFECT_TABLES](EFFECT_TABLES.md) row id, or `SCENARIO_NO_TABLE` |
+| Effect row | The [EFFECT_TABLES](PARAMETERS.md#part-b-effect_tables) row id, or `SCENARIO_NO_TABLE` |
 | Size | Signed, in the quantity's units, with the table's interval |
 | Entry | `FULL` (measured and confirmed out of sample), `HALF` (the provisional rule below) or `SCENARIO` |
 | Overlap | The reference input it must not double count (a player already out for the reference's whole window; a team rating already reflecting the absence) |
 
-4. Apply the sizes to the reference **centre** (margin and total, or the Poisson means), recompute the one score grid, and read every supplied contract from it. Winner, handicap and total rows come from the same grid. The width never falls below the competition's floor ([COMPETITION_PARAMETERS](COMPETITION_PARAMETERS.md)).
+4. Apply the sizes to the reference **centre** (margin and total, or the Poisson means), recompute the one score grid, and read every supplied contract from it. Winner, handicap and total rows come from the same grid. The width never falls below the competition's floor ([COMPETITION_PARAMETERS](PARAMETERS.md#part-a-competition_parameters)).
 5. Write the **picks block** (section 3), lint it, ledger it, commit and push.
 
 **Entry rule (provisional).** A row whose effect is `MEASURED_CONFIRMED` enters at full size. A row whose effect is `LITERATURE_START` or `MEASURED_NOT_CONFIRMED` enters at **half size** until the ledger has an adjustment-value estimate λ from at least 40 adjusted rows (section 5); from then on the entry factor is the estimated λ, capped at 1, and never below 0. A fact with no effect row (`SCENARIO_NO_TABLE`, for example a player whose impact has not been measured) may not change a number silently: price it as a declared low/base/high mixture with weights written before pricing (CURRENT_RULES section 7), and label the row `SCENARIO`. Half size is a starting value, not a tuned parameter, and exists because the card record shows the analyst's unaided probabilities over-confident at the top and uninformative in the middle.
 
 ## 2. Effect tables (REV-17)
 
-[EFFECT_TABLES](EFFECT_TABLES.md) lists every size the analyst may use, with its measurement: estimate, standard error, n, period, evidence status and, where tested, the out-of-sample result. Status classes:
+[EFFECT_TABLES](PARAMETERS.md#part-b-effect_tables) lists every size the analyst may use, with its measurement: estimate, standard error, n, period, evidence status and, where tested, the out-of-sample result. Status classes:
 
 | Status | Meaning | Entry |
 |---|---|---|

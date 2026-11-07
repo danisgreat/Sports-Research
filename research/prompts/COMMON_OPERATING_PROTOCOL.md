@@ -1,8 +1,8 @@
 # Common operating protocol for prompts 1–8
 
-**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](../../MINI_LOG_IDENTITY_PROTOCOL.md); summarised in [CORE](../../CORE.md) §2.
+**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](../../WORKFLOW.md#part-b-mini_log_identity_protocol); summarised in [CORE](../../CORE.md) §2.
 
-**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](../../RESEARCH_EXHAUSTIVENESS_PROTOCOL.md); summarised in [CORE](../../CORE.md) §5.
+**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](../../RESEARCH_PROTOCOL.md#part-b-research_exhaustiveness_protocol); summarised in [CORE](../../CORE.md) §5.
 
 **Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §5.
 
@@ -10,13 +10,13 @@
 
 **Google Drive (DRIVE-v2, optional).** The owner's [Sports Research Google Drive folder](https://drive.google.com/drive/folders/1ChlwkiOvd8c4MTaLC5BvkLniWogrm8Lj?usp=drive_link) is an optional drop box under [GOOGLE_DRIVE_EXCHANGE_PROTOCOL](../../GOOGLE_DRIVE_EXCHANGE_PROTOCOL.md). A chat that cannot write the repository may upload its complete updated mini to `uploads/<YYYY-MM-DD>/<label>/` for the owner to import. Nothing has to be pushed or mirrored to Drive, Drive is never a source of controls, and an upload is not a commit, freeze or canonical record. Controls come from the latest `main` branch on GitHub.
 
-**ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](../../FORECAST_CYCLE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §7.
+**ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](../../REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](../../CORE.md) §7.
 
-**Execution environment (ENV-v2).** Defined in [EXECUTION_ENVIRONMENT_PROTOCOL](../../EXECUTION_ENVIRONMENT_PROTOCOL.md); summarised in [CORE](../../CORE.md) §1.
+**Execution environment (ENV-v2).** Defined in [EXECUTION_ENVIRONMENT_PROTOCOL](../../WORKFLOW.md#part-a-execution_environment_protocol); summarised in [CORE](../../CORE.md) §1.
 
 **P-2026.10.22-v24.0 · CR-2026.10.22-R2 · SCV-2026.10.22-v12.** Game cards use ANALYST_PRIMARY_V1: researched online and built from the frozen reference plus logged adjustments with sizes from the effect tables (REFMODEL-v1, LEDGER-v1; code may compute it). The reference stage runs before the card and the card's own final p is frozen beside it (MLSCOPE-v3); the frozen rows are settled in prompt 3, scored in prompt 6 and released in prompt 8; PRIMARY_HEDGE_MIX_V3 stays a workshop model. The evidence horizon remains the earliest of game-log scheduled start, actual issue and verified first play; no separate runtime cutoff or forced early freeze. Research may finish after start with truthful input/issue cohorts, and a late request gets the fast card first. New formats are mini-log-10 / mini-settlement-10 / canonical-md-1 and the `PICKS_V2` block; existing issued formats remain unchanged. Read the complete selected task; a game card reads [CORE](../../CORE.md) and prompt 1 is a core file plus eleven sport files (`1_sports/`), each with its own Upcoming block.
 
-**Learning pipeline (LEARN-v2).** Prompt 1 records prior-game rows and availability snapshots as Markdown tables in the card; prompt 3 records settled outcomes and hand-computed diagnostics; prompts 4–5 carry them unchanged. Prompt 6 alone ingests them into the learning store, runs model feedback and studies and records dispositions; prompt 8 enforces the data → release → study → prospective shadow → owner decision → registry gates ([LEARNING_PIPELINE_PROTOCOL](../../LEARNING_PIPELINE_PROTOCOL.md)). Dependencies: [DEPENDENCY_MAP](DEPENDENCY_MAP.md).
+**Learning pipeline (LEARN-v2).** Prompt 1 records prior-game rows and availability snapshots as Markdown tables in the card; prompt 3 records settled outcomes and hand-computed diagnostics; prompts 4–5 carry them unchanged. Prompt 6 alone ingests them into the learning store, runs model feedback and studies and records dispositions; prompt 8 enforces the data → release → study → prospective shadow → owner decision → registry gates ([LEARNING_PIPELINE_PROTOCOL](../../ML_PIPELINE.md#part-c-learning_pipeline_protocol)). Dependencies: [DEPENDENCY_MAP](DEPENDENCY_MAP.md).
 
 ## 1. Resolve authority and task boundaries
 
@@ -45,11 +45,11 @@ Use NOT_COMPUTED/NOT_ESTIMATED/NOT_VERIFIED/UNKNOWN_DEFINITION/N/A precisely. Mi
 
 ## 3. Sporting evidence and predictive calculation
 
-**Mandatory research completion:** read [RESEARCH_COMPLETION_PROTOCOL](../../RESEARCH_COMPLETION_PROTOCOL.md). Calibration, missing sporting inputs, kickoff and mini/allocation/write blockers cannot terminate independent sporting work. Complete all applicable procedures, source escalation, form windows and every requested contract assessment, derive the ANALYST_PRIMARY_V1 probability by hand, and return the A9 evidence matrix. Separate research completion, numerical output and issuance. An incomplete search or thin NO_FORECAST supplement is not a completed result.
+**Mandatory research completion:** read [RESEARCH_COMPLETION_PROTOCOL](../../RESEARCH_PROTOCOL.md#part-a-research_completion_protocol). Calibration, missing sporting inputs, kickoff and mini/allocation/write blockers cannot terminate independent sporting work. Complete all applicable procedures, source escalation, form windows and every requested contract assessment, derive the ANALYST_PRIMARY_V1 probability by hand, and return the A9 evidence matrix. Separate research completion, numerical output and issuance. An incomplete search or thin NO_FORECAST supplement is not a completed result.
 
 Apply [availability research](../../ROSTER_AVAILABILITY_PROTOCOL.md) to both sides: starters/starting role, selected bench/replacements, absences/medical/discipline, exact-event original releases, local-language escalation and final late changes. A roster/projection is not confirmation. A failed extraction is not non-publication. Complete the search before reporting a gap; preserve genuine remaining uncertainty. A release after start does not become pregame evidence.
 
-Complete manual research without fixed countdown deadlines, continuing after start when necessary under [TIMING_RESEARCH_PROTOCOL](../../TIMING_RESEARCH_PROTOCOL.md). Freeze only the completed issued original. Keep pre-start evidence horizon, retrieval, completion, lineup check, actual issue and event-state recheck separate. CLEAN_PRE_START_INPUTS may accompany POST_START_ISSUE with independent evidence/no outcome exposure; score it separately, never as a pre-start-issued prospective card. Use known-at sporting inputs only. Prior dated results, current rosters and retrospectively compiled statistics have different availability evidence. No odds, tips, fantasy or market-driven adjustments enter a manual card. Re-price changed verified inputs once, without double-counting effects already in features or form rates.
+Complete manual research without fixed countdown deadlines, continuing after start when necessary under [TIMING_RESEARCH_PROTOCOL](../../RESEARCH_PROTOCOL.md#part-e-timing_research_protocol). Freeze only the completed issued original. Keep pre-start evidence horizon, retrieval, completion, lineup check, actual issue and event-state recheck separate. CLEAN_PRE_START_INPUTS may accompany POST_START_ISSUE with independent evidence/no outcome exposure; score it separately, never as a pre-start-issued prospective card. Use known-at sporting inputs only. Prior dated results, current rosters and retrospectively compiled statistics have different availability evidence. No odds, tips, fantasy or market-driven adjustments enter a manual card. Re-price changed verified inputs once, without double-counting effects already in features or form rates.
 
 Use one supported sport/endpoint-specific event distribution for compatible contracts; derive W/P/L and supported void conditioning, expected scores, ladders and dependence from it. W/(W+L) is decisive probability, not unconditional win mass. Preserve allowed draws, integer pushes, legal support, approximation/tail/error limits and genuine covariance. Do not invent a simulation, fitted model or exact joint. Cross-family dependence without a joint model gets bounds.
 
@@ -81,7 +81,7 @@ New minis have no execution manifest: prompt 1 records the probability method, l
 
 **Research retention (RETAIN-v3).** Retain every identified researched event under its stable local event key. Prompts 1–2 never assign or reserve canonical P-IDs. Prompt 1 appends the full research card with its analyst probabilities, intake row and footer to the active mini after every game request (ENV-v2). Canonical P-IDs are assigned only in the settlement phase: prompt 3 runs the prompt-4 import, which reconciles duplicates and assigns them, preserving local originals and a local-to-canonical map. Verified outcomes become learning candidates in prompt 6. Identity/custody/write conflicts remain real blockers. See RESEARCH_RETENTION_PROTOCOL and MINI_LOG_IDENTITY_PROTOCOL.
 
-**Local research record and updated-document delivery (owner update, 16 October 2026).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](../../MINI_LOG_IDENTITY_PROTOCOL.md); summarised in [CORE](../../CORE.md) §2.
+**Local research record and updated-document delivery (owner update, 16 October 2026).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](../../WORKFLOW.md#part-b-mini_log_identity_protocol); summarised in [CORE](../../CORE.md) §2.
 
 ## Original-policy and event-input preservation
 
@@ -91,4 +91,4 @@ Current online-history/confirmed-player requirements apply to new research. Lega
 
 All eight tasks apply EXH-v1 to every applicable requirement and use the shared/prior source registers as discovery routes, not proof of current coverage. Keep searching alternative sources and independent corroboration, record attempts and field closure, and do not call unresolved information complete. New settlements are mini-settlement-10 with a visible source-reuse section, three CSVs and S17; mini-log-10 follows MINI-v2 local identity and updated-document delivery and older originals retain their own formats. Source acquisition is recorded in each card or settlement; shared source observations are appended only by an authorized import or source task.
 
-**Connected cycle (CYCLE-v1 under MLSCOPE-v3).** [FORECAST_CYCLE_PROTOCOL](../../FORECAST_CYCLE_PROTOCOL.md): prompt 1 freezes the reference before the card and the card's own p after it, prompt 3 runs `cycle settle` (and `league-day settle`) for frozen events, prompt 6 evaluates and prompt 8 releases. Mini creation, import and rollover run no model.
+**Connected cycle (CYCLE-v1 under MLSCOPE-v3).** [FORECAST_CYCLE_PROTOCOL](../../REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol): prompt 1 freezes the reference before the card and the card's own p after it, prompt 3 runs `cycle settle` (and `league-day settle`) for frozen events, prompt 6 evaluates and prompt 8 releases. Mini creation, import and rollover run no model.

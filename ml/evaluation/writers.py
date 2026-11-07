@@ -331,7 +331,7 @@ def write_cards(res: dict, rec: dict) -> None:
     d = SHADOW_ROOT / "CARD_CALIBRATION"
     g = res["groups"]
     lines = ["# Calibration audit of the issued cards' stated probabilities", "",
-             "**Descriptive only.** Source: `GAME_PREDICTION_RANK_LOG.csv` (rows with a numeric `stated_p` and a PASS or "
+             "**Descriptive only.** Source: `research/data/GAME_PREDICTION_RANK_LOG.csv` (rows with a numeric `stated_p` and a PASS or "
              "FAIL grade). Rows within a card are dependent, so intervals resample whole cards. The cards span several "
              "method and scoring versions, many were ungated, and line choice shapes hit rates (CURRENT_RULES §10). "
              "Nothing here recalibrates, regrades or relabels any card. This report applies the October 14 calibration "

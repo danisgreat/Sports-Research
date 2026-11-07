@@ -1,6 +1,6 @@
 # Tennis singles experimental forecasting and online learning
 
-**Status: EXPERIMENTAL_NOT_CERTIFIED.** Implementation: [`tennis_primary.py`](tennis_primary.py). Tests: [`tests/test_tennis_primary.py`](tests/test_tennis_primary.py). The existing [`PRIMARY_PREDICTION_PROTOCOL`](../PRIMARY_PREDICTION_PROTOCOL.md) `MODEL_ASSISTED_PRIMARY_V3` engine **still does not support tennis**; this is an independently versioned, opt-in development lane. Do not put its probabilities into that production lane, claim calibrated skill, auto-promote a model, or overwrite earlier cards.
+**Status: EXPERIMENTAL_NOT_CERTIFIED.** Implementation: [`tennis_primary.py`](tennis_primary.py). Tests: [`tests/test_tennis_primary.py`](tests/test_tennis_primary.py). The existing [`PRIMARY_PREDICTION_PROTOCOL`](../ML_PIPELINE.md#part-a-primary_prediction_protocol) `MODEL_ASSISTED_PRIMARY_V3` engine **still does not support tennis**; this is an independently versioned, opt-in development lane. Do not put its probabilities into that production lane, claim calibrated skill, auto-promote a model, or overwrite earlier cards.
 
 ## Scope and mathematics
 

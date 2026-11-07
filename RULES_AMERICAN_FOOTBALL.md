@@ -1,10 +1,10 @@
-> **Authority.** [CORE](CORE.md) and [CURRENT_RULES](CURRENT_RULES.md) govern new work; this page holds this sport's rules, and earlier statements below keep their historical scope.
+> **Authority.** [CORE](CORE.md) and [CURRENT_RULES](RULES_REFERENCE.md#part-a-current_rules) govern new work; this page holds this sport's rules, and earlier statements below keep their historical scope.
 
-**Executable forecast cycle (CYCLE-v1).** Defined in [FORECAST_CYCLE_PROTOCOL](FORECAST_CYCLE_PROTOCOL.md); summarised in [CORE](CORE.md) §7.
+**Executable forecast cycle (CYCLE-v1).** Defined in [FORECAST_CYCLE_PROTOCOL](REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](CORE.md) §7.
 
-**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](MINI_LOG_IDENTITY_PROTOCOL.md); summarised in [CORE](CORE.md) §2.
+**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](WORKFLOW.md#part-b-mini_log_identity_protocol); summarised in [CORE](CORE.md) §2.
 
-**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
+**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_PROTOCOL.md#part-b-research_exhaustiveness_protocol); summarised in [CORE](CORE.md) §5.
 
 **Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
 
@@ -13,7 +13,7 @@
 **Live rules for American football (NFL, NCAA, CFL). Markdown-only operation, 2026-09-28.** Read §0 in full for every card: it governs this file.
 - §1 onward is the reference algorithm and the competition rules; it is consulted by citation.
 - The dated history (settlement learnings and the evidence behind every numbered control) was moved verbatim to `archive/superseded_2026-09-28/sport_history/RULES_AMERICAN_FOOTBALL_history_to_2026-09-28.md`, which is no longer in the Markdown tree. A maintainer can recover it from the pinned commit ([Git 3fbf0c981b40](https://github.com/danisgreat/Sports-Research/blob/3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa/archive/superseded_2026-09-28/sport_history/RULES_AMERICAN_FOOTBALL_history_to_2026-09-28.md); [index](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)) when a control's full text or evidence is needed. The model works from §0 and the sections below.
-- Arithmetic: `PROBABILITY_TOOLKIT.md`. Sources: `SOURCES.md` §3.8. Card and self-audit: `CARD_AND_LOG_TEMPLATES.md`. The cross-sport rules are in `CURRENT_RULES.md`, which outranks this file.
+- Arithmetic: `PROBABILITY_TOOLKIT.md`. Sources: `SOURCES.md` §3.8. Card and self-audit: `CARD_AND_LOG_TEMPLATES.md`. The cross-sport rules are in `RULES_REFERENCE.md`, which outranks this file.
 - No sport, competition or target is prospectively validated. Every card is LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.
 
 <!-- LIVE-RULES-PAGE-2026-09-26 -->
@@ -46,7 +46,7 @@
 - **Aligned current-regime uncertainty caps a favourite** (control 15): several uncertainties supporting the favourite's kill path keep its spread below SUPPORTED.
 - **CFL** uses its own possession-to-points chain (control 14). **Preseason** is a quarter-by-quarter unit mixture with reserve-sample shrinkage and explosive tails (controls 11, 12).
 
-### 0.4 Reference rows (NFL regular season, n = 272 each; `BASE_RATES_REGISTER.md` §7.7)
+### 0.4 Reference rows (NFL regular season, n = 272 each; `PARAMETERS.md` §7.7)
 | Row | 2024 | 2025 |
 |---|---:|---:|
 | Home win | 0.524 | 0.536 |
@@ -68,7 +68,7 @@ A universal 13.9 SD floor (the residual benchmark is a disclosure reference, not
 
 The NFL model (A1) is ridge ratings with the league's own key-number weights (3, 7, …). On the NFL 2021–2025 it beat the league baseline on results and margins. It was ahead of TB-1 on results, but the interval crosses 0. It gave **no gain on totals**. It is maintainer Python, never a card input, and the model does not run it: print `SHADOW: NO_LANE (md-only)` at settlement (`research/sport_models_2026-09-26/README.md` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents))). The hand-computable team baseline that does feed cards is TB-1-MD (`PROBABILITY_TOOLKIT.md` §4).
 
-**Predictability and cards (2026-09-26(e)).** In the NFL 2025, the model's favourite reached 0.70 in 27% of games and won **73.1%**. The 0.70–0.80 band won only 67% at a stated 0.747, so it is over-confident. This replicated on 2021–24 (66.7% at 0.744, 177 games; C1, 2026-09-27). A uniform shrink did not improve the Brier score, so the model is unchanged: read an NFL favourite at 0.70–0.80 as about a two-in-three row. Totals reach 0.70 in only 8% of games. The side reference is TB-1, because A1 was not separated from it. On the cards' own NFL contracts (9, from 5 cards): card 0.266, A1 0.274, population 0.301 (`research/predictability_2026-09-26/README.md` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)); `BASE_RATES_REGISTER.md` §7.8).
+**Predictability and cards (2026-09-26(e)).** In the NFL 2025, the model's favourite reached 0.70 in 27% of games and won **73.1%**. The 0.70–0.80 band won only 67% at a stated 0.747, so it is over-confident. This replicated on 2021–24 (66.7% at 0.744, 177 games; C1, 2026-09-27). A uniform shrink did not improve the Brier score, so the model is unchanged: read an NFL favourite at 0.70–0.80 as about a two-in-three row. Totals reach 0.70 in only 8% of games. The side reference is TB-1, because A1 was not separated from it. On the cards' own NFL contracts (9, from 5 cards): card 0.266, A1 0.274, population 0.301 (`research/predictability_2026-09-26/README.md` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)); `PARAMETERS.md` §7.8).
 
 ### 0.7 Control index (full text in §4 and the dated sections)
 1 QB identity is a regime · 2 line continuity is combinatorial · 3 game script creates dependence · 4 turnovers and one-score records shrink · 5 weather is matchup-specific · 6 key numbers and pushes are discrete · 7 OT matches the competition · 8 special teams are field position · 9 preseason is a separate phase · 10 college availability is asymmetric · 11 preseason quarter-by-quarter unit mixture · 12 reserve-sample shrinkage and explosive tails · 13 low total ≠ close spread · 14 CFL possession chain · 15 aligned regime uncertainty caps a favourite · 16 new-regime uncertainty two-sided · 17 margin prior and width · 18 key numbers at 3 and 7 · 19 prior-season ratings are width · 20 non-offensive score branch · 21 favourite covers inside the Under.

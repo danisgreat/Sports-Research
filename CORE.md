@@ -1,6 +1,6 @@
 # CORE: what every card reads (CORE-v1)
 
-**MDS-2026.11.07-v24.1 · CR-2026.11.07-R1 · P-2026.10.22-v24.0 · SCV-2026.10.22-v12 · SEL-2026.10.22-v4.** The one document a game card must read in full before research, with the [prompt 1 core](research/prompts/1_GAME_CARD.md) and the one [sport file](research/prompts/1_sports/). It condenses the rules that decide a card; everything else is reference, read when the card touches that topic. Where this page and a long-form protocol differ in wording, the protocol governs and the difference is a defect to report (GOV-v2). Where a pre-v24 sentence anywhere contradicts this page, this page governs for cards under P-2026.10.22-v24.0 and later; earlier cards keep their own method.
+**MDS-2026.11.07-v24.2 · CR-2026.11.07-R2 · P-2026.10.22-v24.0 · SCV-2026.10.22-v12 · SEL-2026.10.22-v4.** The one document a game card must read in full before research, with the [prompt 1 core](research/prompts/1_GAME_CARD.md) and the one [sport file](research/prompts/1_sports/). It condenses the rules that decide a card; everything else is reference, read when the card touches that topic. Where this page and a long-form protocol differ in wording, the protocol governs and the difference is a defect to report (GOV-v2). Where a pre-v24 sentence anywhere contradicts this page, this page governs for cards under P-2026.10.22-v24.0 and later; earlier cards keep their own method.
 
 **Reading receipt.** Print branch, HEAD SHA, read time with offset, every uncommitted control difference, and the files actually read: this page, the prompt 1 core, the sport file and whatever the card opened. Never claim a file was read in full from an excerpt.
 
@@ -25,8 +25,8 @@
 1. **Read** this page, the prompt 1 core, the sport file; print the receipt. Resolve the event: competition, season, stage, participants, venue, native ID, scheduled start in venue zone, UTC and Australia/Sydney; the endpoint and settlement conventions (overtime, extra time, shootout, retirement).
 2. **Tier.** `python -m ml reference tier --competition C` (A, B or C; [REFERENCE_MODEL_PROTOCOL](REFERENCE_MODEL_PROTOCOL.md)). Print it.
 3. **Reference, before any probability is typed.** Tier A with a release as its declared reference: `python -m ml pregame reference …`. TB-2-MD or TB-1-MD: `python -m ml reference standings …` then `python -m ml reference run …`. Baseline only: `reference run` without standings. Tier A competitions whose declared reference is not the release also run `pregame reference` for the challenger. Paste the Reference block into the card. If the request is too late for the full card to finish before the start, issue the **fast card** first (FASTCARD-v1) and the full card after as an addendum.
-4. **Research** by the sport's value-ranked checklist ([RESEARCH_CHECKLISTS](RESEARCH_CHECKLISTS.md)): availability and starters first, timed to when they are published, then history windows, conditions, rules. Decisive facts need a source, a publication time, a retrieval time and a second independent source; a projection is not a confirmation. Search all of it until the horizon, record every attempt.
-5. **Adjust.** One ledger row per confirmed fact with its [effect-table](EFFECT_TABLES.md) row and entry size ([ADJUSTMENT_LEDGER_PROTOCOL](ADJUSTMENT_LEDGER_PROTOCOL.md) section 1). Apply them to the reference centre, recompute one score grid, read every supplied contract from it. Width never below the [floor](COMPETITION_PARAMETERS.md).
+4. **Research** by the sport's value-ranked checklist ([RESEARCH_CHECKLISTS](RESEARCH_PROTOCOL.md#part-d-research_checklists)): availability and starters first, timed to when they are published, then history windows, conditions, rules. Decisive facts need a source, a publication time, a retrieval time and a second independent source; a projection is not a confirmation. Search all of it until the horizon, record every attempt.
+5. **Adjust.** One ledger row per confirmed fact with its [effect-table](PARAMETERS.md#part-b-effect_tables) row and entry size ([ADJUSTMENT_LEDGER_PROTOCOL](ADJUSTMENT_LEDGER_PROTOCOL.md) section 1). Apply them to the reference centre, recompute one score grid, read every supplied contract from it. Width never below the [floor](PARAMETERS.md#part-a-competition_parameters).
 6. **Picks block.** `PICKS_V2` for every priced contract ([CARD_AND_LOG_TEMPLATES](CARD_AND_LOG_TEMPLATES.md) section 3c); then `python -m ml card lint --mini M --key K` until it passes; then `python -m ml ledger add …`.
 7. **Write** the card (decision block, picks block, adjustment table, appendix A1-A9), update intake and footer, read the file back, run `python -m ml pregame run …` (freezes the card's own p on the reference's contracts), commit and push before the scheduled start whenever possible.
 8. **Return** the picks, the winner, the reasons and sources, the reference, the adjustments with their sizes, the abstain flag, the gaps, the local key, timing and the commit.
@@ -76,18 +76,40 @@
 
 | Topic | Document |
 |---|---|
-| Rules in force, sources, times, custody | [CURRENT_RULES](CURRENT_RULES.md) · [METHOD](METHOD.md) · [CURRENT_STATE](CURRENT_STATE.md) |
-| Tiers, reference, model lane, fast card | [REFERENCE_MODEL_PROTOCOL](REFERENCE_MODEL_PROTOCOL.md) · [FORECAST_CYCLE_PROTOCOL](FORECAST_CYCLE_PROTOCOL.md) |
-| Adjustments, picks block, abstain, scoring | [ADJUSTMENT_LEDGER_PROTOCOL](ADJUSTMENT_LEDGER_PROTOCOL.md) · [EFFECT_TABLES](EFFECT_TABLES.md) |
+| Rules in force, sources, times, custody | [CURRENT_RULES](RULES_REFERENCE.md#part-a-current_rules) · [METHOD](#merged-method) · [CURRENT_STATE](CURRENT_STATE.md) |
+| Tiers, reference, model lane, fast card | [REFERENCE_MODEL_PROTOCOL](REFERENCE_MODEL_PROTOCOL.md) · [FORECAST_CYCLE_PROTOCOL](REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol) |
+| Adjustments, picks block, abstain, scoring | [ADJUSTMENT_LEDGER_PROTOCOL](ADJUSTMENT_LEDGER_PROTOCOL.md) · [EFFECT_TABLES](PARAMETERS.md#part-b-effect_tables) |
 | Benchmarks and the market firewall | [BENCHMARK_PROTOCOL](BENCHMARK_PROTOCOL.md) |
-| League numbers, widths | [COMPETITION_PARAMETERS](COMPETITION_PARAMETERS.md) · [LEAGUE_PROFILES](LEAGUE_PROFILES.md) · [BASE_RATES_REGISTER](BASE_RATES_REGISTER.md) |
+| League numbers, widths | [COMPETITION_PARAMETERS](PARAMETERS.md#part-a-competition_parameters) · [LEAGUE_PROFILES](PARAMETERS.md#part-d-league_profiles) · [BASE_RATES_REGISTER](PARAMETERS.md#part-c-base_rates_register) |
 | Probability tables, TB-1-MD | [PROBABILITY_TOOLKIT](PROBABILITY_TOOLKIT.md) |
-| Selection families, grades, baseline | [SELECTION_RULES](SELECTION_RULES.md) · [SCORING_AND_VALIDATION](SCORING_AND_VALIDATION.md) |
-| Research inputs by sport and where | [RESEARCH_CHECKLISTS](RESEARCH_CHECKLISTS.md) · [SOURCES](SOURCES.md) · [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md) · [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md) · [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md) · [TIMING_RESEARCH_PROTOCOL](TIMING_RESEARCH_PROTOCOL.md) |
+| Selection families, grades, baseline | [SELECTION_RULES](RULES_REFERENCE.md#part-b-selection_rules) · [SCORING_AND_VALIDATION](SCORING_AND_VALIDATION.md) |
+| Research inputs by sport and where | [RESEARCH_CHECKLISTS](RESEARCH_PROTOCOL.md#part-d-research_checklists) · [SOURCES](SOURCES.md) · [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md) · [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md) · [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_PROTOCOL.md#part-b-research_exhaustiveness_protocol) · [TIMING_RESEARCH_PROTOCOL](RESEARCH_PROTOCOL.md#part-e-timing_research_protocol) |
 | Simulation | [SIMULATION_PROTOCOL](SIMULATION_PROTOCOL.md) |
-| Mini, identity, retention, delivery | [MINI_LOG_IDENTITY_PROTOCOL](MINI_LOG_IDENTITY_PROTOCOL.md) · [RESEARCH_RETENTION_PROTOCOL](RESEARCH_RETENTION_PROTOCOL.md) · [EXECUTION_ENVIRONMENT_PROTOCOL](EXECUTION_ENVIRONMENT_PROTOCOL.md) · [GITHUB_REFERENCE_PROTOCOL](GITHUB_REFERENCE_PROTOCOL.md) · [GOOGLE_DRIVE_EXCHANGE_PROTOCOL](GOOGLE_DRIVE_EXCHANGE_PROTOCOL.md) |
+| Mini, identity, retention, delivery | [MINI_LOG_IDENTITY_PROTOCOL](WORKFLOW.md#part-b-mini_log_identity_protocol) · [RESEARCH_RETENTION_PROTOCOL](RESEARCH_PROTOCOL.md#part-c-research_retention_protocol) · [EXECUTION_ENVIRONMENT_PROTOCOL](WORKFLOW.md#part-a-execution_environment_protocol) · [GITHUB_REFERENCE_PROTOCOL](GITHUB_REFERENCE_PROTOCOL.md) · [GOOGLE_DRIVE_EXCHANGE_PROTOCOL](GOOGLE_DRIVE_EXCHANGE_PROTOCOL.md) |
 | Formats, self-audit | [CARD_AND_LOG_TEMPLATES](CARD_AND_LOG_TEMPLATES.md) |
 | Requests | [GAME_REQUEST_TEMPLATE](GAME_REQUEST_TEMPLATE.md) |
-| Sport rules | `RULES_<SPORT>.md`, [LEAGUE_RULES_SOCCER](LEAGUE_RULES_SOCCER.md), [LEAGUE_RULES_CRICKET](LEAGUE_RULES_CRICKET.md) |
-| Learning pipeline, models, registry | [LEARNING_PIPELINE_PROTOCOL](LEARNING_PIPELINE_PROTOCOL.md) · [ML_EXECUTION_PROTOCOL](ML_EXECUTION_PROTOCOL.md) · [`ml/README.md`](ml/README.md) |
+| Sport rules | `RULES_<SPORT>.md`, [LEAGUE_RULES_SOCCER](RULES_SOCCER.md#merged-league_rules_soccer), [LEAGUE_RULES_CRICKET](RULES_CRICKET.md#merged-league_rules_cricket) |
+| Learning pipeline, models, registry | [LEARNING_PIPELINE_PROTOCOL](ML_PIPELINE.md#part-c-learning_pipeline_protocol) · [ML_EXECUTION_PROTOCOL](ML_PIPELINE.md#part-b-ml_execution_protocol) · [`ml/README.md`](ml/README.md) |
 | Prompts | [research/prompts/](research/prompts/README.md) |
+
+---
+
+# Merged: METHOD
+
+*Merged 2026-11-07 (CR-2026.11.07-R2, FORMAT), verbatim. Formerly `METHOD.md` (original title: Method: current authority). Original kept unchanged at [archive/consolidation_2026-11-07/merged_sources/METHOD.md](archive/consolidation_2026-11-07/merged_sources/METHOD.md).*
+
+**ACTIVE: MDS-2026.10.22-v24.0 · CR-2026.10.22-R2 · SCV-2026.10.22-v12 · SEL-2026.10.22-v4 · P-2026.10.22-v24.0.** Current allocation and destination are in [CURRENT_STATE](CURRENT_STATE.md). The rules a card reads are in [CORE](CORE.md); the operating rules are in [CURRENT_RULES](RULES_REFERENCE.md#part-a-current_rules). The previous method text is archived in [archive/superseded_2026-10-22-2/METHOD.md](archive/superseded_2026-10-22-2/METHOD.md).
+
+The method, in the order a card follows it:
+
+1. **Identify and tier the event.** Verify the exact competition, season, stage, participants, venue, native ID and scheduled start; search every mini and log; use a stable local key (MINI-v2). `python -m ml reference tier` gives tier A, B or C ([REFERENCE_MODEL_PROTOCOL](REFERENCE_MODEL_PROTOCOL.md)).
+2. **Freeze the reference before typing a probability.** A tier A release or TB-2-MD / TB-1-MD from a dated standings table or the league-only baseline, produced in code, hashed and timestamped (REFMODEL-v1). A late request gets the fast card first (FASTCARD-v1).
+3. **Research by value.** The sport's checklist ([RESEARCH_CHECKLISTS](RESEARCH_PROTOCOL.md#part-d-research_checklists)): confirmed availability and starting roles first, timed to publication; then both sides' L5/L10/L15/L20 online with true n; conditions, rules and definitions. Decisive facts need a source, a publication time and a second independent source (EXH-v1, AVAIL-v4, HIST-v3). The evidence horizon is the game-log scheduled start ([TIMING_RESEARCH_PROTOCOL](RESEARCH_PROTOCOL.md#part-e-timing_research_protocol)).
+4. **Adjust by ledger.** One row per confirmed fact, with its [effect-table](PARAMETERS.md#part-b-effect_tables) row and entry size ([ADJUSTMENT_LEDGER_PROTOCOL](ADJUSTMENT_LEDGER_PROTOCOL.md)); the width never falls below the competition's floor ([COMPETITION_PARAMETERS](PARAMETERS.md#part-a-competition_parameters)); every supplied contract is read from one coherent distribution, with the structural cases (key numbers, empty nets, extras, form shocks) handled explicitly and any simulation limited to [SIMULATION_PROTOCOL](SIMULATION_PROTOCOL.md).
+5. **Say what the numbers say.** The picks block: a probability for every supplied contract, the winner, a most-likely list with line difficulty, an information list, or `no strong pick`. The linter must pass before the card is ledgered (PICKS-v2).
+6. **Freeze and publish.** Append the card to the active mini, read it back, freeze the card's own final p beside the reference (`pregame run`), commit and push before the scheduled start whenever possible.
+7. **Settle from the field owner.** Freeze the mini, settle the exact contracts from a box score or linescore, write RESULTS and ACTUALS, settle the frozen rows (`cycle settle`), run the import in the same session. Canonical IDs are assigned only here (MINI-v2).
+8. **Score honestly.** Paired proper scores of the final p against the reference, the league baseline, the line-implied 0.5, the frozen model and any hand-entered benchmark; the adjustment value λ; width coverage (`ledger score`, `ledger coverage`). Slot counts are descriptive. A documentation improvement is not a demonstrated predictive improvement ([SCORING_AND_VALIDATION](SCORING_AND_VALIDATION.md)).
+9. **Learn through governed lanes.** Verified outcomes become learning data ([LEARNING_PIPELINE_PROTOCOL](ML_PIPELINE.md#part-c-learning_pipeline_protocol)); a model is judged on frozen, pushed, pre-start rows at league volume after 8 weeks and 50 paired games; statistical changes wait for a season boundary or a new lane (STATFREEZE-v1).
+
+Numerical selection constants remain provisional ([SELECTION_RULES](RULES_REFERENCE.md#part-b-selection_rules)). The decision lab stays firewalled. Code lives only under `ml/`; output is Markdown, CSV and text.

@@ -1,6 +1,6 @@
 # External-chat game requests, one per sport
 
-**P-2026.10.22-v24.0 · REQ-v2.** Paste-ready prompt-1 requests for a research chat outside the repository (the `PUBLISHED_MAIN_PINNED` route of [EXECUTION_ENVIRONMENT_PROTOCOL](../../../EXECUTION_ENVIRONMENT_PROTOCOL.md)). They replace the free-text request quoted in [GAME_REQUEST_TEMPLATE](../../../GAME_REQUEST_TEMPLATE.md) for that route. Each file is self-contained on purpose, so it can be pasted alone; the rules it repeats are defined in [CORE](../../../CORE.md) and the protocols it links, which govern if the wording ever differs.
+**P-2026.10.22-v24.0 · REQ-v2.** Paste-ready prompt-1 requests for a research chat outside the repository (the `PUBLISHED_MAIN_PINNED` route of [EXECUTION_ENVIRONMENT_PROTOCOL](../../../WORKFLOW.md#part-a-execution_environment_protocol)). They replace the free-text request quoted in [GAME_REQUEST_TEMPLATE](../../../GAME_REQUEST_TEMPLATE.md) for that route. Each file is self-contained on purpose, so it can be pasted alone; the rules it repeats are defined in [CORE](../../../CORE.md) and the protocols it links, which govern if the wording ever differs.
 
 | # | Sport file | Request |
 |---|---|---|

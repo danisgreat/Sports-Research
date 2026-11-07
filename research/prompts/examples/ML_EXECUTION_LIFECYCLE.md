@@ -6,7 +6,7 @@ FORMAT EXAMPLE ONLY / NOT_ISSUED / NOT_IMPORTABLE. Tokens below describe require
 
 Create a new mini using [template section 2](../../../CARD_AND_LOG_TEMPLATES.md) with `MINI-LOG-FORMAT: mini-log-8`, a valid authority/lease, empty intake/cards and a header-only ML_EXECUTION_MANIFEST.csv. Creation has zero model attempts and consumes no event ID. `verify-log` should report zero cards/executed/failed/feedback.
 
-For an EXAMPLE event in a competition lacking a profile/archive route, research exact history and sporting metadata. Prepare REQUEST/HISTORY/CONTRACTS/COMPETITION_SOURCE CSVs with the schemas in [the primary protocol](../../../PRIMARY_PREDICTION_PROTOCOL.md). Actually run `primary execute` with those paths. No baseline probability is supplied. The successful route fits its own league grid, team experts and Hedge mixture; the actual attempt's `BUNDLE/PREDICTIONS.csv` contains `p_card` and `baseline_p`. Copy only real values, hashes and counts into the original card.
+For an EXAMPLE event in a competition lacking a profile/archive route, research exact history and sporting metadata. Prepare REQUEST/HISTORY/CONTRACTS/COMPETITION_SOURCE CSVs with the schemas in [the primary protocol](../../../ML_PIPELINE.md#part-a-primary_prediction_protocol). Actually run `primary execute` with those paths. No baseline probability is supplied. The successful route fits its own league grid, team experts and Hedge mixture; the actual attempt's `BUNDLE/PREDICTIONS.csv` contains `p_card` and `baseline_p`. Copy only real values, hashes and counts into the original card.
 
 ```text
 - **ML execution identity:** EXAMPLE-EVENT | Basketball/EXAMPLE | FULL_GAME_INCL_OT

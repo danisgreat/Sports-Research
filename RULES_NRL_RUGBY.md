@@ -1,10 +1,10 @@
-> **Authority.** [CORE](CORE.md) and [CURRENT_RULES](CURRENT_RULES.md) govern new work; this page holds this sport's rules, and earlier statements below keep their historical scope.
+> **Authority.** [CORE](CORE.md) and [CURRENT_RULES](RULES_REFERENCE.md#part-a-current_rules) govern new work; this page holds this sport's rules, and earlier statements below keep their historical scope.
 
-**Executable forecast cycle (CYCLE-v1).** Defined in [FORECAST_CYCLE_PROTOCOL](FORECAST_CYCLE_PROTOCOL.md); summarised in [CORE](CORE.md) §7.
+**Executable forecast cycle (CYCLE-v1).** Defined in [FORECAST_CYCLE_PROTOCOL](REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](CORE.md) §7.
 
-**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](MINI_LOG_IDENTITY_PROTOCOL.md); summarised in [CORE](CORE.md) §2.
+**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](WORKFLOW.md#part-b-mini_log_identity_protocol); summarised in [CORE](CORE.md) §2.
 
-**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
+**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_PROTOCOL.md#part-b-research_exhaustiveness_protocol); summarised in [CORE](CORE.md) §5.
 
 **Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
 
@@ -13,7 +13,7 @@
 **Live rules for Rugby league (NRL). Markdown-only operation, 2026-09-28.** Read §0 in full for every card: it governs this file.
 - §1 onward is the reference algorithm and the competition rules; it is consulted by citation.
 - The dated history (settlement learnings and the evidence behind every numbered control) was moved verbatim to `archive/superseded_2026-09-28/sport_history/RULES_NRL_RUGBY_history_to_2026-09-28.md`, which is no longer in the Markdown tree. A maintainer can recover it from the pinned commit ([Git 3fbf0c981b40](https://github.com/danisgreat/Sports-Research/blob/3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa/archive/superseded_2026-09-28/sport_history/RULES_NRL_RUGBY_history_to_2026-09-28.md); [index](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)) when a control's full text or evidence is needed. The model works from §0 and the sections below.
-- Arithmetic: `PROBABILITY_TOOLKIT.md`. Sources: `SOURCES.md` §3.6. Card and self-audit: `CARD_AND_LOG_TEMPLATES.md`. The cross-sport rules are in `CURRENT_RULES.md`, which outranks this file.
+- Arithmetic: `PROBABILITY_TOOLKIT.md`. Sources: `SOURCES.md` §3.6. Card and self-audit: `CARD_AND_LOG_TEMPLATES.md`. The cross-sport rules are in `RULES_REFERENCE.md`, which outranks this file.
 - No sport, competition or target is prospectively validated. Every card is LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.
 
 <!-- LIVE-RULES-PAGE-2026-09-26 -->
@@ -48,7 +48,7 @@
 - **Totals departing from the population by about 0.10 or more** need a receipted mechanism, such as a confirmed wet-track forecast for the match window (P-515).
 - **Recent cover rates, points averages and old H2H** are diagnostic only (control 3, override 5).
 
-### 0.4 Reference rows (NRL, all completed games; `BASE_RATES_REGISTER.md` §7.7)
+### 0.4 Reference rows (NRL, all completed games; `PARAMETERS.md` §7.7)
 | Row | 2025 (n = 216) | 2026 (n = 213) |
 |---|---:|---:|
 | Home win | 0.551 | 0.545 |
@@ -71,7 +71,7 @@ NRLW has no population reference yet (`NOT_YET_DERIVED`).
 
 The NRL model (A1) is ridge ratings with key-number weights. Validated on 2026: results not significant (−0.0273, +0.0003); margin RPS better; totals no better than the population. TB-1's result gain was not significant either, so the NRL reference is the population. The hand-computed TB-1-MD did beat the population on 2026 sides (`PROBABILITY_TOOLKIT.md` §4.4). That is one season found after the fact, so it is test `T-TB1MD-NRL`, not an anchor. It is maintainer Python, never a card input, and the model does not run it: print `SHADOW: NO_LANE (md-only)` at settlement (`research/sport_models_2026-09-26/README.md` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents))). The hand-computable team baseline that does feed cards is TB-1-MD (`PROBABILITY_TOOLKIT.md` §4).
 
-**Predictability and cards (2026-09-26(e)).** The model's favourite reached 0.70 in 19% of games and won 68.3%. The 0.70–0.80 band won 67% at 0.737, so it is over-confident. On the cards' own NRL contracts (4, from 2 cards): card 0.271, A1 0.203. That is too few to read (`research/predictability_2026-09-26/README.md` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)); `BASE_RATES_REGISTER.md` §7.8).
+**Predictability and cards (2026-09-26(e)).** The model's favourite reached 0.70 in 19% of games and won 68.3%. The 0.70–0.80 band won 67% at 0.737, so it is over-confident. On the cards' own NRL contracts (4, from 2 cards): card 0.271, A1 0.203. That is too few to read (`research/predictability_2026-09-26/README.md` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)); `PARAMETERS.md` §7.8).
 
 ### 0.7 Control index (full text in §4 and the dated sections)
 1 spine is a regime · 2 possession imbalance drives dependence · 3 cover rates diagnostic · 4 wet weather bidirectional · 5 goal-kicker state · 6 sin-bin/send-off tail · 7 winner ≠ handicap · 8 league and union never pooled · 9 motivation conditional · 10 no calibration claim · 11 defensive regime and spine-return mixture · 12 blowouts are possession-native · 13 a total can clear through one team · 14 low total ≠ close margin · 15 halftime doesn't freeze separation · 16 close-game winner needs terminal events.

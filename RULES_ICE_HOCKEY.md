@@ -1,10 +1,10 @@
-> **Authority.** [CORE](CORE.md) and [CURRENT_RULES](CURRENT_RULES.md) govern new work; this page holds this sport's rules, and earlier statements below keep their historical scope.
+> **Authority.** [CORE](CORE.md) and [CURRENT_RULES](RULES_REFERENCE.md#part-a-current_rules) govern new work; this page holds this sport's rules, and earlier statements below keep their historical scope.
 
-**Executable forecast cycle (CYCLE-v1).** Defined in [FORECAST_CYCLE_PROTOCOL](FORECAST_CYCLE_PROTOCOL.md); summarised in [CORE](CORE.md) §7.
+**Executable forecast cycle (CYCLE-v1).** Defined in [FORECAST_CYCLE_PROTOCOL](REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](CORE.md) §7.
 
-**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](MINI_LOG_IDENTITY_PROTOCOL.md); summarised in [CORE](CORE.md) §2.
+**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](WORKFLOW.md#part-b-mini_log_identity_protocol); summarised in [CORE](CORE.md) §2.
 
-**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
+**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_PROTOCOL.md#part-b-research_exhaustiveness_protocol); summarised in [CORE](CORE.md) §5.
 
 **Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
 
@@ -13,7 +13,7 @@
 **Live rules for Ice hockey. Markdown-only operation, 2026-09-28.** Read §0 in full for every card: it governs this file.
 - §1 onward is the reference algorithm and the competition rules; it is consulted by citation.
 - The dated history (settlement learnings and the evidence behind every numbered control) was moved verbatim to `archive/superseded_2026-09-28/sport_history/RULES_ICE_HOCKEY_history_to_2026-09-28.md`, which is no longer in the Markdown tree. A maintainer can recover it from the pinned commit ([Git 3fbf0c981b40](https://github.com/danisgreat/Sports-Research/blob/3fbf0c981b40a1d0e3ffff9725dcc8e383ff05fa/archive/superseded_2026-09-28/sport_history/RULES_ICE_HOCKEY_history_to_2026-09-28.md); [index](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)) when a control's full text or evidence is needed. The model works from §0 and the sections below.
-- Arithmetic: `PROBABILITY_TOOLKIT.md`. Sources: `SOURCES.md` §3.9. Card and self-audit: `CARD_AND_LOG_TEMPLATES.md`. The cross-sport rules are in `CURRENT_RULES.md`, which outranks this file.
+- Arithmetic: `PROBABILITY_TOOLKIT.md`. Sources: `SOURCES.md` §3.9. Card and self-audit: `CARD_AND_LOG_TEMPLATES.md`. The cross-sport rules are in `RULES_REFERENCE.md`, which outranks this file.
 - No sport, competition or target is prospectively validated. Every card is LEARNING_ONLY / NOT PERFORMANCE_ELIGIBLE.
 
 <!-- LIVE-RULES-PAGE-2026-09-26 -->
@@ -59,7 +59,7 @@ The NHL api-web boxscore (`SOURCES.md` §3.9) gives the goalies who played with 
 
 The NHL model (A1) is regulation Poisson ratings, with OT won in proportion to scoring rates and the shoot-out a coin flip. Validated on 2023-24 to 2025-26: A1 beat the league baseline and TB-1 on the result, and beat the baseline on the regulation three-way and the margin. It was **worse than the baseline on totals**, and slightly worse than TB-1 at the total line. It is maintainer Python, never a card input, and the model does not run it: print `SHADOW: NO_LANE (md-only)` at settlement (`research/sport_models_2026-09-26/README.md` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents))). The hand-computable team baseline that does feed cards is TB-1-MD (`PROBABILITY_TOOLKIT.md` §4).
 
-**Predictability (2026-09-26(e)).** In the NHL 2025-26, the model's favourite reached 0.70 in only 6% of games (won 72.9%), and 67% of games sat at 0.50–0.60 (Brier 0.248 against 0.250). Totals are not predictable by any model here: A1 was worse than the population, and TB-1 no better. A STRONG NHL Rank 1 is rare (`research/predictability_2026-09-26/README.md` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)); `BASE_RATES_REGISTER.md` §7.8).
+**Predictability (2026-09-26(e)).** In the NHL 2025-26, the model's favourite reached 0.70 in only 6% of games (won 72.9%), and 67% of games sat at 0.50–0.60 (Brier 0.248 against 0.250). Totals are not predictable by any model here: A1 was worse than the population, and TB-1 no better. A STRONG NHL Rank 1 is rare (`research/predictability_2026-09-26/README.md` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)); `PARAMETERS.md` §7.8).
 
 ### 0.7 Control index (full text in §4 and the dated sections)
 1 goalie uncertainty is a mixture · 2 shots and goals linked, not interchangeable · 3 blocked shots definition-sensitive · 4 special teams change exposure and rate · 5 score state changes pace · 6 empty-net goals are an explicit tail · 7 regulation ≠ moneyline · 8 back-to-back is mechanistic · 9 props need role and ice time · 10 external xG models are challengers · 11 shot volume is exposure · 12 sparse competitions keep a conversion cap · 13 OT geometry v operator settlement · 14 unconfirmed goalie blocks a fragile Rank-1 total. References: H-R1 totals and odd OT totals · H-R2 puck line is an empty-net market · H-R3 preseason rates · H-R4 recency · H-R5 width · H-R6 settlement receipt.
@@ -356,3 +356,79 @@ Not directly in the log but the identity template must handle it: IIHF rules (20
 ### 9.6 Identity checklist (ice hockey)
 
 Resolve before any rate work: **league and therefore period length** (AIHL 15 min; almost everything else 20 min) and rink; the **points and overtime regime** and whether it changes for the playoffs; whether the contract is **"regulation / 60 (or 45) minutes"** or **"full-time including OT/SO"**; **import-player availability** for the specific game; goalie confirmation and back-to-back status; and the operator's settlement for the 3-way line and the puck line (empty-net and OT exposure).
+
+---
+
+# Merged: RULES_NHL
+
+*Merged 2026-11-07 (CR-2026.11.07-R2, FORMAT), verbatim. Formerly `RULES_NHL.md` (original title: National Hockey League (NHL) & Professional Ice Hockey Numerical Rules). Original kept unchanged at [archive/consolidation_2026-11-07/merged_sources/RULES_NHL.md](archive/consolidation_2026-11-07/merged_sources/RULES_NHL.md).*
+
+> **Authority.** [CORE](CORE.md) and [CURRENT_RULES](RULES_REFERENCE.md#part-a-current_rules) govern new work; this page holds this sport's rules, and earlier statements below keep their historical scope.
+
+
+**Authority:** MDS-2026.10.01-v7.1 / CR-2026.10.05-I8 (with numerical runtime extension CR-2026.10.06-NUMERICAL-1).
+**Companion Document:** [RULES_ICE_HOCKEY.md](RULES_ICE_HOCKEY.md) (Foundational Ice Hockey Governance).
+
+---
+
+## 1. Scope & Primary Numerical Pipeline
+
+This document defines the numerical prediction pipeline for the **National Hockey League (NHL)** and North American professional ice hockey (including AHL).
+
+The core generative process is modeled as:
+
+$$\text{Shot Attempts (Corsi)} \longrightarrow \text{Unblocked Shots (Fenwick)} \longrightarrow \text{Shot Quality / Expected Goals (xG)} \longrightarrow \text{Goals}$$
+
+```text
+Team 5v5 Shot Pace × Shooting Efficiency (xG)
+                     +
+Special Teams Opportunities (PP/PK) × Conversion Rate
+                     +
+Score Effects & Trailing Aggression
+                     +
+Goalie Save Quality Above Expected (GSAx)
+                     +
+Late-Game Pulled Goalie & Empty-Net Tail
+                     │
+                     ▼
+  Joint Regulation Score Matrix (Home Goals, Away Goals)
+                     │
+                     ├── Regulation 1X2 Probabilities (Home / Draw / Away)
+                     ├── Puck Line (-1.5 / +1.5) Probabilities
+                     ├── Over / Under Goals PMF
+                     └── Overtime / Shootout Branch → Full Game Moneyline
+```
+
+---
+
+## 2. Invariants & Mechanics
+
+### 2.1 Starting Goaltender Gate (Strict Mandatory Prerequisite)
+- Goalies represent the single highest-variance individual factor in ice hockey.
+- **Unconfirmed Goalie Rule**: If a starting goaltender is not confirmed via official team announcement, beat reporter morning skate report, or starting warm-up handshake, the model must evaluate an explicit **mixture distribution**:
+  $$P(\text{Goals}) = p_{\text{starter}} \cdot P(\text{Goals} \mid \text{Starter}) + (1 - p_{\text{starter}}) \cdot P(\text{Goals} \mid \text{Backup})$$
+- Totals on games with unconfirmed starters are strictly barred from Rank #1.
+
+### 2.2 Regulation vs. Overtime/Shootout (Contract Geometry)
+- **Regulation 60-Minute Contract**: Settles on the exact score at the end of the third period. Ties settle as `DRAW` on 1X2, or against the regulation line.
+- **Full Game (OT/Shootout Included)**:
+  - Any game tied after 60 minutes proceeds to 3-on-3 sudden-death overtime (5 minutes) followed by a 3-round shootout.
+  - The winner receives exactly **one additional goal**.
+  - **Mathematical Consequence**: Every game decided in OT/SO adds exactly 1 goal to an even score, resulting in an **odd total**:
+    - A 2–2 tie becomes 3–2 (Total = 5, strictly Under 5.5).
+    - A 3–3 tie becomes 4–3 (Total = 7, strictly Over 6.5).
+  - Models must account for this discrete odd-number mass when pricing 5.5 and 6.5 full-game totals.
+
+### 2.3 Empty-Net Goals and the Puck Line (-1.5 / +1.5)
+- Trailing teams pull their goaltender for a 6-on-5 extra attacker typically with 1:30–2:30 remaining when trailing by 1 or 2 goals.
+- **Empirical Base Rate**: Over 70% of two-goal regulation victories in the modern NHL feature an empty-net goal.
+- **Puck Line Requirement**: A candidate recommending a $-1.5$ handicap must explicitly compute the probability of an empty-net conversion; candidates backing $+1.5$ must account for the empty-net kill risk.
+
+---
+
+## 3. Data Sources & Regime Controls
+
+1. **Shot-Level Tracking**: MoneyPuck (`moneypuck.com`) 2007–08 to present.
+   - Note: MoneyPuck excludes blocked shots from its shot-level tables. Corsi (total shot attempts) must be supplemented via NHL API play-by-play.
+2. **Official Verification**: NHL Web API (`api-web.nhle.com/v1/gamecenter/{gameId}/boxscore`) provides official time on ice, starting goalies, empty-net indicators, and period scoring.
+3. **Preseason Separation**: Preseason hockey displays 0.6–0.9 fewer goals per game due to split-squad rosters and conditioning. Never combine regular season and preseason training records without an explicit regime indicator.

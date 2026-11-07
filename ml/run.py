@@ -184,8 +184,8 @@ def run_cards() -> None:
     from ml.evaluation.writers import write_cards
 
     rec = receipt_base()
-    rec["rank_log_sha256"] = hashlib.sha256((REPO_ROOT / "GAME_PREDICTION_RANK_LOG.csv").read_bytes()).hexdigest()
-    rank_digest = lambda: hashlib.sha256((REPO_ROOT / "GAME_PREDICTION_RANK_LOG.csv").read_bytes()).hexdigest()
+    rec["rank_log_sha256"] = hashlib.sha256((REPO_ROOT / "research/data/GAME_PREDICTION_RANK_LOG.csv").read_bytes()).hexdigest()
+    rank_digest = lambda: hashlib.sha256((REPO_ROOT / "research/data/GAME_PREDICTION_RANK_LOG.csv").read_bytes()).hexdigest()
     write_cards(audit(), finish_receipt(rec, [("rank log", rec["rank_log_sha256"], rank_digest)]))
 
 

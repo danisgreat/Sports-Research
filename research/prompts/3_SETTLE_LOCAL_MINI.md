@@ -2,17 +2,17 @@
 
 **Canonical assignment happens in this settlement phase, through the prompt-4 import (MINI-v2).** Preserve local event keys through original copies, settlement markers, queues and manifests. The settlement document's own LOCAL_ID_MAPPING says canonical ID NOT_ASSIGNED / PENDING_PROMPT_4_IMPORT; never plan P-numbers while settling. When the settlement is written and verified, run [prompt 4](4_CANONICAL_IMPORT.md) on it in the same session (section 6): that import alone assigns the IDs and records the final mapping. Events that stay pending are not imported and get no ID. Existing canonical references retain their real mappings. S18 checks this handoff. Retain reviewed labels locally by local key; defer the canonical-only research_learning exporter until prompt 4 has assigned and verified the mapping.
 
-**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](../../MINI_LOG_IDENTITY_PROTOCOL.md); summarised in [CORE](../../CORE.md) §2.
+**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](../../WORKFLOW.md#part-b-mini_log_identity_protocol); summarised in [CORE](../../CORE.md) §2.
 
-**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](../../RESEARCH_EXHAUSTIVENESS_PROTOCOL.md); summarised in [CORE](../../CORE.md) §5.
+**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](../../RESEARCH_PROTOCOL.md#part-b-research_exhaustiveness_protocol); summarised in [CORE](../../CORE.md) §5.
 
 **Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §5.
 
 **P-2026.10.22-v24.0 · LOCAL_MINI_SETTLEMENT.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). **LOCAL_WORKING_TREE** (ENV-v2). Writes: the frozen mini's source identity, one settlement document with dated revisions at `research/active_minis/<MINI_KEY>_SETTLEMENT.md`, the ledger inputs and frozen-row settlements of section 4, then the prompt-4 import of section 6 and a commit and push. Original cards are immutable. Settle the original probabilities from the frozen card; the model never re-grades or replaces them. Historical MODEL_ASSISTED cards are settled on their frozen contracts like any other card. The decision lab is excluded.
 
-**ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](../../FORECAST_CYCLE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §7.
+**ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](../../REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](../../CORE.md) §7.
 
-**Execution environment (ENV-v2).** Defined in [EXECUTION_ENVIRONMENT_PROTOCOL](../../EXECUTION_ENVIRONMENT_PROTOCOL.md); summarised in [CORE](../../CORE.md) §1.
+**Execution environment (ENV-v2).** Defined in [EXECUTION_ENVIRONMENT_PROTOCOL](../../WORKFLOW.md#part-a-execution_environment_protocol); summarised in [CORE](../../CORE.md) §1.
 
 **Required repository fallback (REF-v1).** Defined in [GITHUB_REFERENCE_PROTOCOL](../../GITHUB_REFERENCE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §1.
 
@@ -74,13 +74,13 @@ For new RC-v1 research records, inspect the A9 completion matrix and retain actu
 
 ## Research retention and execution disposition (RETAIN-v1)
 
-**Retain the research (RETAIN-v3).** Defined in [RESEARCH_RETENTION_PROTOCOL](../../RESEARCH_RETENTION_PROTOCOL.md); summarised in [CORE](../../CORE.md) §2.
+**Retain the research (RETAIN-v3).** Defined in [RESEARCH_RETENTION_PROTOCOL](../../RESEARCH_PROTOCOL.md#part-c-research_retention_protocol); summarised in [CORE](../../CORE.md) §2.
 
 Leave any legacy execution manifest and bundles untouched; new minis have none (model shadows keep their own receipts). New settlement documents use mini-settlement-10. Run S16 by hand against the frozen mini.
 
 Settle every card equally. Record verified event/contract outcomes in the settlement so prompt 6 can use them as learning candidates; partial/unknown outcomes remain queued.
 
-**Local research record and updated-document delivery (owner update, 16 October 2026).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](../../MINI_LOG_IDENTITY_PROTOCOL.md); summarised in [CORE](../../CORE.md) §2.
+**Local research record and updated-document delivery (owner update, 16 October 2026).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](../../WORKFLOW.md#part-b-mini_log_identity_protocol); summarised in [CORE](../../CORE.md) §2.
 
 ## Settle legacy originals without retroactive compliance
 
@@ -92,7 +92,7 @@ Produce the mandatory visible **Source discovery, corroboration and reuse regist
 
 ## Learning record and mini-level diagnostics (LEARN-v2)
 
-After the original contracts are settled, record in the settlement package, as Markdown tables, each settled event's final score, regulation score, decision, final time and terminal source (URL, retrieved time), next to each card's learning record. Prompt 6 converts these records into the learning store under [LEARNING_PIPELINE_PROTOCOL](../../LEARNING_PIPELINE_PROTOCOL.md); apart from the section-4 settlement exports of shadowed events, this prompt writes no learning-store export.
+After the original contracts are settled, record in the settlement package, as Markdown tables, each settled event's final score, regulation score, decision, final time and terminal source (URL, retrieved time), next to each card's learning record. Prompt 6 converts these records into the learning store under [LEARNING_PIPELINE_PROTOCOL](../../ML_PIPELINE.md#part-c-learning_pipeline_protocol); apart from the section-4 settlement exports of shadowed events, this prompt writes no learning-store export.
 
 Account separately for settled unique events, events still pending and events with incomplete learning records. This mini settlement (about 40–50 games) is the first review level: report preliminary calibration and BASELINE_P diagnostics computed by hand (Brier per row, PROBABILITY_TOOLKIT §10) and data-integrity findings only. Never declare a method superior here, and never change ranks. Record a MINI_SETTLEMENT review row in the package (disposition usually NO_CHANGE, INSUFFICIENT_EVIDENCE or DATA_REPAIR_REQUIRED) for prompt 6 to append to `research/learning_status/REVIEW_LOG.csv`.
 

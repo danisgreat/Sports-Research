@@ -1,20 +1,20 @@
 # Card, mini, settlement and canonical formats
 
-**ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](FORECAST_CYCLE_PROTOCOL.md); summarised in [CORE](CORE.md) §7.
+**ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](CORE.md) §7.
 
-**Execution environment (ENV-v2).** Defined in [EXECUTION_ENVIRONMENT_PROTOCOL](EXECUTION_ENVIRONMENT_PROTOCOL.md); summarised in [CORE](CORE.md) §1.
+**Execution environment (ENV-v2).** Defined in [EXECUTION_ENVIRONMENT_PROTOCOL](WORKFLOW.md#part-a-execution_environment_protocol); summarised in [CORE](CORE.md) §1.
 
-**Executable forecast cycle (CYCLE-v1).** Defined in [FORECAST_CYCLE_PROTOCOL](FORECAST_CYCLE_PROTOCOL.md); summarised in [CORE](CORE.md) §7.
+**Executable forecast cycle (CYCLE-v1).** Defined in [FORECAST_CYCLE_PROTOCOL](REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](CORE.md) §7.
 
-**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](MINI_LOG_IDENTITY_PROTOCOL.md); summarised in [CORE](CORE.md) §2.
+**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](WORKFLOW.md#part-b-mini_log_identity_protocol); summarised in [CORE](CORE.md) §2.
 
-**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_EXHAUSTIVENESS_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
+**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_PROTOCOL.md#part-b-research_exhaustiveness_protocol); summarised in [CORE](CORE.md) §5.
 
 **Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
 
 **Required repository fallback (REF-v1).** Defined in [GITHUB_REFERENCE_PROTOCOL](GITHUB_REFERENCE_PROTOCOL.md); summarised in [CORE](CORE.md) §1.
 
-**mini-log-10 · mini-settlement-10 · canonical-md-1.** Authority: MDS-2026.10.16-v20.0 / CR-2026.10.16-R7 / SCV-2026.10.16-v11 / SEL-2026.10.12-v3. [Rules](CURRENT_RULES.md) and [selection definitions](SELECTION_RULES.md) control semantics. Previous formats: [mini-log-6 / mini-settlement-5](archive/superseded_2026-10-12/CARD_AND_LOG_TEMPLATES.md).
+**mini-log-10 · mini-settlement-10 · canonical-md-1.** Authority: MDS-2026.10.16-v20.0 / CR-2026.10.16-R7 / SCV-2026.10.16-v11 / SEL-2026.10.12-v3. [Rules](RULES_REFERENCE.md#part-a-current_rules) and [selection definitions](RULES_REFERENCE.md#part-b-selection_rules) control semantics. Previous formats: [mini-log-6 / mini-settlement-5](archive/superseded_2026-10-12/CARD_AND_LOG_TEMPLATES.md).
 
 <a id="local-mini-format-mini-log-2"></a>
 
@@ -164,7 +164,7 @@ For new primary cards include PRIMARY_PREDICTION_PROTOCOL receipt: exact runtime
 #### A8. Sources, failures, capture/refresh plan
 #### A9. Integrity receipt and readback
 
-Include the mandatory [research-completion matrix](RESEARCH_COMPLETION_PROTOCOL.md#4-completion-receipt-and-return) with actual evidence/outcomes for every procedure, every supplied row and all seven sport steps. Report research coverage, numerical ML availability and issuance status separately. New-run COMPLETE requires verified field closure under RESEARCH_EXHAUSTIVENESS_PROTOCOL; completed attempts with missing facts/corroboration remain INFORMATION_INCOMPLETE. COMPLETE_WITH_DOCUMENTED_GAPS is retained only in historical originals. An unattempted applicable step means INCOMPLETE; retain completed work. A blocked mini write returns a complete no-ID A1–A9 draft without invented original mini bytes.
+Include the mandatory [research-completion matrix](RESEARCH_PROTOCOL.md#4-completion-receipt-and-return) with actual evidence/outcomes for every procedure, every supplied row and all seven sport steps. Report research coverage, numerical ML availability and issuance status separately. New-run COMPLETE requires verified field closure under RESEARCH_EXHAUSTIVENESS_PROTOCOL; completed attempts with missing facts/corroboration remain INFORMATION_INCOMPLETE. COMPLETE_WITH_DOCUMENTED_GAPS is retained only in historical originals. An unattempted applicable step means INCOMPLETE; retain completed work. A blocked mini write returns a complete no-ID A1–A9 draft without invented original mini bytes.
 SPORTS_ONLY_MARKET_BLIND: <result> · OUTCOME_EXPOSURE: <actual state> · SETTLEMENT: NOT_PERFORMED · CANONICAL_IMPORT: PENDING
 <!-- END CARD LOCAL-<MINI_KEY>-G0001 -->
 ```
@@ -420,14 +420,14 @@ Current retention examples: [research-only lifecycle](research/prompts/examples/
 
 ## 11. Timing semantics for new v12 work
 
-Use [TIMING_RESEARCH_PROTOCOL](TIMING_RESEARCH_PROTOCOL.md) in the existing Timing/Known-at/Lineup-state/A1/A3/A8/A9 fields. No added mandatory schema field or mini-format migration. Retain actual late issue time even with CLEAN_PRE_START_INPUTS; report that cohort separately. All old mini formats and issued timing/rank/p/baseline/grade bytes remain unchanged. S9/S10 additionally keep clean-input late-issued research apart from pre-start-issued prospective/shadow scores; a settlement cannot create missing pre-start proof.
+Use [TIMING_RESEARCH_PROTOCOL](RESEARCH_PROTOCOL.md#part-e-timing_research_protocol) in the existing Timing/Known-at/Lineup-state/A1/A3/A8/A9 fields. No added mandatory schema field or mini-format migration. Retain actual late issue time even with CLEAN_PRE_START_INPUTS; report that cohort separately. All old mini formats and issued timing/rank/p/baseline/grade bytes remain unchanged. S9/S10 additionally keep clean-input late-issued research apart from pre-start-issued prospective/shadow scores; a settlement cannot create missing pre-start proof.
 
 ## 12. Primary ML/RL receipt and feedback
 
-**Research retention before model availability (RETAIN-v2).** Defined in [RESEARCH_RETENTION_PROTOCOL](RESEARCH_RETENTION_PROTOCOL.md); summarised in [CORE](CORE.md) §2.
+**Research retention before model availability (RETAIN-v2).** Defined in [RESEARCH_RETENTION_PROTOCOL](RESEARCH_PROTOCOL.md#part-c-research_retention_protocol); summarised in [CORE](CORE.md) §2.
 
-[PRIMARY_PREDICTION_PROTOCOL](PRIMARY_PREDICTION_PROTOCOL.md) controls new model-assisted cards in existing A4/A5/A9 metadata. Existing mini-log-7 and older formats retain their format; the declared policy/version changes, never an issued core. Settlement retains the original bundle, grades original keys first, then creates a new source-backed feedback row and reconciles the effective revision inventory before future learning. The market/decision lab remains excluded.
+[PRIMARY_PREDICTION_PROTOCOL](ML_PIPELINE.md#part-a-primary_prediction_protocol) controls new model-assisted cards in existing A4/A5/A9 metadata. Existing mini-log-7 and older formats retain their format; the declared policy/version changes, never an issued core. Settlement retains the original bundle, grades original keys first, then creates a new source-backed feedback row and reconciles the effective revision inventory before future learning. The market/decision lab remains excluded.
 
-**Local research record and updated-document delivery (owner update, 16 October 2026).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](MINI_LOG_IDENTITY_PROTOCOL.md); summarised in [CORE](CORE.md) §2.
+**Local research record and updated-document delivery (owner update, 16 October 2026).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](WORKFLOW.md#part-b-mini_log_identity_protocol); summarised in [CORE](CORE.md) §2.
 
 **Settlement S18 — local-to-canonical handoff.** Check local-key markers/mappings/manifest consistency; unimported new events remain NOT_ASSIGNED / PROMPT_4_IMPORT; known canonical references and legacy source aliases are distinguished. Prompt 4 supplies the final canonical mapping in new import evidence without rewriting frozen originals. Settlement-10 runs S1–S18; settlement-9 retains S1–S17; settlement-8 retains S1–S16.

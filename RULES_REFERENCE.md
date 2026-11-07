@@ -1,0 +1,343 @@
+# Operating rules reference
+
+**Merged 2026-11-07, CR-2026.11.07-R2 (FORMAT).** This document joins the files below, verbatim and in this order. Nothing was reworded. Each source's title line became its part heading. The banner paragraphs that every source repeated appear once, below. Links to the old files now point to their parts, and the originals are kept unchanged in [archive/consolidation_2026-11-07/merged_sources/](archive/consolidation_2026-11-07/merged_sources/).
+
+| Part | Former file | Bytes | SHA-256 of the original |
+|---|---|---:|---|
+| [A](#part-a-current_rules) | `CURRENT_RULES.md` | 40,096 | `c583a5bcb130855fcc534a9fd4690e39d7b67428ae4d135f783e15b8b382a769` |
+| [B](#part-b-selection_rules) | `SELECTION_RULES.md` | 17,947 | `d7df34a0931267b7ed035a76bac79adf8ce228157db47bcc85f265ce4e760ead` |
+
+**ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](CORE.md) §7.
+
+**Execution environment (ENV-v2).** Defined in [EXECUTION_ENVIRONMENT_PROTOCOL](WORKFLOW.md#part-a-execution_environment_protocol); summarised in [CORE](CORE.md) §1.
+
+**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](WORKFLOW.md#part-b-mini_log_identity_protocol); summarised in [CORE](CORE.md) §2.
+
+**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_PROTOCOL.md#part-b-research_exhaustiveness_protocol); summarised in [CORE](CORE.md) §5.
+
+**Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
+
+**Required repository fallback (REF-v1).** Defined in [GITHUB_REFERENCE_PROTOCOL](GITHUB_REFERENCE_PROTOCOL.md); summarised in [CORE](CORE.md) §1.
+
+**Google Drive (DRIVE-v2, optional).** Defined in [GOOGLE_DRIVE_EXCHANGE_PROTOCOL](GOOGLE_DRIVE_EXCHANGE_PROTOCOL.md); summarised in [CORE](CORE.md) §1.
+
+**Research retention before model availability (RETAIN-v2).** Defined in [RESEARCH_RETENTION_PROTOCOL](RESEARCH_PROTOCOL.md#part-c-research_retention_protocol); summarised in [CORE](CORE.md) §2.
+
+**Local research record and updated-document delivery (owner update, 16 October 2026).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](WORKFLOW.md#part-b-mini_log_identity_protocol); summarised in [CORE](CORE.md) §2.
+
+---
+
+# Part A: CURRENT_RULES
+
+*Formerly `CURRENT_RULES.md` (original title: Current operating rules). Original kept unchanged at [archive/consolidation_2026-11-07/merged_sources/CURRENT_RULES.md](archive/consolidation_2026-11-07/merged_sources/CURRENT_RULES.md).*
+
+**MDS-2026.10.17-v22.2 · CR-2026.10.17-R6 · SCV-2026.10.16-v11 · SEL-2026.10.12-v3.** Effective for new work after this revision is read. Current IDs and destination: [CURRENT_STATE.md](CURRENT_STATE.md). Previous rules remain historical evidence: [CR-2026.10.17-R5](archive/superseded_2026-10-17-6/CURRENT_RULES.md), [CR-2026.10.17-R4](archive/superseded_2026-10-17-5/CURRENT_RULES.md), [CR-2026.10.17-R3](archive/superseded_2026-10-17-4/CURRENT_RULES.md), [CR-2026.10.17-R2](archive/superseded_2026-10-17-3/CURRENT_RULES.md), [CR-2026.10.17-R1](archive/superseded_2026-10-17-2/CURRENT_RULES.md), [CR-2026.10.16-R7](archive/superseded_2026-10-17-1/CURRENT_RULES.md), [CR-2026.10.15-R8](archive/superseded_2026-10-16-1/CURRENT_RULES.md), [CR-2026.10.15-R7](archive/superseded_2026-10-15-8/CURRENT_RULES.md), [CR-2026.10.15-R6](archive/superseded_2026-10-15-7/CURRENT_RULES.md), [CR-2026.10.15-R5](archive/superseded_2026-10-15-6/CURRENT_RULES.md), [CR-2026.10.15-R4](archive/superseded_2026-10-15-5/CURRENT_RULES.md), [CR-2026.10.15-R3](archive/superseded_2026-10-15-4/CURRENT_RULES.md), [CR-2026.10.15-R2](archive/superseded_2026-10-15-3/CURRENT_RULES.md), [CR-2026.10.14-R2](archive/superseded_2026-10-14-5/CURRENT_RULES.md), [CR-2026.10.14-R1](archive/superseded_2026-10-14-4/CURRENT_RULES.md), [CR-2026.10.12-R2](archive/superseded_2026-10-14-3/CURRENT_RULES.md), [v11.0 CR-R1](archive/superseded_2026-10-12/CURRENT_RULES_v11.0_CR-R1.md), [v10.0](archive/superseded_2026-10-12/CURRENT_RULES.md), [pre-v10](archive/superseded_2026-10-11/prompt_v10/CURRENT_RULES.md).
+
+## 0. Authority, scope and honest execution
+
+The framework remains Markdown, CSV and text. Read files, browse permitted sporting sources, use transparent arithmetic and plain file/git tools. Do not add scripts, code, JSON, notebooks or workflows to the repository, except inside the model workshop below. A helper used outside it is disclosed, and its rules are written out in prose (CONTRIBUTING). Do not claim an exact grid, simulation, model fit, calculation, file write, readback or scheduled capture unless actually performed.
+
+**Model workshop exception (owner instruction 2026-10-14; [framework change 2026-10-14-3](research/verification/framework_change_2026-10-14-3/IMPLEMENTATION.md)).**
+- **Where code may live.** Python source, its tests and its `requirements.txt` may exist only under `ml/`. No JSON, notebooks, pickles, workflows or binaries anywhere, `ml/` included.
+- **Who uses it.** Prompt 1 runs the reference stage and the card freeze (MLSCOPE-v3), the picks linter, the ledger and, for the path-dependent contracts in SIMULATION_PROTOCOL, the simulators; prompt 3 runs the settlement commands; prompts 6 and 8 and maintainer workshop runs do the rest. Prompts 2, 4 and 5 run no model. The market decision lab stays excluded from all card work.
+- **What it may write.** Markdown and market-free CSV under the named `research/primary_predictions/` event bundle/input folder, `research/training_candidates/` label-candidate folder, `research/model_shadow/`, `research/pregame/`, `research/adjustment_ledger/`, `research/competition_parameters/`, `research/effect_tables/` and `research/benchmarks/`; explicitly declared parameter admission Markdown/CSV under `research/primary_policy/`, each carrying a receipt: code SHA-256, archive snapshot SHA-256, repository HEAD and run time.
+- **Honesty.** A file there claims only what the code actually computed. A model's status is set by the rules in `research/model_shadow/README.md`; this owner instruction authorises EXPERIMENTAL_PRIMARY_NOT_CERTIFIED, not qualification of old artifacts or production performance.
+
+**One authority mode per run (R09).** Latest user instructions control task scope. Each run prints exactly one mode in its reading receipt and never mixes revisions silently:
+- `LOCAL_WORKING_TREE` applies to every prompt, 1 to 8, which all run in this repository (repository agent, ENV-v2, owner instruction 22 October 2026) and mutate it. Print branch, HEAD and every uncommitted difference to a control file. Those working files govern this run only, and the receipt names them.
+- `PUBLISHED_MAIN_PINNED` applies only to an agent outside the repository (the retired ENV-v1 external-chat route). Read every control from the latest commit of `origin/main`, print its full SHA, and use only that commit's files; its outputs enter through prompt 4's intake.
+
+Where the published and local versions of a control differ, the receipt lists the difference and says which one was applied. Neither mode silently changes branches, pulls over dirty work, or assumes a stale download is current.
+
+Precedence: user instruction; these operating rules and current state for their respective domains; selection/scoring/templates; sport and league rules; historical examples/learning notes. Sport-specific physical rules and actual competition conditions must be verified, not overridden by a generic no-draw assumption. Report substantive contradictions. Continue independent research when a conflict blocks only issuance/import. Never resolve an identity or ID collision by guessing.
+
+## 1. Reading gate
+
+**Basketball endpoint (BK-OT-1, CR-2026.11.07-R1, owner convention 7 November 2026).** Every basketball line includes overtime: full-game totals, spreads/handicaps, team totals and winner lines settle on the final score after all overtime periods, in every basketball competition. Only a contract whose own text names regulation, a quarter or a half settles on that segment. The endpoint is therefore `FROZEN_FRAMEWORK_CONVENTION`, never `UNKNOWN_DEFINITION`, and no operator term is needed to settle it. Price overtime as explicit mass (the regulation-tie branch), and still report whether a threshold was already crossed in regulation (control 13). Full text: [RULES_BASKETBALL](RULES_BASKETBALL.md) §0.5.
+
+**Prompt lifecycle (P-2026.10.22-v24.0).** Every task reads [COMMON_OPERATING_PROTOCOL](research/prompts/COMMON_OPERATING_PROTOCOL.md) and its complete selected prompt. Prompt 1 is a core file (shared rules and shared steps) plus eleven sport files (`research/prompts/1_sports/`) holding each sport's own steps and its inactive Upcoming game block. New cards are ANALYST_PRIMARY_V1: the analyst's own probability, built as the frozen reference plus logged adjustments (REFMODEL-v1, LEDGER-v1), with the picks block linted before it is ledgered; the reference stage runs before the card and the card's own final p is frozen beside it (MLSCOPE-v3). Prompt 8 requires tests, recoverable generating-code/data identities, actual runs and explicit qualification decisions. Tests/development results do not promote models, and the decision lab never enters card learning.
+
+**Reading gate (GOV-v2).** A game card (prompt 1) reads [CORE](CORE.md), the prompt 1 core and its one sport file in full, plus the named sections of any larger file it opens. Every other task opens CURRENT_STATE, METHOD, CURRENT_RULES, SELECTION_RULES, CARD_AND_LOG_TEMPLATES and its own prompt; an agent outside the repository (legacy ENV-v1) reads the ENV-v1 section budget instead of whole files where it names sections. Print the receipt in [the prompt index](research/prompts/README.md): exact paths/sections read, revision, time with offset, missing required files and source of authority. Claim full reading only when full text was read.
+
+Cards also read the applicable sport/league rules, ARCHIVE_USE_GUIDE, relevant SOURCES routes, PROBABILITY_TOOLKIT sections, profile/base-rate rows, active mini, status register and relevant canonical records. Settlement adds scoring and original card/contract evidence. Import, rollover and retrospective add VERIFICATION_PROTOCOL; retrospective adds current hypotheses and latest completed retrospective. Prompt 7 adds coverage/schema/source notes; prompt 8 adds contribution rules, changelog and affected dependencies.
+
+**Model reading gate (MLSCOPE-v3, 22 October 2026; supersedes MLSCOPE-v2 and MLSCOPE-v1).** Prompt 1 reads model output only through the reference stage it ran itself (the printed Reference block and its receipt) and, after the card is written and read back, the pregame freeze block; it reads no other model, shadow, cycle or decision-lab output, and no benchmark. A frozen reference is never rewritten by the card, and the card never rewrites an issued reference or receipt. Prompt 3 settles shadows, prompt 6 evaluates and prompt 8 releases. Prompts 2, 4 and 5 run no model. The decision lab never enters card learning.
+
+After the required GitHub fallback has also been attempted, still-unavailable required control files block the dependent mutation; missing sporting data is recorded and does not justify inventing it. Cite the rule or source next to any value it shaped. Every card prints online source URLs, rows/date range inspected, horizon filter, findings and gaps. No deleted archive path is a required input.
+
+## 2. Rule T2: frozen top two and transparent denominators
+
+Only the original Rank 1 and Rank 2 can count as primary wins. At most four supported candidates are retained; ranks 3–4 and shadow selections stay informational. A missing second pick is not manufactured. Never replace a losing primary with a winning alternate or reforecast.
+
+From P-2026.10.22-v24.0 the rank 1 and rank 2 count is a descriptive count of the most-likely list; the headline is the paired proper score of the final probability against its references ([ADJUSTMENT_LEDGER_PROTOCOL](ADJUSTMENT_LEDGER_PROTOCOL.md) section 5). Report W/L/PUSH/VOID/UNRESOLVED separately, number of requested events, retained cards, numeric/qualitative/NO_FORECAST cards and scoring coverage. WIN/(WIN+LOSS) is conditional on resolved decisive outcomes and must not hide unresolved cases. Missing evidence is not VOID. Dependent rows do not become independent trials. Mechanically protected pairs require an explicit label; Hit@2 is then a construction diagnostic, not predictive skill. Exact definitions: [SCORING_AND_VALIDATION.md](SCORING_AND_VALIDATION.md).
+
+## 3. Rule R1: outcome review without hindsight
+
+Every settled Rank-1 LOSS receives eight parts: exact claim; verified outcome; original-distribution check; cutoff knowability; process/model/variance assessment; cutoff-only counterfactual; failure class; testable correction. Keep R1–R12 for every terminal card, including wins and partial settlements, with unavailable sections marked and explained.
+
+Do not invent numeric blame percentages. A single tail loss neither proves miscalibration nor vindicates a distribution. Process is SOUND, DEFICIENT or NOT_ASSESSABLE with evidence; uncalibrated status is reported separately. Review matched wins for the same defects. Counterfactuals are diagnostic and never replace frozen ranks or join prospective cohorts.
+
+## 4. Rule P4: event first, reproducible selection
+
+Supplied contracts are reference propositions, not privileged selections. Freeze the candidate-generation recipe, endpoints, standard ladder and exclusions before inspecting their probabilities. Price all supported supplied rows and the declared derived slate from one coherent event model. Keep every supplied row's disposition; do not erase a difficult line or keep moving lines until a gate passes.
+
+The primary slate follows [SELECTION_RULES](#part-b-selection_rules): decreasing p_card, deterministic ties, at most four rows. Family constraints are declared eligibility filters. Joint dependence is disclosed, not used to silently reorder primary ranks. Different-quantity and diversification alternatives are explicitly frozen shadow selections. Rank-1 gate constants remain provisional; the alternative-quantity gate is a shadow, not a replacement. Record candidate quantity, family, line and endpoint so comparisons cannot disguise easier propositions as better predictions.
+
+## 5. Sources, event state and time
+
+**Mandatory online history (HIST-v2):** Apply HISTORICAL_SOURCE_PROTOCOL to every sport/competition, even if local data exists. Verify both sides' L5/L10/L15/L20 online, recording sources, true n, comparisons and unresolved fields. No retired store/profile fallback or rebuild prerequisite.
+
+SPORTS_ONLY / MARKET_BLIND: exclude odds, line movement, tips, betting previews, prediction markets and fantasy inputs. User-supplied thresholds are contract metadata. Do not claim value, edge or staking advice from this framework.
+
+**§5a. Decision-lab firewall (owner instruction 2026-10-14).** `ml/decision/` may run a paper-only, historical study of staking policies (fractional Kelly, contextual bandits) on prices held in the local, git-excluded benchmark capture. It commits aggregate tables only, under `research/model_shadow/DECISION_LAB/`, never a price or a price-derived row. Nothing it produces is betting advice, a value claim or an input to any card, rule, rank, width or learning disposition, and the MARKET_BLIND rule above is unchanged for all research. Online in-play betting is prohibited in Australia under the Interactive Gambling Act 2001, so no live or in-play automation is built. The owner-adopted settlement benchmarks (the line-implied 0.5 and hand-entered post-settlement probabilities, [BENCHMARK_PROTOCOL](BENCHMARK_PROTOCOL.md)) are scoring references like a final score: they are never read before settlement and never cited by a rule, rank, width, adjustment or learning disposition.
+
+Confirm competition, season, stage, participants, venue, native event ID or labelled stable surrogate, scheduled time, timezone and official observed state. An event key includes competition/season/native ID or surrogate/date; a reschedule is an alias update under the original identity, not automatically a new event. Doubleheaders require game number or native ID. Search all relevant minis and Combined Logs, not just headers.
+
+Use official field owners then structured providers and quality corroboration. Record URL, exact field/value, source update/publication time when available, retrieval time, short lawful quotation or faithful extract, fallback/failure and collector lineage (UNKNOWN if unknown). Domain count is not independent-source count. Retain decisive evidence as Markdown/text within allowed scope. A quotation and git commit do not prove pregame availability by themselves.
+
+[TIMING_RESEARCH_PROTOCOL](RESEARCH_PROTOCOL.md#part-e-timing_research_protocol) governs manual research completion and timing. Continue comprehensive research until complete, even after scheduled or actual start; no fixed lead time forces freezing, issuance or abandonment. The evidence horizon is the game-log scheduled start: there is no separate cutoff, and lineups, confirmed starters, bench and news are researched up until then (it moves earlier only to an earlier actual issue or verified earlier first play). Record the horizon, retrieval, research completion, final availability check, actual issue and actual-event state separately. PREGAME describes verified not-started issuance, at any lead; a delayed start may allow PREGAME after the advertised time. CLEAN_PRE_START_INPUTS describes independently evidenced pre-start inputs and no live/final target-outcome exposure; it may accompany POST_START_ISSUE, which remains a separate descriptive cohort, never a claim of pre-start release. Unverified start/source timing stays TIMING_UNVERIFIED/KNOWN_AT_UNVERIFIED; observed live/final outcomes make the work LIVE_OBSERVED/HISTORICAL_DIAGNOSTIC. Do not backdate or revise old labels. A stale 0–0 does not prove the event has not started.
+
+**§5b. Comprehensive availability research (AVAIL-2026.10.16-v4).** Every game card applies [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md) §§1–6 and [SOURCES §3.11](SOURCES.md#311-field-fallback-and-official-social-use-by-sport). Confirm both sides' exact starters/starting role and selected bench/replacements separately from current injury, illness, suspension and absence evidence. A roster, probable pitcher, predicted XI, depth chart or projected goalie is not confirmation. Complete official exact-match/team-sheet, both clubs, medical/eligibility/discipline, permitted structured fallback and local-language discovery for missing fields; obscure competitions require their actual organizer/federation and both teams, not a major-league substitute. Record actual attempts and decisive evidence/times in the existing Evidence receipt/A3/A8 and lineup-state metadata; C20 checks completion. Recheck the actual release window and immediately before freeze, then re-price changed inputs. No injuries found does not mean no injuries. A full starting side does not establish the bench or expected minutes/workload. A source failure is not proof of non-publication. After comprehensive research, genuine publication/access/conflict gaps remain explicit; unsupported material scenarios use qualitative/NO_FORECAST handling. An incomplete search cannot pass the process audit, and no rule guarantees publication by a universal deadline. A user's explicit only-confirmed issuance constraint is honoured without dropping the research request or inventing confirmation.
+
+**Research completion workflow (PR-04 revision, owner instruction 15 October 2026).**
+1. Complete identity, authority, every applicable availability route, sporting/online-history inputs, coherent distribution, exact contracts/candidate recipe, baseline attempt, sensitivity and actual audit. There is no countdown deadline; continue after play starts if needed.
+2. The pre-start evidence horizon is the game-log scheduled start (or an earlier actual issue / verified first play), never an earlier chosen cutoff. Retrieve later if necessary, but admit only field-level values demonstrably published by that horizon and before the actual start. A later current page, lineup release, live participation or final game book cannot prove its pre-start value by itself. Record any outcome exposure immediately.
+3. When the research is complete, perform the final availability/source-state recheck, re-price permitted changed inputs once, freeze the completed issued card and write/read it back. Freeze protects that completed original; it is not an advance deadline. New evidence after issue is a dated addendum/reforecast, never an edit to original ranks/probabilities.
+
+Complete the source escalation before calling a lineup unavailable. If genuine material gaps remain, record side/field, actual attempts and next manual check; retain a supported mixture labelled LINEUP_UNCONFIRMED, or qualitative/NO_FORECAST when states/weights are unsupported. A clean pre-start-input claim requires the proof in the timing protocol, not merely the analyst's intent or absence of an intentionally opened scoreboard. An explicit user time/only-confirmed constraint is honoured, with unmet constraints recorded truthfully.
+
+**Known-at time (R28).** An input enters a pregame card only if it was available by the card's cutoff, which is the game-log scheduled start (TIMING_RESEARCH_PROTOCOL §1); there is no separate earlier cutoff. A historical row's game date is not its availability time. Archive rows are retrospective compilations: print the capture date, and treat a late correction or late-published statistic as known only from its correction time. If that is unknown, label the input `KNOWN_AT_UNVERIFIED` and keep it out of anything that decides Rank 1. Full-season aggregates and corrected datasets are separate snapshots from what was known on the day.
+
+## 6. Requested research and missingness
+
+**Strict no-early-exit rule (RC-2026.10.16-v2):** execute [RESEARCH_COMPLETION_PROTOCOL](RESEARCH_PROTOCOL.md#part-a-research_completion_protocol) for every requested sport/competition. Deliver the complete sporting analysis and all applicable procedures regardless of calibration, model support/execution, lineup/history gaps, kickoff or mini/ID/write blockers. These restrict only the dependent calculation, clean-input claim or mutation. Complete and evidence all independent work; do not return a thin research supplement or blanket NO_FORECAST table as completion. Deliver and retain requested research independently of certification. New numeric primary cards use ANALYST_PRIMARY_V1 / UNCALIBRATED_ANALYST_PRIMARY: one hand-built coherent distribution with actual arithmetic, source/assumption provenance and sensitivity (§7). If numerical assumptions cannot be supported, complete the reasoned qualitative assessment for each contract instead. Otherwise use UNCALIBRATED_QUALITATIVE with p_card NOT_ESTIMATED and a supported qualitative ordering, or NO_FORECAST when identity/evidence cannot support a direction. Explain the missing inputs and next action. Never fabricate four rows, a probability, SD, baseline or source to satisfy a template.
+
+Missing baseline, calibration or fitted model does not prevent research logging. Unsupported numeric fields stay NOT_COMPUTED, unavailable facts NOT_VERIFIED, undefined contract terms UNKNOWN_DEFINITION, and structurally irrelevant fields N/A. Numeric zero is data, not missingness. Qualitative ranks receive no numerical gate PASS or proper score.
+
+## 7. Distribution, baseline and uncertainty
+
+Print model family, endpoint, parameters, input provenance, arithmetic and approximation limits. Marginals must come from compatible joint/conditional constructions. Separate supported auxiliary counts (corners, players) explicitly; without a joint model, report bounds rather than an exact cross-family joint. Do not label an unexecuted point/drive/ball enumeration exact.
+
+Retain unconditional win/push/loss/void masses and p_card = W/(W+L) where W+L > 0. Preserve allowed draws/ties; resolve OT/ET/SO/extras only when the exact competition/contract does. Full result masses sum to one within declared rounding tolerance. Do not clip a probability to the 90% selection ceiling; exclude it from the ranked slate and retain its actual value diagnostically. Tail truncation, covariance and score means/SDs must be reproducible.
+
+Every numeric candidate attempts a frozen BASELINE_P on the identical proposition/line/endpoint, using the league-only recipe in SELECTION_RULES §9. Missing comparator remains missing. Baseline provenance and cutoff are retained; no backfill after results. New primary cards use the ANALYST_PRIMARY_V1 distribution built from the frozen reference (below); a workshop model's output reaches a card only as that frozen reference.
+
+**Analyst primary pricing (ANALYST_PRIMARY_V1, v24.0).** The card's single coherent distribution is the numerical source for every p_card, rank and expected value, and it is built from the frozen reference: the reference centre and widths, plus one adjustment-ledger row per confirmed fact with its effect-table row and entry size (ADJUSTMENT_LEDGER_PROTOCOL section 1), converted with PROBABILITY_TOOLKIT tables or the exact grid in `ml.reference`, with every input, formula and intermediate value printed. Code may do the arithmetic and run the simulators the SIMULATION_PROTOCOL table allows. List every adjustment and avoid double-counting effects already in a rating or in the form windows. Print the reference pair and the adjusted pair whenever any adjustment changes the most-likely list or an information row, and flag `ADJUSTMENT_DEPENDENT` for any such change and `LARGE_ADJUSTMENT` above 0.25 SD. The width is never below the competition's floor without a written `width_floor_exception`. Test plausible low/base/high assumptions for the most uncertain inputs and show p changes: sensitivity ranges, not confidence intervals. Uncertain lineups need explicit scenarios/weights fixed before pricing or an honest nonnumeric assessment. A competition with no reference (tier C and no row or prior) prices its own distribution as before and prints `NONE` in the reference column. Historical MODEL_ASSISTED and pre-v24 hand-built cards keep their labels and methods.
+
+**Price the uncertainty you disclose (PR-03; SEL-2026.10.12-v3).**
+- **When it applies:** the card labels an input unfitted, stale, early-season, unconfirmed or `LINEUP_UNCONFIRMED`, and runs a low/base/high case on it.
+- **Scenario distribution:** the declared mixture of those cases, default weights 0.25/0.50/0.25. Different weights need a stated basis, frozen before pricing. Every row's p_card, the gate and the ranks come from the mixture.
+- **Shadow:** the base-case-only p is printed beside each row as `p_base` (shadow `SHADOW_BASE_ONLY`). It never counts as a primary result.
+- **Tails:** a mixture widens the tails honestly. Do not then move the line to recover a higher p: the candidate recipe is frozen first (§4).
+
+**Recent form: four windows, one rate (PR-01).**
+- **Windows:** every numeric team-sport card reads each side's L5, L10, L15 and L20, season-to-date and league level (ARCHIVE_USE_GUIDE online form recipe R2). Use dated games only, before the horizon, verified online under HISTORICAL_SOURCE_PROTOCOL. A window that does not exist is printed with its true n.
+- **One piece of evidence:** the windows overlap. They are never counted as separate confirmations, and a short-window move is never a direction on its own (no bounce-back or streak lean without a named, current mechanism).
+- **Use in the centre:** the rate that enters the centre is one shrunk blend, computed and printed as recipe R2 says. Using it is an analyst adjustment and goes in the adjustment table with the unadjusted pair.
+- **Individual sports:** tennis and other individual sports print the player's last 5/10/15/20 matches on the relevant surface or format where a route exists, under the same rules.
+
+## 8. Mini lifecycle and settlement
+
+Current formats: mini-log-10 and mini-settlement-10; existing formats (mini-log-2 to -9, settlement -2 to -9) finish unchanged. New research records in an older active mini add honest execution/future-learning dispositions without rewriting earlier cores. A no-model disposition passes C21; verified retention-only import may precede settlement. Start (2), append card (1), freeze and settle (3), import (4), rollover if needed (5), retrospective (6), repair archive (7), change framework (8). Creating a mini or rollover consumes no canonical ID. Prompts 1–3 retain new cards under stable local event keys; prompt 4 alone assigns canonical P-IDs during verified import with an explicit immutable-source mapping. Never reserve a canonical number during research. Existing issued P labels remain literal source aliases or verified existing canonical references. Never reuse P-518–P-522 or silently renumber originals.
+
+**Lifecycle controls (R15, R16, R22).**
+- **One issuing writer per mini.** A mini names its issuing writer and lease time. Only that writer appends new cards. Distinct minis use distinct MINI_KEY namespaces and never reserve a shared canonical sequence. Another writer may not append to the same mini while its lease is held. Hand-over and expiry are recorded in the mini.
+- **Freezing.** Settlement freezes a mini by writing a `FROZEN_SOURCE` receipt: prompt 3 records the name, block inventory, freeze time, byte count and SHA-256 (ENV-v2); prompt 4 verifies them at intake. From then on, new events go to the next authorised mini. A card found after the snapshot is reported as source growth: neither omitted nor counted as covered by the earlier receipt.
+- **Request intake.** Every request, including one that never becomes a card, is logged in the mini's intake table with a disposition.
+
+Carry both PENDING_EVENT and terminal UNRESOLVED_EVIDENCE cases in separate queues with original IDs. Every queue item names its responsible actor, exact next source and field, due time with timezone, final-time basis (or UNKNOWN), last attempt, and whether any scheduled automation exists (R38). The five-event open cap and 72-hour final-to-review target are alerts, never instructions to discard work or force grades. Use verified final time; if absent, mark clock UNKNOWN and use scheduled-duration estimate only for triage. Capture fragile fields promptly, normally within 36 hours after scheduled start, adjusted explicitly for delays and multi-day formats. Do not claim capture took place when only a due time exists.
+
+Settle the frozen contract. WIN/LOSS/PUSH require sufficient evidence; VOID requires the frozen void condition; missing/conflicting field or definition yields UNRESOLVED. Evidence C may support a provisional sporting assessment but unresolved conflicts remain visible. A bounded value yields a definite grade only if every feasible value gives that grade. Frozen framework convention and operator settlement are distinct: a sporting result under a convention does not prove an unknown operator result.
+
+For KBO, try the official terminal box score promptly. If stale, retain the available result and arrange/report a retry after about 12 hours, within the review SLA where possible. A promised retry is not a completed fetch. Source corrections append a dated revision; they never silently replace earlier grades.
+
+**Settlement revisions (R17).** Each settlement block has a unique key `revision-<n>` per original local event key or existing canonical reference, its parent revision (NONE for the first), effective time, source, affected contract keys, and old and new values with the reason. A partial revision changes only its listed keys. Every other key keeps the grade from its parent chain. The effective grade of a contract key is the one in the latest revision of the single unbroken parent chain. Two revisions with the same parent are a `REVISION_CONFLICT`: the affected keys are UNRESOLVED until a resolving revision names both as parents. Never pick by "last block in the file" or by the greatest timestamp. Every prior revision stays readable, and no grade is counted twice.
+
+## 9. Custody, current state and publication
+
+Issued card cores, previous log parts, existing settled minis and dated reports are immutable. Append corrections with reason, timestamp, parent ID and superseded revision pointer. Freeze an exact file copy before settlement; compare actual bytes/prefix, not just line counts. Preserve line endings. Zero deleted lines in numstat alone does not prove append-only: compare the complete original prefix and inspect hunk locations.
+
+**Four identities, never conflated (R20).** This repository runs with `core.autocrlf=true`, so working bytes and committed blobs can differ in line endings.
+1. **Raw source snapshot:** the working file's exact bytes, with SHA-256 and byte count, taken before any change.
+2. **Imported literal core:** the original card text copied byte-for-byte into its wrapper.
+3. **Destination prefix:** the destination working file's exact bytes before the append, compared byte-for-byte afterwards.
+4. **Committed representation:** the git blob, normalised to LF. Check it with `git ls-files --eol`.
+
+A claim of byte identity names which identity it means. Line counts, zero deleted lines and the git SHA prove none of the first three. Any normalised comparison declares its transformation (for example CRLF→LF) and keeps the raw source. Changing git attributes needs its own scoped review.
+
+**Finding, 2026-10-12.** The byte-exact (`-text`) rules for Combined Log parts 6–8, `GAME_LOG_STATUS_CURRENT.md`, `research/verification/**`, `research/issued_research/**`, `archive/mini_logs/**` and the archive's `_canonical`/`_custody` folders exist only in this machine's local `.git/info/attributes` (the committed `.gitattributes` was deleted earlier). A fresh clone or another machine applies `core.autocrlf` conversion to those files. Until the owner decides whether to restore a committed attributes file, any agent working outside the original machine must check `git check-attr text <path>` and the raw bytes before claiming byte identity, and must edit `-text` files at byte level. A text editor can silently convert a whole mixed-ending file; this happened and was caught and repaired on 2026-10-12.
+
+**Recheck before every mutation batch (R18).** Immediately before each append, rollover or status update, re-read HEAD, the active-log path and the destination file's current byte count and tail. Compare them with the plan. On any change, stop, rebuild the plan against the new state and preserve both writers' work. Never append from a stale plan.
+
+The active log's opening header is an opening snapshot and may retain old IDs/method text. Resolve current state from CURRENT_STATE, the current status-register section and canonical entries plus dated state/rollover addenda. A stale opening snapshot is not itself a custody conflict. A disagreement in current records is a blocker. Do not run retired tools named in historical log headers.
+
+Imports reconcile every card, carryover, addendum and settlement, including already-imported cards with missing new addenda. All imported cores receive full readback; no three-card spot check substitutes for completeness. Partial imports resume by exact block comparison; mismatch stops before further mutations. Closed-source status requires a verified destination or explicit retained disposition for every source block. Never delete originals automatically.
+
+Stage exact intended paths, preserve unrelated work, commit/push only when authorized by the invoked task, never force. Fetch and verify the remote ref and committed artifacts before claiming publication. A HEAD SHA records repository contents, not proof of a local card's pregame timestamp.
+
+## 10. Learning and claims
+
+Every record remains RESEARCH_ONLY_NOT_CERTIFIED. Model quality, numerical coherence, calibration, predictive skill, operational readiness and record custody are separate questions. **Absence of evidence is not evidence of absence (R24):** a cohort without frozen same-row pregame baselines "does not establish" incremental skill. It does not prove there is none. Line construction affects a hit rate. A single high-probability loss does not establish overconfidence. Measure proper scores against frozen same-row baselines, coverage and expected-score errors; do not optimize headline win rate by line choice or excluding unresolved losses. Historical climatology is descriptive, not a prospective baseline.
+
+Use chronological development, tuning, calibration and untouched test/future shadow separation when designing fitted work. The removed 2026-10-09 runtime is not restored wholesale; the `ml/` workshop is new code with its own tests, and modules ported from commit `37203fc2b` are re-tested. Thresholds and new shadows are untested; eight weeks or a small sample minimum is not proof of power or promotion. See [HYPOTHESIS_REGISTER](HYPOTHESIS_REGISTER.md) and the [implementation roadmap](research/verification/framework_change_2026-10-11-1/IMPLEMENTATION.md).
+
+**Learning pipeline (LEARN-v1, R35).** [LEARNING_PIPELINE_PROTOCOL](ML_PIPELINE.md#part-c-learning_pipeline_protocol) governs reuse of research for model learning. Prompt 1 records its research rows as Markdown tables; only prompt 6 (or an authorised prompt 8 change) ingests them into the append-only `research/learning_store/`. Training releases are immutable and reproducible from a recorded store view. Challengers, Hedge schedules and calibrators are studied chronologically (tune window, then later evaluation) and may reach cards only through a preregistered prospective shadow, a PROMOTION_ELIGIBLE disposition, an owner decision and a registry entry. Review levels (mini ≈40–50, interim ≈100, comprehensive ≈300, per-sport and per-competition clocks) are workflow triggers, never automatic promotion. PRIMARY_HEDGE_MIX_V3 is unchanged.
+
+**Runtime receipt and comparator (R36, amended by MLSCOPE-v3).** Game cards record the pregame shadow disposition and receipt path (EXECUTED, NOT_RUN_NO_RELEASE, NOT_RUN_STALE_RELEASE, NOT_RUN_INPUT_REFUSED or FAILED), never a bare ML_NOT_RUN. A same-line BASELINE_LEAGUE_V1 comparator is computed by the analyst and frozen whenever league history allows. Supplied contracts state unit, period and action before pricing; ambiguity is frozen under every reading and queued.
+
+**Browser-chat execution (CHAT-EXEC-v1), retired for game research.** Chats never run the model (MLSCOPE-v1). `ml/chat.py` remains maintainer tooling for prompt 8 experiments; no card copies its output.
+
+## 11. Change control
+
+Prompt 8 records the user instruction or finding, class, archived originals, dependencies, version changes, verification and publication. **Prompt revisions (R34).** The prompt suite carries `P-<date>-v<major>.<minor>`.
+- The **major** bumps for a FORMAT or STATISTICAL change: a new field, a new rule for p, ranks or scoring.
+- The **minor** bumps for a PROCEDURE change: different steps, the same outputs.
+- An EDITORIAL change (wording only, behaviour identical) keeps the version and says so in CHANGELOG.
+
+Every change states its class, and the before/after behaviour if it is not editorial. A change that alters what an operator must do is never classed as wording-only. A user-authorized process repair can be implemented without pretending a statistical experiment passed. Behavioral selection/model hypotheses need separate frozen tests; preserve the original registration and append versioned amendments. Update rules, prompts, templates, examples, scoring and receipt definitions together. Do not revise historical values under a new scoring convention without a separate labelled diagnostic view.
+
+**Statistical freeze and replaced rules (STATFREEZE-v1 / GOV-v2, 22 October 2026).**
+- A change to a probability method, width, selection constant, reference choice or release is a STATISTICAL change. It takes effect at a season boundary or as a new, separately scored lane; it is not made mid-season on a small sample. A bug fix that changes no output may be made at any time; PROCEDURE changes are batched into at most one release a month; EDITORIAL changes may be made at any time.
+- Every new rule names the rule it replaces, the document that held it and the archive path of the replaced text. A rule that cannot be tested by code or by a registered statistical test is wording and does not enter the reading gate.
+- A rule is stated once. Other documents link to its definition; they do not copy it. The `ml` test suite checks that the prompt suite, the dependency map and CURRENT_STATE agree.
+
+## 12. Navigation
+
+[Prompts](research/prompts/README.md) · [Templates](CARD_AND_LOG_TEMPLATES.md) · [Selection](#part-b-selection_rules) · [Scoring](SCORING_AND_VALIDATION.md) · [Verification](VERIFICATION_PROTOCOL.md) · [Sources](SOURCES.md) · [Archive guide](ARCHIVE_USE_GUIDE.md) · [Learning pipeline](ML_PIPELINE.md#part-c-learning_pipeline_protocol).
+
+---
+
+# Part B: SELECTION_RULES
+
+*Formerly `SELECTION_RULES.md` (original title: Selection, baseline and settlement rules). Original kept unchanged at [archive/consolidation_2026-11-07/merged_sources/SELECTION_RULES.md](archive/consolidation_2026-11-07/merged_sources/SELECTION_RULES.md).*
+
+**SEL-2026.10.22-v4 (cards under P-2026.10.22-v24.0 and later) · SEL-2026.10.12-v3 · primary policy P_ORDER_V2 for the most-likely list.** Numerical thresholds are PROVISIONAL, not proven accuracy guarantees. Cards before v24.0 keep SEL v3 in full ([SEL v2](archive/superseded_2026-10-12/SELECTION_RULES.md) before that). Timing is governed by [TIMING_RESEARCH_PROTOCOL](RESEARCH_PROTOCOL.md#part-e-timing_research_protocol); [CURRENT_RULES](#part-a-current_rules) controls.
+
+## 0. What changes under SEL v4 (v24.0 cards)
+
+Replaced rule (archived in `archive/superseded_2026-10-22-2/SELECTION_RULES.md`): sections 2 and 3, the Rank-1 gate (p at least 0.62, lead at least 0.04), the Rank-2 floor and the five required shadow selections (RET03 gate, RET04, XCARD6, RANK_DELTA, BASE_ONLY). Replacement ([ADJUSTMENT_LEDGER_PROTOCOL](ADJUSTMENT_LEDGER_PROTOCOL.md) sections 3-4): the card prints a probability for every supplied contract, the winner, a **most-likely list** of up to four rows ordered by the unrounded final p (ties by contract key; the section 4 family eligibility rules still remove an inadmissible row from the list), an **information list** (rows that moved at least 0.03 from the reference) and the abstain flag (`no strong pick` unless a ranked row reaches 0.65 or a row moved). The questions the five shadows asked are answered by the information list (does disagreeing with the reference carry information) and by the ledger comparisons (does the card beat its reference, the baseline, the line-implied 0.5). Joint failure of the first two ranked rows is still printed, exact or as Fréchet bounds, and a covering pair counts as one pick.
+
+Unchanged for v24.0 cards: the 0.90 selection ceiling, the section 4 family checks, the section 5 candidate universe and line difficulty, the section 6 regimes, the section 7 grades and evidence classes, the section 8 failure classes and the section 9 league-only baseline.
+
+## 1. Constants and scope
+
+| Item | Rule |
+|---|---|
+| Ranked numeric candidates | At most four supported rows; do not pad |
+| Selection ceiling | p_card ≤ 0.90; retain true higher values outside the selected slate, never clip |
+| Rank-1 gate (cards before v24.0 only) | p_card ≥ 0.62 and lead ≥ 0.04 over best eligible non-complementary alternative |
+| Rank-2 floor (cards before v24.0 only) | 0.58, disclosed if unmet; no invented replacement |
+| Joint failure | Report 0.30 target / 0.35 warning as historical provisional diagnostics, not a forced reordering rule |
+| Large adjustment | Above 0.25 SD; any size that changes top two is ADJUSTMENT_DEPENDENT |
+| Decision block | At most about 650 words, full evidence in appendix |
+| Review target | Within 72 h of verified final; unknown final time is disclosed |
+| Open event alert | More than five pending events; evidence backlog separately counted |
+| Fragile-field capture | Normally within 36 h after scheduled start; real delays/multi-day events need explicit revised due time |
+
+## 2. Primary order and Rank-1 gate
+
+Freeze the candidate recipe and eligibility rules before pricing. Each contract key comprises quantity, participant orientation, line, direction, period, endpoint and action/void convention. Deduplicate identical keys. Rank numeric eligible rows by unrounded p_card descending; ties use ascending contract key. Retain the first four or fewer. Rank 1/2 are the primary picks; the rest are informational. A qualitative slate uses explained qualitative order, no numerical PASS, no numeric proper score.
+
+Family rules apply to eligibility for the primary slate when they would prohibit its top row: remove the inadmissible would-be Rank 1 from primary selection, record its reason and keep it in the diagnostic ladder; repeat on the remaining set. Do not quietly demote it below a lower-p row in a table claimed to be probability-sorted. Unsupported rows are excluded independently of whether they would win.
+
+Compute the original gate against the best non-complementary alternative in the full eligible priced universe, not just the displayed four. An exact opposite on the same line is complementary; another threshold on the same quantity is still an alternative. If no alternative exists, gate = NOT_ASSESSABLE. Print Rank-1 p, alternative key/p, gap, numerical floor result and PASS/RANK1_UNSTABLE. Do not round before comparing or remove competitors to manufacture a pass.
+
+Also freeze `SHADOW_GATE_RET03`: exclude other lines on Rank 1's quantity, keep 0.62 and 0.04, and print the alternative and result or NOT_ASSESSABLE. It does not replace the original gate or enter its cohort. Equal and nearby tail probabilities can keep the gate unstable; this is an observed property, not permission to tune constants after seeing outcomes.
+
+**Precision at thresholds (R14).**
+1. Compute p_card and the gaps at the precision of the calculation actually performed: a Φ table read at z to 2 dp, interpolation, a Poisson grid truncated at a stated maximum.
+2. Print the approximation error ε that this precision implies. The default for a 2-dp Φ table read with linear interpolation is ε = 0.002 per probability. A coarser calculation states a larger ε.
+3. Compare unrounded values, and round only for display.
+4. If |p_card − 0.62| ≤ ε, or |gap − 0.04| ≤ 2ε, the gate is `GATE_UNRESOLVED_PRECISION`. It is not PASS, and it enters neither the PASS nor the UNSTABLE cohort.
+5. If two ranked rows differ by ≤ 2ε, label the order `PRECISION_TIE`. Break the tie by contract key as usual, and disclose it.
+
+Rounding can never create a PASS, a floor pass or a rank. A key-number, push or tie adjustment is applied to the normalised common distribution, and every row is then re-derived from it. Never add mass to one row's probability on its own.
+
+<a id="3-rank-2-and-the-joint-failure-probability"></a>
+
+## 3. Rank 2, dependence and shadows
+
+Primary Rank 2 is the second row in probability order. Report floor failure and dependence without changing the primary order. This resolves the v9 conflict between probability ordering and minimising joint failure; label the policy change on every new card.
+
+Quantity keys identify the underlying random variable and endpoint: full match total; signed full margin (winner and either team's handicap share this quantity); each named team total; each phase total; each player's count. Merely reversing a margin sign or renaming a family does not create a different quantity.
+
+Freeze two diagnostics when supported: (a) `SHADOW_R2_RET04`, highest-p eligible row with p≥0.58 on a different quantity from Rank 1; (b) `SHADOW_R2_XCARD6`, eligible remaining row with p≥0.58 minimising exact joint failure, ties by p then contract key. Report NONE when unavailable. They are never counted as primary wins. Different quantities can still be structurally dependent; evaluate actual losing sets.
+
+Freeze two further shadows (v3). Neither changes primary order or counts as a primary result.
+- **(c) `SHADOW_RANK_DELTA` (PR-05).** Among eligible rows with p_card ≥ 0.58 and a frozen BASELINE_P, rank by Δ = p_card − BASELINE_P, highest first; ties by p_card, then contract key. Print its top two, their Δ and joint loss, or NONE where fewer than two rows have a baseline. The question: do rows where the card disagrees most with the league-only baseline carry more information than the rows the card is most confident about?
+- **(d) `SHADOW_BASE_ONLY` (PR-03).** Where the card prices from a mixture, the ranks and gate that the base case alone would have produced, with each row's `p_base`.
+
+For unconditional losing masses l1 and l2, exact joint = sum of common losing states from a shared model. For nested loss sets use min(l1,l2); for disjoint sets use 0 and label MECHANICALLY_PROTECTED. Otherwise, absent a computed joint, show Fréchet bounds `[max(0,l1+l2−1), min(l1,l2)]`, not a point estimate. Never multiply without justified conditional independence. Use W/P/L/V unconditional masses, not 1−p_card when pushes/voids exist. Record P(both decisive) where conditional comparison is required. Exact, bounded and unavailable joints remain separate in retrospective tables.
+
+## 4. Family checks
+
+| Family | Required support |
+|---|---|
+| Soccer first-half Over 0.5 at Rank 1 | Half-specific rate/model, p≥0.72 and 5-point lead over best eligible alternative; full-time intensity alone is insufficient |
+| Baseball +1.5 at Rank 1 | p≥0.65, signed team-specific P(win)+P(lose by exactly one), with ties/actions treated explicitly |
+| Tennis games | Reproducible point/set/match construction and supported match-form mixture; disclose approximation and deciding-set sensitivity; no invented exact enumeration. Game handicaps and totals come from the complete set-score states, **including match-losing states**. Covering −k.5 games does not imply winning the match, and set handicaps are a different quantity from game handicaps (R12) |
+| Ties and moneylines | Draw/tie possibility is set by the exact competition and season, and moneyline action on a tie by the frozen contract (two-way void/push, three-way, or loss), never by a sport-wide default (R13) |
+| Corners | Named provider, supported count distribution and field definition; cross-score joint requires a joint model |
+| Period/player rows | Exact phase/player definition, source field and capture plan; no inferred period score from match final |
+| Unknown league/format | Explicit local evidence/prior and limitations; no silent transfer of NBA/NHL/MLB or another competition's rules |
+
+Old league-wide absolute-margin or one-run rates are sanity checks, never a particular team's directional probability or universal ceiling. Older sport-file instructions that conflict with these controls are historical.
+
+## 5. Candidate universe
+
+Default recipe: supported supplied lines, winner/draw/double chance as appropriate, plus supported handicap, total, team-total and period families on the sport's declared standard ladder. State each quantity's line range/step before pricing; legacy default spans ±2.5 SD (cricket ±2 SD), half lines, with integer lines only when pushes are defined. Record the actual enumerated set; if only a subset can be computed, label PARTIAL_UNIVERSE and the gate as restricted-universe diagnostic.
+
+Do not claim an exhaustive search from four hand-picked rows. Keep unselected supplied rows and relevant neighbouring lines. Analyst-derived lines may be easy by construction; report their p level, line distance from centre and baseline p. Neither a high hit rate nor zero joint failure proves a useful prediction. Baseline and candidate are scored at the exact same frozen lines.
+
+**Line difficulty on every ranked row (R33).** Each row prints:
+- its line and direction;
+- the signed distance from the card's centre for that quantity, in units, and as a standardised distance z = (line − centre)/SD where the SD is supported (otherwise `N/A`);
+- whether the row is SUPPLIED or ANALYST_DERIVED.
+
+A row 1.2 SD from centre is an easier proposition than a row at 0.3 SD. Comparisons across cohorts must use identical frozen rows, or disclose the difference in line difficulty and selection.
+
+## 6. Regimes and sensitivities
+
+Use NONE, FINALS_COMPRESSION, EARLY_SEASON, CUP_ROTATION or RULE_CHANGE:<verified name>. Other context is prose, not an invented operative flag. Read current [BASE_RATES_REGISTER](PARAMETERS.md#part-c-base_rates_register); use only a supported recommended multiplier in the matching league/era, once. A recommended 1.000 means no shift. Missing/unmeasured effects are scenarios with disclosed basis, never fabricated measured multipliers. Some named finals regimes increase scoring; do not assume every final compresses it.
+
+Log adjustment target, before/after parameter, units/SD basis, source, analyst-versus-archive basis and overlap with other terms. Any top-two flip produces ADJUSTMENT_DEPENDENT. Publish the unadjusted pair, sensitivity probabilities and which assumptions drive the choice. Missing SD prevents an SD-size claim; it does not hide a rank flip.
+
+## 7. Grades, evidence and queues
+
+Grades: WIN, LOSS, PUSH, VOID, UNRESOLVED. VOID is a verified frozen void rule, never a synonym for no data. Card states: SETTLED, PARTIALLY_SETTLED, PENDING_EVENT, UNRESOLVED_EVIDENCE, NO_FORECAST. A cancelled event may be terminal with VOID rows under a frozen rule; unknown event state stays pending with uncertainty.
+
+| Evidence | Meaning |
+|---|---|
+| A | Official field-owner terminal record for the exact target |
+| B | Structured provider or supported agreement, with provenance/lineage disclosed |
+| C | Single secondary/provisional evidence; limitations and conflicts retained |
+| E | Valid bound on a partly observed value; definite grade only if the entire feasible set agrees |
+| X | No sufficient evidence; UNRESOLVED |
+
+Definition status is separate: OPERATOR_VERIFIED, FROZEN_FRAMEWORK_CONVENTION, UNKNOWN_DEFINITION or N/A. Retain legacy OP as a historical evidence label. Never apply a newly invented default after the result. Conflicting material sources cannot be adopted merely to close a record; record both and the unresolved field. Corrections carry original grade, new grade, source and reason.
+
+## 8. Failure classes
+
+Retain the legacy classes: FIRST_HALF_GOAL_OVERSELECTION, RUNLINE_CUSHION_CEILING, BASKETBALL_TOTAL_WITHOUT_PACE_MODEL, TENNIS_IID_UNDERDISPERSION, RANK_BY_Q_NOT_P, SHARED_DRIVER_TOP_TWO, HANDICAP_TAIL_OVERREACH, SMALL_SAMPLE_STRENGTH_OVERREACH, PHASE_INCOHERENCE, CORNER_ROW_WITHOUT_PROVIDER_OR_NB_MODEL, OVERCONFIDENT_PROBABILITY, WEAK_SLATE_FORCED_RANK, QUALITATIVE_RANKS_WITHOUT_DISTRIBUTION, REGIME_IGNORED, UNFITTED_ANALYST_ADJUSTMENT, LATE_INFORMATION, ENDPOINT_OR_CONTRACT, SOURCE_OR_IDENTITY, VARIANCE and OTHER.
+
+Use aliases only with a printed mapping. Distinguish a suspected failure from an established error. Honest qualitative research is not itself misconduct; QUALITATIVE_RANKS_WITHOUT_DISTRIBUTION means numerical confidence was claimed without the supporting distribution. OVERCONFIDENT_PROBABILITY cannot be inferred solely from one high-p loss. OTHER and NOT_ASSESSABLE need an explanation. Keep multiple process faults without invented causal percentages.
+
+## 9. Frozen league-only baseline (RET-02)
+
+**Research retention before model availability (RETAIN-v1).** [RESEARCH_RETENTION_PROTOCOL](RESEARCH_PROTOCOL.md#part-c-research_retention_protocol) supersedes EXEC-v1's model prerequisite for recording/import. Write every identified researched event under its reconciled working P-ID and canonically retain it through verified import even if the model/adapter/runtime/module/baseline/calibration/receipt is absent or failed. Use RESEARCH_ONLY_NO_MODEL, explicit execution reason and blank nonexistent artifact paths; keep model p_card NOT_ESTIMATED and supported analyst_p NOT_PRIMARY. Missing ML never by itself blocks the ID or a source-backed settlement. Retain verified settled labels for future model development with source/known-at/revision/feature status; only actual frozen experts can supply Hedge losses. Never invent probabilities, execution, final scores or pregame timing. Identity/custody/write conflicts remain real blockers.
+
+Use `BASELINE_LEAGUE_V1` for the same league, season regime, endpoint, orientation and line, with no team, lineup, recent-form or event-result inputs. Freeze the recipe and source window before the forecast. Prefer a vetted league distribution with all parameters supported; alternatively use a declared prior-only empirical event cohort with literal W/P/L/V counts for that exact line. Do not switch recipes after seeing which comparator is easier to beat.
+
+Document distribution family, means/SDs/dispersion/covariance or empirical counts, seasons, exclusions, home/away orientation, sample size, data last-known time and source. Match the card's push/void conditioning. Empirical baseline p=W/(W+L); if denominator zero, NOT_COMPUTED. A profile with mean and SD alone does not determine a discrete/extras/tennis/phase distribution: unsupported families remain BASELINE_UNAVAILABLE.
+
+Calculate the baseline from its own league-only inputs; do not reuse team-adjusted parameters as a baseline. Print BASELINE_P and its ID on every numeric row or a precise missing reason. A stale profile is labelled and tested, not silently refreshed with post-cutoff games. No historical backfilled baseline enters prospective paired evaluation.
+
+**Baseline coverage (PR-06).**
+- **Coverage line:** every numeric card prints `Baseline coverage: <rows with BASELINE_P>/<numeric ranked rows>` in its decision block.
+- **Missing reasons:** a missing baseline uses exactly one of these reasons: `NO_LEAGUE_PROFILE`, `PROFILE_LACKS_ENDPOINT` (for example extras, phase or corners not supported), `DISCRETE_FAMILY_UNSUPPORTED`, `NEW_FORMAT_NO_PRIOR`, `SOURCE_UNREACHABLE` (with the attempt and time), or `OTHER:<explanation>`.
+- **Fill route:** a reason that names a missing profile row is also listed for prompt 7, so the gap gets filled rather than repeated.
+- **TB-1-MD is a team model aid.** TB-1-MD (PROBABILITY_TOOLKIT §4) uses team inputs, so it is never `BASELINE_LEAGUE_V1`.
+
+## 10. Primary probability source
+
+New cards: the ANALYST_PRIMARY_V1 coherent distribution built from the frozen reference plus the adjustment ledger (CURRENT_RULES section 7, [PROBABILITY_TOOLKIT](PROBABILITY_TOOLKIT.md), `ml.reference`) supplies every p_card; the reference stage runs before the card and the card's final p is frozen beside it (MLSCOPE-v3). The ordering rule, the 0.90 ceiling, family/precision rules and same-row baseline definitions remain. Historical MODEL_ASSISTED_PRIMARY_V3 cards keep their original [model source](ML_PIPELINE.md#part-a-primary_prediction_protocol) and cohort. A workshop model reaches a card only as the frozen reference; it never overwrites p_card.

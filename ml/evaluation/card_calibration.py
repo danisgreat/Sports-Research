@@ -11,7 +11,7 @@ import pandas as pd
 from ml.config import REPO_ROOT
 from ml.core.metrics import brier_decomposition, calibration_fit, cluster_bootstrap_mean, reliability_table
 
-RANK_LOG = REPO_ROOT / "GAME_PREDICTION_RANK_LOG.csv"
+RANK_LOG = REPO_ROOT / "research" / "data" / "GAME_PREDICTION_RANK_LOG.csv"
 
 
 def load_rows() -> tuple[pd.DataFrame, dict]:

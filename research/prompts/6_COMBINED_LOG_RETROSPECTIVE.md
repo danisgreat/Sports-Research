@@ -1,16 +1,16 @@
 # PROMPT 6 — Review cards and independently verified sporting shadows
 
-**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](../../MINI_LOG_IDENTITY_PROTOCOL.md); summarised in [CORE](../../CORE.md) §2.
+**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](../../WORKFLOW.md#part-b-mini_log_identity_protocol); summarised in [CORE](../../CORE.md) §2.
 
-**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](../../RESEARCH_EXHAUSTIVENESS_PROTOCOL.md); summarised in [CORE](../../CORE.md) §5.
+**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](../../RESEARCH_PROTOCOL.md#part-b-research_exhaustiveness_protocol); summarised in [CORE](../../CORE.md) §5.
 
 **Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §5.
 
 **P-2026.10.22-v24.0 · COHORT_RETROSPECTIVE · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Trigger: user request, about 30 newly settled cards, or a DUE/EARLY_REVIEW row from `python -m ml learning-status` (INTERIM about 100 and COMPREHENSIVE about 300 newly settled unique games; per-sport and per-competition clocks); none proves statistical sufficiency. Writes: a new uniquely named report, authorized scoreboard/state summaries, dated hypothesis amendments and CHANGELOG. No original log/grade/forecast, active rule/prompt or previous report changes. The decision lab is excluded.
 
-**ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](../../FORECAST_CYCLE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §7.
+**ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](../../REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](../../CORE.md) §7.
 
-**Execution environment (ENV-v2).** Defined in [EXECUTION_ENVIRONMENT_PROTOCOL](../../EXECUTION_ENVIRONMENT_PROTOCOL.md); summarised in [CORE](../../CORE.md) §1.
+**Execution environment (ENV-v2).** Defined in [EXECUTION_ENVIRONMENT_PROTOCOL](../../WORKFLOW.md#part-a-execution_environment_protocol); summarised in [CORE](../../CORE.md) §1.
 
 **Required repository fallback (REF-v1).** Defined in [GITHUB_REFERENCE_PROTOCOL](../../GITHUB_REFERENCE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §1.
 
@@ -58,11 +58,11 @@ Under RESEARCH_COMPLETION_PROTOCOL, report research completion, numerical ML/ana
 
 ## Research retention and execution disposition (RETAIN-v1)
 
-**Retain the research (RETAIN-v3).** Defined in [RESEARCH_RETENTION_PROTOCOL](../../RESEARCH_RETENTION_PROTOCOL.md); summarised in [CORE](../../CORE.md) §2.
+**Retain the research (RETAIN-v3).** Defined in [RESEARCH_RETENTION_PROTOCOL](../../RESEARCH_PROTOCOL.md#part-c-research_retention_protocol); summarised in [CORE](../../CORE.md) §2.
 
 Audit every included game and mini manifest: requested/card/executed/failed/not-run counts, exact sport/competition/endpoint, fitted versus unavailable baselines, warm/feedback learning counts and terminal feedback retained/pending/blocked. Verify EXEC-v1 records; keep historical missingness separate. Missing baselines remove only paired-score rows, never otherwise supported inference or source-backed learning. Report the actual Hedge mechanism and unsupported adapters; do not call it a trained control-RL policy or infer skill from execution coverage.
 
-**Local research record and updated-document delivery (owner update, 16 October 2026).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](../../MINI_LOG_IDENTITY_PROTOCOL.md); summarised in [CORE](../../CORE.md) §2.
+**Local research record and updated-document delivery (owner update, 16 October 2026).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](../../WORKFLOW.md#part-b-mini_log_identity_protocol); summarised in [CORE](../../CORE.md) §2.
 
 ## Persistent sourcing and information closure (EXH-v1)
 
@@ -71,7 +71,7 @@ Audit requirement closure and source independence across the complete cohort, in
 ## ML/RL review and the monthly dashboard (MLSCOPE-v3 / LEDGER-v1)
 
 Prompt 1 freezes references and cards and prompt 3 settles them; this prompt reviews them. After the cohort's cards are imported:
-1. Transcribe each imported card's Markdown learning record and settlement outcomes into the export columns of [LEARNING_PIPELINE_PROTOCOL](../../LEARNING_PIPELINE_PROTOCOL.md) §2 (keeping source and capture time), then ingest them with `python -m ml ingest add`; record every receipt and leave quarantined conflicts open.
+1. Transcribe each imported card's Markdown learning record and settlement outcomes into the export columns of [LEARNING_PIPELINE_PROTOCOL](../../ML_PIPELINE.md#part-c-learning_pipeline_protocol) §2 (keeping source and capture time), then ingest them with `python -m ml ingest add`; record every receipt and leave quarantined conflicts open.
 2. Export verified research-only labels with `ml.research_learning`, settle any frozen rows and legacy bundles (`primary settle`, `cycle settle`, `league-day settle`) and append the package review rows to `research/learning_status/REVIEW_LOG.csv`; run `python -m ml learning-status`.
 3. Report lane progress with `python -m ml pregame status`, then compare the model against the league baseline (`cycle evaluate`), the fitted model against the declared reference (`python -m ml pregame compare-card --champion TB2`) and the analyst card against the model (`compare-card --champion CARD`) on identical frozen rows, with `card-history` for BASELINE_P. State coverage and power. A model is judged only when its lane has at least 8 settled weeks and 50 settled paired games; at whichever comes first, a progress review is due and reports INSUFFICIENT_EVIDENCE with the counts.
 4. **Ledger scoring.** `python -m ml ledger score` and `ledger coverage` over every settled v24.0 card: the paired differences of final p against the reference, the league baseline, the line-implied 0.5, the frozen model and any benchmark, the adjustment value λ, the width coverage and the calibration by band (SCORING_AND_VALIDATION §12). Apply the registered decision rules (ADJUSTMENT_LEDGER_PROTOCOL §6) and report them as met, not met or insufficient.
@@ -82,7 +82,7 @@ Prompt 1 freezes references and cards and prompt 3 settles them; this prompt rev
 
 ## Evaluation levels and model decisions (LEARN-v1)
 
-Apply [LEARNING_PIPELINE_PROTOCOL](../../LEARNING_PIPELINE_PROTOCOL.md) §§6–8. State the level: INTERIM (about 100 newly settled unique games) or COMPREHENSIVE (about 300), plus every SPORT/COMPETITION clock that is due. Use the counters from `python -m ml learning-status`, never hand counts. Treat a tennis or minor-league scope separately from the combined count. For example, 300 combined games with 100 tennis matches is a tennis review on its own counts, and fewer still with frozen model forecasts or feedback.
+Apply [LEARNING_PIPELINE_PROTOCOL](../../ML_PIPELINE.md#part-c-learning_pipeline_protocol) §§6–8. State the level: INTERIM (about 100 newly settled unique games) or COMPREHENSIVE (about 300), plus every SPORT/COMPETITION clock that is due. Use the counters from `python -m ml learning-status`, never hand counts. Treat a tennis or minor-league scope separately from the combined count. For example, 300 combined games with 100 tennis matches is a tennis review on its own counts, and fewer still with frozen model forecasts or feedback.
 
 - **Interim review:** audit data coverage, export/ingest quarantine, feature missingness, calibration warnings, model failures, rankings and baseline comparisons. Investigate defects and propose controlled experiments.
 - **Comprehensive review:** cover all sports. Build or cite an immutable training release per studied scope and run (or cite receipts for) the V3-equivalent backtest, the Hedge schedule study, the calibration study, the basketball challenger ablation where basketball is in scope, and any prospective shadow evaluation with its preregistered `delta`. Keep tune and evaluation windows separate and never tune on the evaluated games.
@@ -91,6 +91,6 @@ For every reviewed sport and competition with a model, record exactly one dispos
 
 ## Reproducible card history (v19.2)
 
-Build every row-level cohort table with `python -m ml card-history --rank-log <committed rank log> --out <report folder>/HISTORY` instead of hand counts or one-off scripts: it joins the rank log, the effective final-settlement grades and the import inventories, dates and classifies every card, keeps NOT_PRIMARY analyst rows in their own cohort, flags historical ID collisions and reports slot rates, card classes, calibration, Rank-1 dependence tests and a collision-excluded sensitivity. Use the committed rank log (record its hash); an uncommitted refresh by another writer is noted, not used. Where a frozen same-row baseline is missing, report the coverage gap; never reconstruct a baseline after the outcome. See [LEARNING_PIPELINE_PROTOCOL](../../LEARNING_PIPELINE_PROTOCOL.md) §7.
+Build every row-level cohort table with `python -m ml card-history --rank-log <committed rank log> --out <report folder>/HISTORY` instead of hand counts or one-off scripts: it joins the rank log, the effective final-settlement grades and the import inventories, dates and classifies every card, keeps NOT_PRIMARY analyst rows in their own cohort, flags historical ID collisions and reports slot rates, card classes, calibration, Rank-1 dependence tests and a collision-excluded sensitivity. Use the committed rank log (record its hash); an uncommitted refresh by another writer is noted, not used. Where a frozen same-row baseline is missing, report the coverage gap; never reconstruct a baseline after the outcome. See [LEARNING_PIPELINE_PROTOCOL](../../ML_PIPELINE.md#part-c-learning_pipeline_protocol) §7.
 
-**Connected cycle handoff (CYCLE-v1).** Defined in [FORECAST_CYCLE_PROTOCOL](../../FORECAST_CYCLE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §7.
+**Connected cycle handoff (CYCLE-v1).** Defined in [FORECAST_CYCLE_PROTOCOL](../../REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](../../CORE.md) §7.

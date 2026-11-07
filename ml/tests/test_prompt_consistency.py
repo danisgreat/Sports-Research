@@ -116,7 +116,7 @@ def test_game_prompts_run_in_the_working_tree(name):
     assert "LOCAL_WORKING_TREE" in body
     assert "**EXTERNAL_CHAT**" not in body and "PUBLISHED_MAIN_PINNED`) (EXTERNAL_CHAT)" not in body
     if not name.startswith("1_sports/"):
-        assert "EXECUTION_ENVIRONMENT_PROTOCOL" in body and "ENV-v2" in body
+        assert "WORKFLOW" in body and "ENV-v2" in body      # EXECUTION_ENVIRONMENT_PROTOCOL merged into WORKFLOW, 2026-11-07
 
 
 def test_canonical_ids_are_assigned_in_the_settlement_phase():

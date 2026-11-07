@@ -1,14 +1,14 @@
 # PROMPT 7 — Build reviewed online history in a declared scope
 
-**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](../../MINI_LOG_IDENTITY_PROTOCOL.md); summarised in [CORE](../../CORE.md) §2.
+**Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](../../WORKFLOW.md#part-b-mini_log_identity_protocol); summarised in [CORE](../../CORE.md) §2.
 
-**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](../../RESEARCH_EXHAUSTIVENESS_PROTOCOL.md); summarised in [CORE](../../CORE.md) §5.
+**Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](../../RESEARCH_PROTOCOL.md#part-b-research_exhaustiveness_protocol); summarised in [CORE](../../CORE.md) §5.
 
 **P-2026.10.22-v24.0 · PROCEDURE · LOCAL_WORKING_TREE.** Read COMMON_OPERATING_PROTOCOL, CURRENT_RULES, REFERENCE_MODEL_PROTOCOL, COMPETITION_PARAMETERS, EFFECT_TABLES, HISTORICAL_SOURCE_PROTOCOL, ROSTER_AVAILABILITY_PROTOCOL, RESULTS_REBUILD_PLAN, SOURCES and actual target schemas. Writes: explicitly named market-free CSV/provenance/coverage/profile paths and a new verification folder. Raw captures/helpers stay externally; code stays under ml/. Original cards/logs/reports remain immutable.
 
-**ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](../../FORECAST_CYCLE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §7.
+**ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](../../REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](../../CORE.md) §7.
 
-**Execution environment (ENV-v2).** Defined in [EXECUTION_ENVIRONMENT_PROTOCOL](../../EXECUTION_ENVIRONMENT_PROTOCOL.md); summarised in [CORE](../../CORE.md) §1.
+**Execution environment (ENV-v2).** Defined in [EXECUTION_ENVIRONMENT_PROTOCOL](../../WORKFLOW.md#part-a-execution_environment_protocol); summarised in [CORE](../../CORE.md) §1.
 
 ## 1. Declare the target
 
@@ -36,4 +36,4 @@ Prompt 7 builds what the reference lane runs on, in this order of value: (1) ver
 
 Consult and freshly check shared/prior source observations, then pursue missing fields across owner, structured and local-language routes with independent corroboration. Record all actual discoveries and partial/failed attempts using the source-register templates; map every declared collection requirement and exception. Append dated shared route observations only in authorized scope. A source list, header-only export, single collector or exhausted attempt does not establish complete data.
 
-**Connected cycle handoff (CYCLE-v1).** Defined in [FORECAST_CYCLE_PROTOCOL](../../FORECAST_CYCLE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §7.
+**Connected cycle handoff (CYCLE-v1).** Defined in [FORECAST_CYCLE_PROTOCOL](../../REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](../../CORE.md) §7.

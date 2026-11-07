@@ -2,7 +2,7 @@
 
 **Online history and confirmed players (HIST-2026.10.16-v2 / AVAIL-2026.10.16-v3).** Defined in [HISTORICAL_SOURCE_PROTOCOL](../../../HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](../../../CORE.md) §5.
 
-FORMAT EXAMPLE / NOT_IMPORTABLE. EXAMPLE identifiers are not allocated P-IDs and the examples are not sports evidence. New formats are mini-log-9 / mini-settlement-8 under [RETAIN-v1](../../../RESEARCH_RETENTION_PROTOCOL.md).
+FORMAT EXAMPLE / NOT_IMPORTABLE. EXAMPLE identifiers are not allocated P-IDs and the examples are not sports evidence. New formats are mini-log-9 / mini-settlement-8 under [RETAIN-v1](../../../RESEARCH_PROTOCOL.md#part-c-research_retention_protocol).
 
 If a researched game has no adapter or the environment returns `No module named ml`, write the researched event under the next reconciled P-ID rather than abandon it. Print RESEARCH_ONLY_NO_MODEL; keep model p_card NOT_ESTIMATED and supported analyst_p separately NOT_PRIMARY. Record actual evidence, issue/first-play/exposure times and incomplete research honestly. Update the footer only after the actual append/readback. An inaccessible original, collision or write failure remains a separate reason the mutation cannot complete.
 
@@ -14,7 +14,7 @@ When terminal data is reviewed, prompt3 appends original-contract grades and ver
 
 **Model use and mandatory running-log record (owner clarification, 16 October 2026).** Use the supported ML/RL mechanisms when they are available for the exact sport, competition and endpoint. Whether a model exists or not, assign the reconciled permanent P-ID, append the researched game card to the active running mini-log, read it back and advance its footer. A missing sport-specific model must not leave an otherwise recordable game as intake-only, unissued or without an ID. With no verified model output, record RESEARCH_ONLY_NO_MODEL, the actual reason and supported analyst work; never invent model probabilities or receipts. Carry that same P-ID through verified canonical import; do not allocate another ID. Before an authorized import, the local card may truthfully say PENDING_IMPORT; that status never cancels its ID or running-log entry. Identity/allocation conflicts, frozen or inaccessible originals and real write failures still block only the affected mutation. Verified settlements remain available for future model development in both paths.
 
-See [RETAIN-v1](../../../RESEARCH_RETENTION_PROTOCOL.md). This is an editorial clarification of the existing two-path behavior; no model, numerical policy or format change.
+See [RETAIN-v1](../../../RESEARCH_PROTOCOL.md#part-c-research_retention_protocol). This is an editorial clarification of the existing two-path behavior; no model, numerical policy or format change.
 
 | Model situation | ID and running-log action | Evidence |
 |---|---|---|
