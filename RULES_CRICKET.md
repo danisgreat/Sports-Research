@@ -510,7 +510,7 @@ Added 2026-09-04. The laws of cricket, the format-level playing conditions (Test
 
 # Merged: LEAGUE_RULES_CRICKET
 
-*Merged 2026-11-07 (CR-2026.11.07-R2, FORMAT), verbatim. Formerly `LEAGUE_RULES_CRICKET.md` (original title: Cricket — sport and competition rules reference). Original kept unchanged at [archive/consolidation_2026-11-07/merged_sources/LEAGUE_RULES_CRICKET.md](archive/consolidation_2026-11-07/merged_sources/LEAGUE_RULES_CRICKET.md).*
+*Merged 2026-11-07 (R2, verbatim). *(Wording cleaned 2026-11-07, CR-2026.11.07-R3: contract instead of market or bet wording; current governance pointers. Facts unchanged.)* Formerly `LEAGUE_RULES_CRICKET.md` (original title: Cricket — sport and competition rules reference). Original kept unchanged at [archive/consolidation_2026-11-07/merged_sources/LEAGUE_RULES_CRICKET.md](archive/consolidation_2026-11-07/merged_sources/LEAGUE_RULES_CRICKET.md).*
 
 > **Current authority (October 5):** [CORE.md (METHOD)](CORE.md#merged-method) and [RULES_REFERENCE.md (CURRENT_RULES)](RULES_REFERENCE.md#part-a-current_rules) govern new work. Requested qualitative or explicitly uncalibrated research receives canonical Part 6 IDs regardless of calibration; numerical performance certification is separate. Read current IDs/freeze from the [status register](GAME_LOG_STATUS_CURRENT.md), unresolved items from the [carryover](archive/verification_2026-10/closure_2026-10-05/carryover.md), and [current implementation evidence](archive/verification_2026-10/implementation_2026-10-05/REPORT.md). Earlier method, queue, freeze and eligibility statements below retain their historical scope.
 
@@ -521,11 +521,11 @@ Added 2026-09-04. The laws of cricket, the format-level playing conditions (Test
 
 Status: **ACTIVE — reference**
 Created: **2026-09-04**
-Companion to: **[RULES_CRICKET.md](RULES_CRICKET.md) §11**. Reference only; it does not change `SFA-CRICKET` or any gate. It documents the laws of cricket, the format-level playing conditions, and the competition-specific rules for every cricket competition that appears in the prediction logs.
+Companion to: **[RULES_CRICKET.md](RULES_CRICKET.md) §11**. Reference only; it does not change `SFA-CRICKET` or any selection rule. It documents the laws of cricket, the format-level playing conditions, and the competition-specific rules for every cricket competition that appears in the prediction logs.
 
 Rules-era caveat: the playing conditions below are those in force for the **2025–2026** seasons the current log covers (ICC men's playing conditions effective July 2025; ICC Women's Championship 2025–2029; The Hundred 2026; CPL 2026; ETPL 2026 inaugural). Cricket changes its playing conditions almost every year — verify the era for any event outside this window.
 
-**Maintenance (RULES_GENERAL (archived) §3, `G2`).** Last reviewed **2026-09-04**. Before the first card of a new season / edition of any competition here — or the first appearance of a cricket competition after a break of ~6 weeks or more — re-verify the ICC playing conditions and the competition's own playing regulations against the field owner (ICC, the league operator) for changes to powerplay/bowler limits, DRS, DLS minima, the Super Over rule, the points/NRR system, squad rules, or the knockout format, and update the relevant section below **before** issuing the card. The first time a new cricket competition is forecast, add its full playing conditions and format here first. Watch especially for: a franchise-league deviation from ICC conditions (e.g. the IPL's two-bouncers-per-over and Impact Player rules, which are IPL-only and not guaranteed to persist), a format switch (The Hundred's investors have floated a move to franchise T20), and expansion/contraction of a league's team count.
+**Maintenance (rule G2, kept here; RULES_GENERAL is archived).** Last reviewed **2026-09-04**. Before the first card of a new season / edition of any competition here — or the first appearance of a cricket competition after a break of ~6 weeks or more — re-verify the ICC playing conditions and the competition's own playing regulations against the field owner (ICC, the league operator) for changes to powerplay/bowler limits, DRS, DLS minima, the Super Over rule, the points/NRR system, squad rules, or the knockout format, and update the relevant section below **before** issuing the card. The first time a new cricket competition is forecast, add its full playing conditions and format here first. Watch especially for: a franchise-league deviation from ICC conditions (e.g. the IPL's two-bouncers-per-over and Impact Player rules, which are IPL-only and not guaranteed to persist), a format switch (The Hundred's investors have floated a move to franchise T20), and expansion/contraction of a league's team count.
 
 ---
 
@@ -621,7 +621,7 @@ This is the base format for the CPL, the ETPL, and the bilateral / tri-series T2
 
 ### 4.3 Settlement notes
 - Innings are measured in **balls**, not overs — "first-innings total", "team X runs", "over/under" lines are set against a **100-ball** innings, and any recency comparison to T20 data must adjust for the ~20-ball shorter innings and 5-ball powerplay-overs difference (RULES_CRICKET.md §10.8).
-- A weather-abandoned match is **2 points each** and settles most match markets as **no result / void**, not as a loss for the higher-ranked side.
+- A weather-abandoned match is **2 points each** and a **no result**, not a loss for the higher-ranked side; a match contract on it is VOID only under its frozen void rule, otherwise UNRESOLVED (RULES_REFERENCE Part B §7).
 
 ---
 

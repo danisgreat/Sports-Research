@@ -364,7 +364,7 @@ That file is the reference for `§1` identity (competition, leg/tie state, regul
 
 # Merged: LEAGUE_RULES_SOCCER
 
-*Merged 2026-11-07 (CR-2026.11.07-R2, FORMAT), verbatim. Formerly `LEAGUE_RULES_SOCCER.md` (original title: Soccer — sport and competition rules reference). Original kept unchanged at [archive/consolidation_2026-11-07/merged_sources/LEAGUE_RULES_SOCCER.md](archive/consolidation_2026-11-07/merged_sources/LEAGUE_RULES_SOCCER.md).*
+*Merged 2026-11-07 (R2, verbatim). *(Wording cleaned 2026-11-07, CR-2026.11.07-R3: contract instead of market or bet wording; current governance pointers. Facts unchanged.)* Formerly `LEAGUE_RULES_SOCCER.md` (original title: Soccer — sport and competition rules reference). Original kept unchanged at [archive/consolidation_2026-11-07/merged_sources/LEAGUE_RULES_SOCCER.md](archive/consolidation_2026-11-07/merged_sources/LEAGUE_RULES_SOCCER.md).*
 
 > **Current authority (October 5):** [CORE.md (METHOD)](CORE.md#merged-method) and [RULES_REFERENCE.md (CURRENT_RULES)](RULES_REFERENCE.md#part-a-current_rules) govern new work. Requested qualitative or explicitly uncalibrated research receives canonical Part 6 IDs regardless of calibration; numerical performance certification is separate. Read current IDs/freeze from the [status register](GAME_LOG_STATUS_CURRENT.md), unresolved items from the [carryover](archive/verification_2026-10/closure_2026-10-05/carryover.md), and [current implementation evidence](archive/verification_2026-10/implementation_2026-10-05/REPORT.md). Earlier method, queue, freeze and eligibility statements below retain their historical scope.
 
@@ -375,11 +375,11 @@ That file is the reference for `§1` identity (competition, leg/tie state, regul
 
 Status: **ACTIVE — reference**
 Created: **2026-09-04**
-Companion to: **[RULES_SOCCER.md](RULES_SOCCER.md) §9**. Reference only; it does not change `SFA-SOCCER` or any gate. It documents the IFAB Laws of the Game, the competition variables that decide settlement, and the specific rules of every soccer competition in the prediction logs.
+Companion to: **[RULES_SOCCER.md](RULES_SOCCER.md) §9**. Reference only; it does not change `SFA-SOCCER` or any selection rule. It documents the IFAB Laws of the Game, the competition variables that decide settlement, and the specific rules of every soccer competition in the prediction logs.
 
 Rules-era caveat: formats below are those in force for the **2025–2026 / 2026 / 2026-27** seasons the current log covers. Domestic formats (split systems, playoff qualifier counts, foreign-player quotas, relegation on/off) change frequently — **verify the season** for any event, especially for the Belgian, Danish, Egyptian, Argentine, Mexican, Chinese and Kazakh competitions, which have all changed format recently.
 
-**Maintenance (RULES_GENERAL (archived) §3, `G2`).** Last reviewed **2026-09-04**. Before the first card of a new season / new edition of any competition here — or the first appearance of a competition after a break of ~6 weeks or more (most European leagues run Aug–May, so the August restart is a hard checkpoint; Brazil, China, Argentina, the Nordic and MLS-adjacent competitions run on other calendars) — re-verify against the field owner: the IFAB Laws currently in force (a new edition applies from 1 July each year), the competition's format (team count, split-system adoption, playoff/liguilla qualifier count, promotion/relegation on or off, points/tiebreak order), substitution and VAR adoption, foreign-player quotas, and any points deductions — then update the section below **before** issuing the card. The first time a new soccer competition is forecast, document its full rules here first. Recent examples of why this matters: the away-goals rule was abolished (2021); the 5-substitutions and goalkeeper-8-second rules were added; the UEFA competitions moved to the 36/18-team "league phase"; Liga MX abolished its play-in round from Apertura 2026; the Belgian, Danish and Egyptian leagues changed their split formats; China revised its foreign-player rule for 2026.
+**Maintenance (rule G2, kept here; RULES_GENERAL is archived).** Last reviewed **2026-09-04**. Before the first card of a new season / new edition of any competition here — or the first appearance of a competition after a break of ~6 weeks or more (most European leagues run Aug–May, so the August restart is a hard checkpoint; Brazil, China, Argentina, the Nordic and MLS-adjacent competitions run on other calendars) — re-verify against the field owner: the IFAB Laws currently in force (a new edition applies from 1 July each year), the competition's format (team count, split-system adoption, playoff/liguilla qualifier count, promotion/relegation on or off, points/tiebreak order), substitution and VAR adoption, foreign-player quotas, and any points deductions — then update the section below **before** issuing the card. The first time a new soccer competition is forecast, document its full rules here first. Recent examples of why this matters: the away-goals rule was abolished (2021); the 5-substitutions and goalkeeper-8-second rules were added; the UEFA competitions moved to the 36/18-team "league phase"; Liga MX abolished its play-in round from Apertura 2026; the Belgian, Danish and Egyptian leagues changed their split formats; China revised its foreign-player rule for 2026.
 
 ---
 
@@ -416,11 +416,11 @@ Resolve **all** of these per competition and per fixture before setting any mark
 - **League matches:** end after 90' + stoppage. A **draw is a live result**. No extra time.
 - **Single-leg knockouts:** if level after 90', normally **two 15-minute halves of extra time** (played in full — a goal does not end them), then a **penalty shoot-out** if still level. Some cups (notably the **Carabao Cup** before the semis, **Leagues Cup**, **Chinese FA Cup** before round 5) **skip extra time and go straight to penalties**.
 - **Two-leg ties:** the team with the higher **aggregate** score over both legs advances. If aggregate is level after the second leg's 90', **extra time then penalties** in the second leg. The **away-goals rule was abolished by UEFA in 2021** and by CONMEBOL earlier; some competitions (Liga MX Liguilla) instead advance the **higher-seeded/better-placed team** when aggregate is level, with no extra time except in the final. **Always check the tie-break rule for the specific competition.**
-- **A "regulation winner" bet, an "advance/qualify" bet, and an "eventual match winner" bet are three different propositions** (RULES_SOCCER.md control 18). The standard 90-minute market **excludes** extra time and penalties unless the operator says "including ET/pens." A shoot-out win is never a regulation win.
+- **A "regulation winner" contract, an "advance/qualify" contract and an "eventual match winner" contract are three different propositions** (RULES_SOCCER.md control 18). The standard 90-minute contract **excludes** extra time and penalties unless the operator says "including ET/pens." A shoot-out win is never a regulation win.
 
 ### 2.2 Penalty shoot-out
 
-Five kicks each, alternating, then **sudden death** if level. Only players on the pitch at the end of extra time may take kicks. Since 2017 the standard order is ABAB; the "ABBA" order was trialled and dropped. In the log's terms, a shoot-out result settles "advance/win the tie" markets and any explicit "including penalties" market — nothing else.
+Five kicks each, alternating, then **sudden death** if level. Only players on the pitch at the end of extra time may take kicks. Since 2017 the standard order is ABAB; the "ABBA" order was trialled and dropped. In the log's terms, a shoot-out result settles "advance/win the tie" contracts and any explicit "including penalties" contract — nothing else.
 
 ### 2.3 Points, tiebreakers and league tables
 
@@ -528,7 +528,7 @@ Single-elimination knockout, **seeded** so that Serie A clubs (especially the to
 - **Champions' play-offs (top 6):** a further double round-robin; **regular-season points are halved** (and rounded) before it starts. Decides the title and top European places.
 - **Europe play-offs (7th–12th):** a mini-tournament for the last European ticket; **points halved**.
 - **Relegation play-offs (13th–16th):** a further round-robin; **regular-season points carried in full**. **No automatic relegation in 2025-26** — the bottom club after the relegation play-offs meets the Challenger Pro League promotion-playoff winner in a promotion/relegation playoff.
-- Settlement: the point-halving means mid-table "points" markets and title/relegation projections must use the **post-split** points, not the regular-season table.
+- Settlement: the point-halving means mid-table "points" contracts and title/relegation projections must use the **post-split** points, not the regular-season table.
 
 ### 4.10 Denmark — Superliga (3F Superliga)
 
@@ -601,7 +601,7 @@ The **Uzbekistan Pro League is the second tier** of Uzbek football (the top flig
 
 ### 5.12 India — SFA A Division S-League (Sikkim)
 
-A **state-level competition in Sikkim** run under the local sports-federation structure ("SFA" = Sports For All / Sikkim Football Association A Division). Effectively a **regional semi-amateur league** — small squads, part-time players, single grounds, no VAR, near-zero reliable public data, and frequent schedule uncertainty (the log carries an *unresolved* fixture, P-126, precisely because the field-owner schedule could not be confirmed). Standard 90-minute league matches, draws live, points 3-1-0. This is the sparsest population in the entire soccer register — participant/identity uncertainty caps essentially every market (RULES_SOCCER.md control 13, and the general evidence ceiling).
+A **state-level competition in Sikkim** run under the local sports-federation structure ("SFA" = Sports For All / Sikkim Football Association A Division). Effectively a **regional semi-amateur league** — small squads, part-time players, single grounds, no VAR, near-zero reliable public data, and frequent schedule uncertainty (the log carries an *unresolved* fixture, P-126, precisely because the field-owner schedule could not be confirmed). Standard 90-minute league matches, draws live, points 3-1-0. This is the sparsest population in the entire soccer register — participant/identity uncertainty caps essentially every contract (RULES_SOCCER.md control 13, and the general evidence ceiling).
 
 ---
 
@@ -634,7 +634,7 @@ An annual **MLS vs Liga MX** tournament (co-sanctioned). **2026: 36 clubs — al
 - **Phase One (group stage):** clubs split into an **Eastern** and **Western** region of 18, each seeded into 3 tiers; each club plays **3 or 4 cross-league matches** in a mini-round-robin. **"No draws" format — a group match level after 90' goes straight to a penalty shoot-out** (3 points for a 90-minute win, and points for a shoot-out result).
 - **Knockout:** the **top 4 clubs from each league** enter a fixed **MLS-vs-Liga-MX bracket** — quarter-finals, semi-finals, third-place match, final — all **single matches, straight to penalties if level (no extra time except, in most editions, the final)**.
 - The **finalists and the third-place-match winner qualify for the 2027 CONCACAF Champions Cup.**
-- Settlement: the "no draws / straight to penalties" rule means a "regulation (90') result" market and a "match winner (incl. penalties)" market diverge frequently — freeze which one the card uses. In the log: **2026 Quarterfinal** cards.
+- Settlement: the "no draws / straight to penalties" rule means a "regulation (90') result" contract and a "match winner (incl. penalties)" contract diverge frequently — freeze which one the card uses. In the log: **2026 Quarterfinal** cards.
 
 ---
 

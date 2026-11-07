@@ -1,6 +1,6 @@
 # CORE: what every card reads (CORE-v1)
 
-**MDS-2026.11.07-v24.2 · CR-2026.11.07-R2 · P-2026.10.22-v24.0 · SCV-2026.10.22-v12 · SEL-2026.10.22-v4.** The one document a game card must read in full before research, with the [prompt 1 core](research/prompts/1_GAME_CARD.md) and the one [sport file](research/prompts/1_sports/). It condenses the rules that decide a card; everything else is reference, read when the card touches that topic. Where this page and a long-form protocol differ in wording, the protocol governs and the difference is a defect to report (GOV-v2). Where a pre-v24 sentence anywhere contradicts this page, this page governs for cards under P-2026.10.22-v24.0 and later; earlier cards keep their own method.
+**MDS-2026.11.07-v24.3 · CR-2026.11.07-R3 · P-2026.11.07-v24.1 · SCV-2026.10.22-v12 · SEL-2026.10.22-v4.** The one document a game card must read in full before research, with the [prompt 1 core](research/prompts/1_GAME_CARD.md) and the one [sport file](research/prompts/1_sports/). It condenses the rules that decide a card; everything else is reference, read when the card touches that topic. Where this page and a long-form protocol differ in wording, the protocol governs and the difference is a defect to report (GOV-v2). Where a pre-v24 sentence anywhere contradicts this page, this page governs for cards under P-2026.10.22-v24.0 and later; earlier cards keep their own method.
 
 **Reading receipt.** Print branch, HEAD SHA, read time with offset, every uncommitted control difference, and the files actually read: this page, the prompt 1 core, the sport file and whatever the card opened. Never claim a file was read in full from an excerpt.
 
@@ -10,7 +10,7 @@
 - Labels are literal. The analyst's own final probability is `ANALYST_PRIMARY_V1 / UNCALIBRATED_ANALYST_PRIMARY`, built from a frozen reference plus logged adjustments from P-2026.10.22-v24.0; cards before it keep their method. Nothing is certified; a model is `EXPERIMENTAL_NOT_QUALIFIED`.
 - Missing is not zero. Use `NOT_COMPUTED`, `NOT_ESTIMATED`, `NOT_VERIFIED`, `UNKNOWN_DEFINITION`, `N/A` exactly. Missing evidence is `UNRESOLVED`, never VOID, a loss, a healthy player or a clean sheet. Never invent a source, time, probability, baseline, lineup or score.
 - Issued cards, settled originals, previous log parts and dated reports are immutable. A correction is a dated addendum with its parent, reason and affected keys. A card's frozen reference and picks are never edited after issue.
-- **SPORTS_ONLY / MARKET_BLIND.** No odds, line movement, tips, previews, prediction markets or fantasy inputs in research, the reference, adjustments or any card. A supplied line is contract metadata. The only market-adjacent items are the line-implied 0.5 written into supplied two-way rows and the hand-entered post-settlement benchmarks ([BENCHMARK_PROTOCOL](BENCHMARK_PROTOCOL.md)); neither is read before settlement. The decision lab stays firewalled (CURRENT_RULES section 5a); no staking, edge or value claim; no in-play automation.
+- **SPORTS_ONLY / MARKET_BLIND.** No odds, line movement, tips, previews, prediction markets or fantasy inputs in research, the reference, adjustments or any card. A supplied line is contract metadata. The only market-adjacent items are the line-implied 0.5 written into supplied two-way rows and the hand-entered post-settlement benchmarks ([BENCHMARK_PROTOCOL](BENCHMARK_PROTOCOL.md)); neither is read before settlement. The decision lab stays firewalled ([RULES_REFERENCE](RULES_REFERENCE.md#5-sources-event-state-and-time) Part A §5a); no staking, edge or value claim; no in-play automation.
 - Every run that changes files ends with a commit and push by exact path, no force, then a check that `HEAD` equals `origin/main`. Never stage the whole tree.
 
 ## 2. Identity, the mini and IDs
@@ -37,7 +37,7 @@
 
 - State each contract's unit, period and action (regulation, overtime, extras, push, void, retirement) before pricing. Basketball: every line includes overtime unless its own text names regulation or a segment (BK-OT-1, CR-2026.11.07-R1). An ambiguous text is priced under every reading, frozen with both, and queued; never resolved silently.
 - All contracts come from **one** coherent distribution. Keep W, P (push) and L masses; `p = W/(W+L)`; masses sum to one. A winner row in a competition with draws loses on a draw unless the contract says otherwise. Complementary rows agree. Apply a key-number, push or tie adjustment to the whole normalised distribution, never to one row. Do not clip a probability; a ranked row is at or below the 0.90 selection ceiling and a higher true value is kept outside the ranked list.
-- Family rules (SELECTION_RULES section 4) apply unchanged: soccer first-half Over 0.5 needs a half-specific model, baseball +1.5 at rank 1 needs p at least 0.65, tennis games come from the complete set-score states, corners need a named provider and a count model, period and player rows need exact definitions and a source.
+- Family rules ([RULES_REFERENCE](RULES_REFERENCE.md#part-b-selection_rules) Part B §4) apply unchanged: soccer first-half Over 0.5 needs a half-specific model, baseball +1.5 at rank 1 needs p at least 0.65, tennis games come from the complete set-score states, corners need a named provider and a count model, period and player rows need exact definitions and a source.
 - Grades: WIN, LOSS, PUSH, VOID (only under a frozen void rule), UNRESOLVED. Evidence: A official field owner for the exact target; B structured provider with lineage disclosed; C single secondary; E a bound that grades only if every feasible value agrees; X none. Settle from a box score or linescore with a sum check, never from a headline, recap title or narrative article. Corrections append revisions with parents; a conflict leaves keys UNRESOLVED.
 - Every open item has an actor, a route, a due time with timezone, a final-time basis, a last attempt, and a scheduled-automation status (R38). Nothing is automated unless it is.
 
@@ -52,7 +52,7 @@
 
 ## 6. Probability
 
-- Start from the reference. A departure needs a ledger row; a feeling is not a row. Do not count an effect already in a rating. The reference and the league-only `BASELINE_P` (SELECTION_RULES section 9) are printed beside every number; a missing baseline uses an enumerated reason.
+- Start from the reference. A departure needs a ledger row; a feeling is not a row. Do not count an effect already in a rating. The reference and the league-only `BASELINE_P` (RULES_REFERENCE Part B §9) are printed beside every number; a missing baseline uses an enumerated reason.
 - **Widths** are never below the competition's floor without a written exception. Early season, stale profiles and unconfirmed lineups widen or mix, they do not narrow. A lineup uncertainty is a declared mixture with weights frozen before pricing.
 - **Structure.** NFL margins of 3 and 7, hockey one-goal finishes and empty nets, baseball extras and walk-offs, cricket collapses and tennis match-level form shocks are handled explicitly ([SIMULATION_PROTOCOL](SIMULATION_PROTOCOL.md)). Simulate only where its table says, in code, with seed, N and Monte Carlo error printed. The exact method is the default.
 - **Easy lines.** Report each ranked row's distance from the centre. A near-certain analyst-chosen alternative line is label-only evidence. A hit rate is not skill; the line-implied 0.5, the baseline, the reference and any benchmark are the comparators.
@@ -76,40 +76,32 @@
 
 | Topic | Document |
 |---|---|
-| Rules in force, sources, times, custody | [CURRENT_RULES](RULES_REFERENCE.md#part-a-current_rules) · [METHOD](#merged-method) · [CURRENT_STATE](CURRENT_STATE.md) |
-| Tiers, reference, model lane, fast card | [REFERENCE_MODEL_PROTOCOL](REFERENCE_MODEL_PROTOCOL.md) · [FORECAST_CYCLE_PROTOCOL](REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol) |
-| Adjustments, picks block, abstain, scoring | [ADJUSTMENT_LEDGER_PROTOCOL](ADJUSTMENT_LEDGER_PROTOCOL.md) · [EFFECT_TABLES](PARAMETERS.md#part-b-effect_tables) |
+| Rules in force, sources, times, custody, selection families, grades, baseline | [RULES_REFERENCE](RULES_REFERENCE.md) (Part A: operating rules; Part B: selection) · [CURRENT_STATE](CURRENT_STATE.md) |
+| Tiers, reference, model lane, fast card, MLSCOPE-v3 | [REFERENCE_MODEL_PROTOCOL](REFERENCE_MODEL_PROTOCOL.md) (with its forecast-cycle section) |
+| Adjustments, picks block, abstain, scoring | [ADJUSTMENT_LEDGER_PROTOCOL](ADJUSTMENT_LEDGER_PROTOCOL.md) · [PARAMETERS](PARAMETERS.md#part-b-effect_tables) Part B (effect tables) · [SCORING_AND_VALIDATION](SCORING_AND_VALIDATION.md) |
 | Benchmarks and the market firewall | [BENCHMARK_PROTOCOL](BENCHMARK_PROTOCOL.md) |
-| League numbers, widths | [COMPETITION_PARAMETERS](PARAMETERS.md#part-a-competition_parameters) · [LEAGUE_PROFILES](PARAMETERS.md#part-d-league_profiles) · [BASE_RATES_REGISTER](PARAMETERS.md#part-c-base_rates_register) |
+| League numbers, widths, floors | [PARAMETERS](PARAMETERS.md#part-a-competition_parameters) Part A (Parts C and D are historical) |
 | Probability tables, TB-1-MD | [PROBABILITY_TOOLKIT](PROBABILITY_TOOLKIT.md) |
-| Selection families, grades, baseline | [SELECTION_RULES](RULES_REFERENCE.md#part-b-selection_rules) · [SCORING_AND_VALIDATION](SCORING_AND_VALIDATION.md) |
-| Research inputs by sport and where | [RESEARCH_CHECKLISTS](RESEARCH_PROTOCOL.md#part-d-research_checklists) · [SOURCES](SOURCES.md) · [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md) · [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md) · [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_PROTOCOL.md#part-b-research_exhaustiveness_protocol) · [TIMING_RESEARCH_PROTOCOL](RESEARCH_PROTOCOL.md#part-e-timing_research_protocol) |
+| Research: completion, persistence (EXH-v1), retention (RETAIN-v3), checklists, timing | [RESEARCH_PROTOCOL](RESEARCH_PROTOCOL.md) Parts A–E · [SOURCES](SOURCES.md) · [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md) (AVAIL-v4) · [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md) (HIST-v3) |
 | Simulation | [SIMULATION_PROTOCOL](SIMULATION_PROTOCOL.md) |
-| Mini, identity, retention, delivery | [MINI_LOG_IDENTITY_PROTOCOL](WORKFLOW.md#part-b-mini_log_identity_protocol) · [RESEARCH_RETENTION_PROTOCOL](RESEARCH_PROTOCOL.md#part-c-research_retention_protocol) · [EXECUTION_ENVIRONMENT_PROTOCOL](WORKFLOW.md#part-a-execution_environment_protocol) · [GITHUB_REFERENCE_PROTOCOL](GITHUB_REFERENCE_PROTOCOL.md) · [GOOGLE_DRIVE_EXCHANGE_PROTOCOL](GOOGLE_DRIVE_EXCHANGE_PROTOCOL.md) |
+| Where prompts run (ENV-v2), mini identity and delivery (MINI-v2), external access | [WORKFLOW](WORKFLOW.md) · [GITHUB_REFERENCE_PROTOCOL](GITHUB_REFERENCE_PROTOCOL.md) (REF-v1) · [GOOGLE_DRIVE_EXCHANGE_PROTOCOL](GOOGLE_DRIVE_EXCHANGE_PROTOCOL.md) (DRIVE-v2) |
 | Formats, self-audit | [CARD_AND_LOG_TEMPLATES](CARD_AND_LOG_TEMPLATES.md) |
 | Requests | [GAME_REQUEST_TEMPLATE](GAME_REQUEST_TEMPLATE.md) |
-| Sport rules | `RULES_<SPORT>.md`, [LEAGUE_RULES_SOCCER](RULES_SOCCER.md#merged-league_rules_soccer), [LEAGUE_RULES_CRICKET](RULES_CRICKET.md#merged-league_rules_cricket) |
-| Learning pipeline, models, registry | [LEARNING_PIPELINE_PROTOCOL](ML_PIPELINE.md#part-c-learning_pipeline_protocol) · [ML_EXECUTION_PROTOCOL](ML_PIPELINE.md#part-b-ml_execution_protocol) · [`ml/README.md`](ml/README.md) |
+| Sport rules | `RULES_<SPORT>.md` (soccer and cricket include their competition-rules sections; ice hockey includes the NHL section) |
+| Learning pipeline, models, registry, legacy runtime | [ML_PIPELINE](ML_PIPELINE.md) · [`ml/README.md`](ml/README.md) |
+| Operative lessons | [LESSONS_PROMOTED](LESSONS_PROMOTED.md) |
 | Prompts | [research/prompts/](research/prompts/README.md) |
 
 ---
 
 # Merged: METHOD
 
-*Merged 2026-11-07 (CR-2026.11.07-R2, FORMAT), verbatim. Formerly `METHOD.md` (original title: Method: current authority). Original kept unchanged at [archive/consolidation_2026-11-07/merged_sources/METHOD.md](archive/consolidation_2026-11-07/merged_sources/METHOD.md).*
+*Merged 2026-11-07 (R2, verbatim) and shortened (CR-2026.11.07-R3): METHOD's steps 1–6 repeated section 3 of this page and were removed; its version line moved to [CURRENT_STATE](CURRENT_STATE.md). The original is kept unchanged at [archive/consolidation_2026-11-07/merged_sources/METHOD.md](archive/consolidation_2026-11-07/merged_sources/METHOD.md).*
 
-**ACTIVE: MDS-2026.10.22-v24.0 · CR-2026.10.22-R2 · SCV-2026.10.22-v12 · SEL-2026.10.22-v4 · P-2026.10.22-v24.0.** Current allocation and destination are in [CURRENT_STATE](CURRENT_STATE.md). The rules a card reads are in [CORE](CORE.md); the operating rules are in [CURRENT_RULES](RULES_REFERENCE.md#part-a-current_rules). The previous method text is archived in [archive/superseded_2026-10-22-2/METHOD.md](archive/superseded_2026-10-22-2/METHOD.md).
+After a card is issued (section 3), the method continues:
 
-The method, in the order a card follows it:
+7. **Settle from the field owner.** Freeze the mini, settle the exact contracts from a box score or linescore with a sum check, write RESULTS.csv and ACTUALS.csv, settle the frozen rows (`cycle settle`), and run the import in the same session. Canonical IDs are assigned only here (MINI-v2).
+8. **Score honestly.** Paired proper scores of the final p against the reference, the league baseline, the line-implied 0.5, the frozen model and any owner-entered benchmark; the adjustment value λ; width coverage (`ledger score`, `ledger coverage`). Slot counts are descriptive. A documentation improvement is not a demonstrated predictive improvement ([SCORING_AND_VALIDATION](SCORING_AND_VALIDATION.md)).
+9. **Learn through governed lanes.** Verified outcomes become learning data ([ML_PIPELINE](ML_PIPELINE.md#part-c-learning_pipeline_protocol) Part C); a model is judged on frozen, pushed, pre-start rows at league volume after 8 weeks and 50 paired games; statistical changes wait for a season boundary or a new lane (STATFREEZE-v1).
 
-1. **Identify and tier the event.** Verify the exact competition, season, stage, participants, venue, native ID and scheduled start; search every mini and log; use a stable local key (MINI-v2). `python -m ml reference tier` gives tier A, B or C ([REFERENCE_MODEL_PROTOCOL](REFERENCE_MODEL_PROTOCOL.md)).
-2. **Freeze the reference before typing a probability.** A tier A release or TB-2-MD / TB-1-MD from a dated standings table or the league-only baseline, produced in code, hashed and timestamped (REFMODEL-v1). A late request gets the fast card first (FASTCARD-v1).
-3. **Research by value.** The sport's checklist ([RESEARCH_CHECKLISTS](RESEARCH_PROTOCOL.md#part-d-research_checklists)): confirmed availability and starting roles first, timed to publication; then both sides' L5/L10/L15/L20 online with true n; conditions, rules and definitions. Decisive facts need a source, a publication time and a second independent source (EXH-v1, AVAIL-v4, HIST-v3). The evidence horizon is the game-log scheduled start ([TIMING_RESEARCH_PROTOCOL](RESEARCH_PROTOCOL.md#part-e-timing_research_protocol)).
-4. **Adjust by ledger.** One row per confirmed fact, with its [effect-table](PARAMETERS.md#part-b-effect_tables) row and entry size ([ADJUSTMENT_LEDGER_PROTOCOL](ADJUSTMENT_LEDGER_PROTOCOL.md)); the width never falls below the competition's floor ([COMPETITION_PARAMETERS](PARAMETERS.md#part-a-competition_parameters)); every supplied contract is read from one coherent distribution, with the structural cases (key numbers, empty nets, extras, form shocks) handled explicitly and any simulation limited to [SIMULATION_PROTOCOL](SIMULATION_PROTOCOL.md).
-5. **Say what the numbers say.** The picks block: a probability for every supplied contract, the winner, a most-likely list with line difficulty, an information list, or `no strong pick`. The linter must pass before the card is ledgered (PICKS-v2).
-6. **Freeze and publish.** Append the card to the active mini, read it back, freeze the card's own final p beside the reference (`pregame run`), commit and push before the scheduled start whenever possible.
-7. **Settle from the field owner.** Freeze the mini, settle the exact contracts from a box score or linescore, write RESULTS and ACTUALS, settle the frozen rows (`cycle settle`), run the import in the same session. Canonical IDs are assigned only here (MINI-v2).
-8. **Score honestly.** Paired proper scores of the final p against the reference, the league baseline, the line-implied 0.5, the frozen model and any hand-entered benchmark; the adjustment value λ; width coverage (`ledger score`, `ledger coverage`). Slot counts are descriptive. A documentation improvement is not a demonstrated predictive improvement ([SCORING_AND_VALIDATION](SCORING_AND_VALIDATION.md)).
-9. **Learn through governed lanes.** Verified outcomes become learning data ([LEARNING_PIPELINE_PROTOCOL](ML_PIPELINE.md#part-c-learning_pipeline_protocol)); a model is judged on frozen, pushed, pre-start rows at league volume after 8 weeks and 50 paired games; statistical changes wait for a season boundary or a new lane (STATFREEZE-v1).
-
-Numerical selection constants remain provisional ([SELECTION_RULES](RULES_REFERENCE.md#part-b-selection_rules)). The decision lab stays firewalled. Code lives only under `ml/`; output is Markdown, CSV and text.
+Numerical selection constants remain provisional ([RULES_REFERENCE](RULES_REFERENCE.md#part-b-selection_rules) Part B). The decision lab stays firewalled. Code lives only under `ml/`; output is Markdown, CSV and text.

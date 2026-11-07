@@ -9,7 +9,7 @@ research/verified_history/** -text
 research/cycle_releases/** -text
 research/verification/forecast_cycle_2026-10-16/** -text
 research/model_shadow/** -text
-PROMPT_1_SUPPLIED_FIRST_EXTENDED_2026-10-14.md -text
+archive/consolidation_2026-11-07/archived/PROMPT_1_SUPPLIED_FIRST_EXTENDED_2026-10-14.md -text
 # LEARN-v1 append-only and hash-chained CSVs: keep exact LF bytes on every clone.
 research/learning_store/** -text
 research/training_releases/** -text

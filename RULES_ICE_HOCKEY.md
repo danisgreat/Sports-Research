@@ -361,74 +361,39 @@ Resolve before any rate work: **league and therefore period length** (AIHL 15 mi
 
 # Merged: RULES_NHL
 
-*Merged 2026-11-07 (CR-2026.11.07-R2, FORMAT), verbatim. Formerly `RULES_NHL.md` (original title: National Hockey League (NHL) & Professional Ice Hockey Numerical Rules). Original kept unchanged at [archive/consolidation_2026-11-07/merged_sources/RULES_NHL.md](archive/consolidation_2026-11-07/merged_sources/RULES_NHL.md).*
+*Merged 2026-11-07 (R2, verbatim) and cleaned (CR-2026.11.07-R3). Formerly `RULES_NHL.md` (original title: National Hockey League (NHL) & Professional Ice Hockey Numerical Rules; authority MDS-2026.10.01-v7.1, whose numerical runtime was later removed). Original kept unchanged at [archive/consolidation_2026-11-07/merged_sources/RULES_NHL.md](archive/consolidation_2026-11-07/merged_sources/RULES_NHL.md). What changed and why: [consolidation report](research/verification/framework_change_2026-11-07-3/CONTRADICTIONS.md).*
 
-> **Authority.** [CORE](CORE.md) and [CURRENT_RULES](RULES_REFERENCE.md#part-a-current_rules) govern new work; this page holds this sport's rules, and earlier statements below keep their historical scope.
+**How an NHL card is priced today.** The NHL is tier A: the card starts from the frozen NHL-CYCLE-4 release as its declared reference ([REFERENCE_MODEL_PROTOCOL](REFERENCE_MODEL_PROTOCOL.md) §4), adds ledger rows for confirmed facts ([ADJUSTMENT_LEDGER_PROTOCOL](ADJUSTMENT_LEDGER_PROTOCOL.md)), and uses the hockey simulator where SIMULATION_PROTOCOL allows. The mechanics below are what that price must respect; they are not a separate pipeline to run.
 
+## 1. Scope and the scoring mechanism
 
-**Authority:** MDS-2026.10.01-v7.1 / CR-2026.10.05-I8 (with numerical runtime extension CR-2026.10.06-NUMERICAL-1).
-**Companion Document:** [RULES_ICE_HOCKEY.md](RULES_ICE_HOCKEY.md) (Foundational Ice Hockey Governance).
-
----
-
-## 1. Scope & Primary Numerical Pipeline
-
-This document defines the numerical prediction pipeline for the **National Hockey League (NHL)** and North American professional ice hockey (including AHL).
-
-The core generative process is modeled as:
-
-$$\text{Shot Attempts (Corsi)} \longrightarrow \text{Unblocked Shots (Fenwick)} \longrightarrow \text{Shot Quality / Expected Goals (xG)} \longrightarrow \text{Goals}$$
+The structure applies to the NHL and North American professional hockey (including the AHL), not to other leagues without their own evidence. Goals arise from shot volume, shot quality and goaltending, with special teams, score effects and the late pulled-goalie tail on top:
 
 ```text
-Team 5v5 Shot Pace × Shooting Efficiency (xG)
-                     +
-Special Teams Opportunities (PP/PK) × Conversion Rate
-                     +
-Score Effects & Trailing Aggression
-                     +
-Goalie Save Quality Above Expected (GSAx)
-                     +
-Late-Game Pulled Goalie & Empty-Net Tail
-                     │
-                     ▼
-  Joint Regulation Score Matrix (Home Goals, Away Goals)
-                     │
-                     ├── Regulation 1X2 Probabilities (Home / Draw / Away)
-                     ├── Puck Line (-1.5 / +1.5) Probabilities
-                     ├── Over / Under Goals PMF
-                     └── Overtime / Shootout Branch → Full Game Moneyline
+Team 5v5 shot pace × shot quality (xG)  +  power-play opportunities × conversion
+  +  score effects  +  goaltender save quality above expected (GSAx)  +  late pulled-goalie / empty-net tail
+        → one joint regulation score grid → regulation 1X2, puck line, total, and the OT/shootout branch for the full-game winner
 ```
 
----
+## 2. Invariants and mechanics
 
-## 2. Invariants & Mechanics
+### 2.1 Starting goaltender
 
-### 2.1 Starting Goaltender Gate (Strict Mandatory Prerequisite)
-- Goalies represent the single highest-variance individual factor in ice hockey.
-- **Unconfirmed Goalie Rule**: If a starting goaltender is not confirmed via official team announcement, beat reporter morning skate report, or starting warm-up handshake, the model must evaluate an explicit **mixture distribution**:
-  $$P(\text{Goals}) = p_{\text{starter}} \cdot P(\text{Goals} \mid \text{Starter}) + (1 - p_{\text{starter}}) \cdot P(\text{Goals} \mid \text{Backup})$$
-- Totals on games with unconfirmed starters are strictly barred from Rank #1.
+The starting goalie is the largest single-player factor. Until the starter is confirmed (team announcement, a named reporter's morning-skate report, or the warm-up), price an explicit mixture, `P(goals) = p_starter · P(goals | starter) + (1 − p_starter) · P(goals | backup)`, with the weight written before pricing: in the ledger it is a `SCENARIO` row (EFFECT_TABLES row `E-NEED-GOALIE` is NOT_ESTIMATED). *The old rule that barred totals with an unconfirmed starter from Rank 1 applied to pre-v24 cards; under SEL v4 the most-likely list is ordered by p alone and only the family table of [RULES_REFERENCE](RULES_REFERENCE.md#part-b-selection_rules) Part B §4 restricts eligibility.*
 
-### 2.2 Regulation vs. Overtime/Shootout (Contract Geometry)
-- **Regulation 60-Minute Contract**: Settles on the exact score at the end of the third period. Ties settle as `DRAW` on 1X2, or against the regulation line.
-- **Full Game (OT/Shootout Included)**:
-  - Any game tied after 60 minutes proceeds to 3-on-3 sudden-death overtime (5 minutes) followed by a 3-round shootout.
-  - The winner receives exactly **one additional goal**.
-  - **Mathematical Consequence**: Every game decided in OT/SO adds exactly 1 goal to an even score, resulting in an **odd total**:
-    - A 2–2 tie becomes 3–2 (Total = 5, strictly Under 5.5).
-    - A 3–3 tie becomes 4–3 (Total = 7, strictly Over 6.5).
-  - Models must account for this discrete odd-number mass when pricing 5.5 and 6.5 full-game totals.
+### 2.2 Regulation against overtime and shootout
 
-### 2.3 Empty-Net Goals and the Puck Line (-1.5 / +1.5)
-- Trailing teams pull their goaltender for a 6-on-5 extra attacker typically with 1:30–2:30 remaining when trailing by 1 or 2 goals.
-- **Empirical Base Rate**: Over 70% of two-goal regulation victories in the modern NHL feature an empty-net goal.
-- **Puck Line Requirement**: A candidate recommending a $-1.5$ handicap must explicitly compute the probability of an empty-net conversion; candidates backing $+1.5$ must account for the empty-net kill risk.
+- **Regulation (60 minutes):** settles on the score after three periods; a tie is a DRAW on 1X2 and counts as level on regulation lines.
+- **Full game, regular season:** a tie after 60 minutes goes to a 5-minute 3-on-3 sudden-death overtime and then a shootout (three rounds, then sudden death). A shootout win adds exactly one goal to the winner's score, so a game decided in overtime or a shootout always ends one goal apart and the shootout total is odd: 2–2 becomes 3–2 (total 5, under 5.5) and 3–3 becomes 4–3 (total 7, over 6.5). Price this odd-total mass explicitly for 5.5 and 6.5 full-game totals.
+- **Playoffs:** overtime is 20-minute 5-on-5 sudden-death periods, with no shootout (format rechecked from secondary sources on 2026-11-07, not the rulebook text).
+- The NHL extra-time share in the verified store is 20.6% of games ([PARAMETERS](PARAMETERS.md#part-a-competition_parameters) Part A).
 
----
+### 2.3 Empty-net goals and the puck line (−1.5 / +1.5)
 
-## 3. Data Sources & Regime Controls
+Trailing teams pull the goaltender for an extra attacker late in regulation, typically in the last one to three minutes when down by one or two goals. Empty-net goals have become much more common: 2.4% of all goals in 2005-06 against 7.0% through the first quarter of 2024-25 ([Daily Faceoff](https://www.dailyfaceoff.com/news/how-empty-net-goals-have-changed-the-nhl)). One-goal finishes are 39.9% of NHL games against 28.7% under a discretised normal ([PARAMETERS](PARAMETERS.md#part-b-effect_tables) Part B §3). A −1.5 row must price the empty-net conversion; a +1.5 row must price the empty-net kill risk; both come from the simulator or the release's grid, not from a fixed rate. *The original text's "over 70% of two-goal regulation wins feature an empty-net goal" had no source and could not be verified on 2026-11-07; it is not used.*
 
-1. **Shot-Level Tracking**: MoneyPuck (`moneypuck.com`) 2007–08 to present.
-   - Note: MoneyPuck excludes blocked shots from its shot-level tables. Corsi (total shot attempts) must be supplemented via NHL API play-by-play.
-2. **Official Verification**: NHL Web API (`api-web.nhle.com/v1/gamecenter/{gameId}/boxscore`) provides official time on ice, starting goalies, empty-net indicators, and period scoring.
-3. **Preseason Separation**: Preseason hockey displays 0.6–0.9 fewer goals per game due to split-squad rosters and conditioning. Never combine regular season and preseason training records without an explicit regime indicator.
+## 3. Data sources and regime controls
+
+1. **Shot-level data:** MoneyPuck (`moneypuck.com`, 2007-08 onward). Check which attempt types a table includes before deriving Corsi; supplement blocked attempts from NHL API play-by-play where a table omits them.
+2. **Official record:** the NHL Web API (`api-web.nhle.com/v1/gamecenter/{gameId}/boxscore`) for time on ice, starting goalies, empty-net indicators and period scoring.
+3. **Preseason** is a different regime (split squads, conditioning, lower scoring): never pool preseason with regular-season rows without an explicit regime indicator. *The original's "0.6–0.9 fewer goals per game" was unsourced and is not used as a number.*

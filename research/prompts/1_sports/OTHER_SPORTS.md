@@ -1,6 +1,6 @@
 # PROMPT 1 — sport file: OTHER SPORTS
 
-**P-2026.10.22-v24.0 · prompt 1 sport file.** Use this file together with the [prompt 1 core](../1_GAME_CARD.md): read the core first, then this file. The core holds every rule shared by all sports, including the shared rules of steps 1, 3, 4, 5 and 7; this file holds this sport's own instructions for steps 1–7. At each step apply the core's shared rules for that step together with this file's. Fill in the Upcoming game block below; it is the only part the owner edits. Do not read the other sport files.
+**P-2026.11.07-v24.1 · prompt 1 sport file.** Use this file together with the [prompt 1 core](../1_GAME_CARD.md): read the core first, then this file. The core holds every rule shared by all sports, including the shared rules of steps 1, 3, 4, 5 and 7; this file holds this sport's own instructions for steps 1–7. At each step apply the core's shared rules for that step together with this file's. Fill in the Upcoming game block below; it is the only part the owner edits. Do not read the other sport files.
 
 OTHER SPORTS
 ----------------------------
@@ -24,7 +24,7 @@ Also apply the core's **Before step 1 — evidence standard** ([prompt 1 core](.
 
 Also apply the core's **Step 1 — Read and establish authority** shared rules ([prompt 1 core](../1_GAME_CARD.md)).
 
-Read COMMON_OPERATING_PROTOCOL and every control from the local working tree (`LOCAL_WORKING_TREE`, ENV-v2), recording branch, HEAD SHA and any uncommitted control changes. Print the [reading receipt](../README.md) after opening CURRENT_STATE, METHOD, CURRENT_RULES, SELECTION_RULES, CARD_AND_LOG_TEMPLATES, applicable sport rule file if present, SOURCES (the sport's §3 section if one exists, otherwise §2 and the [§3.11](../../../SOURCES.md#311-field-fallback-and-official-social-use-by-sport) fallback rules), ARCHIVE_USE_GUIDE, this prompt, the complete active mini, GAME_LOG_STATUS_CURRENT and relevant canonical event records. Read the named sections of large files and only this sport's workflow, and record the HEAD SHA, exactly what was read and the read time. Apply current controls over historical sport-engine notes.
+Read COMMON_OPERATING_PROTOCOL and every control from the local working tree (`LOCAL_WORKING_TREE`, ENV-v2), recording branch, HEAD SHA and any uncommitted control changes. Print the [reading receipt](../README.md) after opening [CORE](../../../CORE.md) and the [prompt 1 core](../1_GAME_CARD.md) in full, then CURRENT_STATE and the named sections of RULES_REFERENCE and CARD_AND_LOG_TEMPLATES, applicable sport rule file if present, SOURCES (the sport's §3 section if one exists, otherwise §2 and the [§3.11](../../../SOURCES.md#311-field-fallback-and-official-social-use-by-sport) fallback rules), ARCHIVE_USE_GUIDE, this prompt, the complete active mini, GAME_LOG_STATUS_CURRENT and relevant canonical event records. Read the named sections of large files and only this sport's workflow, and record the HEAD SHA, exactly what was read and the read time. Apply current controls over historical sport-engine notes.
 
 ## 2. Identity, duplicate and timing gate
 
