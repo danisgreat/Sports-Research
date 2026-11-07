@@ -1065,3 +1065,15 @@ Highest canonical **P-622**; next **P-623**; reserved P-518–P-522 unchanged; a
 ## Combined Log rollover — 2026-10-21T02:30:23+11:00
 
 Active destination: [Part 9](prediction%20logs/PREDICTION_LOG_COMBINED_9.md); Part 8 closed with 851,514 pre-closure raw bytes and 22 originals P-601–P-622, on the owner's explicit request (default thresholds not reached). Highest P-622 / next P-623 and reserved P-518–P-522 are unchanged; zero IDs consumed. Pending P-584, P-620's winner-call/learning fields, terminal evidence/definition/custody and independent execution/learning queues continue without closure or clock reset. [Rollover receipt and byte verification](research/verification/combined_rollover_2026-10-21-1/README.md). Earlier dated openings/import summaries retain their historical routing.
+
+## Settlement revisions import — 2026-11-07T20:53:07+11:00
+
+Settlement revisions for P-604, P-606 and P-620, owner-invoked prompts 3 and 4 (P-2026.10.22-v24.0), appended to active [Part 9](prediction%20logs/PREDICTION_LOG_COMBINED_9.md) as revisions to closed-part originals; zero IDs consumed (highest P-622, next P-623, reserved P-518–P-522 unchanged). **P-604** corners 8–5 = 13 (two aggregators, evidence C): Over 10.5 WIN, Under 10.5 LOSS. **P-606** score 116–98 replaces 117–98, grades unchanged. **P-620** South Africa won by an innings and 31 runs (425/9 dec v 99 and 295): the qualitative Australia call was wrong, contract grades unchanged, innings evidence E → B. Research-only P-601–P-611 rows now 26W/26L/0 unresolved; ANALYST_PRIMARY_V1 P-612–P-622 unchanged (primary 11W/10L/1P, Brier 0.2041). The owner drop `MINI LOGS TO BE SETTLED/` was byte-identical to the 21 October import inputs and is archived unchanged at [archive/owner_drop_settled_2026-11-07-1/](archive/owner_drop_settled_2026-11-07-1/README.md). Open: U-603 (P-616 overtime definition, grade-changing, owner), operator terms, the held MELILL01-G0004 card, corroboration and final times ([queue](research/verification/settlement_import_2026-11-07-1/UNRESOLVED_POST_IMPORT.md)). [Import report](research/verification/settlement_import_2026-11-07-1/CANONICAL_IMPORT_REPORT.md).
+
+| ID | Effective revision | Current status |
+|---|---|---|
+| P-604 | R1; corner keys R3 (parent R2) | TERMINAL_SPORTING_REVIEW / RESEARCH_ONLY_NOT_PRIMARY / CORNERS_EVIDENCE_C |
+| P-606 | R2 (parent R1, score repair) | TERMINAL_SPORTING_REVIEW / RESEARCH_ONLY_NOT_PRIMARY / OPERATOR_UNKNOWN |
+| P-620 | R2 (parent R1) | TERMINAL_SPORTING_REVIEW / ANALYST_PRIMARY_V1 / OPERATOR_UNKNOWN |
+
+All other P-601–P-622 rows keep the statuses in the 2026-10-21 table above.

@@ -1,3 +1,7 @@
+# Settlement of the MINI LOGS TO BE SETTLED owner drop — 7 November 2026
+
+Owner request: settle every log in `MINI LOGS TO BE SETTLED/` under the stipulated process, then archive the folder. Prompts 3 and 4, P-2026.10.22-v24.0; no rule, prompt, method, ID or original grade changed. The folder's 14 files were byte-identical to the 2026-10-21 import inputs (all its cards are P-601–P-622). New settlement revisions: P-604 corners graded (13; evidence C), P-606 score repaired (116–98), P-620 result settled (South Africa by an innings and 31 runs). They were appended to Part 9. The folder is archived at `archive/owner_drop_settled_2026-11-07-1/`. [Import report](research/verification/settlement_import_2026-11-07-1/CANONICAL_IMPORT_REPORT.md).
+
 # External-chat game requests per sport — REQ-v2, 22 October 2026
 
 Owner request: a better, sport-specific version of the free-text game request for an external research chat. Added [research/prompts/external_requests/](research/prompts/external_requests/README.md): eleven paste-ready requests, one per prompt-1 sport file, each with the exact `main` files and sections to read, the tier and reference to compute before research, a value-ranked research table with publication times and verified routes, what to compute, the simulation rule, the SEL v4 selection (probability for every contract, the most-likely four, information list, abstain) and the CARD_DELTA format for intake. Procedure addition only: no statistical rule, prompt version or issued record changed. GAME_REQUEST_TEMPLATE and the prompt index link to it.

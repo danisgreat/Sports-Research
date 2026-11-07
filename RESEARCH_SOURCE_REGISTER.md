@@ -62,3 +62,14 @@ Declared scope: routes actually opened while settling the minis imported on 2026
 | SRC-0608 / P-619 (J1) | https://www.jleague.jp/match/j1/2026/101812/stats/ | Final, goal minutes, CK per side, playing time 95:10, attendance | Side assignment from table order (home first) |
 | SRC-0609 / no canonical event (AHL DRAFT-E06) | https://lscluster.hockeytech.com/feed/index.php?feed=gc&tab=gamesummary&game_id=1029155&key=50c2cd9b5e18e390&client_code=ahl&fmt=json | Final, goals by period, empty-net flags, start/end times | Public AHL site key; theahl.com game centre showed a stale 0–0 placeholder |
 | SRC-0610 / failures | https://api.sofascore.com/api/v1/search/all?q=Olympique%20Akbou | HTTP 403 | Algeria corners still unresolved (P-604); try LFP match sheet or Goaloo-derived pages |
+
+## Settlement revisions import — routes observed 7 November 2026
+
+Declared scope: the 2026-11-07 settlement revisions ([register CSV](research/verification/settlement_import_2026-11-07-1/SOURCE_DISCOVERY_REGISTER.csv)). Statistics only; no price, line or odds page was used.
+
+| Source ID / scope | URL actually opened | Fields observed | Limit / next route |
+|---|---|---|---|
+| SRC-0701 / P-604 (Algeria Ligue 1 corners) | https://gioscore.com/es-ben-aknoun-olympique-akbou/MDAxNDQwOTEtMjMyNDc3 | Final, goal minutes, a corners line ("8 Corners 5", home first) | Aggregator, upstream lineage unknown: pair with Futbol24 for C only; LFP match sheet for A/B |
+| SRC-0702 / P-606 (NBA preseason) | https://www.foxsports.com/nba/charlotte-hornets-vs-memphis-grizzlies-oct-16-2026-game-boxscore-106518 | Quarter linescore with totals | Header and scoreboard dates differ by a day (time zone); recap-video titles are not score sources |
+| SRC-0703 / P-620 (Test cricket) | https://arynews.tv/south-africa-complete-innings-victory-over-australia-in-2nd-test | Innings totals and margin | Check margin by arithmetic (425 − 99 − 295 = 31); cricket.com.au series page did not render its match list |
+| SRC-0704 / P-619 (J1) | https://www.jleague.jp/match/j1/2026/101812/stats/ | Final and goal minutes in readable text | CK table not in the readable text; read the rendered page |

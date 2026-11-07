@@ -1,5 +1,13 @@
 # Scoreboard: current measurement and preserved historical results
 
+## Settlement revisions 2026-11-07 (P-604, P-606, P-620; descriptive)
+
+[Import report](../verification/settlement_import_2026-11-07-1/CANONICAL_IMPORT_REPORT.md). Applies the two data repairs the 2026-10-21 retrospective proposed and settles P-620's winner call.
+- **Research-only P-601–P-611.** 26W/26L/0U, NOT_PRIMARY (P-604 corners Over 10.5 WIN / Under LOSS on evidence C).
+- **ANALYST_PRIMARY_V1 (P-612–P-622).** Unchanged: primary 11W/10L/1P, Brier 0.2041 on 21 rows. P-620's innings rows now graded on B (headline view) instead of E.
+- **P-606.** Score 116–98; no grade changed. **P-620.** Qualitative winner call (Australia) wrong; no probability, no score.
+- The 2026-10-21 section below keeps its original figures.
+
 ## Cohort retrospective 2026-10-21 (P-601–P-622; descriptive, grades unchanged)
 
 [Report](../verification/retrospective_2026-10-21/RETROSPECTIVE_REPORT.md) · [tables](../verification/retrospective_2026-10-21/COHORT_TABLES.md). Two ISO weeks, outcome-exposed, `INSUFFICIENT_EVIDENCE`.
