@@ -268,10 +268,11 @@ def id_collisions(logs=None) -> pd.DataFrame:
     logs = combined_logs() if logs is None else logs
     head = re.compile(r"^#{1,4} .{0,8}`?P-(\d{3,})`?(?: \([^)]*\))? — (.{0,60})")
     seen = {}
+    observations = []
     for path in logs:
         if not Path(path).exists():
             continue
-        for line in Path(path).read_text(encoding="utf-8", errors="replace").split("\n"):
+        for number, line in enumerate(Path(path).read_text(encoding="utf-8", errors="replace").split("\n"), 1):
             m = head.match(line)
             if not m:
                 continue
@@ -281,6 +282,11 @@ def id_collisions(logs=None) -> pd.DataFrame:
                     or re.match(r"(#|both top|original rank|retained historical|successful|\d+ under)", title):
                 continue  # result/settlement headings name the same event with its score
             key = re.sub(r"[^a-z]", "", title)[:18]
+            from ml import historical_resolution as hr
+            source = Path(path).resolve()
+            if source.is_relative_to(ROOT):
+                observations.append(dict(source_path=source.relative_to(ROOT).as_posix(), line_number=number,
+                                         alias_id=f"P-{m.group(1)}", heading_sha256=hr._sha(line.encode())))
             seen.setdefault(f"P-{m.group(1)}", {}).setdefault(key, (Path(path).name, title))
     stop = {"women", "live", "hold", "pregame", "forecast", "preseason", "regular", "season", "league", "match",
             "round", "final", "game", "card", "with", "from", "late", "import", "original", "united", "city"}
@@ -303,15 +309,19 @@ def id_collisions(logs=None) -> pd.DataFrame:
         if len(groups) > 1:
             rows.append(dict(card=c, events=len(groups),
                              titles=" || ".join(f"{g['titles'][0][1]} ({g['titles'][0][0]})" for g in groups)))
-    return pd.DataFrame(rows, columns=["card", "events", "titles"])
+    result = pd.DataFrame(rows, columns=["card", "events", "titles"])
+    from ml import historical_resolution as hr
+    resolved = hr.resolved_aliases(observations, ROOT)
+    result["resolution_status"] = np.where(result.card.isin(resolved), "RESOLVED_CHRONOLOGICAL_BINDING", "UNRESOLVED")
+    return result
 
 
 def inventory_rows(path: Path) -> list[dict]:
     """Read an admitted import layout. Unknown layouts/roles fail instead of dropping cards."""
     frame = pd.read_csv(path, dtype=str, keep_default_na=False)
-    if "canonical_id" in frame.columns:
+    if "canonical_id" in frame.columns or {"event_id", "key", "revision_id"} <= set(frame.columns):
         from ml.evaluation import effective_settlement
-        frame = effective_settlement.revised_frame(path, frame, ROOT).drop(columns=["revision_chain", "revision_source"])
+        frame = effective_settlement.revised_frame(path, frame, ROOT).drop(columns=["revision_chain"])
     columns = set(frame.columns)
     local = {"canonical_id", "local_key", "probability_role", "original_rank", "original_contract",
              "original_probability", "sporting_grade", "effective_revision", "evidence_class", "note"}
@@ -336,6 +346,7 @@ def inventory_rows(path: Path) -> list[dict]:
         row = dict(event="", q=math.nan, baseline=math.nan, local_key="", probability_role="",
                    effective_revision="", evidence="", record_status="IMPORTED_CONDITIONAL_SPORTING_REVIEW",
                    source=f"{_label(path)}:{line}")
+        row["revision_source"] = r.get("revision_source", "")
         if layout == "local":
             role = r["probability_role"]
             primary = role == "ANALYST_PRIMARY_V1" or role.startswith("ANALYST_PRIMARY_V1 ")
@@ -346,7 +357,7 @@ def inventory_rows(path: Path) -> list[dict]:
             if primary and rank != "-" and (not rank.isdigit() or int(rank) < 1):
                 raise ValueError(f"Invalid original primary rank at {path}:{line}")
             baseline = re.fullmatch(r"BASELINE_P\s+([01](?:\.\d+)?)", r["note"].strip())
-            row.update(card=r["canonical_id"], rank=int(rank) if primary and rank.isdigit() else 0,
+            row.update(card=r["canonical_id"], rank=int(rank) if rank.isdigit() else 0,
                        contract=r["original_contract"], event=events.get(r["canonical_id"], ""),
                        grade=_grade(r["sporting_grade"]), p=_p(r["original_probability"]),
                        baseline=_p(baseline.group(1)) if baseline else math.nan,
@@ -357,7 +368,9 @@ def inventory_rows(path: Path) -> list[dict]:
             kind = r["original_rank_type"]
             row.update(card=r["event_id"], rank=order.get(kind, 0), contract=r["original_contract"], event=r["event"],
                        grade=_grade(r["sporting_grade"]), p=_p(r["original_analyst_p"]), grade_basis=kind,
-                       cohort="LEGACY_ORIGINAL_RANK" if kind in order else "LEGACY_ANALYST_NOT_PRIMARY")
+                       cohort="LEGACY_ORIGINAL_RANK" if kind in order else "LEGACY_ANALYST_NOT_PRIMARY",
+                       effective_revision=r.get("effective_revision", ""), evidence=r.get("evidence_class", ""),
+                       local_key=r.get("local_key", r.get("key", "")))
         else:
             row.update(card=r["id"], rank=int(r["rank"]), contract=r["proposition"], grade=_grade(r["grade"]),
                        p=_p(r["p_numeric"] if layout == "supplied" else r["p"]),
@@ -392,7 +405,8 @@ def build_rows(rank_log: Path = RANK_LOG, *, inventories=None, logs=None) -> tup
     recon["grade_eff"] = recon.literal_grade.map(_grade)
     # An issued alias is not a unique event. Never transfer a settlement across collided P-IDs.
     logs = combined_logs() if logs is None else logs
-    collided = set(id_collisions(logs).card)
+    collisions = id_collisions(logs)
+    collided = set(collisions[collisions.resolution_status == "UNRESOLVED"].card)
     recon = recon[~recon.id.isin(collided)]
     merged = R.merge(recon[["id", "rank", "grade_eff"]].rename(columns={"id": "card"}).assign(rank=lambda d: d["rank"].astype(int)),
                      on=["card", "rank"], how="left")
@@ -407,6 +421,14 @@ def build_rows(rank_log: Path = RANK_LOG, *, inventories=None, logs=None) -> tup
         all_cards = {r["card"] for r in imported}
         # Local-key imports carry the original probability role. A refreshed rank log must not erase it.
         for r in imported:
+            if r["card"] in have and r["cohort"].startswith("LEGACY_") and r["revision_source"]:
+                match = (R.card == r["card"]) & (R["rank"] == r["rank"]) & (R.contract == r["contract"])
+                if match.sum() != 1 or not np.isclose(R.loc[match, "p"].iloc[0], r["p"], equal_nan=True, rtol=0, atol=1e-12):
+                    raise ValueError(f"Legacy revision does not match the preserved rank/probability: {r['card']}: {r['contract']}")
+                R.loc[match, "literal_grade"] = R.loc[match, "grade"]
+                for key in ("grade", "cohort", "local_key", "effective_revision", "evidence", "revision_source"):
+                    R.loc[match, key] = r[key]
+                R.loc[match, "grade_basis"] = "VALIDATED_LEGACY_SETTLEMENT_REVISION:" + r["revision_source"]
             if r["card"] not in have or r["cohort"] not in {"ANALYST_PRIMARY_V1", "RESEARCH_ONLY_NOT_PRIMARY"}:
                 continue
             match = (R.card == r["card"]) & (R["rank"] == r["rank"]) & (R.contract == r["contract"])
@@ -425,8 +447,12 @@ def build_rows(rank_log: Path = RANK_LOG, *, inventories=None, logs=None) -> tup
         owners.update({card: path for card in all_cards})
         extra.extend(r for r in imported if r["card"] in cards)
     R = pd.concat([R, pd.DataFrame(extra)], ignore_index=True)
-    R["identity_status"] = np.where(R.card.isin(collided), "COLLIDING_ALIAS_GRADE_LINK_UNRESOLVED", "NO_DETECTED_ALIAS_COLLISION")
-    R["literal_grade"] = R.grade
+    from ml import historical_resolution as hr
+    R = hr.recover_contracts(R, ROOT)
+    R["literal_grade"] = R.get("literal_grade", R.grade).fillna(R.grade)
+    R = hr.apply_row_revisions(R, ROOT)
+    R["identity_status"] = np.where(R.card.isin(collided), "COLLIDING_ALIAS_GRADE_LINK_UNRESOLVED",
+                                    np.where(R.card.isin(set(collisions.card)), "RESOLVED_CHRONOLOGICAL_BINDING", "NO_DETECTED_ALIAS_COLLISION"))
     R.loc[R.card.isin(collided), "grade"] = "UNRESOLVED"
     # Imported P-577..P-582 rows also exist in the rank log; prefer the rank-log row and record agreement.
     R["n"] = R.card.map(card_num)
@@ -441,12 +467,16 @@ def build_rows(rank_log: Path = RANK_LOG, *, inventories=None, logs=None) -> tup
     R["family"] = R.contract.map(classify_family)
     dates = card_dates(logs)
     dates.update(fallback_dates(R, dates, logs))
+    dates.update(hr.event_dates(ROOT))
     R["date"] = R.card.map(lambda c: dates.get(c, (None, ""))[0])
     R["date_basis"] = R.card.map(lambda c: dates.get(c, (None, "NOT_FOUND"))[1])
     R["era"] = R.date.map(era_of)
     R["week"] = [iso_week(pd.Series([pd.Timestamp(d)])).iloc[0] if isinstance(d, str) else "UNDATED" for d in R.date]
     R["y"] = R.grade.map({"WIN": 1.0, "LOSS": 0.0})
-    R["counted_slot"] = R["rank"].isin([1, 2]) & ~R.informational_r2 & ~R.cohort.isin(NOT_PRIMARY)
+    administrative = R.record_status.fillna("").str.contains(
+        r"NO FORECAST|NO SCORED TRIAL|NOT ISSUED|RESERVED|NO ACTION|CONDITION NOT MET|CANONICAL ALIAS|BLOCKED AT ISSUE", case=False)
+    R["record_disposition"] = np.where(administrative | R.contract.fillna("").str.strip().eq(""), "NOT_SCORABLE_OR_MISSING_PROPOSITION", "RETAINED_CONTRACT")
+    R["counted_slot"] = R["rank"].isin([1, 2]) & ~R.informational_r2 & ~R.cohort.isin(NOT_PRIMARY) & ~administrative & R.contract.fillna("").str.strip().ne("")
     return R.sort_values(["n", "rank"]).reset_index(drop=True), diff
 
 
@@ -590,7 +620,7 @@ def write(out: dict, folder: Path, receipt: dict) -> None:
     tmp.mkdir(parents=True)
     cols = ["card", "rank", "cohort", "era", "date", "date_basis", "week", "sport", "family", "event", "contract", "p", "q", "identity_status", "literal_grade",
             "baseline", "grade", "counted_slot", "informational_r2", "record_status", "grade_basis", "source"]
-    cols += [c for c in ("local_key", "probability_role", "effective_revision", "evidence") if c in out["rows"]]
+    cols += [c for c in ("local_key", "probability_role", "effective_revision", "evidence", "record_disposition", "contract_recovery_source") if c in out["rows"]]
     out["rows"][cols].to_csv(tmp / "CARD_ROWS.csv", index=False, lineterminator="\n")
     out["coverage"].to_csv(tmp / "CANONICAL_COVERAGE.csv", index=False, lineterminator="\n")
     sections = [("Coverage and primary scores by cohort", out["cohorts"]), ("Slots by cohort", out["slots_cohort"]),
@@ -603,7 +633,7 @@ def write(out: dict, folder: Path, receipt: dict) -> None:
                 ("Historical ID collisions in original headings", out["collisions"])]
     text = ["# Full-history card tables (generated)", "",
             f"Generated by `python -m ml card-history` — receipt below. Rows: {len(out['rows'])}; cards: {out['rows'].card.nunique()}.",
-            "Descriptive and outcome-exposed; literal original ranks and grades; nothing re-graded.",
+            "Descriptive and outcome-exposed; original ranks and probabilities preserved; dated, source-bound settlement corrections applied explicitly.",
             "Pooled historical tables span different policies and timing strata; they do not validate the current method.",
             "Research-only analyst probabilities are retained as diagnostics and excluded from primary scores and calibration.",
             "Missing issue/known-at evidence is not inferred from import time or event date. No prospective eligibility is created.", ""]
@@ -640,6 +670,8 @@ def main(argv=None):
     if stale:
         raise ValueError(f"settlement revisions match no imported row (stale or mistyped): {stale}")
     inputs = [args.rank_log, RECON, STATUS] + inventories + logs + es.revision_files(ROOT)
+    from ml import historical_resolution as hr
+    inputs += hr.input_paths(ROOT)
     inputs += [path.parent / "LOCAL_ID_MAPPING.csv" for path in inventories]
     hashes = {f: p.digest(f.read_bytes()) if f.exists() else "MISSING" for f in inputs}
     R, diff = build_rows(args.rank_log, inventories=inventories, logs=logs)

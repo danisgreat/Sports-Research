@@ -28,3 +28,8 @@ MLB: official native849817 feed identifies Game5,3–1, distinct from Game4 nati
 Soccer: official LFF final/goal times, Footlive FT/secondhalf derivation, Promedios corner table and ScoreMondo exact statistics were tested. Minor-competition scoreboards do not imply corners or XIs. Old LigaPremier-FMF affiliate route is retired. Tennis: ATP archive is blocked even though its root is allowed; two permitted set-score pages were tested instead.
 
 AFL season table, NRL draw, WorldRugby tournaments, NFL scores and Cricsheet download index were fetched. They provide starting routes, not a claim that all requested event fields are already verified. Some minor competitions have only a discovery route; the catalogue deliberately retains that gap instead of claiming universal filter-free accurate coverage.
+
+
+## Historical evidence update ·9November2026
+
+The catalogue now includes236 route rows: the prior209 plus27 exact-event field routes. The [historical audit](../verification/historical_resolution_2026-11-09-1/REPORT.md) records139 additional exactURL checks,103 retrieval attempts including supported renderer captures,40 field cases and every remaining limitation. The latest combined access table has 620 unique URLs. Earlier486-check figures above describe R3. An admitted conditional table or threshold-invariant bound is not field-owner/independent-quorum certification. Some rediscovered pages were stale despite promising search snippets; opened content governs.

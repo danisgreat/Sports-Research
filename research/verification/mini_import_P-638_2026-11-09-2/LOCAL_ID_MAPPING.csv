@@ -1,0 +1,2 @@
+source_mini,local_key,native_identity,event,canonical_id,disposition,core_bytes,core_sha256,frozen_source_sha256,import_time
+HIST20260904,LOCAL-HIST20260904-G0001,AFL:9022,Australian Rules/AFL — Geelong Cats v Carlton · 2026-09-04,P-638,NEW_DISTINCT_HISTORICAL_EVENT_REUSED_ALIAS_CHRONOLOGICAL,15144,f1ffaa856a07612478dcbda8cbf7429d0131b17472b433d878d7b1da25ec7754,a01292338a3469df58efaf257a3925e78d351208b6a8dc975ba1d078bc7723ac,2026-11-08T22:29:01.710709+00:00

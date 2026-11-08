@@ -15,6 +15,7 @@ from __future__ import annotations
 import argparse
 import csv
 import io
+import re
 from pathlib import Path
 
 import pandas as pd
@@ -29,6 +30,24 @@ KEY = ("canonical_id", "original_rank", "original_contract")
 
 class RevisionError(ValueError):
     pass
+
+
+def normalize_inventory(frame: pd.DataFrame) -> pd.DataFrame:
+    """Admit the preserved legacy event/key layout without rewriting its source file."""
+    if "canonical_id" in frame.columns:
+        return frame.copy()
+    if not {"event_id", "key", "revision_id", "original_contract", "original_rank_type", "sporting_grade"} <= set(frame.columns):
+        return frame.copy()
+    out = frame.copy()
+    versions = out.revision_id.str.extract(r"-R(\d+)-", expand=False)
+    if versions.isna().any() or out.key.duplicated().any():
+        raise RevisionError("LEGACY_REVISION_ID: unique source keys and explicit -R<n>- versions required")
+    out["canonical_id"] = out.event_id
+    out["local_key"] = out.key
+    out["original_rank"] = out.original_rank_type
+    out["effective_revision"] = "revision-" + versions
+    out["evidence_class"] = out.get("source_evidence_class", "X")
+    return out
 
 
 def _number(revision: str) -> int:
@@ -96,7 +115,7 @@ def apply_revisions(original: pd.DataFrame, revisions: pd.DataFrame) -> pd.DataF
 def effective_rows(root=ROOT) -> pd.DataFrame:
     """Every local-layout original row with its validated revisions applied (the authoritative effective view)."""
     root = Path(root)
-    frames = [pd.read_csv(p, dtype=str, keep_default_na=False).assign(inventory=str(p.relative_to(root).as_posix()))
+    frames = [normalize_inventory(pd.read_csv(p, dtype=str, keep_default_na=False)).assign(inventory=str(p.relative_to(root).as_posix()))
               for p in original_inventories(root)]
     frames = [f for f in frames if "canonical_id" in f.columns]
     original = pd.concat(frames, ignore_index=True) if frames else pd.DataFrame()
@@ -107,6 +126,7 @@ def effective_rows(root=ROOT) -> pd.DataFrame:
 
 def revised_frame(path: Path, frame: pd.DataFrame, root=ROOT) -> pd.DataFrame:
     """One inventory's rows with the revisions that target its keys (used by card_history for each inventory)."""
+    frame = normalize_inventory(frame)
     revisions = [read_revisions(p, root) for p in revision_files(root)]
     revisions = pd.concat(revisions, ignore_index=True) if revisions else pd.DataFrame(columns=REVISION_FIELDS)
     if not revisions.empty and "canonical_id" in frame.columns:
@@ -122,7 +142,7 @@ def unmatched_revisions(root=ROOT) -> list[tuple]:
     root = Path(root)
     keys = set()
     for p in original_inventories(root):
-        f = pd.read_csv(p, dtype=str, keep_default_na=False)
+        f = normalize_inventory(pd.read_csv(p, dtype=str, keep_default_na=False))
         if "canonical_id" in f.columns:
             keys |= set(map(tuple, f[list(KEY)].to_numpy()))
     out = []

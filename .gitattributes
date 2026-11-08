@@ -69,3 +69,12 @@ research/verification/settlement_import_2026-11-09_shadows/** -text
 research/release_gates/** -text
 research/active_minis/20261109R3NEXT.md -text
 research/active_minis/20261022F6K3OJNO_SETTLEMENT.md -text
+
+# Historical bindings preserve the already-published source bytes, including mixed/CRLF parts.
+"prediction logs/PREDICTION_LOG_COMBINED*.md" -text
+archive/historical_resolution_2026-11-09_r4/** -text
+research/historical_resolution/** -text
+research/historical_resolution/EVENT_DATES.csv -text whitespace=cr-at-eol
+research/verification/historical_resolution_2026-11-09-1/** -text
+research/verification/mini_import_P-638_2026-11-09-2/** -text
+research/verification/settlement_import_2026-11-09_historical/** -text

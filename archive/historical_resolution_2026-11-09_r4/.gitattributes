@@ -1,0 +1,71 @@
+# Preserve forensic originals and generated evidence exactly across Windows clones.
+archive/superseded_2026-10-14-3/** -text
+archive/superseded_2026-10-14-4/** -text
+archive/superseded_2026-10-14-5/** -text
+archive/superseded_2026-10-14-6/** -text
+archive/rank_log_2026-10-16/** -text
+archive/superseded_2026-10-16-8/** -text
+research/verified_history/** -text
+research/cycle_releases/** -text
+research/verification/forecast_cycle_2026-10-16/** -text
+research/model_shadow/** -text
+archive/consolidation_2026-11-07/archived/PROMPT_1_SUPPLIED_FIRST_EXTENDED_2026-10-14.md -text
+# LEARN-v1 append-only and hash-chained CSVs: keep exact LF bytes on every clone.
+research/learning_store/** -text
+research/training_releases/** -text
+research/prospective/** -text
+research/model_registry/** -text
+research/learning_status/** -text
+research/training_candidates/** -text
+research/verification/retrospective_2026-10-21/** -text
+# CHAT-EXEC-v1: hashed captures, returned attempts and settlement feedback keep exact bytes on every clone.
+research/chat_captures/** -text
+research/cycle_attempts/** -text
+research/cycle_feedback/** -text
+archive/superseded_2026-10-17-1/** -text
+research/verification/framework_change_2026-10-17-1/** -text
+archive/superseded_2026-10-17-2/** -text
+research/verification/framework_change_2026-10-17-2/** -text
+archive/superseded_2026-10-17-3/** -text
+research/verification/framework_change_2026-10-17-3/** -text
+archive/superseded_2026-10-17-4/** -text
+research/verification/framework_change_2026-10-17-4/** -text
+archive/superseded_2026-10-17-5/** -text
+research/verification/framework_change_2026-10-17-5/** -text
+archive/superseded_2026-10-17-6/** -text
+research/verification/framework_change_2026-10-17-6/** -text
+
+# Exact custody for the history repair and Part 8-to-9 rollover.
+archive/history_reporting_2026-10-21-1/** -text
+research/verification/history_reporting_2026-10-21-1/** -text
+research/verification/combined_rollover_2026-10-21-1/** -text
+"prediction logs/PREDICTION_LOG_COMBINED_8.md" -text
+"prediction logs/PREDICTION_LOG_COMBINED_9.md" -text
+GAME_LOG_STATUS_CURRENT.md -text
+
+# v23.0 (ENV-v2 / MLSCOPE-v2): archived originals, received minis, the active mini and pregame receipts keep exact bytes.
+archive/superseded_2026-10-22-1/** -text
+research/verification/framework_change_2026-10-22-1/** -text
+archive/superseded_2026-10-22-2/** -text
+research/verification/framework_change_2026-10-22-2/** -text
+research/verification/review_2026-10-22_framework_revamp/** -text
+research/adjustment_ledger/** -text
+research/effect_tables/** -text
+research/competition_parameters/** -text
+research/verification/review_2026-10-21_league_neutral_ml_sim/** -text
+research/active_minis/received/** -text
+research/active_minis/20261022F6K3OJNO.md -text
+research/pregame/** -text
+
+# CR-2026.11.09-R3: exact raw source custody and receipt/export hashes across clones.
+archive/integrity_2026-11-09_r3/** -text
+research/source_routes/** -text
+research/verification/framework_change_2026-11-09-3/** -text
+research/verification/mini_import_P-584_settlement_2026-11-09-1/** -text
+research/verification/mini_import_P-623_P-628_2026-11-09-1/** -text
+research/verification/mini_import_P-629_P-636_2026-11-09-1/** -text
+research/verification/mini_import_P-637_2026-11-09-1/** -text
+research/verification/settlement_import_2026-11-09_shadows/** -text
+research/release_gates/** -text
+research/active_minis/20261109R3NEXT.md -text
+research/active_minis/20261022F6K3OJNO_SETTLEMENT.md -text

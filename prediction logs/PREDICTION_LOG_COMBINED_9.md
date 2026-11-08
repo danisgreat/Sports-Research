@@ -3992,3 +3992,804 @@ Parent: ORIGINAL_DIAGNOSTIC_CARD / earlier PENDING_EVENT state. Effective 2026-1
 **14. Honesty.** Original numbers and labels preserved; no causal shares, retroactive publication, operator terms or baseline invented. Source conflicts retained. Preservation/disclosure PASS; full information closure INCOMPLETE.
 
 <!-- END RESEARCH ADDENDUM P-584 2026-11-09-settlement-revision-1 -->
+
+
+<!-- BEGIN CANONICAL RESEARCH P-638 -->
+## Canonical retention P-638 · LOCAL-HIST20260904-G0001
+
+Original alias P-272 mapped chronologically to this distinct event. Original core follows byte for byte; no forecast reissued.
+
+# P-272 — Geelong Cats vs Carlton — 2026 AFL Finals Elimination Final
+
+## 1. Frozen identity, state and contracts
+
+- **Canonical ID:** `P-272`
+- **Sport:** Australian rules football
+- **Competition:** 2026 Toyota AFL Premiership, Elimination Final
+- **Event:** Geelong Cats vs Carlton
+- **Venue:** Melbourne Cricket Ground, Melbourne
+- **Scheduled bounce:** Friday 4 September 2026, 7:40 pm AEST
+- **Information/state cutoff:** **2026-09-04 19:33:09 AEST**
+- **Cutoff invariant:** PASS — approximately 6 minutes 51 seconds before scheduled bounce
+- **Game state:** `PREGAME`
+- **AFL current-state evidence:** official AFL live article headline stated final teams were in; no game score had begun in the frozen source state
+- **Operator:** not supplied
+- **Draw / extra-time / settlement terms:** `UNKNOWN_DEFINITION`; operator-specific terms were not supplied
+- **Retrospective:** **NO**
+
+### User-supplied exact slate
+
+| Contract ID | Contract | Ordinary full-game geometry |
+|---|---|---|
+| `P-272-C01` | **Geelong +11.5** | Wins if Geelong wins/draws or loses by 1–11 |
+| `P-272-C02` | **Carlton -11.5** | Wins if Carlton wins by 12+ |
+| `P-272-C03` | **Combined Over 165.5** | Wins at 166+ total points |
+| `P-272-C04` | **Combined Under 165.5** | Wins at 165 or fewer total points |
+
+---
+
+## 2. Governing AFL process applied
+
+The active AFL framework requires the forecast to be built from the current scoring chain rather than from raw points averages or head-to-head alone:
+
+`clearance / turnover / intercept -> inside-50 -> scoring-shot creation and quality -> conversion`
+
+Key controls applied:
+- current shot-chain and territory evidence outranks old scoring/H2H;
+- winner and handicap are separate thresholds;
+- conversion is less stable than territory/shot creation;
+- low/close, low/separation, high/close and high/separation branches are all tested;
+- a streak is used only after assessing whether its mechanism persists;
+- the latest meeting is reconciled rather than copied forward automatically;
+- weather does not create an automatic Under;
+- every contract is derived from one coherent game corridor.
+
+---
+
+## 3. Current selection and availability
+
+### Geelong
+Official club selection named:
+- **IN:** Max Holmes, Mark Blicavs, Oli Wiltshire
+- **OUT:** Jack Martin, Sam De Koning, Jhye Clark, all omitted
+- Holmes was named for his first AFL game since Round 19.
+- Blicavs returns after being managed in Round 24.
+
+**Mechanism impact:** Holmes restores high-end run and transition speed, while Blicavs adds structural flexibility around stoppage, wing and defensive coverage. Holmes' layoff also adds uncertainty because his full-match workload and sharpness cannot simply be assumed.
+
+### Carlton
+Official club selection named:
+- **IN:** Wade Derksen
+- **OUT:** Nick Haynes, injured
+- **Will Hayward:** unavailable after failing to get through main training
+
+**Mechanism impact:** losing Haynes removes an experienced defensive option against a Geelong forward group with multiple tall/medium scoring threats. Hayward's absence removes another forward option. Carlton otherwise retained a settled side.
+
+### Final-team limitation
+The official AFL live article confirmed that final teams were in, but its static text did not expose a complete readable late-change/interchange table in the frozen capture. Therefore **no additional late change is asserted** beyond the official club selections above.
+
+---
+
+## 4. Form and regime audit
+
+### Geelong
+- Entered finals on **six consecutive wins by an average margin of 35 points**.
+- Important qualification: the AFL's own preview notes those six wins came against teams now out of contention.
+- In the second half of the season, Geelong had **three losses from three against top-six opponents**, plus the loss to Carlton.
+- Geelong's current process profile is elite: **1st in forward-half intercepts, inside-50 differential and points from the forward half**.
+- Jeremy Cameron returned in Round 24 after missing five consecutive wins through a shoulder injury and had 22 disposals. Shannon Neale had 47 goals for the season and Ollie Henry 42.
+
+**Interpretation:** the six-win streak is real but cannot be carried forward as a simple "hot team" coefficient. Its competition-quality limitation is material. The stronger reusable signal is Geelong's persistent ability to win territory and lock the ball in its front half.
+
+### Carlton
+- After a 1–8 start, the Blues produced an **11–1–2 record across the next 14 matches** during their revival.
+- In the wildcard win over Melbourne, Carlton kicked **nine goals to three after quarter-time**.
+- Since Josh Fraser took charge, Carlton had been the **second-stingiest side**, conceding about **75 points per game across 15 matches**.
+- During that revival period, Carlton ranked **4th for defensive-50-to-inside-50 against** and **3rd for scores per inside-50 against**.
+- Sam Walsh produced 39 disposals, seven clearances, seven score involvements and five inside-50s against Melbourne; his five-final career disposal average was 32.4.
+
+**Interpretation:** Carlton's turnaround has a tangible mechanism: stronger possession control, transition and defensive efficiency rather than a bare win streak. That makes the Blues a genuine winner/separation threat.
+
+---
+
+## 5. Most-recent-meeting reconciliation
+
+**Round 12, 2026 at the MCG: Carlton 12.16 (88) defeated Geelong 12.12 (84). Total: 172.**
+
+The relevant mechanism was not merely the four-point final margin:
+- Geelong led by 20 points midway through the second quarter.
+- Carlton changed the shape of the game by moving the ball with more speed and changing angles.
+- In the decisive late sequence Carlton won the clearance, went deep inside 50 and Patrick Cripps converted the response.
+
+### What persists
+Carlton's possession/transition identity and ability to escape a high press are still live and are directly relevant against Geelong's forward-half pressure.
+
+### What changed
+- Geelong now has Holmes and Blicavs back in the selected side.
+- Carlton is without Haynes and Hayward.
+- Geelong has had the week off; Carlton comes in on a six-day break after the wildcard final.
+- Geelong's current forward-half territory profile remains competition-leading.
+
+**Conclusion:** the May result is a real Carlton matchup warning, but it is not sufficient to project Carlton to a 12+ win automatically.
+
+---
+
+## 6. Weather and surface gate
+
+- Current Melbourne conditions at the freeze were cloudy and cool.
+- BOM's Melbourne/Olympic Park observation at 5:40 pm recorded approximately **15.2°C, northerly wind 24 km/h with gusts to 35 km/h, and 0 mm rain since 9 am**.
+- The broader Melbourne forecast was mostly cloudy and breezy.
+- A severe-wind warning existed for parts of Victoria, but the warning text's damaging-wind timing/locations did **not** justify treating the MCG game itself as a damaging-wind event at the pre-game cutoff.
+- **Current MCG turf/surface condition:** `NOT independently verified from an official current surface report`.
+
+**Forecast implication:** some breeze increases kicking/ball-use variance, but the evidence does **not** support a weather-driven automatic Under.
+
+---
+
+## 7. Qualitative game corridor
+
+Because no fitted or validated numerical model exists, this is a qualitative scenario corridor rather than a published probability distribution.
+
+### Lower-scoring / control branch
+**Approximate total family: 145–160**
+- Carlton's improved defensive-50 control reduces clean Geelong shots.
+- Finals pressure and possession control slow repeat scoring chains.
+- Geelong still wins enough territory to prevent a large Carlton separation.
+
+### Central branch
+**Approximate total family: 158–174**
+- Geelong wins more forward-half territory.
+- Carlton still generates transition exits and periods of possession control.
+- The margin remains mostly within about 10 points either way, with a slight Geelong game-winner lean.
+
+### High-scoring branch
+**Approximate total family: 176–190+**
+- Geelong pressure creates repeated short-field shots and Carlton also breaks the press into open transition.
+- Carlton's loss of Haynes is exposed by Geelong's Cameron/Neale/Henry forward mix.
+- Conversion runs above ordinary expectation.
+
+### Carlton separation / kill path
+Carlton -11.5 becomes the leading outcome if Carlton repeatedly beats Geelong's first pressure layer, wins the important centre-clearance moments and forces the Cats into inefficient chase/transition defence, while Geelong's weaker record against high-end opposition proves more representative than its six-win close to the season.
+
+### Geelong separation branch
+Geelong can also create a 12+ margin if its league-leading forward-half intercept and inside-50 profile overwhelms Carlton's exits and Carlton's depleted defensive personnel cannot absorb the repeat-entry load.
+
+---
+
+## 8. Ranked forecast — exact supplied contracts
+
+| Rank | Contract | Forecast status | Why it ranks here |
+|---:|---|---|---|
+| **1** | **Geelong +11.5** | **BEST / strongest relative lean** | The most robust contract across the central game tree. It survives a Geelong win, a draw, and Carlton wins by up to 11. Carlton's current regime and same-venue H2H make a Blues win plausible, but they do not make a 12+ separation the central requirement. Geelong's territory profile, week off and returning Holmes/Blicavs provide several independent paths to staying inside the cushion. |
+| **2** | **Under 165.5** | **LEAN — lower confidence than Rank #1** | Carlton's defensive revival and elimination-final pressure support a lower-scoring path. However 165.5 sits inside the central corridor, the most recent H2H totalled 172, Geelong's forward-half scoring engine is strong and Carlton is missing Haynes. This is therefore only a modest directional edge, not a high-confidence Under. |
+| **3** | **Over 165.5** | **LIVE ALTERNATIVE / slightly below Under** | The Over has a credible route through Geelong repeat entries, Carlton transition scoring and the weakened Carlton defensive matchup. It ranks just below the Under because Carlton's recent defensive control and finals context modestly favour a more compressed scoring environment. The total threshold remains central and uncertain. |
+| **4** | **Carlton -11.5** | **LEAST LIKELY of supplied rows** | Carlton can absolutely win, but this contract specifically needs 12+ points. The strongest Carlton evidence supports matchup competitiveness and a viable winner branch more clearly than it supports sustained separation. Geelong +11.5 and Carlton -11.5 are not equivalent to the winner call. |
+
+---
+
+## 9. Potential game winner
+
+### **Geelong Cats — narrow lean**
+
+The winner call is deliberately weaker than Rank #1 Geelong +11.5.
+
+The deciding factors are:
+1. Geelong's league-leading forward-half intercept, inside-50 differential and forward-half scoring structure.
+2. A week off versus Carlton's six-day turnaround.
+3. Holmes and Blicavs returning.
+4. Carlton's Haynes/Hayward absences.
+5. Carlton's transition and defensive revival remains a strong adverse branch, which is why the winner call is **narrow rather than strong**.
+
+**Representative central score shape only, not a model projection:** Geelong by roughly one to two goals, with the total clustering near the 165.5 threshold.
+
+---
+
+## 10. Evidence quality and limitations
+
+- **Identity / venue / start:** HIGH — official AFL.
+- **Selected-team changes:** HIGH — official club sources.
+- **Final-team status:** HIGH for "final teams in"; MEDIUM for exact late-change detail because the static live article did not render the full final team table.
+- **Current tactical/form profile:** HIGH/MEDIUM-HIGH — official AFL analytical preview and official match centre.
+- **Weather:** HIGH for observed Melbourne/Olympic Park conditions; current MCG turf condition not independently verified.
+- **Full L5/L10/L15/L20 exact threshold hit-rate reconstruction:** **NOT COMPLETED from an official stat feed before the pre-bounce cutoff.** No hit rates are invented. Current-regime summaries and the most recent meeting are used descriptively instead.
+- **Operator settlement rules:** UNKNOWN.
+- **Validated probabilities / edge / ROI / staking:** NOT AVAILABLE / NOT AUTHORISED.
+
+---
+
+# SOURCE REGISTER — P-272
+
+## A. Google Drive governing framework, read-only
+1. `PREDICTION_LOG_COMBINED_2.md` — active canonical log; P-272 next ID at opening; probability/value gates and append rules.
+2. `README.md` — active workflow, source order, pre-game cutoff, corridor and settlement workflow.
+3. `LEARNING_REGISTER.md` — current v3.4 method state and promoted controls, including AFL scoring-chain/coherence/streak/most-recent-meeting controls.
+4. `RULES_AFL.md` — AFL identity, participant, territory, scoring-chain, context, branch and source rules.
+5. `MODEL_AND_DATA_SPEC.md` — method-version history through MDS-2026.09.04-v3.4 and numerical publication boundary.
+
+**Drive modification:** NONE.
+
+## B. Official AFL / club sources
+1. AFL — Finals week-two fixture:  
+   https://www.afl.com.au/news/1597385/finals-fixture-ticket-details-schedule-confirmed-for-week-two-of-the-2026-finals-series
+
+2. AFL — Elimination Final mega-preview, current form, tactical rankings, H2H, player context:  
+   https://www.afl.com.au/news/1600128/mega-preview-cats-v-blues-stats-that-matter-who-wins-and-why
+
+3. AFL — Current live pre-game article confirming final-team state:  
+   https://www.afl.com.au/news/1601434/live-cats-take-on-hot-blues-in-elimination-final-blockbuster-at-the-g
+
+4. AFL — Round 12 Carlton v Geelong official match centre and match report:  
+   https://www.afl.com.au/afl/matches/8140
+
+5. Geelong Cats — official elimination-final team selection:  
+   https://www.geelongcats.com.au/news/2119044/afl-team-selection-cats-make-three-changes-for-elimination-final
+
+6. Carlton — official elimination-final team news:  
+   https://www.carltonfc.com.au/news/2119507/afl-team-news-one-change-for-cats-elimination-final
+
+## C. Weather
+1. Australian Bureau of Meteorology — Melbourne (Olympic Park) observations / current observation feed:  
+   https://www.bom.gov.au/products/IDV60801/IDV60801.95936.shtml
+
+2. Current Melbourne forecast card retrieved in-session at 19:31 AEST, including current cloudy conditions and the contemporaneous BOM severe-weather warning text.
+
+---
+
+# NEXT-QUERY OPERATING RULE
+
+1. Keep every incomplete/unsettled card in the **UNSETTLED / INCOMPLETE QUEUE** at the top.
+2. On the next query, state-check P-272 first.
+3. If P-272 is final, perform settlement only unless the user explicitly asks for retrospective analysis; the user explicitly said **do not do a retrospective yet** for this card.
+4. Once settled, move P-272 from the top unsettled queue into the normal settled chronology.
+5. Preserve the frozen forecast unchanged.
+6. Record every source used for settlement or any future analysis.
+7. Re-read the current Drive method/version before issuing the next canonical local card.
+8. Next local forecast ID: **P-273**, subject to reconciliation with the current Drive canonical snapshot.
+
+---
+
+
+<!-- END CANONICAL RESEARCH P-638 -->
+
+<!-- BEGIN RESEARCH ADDENDUM P-638 2026-11-09-historical -->
+# Historical local settlement: Geelong–Carlton
+
+Local key `LOCAL-HIST20260904-G0001`. At settlement stage canonical ID `NOT_ASSIGNED / PROMPT_4_IMPORT`. Original literal alias P-272 is retained; Osaka–Siniakova is the earlier event using that alias. Original core SHA256 `f1ffaa856a07612478dcbda8cbf7429d0131b17472b433d878d7b1da25ec7754`. Original declared cutoff2026-09-04 19:33:09AEST; start19:40AEST. Verified external pre-start publication and original captures NOT_RECOVERED; no prospective eligibility.
+
+**R1. Original prediction.** Rank1 Geelong+11.5; rank2 Under165.5; rank3 Over165.5; rank4 Carlton−11.5. Qualitative/uncalibrated, no issued numeric p recovered. Literal original enclosed unchanged at import.
+
+**R2. Verified final.** AFL match9022, first elimination final, MCG,4September2026: Geelong14.23(107), Carlton11.8(74). Official AFL match centre and Blueseum score table agree. Quarter cumulative scores Geelong11,34,73,107; Carlton27,37,50,74. Quarter increments11+23+39+34=107 and27+10+13+24=74. Half-time34–37; final total181, marginGeelong33. Exact final wallclock UNKNOWN. Sources and capture hashes in the historical source register.
+
+**R3. Settlement.** Geelong+11.5:33+11.5=44.5 WIN. Under165.5:181>165.5 LOSS by15.5. Over165.5 WIN. Carlton−11.5:−33−11.5=−44.5 LOSS. Regulation AFL scoring, no extra time; formal operator terms UNKNOWN_DEFINITION.
+
+**R4. Rank diagnostics.** Four qualitative ranks2W2L; top two1W1L. Zero new primary/prospective scored rows; p, baseline and proper scores NOT_COMPUTED.
+
+**R5. Winner.** The underdog protection won; a handicap selection is not a newly inferred unconditional winner probability. Preserve original winner text without substituting a new model.
+
+**R6. Line assessment.** Total181 is5 above the original160–176 central corridor,15.5 above165.5. Final score margin33 is observed, not a new pregame estimate.
+
+**R7. Mechanism.** Carlton led37–34 at half-time; Geelong's third quarter39–13 produced a26-point swing and fourth34–24 a further10. These sum to finalmargin33 after the3-point half-time deficit. A calibrated distribution, tail probability and SD were not frozen; PIT/z diagnostics NOT_ASSESSABLE.
+
+**R8. Missed mechanism.** Score progression supports a second-half swing. It cannot quantify causal injury, weather, coaching or accuracy adjustments. No causal percentages or hindsight-adjusted means.
+
+**R9. Research/timing.** Official club selection pages currently retrieved for this exact event; their current availability cannot authenticate the original agent's reads. AFL and Blueseum are terminal sources, not new pregame inputs. The older LOCAL-GEELONG-20260904 carryover's Fremantle wording is an indexing error: the original card and officialmatch9022 name Carlton.
+
+**R10. Classification.** SPORTING_SETTLED / QUALITATIVE_NOT_PRIMARY / HISTORICAL_PUBLICATION_UNVERIFIED. No original model bundle, no fabricated model feedback, causal verdict INCONCLUSIVE.
+
+**R11. Hypothesis.** PROPOSED_NOT_TESTED: future AFL total forecasts should freeze a calibrated quarter/accuracy distribution and capture-bound availability. This result does not authorize a parameter change.
+
+**R12. Disposition.** Exact-event sporting rows closed; immutable original retained, dated identity correction, four NOT_PRIMARY rows at subsequent import. No invented monetary EV or operator certification.
+
+## Deep loss review: top total Under165.5
+
+**1. Frozen claim.** Under165.5, original qualitative rank2; no numeric p or baseline.
+**2. Outcome.** Final181, miss15.5; official score components6×14+23=107 and6×11+8=74.
+**3. Distribution.** Original corridor160–176; final5 above its upper edge. It is not a calibrated interval; no tail probability, PIT, SD or proper score exists.
+**4. Decomposition.** Relative to the line the total error is15.5. No measured base/adjustment ledger exists to split it into process/variance contributions.
+**5. Fact audit.** Teams/date/venue/final now verified. Original player availability, effect magnitudes and source-known-at times remain unverified. Postgame boxes cannot establish these pregame facts.
+**6. Deciding observations.** First-half71 points, second-half110; Geelong73 afterQ3 and107final. These describe the lost threshold without inventing a cause.
+**7. Knowable at cutoff.** Contract and original scenario knowable; realised scoring not knowable. Current club articles are historically relevant but original read custody absent.
+**8. Process.** Rank2 was a total despite its information role; it triggers the requested deep review. No numeric confidence is manufactured.
+**9. Verdict.** Sporting total miss established; MODEL_LIMIT vs VARIANCE vs knowableERROR NOT_ASSESSABLE without frozen distribution and features.
+**10. Counterfactual.** NOT_ESTIMATED: no retrospective lineup or probability.
+**11. Recurrence.** Missing calibrated total/capture custody; comparable same-policy recurrence NOT_COMPUTED.
+**12. Correction.** Prompt7 retains exact competition/quarter sources; prompt8 must freeze and prospectively test any numerical change. Existing method untouched.
+**13. Matched wins.** Geelong+11.5 and Over165.5 share the same original timing/model limits; winning outcomes do not certify their research.
+**14. Honesty.** Original core/ranks preserved, no extra primary sample or invented input, source/cutoff limits visible. Preservation PASS; historical provenance incomplete.
+
+<!-- END RESEARCH ADDENDUM P-638 2026-11-09-historical -->
+
+
+<!-- BEGIN HISTORICAL SETTLEMENT CORRECTIONS 2026-11-09-R4 -->
+# P-596 sporting settlement revision2
+
+**R1. Original.** `Saryarka ML`; original role `ANALYST_ONLY`, analyst p `0.603400`; primaryNOT_VERIFIED. Original inventory unchanged.
+**R2. Final.** Saryarka ML: official PHL game2548,15October2026,Arlan4–3Saryarqa after shootout. Regulation3–3 (periods1–2,1–1,1–0), overtime0–0, shootout1–0. Original illustrated tie-resolution/eventual-winner interpretation retained. Saryarka loses under that convention; no draw-no-bet contract is invented. Official venue label is not used to infer venue effects.
+**R3. Grade.** LOSS, a sporting grade under the recorded interpretation; financial operator action UNKNOWN_DEFINITION.
+**R4. Rank/score.** Analyst-only. No new primary/prospective row; original numeric p preserved if present. No baseline or model-feedback score manufactured.
+**R5. Winner.** Huima winning is different from covering; Saryarka did not win the eventual game. No winner override transfers between contracts.
+**R6. Endpoint.** Full final including overtime for Huimahandicap; Saryarka eventualwinner as frozen illustration. Periods preserved separately.
+**R7. Mechanism.** The observed scoring/period arithmetic establishes settlement. It does not establish a causal player/venue effect.
+**R8. Blind spots.** Original input/read/publication custody and exact operator terms remain unverified; scores cannot recover them.
+**R9. Evidence.** Exact source URLs, policy checks, retrieval paths and hashes in `research/verification/historical_resolution_2026-11-09-1/SOURCE_CAPTURES.csv` and FIELD_EVIDENCE.csv. Current finals do not certify pregame availability. P596 officialPHL; P598 ScoutBasketball plus supported SportScore renderer; no certified independent feeds.
+**R10. Classification.** Sporting definition resolved and LOSS; original primary certification unchanged. VARIANCE/MODEL_LIMIT/knowableERROR INCONCLUSIVE without an executed frozen model.
+**R11. Hypothesis.** PROPOSED_NOT_TESTED: reject mixed ML/handicap text at future intake and freeze hockey tie treatment explicitly. No retroactive probability or numerical method change.
+**R12. Disposition.** revision2 directly follows original revision1, keyed to exact preserved localkey/rank/contract. Other contracts untouched. No automatic task scheduled.
+
+## Deep loss review: losing side diagnostic
+
+**1. Claim.** Exact original contract above; original probabilities remain literal. **2. Outcome.** Saryarka ML: official PHL game2548,15October2026,Arlan4–3Saryarqa after shootout. Regulation3–3 (periods1–2,1–1,1–0), overtime0–0, shootout1–0. Original illustrated tie-resolution/eventual-winner interpretation retained. Saryarka loses under that convention; no draw-no-bet contract is invented. Official venue label is not used to infer venue effects.
+**3. Distribution.** No receipt-bound primary distribution or baseline; primaryBrier/PIT/z NOT_ASSESSABLE. **4. Decomposition.** No measured base/adjustment ledger, so no causal shares.
+**5. Fact audit.** Event/final now captured; pregame player/availability/known-at claims remain unverified. **6. Deciding observations.** Period/final arithmetic above only.
+**7. Cutoff knowledge.** Outcome not knowable; new owner clarification is dated now, not pretended historical. **8. Process.** Original definition ambiguity is a documented defect; resolved without erasing it.
+**9. Verdict.** Sporting loss established; calibrated variance/model attribution INCONCLUSIVE. **10. Counterfactual.** No replacement forecast.
+**11. Recurrence.** Comparable same-policy count NOT_COMPUTED. **12. Correction.** Prompt7 records endpoint conventions; future intake requires exact period/tie/line, separately tested by Prompt8.
+**13. Matched wins.** Other winning contracts share original timing/model limits; no special exemption. **14. Honesty.** Original rank/p/core unchanged, revision dated, no invented pregame feature or feedback. Information completeness remains partial.
+
+# P-598 sporting settlement revision2
+
+**R1. Original.** `Huima −8.5 ML (ambiguous spread vs ML)`; original role `NO_NUMERIC_RANK`, analyst p `MISSING`; primaryNOT_VERIFIED. Original inventory unchanged.
+**R2. Final.** Owner clarification9November2026: use explicit Huima−8.5 handicap. Huima88–85Lappeenranta afterOT: regulation74–74, overtime14–11. Final margin3;3−8.5=−5.5, LOSS. The ML token in the literal original is superseded only for contract interpretation by this owner instruction; original wording retained.
+**R3. Grade.** LOSS, a sporting grade under the recorded interpretation; financial operator action UNKNOWN_DEFINITION.
+**R4. Rank/score.** Analyst-only. No new primary/prospective row; original numeric p preserved if present. No baseline or model-feedback score manufactured.
+**R5. Winner.** Huima winning is different from covering; Saryarka did not win the eventual game. No winner override transfers between contracts.
+**R6. Endpoint.** Full final including overtime for Huimahandicap; Saryarka eventualwinner as frozen illustration. Periods preserved separately.
+**R7. Mechanism.** The observed scoring/period arithmetic establishes settlement. It does not establish a causal player/venue effect.
+**R8. Blind spots.** Original input/read/publication custody and exact operator terms remain unverified; scores cannot recover them.
+**R9. Evidence.** Exact source URLs, policy checks, retrieval paths and hashes in `research/verification/historical_resolution_2026-11-09-1/SOURCE_CAPTURES.csv` and FIELD_EVIDENCE.csv. Current finals do not certify pregame availability. P596 officialPHL; P598 ScoutBasketball plus supported SportScore renderer; no certified independent feeds.
+**R10. Classification.** Sporting definition resolved and LOSS; original primary certification unchanged. VARIANCE/MODEL_LIMIT/knowableERROR INCONCLUSIVE without an executed frozen model.
+**R11. Hypothesis.** PROPOSED_NOT_TESTED: reject mixed ML/handicap text at future intake and freeze hockey tie treatment explicitly. No retroactive probability or numerical method change.
+**R12. Disposition.** revision2 directly follows original revision1, keyed to exact preserved localkey/rank/contract. Other contracts untouched. No automatic task scheduled.
+
+## Deep loss review: losing side diagnostic
+
+**1. Claim.** Exact original contract above; original probabilities remain literal. **2. Outcome.** Owner clarification9November2026: use explicit Huima−8.5 handicap. Huima88–85Lappeenranta afterOT: regulation74–74, overtime14–11. Final margin3;3−8.5=−5.5, LOSS. The ML token in the literal original is superseded only for contract interpretation by this owner instruction; original wording retained.
+**3. Distribution.** No receipt-bound primary distribution or baseline; primaryBrier/PIT/z NOT_ASSESSABLE. **4. Decomposition.** No measured base/adjustment ledger, so no causal shares.
+**5. Fact audit.** Event/final now captured; pregame player/availability/known-at claims remain unverified. **6. Deciding observations.** Period/final arithmetic above only.
+**7. Cutoff knowledge.** Outcome not knowable; new owner clarification is dated now, not pretended historical. **8. Process.** Original definition ambiguity is a documented defect; resolved without erasing it.
+**9. Verdict.** Sporting loss established; calibrated variance/model attribution INCONCLUSIVE. **10. Counterfactual.** No replacement forecast.
+**11. Recurrence.** Comparable same-policy count NOT_COMPUTED. **12. Correction.** Prompt7 records endpoint conventions; future intake requires exact period/tie/line, separately tested by Prompt8.
+**13. Matched wins.** Other winning contracts share original timing/model limits; no special exemption. **14. Honesty.** Original rank/p/core unchanged, revision dated, no invented pregame feature or feedback. Information completeness remains partial.
+
+<!-- END HISTORICAL SETTLEMENT CORRECTIONS 2026-11-09-R4 -->
+
+
+<!-- BEGIN HISTORICAL ROW REVISIONS 2026-11-09-1 -->
+# Historical sporting corrections ·9November2026
+
+This dated addendum supersedes only the named rows below. BASE is the preserved pre-overlay effective grade. Original ranks/probabilities and log bytes are immutable. ConditionalC/E results never satisfy the older independent-owner quorum or establish prospective skill. No missing field is a financialVOID.
+
+## P-148 rank2 · Toluca team corners Over 4.5
+
+**R1. Frozen contract.** `Toluca team corners Over 4.5`, original rank2; p `MISSING`; no new probability or reference.
+**R2. Terminal evidence.** Toluca corners2; Leon6; Toluca teamOver4.5 loses. Source: https://sportscore.com/football/match/toluca-women-vs-leon-women/318q66hxedv5qo9/. CaptureSHA256 `b8f58392f18e47bbf3ec714a7c1bed66919700e680a0952055a3eb38da3bf3c9`; retrieval `2026-11-08T22:32:03.026122+00:00`.
+**R3. Sporting grade.** Prior `LOSS` → `LOSS`. New evidence `C`. Financial operator action remains UNKNOWN_DEFINITION.
+**R4. Rank diagnostics.** Preserve original rank and probability role. Same-grade entries refresh evidence only, never add a win or trial.
+**R5. Winner.** No winner-call override from a corner total/handicap result.
+**R6. Endpoint.** Regulation including stoppage; extra time excluded. Timed lower bounds or disagreement bounds are used only where explicitly stated.
+**R7. Mechanism.** Threshold arithmetic is observed. A calibrated causal/distribution error split is not recovered.
+**R8. Research limits.** Pregame conditions, original lineup/bench knowledge and issue custody not authenticated by terminal boxes.
+**R9. Source audit.** Independent collection not certified; original issue/known-at and operator terms remain unverified Current accesscheck is separate from sporting truth; upstream independence UNKNOWN unless certified in original evidence.
+**R10. Classification.** Conditional sporting review, not a retrospective primary/model promotion. No manufactured final clock or pregame availability.
+**R11. Learning.** Hypothesis only: capture exact event/provider/period before future issue. No fitted parameter or causal effect changed.
+**R12. Disposition.** Exact named row revised via ROW_REVISIONS.csv with source-document hash; original card retained. Remaining certification limits stay explicit.
+
+### Deep loss review
+**1. Claim.** `Toluca team corners Over 4.5`; original rank2/p above. **2. Outcome.** Toluca corners2; Leon6; Toluca teamOver4.5 loses.
+**3. Distribution.** No receipt-bound complete distribution/baseline recovered; PIT/SD/counterfactual proper-score comparison NOT_ASSESSABLE. The literal p is preserved, never recalibrated here.
+**4. Decomposition.** Threshold miss established; no measured base/adjustment decomposition. **5. Fact audit.** Exact terminal field above verified conditionally; original research claims remain independently unverified.
+**6. Mechanism.** The admitted count decides the line; scoreflow/causal injury/weather effects not inferred. **7. Cutoff knowledge.** Final count was not knowable; new capture is dated now.
+**8. Process.** Endpoint/corner provenance reviewed with the same limits for wins. **9. Verdict.** Sporting loss established; knowableERROR vs MODEL_LIMIT vs VARIANCE INCONCLUSIVE.
+**10. Counterfactual.** No replacement p. **11. Recurrence.** Comparable same-policy recurrence NOT_COMPUTED. **12. Correction.** Prompt7 captures scope/period; Prompt8 separately tests any numerical change prospectively.
+**13. Matched wins.** Same source/custody shortcomings apply to winning rows. **14. Honesty.** No causal shares, backdated publication, baseline or feedback invented; full certification remains incomplete.
+
+## P-149 rank2 · Ventura County team corners Over 3.5
+
+**R1. Frozen contract.** `Ventura County team corners Over 3.5`, original rank2; p `MISSING`; no new probability or reference.
+**R2. Terminal evidence.** Rapids2 corners2; Ventura8; VenturaOver3.5 wins. Source: https://www.onelightscore.com/soccer/us-mls-next-pro/colorado-rapids-2-vs-ventura-county-2026-08-29. CaptureSHA256 `9c0a2330f6910e857c9c4f45843053d8a7d69586a71eae991e67d31ac04c2d8e`; retrieval `2026-11-08T21:53:58.692229+00:00`.
+**R3. Sporting grade.** Prior `WIN` → `WIN`. New evidence `C`. Financial operator action remains UNKNOWN_DEFINITION.
+**R4. Rank diagnostics.** Preserve original rank and probability role. Same-grade entries refresh evidence only, never add a win or trial.
+**R5. Winner.** No winner-call override from a corner total/handicap result.
+**R6. Endpoint.** Regulation including stoppage; extra time excluded. Timed lower bounds or disagreement bounds are used only where explicitly stated.
+**R7. Mechanism.** Threshold arithmetic is observed. A calibrated causal/distribution error split is not recovered.
+**R8. Research limits.** Pregame conditions, original lineup/bench knowledge and issue custody not authenticated by terminal boxes.
+**R9. Source audit.** Independent collection not certified; original issue/known-at and operator terms remain unverified Current accesscheck is separate from sporting truth; upstream independence UNKNOWN unless certified in original evidence.
+**R10. Classification.** Conditional sporting review, not a retrospective primary/model promotion. No manufactured final clock or pregame availability.
+**R11. Learning.** Hypothesis only: capture exact event/provider/period before future issue. No fitted parameter or causal effect changed.
+**R12. Disposition.** Exact named row revised via ROW_REVISIONS.csv with source-document hash; original card retained. Remaining certification limits stay explicit.
+
+## P-176 rank5 · Total match corners Under 10.5
+
+**R1. Frozen contract.** `Total match corners Under 10.5`, original rank5; p `MISSING`; no new probability or reference.
+**R2. Terminal evidence.** Amiens5 corners; Versailles3; total8 Under10.5 wins. Source: https://scoutingstats.ai/ligue-3/amiens-sc-v-versailles/19733492. CaptureSHA256 `d778110952e7cbf58cdfc7adbb4bbe49668048b924f80f08b24e3b136c3c9454`; retrieval `2026-11-08T21:53:51.800168+00:00`.
+**R3. Sporting grade.** Prior `WIN` → `WIN`. New evidence `C`. Financial operator action remains UNKNOWN_DEFINITION.
+**R4. Rank diagnostics.** Preserve original rank and probability role. Same-grade entries refresh evidence only, never add a win or trial.
+**R5. Winner.** No winner-call override from a corner total/handicap result.
+**R6. Endpoint.** Regulation including stoppage; extra time excluded. Timed lower bounds or disagreement bounds are used only where explicitly stated.
+**R7. Mechanism.** Threshold arithmetic is observed. A calibrated causal/distribution error split is not recovered.
+**R8. Research limits.** Pregame conditions, original lineup/bench knowledge and issue custody not authenticated by terminal boxes.
+**R9. Source audit.** Independent collection not certified; original issue/known-at and operator terms remain unverified Current accesscheck is separate from sporting truth; upstream independence UNKNOWN unless certified in original evidence.
+**R10. Classification.** Conditional sporting review, not a retrospective primary/model promotion. No manufactured final clock or pregame availability.
+**R11. Learning.** Hypothesis only: capture exact event/provider/period before future issue. No fitted parameter or causal effect changed.
+**R12. Disposition.** Exact named row revised via ROW_REVISIONS.csv with source-document hash; original card retained. Remaining certification limits stay explicit.
+
+## P-178 rank5 · Total corners Under 10.5
+
+**R1. Frozen contract.** `Total corners Under 10.5`, original rank5; p `MISSING`; no new probability or reference.
+**R2. Terminal evidence.** Cannes8 corners; LePuy8; total16 Under10.5 loses. Source: https://scoutingstats.ai/ligue-3/cannes-v-le-puy-en-velay/19733491. CaptureSHA256 `ebbc9462203dc68aec266ec87d42932435de8d8c8af4798a192e058f9e80ac53`; retrieval `2026-11-08T22:05:59.661165+00:00`.
+**R3. Sporting grade.** Prior `LOSS` → `LOSS`. New evidence `C`. Financial operator action remains UNKNOWN_DEFINITION.
+**R4. Rank diagnostics.** Preserve original rank and probability role. Same-grade entries refresh evidence only, never add a win or trial.
+**R5. Winner.** No winner-call override from a corner total/handicap result.
+**R6. Endpoint.** Regulation including stoppage; extra time excluded. Timed lower bounds or disagreement bounds are used only where explicitly stated.
+**R7. Mechanism.** Threshold arithmetic is observed. A calibrated causal/distribution error split is not recovered.
+**R8. Research limits.** Pregame conditions, original lineup/bench knowledge and issue custody not authenticated by terminal boxes.
+**R9. Source audit.** Independent collection not certified; original issue/known-at and operator terms remain unverified Current accesscheck is separate from sporting truth; upstream independence UNKNOWN unless certified in original evidence.
+**R10. Classification.** Conditional sporting review, not a retrospective primary/model promotion. No manufactured final clock or pregame availability.
+**R11. Learning.** Hypothesis only: capture exact event/provider/period before future issue. No fitted parameter or causal effect changed.
+**R12. Disposition.** Exact named row revised via ROW_REVISIONS.csv with source-document hash; original card retained. Remaining certification limits stay explicit.
+
+### Deep loss review
+**1. Claim.** `Total corners Under 10.5`; original rank5/p above. **2. Outcome.** Cannes8 corners; LePuy8; total16 Under10.5 loses.
+**3. Distribution.** No receipt-bound complete distribution/baseline recovered; PIT/SD/counterfactual proper-score comparison NOT_ASSESSABLE. The literal p is preserved, never recalibrated here.
+**4. Decomposition.** Threshold miss established; no measured base/adjustment decomposition. **5. Fact audit.** Exact terminal field above verified conditionally; original research claims remain independently unverified.
+**6. Mechanism.** The admitted count decides the line; scoreflow/causal injury/weather effects not inferred. **7. Cutoff knowledge.** Final count was not knowable; new capture is dated now.
+**8. Process.** Endpoint/corner provenance reviewed with the same limits for wins. **9. Verdict.** Sporting loss established; knowableERROR vs MODEL_LIMIT vs VARIANCE INCONCLUSIVE.
+**10. Counterfactual.** No replacement p. **11. Recurrence.** Comparable same-policy recurrence NOT_COMPUTED. **12. Correction.** Prompt7 captures scope/period; Prompt8 separately tests any numerical change prospectively.
+**13. Matched wins.** Same source/custody shortcomings apply to winning rows. **14. Honesty.** No causal shares, backdated publication, baseline or feedback invented; full certification remains incomplete.
+
+## P-179 rank5 · Under 10.5 corners
+
+**R1. Frozen contract.** `Under 10.5 corners`, original rank5; p `MISSING`; no new probability or reference.
+**R2. Terminal evidence.** Thionville8 corners; Paris13 Atletico1; total9 Under10.5 wins. Source: https://scoutingstats.ai/ligue-3/thionville-lusitanos-v-paris-13-atletico/19733486. CaptureSHA256 `2062e69148c88833b3c05aad0b13952b76fd26d32f67bee26c918ddda52c51e4`; retrieval `2026-11-08T21:53:52.434918+00:00`.
+**R3. Sporting grade.** Prior `WIN` → `WIN`. New evidence `C`. Financial operator action remains UNKNOWN_DEFINITION.
+**R4. Rank diagnostics.** Preserve original rank and probability role. Same-grade entries refresh evidence only, never add a win or trial.
+**R5. Winner.** No winner-call override from a corner total/handicap result.
+**R6. Endpoint.** Regulation including stoppage; extra time excluded. Timed lower bounds or disagreement bounds are used only where explicitly stated.
+**R7. Mechanism.** Threshold arithmetic is observed. A calibrated causal/distribution error split is not recovered.
+**R8. Research limits.** Pregame conditions, original lineup/bench knowledge and issue custody not authenticated by terminal boxes.
+**R9. Source audit.** Independent collection not certified; original issue/known-at and operator terms remain unverified Current accesscheck is separate from sporting truth; upstream independence UNKNOWN unless certified in original evidence.
+**R10. Classification.** Conditional sporting review, not a retrospective primary/model promotion. No manufactured final clock or pregame availability.
+**R11. Learning.** Hypothesis only: capture exact event/provider/period before future issue. No fitted parameter or causal effect changed.
+**R12. Disposition.** Exact named row revised via ROW_REVISIONS.csv with source-document hash; original card retained. Remaining certification limits stay explicit.
+
+## P-233 rank5 · Corners Over 8.5
+
+**R1. Frozen contract.** `Corners Over 8.5`, original rank5; p `MISSING`; no new probability or reference.
+**R2. Terminal evidence.** Beijing9 corners; Lanzhou4; total13 Over8.5 wins. Source: https://sportscore.com/football/match/lanzhou-longyuan-athletic-vs-beijing-guoan/vjxm8ghe12lnr6o/. CaptureSHA256 `07b027aa6ac341e7699d87e64166a6240fab0e065ea96ff273b3ce0b230f2f0e`; retrieval `2026-11-08T22:05:43.678233+00:00`.
+**R3. Sporting grade.** Prior `WIN` → `WIN`. New evidence `C`. Financial operator action remains UNKNOWN_DEFINITION.
+**R4. Rank diagnostics.** Preserve original rank and probability role. Same-grade entries refresh evidence only, never add a win or trial.
+**R5. Winner.** No winner-call override from a corner total/handicap result.
+**R6. Endpoint.** Regulation including stoppage; extra time excluded. Timed lower bounds or disagreement bounds are used only where explicitly stated.
+**R7. Mechanism.** Threshold arithmetic is observed. A calibrated causal/distribution error split is not recovered.
+**R8. Research limits.** Pregame conditions, original lineup/bench knowledge and issue custody not authenticated by terminal boxes.
+**R9. Source audit.** Independent collection not certified; original issue/known-at and operator terms remain unverified Current accesscheck is separate from sporting truth; upstream independence UNKNOWN unless certified in original evidence.
+**R10. Classification.** Conditional sporting review, not a retrospective primary/model promotion. No manufactured final clock or pregame availability.
+**R11. Learning.** Hypothesis only: capture exact event/provider/period before future issue. No fitted parameter or causal effect changed.
+**R12. Disposition.** Exact named row revised via ROW_REVISIONS.csv with source-document hash; original card retained. Remaining certification limits stay explicit.
+
+## P-234 rank3 · Corners Over 8.5
+
+**R1. Frozen contract.** `Corners Over 8.5`, original rank3; p `MISSING`; no new probability or reference.
+**R2. Terminal evidence.** Dalian5 corners; Shenhua5; total10 Over8.5 wins. Source: https://playerstats.football/fixture/dalian-yingbo/shanghai-shenhua/2026-09-01. CaptureSHA256 `a3f39b01e5818993db5c46b6d313d5b9bdab860357836f815de15f08b1bd9a64`; retrieval `2026-11-08T21:12:54.424334+00:00`.
+**R3. Sporting grade.** Prior `WIN` → `WIN`. New evidence `C`. Financial operator action remains UNKNOWN_DEFINITION.
+**R4. Rank diagnostics.** Preserve original rank and probability role. Same-grade entries refresh evidence only, never add a win or trial.
+**R5. Winner.** No winner-call override from a corner total/handicap result.
+**R6. Endpoint.** Regulation including stoppage; extra time excluded. Timed lower bounds or disagreement bounds are used only where explicitly stated.
+**R7. Mechanism.** Threshold arithmetic is observed. A calibrated causal/distribution error split is not recovered.
+**R8. Research limits.** Pregame conditions, original lineup/bench knowledge and issue custody not authenticated by terminal boxes.
+**R9. Source audit.** Same-day capture reaudited; disrupted-match/operator consequences not certified Current accesscheck is separate from sporting truth; upstream independence UNKNOWN unless certified in original evidence.
+**R10. Classification.** Conditional sporting review, not a retrospective primary/model promotion. No manufactured final clock or pregame availability.
+**R11. Learning.** Hypothesis only: capture exact event/provider/period before future issue. No fitted parameter or causal effect changed.
+**R12. Disposition.** Exact named row revised via ROW_REVISIONS.csv with source-document hash; original card retained. Remaining certification limits stay explicit.
+
+## P-235 rank5 · Corners Over 8.5
+
+**R1. Frozen contract.** `Corners Over 8.5`, original rank5; p `MISSING`; no new probability or reference.
+**R2. Terminal evidence.** Shandong10 corners; Port4; total14 Over8.5 wins. Source: https://sportscore.com/football/match/shanghai-port-vs-shandong-taishan/1l4rjnh97xw6m7v/. CaptureSHA256 `65233b2cb9ea88acab171a40791745eebe9681929e6b38421d4bd09d012b2041`; retrieval `2026-11-08T22:22:53.755191+00:00`.
+**R3. Sporting grade.** Prior `WIN` → `WIN`. New evidence `C`. Financial operator action remains UNKNOWN_DEFINITION.
+**R4. Rank diagnostics.** Preserve original rank and probability role. Same-grade entries refresh evidence only, never add a win or trial.
+**R5. Winner.** No winner-call override from a corner total/handicap result.
+**R6. Endpoint.** Regulation including stoppage; extra time excluded. Timed lower bounds or disagreement bounds are used only where explicitly stated.
+**R7. Mechanism.** Threshold arithmetic is observed. A calibrated causal/distribution error split is not recovered.
+**R8. Research limits.** Pregame conditions, original lineup/bench knowledge and issue custody not authenticated by terminal boxes.
+**R9. Source audit.** Independent collection not certified; original issue/known-at and operator terms remain unverified Current accesscheck is separate from sporting truth; upstream independence UNKNOWN unless certified in original evidence.
+**R10. Classification.** Conditional sporting review, not a retrospective primary/model promotion. No manufactured final clock or pregame availability.
+**R11. Learning.** Hypothesis only: capture exact event/provider/period before future issue. No fitted parameter or causal effect changed.
+**R12. Disposition.** Exact named row revised via ROW_REVISIONS.csv with source-document hash; original card retained. Remaining certification limits stay explicit.
+
+## P-250 rank2 · Total corners Over 8.5
+
+**R1. Frozen contract.** `Total corners Over 8.5`, original rank2; p `MISSING`; no new probability or reference.
+**R2. Terminal evidence.** Yunnan1 corner; Chongqing3; total4 Over8.5 loses. Source: https://sportscore.com/football/match/yunnan-yukun-vs-chongqing-tonglianglong/4jwq2ghn2x3km0v/. CaptureSHA256 `07b027aa6ac341e7699d87e64166a6240fab0e065ea96ff273b3ce0b230f2f0e`; retrieval `2026-11-08T22:05:43.678233+00:00`.
+**R3. Sporting grade.** Prior `VOID` → `LOSS`. New evidence `C`. Financial operator action remains UNKNOWN_DEFINITION.
+**R4. Rank diagnostics.** Preserve original rank and probability role. Same-grade entries refresh evidence only, never add a win or trial.
+**R5. Winner.** No winner-call override from a corner total/handicap result.
+**R6. Endpoint.** Regulation including stoppage; extra time excluded. Timed lower bounds or disagreement bounds are used only where explicitly stated.
+**R7. Mechanism.** Threshold arithmetic is observed. A calibrated causal/distribution error split is not recovered.
+**R8. Research limits.** Pregame conditions, original lineup/bench knowledge and issue custody not authenticated by terminal boxes.
+**R9. Source audit.** Prior VOID was missing evidence, not an evidenced void rule. Correct cup1-0 event; prior league1-1 source rejected. Current accesscheck is separate from sporting truth; upstream independence UNKNOWN unless certified in original evidence.
+**R10. Classification.** Conditional sporting review, not a retrospective primary/model promotion. No manufactured final clock or pregame availability.
+**R11. Learning.** Hypothesis only: capture exact event/provider/period before future issue. No fitted parameter or causal effect changed.
+**R12. Disposition.** Exact named row revised via ROW_REVISIONS.csv with source-document hash; original card retained. Remaining certification limits stay explicit.
+
+### Deep loss review
+**1. Claim.** `Total corners Over 8.5`; original rank2/p above. **2. Outcome.** Yunnan1 corner; Chongqing3; total4 Over8.5 loses.
+**3. Distribution.** No receipt-bound complete distribution/baseline recovered; PIT/SD/counterfactual proper-score comparison NOT_ASSESSABLE. The literal p is preserved, never recalibrated here.
+**4. Decomposition.** Threshold miss established; no measured base/adjustment decomposition. **5. Fact audit.** Exact terminal field above verified conditionally; original research claims remain independently unverified.
+**6. Mechanism.** The admitted count decides the line; scoreflow/causal injury/weather effects not inferred. **7. Cutoff knowledge.** Final count was not knowable; new capture is dated now.
+**8. Process.** Endpoint/corner provenance reviewed with the same limits for wins. **9. Verdict.** Sporting loss established; knowableERROR vs MODEL_LIMIT vs VARIANCE INCONCLUSIVE.
+**10. Counterfactual.** No replacement p. **11. Recurrence.** Comparable same-policy recurrence NOT_COMPUTED. **12. Correction.** Prompt7 captures scope/period; Prompt8 separately tests any numerical change prospectively.
+**13. Matched wins.** Same source/custody shortcomings apply to winning rows. **14. Honesty.** No causal shares, backdated publication, baseline or feedback invented; full certification remains incomplete.
+
+## P-251 rank3 · Corners Over 8.5
+
+**R1. Frozen contract.** `Corners Over 8.5`, original rank3; p `MISSING`; no new probability or reference.
+**R2. Terminal evidence.** Sassuolo6 corners; Frosinone4; total10 Over8.5 wins. Source: https://footballan.com/game/sassuolo-frosinone-2026-09-02/. CaptureSHA256 `89f0ab2091c20867d1aace58d126c126145b6a1ea4dd5408032599138816a90d`; retrieval `2026-11-08T22:22:05.819522+00:00`.
+**R3. Sporting grade.** Prior `WIN` → `WIN`. New evidence `E`. Financial operator action remains UNKNOWN_DEFINITION.
+**R4. Rank diagnostics.** Preserve original rank and probability role. Same-grade entries refresh evidence only, never add a win or trial.
+**R5. Winner.** No winner-call override from a corner total/handicap result.
+**R6. Endpoint.** Regulation including stoppage; extra time excluded. Timed lower bounds or disagreement bounds are used only where explicitly stated.
+**R7. Mechanism.** Threshold arithmetic is observed. A calibrated causal/distribution error split is not recovered.
+**R8. Research limits.** Pregame conditions, original lineup/bench knowledge and issue custody not authenticated by terminal boxes.
+**R9. Source audit.** Other prior source reported11; both bounds exceed8.5. Exact count disputed, no majority-vote or independence claim. Sporting threshold invariant. Current accesscheck is separate from sporting truth; upstream independence UNKNOWN unless certified in original evidence.
+**R10. Classification.** Conditional sporting review, not a retrospective primary/model promotion. No manufactured final clock or pregame availability.
+**R11. Learning.** Hypothesis only: capture exact event/provider/period before future issue. No fitted parameter or causal effect changed.
+**R12. Disposition.** Exact named row revised via ROW_REVISIONS.csv with source-document hash; original card retained. Remaining certification limits stay explicit.
+
+## P-255 rank2 · Total corners Over 8.5 (90 minutes)
+
+**R1. Frozen contract.** `Total corners Over 8.5 (90 minutes)`, original rank2; p `MISSING`; no new probability or reference.
+**R2. Terminal evidence.** At least nine separately timed regulation corner events; sample first9 minutes2,4,25,27,34,42,43,45,46; each is before extra time. Over8.5 wins. Source: https://calcio.it/europa/uefa-womens-champions-league/partite/2026-09-02-inter-milano-w-wolfsburg-w. CaptureSHA256 `fd34b8c4ce42d6998e5d69994cc71b72ea1fc5e908496aa68d63a7ce0b52277f`; retrieval `2026-11-08T22:22:05.814843+00:00`.
+**R3. Sporting grade.** Prior `WIN` → `WIN`. New evidence `E`. Financial operator action remains UNKNOWN_DEFINITION.
+**R4. Rank diagnostics.** Preserve original rank and probability role. Same-grade entries refresh evidence only, never add a win or trial.
+**R5. Winner.** No winner-call override from a corner total/handicap result.
+**R6. Endpoint.** Regulation including stoppage; extra time excluded. Timed lower bounds or disagreement bounds are used only where explicitly stated.
+**R7. Mechanism.** Threshold arithmetic is observed. A calibrated causal/distribution error split is not recovered.
+**R8. Research limits.** Pregame conditions, original lineup/bench knowledge and issue custody not authenticated by terminal boxes.
+**R9. Source audit.** Final/AET corner aggregates12-11 versus12-12 disagree; not used for90min. Timed regulation lower bound suffices. Incomplete event enumeration not represented as a complete corner ledger. Current accesscheck is separate from sporting truth; upstream independence UNKNOWN unless certified in original evidence.
+**R10. Classification.** Conditional sporting review, not a retrospective primary/model promotion. No manufactured final clock or pregame availability.
+**R11. Learning.** Hypothesis only: capture exact event/provider/period before future issue. No fitted parameter or causal effect changed.
+**R12. Disposition.** Exact named row revised via ROW_REVISIONS.csv with source-document hash; original card retained. Remaining certification limits stay explicit.
+
+## P-256 rank1 · Total corners Over 8.5 (90 minutes)
+
+**R1. Frozen contract.** `Total corners Over 8.5 (90 minutes)`, original rank1; p `MISSING`; no new probability or reference.
+**R2. Terminal evidence.** Nine regulation corner events: firsthalf20PSG,10EF; secondhalf90+5PSG,90+4PSG,89PSG,87EF,83PSG,58EF,49PSG. At least9, Over8.5 wins. Source: https://www.foxsports.com/soccer/uefa-womens-champions-league-paris-saint-germain-vs-eintracht-frankfurt-sep-02-2026-game-boxscore-978392?tab=playbyplay. CaptureSHA256 `ef1b765ddf95fb68672e2d3113eda24ce254a1497b33b3b32f4a10441c639cc2`; retrieval `2026-11-08T21:12:57.485696+00:00`.
+**R3. Sporting grade.** Prior `WIN` → `WIN`. New evidence `E`. Financial operator action remains UNKNOWN_DEFINITION.
+**R4. Rank diagnostics.** Preserve original rank and probability role. Same-grade entries refresh evidence only, never add a win or trial.
+**R5. Winner.** No winner-call override from a corner total/handicap result.
+**R6. Endpoint.** Regulation including stoppage; extra time excluded. Timed lower bounds or disagreement bounds are used only where explicitly stated.
+**R7. Mechanism.** Threshold arithmetic is observed. A calibrated causal/distribution error split is not recovered.
+**R8. Research limits.** Pregame conditions, original lineup/bench knowledge and issue custody not authenticated by terminal boxes.
+**R9. Source audit.** Same-day capture reaudited; regulation lower bound only; AET totals excluded. Current accesscheck is separate from sporting truth; upstream independence UNKNOWN unless certified in original evidence.
+**R10. Classification.** Conditional sporting review, not a retrospective primary/model promotion. No manufactured final clock or pregame availability.
+**R11. Learning.** Hypothesis only: capture exact event/provider/period before future issue. No fitted parameter or causal effect changed.
+**R12. Disposition.** Exact named row revised via ROW_REVISIONS.csv with source-document hash; original card retained. Remaining certification limits stay explicit.
+
+## P-368 rank2 · Total corners Over 7.5
+
+**R1. Frozen contract.** `Total corners Over 7.5`, original rank2; p `0.55`; no new probability or reference.
+**R2. Terminal evidence.** AlJazira6 corners; AlNasr3; total9 Over7.5 wins. Source: https://ballwhizz.com/en/matches/12138. CaptureSHA256 `c7f823906843debd74b3751b1fb2d4d9d98c5c584eb8f8f2160c655fc95533ae`; retrieval `2026-11-08T21:53:35.068994+00:00`.
+**R3. Sporting grade.** Prior `WIN` → `WIN`. New evidence `C`. Financial operator action remains UNKNOWN_DEFINITION.
+**R4. Rank diagnostics.** Preserve original rank and probability role. Same-grade entries refresh evidence only, never add a win or trial.
+**R5. Winner.** No winner-call override from a corner total/handicap result.
+**R6. Endpoint.** Regulation including stoppage; extra time excluded. Timed lower bounds or disagreement bounds are used only where explicitly stated.
+**R7. Mechanism.** Threshold arithmetic is observed. A calibrated causal/distribution error split is not recovered.
+**R8. Research limits.** Pregame conditions, original lineup/bench knowledge and issue custody not authenticated by terminal boxes.
+**R9. Source audit.** Independent collection not certified; original issue/known-at and operator terms remain unverified Current accesscheck is separate from sporting truth; upstream independence UNKNOWN unless certified in original evidence.
+**R10. Classification.** Conditional sporting review, not a retrospective primary/model promotion. No manufactured final clock or pregame availability.
+**R11. Learning.** Hypothesis only: capture exact event/provider/period before future issue. No fitted parameter or causal effect changed.
+**R12. Disposition.** Exact named row revised via ROW_REVISIONS.csv with source-document hash; original card retained. Remaining certification limits stay explicit.
+
+## P-369 rank1 · Total corners Under 10.5
+
+**R1. Frozen contract.** `Total corners Under 10.5`, original rank1; p `0.68`; no new probability or reference.
+**R2. Terminal evidence.** DubaiUnited5 corners; Shabab6; total11 Under10.5 loses. Source: https://sportscore.com/football/match/dubai-united-vs-shabab-al-ahli/pxwrxlhy6odxryk/. CaptureSHA256 `65233b2cb9ea88acab171a40791745eebe9681929e6b38421d4bd09d012b2041`; retrieval `2026-11-08T22:22:53.755191+00:00`.
+**R3. Sporting grade.** Prior `LOSS` → `LOSS`. New evidence `C`. Financial operator action remains UNKNOWN_DEFINITION.
+**R4. Rank diagnostics.** Preserve original rank and probability role. Same-grade entries refresh evidence only, never add a win or trial.
+**R5. Winner.** No winner-call override from a corner total/handicap result.
+**R6. Endpoint.** Regulation including stoppage; extra time excluded. Timed lower bounds or disagreement bounds are used only where explicitly stated.
+**R7. Mechanism.** Threshold arithmetic is observed. A calibrated causal/distribution error split is not recovered.
+**R8. Research limits.** Pregame conditions, original lineup/bench knowledge and issue custody not authenticated by terminal boxes.
+**R9. Source audit.** Independent collection not certified; original issue/known-at and operator terms remain unverified Current accesscheck is separate from sporting truth; upstream independence UNKNOWN unless certified in original evidence.
+**R10. Classification.** Conditional sporting review, not a retrospective primary/model promotion. No manufactured final clock or pregame availability.
+**R11. Learning.** Hypothesis only: capture exact event/provider/period before future issue. No fitted parameter or causal effect changed.
+**R12. Disposition.** Exact named row revised via ROW_REVISIONS.csv with source-document hash; original card retained. Remaining certification limits stay explicit.
+
+### Deep loss review
+**1. Claim.** `Total corners Under 10.5`; original rank1/p above. **2. Outcome.** DubaiUnited5 corners; Shabab6; total11 Under10.5 loses.
+**3. Distribution.** No receipt-bound complete distribution/baseline recovered; PIT/SD/counterfactual proper-score comparison NOT_ASSESSABLE. The literal p is preserved, never recalibrated here.
+**4. Decomposition.** Threshold miss established; no measured base/adjustment decomposition. **5. Fact audit.** Exact terminal field above verified conditionally; original research claims remain independently unverified.
+**6. Mechanism.** The admitted count decides the line; scoreflow/causal injury/weather effects not inferred. **7. Cutoff knowledge.** Final count was not knowable; new capture is dated now.
+**8. Process.** Endpoint/corner provenance reviewed with the same limits for wins. **9. Verdict.** Sporting loss established; knowableERROR vs MODEL_LIMIT vs VARIANCE INCONCLUSIVE.
+**10. Counterfactual.** No replacement p. **11. Recurrence.** Comparable same-policy recurrence NOT_COMPUTED. **12. Correction.** Prompt7 captures scope/period; Prompt8 separately tests any numerical change prospectively.
+**13. Matched wins.** Same source/custody shortcomings apply to winning rows. **14. Honesty.** No causal shares, backdated publication, baseline or feedback invented; full certification remains incomplete.
+
+## P-377 rank2 · Over 8.5 total corners
+
+**R1. Frozen contract.** `Over 8.5 total corners`, original rank2; p `MISSING`; no new probability or reference.
+**R2. Terminal evidence.** Xelaju10 corners; Coban0; total10 Over8.5 wins. Source: https://sportscore.com/football/match/coban-imperial-vs-xelaju-mc/y0or5jh8kdoyqwz/. CaptureSHA256 `9cccf2ce0e93ebf33ff029674fd180b5de991458f833d41bce3ac6165ca439df`; retrieval `2026-11-08T22:31:02.884216+00:00`.
+**R3. Sporting grade.** Prior `LOSS` → `WIN`. New evidence `C`. Financial operator action remains UNKNOWN_DEFINITION.
+**R4. Rank diagnostics.** Preserve original rank and probability role. Same-grade entries refresh evidence only, never add a win or trial.
+**R5. Winner.** No winner-call override from a corner total/handicap result.
+**R6. Endpoint.** Regulation including stoppage; extra time excluded. Timed lower bounds or disagreement bounds are used only where explicitly stated.
+**R7. Mechanism.** Threshold arithmetic is observed. A calibrated causal/distribution error split is not recovered.
+**R8. Research limits.** Pregame conditions, original lineup/bench knowledge and issue custody not authenticated by terminal boxes.
+**R9. Source audit.** Actual game11September02:00UTC; earlier6September search was wrongdate. Reversed source slug does not reverse table ownership. Correct prior provisionalLOSS. Current accesscheck is separate from sporting truth; upstream independence UNKNOWN unless certified in original evidence.
+**R10. Classification.** Conditional sporting review, not a retrospective primary/model promotion. No manufactured final clock or pregame availability.
+**R11. Learning.** Hypothesis only: capture exact event/provider/period before future issue. No fitted parameter or causal effect changed.
+**R12. Disposition.** Exact named row revised via ROW_REVISIONS.csv with source-document hash; original card retained. Remaining certification limits stay explicit.
+
+## P-399 rank2 · Combined corners Over 8.5
+
+**R1. Frozen contract.** `Combined corners Over 8.5`, original rank2; p `MISSING`; no new probability or reference.
+**R2. Terminal evidence.** Genoa8 corners; Frosinone9; total17 Over8.5 wins. Source: https://football-italia.net/match/italian-serie-a-2026-27-genoa-vs-frosinone-2026-09-12/. CaptureSHA256 `e94ca791a9fa9e83718e17593ca3324978b6d3db204437fbd1159fd573cd364e`; retrieval `2026-11-08T21:53:45.010626+00:00`.
+**R3. Sporting grade.** Prior `WIN` → `WIN`. New evidence `C`. Financial operator action remains UNKNOWN_DEFINITION.
+**R4. Rank diagnostics.** Preserve original rank and probability role. Same-grade entries refresh evidence only, never add a win or trial.
+**R5. Winner.** No winner-call override from a corner total/handicap result.
+**R6. Endpoint.** Regulation including stoppage; extra time excluded. Timed lower bounds or disagreement bounds are used only where explicitly stated.
+**R7. Mechanism.** Threshold arithmetic is observed. A calibrated causal/distribution error split is not recovered.
+**R8. Research limits.** Pregame conditions, original lineup/bench knowledge and issue custody not authenticated by terminal boxes.
+**R9. Source audit.** Independent collection not certified; original issue/known-at and operator terms remain unverified Current accesscheck is separate from sporting truth; upstream independence UNKNOWN unless certified in original evidence.
+**R10. Classification.** Conditional sporting review, not a retrospective primary/model promotion. No manufactured final clock or pregame availability.
+**R11. Learning.** Hypothesis only: capture exact event/provider/period before future issue. No fitted parameter or causal effect changed.
+**R12. Disposition.** Exact named row revised via ROW_REVISIONS.csv with source-document hash; original card retained. Remaining certification limits stay explicit.
+
+## P-401 rank1 · Combined corners Over 8.5
+
+**R1. Frozen contract.** `Combined corners Over 8.5`, original rank1; p `MISSING`; no new probability or reference.
+**R2. Terminal evidence.** IFKGoteborg8 corners; Halmstad9; total17; Over8.5 andIFKOver4.5 win. Source: https://www.telefootball.net/US/IFK-Goteborg-Halmstad-2026-09-12-667686.html. CaptureSHA256 `9bf1103b125f41640aca5b339e85fd7df30662d570e35186c7f4bcb8fb8d9ca4`; retrieval `2026-11-08T21:54:02.032718+00:00`.
+**R3. Sporting grade.** Prior `WIN` → `WIN`. New evidence `C`. Financial operator action remains UNKNOWN_DEFINITION.
+**R4. Rank diagnostics.** Preserve original rank and probability role. Same-grade entries refresh evidence only, never add a win or trial.
+**R5. Winner.** No winner-call override from a corner total/handicap result.
+**R6. Endpoint.** Regulation including stoppage; extra time excluded. Timed lower bounds or disagreement bounds are used only where explicitly stated.
+**R7. Mechanism.** Threshold arithmetic is observed. A calibrated causal/distribution error split is not recovered.
+**R8. Research limits.** Pregame conditions, original lineup/bench knowledge and issue custody not authenticated by terminal boxes.
+**R9. Source audit.** Independent collection not certified; original issue/known-at and operator terms remain unverified Current accesscheck is separate from sporting truth; upstream independence UNKNOWN unless certified in original evidence.
+**R10. Classification.** Conditional sporting review, not a retrospective primary/model promotion. No manufactured final clock or pregame availability.
+**R11. Learning.** Hypothesis only: capture exact event/provider/period before future issue. No fitted parameter or causal effect changed.
+**R12. Disposition.** Exact named row revised via ROW_REVISIONS.csv with source-document hash; original card retained. Remaining certification limits stay explicit.
+
+## P-401 rank3 · IFK team corners Over 4.5
+
+**R1. Frozen contract.** `IFK team corners Over 4.5`, original rank3; p `MISSING`; no new probability or reference.
+**R2. Terminal evidence.** IFKGoteborg8 corners; Halmstad9; total17; Over8.5 andIFKOver4.5 win. Source: https://www.telefootball.net/US/IFK-Goteborg-Halmstad-2026-09-12-667686.html. CaptureSHA256 `9bf1103b125f41640aca5b339e85fd7df30662d570e35186c7f4bcb8fb8d9ca4`; retrieval `2026-11-08T21:54:02.032718+00:00`.
+**R3. Sporting grade.** Prior `WIN` → `WIN`. New evidence `C`. Financial operator action remains UNKNOWN_DEFINITION.
+**R4. Rank diagnostics.** Preserve original rank and probability role. Same-grade entries refresh evidence only, never add a win or trial.
+**R5. Winner.** No winner-call override from a corner total/handicap result.
+**R6. Endpoint.** Regulation including stoppage; extra time excluded. Timed lower bounds or disagreement bounds are used only where explicitly stated.
+**R7. Mechanism.** Threshold arithmetic is observed. A calibrated causal/distribution error split is not recovered.
+**R8. Research limits.** Pregame conditions, original lineup/bench knowledge and issue custody not authenticated by terminal boxes.
+**R9. Source audit.** Independent collection not certified; original issue/known-at and operator terms remain unverified Current accesscheck is separate from sporting truth; upstream independence UNKNOWN unless certified in original evidence.
+**R10. Classification.** Conditional sporting review, not a retrospective primary/model promotion. No manufactured final clock or pregame availability.
+**R11. Learning.** Hypothesis only: capture exact event/provider/period before future issue. No fitted parameter or causal effect changed.
+**R12. Disposition.** Exact named row revised via ROW_REVISIONS.csv with source-document hash; original card retained. Remaining certification limits stay explicit.
+
+## P-407 rank1 · Club Brugge team corners Over 4.5
+
+**R1. Frozen contract.** `Club Brugge team corners Over 4.5`, original rank1; p `MISSING`; no new probability or reference.
+**R2. Terminal evidence.** ClubBrugge9 corners; Antwerp4; ClubOver4.5 wins. Source: https://socceryes.com/match.php?id=1558631. CaptureSHA256 `272f26f6e6c45aabfb94c0d243f691cec54ab700a51eebbab3bfeb415898e651`; retrieval `2026-11-08T21:53:53.494847+00:00`.
+**R3. Sporting grade.** Prior `WIN` → `WIN`. New evidence `E`. Financial operator action remains UNKNOWN_DEFINITION.
+**R4. Rank diagnostics.** Preserve original rank and probability role. Same-grade entries refresh evidence only, never add a win or trial.
+**R5. Winner.** No winner-call override from a corner total/handicap result.
+**R6. Endpoint.** Regulation including stoppage; extra time excluded. Timed lower bounds or disagreement bounds are used only where explicitly stated.
+**R7. Mechanism.** Threshold arithmetic is observed. A calibrated causal/distribution error split is not recovered.
+**R8. Research limits.** Pregame conditions, original lineup/bench knowledge and issue custody not authenticated by terminal boxes.
+**R9. Source audit.** Another permitted table reported10-4; preserve discrepancy9-10 forhome. Both exceed4.5; exactcount/owner independence not newly certified. Current accesscheck is separate from sporting truth; upstream independence UNKNOWN unless certified in original evidence.
+**R10. Classification.** Conditional sporting review, not a retrospective primary/model promotion. No manufactured final clock or pregame availability.
+**R11. Learning.** Hypothesis only: capture exact event/provider/period before future issue. No fitted parameter or causal effect changed.
+**R12. Disposition.** Exact named row revised via ROW_REVISIONS.csv with source-document hash; original card retained. Remaining certification limits stay explicit.
+
+## P-409 rank2 · Troyes team corners Over 2.5
+
+**R1. Frozen contract.** `Troyes team corners Over 2.5`, original rank2; p `MISSING`; no new probability or reference.
+**R2. Terminal evidence.** Lille2 corners; Troyes5; TroyesOver2.5 wins. Source: https://www.telefootball.net/FR/Lille-Troyes-2026-09-13-667744.html. CaptureSHA256 `600762361240a1e6653b0aec7708b8b85591722865696a087b0ab26661f18da7`; retrieval `2026-11-08T21:54:01.769360+00:00`.
+**R3. Sporting grade.** Prior `WIN` → `WIN`. New evidence `C`. Financial operator action remains UNKNOWN_DEFINITION.
+**R4. Rank diagnostics.** Preserve original rank and probability role. Same-grade entries refresh evidence only, never add a win or trial.
+**R5. Winner.** No winner-call override from a corner total/handicap result.
+**R6. Endpoint.** Regulation including stoppage; extra time excluded. Timed lower bounds or disagreement bounds are used only where explicitly stated.
+**R7. Mechanism.** Threshold arithmetic is observed. A calibrated causal/distribution error split is not recovered.
+**R8. Research limits.** Pregame conditions, original lineup/bench knowledge and issue custody not authenticated by terminal boxes.
+**R9. Source audit.** Independent collection not certified; original issue/known-at and operator terms remain unverified Current accesscheck is separate from sporting truth; upstream independence UNKNOWN unless certified in original evidence.
+**R10. Classification.** Conditional sporting review, not a retrospective primary/model promotion. No manufactured final clock or pregame availability.
+**R11. Learning.** Hypothesis only: capture exact event/provider/period before future issue. No fitted parameter or causal effect changed.
+**R12. Disposition.** Exact named row revised via ROW_REVISIONS.csv with source-document hash; original card retained. Remaining certification limits stay explicit.
+
+## P-419 rank5 · Total corners Over 7.5 (self-generated alternate)
+
+**R1. Frozen contract.** `Total corners Over 7.5 (self-generated alternate)`, original rank5; p `MISSING`; no new probability or reference.
+**R2. Terminal evidence.** Djurgarden2 corners; GAIS2; total4 Over7.5 loses. Source: https://www.fotboll.com/match/djurg%C3%A5rden-gais-19635886. CaptureSHA256 `84d45fe9fd64194350c4240d1df677c779220b81b280d3035cafab7fb4c0aad0`; retrieval `2026-11-08T21:53:56.676353+00:00`.
+**R3. Sporting grade.** Prior `LOSS` → `LOSS`. New evidence `C`. Financial operator action remains UNKNOWN_DEFINITION.
+**R4. Rank diagnostics.** Preserve original rank and probability role. Same-grade entries refresh evidence only, never add a win or trial.
+**R5. Winner.** No winner-call override from a corner total/handicap result.
+**R6. Endpoint.** Regulation including stoppage; extra time excluded. Timed lower bounds or disagreement bounds are used only where explicitly stated.
+**R7. Mechanism.** Threshold arithmetic is observed. A calibrated causal/distribution error split is not recovered.
+**R8. Research limits.** Pregame conditions, original lineup/bench knowledge and issue custody not authenticated by terminal boxes.
+**R9. Source audit.** Independent collection not certified; original issue/known-at and operator terms remain unverified Current accesscheck is separate from sporting truth; upstream independence UNKNOWN unless certified in original evidence.
+**R10. Classification.** Conditional sporting review, not a retrospective primary/model promotion. No manufactured final clock or pregame availability.
+**R11. Learning.** Hypothesis only: capture exact event/provider/period before future issue. No fitted parameter or causal effect changed.
+**R12. Disposition.** Exact named row revised via ROW_REVISIONS.csv with source-document hash; original card retained. Remaining certification limits stay explicit.
+
+### Deep loss review
+**1. Claim.** `Total corners Over 7.5 (self-generated alternate)`; original rank5/p above. **2. Outcome.** Djurgarden2 corners; GAIS2; total4 Over7.5 loses.
+**3. Distribution.** No receipt-bound complete distribution/baseline recovered; PIT/SD/counterfactual proper-score comparison NOT_ASSESSABLE. The literal p is preserved, never recalibrated here.
+**4. Decomposition.** Threshold miss established; no measured base/adjustment decomposition. **5. Fact audit.** Exact terminal field above verified conditionally; original research claims remain independently unverified.
+**6. Mechanism.** The admitted count decides the line; scoreflow/causal injury/weather effects not inferred. **7. Cutoff knowledge.** Final count was not knowable; new capture is dated now.
+**8. Process.** Endpoint/corner provenance reviewed with the same limits for wins. **9. Verdict.** Sporting loss established; knowableERROR vs MODEL_LIMIT vs VARIANCE INCONCLUSIVE.
+**10. Counterfactual.** No replacement p. **11. Recurrence.** Comparable same-policy recurrence NOT_COMPUTED. **12. Correction.** Prompt7 captures scope/period; Prompt8 separately tests any numerical change prospectively.
+**13. Matched wins.** Same source/custody shortcomings apply to winning rows. **14. Honesty.** No causal shares, backdated publication, baseline or feedback invented; full certification remains incomplete.
+
+## P-430 rank5 · Al Ain team corners Over 3.5
+
+**R1. Frozen contract.** `Al Ain team corners Over 3.5`, original rank5; p `MISSING`; no new probability or reference.
+**R2. Terminal evidence.** AlAin2 corners; AlNassr10; AlAinOver3.5 loses. Source: https://foot.be/match/afc-champions-league/2026/810153/. CaptureSHA256 `aacda96bc0043e127e41df542154c3d11ad3490ae35316101eef6fb2c9575dcf`; retrieval `2026-11-08T21:53:43.757169+00:00`.
+**R3. Sporting grade.** Prior `LOSS` → `LOSS`. New evidence `C`. Financial operator action remains UNKNOWN_DEFINITION.
+**R4. Rank diagnostics.** Preserve original rank and probability role. Same-grade entries refresh evidence only, never add a win or trial.
+**R5. Winner.** No winner-call override from a corner total/handicap result.
+**R6. Endpoint.** Regulation including stoppage; extra time excluded. Timed lower bounds or disagreement bounds are used only where explicitly stated.
+**R7. Mechanism.** Threshold arithmetic is observed. A calibrated causal/distribution error split is not recovered.
+**R8. Research limits.** Pregame conditions, original lineup/bench knowledge and issue custody not authenticated by terminal boxes.
+**R9. Source audit.** Independent collection not certified; original issue/known-at and operator terms remain unverified Current accesscheck is separate from sporting truth; upstream independence UNKNOWN unless certified in original evidence.
+**R10. Classification.** Conditional sporting review, not a retrospective primary/model promotion. No manufactured final clock or pregame availability.
+**R11. Learning.** Hypothesis only: capture exact event/provider/period before future issue. No fitted parameter or causal effect changed.
+**R12. Disposition.** Exact named row revised via ROW_REVISIONS.csv with source-document hash; original card retained. Remaining certification limits stay explicit.
+
+### Deep loss review
+**1. Claim.** `Al Ain team corners Over 3.5`; original rank5/p above. **2. Outcome.** AlAin2 corners; AlNassr10; AlAinOver3.5 loses.
+**3. Distribution.** No receipt-bound complete distribution/baseline recovered; PIT/SD/counterfactual proper-score comparison NOT_ASSESSABLE. The literal p is preserved, never recalibrated here.
+**4. Decomposition.** Threshold miss established; no measured base/adjustment decomposition. **5. Fact audit.** Exact terminal field above verified conditionally; original research claims remain independently unverified.
+**6. Mechanism.** The admitted count decides the line; scoreflow/causal injury/weather effects not inferred. **7. Cutoff knowledge.** Final count was not knowable; new capture is dated now.
+**8. Process.** Endpoint/corner provenance reviewed with the same limits for wins. **9. Verdict.** Sporting loss established; knowableERROR vs MODEL_LIMIT vs VARIANCE INCONCLUSIVE.
+**10. Counterfactual.** No replacement p. **11. Recurrence.** Comparable same-policy recurrence NOT_COMPUTED. **12. Correction.** Prompt7 captures scope/period; Prompt8 separately tests any numerical change prospectively.
+**13. Matched wins.** Same source/custody shortcomings apply to winning rows. **14. Honesty.** No causal shares, backdated publication, baseline or feedback invented; full certification remains incomplete.
+
+## P-105 rank4 · Total Corners Over 7.5
+
+**R1. Frozen contract.** `Total Corners Over 7.5`, original rank4; p `MISSING`; no new probability or reference.
+**R2. Terminal evidence.** AlAhli9 corners; Auckland1; total10 Over7.5 wins. Source: https://www.voetbalprimeur.be/wedstrijden/2026-08-26/al-ahli-vs-auckland/statistieken. CaptureSHA256 `a663690a1029b9685961eb957b3be5a226db3f9072b60375be54ca2b4d6ec77d`; retrieval `2026-11-08T22:26:05.492641+00:00`.
+**R3. Sporting grade.** Prior `UNRESOLVED` → `WIN`. New evidence `C`. Financial operator action remains UNKNOWN_DEFINITION.
+**R4. Rank diagnostics.** Preserve original rank and probability role. Same-grade entries refresh evidence only, never add a win or trial.
+**R5. Winner.** No winner-call override from a corner total/handicap result.
+**R6. Endpoint.** Regulation including stoppage; extra time excluded. Timed lower bounds or disagreement bounds are used only where explicitly stated.
+**R7. Mechanism.** Threshold arithmetic is observed. A calibrated causal/distribution error split is not recovered.
+**R8. Research limits.** Pregame conditions, original lineup/bench knowledge and issue custody not authenticated by terminal boxes.
+**R9. Source audit.** PlayerStats regulation corner timeline corroborates>=8. Different publishers not certified independent. Current accesscheck is separate from sporting truth; upstream independence UNKNOWN unless certified in original evidence.
+**R10. Classification.** Conditional sporting review, not a retrospective primary/model promotion. No manufactured final clock or pregame availability.
+**R11. Learning.** Hypothesis only: capture exact event/provider/period before future issue. No fitted parameter or causal effect changed.
+**R12. Disposition.** Exact named row revised via ROW_REVISIONS.csv with source-document hash; original card retained. Remaining certification limits stay explicit.
+
+## P-117 rank4 · Total Corners Over 7.5
+
+**R1. Frozen contract.** `Total Corners Over 7.5`, original rank4; p `MISSING`; no new probability or reference.
+**R2. Terminal evidence.** ISI5 corners; Life3; total8 Over7.5 wins. Source: https://sportscore.com/football/match/life-fc-vs-isi-dangkor-senchey-fc/y39mp1h6xg1ymoj/. CaptureSHA256 `963894f43d8d1450f6f1aa0551a2ecf7c2e2bc0b9fd4ad7afa47333690218584`; retrieval `2026-11-08T22:32:26.628071+00:00`.
+**R3. Sporting grade.** Prior `UNRESOLVED` → `WIN`. New evidence `C`. Financial operator action remains UNKNOWN_DEFINITION.
+**R4. Rank diagnostics.** Preserve original rank and probability role. Same-grade entries refresh evidence only, never add a win or trial.
+**R5. Winner.** No winner-call override from a corner total/handicap result.
+**R6. Endpoint.** Regulation including stoppage; extra time excluded. Timed lower bounds or disagreement bounds are used only where explicitly stated.
+**R7. Mechanism.** Threshold arithmetic is observed. A calibrated causal/distribution error split is not recovered.
+**R8. Research limits.** Pregame conditions, original lineup/bench knowledge and issue custody not authenticated by terminal boxes.
+**R9. Source audit.** Date/teams/final match. Source11:30UTC agrees original18:30PhnomPenh. Other search feed12:30 not used for start proof. Current accesscheck is separate from sporting truth; upstream independence UNKNOWN unless certified in original evidence.
+**R10. Classification.** Conditional sporting review, not a retrospective primary/model promotion. No manufactured final clock or pregame availability.
+**R11. Learning.** Hypothesis only: capture exact event/provider/period before future issue. No fitted parameter or causal effect changed.
+**R12. Disposition.** Exact named row revised via ROW_REVISIONS.csv with source-document hash; original card retained. Remaining certification limits stay explicit.
+
+## P-290 rank4 · Pachuca most corners
+
+**R1. Frozen contract.** `Pachuca most corners`, original rank4; p `MISSING`; no new probability or reference.
+**R2. Terminal evidence.** Juarez1 corner; Pachuca3; Pachuca mostcorners wins. Source: https://pitcharium.com/match/fc-juarez-vs-cf-pachuca-2026-09-05. CaptureSHA256 `e3bc9b9fb9eb5fae1dc5883282c8567d1bde521a41e119cdee3ef0e560290e87`; retrieval `2026-11-08T22:26:05.491374+00:00`.
+**R3. Sporting grade.** Prior `UNRESOLVED` → `WIN`. New evidence `C`. Financial operator action remains UNKNOWN_DEFINITION.
+**R4. Rank diagnostics.** Preserve original rank and probability role. Same-grade entries refresh evidence only, never add a win or trial.
+**R5. Winner.** No winner-call override from a corner total/handicap result.
+**R6. Endpoint.** Regulation including stoppage; extra time excluded. Timed lower bounds or disagreement bounds are used only where explicitly stated.
+**R7. Mechanism.** Threshold arithmetic is observed. A calibrated causal/distribution error split is not recovered.
+**R8. Research limits.** Pregame conditions, original lineup/bench knowledge and issue custody not authenticated by terminal boxes.
+**R9. Source audit.** Independent collection not certified; original issue/known-at and operator terms remain unverified Current accesscheck is separate from sporting truth; upstream independence UNKNOWN unless certified in original evidence.
+**R10. Classification.** Conditional sporting review, not a retrospective primary/model promotion. No manufactured final clock or pregame availability.
+**R11. Learning.** Hypothesis only: capture exact event/provider/period before future issue. No fitted parameter or causal effect changed.
+**R12. Disposition.** Exact named row revised via ROW_REVISIONS.csv with source-document hash; original card retained. Remaining certification limits stay explicit.
+
+## P-341 rank3 · missingness correction
+
+Prior indexVOID → UNRESOLVED. Original says UNSETTLEABLE / not booked; no actual operator void rule exists. Current permitted renderer retries failed, so search7-5 remains a pointer. No WIN/LOSS admitted. Original p is not reconstructed from narrative.
+
+<!-- END HISTORICAL ROW REVISIONS 2026-11-09-1 -->

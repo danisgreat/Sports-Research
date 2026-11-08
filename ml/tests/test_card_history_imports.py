@@ -136,7 +136,7 @@ def test_current_import_matches_preserved_cohort_rows(current_rows):
     for path in es.revision_files():
         for v in es.read_revisions(path).to_dict("records"):
             revised[(v["canonical_id"], v["original_contract"])] = v
-    assert len(revised) == 12
+    assert len([k for k in revised if 601 <= int(k[0][2:]) <= 622]) == 12
     for r in reference.to_dict("records"):
         row = a.loc[(r["canonical_id"], r["contract"])]
         v = revised.get((r["canonical_id"], r["contract"]))
@@ -147,6 +147,17 @@ def test_current_import_matches_preserved_cohort_rows(current_rows):
         assert row.evidence.startswith(v["evidence_class"] if v else r["evidence"])  # keep the source's literal "R1 package" wording
         assert row.p == pytest.approx(float(r["p"])) if r["p"] else math.isnan(row.p)
         assert row.baseline == pytest.approx(float(r["baseline_p"])) if r["baseline_p"] else math.isnan(row.baseline)
+
+
+def test_revised_legacy_rows_override_existing_rank_log_without_becoming_primary(current_rows):
+    from ml.evaluation import effective_settlement as es
+    effective = es.effective_rows()
+    for cid in ("P-596", "P-598"):
+        original = effective[(effective.canonical_id == cid) & (effective.revision_source != "")].iloc[0]
+        row = current_rows[(current_rows.card == cid) & (current_rows.contract == original.original_contract)].iloc[0]
+        assert row.grade == original.sporting_grade == "LOSS"
+        assert row.effective_revision == "revision-2" and row.literal_grade == "UNRESOLVED"
+        assert row.cohort == "LEGACY_ANALYST_NOT_PRIMARY" and not row.counted_slot
 
 
 def test_current_primary_counts_and_research_exclusion(current_rows):

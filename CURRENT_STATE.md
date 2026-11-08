@@ -1,6 +1,8 @@
 # Current state
 
-**Current release — MDS/P v24.8 / CR-2026.11.09-R3 / P-2026.11.09-v24.6:** INTEGRITY + SOURCE PROCEDURE + SETTLEMENT. The 9 November review reproductions are now rejected in code: standings identity/as-of admission, nested probability consistency, effect scope/units,50-event prospective floor and enforced source access including redirects. [Implementation and verification](research/verification/framework_change_2026-11-09-3/IMPLEMENTATION.md). [Current competition sources](research/source_routes/README.md) checks both OpenAI/Anthropic tokens and distinguishes tested fields from discovery routes. P623–P637 imported; P584 settled; two frozen NBA bundles settled; historical unresolved fields/aliases are retained in the [current queue](research/verification/framework_change_2026-11-09-3/UNRESOLVED_POST_IMPORT.csv). Predictive skill remains unproven.
+**Historical ledger repair ·9November2026:** [review and evidence](research/verification/historical_resolution_2026-11-09-1/REPORT.md). Chronological original-to-canonical bindings resolve21 collision flags without moving original bytes. The distinct Geelong–Carlton card is imported asP638; nextP639. P596 andP598 have validated revision2 sporting losses; owner selected Huima−8.5. Eight missing corner-contract labels recovered;26 dated older-row revisions applied, including two missing-evidenceVOID corrections. [Remaining sporting/identity items](research/verification/historical_resolution_2026-11-09-1/UNRESOLVED_SPORTING_ITEMS.csv) and [certification limits](research/verification/historical_resolution_2026-11-09-1/CERTIFICATION_LIMITS.csv) are separate. Forecast method/prompt versions and prospective qualification unchanged.
+
+**Current release — MDS/P v24.8 / CR-2026.11.09-R3 / P-2026.11.09-v24.6:** INTEGRITY + SOURCE PROCEDURE + SETTLEMENT. The 9 November review reproductions are now rejected in code: standings identity/as-of admission, nested probability consistency, effect scope/units,50-event prospective floor and enforced source access including redirects. [Implementation and verification](research/verification/framework_change_2026-11-09-3/IMPLEMENTATION.md). [Current competition sources](research/source_routes/README.md) checks both OpenAI/Anthropic tokens and distinguishes tested fields from discovery routes. P623–P637 imported; P584 settled; two frozen NBA bundles settled; the earlier unresolved snapshot is reconciled row by row in the [current historical audit](research/verification/historical_resolution_2026-11-09-1/BACKLOG_RECONCILIATION.csv). Predictive skill remains unproven.
 
 **Previous release — MDS/P v24.7 / CR-2026.11.09-R2 / P-2026.11.09-v24.5:** PROCEDURE, owner instruction 9 November 2026. The owner's per-game request formats for nine sports (REQ-v4) are now the request template and head each prompt-1 sport file. GAME_REQUEST_TEMPLATE §1b reads every line into a contract, endpoint and deep-loss-review role, and the DEEPLOSS-v1 top-total trigger names goals, corners and full-innings totals.
 
@@ -65,14 +67,14 @@ FORMAT + PROCEDURE: MDS-v16.0 / CR-R7 / P-v16.0 / PRIMARY-v3.2; SCV-v10 and SEL-
 
 | Item | Value |
 |---|---|
-| Highest canonical ID / next | P-637 / **P-638** (from the import mappings) |
+| Highest canonical ID / next | P-638 / **P-639** (from the import mappings) |
 | Active local mini | `research/active_minis/20261109R3NEXT.md`; last / next local key `NONE` / `LOCAL-20261109R3NEXT-G0001` (footer) |
 | Open cards in the active mini | 0 of 0: none |
 | Frozen league-day events without settlement | 0: none |
 | Learning store | view 15; 5402 events, 5402 results, 8 team-statistic rows, 0 player-availability rows |
 | Adjustment ledger | 0 contract rows on 0 cards; 0 adjustment rows |
 | Prospective shadow ledger | 12 frozen rows on 2 events (`research/prospective/CYCLE_SHADOW_LEDGER.csv`) |
-| Effective settlements (imported local-key rows) | 178 rows, 12 revised by settlement imports, 2 UNRESOLVED |
+| Effective settlements (imported local-key rows) | 228 rows, 14 revised by settlement imports, 2 UNRESOLVED |
 | Active releases | MLB-CYCLE-4 (Baseball/MLB; CARRIED_FORWARD_BEFORE_GATE_V2; STALE_FOR_CURRENT_CODE); NHL-CYCLE-6 (Ice Hockey/NHL; BOUND_GATE_V2; CURRENT_CODE); NBA-CYCLE-4 (Basketball/NBA; BOUND_GATE_V2; CURRENT_CODE) |
 
 <!-- END GENERATED STATE -->

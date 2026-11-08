@@ -8,7 +8,13 @@ Active Combined Log: `prediction logs/PREDICTION_LOG_COMBINED_9.md`.
 Freeze: none (custody is the git history of `main`, CURRENT_RULES §9). The last control manifest is `archive/controls/CONTROL_MANIFEST_2026-10-09-3.md`. Current authority: CURRENT_STATE.md, METHOD.md and CURRENT_RULES.md.
 
 
-## Current settlement/import ·9November2026
+## Current historical repair ·9November2026
+
+HighestP638 / nextP639. [Historical report](research/verification/historical_resolution_2026-11-09-1/REPORT.md) and [all160 prior queue rows reconciled](research/verification/historical_resolution_2026-11-09-1/BACKLOG_RECONCILIATION.csv) supersede the earlier queue snapshot for the named keys only. P272 retains Osaka–Siniakova; its later Geelong–Carlton original is P638, not a Fremantle fixture. Shifted raw138–160 aliases bind chronologically to existingcanonical139–161; no duplicate outcome or new ID for a copy. P370/P415 are same-event administrative references, not distinct trials.
+
+P596SaryarkaML andP598Huima−8.5 are LOSS under validated revision2. Missing contracts and per-row source/grade changes are in [ROW_REVISIONS](research/historical_resolution/ROW_REVISIONS.csv), with R1–R12 and triggered deep-loss reviews appended to Part9. Original Part1–8 bytes unchanged. Non-scorable/no-action rows remain such, never invented wins/losses. [Current unresolved sporting/identity items](research/verification/historical_resolution_2026-11-09-1/UNRESOLVED_SPORTING_ITEMS.csv) and [provenance/independence limits](research/verification/historical_resolution_2026-11-09-1/CERTIFICATION_LIMITS.csv) are authoritative for this repair. Other original probabilities and issue strata remain literal.
+
+## Earlier settlement/import snapshot ·9November2026 R3
 
 P623–P637 are now retained in Part9; P584's sporting result is terminal. Two frozen NBA bundles have settlement feedback. See [R3 implementation](research/verification/framework_change_2026-11-09-3/IMPLEMENTATION.md), [readback](research/verification/framework_change_2026-11-09-3/CANONICAL_READBACK.csv) and [honest unresolved queue](research/verification/framework_change_2026-11-09-3/UNRESOLVED_POST_IMPORT.csv). Historical statuses below are dated snapshots, superseded only where a named revision says so. Active mini20261109R3NEXT, zero newcards, nextlocalG0001. P518–522 still reserved.
 

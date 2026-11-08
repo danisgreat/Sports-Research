@@ -1357,3 +1357,10 @@ Traps found and handled while building the ODI International files:
 - Historical source audits removed from this tree remain in Git history.
 
 Publication readback: 152 ignored local cache files listed in the full local control freeze remain absent from Git. The first publication also had one workflow line-ending mismatch, corrected with byte-preserving Git attributes. Remote validation remains incomplete; the local freeze does not establish clean-checkout evidence availability. The exact paths are retained in `research/verification/all_log_resolution_2026-10-05/published_freeze_inventory.json`.
+
+
+## Historical source cycling ·9November2026
+
+The [field evidence register](research/verification/historical_resolution_2026-11-09-1/FIELD_EVIDENCE.csv) records exact competition/event/period, observations, source URLs, current retrieval time/hash and limits for40 historical cases.139 exact paths were checked for all eight agent tokens; the full [access audit](research/verification/historical_resolution_2026-11-09-1/SOURCE_ACCESS_AUDIT.csv) includes refusals.27 tested event routes are appended to [COMPETITION_ROUTES](research/source_routes/COMPETITION_ROUTES.csv). Current access succeeds only as recorded: raw HTTP and supported rendering are separate, and neither proves unfiltered future access, accuracy, independent lineage or pregame publication.
+
+Useful recovered sporting fields include PHL's official period/shootout game record, AFL's official final plus club quarter table, ScoutBasketball's visible player-point totals, permitted regulation corner timelines from Fox/Calcio, and exact-event corner tables from sporting score sites. On mixed pages only the structured sporting fields are retained; odds, model-generated predictions and betting-product sources remain excluded. Failed/stale pages and blocked alternatives are in the evidence and discovery registers; no proxy, mirror, CAPTCHA workaround or user-agent rotation is authorized. Search snippets never settle a row.

@@ -1,5 +1,9 @@
 # Owner per-game request formats — MDS/P v24.7 / CR-2026.11.09-R2 / P-2026.11.09-v24.5, 9 November 2026
 
+## 2026-11-09 · historical evidence and chronological custody repair
+
+Source-bound aliases, literal-contract recovery and dated effective revisions preserve the immutable logs. P638 retains the distinct Geelong–Carlton card; P596/P598 definition losses and26 older-row corrections/corroborations feed reports without new primary forecasts.139 exactURL access checks and27 tested field routes added. All160 earlier queue rows reconciled; missing fields and nonrecoverable provenance remain explicit. [Report](research/verification/historical_resolution_2026-11-09-1/REPORT.md). No forecast method, calibrated parameter or prospective promotion.
+
 ## 2026-11-09 ·MDSv24.8 /CR-R3 /Pv24.6
 
 Owner-authorized integrity fixes after review: exact standings identity/provenance/time admission; nested probabilities by contract scope; effect competition/target/unit admission;50games plus8weeks in general prospective evaluator; mandatory source access at every sporting HTTP fetch/redirect for OpenAI+Anthropic tokens. Added209 explicit competition/scope source rows with actual tests/limits. Imported15originalsP623–P637 preserving allcorebytes, settledP584 and two real frozen NBA bundles; old missing fields/aliases remain unresolved. New mini20261109R3NEXT, nextcanonicalP638. Releases integrity-refrozen only if realgatepasses; no performancepromotion. Full evidence: research/verification/framework_change_2026-11-09-3/IMPLEMENTATION.md.
