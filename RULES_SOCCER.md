@@ -379,7 +379,7 @@ Companion to: **[RULES_SOCCER.md](RULES_SOCCER.md) §9**. Reference only; it doe
 
 Rules-era caveat: formats below are those in force for the **2025–2026 / 2026 / 2026-27** seasons the current log covers. Domestic formats (split systems, playoff qualifier counts, foreign-player quotas, relegation on/off) change frequently — **verify the season** for any event, especially for the Belgian, Danish, Egyptian, Argentine, Mexican, Chinese and Kazakh competitions, which have all changed format recently.
 
-**Maintenance (rule G2, kept here; RULES_GENERAL is archived).** Last reviewed **2026-09-04**. Before the first card of a new season / new edition of any competition here — or the first appearance of a competition after a break of ~6 weeks or more (most European leagues run Aug–May, so the August restart is a hard checkpoint; Brazil, China, Argentina, the Nordic and MLS-adjacent competitions run on other calendars) — re-verify against the field owner: the IFAB Laws currently in force (a new edition applies from 1 July each year), the competition's format (team count, split-system adoption, playoff/liguilla qualifier count, promotion/relegation on or off, points/tiebreak order), substitution and VAR adoption, foreign-player quotas, and any points deductions — then update the section below **before** issuing the card. The first time a new soccer competition is forecast, document its full rules here first. Recent examples of why this matters: the away-goals rule was abolished (2021); the 5-substitutions and goalkeeper-8-second rules were added; the UEFA competitions moved to the 36/18-team "league phase"; Liga MX abolished its play-in round from Apertura 2026; the Belgian, Danish and Egyptian leagues changed their split formats; China revised its foreign-player rule for 2026.
+**Maintenance (rule G2, kept here; RULES_GENERAL is archived).** Last reviewed **2026-11-08** (register before §9). Before the first card of a new season / new edition of any competition here — or the first appearance of a competition after a break of ~6 weeks or more (most European leagues run Aug–May, so the August restart is a hard checkpoint; Brazil, China, Argentina, the Nordic and MLS-adjacent competitions run on other calendars) — re-verify against the field owner: the IFAB Laws currently in force (a new edition applies from 1 July each year), the competition's format (team count, split-system adoption, playoff/liguilla qualifier count, promotion/relegation on or off, points/tiebreak order), substitution and VAR adoption, foreign-player quotas, and any points deductions — then update the section below **before** issuing the card. The first time a new soccer competition is forecast, document its full rules here first. Recent examples of why this matters: the away-goals rule was abolished (2021); the 5-substitutions and goalkeeper-8-second rules were added; the UEFA competitions moved to the 36/18-team "league phase"; Liga MX abolished its play-in round from Apertura 2026; the Belgian, Danish and Egyptian leagues changed their split formats; China revised its foreign-player rule for 2026.
 
 ---
 
@@ -434,7 +434,7 @@ Five kicks each, alternating, then **sudden death** if level. Only players on th
 ### 2.4 Season structure types
 
 - **Balanced double round-robin** (everyone plays everyone home and away): Premier League, LaLiga, Serie A, Bundesliga, Ligue 1, Eredivisie, Brasileirão, Roshn Saudi League, Chinese Super League, Championnat National.
-- **Split system** (a full or partial round-robin, then the table splits into a championship group and a relegation group, with points carried): **Scotland, Belgium, Denmark, Israel, Egypt (2025-26)** and others. In a split league, the fixture list and even the number of remaining games differ by group — never assume a full home-and-away season.
+- **Split system** (a full or partial round-robin, then the table splits into a championship group and a relegation group, with points carried): **Scotland, Denmark, Israel, Egypt (2025-26)** and others (Belgium dropped its split from 2026-27, §4.9). In a split league, the fixture list and even the number of remaining games differ by group — never assume a full home-and-away season.
 - **Apertura / Clausura** (two separate short championships per calendar year, each with its own champion, plus an annual/aggregate table for continental qualification and relegation): **Argentina, Mexico** and much of Latin America. Frequently followed by a knockout **playoff / "Liguilla" / "fase final"** among the top teams of the short tournament.
 - **Group + knockout** (a tournament, not a league): the cups, Leagues Cup, and the continental competitions.
 
@@ -524,11 +524,8 @@ Single-elimination knockout, **seeded** so that Serie A clubs (especially the to
 
 ### 4.9 Belgium — Jupiler Pro League (Belgian Pro League)
 
-**2025-26: 16 clubs** (expanding to 18 in 2026-27). **Regular season:** full double round-robin (30 matches). **Then the table splits:**
-- **Champions' play-offs (top 6):** a further double round-robin; **regular-season points are halved** (and rounded) before it starts. Decides the title and top European places.
-- **Europe play-offs (7th–12th):** a mini-tournament for the last European ticket; **points halved**.
-- **Relegation play-offs (13th–16th):** a further round-robin; **regular-season points carried in full**. **No automatic relegation in 2025-26** — the bottom club after the relegation play-offs meets the Challenger Pro League promotion-playoff winner in a promotion/relegation playoff.
-- Settlement: the point-halving means mid-table "points" contracts and title/relegation projections must use the **post-split** points, not the regular-season table.
+**Changed for 2026-27 (re-verified 2026-11-08).** **18 clubs, one double round-robin (34 matches), no play-offs and no halving of points**: the champion is the club top of the table, and the bottom two are relegated to the 2027–28 Challenger Pro League. This is the first season without play-offs since 2008-09. The season runs from 7 August 2026 to about 23 May 2027 (Hespress; Inside World Football, 17 June 2025; VRT, 27 February 2025). A play-off survives only on the Challenger side, where the clubs placed 3rd–6th play for a match against the Pro League's bottom club.
+- Settlement: points and position contracts use the single table. The 2025-26 split (Champions', Europe and Relegation play-offs, with halved points) is history and applies only to cards on that season.
 
 ### 4.10 Denmark — Superliga (3F Superliga)
 
@@ -614,12 +611,12 @@ A **state-level competition in Sikkim** run under the local sports-federation st
 
 ### 6.2 United States — MLS NEXT Pro
 
-MLS's **third-division development league** (mostly MLS reserve teams + a few independents). **No draws:** a match level after 90' goes **straight to a penalty shoot-out** — **both teams get 1 point for the 90-minute draw, and the shoot-out winner gets a 2nd point** (so a "regulation winner" is a real, distinct outcome from a "match/shoot-out winner"). **3 points for a 90-minute win.** Rosters ~20 for a matchday; up to 5 subs. Heavy developmental rotation — effective team strength swings match to match. **Playoffs:** conference-based single-elimination. In the log: **Colorado Rapids 2 vs Ventura County FC** — the card's "potential winner" is explicitly the **regulation winner**, not the shoot-out winner.
+MLS's **third-division development league** (mostly MLS reserve teams + a few independents). **No draws:** a match level after 90' goes **straight to a penalty shoot-out** — **both teams get 1 point for the 90-minute draw, and the shoot-out winner gets a 2nd point** (so a "regulation winner" is a real, distinct outcome from a "match/shoot-out winner"). **3 points for a 90-minute win.** Rosters ~20 for a matchday; up to 5 subs. Heavy developmental rotation — effective team strength swings match to match. **Playoffs (2026, re-verified 2026-11-08):** top nine per conference; 8 v 9 single-game play-in hosted by the 8th seed; Pick-Your-Opponent for the first two rounds; MLS NEXT Pro Cup 6–8 Nov 2026 as a single match. In the log: **Colorado Rapids 2 vs Ventura County FC** — the card's "potential winner" is explicitly the **regulation winner**, not the shoot-out winner.
 
 ### 6.3 Mexico — Liga MX
 
 **18 clubs.** Two tournaments per year (**Apertura**, Jul–Dec; **Clausura**, Jan–May), each a **17-match** single round-robin, each with its own champion.
-- **Liguilla (playoff):** **from Apertura 2026 the "Play-In"/reclasificación round is abolished — the top 8 of the Tabla General go straight to two-legged quarter-finals**, then two-legged semi-finals, then a two-legged final. Higher aggregate advances; **if aggregate is level in the QF or SF, the higher-seeded team advances (no extra time); the final has extra time + penalties.**
+- **Liguilla (playoff):** this file said that **from Apertura 2026 the "Play-In"/reclasificación round is abolished, and the top 8 of the Tabla General go straight to two-legged quarter-finals**, then two-legged semi-finals, then a two-legged final. **`CONFLICT` (re-verified 2026-11-08):** Mediotiempo reports the play-in ended from Apertura 2026. Fox Sports México (15 Oct 2026) says the format was still unclear, and a standings page lists places 1–6 direct and 7–10 in a reclasificación. Confirm the Apertura 2026 Liguilla format from ligamx.net before any Liguilla card. Higher aggregate advances; **if aggregate is level in the QF or SF, the higher-seeded team advances (no extra time); the final has extra time + penalties.**
 - **Tiebreakers:** points, GD, goals scored, head-to-head, away goals, relegation coefficient, Fair Play.
 - **Relegation is suspended** — the club with the worst multi-season **coefficient** pays a fine instead of going down. Continental berths (CONCACAF Champions Cup) go to tournament champions and the top of the aggregate table.
 - **5 subs**, VAR. In the log: cards reference **Apertura 2026** and earlier **Apertura 2026** fixtures.
@@ -631,7 +628,7 @@ The women's competition, **same Apertura/Clausura + Liguilla structure** as the 
 ### 6.5 CONCACAF — Leagues Cup
 
 An annual **MLS vs Liga MX** tournament (co-sanctioned). **2026: 36 clubs — all 18 Liga MX + 18 qualified MLS clubs.**
-- **Phase One (group stage):** clubs split into an **Eastern** and **Western** region of 18, each seeded into 3 tiers; each club plays **3 or 4 cross-league matches** in a mini-round-robin. **"No draws" format — a group match level after 90' goes straight to a penalty shoot-out** (3 points for a 90-minute win, and points for a shoot-out result).
+- **Phase One (league phase, 4–13 Aug 2026, re-verified 2026-11-08):** 54 MLS-v-Liga MX matches; each club plays three, ranked in a table for its own league. **"No draws": a match level after 90' goes straight to a penalty shoot-out.** Points: 3 for a 90-minute win, 2 for a shoot-out win, 1 for a shoot-out loss (mlssoccer.com). **The 2026 edition is complete** (knockouts 25 Aug – 6 Sep; final won 2–0 against Monterrey).
 - **Knockout:** the **top 4 clubs from each league** enter a fixed **MLS-vs-Liga-MX bracket** — quarter-finals, semi-finals, third-place match, final — all **single matches, straight to penalties if level (no extra time except, in most editions, the final)**.
 - The **finalists and the third-place-match winner qualify for the 2027 CONCACAF Champions Cup.**
 - Settlement: the "no draws / straight to penalties" rule means a "regulation (90') result" contract and a "match winner (incl. penalties)" contract diverge frequently — freeze which one the card uses. In the log: **2026 Quarterfinal** cards.
@@ -663,7 +660,7 @@ Unlike the above, the **ASEAN Club Championship** is a **competitive regional cl
 | Serie A | balanced league (H2H tiebreak; spareggio) | yes | n/a | yes / yes |
 | Coppa Italia | seeded knockout | — | ET + pens (2-leg SF) | yes / yes |
 | Eredivisie | balanced league (+ Nacompetitie) | yes | n/a | yes / yes |
-| Jupiler Pro League | split (points halved in title/Europe playoffs) | yes | n/a | yes / yes |
+| Jupiler Pro League | balanced league from 2026-27 (no play-offs, no halving; §4.9) | yes | n/a | yes / yes |
 | Danish Superliga | split (points carried) | yes | n/a | yes / yes |
 | DBU Pokalen | knockout | — | ET + pens | yes / partial |
 | Championnat National (FRA 3) | balanced league | yes | n/a | yes / **no VAR** |
@@ -693,6 +690,43 @@ Unlike the above, the **ASEAN Club Championship** is a **competitive regional cl
 | FIFA Intercontinental Cup | single-match knockout ladder | — | ET + pens | yes / yes |
 | Club friendlies / pre-season cups | exhibition | yes (or shoot-out for a trophy) | usually straight to pens | 6+ / usually no |
 | ASEAN Club Championship | group + 2-leg final | yes (group) | ET + pens | — / partial |
+
+## 8a. Competition register — re-verified 2026-11-08 (CR-2026.11.08-R1)
+
+Owner instruction, 8 November 2026: re-verify the rules of every soccer competition in the game logs. The status labels are those of RULES_BASKETBALL §9.5a. A card on a `CONFLICT` or `NOT_RE_VERIFIED` row must first confirm the format from the field owner (rule G2). Sources and notes: [verification report](research/verification/framework_change_2026-11-08-1/COMPETITION_RULES_VERIFICATION.md).
+
+**Laws of the Game 2026/27 (all competitions).** Approved at the 140th IFAB AGM (28 February 2026) and in force from **1 July 2026**, or earlier for competitions that started before then:
+- the five-second countdown now covers throw-ins and goal kicks, with possession to the opponents if it is exceeded;
+- a player who needs on-field assessment leaves the field for one minute after the restart;
+- VAR may review a second yellow card (and two other new situations) and a clearly wrong corner award;
+- up to 8 substitutes in senior A friendlies (11 by agreement);
+- referee body cameras;
+- the "only the captain" rule is compulsory.
+
+The 90 minutes, extra time, penalties and points are **unchanged**, so no settlement convention moves.
+
+| Competition (logged as) | 2026/27 rules that matter for a card | Status |
+|---|---|---|
+| UEFA Champions League, Europa League, Conference League | 36-team league phase, eight matches; top 8 to the last 16, 9th–24th in a two-legged play-off; two-legged ties to the semi-finals; level aggregate → extra time, then penalties; no away goals (since 2021); UCL final 5 Jun 2027 (Madrid) | `VERIFIED` |
+| UEFA Women's Champions League, Women's Europa Cup | Two-legged qualifiers, extra time and penalties on level aggregate; league phase in the UWCL | `VERIFIED` (format as §2–§3) |
+| England Premier League; EFL Championship | 20 and 24 clubs, balanced leagues; Championship play-offs | `VERIFIED` |
+| England Carabao Cup | Rounds 1–5 (through the QF): level after 90' → straight to penalties; SF two legs, extra time in the second leg; final extra time + penalties (§4.2 stands) | `VERIFIED` |
+| Germany Bundesliga, 2. Bundesliga; Spain LaLiga; Italy Serie A; France Ligue 1; Netherlands Eredivisie | Balanced leagues as §4; no format change found for 2026-27 | `VERIFIED` (format) |
+| Italy Coppa Italia; Denmark DBU Pokalen; China FA Cup; Israel State Cup; Armenia Cup; Slovakia Slovnaft Cup; Hungary MOL Cup | Single-match knockouts with extra time and penalties (Coppa Italia semi-finals two legs) as §4–§5 | `VERIFIED` (format; ties per round not individually rechecked) |
+| Belgium Pro League | **18 clubs, no play-offs, no halving of points** from 2026-27 (§4.9) | `CHANGED` |
+| Denmark Superliga | 12 clubs, split after 22 rounds (§4.10); no 2026-27 change found in this pass | `NOT_RE_VERIFIED` |
+| France Ligue 3 / Championnat National | The log names both; check the 2026-27 name and format (§4.12) on the card | `NOT_RE_VERIFIED` |
+| Japan J1 League | **First August-to-June season**, 7 Aug 2026 – 6 Jun 2027 with a winter break; double round-robin; three up, three down with J2. The Feb–Jun 2026 transition tournament ("J1 100 Year Vision League", East and West groups, no relegation) is complete | `CHANGED` |
+| India Indian Super League | **2026-27: 13 clubs, double round-robin home and away**, 10 Oct 2026 – May 2027; top 6 to the ISL Cup play-offs; league leader wins the Shield (AIFF) | `CHANGED` |
+| USA MLS NEXT Pro | Level after 90' → shoot-out for an extra point (3/2/1/0); the 90-minute draw is the settled result; 2026 play-offs §6.2 | `VERIFIED` |
+| MLS (regular season) | No shoot-outs; draws stand | `VERIFIED` |
+| CONCACAF Leagues Cup | 2026 complete; league phase with shoot-out points, knockouts straight to penalties (§6.5) | `VERIFIED` |
+| Mexico Liga MX Apertura 2026 | Play-in reported both abolished and kept (§6.3) | `CONFLICT` |
+| Mexico Liga MX Femenil; Liga Premier | Not re-verified in this pass | `NOT_RE_VERIFIED` |
+| Argentina Liga Profesional (Clausura 2026); Brazil Série A; Venezuela; Guatemala Liga Nacional | Formats as §5–§6 and the 2026-09-15 addendum; not re-verified in this pass | `NOT_RE_VERIFIED` |
+| Saudi Pro League, UAE Pro League, Algeria Ligue 1, Egypt, Kazakhstan, Uzbekistan, Uganda, Bhutan, Cambodia, Sikkim S-League, China Super League and League One, K League 1, Allsvenskan, Czech Chance Liga, Prva Liga RS, Australia Cup, Israel U19 | Balanced leagues or cups under the Laws; formats as their sections or not yet documented; not re-verified in this pass | `NOT_RE_VERIFIED` |
+| AFC Champions League Elite and Two; FIFA Intercontinental Cup; ASEAN Championship; Asian Games football | Knockout ties with extra time and penalties; not re-verified for 2026-27 | `NOT_RE_VERIFIED` |
+| Friendlies (club and international) | §7; senior A international friendlies now allow 8 substitutes (11 by agreement) | `CHANGED` (substitutes) |
 
 ## 9. Identity checklist (soccer)
 

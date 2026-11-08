@@ -6,13 +6,13 @@
 
 **Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §5.
 
-**P-2026.11.07-v24.1 · COHORT_RETROSPECTIVE · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Trigger: user request, about 30 newly settled cards, or a DUE/EARLY_REVIEW row from `python -m ml learning-status` (INTERIM about 100 and COMPREHENSIVE about 300 newly settled unique games; per-sport and per-competition clocks); none proves statistical sufficiency. Writes: a new uniquely named report, authorized scoreboard/state summaries, dated hypothesis amendments and CHANGELOG. No original log/grade/forecast, active rule/prompt or previous report changes. The decision lab is excluded.
+**P-2026.11.08-v24.2 · COHORT_RETROSPECTIVE · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Trigger: user request, about 30 newly settled cards, or a DUE/EARLY_REVIEW row from `python -m ml learning-status` (INTERIM about 100 and COMPREHENSIVE about 300 newly settled unique games; per-sport and per-competition clocks); none proves statistical sufficiency. Writes: a new uniquely named report, authorized scoreboard/state summaries, dated hypothesis amendments and CHANGELOG. No original log/grade/forecast, active rule/prompt or previous report changes. The decision lab is excluded.
 
 **ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](../../REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](../../CORE.md) §7.
 
 **Execution environment (ENV-v2).** Defined in [EXECUTION_ENVIRONMENT_PROTOCOL](../../WORKFLOW.md#part-a-execution_environment_protocol); summarised in [CORE](../../CORE.md) §1.
 
-**Required repository fallback (REF-v1).** Defined in [GITHUB_REFERENCE_PROTOCOL](../../GITHUB_REFERENCE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §1.
+**Required repository fallback (REF-v2).** Defined in [WORKFLOW](../../WORKFLOW.md#part-a-execution_environment_protocol) Part A §2 (GitHub `main` at a printed SHA when a local file is unreadable).
 
 ## 1. Freeze scope and evidence
 
@@ -34,7 +34,7 @@ Report:
 - Complete-range reliability bins and empty bins, event counts and calibration uncertainty; expected-score bias/MAE/RMSE and originally issued interval coverage. No z without original SD.
 - Gate PASS/instability/precision and frozen RET03/RET04/XCARD6/RANK_DELTA/BASE_ONLY comparisons, original/unadjusted adjustments, form-window/mixture diagnostics and identical-line difficulty.
 - Correctly conditioned joint losses; exact values versus bounds; actual issue state/lead and independent input horizon, separately scored CLEAN_PRE_START_INPUTS / POST_START_ISSUE versus pre-start-issued/unknown/outcome-exposed cohorts; no fixed research deadline, availability-search completion, source lineage, capture/review SLA and unresolved workload.
-- Rank-1 deep reviews and matched-win process defects; mechanism known-at versus post-event explanation. One loss or short streak is not calibration proof.
+- Deep loss reviews (DEEPLOSS-v1: top side, top total and rank 1): tally verdicts (ERROR, MODEL_LIMIT, VARIANCE, MIXED) and failure classes across the cohort. A class seen in three or more reviews is a pattern: route its correction to prompt 8 with the reviews' IDs. Report matched-win process defects, and mechanism known-at versus post-event explanation. One loss or short streak is not calibration proof.
 
 Use event/week dependence, repeated teams, serial drift, missingness, multiplicity and unequal task difficulty in the interpretation. Fewer than eight weeks is INSUFFICIENT_EVIDENCE under current scoring; eight is a floor, not a power calculation. No invented bootstrap or sample-size number.
 

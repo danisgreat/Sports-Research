@@ -1,0 +1,6 @@
+league,test,multiplier,n,mean_actual,mean_forecast,bias_without,bias_with,crps_without,crps_with,crps_diff,crps_diff_ci,brier_without,brier_with,brier_diff,brier_diff_ci
+AFL,"EARLY_SEASON first 14 days, archive estimate 1.013",1.013,183,176.842,172.392,4.45,2.209,16.0243,15.88278,-0.14153,"[-0.35351, 0.06156]",0.2429,0.23965,-0.00325,"[-0.00788, 0.00139]"
+AFL,"EARLY_SEASON first 28 days, archive estimate 1.013",1.013,373,173.847,174.98,-1.133,-3.408,17.88415,18.01151,0.12736,"[-0.05705, 0.30546]",0.24534,0.24711,0.00177,"[-0.00201, 0.00563]"
+AFL,"FINALS_COMPRESSION postseason, recommended 0.943",0.943,101,164.782,170.221,-5.438,4.264,14.49541,14.5034,0.00799,"[-0.95010, 1.03497]",0.24241,0.23448,-0.00793,"[-0.02983, 0.01441]"
+AFL,"Postseason 2026, refit on other seasons",0.9641,11,186.455,187.009,-0.554,6.157,22.71741,23.34707,0.62966,"[-1.07957, 3.48280]",0.24945,0.25658,0.00713,"[-0.03168, 0.05688]"
+AFL,"Postseason pooled refit (in-sample, for the size only)",0.9681,101,164.782,170.221,-5.438,0.0,14.49541,14.25982,-0.23559,"[-0.77192, 0.33856]",0.24241,0.23386,-0.00856,"[-0.02099, 0.00415]"

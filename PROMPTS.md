@@ -6,15 +6,13 @@
 
 **Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
 
-**Required repository fallback (REF-v1).** Defined in [GITHUB_REFERENCE_PROTOCOL](GITHUB_REFERENCE_PROTOCOL.md); summarised in [CORE](CORE.md) §1.
-
-**Google Drive (DRIVE-v2, optional).** Defined in [GOOGLE_DRIVE_EXCHANGE_PROTOCOL](GOOGLE_DRIVE_EXCHANGE_PROTOCOL.md); summarised in [CORE](CORE.md) §1.
+**Required repository fallback (REF-v2).** Defined in [WORKFLOW](WORKFLOW.md#part-a-execution_environment_protocol) Part A §2 (GitHub `main` at a printed SHA when a local file is unreadable).
 
 **ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](CORE.md) §7.
 
 **Execution environment (ENV-v2).** Defined in [EXECUTION_ENVIRONMENT_PROTOCOL](WORKFLOW.md#part-a-execution_environment_protocol); summarised in [CORE](CORE.md) §1.
 
-**Active suite: P-2026.11.07-v24.1** (read [CORE](CORE.md) first; prompt 1 = core with the shared steps plus one sport file in [research/prompts/1_sports/](research/prompts/1_sports/); ENV-v2: every prompt runs in this repository with internet research and ends with a commit and push; MLSCOPE-v3: prompt 1 freezes the declared reference before the card, builds p_card as reference plus logged adjustments and freezes the card's final p after it, prompt 3 settles it and runs the import (canonical IDs assigned in the settlement phase), prompt 6 scores the ledger and prompt 8 owns references and releases; models are judged after 8 weeks and 50 paired games; optional DRIVE-v2 drop box under [GOOGLE_DRIVE_EXCHANGE_PROTOCOL](GOOGLE_DRIVE_EXCHANGE_PROTOCOL.md); new minis mini-log-10 / mini-settlement-10; existing formats retained; learning records and review levels under [LEARNING_PIPELINE_PROTOCOL](ML_PIPELINE.md#part-c-learning_pipeline_protocol); dependency map in [research/prompts/DEPENDENCY_MAP.md](research/prompts/DEPENDENCY_MAP.md)). [Reading receipt and workflow](research/prompts/README.md). Use the complete selected prompt; its required rules/templates are linked there.
+**Active suite: P-2026.11.08-v24.2** (read [CORE](CORE.md) first; prompt 1 = core with the shared steps plus one sport file in [research/prompts/1_sports/](research/prompts/1_sports/); ENV-v2: every prompt runs in this repository with internet research and ends with a commit and push; MLSCOPE-v3: prompt 1 freezes the declared reference before the card, builds p_card as reference plus logged adjustments and freezes the card's final p after it, prompt 3 settles it and runs the import (canonical IDs assigned in the settlement phase), prompt 6 scores the ledger and prompt 8 owns references and releases; models are judged after 8 weeks and 50 paired games; the external-chat route and Drive drop box are retired (REQ-v3); new minis mini-log-10 / mini-settlement-10; existing formats retained; learning records and review levels under [LEARNING_PIPELINE_PROTOCOL](ML_PIPELINE.md#part-c-learning_pipeline_protocol); dependency map in [research/prompts/DEPENDENCY_MAP.md](research/prompts/DEPENDENCY_MAP.md)). [Reading receipt and workflow](research/prompts/README.md). Use the complete selected prompt; its required rules/templates are linked there.
 
 | # | Copy-ready prompt |
 |---|---|

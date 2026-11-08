@@ -288,7 +288,7 @@ StatMuse is an accepted research accelerator for this sport under `SOURCES.md`, 
 
 ## 9. Sport and competition rules reference
 
-Added 2026-09-04; last reviewed 2026-09-04. Standing reference for the rules of ice hockey and the competition-specific rules of every ice-hockey competition in the prediction logs. Supports `IH-P` identity and §6 settlement; introduces no rate, weight or ordering rule. **Two facts dominate ice-hockey identity: the period length (the AIHL uses 15-minute periods, not 20) and the overtime/points regime, which differ by league and between regular season and playoffs.**
+Added 2026-09-04; last reviewed 2026-11-08 (register §9.5a). Standing reference for the rules of ice hockey and the competition-specific rules of every ice-hockey competition in the prediction logs. Supports `IH-P` identity and §6 settlement; introduces no rate, weight or ordering rule. **Two facts dominate ice-hockey identity: the period length (the AIHL uses 15-minute periods, not 20) and the overtime/points regime, which differ by league and between regular season and playoffs.**
 
 **Maintenance (RULES_GENERAL (archived) §3, `G2`).** Before the first card of a new AIHL or Metal Ligaen season, or the first playoff card, re-verify the period length, the points system, the regular-season vs playoff overtime/shootout rules, the import-player limits, the team count and the playoff bracket against the league source, and update this section **before** issuing the card — both leagues have changed team counts recently, and the AIHL's 15-minute-period and finals-weekend format are unusual and worth re-confirming each year. The first time another hockey competition is forecast (NHL, an IIHF event, another European league), document its full rules — periods, points, OT — here first.
 
@@ -352,6 +352,19 @@ Added 2026-09-04; last reviewed 2026-09-04. Standing reference for the rules of 
 ### 9.5 IIHF national-team context
 
 Not directly in the log but the identity template must handle it: IIHF rules (20-minute periods, wider rink historically, 3-2-1-0 points, 3-on-3 OT + shootout in group games, long sudden-death OT with **no shootout** in medal/elimination games), tournament format = groups then a single-elimination knockout. Olympic and World Championship rosters and rules are their own era/population.
+
+### 9.5a Competition register — re-verified 2026-11-08 (CR-2026.11.08-R1)
+
+Owner instruction, 8 November 2026: re-verify the rules of every ice hockey competition in the game logs. The status labels are those of RULES_BASKETBALL §9.5a. Sources: [verification report](research/verification/framework_change_2026-11-08-1/COMPETITION_RULES_VERIFICATION.md).
+
+| Competition (logged as) | 2026/27 rules that matter for a card | Status |
+|---|---|---|
+| NHL (regular season, preseason) | **84-game regular season** from 2026-27 (first since 1993-94; 1,344 games, 29 Sep 2026 to 10 Apr 2027); preseason capped at four games (veterans two) under the CBA in force 16 Sep 2026; overtime and shootout unchanged (5-min 3-on-3, then shootout; playoffs 20-min 5-on-5 sudden death); points 2/1/0 | `CHANGED` (schedule length) |
+| Finland Liiga | 2026-27 transitional season of **17 clubs** (Jokerit and the Mestis champion promoted); top 12 to the playoffs; relegation at the bottom (reports differ on a 13th–16th relegation series); cut to 14 clubs for 2027-28 | `CHANGED` |
+| AHL | Standing rule 5-min 3-on-3 overtime, then a shootout (regular season); no 2026-27 statement retrieved | `NOT_RE_VERIFIED` |
+| Czech Tipsport extraliga | Opened 15 Sep 2026; 2025-26: 14 clubs, 52 rounds, places 5–12 in a pre-playoff; an undated report gives 15 clubs and 60 rounds | `CONFLICT` |
+| AIHL (Australia) | §9.3 stands; the 2026 season is complete | `VERIFIED` |
+| Denmark Metal Ligaen, Kazakhstan Pro Hokei Ligasy | Not re-verified in this pass (§9.4 club count 9 is from 2026-09-04) | `NOT_RE_VERIFIED` |
 
 ### 9.6 Identity checklist (ice hockey)
 

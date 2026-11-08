@@ -8,13 +8,13 @@
 
 **Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §5.
 
-**P-2026.11.07-v24.1 · LOCAL_MINI_SETTLEMENT.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). **LOCAL_WORKING_TREE** (ENV-v2). Writes: the frozen mini's source identity, one settlement document with dated revisions at `research/active_minis/<MINI_KEY>_SETTLEMENT.md`, the ledger inputs and frozen-row settlements of section 4, then the prompt-4 import of section 6 and a commit and push. Original cards are immutable. Settle the original probabilities from the frozen card; the model never re-grades or replaces them. Historical MODEL_ASSISTED cards are settled on their frozen contracts like any other card. The decision lab is excluded.
+**P-2026.11.08-v24.2 · LOCAL_MINI_SETTLEMENT.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). **LOCAL_WORKING_TREE** (ENV-v2). Writes: the frozen mini's source identity, one settlement document with dated revisions at `research/active_minis/<MINI_KEY>_SETTLEMENT.md`, the ledger inputs and frozen-row settlements of section 4, then the prompt-4 import of section 6 and a commit and push. Original cards are immutable. Settle the original probabilities from the frozen card; the model never re-grades or replaces them. Historical MODEL_ASSISTED cards are settled on their frozen contracts like any other card. The decision lab is excluded.
 
 **ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](../../REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](../../CORE.md) §7.
 
 **Execution environment (ENV-v2).** Defined in [EXECUTION_ENVIRONMENT_PROTOCOL](../../WORKFLOW.md#part-a-execution_environment_protocol); summarised in [CORE](../../CORE.md) §1.
 
-**Required repository fallback (REF-v1).** Defined in [GITHUB_REFERENCE_PROTOCOL](../../GITHUB_REFERENCE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §1.
+**Required repository fallback (REF-v2).** Defined in [WORKFLOW](../../WORKFLOW.md#part-a-execution_environment_protocol) Part A §2 (GitHub `main` at a printed SHA when a local file is unreadable).
 
 ## Inputs
 
@@ -48,7 +48,15 @@ Each revision has a unique per-original-record-key revision key, parent(s), effe
 
 Copy original rank/proposition/p_card/BASELINE_P/expected score literally. Count W/L/PUSH/VOID/UNRESOLVED separately; only original ranks 1–2 are primary. Informational, reforecast and frozen shadow wins never replace losses. Compute proper scores only from issued numeric probabilities with correct conditioning; full vectors are scored separately. Missing original p, SD or baseline stays missing.
 
-Complete R1–R12 for every terminal card, including wins and partial settlements; explain unavailable parts. Every Rank-1 LOSS gets eight parts: exact claim; verified outcome; original-distribution check; cutoff knowability; process/model/variance assessment; cutoff-only counterfactual; failure class; testable correction. No invented blame percentages, post-event rank replacement or miscalibration inference from one loss. Check matched wins for the same defects.
+Complete R1–R12 for every terminal card, including wins and partial settlements; explain unavailable parts. **Deep loss reviews (DEEPLOSS-v1, owner instruction 2026-11-08):** on every card, find the top side row (highest final p among winner, moneyline and spread or handicap rows on the full game), the top total row (highest final p over/under on the full-game total) and rank 1. Write one deep loss review for each of them graded LOSS, plus a joint section when the side and the total both lost, using the 14-section template in [CARD_AND_LOG_TEMPLATES](../../CARD_AND_LOG_TEMPLATES.md) §6 under [RULES_REFERENCE](../../RULES_REFERENCE.md#3-rule-r1-outcome-review-without-hindsight) Part A §3. Each review must be deep, comprehensive, brutally honest and accurate:
+
+- re-open the box score;
+- place the outcome in the frozen distribution;
+- audit every fact the card used, and every fact it missed, against publication times;
+- name what decided the game, with numbers;
+- give a plain verdict on whether the pick should have been made.
+
+"Bad luck" is never a verdict without the numbers that show it. No invented blame percentages, post-event rank replacement or miscalibration inference from one loss. Check matched wins for the same defects.
 
 ## 4. Reference, model rows and the adjustment ledger (MLSCOPE-v3 / LEDGER-v1)
 

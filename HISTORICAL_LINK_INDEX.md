@@ -451,3 +451,24 @@ Owner instruction, 7 November 2026: carry out the merge and archive plan of the 
 | `research/verification/reconciliation_2026-10-06/` | [archive/verification_2026-10/reconciliation_2026-10-06/](archive/verification_2026-10/reconciliation_2026-10-06/) |
 | `research/verification/settlement_2026-10-01/` | [archive/verification_2026-10/settlement_2026-10-01/](archive/verification_2026-10/settlement_2026-10-01/) |
 | `research/custody/implementation_2026-10-01/` | [archive/custody_implementation_2026-10-01/](archive/custody_implementation_2026-10-01/) |
+
+## External route retired — 2026-11-08 (CR-2026.11.08-R1)
+
+Owner instruction, 8 November 2026: research whether the external-chat route improves accuracy and is still needed, and include or exclude it accordingly. It was excluded ([implementation](research/verification/framework_change_2026-11-08-1/IMPLEMENTATION.md#2-external-chat-route)). Files moved unchanged (`git mv`); REF-v1's operative rule now lives in [WORKFLOW](WORKFLOW.md#part-a-execution_environment_protocol) Part A §2 as REF-v2. Historical documents keep their old links; this table resolves them.
+
+| Former path | Now | Bytes | SHA-256 |
+|---|---|---:|---|
+| `GITHUB_REFERENCE_PROTOCOL.md` | [archive/retired_2026-11-08/GITHUB_REFERENCE_PROTOCOL.md](archive/retired_2026-11-08/GITHUB_REFERENCE_PROTOCOL.md) | 4,873 | `f9e1e8c53573986737d0065baef9ae534716d0e81bd7bc8905609cbb77a3421f` |
+| `GOOGLE_DRIVE_EXCHANGE_PROTOCOL.md` | [archive/retired_2026-11-08/GOOGLE_DRIVE_EXCHANGE_PROTOCOL.md](archive/retired_2026-11-08/GOOGLE_DRIVE_EXCHANGE_PROTOCOL.md) | 3,219 | `e3d143833168f9110f3619f7d5e729cdf202d74722838167a384e597ad55a789` |
+| `research/prompts/external_requests/01_BASKETBALL.md` | [archive/retired_2026-11-08/external_requests/01_BASKETBALL.md](archive/retired_2026-11-08/external_requests/01_BASKETBALL.md) | 20,520 | `a6059f1ea7d66f4ea9971f6f4ef4b5bae484fa3c836a961b9e76647222f5ea80` |
+| `research/prompts/external_requests/02_BASEBALL.md` | [archive/retired_2026-11-08/external_requests/02_BASEBALL.md](archive/retired_2026-11-08/external_requests/02_BASEBALL.md) | 19,863 | `52e232938a96566fc5cf34ccdd5cc988d3efe06401e4bb02ce1584ffedae1563` |
+| `research/prompts/external_requests/03_ICE_HOCKEY.md` | [archive/retired_2026-11-08/external_requests/03_ICE_HOCKEY.md](archive/retired_2026-11-08/external_requests/03_ICE_HOCKEY.md) | 18,368 | `3b2be5960e7782dc1482c9c4fc43ab4998e5cfc664f41f6a4f37ef7bb6d2d99c` |
+| `research/prompts/external_requests/04_SOCCER.md` | [archive/retired_2026-11-08/external_requests/04_SOCCER.md](archive/retired_2026-11-08/external_requests/04_SOCCER.md) | 18,931 | `6cc591b815859e04d9314b4b7872748193e6d079a6b7d8e28fd563023dd752d3` |
+| `research/prompts/external_requests/05_AFL_AFLW.md` | [archive/retired_2026-11-08/external_requests/05_AFL_AFLW.md](archive/retired_2026-11-08/external_requests/05_AFL_AFLW.md) | 17,550 | `80f0a3cf882001c3dc6d7f6ab6a67da362a114aa99253ce75ba34998762c0730` |
+| `research/prompts/external_requests/06_RUGBY_LEAGUE.md` | [archive/retired_2026-11-08/external_requests/06_RUGBY_LEAGUE.md](archive/retired_2026-11-08/external_requests/06_RUGBY_LEAGUE.md) | 17,119 | `ffa768dea80daac20e70f39050fd810019809fc8fa0357450de74f23d7b835b1` |
+| `research/prompts/external_requests/07_RUGBY_UNION.md` | [archive/retired_2026-11-08/external_requests/07_RUGBY_UNION.md](archive/retired_2026-11-08/external_requests/07_RUGBY_UNION.md) | 16,846 | `607ccd7cb9b055ed61f70bd48c5f20807326512cb32fbc21969d20a9783146f2` |
+| `research/prompts/external_requests/08_AMERICAN_FOOTBALL.md` | [archive/retired_2026-11-08/external_requests/08_AMERICAN_FOOTBALL.md](archive/retired_2026-11-08/external_requests/08_AMERICAN_FOOTBALL.md) | 17,573 | `f286ee10c6d2297586f5fb73e8c1c268711bf0845f90e97fe884dde1d81c811d` |
+| `research/prompts/external_requests/09_CRICKET.md` | [archive/retired_2026-11-08/external_requests/09_CRICKET.md](archive/retired_2026-11-08/external_requests/09_CRICKET.md) | 18,145 | `1276d26b05945ca187ce0a7adadc931bc60d65ad80945e580f11448c9e63475a` |
+| `research/prompts/external_requests/10_TENNIS.md` | [archive/retired_2026-11-08/external_requests/10_TENNIS.md](archive/retired_2026-11-08/external_requests/10_TENNIS.md) | 17,387 | `0a187d62fc335109bbc972d8e1e1ef6ba1b5146c561076a7573dd8b8c8215f78` |
+| `research/prompts/external_requests/11_OTHER_SPORTS.md` | [archive/retired_2026-11-08/external_requests/11_OTHER_SPORTS.md](archive/retired_2026-11-08/external_requests/11_OTHER_SPORTS.md) | 16,354 | `e211fa3b5223ed58015e3c28d291c92d6ca9a7a0fe6daeefb45bb5bfb29c6b5c` |
+| `research/prompts/external_requests/README.md` | [archive/retired_2026-11-08/external_requests/README.md](archive/retired_2026-11-08/external_requests/README.md) | 4,852 | `fa5ffdb7d8691991fa0c07d01d5172a793b4d24e2db885952ed3452257e42bd1` |

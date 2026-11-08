@@ -1,6 +1,6 @@
 # CORE: what every card reads (CORE-v1)
 
-**MDS-2026.11.07-v24.3 · CR-2026.11.07-R3 · P-2026.11.07-v24.1 · SCV-2026.10.22-v12 · SEL-2026.10.22-v4.** The one document a game card must read in full before research, with the [prompt 1 core](research/prompts/1_GAME_CARD.md) and the one [sport file](research/prompts/1_sports/). It condenses the rules that decide a card; everything else is reference, read when the card touches that topic. Where this page and a long-form protocol differ in wording, the protocol governs and the difference is a defect to report (GOV-v2). Where a pre-v24 sentence anywhere contradicts this page, this page governs for cards under P-2026.10.22-v24.0 and later; earlier cards keep their own method.
+**MDS-2026.11.08-v24.4 · CR-2026.11.08-R1 · P-2026.11.08-v24.2 · SCV-2026.10.22-v12 · SEL-2026.10.22-v4.** The one document a game card must read in full before research, with the [prompt 1 core](research/prompts/1_GAME_CARD.md) and the one [sport file](research/prompts/1_sports/). It condenses the rules that decide a card; everything else is reference, read when the card touches that topic. Where this page and a long-form protocol differ in wording, the protocol governs and the difference is a defect to report (GOV-v2). Where a pre-v24 sentence anywhere contradicts this page, this page governs for cards under P-2026.10.22-v24.0 and later; earlier cards keep their own method.
 
 **Reading receipt.** Print branch, HEAD SHA, read time with offset, every uncommitted control difference, and the files actually read: this page, the prompt 1 core, the sport file and whatever the card opened. Never claim a file was read in full from an excerpt.
 
@@ -84,7 +84,7 @@
 | Probability tables, TB-1-MD | [PROBABILITY_TOOLKIT](PROBABILITY_TOOLKIT.md) |
 | Research: completion, persistence (EXH-v1), retention (RETAIN-v3), checklists, timing | [RESEARCH_PROTOCOL](RESEARCH_PROTOCOL.md) Parts A–E · [SOURCES](SOURCES.md) · [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md) (AVAIL-v4) · [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md) (HIST-v3) |
 | Simulation | [SIMULATION_PROTOCOL](SIMULATION_PROTOCOL.md) |
-| Where prompts run (ENV-v2), mini identity and delivery (MINI-v2), external access | [WORKFLOW](WORKFLOW.md) · [GITHUB_REFERENCE_PROTOCOL](GITHUB_REFERENCE_PROTOCOL.md) (REF-v1) · [GOOGLE_DRIVE_EXCHANGE_PROTOCOL](GOOGLE_DRIVE_EXCHANGE_PROTOCOL.md) (DRIVE-v2) |
+| Where prompts run (ENV-v2; external-chat route retired, REQ-v3), remote fallback (REF-v2), mini identity and delivery (MINI-v2) | [WORKFLOW](WORKFLOW.md) |
 | Formats, self-audit | [CARD_AND_LOG_TEMPLATES](CARD_AND_LOG_TEMPLATES.md) |
 | Requests | [GAME_REQUEST_TEMPLATE](GAME_REQUEST_TEMPLATE.md) |
 | Sport rules | `RULES_<SPORT>.md` (soccer and cricket include their competition-rules sections; ice hockey includes the NHL section) |

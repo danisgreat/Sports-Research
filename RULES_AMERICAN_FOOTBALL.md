@@ -313,7 +313,7 @@ StatMuse is an accepted research accelerator for this sport under `SOURCES.md`, 
 
 ## 9. Sport and competition rules reference
 
-Added 2026-09-04; last reviewed 2026-09-04. Standing reference for the rules of American/Canadian football and the competition-specific rules of every gridiron competition in the prediction logs. Supports `AM-P` identity and §6 settlement; introduces no rate, weight or ordering rule. Where a 2026 rule is cited it is the rule in force for the 2026 seasons the current log covers.
+Added 2026-09-04; last reviewed 2026-11-08: NFL 2026 changes (§9.4) confirmed against the owners' approval of all five Competition Committee proposals; CFL ties eliminated (§9.6); NCAA rules not re-verified in this pass. Standing reference for the rules of American/Canadian football and the competition-specific rules of every gridiron competition in the prediction logs. Supports `AM-P` identity and §6 settlement; introduces no rate, weight or ordering rule. Where a 2026 rule is cited it is the rule in force for the 2026 seasons the current log covers.
 
 **Maintenance (RULES_GENERAL (archived) §3, `G2`).** Before the first card of a new NFL/CFL/UFL season, a new preseason, a new college-football season, or a new bowl/playoff cycle, re-verify the overtime rule, the kickoff rule, the playoff/CFP/FCS-bracket format and size, roster rules, and any new playing-rule package against the league/NCAA source, and update this section **before** issuing the card — the NFL and NCAA change rules every offseason (kickoff, OT, CFP field size, two-minute warning). The first time a new gridiron competition is forecast, document its full rules here first.
 
@@ -388,7 +388,7 @@ Added 2026-09-04; last reviewed 2026-09-04. Standing reference for the rules of 
 
 **Roster ratio.** CFL rosters must carry a minimum number of **Canadian ("national") players**, with limits on **American ("global"/international)** starters — this constrains roster construction and depth in a way with no NFL analogue.
 
-**Overtime.** Not sudden death: each team gets a possession from the opponent's **35-yard line**; from the **second** OT round a **two-point convert is mandatory**; regular-season games may still **end in a tie** after one full round if level; playoff games continue until a winner.
+**Overtime.** Not sudden death: each team gets a possession from the opponent's **35-yard line**; from the **second** OT round a **two-point convert is mandatory**. **Changed for 2026 (CFL Board of Governors, 12 May 2026; re-verified 2026-11-08): ties are eliminated**, so regular-season games continue until there is a winner, as playoff games already did. Before 2026 a regular-season game could end tied after two OT rounds. A 20-second, whistled-in play clock also returned for the last three minutes of each half (cfl.ca; 3DownNation, "No more ties"). Any field or goal-post modernisation timetable was not confirmed in this pass: check cfl.ca before a card.
 
 ### 9.7 UFL (spring league — in scope per README, not yet in the log)
 

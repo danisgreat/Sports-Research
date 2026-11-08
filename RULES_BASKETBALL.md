@@ -308,7 +308,7 @@ StatMuse is an accepted research accelerator for this sport under `SOURCES.md`, 
 
 ## 9. Sport and competition rules reference
 
-Added 2026-09-04; last reviewed 2026-09-04. Standing reference for the playing rules of basketball and the competition-specific rules of every basketball competition in the prediction logs. Supports `BK-P3` (rule set and duration) and §6 settlement; introduces no rate, weight or ordering rule. **The single most important identity fact in basketball is which rule set applies — FIBA, WNBA or NBA — because it changes game length, the foul/bonus economy, overtime, and the three-point distance.**
+Added 2026-09-04; last reviewed 2026-11-08 (register §9.5a). Standing reference for the playing rules of basketball and the competition-specific rules of every basketball competition in the prediction logs. Supports `BK-P3` (rule set and duration) and §6 settlement; introduces no rate, weight or ordering rule. **The single most important identity fact in basketball is which rule set applies — FIBA, WNBA or NBA — because it changes game length, the foul/bonus economy, overtime, and the three-point distance.**
 
 **Maintenance (RULES_GENERAL (archived) §3, `G2`).** Before the first card of a new WNBA season, a new FIBA qualifier window, or a new tournament edition, re-verify the rule set (FIBA / WNBA / NBA), the roster and expansion state, the playoff/finals format and any in-season-tournament structure against the official body, and update this section **before** issuing the card. Basketball adds structural events regularly (the NBA play-in tournament, in-season cups, WNBA's move to a best-of-seven final and 15-team league). The first time a new basketball competition is forecast (an NBA card, a EuroLeague card, another national league), document its full rules — including whether it is FIBA or NBA rules — here first.
 
@@ -386,6 +386,31 @@ Before another LNBP or Copa Value card, obtain an exact current league regulatio
 **Settlement.** Freeze the operator's own regulation-versus-overtime, postponement, abandonment and player-prop terms. Without them, full-game side/total action is `UNKNOWN_DEFINITION` even if a research settlement is direction-invariant. P-279 did not require overtime and every recovered high-quality final agreed on 96–86, so its winner, ±5.5 and 169.5 result fields are direction-invariant; that does not validate an unstated operator rule. Quarter/player detail remains provisional unless an exact LNBP field-owner box or a provider with a frozen definition is recovered. Fox Sports México's statement that Mineros won all four quarters conflicts with the provisional 20–23 third-quarter row and may not control phase settlement.
 
 **Source state at review (2026-09-04; superseded for results by §"2026-09-17(b)" — the domain now returns HTTP 200 with a JavaScript-only shell, and the per-Jornada finals are recoverable by rendering `lnbp.mx/<Team>/team_results.html`).** `https://lnbp.mx/` identifies the field owner but returned HTTP 403 to the scripted research route; the official mobile-app listing did not expose a validated API, stable event IDs, correction history or use/retention terms. Use the exact LNBP record when accessible; otherwise seek an official club/static report and then two independent dated high-quality reports for a provisional final. Never upgrade the fallback into a league-wide structured-stat source.
+
+### 9.5a Competition register — re-verified 2026-11-08 (CR-2026.11.08-R1)
+
+Owner instruction, 8 November 2026: re-verify the rules of every basketball competition in the game logs. Status: `VERIFIED` (rules confirmed for the current or latest season), `CHANGED` (a rule or format differs from what this file said or from the previous season), `CONFLICT` (sources disagree: confirm from the field owner on the card, BK-P1) or `NOT_RE_VERIFIED` (no current statement found in this pass; G2 applies before the next card). Every basketball line includes overtime (BK-OT-1). Sources and the full notes: [verification report](research/verification/framework_change_2026-11-08-1/COMPETITION_RULES_VERIFICATION.md).
+
+**FIBA rules (all FIBA-governed competitions below).** The FIBA Official Basketball Rules 2026 are in force worldwide from **1 October 2026**. Disruption and flagrant fouls replace the unsportsmanlike foul. Technical fouls are split into two types, of which only one counts towards disqualification. Instant replay may review goaltending and basket interference after a foul at any time, and throw-in fouls in the last two minutes of the fourth quarter and of each overtime. Game length (4 × 10 minutes), overtime (5 minutes), scoring and the shot clock are **unchanged**. This replaces the "2024 edition still current" statement in §9.5.
+
+| Competition (logged as) | 2026/27 rules that matter for a card | Status |
+|---|---|---|
+| NBA (regular season, preseason, NBA Cup) | 48 min, 5-min OT, no ties; NBA Cup 2026-27: semifinals at the higher seed's home arena, only the championship neutral; draft lottery reform does not touch games | `CHANGED` (Cup venues) |
+| WNBA (regular season, playoffs) | 2026: 15 teams, 44 games (50 from 2027 under the CBA ratified 24 March 2026); playoffs top 8, best-of-three, five, seven; §9.3 stands | `VERIFIED` |
+| Australia NBL (NBL27) | FIBA rules; 10 clubs; Ignite Cup = 20 Wednesday games counting in the ladder, **top 4 now play Ignite Cup finals** (semis 19 Feb, decider 21 Feb 2027, Canberra); play-in then semifinal and championship series after 14 Feb 2027 | `CHANGED` |
+| Japan B.League (B.PREMIER, B.ONE) | Three tiers from 2026-27 (B.PREMIER, B.ONE, B.NEXT); B.PREMIER licence-based, no promotion or relegation on results; 60 games; FIBA rules with league import rules | `CHANGED` (sources differ on the B.PREMIER club count, 26 reported) |
+| Korea KBL | 54 games, Oct 2026 to 11 Apr 2027; **two imports may play together in Q2 and Q3** from 2026-27; FIBA playing rules | `CHANGED` |
+| Philippines PBA (Governors' Cup) | 4 × 12 min (PBA rules, not FIBA's 40); **four-point arc (27 ft)** since Season 49, retained; 2026 Governors' Cup two groups, crossover QF, QF/SF best-of-five, final best-of-seven | `VERIFIED` |
+| EuroCup (BKT) | 32 clubs, four groups of eight; **every playoff round best-of-three** from 2026-27 (was single-game early rounds) | `CHANGED` |
+| Basketball Champions League | Qualification tournaments single-game elimination (14–20 Sep 2026); 32-team regular season from 6 Oct 2026 | `VERIFIED` |
+| EuroLeague Women (qualifiers, regular season) | Qualifiers: four brackets of three, single games; regular season four groups of four, home and away, top three to a second round with results carried; EuroCup Women qualifiers are two-legged (FIBA two-game total-points rule: no overtime in game 1) | `VERIFIED` |
+| Spain Liga ACB (Endesa) | 18 clubs, 34 rounds, 26 Sep 2026 to 23 May 2027, eight-team playoffs (a 12-team plan is unconfirmed) | `VERIFIED` |
+| Italy LBA Serie A | 16 clubs, 30 rounds, 27 Sep 2026 to 9 May 2027, eight-team playoffs, final best-of-seven | `VERIFIED` |
+| Germany easyCredit BBL | 18 clubs; top 6 direct, play-in 7–10 single games, best-of-five series (2025-26 format; no 2026-27 change found) | `VERIFIED` (2025-26 basis) |
+| Greece Stoiximan GBL | Play-in and playout removed (2025-26); planned 14 clubs in 2026-27; 6+2 foreign players | `CHANGED` |
+| Lithuania LKL (now Betsson-LKL) | FIBA rules; 10 clubs listed; 2026-27 format not published in the sources found | `NOT_RE_VERIFIED` (format) |
+| FIBA World Cup 2027 qualifiers, Women's World Cup 2026, Asian Games 2026 | §9.4 stands; WWC 2026 and Asian Games 2026 (12 teams, three groups, final 20 Sep) are complete | `VERIFIED` |
+| Finland Korisliiga, Czech women's 1. liga, El Salvador LMB, Mexico LNBP / Copa Value | FIBA rule set; formats not re-verified in this pass (LNBP keeps its §9.5 onboarding gap) | `NOT_RE_VERIFIED` |
 
 ### 9.6 Identity checklist (basketball)
 

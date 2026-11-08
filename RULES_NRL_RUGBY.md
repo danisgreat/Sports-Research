@@ -305,7 +305,7 @@ Failure to obtain the match-window forecast for an outdoor or open-roof event yi
 
 ## 9. Sport and competition rules reference
 
-Added 2026-09-04; last reviewed 2026-09-04. Standing reference for the laws of rugby league and the competition rules of the NRL Telstra Premiership — the only rugby-league competition in the prediction logs. Supports `RL-P` identity and §6 settlement; introduces no rate, weight or ordering rule.
+Added 2026-09-04; last reviewed 2026-11-08: the 2026 NRL and NRLW seasons are complete (Grand Final 4 October 2026), and §9.2 stands as their record. Re-verify the 2027 rules package before the first 2027 card (G2). Standing reference for the laws of rugby league and the competition rules of the NRL Telstra Premiership — the only rugby-league competition in the prediction logs. Supports `RL-P` identity and §6 settlement; introduces no rate, weight or ordering rule.
 
 **Maintenance (RULES_GENERAL (archived) §3, `G2`).** Before the first card of a new NRL season, the pre-season Challenge, or the first finals card, re-verify the golden-point rule (regular season vs finals), the interchange/18th-man rules, the captain's-challenge and Bunker rules, the two-point field-goal rule, the team count and the finals bracket against nrl.com, and update this section **before** issuing the card — the NRL has changed the six-again, interchange, field-goal and finals rules within the last few seasons and adds an expansion team for 2028. The first time another rugby-league competition is forecast (Super League, State of Origin, an international, the NSW/Q Cup), document its full rules here first.
 

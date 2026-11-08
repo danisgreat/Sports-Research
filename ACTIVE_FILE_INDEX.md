@@ -6,9 +6,7 @@
 
 **Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
 
-**Required repository fallback (REF-v1).** Defined in [GITHUB_REFERENCE_PROTOCOL](GITHUB_REFERENCE_PROTOCOL.md); summarised in [CORE](CORE.md) §1.
-
-**Google Drive (DRIVE-v2, optional).** Defined in [GOOGLE_DRIVE_EXCHANGE_PROTOCOL](GOOGLE_DRIVE_EXCHANGE_PROTOCOL.md); summarised in [CORE](CORE.md) §1.
+**Required repository fallback (REF-v2).** Defined in [WORKFLOW](WORKFLOW.md#part-a-execution_environment_protocol) Part A §2 (GitHub `main` at a printed SHA when a local file is unreadable).
 
 **ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](CORE.md) §7.
 
@@ -26,9 +24,7 @@
 | Persistent sourcing / information closure | [RESEARCH_PROTOCOL.md (RESEARCH_EXHAUSTIVENESS_PROTOCOL)](RESEARCH_PROTOCOL.md#part-b-research_exhaustiveness_protocol) |
 | Reusable source discoveries | [RESEARCH_SOURCE_REGISTER.md](RESEARCH_SOURCE_REGISTER.md) |
 | Current values (IDs, active log, versions, scoreboard) | [CURRENT_STATE.md](CURRENT_STATE.md) |
-| Required GitHub reference / local-access recovery | [GITHUB_REFERENCE_PROTOCOL](GITHUB_REFERENCE_PROTOCOL.md) |
-| Who runs which prompt, external-chat reading budget, delivery and prompt-4 intake | [EXECUTION_ENVIRONMENT_PROTOCOL](WORKFLOW.md#part-a-execution_environment_protocol) |
-| Optional Google Drive drop box (folder `1ChlwkiOvd8c4MTaLC5BvkLniWogrm8Lj`; no push or mirror requirement) | [GOOGLE_DRIVE_EXCHANGE_PROTOCOL](GOOGLE_DRIVE_EXCHANGE_PROTOCOL.md) |
+| Who runs which prompt, the remote fallback (REF-v2), delivery and prompt-4 intake (the external-chat route is retired, REQ-v3) | [EXECUTION_ENVIRONMENT_PROTOCOL](WORKFLOW.md#part-a-execution_environment_protocol) |
 | The one page a game card reads in full before research (v24.0) | [CORE.md](CORE.md), with [GAME_REQUEST_TEMPLATE.md](GAME_REQUEST_TEMPLATE.md) for the owner's request and [RESEARCH_PROTOCOL.md (RESEARCH_CHECKLISTS)](RESEARCH_PROTOCOL.md#part-d-research_checklists) for what to research per sport and where |
 | Reference stage, tiers, TB-2-MD and the model lane | [REFERENCE_MODEL_PROTOCOL.md](REFERENCE_MODEL_PROTOCOL.md), parameters in [PARAMETERS.md (COMPETITION_PARAMETERS)](PARAMETERS.md#part-a-competition_parameters) and [research/competition_parameters/](research/competition_parameters/) |
 | Adjustment ledger, effect tables, picks block and benchmarks | [ADJUSTMENT_LEDGER_PROTOCOL.md](ADJUSTMENT_LEDGER_PROTOCOL.md), [PARAMETERS.md (EFFECT_TABLES)](PARAMETERS.md#part-b-effect_tables), [BENCHMARK_PROTOCOL.md](BENCHMARK_PROTOCOL.md); data in [research/adjustment_ledger/](research/adjustment_ledger/) and [research/effect_tables/](research/effect_tables/) |

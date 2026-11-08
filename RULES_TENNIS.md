@@ -291,7 +291,16 @@ Failure to obtain the match-window forecast for an outdoor or open-roof event yi
 
 ## 10. Sport and competition rules reference
 
-Added 2026-09-04; last reviewed 2026-09-04. Standing reference for the rules of tennis scoring and the tour-by-tour format and administrative differences for every tennis body in the prediction logs: **Grand Slams (US Open)**, the **ATP Tour** and **ATP Challenger Tour**, the **WTA Tour**, the **ITF World Tennis Tour** (M15/M25 etc.), and the **UTR Pro Tennis Tour**. Supports `TE-P` identity (`§1`) and `§7` settlement; introduces no rate, weight or ordering rule.
+Added 2026-09-04; last reviewed 2026-11-08. **2026 changes:**
+
+- **ATP extreme-heat rule:** a 10-minute cooling break in best-of-three singles when the wet-bulb globe temperature threshold is met, which lengthens matches but does not change scoring.
+- **ATP rankings:** 18 counting events; mandatory ATP 500s cut from 5 to 4.
+- **ITF World Tennis Tour:** 2026 regulations published with amendments marked; no adult match-format change was found.
+- **WTA:** no format change was found.
+
+The US Open, Shanghai, Almaty, Winston-Salem, Korea Open, Singapore, WTA 125 and ITF events in the log are complete; scoring formats in §10.2–§10.4 stand.
+
+ Standing reference for the rules of tennis scoring and the tour-by-tour format and administrative differences for every tennis body in the prediction logs: **Grand Slams (US Open)**, the **ATP Tour** and **ATP Challenger Tour**, the **WTA Tour**, the **ITF World Tennis Tour** (M15/M25 etc.), and the **UTR Pro Tennis Tour**. Supports `TE-P` identity (`§1`) and `§7` settlement; introduces no rate, weight or ordering rule.
 
 **Maintenance (RULES_GENERAL (archived) §3, `G2`).** The tours revise the rulebook most years (the 2022 final-set tiebreak alignment, on-court coaching becoming permanent in 2025, the spread of electronic line-calling, changes to medical-timeout and bathroom-break rules). Before the first card of a new Grand Slam, a new season on any tour, or a competition format not seen before (a Davis Cup / Billie Jean King Cup tie, a United Cup, an exhibition), re-verify the match format (best-of-3 vs 5, ad vs no-ad, standard vs match-tiebreak decider), the deciding-set rule, the coaching and line-calling rules, and the event's own draw/advancement structure, and update this section **before** issuing the card. The first time a new circuit is forecast (WTA 125, ATP Finals, a team event, a senior/legends event), document its full format and any format flexibility here first.
 

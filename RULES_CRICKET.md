@@ -525,7 +525,7 @@ Companion to: **[RULES_CRICKET.md](RULES_CRICKET.md) §11**. Reference only; it 
 
 Rules-era caveat: the playing conditions below are those in force for the **2025–2026** seasons the current log covers (ICC men's playing conditions effective July 2025; ICC Women's Championship 2025–2029; The Hundred 2026; CPL 2026; ETPL 2026 inaugural). Cricket changes its playing conditions almost every year — verify the era for any event outside this window.
 
-**Maintenance (rule G2, kept here; RULES_GENERAL is archived).** Last reviewed **2026-09-04**. Before the first card of a new season / edition of any competition here — or the first appearance of a cricket competition after a break of ~6 weeks or more — re-verify the ICC playing conditions and the competition's own playing regulations against the field owner (ICC, the league operator) for changes to powerplay/bowler limits, DRS, DLS minima, the Super Over rule, the points/NRR system, squad rules, or the knockout format, and update the relevant section below **before** issuing the card. The first time a new cricket competition is forecast, add its full playing conditions and format here first. Watch especially for: a franchise-league deviation from ICC conditions (e.g. the IPL's two-bouncers-per-over and Impact Player rules, which are IPL-only and not guaranteed to persist), a format switch (The Hundred's investors have floated a move to franchise T20), and expansion/contraction of a league's team count.
+**Maintenance (rule G2, kept here; RULES_GENERAL is archived).** Last reviewed **2026-11-08**: the ICC 2025 conditions and the MCC 2026 Laws above. The Hundred, CPL, WCPL and ETPL 2026 seasons are complete; their sections stand as records. Bilateral Tests, ODIs and T20Is follow the ICC conditions in force on the match date; the 2026 Women's T20 Asia Cup and the Namibia and Pakistan tri-series are complete. Before the first card of a new season / edition of any competition here — or the first appearance of a cricket competition after a break of ~6 weeks or more — re-verify the ICC playing conditions and the competition's own playing regulations against the field owner (ICC, the league operator) for changes to powerplay/bowler limits, DRS, DLS minima, the Super Over rule, the points/NRR system, squad rules, or the knockout format, and update the relevant section below **before** issuing the card. The first time a new cricket competition is forecast, add its full playing conditions and format here first. Watch especially for: a franchise-league deviation from ICC conditions (e.g. the IPL's two-bouncers-per-over and Impact Player rules, which are IPL-only and not guaranteed to persist), a format switch (The Hundred's investors have floated a move to franchise T20), and expansion/contraction of a league's team count.
 
 ---
 
@@ -559,7 +559,8 @@ Rules-era caveat: the playing conditions below are those in force for the **2025
 - **Wide judgement** now references the batter's leg position **at the moment of delivery**, so a batter who moves across cannot manufacture a wide by the movement alone (leg-side wides are still strict in white-ball cricket).
 - **One bouncer (above shoulder height) per over** in ICC T20Is; **two per over** in ODIs. (The IPL uses two per over — a franchise-league deviation; do not assume it elsewhere.)
 - **Serious-injury replacement:** from October 2025, on trial, a player who suffers a serious on-field injury after the match starts may be replaced by a **like-for-like fully participating** substitute (a widening of the older concussion-substitute rule).
-- **Boundary catches:** a fielder must be **entirely within the boundary** (or their last contact with the ground was inside) when they touch the ball; airborne fielders taking a ball beyond the boundary get one touch and must land inside.
+- **Boundary catches (ICC men's playing conditions from June–July 2025, re-verified 2026-11-08):** a fielder must be **entirely within the boundary** (or their last contact with the ground was inside) when they touch the ball. A fielder who is airborne beyond the rope when touching the ball must then **land inside the field and stay inside** for the catch to stand.
+- **MCC Laws of Cricket, 2026 edition (in force 1 October 2026; 73 material changes, the fourth revision of the 2017 Code):** when a wicket falls in the last over of a day in a multi-day match, the over is completed and the new batter faces the remaining balls; ball sizes are now classed Size 1, 2 and 3 with uniform tolerances; laminated bats are allowed in adult open-age cricket; the rules on when the ball is "finally settled" and on overthrows are clarified; and the wording is gender-neutral. ICC international playing conditions adopt Laws changes separately: check the series' playing conditions on the card (lords.org; icc-cricket.com).
 
 ---
 
@@ -567,7 +568,7 @@ Rules-era caveat: the playing conditions below are those in force for the **2025
 
 ### 2.1 Test cricket
 - **Two innings per side**, up to **5 days**, minimum **90 overs per day**. No fixed innings length — an innings ends when the side is all out, declares, or (rarely) time runs out.
-- **New ball** available after 80 overs. **Follow-on:** the side batting first, if 200+ runs ahead after the first innings, may ask the opponent to bat again immediately.
+- **New ball** available after 80 overs. **Stop clock between overs in Tests** (ICC, from June 2025; warnings reset every 80 overs). **Follow-on:** the side batting first, if 200+ runs ahead after the first innings, may ask the opponent to bat again immediately.
 - **Result:** win (opponent's second innings dismissed/target chased), **draw** (time expires with the match unfinished), or **tie** (extremely rare — scores level with the last team all out). **No DLS** in Tests — lost time simply makes a draw more likely.
 - **World Test Championship (2025–2027):** a points percentage table (12 points per win, 4 per draw, of a possible 12 per match), with in-match over-rate and slow-over penalties; top two contest a one-off final.
 - Settlement: the **draw is a first-class outcome** and must be an explicit branch for any Test winner market.
@@ -575,7 +576,7 @@ Rules-era caveat: the playing conditions below are those in force for the **2025
 ### 2.2 One Day International (ODI) / List A
 - **50 overs per side**, one innings each. Bowler maximum **10 overs**.
 - **Powerplays:** overs 1–10 = two fielders out (P1); overs 11–40 = four out (P2); overs 41–50 = five out (P3).
-- **Two new balls** (one from each end) in ODIs for the first ~34 overs, then one chosen ball for the death — the exact rule has changed repeatedly; the 2025 update moved to one ball from over 35.
+- **Two new balls** (one from each end) in ODIs for the first ~34 overs, then one chosen ball for the death — the exact rule has changed repeatedly; since 2 July 2025 (ICC), two new balls are used to the end of over 34 and the fielding side then picks one of them for overs 35–50 (re-verified 2026-11-08).
 - **DRS:** two unsuccessful reviews per team per innings.
 - **DLS** applies; minimum **20 overs** to the side batting second for a result.
 - **Result:** win or tie; no draw. **Super Over** in knockouts, bilateral series usually record a tie.

@@ -1,0 +1,5 @@
+league,test,multiplier,n,mean_actual,mean_forecast,bias_without,bias_with,crps_without,crps_with,crps_diff,crps_diff_ci,brier_without,brier_with,brier_diff,brier_diff_ci
+NRL,"EARLY_SEASON first 14 days, archive estimate 0.938",0.938,81,40.111,42.979,-2.868,-0.203,7.848,7.65031,-0.19769,"[-0.55927, 0.22990]",0.24433,0.2359,-0.00843,"[-0.02492, 0.01131]"
+NRL,"EARLY_SEASON first 28 days, archive estimate 0.938",0.938,177,41.345,42.402,-1.057,1.572,8.03233,7.94068,-0.09165,"[-0.36122, 0.19669]",0.24381,0.23695,-0.00686,"[-0.02000, 0.00697]"
+NRL,"FINALS_COMPRESSION postseason, recommended 0.938",0.938,54,41.778,45.177,-3.399,-0.598,7.38395,7.1043,-0.27964,"[-0.65900, 0.07678]",0.24263,0.23109,-0.01153,"[-0.02951, 0.00608]"
+NRL,"Postseason pooled refit (in-sample, for the size only)",0.9248,54,41.778,45.177,-3.399,0.0,7.38395,7.08906,-0.29489,"[-0.75738, 0.13837]",0.24263,0.23029,-0.01234,"[-0.03406, 0.00891]"

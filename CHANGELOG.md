@@ -1,3 +1,13 @@
+# Owner decisions and competition rules — MDS/P v24.4 / CR-2026.11.08-R1 / P-2026.11.08-v24.2, 8 November 2026
+
+Owner instructions on the four items left open on 7 November, and a re-verification of every logged competition's rules. STATISTICAL + PROCEDURE.
+
+- **Regime multipliers:** tested against the reference on verified NBA, MLB, AFL and NRL finals, with leave-one-season-out scoring ([study](research/verification/framework_change_2026-11-08-1/regime_study/REGIME_STUDY.md)). Four effect rows move a number; the rest are null, not estimable or retired.
+- **External-chat route:** no accuracy gain and structural custody gaps, so it is retired; its files are archived.
+- **Decision lab:** kept as a firewalled separate contributor, with a code test.
+- **Deep loss reviews (DEEPLOSS-v1):** required for every losing top side, top total and rank 1 row, using a 14-section template.
+- **Competition rules:** about 130 competitions re-verified; corrections in the sport files ([report](research/verification/framework_change_2026-11-08-1/COMPETITION_RULES_VERIFICATION.md)).
+
 # Contradictions removed from the merged documents — MDS/P v24.3 / CR-2026.11.07-R3 / P-2026.11.07-v24.1, 7 November 2026
 
 Owner instruction: "do comprehensive research to remove the contradictions in merged files and to shorten anything when necessary". Class PROCEDURE. Rewrote RULES_REFERENCE, RESEARCH_PROTOCOL, WORKFLOW, ML_PIPELINE and PARAMETERS, and cleaned the appended sections in REFERENCE_MODEL_PROTOCOL, RULES_ICE_HOCKEY, RULES_SOCCER, RULES_CRICKET and CORE. 47 contradictions were resolved, each with its governing rule. The receipt sentences of the eleven prompt-1 sport files now follow the v24 reading gate (suite v24.1). CURRENT_STATE's method and control rows were brought up to date; `.gitattributes` follows the archived prompt; CARD_AND_LOG_TEMPLATES now reads S1–S19. Web rechecks of the checklist publication times; two unsourced NHL numbers removed. 33% shorter overall. No method, width, constant, reference, ID or grade changed. Owner checks: regime multipliers (R-18), the external route, the decision lab. Erratum: S19 in today's settlement documents is N/A for those pre-v24 cards. [Report](research/verification/framework_change_2026-11-07-3/CONTRADICTIONS.md).
@@ -16,7 +26,7 @@ Owner request: settle every log in `MINI LOGS TO BE SETTLED/` under the stipulat
 
 # External-chat game requests per sport — REQ-v2, 22 October 2026
 
-Owner request: a better, sport-specific version of the free-text game request for an external research chat. Added [research/prompts/external_requests/](research/prompts/external_requests/README.md): eleven paste-ready requests, one per prompt-1 sport file, each with the exact `main` files and sections to read, the tier and reference to compute before research, a value-ranked research table with publication times and verified routes, what to compute, the simulation rule, the SEL v4 selection (probability for every contract, the most-likely four, information list, abstain) and the CARD_DELTA format for intake. Procedure addition only: no statistical rule, prompt version or issued record changed. GAME_REQUEST_TEMPLATE and the prompt index link to it.
+Owner request: a better, sport-specific version of the free-text game request for an external research chat. Added [research/prompts/external_requests/](archive/retired_2026-11-08/external_requests/README.md): eleven paste-ready requests, one per prompt-1 sport file, each with the exact `main` files and sections to read, the tier and reference to compute before research, a value-ranked research table with publication times and verified routes, what to compute, the simulation rule, the SEL v4 selection (probability for every contract, the most-likely four, information list, abstain) and the CARD_DELTA format for intake. Procedure addition only: no statistical rule, prompt version or issued record changed. GAME_REQUEST_TEMPLATE and the prompt index link to it.
 
 # Reference-first cards, adjustment ledger, linted picks, tiers and league lane — MDS/P v24.0 / CR-2026.10.22-R2, 22 October 2026
 
@@ -139,7 +149,7 @@ STATISTICAL + PROCEDURE, owner instruction: "ML/RL doesn't seem to be implemente
 
 ## 2026-10-17 — MDS/P v20.2 / CR-2026.10.17-R2 / DRIVE-v1
 
-PROCEDURE, owner instruction. The owner's Google Drive folder `1ChlwkiOvd8c4MTaLC5BvkLniWogrm8Lj` may now be used to upload changes, prompts 1 and 2 may refer to it, and every authorised publication goes to GitHub and then to the Drive mirror. New [GOOGLE_DRIVE_EXCHANGE_PROTOCOL](GOOGLE_DRIVE_EXCHANGE_PROTOCOL.md):
+PROCEDURE, owner instruction. The owner's Google Drive folder `1ChlwkiOvd8c4MTaLC5BvkLniWogrm8Lj` may now be used to upload changes, prompts 1 and 2 may refer to it, and every authorised publication goes to GitHub and then to the Drive mirror. New [GOOGLE_DRIVE_EXCHANGE_PROTOCOL](archive/retired_2026-11-08/GOOGLE_DRIVE_EXCHANGE_PROTOCOL.md):
 - **Reading.** GitHub `main` stays authoritative. A Drive mirror copy is used only when `DRIVE_SYNC_RECEIPT.md` lists it as current. An uploaded but uncommitted mini, runtime pack or attempt may be used after identity and custody checks.
 - **Uploading.** A session that cannot push writes complete files with an `UPLOAD_MANIFEST.md` to `uploads/<date>/<label>/`. An upload is not a commit, freeze or publication.
 - **Importing.** A checkout session imports uploads through the normal gates, then renames the upload folder `__IMPORTED_<sha>`.
@@ -222,7 +232,7 @@ Owner requires researched events to be recorded/canonically retained regardless 
 
 ## 2026-10-15 - Require GitHub main fallback for incomplete local access
 
-PROCEDURE: MDS-v16.1 / CR-R8 / P-v16.1. Standing reference https://github.com/danisgreat/Sports-Research/tree/main. [REF-v1](GITHUB_REFERENCE_PROTOCOL.md) requires actual required-file recovery whenever local repository files are absent, unreadable, truncated or incomplete, with exact commit/path/read-time/fallback evidence in the existing reading receipt. All eleven standalone game workflows, all eight task prompts and core/ML/source/contribution instructions aligned. Preserve pinned authority and local differences; unpublished minis are never reconstructed from a different remote original. Both-route failure blocks only dependent work; reading a page never claims ML execution. No numerical algorithm, scoring/selection, mini format, issued card, ID or grade change. [Implementation](research/verification/framework_change_2026-10-15-8/IMPLEMENTATION.md).
+PROCEDURE: MDS-v16.1 / CR-R8 / P-v16.1. Standing reference https://github.com/danisgreat/Sports-Research/tree/main. [REF-v1](archive/retired_2026-11-08/GITHUB_REFERENCE_PROTOCOL.md) requires actual required-file recovery whenever local repository files are absent, unreadable, truncated or incomplete, with exact commit/path/read-time/fallback evidence in the existing reading receipt. All eleven standalone game workflows, all eight task prompts and core/ML/source/contribution instructions aligned. Preserve pinned authority and local differences; unpublished minis are never reconstructed from a different remote original. Both-route failure blocks only dependent work; reading a page never claims ML execution. No numerical algorithm, scoring/selection, mini format, issued card, ID or grade change. [Implementation](research/verification/framework_change_2026-10-15-8/IMPLEMENTATION.md).
 
 ## 2026-10-15 - Enforce actual ML execution and feedback across game/mini logs
 

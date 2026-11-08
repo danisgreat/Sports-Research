@@ -2,7 +2,7 @@
 
 **Consolidated 2026-11-07, CR-2026.11.07-R3.** Part A (formerly CURRENT_RULES) and Part B (formerly SELECTION_RULES) were joined verbatim on 2026-11-07 (R2) and then rewritten (R3): contradictions are resolved by the framework's own precedence (owner instruction, then [CORE](CORE.md), whose v24 text governs any pre-v24 sentence, then the v24 protocols), repeated text is stated once, and rules that apply only to cards issued before P-2026.10.22-v24.0 are kept by reference to their archived text. Section numbers are unchanged, so references such as "CURRENT_RULES section 7" or "SELECTION_RULES §9" still point to the right place. What changed and why: [consolidation report](research/verification/framework_change_2026-11-07-3/CONTRADICTIONS.md). Verbatim originals: [CURRENT_RULES](archive/consolidation_2026-11-07/merged_sources/CURRENT_RULES.md), [SELECTION_RULES](archive/consolidation_2026-11-07/merged_sources/SELECTION_RULES.md).
 
-**Versions in force:** see [CURRENT_STATE](CURRENT_STATE.md) (method, control, scoring, selection and prompt suite). Rule IDs cited below (MINI-v2, EXH-v1, HIST-v3, AVAIL-v4, RETAIN-v3, MLSCOPE-v3, ENV-v2, REF-v1, DRIVE-v2) are defined where [CORE](CORE.md) §9 lists them.
+**Versions in force:** see [CURRENT_STATE](CURRENT_STATE.md) (method, control, scoring, selection and prompt suite). Rule IDs cited below (MINI-v2, EXH-v1, HIST-v3, AVAIL-v4, RETAIN-v3, MLSCOPE-v3, ENV-v2, REF-v2, REQ-v3) are defined where [CORE](CORE.md) §9 lists them.
 
 ---
 
@@ -18,7 +18,7 @@ The framework is Markdown, CSV and text. Code, its tests and `requirements.txt` 
 
 **One authority mode per run (R09).** Each run prints one mode in its reading receipt:
 - `LOCAL_WORKING_TREE`: every prompt, 1 to 8, run by the repository agent in this repository (ENV-v2, owner instruction 22 October 2026). Print branch, HEAD and every uncommitted difference to a control file; those working files govern this run and the receipt names them.
-- `PUBLISHED_MAIN_PINNED`: only an agent outside the repository (an external chat, [WORKFLOW](WORKFLOW.md#part-a-execution_environment_protocol) §6). It reads every control from the full SHA of `origin/main` it printed; its outputs enter only through prompt 4's intake.
+- `PUBLISHED_MAIN_PINNED`: only for reading legacy minis made outside the repository under ENV-v1; the external-chat route is retired ([WORKFLOW](WORKFLOW.md#part-a-execution_environment_protocol) §1, REQ-v3). All controls come from the one printed full SHA of `origin/main`.
 
 Where the published and local versions of a control differ, the receipt lists the difference and which one was applied. Never change branches, pull over dirty work or assume a stale download is current.
 
@@ -34,7 +34,7 @@ Where the published and local versions of a control differ, the receipt lists th
 
 **Model reading gate (MLSCOPE-v3).** Prompt 1 reads model output only through the reference stage it ran itself (the printed Reference block and its receipt) and, after the card is written and read back, the pregame freeze block. It reads no other model, shadow, cycle or decision-lab output and no benchmark. A frozen reference is never rewritten by the card, and the card never rewrites an issued reference or receipt. Prompt 3 settles shadows, prompt 6 evaluates, prompt 8 releases.
 
-A required control file still unreadable after the GitHub fallback (REF-v1) blocks the dependent mutation only; missing sporting data is recorded, never invented. Cite the rule or source next to any value it shaped. Every card prints its online source URLs, rows and date range inspected, horizon filter, findings and gaps. No deleted archive path is a required input.
+A required control file still unreadable after the GitHub fallback (REF-v2) blocks the dependent mutation only; missing sporting data is recorded, never invented. Cite the rule or source next to any value it shaped. Every card prints its online source URLs, rows and date range inspected, horizon filter, findings and gaps. No deleted archive path is a required input.
 
 ## 2. Rule T2: frozen top two and transparent denominators
 
@@ -46,9 +46,45 @@ For every cohort, report WIN, LOSS, PUSH, VOID and UNRESOLVED separately, with r
 
 ## 3. Rule R1: outcome review without hindsight
 
-Every settled Rank-1 LOSS (for v24 cards, rank 1 of the most-likely list) receives the eight parts: exact claim; verified outcome; original-distribution check; cutoff knowability; process, model or variance assessment; cutoff-only counterfactual; failure class; testable correction. Every terminal card, wins and partial settlements included, keeps R1–R12, with unavailable sections marked and explained.
+**Deep loss review (DEEPLOSS-v1, owner instruction 2026-11-08).** Every card settled from 8 November 2026 is checked for three rows, each judged on its own:
 
-No numeric blame percentages. A single tail loss neither proves miscalibration nor vindicates a distribution. Process is SOUND, DEFICIENT or NOT_ASSESSABLE with evidence; uncalibrated status is reported separately. Review matched wins for the same defects. Counterfactuals are diagnostic and never replace frozen ranks or join prospective cohorts.
+- **Top side:** the highest final-p row of the side families on the full game, that is winner or moneyline (two-way, three-way or draw-no-bet) and handicap or spread (point spread, run line, puck line, Asian handicap). If the card has no full-game side row, use its highest-p side row on any period.
+- **Top total:** the highest final-p over/under row on the full-game total. If there is none, use the highest-p over/under row on any quantity (team, period or count total).
+- **Rank 1:** the first row of the most-likely list (for cards before v24, the original Rank 1), when it is neither of the above.
+
+Use the issued final p to find each row. For a card issued without probabilities, use the highest-ranked row of the family. **Each of these rows that is graded LOSS gets its own deep review.** When the top side and the top total both lose, a joint section says whether one cause (pace, a missing player, weather, an early red card) sank both, and whether the card should have priced them as dependent. A PUSH or VOID is not a loss. An UNRESOLVED row waits, and its review is due in the settlement revision that resolves it. A review that is missing, or that skips a section, fails settlement check S8.
+
+**What the review must be.** Deep, comprehensive, brutally honest and accurate. It is written to find what was wrong, not to defend the card. Every claim cites its source and time. It uses the template in [CARD_AND_LOG_TEMPLATES](CARD_AND_LOG_TEMPLATES.md) §6 ("Deep loss review"), whose sections are:
+
+1. the exact frozen claim;
+2. the verified outcome and settlement arithmetic;
+3. where the outcome fell in the frozen distribution, and the card against its reference and baseline on the row;
+4. the error decomposed into reference, adjustments and width;
+5. a fact-by-fact research audit;
+6. what decided the game, from the box score;
+7. what was knowable at the cutoff;
+8. a process audit;
+9. a verdict in plain words;
+10. a counterfactual using only pre-cutoff information;
+11. the failure class, and its recurrence across earlier reviews;
+12. a testable correction, routed to a lane;
+13. the same defects searched for in the card's winning rows;
+14. an honesty checklist.
+
+**Honesty rules.**
+
+- "Variance" or "bad luck" is a verdict only with numbers that show it. Acceptable evidence:
+  - the outcome's percentile in the frozen distribution;
+  - a measured shooting, conversion or BABIP outlier against the teams' season rates;
+  - a verified in-game event that no pre-game input could carry, such as an injury, an ejection, a red card or rain.
+  Without such evidence, the verdict is ERROR, MODEL_LIMIT or NOT_ASSESSABLE, never luck.
+- Say plainly when the pick should not have been made: for example, a near coin flip below the abstain line, a fact that was not verified, or an adjustment without an effect-table row.
+- No numeric blame percentages: they would be invented, not measured.
+- One tail loss neither proves miscalibration nor vindicates a distribution. Process is SOUND, DEFICIENT or NOT_ASSESSABLE, with evidence; calibration is reported separately, from prompt 6's cohorts.
+- Counterfactuals are diagnostic only: they never replace frozen rows, ranks or grades, and never join prospective cohorts.
+- Every terminal card, wins and partial settlements included, still keeps R1–R12, with unavailable sections marked and explained.
+
+Settled records written before 8 November 2026 are not reopened; their reviews followed the eight-part rule then in force.
 
 ## 4. Rule P4: event first, reproducible selection
 
@@ -64,7 +100,7 @@ Ranking follows [Part B](#part-b-selection_rules): decreasing unrounded final p,
 
 **SPORTS_ONLY / MARKET_BLIND.** No odds, line movement, tips, betting previews, prediction markets or fantasy inputs anywhere in research, references, adjustments or cards. A supplied threshold is contract metadata. No value, edge or staking claim.
 
-**§5a. Decision-lab firewall (owner instruction 2026-10-14).** `ml/decision/` may run a paper-only, historical study of staking policies on prices held in a local, git-excluded capture. It commits aggregate tables only, under `research/model_shadow/DECISION_LAB/`, never a price or a price-derived row, and nothing it produces enters any card, rule, rank, width or learning disposition. No live or in-play automation is built (online in-play betting is prohibited in Australia under the Interactive Gambling Act 2001). The settlement benchmarks of [BENCHMARK_PROTOCOL](BENCHMARK_PROTOCOL.md) (the line-implied 0.5 and owner-entered post-settlement probabilities) are scoring references only: never read before settlement and never cited by a rule, rank, width, adjustment or learning disposition. *Open owner decision: the 2026-11-07 review proposes retiring the decision lab under the owner's no-odds rule; until decided, this firewall stands.*
+**§5a. Decision lab: a separate contributor behind a firewall (DECISION-LAB-v2; owner instructions 2026-10-14 and 2026-11-08).** The owner keeps the decision lab as a separate contributor that never adds to the main prediction. `ml/decision/` may run a paper-only, historical study of staking policies on prices held in a local, git-excluded capture. It commits aggregate tables only, under `research/model_shadow/DECISION_LAB/`, never a price or a price-derived row. Its results are reported only in their own place (that folder, or a separately headed section of a report), never beside a card's probability. Nothing it produces enters the reference, an adjustment or effect-table row, p_card, the picks block, a rank, a width, a grade, the learning data or any release; and no forecast, reference, ledger, picks, learning or release module may import `ml.decision` or read its output folder (enforced by `ml/tests/test_decision_firewall.py`). No live or in-play automation is built (online in-play betting is prohibited in Australia under the Interactive Gambling Act 2001). The settlement benchmarks of [BENCHMARK_PROTOCOL](BENCHMARK_PROTOCOL.md) (the line-implied 0.5 and owner-entered post-settlement probabilities) are scoring references only: never read before settlement and never cited by a rule, rank, width, adjustment or learning disposition. *Decided 2026-11-08: kept as a separate contributor; the firewall above is permanent.*
 
 **Identity.** Confirm competition, season, stage, participants, venue, native event ID or a labelled stable surrogate, scheduled time, timezone and official observed state. A reschedule is an alias update under the original identity. A doubleheader needs its game number or native ID. Search every mini and Combined Log, not just headers.
 
@@ -227,7 +263,7 @@ Never claim an exhaustive search from four hand-picked rows. Keep unselected sup
 
 ## 6. Regimes and sensitivities
 
-Regime flags: NONE, FINALS_COMPRESSION, EARLY_SEASON, CUP_ROTATION or RULE_CHANGE:<verified name>; other context is prose. A flag labels the context; it does not move a number by itself. For v24 cards a regime effect enters only as an [effect-table](PARAMETERS.md#part-b-effect_tables) row (none is measured yet) or a declared `SCENARIO` row; the multipliers in [PARAMETERS](PARAMETERS.md#part-c-base_rates_register) Part C were estimated on 2026-10-09 from the results archive retired on 16 October and are historical reference, not inputs (pre-v24 cards applied them as their own rules said). An unmeasured effect is a scenario with its basis, never an invented multiplier. Some finals regimes raise scoring; do not assume compression.
+Regime flags: NONE, FINALS_COMPRESSION, EARLY_SEASON, CUP_ROTATION or RULE_CHANGE:<verified name>; other context is prose. A flag labels the context; it does not move a number by itself. A regime effect enters a card only as an [effect-table](PARAMETERS.md#part-b-effect_tables) row, at the entry size its status gives, or as a declared `SCENARIO` row. **Regime rows (REGIME-v2, owner instruction 2026-11-08, measured on verified finals against the reference's own walk-forward forecasts):** NBA playoffs total −4.5% (`E-NBA-PLAYOFF-TOTAL`, FULL), MLB postseason total −10.9% (`E-MLB-POSTSEASON-TOTAL`, FULL), NRL first 28 days total −2.5% (`E-NRL-EARLY-TOTAL`, FULL), AFL finals total −3.2% (`E-AFL-FINALS-TOTAL`, HALF); NBA, MLB and AFL early season and NRL finals are `MEASURED_NULL` (no adjustment); NHL and NFL are `NOT_ESTIMATED` (scenario only); NRL six-again is retired (every season since 2020 already contains it). Apply a regime row once, to the total centre, before reading the contracts, and never together with another row that measures the same thing (for MLB early season, a temperature row). The 2026-10-09 archive multipliers in [PARAMETERS](PARAMETERS.md#part-c-base_rates_register) Part C are historical and are never inputs (pre-v24 cards applied them as their own rules said). Study: [regime_study](research/verification/framework_change_2026-11-08-1/regime_study/). An unmeasured effect is a scenario with its basis, never an invented multiplier. Some finals regimes raise scoring; do not assume compression.
 
 Every adjustment logs its target, before and after values, units and SD basis, source, basis (measured or analyst) and overlap with other terms (for v24 cards, as ledger rows). A change to the most-likely list is ADJUSTMENT_DEPENDENT; print the unadjusted pair, the sensitivity probabilities and which assumptions drive the result. A missing SD prevents an SD-size claim but never hides a rank change.
 

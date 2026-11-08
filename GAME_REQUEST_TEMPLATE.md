@@ -15,7 +15,7 @@ Use exact distributions; run code simulations only where SIMULATION_PROTOCOL req
 If research will not finish before the start, issue the fast card first and the full card after.
 ```
 
-**External research chat (REQ-v2).** For a chat outside the repository, use the paste-ready request for the sport in [research/prompts/external_requests/](research/prompts/external_requests/README.md) (eleven files, one per prompt-1 sport file). Each names the exact files and sections to read on `main`, the value-ranked research for that sport, the reference to compute first, the selection rules and the CARD_DELTA the repository agent takes in, lints, ledgers and freezes.
+**Where to send it (REQ-v3, 2026-11-08).** Send every request to the repository agent; cards are made only in this repository. The external-chat requests (REQ-v2) are retired and archived in [archive/retired_2026-11-08/external_requests/](archive/retired_2026-11-08/external_requests/README.md); a chat answer pasted with a request is an owner-supplied research note, re-verified before use ([WORKFLOW](WORKFLOW.md#part-a-execution_environment_protocol) §1).
 
 ## 2. Reading a request
 

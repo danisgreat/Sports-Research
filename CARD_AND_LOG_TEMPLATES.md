@@ -12,7 +12,7 @@
 
 **Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](CORE.md) §5.
 
-**Required repository fallback (REF-v1).** Defined in [GITHUB_REFERENCE_PROTOCOL](GITHUB_REFERENCE_PROTOCOL.md); summarised in [CORE](CORE.md) §1.
+**Required repository fallback (REF-v2).** Defined in [WORKFLOW](WORKFLOW.md#part-a-execution_environment_protocol) Part A §2 (GitHub `main` at a printed SHA when a local file is unreadable).
 
 **mini-log-10 · mini-settlement-10 · canonical-md-1.** Authority: MDS-2026.10.16-v20.0 / CR-2026.10.16-R7 / SCV-2026.10.16-v11 / SEL-2026.10.12-v3. [Rules](RULES_REFERENCE.md#part-a-current_rules) and [selection definitions](RULES_REFERENCE.md#part-b-selection_rules) control semantics. Previous formats: [mini-log-6 / mini-settlement-5](archive/superseded_2026-10-12/CARD_AND_LOG_TEMPLATES.md).
 
@@ -331,8 +331,34 @@ Shared/prior registers consulted: <exact files/source IDs actually opened; fresh
 **R10. Classification:** <process SOUND/DEFICIENT/NOT_ASSESSABLE; model uncalibrated separately; failure class>
 **R11. Hypothesis:** <testable proposal, PROPOSED_NOT_TESTED>
 **R12. Disposition:** <NO_CHANGE/MONITOR/PROPOSE_EXPERIMENT/process candidate; next action for gaps>
-<Rank-1 LOSS: eight-part deep review required by CURRENT_RULES §3>
+**Deep-review triggers (DEEPLOSS-v1):** top side <row, p, grade> · top total <row, p, grade> · rank 1 <row, p, grade> → <one deep loss review per LOSS below, or NONE_REQUIRED>
+<Deep loss review block(s), template below>
 <!-- END SETTLEMENT <original-record-key> revision-1 -->
+```
+
+### Deep loss review (DEEPLOSS-v1)
+
+One block for each losing trigger row: top side, top total, and rank 1 when it is neither ([RULES_REFERENCE](RULES_REFERENCE.md#3-rule-r1-outcome-review-without-hindsight) Part A §3). Every section is filled in or marked `NOT_ASSESSABLE` with the reason. Write to find what was wrong, not to defend the card; cite a source and a time for every claim.
+
+```markdown
+#### Deep loss review · <local key / P-ID> · <TOP_SIDE | TOP_TOTAL | RANK_1> · <exact row>
+
+**1. Exact frozen claim.** <row text, family, line, endpoint; final p; reference p and id; BASELINE_P; every ledger row that moved it (row id, size, entry); issue time and its proof (pushed commit) against the scheduled and actual start>
+**2. Verified outcome.** <final score from the box score or linescore with a sum check; periods, OT/ET/extras; source, field and retrieval time; settlement arithmetic; signed distance from the line in units and in frozen SDs>
+**3. Distribution check.** <percentile of the actual margin or total in the frozen grid (PIT) and z; probability the card gave to an outcome at least this far the wrong way; the same row's Brier and log loss for the card, the reference and the baseline: did the card's own work make this row worse or better than the reference?>
+**4. Error decomposition.** <reference centre against actual; each adjustment's sign and size against what happened; was the width right; no percentages of blame>
+**5. Research audit, fact by fact.** <every fact the card used: TRUE / FALSE / STALE / UNVERIFIED, with the post-game source; sources claimed but not opened; missed facts that were published before the cutoff (with their publication time); any breach of the market-blind, outcome-exposure or no-invention rules>
+**6. What decided the game.** <the box-score drivers against the frozen expectation: pace or possessions, shooting and three-point rates, turnovers, free throws, set pieces, penalties, cards, bullpen, errors, weather, in-game injuries or ejections, garbage time, OT; each with its number and the team's season rate>
+**7. Knowable at the cutoff?** <for each driver in 6: KNOWABLE (with the pre-cutoff source and time), PARTLY (a signal existed but its size was not measurable) or NOT_KNOWABLE>
+**8. Process audit.** <declared reference used; ledger and effect-table rows correct; double counting; endpoint and contract definition; line choice and difficulty; p against the abstain line; dependence with the other trigger row; arithmetic and readback; timing>
+**9. Verdict.** <one of ERROR (wrong for a reason knowable and checkable before the start), MODEL_LIMIT (the reference or width is measurably wrong in this spot), VARIANCE (sound forecast; the outcome is within the expected range and section 3 or 6 shows it with numbers), MIXED (name each part); process SOUND / DEFICIENT / NOT_ASSESSABLE; and one plain sentence: should this pick have been made, and at this probability?>
+**10. Cutoff-only counterfactual.** <the p the card should have given with every KNOWABLE fact from section 7 priced through an effect-table row or a declared scenario; diagnostic only, never a replacement row>
+**11. Failure class and recurrence.** <class from RULES_REFERENCE Part B §8; how many earlier deep reviews carry the same class (IDs), and whether this is a pattern>
+**12. Correction.** <a specific, testable change (rule, checklist, effect-table row, source route or data capture), its owner prompt (7 or 8), an acceptance test and a rollback; or NO_CHANGE with the reason>
+**13. Matched wins.** <the card's winning rows checked for the same defects; a win with the same defect is luck, not proof>
+**14. Honesty checklist.** <no hindsight facts used as if known; no "bad luck" without the numbers in 3 or 6; no softened wording; no invented percentages; frozen rows, ranks and grades unchanged; every claim sourced and timed: PASS or the item that fails>
+
+<If both TOP_SIDE and TOP_TOTAL lost: **Joint section.** <shared cause, or independent causes; whether the card treated the two rows as dependent; whether pairing them was a construction error>>
 ```
 
 Pending cards get state evidence, literal original reference and next check, with result-dependent R sections N/A. Terminal unresolved rows retain the supported settlement work and open questions. Manifest inventories each source block, local/canonical status, latest revision, grades/counts, outputs, prefix check and import PENDING. No guessed hash or byte-comparison PASS.
@@ -399,7 +425,7 @@ Legacy settlement markers without revision keys (mini-settlement-2 to -5) are ac
 | S5 | Evidence source/field/times; bound only graded if invariant; operator status separate |
 | S6 | Counts, coverage, conditional probabilities and cohort definitions agree |
 | S7 | R1 is this card; terminal R1–R12 complete with honest N/A |
-| S8 | Every Rank-1 LOSS has eight-part review; wins checked equally; no invented causal shares |
+| S8 | DEEPLOSS-v1: every losing top side, top total and rank 1 row has its own deep loss review, all 14 sections complete or `NOT_ASSESSABLE` with a reason, a joint section when side and total both lost; wins checked equally; no luck verdict without numbers; no invented causal shares |
 | S9 | Original versus shadow/reforecast results and baseline coverage separate |
 | S10 | Pending-event and terminal-evidence queues complete; SLA uses actual final or marked unknown |
 | S11 | Expected errors/z and proper scores recompute; no historical baseline reconstruction |

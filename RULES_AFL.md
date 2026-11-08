@@ -302,7 +302,7 @@ Failure to obtain the match-window forecast for an outdoor or open-roof event yi
 
 ## 9. Sport and competition rules reference
 
-Added 2026-09-04; last reviewed 2026-09-04. Standing reference for the laws of Australian football and the competition rules of the AFL and AFLW. Supports `AF-P` identity and §6 settlement; introduces no rate, weight or ordering rule. The 2026 rules below are those in force for the 2026 seasons the current log covers.
+Added 2026-09-04; last reviewed 2026-11-08: the 2026 rule package, the Wildcard Round and finals extra time (§9.2) were confirmed (afl.com.au explainer of the seven 2026 rule changes). The 2026 AFL season is complete. The AFLW finals format (§9.3) was not re-verified in this pass. Standing reference for the laws of Australian football and the competition rules of the AFL and AFLW. Supports `AF-P` identity and §6 settlement; introduces no rate, weight or ordering rule. The 2026 rules below are those in force for the 2026 seasons the current log covers.
 
 **Maintenance (RULES_GENERAL (archived) §3, `G2`).** The AFL publishes a rule-change package almost every pre-season (the 2026 set added the last-disposal out-of-bounds rule and the centre-bounce ruck rule; the finals system changed to the Wildcard structure). Before the first card of a new AFL or AFLW season, or the first finals card of a season, re-verify the quarter/time-on structure, the interchange cap, the medical-sub rule, the current rule-change package and the finals bracket against afl.com.au, and update this section **before** issuing the card. The first time a state league (VFL, SANFL, WAFL) or a local competition is forecast, document its format and any local law variations here first.
 

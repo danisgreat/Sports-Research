@@ -295,7 +295,16 @@ Failure to obtain the match-window forecast for an outdoor or open-roof event yi
 
 ## 11. Sport and competition rules reference
 
-Added 2026-09-04; last reviewed 2026-09-04. Standing reference for the laws of rugby union (15s and 7s) and the competition rules of the two rugby competitions in the prediction logs: the **New Zealand NPC** (now the Hilux NPC) and the **French In Extenso SuperSevens**. Supports `RU-P` identity and §8 settlement; introduces no rate, weight or ordering rule.
+Added 2026-09-04; last reviewed 2026-11-08. **Law in force from 1 July 2026** (World Rugby Council, 17 June 2026), for competitions starting after that date: four former global law trials became full law:
+
+- the **20-minute red card**, under which a red-carded player may be replaced after 20 minutes;
+- the scrum brake foot (all levels);
+- elite water-carrier restrictions;
+- the defined role of the TMO.
+
+The shot clock is not yet law. For a competition already under way on 1 July, check the union's date of adoption on the card ([World Rugby, 2026-07 Law updates](https://passport.world.rugby/laws-of-the-game/whats-new/2026-07-law-updates/)). The 2026 Bledisloe Cup and NPC are complete.
+
+ Standing reference for the laws of rugby union (15s and 7s) and the competition rules of the two rugby competitions in the prediction logs: the **New Zealand NPC** (now the Hilux NPC) and the **French In Extenso SuperSevens**. Supports `RU-P` identity and §8 settlement; introduces no rate, weight or ordering rule.
 
 **Maintenance (RULES_GENERAL (archived) §3, `G2`).** World Rugby runs frequent law trials (the 20-minute red card, the goal-line drop-out, scrum/breakdown tweaks, a shot-clock) that competitions adopt at different times; SuperSevens changed its whole format for 2026. Before the first card of a new NPC or SuperSevens season, re-verify the red-card law in force, the bonus-point rules, the team count and single-division status, the playoff bracket, and (for SuperSevens) the current stage structure against the competition's site, and update this section **before** issuing the card. The first time another union or sevens competition is forecast (Super Rugby, URC, Top 14, a Test, a World Series leg), document its full rules here first, and keep 15s and 7s as separate populations.
 
