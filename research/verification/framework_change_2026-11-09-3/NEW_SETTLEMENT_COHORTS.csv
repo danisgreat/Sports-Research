@@ -1,0 +1,3 @@
+cohort,events,rows,WIN,LOSS,PUSH,UNRESOLVED,prospective_eligible_events,proper_score_scope,limitation
+ANALYST_PRIMARY_V1,5,20,13,7,0,0,0,By exact competition/endpoint/family and evidence only; no pooled advantage claim,Timing unverified; no prospective issue inferred; missing primaryp retained
+ANALYST_NOT_PRIMARY,11,56,28,26,0,2,0,By exact competition/endpoint/family and evidence only; no pooled advantage claim,Timing unverified; no prospective issue inferred; missing primaryp retained

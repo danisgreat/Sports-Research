@@ -56,3 +56,16 @@ research/verification/review_2026-10-21_league_neutral_ml_sim/** -text
 research/active_minis/received/** -text
 research/active_minis/20261022F6K3OJNO.md -text
 research/pregame/** -text
+
+# CR-2026.11.09-R3: exact raw source custody and receipt/export hashes across clones.
+archive/integrity_2026-11-09_r3/** -text
+research/source_routes/** -text
+research/verification/framework_change_2026-11-09-3/** -text
+research/verification/mini_import_P-584_settlement_2026-11-09-1/** -text
+research/verification/mini_import_P-623_P-628_2026-11-09-1/** -text
+research/verification/mini_import_P-629_P-636_2026-11-09-1/** -text
+research/verification/mini_import_P-637_2026-11-09-1/** -text
+research/verification/settlement_import_2026-11-09_shadows/** -text
+research/release_gates/** -text
+research/active_minis/20261109R3NEXT.md -text
+research/active_minis/20261022F6K3OJNO_SETTLEMENT.md -text

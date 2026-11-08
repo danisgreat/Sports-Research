@@ -3,10 +3,14 @@
 
 **Generated current queue (STATE-v1, 2026-11-08).** The live values (next canonical ID, the active mini and its open cards, frozen league-day events without a settlement, ledger and store counts) are generated from the records in [CURRENT_STATE](CURRENT_STATE.md) by `python -m ml state`, and a test keeps them current. The rest of this file is the preserved status history and the canonical register; where its dated text differs from the generated block, the generated block is current.
 
-**Next canonical ID: P-623.** Every requested event is retained, regardless of calibration: first as a local working card in the authorised mini, then canonically through verified prompt-4 retention import (which may precede prompt-3 settlement under RETAIN-v1). No card is written to the active combined log directly. *(Clarified 2026-10-12, audit R10: the earlier wording "go directly to the active combined log" described retention, not a bypass of local staging.)* Canonical IDs identify retained cards; performance certification and live/late timing are separate labels.
+**Next canonical ID: P-638.** Every requested event is retained, regardless of calibration: first as a local working card in the authorised mini, then canonically through verified prompt-4 retention import (which may precede prompt-3 settlement under RETAIN-v1). No card is written to the active combined log directly. *(Clarified 2026-10-12, audit R10: the earlier wording "go directly to the active combined log" described retention, not a bypass of local staging.)* Canonical IDs identify retained cards; performance certification and live/late timing are separate labels.
 Active Combined Log: `prediction logs/PREDICTION_LOG_COMBINED_9.md`.
 Freeze: none (custody is the git history of `main`, CURRENT_RULES §9). The last control manifest is `archive/controls/CONTROL_MANIFEST_2026-10-09-3.md`. Current authority: CURRENT_STATE.md, METHOD.md and CURRENT_RULES.md.
 
+
+## Current settlement/import ·9November2026
+
+P623–P637 are now retained in Part9; P584's sporting result is terminal. Two frozen NBA bundles have settlement feedback. See [R3 implementation](research/verification/framework_change_2026-11-09-3/IMPLEMENTATION.md), [readback](research/verification/framework_change_2026-11-09-3/CANONICAL_READBACK.csv) and [honest unresolved queue](research/verification/framework_change_2026-11-09-3/UNRESOLVED_POST_IMPORT.csv). Historical statuses below are dated snapshots, superseded only where a named revision says so. Active mini20261109R3NEXT, zero newcards, nextlocalG0001. P518–522 still reserved.
 
 ## Combined Log rollover — 2026-10-17T02:17:38+11:00
 
@@ -1087,3 +1091,33 @@ P-616 (TNT v Converge, 114–112 OT, regulation 106–106) revision-2, appended 
 | ID | Effective revision | Current status |
 |---|---|---|
 | P-616 | R2 (parent R1, BK-OT-1) | TERMINAL_SPORTING_REVIEW / ANALYST_PRIMARY_V1 / NOT_ISSUED_DRAFT / ENDPOINT_FROZEN_FRAMEWORK_CONVENTION |
+
+| **P-623** | Oklahoma City Thunder @ San Antonio Spurs · 2026-10-20 | `LOCAL-20261021OKCSASR01-G0001` | TERMINAL_SPORTING_REVIEW; original issue/cohort retained; see mini_import_P-623_P-628_2026-11-09-1 |
+
+| **P-624** | Facundo Díaz Acosta v Nikoloz Basilashvili · Almaty R16 · 2026-10-21 | `LOCAL-20261022F6K3OJNO-G0001` | TERMINAL_SPORTING_REVIEW; original issue/cohort retained; see mini_import_P-623_P-628_2026-11-09-1 |
+
+| **P-625** | Potkozarje v Drina Zvornik · round 12 · 2026-10-21 | `LOCAL-20261022F6K3OJNO-G0002` | TERMINAL_SPORTING_REVIEW; original issue/cohort retained; see mini_import_P-623_P-628_2026-11-09-1 |
+
+| **P-626** | Atlanta Hawks @ Orlando Magic · 2026-10-21 | `LOCAL-20261022F6K3OJNO-G0003` | TERMINAL_SPORTING_REVIEW; original issue/cohort retained; see mini_import_P-623_P-628_2026-11-09-1 |
+
+| **P-627** | Milwaukee Bucks @ Washington Wizards · 2026-10-21 | `LOCAL-20261022F6K3OJNO-G0004` | TERMINAL_SPORTING_REVIEW; original issue/cohort retained; see mini_import_P-623_P-628_2026-11-09-1 |
+
+| **P-628** | Hamilton Hammers @ Toronto Marlies · 2026-10-21 | `LOCAL-20261022F6K3OJNO-G0005` | TERMINAL_SPORTING_REVIEW; original issue/cohort retained; see mini_import_P-623_P-628_2026-11-09-1 |
+
+| **P-629** | Beibarys Atyrau v Qulager | `LOCAL-20261016A691119714D1-G0001` | TERMINAL_SPORTING_REVIEW; original issue/cohort retained; see mini_import_P-629_P-636_2026-11-09-1 |
+
+| **P-630** | FK Be1 v FC Neptunas | `LOCAL-20261016A691119714D1-G0002` | TERMINAL_SPORTING_REVIEW; original issue/cohort retained; see mini_import_P-629_P-636_2026-11-09-1 |
+
+| **P-631** | USM Blida v CSC Djasr Kasentina | `LOCAL-20261016A691119714D1-G0003` | TERMINAL_SPORTING_REVIEW; original issue/cohort retained; see mini_import_P-629_P-636_2026-11-09-1 |
+
+| **P-632** | HC Olomouc v Karlovy Vary | `LOCAL-20261016A691119714D1-G0004` | TERMINAL_SPORTING_REVIEW; original issue/cohort retained; see mini_import_P-629_P-636_2026-11-09-1 |
+
+| **P-633** | Boca Juniors v Talleres | `LOCAL-20261016A691119714D1-G0005` | TERMINAL_SPORTING_REVIEW; original issue/cohort retained; see mini_import_P-629_P-636_2026-11-09-1 |
+
+| **P-634** | Tampa Bay Rays at Cleveland Guardians, native849817 / ALCS Game5 | `LOCAL-20261016A691119714D1-G0006` | TERMINAL_SPORTING_REVIEW; original issue/cohort retained; see mini_import_P-629_P-636_2026-11-09-1 |
+
+| **P-635** | Utah Jazz at Phoenix Suns, preseason | `LOCAL-20261016A691119714D1-G0007` | TERMINAL_SPORTING_REVIEW; original issue/cohort retained; see mini_import_P-629_P-636_2026-11-09-1 |
+
+| **P-636** | LG Twins at KIA Tigers | `LOCAL-20261016A691119714D1-G0008` | TERMINAL_SPORTING_REVIEW; original issue/cohort retained; see mini_import_P-629_P-636_2026-11-09-1 |
+
+| **P-637** | Beijing Guoan v Qingdao West Coast,18October2026 | `LOCAL-20261018MELILL01-G0004` | TERMINAL_SPORTING_REVIEW; original issue/cohort retained; see mini_import_P-637_2026-11-09-1 |

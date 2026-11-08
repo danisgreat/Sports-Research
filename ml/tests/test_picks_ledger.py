@@ -27,8 +27,8 @@ def good_rows():
         return base
     return [r(label="HOME_ML", family="WINNER", quantity="MARGIN", side="HOME", line="", reference_p="0.6200", baseline_p="0.6000", final_p="0.6600",
               w="0.6600", l="0.3400", line_implied_p="", centre="5", sd="13", z="0.38", most_likely_rank="1", information_row="Y"),
-            r(label="OVER_170.5"),
-            r(label="UNDER_170.5", side="UNDER", final_p="0.4800", w="0.4800", l="0.5200")]
+            r(label="OVER_170.5", reference_p="0.5200"),
+            r(label="UNDER_170.5", side="UNDER", reference_p="0.4800", final_p="0.4800", w="0.4800", l="0.5200")]
 
 
 def render(meta=None, rows=None, key=KEY):
@@ -183,6 +183,7 @@ def test_one_distribution_per_quantity_and_the_width_floor(root):
 def test_abstain_follows_from_the_numbers(root):
     weak = [dict(r, most_likely_rank="", information_row="N", final_p=r["reference_p"], w=r["reference_p"], l=f"{1 - float(r['reference_p']):.4f}") for r in good_rows()]
     weak = edit(weak, "UNDER_170.5", reference_p="0.5000", final_p="0.5000", w="0.5000", l="0.5000")
+    weak = edit(weak, "OVER_170.5", reference_p="0.5000", final_p="0.5000", w="0.5000", l="0.5000")
     assert any("abstain should be YES" in p for p in lint(root, rows=weak))
     assert lint(root, meta=dict(abstain="YES"), rows=weak) == []
     assert any("abstain should be NO" in p for p in lint(root, meta=dict(abstain="YES")))

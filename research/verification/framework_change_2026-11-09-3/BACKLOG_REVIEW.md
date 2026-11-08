@@ -1,0 +1,9 @@
+# Full backlog reconciliation ·9 November 2026
+
+The current generated history has 2500 rows across 637 retained card/admin records. It reports 119 UNRESOLVED rows on 55 IDs, which are **not 119 unsettled games**: many are blank extra slots, no-forecast/no-action/reserved/administrative records, or collided aliases. ALL_UNRESOLVED_REPORT_ROWS.csv preserves every row. Explicit old propositions are chiefly collided P148/P149 and the undefined P596/P598 rows; no unsupported grade transfer is allowed.
+
+All six active originals, all eight events in the previously unimported Downloads package, the held Beijing draft and existing P584 have terminal outcomes retained. Seventy-six new effective contract rows contain74 sporting grades and2 UNRESOLVED Be1–Neptunas corner directions. Two separate frozen NBA events have real receipt-verified expert feedback. Importing/settling them does not establish pregame issue or predictive skill.
+
+Twenty-four fresh historical source queries,31 exact-URL audits and18 permitted capture attempts are retained (plus earlier attempts). Some partial-status headings were stale after later revisions; LEGACY_STATUS_RECONCILIATION.csv keeps those distinctions. RECOVERED_HISTORICAL_FIELDS.csv records new terminal fields without silently declaring missing provider definitions or independent collection solved. Football365 corner commentaries and blank365scoresHTML were not treated as certified aggregates. Yunnan's new candidate is a different league fixture and was rejected.
+
+The remaining real gaps include Be1 corners, P596/P598 definitions, P126 fixture identity/state, old field-owner/period/custody gaps and pre-start/source-lineage proof. The globalqueue names actors, exact nextfields, review targets/timezones, original SLA preservation and NOT_SCHEDULED automation. It is honest to leave these UNRESOLVED; it would be false to report every historical log fully certified or convert missing data to VOID.

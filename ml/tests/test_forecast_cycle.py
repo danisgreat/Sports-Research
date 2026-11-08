@@ -212,6 +212,20 @@ def test_empty_prospective_evaluation_does_not_invent_results(setup):
     assert rec['disposition']=='INSUFFICIENT_EVIDENCE' and rec['paired_events']==0
 
 
+def test_evaluation_exports_both_interval_shapes_without_losing_log_diagnostics(setup, monkeypatch):
+    s = setup
+    interval = dict(n_events=2, k_weeks=1, mean=.01, lo=float('nan'), hi=float('nan'), status='INSUFFICIENT_WEEKS')
+    monkeypatch.setattr(PS, 'evaluate', lambda *a, **k: dict(
+        disposition='INSUFFICIENT_EVIDENCE', reason='two events', pairs=2,
+        interval=interval, log_loss_interval=dict(interval, infinite_candidate=0, infinite_champion=0), models={}))
+    output = s['tmp'] / 'interval_evaluation'
+    C.evaluate(s['release'], s['tmp'] / 'absent-ledger.csv', s['tmp'] / 'feedback', output)
+    exported = p.read_rows(output / 'PAIRED_INTERVALS.csv')
+    assert [r['metric'] for r in exported] == ['BRIER', 'LOG_LOSS']
+    assert exported[0]['infinite_candidate'] == ''
+    assert exported[1]['infinite_candidate'] == exported[1]['infinite_champion'] == '0'
+
+
 def test_exact_contract_and_stable_version_checks(tmp_path):
     from ml.tests.test_learning_governance import _rows
     start=pd.Timestamp('2026-11-01T00:00Z')

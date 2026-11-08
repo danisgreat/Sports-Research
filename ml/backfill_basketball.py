@@ -25,7 +25,7 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from ml import primary as p, research_ingest as ri
+from ml import primary as p, research_ingest as ri, source_access
 
 LEAGUES = {  # slug on ESPN; competition label and endpoint match ml.config.SPORT_RULES["Basketball"]
     "nba": dict(espn="basketball/nba", competition="Basketball/NBA", endpoint="FULL_GAME_INCL_OT",
@@ -52,11 +52,14 @@ def fetch(url: str, cache: Path, suffix: str, pause: float = 0.0, tries: int = 3
         try:
             if pause:
                 time.sleep(pause)
-            raw = urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": UA}), timeout=60).read()
+            raw = source_access.fetch_bytes(url, user_agent=UA, timeout=60)
             sha = p.digest(raw)
             (cache / (sha + suffix)).write_bytes(raw)
             return raw, dict(source_url=url, retrieved_at=datetime.now(timezone.utc).isoformat(), raw_sha256=sha,
                              raw_bytes=len(raw), external_raw_capture=str(cache / (sha + suffix)), error="")
+        except source_access.SourceAccessError as exc:
+            last = exc
+            break                         # a policy refusal is not retried or worked around
         except Exception as exc:  # recorded, never hidden; the caller decides what a failed page means
             last = exc
             time.sleep(2 * (attempt + 1))

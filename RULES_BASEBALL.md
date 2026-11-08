@@ -1,5 +1,7 @@
 > **Authority.** [CORE](CORE.md) and [CURRENT_RULES](RULES_REFERENCE.md#part-a-current_rules) govern new work; this page holds this sport's rules, and earlier statements below keep their historical scope.
 
+**Current sourcing (9November2026):** use [SOURCES SRC-ALT-v2](SOURCES.md) and the [explicit competition catalogue](research/source_routes/COMPETITION_ROUTES.csv). Each required sporting field and exact event needs its own access/accuracy check; a major-league sample never certifies this competition.
+
 **Executable forecast cycle (CYCLE-v1).** Defined in [FORECAST_CYCLE_PROTOCOL](REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](CORE.md) §7.
 
 **Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](WORKFLOW.md#part-b-mini_log_identity_protocol); summarised in [CORE](CORE.md) §2.

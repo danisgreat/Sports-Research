@@ -6,7 +6,7 @@
 
 **Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §5.
 
-**P-2026.11.09-v24.5 · COHORT_RETROSPECTIVE · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Trigger: user request, about 30 newly settled cards, or a DUE/EARLY_REVIEW row from `python -m ml learning-status` (INTERIM about 100 and COMPREHENSIVE about 300 newly settled unique games; per-sport and per-competition clocks); none proves statistical sufficiency. Writes: a new uniquely named report, authorized scoreboard/state summaries, dated hypothesis amendments and CHANGELOG. No original log/grade/forecast, active rule/prompt or previous report changes. The decision lab is excluded.
+**P-2026.11.09-v24.6 · COHORT_RETROSPECTIVE · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Trigger: user request, about 30 newly settled cards, or a DUE/EARLY_REVIEW row from `python -m ml learning-status` (INTERIM about 100 and COMPREHENSIVE about 300 newly settled unique games; per-sport and per-competition clocks); none proves statistical sufficiency. Writes: a new uniquely named report, authorized scoreboard/state summaries, dated hypothesis amendments and CHANGELOG. No original log/grade/forecast, active rule/prompt or previous report changes. The decision lab is excluded.
 
 **ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](../../REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](../../CORE.md) §7.
 

@@ -30,7 +30,8 @@ import urllib.robotparser
 from datetime import datetime, timezone
 from pathlib import Path
 
-AGENTS = ("ClaudeBot", "Claude-User", "Claude-SearchBot", "Claude-Web", "anthropic-ai")
+AGENTS = ("ClaudeBot", "Claude-User", "Claude-SearchBot", "Claude-Web", "anthropic-ai",
+          "GPTBot", "OAI-SearchBot", "ChatGPT-User")
 UA = "sports-results-research/1.0"
 OPEN = ("ALLOWED", "NO_RULES_FILE")
 FIELDS = ("host", "url", "robots_http", "status", "agents_blocked", "content_signal", "checked_at")

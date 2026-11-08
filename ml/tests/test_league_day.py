@@ -24,7 +24,12 @@ def lane(runtime, monkeypatch):
     monkeypatch.setattr(LD, "fixtures", lambda competition, date, cache, now=None: _slate(runtime, clock))
     monkeypatch.setattr(LD, "total_line", lambda competition, root=None: 200.5)
     monkeypatch.setattr(R, "league_key", lambda competition: "NBL")
-    standings = ("role,team,pf,pa,n\nHOME,T00,1195,1102,13\nAWAY,T01,1150,1231,13\nLEAGUE,ALL,18250,18250,200\n").encode()
+    evidence = dict(competition=lf.COMPETITION, source_url="https://example.org/standings", source_sha256="a" * 64,
+                    published_at=clock.isoformat(), known_at=clock.isoformat(), retrieved_at=clock.isoformat(), snapshot_at=clock.isoformat())
+    standings = chat._csv([dict(role="HOME", team="T00", pf=1195, pa=1102, n=13, **evidence),
+                          dict(role="AWAY", team="T01", pf=1150, pa=1231, n=13, **evidence),
+                          dict(role="LEAGUE", team="ALL", pf=18250, pa=18250, n=200, **evidence)],
+                         ("role", "team", "pf", "pa", "n", *R.STANDINGS_EVIDENCE))
     monkeypatch.setattr(R, "standings_csv", lambda competition, home, away, cache=None: (standings, dict(source_url="https://example.org/standings")))
     monkeypatch.setattr(R, "parameter_row", lambda competition, root=None: None)
     monkeypatch.setattr(R, "reference_choice", lambda competition, root=None: dict(reference_model="TB2-MD"))

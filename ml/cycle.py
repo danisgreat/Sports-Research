@@ -448,7 +448,11 @@ def evaluate(release_path, ledger, feedback_root, output):
     write_rows(output/'SOURCES.csv',manifests,('event_id','bundle','receipt_sha256','result_revision','evidence_sha256'))
     write_rows(output/'MODEL_METRICS.csv',[dict(model=tag,**values) for tag,values in result.get('models',{}).items()],('model','rows','events','brier','log_loss','slope','intercept'))
     intervals=[dict(metric=name,**values) for name,values in (('BRIER',result.get('interval',{})),('LOG_LOSS',result.get('log_loss_interval',{}))) if values]
-    write_rows(output/'PAIRED_INTERVALS.csv',intervals,('metric','n_events','k_weeks','mean','lo','hi','status'))
+    # Log-loss diagnostics include infinite-loss counts that Brier intervals do not.
+    # Preserve the union of fields rather than dropping diagnostics or failing CSV export.
+    interval_fields=tuple(dict.fromkeys(k for r in intervals for k in r)) or ('metric','n_events','k_weeks','mean','lo','hi','status')
+    intervals=[{k:r.get(k,'') for k in interval_fields} for r in intervals]
+    write_rows(output/'PAIRED_INTERVALS.csv',intervals,interval_fields)
     if rows and outcomes:
         from ml.core.metrics import reliability_table
         graded=ps._grade(pd.DataFrame(rows),pd.DataFrame(outcomes))

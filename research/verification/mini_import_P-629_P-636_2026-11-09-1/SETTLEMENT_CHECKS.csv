@@ -1,0 +1,20 @@
+check,status,evidence,limitation
+S1,PASS_PROCEDURE,FROZEN_SOURCE/core inventory; original IDs/roles preserved,Historical operator/sourceindependence/known-at gaps remain; no overall informationCOMPLETE claim
+S2,PASS_PROCEDURE,Exact originalprefix/body hash; immutable source inputs,Historical operator/sourceindependence/known-at gaps remain; no overall informationCOMPLETE claim
+S3,PASS_PROCEDURE,Original cores retained and row inventory literal probability roles,Historical operator/sourceindependence/known-at gaps remain; no overall informationCOMPLETE claim
+S4,PASS_PROCEDURE,Per-row arithmetic; unavailable fields UNRESOLVED,Historical operator/sourceindependence/known-at gaps remain; no overall informationCOMPLETE claim
+S5,INFORMATION_INCOMPLETE_PROCEDURE_RECORDED,Source discovery/attempts/closure; operator separate,Historical operator/sourceindependence/known-at gaps remain; no overall informationCOMPLETE claim
+S6,PASS_PROCEDURE,Effective inventory counts/cohorts; no draft primary inflation,Historical operator/sourceindependence/known-at gaps remain; no overall informationCOMPLETE claim
+S7,PASS_PROCEDURE,SETTLEMENT.md R1-R12,Historical operator/sourceindependence/known-at gaps remain; no overall informationCOMPLETE claim
+S8,PASS_PROCEDURE,SETTLEMENT.md distinct14-section deep reviews for losingtriggerrows,Historical operator/sourceindependence/known-at gaps remain; no overall informationCOMPLETE claim
+S9,INFORMATION_INCOMPLETE_PROCEDURE_RECORDED,No shadow mixed into cardwins; baseline missing explicitly,Historical operator/sourceindependence/known-at gaps remain; no overall informationCOMPLETE claim
+S10,INFORMATION_INCOMPLETE_PROCEDURE_RECORDED,Current globalqueue and historicalqueues retained,Historical operator/sourceindependence/known-at gaps remain; no overall informationCOMPLETE claim
+S11,INFORMATION_INCOMPLETE_PROCEDURE_RECORDED,Exact threshold arithmetic; no reconstructedbaseline,Historical operator/sourceindependence/known-at gaps remain; no overall informationCOMPLETE claim
+S12,PASS_PROCEDURE,CANONICAL_READBACK.csv / globalLOG_CUSTODY.csv,Historical operator/sourceindependence/known-at gaps remain; no overall informationCOMPLETE claim
+S13,PASS_PROCEDURE,Named original/revisionparents and preservedearlierpackages,Historical operator/sourceindependence/known-at gaps remain; no overall informationCOMPLETE claim
+S14,PASS_PROCEDURE,Frozen originalsource receipts before initialsettlement preparation,Historical operator/sourceindependence/known-at gaps remain; no overall informationCOMPLETE claim
+S15,INFORMATION_INCOMPLETE_PROCEDURE_RECORDED,Globalqueue actors/source/field/timebasis/automation,Historical operator/sourceindependence/known-at gaps remain; no overall informationCOMPLETE claim
+S16,PASS_PROCEDURE,All source events retained despite no model; realfrozenbundles settled separately,Historical operator/sourceindependence/known-at gaps remain; no overall informationCOMPLETE claim
+S17,INFORMATION_INCOMPLETE_PROCEDURE_RECORDED,Discovery/attempts/closure sidecars; informationnotcomplete,Historical operator/sourceindependence/known-at gaps remain; no overall informationCOMPLETE claim
+S18,PASS_PROCEDURE,Finalcanonicalmapping verified by prompt4; original localkeys unchanged,Historical operator/sourceindependence/known-at gaps remain; no overall informationCOMPLETE claim
+S19,NOT_APPLICABLE_LEGACY_NO_LEDGER,"No originalPICKS_V2 ledgerrows; verified terminalfields retained, no inventedadjustments",Historical operator/sourceindependence/known-at gaps remain; no overall informationCOMPLETE claim

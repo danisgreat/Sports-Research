@@ -1,0 +1,7 @@
+# NBA fixed prospective experiment ·9 November 2026
+
+Competition Basketball/NBA; endpoint FULL_GAME_INCL_OT; challenger NBA-CYCLE-4, fixed recipe alreadyinrelease; comparator frozen competition league baseline on identical supplied winner/spread/total contracts. All eligible scheduled league-day events are included; no outcome-based selection. Refused fixtures/inputs and access/coverage failures are logged, not silently omitted. Use source-reviewed capture-bound fixtures when ESPN is blocked, with current standings evidence and explicitly labelled Foxproxy if needed.
+
+Freeze through league-day before the scheduled start, commit/push before start to establish publication, settle from matching permitted source boxes and sums, keep real feedback only. Evaluate paired events within ISOweek: minimum50unique settled paired games and 8settledweeks; minimum Brier improvement .01 and the existing uncertainty/guardrail criteria. Code/release/data changes create a newexperiment/version, never silently pool versions. Report Brier/logloss/calibration by contract/competition/timing andevidence. No automatic promotion.
+
+Registration does not schedule tasks or certify future coverage. AUTOMATION: NOT_SCHEDULED. No newfuture fixture was fabricated or frozen by this task. The two October frozen events retain NBA-CYCLE-1; their feedback is reported separately and cannot be relabelled as this newexperiment. Eight future weeks cannot be completed retrospectively.

@@ -1,0 +1,2 @@
+canonical_id,source,bytes,sha256,prepared_core_time,receipt_created_at,limitation
+P-584,ClosedPart7 original; exact samebytes at baseHEAD,27105,e6fa04c4df42f8e58279f6efefbeabe18ce7f8f831db1e75bc7b8a84d02de172,2026-11-08T20:51:14.411704+00:00,2026-11-08T21:21:29.490779+00:00,Original core was saved by preparation before settlement; separate FROZEN_SOURCE receipt was not contemporaneously written. Closed original remains unchanged; no invented earlierreceipt timestamp

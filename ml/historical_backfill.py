@@ -17,12 +17,12 @@ import urllib.request
 
 import pandas as pd
 
-from ml import primary as p, research_ingest as ri
+from ml import primary as p, research_ingest as ri, source_access
 
 
 def fetch(url, cache):
     cache=Path(cache); cache.mkdir(parents=True,exist_ok=True)
-    raw=urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'SportsResearch result verification'}),timeout=45).read()
+    raw=source_access.fetch_bytes(url,user_agent='SportsResearch result verification',timeout=45)
     at=datetime.now(timezone.utc).isoformat(); sha=p.digest(raw)
     (cache/(sha+'.json')).write_bytes(raw)
     return json.loads(raw),dict(source_url=url,retrieved_at=at,raw_sha256=sha,raw_bytes=len(raw),external_raw_capture=str(cache/(sha+'.json')))

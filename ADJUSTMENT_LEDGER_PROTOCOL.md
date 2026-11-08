@@ -2,6 +2,12 @@
 
 **P-2026.10.22-v24.0 · CR-2026.10.22-R2.** Implements REV-02, REV-03, REV-05, REV-09, REV-10 and REV-17 of the [framework revamp review](research/verification/review_2026-10-22_framework_revamp/REPORT.md). The card's probability is the frozen **reference** ([REFERENCE_MODEL_PROTOCOL](REFERENCE_MODEL_PROTOCOL.md)) plus **logged adjustments**. Each adjustment is a verified fact with a source, a publication time, a size taken from an effect-table row and a direction. At settlement the final probability is scored against the reference on the same rows, so for the first time the framework measures whether the analyst's research adds accuracy.
 
+## Admission integrity ·CR-2026.11.09-R3
+
+The ledger rejects effect rows from another competition (only explicit `all` is global), incompatible target quantities/units, nonfinite applied sizes and moved probabilities without a named adjustment counterfactual. This validates declared scope, not the causal truth of an effect or an arbitrary unrecorded distribution transformation.
+
+PICKS_V2 checks unconditional win/loss monotonicity across nested TOTAL, TEAM_TOTAL and HANDICAP thresholds, preserving integer pushes. A TEAM_TOTAL must name its team/period scope in the optional header: `contract_scopes: HOME_OVER_100=HOME_FULL_MATCH|AWAY_OVER_110=AWAY_FULL_MATCH`. Use the same scope for contracts of the same quantity/endpoint and different scopes for different teams/periods. Scope identifiers describe sporting contracts, never a means to evade a consistency check. Opposite sides at the same line are checked within the same scope.
+
 ## 1. The procedure
 
 1. Run the reference stage and print the Reference block (REFMODEL-v1).

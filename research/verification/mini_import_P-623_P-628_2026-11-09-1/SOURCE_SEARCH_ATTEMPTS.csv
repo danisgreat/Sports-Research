@@ -1,0 +1,13 @@
+local_key,url,attempt_at,operation,result,open_field
+LOCAL-20261021OKCSASR01-G0001,https://statsdmz.nba.com/pdfs/20261020/20261020_OKCSAS.pdf,2026-11-08T20:27:21.339256+00:00,ROBOTS_CHECK_THEN_DIRECT_FETCH,FETCHED,Exact final and contract endpoint
+LOCAL-20261021OKCSASR01-G0001,https://www.statpro.io/reference/nba/games/2026-10-20-okc-sas,2026-11-08T20:27:23.966333+00:00,ROBOTS_CHECK_THEN_DIRECT_FETCH,FETCHED,Exact final and contract endpoint
+LOCAL-20261022F6K3OJNO-G0001,https://www.tennisexplorer.com/match-detail/?id=3354293,2026-11-08T20:27:26.763958+00:00,ROBOTS_CHECK_THEN_DIRECT_FETCH,FETCHED,Exact final and contract endpoint
+LOCAL-20261022F6K3OJNO-G0001,https://tennis-db.com/matches/4719797/nikoloz-basilashvili-vs-facundo-diaz-acosta,2026-11-08T20:27:28.181952+00:00,ROBOTS_CHECK_THEN_DIRECT_FETCH,FETCHED,Exact final and contract endpoint
+LOCAL-20261022F6K3OJNO-G0002,https://www.footlive.com/score/potkozarje-vs-drina-zvornik-2026-10-21/,2026-11-08T20:27:29.094181+00:00,ROBOTS_CHECK_THEN_DIRECT_FETCH,FETCHED,Exact final and contract endpoint
+LOCAL-20261022F6K3OJNO-G0002,https://www.flashscore.com/match/football/potkozarje-AHrFXeeB/zvornik-YZcveBlG/?mid=GI2RuAdD,2026-11-08T20:32:12.886245+00:00,ROBOTS_CHECK_THEN_DIRECT_FETCH,FETCHED,Exact final and contract endpoint
+LOCAL-20261022F6K3OJNO-G0003,https://statsdmz.nba.com/pdfs/20261021/20261021_ATLORL.pdf,2026-11-08T20:27:21.339681+00:00,ROBOTS_CHECK_THEN_DIRECT_FETCH,FETCHED,Exact final and contract endpoint
+LOCAL-20261022F6K3OJNO-G0003,https://www.statpro.io/reference/nba/games/2026-10-21-atl-orl,2026-11-08T20:27:24.062297+00:00,ROBOTS_CHECK_THEN_DIRECT_FETCH,FETCHED,Exact final and contract endpoint
+LOCAL-20261022F6K3OJNO-G0004,https://statsdmz.nba.com/pdfs/20261021/20261021_MILWAS.pdf,2026-11-08T20:27:21.339960+00:00,ROBOTS_CHECK_THEN_DIRECT_FETCH,FETCHED,Exact final and contract endpoint
+LOCAL-20261022F6K3OJNO-G0004,https://www.statpro.io/reference/nba/games/2026-10-21-mil-was,2026-11-08T20:27:24.184471+00:00,ROBOTS_CHECK_THEN_DIRECT_FETCH,FETCHED,Exact final and contract endpoint
+LOCAL-20261022F6K3OJNO-G0005,https://lscluster.hockeytech.com/feed/index.php?feed=gc&key=50c2cd9b5e18e390&client_code=ahl&game_id=1029174&lang=en&fmt=json&tab=gamesummary,2026-11-08T20:27:30.523827+00:00,ROBOTS_CHECK_THEN_DIRECT_FETCH,FETCHED,Exact final and contract endpoint
+LOCAL-20261022F6K3OJNO-G0005,https://www.hamiltonhammers.com/games,2026-11-08T20:32:12.886594+00:00,ROBOTS_CHECK_THEN_DIRECT_FETCH,FETCHED,Exact final and contract endpoint

@@ -1,0 +1,173 @@
+# Current state
+
+**Current release — MDS/P v24.7 / CR-2026.11.09-R2 / P-2026.11.09-v24.5:** PROCEDURE, owner instruction 9 November 2026. The owner's per-game request formats for nine sports (REQ-v4) are now the request template and head each prompt-1 sport file. GAME_REQUEST_TEMPLATE §1b reads every line into a contract, endpoint and deep-loss-review role, and the DEEPLOSS-v1 top-total trigger names goals, corners and full-innings totals.
+
+**Previous release — MDS/P v24.6 / CR-2026.11.09-R1 / P-2026.11.09-v24.4:** PROCEDURE, owner instruction 9 November 2026: "if any source is blocking because of this AI filter, go search for alternate sources that provide the necessary information, apply this for all sports and leagues and competitions". SRC-ALT-v1: every source is checked against its robots rules for the Anthropic agent tokens before it is opened (`python -m ml source-audit`). A blocked or unknown source is never worked around; a permitted alternate is found. The register audit found 245 URLs: 45 blocked for AI and 32 unknown. Permitted alternates were found for every sport ([SOURCES](SOURCES.md) SRC-ALT-v1; [implementation](research/verification/framework_change_2026-11-09-1/IMPLEMENTATION.md)).
+
+**Previous release — MDS/P v24.5 / CR-2026.11.08-R2 / P-2026.11.08-v24.3:** INTEGRITY + PROCEDURE, owner instruction 8 November 2026 (implement the review of v24.4; [implementation](research/verification/framework_change_2026-11-08-2/IMPLEMENTATION.md)). Rejections now enforced in code, each with a test:
+
+- forecasts bound to the exact event, contract and printed probability;
+- probability, date, side and timing checks on cards, and timing derived from evidence;
+- publication and correction chronology at ingest, plus a store lock;
+- one effective-settlement view that reports consume;
+- the declared promotion threshold and infinite log loss for a wrong certain forecast;
+- scoring kept within strata;
+- releases gated on a receipt bound to the store (GATE-v2);
+- structured, immutable adjustment rows;
+- the regime rows re-tested chronologically;
+- a generated current-state block.
+
+**Previous release — MDS/P v24.4 / CR-2026.11.08-R1 / P-2026.11.08-v24.2:** STATISTICAL + PROCEDURE, owner instructions 8 November 2026 ([implementation](research/verification/framework_change_2026-11-08-1/IMPLEMENTATION.md)):
+
+- Regime multipliers tested on verified finals: NBA playoffs, MLB postseason and NRL early season are full effect rows, AFL finals a half row, the rest null or not estimable.
+- The external-chat route is retired (REQ-v3) and its files are archived.
+- The decision lab is a firewalled separate contributor, with a code test (DECISION-LAB-v2).
+- A deep loss review is required for every losing top side, top total and rank 1 row (DEEPLOSS-v1).
+- Every logged competition's rules were re-verified, with dated registers in the sport files.
+
+**Earlier releases (v24.3 and before):** dated history in [research/history/CURRENT_STATE_RELEASES.md](research/history/CURRENT_STATE_RELEASES.md); the full record is [CHANGELOG](CHANGELOG.md).
+
+## Authority
+
+**Research retention before model availability (RETAIN-v2).** Defined in [RESEARCH_RETENTION_PROTOCOL](RESEARCH_PROTOCOL.md#part-c-research_retention_protocol); summarised in [CORE](CORE.md) §2.
+
+Historical retention release: MDS-v17.0 / CR-2026.10.16-R1 / P-v17.0 / SCV-v11; mini-log-9 / mini-settlement-8. The later v18 source-persistence release and current v19 local-key/delivery release supersede these procedure/format defaults. [Retention implementation](research/verification/framework_change_2026-10-16-1/IMPLEMENTATION.md).
+
+**Required repository fallback (REF-v2).** Defined in [WORKFLOW](WORKFLOW.md#part-a-execution_environment_protocol) Part A §2 (GitHub `main` at a printed SHA when a local file is unreadable).
+
+**ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](CORE.md) §7.
+
+**Execution environment (ENV-v2).** Defined in [EXECUTION_ENVIRONMENT_PROTOCOL](WORKFLOW.md#part-a-execution_environment_protocol); summarised in [CORE](CORE.md) §1.
+
+PROCEDURE: MDS-v16.1 / CR-R8 / P-v16.1. [Reference recovery implementation](research/verification/framework_change_2026-10-15-8/IMPLEMENTATION.md). Numerical primary V3, scoring/selection, formats and all allocation/settlement values are unchanged.
+
+FORMAT + PROCEDURE: MDS-v16.0 / CR-R7 / P-v16.0 / PRIMARY-v3.2; SCV-v10 and SEL-v3 unchanged. [Audit and implementation](research/verification/framework_change_2026-10-15-7/IMPLEMENTATION.md). Allocation and existing event/settlement values below are unchanged.
+
+**Strict research completion (15 October 2026):** [RC-2026.10.16-v2](RESEARCH_PROTOCOL.md#part-a-research_completion_protocol) requires full sport-specific research and every contract assessment despite calibration/runtime/lineup/timing/mini blockers, with supported automatic analyst comparisons in a separate NOT_PRIMARY lane and an evidenced A9 completion matrix. P-v15.0 adds this receipt within existing mini-log-7 appendices; no numerical ML/selection/scoring policy, issued record or allocation changes. [Implementation](research/verification/framework_change_2026-10-15-6/IMPLEMENTATION.md).
+
+**Preferred web history recovery (15 October 2026):** [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md) requires online source research first when exact local history is absent, incomplete or incorrect, across all sports and competitions. Fresh reviewed inputs and exact competition metadata can support the existing primary model without waiting for shared archive repair. Known-at, evidence and unsupported-model checks remain; no dataset refresh or predictive qualification is claimed. [Implementation](research/verification/framework_change_2026-10-15-5/IMPLEMENTATION.md).
+
+**Primary integrity review (15 October 2026):** [PRIMARY-2026.10.15-v3](ML_PIPELINE.md#part-a-primary_prediction_protocol) retains the deterministic mixture and fixes warm-refit known-at leakage, duplicate history/feedback contributions, parameter admission and receipt integrity. Online expert aggregation, not a trained environment-control RL policy. The old replay is proxy evidence with pooling and policy mismatch limits, not validation of the corrected runtime. [Review and implementation](research/verification/framework_change_2026-10-15-4/REVIEW.md). Existing IDs/grades remain unchanged.
+
+**Primary mixture and scheduled-start horizon (15 October 2026):** [PRIMARY-2026.10.15-v2](ML_PIPELINE.md#part-a-primary_prediction_protocol) replaces random Exp3 expert selection with the full-information mixture PRIMARY_HEDGE_MIX_V2 (the earlier proxy replay reported lower Brier; its runtime/parameter/pooling limits are documented in the new integrity review). There is no separate cutoff: the evidence horizon is the game-log scheduled start, and lineups, confirmed starters, bench and news are researched up until then ([TIMING-2026.10.15-v2](RESEARCH_PROTOCOL.md#part-e-timing_research_protocol)). [Implementation](research/verification/framework_change_2026-10-15-3/IMPLEMENTATION.md). No bundle had been issued under v1.
+
+**Primary ML/RL integration (15 October 2026):** PRIMARY-2026.10.15-v1 authorised model-assisted experimental primary cards from actual receipt-bound per-event runs, with a sporting bandit selecting the distribution and learning only from resolved available feedback (superseded by v2 above). No old DATA_HOLD model is qualified by this change. Unsupported/missing runs remain explicit NO_FORECAST. [Implementation](research/verification/framework_change_2026-10-15-2/IMPLEMENTATION.md).
+
+**Timing update (15 October 2026):** TIMING-2026.10.15-v1 removes all fixed manual research/freeze deadlines and permits research to finish after start. CLEAN_PRE_START_INPUTS describes verified pre-start evidence and no outcome exposure independently of actual issue time. Post-start issuance remains visible and separately scored; it is not a pre-start-issued prospective forecast. [Implementation](research/verification/framework_change_2026-10-15-1/IMPLEMENTATION.md). Existing issued cards, IDs, grades, statistics and model qualification unchanged.
+
+**Availability procedure update (14 October 2026):** [AVAIL-2026.10.14-v1](ROSTER_AVAILABILITY_PROTOCOL.md) and [change receipt](research/verification/framework_change_2026-10-14-4/IMPLEMENTATION.md) require comprehensive starter, bench and absence research for both sides, including obscure competitions. PROCEDURE only; truthful missingness, prediction/selection/scoring rules, formats and model-workshop firewall remain in force. Prompt v11.3 retains this procedure and adds the complete lifecycle/integrity controls.
+
+<!-- BEGIN GENERATED STATE (python -m ml state --write) -->
+
+*Generated from the records; do not edit by hand. A test fails if this block differs from `python -m ml state`.*
+
+| Item | Value |
+|---|---|
+| Highest canonical ID / next | P-622 / **P-623** (from the import mappings) |
+| Active local mini | `research/active_minis/20261022F6K3OJNO.md`; last / next local key `LOCAL-20261022F6K3OJNO-G0005` / `LOCAL-20261022F6K3OJNO-G0006` (footer) |
+| Open cards in the active mini | 6 of 6: `LOCAL-20261021OKCSASR01-G0001`, `LOCAL-20261022F6K3OJNO-G0001`, `LOCAL-20261022F6K3OJNO-G0002`, `LOCAL-20261022F6K3OJNO-G0003`, `LOCAL-20261022F6K3OJNO-G0004`, `LOCAL-20261022F6K3OJNO-G0005` |
+| Frozen league-day events without settlement | 2: `LOCAL-LEAGUE-NBA-20261022-G0001`, `LOCAL-LEAGUE-NBA-20261022-G0002` |
+| Learning store | view 12; 5402 events, 5400 results, 8 team-statistic rows, 0 player-availability rows |
+| Adjustment ledger | 0 contract rows on 0 cards; 0 adjustment rows |
+| Prospective shadow ledger | 12 frozen rows on 2 events (`research/prospective/CYCLE_SHADOW_LEDGER.csv`) |
+| Effective settlements (imported local-key rows) | 102 rows, 12 revised by settlement imports, 0 UNRESOLVED |
+| Active releases | MLB-CYCLE-4 (Baseball/MLB; CARRIED_FORWARD_BEFORE_GATE_V2; STALE_FOR_CURRENT_CODE); NHL-CYCLE-4 (Ice Hockey/NHL; CARRIED_FORWARD_BEFORE_GATE_V2; STALE_FOR_CURRENT_CODE); NBA-CYCLE-2 (Basketball/NBA; BOUND_GATE_V2; CURRENT_CODE) |
+
+<!-- END GENERATED STATE -->
+
+**Versions and pointers (hand-maintained):**
+
+| Item | Value |
+|---|---|
+| Status | ACTIVE |
+| Method | MDS-2026.11.09-v24.7 (v24.7 owner request formats REQ-v4; v24.6 v24.6 AI-blocked sources replaced by permitted alternates; v24.5 v24.5 enforced integrity and chronological regime rows; v24.4 v24.4 regime rows, route retired, deep loss reviews, competition rules re-verified; v24.1 BK-OT-1, v24.2 consolidated documents, v24.3 contradictions removed; the card method itself is unchanged since v24.0) (read [CORE](CORE.md) first, then prompt 1 core plus one sport file; ENV-v2: every prompt runs in this repository with internet research and ends with a commit and push; the reference is frozen before the card, p_card = reference + logged adjustments (ANALYST_PRIMARY_V1), the card's final p is frozen beside it (MLSCOPE-v3); prompt 3 settles card, ledger inputs and frozen rows and runs the import; Markdown/CSV/text controls, code in ml/) |
+| Control revision | CR-2026.11.09-R2 (REQ-v4); CR-2026.11.09-R1 ([implementation](research/verification/framework_change_2026-11-09-1/IMPLEMENTATION.md)); CR-2026.11.08-R2 ([implementation](research/verification/framework_change_2026-11-08-2/IMPLEMENTATION.md)); CR-2026.11.08-R1 ([implementation](research/verification/framework_change_2026-11-08-1/IMPLEMENTATION.md)); CR-2026.11.07-R3 ([report](research/verification/framework_change_2026-11-07-3/CONTRADICTIONS.md)); CR-2026.11.07-R2 ([implementation](research/verification/framework_change_2026-11-07-2/IMPLEMENTATION.md)); CR-2026.11.07-R1 ([implementation](research/verification/framework_change_2026-11-07-1/IMPLEMENTATION.md)); CR-2026.10.22-R2 ([implementation](research/verification/framework_change_2026-10-22-2/IMPLEMENTATION.md)); CR-2026.10.22-R1 ([implementation](research/verification/framework_change_2026-10-22-1/IMPLEMENTATION.md)) and earlier releases retained above |
+| Scoring version | SCV-2026.10.22-v12 (ledger views: paired Brier against reference, baseline, line-implied, frozen model and benchmark; λ; width coverage; calibration by band; SCV-v11 and the historical v5-v7 views retained for earlier cards) |
+| Selection version | SEL-2026.10.22-v4 for cards with a `PICKS_V2` block (a probability for every contract, most-likely list, information list, abstain flag); SEL-2026.10.12-v3 / P_ORDER_V2 retained for earlier cards, whose Rank-1 gate and Rank-2 floor stay as written for them; historical manual mixtures remain in their own cohort |
+| Prompt suite | P-2026.11.09-v24.5 (v24.5: the owner's per-game request blocks in the sport files and prompt 1; v24.4: SRC-ALT-v1 source access check in prompts 1 and 3 and the common protocol; v24.3: sport files read model output only through the reference stage and the freeze; PROMPTS.md is a pointer to the one operator index; v24.2: prompt 3 deep loss reviews, prompt 6 review tallies, external requests archived; v24.1: reading lists follow the v24 gate and name the merged files; otherwise as v24.0:) (prompt 1 core with shared steps plus eleven sport files; ENV-v2 repository agent for every prompt; reference stage before the card and card freeze after it (MLSCOPE-v3); MINI-v2 canonical assignment in the settlement phase; optional DRIVE-v2 drop box) |
+| Learning pipeline | MLSCOPE-v3: reference stage and card freeze in prompt 1 (`pregame reference`, `pregame run`), ledger inputs and `cycle settle` / `league-day settle` in prompt 3, ledger scoring and the monthly dashboard in prompt 6, references, releases and the release gate in prompt 8; CYCLE-v1 / LEARN-v1.1; store view and counts: generated block above. Active experimental releases **NHL-CYCLE-4 / MLB-CYCLE-4** (RELEASE-SCOPE-v1 code digest, same parameters as v3); 0 prospective events; lanes judged only after 8 settled weeks and 50 settled paired games. **NBA-CYCLE-1** (experimental, 0 prospective events; three seasons of two-lineage finals, release gate passed) is the NBA challenger; the NBA's declared reference is TB-2-MD. No soccer or other release yet. |
+| Active local mini | [research/active_minis/20261022F6K3OJNO.md](research/active_minis/20261022F6K3OJNO.md) (MINI_KEY 20261022F6K3OJNO; open cards and the next local key: generated block above) |
+| Mini-log format | `mini-log-10` (in-progress `mini-log-2` through `mini-log-9` retain their format and issued cores) |
+| Settlement format | `mini-settlement-10` with source discovery, attempts and closure / S1-S18 (settlement-9 and earlier retain original formats) |
+| Freeze | None. Custody is the git history of `main` (CURRENT_RULES §9). Cards record the HEAD SHA they read. The last control manifest, `CONTROL_MANIFEST_2026-10-09-3.md`, is in [archive/controls/](archive/controls/). |
+| Highest committed canonical ID | **P-622** |
+| Next canonical ID | **P-623** (equal to the line in GAME_LOG_STATUS_CURRENT.md) |
+| Reserved IDs | P-518 to P-522 |
+| Active Combined Log | [prediction logs/PREDICTION_LOG_COMBINED_9.md](prediction%20logs/PREDICTION_LOG_COMBINED_9.md) |
+| Previous parts | Parts 1 to 8, immutable; Part 6 keeps its original P-518 to P-522 source block; Part 7 closed with 51 originals P-550 to P-600; Part 8 closed with 22 originals P-601 to P-622 |
+| Final settlement register | **138 retained records: 137 terminal sporting-result reviews + 1 legacy pending P-584** (P-620's contracts are terminal; its qualitative Test-winner call was settled 2026-11-07: incorrect). Latest import P-601–P-622 (2026-10-21), with settlement revisions of 2026-11-07: research-only P-601–P-611 analyst rows 26W/26L/0 unresolved (NOT_PRIMARY, no primary denominator); ANALYST_PRIMARY_V1 P-612–P-622 rows 25W/23L/2 push, primary ranks 1–2 11W/10L/1 push, mean Brier 0.204 (n=21, uncalibrated, no pre-start issue verified; P-612–P-618 are NOT_ISSUED drafts). Conditional sporting grades only; no operator/model certification. One card held (LOCAL-20261018MELILL01-G0004, intake marker defect). [Current import](research/verification/mini_import_P-601_P-622_2026-10-21-1/CANONICAL_IMPORT_REPORT.md); previous [P-590–P-600 import](research/verification/mini_import_P-590_P-600_2026-10-16-1/CANONICAL_IMPORT_REPORT.md). Earlier dated scoreboards retain their original figures. |
+
+## Selection rules (provisional until the prospective window completes)
+
+- Only Rank 1 and Rank 2 count as wins (Rule T2). A Rank-1 loss gets a deep retrospection (Rule R1). Supplied contracts are reference only (Rule P4).
+- `p_card` selection ceiling 90%, never a probability clip. Original Rank-1 gate: at least 62% and a 4-point lead over the best eligible non-complementary alternative. Primary order is decreasing p_card; Rank-2 floor 58% is disclosed. Joint failure is diagnostic; RET03 gate, RET04 different-quantity Rank 2 and XCARD6 diversification are separate frozen shadows. Up to four supported candidates; qualitative/NO_FORECAST research is retained.
+- Source: [SELECTION_RULES.md](RULES_REFERENCE.md#part-b-selection_rules) (status PROVISIONAL).
+
+## Scoreboard
+
+- **Current import (14 October):** P-585-P-589 retain SUPPLIED_FIRST_V1/SF-2 as a separate cohort: 5 numeric research cards, primary 5W/5L (Rank 1 4W/1L, Rank 2 1W/4L), sporting 9W/9L/2PUSH over 20 rows. Frozen paired coverage 4/10 primary rows on 2 events in 1 ISO week; paired Brier 0.251668318 versus baseline 0.229513269, difference +0.022155049, INSUFFICIENT_EVIDENCE. Current P_ORDER_V2 remains unchanged; no clean prospective certification. Prior policy/historical tables below retained. [October 14 report](research/verification/mini_import_P-585_P-589_2026-10-14-1/CANONICAL_IMPORT_REPORT.md).
+
+- **Current v10/v11 import measurement (13 October):** v10 P-580–P-583 = 4 retained events (3 numeric primary, 1 NO_FORECAST), primary 5W/1L, baseline coverage 4/6 rows on 2 events in 1 ISO week; paired Brier card 0.187418187 vs baseline 0.188131225 (difference -0.000713038), INSUFFICIENT_EVIDENCE. V11 P-584 = 1 pending diagnostic-only event, zero eligible primary rows. Historical pre-v10 P-577–P-579 add 5W/1L; current historical inventory 94 forecast cards, 118W/62L plus 8 legacy VOID slots, 65.6% decisive rate; historical Rank 1 58W/33L/3V, Rank 2 60W/29L/5V. The 0-card v10/v11 release snapshot was dated to the framework release and is superseded for current counts by this import; no old card is relabelled or baseline backfilled. Full scoring/queue provenance: [import](research/verification/mini_import_P-577_P-584_2026-10-13-1/CANONICAL_IMPORT_REPORT.md). Clean prospective predictive skill remains unestablished; nothing is performance-certified.
+- **Historical v5 snapshot follows:** original cohorts and figures remain unchanged; these are descriptive, not prospective v10 evidence.
+
+Full tables: [research/scoreboard/SCOREBOARD.md](research/scoreboard/SCOREBOARD.md).
+
+- Forecast cards scored: 91 (P-126 to P-576). Gated counted cohort: 0 cards (no card yet carries a recorded Rank-1 gate PASS). RANK1_UNSTABLE cohort: 20 cards (P-557 to P-576), 34 counted wins in 40 live top-two rows = 85.0% (95% interval 70.9% to 92.9%). All forecast cards (historical, ungated): 113 counted wins in 174 live top-two rows = 64.9% (95% interval 57.6% to 71.6%). Rank 1 56-32, Rank 2 57-29, ranks 3-4 106-67 (informational).
+- Last cohort retrospective: [2026-10-11](research/verification/retrospective_2026-10-11/RETROSPECTIVE_REPORT.md), new cohort P-557 to P-576 against P-126 to P-556. Rank 1 80.0% (58.4% to 91.9%) does not beat Rank 2 90.0% (69.9% to 97.2%) or ranks 3-4 77.5%. Top-two Brier 0.131 against climatology 0.128 (skill -0.03). Every RANK1_UNSTABLE top-two pair covers itself (stated joint failure 0.0%, realised all-lost 0 of 20). So the counted rate is driven by line construction, and the cohort **does not establish** incremental predictive skill: there were no frozen same-row pregame baselines, and the skill figure uses an in-sample climatology reference, which is descriptive only. *(Wording corrected 2026-10-12, audit R24. The earlier summary said "not skill", which overstated what 20 cards without paired baselines can show. The dated retrospective is unchanged.)* 0 of 20 cards passed the Rank-1 gate; experiment SEL-1 has 1 of 8 week-blocks and no PASS card, so the gate stays provisional. Seven proposals (RET-01 to RET-07) are `PROPOSED_NOT_TESTED` in [HYPOTHESIS_REGISTER.md](HYPOTHESIS_REGISTER.md).
+- Nothing here is performance-certified.
+
+**Implementation notes of 11–14 October 2026:** [research/history/CURRENT_STATE_IMPLEMENTATION_NOTES.md](research/history/CURRENT_STATE_IMPLEMENTATION_NOTES.md).
+
+## Sources
+
+- Register: [SOURCES.md](SOURCES.md) (rules, source register, adapter statuses, exclusions, reachability matrix). The source adapters and parsers were removed; the routes are used by hand.
+- No lineage audit has established independent collection for any source. Treat independence as unknown.
+
+## Models
+
+- **New cards:** ANALYST_PRIMARY_V1 / UNCALIBRATED_ANALYST_PRIMARY, the frozen reference plus logged adjustments (ADJUSTMENTS_V1); code does the reference, the linter, the ledger and the freeze (MLSCOPE-v3). Historical MODEL_ASSISTED cards keep their labels. Rows that cannot be supported are bounded, qualitative or NO_FORECAST, never fabricated. The ML/RL workshop is used only in prompts 6 and 8.
+- **Model workshop (2026-10-14):** fitted development models exist in [`ml/`](ml/README.md), with outputs and statuses in [research/model_shadow/STATUS.md](research/model_shadow/STATUS.md). All are `HISTORICAL_DEVELOPMENT`; no prospective lane has started, and these old historical outputs remain unadmitted. New primary cards use a separate freshly fitted per-event bundle, not these cached predictions.
+- The 2026-10-09 numerical runtime and its model register are archived design notes ([NUMERICAL_MODEL_REGISTER.md](archive/root_documents_2026-10-14/NUMERICAL_MODEL_REGISTER.md)).
+
+## Where things are
+
+| Need | Document |
+|---|---|
+| Rules | [CURRENT_RULES.md](RULES_REFERENCE.md#part-a-current_rules), [METHOD.md](CORE.md#merged-method), [SELECTION_RULES.md](RULES_REFERENCE.md#part-b-selection_rules) |
+| Operator prompts | [research/prompts/](research/prompts/README.md), [PROMPTS.md](PROMPTS.md) |
+| Card, mini and log formats; self-audit checklists | [CARD_AND_LOG_TEMPLATES.md](CARD_AND_LOG_TEMPLATES.md) |
+| Probability tables | [PROBABILITY_TOOLKIT.md](PROBABILITY_TOOLKIT.md) |
+| League scoring levels | [LEAGUE_PROFILES.md](PARAMETERS.md#part-d-league_profiles) |
+| Base rates and regimes | [BASE_RATES_REGISTER.md](PARAMETERS.md#part-c-base_rates_register) |
+| Sources and reachability | [SOURCES.md](SOURCES.md) |
+| Previous results | [ARCHIVE_USE_GUIDE.md](ARCHIVE_USE_GUIDE.md), [Previous Sports Results/README.md](https://github.com/danisgreat/Sports-Research/blob/2ea94f6f718d1f43c7af9e567008495114ef9cef/Previous%20Sports%20Results/README.md) |
+| Scoring | [SCORING_AND_VALIDATION.md](SCORING_AND_VALIDATION.md) |
+| Verification | [VERIFICATION_PROTOCOL.md](VERIFICATION_PROTOCOL.md) |
+| Proposed improvements | [HYPOTHESIS_REGISTER.md](HYPOTHESIS_REGISTER.md) |
+| Retrospective and recommendation status | [FRAMEWORK_RETROSPECTIVE_2026-10-09.md](archive/root_documents_2026-10-14/FRAMEWORK_RETROSPECTIVE_2026-10-09.md); latest cohort retrospective [retrospective_2026-10-11](research/verification/retrospective_2026-10-11/RETROSPECTIVE_REPORT.md) (register status in its §6) |
+| Historical root documents archived 2026-10-14 | [Archive index](archive/root_documents_2026-10-14/README.md); [old-path recovery](HISTORICAL_LINK_INDEX.md#root-document-archive-2026-10-14). Navigation change only; all IDs, grades and versions unchanged. |
+| Superseded documents | [archive/superseded_2026-10-09/](archive/superseded_2026-10-09/README.md), `archive/controls/` |
+
+**Local research record and updated-document delivery (owner update, 16 October 2026).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](WORKFLOW.md#part-b-mini_log_identity_protocol); summarised in [CORE](CORE.md) §2.
+
+## Current legacy settlement import — 2026-10-16T15:18:45+11:00
+
+Highest canonical **P-600**; next **P-601**; active Combined Log remains Part 7. Inventory **116 retained research records = 115 terminal sporting-result reviews + 1 legacy pending P-584** (104 prior terminal + eleven P-590-P-600 result reviews). Four originals P-597-P-600 added; seven existing originals P-590-P-596 skipped; one P-590 reconciliation addendum and eleven revision-1 settlements retained. [Complete import/readback](research/verification/mini_import_P-590_P-600_2026-10-16-1/CANONICAL_IMPORT_REPORT.md).
+
+The supplied package reports **23 conditional sporting WIN / 21 LOSS / 2 UNRESOLVED** across 46 dependent supplied-contract rows; all eleven events still lack complete operator-action terms and exact final-at/SLA evidence. P-596 Saryarka ML and P-598 Huima −8.5 ML remain UNKNOWN_DEFINITION. These grades retain original rules and analyst roles; no current online-history/lineup compliance, fitted primary model, certified performance or pregame availability is backfilled. Model primary/baseline paired scores remain NOT_COMPUTABLE for this cohort; 37 descriptive analyst rows remain NOT_PRIMARY. Prior score cohorts retain their original figures. Raw carryover: 17 items, 2 closed by canonical-core/owner-result capture, 15 open; older P-581-P-584 and prior operator/time/custody queues remain. No automation scheduled.
+
+## Combined Log rollover — 2026-10-17T02:17:38+11:00
+
+Active destination: [Part 8](prediction%20logs/PREDICTION_LOG_COMBINED_8.md); Part 7 closed after 2,078,770 bytes / 51 originals P-550–P-600. Highest P-600 / next P-601 and reserved P-518–P-522 unchanged; zero IDs consumed. Pending P-584, terminal evidence and execution/learning repair queues continue at their exact existing dispositions. [Rollover custody, both queues and readback](research/verification/combined_rollover_2026-10-17/README.md). This dated navigation update supersedes earlier active-part snapshots only; no forecast, settlement, training or model change.
+
+## Combined Log rollover — 2026-10-21T02:30:23+11:00
+
+Active destination: [Part 9](prediction%20logs/PREDICTION_LOG_COMBINED_9.md); Part 8 closed with 851,514 pre-closure raw bytes and 22 originals P-601–P-622, on the owner's explicit request (default thresholds not reached). Highest P-622 / next P-623 and reserved P-518–P-522 are unchanged; zero IDs consumed. Pending P-584, P-620's winner-call/learning fields, terminal evidence/definition/custody and independent execution/learning queues continue without closure or clock reset. [Rollover receipt and byte verification](research/verification/combined_rollover_2026-10-21-1/README.md). Earlier dated openings/import summaries retain their historical routing.
+
+## Settlement revisions import — 2026-11-07T20:53:07+11:00
+
+Settlement revisions for P-604, P-606 and P-620, owner-invoked prompts 3 and 4 (P-2026.10.22-v24.0), appended to active [Part 9](prediction%20logs/PREDICTION_LOG_COMBINED_9.md) as revisions to closed-part originals; zero IDs consumed (highest P-622, next P-623, reserved P-518–P-522 unchanged). **P-604** corners 8–5 = 13 (two aggregators, evidence C): Over 10.5 WIN, Under 10.5 LOSS. **P-606** score 116–98 replaces 117–98, grades unchanged. **P-620** South Africa won by an innings and 31 runs (425/9 dec v 99 and 295): the qualitative Australia call was wrong, contract grades unchanged, innings evidence E → B. Research-only P-601–P-611 rows now 26W/26L/0 unresolved; ANALYST_PRIMARY_V1 P-612–P-622 unchanged (primary 11W/10L/1P, Brier 0.2041). The owner drop `MINI LOGS TO BE SETTLED/` was byte-identical to the 21 October import inputs and is archived unchanged at [archive/owner_drop_settled_2026-11-07-1/](archive/owner_drop_settled_2026-11-07-1/README.md). Open: U-603 (P-616 overtime definition, grade-changing, owner), operator terms, the held MELILL01-G0004 card, corroboration and final times ([queue](research/verification/settlement_import_2026-11-07-1/UNRESOLVED_POST_IMPORT.md)). [Import report](research/verification/settlement_import_2026-11-07-1/CANONICAL_IMPORT_REPORT.md).
+
+## BK-OT-1 settlement import — 2026-11-07T21:15:50+11:00
+
+P-616 (TNT v Converge, 114–112 OT, regulation 106–106) revision-2, appended to Part 9: its endpoint is now `FROZEN_FRAMEWORK_CONVENTION` under BK-OT-1, so U-603 is closed. Grades unchanged (Under 221.5 LOSS, TNT +2.0 PUSH, Converge −2.0 PUSH, Over 221.5 WIN); the four rows join the headline view. The other basketball events were already graded on the final score. Zero IDs consumed (highest P-622, next P-623). No grade-changing item remains open in P-601–P-622. [Import report](research/verification/settlement_import_2026-11-07-2/CANONICAL_IMPORT_REPORT.md); [queue](research/verification/settlement_import_2026-11-07-2/UNRESOLVED_POST_IMPORT.md).

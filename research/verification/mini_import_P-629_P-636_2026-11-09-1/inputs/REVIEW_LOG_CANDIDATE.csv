@@ -1,0 +1,2 @@
+review_id,created_at,scope,stage,unique_events_with_supported_finals,original_contract_count,primary_eligible_rows,disposition,secondary,append_status
+MINI_SETTLEMENT_20261016A691119714D1_REV1,2026-10-17T19:15:48.359166+11:00,MINI_LOCAL_20261016A691119714D1,MINI_SETTLEMENT,5,32,0,DATA_REPAIR_REQUIRED,INSUFFICIENT_EVIDENCE,NOT_APPENDED_GITHUB_READ_ONLY

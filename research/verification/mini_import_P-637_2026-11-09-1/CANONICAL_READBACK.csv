@@ -1,0 +1,2 @@
+canonical_id,local_key,block_sha256,block_bytes,source,check
+P-637,LOCAL-20261018MELILL01-G0004,77171098b5610b6b10fb3d7cfd3f38313ebde47c0c5b27a026e531e537c211e4,33828,research/verification/mini_import_P-637_2026-11-09-1/inputs/REPAIRED_INTAKE.md,PASS_EXACT_CORE_BYTES_UNIQUE_CANONICAL

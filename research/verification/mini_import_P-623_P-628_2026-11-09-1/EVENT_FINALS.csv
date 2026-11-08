@@ -1,0 +1,7 @@
+competition,native,event,home,away,hs,as_,ht_h,ht_a,total_mean,total_sd,margin_mean,margin_sd,evidence,winner,draft,key,canonical
+Basketball/NBA,NBA:0022600003,Oklahoma City Thunder @ San Antonio Spurs · 2026-10-20,Spurs,Thunder,104,116,44,65,224.11,21.7,0.26,16.4,A,Spurs (weak),False,LOCAL-20261021OKCSASR01-G0001,P-623
+Tennis/ATP Almaty,ATP-ALMATY-2026-R2-DIAZACOSTA-BASILASHVILI,Facundo Díaz Acosta v Nikoloz Basilashvili · Almaty R16 · 2026-10-21,Diaz Acosta,Basilashvili,6,12,,,,,,,B,Basilashvili 0.56,True,LOCAL-20261022F6K3OJNO-G0001,P-624
+Soccer/Prva Liga RS,GI2RuAdD,Potkozarje v Drina Zvornik · round 12 · 2026-10-21,Potkozarje,Drina,2,0,0,0,2.569,,0.261,,B,Potkozarje 0.429,False,LOCAL-20261022F6K3OJNO-G0002,P-625
+Basketball/NBA,NBA:0022600085,Atlanta Hawks @ Orlando Magic · 2026-10-21,Magic,Hawks,125,132,62,72,228.886,19.78,1.593,15.54,A,Magic 0.5408,False,LOCAL-20261022F6K3OJNO-G0003,P-626
+Basketball/NBA,NBA:0022600086,Milwaukee Bucks @ Washington Wizards · 2026-10-21,WAS,MIL,128,116,51,56,239.283942,24.111223,7.003631,19.055205,A,WAS 0.645699,False,LOCAL-20261022F6K3OJNO-G0004,P-627
+Ice Hockey/AHL,AHL:1029174,Hamilton Hammers @ Toronto Marlies · 2026-10-21,Marlies,Hammers,4,1,,,6.404,,0.34,,A,Marlies 0.5464,False,LOCAL-20261022F6K3OJNO-G0005,P-628

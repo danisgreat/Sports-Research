@@ -202,6 +202,19 @@ def check_adjustments(adjustments: list[dict], meta: dict, rows: list[dict], roo
             continue
         else:
             status = effect["status"]
+            if effect["competition"] != meta["competition"] and effect["competition"].strip().lower() != "all":
+                problems.append(f"{name}: effect competition {effect['competition']!r} does not match {meta['competition']!r}; use an explicitly scoped effect")
+            effect_target = effect["target"].strip().lower()
+            compatible = {"MARGIN": ("margin",), "TOTAL": ("total",), "TEAM_TOTAL": ("team rating", "team runs", "team goals"),
+                          "PERIOD": ("period",), "COUNT": ("count", "corner")}
+            if not any(word in effect_target for word in compatible.get(a["target"], ())):
+                problems.append(f"{name}: effect target {effect['target']!r} is incompatible with {a['target']!r}")
+            source_unit, applied_unit = effect["unit"].lower(), a["unit"].strip().lower()
+            expected_unit = ("proportion" if "proportion" in source_unit else "points" if "point" in source_unit
+                             else "goals" if "goal" in source_unit else "runs" if "run" in source_unit
+                             else "probability" if "probability" in source_unit else source_unit.strip())
+            if applied_unit != expected_unit:
+                problems.append(f"{name}: effect unit {expected_unit!r} does not match applied unit {applied_unit!r}")
         if status == "MEASURED_NULL":
             problems.append(f"{name}: {a['effect_row_id']} is MEASURED_NULL; no adjustment may use it")
             continue
@@ -216,6 +229,8 @@ def check_adjustments(adjustments: list[dict], meta: dict, rows: list[dict], roo
         except ValueError:
             problems.append(f"{name}: applied_size must be a number")
             size = None
+        if size is not None and not math.isfinite(size):
+            problems.append(f"{name}: applied_size must be finite")
         if size is not None and factor is not None and effect and effect.get("estimate", "") != "":
             want = float(effect["estimate"]) * factor
             if abs(size - want) > SIZE_TOLERANCE:
@@ -248,6 +263,10 @@ def check_adjustments(adjustments: list[dict], meta: dict, rows: list[dict], roo
              and abs(float(r["final_p"]) - float(r["reference_p"])) > 1e-9]
     if moved and not adjustments:
         problems.append("rows differ from the reference (" + ", ".join(moved) + ") but the card has no ADJUSTMENTS_V1 block")
+    covered = {part.partition("=")[0] for a in adjustments for part in a["counterfactual"].split("|")}
+    uncovered = set(moved) - covered
+    if adjustments and uncovered:
+        problems.append("moved rows lack an adjustment counterfactual: " + ", ".join(sorted(uncovered)))
     return problems
 
 

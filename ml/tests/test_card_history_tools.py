@@ -48,7 +48,10 @@ def test_grades_eras_and_probabilities_are_literal():
 
 def test_repository_history_table_invariants():
     R, diff = ch.build_rows()
-    assert R.card.nunique() >= 599 and "P-584" not in set(R.card)  # pending event excluded by design
+    assert R.card.nunique() >= 614
+    p584 = R[R.card == "P-584"]  # settled 9 November; original diagnostic role stays excluded
+    assert len(p584) == 4 and p584.grade.tolist() == ["LOSS", "WIN", "LOSS", "WIN"]
+    assert not p584.counted_slot.any() and set(p584.cohort) == {"RESEARCH_ONLY_NOT_PRIMARY"}
     assert not R[R.cohort == "LEGACY_ANALYST_NOT_PRIMARY"].counted_slot.any()
     assert not R[R.informational_r2].counted_slot.any()
     assert R[(R.card == "P-217") & (R["rank"] == 1)].grade.iloc[0] == "LOSS"  # effective final settlement

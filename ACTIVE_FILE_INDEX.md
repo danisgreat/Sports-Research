@@ -22,6 +22,8 @@
 |---|---|
 | Local keys, prompt-4 canonical assignment and cumulative .md delivery | [WORKFLOW.md (MINI_LOG_IDENTITY_PROTOCOL)](WORKFLOW.md#part-b-mini_log_identity_protocol) |
 | Persistent sourcing / information closure | [RESEARCH_PROTOCOL.md (RESEARCH_EXHAUSTIVENESS_PROTOCOL)](RESEARCH_PROTOCOL.md#part-b-research_exhaustiveness_protocol) |
+| Current exact competition source routes and access/coverage limits | [research/source_routes/README.md](research/source_routes/README.md) |
+| R3 implementation and unresolved backlog | [research/verification/framework_change_2026-11-09-3/IMPLEMENTATION.md](research/verification/framework_change_2026-11-09-3/IMPLEMENTATION.md) |
 | Reusable source discoveries | [RESEARCH_SOURCE_REGISTER.md](RESEARCH_SOURCE_REGISTER.md) |
 | Current values (IDs, active log, versions, scoreboard) | [CURRENT_STATE.md](CURRENT_STATE.md) |
 | Who runs which prompt, the remote fallback (REF-v2), delivery and prompt-4 intake (the external-chat route is retired, REQ-v3) | [EXECUTION_ENVIRONMENT_PROTOCOL](WORKFLOW.md#part-a-execution_environment_protocol) |

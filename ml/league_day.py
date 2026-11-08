@@ -73,7 +73,34 @@ def fixtures(competition: str, date: str, cache: Path, now=None) -> list[dict]:
     return out
 
 
-def run(competition: str, date: str, cache: Path, *, confirmed: bool = False, root=ROOT, ledger=chat.LEDGER, now=None) -> list[dict]:
+def reviewed_fixtures(path, competition, now=None):
+    """Admit a source-reviewed slate when an automatic feed is prohibited; never infer a pre-start state."""
+    from ml import primary as p, source_access
+    at = p.clock(now or datetime.now(timezone.utc))
+    out, seen = [], set()
+    for row in chat._rows(path):
+        if row.get("competition") != competition or not row.get("native_event_id"):
+            raise LeagueDayError("FIXTURE_SCOPE: exact competition and native event id required")
+        start, known = p.clock(row["scheduled_start"]), p.clock(row["known_at"])
+        if known > at or row.get("state") not in ("pre", "in", "post"):
+            raise LeagueDayError("FIXTURE_TIME: a nonfuture observation and explicit event state required")
+        if row["native_event_id"] in seen or row["home"] == row["away"]:
+            raise LeagueDayError("FIXTURE_IDENTITY: duplicate event or identical sides")
+        seen.add(row["native_event_id"])
+        p.receipt_file(row["capture_path"], row["capture_sha256"])
+        source_access.ensure_allowed(row["source_url"])
+        out.append(dict(event_id=row["native_event_id"], native_event_id=row["native_event_id"], start=start.to_pydatetime(),
+                        state=row["state"], season_type=int(row["season_type"]), season=row["season"],
+                        home=row["home"], away=row["away"], venue=row.get("venue", ""), source_url=row["source_url"],
+                        receipt=dict(raw_sha256=row["capture_sha256"], retrieved_at=row["known_at"], source_url=row["source_url"]),
+                        open=row["state"] == "pre" and known < start and (start - at).total_seconds() > MIN_LEAD_MINUTES * 60))
+    if not out:
+        raise LeagueDayError("FIXTURE_EMPTY: the reviewed slate contains no events")
+    return out
+
+
+def run(competition: str, date: str, cache: Path, *, confirmed: bool = False, root=ROOT, ledger=chat.LEDGER, now=None,
+        fixtures_path=None) -> list[dict]:
     if not confirmed:
         raise LeagueDayError("pass --confirm-no-outcome-seen only if no live score or result of these games was opened")
     root = Path(root).resolve()
@@ -81,7 +108,7 @@ def run(competition: str, date: str, cache: Path, *, confirmed: bool = False, ro
     if tier["tier"] != "A":
         raise LeagueDayError(f"{competition} has no active release; a league-day lane needs one")
     line = total_line(competition, root)
-    slate = fixtures(competition, date, cache, now)
+    slate = reviewed_fixtures(fixtures_path, competition, now) if fixtures_path is not None else fixtures(competition, date, cache, now)
     results = []
     stamp = (now or datetime.now(timezone.utc)).strftime("%Y%m%d")
     n = 0
@@ -93,14 +120,14 @@ def run(competition: str, date: str, cache: Path, *, confirmed: bool = False, ro
         key = f"LOCAL-LEAGUE-{R.league_key(competition) or 'X'}-{date.replace('-', '')}-G{n:04d}"
         label_total = f"OVER_{line}"
         lines = [dict(label="HOME_ML", family="winner", side="HOME", line=""), dict(label=label_total, family="total", side="OVER", line=str(line))]
-        game = dict(local_key=key, competition=competition, native_event_id="ESPN:" + fx["event_id"], season=fx["season"],
+        game = dict(local_key=key, competition=competition, native_event_id=fx.get("native_event_id", "ESPN:" + fx["event_id"]), season=fx["season"],
                     scheduled_start=fx["start"].isoformat(), home=fx["home"], away=fx["away"], venue=fx["venue"], source_url=fx["source_url"])
         with tempfile.TemporaryDirectory(prefix="sr_leagueday_") as tmp:
             tmp = Path(tmp)
             (tmp / "GAME.csv").write_bytes(chat._csv([game], chat.GAME_FIELDS))
             (tmp / "LINES.csv").write_bytes(chat._csv(lines, chat.LINE_FIELDS))
             (tmp / "fixture.txt").write_text(
-                f"ESPN scoreboard {date} event {fx['event_id']}: {fx['away']} at {fx['home']}, {fx['venue']}, scheduled {fx['start'].isoformat()}, "
+                f"Fixture source {fx['source_url']}, slate {date}, event {fx['event_id']}: {fx['away']} at {fx['home']}, {fx['venue']}, scheduled {fx['start'].isoformat()}, "
                 f"state pre; raw body sha256 {fx['receipt']['raw_sha256']} retrieved {fx['receipt']['retrieved_at']}\n", encoding="utf-8")
             model = pregame.reference(tmp / "GAME.csv", tmp / "LINES.csv", tmp / "fixture.txt", confirmed=True, root=root, ledger=ledger)
             row = dict(event_id=fx["event_id"], local_key=key, home=fx["home"], away=fx["away"], start=fx["start"].isoformat(),
@@ -163,13 +190,14 @@ def main(argv=None):
         s.add_argument("--cache", type=Path, required=True, help="folder OUTSIDE the repository for raw feed bodies")
         if name == "freeze":
             s.add_argument("--confirm-no-outcome-seen", action="store_true")
+            s.add_argument("--fixtures", type=Path, help="source-reviewed exact-scope fixture CSV when the automatic feed is prohibited")
     args = parser.parse_args(argv)
     if Path.cwd().resolve() != ROOT:
         print("REFUSED: run from the repository root")
         raise SystemExit(2)
     try:
         if args.command == "freeze":
-            rows = run(args.competition, args.date, args.cache, confirmed=args.confirm_no_outcome_seen)
+            rows = run(args.competition, args.date, args.cache, confirmed=args.confirm_no_outcome_seen, fixtures_path=args.fixtures)
         else:
             rows = settle_day(args.competition, args.date, args.cache)
     except (LeagueDayError, pregame.PregameError, chat.ChatError) as exc:

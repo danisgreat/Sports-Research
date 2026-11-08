@@ -202,6 +202,8 @@ def evaluate(ledger: list[dict], outcomes: pd.DataFrame, champion: str, candidat
     c, k = per[champion], per[candidate]
     if unsettled > 0.2:
         disposition, reason = "DATA_REPAIR_REQUIRED", f"{unsettled:.0%} of eligible rows unsettled"
+    elif iv["n_events"] < 50:
+        disposition, reason = "INSUFFICIENT_EVIDENCE", f"{iv['n_events']} paired games; minimum 50"
     elif iv["k_weeks"] < 8 or (math.isfinite(need) and iv["k_weeks"] < need and iv["status"] == "SPANS_ZERO"):
         disposition, reason = "INSUFFICIENT_EVIDENCE", f"{iv['k_weeks']} weeks; about {need} needed for delta={delta}"
     elif iv["status"] == "BELOW_ZERO" and iv["mean"] <= -delta:

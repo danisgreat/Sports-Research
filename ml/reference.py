@@ -32,6 +32,7 @@ import numpy as np
 from scipy import stats
 
 from ml.core.distributions import ScoreGrid
+from ml import source_access
 
 ROOT = Path(__file__).resolve().parents[1]
 RELEASES = "research/cycle_releases/CURRENT_RELEASES.csv"
@@ -206,6 +207,50 @@ def tb1_inputs(rows: list[dict], league: str, lm_prior: float | None = None) -> 
                 away=dict(team=by["AWAY"]["team"], pf=float(by["AWAY"]["pf"]), pa=float(by["AWAY"]["pa"]), n=float(by["AWAY"]["n"])))
 
 
+STANDINGS_EVIDENCE = ("competition", "source_url", "published_at", "known_at", "retrieved_at", "snapshot_at", "source_sha256")
+
+
+def admit_standings(rows: list[dict], game: dict, generated_at: str) -> None:
+    """Bind standings to the exact sides and competition, with independently dated pre-horizon inputs."""
+    import re
+    def clock(value, name):
+        try:
+            at = datetime.fromisoformat(value.replace("Z", "+00:00"))
+            if at.utcoffset() is None:
+                raise ValueError("timezone missing")
+            return at
+        except (ValueError, AttributeError):
+            raise ReferenceError_(f"STANDINGS_TIME: {name} needs an ISO timestamp with offset") from None
+    now = clock(generated_at, "generated_at")
+    horizon = min(now, clock(game["scheduled_start"], "scheduled_start"))
+    roles = [r.get("role", "").strip().upper() for r in rows]
+    if len(rows) != 3 or sorted(roles) != ["AWAY", "HOME", "LEAGUE"]:
+        raise ReferenceError_("STANDINGS_ROLES: exactly one HOME, AWAY and LEAGUE row required")
+    evidence = set()
+    for role, row in zip(roles, rows):
+        if any(not row.get(k, "").strip() for k in STANDINGS_EVIDENCE):
+            raise ReferenceError_("STANDINGS_EVIDENCE: missing " + ", ".join(k for k in STANDINGS_EVIDENCE if not row.get(k, "").strip()))
+        if row["competition"] != game["competition"]:
+            raise ReferenceError_("STANDINGS_COMPETITION: row is for another competition")
+        if role in ("HOME", "AWAY") and row.get("team") != game[role.lower()]:
+            raise ReferenceError_(f"STANDINGS_TEAM: {role} must name {game[role.lower()]!r}")
+        if not row["source_url"].startswith(("https://", "http://")) or not re.fullmatch(r"[0-9a-fA-F]{64}", row["source_sha256"]):
+            raise ReferenceError_("STANDINGS_SOURCE: a source URL and SHA-256 are required")
+        published, known, retrieved, snapshot = (clock(row[k], k) for k in ("published_at", "known_at", "retrieved_at", "snapshot_at"))
+        if not published <= known <= retrieved <= now or max(known, snapshot) > horizon or snapshot > retrieved:
+            raise ReferenceError_("STANDINGS_HORIZON: publication <= known <= retrieval <= generation and known/snapshot <= horizon required")
+        evidence.add(tuple(row[k] for k in STANDINGS_EVIDENCE))
+        for name in ("pf", "pa", "n"):
+            try:
+                value = float(row[name])
+            except (KeyError, ValueError):
+                raise ReferenceError_(f"STANDINGS_NUMBER: {name} must be finite and nonnegative") from None
+            if not math.isfinite(value) or value < 0 or (name == "n" and value != int(value)):
+                raise ReferenceError_(f"STANDINGS_NUMBER: invalid {name}")
+    if len(evidence) != 1:
+        raise ReferenceError_("STANDINGS_SNAPSHOT: the three aggregates must share one evidenced snapshot")
+
+
 FORMS = ("average", "additive")
 
 
@@ -322,7 +367,7 @@ def espn_standings(competition: str, cache: Path | None = None) -> tuple[list[di
     if key not in ESPN_STANDINGS:
         raise ReferenceError_(f"{competition}: no standings feed mapped")
     url = f"https://site.api.espn.com/apis/v2/sports/{ESPN_STANDINGS[key]}/standings"
-    raw = urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "SportsResearch standings read"}), timeout=60).read()
+    raw = source_access.fetch_bytes(url, user_agent="SportsResearch standings read", timeout=60)
     receipt = dict(source_url=url, retrieved_at=datetime.now(timezone.utc).isoformat(), raw_sha256=_sha(raw), raw_bytes=len(raw))
     if cache is not None:
         Path(cache).mkdir(parents=True, exist_ok=True)
@@ -347,7 +392,20 @@ def espn_standings(competition: str, cache: Path | None = None) -> tuple[list[di
 
 def standings_csv(competition: str, home: str, away: str, cache: Path | None = None) -> tuple[bytes, dict]:
     """STANDINGS.csv (HOME, AWAY, LEAGUE rows) for ``run``. Team names must be ESPN's display names."""
-    teams, receipt = espn_standings(competition, cache)
+    try:
+        teams, receipt = espn_standings(competition, cache)
+        precision = "SOURCE_TOTALS"
+    except (source_access.SourceAccessError, OSError) as exc:
+        if league_key(competition) != "NBA":
+            raise ReferenceError_(f"STANDINGS_SOURCE_UNAVAILABLE: {exc}; supply a reviewed, evidenced STANDINGS.csv") from exc
+        from ml import permitted_standings
+        raw, teams = permitted_standings.fetch()
+        receipt = dict(source_url=permitted_standings.URL, retrieved_at=datetime.now(timezone.utc).isoformat(),
+                       raw_sha256=_sha(raw), raw_bytes=len(raw), replaced_source=str(exc))
+        precision = "ROUNDED_PPG_PROXY_MAX_ERROR_0.05_PER_TEAM_GAME"
+        if cache is not None:
+            Path(cache).mkdir(parents=True, exist_ok=True)
+            (Path(cache) / (receipt["raw_sha256"] + ".html")).write_bytes(raw)
     by = {t["team"]: t for t in teams}
     for side, name in (("home", home), ("away", away)):
         if name not in by:
@@ -358,7 +416,12 @@ def standings_csv(competition: str, home: str, away: str, cache: Path | None = N
             dict(role="AWAY", team=away, pf=by[away]["pf"], pa=by[away]["pa"], n=by[away]["n"]),
             dict(role="LEAGUE", team="ALL", pf=sum(t["pf"] for t in teams), pa=sum(t["pa"] for t in teams), n=sum(t["n"] for t in teams))]
     out = io.StringIO(newline="")
-    writer = csv.DictWriter(out, fieldnames=("role", "team", "pf", "pa", "n"), lineterminator="\n")
+    for row in rows:
+        row.update(competition=competition, source_url=receipt["source_url"], published_at=receipt["retrieved_at"],
+                   known_at=receipt["retrieved_at"], retrieved_at=receipt["retrieved_at"], snapshot_at=receipt["retrieved_at"],
+                   source_sha256=receipt["raw_sha256"])
+        row.update(precision_basis=precision, publication_basis="OBSERVED_SNAPSHOT_UPPER_BOUND")
+    writer = csv.DictWriter(out, fieldnames=("role", "team", "pf", "pa", "n", *STANDINGS_EVIDENCE, "precision_basis", "publication_basis"), lineterminator="\n")
     writer.writeheader()
     writer.writerows(rows)
     return out.getvalue().encode(), receipt
@@ -404,7 +467,11 @@ def run(game, lines, standings=None, *, confirmed=False, root=ROOT, now=None) ->
         prior = None
         if row and TB1_MD[league_key(g["competition"])]["kind"] == "normal" and (row["store_mean_total"] or row["mean_total"]):
             prior = float(row["store_mean_total"] or row["mean_total"]) / 2
-        data = tb1_inputs(_rows(standings), league_key(g["competition"]), prior)
+        standings_rows = _rows(standings)
+        admit_standings(standings_rows, g, at)
+        if any("PROXY" in row.get("precision_basis", "") for row in standings_rows):
+            result["flags"].append("ROUNDED_STANDINGS_PROXY_MAX_ERROR_0.05_PER_TEAM_GAME")
+        data = tb1_inputs(standings_rows, league_key(g["competition"]), prior)
         inputs.append(Path(standings).read_bytes())
         grid, info = tb1_grid(g["competition"], data, neutral=g.get("neutral", "").strip().lower() in ("1", "true", "yes"))
         result["rows"] = price_rows(grid, lines_rows)

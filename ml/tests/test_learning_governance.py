@@ -26,7 +26,7 @@ def _rows(model, version, role, event, start, prob, rank, key="WIN-H", status="P
 
 def _season(path, n_weeks, rng, cand_noise, champ_noise=.3):
     outcomes = []
-    for i in range(n_weeks * 4):
+    for i in range(n_weeks * 5):
         rows = []
         start = T0 + pd.Timedelta(days=2 * i)
         q = rng.uniform(.2, .8)
@@ -69,9 +69,9 @@ def test_paired_evaluation_needs_weeks_and_power_before_any_promotion(tmp_path):
     res = P.evaluate(P.verify_ledger(tmp_path / "many.csv"), many, "CHAMP:v3", "CAND:c1", delta=.01)
     assert res["disposition"] in ("PROMOTION_ELIGIBLE", "CALIBRATION_STUDY") and res["interval"]["status"] == "BELOW_ZERO"
     m = res["models"]["CAND:c1"]
-    assert 0 <= m["hit_at_2"] <= 1 and m["ranked_events"] == 48 and m["coverage"] == 1
+    assert 0 <= m["hit_at_2"] <= 1 and m["ranked_events"] == 60 and m["coverage"] == 1
     b = res["breakdown"]
-    assert set(b.dimension) == {"competition", "family", "endpoint"} and (b[b.dimension == "family"].contracts == 96).all()
+    assert set(b.dimension) == {"competition", "family", "endpoint"} and (b[b.dimension == "family"].contracts == 120).all()
     worse = _season(tmp_path / "worse.csv", 12, rng, cand_noise=.45, champ_noise=.05)
     assert P.evaluate(P.verify_ledger(tmp_path / "worse.csv"), worse, "CHAMP:v3", "CAND:c1", delta=.01)["disposition"] == "NO_CHANGE"
     with pytest.raises(p.AdmissionError, match="duplicate outcome"):

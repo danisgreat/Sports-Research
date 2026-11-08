@@ -267,6 +267,9 @@ issued_at: <UTC time>
 label,family,quantity,side,line,line_source,reference_p,baseline_p,model_p,final_p,w,p,l,line_implied_p,centre,sd,z,most_likely_rank,information_row
 HOME_ML,WINNER,MARGIN,HOME,,SUPPLIED,0.6200,0.5900,0.5800,0.6600,0.6600,0.0000,0.3400,,5.0,14.1,-0.35,1,Y
 ```
+
+**CR-2026.11.09-R3:** TEAM_TOTAL rows require `contract_scopes: LABEL=TEAM_PERIOD|...` in the PICKS_V2 header. Nested thresholds/complements are checked only within the same sporting scope; totals/handicaps default to FULL_MATCH. All original CSV columns remain unchanged.
+
 <!-- END PICKS_V2 LOCAL-<MINI_KEY>-G0001 -->
 ````
 

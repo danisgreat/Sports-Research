@@ -1,0 +1,45 @@
+local_key,contract,field,status,evidence,limitation
+LOCAL-20261016A691119714D1-G0001,Kulager +1.5 goals,final/period scores,SPORTING_GRADED,A,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0001,Beibarys Atyrau +1.5 goals,final/period scores,SPORTING_GRADED,A,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0001,Under 6.0 full-match goals,final/period scores,SPORTING_GRADED,A,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0001,Over 6.0 full-match goals,final/period scores,SPORTING_GRADED,A,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0002,Under 10.5 full-match corners,corners,UNRESOLVED_EVIDENCE,A,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0002,Over 0.5 first-half goals,final/period scores,SPORTING_GRADED,A,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0002,Under 2.5 full-match goals,final/period scores,SPORTING_GRADED,A,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0002,Over 2.5 full-match goals,final/period scores,SPORTING_GRADED,A,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0002,Under 0.5 first-half goals,final/period scores,SPORTING_GRADED,A,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0002,Over 10.5 full-match corners,corners,UNRESOLVED_EVIDENCE,A,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0003,CSC Djasr Kasentina +9.5 points,final/period scores,SPORTING_GRADED,C,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0003,Under 132.5 combined points,final/period scores,SPORTING_GRADED,C,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0003,Over 132.5 combined points,final/period scores,SPORTING_GRADED,C,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0003,USM Blida −9.5 points,final/period scores,SPORTING_GRADED,C,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0004,Karlovy Vary moneyline incl OT/SO,final/period scores,SPORTING_GRADED,C,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0004,Under 6.0 full-game goals,final/period scores,SPORTING_GRADED,C,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0004,Olomouc +1.5 full-game goals,final/period scores,SPORTING_GRADED,C,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0004,Over 6.0 full-game goals,final/period scores,SPORTING_GRADED,C,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0005,Under 10.5 total corners,corners,SPORTING_GRADED,C,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0005,Under 2.5 full-match goals,final/period scores,SPORTING_GRADED,C,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0005,Over 0.5 first-half goals,final/period scores,SPORTING_GRADED,C,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0005,Under 0.5 first-half goals,final/period scores,SPORTING_GRADED,C,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0005,Over 2.5 full-match goals,final/period scores,SPORTING_GRADED,C,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0005,Over 10.5 total corners,corners,SPORTING_GRADED,C,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0006,TB +1.5 runs,final/period scores,SPORTING_GRADED,A,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0006,Total Under 9.5 runs,final/period scores,SPORTING_GRADED,A,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0006,Total Over 5.5 runs,final/period scores,SPORTING_GRADED,A,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0006,CLE +1.5 runs,final/period scores,SPORTING_GRADED,A,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0006,Total Under 8.5 runs,final/period scores,SPORTING_GRADED,A,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0006,TB ML incl extra innings,final/period scores,SPORTING_GRADED,A,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0006,Total Under 7.5 runs,final/period scores,SPORTING_GRADED,A,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0006,Total Over 7.5 runs,final/period scores,SPORTING_GRADED,A,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0006,CLE ML incl extra innings,final/period scores,SPORTING_GRADED,A,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0006,Total Over 8.5 runs,final/period scores,SPORTING_GRADED,A,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0006,TB -1.5 runs,final/period scores,SPORTING_GRADED,A,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0006,CLE -1.5 runs,final/period scores,SPORTING_GRADED,A,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0007,Under 225.5 full-game points,final/period scores,SPORTING_GRADED,A,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0007,Utah Jazz +4.5 full game,final/period scores,SPORTING_GRADED,A,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0007,Phoenix Suns −4.5 full game,final/period scores,SPORTING_GRADED,A,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0007,Over 225.5 full-game points,final/period scores,SPORTING_GRADED,A,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0008,LG Twins +1.5 runs incl extras,final/period scores,SPORTING_GRADED,C,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0008,KIA Tigers moneyline incl extras,final/period scores,SPORTING_GRADED,C,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0008,Over 8.5 runs incl extras,final/period scores,SPORTING_GRADED,C,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED
+LOCAL-20261016A691119714D1-G0008,Under 8.5 runs incl extras,final/period scores,SPORTING_GRADED,C,Operator UNKNOWN_DEFINITION; independent collection NOT_VERIFIED

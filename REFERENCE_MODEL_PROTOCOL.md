@@ -2,6 +2,14 @@
 
 **P-2026.10.22-v24.0 · CR-2026.10.22-R2.** Owner instruction, 22 October 2026, implementing recommendations REV-01, REV-06, REV-13, REV-15 and REV-22 of the [framework revamp review](research/verification/review_2026-10-22_framework_revamp/REPORT.md). It changes how a card's probability is produced, so the prompt major version moves to v24.0 and cards before it keep their own method.
 
+## Integrity admission ·CR-2026.11.09-R3
+
+`ml.reference.run` now requires standings evidence for exactly HOME/AWAY/LEAGUE, exact team names/competition, source URL/hash and aware publication/known-at/retrieval/snapshot clocks. Publication≤known≤retrieval≤generation; known/snapshot must not exceed min(generation,scheduledstart); snapshot≤retrieval. Negative/nonfinite totals, noninteger game counts and inconsistent snapshot metadata are refused. A current download is not a historical snapshot. Preserve missing exact totals instead of filling them with post-start data.
+
+The NBA standings fetch uses the mandatory exact-URL access gate. If ESPN is blocked, permitted Fox standings can supply a labelled **ROUNDED_PPG_TOTALS_PROXY** (PPG×games, maximum rounding error .05perteam/game); this is not exact season points. The reference receipt/rows disclose the proxy. Other unsupported competitions require a reviewed provenance-complete CSV; they do not borrow NBAcoverage.
+
+For a permitted non-ESPN slate, `python -B -m ml league-day freeze --fixtures REVIEWED_FIXTURES.csv ...` admits an exact competition/nativeID, aware known-at/start/state and capture-bound URL/hash. CSV columns: competition,native_event_id,scheduled_start,known_at,state,season_type,season,home,away,venue,source_url,capture_path,capture_sha256. This is a reviewed input route, not an unattended scheduler. See [source catalogue](research/source_routes/README.md).
+
 ## 1. Why
 
 The review of 862 stated-probability rows found no detectable discrimination between 0.40 and 0.65 (calibration slope 0.15, SE 0.31), where almost every supplied spread and total sits, and a card has been compared with a same-row baseline on only 4 of its first 600 cards. A hand-built distribution re-derived from nothing on every card is slow, drifts wide or narrow from card to card, and cannot be scored against anything. A **reference** fixes that: every card starts from one frozen, scored number per contract, produced before the analyst writes, and the analyst's own work is the logged departure from it ([ADJUSTMENT_LEDGER_PROTOCOL](ADJUSTMENT_LEDGER_PROTOCOL.md)).

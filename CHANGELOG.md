@@ -1,5 +1,9 @@
 # Owner per-game request formats — MDS/P v24.7 / CR-2026.11.09-R2 / P-2026.11.09-v24.5, 9 November 2026
 
+## 2026-11-09 ·MDSv24.8 /CR-R3 /Pv24.6
+
+Owner-authorized integrity fixes after review: exact standings identity/provenance/time admission; nested probabilities by contract scope; effect competition/target/unit admission;50games plus8weeks in general prospective evaluator; mandatory source access at every sporting HTTP fetch/redirect for OpenAI+Anthropic tokens. Added209 explicit competition/scope source rows with actual tests/limits. Imported15originalsP623–P637 preserving allcorebytes, settledP584 and two real frozen NBA bundles; old missing fields/aliases remain unresolved. New mini20261109R3NEXT, nextcanonicalP638. Releases integrity-refrozen only if realgatepasses; no performancepromotion. Full evidence: research/verification/framework_change_2026-11-09-3/IMPLEMENTATION.md.
+
 The owner's request formats for nine sports are now GAME_REQUEST_TEMPLATE §1 (REQ-v4), verbatim: basketball, soccer, cricket, tennis, ice hockey, rugby league, rugby union, American football and baseball. Each one heads its prompt-1 sport file. §1b maps each line to a family, quantity, endpoint and deep-loss-review role. The DEEPLOSS-v1 top-total trigger now covers goals, corners and full-innings totals. AFL and other sports keep their free-form blocks.
 
 # Sources that block AI agents — MDS/P v24.6 / CR-2026.11.09-R1 / P-2026.11.09-v24.4, 9 November 2026

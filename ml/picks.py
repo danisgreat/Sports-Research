@@ -25,7 +25,7 @@ ROOT = Path(__file__).resolve().parents[1]
 BEGIN, END = "<!-- BEGIN PICKS_V2 {key} -->", "<!-- END PICKS_V2 {key} -->"
 META_REQUIRED = ("tier", "competition", "reference_id", "reference_status", "model_stage", "abstain", "fast_card", "timing", "scheduled_start",
                  "issued_at")
-META_OPTIONAL = ("reference_frozen_at", "width_floor_exception", "tier_basis", "notes", "issue_evidence")
+META_OPTIONAL = ("reference_frozen_at", "width_floor_exception", "tier_basis", "notes", "issue_evidence", "contract_scopes")
 SIDES = {"WINNER": ("HOME", "AWAY", "DRAW"), "HANDICAP": ("HOME", "AWAY"), "TOTAL": ("OVER", "UNDER"),
          "TEAM_TOTAL": ("OVER", "UNDER"), "CORNERS": ("OVER", "UNDER", "HOME", "AWAY"),
          "PERIOD": ("HOME", "AWAY", "DRAW", "OVER", "UNDER"), "PLAYER": ("OVER", "UNDER", "YES", "NO"),
@@ -250,7 +250,22 @@ def lint(meta: dict, rows: list[dict], root=ROOT) -> list[str]:
             floor = R.width_floor(meta["competition"], quantity, root)
             if floor["floor"] is not None and sd < floor["floor"] - 1e-9 and meta.get("width_floor_exception", "NONE") in ("", "NONE"):
                 problems.append(f"{quantity}: sd {sd} is below the {floor['basis']} floor {floor['floor']} and no width_floor_exception is written")
-    _complements(rows, problems)
+    scopes = {}
+    for item in meta.get("contract_scopes", "").split("|"):
+        if not item.strip():
+            continue
+        label, sep, scope = item.partition("=")
+        if not sep or not scope.strip() or label.strip() in scopes:
+            problems.append("header: contract_scopes needs unique LABEL=SCOPE entries")
+        else:
+            scopes[label.strip()] = scope.strip()
+    for row in rows:
+        if row["family"] == "TEAM_TOTAL" and row["label"] not in scopes:
+            problems.append(f"{row['label']}: TEAM_TOTAL needs an explicit team/period contract_scopes entry")
+    if set(scopes) - seen:
+        problems.append("header: contract_scopes names an unknown row")
+    _complements(rows, problems, scopes)
+    _monotonic(rows, problems, scopes)
     ranked.sort()
     if [r for r, _, _ in ranked] != list(range(1, len(ranked) + 1)):
         problems.append("most_likely_rank values must be consecutive from 1")
@@ -263,20 +278,52 @@ def lint(meta: dict, rows: list[dict], root=ROOT) -> list[str]:
     return problems
 
 
-def _complements(rows: list[dict], problems: list[str]) -> None:
+def _complements(rows: list[dict], problems: list[str], scopes=None) -> None:
+    scopes = scopes or {}
     index = {}
     for r in rows:
         if r["family"] in ("TOTAL", "TEAM_TOTAL") and r["side"].upper() in ("OVER", "UNDER"):
-            index[(r["family"], r["quantity"], r["line"], r["side"].upper())] = r
+            index[(r["family"], r["quantity"], scopes.get(r["label"], "FULL_MATCH"), r["line"], r["side"].upper())] = r
         if r["family"] == "HANDICAP" and r["side"].upper() in ("HOME", "AWAY") and r["line"].strip():
-            index[(r["family"], r["quantity"], str(float(r["line"]) * (1 if r["side"].upper() == "HOME" else -1)), r["side"].upper())] = r
-    for (family, quantity, line, side), r in list(index.items()):
-        other = index.get((family, quantity, line, {"OVER": "UNDER", "UNDER": "OVER", "HOME": "AWAY", "AWAY": "HOME"}[side]))
+            try:
+                line = str(float(r["line"]) * (1 if r["side"].upper() == "HOME" else -1))
+            except ValueError:
+                continue
+            index[(r["family"], r["quantity"], scopes.get(r["label"], "FULL_MATCH"), line, r["side"].upper())] = r
+    for (family, quantity, scope, line, side), r in list(index.items()):
+        other = index.get((family, quantity, scope, line, {"OVER": "UNDER", "UNDER": "OVER", "HOME": "AWAY", "AWAY": "HOME"}[side]))
         if other is None or side not in ("OVER", "HOME"):
             continue
         for a, b, name in (("w", "l", "win/loss"), ("l", "w", "loss/win"), ("p", "p", "push")):
             if abs(float(r[a]) - float(other[b])) > TOLERANCE:
                 problems.append(f"{r['label']} / {other['label']}: complementary rows disagree on {name} ({r[a]} v {other[b]})")
+
+
+def _monotonic(rows: list[dict], problems: list[str], scopes=None) -> None:
+    """Nested contracts must have nested unconditional win/loss events, including integer pushes."""
+    groups = {}; scopes = scopes or {}
+    for row in rows:
+        if row["family"] not in ("TOTAL", "TEAM_TOTAL", "HANDICAP"):
+            continue
+        try:
+            line, w, loss = (float(row[k]) for k in ("line", "w", "l"))
+        except (ValueError, KeyError):
+            continue                       # the row validator reports malformed numbers
+        if not all(math.isfinite(v) for v in (line, w, loss)):
+            continue
+        groups.setdefault((row["family"], row["quantity"], scopes.get(row["label"], "FULL_MATCH"), row["side"].upper()), []).append((line, w, loss, row["label"]))
+    for (family, _, _, side), group in groups.items():
+        ordered = sorted(group)
+        increasing = family == "HANDICAP" or side == "UNDER"
+        for lo, hi in zip(ordered, ordered[1:]):
+            if lo[0] == hi[0]:
+                bad = abs(lo[1] - hi[1]) > TOLERANCE or abs(lo[2] - hi[2]) > TOLERANCE
+            elif increasing:
+                bad = hi[1] < lo[1] - TOLERANCE or hi[2] > lo[2] + TOLERANCE
+            else:
+                bad = hi[1] > lo[1] + TOLERANCE or hi[2] < lo[2] - TOLERANCE
+            if bad:
+                problems.append(f"{lo[3]} / {hi[3]}: nested contracts violate probability monotonicity")
 
 
 def lint_card(mini, key: str, root=ROOT) -> tuple[dict, list[dict], list[str]]:

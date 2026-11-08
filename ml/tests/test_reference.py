@@ -178,6 +178,12 @@ def _inputs(root):
     _write(work / "LINES.csv", [dict(label="HOME_ML", family="winner", side="HOME", line=""), dict(label="OVER_180.5", family="total", side="OVER", line="180.5")])
     _write(work / "STANDINGS.csv", [dict(role="HOME", team="H", pf=1195, pa=1102, n=13), dict(role="AWAY", team="A", pf=1150, pa=1231, n=13),
                                     dict(role="LEAGUE", team="ALL", pf=18250, pa=18250, n=200)])
+    rows = R._rows(work / "STANDINGS.csv")
+    for row in rows:
+        row.update(competition="Basketball/NBL", source_url="https://example.org/standings", source_sha256="a" * 64,
+                   published_at="2026-10-21T00:00:00Z", known_at="2026-10-21T00:00:00Z",
+                   retrieved_at="2026-10-21T00:00:00Z", snapshot_at="2026-10-21T00:00:00Z")
+    _write(work / "STANDINGS.csv", rows)
     return work
 
 
@@ -204,6 +210,7 @@ def test_reference_stage_flags_the_nfl_key_numbers(root):
     work = _inputs(root)
     _write(work / "GAME.csv", [dict(local_key="LOCAL-EXAMPLE-G0001", competition="American Football/NFL", home="H", away="A",
                                     scheduled_start="2026-11-01T09:00:00+00:00")])
+    _write(work / "STANDINGS.csv", [dict(row, competition="American Football/NFL") for row in R._rows(work / "STANDINGS.csv")])
     result = R.run(work / "GAME.csv", work / "LINES.csv", work / "STANDINGS.csv", confirmed=True, root=root)
     assert result["status"] == "EXECUTED" and "KEY_NUMBERS_NOT_MODELLED" in result["flags"]
     nbl = R.run(_inputs(root) / "GAME.csv", work / "LINES.csv", work / "STANDINGS.csv", confirmed=True, root=root)
@@ -238,7 +245,7 @@ def test_standings_csv_parses_the_feed_and_suggests_names(monkeypatch):
         def read(self):
             return json.dumps(feed).encode()
 
-    monkeypatch.setattr("urllib.request.urlopen", lambda *a, **k: Body())
+    monkeypatch.setattr(R.source_access, "fetch_bytes", lambda *a, **k: Body().read())
     data, receipt = R.standings_csv("Basketball/NBA", "Alpha", "Beta")
     rows = list(csv.DictReader(io.StringIO(data.decode())))
     assert [r["role"] for r in rows] == ["HOME", "AWAY", "LEAGUE"] and rows[0]["n"] == "2.0" and rows[2]["pf"] == "380.0" and rows[2]["n"] == "4.0"

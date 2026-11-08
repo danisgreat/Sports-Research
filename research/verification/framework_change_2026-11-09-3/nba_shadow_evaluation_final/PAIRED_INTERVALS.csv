@@ -1,0 +1,3 @@
+metric,k_weeks,n_events,mean,lo,hi,sd_w,status,infinite_candidate,infinite_champion
+BRIER,1,2,0.062334781624199656,nan,nan,nan,INSUFFICIENT_EVIDENCE,,
+LOG_LOSS,1,2,0.12598910330974733,nan,nan,nan,INSUFFICIENT_EVIDENCE,0,0

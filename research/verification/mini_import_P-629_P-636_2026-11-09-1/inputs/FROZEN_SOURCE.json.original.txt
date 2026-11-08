@@ -1,0 +1,26 @@
+{
+  "frozen_at": "2026-10-17T19:05:41.675024+11:00",
+  "original_path": "/mnt/data/Mini Prediction Log - 20261016A691119714D1 - 2026-10-16/PREDICTION_MINI_RUNNING_LOG_20261016A691119714D1.md",
+  "original_bytes": 197805,
+  "original_sha256": "31b5882528154a7072906d4b940442f706482226cca710bf1bbb2cee5ca3b4d0",
+  "manifest_path": "/mnt/data/Mini Prediction Log - 20261016A691119714D1 - 2026-10-16/ML_EXECUTION_MANIFEST.csv",
+  "manifest_bytes": 3220,
+  "manifest_sha256": "0294afb3f4c0824431eca18f5ecf94e3b1bedf3fd30cea3437aad09e34fd26db",
+  "card_ids": [
+    "LOCAL-20261016A691119714D1-G0001",
+    "LOCAL-20261016A691119714D1-G0002",
+    "LOCAL-20261016A691119714D1-G0003",
+    "LOCAL-20261016A691119714D1-G0004",
+    "LOCAL-20261016A691119714D1-G0005",
+    "LOCAL-20261016A691119714D1-G0006",
+    "LOCAL-20261016A691119714D1-G0007",
+    "LOCAL-20261016A691119714D1-G0008"
+  ],
+  "card_count": 8,
+  "format": "mini-log-10",
+  "canonical": "NOT_ASSIGNED",
+  "github_write": false,
+  "source_frozen_in_settlement_package": true,
+  "original_active_mini_unchanged": true,
+  "handover_scope": "LOCAL_MINI_SETTLEMENT; no new appends to this source after freeze"
+}

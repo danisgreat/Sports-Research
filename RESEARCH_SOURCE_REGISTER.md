@@ -1,5 +1,7 @@
 # Reusable research and settlement source observations
 
+**Current access admission:** [SOURCES SRC-ALT-v2](SOURCES.md) and [exact competition routes](research/source_routes/COMPETITION_ROUTES.csv) supersede older access assertions in this historical register. Recheck exact URLs for all eight tokens; a reachable root is not event evidence.
+
 **SRC-2026.10.16-v1 / EXH-v1.** Start research/settlement here, in SOURCES and in earlier package registers, then open and revalidate actual routes. This is a discovery index, not a complete source universe or permission to stop. [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_PROTOCOL.md#part-b-research_exhaustiveness_protocol) requires alternative routes, independent corroboration and field closure. Missing fields need more sources even when another field is complete.
 
 ## Observation and update rules
@@ -73,3 +75,8 @@ Declared scope: the 2026-11-07 settlement revisions ([register CSV](research/ver
 | SRC-0702 / P-606 (NBA preseason) | https://www.foxsports.com/nba/charlotte-hornets-vs-memphis-grizzlies-oct-16-2026-game-boxscore-106518 | Quarter linescore with totals | Header and scoreboard dates differ by a day (time zone); recap-video titles are not score sources |
 | SRC-0703 / P-620 (Test cricket) | https://arynews.tv/south-africa-complete-innings-victory-over-australia-in-2nd-test | Innings totals and margin | Check margin by arithmetic (425 − 99 − 295 = 31); cricket.com.au series page did not render its match list |
 | SRC-0704 / P-619 (J1) | https://www.jleague.jp/match/j1/2026/101812/stats/ | Final and goal minutes in readable text | CK table not in the readable text; read the rendered page |
+
+
+## Verified source observations ·9 November 2026 (CR-R3)
+
+The [current route catalogue](research/source_routes/README.md) distinguishes checked access, tested event fields and discovery-only coverage. Settlement sources and current times/hashes are in the R3 package sidecars. [Recovered historical fields](research/verification/framework_change_2026-11-09-3/RECOVERED_HISTORICAL_FIELDS.csv) include Dalian5–5corners, PSG regulation9corner events, IFK8–9corners and ClubBrugge9–4corners, with conditional/lineage limits. An unrelated Yunnan league fixture was rejected for the cup queue; no transfer to another event or collided canonical alias.

@@ -8,7 +8,7 @@
 
 **Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §5.
 
-**P-2026.11.09-v24.5 · LOCAL_MINI_SETTLEMENT.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). **LOCAL_WORKING_TREE** (ENV-v2). Writes: the frozen mini's source identity, one settlement document with dated revisions at `research/active_minis/<MINI_KEY>_SETTLEMENT.md`, the ledger inputs and frozen-row settlements of section 4, then the prompt-4 import of section 6 and a commit and push. Original cards are immutable. Settle the original probabilities from the frozen card; the model never re-grades or replaces them. Historical MODEL_ASSISTED cards are settled on their frozen contracts like any other card. The decision lab is excluded.
+**P-2026.11.09-v24.6 · LOCAL_MINI_SETTLEMENT.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). **LOCAL_WORKING_TREE** (ENV-v2). Writes: the frozen mini's source identity, one settlement document with dated revisions at `research/active_minis/<MINI_KEY>_SETTLEMENT.md`, the ledger inputs and frozen-row settlements of section 4, then the prompt-4 import of section 6 and a commit and push. Original cards are immutable. Settle the original probabilities from the frozen card; the model never re-grades or replaces them. Historical MODEL_ASSISTED cards are settled on their frozen contracts like any other card. The decision lab is excluded.
 
 **ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](../../REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](../../CORE.md) §7.
 
@@ -36,7 +36,7 @@ Before scoring, preserve actual issue phase and independent pre-start-input proo
 
 ## 2. Establish outcomes and exact terms
 
-**Sources that block AI agents (SRC-ALT-v1, owner instruction 2026-11-09).** Check every source with `python -m ml source-audit --url <url>` before opening it. Open only `ALLOWED` or `NO_RULES_FILE`; a blocked or unreadable-rules source is never reached through a proxy, cache, mirror or other user agent. Find a permitted alternate for the same fields (field owner's other outlets, then a reputable statistics site, then reputable media), record the substitution, and leave a field `NOT_VERIFIED` when none exists. Alternates by sport: [SOURCES](../../SOURCES.md) SRC-ALT-v1. A settlement's two lineages must both be permitted sources.
+**Sources that block AI agents (SRC-ALT-v2, owner instruction 2026-11-09).** Check every source with `python -m ml source-audit --url <url>` before opening it. Open only `ALLOWED` or `NO_RULES_FILE`; a blocked or unreadable-rules source is never reached through a proxy, cache, mirror or other user agent. Find a permitted alternate for the same fields (field owner's other outlets, then a reputable statistics site, then reputable media), record the substitution, and leave a field `NOT_VERIFIED` when none exists. Alternates by sport: [SOURCES](../../SOURCES.md) SRC-ALT-v2. A settlement's two lineages must both be permitted sources.
 
 Retrieve official terminal state and exact field-owner outcomes with permitted corroboration. Match frozen event/participant orientation/line/period/endpoint and activation/action/void/retirement/extras terms to the competition-season rules. Record definition status, source URL, field/extract, publication/update/retrieval time, evidence grade, failures/conflicts and unknown lineage.
 

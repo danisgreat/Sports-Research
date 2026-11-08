@@ -1,0 +1,2 @@
+ingest_seq,ingested_at,export_path,export_sha256,schema_version,code_sha256,observations,new_events,new_results,corroborating,corrections,quarantined,exact_duplicates
+13,2026-11-08T20:45:40.916844+00:00,C:\Users\danie\OneDrive - Monash University\Sports Research Latest\research\verification\settlement_import_2026-11-09_shadows\LOCAL-LEAGUE-NBA-20261022-G0001,6d2435cd2e05093468142d6cd8e6c02c0f99df0f1f207aac11b43b0235b58a40,LEARN-STORE-2026.10.16-v1,7fafb46ab20970c8d44f7807b39e841bf528ac603d8ce2c6fa86f76a3474ead7,2,0,1,1,0,0,0

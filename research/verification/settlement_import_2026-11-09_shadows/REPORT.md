@@ -1,0 +1,3 @@
+# Frozen league-day settlements, 9 November 2026
+
+Two original pre-start frozen events were settled from the NBA final scorer reports, checked against separately captured StatPro box scores. Four-quarter sums equal the finals; no overtime. Publication times and exact final wall-clock times are unknown. The saved final_at is the first observation upper bound, explicitly not the final whistle. Sources are permitted at their exact paths under SRC-ALT-v2. The normalized export contains sporting fields only. Different publishers do not prove upstream feed independence. Original forecast bytes and the 12-row prospective ledger are unchanged; outcomes and expert losses are in cycle_feedback. Two settled events cannot qualify a model. No card win or canonical ID is created.

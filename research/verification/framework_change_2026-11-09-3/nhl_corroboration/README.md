@@ -1,0 +1,3 @@
+# P-607 result corroboration
+
+The permitted DK Pittsburgh Sports box score identifies the exact October 16 Pittsburgh-at-Colorado game, final 2–5, with periods PIT 2–0–0 and COL 1–3–1. It agrees with the existing effective result. The retained final_at is the existing observation upper bound, not a newly verified final whistle; the new observation is known only at its current capture time. This adds corroboration and does not revise the result or backdate knowledge. The NHL public game-centre page was permitted but supplied only an unrendered shell, so it was not admitted as a second result observation. Publisher-domain distinction is recorded; independent upstream collection remains unverified.
