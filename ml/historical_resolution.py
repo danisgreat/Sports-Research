@@ -132,7 +132,9 @@ def apply_row_revisions(frame, root):
             raise HistoricalResolutionError(f"HISTORICAL_REVISION_TARGET: {key}")
         if out.loc[mask, "grade"].iloc[0] != r["prior_grade"]:
             raise HistoricalResolutionError(f"HISTORICAL_PRIOR_GRADE: {key}")
-        if r["sporting_grade"] not in {"WIN", "LOSS", "PUSH", "VOID", "UNRESOLVED"}:
+        if out.loc[mask, "grade"].iloc[0] == "UNATTAINABLE":
+            raise HistoricalResolutionError(f"PERMANENTLY_CLOSED_UNATTAINABLE: {key}")
+        if r["sporting_grade"] not in {"WIN", "LOSS", "PUSH", "VOID", "UNRESOLVED", "UNATTAINABLE"}:
             raise HistoricalResolutionError("HISTORICAL_GRADE")
         document = Path(root) / r["source_document"]
         if not r["effective_at"] or not document.is_file() or _sha(document.read_bytes()) != r.get("source_document_sha256"):

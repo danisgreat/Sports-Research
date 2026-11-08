@@ -96,6 +96,7 @@ def generate(root=ROOT) -> str:
         f"| Adjustment ledger | {len(ledger)} contract rows on {len({r['local_key'] for r in ledger})} cards; {len(adjustments)} adjustment rows |",
         f"| Prospective shadow ledger | {len(shadow)} frozen rows on {len({r['event_id'] for r in shadow})} events (`{chat.LEDGER}`) |",
         f"| Effective settlements (imported local-key rows) | {len(effective)} rows, {int((effective['revision_source'] != '').sum())} revised by settlement imports, {unresolved} UNRESOLVED |",
+        f"| Permanently closed unattainable contracts | {len(_rows(root / 'research/historical_resolution/PERMANENT_CLOSURES.csv'))} exact rows; DO_NOT_RETRY; excluded from sporting scores |",
         "| Active releases | " + ("; ".join(releases) or "none") + " |",
         "",
         END,

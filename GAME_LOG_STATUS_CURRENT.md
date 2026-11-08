@@ -8,6 +8,10 @@ Active Combined Log: `prediction logs/PREDICTION_LOG_COMBINED_9.md`.
 Freeze: none (custody is the git history of `main`, CURRENT_RULES §9). The last control manifest is `archive/controls/CONTROL_MANIFEST_2026-10-09-3.md`. Current authority: CURRENT_STATE.md, METHOD.md and CURRENT_RULES.md.
 
 
+## Current permanent closure ·9November2026
+
+The owner permanently closed P003R3, P100R4, P102R4, P104R4, P121R4, P123R4, P341R3 and P630R1/R6 as UNATTAINABLE / COMPLETELY_RESOLVED / DO_NOT_RETRY. These nine rows are no longer unresolved, retryable or scorable. [Exact registry](research/historical_resolution/PERMANENT_CLOSURES.csv), [dated closure](research/verification/historical_closure_2026-11-09-1/OWNER_CLOSURE.md), [current open queue: P126/P418 only](research/verification/historical_closure_2026-11-09-1/OPEN_ITEMS.csv). HighestP638 / nextP639 unchanged. This supersedes earlier open-corner snapshots; original log bytes and other grades remain unchanged.
+
 ## Current historical repair ·9November2026
 
 HighestP638 / nextP639. [Historical report](research/verification/historical_resolution_2026-11-09-1/REPORT.md) and [all160 prior queue rows reconciled](research/verification/historical_resolution_2026-11-09-1/BACKLOG_RECONCILIATION.csv) supersede the earlier queue snapshot for the named keys only. P272 retains Osaka–Siniakova; its later Geelong–Carlton original is P638, not a Fremantle fixture. Shifted raw138–160 aliases bind chronologically to existingcanonical139–161; no duplicate outcome or new ID for a copy. P370/P415 are same-event administrative references, not distinct trials.

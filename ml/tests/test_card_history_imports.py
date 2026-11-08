@@ -160,6 +160,20 @@ def test_revised_legacy_rows_override_existing_rank_log_without_becoming_primary
         assert row.cohort == "LEGACY_ANALYST_NOT_PRIMARY" and not row.counted_slot
 
 
+def test_owner_closed_nine_corner_rows_are_terminal_and_excluded_from_scores(current_rows):
+    closed = current_rows[current_rows.grade == "UNATTAINABLE"]
+    assert len(closed) == 9 and closed.card.nunique() == 8
+    assert closed.y.isna().all() and not closed.counted_slot.any()
+    assert set(closed.record_disposition) == {"CLOSED_UNATTAINABLE_DO_NOT_RETRY"}
+    assert (closed[closed.card == "P-630"].literal_grade == "UNRESOLVED").all()
+    assert not ((current_rows.grade == "UNRESOLVED") & (current_rows.record_disposition == "RETAINED_CONTRACT")).any()
+    original = pd.read_csv(ch.V / "historical_resolution_2026-11-09-1/final_history/CARD_ROWS.csv", dtype=str, keep_default_na=False)
+    old = original[original.card.isin(["P-126", "P-418"])]
+    now = current_rows[current_rows.card.isin(["P-126", "P-418"])]
+    assert {(r.card, str(r['rank']), r.contract if pd.notna(r.contract) else '', r.grade) for _, r in now.iterrows()} == {
+        (r.card, r['rank'], r.contract, r.grade) for _, r in old.iterrows()}
+
+
 def test_current_primary_counts_and_research_exclusion(current_rows):
     current_rows = current_rows[current_rows.n.between(601, 622)]  # future cohorts must not change this fixture
     summary = ch.cohort_summary(current_rows).set_index("cohort")

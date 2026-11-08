@@ -173,7 +173,7 @@ def era_of(date) -> str:
 
 def _grade(value) -> str:
     v = str(value).strip().upper()
-    if v in {"WIN", "LOSS", "PUSH", "VOID", "UNRESOLVED", "CONFLICT"}:
+    if v in {"WIN", "LOSS", "PUSH", "VOID", "UNRESOLVED", "UNATTAINABLE", "CONFLICT"}:
         return v
     return {"W": "WIN", "L": "LOSS", "P": "PUSH", "V": "VOID", "U": "UNRESOLVED"}.get(v, "CONFLICT" if "/" in v else "UNRESOLVED")
 
@@ -319,6 +319,8 @@ def id_collisions(logs=None) -> pd.DataFrame:
 def inventory_rows(path: Path) -> list[dict]:
     """Read an admitted import layout. Unknown layouts/roles fail instead of dropping cards."""
     frame = pd.read_csv(path, dtype=str, keep_default_na=False)
+    if "sporting_grade" in frame:
+        frame["_original_inventory_grade"] = frame.sporting_grade
     if "canonical_id" in frame.columns or {"event_id", "key", "revision_id"} <= set(frame.columns):
         from ml.evaluation import effective_settlement
         frame = effective_settlement.revised_frame(path, frame, ROOT).drop(columns=["revision_chain"])
@@ -347,6 +349,8 @@ def inventory_rows(path: Path) -> list[dict]:
                    effective_revision="", evidence="", record_status="IMPORTED_CONDITIONAL_SPORTING_REVIEW",
                    source=f"{_label(path)}:{line}")
         row["revision_source"] = r.get("revision_source", "")
+        if r.get("sporting_grade") == "UNATTAINABLE":
+            row["literal_grade"] = _grade(r["_original_inventory_grade"])
         if layout == "local":
             role = r["probability_role"]
             primary = role == "ANALYST_PRIMARY_V1" or role.startswith("ANALYST_PRIMARY_V1 ")
@@ -453,7 +457,8 @@ def build_rows(rank_log: Path = RANK_LOG, *, inventories=None, logs=None) -> tup
     R = hr.apply_row_revisions(R, ROOT)
     R["identity_status"] = np.where(R.card.isin(collided), "COLLIDING_ALIAS_GRADE_LINK_UNRESOLVED",
                                     np.where(R.card.isin(set(collisions.card)), "RESOLVED_CHRONOLOGICAL_BINDING", "NO_DETECTED_ALIAS_COLLISION"))
-    R.loc[R.card.isin(collided), "grade"] = "UNRESOLVED"
+    # Owner-directed permanent closures cannot be reopened by later alias observations.
+    R.loc[R.card.isin(collided) & R.grade.ne("UNATTAINABLE"), "grade"] = "UNRESOLVED"
     # Imported P-577..P-582 rows also exist in the rank log; prefer the rank-log row and record agreement.
     R["n"] = R.card.map(card_num)
     R["informational_r2"] = (R.grade_basis == "ORIGINAL_RANK_2_INFORMATIONAL")
@@ -475,7 +480,9 @@ def build_rows(rank_log: Path = RANK_LOG, *, inventories=None, logs=None) -> tup
     R["y"] = R.grade.map({"WIN": 1.0, "LOSS": 0.0})
     administrative = R.record_status.fillna("").str.contains(
         r"NO FORECAST|NO SCORED TRIAL|NOT ISSUED|RESERVED|NO ACTION|CONDITION NOT MET|CANONICAL ALIAS|BLOCKED AT ISSUE", case=False)
+    administrative |= R.grade.eq("UNATTAINABLE")
     R["record_disposition"] = np.where(administrative | R.contract.fillna("").str.strip().eq(""), "NOT_SCORABLE_OR_MISSING_PROPOSITION", "RETAINED_CONTRACT")
+    R.loc[R.grade.eq("UNATTAINABLE"), "record_disposition"] = "CLOSED_UNATTAINABLE_DO_NOT_RETRY"
     R["counted_slot"] = R["rank"].isin([1, 2]) & ~R.informational_r2 & ~R.cohort.isin(NOT_PRIMARY) & ~administrative & R.contract.fillna("").str.strip().ne("")
     return R.sort_values(["n", "rank"]).reset_index(drop=True), diff
 

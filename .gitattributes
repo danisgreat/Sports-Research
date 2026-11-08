@@ -78,3 +78,8 @@ research/historical_resolution/EVENT_DATES.csv -text whitespace=cr-at-eol
 research/verification/historical_resolution_2026-11-09-1/** -text
 research/verification/mini_import_P-638_2026-11-09-2/** -text
 research/verification/settlement_import_2026-11-09_historical/** -text
+
+# Exact owner-directed permanent closure receipts.
+archive/terminal_closure_2026-11-09-1/** -text
+research/verification/historical_closure_2026-11-09-1/** -text
+research/verification/settlement_import_2026-11-09_permanent_closure/** -text

@@ -111,3 +111,33 @@ def test_event_date_correction_is_bound_to_reviewed_evidence(tmp_path):
     (tmp_path / 'date.md').write_bytes(b'Changed to import date')
     with pytest.raises(H.HistoricalResolutionError, match='EVIDENCE_CHANGED'):
         H.event_dates(tmp_path)
+
+
+def test_unattainable_historical_contract_is_terminal_and_keeps_original_probability(tmp_path):
+    (tmp_path / 'closure.md').write_bytes(b'Owner closes exact contract; do not retry')
+    r = dict(canonical_id='P-900', rank='1', contract='Over 7.5 corners', prior_grade='UNRESOLVED',
+             sporting_grade='UNATTAINABLE', evidence_class='X', revision='close-1', parent_revision='BASE',
+             effective_at='2026-11-09T12:00:00+11:00', source_document='closure.md',
+             source_document_sha256=H._sha((tmp_path / 'closure.md').read_bytes()))
+    write(H.input_paths(tmp_path)[2], [r])
+    original = pd.DataFrame([dict(card='P-900', rank=1, contract=r['contract'], grade='UNRESOLVED', p=.6),
+                             dict(card='P-900', rank=2, contract='Under 2.5 goals', grade='WIN', p=.7)])
+    closed = H.apply_row_revisions(original, tmp_path)
+    assert closed.iloc[0].grade == 'UNATTAINABLE' and closed.iloc[0].p == .6
+    assert closed.iloc[1].grade == 'WIN'
+    later = dict(r, prior_grade='UNATTAINABLE', sporting_grade='WIN', revision='later', parent_revision='close-1')
+    write(H.input_paths(tmp_path)[2], [r, later])
+    with pytest.raises(H.HistoricalResolutionError, match='PERMANENTLY_CLOSED'):
+        H.apply_row_revisions(original, tmp_path)
+
+
+def test_common_effective_view_refuses_future_reopening_of_unattainable_row():
+    original = pd.DataFrame([dict(canonical_id='P-900', local_key='K', original_rank='1',
+                                 original_contract='Over 7.5 corners', sporting_grade='UNRESOLVED', effective_revision='revision-1')])
+    close = dict(canonical_id='P-900', local_key='K', original_rank='1', original_contract='Over 7.5 corners',
+                 sporting_grade='UNATTAINABLE', evidence_class='X', revision='revision-2', parent_revision='revision-1', revision_file='close.csv')
+    result = E.apply_revisions(original, pd.DataFrame([close]))
+    assert result.iloc[0].sporting_grade == 'UNATTAINABLE'
+    later = dict(close, sporting_grade='WIN', revision='revision-3', parent_revision='revision-2')
+    with pytest.raises(E.RevisionError, match='PERMANENTLY_CLOSED'):
+        E.apply_revisions(original, pd.DataFrame([close, later]))

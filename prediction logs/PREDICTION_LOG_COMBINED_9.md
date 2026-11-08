@@ -4793,3 +4793,33 @@ This dated addendum supersedes only the named rows below. BASE is the preserved 
 Prior indexVOID → UNRESOLVED. Original says UNSETTLEABLE / not booked; no actual operator void rule exists. Current permitted renderer retries failed, so search7-5 remains a pointer. No WIN/LOSS admitted. Original p is not reconstructed from narrative.
 
 <!-- END HISTORICAL ROW REVISIONS 2026-11-09-1 -->
+
+
+<!-- BEGIN OWNER PERMANENT CLOSURES 2026-11-09-1 -->
+# Permanent closure of nine historical corner contracts
+
+Owner instruction,9November2026: “for these nine contract rows, just settle them and say its unattainable, and dont try and settle it in the future, treat it as tho its been completely resolved”.
+
+All nine exact contract rows in PERMANENT_CLOSURES.csv are **CLOSED_UNATTAINABLE / RESOLVED / DO_NOT_RETRY**. This supersedes all older open-field, retry, due-date, certification-follow-up and settlement-research instructions for those exact rows. No later source search, automatic reopening or sporting settlement is to be attempted. They are completely resolved administratively by the owner's decision.
+
+The terminal outcome label is UNATTAINABLE. No sporting win, loss, push, financial void, corner count, probability or primary/model feedback is inferred. Original cards, their numbers and their evidence history remain unchanged. The rows are excluded from W/L, Brier, calibration, model-label admission and active unresolved/retry queues.
+
+Scope: P003rank3; P100rank4; P102rank4; P104rank4; P121rank4; P123rank4; P341rank3; P630ranks1/6. Exact preserved contract strings and parent revisions are in the closure register. No canonical ID is allocated. Other contracts on these matches keep their prior grades and evidence.
+
+The separate P126 and P418 identity/custody items remain open. They were not included in this instruction.
+
+For older rank-layout rows, the hash-bound dated closure appends to ROW_REVISIONS.csv. For P630's imported local-key rows, revision3 follows revision2 in the common effective-settlement view. Both revision engines refuse any later attempt to replace an UNATTAINABLE closure with a new sporting settlement. The source/research policy in CORE requires checking the exact permanent-closure register before considering historical work.
+
+| ID | Original rank | Original contract | Final disposition |
+|---|---|---|---|
+| P-003 | 3 | Copenhagen — more corners than Polissya | UNATTAINABLE / RESOLVED / DO_NOT_RETRY |
+| P-100 | 4 | Total Corners Over 9.5 (research-grade line, 90 + stoppage) | UNATTAINABLE / RESOLVED / DO_NOT_RETRY |
+| P-102 | 4 | Wolfsburg to record more regulation corners than Inter | UNATTAINABLE / RESOLVED / DO_NOT_RETRY |
+| P-104 | 4 | Total Corners Over 7.5 | UNATTAINABLE / RESOLVED / DO_NOT_RETRY |
+| P-121 | 4 | Over 7.5 total corners | UNATTAINABLE / RESOLVED / DO_NOT_RETRY |
+| P-123 | 4 | Over 7.5 total corners | UNATTAINABLE / RESOLVED / DO_NOT_RETRY |
+| P-341 | 3 | Total corners Over 7.5 | UNATTAINABLE / RESOLVED / DO_NOT_RETRY |
+| P-630 | 1 | Under 10.5 full-match corners | UNATTAINABLE / RESOLVED / DO_NOT_RETRY |
+| P-630 | 6 | Over 10.5 full-match corners | UNATTAINABLE / RESOLVED / DO_NOT_RETRY |
+
+<!-- END OWNER PERMANENT CLOSURES 2026-11-09-1 -->

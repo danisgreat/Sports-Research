@@ -1,0 +1,2 @@
+scope,tests,failures,result,code_sha256,junit_path,junit_sha256
+historical_resolution; card_history_imports; card_history_tools; integrity_r2,68,0,PASS,78eff76cb403fb4caf3282a04fc0ff90eeb66b5d4fb6073c5cc508d37748ae62,C:\Users\danie\AppData\Local\Temp\sports_terminal_closure_20261109\FINAL_TESTS.xml,10520ce6f66ae10fdeb79c63913f0fe56d0580d650d1c0e7e95d067513f7a9dc

@@ -24,7 +24,7 @@ ROOT = Path(__file__).resolve().parents[2]
 V = "research/verification"
 REVISION_FIELDS = ("canonical_id", "local_key", "original_rank", "original_contract", "revision", "parent_revision",
                    "sporting_grade", "evidence_class", "effective_at", "source_document", "note")
-GRADES = ("WIN", "LOSS", "PUSH", "VOID", "UNRESOLVED")
+GRADES = ("WIN", "LOSS", "PUSH", "VOID", "UNRESOLVED", "UNATTAINABLE")
 KEY = ("canonical_id", "original_rank", "original_contract")
 
 
@@ -104,6 +104,8 @@ def apply_revisions(original: pd.DataFrame, revisions: pd.DataFrame) -> pd.DataF
         if out.at[i, "effective_revision"] != r["parent_revision"]:
             raise RevisionError(f"broken chain for {key}: {r['revision']} names parent {r['parent_revision']} but the effective "
                                 f"revision is {out.at[i, 'effective_revision']}")
+        if out.at[i, "sporting_grade"] == "UNATTAINABLE":
+            raise RevisionError(f"PERMANENTLY_CLOSED_UNATTAINABLE: {key}; no future settlement attempt")
         out.at[i, "sporting_grade"] = r["sporting_grade"]
         out.at[i, "evidence_class"] = r["evidence_class"]
         out.at[i, "effective_revision"] = r["revision"]

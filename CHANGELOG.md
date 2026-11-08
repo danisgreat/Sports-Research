@@ -1,5 +1,9 @@
 # Owner per-game request formats — MDS/P v24.7 / CR-2026.11.09-R2 / P-2026.11.09-v24.5, 9 November 2026
 
+## 2026-11-09 · owner-directed permanent closure of nine corner contracts
+
+All nine previously unresolved corner rows are UNATTAINABLE, completely resolved administratively and excluded from future settlement/research retries. Dated exact-key revisions preserve originals; both revision engines reject later reopening. Only the separate P126/P418 identity/custody tasks remain open. No sporting result, model label or new canonical ID. [Report](research/verification/historical_closure_2026-11-09-1/REPORT.md).
+
 ## 2026-11-09 · historical evidence and chronological custody repair
 
 Source-bound aliases, literal-contract recovery and dated effective revisions preserve the immutable logs. P638 retains the distinct Geelong–Carlton card; P596/P598 definition losses and26 older-row corrections/corroborations feed reports without new primary forecasts.139 exactURL access checks and27 tested field routes added. All160 earlier queue rows reconciled; missing fields and nonrecoverable provenance remain explicit. [Report](research/verification/historical_resolution_2026-11-09-1/REPORT.md). No forecast method, calibrated parameter or prospective promotion.
