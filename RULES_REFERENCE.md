@@ -96,6 +96,8 @@ Ranking follows [Part B](#part-b-selection_rules): decreasing unrounded final p,
 
 ## 5. Sources, event state and time
 
+**Sources that block AI agents (SRC-ALT-v1, owner instruction 2026-11-09).** Check every source with `python -m ml source-audit --url <url>` before opening it. Open only `ALLOWED` or `NO_RULES_FILE`; a blocked or unreadable-rules source is never reached through a proxy, cache, mirror or other user agent. Find a permitted alternate for the same fields (field owner's other outlets, then a reputable statistics site, then reputable media), record the substitution, and leave a field `NOT_VERIFIED` when none exists. Alternates by sport: [SOURCES](SOURCES.md) SRC-ALT-v1.
+
 **Online history (HIST-v3).** Apply [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md) to every sport and competition, even when local data exist: both sides' L5/L10/L15/L20 verified online with sources, true n, comparisons and unresolved fields. No retired store or profile is a fallback.
 
 **SPORTS_ONLY / MARKET_BLIND.** No odds, line movement, tips, betting previews, prediction markets or fantasy inputs anywhere in research, references, adjustments or cards. A supplied threshold is contract metadata. No value, edge or staking claim.

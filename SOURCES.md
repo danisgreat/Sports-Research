@@ -18,6 +18,56 @@
 
 **What changed.** The source adapters, parsers, retrieval jobs, probes and the matrix generator are gone. The **routes** in the sport tables below (sections 2 and 3, and the reachability matrix) remain the way to find each fact; the **commands** that fetched, parsed or hashed them (`sources.py`, `research/src/...`, `python -B -m ...`, `*.json` receipts) are historical. Wherever an older section below names one of those, read it as a description of what the route returns, and open the page yourself.
 
+## SRC-ALT-v1. Sources that block AI agents, and their alternates (owner instruction 2026-11-09)
+
+**Rule (every sport, league and competition, every prompt).** Before a source is opened, check it with `python -m ml source-audit --url <url>`. The check reads the site's robots.txt for every Anthropic agent token (ClaudeBot, Claude-User, Claude-SearchBot, Claude-Web, anthropic-ai) and for a `Content-Signal: ai-input=no` reservation.
+
+- **May be opened:** only `ALLOWED` or `NO_RULES_FILE` (robots.txt 404 or 410).
+- **Not opened:**
+  - `BLOCKED_FOR_AI`;
+  - `BLOCKED_FOR_ALL`;
+  - `RULES_UNKNOWN`: a 403, 429, 5xx, timeout or HTML challenge page is not permission.
+- **Never a way around a block:** a reader proxy (r.jina.ai), a search cache, a mirror of the same pages or a changed user agent.
+
+**When a source is blocked or unknown, search for an alternate that publishes the same fields.** Take them in this order:
+1. the field owner's other official outlets (league or federation site, official stats feed, a team's own site);
+2. a reputable statistics site;
+3. a reputable media report.
+
+Check each one the same way. A site that also shows prices is used with its prices blocked. Record the substitution, with the check date, on the card or settlement. If no permitted alternate gives a field, the field is `NOT_VERIFIED`; the attempts are recorded, and nothing is guessed.
+
+**Re-audit.** Prompt 7 re-audits at each new season (`python -m ml source-audit --register SOURCES.md --out <folder>`), because sites change their rules.
+
+**Audit of 2026-11-09.**
+- The register: 245 URLs. 119 `ALLOWED`, 49 `NO_RULES_FILE`, 45 `BLOCKED_FOR_AI`, 32 `RULES_UNKNOWN` ([audit](research/verification/framework_change_2026-11-09-1/register/SOURCE_ACCESS_AUDIT.csv)).
+- 130 candidate alternates ([audit](research/verification/framework_change_2026-11-09-1/candidates/SOURCE_ACCESS_AUDIT.csv)).
+
+Where the table below and an older row of this register disagree, this table governs.
+
+| Sport / data need | Blocked or unknown (2026-11-09) | Permitted alternates (status) | Notes |
+|---|---|---|---|
+| NBA results and box scores | `www.nba.com` (BLOCKED_FOR_AI), ESPN `site.api.espn.com` (RULES_UNKNOWN 403), `www.espn.com` (anthropic-ai disallowed), `cdn.nba.com` (403), `basketball.realgm.com`, `www.proballers.com`, `www.landofbasketball.com`, `sports.yahoo.com`, `apnews.com` | `www.basketball-reference.com/boxscores/` (ALLOWED), `www.cbssports.com/nba/gametracker/` (ALLOWED), `www.foxsports.com/nba/` (ALLOWED), `www.thesportsdb.com` API (ALLOWED), `www.statmuse.com` (ALLOWED), `www.flashscore.com` (ALLOWED, prices blocked), `stats.nba.com` (NO_RULES_FILE) | Two lineages for a settlement: Basketball-Reference and CBS Sports. The league-day settle needs a non-ESPN second lineage (code change for prompt 8) |
+| NBA availability | ESPN injury pages | `official.nba.com` injury report (ALLOWED, the field owner), `www.cbssports.com/nba/injuries/` (ALLOWED), `www.rotowire.com/basketball/nba-lineups.php` (ALLOWED) | The official report governs; the others corroborate |
+| WNBA | `www.wnba.com` (BLOCKED_FOR_AI), `cdn.wnba.com` (403) | `www.basketball-reference.com/wnba/boxscores/` (ALLOWED), `www.cbssports.com/wnba/` (ALLOWED), `www.thesportsdb.com` (ALLOWED) | |
+| NHL results, box scores, goalies | `api-web.nhle.com`, `api.nhle.com` (BLOCKED_FOR_AI), `records.nhl.com` (HTML: unknown), `www.naturalstattrick.com` (BLOCKED_FOR_AI) | `www.nhl.com/gamecenter/` (ALLOWED, the field owner's pages), `www.hockey-reference.com/boxscores/` (ALLOWED), `www.cbssports.com/nhl/` (ALLOWED), `www.quanthockey.com` (ALLOWED), `www.eliteprospects.com` (ALLOWED), `www.dailyfaceoff.com/starting-goalies/` (ALLOWED) | nhl.com plus Hockey-Reference are the two lineages. A second lineage for P-607 (the NHL release gate G4) can come from these |
+| AHL and other North American hockey | none blocked | `theahl.com` game centre (ALLOWED), `lscluster.hockeytech.com` (NO_RULES_FILE) | |
+| European hockey | `s3-eu-west-1.amazonaws.com` file (403) | `liiga.fi`, `metalligaen.dk`, `www.eliteprospects.com` (ALLOWED or no rules) | |
+| MLB | `www.baseball-reference.com` (RULES_UNKNOWN 403) | `statsapi.mlb.com` (NO_RULES_FILE), `www.mlb.com/gameday/` (ALLOWED), `www.mlb.com/probable-pitchers` (ALLOWED), `www.cbssports.com/mlb/` | The Stats API and MLB.com are one owner: a second lineage for the release gate needs an independent site (CBS Sports, Fox Sports) |
+| KBO | `www.koreabaseball.com` (BLOCKED_FOR_AI), Naver (`m.sports.naver.com` BLOCKED_FOR_AI; `api-gw.sports.naver.com` timeout), `www.statiz.co.kr` (BLOCKED_FOR_AI) | `eng.koreabaseball.com` (ALLOWED, the field owner's English site), `mykbostats.com` (ALLOWED) | |
+| NPB, CPBL | none blocked | `npb.jp` (NO_RULES_FILE), `baseball.yahoo.co.jp` (NO_RULES_FILE), `www.cpbl.com.tw` (NO_RULES_FILE) | |
+| Cricket | `www.cricbuzz.com`, `www.howstat.com`, `stats.bcci.tv`, `www.cricketarchive.com` (BLOCKED_FOR_AI), `www.espncricinfo.com` (403), `www.pcb.com.pk` (403), part of `www.iplt20.com` | `cricsheet.org` (ALLOWED, ball by ball, after the match), `www.icc-cricket.com` (ALLOWED), `www.cricket.com.au` (ALLOWED), `www.ecb.co.uk` (NO_RULES_FILE), `www.thehundred.com` (NO_RULES_FILE), `www.cricketworld.com` (NO_RULES_FILE) | Scorecards: ICC or the home board plus Cricsheet |
+| Soccer results, line-ups, corners | `www.worldfootball.net`, `www.fotmob.com`, `www.football-data.co.uk`, `www.laliga.com` (BLOCKED_FOR_AI), `fbref.com`, `footystats.org`, `www.besoccer.com`, `www.sofascore.com`, `understat.com`, `ligamx.net` (unknown) | `int.soccerway.com` (ALLOWED), `www.transfermarkt.com` (ALLOWED), `www.11v11.com` (ALLOWED), `www.futbol24.com` (ALLOWED), `www.flashscore.com` and `www.livesport.com` (ALLOWED, prices blocked), `www.rsssf.org` (NO_RULES_FILE), `api.openligadb.de` (NO_RULES_FILE), league sites: `premierleague.com`, `bundesliga.com`, `legaseriea.it`, `ligue1.com`, `jleague.co`, `mlssoccer.com`, `uefa.com`, `the-afc.com` (ALLOWED), `kleague.com` (NO_RULES_FILE) | LaLiga: Soccerway, Transfermarkt or Flashscore. Corners: Futbol24 directly (the 2026-11-07 P-604 corner evidence came through r.jina.ai, a route now excluded; re-verify it from Futbol24 directly) |
+| Basketball outside the NBA | `www.basket.gr`, `www.basketballaustria.at` (BLOCKED_FOR_AI), `www.euroleaguebasketball.net` (429), `prod.rosetta.nbl.com.au` (401), `schedule.nbl.com.au` (403), `www.kbl.or.kr` and `www.pba.ph` (HTML: unknown), `fibalivestats.com` (no answer), `www.basketballliga.at` (no answer) | `www.esake.gr` (NO_RULES_FILE), `api-live.euroleague.net` (NO_RULES_FILE), `www.fiba.basketball` (ALLOWED), FIBA LiveStats on `fibalivestats.dcd.shared.geniussports.com` (NO_RULES_FILE), `www.nbl.com.au` (ALLOWED), `www.legabasket.it`, `www.acb.com`, `www.lkl.lt`, `www.bleague.jp`, `www.championsleague.basketball` (ALLOWED), `www.easycredit-bbl.de` (NO_RULES_FILE), PBA via `tiebreakertimes.com.ph` and `sports.inquirer.net` (ALLOWED) | KBL: FIBA LiveStats or the box score on a permitted media site; the official site stays unknown |
+| Tennis | `www.protennislive.com` (503), `www.itftennis.com` (HTML: unknown) | `www.atptour.com` (ALLOWED), `www.wtatennis.com` (ALLOWED), `www.tennisabstract.com` (ALLOWED), `www.ultimatetennisstatistics.com` (ALLOWED), `www.tennisexplorer.com` (ALLOWED, prices blocked), `www.flashscore.com/tennis/` (ALLOWED), slam sites such as `www.usopen.org` (ALLOWED) | ITF events: Flashscore or Tennis Explorer plus the tournament's own page |
+| AFL, NRL | `fixturedownload.com` (BLOCKED_FOR_AI) | `afltables.com` (NO_RULES_FILE), `www.footywire.com`, `api.squiggle.com.au`, `www.afl.com.au` (ALLOWED); `www.nrl.com`, `www.rugbyleagueproject.org`, `www.leagueunlimited.com` (ALLOWED) | |
+| Rugby union | `www.espnscrum.com` (no answer) | `www.world.rugby`, `www.rugbypass.com`, `www.allblacks.com` (ALLOWED), `www.rugby.com.au` (NO_RULES_FILE) | |
+| NFL, NCAA, CFL | `www.ncaa.com`, `www.footballdb.com` (BLOCKED_FOR_AI), `www.pro-football-reference.com`, `www.sports-reference.com/cfb/`, `stats.ncaa.org` (403); GitHub release downloads (nflverse, sportsdataverse) are BLOCKED_FOR_AI | `www.nfl.com/games/` (ALLOWED), `www.cbssports.com/nfl/` and `/college-football/` (ALLOWED), `www.cfl.ca` (ALLOWED), files committed in the same repositories on `raw.githubusercontent.com` (NO_RULES_FILE; price columns blocked) | NCAA: CBS Sports plus the schools' own athletics sites |
+| Weather | `api.open-meteo.com`, `archive-api.open-meteo.com`, `api.weather.gov`, `reg.bom.gov.au` (BLOCKED_FOR_AI) | `api.met.no` (ALLOWED, global forecast), `bulk.meteostat.net` (ALLOWED, history), `www.metoffice.gov.uk` (ALLOWED), `www.jma.go.jp` (NO_RULES_FILE), `www.timeanddate.com/weather/` and `www.wunderground.com/history/` (ALLOWED) | |
+| News, social, search | `news.google.com`, `syndication.twitter.com`, `publish.twitter.com`, `www.bbc.com`, `www.reuters.com`, `www.theguardian.com`, `www.abc.net.au`, `apnews.com` (BLOCKED_FOR_AI), the Wikipedia REST summary API | `www.bing.com/news/search` (ALLOWED), `html.duckduckgo.com` (ALLOWED), `public.api.bsky.app` (ALLOWED), Wikipedia article pages (ALLOWED), club and league news pages (check each) | A search result is a pointer: the item is opened at a permitted source |
+| Older NBL data | GitHub release assets of `JaseZiv/nblr_data` (BLOCKED_FOR_AI) | `www.nbl.com.au` (ALLOWED), FIBA LiveStats (NO_RULES_FILE) | The already-captured files in `research/data/` stay as captured |
+
+**Correction (2026-11-09).** The settlement note of 8 November said Basketball-Reference blocks AI crawlers. Its rules block some agents, but they permit every Anthropic token on `/boxscores/`, `/wnba/boxscores/` and the season game pages. Hockey-Reference is the same.
+
 ## A. Using the register without code
 
 1. Pick the sport's table (section 3) and read the first-choice route and the fallback for the field you need (the "Source-by-source fallback chain" in §3.12 and the field fallbacks in §1.7).
@@ -137,6 +187,8 @@ Which registered source answers in which environment, with the fallback routes (
 ---
 
 ## 1. Rules every source follows
+
+**Access for AI agents (SRC-ALT-v1, 2026-11-09).** Every source is checked with `python -m ml source-audit --url` before it is opened; a blocked or unknown source is replaced by a permitted alternate, never reached another way (see the SRC-ALT-v1 section at the top of this page).
 
 ### 1.1 Three independent lineages
 

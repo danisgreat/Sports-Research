@@ -1,3 +1,7 @@
+# Sources that block AI agents — MDS/P v24.6 / CR-2026.11.09-R1 / P-2026.11.09-v24.4, 9 November 2026
+
+Owner instruction: when a source blocks AI agents, find alternate sources for the same information, for every sport, league and competition. SRC-ALT-v1: `python -m ml source-audit` checks robots rules for the Anthropic agent tokens and `ai-input=no`. Only ALLOWED or NO_RULES_FILE sources are opened, and a blocked or unknown source is never reached another way. The register was audited (245 URLs: 45 blocked for AI, 32 unknown), as were 130 candidates, and permitted alternates by sport are now in SOURCES.md. Correction: Basketball-Reference permits Anthropic agents on its box-score pages (the 8 November note said it blocked them).
+
 # Enforced integrity — MDS/P v24.5 / CR-2026.11.08-R2 / P-2026.11.08-v24.3, 8 November 2026
 
 The owner asked to implement the review of v24.4: make the code enforce the rules and close the forecast, settlement and evaluation cycle. These fixes are now enforced in code, each with a rejection test:
