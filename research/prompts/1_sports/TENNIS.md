@@ -1,18 +1,22 @@
 # PROMPT 1 — sport file: TENNIS
 
-**P-2026.11.09-v24.4 · prompt 1 sport file.** Use this file together with the [prompt 1 core](../1_GAME_CARD.md): read the core first, then this file. The core holds every rule shared by all sports, including the shared rules of steps 1, 3, 4, 5 and 7; this file holds this sport's own instructions for steps 1–7. At each step apply the core's shared rules for that step together with this file's. Fill in the Upcoming game block below; it is the only part the owner edits. Do not read the other sport files.
+**P-2026.11.09-v24.5 · prompt 1 sport file.** Use this file together with the [prompt 1 core](../1_GAME_CARD.md): read the core first, then this file. The core holds every rule shared by all sports, including the shared rules of steps 1, 3, 4, 5 and 7; this file holds this sport's own instructions for steps 1–7. At each step apply the core's shared rules for that step together with this file's. Fill in the Upcoming game block below; it is the only part the owner edits. Do not read the other sport files.
 
 TENNIS
 ----------------------------
 
 ## Upcoming game — TENNIS
 
+**The owner's request (REQ-v4, 2026-11-09).** The owner fills this in and sends it. How each line becomes a contract, its endpoint and its deep-loss-review role: [GAME_REQUEST_TEMPLATE](../../../GAME_REQUEST_TEMPLATE.md) §1b. The estimated start can be delayed: verify the official start and continue the process as normal.
 
-- Competition details: <Ann Li vs Janice Tjen, WTA Wuhan - Round 3>
-- Scheduled start: <12:00 AM AEDT, 16 October 2026 (Can be delayed, continue research as normal regardless)>
-- Active local mini: <current path>
-- Supplied contracts: <Li -3.5 Handicap>, <Tjen +3.5 Handicap>, <Combined Total Games Over/Under 21.5 Games>
+```text
+Upcoming Tennis Match: Player A vs Player B, Competition,,
+Estimated Game Time Start: Day Month Year, Time AM/PM AEDT (can be delayed so continue the process as normal)
 
+Player A ML/Handicap Games Spread
+Player B ML/Handicap Games Spread
+Combined Total: Over/Under X.X Games
+```
 
 Read [COMMON_OPERATING_PROTOCOL](../COMMON_OPERATING_PROTOCOL.md), [MINI_LOG_IDENTITY_PROTOCOL](../../../WORKFLOW.md#part-b-mini_log_identity_protocol) and the complete seven-step sport workflow below. The primary card is ANALYST_PRIMARY_V1: the frozen reference plus logged adjustments (prompt header). The reference stage runs before any probability is written and the card freeze after it (MLSCOPE-v3, core step 7); no other model, shadow or decision-lab output is read. Read the [CORE](../../../CORE.md) page first.
 

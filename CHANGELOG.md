@@ -1,3 +1,7 @@
+# Owner per-game request formats — MDS/P v24.7 / CR-2026.11.09-R2 / P-2026.11.09-v24.5, 9 November 2026
+
+The owner's request formats for nine sports are now GAME_REQUEST_TEMPLATE §1 (REQ-v4), verbatim: basketball, soccer, cricket, tennis, ice hockey, rugby league, rugby union, American football and baseball. Each one heads its prompt-1 sport file. §1b maps each line to a family, quantity, endpoint and deep-loss-review role. The DEEPLOSS-v1 top-total trigger now covers goals, corners and full-innings totals. AFL and other sports keep their free-form blocks.
+
 # Sources that block AI agents — MDS/P v24.6 / CR-2026.11.09-R1 / P-2026.11.09-v24.4, 9 November 2026
 
 Owner instruction: when a source blocks AI agents, find alternate sources for the same information, for every sport, league and competition. SRC-ALT-v1: `python -m ml source-audit` checks robots rules for the Anthropic agent tokens and `ai-input=no`. Only ALLOWED or NO_RULES_FILE sources are opened, and a blocked or unknown source is never reached another way. The register was audited (245 URLs: 45 blocked for AI, 32 unknown), as were 130 candidates, and permitted alternates by sport are now in SOURCES.md. Correction: Basketball-Reference permits Anthropic agents on its box-score pages (the 8 November note said it blocked them).
