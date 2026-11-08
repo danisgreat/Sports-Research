@@ -29,8 +29,9 @@ def store(tmp_path, n=40, seasons=("2024", "2025"), domains=("https://a.example/
         results.append(dict(event_uid=uid, revision="1", status="FINAL", hs=str(90 + i % 17), as_=str(88 + i % 11), reg_hs=reg, reg_as=reg,
                             decision=decision if i % 12 == 0 else "Regulation", final_at="x", revision_basis="FIRST_OBSERVED", ingest_seq="1"))
         for d in domains:
-            obs.append(dict(observation_id=f"{uid}{d}", kind="RESULT", event_uid=uid, link="1", disposition="NEW", source_url=d, source_kind="WEB_RECOVERED",
-                            published_at="", retrieved_at="", known_at="", capture_path="", capture_sha256="", collected_by="", ingest_seq="1"))
+            obs.append(dict(observation_id=f"{uid}{d}", kind="RESULT", event_uid=uid, link="1", disposition="FIRST_OBSERVED", source_url=d,
+                            source_kind="WEB_RECOVERED", published_at="", retrieved_at="", known_at="", capture_path="",
+                            capture_sha256=f"sha-{uid}-{d}", collected_by="LOCAL-EX-G0001", ingest_seq="1"))
     base = tmp_path / G.STORE
     write(base / "EVENTS.csv", events, list(events[0]))
     write(base / "RESULTS.csv", results, list(results[0]))
@@ -69,3 +70,53 @@ def test_an_always_regulation_overtime_field_is_flagged_by_g2(tmp_path):
     big = store(tmp_path, n=600, seasons=("2020", "2021", "2022", "2023", "2024"), decision="Regulation")
     result = G.gate(COMP, big, min_events=300)
     assert codes(result)["G2"] == "FAIL" and "OVERTIME_FIELD_IMPLAUSIBLE" in next(c["detail"] for c in result["checks"] if c["check"] == "G2")
+
+
+
+def test_subdomains_of_one_site_are_one_lineage(tmp_path):
+    """GATE-v2 (review 2026-11-08): different hostnames of one site were counted as corroboration."""
+    result = G.gate(COMP, store(tmp_path, domains=("https://www.espn.com/x", "https://site.api.espn.com/y")), min_events=30)
+    assert codes(result)["G4"] == "FAIL"
+    assert G.registrable("https://www.bbc.co.uk/sport") == "bbc.co.uk" and G.registrable("https://site.api.espn.com/a") == "espn.com"
+
+
+def test_observations_of_another_revision_do_not_support_the_effective_final(tmp_path):
+    root = store(tmp_path)
+    path = root / G.STORE / "SOURCE_OBSERVATIONS.csv"
+    rows = G._rows(path)
+    for r in rows:
+        if r["source_url"].startswith("https://b."):
+            r["link"] = "2"            # attached to a revision that is not the effective one
+    write(path, rows, list(rows[0]))
+    assert codes(G.gate(COMP, root, min_events=30))["G4"] == "FAIL"
+
+
+def test_both_regulation_coordinates_are_required(tmp_path):
+    root = store(tmp_path, decision="Overtime")
+    path = root / G.STORE / "RESULTS.csv"
+    rows = G._rows(path)
+    for r in rows:
+        r["reg_as"] = "NOT_OBSERVED"
+    write(path, rows, list(rows[0]))
+    assert codes(G.gate(COMP, root, min_events=30))["G5"] == "FAIL"
+
+
+def test_a_release_needs_a_passed_receipt_bound_to_the_exact_store(tmp_path):
+    from ml import cycle as C, primary as p
+    root = store(tmp_path)
+    failed = G.write_receipt(G.gate(COMP, root, min_events=300), root)
+    with pytest.raises(p.AdmissionError, match="GATE_FAILED"):
+        C.freeze_gated_release(tmp_path / "rel" / "R.csv", COMP, "E", "v1", failed, root=root)
+    passed = G.write_receipt(G.gate(COMP, root, min_events=30), root)
+    with pytest.raises(p.AdmissionError, match="GATE_RECEIPT_SCOPE"):
+        C.freeze_gated_release(tmp_path / "rel" / "R.csv", "Basketball/OTHER", "E", "v1", passed, root=root)
+    (root / G.STORE / "QUARANTINE.csv").write_bytes((root / G.STORE / "QUARANTINE.csv").read_bytes() + b"\n")
+    with pytest.raises(p.AdmissionError, match="GATE_STALE"):
+        C.freeze_gated_release(tmp_path / "rel" / "R.csv", COMP, "E", "v1", passed, root=root)
+    assert not (tmp_path / "rel" / "R.csv").exists()
+
+
+def test_existing_releases_are_reported_as_carried_forward():
+    from ml import cycle as C
+    for name in ("MLB-CYCLE-4", "NHL-CYCLE-4", "NBA-CYCLE-1"):
+        assert C.gate_binding(G.ROOT / "research" / "cycle_releases" / f"{name}.csv") == "CARRIED_FORWARD_BEFORE_GATE_V2"

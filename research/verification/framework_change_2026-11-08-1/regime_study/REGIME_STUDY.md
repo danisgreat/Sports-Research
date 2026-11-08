@@ -60,6 +60,20 @@ Sizes are the pooled actual/forecast ratio minus one, with a season-block bootst
 
 A row is applied once, to the total centre, before every contract is read from the one grid; the width floor still applies; the ledger records the row id and entry size (ADJUSTMENT_LEDGER_PROTOCOL §1).
 
+## 5a. Correction the same day: the chronological test (REGIME-v3, CR-2026.11.08-R2)
+
+A review on 8 November found that the leave-one-season-out fit in section 2 used later seasons when it evaluated earlier ones. That is not how information arrives. The confirmation test is now chronological: each season's multiplier is fitted on earlier seasons only (an expanding window), and the first season is not scored. Code: `ml/studies/regime_eval.py`. Output: [outputs/CHRONOLOGICAL.csv](outputs/CHRONOLOGICAL.csv). The leave-one-season-out table is kept and labelled exploratory.
+
+| League | Regime | Chronological CRPS | Chronological Brier | Later seasons better | Status (R2 row) |
+|---|---|---|---|---|---|
+| NBA | Playoffs | −1.72 (−2.50, −0.90) | −0.052 (−0.076, −0.027) | 5/5 | CONFIRMED, FULL |
+| MLB | Postseason | −0.081 (−0.117, −0.036) | −0.014 (−0.019, −0.009) | 5/5 | NOT_CONFIRMED, HALF: the test is on a proxy, not on MLB-CYCLE-4 |
+| NRL | First 28 days | −0.029 (−0.081, +0.038) | −0.0019 (−0.0049, +0.0019) | 4/5 | NOT_CONFIRMED, HALF |
+| AFL | Finals | +0.170 (−0.767, +1.064) | −0.005 (−0.026, +0.014) | 4/10 | NOT_CONFIRMED, HALF |
+| MLB | First 28 days | −0.008 (−0.014, −0.003) | −0.002 (−0.004, −0.001) | 4/5 | NULL kept: the size's interval contains zero; a prospective candidate |
+
+The append-only effect table gains `-R2` rows, and `research/effect_tables/SUPERSEDED.csv` retires the R1 rows; the ledger refuses a superseded row. Each regime adjustment on a card now carries its frozen unadjusted counterfactual (ADJUSTMENTS_V1), so prompt 6 scores adjusted against unadjusted on future games ([scikit-learn: time-series cross-validation](https://scikit-learn.org/stable/modules/cross_validation.html#cross-validation-of-time-series-data)).
+
 ## 6. Findings for prompt 8 (not acted on here)
 
 The control window (regular season after day 28) shows the reference itself is biased in some leagues, which is a reference calibration matter, not a regime effect:
@@ -82,4 +96,4 @@ A league-size-scaled prior weight (for example a fixed number of rounds rather t
 
 ## 8. Reproduce
 
-From the repository root: `python research/verification/framework_change_2026-11-08-1/regime_study/scripts/regime_nba.py <OUT>`; then, with the cached captures, `python scripts/regime_generic.py mlb|afl|nrl <RAW> <OUT>`, and `loso.py` and `sizes.py` from the folder holding `outputs/`. Seeds are fixed (20261108).
+From the repository root (the study code moved to `ml/studies/` on 2026-11-08): `python -m ml.studies.regime_nba <OUT>`; with the cached captures, `python -m ml.studies.regime_generic mlb|afl|nrl <RAW> <OUT>`; then `python -m ml.studies.regime_eval --outputs <OUT>` for the sizes, the exploratory leave-one-season-out table and the chronological test. Seeds are fixed (20261108).

@@ -25,7 +25,12 @@ ROOT = Path(__file__).resolve().parents[1]
 BEGIN, END = "<!-- BEGIN PICKS_V2 {key} -->", "<!-- END PICKS_V2 {key} -->"
 META_REQUIRED = ("tier", "competition", "reference_id", "reference_status", "model_stage", "abstain", "fast_card", "timing", "scheduled_start",
                  "issued_at")
-META_OPTIONAL = ("reference_frozen_at", "width_floor_exception", "tier_basis", "notes")
+META_OPTIONAL = ("reference_frozen_at", "width_floor_exception", "tier_basis", "notes", "issue_evidence")
+SIDES = {"WINNER": ("HOME", "AWAY", "DRAW"), "HANDICAP": ("HOME", "AWAY"), "TOTAL": ("OVER", "UNDER"),
+         "TEAM_TOTAL": ("OVER", "UNDER"), "CORNERS": ("OVER", "UNDER", "HOME", "AWAY"),
+         "PERIOD": ("HOME", "AWAY", "DRAW", "OVER", "UNDER"), "PLAYER": ("OVER", "UNDER", "YES", "NO"),
+         "OTHER": ("HOME", "AWAY", "DRAW", "OVER", "UNDER", "YES", "NO")}
+ISSUE_EVIDENCE = re.compile(r"(COMMIT:[0-9a-f]{7,40}|PREGAME_RECEIPT:research/pregame/\S+)")
 COLUMNS = ("label", "family", "quantity", "side", "line", "line_source", "reference_p", "baseline_p", "model_p", "final_p", "w", "p", "l",
            "line_implied_p", "centre", "sd", "z", "most_likely_rank", "information_row")
 FAMILIES = ("WINNER", "HANDICAP", "TOTAL", "TEAM_TOTAL", "PERIOD", "PLAYER", "CORNERS", "OTHER")
@@ -46,6 +51,25 @@ MISSING_BASELINE = re.compile(r"MISSING:(NO_LEAGUE_PROFILE|PROFILE_LACKS_ENDPOIN
 
 class PicksError(ValueError):
     pass
+
+
+def _when(value: str, name: str):
+    """An ISO 8601 time with an explicit UTC offset (BIND-v1): a naive or malformed time is refused, never guessed."""
+    from datetime import datetime
+    try:
+        t = datetime.fromisoformat(value.strip().replace("Z", "+00:00"))
+    except ValueError:
+        raise PicksError(f"header: {name} {value!r} is not an ISO 8601 time") from None
+    if t.tzinfo is None:
+        raise PicksError(f"header: {name} {value!r} needs a UTC offset")
+    return t
+
+
+def _probability(value, name: str, row: str) -> float:
+    v = _num(value, name, row)
+    if not 0 <= v <= 1:
+        raise PicksError(f"{row}: {name} {v} is outside [0, 1]")
+    return v
 
 
 def block(card_text: str, key: str) -> str:
@@ -123,6 +147,23 @@ def lint(meta: dict, rows: list[dict], root=ROOT) -> list[str]:
         problems.append("header: model_stage must be one of " + ", ".join(MODEL_STAGES))
     if meta["reference_status"] in HAS_REFERENCE and not meta.get("reference_frozen_at"):
         problems.append("header: reference_frozen_at is required when a reference exists")
+    times = {}
+    for name in ("scheduled_start", "issued_at", "reference_frozen_at"):
+        if meta.get(name):
+            try:
+                times[name] = _when(meta[name], name)
+            except PicksError as exc:
+                problems.append(str(exc))
+    if "issued_at" in times and "scheduled_start" in times:
+        late = times["issued_at"] >= times["scheduled_start"]
+        if meta["timing"] == "PREGAME" and late:
+            problems.append("header: timing PREGAME but issued_at is not before scheduled_start; use POST_START_ISSUE")
+        if meta["timing"] == "POST_START_ISSUE" and not late:
+            problems.append("header: timing POST_START_ISSUE but issued_at is before scheduled_start")
+    if meta.get("issue_evidence") and not ISSUE_EVIDENCE.fullmatch(meta["issue_evidence"]):
+        problems.append("header: issue_evidence must be COMMIT:<sha> or PREGAME_RECEIPT:research/pregame/<key>/<file>")
+    if "reference_frozen_at" in times and "issued_at" in times and times["reference_frozen_at"] > times["issued_at"]:
+        problems.append("header: reference_frozen_at is after issued_at; the reference must be frozen before the card")
     if not rows:
         return problems + ["no rows: a card with nothing priced must be NO_FORECAST, not PICKS_V2"]
     try:
@@ -141,6 +182,8 @@ def lint(meta: dict, rows: list[dict], root=ROOT) -> list[str]:
             seen.add(row["label"])
             if row["family"] not in FAMILIES or row["quantity"] not in QUANTITIES:
                 problems.append(f"{name}: family/quantity not in the allowed vocabulary")
+            if row["family"] in SIDES and row["side"].strip().upper() not in SIDES[row["family"]]:
+                problems.append(f"{name}: side {row['side']!r} is not valid for {row['family']} ({'/'.join(SIDES[row['family']])})")
             if row["line_source"] not in ("SUPPLIED", "ANALYST_DERIVED"):
                 problems.append(f"{name}: line_source must be SUPPLIED or ANALYST_DERIVED")
             w, p, l = (_num(row[k], k, name) for k in ("w", "p", "l"))
@@ -153,7 +196,7 @@ def lint(meta: dict, rows: list[dict], root=ROOT) -> list[str]:
                 problems.append(f"{name}: final_p {final} differs from W/(W+L) = {w / (w + l):.4f}")
             reference = row["reference_p"].strip()
             if meta["reference_status"] in HAS_REFERENCE:
-                ref = _num(reference, "reference_p", name)
+                ref = _probability(reference, "reference_p", name)
             elif reference != "NONE":
                 problems.append(f"{name}: reference_p must be NONE when reference_status is {meta['reference_status']}")
                 ref = None
@@ -161,13 +204,13 @@ def lint(meta: dict, rows: list[dict], root=ROOT) -> list[str]:
                 ref = None
             baseline = row["baseline_p"].strip()
             if not MISSING_BASELINE.fullmatch(baseline):
-                _num(baseline, "baseline_p", name)
+                _probability(baseline, "baseline_p", name)
             model = row["model_p"].strip()
             if model != "NONE":
                 if meta["model_stage"] != "EXECUTED":
                     problems.append(f"{name}: model_p must be NONE when model_stage is {meta['model_stage']}")
                 else:
-                    _num(model, "model_p", name)
+                    _probability(model, "model_p", name)
             implied = row["line_implied_p"].strip()
             if row["line_source"] == "SUPPLIED" and row["family"] in TWO_WAY_FAMILIES:
                 if implied != "0.5":

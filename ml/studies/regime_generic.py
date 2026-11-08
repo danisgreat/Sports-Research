@@ -3,7 +3,7 @@
 200 team-games. Data: MLB Stats API schedules (statsapi.mlb.com, robots 404) and AFL Tables season pages (afltables.com,
 robots 404), captured into the study folder with SHA-256 hashes. These are study inputs, not learning-store admissions.
 
-    python regime_generic.py mlb|afl RAWDIR OUTDIR
+    python -m ml.studies.regime_generic mlb|afl|nrl RAWDIR OUTDIR
 """
 import csv
 import hashlib
@@ -17,8 +17,7 @@ from collections import defaultdict
 from datetime import date, datetime
 from pathlib import Path
 
-LEAGUE, RAW, OUT = sys.argv[1], Path(sys.argv[2]), Path(sys.argv[3])
-OUT.mkdir(parents=True, exist_ok=True)
+LEAGUE, RAW, OUT = (sys.argv[1], Path(sys.argv[2]), Path(sys.argv[3])) if __name__ == "__main__" else ("mlb", Path("."), Path("."))
 PARAMS = {"mlb": dict(k=20, sd=4.5, early=0.999, finals=0.924, early_rec=1.000, finals_rec=0.924),
           "afl": dict(k=2, sd=29.1, early=1.013, finals=0.943, early_rec=1.000, finals_rec=0.943),
           "nrl": dict(k=2, sd=13.9, early=0.938, finals=0.938, early_rec=0.938, finals_rec=0.938)}[LEAGUE]
@@ -176,6 +175,7 @@ def summarise(name, sub, m, B=4000):
 
 
 if __name__ == "__main__":
+    OUT.mkdir(parents=True, exist_ok=True)
     games = {"mlb": load_mlb, "afl": load_afl, "nrl": load_nrl}[LEAGUE]()
     with open(OUT / f"{LEAGUE.upper()}_RAW_HASHES.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)

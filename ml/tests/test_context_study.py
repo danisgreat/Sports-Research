@@ -55,3 +55,44 @@ def test_summary_reports_both_mixtures_and_the_tb2_comparison():
     assert out["paired_brier_TB-2-MD_minus_TB-1-MD (season to date)"]["value"] < 0
     assert "BELOW_ZERO" in out["paired_brier_TB-2-MD_minus_league-only arm"]["detail"]
     assert out["mean_hedge_weights_fast_slow_league"]["detail"] == "0.400 / 0.400 / 0.200"
+
+
+def test_changing_a_future_result_cannot_change_an_earlier_prediction(monkeypatch):
+    """PIT-v2 (review 2026-11-08): the loss scale used the whole data set, so a future result moved earlier Hedge weights."""
+    from ml.core.distributions import ScoreGrid
+
+    class Stub:
+        def __init__(self, competition, endpoint, recipe, ridge, baseline=False):
+            self.shift = 0.0 if baseline else (4.0 if recipe == S.RECIPES["Basketball"][0] else 2.0)
+
+        def fit(self, history, cutoff):
+            return self
+
+        def grid(self, row):
+            return ScoreGrid.bivariate_normal(100.0 + self.shift, 96.0, np.array([[90.0, 40.0], [40.0, 90.0]]))
+
+    rng = np.random.default_rng(11)
+    teams = [f"T{i:02d}" for i in range(8)]
+    rows, t = [], pd.Timestamp("2024-10-01T00:00:00Z")
+    for i in range(330):
+        h, a = rng.choice(teams, 2, replace=False)
+        t += pd.Timedelta(hours=14)
+        rows.append(dict(event_id=f"E{i}", event_at=t.isoformat(), season="2025" if i >= 260 else "2024", home=h, away=a,
+                         hs=int(rng.normal(102, 12)), as_=int(rng.normal(97, 12))))
+    base = pd.DataFrame(rows)
+    monkeypatch.setattr(S, "ContextModel", Stub)
+
+    def run(frame):
+        monkeypatch.setattr(S, "training_frame", lambda *a, **k: frame.copy())
+        return S.study("Basketball/NBA", "2025", refit_days=7).get("frame")
+
+    first = run(base)
+    changed = base.copy()
+    changed.loc[changed.index[-1], ["hs", "as_"]] = [250, 10]        # an absurd final for the last game only
+    second = run(changed)
+    last_day = pd.Timestamp(base.event_at.iloc[-1]).normalize()
+    earlier = first[first.event_at.map(lambda v: pd.Timestamp(v).normalize() < last_day - pd.Timedelta(days=7))]
+    assert len(earlier) > 20
+    merged = earlier.merge(second, on="event_id", suffixes=("_a", "_b"))
+    assert np.allclose(merged.p_hedge_a, merged.p_hedge_b, atol=0, rtol=0)
+    assert np.allclose(merged.w_fast_a, merged.w_fast_b, atol=0, rtol=0)

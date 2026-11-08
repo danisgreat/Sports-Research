@@ -24,6 +24,7 @@ import pandas as pd
 from scipy import stats
 
 from ml import primary as p
+from ml.core import metrics as M
 from ml.core.metrics import calibration_fit, iso_week, paired_week_interval
 
 LEDGER_FIELDS = ("forecast_id", "model_id", "model_version", "role", "event_id", "competition", "endpoint",
@@ -171,11 +172,14 @@ def evaluate(ledger: list[dict], outcomes: pd.DataFrame, champion: str, candidat
     if pair.empty:
         return dict(disposition="INSUFFICIENT_EVIDENCE", reason="no settled identical pre-start contracts", pairs=0)
     pair["week"] = iso_week(pair.scheduled_start_c.map(lambda t: p.clock(t).tz_localize(None)))
-    pair["d_brier"] = (pair.p_k.astype(float) - pair.y_c) ** 2 - (pair.p_c.astype(float) - pair.y_c) ** 2
+    pc, pk, y = pair.p_c.astype(float), pair.p_k.astype(float), pair.y_c.astype(float)
+    # One shared scoring implementation (ml.core.metrics): no hidden probability floor anywhere (SCORING §3).
+    pair["d_brier"] = M.brier(pk, y) - M.brier(pc, y)
     iv = paired_week_interval(pair.d_brier, pair.event_id, pair.week)
-    pc, pk, y = pair.p_c.astype(float), pair.p_k.astype(float), pair.y_c
-    pair["d_log_loss"] = -np.log(np.clip(np.where(y == 1, pk, 1-pk), 1e-12, 1)) + np.log(np.clip(np.where(y == 1, pc, 1-pc), 1e-12, 1))
-    log_iv = paired_week_interval(pair.d_log_loss, pair.event_id, pair.week)
+    lk, lc = M.log_loss(pk, y), M.log_loss(pc, y)
+    with np.errstate(invalid="ignore"):
+        pair["d_log_loss"] = lk - lc
+    log_iv = _log_interval(pair, lk, lc)
     need = weeks_needed(iv["sd_w"], delta)
     per = {}
     for tag, rows in ((champion, champ), (candidate, cand)):
@@ -185,8 +189,8 @@ def evaluate(ledger: list[dict], outcomes: pd.DataFrame, champion: str, candidat
         q = rows.p.astype(float)
         fit = calibration_fit(q, rows.y)
         per[tag] = dict(rows=len(rows), events=rows.event_id.nunique(), coverage=len(coverage_rows) / union if union else math.nan,
-                        brier=float(((q - rows.y) ** 2).mean()),
-                        log_loss=float(-np.mean(np.log(np.clip(np.where(rows.y == 1, q, 1 - q), 1e-12, 1)))),
+                        brier=float(M.brier(q, rows.y.astype(float)).mean()),
+                        log_loss=float(M.log_loss(q, rows.y.astype(float)).mean()),
                         slope=fit["slope"], intercept=fit["intercept"], **_ranking(rows))
     breakdown = []
     for by in ("competition_c", "family_c", "endpoint_c"):
@@ -200,7 +204,8 @@ def evaluate(ledger: list[dict], outcomes: pd.DataFrame, champion: str, candidat
         disposition, reason = "DATA_REPAIR_REQUIRED", f"{unsettled:.0%} of eligible rows unsettled"
     elif iv["k_weeks"] < 8 or (math.isfinite(need) and iv["k_weeks"] < need and iv["status"] == "SPANS_ZERO"):
         disposition, reason = "INSUFFICIENT_EVIDENCE", f"{iv['k_weeks']} weeks; about {need} needed for delta={delta}"
-    elif iv["status"] == "BELOW_ZERO" and iv["mean"] <= -delta / 2:
+    elif iv["status"] == "BELOW_ZERO" and iv["mean"] <= -delta:
+        # PROMO-v2: the declared minimum improvement itself, never a fraction of it (review 2026-11-08: 0.0064 passed a 0.01 rule).
         guard = (slope_band[0] <= k["slope"] <= slope_band[1]) and k["coverage"] >= c["coverage"] - coverage_tolerance
         disposition = "PROMOTION_ELIGIBLE" if guard else "CALIBRATION_STUDY"
         reason = "candidate better on paired Brier" + ("" if guard else "; calibration/coverage guard failed")
@@ -210,6 +215,17 @@ def evaluate(ledger: list[dict], outcomes: pd.DataFrame, champion: str, candidat
         disposition, reason = "NO_CHANGE", "no resolvable difference at the registered effect size"
     return dict(disposition=disposition, reason=reason, pairs=len(pair), interval=iv, log_loss_interval=log_iv, weeks_needed=need,
                 models=per, unsettled_share=float(unsettled), breakdown=pd.DataFrame(breakdown))
+
+
+def _log_interval(pair: pd.DataFrame, lk, lc) -> dict:
+    """Paired log-loss interval. A wrong literal 0 or 1 is an infinite loss (SCORING §3): reported, never clipped or dropped."""
+    inf_k, inf_c = int(np.isinf(lk).sum()), int(np.isinf(lc).sum())
+    if inf_k or inf_c:
+        mean = math.inf if inf_k and not inf_c else -math.inf if inf_c and not inf_k else math.nan
+        status = "ABOVE_ZERO" if mean == math.inf else "BELOW_ZERO" if mean == -math.inf else "NOT_COMPUTABLE"
+        return {"k_weeks": int(pair.week.nunique()), "n_events": int(pair.event_id.nunique()), "mean": mean, "lo": mean, "hi": mean,
+                "sd_w": math.nan, "status": status, "infinite_candidate": inf_k, "infinite_champion": inf_c}
+    return dict(paired_week_interval(pair.d_log_loss, pair.event_id, pair.week), infinite_candidate=0, infinite_champion=0)
 
 
 def _common(model_id, version, role, event_id, competition, endpoint, issued_at, start, release, params, code, status):

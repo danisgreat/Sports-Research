@@ -4,7 +4,7 @@
 
 **Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](../../RESEARCH_PROTOCOL.md#part-b-research_exhaustiveness_protocol); summarised in [CORE](../../CORE.md) §5.
 
-**P-2026.11.08-v24.2 · PROCEDURE · LOCAL_WORKING_TREE.** Read COMMON_OPERATING_PROTOCOL, CURRENT_RULES, REFERENCE_MODEL_PROTOCOL, COMPETITION_PARAMETERS, EFFECT_TABLES, HISTORICAL_SOURCE_PROTOCOL, ROSTER_AVAILABILITY_PROTOCOL, RESULTS_REBUILD_PLAN, SOURCES and actual target schemas. Writes: explicitly named market-free CSV/provenance/coverage/profile paths and a new verification folder. Raw captures/helpers stay externally; code stays under ml/. Original cards/logs/reports remain immutable.
+**P-2026.11.08-v24.3 · PROCEDURE · LOCAL_WORKING_TREE.** Read COMMON_OPERATING_PROTOCOL, CURRENT_RULES, REFERENCE_MODEL_PROTOCOL, COMPETITION_PARAMETERS, EFFECT_TABLES, HISTORICAL_SOURCE_PROTOCOL, ROSTER_AVAILABILITY_PROTOCOL, RESULTS_REBUILD_PLAN, SOURCES and actual target schemas. Writes: explicitly named market-free CSV/provenance/coverage/profile paths and a new verification folder. Raw captures/helpers stay externally; code stays under ml/. Original cards/logs/reports remain immutable.
 
 **ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](../../REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](../../CORE.md) §7.
 

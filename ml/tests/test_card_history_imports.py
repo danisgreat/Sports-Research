@@ -130,13 +130,21 @@ def test_current_import_matches_preserved_cohort_rows(current_rows):
     actual = current_rows[current_rows.n.between(601, 622)]
     assert len(actual) == 102 and actual.card.nunique() == 22
     a = actual.set_index(["card", "contract"])
+    # SETTLE-VIEW-v1: later settlement revisions apply on top of the preserved 2026-10-21 rows, and only to their own keys.
+    from ml.evaluation import effective_settlement as es
+    revised = {}
+    for path in es.revision_files():
+        for v in es.read_revisions(path).to_dict("records"):
+            revised[(v["canonical_id"], v["original_contract"])] = v
+    assert len(revised) == 12
     for r in reference.to_dict("records"):
         row = a.loc[(r["canonical_id"], r["contract"])]
+        v = revised.get((r["canonical_id"], r["contract"]))
         assert row["rank"] == (int(r["rank"]) if r["cohort"] == "ANALYST_PRIMARY_V1" and str(r["rank"]).isdigit() else 0)
-        assert row.grade == r["grade"] and row.cohort == r["cohort"]
+        assert row.grade == (v["sporting_grade"] if v else r["grade"]) and row.cohort == r["cohort"]
         assert row.date == r["event_date"] and row.week == r["iso_week"]
-        assert row.effective_revision == r["effective_revision"]
-        assert row.evidence.startswith(r["evidence"])  # keep the source's literal "R1 package" wording
+        assert row.effective_revision == (v["revision"] if v else r["effective_revision"])
+        assert row.evidence.startswith(v["evidence_class"] if v else r["evidence"])  # keep the source's literal "R1 package" wording
         assert row.p == pytest.approx(float(r["p"])) if r["p"] else math.isnan(row.p)
         assert row.baseline == pytest.approx(float(r["baseline_p"])) if r["baseline_p"] else math.isnan(row.baseline)
 

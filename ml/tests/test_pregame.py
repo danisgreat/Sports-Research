@@ -13,7 +13,15 @@ from ml.evaluation import prospective as PS
 from ml.tests.test_chat_execution import KEY, _write, runtime  # noqa: F401  (pytest fixture)
 
 
-def _mini(rt, card_text="Over 200.5 p_card 0.612"):
+def _picks(final_p="0.612", line="200.5", side="OVER", label="OVER_200.5", extra=""):
+    from ml.tests.test_picks_ledger import good_rows, render
+    row = dict(good_rows()[1], label=label, side=side, line=line, final_p=final_p, w=final_p,
+               l=f"{1 - float(final_p):.4f}")
+    return extra + render(rows=[row], key=KEY)
+
+
+def _mini(rt, card_text=None, *, empty=False):
+    card_text = None if empty else (card_text if card_text is not None else _picks())
     mini = rt["work"] / "MINI.md"
     mini.write_text("<!-- MINI-LOG-FORMAT: mini-log-10 -->\n# EXAMPLE mini\n"
                     + (f"<!-- BEGIN CARD {KEY} -->\n{card_text}\n<!-- END CARD {KEY} -->\n" if card_text is not None else "")
@@ -34,7 +42,7 @@ def _run(rt, mini, lines):
 
 def test_model_runs_only_after_the_card_is_written(runtime):
     with pytest.raises(pregame.PregameError, match="before the model runs"):
-        _run(runtime, _mini(runtime, card_text=None), _lines(runtime))
+        _run(runtime, _mini(runtime, empty=True), _lines(runtime))
     assert not (runtime["root"] / chat.LEDGER).exists()
 
 
@@ -43,7 +51,20 @@ def test_card_probability_must_be_the_one_printed_on_the_card(runtime):
         _run(runtime, _mini(runtime), _lines(runtime, card_p="0.71"))
     # A value that only appears inside a longer number is not the card's value either.
     with pytest.raises(pregame.PregameError, match="not printed in card"):
-        _run(runtime, _mini(runtime, card_text="p_card 0.6125"), _lines(runtime))
+        _run(runtime, _mini(runtime, card_text=_picks(final_p="0.6125")), _lines(runtime))
+
+
+def test_card_probability_must_be_attached_to_the_same_contract(runtime):
+    # BIND-v1: a value printed elsewhere in the card (prose, another row) does not count.
+    with pytest.raises(pregame.PregameError, match="not printed in card"):
+        _run(runtime, _mini(runtime, card_text=_picks(final_p="0.588", extra="Over 200.5 p_card 0.612 (prose)\n")), _lines(runtime))
+    with pytest.raises(pregame.PregameError, match="no PICKS_V2 row"):
+        _run(runtime, _mini(runtime, card_text=_picks(label="OVER_201.5", line="201.5")), _lines(runtime))
+    with pytest.raises(pregame.PregameError, match="different contract"):
+        _run(runtime, _mini(runtime, card_text=_picks(line="201.5")), _lines(runtime))
+    with pytest.raises(pregame.PregameError, match="PICKS_V2 block"):
+        _run(runtime, _mini(runtime, card_text="Over 200.5 p_card 0.612"), _lines(runtime))
+    assert not [r for r in PS.verify_ledger(runtime["root"] / chat.LEDGER) if r["model_id"] == pregame.CARD_MODEL]         if (runtime["root"] / chat.LEDGER).exists() else True
 
 
 def test_run_freezes_model_baseline_and_card_rows_on_identical_contracts(runtime):
@@ -170,6 +191,25 @@ def test_run_after_a_reference_reuses_the_attempt_and_adds_only_the_card_row(run
     assert len([r for r in after if r["model_id"] == C.POLICY]) == 3               # the model was not run or accepted twice
     block = pregame.markdown(result)
     assert "reference reused" in block and "model frozen before the card" in block        # the table was printed with the Reference block
+
+
+def test_a_reused_reference_must_be_for_the_same_event_and_contracts(runtime):
+    _reference(runtime)
+    moved = dict(runtime["game"], away="T02")
+    _write(runtime["work"] / "GAME.csv", [moved])
+    with pytest.raises(pregame.PregameError, match="different event"):
+        _run(runtime, _mini(runtime), _lines(runtime))
+    _write(runtime["work"] / "GAME.csv", [dict(runtime["game"], native_event_id="EXAMPLE:2")])
+    with pytest.raises(pregame.PregameError, match="different event"):
+        _run(runtime, _mini(runtime), _lines(runtime))
+    _write(runtime["work"] / "GAME.csv", [runtime["game"]])
+    shifted = [dict(r, line="201.5", label=r["label"]) if r["family"] == "total" else r for r in runtime["lines"]]
+    rows = [dict(r, card_p="", card_rank="") for r in shifted]
+    rows[1] = dict(rows[1], card_p="0.612", card_rank="1")
+    _write(runtime["work"] / "PREGAME_LINES.csv", rows)
+    with pytest.raises(pregame.PregameError, match="frozen reference priced"):
+        _run(runtime, _mini(runtime, card_text=_picks(line="201.5")), runtime["work"] / "PREGAME_LINES.csv")
+    assert not [r for r in PS.verify_ledger(runtime["root"] / chat.LEDGER) if r["model_id"] == pregame.CARD_MODEL]
 
 
 def test_a_missing_release_at_the_reference_stage_is_recorded_and_the_card_still_runs_its_shadow_path(runtime):

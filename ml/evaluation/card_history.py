@@ -8,6 +8,9 @@ Builds one row per (card, original rank) from the committed records, without re-
                                                       grade wins for Ranks 1–2)
     mini_import_*/ inventories                       discovered at run time; supported historical and local-key
                                                       schemas, with research-only probabilities kept NOT_PRIMARY
+    settlement_import_*/SETTLEMENT_REVISIONS.csv     later revisions, applied through validated chains by
+                                                      ml.evaluation.effective_settlement (a stale or forked
+                                                      revision stops the report)
 
 Each card gets a date (first ISO date in its original block, else the status register), an era (date windows that
 follow documented policy changes), a sport and a proposition family (keyword rules, with UNCLASSIFIED counted, never
@@ -306,6 +309,9 @@ def id_collisions(logs=None) -> pd.DataFrame:
 def inventory_rows(path: Path) -> list[dict]:
     """Read an admitted import layout. Unknown layouts/roles fail instead of dropping cards."""
     frame = pd.read_csv(path, dtype=str, keep_default_na=False)
+    if "canonical_id" in frame.columns:
+        from ml.evaluation import effective_settlement
+        frame = effective_settlement.revised_frame(path, frame, ROOT).drop(columns=["revision_chain", "revision_source"])
     columns = set(frame.columns)
     local = {"canonical_id", "local_key", "probability_role", "original_rank", "original_contract",
              "original_probability", "sporting_grade", "effective_revision", "evidence_class", "note"}
@@ -626,10 +632,14 @@ def main(argv=None):
     parser.add_argument("--out", type=Path, required=True, help="new folder for CARD_ROWS.csv and CARD_HISTORY.md")
     parser.add_argument("--rank-log", type=Path, default=RANK_LOG, help="rank log to read (default: working copy)")
     args = parser.parse_args(argv)
+    from ml.evaluation import effective_settlement as es
     code = p.source_hash()
     inventories = import_inventories()
     logs = combined_logs()
-    inputs = [args.rank_log, RECON, STATUS] + inventories + logs
+    stale = es.unmatched_revisions(ROOT)
+    if stale:
+        raise ValueError(f"settlement revisions match no imported row (stale or mistyped): {stale}")
+    inputs = [args.rank_log, RECON, STATUS] + inventories + logs + es.revision_files(ROOT)
     inputs += [path.parent / "LOCAL_ID_MAPPING.csv" for path in inventories]
     hashes = {f: p.digest(f.read_bytes()) if f.exists() else "MISSING" for f in inputs}
     R, diff = build_rows(args.rank_log, inventories=inventories, logs=logs)

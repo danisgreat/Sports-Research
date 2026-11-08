@@ -208,6 +208,19 @@ A window shorter than its label prints its true n. A missing window prints `HIST
 
 ### 3c. Card under P-2026.10.22-v24.0 (REFMODEL-v1 / LEDGER-v1 / PICKS-v2)
 
+**LEDGER-v2 additions (2026-11-08).**
+
+- The PICKS_V2 header may carry `issue_evidence: COMMIT:<sha>` or `PREGAME_RECEIPT:research/pregame/<key>/<file>`. Without verified evidence, the ledger records the card as `TIMING_UNVERIFIED`.
+- Every probability must be in [0, 1]. Times are ISO 8601 with an offset. A row's side must suit its family.
+- A card whose final p differs from its reference on any row also carries an ADJUSTMENTS_V1 block ([ADJUSTMENT_LEDGER_PROTOCOL](ADJUSTMENT_LEDGER_PROTOCOL.md) section 3a):
+
+```text
+<!-- BEGIN ADJUSTMENTS_V1 LOCAL-<MINI_KEY>-G0001 -->
+adjustment_id,effect_row_id,fact,target,unit,applied_size,entry,source_url,published_at,retrieved_at,corroboration,overlap_check,centre_before,centre_after,counterfactual
+A1,E-NBA-PLAYOFF-TOTAL-R2,Playoff game,TOTAL,proportion,-0.045,FULL,research/captures/<key>/schedule.txt,2026-04-18T00:00:00+00:00,2026-04-19T09:00:00+00:00,league schedule,reference uses regular-season ratings only,226.0,215.8,UNDER_221.5=0.4120|OVER_221.5=0.5880
+<!-- END ADJUSTMENTS_V1 LOCAL-<MINI_KEY>-G0001 -->
+```
+
 Cards written under v24.0 add four header lines to the card above and replace the decision block with the one below; the appendix A1-A9 and the form windows (3b) are unchanged except that A4 holds the reference and A6 the adjustment ledger.
 
 ````markdown

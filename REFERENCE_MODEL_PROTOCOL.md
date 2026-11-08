@@ -75,7 +75,17 @@ The league mean per team-game enters only the total (it cancels from every margi
 A model earns its place only by prospective evidence at league volume, because carded games alone cannot decide anything in under years.
 
 1. **Data.** Verified finals enter the learning store through a two-lineage backfill (`python -m ml backfill-basketball`: ESPN and Basketball-Reference must agree on teams, final and overtime). 3,693 NBA finals (2023-24 to 2025-26) were ingested on 22 October 2026; every capture hash re-verifies.
-2. **Gate.** `python -m ml release-gate --competition C` must pass before a release is frozen: enough finals over two seasons, no plausibility warning, nothing in quarantine, two source domains for every final, observed regulation scores for every extra-time final, no revision conflict.
+2. **Gate (GATE-v2, 2026-11-08).** `python -m ml release-gate --competition C` must pass before a release is frozen. It checks:
+   - enough finals over two seasons;
+   - no plausibility warning;
+   - nothing in quarantine;
+   - two independent lineages for every effective final: different registrable domains and captures, observing that same revision;
+   - both regulation scores for every extra-time final;
+   - no revision conflict.
+
+   Each run writes a receipt bound to the store snapshot. `python -m ml cycle release --gate-receipt R` refuses a failed, stale, wrong-scope or old-version receipt and writes the binding beside the release.
+
+   Releases frozen before GATE-v2 are reported as `CARRIED_FORWARD_BEFORE_GATE_V2`. A release whose code closure has changed is `STALE_FOR_CURRENT_CODE` and is never restamped (`python -m ml state` lists both).
 3. **Development.** `python -m ml context-study` reports the walk-forward Brier, the paired differences against the league-only arm and TB-2-MD, the calibration slope and the width coverage on the previous seasons.
 4. **Release.** `python -m ml cycle release …` freezes one version for the season. Edits outside the cycle's import closure (`ml/code_identity.py`) never retire it. An edit inside it needs a new version and a new lane, so statistical code is edited between seasons.
 5. **Daily lane.** `python -m ml league-day freeze --competition C --date D --cache <dir> --confirm-no-outcome-seen` freezes every open fixture of the day, card or not: the release's model (CANDIDATE), the league baseline (CHAMPION) and the declared TB-2-MD reference (champion `TB2_MD_REFERENCE`) on two contracts, the home winner and the total at the half point below the league's verified mean. Commit and push before the first tip-off. `python -m ml league-day settle …` a day or two later ingests the date's finals (ESPN and Basketball-Reference must agree) and settles every frozen bundle of the date into `research/cycle_feedback/`. No automation is scheduled; the operator or prompt 1 runs both each day (R38).

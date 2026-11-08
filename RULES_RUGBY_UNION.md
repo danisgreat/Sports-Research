@@ -42,11 +42,9 @@
 ### 0.3 Ranking and settlement
 *[Non-operative since v10: rank by p_card, SELECTION_RULES §2.]* Rank by RM-1 q; its cushion term applies to union +k.5 rows. A large cushion (k ≥ 10) stated at 0.60–0.65 is still scored by RM-1, and the reconciliation line names the margin band (`C-PLUS-CUSHION`). Print `TOP2_QUALITY`. Settle from the competition's official match centre plus two further lineages, read from the feed.
 
-### Numerical shadow model (2026-09-26(c); suspended for md-only operation, 2026-09-28)
+### Numerical shadow model (2026-09-26(c); suspended for md-only operation, 2026-09-28) — historical
 
-The rugby-union model (A1) is ridge ratings with key-number weights and draws allowed. **Not validated.** It is maintainer Python, never a card input, and the model does not run it: print `SHADOW: NO_LANE (md-only)` at settlement (`research/sport_models_2026-09-26/README.md` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents))). The hand-computable team baseline that does feed cards is TB-1-MD (`PROBABILITY_TOOLKIT.md` §4).
-
-**Predictability (2026-09-26(e)).** Not measured: no union results were reached. The reference is the population (`research/predictability_2026-09-26/README.md` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)); `PARAMETERS.md` §7.8).
+Moved verbatim to [archive/historical_engine_sections_2026-11-08/RULES_RUGBY_UNION.md](archive/historical_engine_sections_2026-11-08/RULES_RUGBY_UNION.md) on 2026-11-08 (CR-2026.11.08-R2): it describes the September numerical engine and shadow, suspended for markdown-only operation on 2026-09-28 and superseded by the v24 reference ([REFERENCE_MODEL_PROTOCOL](REFERENCE_MODEL_PROTOCOL.md)). It is not a current instruction.
 
 ### 0.4 Control index (full text in §6 and the dated sections)
 1 union is not league · 2 fifteens and sevens separate · 3 broad totals need mechanism support · 4 territory is not points · 5 points composition matters · 6 goal kicker is a regime · 7 set piece and breakdown are exposure engines · 8 cards create asymmetric tails · 9 low total ≠ close margin · 10 sevens clusters need restart/card branches · 11 sparse lineups cap evidence.

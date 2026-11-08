@@ -48,6 +48,12 @@ def root(tmp_path):
     _write(tmp_path / R.STORE_EVENTS, [dict(event_uid=f"E{i}", competition="Basketball/EXAMPLE-B", endpoint="E", native_event_id=str(i), identity_basis="N",
                                             season="2025", event_at="2025-01-01T00:00:00+00:00", home="a", away="b", venue="", ingest_seq="1")
                                        for i in range(R.MIN_STORE_EVENTS)])
+    _write(tmp_path / L.EFFECTS, [dict(row_id="E-EX-REST", factor="rest", competition="Basketball/EXAMPLE-B", target="home margin", estimate="2.0",
+                                       se="", ci_low="", ci_high="", unit="points", n="", period="", status="MEASURED_NOT_CONFIRMED",
+                                       out_of_sample="", source="", data_needed=""),
+                                  dict(row_id="E-EX-NULL", factor="null", competition="Basketball/EXAMPLE-B", target="total", estimate="0.1",
+                                       se="", ci_low="", ci_high="", unit="points", n="", period="", status="MEASURED_NULL",
+                                       out_of_sample="", source="", data_needed="")])
     _write(tmp_path / R.PARAMETERS, [_row(row_type="COMPETITION", competition="Basketball/EXAMPLE-B", usable="USABLE_DEVELOPMENT", family="BASKETBALL",
                                           mean_total="170", mean_home_margin="3", raw_margin_sd="13.5", raw_total_sd="17.5", resid_margin_sd="12.0",
                                           resid_total_sd="16.5", evidence_class="X", dev_last_date="2026-06-01")])
@@ -121,6 +127,38 @@ def test_row_problems(root, label, change, needle):
     assert any(needle in p for p in problems), (needle, problems)
 
 
+@pytest.mark.parametrize("label,change,needle", [
+    ("HOME_ML", dict(reference_p="9"), "reference_p 9.0 is outside [0, 1]"),
+    ("HOME_ML", dict(baseline_p="1.2"), "baseline_p 1.2 is outside [0, 1]"),
+    ("HOME_ML", dict(baseline_p="-2"), "baseline_p -2.0 is outside [0, 1]"),
+    ("HOME_ML", dict(side="OVER"), "not valid for WINNER"),
+    ("OVER_170.5", dict(side="HOME"), "not valid for TOTAL"),
+])
+def test_comparators_and_sides_are_bounded(root, label, change, needle):
+    """BIND-v1 (review 2026-11-08): comparator probabilities of 9, 1.2 and -2 and invalid sides were accepted."""
+    problems = lint(root, rows=edit(good_rows(), label, **change))
+    assert any(needle in p for p in problems), (needle, problems)
+
+
+def test_model_p_is_bounded_when_the_model_ran(root):
+    problems = lint(root, dict(model_stage="EXECUTED"), rows=edit(good_rows(), "HOME_ML", model_p="1.5"))
+    assert any("model_p 1.5 is outside [0, 1]" in p for p in problems), problems
+
+
+@pytest.mark.parametrize("meta,needle", [
+    (dict(issued_at="2026-13-40T09:30:00+00:00"), "issued_at '2026-13-40T09:30:00+00:00' is not an ISO 8601 time"),
+    (dict(scheduled_start="tonight"), "is not an ISO 8601 time"),
+    (dict(issued_at="2026-10-22T09:30:00"), "needs a UTC offset"),
+    (dict(issued_at="2026-10-22T10:05:00+00:00"), "timing PREGAME but issued_at is not before scheduled_start"),
+    (dict(timing="POST_START_ISSUE"), "timing POST_START_ISSUE but issued_at is before scheduled_start"),
+    (dict(reference_frozen_at="2026-10-22T09:45:00+00:00"), "reference_frozen_at is after issued_at"),
+    (dict(issue_evidence="trust me"), "issue_evidence must be"),
+])
+def test_dates_and_timing_follow_the_evidence(root, meta, needle):
+    problems = lint(root, meta)
+    assert any(needle in p for p in problems), (needle, problems)
+
+
 def test_ranked_rows_may_not_exceed_the_selection_ceiling_and_must_be_ordered(root):
     rows = edit(good_rows(), "HOME_ML", final_p="0.9300", w="0.9300", l="0.0700", reference_p="0.62")
     assert any("selection ceiling" in p for p in lint(root, rows=rows))
@@ -162,9 +200,24 @@ def test_the_model_stage_may_carry_a_challenger_probability(root):
     assert lint(root, meta=dict(model_stage="EXECUTED"), rows=rows) == []
 
 
-def mini(tmp_path, block):
+ADJ = dict(adjustment_id="A1", effect_row_id="E-EX-REST", fact="away team on a back-to-back", target="MARGIN", unit="points",
+           applied_size="1.0", entry="HALF", source_url="https://example.org/schedule", published_at="2026-10-21T00:00:00+00:00",
+           retrieved_at="2026-10-22T08:00:00+00:00", corroboration="league schedule", overlap_check="NONE_FOUND", centre_before="4",
+           centre_after="5", counterfactual="HOME_ML=0.6200")
+
+
+def adjustments(rows=None):
+    out = io.StringIO(newline="")
+    w = csv.DictWriter(out, fieldnames=L.ADJ_COLUMNS, lineterminator="\n")
+    w.writeheader()
+    w.writerows(rows if rows is not None else [ADJ])
+    return f"<!-- BEGIN ADJUSTMENTS_V1 {KEY} -->\n```text\n{out.getvalue()}```\n<!-- END ADJUSTMENTS_V1 {KEY} -->"
+
+
+def mini(tmp_path, block, adj=None):
     p = tmp_path / "MINI.md"
-    p.write_text(f"# mini\n<!-- BEGIN CARD {KEY} -->\ncard text\n{block}\n<!-- END CARD {KEY} -->\n# footer\n", encoding="utf-8")
+    adj = adjustments() if adj is None else adj
+    p.write_text(f"# mini\n<!-- BEGIN CARD {KEY} -->\ncard text\n{block}\n{adj}\n<!-- END CARD {KEY} -->\n# footer\n", encoding="utf-8")
     return p
 
 
@@ -182,9 +235,14 @@ def test_ledger_add_refuses_a_failing_card_and_a_second_entry(root, tmp_path):
         L.add(bad, KEY, root=root)
     assert not (root / L.LEDGER).exists()
     good = mini(tmp_path, render())
-    assert L.add(good, KEY, root=root) == dict(local_key=KEY, rows=3, tier="B", abstain="NO")
+    added = L.add(good, KEY, root=root)
+    # LEDGER-v2: the card claims PREGAME but no receipt or commit proves it, so the ledger records TIMING_UNVERIFIED.
+    assert added["rows"] == 3 and added["timing"] == "TIMING_UNVERIFIED" and added["adjustments"] == 1
     frame = L.read(root / L.LEDGER)
     assert len(frame) == 3 and set(frame["local_key"]) == {KEY} and tuple(frame.columns) == L.FIELDS
+    assert set(frame["timing"]) == {"TIMING_UNVERIFIED"} and set(frame["timing_claimed"]) == {"PREGAME"}
+    adj = L.read_adjustments(root / L.ADJUSTMENTS)
+    assert len(adj) == 1 and adj["effect_status"][0] == "MEASURED_NOT_CONFIRMED" and len(adj["effect_version"][0]) == 64
     with pytest.raises(L.LedgerError, match="already in the ledger"):
         L.add(good, KEY, root=root)
 
@@ -228,12 +286,79 @@ def _synthetic_ledger(tmp_path, n_cards=80, seed=3):
 def test_score_reports_paired_differences_on_identical_rows(tmp_path):
     ledger, results = _synthetic_ledger(tmp_path)
     out = L.score(ledger, results)
+    strata = {r["stratum"] for r in out["scores"]}
+    assert strata == {"timing=PREGAME|card=FULL|line=SUPPLIED|reference=EXECUTED"}
     by = {(r["scope"], r["comparison"]): r for r in out["scores"]}
-    row = by[("ALL", "final minus reference")]
+    row = by[("ALL_IN_STRATUM", "final minus reference")]
     assert row["n_rows"] == 160 and row["n_events"] == 80 and row["k_weeks"] == 12
     assert by[("INFORMATION_ROWS", "final minus reference")]["n_rows"] <= row["n_rows"]
-    assert ("ALL", "final minus line-implied 0.5") in by and ("ALL", "final minus league baseline") in by
+    assert ("ALL_IN_STRATUM", "final minus line-implied 0.5") in by and ("ALL_IN_STRATUM", "final minus league baseline") in by
     assert out["rows"] == 160 and out["events"] == 80 and out["calibration"]["n"] == 160
+
+
+def test_score_never_pools_timing_card_or_line_strata(tmp_path):
+    """Review 2026-11-08: timing, fast/full and supplied/derived cohorts were pooled; each stratum is now scored alone."""
+    ledger, results = _synthetic_ledger(tmp_path)
+    frame = L.read(ledger)
+    frame.loc[frame.index % 4 == 0, "timing"] = "POST_START_ISSUE"
+    frame.loc[frame.index % 4 == 1, "fast_card"] = "YES"
+    frame.loc[frame.index % 4 == 2, "line_source"] = "ANALYST_DERIVED"
+    ledger.write_bytes(L._csv(frame.to_dict("records"), L.FIELDS))
+    out = L.score(ledger, results)
+    strata = {r["stratum"] for r in out["scores"]}
+    assert any("timing=POST_START_ISSUE" in s for s in strata) and any("card=FAST" in s for s in strata)
+    assert any("line=ANALYST_DERIVED" in s for s in strata)
+    for r in out["scores"]:
+        assert r["n_rows"] < 160            # no row pools every stratum
+    assert out["lam"]["status"] in ("BY_STRATUM", "NOT_ESTIMATED", "ESTIMATED") and len(out["lambda_by_stratum"]) == len(strata)
+
+
+def _adj_problems(root, change=None, rows=None, adj_rows=None):
+    meta, picks_rows = P.parse(P.block(render(None, rows), KEY))
+    a = [dict(ADJ, **(change or {}))] if adj_rows is None else adj_rows
+    return L.check_adjustments(a, meta, picks_rows, root)
+
+
+@pytest.mark.parametrize("change,needle", [
+    (dict(effect_row_id="E-NOPE"), "not in EFFECT_TABLES.csv"),
+    (dict(effect_row_id="E-EX-NULL"), "MEASURED_NULL"),
+    (dict(entry="FULL"), "enters HALF, not FULL"),
+    (dict(applied_size="2.0"), "is not the table estimate 2.0 at HALF"),
+    (dict(published_at="2026-10-23T00:00:00+00:00"), "published_at <= retrieved_at <= issued_at"),
+    (dict(source_url="a friend"), "source_url must be"),
+    (dict(overlap_check=""), "overlap_check must name"),
+    (dict(counterfactual="NOPE=0.5"), "not a PICKS_V2 row"),
+    (dict(counterfactual="HOME_ML=1.4"), "must be in [0, 1]"),
+    (dict(counterfactual=""), "counterfactual must give"),
+])
+def test_adjustments_must_match_the_effect_table_and_the_evidence(root, change, needle):
+    problems = _adj_problems(root, change)
+    assert any(needle in p for p in problems), (needle, problems)
+
+
+def test_a_moved_row_needs_an_adjustment_block_and_adjustments_are_immutable(root, tmp_path):
+    assert any("no ADJUSTMENTS_V1 block" in p for p in _adj_problems(root, adj_rows=[]))
+    with pytest.raises(L.LedgerError, match="no ADJUSTMENTS_V1 block"):
+        L.add(mini(tmp_path, render(), adj=""), KEY, root=root)
+    L.add(mini(tmp_path, render()), KEY, root=root)
+    path = root / L.ADJUSTMENTS
+    path.write_text(path.read_text().replace("back-to-back", "rested"))
+    with pytest.raises(L.LedgerError, match="chain broken"):
+        L.read_adjustments(path)
+
+
+def test_a_late_card_labelled_pregame_is_refused_and_a_receipt_verifies_timing(root, tmp_path):
+    late = mini(tmp_path, render(dict(issued_at="2026-10-22T10:30:00+00:00")))
+    with pytest.raises(L.LedgerError, match="timing PREGAME but issued_at is not before scheduled_start"):
+        L.add(late, KEY, root=root)
+    good = mini(tmp_path, render())
+    card = L._card_text(good, KEY)
+    receipt = root / "research" / "pregame" / KEY / "20261022T093500000000Z_PREGAME.csv"
+    receipt.parent.mkdir(parents=True)
+    receipt.write_bytes(L._csv([dict(local_key=KEY, status="EXECUTED", card_block_sha256=L._sha(card.encode("utf-8")),
+                                     run_at="2026-10-22T09:35:00+00:00")], ["local_key", "status", "card_block_sha256", "run_at"]))
+    assert L.add(good, KEY, root=root)["timing"] == "PREGAME"
+    assert set(L.read(root / L.LEDGER)["timing_evidence"]) == {"PREGAME_RECEIPT:" + receipt.relative_to(root).as_posix()}
 
 
 def test_lambda_recovers_the_true_value_and_refuses_small_samples():
@@ -319,3 +444,19 @@ def test_scoring_includes_a_hand_entered_benchmark(tmp_path):
     path.write_bytes(L._csv(rows, B.FIELDS))
     out = L.score(ledger, results, path)
     assert any(r["comparison"] == "final minus NOVIG_CLOSE" and r["n_rows"] == 20 for r in out["scores"])
+
+
+
+def test_a_superseded_effect_row_cannot_be_used(root):
+    """REGIME-v3: re-estimated rows are appended and the old row is retired in SUPERSEDED.csv, never overwritten."""
+    _write(root / L.SUPERSEDED, [dict(row_id="E-EX-REST", superseded_by="E-EX-REST-R2", superseded_at="2026-11-08", reason="test")])
+    assert any("superseded by E-EX-REST-R2" in p for p in _adj_problems(root))
+
+
+def test_the_live_regime_rows_follow_the_chronological_evidence():
+    effects, retired = L.effect_rows(), L.superseded()
+    assert effects["E-NBA-PLAYOFF-TOTAL-R2"]["status"] == "MEASURED_CONFIRMED"
+    for row in ("E-MLB-POSTSEASON-TOTAL-R2", "E-NRL-EARLY-TOTAL-R2", "E-AFL-FINALS-TOTAL-R2"):
+        assert effects[row]["status"] == "MEASURED_NOT_CONFIRMED"
+    assert {r: retired[r] for r in ("E-NBA-PLAYOFF-TOTAL", "E-MLB-POSTSEASON-TOTAL", "E-NRL-EARLY-TOTAL", "E-AFL-FINALS-TOTAL")} == {
+        r: r + "-R2" for r in ("E-NBA-PLAYOFF-TOTAL", "E-MLB-POSTSEASON-TOTAL", "E-NRL-EARLY-TOTAL", "E-AFL-FINALS-TOTAL")}

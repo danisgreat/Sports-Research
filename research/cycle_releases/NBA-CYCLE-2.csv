@@ -1,0 +1,2 @@
+policy,version,competition,endpoint,frozen_at,code_sha256,model_spec,fast_days,slow_days,ridge,feedback_half_life_events,weight_floor,eta_cap,minimum_weeks,minimum_events,minimum_brier_effect,status,parameter_evidence
+RESEARCH_FORECAST_CYCLE_V1,NBA-CYCLE-2,Basketball/NBA,FULL_GAME_INCL_OT,2026-11-08T08:57:58.784081+00:00,c5f2d5e4f5ac4a2d7745d1e9240ecb44897a65f1b1a515d6728dd3fdd49dd1e5,CONTEXT_FINAL_V1,45.0,180.0,12.0,20.0,0.05,0.5,8,50,0.01,EXPERIMENTAL_NOT_QUALIFIED,PREDECLARED_FAMILY_DEFAULTS_NOT_TUNED

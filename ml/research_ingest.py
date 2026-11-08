@@ -188,6 +188,20 @@ def _valid_from(store: Store) -> dict:
     return out
 
 
+def _stat_valid_from(store: Store) -> dict:
+    """(event_uid, team, stat, revision) -> earliest known_at of an observation supporting that statistic revision."""
+    obs = store.source_observations
+    obs = obs[(obs.kind == "TEAM_STAT") & obs.disposition.isin(["FIRST_OBSERVED", "CORROBORATING", "CORRECTION"])]
+    out = {}
+    for r in obs.itertuples():
+        uid, team, stat, rev = str(r.link).rsplit("|", 3)
+        key = (uid, team, stat, int(rev))
+        t = p.clock(r.known_at)
+        if key not in out or t < out[key]:
+            out[key] = t
+    return out
+
+
 def effective_results(store: Store, as_of=None) -> pd.DataFrame:
     """Latest result revision per event whose availability is at or before ``as_of`` (all revisions if None)."""
     res = store.results.copy()
@@ -392,6 +406,10 @@ def _check_source(row, *, require_kind=True) -> None:
             p.clock(row[name])
     if row.get("retrieved_at", "").strip() and known > p.clock(row["retrieved_at"]):
         raise p.AdmissionError("KNOWN_AT_AFTER_RETRIEVAL: a fact cannot become known after it was captured")
+    # PIT-v2 (CR-2026.11.08-R2): publication <= known_at <= retrieval; a fact claimed known before it was published would
+    # appear in an earlier historical view than the public could have seen it.
+    if row.get("published_at", "").strip() and known < p.clock(row["published_at"]):
+        raise p.AdmissionError("KNOWN_BEFORE_PUBLICATION: known_at precedes the source's publication time")
     p.receipt_file(row["capture_path"], row["capture_sha256"])
 
 
@@ -423,9 +441,36 @@ def _same(a: dict, b) -> bool:
     return all(str(a[k]) == str(getattr(b, k)) for k in ("status", "hs", "as_", "reg_hs", "reg_as", "decision"))
 
 
+LOCK_NAME = ".INGEST.lock"
+
+
+def _max_seq(store_root: Path) -> int:
+    raw = [pd.to_numeric(_read(store_root / n, f).ingest_seq, errors="coerce").max() for n, f in STORE_FILES.items()]
+    return int(max([0] + [x for x in raw if pd.notna(x)]))
+
+
 def ingest(export: Path, store_root: Path, *, dry_run: bool = False) -> dict:
-    """Append one research export to the store. Exact re-ingest is idempotent (all observations duplicate)."""
+    """Append one research export to the store under an exclusive lock (STORE-LOCK-v1). Exact re-ingest is idempotent."""
     store_root = Path(store_root)
+    if dry_run:
+        return _ingest(export, store_root, dry_run=True)
+    import os
+    store_root.mkdir(parents=True, exist_ok=True)
+    lock = store_root / LOCK_NAME
+    try:
+        fd = os.open(lock, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+    except FileExistsError:
+        raise p.AdmissionError(f"STORE_LOCKED: another ingest holds {lock}; wait for it, or remove the lock only after "
+                               "checking that no ingest is running") from None
+    try:
+        os.write(fd, f"{os.getpid()} {_now()}\n".encode())
+        os.close(fd)
+        return _ingest(export, store_root, dry_run=False)
+    finally:
+        lock.unlink(missing_ok=True)
+
+
+def _ingest(export: Path, store_root: Path, *, dry_run: bool = False) -> dict:
     data = _read_export(export)
     store = load_store(store_root)
     # Never reuse the sequence of rows left by an interrupted ingest: they would become visible with a new receipt.
@@ -505,6 +550,7 @@ def ingest(export: Path, store_root: Path, *, dry_run: bool = False) -> dict:
             batch.observe("RESULT", oid, uid, rev, basis, row)
 
     stats_now = store.team_game_stats
+    stat_vf = _stat_valid_from(store)
     stat_rev = {}
     for r in stats_now.itertuples():
         key = (r.event_uid, r.team, r.stat)
@@ -539,6 +585,9 @@ def ingest(export: Path, store_root: Path, *, dry_run: bool = False) -> dict:
             elif stat_rev[key][1] == value_text:
                 rev, basis = stat_rev[key][0], "CORROBORATING"
             elif row["source_kind"] == "WEB_CORRECTED":
+                before = stat_vf.get(key + (stat_rev[key][0],))
+                if before is not None and p.clock(row["known_at"]) <= before:
+                    raise p.AdmissionError("CORRECTION_CHRONOLOGY: a correction must be known after the revision it replaces")
                 rev, basis = stat_rev[key][0] + 1, "CORRECTION"
             else:
                 raise p.AdmissionError("STAT_CONFLICT: differs from the stored value without a reviewed correction")
@@ -546,6 +595,7 @@ def ingest(export: Path, store_root: Path, *, dry_run: bool = False) -> dict:
                 batch.new["TEAM_GAME_STATS.csv"].append(dict(event_uid=ev.event_uid, team=row["team"], stat=stat,
                                                              revision=str(rev), value=value_text, ingest_seq=seq))
                 stat_rev[key] = (rev, value_text)
+                stat_vf[key + (rev,)] = p.clock(row["known_at"])
             batch.observe("TEAM_STAT", oid, ev.event_uid, f"{ev.event_uid}|{row['team']}|{stat}|{rev}", basis, row)
         except (p.AdmissionError, ValueError, KeyError) as e:
             batch.quarantine("TEAM_STAT", oid, row, str(e))
@@ -588,6 +638,8 @@ def ingest(export: Path, store_root: Path, *, dry_run: bool = False) -> dict:
         return receipt
     if p.source_hash() != code:
         raise p.AdmissionError("generating source changed during ingest")
+    if _max_seq(store_root) != seq - 1 and _max_seq(store_root) >= seq:
+        raise p.AdmissionError("STORE_CHANGED_DURING_INGEST: another writer appended; nothing was written, rerun the ingest")
     store_root.mkdir(parents=True, exist_ok=True)
     for name, fields in STORE_FILES.items():
         if name == "INGEST_RECEIPTS.csv":

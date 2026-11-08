@@ -6,7 +6,7 @@ Test seasons 2020-21 .. 2025-26; 2019-20 supplies only the first prior-season le
 Scores: bias (actual - forecast), RMSE, CRPS and log score of the reference's own normal total (sd_total 19.4), and
 Brier of P(over) at the reference's own centre rounded to the nearest .5 plus and minus 4 points (lines the model did not
 choose after the fact). Paired differences are bootstrapped by season-week blocks.
-Run from the repository root:  python <this file> OUTDIR
+Run from the repository root:  python -m ml.studies.regime_nba OUTDIR
 """
 import csv
 import math
@@ -20,8 +20,7 @@ sys.path.insert(0, str(Path.cwd()))
 from ml.reference import TB1_MD, LM_PRIOR_WEIGHT  # noqa: E402
 
 P = Path("research/verified_history/2026-10-17-nba")
-OUT = Path(sys.argv[1])
-OUT.mkdir(parents=True, exist_ok=True)
+OUT = Path(sys.argv[1]) if __name__ == "__main__" else Path(".")   # study script: run as a program only
 SPEC = TB1_MD["NBA"]
 K, HE, SD = SPEC["k"], SPEC["he"], SPEC["sd_total"]
 MULT = {"EARLY_SEASON": 0.988, "FINALS_COMPRESSION": 0.970}
@@ -154,6 +153,7 @@ def summarise(name, subset, m, seed=20261108, B=4000):
 
 
 if __name__ == "__main__":
+    OUT.mkdir(parents=True, exist_ok=True)
     rows = main()
     reg = [r for r in rows if r["stage"] == "REGULAR"]
     po = [r for r in rows if r["stage"] == "PLAYOFFS"]

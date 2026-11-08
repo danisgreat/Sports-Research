@@ -78,6 +78,11 @@ def tb1_probability(history: pd.DataFrame, home: str, away: str, competition: st
     return None
 
 
+def loss_scale(history: pd.DataFrame) -> float:
+    """CRPS scale for the expert losses, from admissible history only (PIT-v2: never from future outcomes)."""
+    return max(1.0, float(np.std(history.hs.astype(float) - history.as_.astype(float))))
+
+
 def study(competition: str, test_season: str, refit_days: int = 7, root=ROOT, endpoint: str | None = None) -> dict:
     root = Path(root)
     from ml.config import SPORT_RULES
@@ -96,7 +101,6 @@ def study(competition: str, test_season: str, refit_days: int = 7, root=ROOT, en
     fast, slow, ridge = RECIPES[sport]
     config = dict(feedback_half_life_events=20.0, eta_cap=0.5, weight_floor=0.05)   # the frozen release defaults (cycle.freeze_release)
     feedback: list[dict] = []
-    scale = max(1.0, float(np.std(frame.hs.astype(float) - frame.as_.astype(float))))
     rows = []
     start, end = test.day.min(), test.day.max()
     cutoff = start
@@ -105,6 +109,7 @@ def study(competition: str, test_season: str, refit_days: int = 7, root=ROOT, en
         target = test[(test.day >= cutoff) & (test.day < window_end)]
         history = frame[(frame.event_at.map(p.clock) < cutoff) & (frame.label_available_at.map(p.clock) <= cutoff)]
         if len(target) and len(history) >= 200:
+            scale = loss_scale(history)     # each window's losses use only what was known at its cutoff
             usable = [r for r in feedback if p.clock(r["available_at"]) <= cutoff]
             weights = cycle.adaptive_weights(usable, config)[0] if usable else np.ones(3) / 3
             week_rows = []

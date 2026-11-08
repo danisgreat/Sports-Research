@@ -1,4 +1,6 @@
 """Prospective shadow ledger, model registry and learning-status triggers (EXAMPLE data only)."""
+import math
+
 import numpy as np
 import pandas as pd
 import pytest
@@ -78,6 +80,48 @@ def test_paired_evaluation_needs_weeks_and_power_before_any_promotion(tmp_path):
     early.loc[0, "available_at"] = (T0 - pd.Timedelta(days=3)).isoformat()
     with pytest.raises(p.AdmissionError, match="not prospective"):
         P.evaluate(P.verify_ledger(tmp_path / "many.csv"), early, "CHAMP:v3", "CAND:c1", delta=.01)
+
+
+def _paired_ledger(tmp_path, name, gap, weeks=12, zero_wrong=False):
+    """Two models on identical contracts; the candidate's Brier is lower by about ``gap`` per row (deterministic)."""
+    path = tmp_path / name
+    outcomes = []
+    for w in range(weeks):
+        start = T0 + pd.Timedelta(days=7 * w + 1)
+        rows = []
+        for i in range(8):
+            e = f"E{w}-{i}"
+            y = (i % 2 == 0)
+            champ = 0.5
+            cand = 0.5 + (math.sqrt(0.25 - gap) - 0.5 if y else 0.5 - math.sqrt(0.25 - gap)) * -1
+            if zero_wrong and w == 0 and i == 0:
+                cand = 0.0                  # a wrong literal zero
+            rows += [_rows("CHAMP", "v3", "CHAMPION", e, start, champ, 1, "WIN-H"),
+                     _rows("CAND", "c1", "CANDIDATE", e, start, cand, 1, "WIN-H")]
+            outcomes.append(dict(event_id=e, contract_key="WIN-H", result="WIN" if y else "LOSS",
+                                 final_at=(start + pd.Timedelta(hours=3)).isoformat(),
+                                 available_at=(start + pd.Timedelta(hours=4)).isoformat(), evidence_sha256="e" * 64))
+        P.freeze(path, rows, now=start - pd.Timedelta(hours=1))
+    return path, pd.DataFrame(outcomes)
+
+
+def test_promotion_needs_the_full_declared_improvement(tmp_path):
+    """PROMO-v2 (review 2026-11-08): a 0.0064 Brier gain passed a declared 0.01 rule; now only the declared size promotes."""
+    path, outcomes = _paired_ledger(tmp_path, "small.csv", gap=0.0064)
+    res = P.evaluate(P.verify_ledger(path), outcomes, "CHAMP:v3", "CAND:c1", delta=0.01)
+    assert abs(res["interval"]["mean"] + 0.0064) < 1e-9 and res["disposition"] not in ("PROMOTION_ELIGIBLE", "CALIBRATION_STUDY")
+    path, outcomes = _paired_ledger(tmp_path, "big.csv", gap=0.012)
+    res = P.evaluate(P.verify_ledger(path), outcomes, "CHAMP:v3", "CAND:c1", delta=0.01)
+    assert res["interval"]["mean"] <= -0.01 and res["disposition"] in ("PROMOTION_ELIGIBLE", "CALIBRATION_STUDY")
+
+
+def test_a_wrong_literal_zero_has_infinite_log_loss(tmp_path):
+    """SCORING §3: no hidden clipping; a wrong certain forecast is an infinite loss, reported, never dropped."""
+    path, outcomes = _paired_ledger(tmp_path, "zero.csv", gap=0.012, zero_wrong=True)
+    res = P.evaluate(P.verify_ledger(path), outcomes, "CHAMP:v3", "CAND:c1", delta=0.01)
+    assert res["models"]["CAND:c1"]["log_loss"] == math.inf
+    assert res["log_loss_interval"]["mean"] == math.inf and res["log_loss_interval"]["infinite_candidate"] == 1
+    assert res["log_loss_interval"]["status"] == "ABOVE_ZERO"
 
 
 def test_registry_is_chained_and_enforces_transitions(tmp_path):

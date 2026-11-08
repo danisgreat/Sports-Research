@@ -11,7 +11,10 @@ for the same contracts beside them, so model, baseline and card can be compared 
     python -m ml pregame compare-card --release research/cycle_releases/<RELEASE>.csv --out OUT
 
 GAME.csv uses the ml.chat columns. LINES.csv uses ``label,family,side,line`` plus optional ``card_p`` (the
-card's printed p_card for that row) and ``card_rank``. Every card_p must appear verbatim in the card block.
+card's printed p_card for that row) and ``card_rank``. Every card_p must equal the ``final_p`` of the row with the same
+label in the card's PICKS_V2 block, whose family, side and line must match the LINES row (BIND-v1, CR-2026.11.08-R2).
+A reference frozen earlier is reused only when its bundle is for the same event (native ID, competition, teams,
+scheduled start) and priced exactly these contracts; otherwise the run is refused and the reference stage reruns.
 
 A competition without an active release, a release frozen for other code, or an input the cycle refuses is
 recorded as an honest NOT_RUN disposition: the card stands and nothing is invented. Every run writes a
@@ -28,7 +31,6 @@ import argparse
 import csv
 import io
 from pathlib import Path
-import re
 import shutil
 import tempfile
 
@@ -60,6 +62,71 @@ def card_block(mini: Path, local_key: str) -> str:
         raise PregameError(f"{mini} must hold exactly one complete card {local_key} before the model runs "
                            "(write and read back the card first; the model never feeds the card)")
     return text[text.index(begin): text.index(end) + len(end)]
+
+
+def _same_line(a: str, b: str) -> bool:
+    a, b = (a or "").strip(), (b or "").strip()
+    if a == "" or b == "":
+        return a == b
+    try:
+        return abs(float(a) - float(b)) < 1e-9
+    except ValueError:
+        return a == b
+
+
+def bind_card(block: str, key: str, cycle_lines: list[dict], card: dict) -> None:
+    """Every card_p is the final_p printed on the same contract's PICKS_V2 row, with the same family, side and line."""
+    if not card:
+        return
+    from ml import picks
+    try:
+        _, rows = picks.parse(picks.block(block, key))
+    except picks.PicksError as exc:
+        raise PregameError(f"card {key}: card_p needs the card's PICKS_V2 block to bind each value to its contract ({exc})") from None
+    by_label = {r["label"]: r for r in rows}
+    lines = {r["label"].strip(): r for r in cycle_lines}
+    for label, (value, _) in card.items():
+        row, line = by_label.get(label), lines[label]
+        if row is None:
+            raise PregameError(f"{label}: card_p {value} is not printed in card {key}: no PICKS_V2 row has this label")
+        try:
+            printed = float(row["final_p"])
+        except ValueError:
+            raise PregameError(f"{label}: the PICKS_V2 final_p {row['final_p']!r} is not a number") from None
+        if abs(printed - float(value)) > 1e-9:
+            raise PregameError(f"{label}: card_p {value} is not printed in card {key} for this contract (its final_p is {row['final_p']})")
+        if row["family"].strip().upper() != line["family"].strip().upper() or row["side"].strip().upper() != line["side"].strip().upper()                 or not _same_line(row["line"], line["line"]):
+            raise PregameError(f"{label}: the PICKS_V2 row ({row['family']} {row['side']} {row['line']}) is a different contract from "
+                               f"LINES.csv ({line['family']} {line['side']} {line['line']})")
+
+
+def bind_reference(root: Path, attempt_path: str, g: dict, cycle_lines: list[dict]) -> None:
+    """A reused reference must have priced this event and exactly these contracts; anything else is refused."""
+    from ml import cycle, primary as p
+    bundle = root / attempt_path / "BUNDLE"
+    try:
+        cycle.verify_bundle(bundle)
+    except Exception as exc:
+        raise PregameError(f"the frozen reference bundle {attempt_path} does not verify ({exc}); rerun the reference stage") from None
+    req = p.read_rows(bundle / "REQUEST.csv")[0]
+    expected = dict(event_id=g["native_event_id"], competition=g["competition"], home=g["home"], away=g["away"])
+    wrong = [k for k, v in expected.items() if req.get(k, "") != v]
+    if p.clock(req["scheduled_start"]) != p.clock(g["scheduled_start"]):
+        wrong.append("scheduled_start")
+    if wrong:
+        raise PregameError("the frozen reference is for a different event (" + ", ".join(f"{k}: {req.get(k)!r} != {expected.get(k, g.get(k))!r}"
+                           for k in wrong) + "); rerun the reference stage for this event")
+    frozen = {r["contract_key"]: r for r in p.read_rows(bundle / "CONTRACTS.csv")}
+    for row in cycle_lines:
+        label = row["label"].strip()
+        c = frozen.get(label)
+        if c is None or c["family"] != row["family"].strip().lower() or c["side"] != row["side"].strip().upper()                 or not _same_line(c["line"], row["line"]):
+            have = f"{c['family']} {c['side']} {c['line']}" if c else "no such contract"
+            raise PregameError(f"{label}: the frozen reference priced {have}, not {row['family']} {row['side']} {row['line']}; "
+                               "rerun the reference stage for the changed contract")
+    extra = set(frozen) - {r["label"].strip() for r in cycle_lines}
+    if extra:
+        raise PregameError("LINES.csv drops contracts the reference froze (" + ", ".join(sorted(extra)) + "); pass the same contracts")
 
 
 def split_lines(path) -> tuple[list[dict], dict]:
@@ -198,15 +265,14 @@ def run(mini, game, lines, capture, *, confirmed=False, root=ROOT, ledger=chat.L
         raise PregameError("local_key must be the card's stable key, e.g. LOCAL-<MINI_KEY>-G0001")
     block = card_block(mini, key)
     cycle_lines, card = split_lines(lines)
-    for label, (value, _) in card.items():
-        if not re.search(r"(?<![\d.])" + re.escape(value) + r"(?![\d])", block):
-            raise PregameError(f"{label}: card_p {value} is not printed in card {key}; copy the card's own value")
+    bind_card(block, key, cycle_lines, card)
     mini_path = Path(mini).resolve()
     rec = _receipt_record(g, key, "SHADOW", root)
     rec.update(mini_path=mini_path.relative_to(root).as_posix() if mini_path.is_relative_to(root) else str(mini_path),
                mini_sha256=chat._sha(mini_path.read_bytes()), card_block_sha256=chat._sha(block.encode("utf-8")))
     earlier = _reference_attempt(root, key)
     if earlier is not None:
+        bind_reference(root, earlier["attempt_path"], g, cycle_lines)
         # The model already ran before the card (REFMODEL-v1): reuse that attempt, never run or accept it again.
         rec.update(stage="REFERENCE_REUSED", status="EXECUTED", release=earlier["release"], attempt_path=earlier["attempt_path"],
                    timing_at_generation=earlier["timing_at_generation"], ledger_model_rows=earlier["ledger_model_rows"],

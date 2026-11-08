@@ -1,6 +1,8 @@
 <!-- BEGIN CURRENT RESEARCH QUEUE -->
 # Current canonical research queue
 
+**Generated current queue (STATE-v1, 2026-11-08).** The live values (next canonical ID, the active mini and its open cards, frozen league-day events without a settlement, ledger and store counts) are generated from the records in [CURRENT_STATE](CURRENT_STATE.md) by `python -m ml state`, and a test keeps them current. The rest of this file is the preserved status history and the canonical register; where its dated text differs from the generated block, the generated block is current.
+
 **Next canonical ID: P-623.** Every requested event is retained, regardless of calibration: first as a local working card in the authorised mini, then canonically through verified prompt-4 retention import (which may precede prompt-3 settlement under RETAIN-v1). No card is written to the active combined log directly. *(Clarified 2026-10-12, audit R10: the earlier wording "go directly to the active combined log" described retention, not a bypass of local staging.)* Canonical IDs identify retained cards; performance certification and live/late timing are separate labels.
 Active Combined Log: `prediction logs/PREDICTION_LOG_COMBINED_9.md`.
 Freeze: none (custody is the git history of `main`, CURRENT_RULES §9). The last control manifest is `archive/controls/CONTROL_MANIFEST_2026-10-09-3.md`. Current authority: CURRENT_STATE.md, METHOD.md and CURRENT_RULES.md.

@@ -19,7 +19,17 @@
 | Overlap | The reference input it must not double count (a player already out for the reference's whole window; a team rating already reflecting the absence) |
 
 4. Apply the sizes to the reference **centre** (margin and total, or the Poisson means), recompute the one score grid, and read every supplied contract from it. Winner, handicap and total rows come from the same grid. The width never falls below the competition's floor ([COMPETITION_PARAMETERS](PARAMETERS.md#part-a-competition_parameters)).
-5. Write the **picks block** (section 3), lint it, ledger it, commit and push.
+5. Write the **picks block** (section 3) and the **adjustments block** (section 3a), lint it, ledger it, commit and push.
+
+**LEDGER-v2 (CR-2026.11.08-R2).**
+
+- **Timing is derived, not claimed.** `python -m ml ledger add` records PREGAME only when evidence proves the card existed before the start:
+  - a pregame receipt for the same key, with the same card-block hash and a run time before the start; or
+  - the header's `issue_evidence: COMMIT:<sha>`, naming a commit made before the start that holds this exact card.
+
+  Otherwise the rows are ledgered `TIMING_UNVERIFIED`, and the claim is kept in `timing_claimed`.
+- **A card labelled PREGAME but issued at or after the start does not lint.**
+- **Effect-table rows are append-only.** A re-estimate adds a new row, the old row is listed in `research/effect_tables/SUPERSEDED.csv`, and a superseded or `MEASURED_NULL` row cannot be used.
 
 **Entry rule (provisional).** A row whose effect is `MEASURED_CONFIRMED` enters at full size. A row whose effect is `LITERATURE_START` or `MEASURED_NOT_CONFIRMED` enters at **half size** until the ledger has an adjustment-value estimate λ from at least 40 adjusted rows (section 5); from then on the entry factor is the estimated λ, capped at 1, and never below 0. A fact with no effect row (`SCENARIO_NO_TABLE`, for example a player whose impact has not been measured) may not change a number silently: price it as a declared low/base/high mixture with weights written before pricing (CURRENT_RULES section 7), and label the row `SCENARIO`. Half size is a starting value, not a tuned parameter, and exists because the card record shows the analyst's unaided probabilities over-confident at the top and uninformative in the middle.
 
@@ -35,6 +45,21 @@
 | `NOT_ESTIMATED` | No usable number | SCENARIO only |
 
 Prompt 7 and 8 re-estimate rows between seasons. Hand-invented sizes stay out.
+
+## 3a. The adjustments block (ADJUSTMENTS_V1)
+
+Every card whose final p differs from its reference on any row carries one CSV block between `<!-- BEGIN ADJUSTMENTS_V1 <key> -->` and `<!-- END ADJUSTMENTS_V1 <key> -->`. Its columns are, exactly:
+
+`adjustment_id,effect_row_id,fact,target,unit,applied_size,entry,source_url,published_at,retrieved_at,corroboration,overlap_check,centre_before,centre_after,counterfactual`
+
+Each row is one adjustment (`A1`, `A2`, …):
+
+- **Effect row and size.** `effect_row_id` is a current EFFECT_TABLES row or `SCENARIO_NO_TABLE`. `entry` and `applied_size` follow the row's status: FULL is the estimate; HALF is half the estimate; SCENARIO uses declared weights.
+- **Times.** They satisfy published_at ≤ retrieved_at ≤ issued_at.
+- **Overlap.** `overlap_check` names what the reference already contains, or `NONE_FOUND`.
+- **Counterfactual.** `counterfactual` gives the frozen p of every affected row without this adjustment (`LABEL=p|LABEL=p`).
+
+`ledger add` checks every row and appends it to `research/adjustment_ledger/ADJUSTMENTS.csv`. That file is hash-chained and immutable, and each row is keyed by card and effect-row version.
 
 ## 3. The picks block
 
@@ -63,6 +88,10 @@ The linter reads no model, price or outcome. A card that does not lint clean is 
 Rule T2 (rank 1 and rank 2) is kept as a descriptive count of the most-likely list. It is no longer the headline: the headline is the paired proper score of the final p against its references.
 
 ## 5. Scoring at settlement
+
+**Strata stay apart (LEDGER-v2).** Every score row names its stratum: timing, fast or full card, supplied or derived line, and reference executed or baseline only. Scores are never pooled across strata, and λ is estimated within each stratum.
+
+**Individual effects.** `EFFECT_SCORES.csv` compares the final p with each adjustment's frozen counterfactual, effect-row version by version. This is the prospective test of a single effect, such as a regime row, and it is reported apart from the aggregate final-minus-reference value.
 
 `python -m ml ledger add --mini M --key K` appends the lint-clean block to [ADJUSTMENT_LEDGER.csv](research/adjustment_ledger/ADJUSTMENT_LEDGER.csv) (once per card). Prompt 3 writes `RESULTS.csv` (`local_key,label,grade`), `ACTUALS.csv` (`local_key,quantity,actual` for margin and total) and, if the owner supplies them, a [benchmark file](BENCHMARK_PROTOCOL.md). `python -m ml ledger score --results R --benchmarks B --out DIR` then reports, on identical decisive rows and by scope (ALL, tier, family, information rows, most-likely list):
 

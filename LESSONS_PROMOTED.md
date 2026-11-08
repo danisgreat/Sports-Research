@@ -4,45 +4,53 @@
 
 **Status words.** PROMOTED = operative process/disclosure control · NARROWED = partly operative (the operative part is named) · WITHDRAWN = never apply.
 
+**Applicability (LESSON-STATUS-v1, CR-2026.11.08-R2).** Every lesson below now carries a version status, because the lessons were learned on cards made under earlier rules:
+
+- `PRE_V24`: learned before P-2026.10.22-v24.0. It is historical evidence and a checklist prompt. It is not a current rule unless a current document restates it, and where a current rule differs, the current rule governs.
+- `V24`: learned on v24 cards.
+- `CHECKLIST`: a recurring-mistake check that applies to every card.
+
+Numbers inside lessons (for example "skill lives at p ≥ 0.65") are descriptive findings on the cohort they were measured on. The current selection constants are provisional in [RULES_REFERENCE](RULES_REFERENCE.md#part-b-selection_rules) Part B, and prompt 8 re-estimates them. Precedence is defined once, in [RULES_REFERENCE](RULES_REFERENCE.md#part-a-current_rules) Part A §0 (PREC-v1).
+
 ## 2. Recurring mistakes (check every card)
 
 | ID | Mistake | Control |
 |---|---|---|
-| M1 | Exact-winner over-trust | G30.1 |
-| M2 | Non-loss / double chance over-ranked | Soccer rules |
-| M3 | Totals stacked off one factor | Baseball control 26 |
-| M4 | Overtime/blowout tail ignored beside phase Unders | G-L1 |
-| M5 | Cushion on a cold side missing its key player | Kill paths |
-| M6 | Reputation or returning ace against a park suppressor | Baseball rules |
-| M7 | Elite ceiling against a "tough venue" Under | Cricket rules |
-| M8 | Bottom slot never tested | G23.1, G27 |
-| M9 | Stale cached or proxy source | Source freshness |
-| M10 | Kill path as prose, not mass | G-L1 |
-| M11 | Uncertainty turned into a directional lean | G-L2 |
-| M12 | Tier gap read as scoring shape | G-L3; no EPL-to-cup transfer |
-| **M13** | **Aggregate used where the game log was one click away (highest-value check)** | G-L7 |
-| M14 | Total probability not derived from the card's own centre and width | G-L8; `tools/card_math.py` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)) |
-| M15 | Control listed, not executed | `audit_card_controls.py` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)); `C-READING-GATE` |
-| M16 | Complement not itemised | G-L9 |
-| M17 | Small-sample rate used as direction | G-L11 |
-| M18 | Top two structurally anti-coupled | G-L10 |
-| M19 | Published lineup not retrieved | G14.2; `RETRIEVAL_MISS` |
-| M20 | Model summary used as the record | G-L13 |
-| M21 | Settlement route not consulted | G-L14 |
-| M22 | Period-scope mismatch | G-L16 |
-| M23 | "At least one O/U won" read as success | G-L15, G-L22 |
-| M24 | State-contaminated evidence window | Cricket control 21; G-L7 |
-| M25 | Personnel claim without retrieval or receipt | `C-LINEUP-DIFF`; S-1 Rev 2 receipt |
-| M26 | Process record written, not read | `C-PROCESS-RECORD-PROVENANCE`; `C-SETTLEMENT-FROM-FEED` |
-| M27 | Single-game predictive rule promoted | `C-PROMOTION-RECEIPT` |
-| M28 | Covering-pair record read as skill | G-L22(c) `COVERING_PAIR` |
-| M29 | Summary row retyped, not copied | `C-SUMMARY-FROM-CARD` |
-| M30 | City forecast instead of the gamefeed wind | `RULES_BASEBALL.md` B-2 |
-| M31 | Width chosen without a reference | `C-WIDTH-BENCHMARK`; `C-WIDTH-Z` |
-| M32 | Non-baseball cushion priced like a baseball +1.5 | `C-PLUS-CUSHION`; RM-1 |
-| M33 | Rule churn outruns evidence | `C-RULE-FREEZE`; one manifest per day; rule inventory closed, lessons parked (§10, 2026-09-28(e)) |
-| M34 | Self-selected sample read as the competition | `C-EVENT-UNIVERSE`; `T-UNIVERSE-VS-SELECTED` |
-| M35 | Frozen field replaced at settlement (e.g. a missing baseline retyped as 0.500) | `CURRENT_RULES.md` §D8; `CARD_AND_LOG_TEMPLATES.md` §2 (added 2026-09-28) |
+| M1 | Exact-winner over-trust | G30.1 · applies: `CHECKLIST` |
+| M2 | Non-loss / double chance over-ranked | Soccer rules · applies: `CHECKLIST` |
+| M3 | Totals stacked off one factor | Baseball control 26 · applies: `CHECKLIST` |
+| M4 | Overtime/blowout tail ignored beside phase Unders | G-L1 · applies: `CHECKLIST` |
+| M5 | Cushion on a cold side missing its key player | Kill paths · applies: `CHECKLIST` |
+| M6 | Reputation or returning ace against a park suppressor | Baseball rules · applies: `CHECKLIST` |
+| M7 | Elite ceiling against a "tough venue" Under | Cricket rules · applies: `CHECKLIST` |
+| M8 | Bottom slot never tested | G23.1, G27 · applies: `CHECKLIST` |
+| M9 | Stale cached or proxy source | Source freshness · applies: `CHECKLIST` |
+| M10 | Kill path as prose, not mass | G-L1 · applies: `CHECKLIST` |
+| M11 | Uncertainty turned into a directional lean | G-L2 · applies: `CHECKLIST` |
+| M12 | Tier gap read as scoring shape | G-L3; no EPL-to-cup transfer · applies: `CHECKLIST` |
+| **M13** | **Aggregate used where the game log was one click away (highest-value check)** | G-L7 · applies: `CHECKLIST` |
+| M14 | Total probability not derived from the card's own centre and width | G-L8; `tools/card_math.py` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)) · applies: `CHECKLIST` |
+| M15 | Control listed, not executed | `audit_card_controls.py` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)); `C-READING-GATE` · applies: `CHECKLIST` |
+| M16 | Complement not itemised | G-L9 · applies: `CHECKLIST` |
+| M17 | Small-sample rate used as direction | G-L11 · applies: `CHECKLIST` |
+| M18 | Top two structurally anti-coupled | G-L10 · applies: `CHECKLIST` |
+| M19 | Published lineup not retrieved | G14.2; `RETRIEVAL_MISS` · applies: `CHECKLIST` |
+| M20 | Model summary used as the record | G-L13 · applies: `CHECKLIST` |
+| M21 | Settlement route not consulted | G-L14 · applies: `CHECKLIST` |
+| M22 | Period-scope mismatch | G-L16 · applies: `CHECKLIST` |
+| M23 | "At least one O/U won" read as success | G-L15, G-L22 · applies: `CHECKLIST` |
+| M24 | State-contaminated evidence window | Cricket control 21; G-L7 · applies: `CHECKLIST` |
+| M25 | Personnel claim without retrieval or receipt | `C-LINEUP-DIFF`; S-1 Rev 2 receipt · applies: `CHECKLIST` |
+| M26 | Process record written, not read | `C-PROCESS-RECORD-PROVENANCE`; `C-SETTLEMENT-FROM-FEED` · applies: `CHECKLIST` |
+| M27 | Single-game predictive rule promoted | `C-PROMOTION-RECEIPT` · applies: `CHECKLIST` |
+| M28 | Covering-pair record read as skill | G-L22(c) `COVERING_PAIR` · applies: `CHECKLIST` |
+| M29 | Summary row retyped, not copied | `C-SUMMARY-FROM-CARD` · applies: `CHECKLIST` |
+| M30 | City forecast instead of the gamefeed wind | `RULES_BASEBALL.md` B-2 · applies: `CHECKLIST` |
+| M31 | Width chosen without a reference | `C-WIDTH-BENCHMARK`; `C-WIDTH-Z` · applies: `CHECKLIST` |
+| M32 | Non-baseball cushion priced like a baseball +1.5 | `C-PLUS-CUSHION`; RM-1 · applies: `CHECKLIST` |
+| M33 | Rule churn outruns evidence | `C-RULE-FREEZE`; one manifest per day; rule inventory closed, lessons parked (§10, 2026-09-28(e)) · applies: `CHECKLIST` |
+| M34 | Self-selected sample read as the competition | `C-EVENT-UNIVERSE`; `T-UNIVERSE-VS-SELECTED` · applies: `CHECKLIST` |
+| M35 | Frozen field replaced at settlement (e.g. a missing baseline retyped as 0.500) | `CURRENT_RULES.md` §D8; `CARD_AND_LOG_TEMPLATES.md` §2 (added 2026-09-28) · applies: `CHECKLIST` |
 
 ---
 
@@ -199,46 +207,46 @@
 
 | ID | Lesson | Status |
 |---|---|---|
-| L-20260912-01 | Exact CDF/outcome mass and push handling replace absolute-edge ordering | PROMOTED |
-| L-20260912-02 | Disjoint complete-game states and joint bounds | PROMOTED |
-| L-20260912-03 | Real sample denominators; withdraw equal-n and two-SE claims | PROMOTED |
-| L-20260912-04 | Starters, bench and coaches separately; no backdating | PROMOTED |
-| L-20260912-05 | Record the first decisive checkpoint and extra-period exposure | PROMOTED (weights TESTING) |
-| L-20260912-07 | Field-level source checks; branding can't certify every field | PROMOTED |
-| L-20260912-08 | Exclude market-derived prose from MARKET_BLIND analysis | PROMOTED |
-| L-20260912-09 | Frozen preferred O/U; explicit denominators | PROMOTED |
-| L-20260912-10 | Document custody; restore before declaring absent | PROMOTED |
-| L-20260915-01 | Test winner labels need a time budget, not a series aggregate | PROMOTED (cricket control 28) |
-| L-20260915-02 | Current-series innings table is the Test phase prior | PROMOTED (cricket control 27) |
-| L-20260915-04 | A missing log gets an inventory, not new IDs | PROMOTED |
-| L-20260915-06 | Underdog cushions 10 W / 13 L at 0.61 → G-L12 | PROMOTED |
-| L-20260915-12 | Sparse fixtures confirmed at federation level | PROMOTED |
-| L-20260915-13 | Derivatives settle from the official record | PROMOTED |
-| L-20260915-14 | Team-corner rows need corner generators | PROMOTED (soccer control 33) |
-| L-20260915-15 | Same-competition meeting is current evidence | PROMOTED (basketball control 25) |
-| L-20260915-16 | Run-line decomposition; IL-return hook; home-last-bat mass | PROMOTED (baseball control 29) |
-| L-20260915-17 | NFL margin prior, key numbers, prior-season ratings as width | PROMOTED (gridiron controls 17–19) |
-| L-20260915-19 | Import checks | PROMOTED |
-| L-20260916-01 | A summarised fetch is not a record → G-L13 | PROMOTED |
-| L-20260916-02 | Settlement route executed → G-L14 | PROMOTED |
-| L-20260916-03 | League corner route table | PROMOTED (soccer control 35) |
-| L-20260916-05 | O/U geometry disclosure → G-L15; C-OU-GEOMETRY | PROMOTED; the test SUPERSEDED 2026-09-26 |
-| L-20260916-06 | Disruption facts at settlement | PROMOTED (soccer control 34) |
-| L-20260916-07 | NFL non-offensive TD branch (18.8% of games) | PROMOTED (gridiron control 20) |
-| L-20260916-08 | P(favourite covers ∧ Under) | PROMOTED (gridiron control 21) |
-| L-20260916-09 | Starter-exit transition inning | PROMOTED (baseball control 30) |
-| L-20260916-10 | Repeatable-v-variance table; batting pitcher branch | PROMOTED (basketball 25; baseball 31b) |
-| L-20260916-11 | Fingerprint every drop-location variant | PROMOTED |
-| L-20260916-13 | Period scope → G-L16 | PROMOTED |
-| L-20260916-15 | Threshold-invariant v knife-edge derivative rows | PROMOTED (disclosure) |
-| L-20260917-01 | Shared failure state of the top two → G-L17 | PROMOTED |
-| L-20260917-02 | Allocation marginals → G-L18 | PROMOTED |
-| L-20260917-03 | Ties in the end-state family → G-L19 | PROMOTED |
-| L-20260917-04 | Direct comparable already cleared the line → G-L20 | PROMOTED |
-| L-20260917-05 | Single-team scoring rows above 0.80 without an XI | PROMOTED (soccer control 37; no cap) |
-| L-20260917-08 | Cross-league defence widens the separation tail | PROMOTED (soccer control 39) |
-| L-20260917-09 | Bowling replacement chain | PROMOTED (cricket control 31) |
-| L-20260917-10 | Strikeout-floor prop gate | PROMOTED (baseball control 33) |
+| L-20260912-01 | Exact CDF/outcome mass and push handling replace absolute-edge ordering | PROMOTED · applies: `PRE_V24` |
+| L-20260912-02 | Disjoint complete-game states and joint bounds | PROMOTED · applies: `PRE_V24` |
+| L-20260912-03 | Real sample denominators; withdraw equal-n and two-SE claims | PROMOTED · applies: `PRE_V24` |
+| L-20260912-04 | Starters, bench and coaches separately; no backdating | PROMOTED · applies: `PRE_V24` |
+| L-20260912-05 | Record the first decisive checkpoint and extra-period exposure | PROMOTED (weights TESTING) · applies: `PRE_V24` |
+| L-20260912-07 | Field-level source checks; branding can't certify every field | PROMOTED · applies: `PRE_V24` |
+| L-20260912-08 | Exclude market-derived prose from MARKET_BLIND analysis | PROMOTED · applies: `PRE_V24` |
+| L-20260912-09 | Frozen preferred O/U; explicit denominators | PROMOTED · applies: `PRE_V24` |
+| L-20260912-10 | Document custody; restore before declaring absent | PROMOTED · applies: `PRE_V24` |
+| L-20260915-01 | Test winner labels need a time budget, not a series aggregate | PROMOTED (cricket control 28) · applies: `PRE_V24` |
+| L-20260915-02 | Current-series innings table is the Test phase prior | PROMOTED (cricket control 27) · applies: `PRE_V24` |
+| L-20260915-04 | A missing log gets an inventory, not new IDs | PROMOTED · applies: `PRE_V24` |
+| L-20260915-06 | Underdog cushions 10 W / 13 L at 0.61 → G-L12 | PROMOTED · applies: `PRE_V24` |
+| L-20260915-12 | Sparse fixtures confirmed at federation level | PROMOTED · applies: `PRE_V24` |
+| L-20260915-13 | Derivatives settle from the official record | PROMOTED · applies: `PRE_V24` |
+| L-20260915-14 | Team-corner rows need corner generators | PROMOTED (soccer control 33) · applies: `PRE_V24` |
+| L-20260915-15 | Same-competition meeting is current evidence | PROMOTED (basketball control 25) · applies: `PRE_V24` |
+| L-20260915-16 | Run-line decomposition; IL-return hook; home-last-bat mass | PROMOTED (baseball control 29) · applies: `PRE_V24` |
+| L-20260915-17 | NFL margin prior, key numbers, prior-season ratings as width | PROMOTED (gridiron controls 17–19) · applies: `PRE_V24` |
+| L-20260915-19 | Import checks | PROMOTED · applies: `PRE_V24` |
+| L-20260916-01 | A summarised fetch is not a record → G-L13 | PROMOTED · applies: `PRE_V24` |
+| L-20260916-02 | Settlement route executed → G-L14 | PROMOTED · applies: `PRE_V24` |
+| L-20260916-03 | League corner route table | PROMOTED (soccer control 35) · applies: `PRE_V24` |
+| L-20260916-05 | O/U geometry disclosure → G-L15; C-OU-GEOMETRY | PROMOTED; the test SUPERSEDED 2026-09-26 · applies: `PRE_V24` |
+| L-20260916-06 | Disruption facts at settlement | PROMOTED (soccer control 34) · applies: `PRE_V24` |
+| L-20260916-07 | NFL non-offensive TD branch (18.8% of games) | PROMOTED (gridiron control 20) · applies: `PRE_V24` |
+| L-20260916-08 | P(favourite covers ∧ Under) | PROMOTED (gridiron control 21) · applies: `PRE_V24` |
+| L-20260916-09 | Starter-exit transition inning | PROMOTED (baseball control 30) · applies: `PRE_V24` |
+| L-20260916-10 | Repeatable-v-variance table; batting pitcher branch | PROMOTED (basketball 25; baseball 31b) · applies: `PRE_V24` |
+| L-20260916-11 | Fingerprint every drop-location variant | PROMOTED · applies: `PRE_V24` |
+| L-20260916-13 | Period scope → G-L16 | PROMOTED · applies: `PRE_V24` |
+| L-20260916-15 | Threshold-invariant v knife-edge derivative rows | PROMOTED (disclosure) · applies: `PRE_V24` |
+| L-20260917-01 | Shared failure state of the top two → G-L17 | PROMOTED · applies: `PRE_V24` |
+| L-20260917-02 | Allocation marginals → G-L18 | PROMOTED · applies: `PRE_V24` |
+| L-20260917-03 | Ties in the end-state family → G-L19 | PROMOTED · applies: `PRE_V24` |
+| L-20260917-04 | Direct comparable already cleared the line → G-L20 | PROMOTED · applies: `PRE_V24` |
+| L-20260917-05 | Single-team scoring rows above 0.80 without an XI | PROMOTED (soccer control 37; no cap) · applies: `PRE_V24` |
+| L-20260917-08 | Cross-league defence widens the separation tail | PROMOTED (soccer control 39) · applies: `PRE_V24` |
+| L-20260917-09 | Bowling replacement chain | PROMOTED (cricket control 31) · applies: `PRE_V24` |
+| L-20260917-10 | Strikeout-floor prop gate | PROMOTED (baseball control 33) · applies: `PRE_V24` |
 | L-20260917b-01 | P(all fail) with Fréchet bounds → G-L21 | PROMOTED |
 | L-20260917b-02 | Suppression lowers a −1.5 too → G-L21(2) | PROMOTED |
 | L-20260917b-03 | Winner labels inherit ranked-row evidence → G-L21(3) | PROMOTED |
@@ -257,43 +265,43 @@
 | L-20260917b-24 | Every sport has a cushion band → G-L24 | PROMOTED |
 | L-20260917b-25 | One maintained `BASE_RATES_REGISTER.md` | PROMOTED |
 | L-20260919-01 – 04 | No MLB rebound; calibre doesn't change it; no pitcher rebound; shorter windows predict worse | PROMOTED (`R-1`) |
-| L-20260919-08 | Press conferences: availability and role only | PROMOTED (`S-2`) |
-| L-20260919-09 | `LINEUPS_NOT_YET_PUBLISHED` distinct from `RETRIEVAL_MISS` | PROMOTED |
-| L-20260919-11 | Debutants are machine-detectable | PROMOTED |
-| L-20260919-12 | Top O/U must win or get Rank-1 failure review | PROMOTED (review trigger, not a rank rule) |
-| L-20260923-01 | Date, venue and starters must match before merging views | PROMOTED (`O-ID-DATE-STARTER-MATCH`) |
-| L-20260923-02 | External ID claim sweep at import | PROMOTED |
+| L-20260919-08 | Press conferences: availability and role only | PROMOTED (`S-2`) · applies: `PRE_V24` |
+| L-20260919-09 | `LINEUPS_NOT_YET_PUBLISHED` distinct from `RETRIEVAL_MISS` | PROMOTED · applies: `PRE_V24` |
+| L-20260919-11 | Debutants are machine-detectable | PROMOTED · applies: `PRE_V24` |
+| L-20260919-12 | Top O/U must win or get Rank-1 failure review | PROMOTED (review trigger, not a rank rule) · applies: `PRE_V24` |
+| L-20260923-01 | Date, venue and starters must match before merging views | PROMOTED (`O-ID-DATE-STARTER-MATCH`) · applies: `PRE_V24` |
+| L-20260923-02 | External ID claim sweep at import | PROMOTED · applies: `PRE_V24` |
 | L-20260924-F01 | Process facts carry endpoint and time | PROMOTED (`C-PROCESS-RECORD-PROVENANCE`) |
 | L-20260924-F02 | Summaries copied from the card | PROMOTED (`C-SUMMARY-FROM-CARD`) |
 | L-20260924-F03 | Lineup diff at settlement; receipts for projected lineups | PROMOTED (`C-LINEUP-DIFF`) |
 | L-20260924-F09 | Covering pairs; "dual run-line arbitrage" | PROMOTED (measurement); arbitrage REJECTED |
 | L-20260924-F11 | Gamefeed weather at freeze | PROMOTED |
 | L-20260924-F12 | Every rule carries a receipt | PROMOTED (`C-PROMOTION-RECEIPT`) |
-| L-20260925-09 | Basketball widths about 39% narrow | PROMOTED (`C-WIDTH-BENCHMARK`); TESTING (`C-WIDTH-Z`) |
-| L-20260925-13 | Tennis population rates; P(−k.5) ≤ P(win) | REFERENCE; PROMOTED (`C-HCP-COHERENCE`) |
-| L-20260925-16 | `receipts.py` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)) | PROMOTED (tool) |
-| L-20260925-21 | Rules too large; `CURRENT_RULES.md` | PROMOTED (extended by `C-READING-GATE`) |
-| L-20260925-26 | Settled-row dataset and calibration tool | PROMOTED (tool) |
-| L-20260925-28 | Skill lives at p ≥ 0.65 | PROMOTED (`C-LOW-RESOLUTION-BAND`) |
-| L-20260925-30 | Sport track records | PROMOTED (`C-TRACK-RECORD`, `C-DEPARTURE-LEDGER`) |
-| L-20260925-34 | `card_math.py` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)) reproduces issued probabilities | PROMOTED (tool) |
-| L-20260925-41 | TB-1 resolution map | PROMOTED (`C-TEAM-BASELINE`) |
-| L-20260925-43 | Script-typed settlement | PROMOTED (`C-SETTLEMENT-FROM-FEED`) |
-| L-20260926-01 | No skill yet: gather evidence before rules | PROMOTED (`C-RULE-FREEZE`) |
-| L-20260926-02 | The reading load broke execution | PROMOTED (`C-READING-GATE`) |
-| L-20260926-03 | Self-selected sample | PROMOTED (`C-EVENT-UNIVERSE`) |
-| L-20260926-04 | No market yardstick | PROMOTED (`C-MARKET-BENCHMARK`, post-settlement only) |
-| L-20260926-05 | MLB pilot had no code | PROMOTED (`C-MLB-SHADOW`) |
-| L-20260926-11 | Six manifests in one day | PROMOTED (one per day; M33) |
-| L-20260926-12 | Every sport has a numerical A0/A1 model; A1 beats the baseline on results in soccer, NFL, AFL, NBA | PROMOTED (`C-SPORT-SHADOW`; shadow only) |
-| L-20260926-23 | Unrecorded lanes produce no evidence | PROMOTED (audit `10s`) |
-| L-20260926-27 | Predictability map: STRONG favourites by league (AFL 39% … MLB 0%) | PROMOTED (disclosure, `C-PREDICTABILITY-MAP`) |
-| L-20260928-01 | Markdown-only operation: every tool step has a Markdown procedure | PROMOTED (process; `CURRENT_RULES.md` A11) |
-| L-20260928-04 | 60+ sources re-verified by live request; about 30 added (standings, injuries, official ladders, Elo, weather) | PROMOTED (`SOURCES.md`) |
-| L-20260928-05 | Settlement tables replaced frozen baselines with 0.500 (20/20 cells, review F2) | PROMOTED (M35; frozen fields copied, never replaced) |
-| L-20260928-09 | P6: TB-1-MD has resolution for results in the top five soccer leagues, and for totals in La Liga and the Bundesliga | PROMOTED (anchor extension) |
-| L-20260928-10 | Four of the five cards before this change were `LIVE_ISSUED`, so none could count toward a checkpoint | PROMOTED (process, user-instructed): core frozen before the start, annex after; reading once per session (`CURRENT_RULES.md` §B, §0) |
-| L-20260928-14 | Rule churn continued after M33 (three manifests on 2026-09-28 before this pass) | PROMOTED (governance, user-instructed): the rule inventory is closed and lessons are parked (§10) until the checkpoints read out |
+| L-20260925-09 | Basketball widths about 39% narrow | PROMOTED (`C-WIDTH-BENCHMARK`); TESTING (`C-WIDTH-Z`) · applies: `PRE_V24` |
+| L-20260925-13 | Tennis population rates; P(−k.5) ≤ P(win) | REFERENCE; PROMOTED (`C-HCP-COHERENCE`) · applies: `PRE_V24` |
+| L-20260925-16 | `receipts.py` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)) | PROMOTED (tool) · applies: `PRE_V24` |
+| L-20260925-21 | Rules too large; `CURRENT_RULES.md` | PROMOTED (extended by `C-READING-GATE`) · applies: `PRE_V24` |
+| L-20260925-26 | Settled-row dataset and calibration tool | PROMOTED (tool) · applies: `PRE_V24` |
+| L-20260925-28 | Skill lives at p ≥ 0.65 | PROMOTED (`C-LOW-RESOLUTION-BAND`) · applies: `PRE_V24` |
+| L-20260925-30 | Sport track records | PROMOTED (`C-TRACK-RECORD`, `C-DEPARTURE-LEDGER`) · applies: `PRE_V24` |
+| L-20260925-34 | `card_math.py` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)) reproduces issued probabilities | PROMOTED (tool) · applies: `PRE_V24` |
+| L-20260925-41 | TB-1 resolution map | PROMOTED (`C-TEAM-BASELINE`) · applies: `PRE_V24` |
+| L-20260925-43 | Script-typed settlement | PROMOTED (`C-SETTLEMENT-FROM-FEED`) · applies: `PRE_V24` |
+| L-20260926-01 | No skill yet: gather evidence before rules | PROMOTED (`C-RULE-FREEZE`) · applies: `PRE_V24` |
+| L-20260926-02 | The reading load broke execution | PROMOTED (`C-READING-GATE`) · applies: `PRE_V24` |
+| L-20260926-03 | Self-selected sample | PROMOTED (`C-EVENT-UNIVERSE`) · applies: `PRE_V24` |
+| L-20260926-04 | No market yardstick | PROMOTED (`C-MARKET-BENCHMARK`, post-settlement only) · applies: `PRE_V24` |
+| L-20260926-05 | MLB pilot had no code | PROMOTED (`C-MLB-SHADOW`) · applies: `PRE_V24` |
+| L-20260926-11 | Six manifests in one day | PROMOTED (one per day; M33) · applies: `PRE_V24` |
+| L-20260926-12 | Every sport has a numerical A0/A1 model; A1 beats the baseline on results in soccer, NFL, AFL, NBA | PROMOTED (`C-SPORT-SHADOW`; shadow only) · applies: `PRE_V24` |
+| L-20260926-23 | Unrecorded lanes produce no evidence | PROMOTED (audit `10s`) · applies: `PRE_V24` |
+| L-20260926-27 | Predictability map: STRONG favourites by league (AFL 39% … MLB 0%) | PROMOTED (disclosure, `C-PREDICTABILITY-MAP`) · applies: `PRE_V24` |
+| L-20260928-01 | Markdown-only operation: every tool step has a Markdown procedure | PROMOTED (process; `CURRENT_RULES.md` A11) · applies: `PRE_V24` |
+| L-20260928-04 | 60+ sources re-verified by live request; about 30 added (standings, injuries, official ladders, Elo, weather) | PROMOTED (`SOURCES.md`) · applies: `PRE_V24` |
+| L-20260928-05 | Settlement tables replaced frozen baselines with 0.500 (20/20 cells, review F2) | PROMOTED (M35; frozen fields copied, never replaced) · applies: `PRE_V24` |
+| L-20260928-09 | P6: TB-1-MD has resolution for results in the top five soccer leagues, and for totals in La Liga and the Bundesliga | PROMOTED (anchor extension) · applies: `PRE_V24` |
+| L-20260928-10 | Four of the five cards before this change were `LIVE_ISSUED`, so none could count toward a checkpoint | PROMOTED (process, user-instructed): core frozen before the start, annex after; reading once per session (`CURRENT_RULES.md` §B, §0) · applies: `PRE_V24` |
+| L-20260928-14 | Rule churn continued after M33 (three manifests on 2026-09-28 before this pass) | PROMOTED (governance, user-instructed): the rule inventory is closed and lessons are parked (§10) until the checkpoints read out · applies: `PRE_V24` |
 
 ## 7. Withdrawn — never apply
 

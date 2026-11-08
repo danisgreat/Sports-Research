@@ -1,0 +1,5 @@
+canonical_id,local_key,original_rank,original_contract,revision,parent_revision,sporting_grade,evidence_class,effective_at,source_document,note
+P-616,LOCAL-20261018Q7N4T9B2-G0002,1,Under 221.5,revision-2,revision-1,LOSS,B,2026-11-07T21:15:50+11:00,research/active_minis/20261018Q7N4T9B2_SETTLEMENT_REVISION_2.md,BK-OT-1: endpoint FROZEN_FRAMEWORK_CONVENTION (full game incl. OT); grade unchanged
+P-616,LOCAL-20261018Q7N4T9B2-G0002,2,TNT +2.0,revision-2,revision-1,PUSH,B,2026-11-07T21:15:50+11:00,research/active_minis/20261018Q7N4T9B2_SETTLEMENT_REVISION_2.md,BK-OT-1: endpoint FROZEN_FRAMEWORK_CONVENTION (full game incl. OT); grade unchanged
+P-616,LOCAL-20261018Q7N4T9B2-G0002,3,Converge -2.0,revision-2,revision-1,PUSH,B,2026-11-07T21:15:50+11:00,research/active_minis/20261018Q7N4T9B2_SETTLEMENT_REVISION_2.md,BK-OT-1: endpoint FROZEN_FRAMEWORK_CONVENTION (full game incl. OT); grade unchanged
+P-616,LOCAL-20261018Q7N4T9B2-G0002,4,Over 221.5,revision-2,revision-1,WIN,B,2026-11-07T21:15:50+11:00,research/active_minis/20261018Q7N4T9B2_SETTLEMENT_REVISION_2.md,BK-OT-1: endpoint FROZEN_FRAMEWORK_CONVENTION (full game incl. OT); grade unchanged

@@ -59,6 +59,39 @@ def freeze_release(path, competition, endpoint, version):
     return rec
 
 
+def freeze_gated_release(path, competition, endpoint, version, gate_receipt, root=None):
+    """GATE-v2: freeze a release only on a PASSED, current-version gate receipt for this competition and this exact store.
+
+    The binding is written beside the release as <release>.GATE.csv (release hash, receipt path and hash, store snapshot)."""
+    from ml import releasegate as G
+    root = Path(root) if root else G.ROOT
+    try:
+        receipt = G.verify_receipt(gate_receipt, competition, root)
+    except ValueError as exc:
+        raise p.AdmissionError(str(exc)) from None
+    rec = freeze_release(path, competition, endpoint, version)
+    rel = lambda f: Path(f).resolve().relative_to(root.resolve()).as_posix() if Path(f).resolve().is_relative_to(root.resolve()) else str(f)
+    binding = dict(release_path=rel(path), release_sha256=p.digest(Path(path).read_bytes()), gate_version=receipt["gate_version"],
+                   gate_receipt=rel(gate_receipt), gate_receipt_sha256=p.digest(Path(gate_receipt).read_bytes()),
+                   store_snapshot_sha256=receipt["store_snapshot_sha256"], bound_at=now())
+    with Path(path).with_suffix(".GATE.csv").open("xb") as handle:
+        handle.write(p.csv_bytes([binding]))
+    return dict(rec, gate_binding=str(Path(path).with_suffix(".GATE.csv")))
+
+
+def gate_binding(path) -> str:
+    """BOUND_GATE_V2 when a release carries a verified gate binding; CARRIED_FORWARD_BEFORE_GATE_V2 for older releases."""
+    side = Path(path).with_suffix(".GATE.csv")
+    if not side.exists():
+        return "CARRIED_FORWARD_BEFORE_GATE_V2"
+    row = p.read_rows(side)[0]
+    receipt = Path(row["gate_receipt"])
+    receipt = receipt if receipt.is_absolute() else Path(__file__).resolve().parents[1] / receipt   # repository-relative
+    if row["release_sha256"] != p.digest(Path(path).read_bytes()) or row["gate_receipt_sha256"] != p.digest(receipt.read_bytes()):
+        raise p.AdmissionError("gate binding does not match the release or its receipt")
+    return "BOUND_GATE_V2"
+
+
 def release(path, req=None, *, check_code=True):
     rows = p.read_rows(Path(path))
     if len(rows)!=1 or set(rows[0])!=set(RELEASE_FIELDS):
@@ -439,14 +472,14 @@ def evaluate(release_path, ledger, feedback_root, output):
 def main(argv=None):
     parser=argparse.ArgumentParser(description=__doc__); sub=parser.add_subparsers(dest='command',required=True)
     fr=sub.add_parser('release')
-    for name in ('competition','endpoint','version','out'): fr.add_argument('--'+name,required=True)
+    for name in ('competition','endpoint','version','out','gate-receipt'): fr.add_argument('--'+name,required=True)
     vf=sub.add_parser('verify'); vf.add_argument('--bundle',type=Path,required=True)
     st=sub.add_parser('settle')
     for name in ('bundle','export','store','out'): st.add_argument('--'+name,type=Path,required=True)
     ev=sub.add_parser('evaluate')
     for name in ('release','ledger','feedback-root','out'): ev.add_argument('--'+name,type=Path,required=True)
     args=parser.parse_args(argv)
-    if args.command=='release': print(freeze_release(Path(args.out),args.competition,args.endpoint,args.version))
+    if args.command=='release': print(freeze_gated_release(Path(args.out),args.competition,args.endpoint,args.version,Path(args.gate_receipt)))
     elif args.command=='verify': print(verify_bundle(args.bundle))
     elif args.command=='settle': print(settle(args.bundle,args.export,args.store,args.out))
     else: print(evaluate(args.release,args.ledger,args.feedback_root,args.out))

@@ -472,3 +472,21 @@ Owner instruction, 8 November 2026: research whether the external-chat route imp
 | `research/prompts/external_requests/10_TENNIS.md` | [archive/retired_2026-11-08/external_requests/10_TENNIS.md](archive/retired_2026-11-08/external_requests/10_TENNIS.md) | 17,387 | `0a187d62fc335109bbc972d8e1e1ef6ba1b5146c561076a7573dd8b8c8215f78` |
 | `research/prompts/external_requests/11_OTHER_SPORTS.md` | [archive/retired_2026-11-08/external_requests/11_OTHER_SPORTS.md](archive/retired_2026-11-08/external_requests/11_OTHER_SPORTS.md) | 16,354 | `e211fa3b5223ed58015e3c28d291c92d6ca9a7a0fe6daeefb45bb5bfb29c6b5c` |
 | `research/prompts/external_requests/README.md` | [archive/retired_2026-11-08/external_requests/README.md](archive/retired_2026-11-08/external_requests/README.md) | 4,852 | `fa5ffdb7d8691991fa0c07d01d5172a793b4d24e2db885952ed3452257e42bd1` |
+
+## Integrity release — 2026-11-08 (CR-2026.11.08-R2)
+
+Moved so that live pages hold current instructions only. Content was moved verbatim, except the two regime evaluation scripts, which were rewritten as `ml/studies/regime_eval.py`.
+
+| Former location | Now | SHA-256 (first 16) |
+|---|---|---|
+| `research/verification/framework_change_2026-11-08-1/regime_study/scripts/regime_nba.py` | [ml/studies/regime_nba.py](ml/studies/regime_nba.py) | `00194840815b550f` |
+| `research/verification/framework_change_2026-11-08-1/regime_study/scripts/regime_generic.py` | [ml/studies/regime_generic.py](ml/studies/regime_generic.py) | `41f7221cc9b3bf96` |
+| `research/verification/framework_change_2026-11-08-1/regime_study/scripts/loso.py` | [ml/studies/regime_eval.py (rewritten as functions)](ml/studies/regime_eval.py) | `f0e0cc710b56f3ae` |
+| `research/verification/framework_change_2026-11-08-1/regime_study/scripts/sizes.py` | [ml/studies/regime_eval.py (rewritten as functions)](ml/studies/regime_eval.py) | `f0e0cc710b56f3ae` |
+| `PROMPTS.md (former content)` | [research/history/PROMPTS_ROOT_PAGE.md](research/history/PROMPTS_ROOT_PAGE.md) | `ee5cbd4d5228932f` |
+| `CURRENT_STATE.md release paragraphs (v24.3 and earlier)` | [research/history/CURRENT_STATE_RELEASES.md](research/history/CURRENT_STATE_RELEASES.md) | `64adc538cc0aa47b` |
+| `CURRENT_STATE.md October implementation notes` | [research/history/CURRENT_STATE_IMPLEMENTATION_NOTES.md](research/history/CURRENT_STATE_IMPLEMENTATION_NOTES.md) | `c2fb4b6fa3362cb8` |
+| `research/prompts/README.md release notes v19.1–v23.0` | [research/history/PROMPT_RELEASES_TO_v23.md](research/history/PROMPT_RELEASES_TO_v23.md) | `ebab3a7bc98d5b57` |
+| `research/prompts/README.md Primary ML/RL lane` | [research/history/PROMPTS_README_PRIMARY_LANE.md](research/history/PROMPTS_README_PRIMARY_LANE.md) | `f31cd48658659306` |
+| `SOURCES.md Part D` | [research/history/SOURCES_RETIRED_RUNTIME.md](research/history/SOURCES_RETIRED_RUNTIME.md) | `d6e1262939e4ec2a` |
+| `RULES_<SPORT>.md numerical engine and shadow sections` | [archive/historical_engine_sections_2026-11-08/](archive/historical_engine_sections_2026-11-08/) | folder |

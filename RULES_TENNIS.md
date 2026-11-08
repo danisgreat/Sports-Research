@@ -56,22 +56,16 @@ Raw ATP/WTA/ITF records for set and tiebreak scores (G-L13). ITF: the tournament
 ### 0.6 Withdrawn in tennis — never apply
 The clay/Challenger handicap cap (L-20260924-F06); "winner implies games handicap" and "cushion implies underdog winner"; long-match-only coupling of underdog wins; pseudo-tails, path-count categories, 40–60% bands and normalised-edge ordering.
 
-### Numerical shadow model (2026-09-26(c); suspended for md-only operation, 2026-09-28)
+### Numerical shadow model (2026-09-26(c); suspended for md-only operation, 2026-09-28) — historical
 
-The tennis model: on ATP 2023 to January 2026, surface-blended Elo narrowly beat overall Elo on winners (Brier 0.222 against 0.224). The serve-chain games route lost to the population at v1; after v2 (a match-level gap effect, selected on 2021–22) it is level to slightly better. WTA was not validated. A retirement voids the games rows. It is maintainer Python, never a card input, and the model does not run it: print `SHADOW: NO_LANE (md-only)` at settlement (`research/sport_models_2026-09-26/README.md` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents))). The hand-computable team baseline that does feed cards is TB-1-MD (`PROBABILITY_TOOLKIT.md` §4).
-
-**Predictability (2026-09-26(e)).** Tennis winners are predictable by Elo (Brier 0.222 against a coin flip's 0.25), and A1 improves that only narrowly. The WTA is not validated (`research/predictability_2026-09-26/README.md` ([removed; recovery](HISTORICAL_LINK_INDEX.md#removed-paths-cited-in-operating-documents)); `PARAMETERS.md` §7.8).
+Moved verbatim to [archive/historical_engine_sections_2026-11-08/RULES_TENNIS.md](archive/historical_engine_sections_2026-11-08/RULES_TENNIS.md) on 2026-11-08 (CR-2026.11.08-R2): it describes the September numerical engine and shadow, suspended for markdown-only operation on 2026-09-28 and superseded by the v24 reference ([REFERENCE_MODEL_PROTOCOL](REFERENCE_MODEL_PROTOCOL.md)). It is not a current instruction.
 
 ### 0.7 Control index (full text in §5 and the dated sections)
 1 surface is a regime · 2 current stability decomposed · 3 H2H needs continuity · 4 set count and total linked · 5 set cushions aren't free safety · 6 qualifying and workload · 7 retirement terms gate · 8 no ranking-only confidence · 9 level comparability demonstrated · 10 win-conditioned cover counts descriptive · 11 kill paths include opponent control · 12 scoreline coherence · 13 Elo benchmark beside the winner probability · 14 a long layoff widens the tree. Receipts and references: T-1 ITF route · T-2 surface from the calendar · TE-R1 totals reference · TE-R2 handicap coherence · TE-R3 qualifying v main draw.
 
-### 0.8 Numerical engine specification (MDS-v8.0 / CR-2026.10.06-NUMERICAL-1)
-Numerical-engine design notes (the engine code was removed on 2026-10-09; compute by hand with PROBABILITY_TOOLKIT.md and the sport block of research/prompts/1_GAME_CARD.md; this list is a design record, not a rule):
-1. **Event-First Modeling**: Surface-adjusted serve/return point Markov model:
-   $$\text{Point Win Prob } p_{\text{serve}} \longrightarrow \text{Game Hold/Break } P(\text{Hold}) \longrightarrow \text{Tiebreak/Set Distribution} \longrightarrow \text{Match Winner & Games Matrix } (G_1, G_2)$$
-2. **Derivative Coherence**: Games totals and games handicaps ($G_1 - G_2$) are integrated directly from the discrete joint games grid; P(deciding set) and straight-set distributions are explicit.
-3. **Regime Conditioning**: Surface (Clay, Hard, Grass, Indoor) and tournament format (Best-of-3 vs Best-of-5) condition serve/return transition kernels.
-4. **Independent Training**: Fit exclusively on `H0-TENNIS-v1` (Tennis Abstract / OnCourt / Jeff Sackmann match charting); D0 is strictly reserved for qualitative error diagnostics.
+### 0.8 Numerical engine specification (MDS-v8.0 / CR-2026.10.06-NUMERICAL-1) — historical
+
+Moved verbatim to [archive/historical_engine_sections_2026-11-08/RULES_TENNIS.md](archive/historical_engine_sections_2026-11-08/RULES_TENNIS.md) on 2026-11-08 (CR-2026.11.08-R2): it describes the September numerical engine and shadow, suspended for markdown-only operation on 2026-09-28 and superseded by the v24 reference ([REFERENCE_MODEL_PROTOCOL](REFERENCE_MODEL_PROTOCOL.md)). It is not a current instruction.
 
 ## 1. Identity and contract
 

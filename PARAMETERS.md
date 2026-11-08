@@ -151,17 +151,17 @@ Every `NOT_ESTIMATED` row names its data. The largest gap is player availability
 
 **Regime flags (PRD-07).** The flags (NONE, FINALS_COMPRESSION, EARLY_SEASON, CUP_ROTATION, RULE_CHANGE:<verified name>) still label a card's context ([RULES_REFERENCE](RULES_REFERENCE.md#part-b-selection_rules) Part B §6). The multipliers below were estimated from the retired results archive on 2026-10-09 (season-block bootstrap of the ratio of mean game totals over each league's last 25 seasons) and are kept as historical reference; a regime effect enters a card only as an effect-table row (Part B) or a declared `SCENARIO` row, never as a multiplier from this table.
 
-**Tested 2026-11-08 (REGIME-v2).** A raw ratio of early-season (or finals) scoring to the season mean is not what a card needs: the reference already follows the season to date, so the question is whether it is biased in that regime. Each row below was tested on verified finals against a walk-forward replication of the reference (standings from earlier games only, prior-season league mean blended in), with each held-out season's multiplier fitted on the other seasons and the paired CRPS and Brier bootstrapped by season. Study, code and data hashes: [regime_study](research/verification/framework_change_2026-11-08-1/regime_study/REGIME_STUDY.md).
+**Tested 2026-11-08 (REGIME-v2; corrected the same day as REGIME-v3).** The first test (leave one season out) used later seasons to evaluate earlier ones; it is exploratory. Confirmation is the chronological test: each season's multiplier is fitted on earlier seasons only. A raw ratio of early-season (or finals) scoring to the season mean is not what a card needs: the reference already follows the season to date, so the question is whether it is biased in that regime. Each row below was tested on verified finals against a walk-forward replication of the reference (standings from earlier games only, prior-season league mean blended in), with each held-out season's multiplier fitted on the other seasons and the paired CRPS and Brier bootstrapped by season. Study, code and data hashes: [regime_study](research/verification/framework_change_2026-11-08-1/regime_study/REGIME_STUDY.md).
 
 | League | Flag | Archive (2026-10-09) | Bias of the reference in the regime (95% CI) | Held-out result | Effect row and entry |
 |---|---|---:|---|---|---|
-| NBA | FINALS_COMPRESSION | 0.970 | −4.5% (−6.0 to −3.1), 507 games | CRPS and Brier better, 5 of 6 seasons | `E-NBA-PLAYOFF-TOTAL`, FULL |
+| NBA | FINALS_COMPRESSION | 0.970 | −4.5% (−6.0 to −3.1), 507 games | Chronological: CRPS and Brier better, 5 of 5 later seasons | `E-NBA-PLAYOFF-TOTAL-R2`, FULL |
 | NBA | EARLY_SEASON | 0.988 | −0.3% (−0.7 to +0.3), 1,231 | No gain; 0.988 made every window worse | `E-NBA-EARLY-TOTAL`, none |
-| MLB | FINALS_COMPRESSION | 0.924 | −10.9% (−13.9 to −7.7), 248 | Better, 4 of 6 | `E-MLB-POSTSEASON-TOTAL`, FULL |
+| MLB | FINALS_COMPRESSION | 0.924 | −10.9% (−13.9 to −7.7), 248 | Chronological on the proxy: better, 5 of 5; not tested on MLB-CYCLE-4 | `E-MLB-POSTSEASON-TOTAL-R2`, HALF |
 | MLB | EARLY_SEASON | 1.000 | −1.4% (−3.4 to +0.4), 1,962 | Slight gain, interval of the size contains zero | `E-MLB-EARLY-TOTAL`, none |
-| AFL | FINALS_COMPRESSION | 0.943 | −3.2% (−6.1 to −0.5), 101 | Not confirmed, 5 of 11 | `E-AFL-FINALS-TOTAL`, HALF |
+| AFL | FINALS_COMPRESSION | 0.943 | −3.2% (−6.1 to −0.5), 101 | Chronological: not confirmed, 4 of 10 | `E-AFL-FINALS-TOTAL-R2`, HALF |
 | AFL | EARLY_SEASON | 1.000 | −0.7% (−1.2 to −0.1), 373 | Smaller than the reference's −1.7% bias elsewhere | `E-AFL-EARLY-TOTAL`, none |
-| NRL | EARLY_SEASON | 0.938 | −2.5% (−4.5 to −0.4), 177 | Better, 5 of 6 | `E-NRL-EARLY-TOTAL`, FULL |
+| NRL | EARLY_SEASON | 0.938 | −2.5% (−4.5 to −0.4), 177 | Chronological: Brier −0.0019 (−0.0049 to +0.0019), not confirmed | `E-NRL-EARLY-TOTAL-R2`, HALF |
 | NRL | FINALS_COMPRESSION | 0.938 | −7.5% (−16.1 to +1.8), 54 | No gain, 3 of 6 | `E-NRL-FINALS-TOTAL`, none |
 | NRL | RULE_CHANGE:six_again | 1.121 | — | Every season since 2020 is under the rule | Retired (`E-NRL-SIX-AGAIN`) |
 | NHL | both | 1.024, 0.917 | Not testable: one verified season, no playoffs | — | `E-NEED-REGIME-NHL`, scenario |

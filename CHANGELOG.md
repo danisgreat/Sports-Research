@@ -1,3 +1,27 @@
+# Enforced integrity — MDS/P v24.5 / CR-2026.11.08-R2 / P-2026.11.08-v24.3, 8 November 2026
+
+The owner asked to implement the review of v24.4: make the code enforce the rules and close the forecast, settlement and evaluation cycle. These fixes are now enforced in code, each with a rejection test:
+
+- **Binding:** a reused pregame reference must match the event and the contracts, and a card's p must sit on its own PICKS_V2 row.
+- **Card checks:** probabilities stay within [0, 1], dates and sides must be valid, and a late card cannot be labelled PREGAME.
+- **Derived timing:** the ledger takes timing from evidence, not from the card's claim.
+- **Ingest:** publication order and correction chronology are enforced, and a store lock stops a second writer.
+- **Study scale:** the development study's loss scale now comes from past data only.
+- **Effective settlements:** one view, validated revision chains, consumed by card history.
+- **Promotion and scoring:** promotion needs the full declared improvement, a wrong certain forecast gets infinite log loss, and strata are scored separately.
+- **Releases:** GATE-v2 checks lineage by registrable domain and by revision, needs both regulation scores, and binds each release to a receipt.
+- **Adjustments:** structured, immutable ADJUSTMENTS rows.
+- **Regime rows:** re-tested chronologically (NBA playoffs confirmed; MLB postseason, NRL early season and AFL finals at half size).
+- **State:** a generated block in CURRENT_STATE.
+
+The integrity fixes change the forecast-path code. NBA-CYCLE-2 is therefore frozen through the new gate. NHL and MLB fail it on data (one single-lineage NHL final; one MLB season), so their releases are listed as stale. Cleanup:
+
+- live pages keep current instructions only, and their history moved to `research/history/`;
+- PROMPTS.md now points to the single operator index;
+- old engine sections are archived;
+- lessons carry an applicability status;
+- the regime study code moved to `ml/studies/`.
+
 # Owner decisions and competition rules — MDS/P v24.4 / CR-2026.11.08-R1 / P-2026.11.08-v24.2, 8 November 2026
 
 Owner instructions on the four items left open on 7 November, and a re-verification of every logged competition's rules. STATISTICAL + PROCEDURE.

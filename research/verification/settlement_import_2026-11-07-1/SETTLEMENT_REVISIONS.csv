@@ -1,0 +1,9 @@
+canonical_id,local_key,original_rank,original_contract,revision,parent_revision,sporting_grade,evidence_class,effective_at,source_document,note
+P-604,LOCAL-2026101679B3FBCC8D-G0004,A3,Corners Over 10.5,revision-3,revision-2,WIN,C,2026-11-07T20:53:07+11:00,research/active_minis/2026101679B3FBCC8D_SETTLEMENT_REVISION_3.md,corners 8-5 = 13
+P-604,LOCAL-2026101679B3FBCC8D-G0004,A4,Corners Under 10.5,revision-3,revision-2,LOSS,C,2026-11-07T20:53:07+11:00,research/active_minis/2026101679B3FBCC8D_SETTLEMENT_REVISION_3.md,corners 8-5 = 13
+P-606,LOCAL-2026101679B3FBCC8D-G0006,A1,Under 229.5,revision-2,revision-1,WIN,R1 package,2026-11-07T20:53:07+11:00,research/active_minis/2026101679B3FBCC8D_SETTLEMENT_REVISION_3.md,score corrected to 116-98 (was 117-98); grade unchanged
+P-606,LOCAL-2026101679B3FBCC8D-G0006,A2,Grizzlies -2.5,revision-2,revision-1,WIN,R1 package,2026-11-07T20:53:07+11:00,research/active_minis/2026101679B3FBCC8D_SETTLEMENT_REVISION_3.md,score corrected to 116-98 (was 117-98); grade unchanged
+P-606,LOCAL-2026101679B3FBCC8D-G0006,A3,Hornets +2.5,revision-2,revision-1,LOSS,R1 package,2026-11-07T20:53:07+11:00,research/active_minis/2026101679B3FBCC8D_SETTLEMENT_REVISION_3.md,score corrected to 116-98 (was 117-98); grade unchanged
+P-606,LOCAL-2026101679B3FBCC8D-G0006,A4,Over 229.5,revision-2,revision-1,LOSS,R1 package,2026-11-07T20:53:07+11:00,research/active_minis/2026101679B3FBCC8D_SETTLEMENT_REVISION_3.md,score corrected to 116-98 (was 117-98); grade unchanged
+P-620,LOCAL-20261018X7Q4M9R2-G0001,1,SA 1st inns Under 282.5,revision-2,revision-1,LOSS,B,2026-11-07T20:53:07+11:00,research/active_minis/20261018X7Q4M9R2_SETTLEMENT_REVISION_2.md,SA 425/9 dec; evidence E -> B; grade unchanged
+P-620,LOCAL-20261018X7Q4M9R2-G0001,4,SA 1st inns Over 282.5,revision-2,revision-1,WIN,B,2026-11-07T20:53:07+11:00,research/active_minis/20261018X7Q4M9R2_SETTLEMENT_REVISION_2.md,SA 425/9 dec; evidence E -> B; grade unchanged

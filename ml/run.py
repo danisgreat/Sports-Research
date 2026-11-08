@@ -221,7 +221,8 @@ LEARN_COMMANDS = {"ingest": "ml.research_ingest", "features": "ml.features", "tr
                   "v3-backtest": "ml.evaluation.v3_backtest", "bkb-features": "ml.models.basketball_features",
                   "card-history": "ml.evaluation.card_history", "capability": "ml.capability", "baseline": "ml.league_baseline",
                   "pregame": "ml.pregame", "reference": "ml.reference", "ledger": "ml.ledger", "card": "ml.picks",
-                  "sim": "ml.sim.cli", "release-gate": "ml.releasegate", "backfill-basketball": "ml.backfill_basketball", "context-study": "ml.context_study", "league-day": "ml.league_day"}
+                  "sim": "ml.sim.cli", "release-gate": "ml.releasegate", "backfill-basketball": "ml.backfill_basketball", "context-study": "ml.context_study", "league-day": "ml.league_day",
+                  "settlement-view": "ml.evaluation.effective_settlement", "state": "ml.state"}
 
 
 def main(argv: list[str]) -> None:
