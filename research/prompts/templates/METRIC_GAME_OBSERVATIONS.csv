@@ -1,0 +1,1 @@
+requirement_id,local_key,side,team_or_player,event_id,event_at,opponent,venue_role,competition,season,completion_status,metric,period,endpoint,unit,value,numerator,denominator,value_status,source_id,source_url,source_field,published_at,retrieved_at,known_at,collector_lineage,capture_path,capture_sha256,compatibility_status,exclusion_or_missing_reason

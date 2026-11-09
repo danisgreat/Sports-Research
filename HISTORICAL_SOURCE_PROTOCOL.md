@@ -54,3 +54,8 @@ Record actual searches, accepted rows/sources, comparison/conflict dispositions,
 ## 5. Reuse of reviewed rows (LEARN-v1)
 
 Every dated prior-game row opened under this protocol is also written to the card's structured research export ([LEARNING_PIPELINE_PROTOCOL](ML_PIPELINE.md#part-c-learning_pipeline_protocol) §2), one row per source, with known-at time and capture hash. After prompt 4 ingests it, the learning store can regenerate primary HISTORY.csv for later games (`python -m ml ingest history`) under the same admission gates. A row researched in several minis is stored once with several source observations. Conflicting values are quarantined until a reviewed WEB_CORRECTED observation resolves them. The retired results store is never a source.
+
+
+## Per-metric window execution aid ·9 November 2026
+
+[Execution playbook §4](research/source_routes/RESEARCH_COVERAGE_PLAYBOOK.md#4-build-l5l10l15l20-for-every-researched-metric) supplies the event-spine, metric-observation and coverage-matrix procedure for the existing L5/L10/L15/L20 requirement. It distinguishes eligible games from observed metric values and provides blank companion templates. Current learning-log checks do not independently certify complete per-metric histories; retain explicit A3/A8/A9 evidence and actual source attempts.

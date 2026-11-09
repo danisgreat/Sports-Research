@@ -54,3 +54,12 @@ The catalogue now includes236 route rows: the prior209 plus27 exact-event field 
 Prompt 1 reads both CSVs for the card's sport, after this catalogue's competition row. Re-audit each exact URL before opening it.
 
 Evidence: [sweep report](../verification/source_sweep_2026-11-09-2/REPORT.md).
+
+
+## Field-tested follow-up and coverage guide ·9 November 2026
+
+The [follow-up report](../verification/source_sweep_2026-11-09-1/REPORT.md) supplements the R4 sweep with 43 field/index observations across all ten sports, 64 additional explicit competition-route rows (300 total), and 36 new exact URLs in PREGAME_SOURCES (175 rows total). Four season-end, undated, superseded or post-event samples are reference-only. [Field decisions](../verification/source_sweep_2026-11-09-1/FIELD_DECISIONS.csv) give actual fields, freshness, lineage and limits; discovery-only entries are not tested complete data feeds.
+
+The latest navigational SOURCE_ACCESS_AUDIT consolidates 3982 exact URLs from both sweeps by recorded check time; immutable original check tables remain in their dated packages. A current pre-use audit is still mandatory.
+
+[RESEARCH_COVERAGE_PLAYBOOK](RESEARCH_COVERAGE_PLAYBOOK.md) explains authenticated social evidence, permitted same-field source cycling and one event spine with per-metric L5/L10/L15/L20 coverage. It links three blank evidence templates. Existing learning-log schemas are unchanged; the matrix is manual review evidence, not a new automated gate. [Mini lifecycle and learning status](../verification/source_sweep_2026-11-09-1/MINI_AND_LEARNING.md).

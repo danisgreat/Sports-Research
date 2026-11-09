@@ -1,0 +1,3 @@
+url,status,retrieved_at,bytes,sha256,capture_path,title,text_chars,field_status
+https://www.youtube.com/@AFL,FETCHED_NOT_FIELD_VERIFIED,2026-11-09T09:29:48.012606+00:00,2680572,5c5f0f0884bcd85a875c200daa8d515ed0e49ee7b23637ffb29c0859843e4fd1,C:\Users\danie\AppData\Local\Temp\sports_source_sweep_20261109\raw\5c5f0f0884bcd85a875c200daa8d515ed0e49ee7b23637ffb29c0859843e4fd1,AFL - YouTube,159,NOT_TESTED_FOR_ANY_GAME_OR_PLAYER
+https://bsky.app/,FETCHED_NOT_FIELD_VERIFIED,2026-11-09T09:29:49.628527+00:00,28374,5247f0b4d7d3f6ce59e5a02d7e907d97586ebdd545047e5b5d29b9fcea75d36d,C:\Users\danie\AppData\Local\Temp\sports_source_sweep_20261109\raw\5247f0b4d7d3f6ce59e5a02d7e907d97586ebdd545047e5b5d29b9fcea75d36d,Bluesky,232,NOT_TESTED_FOR_ANY_GAME_OR_PLAYER

@@ -115,3 +115,8 @@ C20 fails when the operator skips relevant searches, claims a projected/roster f
 This protocol should reduce avoidable missing information and unsupported availability assumptions. Its effect on predictive scores remains untested and must be measured on frozen same-event comparisons with coverage and timing reported. Only the named primary model/runtime/receipt lane is permitted under PRIMARY_PREDICTION_PROTOCOL; historical/unadmitted outputs and market material remain excluded.
 
 **Primary-model amendment (15 October 2026):** [PRIMARY_PREDICTION_PROTOCOL](ML_PIPELINE.md#part-a-primary_prediction_protocol) permits the named source-reviewed primary runtime and sporting feedback. Comprehensive availability and truthful timing remain mandatory. These first runtime models do not fit player/lineup effects; record material unsupported scenarios rather than inventing an adjustment. The market decision lab remains excluded.
+
+
+## Social evidence execution aid ·9 November 2026
+
+[Execution playbook §2](research/source_routes/RESEARCH_COVERAGE_PLAYBOOK.md#2-use-social-reports-with-traceable-authority) operationalises the existing original-post standard: source ownership, exact-game claim, publication/edit/retrieval time, readable media, status, lineage and final recheck. The linked current access test supersedes September platform reachability assumptions. A blocked post is not retrieved through an embed, mirror or syndication workaround; seek the publisher’s own permitted release or another original report.

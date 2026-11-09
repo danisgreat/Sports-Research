@@ -1,0 +1,1 @@
+requirement_id,local_key,side,metric,definition,unit,period,endpoint,population,horizon,requested_window,eligible_games,observed_n,missing_n,conflicting_n,oldest_event_at,newest_event_at,event_ids,aggregate_method,numerator_sum,denominator_sum,aggregate_value,source_ids,coverage_status,limitation,attempt_ids,next_action

@@ -1289,3 +1289,8 @@ Training-only league profiles and consistent unconditional winner evaluation rep
 ## 2026-10-16 - Explicit model-available and model-absent recording paths
 
 EDITORIAL clarification of RETAIN-v1; MDS-v17.0 / CR-2026.10.16-R1 / P-v17.0, formats and numerical policy unchanged. Both paths produce the reconciled permanent P-ID and running-log card. Supported ML/RL remains usable; missing sport-specific models never suppress ID assignment or recording. Canonical import preserves the same ID and honest import status. No new game or settlement allocated. [Implementation and checks](research/verification/framework_change_2026-10-16-2/IMPLEMENTATION.md).
+
+
+## 9 November 2026 - source field observations and execution guides
+
+Supplement the owner’s v24.10 without changing its model separation or learning-log schemas: 36 new exact pregame URLs (175 rows total), 64 competition-route additions (300 total), 43 field/index observations with four reference-only samples, and consolidated dated access checks. Add the social/source-cycling/per-metric history playbook, three blank companion templates, mini/review/ML guide and source-sweep report. Record two open custody items and eleven generated rank/view reporting conflicts across seven settled cards; nine permanent corner closures stay closed. No runtime, original log, grade, model release or prediction-method change. [Report](research/verification/source_sweep_2026-11-09-1/REPORT.md).

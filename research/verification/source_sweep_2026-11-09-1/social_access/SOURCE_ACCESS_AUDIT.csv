@@ -1,0 +1,6 @@
+host,url,robots_http,status,agents_blocked,content_signal,checked_at
+bsky.app,https://bsky.app/,200,ALLOWED,,,2026-11-09T09:28:44+00:00
+www.facebook.com,https://www.facebook.com/AFL/,200,BLOCKED_FOR_AI,ClaudeBot;Claude-User;Claude-SearchBot;Claude-Web;anthropic-ai;GPTBot;OAI-SearchBot;ChatGPT-User,,2026-11-09T09:28:44+00:00
+www.instagram.com,https://www.instagram.com/afl/,200,BLOCKED_FOR_AI,ClaudeBot;Claude-User;Claude-SearchBot;Claude-Web;anthropic-ai;GPTBot;OAI-SearchBot;ChatGPT-User,,2026-11-09T09:28:44+00:00
+www.youtube.com,https://www.youtube.com/@AFL,200,ALLOWED,,,2026-11-09T09:28:44+00:00
+x.com,https://x.com/SpursOfficial,200,BLOCKED_FOR_AI,ClaudeBot;Claude-User;Claude-SearchBot;Claude-Web;anthropic-ai;GPTBot;OAI-SearchBot;ChatGPT-User,,2026-11-09T09:28:44+00:00

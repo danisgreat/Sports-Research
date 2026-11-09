@@ -40,3 +40,8 @@ python -m ml learning-log build --out research/learning_log/builds/<date>-<n>   
 **Tennis:** `HOME` is the first-named player (player A) and `AWAY` the second. A sport without its own dictionary rows uses the `TEAM_SPORT` rows.
 
 **Earlier cards (P-001 to P-638)** have no point-in-time feature rows. Their contracts, probabilities and grades are in the generated card history (`python -m ml card-history`; for example [CARD_ROWS.csv](../verification/historical_closure_2026-11-09-1/final_history/CARD_ROWS.csv)). That history is outcome-exposed: it serves as labels and descriptive history, never as training features.
+
+
+## Companion source and window evidence ·9 November 2026
+
+The [research coverage playbook](../source_routes/RESEARCH_COVERAGE_PLAYBOOK.md) links blank social-claim, game-metric and window-coverage tables for the card’s named evidence scope. They support the existing learning-log files; do not insert their additional columns into fixed-schema files. Current check/build commands do not verify complete metric-window membership or the truth of a source. Retain those checks in A9. No historical point-in-time feature logs are backfilled.
