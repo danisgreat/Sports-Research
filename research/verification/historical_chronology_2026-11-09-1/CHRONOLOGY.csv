@@ -1,0 +1,8 @@
+canonical_id,event,recorded_clock,clock_kind,source,interpretation
+P-125,Canberra Brave vs Sydney Bears,2026-08-28T15:00:00+10:00,SCHEDULED_START,prediction logs/PREDICTION_LOG_COMBINED.md:21183,Adjacent original; final state refresh about15:06 AEST on28August
+P-126,Sikkim Aakraman FC vs Sikkim Boys Club,2026-08-28T15:30:00+10:00,WORKING_SCHEDULE_OWNER_CHRONOLOGY_INFERRED_DATE,Owner chronological instruction; prediction logs/PREDICTION_LOG_COMBINED.md:22040-22046,"Owner places126 before127; intended28August branch. Retains recorded11:00IST hour, NOT a verified actual kickoff or issue timestamp"
+P-127,Iran vs New Zealand,2026-08-28T16:00:00+10:00,SCHEDULED_START,prediction logs/PREDICTION_LOG_COMBINED.md:22596-22598,14:00 Manila; final pregame refresh15:52 Melbourne on28August
+P-417,Chunichi Dragons vs Hanshin Tigers,2026-09-15,SETTLEMENT_DATE_NOT_KICKOFF,prediction logs/PREDICTION_LOG_COMBINED_3.md:1922,Native NPB box identifier contains20260914; settlement recorded15September
+P-418,Drukpa FC vs Royal Thimphu College FC,2026-09-14,WORKING_EVENT_DATE_FROM_EXISTING_SEPTEMBER_FIXTURE_LIST,Owner September binding; prediction logs/PREDICTION_LOG_COMBINED_3.md:1948; prediction logs/PREDICTION_LOG_COMBINED_7.md:3800,Intended midSeptember fixture;14September supported by retained RSSSF listing. Actual kickoff not independently certified; June/July out of target scope
+P-419,Djurgardens IF vs GAIS,2026-09-15,SETTLEMENT_DATE_NOT_KICKOFF,prediction logs/PREDICTION_LOG_COMBINED_3.md:1952,Neighbouring record settled15September
+P-420,Atlanta Braves vs Chicago Cubs,2026-09-15,SETTLEMENT_DATE_NOT_KICKOFF,prediction logs/PREDICTION_LOG_COMBINED_3.md:1968,Neighbouring record settled15September; not a recovered exact issue clock

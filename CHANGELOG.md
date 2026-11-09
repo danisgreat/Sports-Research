@@ -1294,3 +1294,8 @@ EDITORIAL clarification of RETAIN-v1; MDS-v17.0 / CR-2026.10.16-R1 / P-v17.0, fo
 ## 9 November 2026 - source field observations and execution guides
 
 Supplement the owner’s v24.10 without changing its model separation or learning-log schemas: 36 new exact pregame URLs (175 rows total), 64 competition-route additions (300 total), 43 field/index observations with four reference-only samples, and consolidated dated access checks. Add the social/source-cycling/per-metric history playbook, three blank companion templates, mini/review/ML guide and source-sweep report. Record two open custody items and eleven generated rank/view reporting conflicts across seven settled cards; nine permanent corner closures stay closed. No runtime, original log, grade, model release or prediction-method change. [Report](research/verification/source_sweep_2026-11-09-1/REPORT.md).
+
+
+## 9 November 2026 - neighbouring-record chronology clarification
+
+Owner chronological instruction binds P126 to the intended28August slot between125 and127 and P418 to midSeptember (working14September), excluding unrelated June/July evidence. Add hash-bound neighbouring source extracts and a narrowed current queue; preserve issued originals, actual-start uncertainty, sporting grades and permanent closures. [Report](research/verification/historical_chronology_2026-11-09-1/REPORT.md).

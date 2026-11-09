@@ -1,0 +1,28 @@
+check,result
+Archive CURRENT_STATE.md,PASS
+Archive CHANGELOG.md,PASS
+Original source prediction logs/PREDICTION_LOG_COMBINED.md:21183,PASS
+Original source prediction logs/PREDICTION_LOG_COMBINED.md:21185,PASS
+Original source prediction logs/PREDICTION_LOG_COMBINED.md:22040,PASS
+Original source prediction logs/PREDICTION_LOG_COMBINED.md:22041,PASS
+Original source prediction logs/PREDICTION_LOG_COMBINED.md:22046,PASS
+Original source prediction logs/PREDICTION_LOG_COMBINED.md:22596,PASS
+Original source prediction logs/PREDICTION_LOG_COMBINED.md:22597,PASS
+Original source prediction logs/PREDICTION_LOG_COMBINED.md:22598,PASS
+Original source prediction logs/PREDICTION_LOG_COMBINED_3.md:1922,PASS
+Original source prediction logs/PREDICTION_LOG_COMBINED_3.md:1948,PASS
+Original source prediction logs/PREDICTION_LOG_COMBINED_3.md:1952,PASS
+Original source prediction logs/PREDICTION_LOG_COMBINED_3.md:1968,PASS
+Original source prediction logs/PREDICTION_LOG_COMBINED_7.md:3800,PASS
+Owner ordered working schedule,PASS
+11 IST equals15:30 AEST,PASS
+P127 Manila14:00,PASS
+P418 September target,PASS
+Neighbour settlement date not relabelled kickoff,PASS
+Exact queue membership,PASS
+Unchanged research/historical_resolution/PERMANENT_CLOSURES.csv,PASS
+Unchanged research/historical_resolution/ROW_REVISIONS.csv,PASS
+Unchanged research/data/GAME_PREDICTION_RANK_LOG.csv,PASS
+Unchanged research/active_minis/20261109R3NEXT.md,PASS
+Only authorised tracked navigation changes,PASS
+No sporting labels assigned,PASS
