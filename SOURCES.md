@@ -34,6 +34,21 @@ Find same-field alternates in order: field owner's other public outlets, structu
 
 All normalized inputs are sporting-only. Verify exact teams/date/competition/endpoint, final state and score sums; keep publication/known-at/retrieval separate. Shared upstream feeds count once. If no permitted source supplies a field, preserve UNAVAILABLE/NOT_VERIFIED with actual attempts. Source quality is determined by its fields and provenance, not mere reachability.
 
+## SRC-PRE-v1. Pregame sources by sport and field ·9 November 2026
+
+**Owner instruction, 9 November 2026:** sweep the logs and add accurate, comprehensive and up-to-date alternate sources so future minis can use them in time before a game.
+
+The sweep read every log and mini: 9,670 source citations and 3,079 distinct URLs. It found that a third to a half of past pregame citations now fail closed in cricket, basketball, ice hockey, tennis, baseball, rugby union and soccer. The main ones are:
+- ESPN, Basketball-Reference, Hockey-Reference, koreabaseball.com and tennis.com;
+- RealGM, Cricbuzz, ESPNcricinfo, FBref, BeSoccer and Sofascore;
+- the major wire services.
+
+[PREGAME_SOURCES.csv](research/source_routes/PREGAME_SOURCES.csv) adds 139 tested, permitted sources by field. Each has a `when_to_check` column: injury reports the day before and in the final hour; lineups and starting goalies or pitchers after the team announcement; referee assignments on game day; weather within 24 h and again within 3 h.
+
+[PREGAME_SOURCE_REJECTIONS.csv](research/source_routes/PREGAME_SOURCE_REJECTIONS.csv) names what not to plan on and what to use instead. The betting and prediction sites some old logs cited (BetExplorer, APWin, TotalCorner, 24score, FootyMetrics, betimate, hockeypredicts, okooo) are excluded by the firewall whatever their robots rules.
+
+**Fields with no permitted source yet:** all-league soccer xG, WNBA statistics, NCAA basketball ratings, and the official KBL and PBA statistics. These stay `NOT_VERIFIED` until an alternate is found. The gaps and evidence are in the [sweep report](research/verification/source_sweep_2026-11-09-2/REPORT.md).
+
 ## A. Using the register without code
 
 1. Pick the sport's table (section 3) and read the first-choice route and the fallback for the field you need (the "Source-by-source fallback chain" in §3.12 and the field fallbacks in §1.7).

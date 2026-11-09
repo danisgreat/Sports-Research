@@ -1,0 +1,894 @@
+host,domain,occurrences,pregame,settlement,cards,sports,top_urls,access,agents_blocked
+site.api.espn.com,espn.com,319,291,28,17,Basketball:192;UNCLASSIFIED:90;Baseball:11;UNKNOWN:10;Soccer:6;Tennis:5;Australian Rules:2;Rugby League:2;Cricket:1,https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20261021 https://site.api.espn.com/apis/site/v2/sports/basketball/nba/summary?event=401909834 https://site.api.espn.com/apis/v2/sports/basketball/nba/standings?season=2024,RULES_UNKNOWN:113,
+www.basketball-reference.com,basketball-reference.com,293,275,18,8,Basketball:214;Ice Hockey:68;UNCLASSIFIED:10;Baseball:1,https://www.basketball-reference.com/teams/POR/2026_games.html https://www.basketball-reference.com/teams/GSW/2026_games.html https://www.basketball-reference.com/international/teams/murcia/2027.html,BLOCKED_FOR_AI:37,GPTBot
+www.bleague.jp,bleague.jp,209,160,36,8,Basketball:167;UNKNOWN:28;Baseball:10;Tennis:4,https://www.bleague.jp/basketball_rule/?tab=5 https://www.bleague.jp/game_detail/?ScheduleKey=506458&tab=4 https://www.bleague.jp/game_detail/?ScheduleKey=506457,ALLOWED:31,
+www.nhl.com,nhl.com,206,117,84,11,Ice Hockey:133;Soccer:24;UNKNOWN:16;UNCLASSIFIED:14;Basketball:14;Tennis:4;Baseball:1,https://www.nhl.com/wild/ https://www.nhl.com/news/pittsburgh-penguins-colorado-avalanche-game-preview-october-16-2026 https://www.nhl.com/gamecenter/edm-vs-ana/2026/10/07/2026020055,ALLOWED:43,
+github.com,github.com,186,107,10,27,Soccer:50;Basketball:40;UNKNOWN:28;Ice Hockey:27;Baseball:15;Tennis:10;Cricket:9;Rugby Union:6;UNCLASSIFIED:1,https://github.com/danisgreat/Sports-Research.git https://github.com/danisgreat/Sports-Research https://github.com/danisgreat/Sports-Research/tree/main,ALLOWED:11;BLOCKED_FOR_AI:3,ChatGPT-User;Claude-SearchBot;Claude-User;Claude-Web;ClaudeBot;GPTBot;OAI-SearchBot;anthropic-ai
+www.mlb.com,mlb.com,167,104,63,21,Baseball:119;Australian Rules:36;Basketball:8;UNKNOWN:4,https://www.mlb.com/starting-lineups https://www.mlb.com/glossary/rules/designated-runner https://www.mlb.com/gameday,ALLOWED:127,
+www.espn.com,espn.com,160,155,5,16,Basketball:85;UNCLASSIFIED:40;Cricket:17;Soccer:9;Baseball:8;UNKNOWN:1,https://www.espn.com/mlb/scoreboard https://www.espn.com/soccer/match/_/gameId/401879264/manchester-city-liverpool https://www.espn.com/soccer/,BLOCKED_FOR_AI:69,ChatGPT-User;GPTBot;anthropic-ai
+www.nba.com,nba.com,157,114,36,13,Basketball:110;Ice Hockey:24;UNKNOWN:14;UNCLASSIFIED:5;Soccer:2;Baseball:1;Tennis:1,https://www.nba.com/game/DAL-vs-HOU-0012600016 https://www.nba.com/game/por-vs-gsw-0012600033 https://www.nba.com/spurs/game/0022600003-thunder-vs-spurs-san-antonio-tx-10-20-2026,ALLOWED:3;BLOCKED_FOR_AI:31,ChatGPT-User;Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+www.koreabaseball.com,koreabaseball.com,155,141,10,23,Baseball:116;UNKNOWN:21;Basketball:16;Soccer:2,https://www.koreabaseball.com/Schedule/Schedule.aspx?month=10&year=2026 https://www.koreabaseball.com/Record/Team/Pitcher/Basic1.aspx https://www.koreabaseball.com/Record/Team/Hitter/Basic1.aspx,BLOCKED_FOR_AI:46,ChatGPT-User;Claude-SearchBot;Claude-User;Claude-Web;ClaudeBot;GPTBot;OAI-SearchBot;anthropic-ai
+mykbostats.com,mykbostats.com,152,85,67,19,Baseball:122;Basketball:26;Tennis:2;Rugby League:1;UNKNOWN:1,https://mykbostats.com/games/14036-Lotte-vs-Kia-20261011 https://mykbostats.com/games/14035-KT-vs-Samsung-20261011 https://mykbostats.com/stats/park_splits/2026,ALLOWED:27,
+www.nbl.com.au,nbl.com.au,150,108,22,15,Basketball:107;UNKNOWN:17;UNCLASSIFIED:12;Baseball:8;Tennis:4;Soccer:2,https://www.nbl.com.au/club-schedule/sem https://www.nbl.com.au/news/how-to-watch-talking-points-south-east-melbourne-v-cairns https://www.nbl.com.au/news/nbl26-the-latest-injury-updates,ALLOWED:37,
+tennis.com,tennis.com,129,110,12,24,Tennis:95;UNKNOWN:19;Basketball:6;Baseball:5;Australian Rules:2;Soccer:2,,BLOCKED_FOR_AI:1,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+npb.jp,npb.jp,126,81,45,14,Baseball:100;Tennis:16;Australian Rules:8;UNKNOWN:2,https://npb.jp/scores/2026/1001/c-d-25/ https://npb.jp/bis/2026/stats/tmb_c.html https://npb.jp/games/2026/schedule_08_detail.html,NO_RULES_FILE:77,
+www.afl.com.au,afl.com.au,123,64,57,19,Australian Rules:90;UNKNOWN:12;Tennis:12;Baseball:5;Soccer:4,https://www.afl.com.au/afl/matches/8223 https://www.afl.com.au/afl/matches/8244 https://www.afl.com.au/afl/matches/8242,ALLOWED:82,
+basketball.realgm.com,realgm.com,122,101,19,11,Basketball:107;Baseball:8;UNKNOWN:7,https://basketball.realgm.com/international/boxscore/2026-10-11/Cairns-at-Illawarra/524402 https://basketball.realgm.com/international/boxscore/2026-10-16/Macau-Black-Knights-at-Converge-Fiber-Xers/544792 https://basketball.realgm.com/international/preview/2026-10-08/Pyrinto-Tampere-at-KTP-Basket/534469,BLOCKED_FOR_AI:24,Claude-Web;anthropic-ai
+eng.koreabaseball.com,koreabaseball.com,109,64,43,21,Baseball:81;Basketball:10;UNKNOWN:8;Soccer:5;Cricket:3;Tennis:2,https://eng.koreabaseball.com/Schedule/DailySchedule.aspx https://eng.koreabaseball.com/Standings/TeamStandings.aspx https://eng.koreabaseball.com/Schedule/Scoreboard.aspx?searchDate=2026-10-11,ALLOWED:24,
+statsapi.mlb.com,mlb.com,107,44,58,25,Baseball:91;Soccer:8;UNKNOWN:7;Basketball:1,https://statsapi.mlb.com/api/v1.1/game/824722/feed/live https://statsapi.mlb.com/api/v1.1/game/824077/feed/live https://statsapi.mlb.com/api/v1.1/game/822678/feed/live,NO_RULES_FILE:70,
+www.tennis.com,tennis.com,103,95,5,11,Tennis:83;UNKNOWN:17;Basketball:1;Soccer:1;Baseball:1,https://www.tennis.com/tournaments/rakuten-japan-open-tennis-championships/matches/m-berrettini-vs-a-vallejo-2026-10-03 https://www.tennis.com/tournaments/hangzhou-open/matches/v-royer-vs-a-walton-2026-09-23 https://www.tennis.com/tournaments/rolex-shanghai-masters/matches/y-nishioka-vs-d-svrcina-2026-10-06,BLOCKED_FOR_AI:29,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+www.besoccer.com,besoccer.com,96,95,1,3,Soccer:95;UNKNOWN:1,https://www.besoccer.com/team/matches/hyderabad-fc https://www.besoccer.com/team/matches/mohun-bagan-sg https://www.besoccer.com/competition/info/arabian_gulf_league/2027,RULES_UNKNOWN:9,
+en.rolexshanghaimasters.com,rolexshanghaimasters.com,91,68,16,9,Tennis:74;UNKNOWN:16;Soccer:1,https://en.rolexshanghaimasters.com/en/scores/schedule?dayToDisplay=8 https://en.rolexshanghaimasters.com/en/scores/results https://en.rolexshanghaimasters.com/en/scores/head-to-head/singles/v0dp/r0eb,ALLOWED:15,
+www.sofascore.com,sofascore.com,80,36,41,18,Basketball:24;Tennis:17;Soccer:13;UNKNOWN:11;Baseball:8;Cricket:4;Australian Rules:2;Rugby Union:1,https://www.sofascore.com/basketball/match/tampereen-pyrinto-ktp-basket-kotka/lFcspFc https://www.sofascore.com/tennis/match/joelle-lilly-sophie-steur-tamara-zidansek/ZfUszntc https://www.sofascore.com,RULES_UNKNOWN:21,
+www.tennisabstract.com,tennisabstract.com,78,78,0,7,Tennis:66;UNKNOWN:12,https://www.tennisabstract.com/reports/atp_elo_ratings.html https://www.tennisabstract.com/cgi-bin/player-classic.cgi?f=ACareerqq&p=209226%2FAdolfo-Daniel-Vallejo&q=PabloCarrenoBusta https://www.tennisabstract.com/cgi-bin/player-classic.cgi?f=ACareerqqDOeiras_1_Challengerqq&p=208316%2FValentin-Royer,ALLOWED:12,
+www.icc-cricket.com,icc-cricket.com,73,65,6,7,Cricket:61;UNKNOWN:8;Australian Rules:3;Soccer:1,https://www.icc-cricket.com/news/sri-lanka-unveil-odi-squad-for-tri-series-in-pakistan https://www.icc-cricket.com/news/proteas-set-for-rabada-boost-as-bavuma-looks-for-response https://www.icc-cricket.com/matches/270970/india-vs-zimbabwe,ALLOWED:29,
+www.indiansuperleague.com,indiansuperleague.com,71,66,2,1,Soccer:69;UNKNOWN:2,https://www.indiansuperleague.com/clubs/3234-sporting-club-delhi-profile/news https://www.indiansuperleague.com/matchcentre/194640 https://www.indiansuperleague.com/matchcentre/194634,ALLOWED:9,
+fbref.com,fbref.com,68,63,5,6,Soccer:64;Basketball:2;Cricket:1;UNKNOWN:1,https://fbref.com/en/squads/8ab37ab8/2026/matchlogs/c62/schedule/Beijing-Guoan-Scores-and-Fixtures-Chinese-Super-League https://fbref.com/en/squads/d87e75be/2026/matchlogs/c62/schedule/Qingdao-West-Coast-Scores-and-Fixtures-Chinese-Super-League https://fbref.com/en/squads/5c7eb1c7/2025-2026/Mohun-Bagan-Stats,RULES_UNKNOWN:12,
+hokej.cz,hokej.cz,68,36,28,3,Ice Hockey:54;Basketball:14,,RULES_UNKNOWN:1,
+liiga.fi,liiga.fi,67,42,22,3,Ice Hockey:55;Basketball:10;UNKNOWN:2,https://liiga.fi/fi/ottelut/2026-2027/runkosarja/2701375/ https://liiga.fi/en/game/2027/2701384/events https://liiga.fi/fi/ohjelma/?joukkue=hpk&kausi=2025-2026&sarja=playoffs,ALLOWED:9,
+www.reuters.com,reuters.com,66,51,14,13,Cricket:20;Baseball:10;UNKNOWN:8;Rugby Union:7;Tennis:7;Basketball:6;Ice Hockey:3;Soccer:3;Australian Rules:2,https://www.reuters.com/sports/tennis/atp-roundup-alexander-zverev-carlos-alcaraz-advance-asia--flm-2026-10-01/ https://www.reuters.com/sports/cricket/south-africa-peril-australia-take-three-wickets-sundays-opening-session-2026-10-11/ https://www.reuters.com/sports/cricket/australia-still-undecided-starting-xi-second-test-v-s-africa-2026-10-17/,BLOCKED_FOR_AI:28,Claude-SearchBot;Claude-User;Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+site.web.api.espn.com,espn.com,63,58,5,3,Basketball:38;UNCLASSIFIED:19;Cricket:3;UNKNOWN:3,https://site.web.api.espn.com/apis/common/v3/sports/basketball/nba/athletes/4591725/overview?season=2026 https://site.web.api.espn.com/apis/common/v3/sports/basketball/nba/athletes/4395725/overview?season=2026 https://site.web.api.espn.com/apis/common/v3/sports/basketball/nba/athletes/4432848/overview?season=2026,RULES_UNKNOWN:23,
+www.cricbuzz.com,cricbuzz.com,61,46,13,20,Cricket:54;UNKNOWN:3;Baseball:2;Soccer:1;Australian Rules:1,https://www.cricbuzz.com/cricket-series/10543/india-women-tour-of-england-2026/matches https://www.cricbuzz.com/live-cricket-scores/144794/msg-vs-tre-14th-match-the-hundred-mens-competition-2026 https://www.cricbuzz.com/live-cricket-scorecard/145223/sulw-vs-ldnw-20th-match-the-hundred-womens-competition-2026,BLOCKED_FOR_AI:36,ChatGPT-User;Claude-SearchBot;Claude-User;Claude-Web;ClaudeBot;GPTBot;OAI-SearchBot;anthropic-ai
+basketballstats.net,basketballstats.net,56,39,17,4,Basketball:43;UNKNOWN:9;Cricket:4,https://basketballstats.net/teams/ktp-basket https://basketballstats.net/teams/tampereen-pyrinto https://basketballstats.net/teams/aanekosken-huima,RULES_UNKNOWN:10,
+www.fiba.basketball,fiba.basketball,50,39,11,8,Soccer:29;Basketball:14;UNKNOWN:6;Baseball:1,https://www.fiba.basketball/en/events/euroleague-women-26-27/games/135150-ZARAG-BLA https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128134-USA-CHN https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128123-KOR-NGR,ALLOWED:32,
+nhl.com,nhl.com,46,34,10,5,Ice Hockey:28;UNCLASSIFIED:6;UNKNOWN:4;Tennis:3;Baseball:3;Soccer:2,,ALLOWED:1,
+www.pcb.com.pk,pcb.com.pk,46,46,0,4,Cricket:46,https://www.pcb.com.pk/tournament-reports.php?action=tournament_matches&sort_by=date_start&sort_order=desc&tournament_id=1465 https://www.pcb.com.pk/press-release-detail/pakistan-england-sri-lanka-set-to-begin-preparations-for-odi-world-cup-with-tri-series-from-18-to-31.html https://www.pcb.com.pk/press-release-detail/pakistan-squads-announced-for-sri-lanka-t20is-and-odi-tri-series.html,RULES_UNKNOWN:12,
+acb.com,acb.com,46,27,17,4,Baseball:20;Basketball:20;UNKNOWN:4;Ice Hockey:2,https://acb.com/es/liga/equipos/la-laguna-tenerife-28/partidos?categoria=played_matches&filtro=temporada https://acb.com/es/liga/equipos/ucam-murcia-12 https://acb.com/es/copa-del-rey/noticias/calendario-liga-endesa-2026-27-todas-las-fechas-y-horarios-145767,ALLOWED:15,
+stats.cpbl.com.tw,cpbl.com.tw,45,35,10,5,Baseball:32;UNKNOWN:5;Australian Rules:5;Soccer:3,https://stats.cpbl.com.tw/schedule/2026-A-307 https://stats.cpbl.com.tw/schedule/2026-A-308 https://stats.cpbl.com.tw/schedule/2026-A-290,ALLOWED:35,
+www.mohunbaganclub.com,mohunbaganclub.com,44,44,0,1,Soccer:44,https://www.mohunbaganclub.com/calendar/isl-2025-26/,ALLOWED:1,
+www.taipans.com,taipans.com,39,26,5,5,Basketball:28;UNKNOWN:6;Tennis:3;Baseball:2,https://www.taipans.com/news/game-preview-phoenix-v-taipans-nbl27-round-5 https://www.taipans.com/ https://www.taipans.com/news/game-day-update-8-october,ALLOWED:9,
+www.philstar.com,philstar.com,39,39,0,1,Basketball:36;UNKNOWN:3,https://www.philstar.com/sports/2026/10/17/2563760/converge-thrashes-macau https://www.philstar.com/sports/2026/10/14/2563094/rhj-sparks-tnt-rout-macau https://www.philstar.com/sports/2026/10/13/2562750/rhj-back-tnt-gears-quarters/amp/,ALLOWED:8,
+mlb.com,mlb.com,38,26,12,9,Baseball:20;Basketball:12;Tennis:4;Soccer:2,,ALLOWED:1,
+www.yagoonara.com,yagoonara.com,38,30,6,6,Baseball:22;Basketball:16,https://www.yagoonara.com/teams/2/gamelog https://www.yagoonara.com/teams/4/gamelog https://www.yagoonara.com/schedule/128564,BLOCKED_FOR_AI:10,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+www.dragonesfc.mx,dragonesfc.mx,38,32,3,2,Soccer:26;UNKNOWN:9;Cricket:3,https://www.dragonesfc.mx/equipos/premier-a/resultados https://www.dragonesfc.mx/equipos/premier-a/calendario https://www.dragonesfc.mx/noticias/dragones-oaxaca-vivira-un-fin-de-semana-especial-con-el-lunes-premier,ALLOWED:6,
+durandcup.in,durandcup.in,36,36,0,1,Soccer:36,https://durandcup.in/ https://durandcup.in/east-bengal-fc-edge-sc-delhi-on-penalties-to-reach-135th-indianoil-durand-cup-final/ https://durandcup.in/hnamtes-double-helps-sc-delhi-secure-a-comeback-win-against-jamshedpur-fc/,ALLOWED:3,
+www.fotmob.com,fotmob.com,36,30,5,11,Soccer:29;Cricket:4;UNKNOWN:2;Baseball:1,https://www.fotmob.com/ar/teams/1660716/fixtures/olympique-akbou https://www.fotmob.com/ar/teams/1531341/fixtures/undefined%2Cplayers https://www.fotmob.com/matches/go-ahead-eagles-vs-sparta-rotterdam/1vequa,ALLOWED:15,
+www.hockey-reference.com,hockey-reference.com,36,29,7,4,Ice Hockey:27;Soccer:9,https://www.hockey-reference.com/teams/EDM/2026.html https://www.hockey-reference.com/teams/PIT/2027_games.html https://www.hockey-reference.com/teams/COL/2027_games.html,BLOCKED_FOR_AI:9,GPTBot
+www.soccerzz.com,soccerzz.com,35,7,22,4,Soccer:23;Basketball:10;UNKNOWN:2,https://www.soccerzz.com/live/2026-10-09-qingdao-hainiu-beijing-guoan/12060310 https://www.soccerzz.com/match/2026-10-16-sporting-delhi-mohun-bagan-super-giant/12735151 https://www.soccerzz.com/live/2026-10-16-al-dhafra-dubai-united/12676790,RULES_UNKNOWN:3,
+www.bundesliga.com,bundesliga.com,35,9,26,3,Soccer:21;Basketball:12;UNKNOWN:2,https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/5/fc-augsburg-vs-fc-bayern-muenchen/liveticker https://www.bundesliga.com/de/bundesliga/spieltag/2026-2027/5/fc-augsburg-vs-fc-bayern-muenchen/liveticker https://www.bundesliga.com/de/bundesliga/spieltag/2026-2027/5/fc-augsburg-vs-fc-bayern-muenchen/lineup,ALLOWED:7,
+www.atptour.com,atptour.com,35,34,1,8,Tennis:31;UNKNOWN:4,https://www.atptour.com/en/tournaments/rolex-shanghai-masters/5014/overview https://www.atptour.com/-/media/files/rulebook/2026/2026-rulebook-chapter-1_atp-circuit-regulations19dec25.pdf https://www.atptour.com/en/scores/current/us-open/560/results?matchType=singles,ALLOWED:19,
+www.hawks.com.au,hawks.com.au,35,32,1,4,Basketball:34;Baseball:1,https://www.hawks.com.au/news/mason-peatling-injury-update-nbl27 https://www.hawks.com.au/news/game-preview-hawks-melbourne-united-rd5-nbl27 https://www.hawks.com.au/statistics,ALLOWED:6,
+www.cricket.com.au,cricket.com.au,34,29,5,4,Cricket:27;Australian Rules:5;Soccer:1;UNKNOWN:1,https://www.cricket.com.au/matches/CA%3A39991 https://www.cricket.com.au/matches/CA%3A40390/india-women-zimbabwe-women-india-v-zimbabwe-t20is-2026-women https://www.cricket.com.au/matches/CA%3A21533/south-africa-men-australia-men-final,ALLOWED:13,
+tennisabstract.com,tennisabstract.com,34,27,7,8,Tennis:30;UNKNOWN:2;Soccer:1;Baseball:1,https://tennisabstract.com/reports/atp_elo_ratings.html https://tennisabstract.com/reports/wta_elo_ratings.html https://tennisabstract.com/cgi-bin/player-classic.cgi?p=AlexanderBublik,ALLOWED:4,
+www.easycredit-bbl.de,easycredit-bbl.de,34,12,22,3,Basketball:32;Soccer:2,https://www.easycredit-bbl.de/spiele/2006882 https://www.easycredit-bbl.de/statistiken/teams https://www.easycredit-bbl.de/spiele/2006888,NO_RULES_FILE:4,
+www.cbssports.com,cbssports.com,33,18,15,11,Basketball:11;Ice Hockey:10;Cricket:4;UNKNOWN:4;Australian Rules:2;Baseball:1;Soccer:1,https://www.cbssports.com/nba/teams/gs/golden-state-warriors/schedule/preseason/ https://www.cbssports.com/nba/gametracker/recap/NBA_20261015_OKC%40HOU/ https://www.cbssports.com/nhl/gametracker/boxscore/NHL_20261010_MIN%40FLA/,BLOCKED_FOR_AI:11,GPTBot
+www.yna.co.kr,yna.co.kr,33,16,17,10,Baseball:15;Basketball:8;Cricket:4;Soccer:2;UNCLASSIFIED:2;UNKNOWN:2,https://www.yna.co.kr/view/AKR20261020155400007 https://www.yna.co.kr/view/AKR20261008095500007 https://www.yna.co.kr/view/AKR20261009029800007,BLOCKED_FOR_AI:10,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+www.wtatennis.com,wtatennis.com,33,11,21,4,Tennis:16;UNKNOWN:9;Australian Rules:5;Basketball:2;Baseball:1,https://www.wtatennis.com/tournaments/1128/mallorca/2026 https://www.wtatennis.com/tournaments/1128/mallorca-125/2026/scores/LS024 https://www.wtatennis.com/tournaments/1024/seoul/2026/scores/LS029,ALLOWED:18,
+www.okooo.cn,okooo.cn,32,32,0,1,Soccer:32,https://www.okooo.cn/soccer/match/1323683/history/ https://www.okooo.cn/soccer/match/1323611/history/ https://www.okooo.cn/soccer/match/1323705/history/,ALLOWED:8,
+nba.com,nba.com,32,24,5,4,Basketball:26;UNKNOWN:4;Ice Hockey:2,,BLOCKED_FOR_AI:1,ChatGPT-User;Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+www.abc.net.au,abc.net.au,32,29,3,6,Cricket:24;UNKNOWN:3;Australian Rules:3;Soccer:2,https://www.abc.net.au/news/sport/score-centre/cricket/2026-10-13/saf-aus/67174 https://www.abc.net.au/news/2026-10-18/renshaw-to-stay-at-number-five-as-aussies-delay-naming-test-side/107280234 https://www.abc.net.au/news/sport/score-centre/cricket/2025-10-23/pak-saf/65957,BLOCKED_FOR_AI:12,ChatGPT-User;Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+baseballsavant.mlb.com,mlb.com,32,21,9,13,Baseball:20;Australian Rules:8;UNKNOWN:2;Basketball:2,https://baseballsavant.mlb.com/leaderboard/statcast-park-factors https://baseballsavant.mlb.com/leaderboard/statcast-park-factors?type=year&year=2026 https://baseballsavant.mlb.com/probable-pitchers,ALLOWED:21,
+www.cricketworld.com,cricketworld.com,31,27,4,9,Cricket:25;Baseball:3;UNKNOWN:2;Australian Rules:1,https://www.cricketworld.com/west-indies-women-beat-zimbabwe-by-eight-wickets-to-seal-3-0-series-sweep/113694.htm https://www.cricketworld.com/south-africa-women-defend-164-6-to-beat-zimbabwe-women-by-13-runs-in-fifth-t20i/113393.htm https://www.cricketworld.com/cricket/series/bangladesh-tour-of-australia-2026/fixtures/129989,NO_RULES_FILE:14,
+league.nbl.com.au,nbl.com.au,30,18,11,8,Basketball:15;UNCLASSIFIED:8;Tennis:3;Baseball:2;UNKNOWN:2,https://league.nbl.com.au/news/snakes-hold-out-bullets-in-cairns https://league.nbl.com.au/news/how-to-watch-talking-points-illawarra-hawks-v-cairns-taipans-nbl27 https://league.nbl.com.au/news/season-over-for-two-time-champion-mason-peatling,ALLOWED:11,
+www.osasuna.es,osasuna.es,30,28,0,1,Basketball:20;Soccer:10,https://www.osasuna.es/primer-equipo https://www.osasuna.es/entrenamiento-14-10-2026 https://www.osasuna.es/osasuna-convocatoria-racing-santander-17-10-2026,ALLOWED:3,
+www.thescore.com,thescore.com,29,25,4,2,Soccer:24;Cricket:4;UNKNOWN:1,https://www.thescore.com/liga/teams/3345-beijing-guoan-fc/schedule https://www.thescore.com/mls/teams/3332-qingdao-west-coast-fc/schedule https://www.thescore.com/mls/teams/3331-henan-fc/schedule,ALLOWED:6,
+footystats.org,footystats.org,29,23,3,4,Soccer:14;Basketball:8;UNKNOWN:4;Australian Rules:3,https://footystats.org/clubs/ca-osasuna-287 https://footystats.org/india/bengaluru-fc-vs-sporting-delhi-h2h-stats https://footystats.org/clubs/racing-santander-541,RULES_UNKNOWN:12,
+www.wnba.com,wnba.com,29,15,14,12,Basketball:11;Baseball:8;UNKNOWN:6;Soccer:2;Australian Rules:2,https://www.wnba.com/game/ind-vs-pdx-1022600215 https://www.wnba.com/wnba-injury-report https://www.wnba.com/game/ind-vs-pdx-1022600062,BLOCKED_FOR_AI:27,ChatGPT-User;Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+www.rsl.com,rsl.com,28,21,7,3,Soccer:24;Cricket:4,https://www.rsl.com/competitions/mls-regular-season/2026/matches/rslvssj-10-14-2026/ https://www.rsl.com/news/the-basics-october-14-2026 https://www.rsl.com/news/real-salt-lake-returns-home-wednesday-to-host-san-jose-earthquakes,ALLOWED:9,
+czehockey.cz,czehockey.cz,28,20,8,3,Ice Hockey:24;Basketball:4,https://czehockey.cz/game/detail/179856 https://czehockey.cz/game/detail/179863 https://czehockey.cz/competition/club-stats/14?playerCompetitionStatsWidget-filter%5Bclub%5D=9,ALLOWED:4,
+www.casademontzaragoza.es,casademontzaragoza.es,28,25,3,2,Basketball:24;Cricket:4,https://www.casademontzaragoza.es/noticias/casademont-zaragoza-suma-la-tercera-victoria-en-liga-y-completa-el-pleno-gallego https://www.casademontzaragoza.es/noticias/modificados-los-horarios-de-los-pr%C3%B3ximos-compromisos-europeos https://www.casademontzaragoza.es/noticias/casademont-zaragoza-abre-su-camino-europeo-ante-basket-landes-en-plenos-pilares,ALLOWED:6,
+nkl.lt,nkl.lt,28,25,3,2,Basketball:24;Cricket:4,https://nkl.lt/43-taskus-pelniusio-hallo-sou-ir-patriotu-triumfas-pratesimo-dramoje/ https://nkl.lt/komandos/alytaus-patriotai/ https://nkl.lt/komandos/sakiu-vytis-vdu/,ALLOWED:9,
+www.ilves.com,ilves.com,27,25,2,1,Ice Hockey:25;UNKNOWN:2,https://www.ilves.com/otteluennakko/ilves-matkustaa-perjantaina-hpkn-vieraaksi/ https://www.ilves.com/ottelut-2025-26/ https://www.ilves.com/ottelut-2026-27/,ALLOWED:4,
+www.jleague.jp,jleague.jp,27,23,0,1,Soccer:21;UNKNOWN:6,https://www.jleague.jp/match/j1/2026/101812/ https://www.jleague.jp/en/club/machida/ https://www.jleague.jp/match/j1/2026/101012/lineup/,ALLOWED:7,
+www.bcci.tv,bcci.tv,27,23,2,3,Cricket:21;UNKNOWN:4;Australian Rules:2,https://www.bcci.tv/matches/239631/india-women-vs-zimbabwe-women https://www.bcci.tv/news/article/india-womens-squads-for-t20i-and-odi-series-against-zimbabwe-announced https://www.bcci.tv/matches/3385ec17-38fa-47dd-a809-cdacef29fb37/india-vs-west-indies/match-details,ALLOWED:8,
+www.weltfussball.de,weltfussball.de,27,27,0,1,Soccer:27,https://www.weltfussball.de/spielbericht/co3804/mexiko-lp---serie-a/ma12490514/club-de-ciervos_dragones-de-oaxaca/ https://www.weltfussball.de/spielbericht/co3804/lp---serie-a/ma12490550/dragones-de-oaxaca_halcones-negros/ https://www.weltfussball.de/spielbericht/co3804/lp---serie-a/ma12490586/acambaro-fc_dragones-de-oaxaca/,BLOCKED_FOR_AI:9,ChatGPT-User;Claude-User;Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+sec.cz.basketball,cz.basketball,27,25,0,1,UNKNOWN:18;Basketball:9,https://sec.cz.basketball/tym/15880?y=2026 https://sec.cz.basketball/zapas/532124 https://sec.cz.basketball/tym/641?y=2025,ALLOWED:4,
+www.footymetrics.com,footymetrics.com,26,19,1,3,Soccer:24;UNKNOWN:1;Baseball:1,https://www.footymetrics.com/teams/11058825-sporting-delhi https://www.footymetrics.com/statistics/corners/china-super-league https://www.footymetrics.com/statistics/corners/mexico-liga-mx,ALLOWED:4,
+www.betexplorer.com,betexplorer.com,26,23,3,2,Soccer:20;Basketball:6,https://www.betexplorer.com/football/team/mohun-bagan/nu3kFdnl/results/ https://www.betexplorer.com/basketball/team/manresa/KAm6vlvR/results/,ALLOWED:2,
+matchatlaslive.com,matchatlaslive.com,26,24,0,2,Soccer:26,https://matchatlaslive.com/detail.php?id=3056771&kind=match https://matchatlaslive.com/detail.php?id=2944828&kind=match https://matchatlaslive.com/detail.php?id=3031218&kind=match,ALLOWED:3,
+www.fightingeagles.jp,fightingeagles.jp,26,24,0,1,Basketball:24;UNKNOWN:2,https://www.fightingeagles.jp/news/detail/id=20544 https://www.fightingeagles.jp/news/detail/id=20433 https://www.fightingeagles.jp/news/?contents_type=32&pageID=3,ALLOWED:5,
+as.com,as.com,26,21,5,5,Basketball:16;Soccer:9;Baseball:1,https://as.com/resultados/baloncesto/eurocup/2026_2027/calendario/grupos_d/ https://as.com/resultados/ficha/equipo/racing/15/calendario/ https://as.com/resultados/futbol/primera/2026_2027/directo/regular_a_9_6a4496c62a78a88/alineaciones/,BLOCKED_FOR_AI:8,Claude-SearchBot;Claude-User;ClaudeBot
+www.skysports.com,skysports.com,25,20,5,5,Rugby Union:15;UNKNOWN:5;Cricket:2;Soccer:1;Australian Rules:1;Baseball:1,https://www.skysports.com/rugby-union/competitions/the-rugby-championship/results/2025-26 https://www.skysports.com/rugby-union/teams/australia/results/2025-26 https://www.skysports.com/rugby-union/australia-vs-new-zealand/preview/111860,BLOCKED_FOR_AI:11,GPTBot
+www.foxsports.com,foxsports.com,25,25,0,4,Basketball:17;Baseball:5;UNKNOWN:2;Soccer:1,https://www.foxsports.com/nba/oklahoma-city-thunder-team-schedule?seasonType=Preseason https://www.foxsports.com/nba/houston-rockets-team-schedule?seasonType=Preseason https://www.foxsports.com/mlb,ALLOWED:10,
+www.flashscore.com,flashscore.com,25,20,4,4,Soccer:15;Baseball:6;Basketball:3;UNKNOWN:1,https://www.flashscore.com/match/football/beijing-guoan-WSLjVBLN/qingdao-west-coast-0QkqH4Gf/ https://www.flashscore.com https://www.flashscore.com/basketball/philippines/pba-governors-cup/results/,ALLOWED:6,
+tennis-db.com,tennis-db.com,25,22,3,5,Tennis:22;UNKNOWN:2;Basketball:1,https://tennis-db.com/matches/4698004/cameron-norrie-vs-dalibor-svrcina https://tennis-db.com/players/56/valentin-royer/matches https://tennis-db.com/matches/4709456/arthur-gea-vs-jakub-mensik,ALLOWED:7,
+www.melbourneutd.com.au,melbourneutd.com.au,24,15,7,6,Basketball:20;UNCLASSIFIED:2;Baseball:1;Soccer:1,https://www.melbourneutd.com.au/news/nbl27-preview---round-5-vs-illawarra-hawks https://www.melbourneutd.com.au/news/nbl27-squad-update-round-5 https://www.melbourneutd.com.au/news/nbl27-preview---round-4-game-2-vs-south-east-melbourne-phoenix,ALLOWED:7,
+www.ga-eagles.nl,ga-eagles.nl,24,4,20,2,Soccer:14;Basketball:10,https://www.ga-eagles.nl/go-ahead-eagles-hervat-competitie-met-doelpuntrijke-remise-tegen-sparta-rotterdam/ https://www.ga-eagles.nl/,BLOCKED_FOR_AI:2,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+www.u-bt.ro,u-bt.ro,24,16,8,0,Basketball:24,https://www.u-bt.ro/seniori/stiri/alb-negrii-cauta-al-doilea-succes-in-bkt-eurocup-pe-terenul-lui-bc-siauliai https://www.u-bt.ro/seniori/stiri/victorie-la-revenirea-acasa-publicul-si-a-facut-simtita-prezenta-mihai-silvasan https://www.u-bt.ro/seniori/stiri/infrangere-la-roma,RULES_UNKNOWN:4,
+phl.ligasy.kz,ligasy.kz,24,16,0,2,Ice Hockey:24,https://phl.ligasy.kz/ru/game/2543-bei-qul https://phl.ligasy.kz/ru/schedule/2024?id_team=3 https://phl.ligasy.kz/,ALLOWED:4,
+www.baseball-reference.com,baseball-reference.com,23,16,7,6,Baseball:20;Australian Rules:3,https://www.baseball-reference.com/teams/TBR/2026.shtml https://www.baseball-reference.com/teams/CLE/2026.shtml https://www.baseball-reference.com/teams/TBR/2026-schedule-scores.shtml,RULES_UNKNOWN:15,
+www.soccerstats.com,soccerstats.com,23,22,1,4,Soccer:22;Baseball:1,https://www.soccerstats.com/pmatch.asp?league=china&stats=223-16-14-2026 https://www.soccerstats.com/pmatch.asp?league=china&stats=213-10-16-2026 https://www.soccerstats.com/pmatch.asp?league=denmark&stats=58-4-8-2027,RULES_UNKNOWN:5,
+www.totalcorner.com,totalcorner.com,22,14,8,5,Soccer:13;UNKNOWN:9,https://www.totalcorner.com/league/corner_stats/116 https://www.totalcorner.com/tr/h2h/chongqing-tonglianglong-vs-yunnan-yukun https://www.totalcorner.com/team/view/151826,ALLOWED:7,
+www.apwin.com,apwin.com,21,18,0,4,Soccer:20;Cricket:1,https://www.apwin.com/team/sporting-delhi/corners/ https://www.apwin.com/league/china/chinese-super-league/corners/ https://www.apwin.com/team/oued-akbou/corners/,ALLOWED:5,
+www.theguardian.com,theguardian.com,21,13,8,6,Cricket:10;UNKNOWN:6;Baseball:2;Australian Rules:1;Soccer:1;Rugby Union:1,https://www.theguardian.com/sport/live/2026/oct/18/south-africa-v-australia-second-test-day-one-cricket-st-georges-park-gqeberha-live-updates https://www.theguardian.com/sport/2026/oct/17/bledisloe-cup-australia-wallabies-new-zealand-all-blacks-second-rugby-test-match-report https://www.theguardian.com/sport/live/2026/oct/10/south-africa-v-australia-first-test-day-two-durban-kingsmead-cricket-ground-live-updates?page=with%3Ablock-6aca309b8f084a13d13c8cec,BLOCKED_FOR_AI:10,Claude-SearchBot;Claude-User;ClaudeBot;anthropic-ai
+www.windiescricket.com,windiescricket.com,21,19,2,2,UNKNOWN:15;Cricket:6,https://www.windiescricket.com/results/comp_id/9060/ https://www.windiescricket.com/fixtures/ https://www.windiescricket.com/news/cricket-west-indies-announces-limited-overs-squads-for-the-tour-of-india/,ALLOWED:7,
+www.tennismajors.com,tennismajors.com,21,19,1,3,Tennis:15;UNKNOWN:6,https://www.tennismajors.com/matches/atp/rolex-shanghai-masters/adolfo-daniel-vallejo-vs-valentin-royer https://www.tennismajors.com/matches/atp/rolex-shanghai-masters/alexander-bublik-vs-brandon-nakashima https://www.tennismajors.com/atp/gea-stuns-shelton-for-first-top-10-win-and-reaches-shanghai-last-16-on-masters-1000-debut-863001.html,ALLOWED:5,
+lkl.lt,lkl.lt,21,11,9,2,Basketball:8;Baseball:6;Tennis:5;UNKNOWN:2,https://lkl.lt/rungtynes/11599,ALLOWED:2,
+www.hokej.cz,hokej.cz,21,19,0,3,Ice Hockey:20;UNKNOWN:1,https://www.hokej.cz/zapas/2928325 https://www.hokej.cz/zapas/2928313?t=426 https://www.hokej.cz/zapas/2928320,RULES_UNKNOWN:4,
+www.aiscore.com,aiscore.com,20,16,4,5,Soccer:11;Tennis:5;UNKNOWN:4,https://www.aiscore.com/tournament-bhutan-premier-league/59gklzi36gu37xd https://www.aiscore.com/head-to-head/tennis/vit-kopriva-vs-zizou-bergs https://www.aiscore.com/team-henan-songshan-longmen/2j374oimr4crqo6,ALLOWED:5,
+omnihockey.com,omnihockey.com,20,20,0,1,Ice Hockey:20,https://omnihockey.com/teams/liiga-hpk/schedule https://omnihockey.com/teams/liiga-ilves/schedule https://omnihockey.com/teams/liiga-saipa/schedule,RULES_UNKNOWN:3,
+www.statmuse.com,statmuse.com,20,15,5,9,Basketball:8;Soccer:7;Baseball:5,https://www.statmuse.com/nhl/team/calgary-flames-21/schedule/2027 https://www.statmuse.com/nhl/ask/sharks-game-game-log https://www.statmuse.com/mlb/ask/scores-for-cubs-last-20-games,ALLOWED:16,
+en.tennistemple.com,tennistemple.com,20,11,9,5,Tennis:17;Baseball:2;UNKNOWN:1,https://en.tennistemple.com/competitions/shanghai/orderofplay/2026-10-11 https://en.tennistemple.com/player/tamara-zidansek/results https://en.tennistemple.com/match/steur-zaar-santa-margherita-di-pula-2026/9485150/,ALLOWED:7,
+www.nfl.com,nfl.com,20,20,0,2,American Football:18;UNKNOWN:1;Basketball:1,https://www.nfl.com/games/seahawks-at-broncos-2026-reg-6 https://www.nfl.com/injuries/league/2026/reg6 https://www.nfl.com/schedules/2026/by-team/denver-broncos,ALLOWED:5,
+www.velca.jp,velca.jp,20,20,0,1,Basketball:20,https://www.velca.jp/lp/game_20261008/ https://www.velca.jp/stats/ https://www.velca.jp/news/detail/id=50949,ALLOWED:4,
+ktpbasket.fi,ktpbasket.fi,20,16,4,2,Basketball:20,https://ktpbasket.fi/news/ktp-pyrinto-ennakko/ https://ktpbasket.fi/ https://ktpbasket.fi/news/karhubasket-ktp-78-84/,NO_RULES_FILE:3,
+anketa.hokej.cz,hokej.cz,20,0,20,2,Basketball:10;Ice Hockey:10,https://anketa.hokej.cz/zapas/2928313/summary,RULES_UNKNOWN:1,
+fcbayern.com,fcbayern.com,19,13,6,5,Basketball:12;Soccer:7,https://fcbayern.com/en/match-center/matchplan/profis/bundesliga/2026-2027 https://fcbayern.com/basketball/de/news/2026-27/10/niners-chemnitz---fc-bayern-basketball https://fcbayern.com/basketball/en/season/schedule,RULES_UNKNOWN:6,
+www.nrl.com,nrl.com,19,6,13,7,UNKNOWN:6;Rugby League:6;Baseball:4;Soccer:3,https://www.nrl.com/news/2026/09/01/rabbitohs-v-roosters-trell-set-to-start-robbo-rests-stars/ https://www.nrl.com/draw/nrl-premiership/2026/round-27/rabbitohs-v-roosters/ https://www.nrl.com/news/2026/08/28/friday-night-lights-sea-eagles-v-dragons-panthers-v-bulldogs/,ALLOWED:12,
+live.acb.com,acb.com,19,8,11,3,Baseball:10;Basketball:5;UNKNOWN:3;Soccer:1,https://live.acb.com https://live.acb.com/en/partidos/ucam-murcia-vs-la-laguna-tenerife-105398/jugadas https://live.acb.com/en/partidos/rio-breogan-vs-asisa-joventut-105378/previa,ALLOWED:8,
+sportscore.com,sportscore.com,19,15,4,10,Soccer:10;Cricket:4;UNKNOWN:4;Basketball:1,https://sportscore.com/basketball/match/lappeenrannan-nmky-vs-huima/ https://sportscore.com/football/match/guerreros-del-pacifico-vs-club-canoneros-marina/1l4rjnhnyekdm7v/ https://sportscore.com/basketball/match/csc-jasir-vs-usm-blida/,ALLOWED:10,
+mediacentre.euroleague.net,euroleague.net,19,9,10,1,Basketball:19,https://mediacentre.euroleague.net/mediacentre/en/games/view/19489/yes https://mediacentre.euroleague.net/mediacentre/en/games/view/19497/yes https://mediacentre.euroleague.net/mediacentre/en/games/view/19486/yes,ALLOWED:3,
+www.houstonchronicle.com,houstonchronicle.com,19,16,3,2,Basketball:15;Cricket:4,https://www.houstonchronicle.com/sports/rockets/article/houston-dallas-macao-score-22472184.php https://www.houstonchronicle.com/sports/rockets/article/houston-oklahoma-city-preseason-score-22478186.php https://www.houstonchronicle.com/sports/rockets/article/rockets-preseason-film-review-22472045.php,BLOCKED_FOR_AI:3,Claude-User;Claude-Web;ClaudeBot;anthropic-ai
+espn.com,espn.com,18,6,12,5,Baseball:8;Tennis:6;Soccer:3;Cricket:1,,BLOCKED_FOR_AI:1,ChatGPT-User;GPTBot;anthropic-ai
+www.usopen.org,usopen.org,18,11,4,4,Tennis:10;UNKNOWN:6;Soccer:2,https://www.usopen.org/en_US/scores/stats/1315.html https://www.usopen.org/en_US/scores/stats/1313.html https://www.usopen.org/en_US/scores/stats/11231.html,ALLOWED:10;BLOCKED_FOR_AI:3,Claude-User;Claude-Web;ClaudeBot;GPTBot;OAI-SearchBot;anthropic-ai
+www.dbu.dk,dbu.dk,18,16,2,3,UNKNOWN:7;Soccer:6;Cricket:3;Australian Rules:2,https://www.dbu.dk/resultater/kamp/556151_506118/ https://www.dbu.dk/resultater/pulje/506118 https://www.dbu.dk/resultater/kamp/486247_508655/kampinfo,ALLOWED:3,
+en.yna.co.kr,yna.co.kr,18,13,5,4,Baseball:18,https://en.yna.co.kr/view/AEN20260407002800315 https://en.yna.co.kr/view/AEN20261007009700315,BLOCKED_FOR_AI:2,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+tryhoop.com,tryhoop.com,18,16,0,1,Basketball:18,https://tryhoop.com/schedule/list/?month=10&year=2026 https://tryhoop.com/news/contents_type=32 https://tryhoop.com/?p=18412,ALLOWED:3,
+en.wikipedia.org,wikipedia.org,18,18,0,1,Basketball:18,https://en.wikipedia.org/wiki/2025%E2%80%9326_TNT_Tropang_5G_season https://en.wikipedia.org/wiki/2025%E2%80%9326_Converge_FiberXers_season,ALLOWED:2,
+iaas-public-front-pro.laliga.com,laliga.com,18,16,0,1,Basketball:12;Soccer:6,https://iaas-public-front-pro.laliga.com/partido/temporada-2026-2027-laliga-ea-sports-ca-osasuna-r-racing-club-9 https://iaas-public-front-pro.laliga.com/clubes/c-a-osasuna/resultados,ALLOWED:2,
+sport.sky.it,sky.it,18,9,9,1,Basketball:18,https://sport.sky.it/basket/2026/10/14/eurocup-tortona-napoli-venezia-maxima-risultati-oggi https://sport.sky.it/basket/serie-a/2026/09/20/milano-venezia-finale-supercoppa-italiana-basket-2026-risultato https://sport.sky.it/basket/serie-a/2026/10/17/napoli-olimpia-milano-dove-vedere-tv-streaming,ALLOWED:3,
+news.zhibo8.com,zhibo8.com,17,16,0,2,Soccer:16;UNKNOWN:1,https://news.zhibo8.com/zuqiu/2026-10-16/6ad1ce94555eanative.htm https://news.zhibo8.com/zuqiu/2026-10-09/6ac894ff96250native.htm https://news.zhibo8.com/nba/2026-10-17/match2295762date2026vnative.htm,NO_RULES_FILE:3,
+matchscan.co,matchscan.co,17,17,0,2,Soccer:17,https://matchscan.co/en/database/chinese-super-league/tianjin-jinmen-tiger https://matchscan.co/database/chinese-super-league/corners https://matchscan.co/database/j1-league/machida-zelvia,ALLOWED:5,
+www.qiumiwu.com,qiumiwu.com,17,9,8,4,Soccer:11;UNKNOWN:2;Australian Rules:2;Basketball:2,https://www.qiumiwu.com/game/114463542711 https://www.qiumiwu.com/game/stat-113881161768 https://www.qiumiwu.com/game/news-114268476237,ALLOWED:5,
+sofascore.com,sofascore.com,17,7,10,5,Tennis:7;Baseball:7;Soccer:1;Cricket:1;Basketball:1,,RULES_UNKNOWN:1,
+api.open-meteo.com,open-meteo.com,17,12,5,14,Baseball:8;Cricket:6;Soccer:2;Australian Rules:1,https://api.open-meteo.com/v1/forecast?latitude=34.39&longitude=132.48 https://api.open-meteo.com/v1/forecast?latitude=53.817&longitude=-1.582&hourly=temperature_2m https://api.open-meteo.com/v1/forecast?latitude=52.4559&longitude=-1.9027&hourly=temperature_2m,BLOCKED_FOR_AI:16,ChatGPT-User;Claude-SearchBot;Claude-User;Claude-Web;ClaudeBot;GPTBot;OAI-SearchBot;anthropic-ai
+biz.chosun.com,chosun.com,17,3,14,5,Baseball:15;Basketball:2,https://biz.chosun.com/en/en-sports/2026/10/11/CW5S52SHNNHYRMF3VHPRTXQWZY/ https://biz.chosun.com/en/en-sports/2026/10/11/5OVAASYQXVFWXKWANL4CDEDPWA/?outputType=amp https://biz.chosun.com/sports/baseball/2026/10/10/GVTDIN3EGIZGEY3DMUZWGYRVMU/,BLOCKED_FOR_AI:5,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+pgtest.mykbostats.com,mykbostats.com,17,12,5,4,Baseball:17,https://pgtest.mykbostats.com/games/14035-KT-vs-Samsung-20261011 https://pgtest.mykbostats.com/players/2114 https://pgtest.mykbostats.com/stats/park_splits/2026,ALLOWED:4,
+www.mancity.com,mancity.com,17,17,0,3,Soccer:9;UNKNOWN:5;Cricket:3,https://www.mancity.com/news/mens/liverpool-v-manchester-city-premier-league-team-news-63927317 https://www.mancity.com/matchday/fixtures/mens/2026/premier-league/liverpool-v-man-city-11-oct-2026?page=Commentary,ALLOWED:2,
+www.tving.com,tving.com,17,13,0,2,Basketball:14;Baseball:3,https://www.tving.com/sports/kbo https://www.tving.com/sports/game/20261015355049012102,ALLOWED:2,
+rfef.es,rfef.es,16,13,1,2,Basketball:10;Soccer:5;Australian Rules:1,https://rfef.es/es/resultados?competition=33836084&group=33836085&journey=9 https://rfef.es/es/resultados?competition=33836084&group=33836085 https://rfef.es/,ALLOWED:4,
+schedule.nbl.com.au,nbl.com.au,16,10,6,4,Basketball:11;Tennis:4;Soccer:1,https://schedule.nbl.com.au/match?league=NBL&match=36fb1b72-58ad-11f1-a2a4-7da015763581&year=2026 https://schedule.nbl.com.au/api/calendar/match?match=36e0818b-58ad-11f1-89d2-fb9d3a8baf78&league=NBL https://schedule.nbl.com.au/match?from=%2Fnbl%2F2026%3Flogo%3D0&league=NBL&match=36e0818b-58ad-11f1-89d2-fb9d3a8baf78&season=67d4a190-40bc-4bfb-a9a2-11bd0b93f020&year=2026,RULES_UNKNOWN:5,
+www.mountfield-hk.cz,mountfield-hk.cz,16,16,0,1,Ice Hockey:16,https://www.mountfield-hk.cz/clanek.asp?id=Odveta-za-vyrazeni-z-lonska-Lvi-zkusi-zastavit-rozjety-Trinec-14635 https://www.mountfield-hk.cz/clanek.asp?id=Tiskova-zprava-Mountfieldu-HK-pred-sezonou-2026-27-14541,ALLOWED:2,
+hcotrinec.cz,hcotrinec.cz,16,16,0,1,Ice Hockey:16,https://hcotrinec.cz/roster/MUZ https://hcotrinec.cz/matches/MUZ https://hcotrinec.cz/statistics/MUZ,NO_RULES_FILE:3,
+bcsiauliai.lt,bcsiauliai.lt,16,8,8,0,Basketball:16,https://bcsiauliai.lt/rezultatai/ https://bcsiauliai.lt/komanda/ https://bcsiauliai.lt/u-bt-estu-dirigentas-serbu-bokstas-ir-amerikieciu-jega/,ALLOWED:3,
+www.basket-landes.com,basket-landes.com,16,13,3,2,Basketball:12;Cricket:4,https://www.basket-landes.com/preview-casademont-zaragoza/ https://www.basket-landes.com/news-professionnelles/ https://www.basket-landes.com/event/basket-landes-vs-la-tronche-meylan/,ALLOWED:4,
+www.allblacks.com,allblacks.com,15,13,0,1,Rugby Union:15,https://www.allblacks.com/news/all-blacks/all-blacks-team-named-to-play-australia-in-second-bledisloe-cup-test https://www.allblacks.com/news/all-blacks/tavatavanawai-to-start-as-jordie-barrett-ruled-out-of-sydney-test,ALLOWED:2,
+www.espncricinfo.com,espncricinfo.com,15,8,5,6,Cricket:13;UNKNOWN:2,https://www.espncricinfo.com/ https://www.espncricinfo.com/series/the-hundred-men-s-competition-2026-1521176/welsh-fire-men-vs-southern-brave-men-19th-match-1521249/full-scorecard https://www.espncricinfo.com/series/the-hundred-men-s-competition-2026-1521176/manchester-super-giants-men-vs-sunrisers-leeds-men-eliminator-1521263/ball-by-ball-commentary,RULES_UNKNOWN:10,
+www.milb.com,milb.com,15,15,0,0,UNKNOWN:15,https://www.milb.com/sacramento/scores/triple-a/pacific-coast https://www.milb.com/sacramento/schedule/2026/fullseason https://www.milb.com/reno/news/reno-aces-announce-promotions-for-august-and-september,ALLOWED:14,
+nrl.com,nrl.com,15,8,7,4,Rugby League:14;Baseball:1,,ALLOWED:1,
+baseball.yahoo.co.jp,yahoo.co.jp,15,7,8,6,Baseball:11;Tennis:4,https://baseball.yahoo.co.jp/npb/game/2021048568/top https://baseball.yahoo.co.jp/npb/game/2026092501/top https://baseball.yahoo.co.jp/npb/game/2021039417/score?index=1120301,NO_RULES_FILE:8,
+nbl.com.au,nbl.com.au,15,7,8,6,Basketball:8;Baseball:4;Tennis:3,,ALLOWED:1,
+www.mt.co.kr,mt.co.kr,15,15,0,4,Baseball:11;Basketball:4,https://www.mt.co.kr/sports/2026/10/20/202610201531770170O https://www.mt.co.kr/sports/2026/10/09/202610091213776293O https://www.mt.co.kr/amp/sports/2026/10/17/2026101710565214552,ALLOWED:4,
+www.b-warriors.net,b-warriors.net,15,15,0,1,Basketball:15,https://www.b-warriors.net/stats/ https://www.b-warriors.net/news/detail/id=20391 https://www.b-warriors.net/schedule/list/,ALLOWED:3,
+www.sunrockers.jp,sunrockers.jp,15,15,0,1,Basketball:15,https://www.sunrockers.jp/stats/?Year=529 https://www.sunrockers.jp/lp/game_20261011/ https://www.sunrockers.jp/,ALLOWED:3,
+www.ucamdeportes.com,ucamdeportes.com,15,15,0,1,Basketball:15,https://www.ucamdeportes.com/ucamcb https://www.ucamdeportes.com/ucamcb/proximos-partidos https://www.ucamdeportes.com/ucamcb/noticias/el-ucam-murcia-busca-el-pleno-semanal-ante-la-laguna-tenerife,ALLOWED:3,
+rtvc.es,rtvc.es,15,15,0,1,Basketball:15,https://rtvc.es/ucam-murcia-vs-la-laguna-tenerife-jornada-3-liga-endesa-11-octubre-2026/,ALLOWED:1,
+es.besoccer.com,besoccer.com,15,15,0,2,Basketball:8;Soccer:7,https://es.besoccer.com/equipo/partidos/osasuna https://es.besoccer.com/partido/osasuna/racing/202724620/alineaciones https://es.besoccer.com/equipo/partidos/guerreros-del-pacifico,RULES_UNKNOWN:3,
+www.seahawks.com,seahawks.com,15,15,0,1,American Football:15,https://www.seahawks.com/game-day/2026/reg-week6/seahawks-at-broncos/ https://www.seahawks.com/news/seahawks-at-broncos-week-6-inactives https://www.seahawks.com/schedule/,ALLOWED:3,
+www.news1.kr,news1.kr,15,13,0,1,Basketball:10;Baseball:5,https://www.news1.kr/sports/baseball/6324044 https://www.news1.kr/sports/baseball/6326360 https://www.news1.kr/sports/baseball/6326175,RULES_UNKNOWN:3,
+official.nba.com,nba.com,15,15,0,1,Basketball:10;UNCLASSIFIED:5,https://official.nba.com/nba-injury-report-2026-27-season/ https://official.nba.com/rule-no-5-scoring-and-timing/ https://official.nba.com/rule-no-3-players-substitutes-and-coaches/,ALLOWED:5,
+www.semphoenix.com.au,semphoenix.com.au,14,10,2,3,Basketball:11;UNKNOWN:2;Baseball:1,https://www.semphoenix.com.au/news/match-preview-phoenix-return-to-the-fire-pit-to-stop-in-form-taipans https://www.semphoenix.com.au/news/match-preview-phoenix-out-for-redemption-in-throwdown-34-presented-by-axs?d6ef7251_page=2 https://www.semphoenix.com.au/schedule/south-east-melbourne-phoenix-v-cairns-taipans-men-17-10-2026,ALLOWED:4,
+www.wisden.com,wisden.com,14,13,1,3,Cricket:13;UNKNOWN:1,https://www.wisden.com/series/pakistan-odi-tri-series-2026/cricket-news/pakistan-tri-series-2026-all-you-need-to-know-full-schedule-squads-venues-and-match-timings-for-the-odi-tri-series https://www.wisden.com/ https://www.wisden.com/series/india-vs-zimbabwe-w-2026/cricket-news/ind-w-vs-zim-w-t20is-all-you-need-to-know-full-schedule-squads-venues-and-live-streaming-details,ALLOWED:5,
+www.bbc.co.uk,bbc.co.uk,14,14,0,5,Cricket:14,https://www.bbc.co.uk/sport/cricket/articles/cr7971znm7no https://www.bbc.co.uk/sport/cricket/scorecard/e-231156 https://www.bbc.co.uk/sport/cricket/articles/ckg1rj85z26o,BLOCKED_FOR_AI:7,ChatGPT-User;Claude-SearchBot;Claude-Web;ClaudeBot;GPTBot;OAI-SearchBot;anthropic-ai
+cpbl.com.tw,cpbl.com.tw,14,6,8,3,Australian Rules:8;Baseball:6,https://cpbl.com.tw/standings/season https://cpbl.com.tw/box/index?gameSno=338&kindCode=A&year=2026 https://cpbl.com.tw/theme/client/download/%E8%A3%81%E5%88%A4%E5%9F%B7%E6%B3%95%E6%89%8B%E5%86%8A%E8%A6%8F%E5%89%87%E8%A3%9C%E8%BF%B0.pdf,NO_RULES_FILE:12,
+koreabaseball.com,koreabaseball.com,14,10,4,6,Baseball:11;Soccer:2;Cricket:1,https://koreabaseball.com/MediaNews/Notice/View.aspx?bdSe=12172 https://koreabaseball.com/Record/Team/Hitter/Basic1.aspx https://koreabaseball.com/Record/TeamRank/TeamRank.aspx,BLOCKED_FOR_AI:5,ChatGPT-User;Claude-SearchBot;Claude-User;Claude-Web;ClaudeBot;GPTBot;OAI-SearchBot;anthropic-ai
+bundesliga.com,bundesliga.com,14,8,6,3,Soccer:8;UNKNOWN:4;Baseball:1;Cricket:1,,ALLOWED:1,
+www.besoccer.es,besoccer.es,13,13,0,2,Soccer:7;Basketball:6,https://www.besoccer.es/equipo/partidos/racing https://www.besoccer.es/equipo/partidos/oued-akbou,RULES_UNKNOWN:2,
+www.cbf.cz.basketball,cz.basketball,13,13,0,1,UNKNOWN:10;Basketball:3,https://www.cbf.cz.basketball/tym/9293 https://www.cbf.cz.basketball/zapas/532124 https://www.cbf.cz.basketball/tym/15882,ALLOWED:3,
+www.denverbroncos.com,denverbroncos.com,13,13,0,1,American Football:9;UNKNOWN:4,https://www.denverbroncos.com/news/cb-riley-moss-active-for-broncos-week-6-game-vs-seahawks https://www.denverbroncos.com/game-day/2026/reg/broncos-at-49ers https://www.denverbroncos.com/news/game-preview-what-to-watch-in-broncos-preseason-finale-vs-minnesota-vikings,ALLOWED:6,
+basketnews.lt,basketnews.lt,13,8,5,2,Baseball:8;Tennis:5,,ALLOWED:1,
+www.wildcats.com.au,wildcats.com.au,13,12,1,2,Basketball:13,https://www.wildcats.com.au/news/nbl27-round-4-mental-health-game-preview-wildcats-vs-breakers https://www.wildcats.com.au/statistics https://www.wildcats.com.au/schedule?season=41560,ALLOWED:4,
+www.newsis.com,newsis.com,13,13,0,2,Baseball:7;Basketball:6,https://www.newsis.com/view/NISX20261020_0003833694 https://www.newsis.com/view/NISX20261008_0003819609 https://www.newsis.com/view/NISX20261007_0003817884,ALLOWED:3,
+www.fancrew.com.au,fancrew.com.au,13,13,0,3,Basketball:13,https://www.fancrew.com.au/stats/teams https://www.fancrew.com.au/games/south-east-melbourne-phoenix-v-melbourne-united-men-10-10-2026,ALLOWED:2,
+jmtfc.com.cn,jmtfc.com.cn,12,9,0,1,Soccer:12,https://jmtfc.com.cn/fixtures.html,NO_RULES_FILE:1,
+bengali.indianexpress.com,indianexpress.com,12,6,0,1,Soccer:12,https://bengali.indianexpress.com/sports/sc-delhi-vs-mohun-bagan-isl-match-preview-12680371 https://bengali.indianexpress.com/sports/mohun-bagan-super-giant-isl-2026-27-panagiotis-dilmperis-squad-trophy-challenge-12666551,BLOCKED_FOR_AI:2,Claude-Web;ClaudeBot;anthropic-ai
+hpk.fi,hpk.fi,12,12,0,1,Ice Hockey:12,https://hpk.fi/biorex-otteluennakko-hpk-ilves-16-10-vieraita-tampereelta/,ALLOWED:1,
+www.jatkoaika.com,jatkoaika.com,12,9,0,1,Ice Hockey:12,https://www.jatkoaika.com/LIIGA/Kokoonpanot/HPK-Ilves/62530,BLOCKED_FOR_AI:1,ChatGPT-User;Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+www.rugby.com.au,rugby.com.au,12,12,0,1,Rugby Union:12,https://www.rugby.com.au/news/wallabies-team-confirmed-to-play-new-zealand-in-sydney-20261015 https://www.rugby.com.au/news/bledisloe-cup-wallabies-all-blacks-new-zealand-team-rugby-union-20261015,NO_RULES_FILE:2,
+pba.ph,pba.ph,12,8,0,1,UNKNOWN:9;Basketball:3,,RULES_UNKNOWN:1,
+www.reddit.com,reddit.com,12,7,5,4,UNKNOWN:5;Soccer:4;Australian Rules:2;Basketball:1,https://www.reddit.com/r/SJEarthquakes/comments/1x67pqk/match_thread_real_salt_lake_vs_san_jose/ https://www.reddit.com/r/ahlscores/comments/1x8nqv0/game_thread_henderson_silver_knights_at_ontario/ https://www.reddit.com/r/CarltonBlues/comments/1vjnzhy/post_match_round_22_st_kilda_v_carlton/,BLOCKED_FOR_AI:8,ChatGPT-User;Claude-SearchBot;Claude-User;Claude-Web;ClaudeBot;GPTBot;OAI-SearchBot;anthropic-ai
+espncricinfo.com,espncricinfo.com,12,10,2,2,Cricket:12,,BLOCKED_FOR_AI:1,GPTBot
+ak-static.cms.nba.com,nba.com,12,12,0,5,Basketball:10;UNCLASSIFIED:2,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-21_06_30PM.pdf https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-21_06_45PM.pdf https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-21_07_00PM.pdf,ALLOWED:6,
+sports.yahoo.com,yahoo.com,12,10,2,3,Basketball:5;UNKNOWN:4;Baseball:2;Soccer:1,https://sports.yahoo.com/articles/october-11th-injury-report-houston-073032121.html https://sports.yahoo.com/articles/rajiv-gandhi-international-stadium-hyderabad-223001553.html https://sports.yahoo.com/mlb/new-york-mets-washington-nationals-460926120/,BLOCKED_FOR_AI:5,ChatGPT-User;Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+yakuku-yaru.today,yakuku-yaru.today,12,12,0,3,Baseball:12,https://yakuku-yaru.today/games/59152 https://yakuku-yaru.today/games/59148 https://yakuku-yaru.today/games/59155,ALLOWED:3,
+www.sparta-rotterdam.nl,sparta-rotterdam.nl,12,8,4,2,Soccer:10;Basketball:2,https://www.sparta-rotterdam.nl/go-ahead-eagles-sparta-krijgt-nieuw-tijdstip/ https://www.sparta-rotterdam.nl/sparta-werkt-toe-naar-uitwedstrijd-tegen-go-ahead-eagles/ https://www.sparta-rotterdam.nl/clubliefde/competitie-programma/,ALLOWED:3,
+hifk.fi,hifk.fi,12,8,4,2,Ice Hockey:10;Basketball:2,https://hifk.fi/red-classics-spektaakkeli-tanaan-nordiksella-vastassa-kalpa/ https://hifk.fi/vili-varonen-starttaa-illan-otteluun-alnefelt-viime-hetkella-sivuun/ https://hifk.fi/kalpa-kaatui-nordiksella-tennislukemin/,ALLOWED:3,
+fixturedownload.com,fixturedownload.com,12,12,0,1,Soccer:12,https://fixturedownload.com/results/mls-2026/real-salt-lake https://fixturedownload.com/results/mls-2026/san-jose-earthquakes,BLOCKED_FOR_AI:2,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+www.sjearthquakes.com,sjearthquakes.com,12,12,0,1,Soccer:12,https://www.sjearthquakes.com/news/match-preview-earthquakes-hoping-to-clinch-playoff-berth-wednesday-at-real-salt-lake https://www.sjearthquakes.com/competitions/mls-regular-season/2026/matches/rslvssj-10-14-2026/lineups https://www.sjearthquakes.com/competitions/mls-regular-season/2026/matches/colvssj-10-10-2026/lineups,ALLOWED:3,
+www.thenews.pk,thenews.pk,12,10,0,1,Cricket:12,https://www.thenews.pk/story/1443659-sri-lanka-win-toss-elect-to-bowl-first-against-pakistan-in-tri-nation-series-opener https://www.thenews.pk/print/1443109-nissanka-ruled-out-of-tri-series-as-pakistan-sl-step-up-preparations,ALLOWED:2,
+querostats.com,querostats.com,12,12,0,1,Basketball:8;Soccer:4,https://querostats.com/,ALLOWED:1,
+www.zelvia.co.jp,zelvia.co.jp,12,10,0,1,Soccer:12,https://www.zelvia.co.jp/match/ https://www.zelvia.co.jp/match/game/series/2026-27/ https://www.zelvia.co.jp/match/game/357151/,ALLOWED:3,
+realolimpiamilano.com,realolimpiamilano.com,12,6,6,1,Basketball:12,https://realolimpiamilano.com/2026/10/17/napoli-olimpia-milano-18-ottobre-2026-ultime-notizie/ https://realolimpiamilano.com/2026/10/15/olimpia-milano-dubai-15-ottobre-2026-ufficiali/,ALLOWED:2,
+crex.com,crex.com,12,12,0,1,Cricket:12,https://crex.com/team/zimbabwe-women-6I/matches https://crex.com/team/india-women-16/matches,BLOCKED_FOR_AI:2,GPTBot
+ca.soccerway.com,soccerway.com,12,12,0,1,Soccer:12,https://ca.soccerway.com/bosnia-and-herzegovina/prva-liga-rs/standings https://ca.soccerway.com/game/potkozarje-AHrFXeeB/zvornik-YZcveBlG/?mid=GI2RuAdD https://ca.soccerway.com/team/potkozarje/AHrFXeeB/results/,ALLOWED:4,
+1lyga.lt,1lyga.lt,12,10,0,1,Soccer:12,https://1lyga.lt/artimiausios-varzybos/puslapis/3/ https://1lyga.lt/klubas/fk-be1/ https://1lyga.lt/klubas/fc-neptunas/,ALLOWED:4,
+www.hc-olomouc.cz,hc-olomouc.cz,12,12,0,1,Ice Hockey:12,https://www.hc-olomouc.cz/matches/MUZ/ https://www.hc-olomouc.cz/article/8872-PREVIEW-Extraligovy-vikend-je-tady-Na-led-Olomouce-miri-Karlovy-Vary,BLOCKED_FOR_AI:2,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+m.24score.com,24score.com,12,12,0,0,Soccer:12,https://m.24score.com/football/match/844270-beijing_guoan-qingdao_west_coast,ALLOWED:1,
+m.aiscore.com,aiscore.com,11,11,0,3,Soccer:9;Baseball:2,https://m.aiscore.com/team-henan-fc/2j374oimr4crqo6/matches https://m.aiscore.com/team-tianjin-jinmen-tiger/0m2q15ixx3tm76x/matches https://m.aiscore.com/ko/baseball/tournament-kbo-league/2jr7onc64gs1q0e,ALLOWED:3,
+www.osen.co.kr,osen.co.kr,11,10,1,4,Baseball:11,https://www.osen.co.kr/article/G1112890308 https://www.osen.co.kr/article/G1112889182 https://www.osen.co.kr/article/G1112889168,ALLOWED:5,
+www.brisbanebullets.com.au,brisbanebullets.com.au,11,6,1,2,Basketball:6;UNKNOWN:4;Baseball:1,https://www.brisbanebullets.com.au/news/preview-r4-away-v-cairns https://www.brisbanebullets.com.au/news/recap-bullets-lose-entertaining-ot-contest https://www.brisbanebullets.com.au/news/round-2-preview-bullets-v-hawks,ALLOWED:3,
+www.eurohoops.net,eurohoops.net,11,4,7,1,Basketball:8;Soccer:2;UNKNOWN:1,https://www.eurohoops.net/eurocup-game/?comp=U&gamecode=39&lang=en&season=U2026 https://www.eurohoops.net/en/euroleague/2014883/euroleague-roundup-hapoel-survives-reals-comeback-and-secures-a-victory/ https://www.eurohoops.net/en/heba/2016134/panathinaikos-open-gbl-season-with-a-dominant-win/,ALLOWED:3,
+statshub.sportradar.com,sportradar.com,11,7,2,3,Soccer:8;Basketball:3,https://statshub.sportradar.com/sportradar/en/match/72224078 https://statshub.sportradar.com/sportradar/en/match/75109764 https://statshub.sportradar.com/sportradar/en/match/69456656,NO_RULES_FILE:3,
+sec.cz,sec.cz,10,10,0,1,UNKNOWN:8;Basketball:2,,RULES_UNKNOWN:1,
+afl.com.au,afl.com.au,10,3,7,7,Australian Rules:6;Baseball:3;Soccer:1,,ALLOWED:1,
+www.mlssoccer.com,mlssoccer.com,10,8,2,2,Soccer:9;UNKNOWN:1,https://www.mlssoccer.com/news/mls-player-status-report-matchday-30-wednesday-october-14 https://www.mlssoccer.com/competitions/mls-regular-season/2026/matches/rslvssj-10-14-2026/lineups https://www.mlssoccer.com/competitions/leagues-cup/news/chicago-fire-exit-leagues-cup,ALLOWED:4,
+elpais.com,elpais.com,10,10,0,2,Soccer:5;Basketball:4;UNKNOWN:1,https://elpais.com/deportes/resultados/futbol/primera/2026_2027/directo/regular-a-9-6a4496c62a78a88/alineaciones/ https://elpais.com/deportes/resultados/futbol/inglaterra/2026_2027/directo/regular-a-6-6a38cde9456aa39/alineaciones/ https://elpais.com/deportes/resultados/futbol/mexico_apertura/2026/directo/regular-a-6-6a2d4a0547eba52/alineaciones/,BLOCKED_FOR_AI:3,Claude-SearchBot;Claude-User;ClaudeBot
+weather.com,weather.com,10,4,2,3,Soccer:6;Australian Rules:2;UNKNOWN:1;Baseball:1,https://weather.com/es-US/tiempo/horario/l/eb21b6c30fe7eef7bdb5ae103d0669ffbb96ef1e33a2564bf01c340aca0248ed?temp=c,ALLOWED:2,
+www.liverpoolfc.com,liverpoolfc.com,10,7,3,2,Soccer:7;UNKNOWN:3,https://www.liverpoolfc.com/news/fixture-updates-new-dates-anfield-games-against-man-city-and-arsenal https://www.liverpoolfc.com/matches/mens-team/liverpool-v-manchester-city-english-premier-league-20261011 https://www.liverpoolfc.com/news/isak-and-munoz-score-liverpool-draw-nottingham-forest/,ALLOWED:3,
+www.etplofficial.com,etplofficial.com,10,4,6,3,UNKNOWN:4;Cricket:2;Soccer:2;Baseball:2,https://www.etplofficial.com/matches/6a688c61b30844b0969df8af https://www.etplofficial.com/nvplay-embed?customerId=1A9E0000-8D41-7CED-D487-08DEF280CD56&innings=2&matchId=ac4fe6d2-e979-49db-9803-83495a8a047f&theme=light&widget=match-centre https://www.etplofficial.com/,ALLOWED:5,
+baseball-reference.com,baseball-reference.com,10,4,6,3,Baseball:6;Tennis:4,,RULES_UNKNOWN:1,
+paris-idf.fff.fr,fff.fr,10,2,8,2,UNKNOWN:8;Soccer:2,https://paris-idf.fff.fr/simple/,RULES_UNKNOWN:1,
+www.hangzhouopen.com,hangzhouopen.com,10,10,0,1,Tennis:6;UNKNOWN:4,https://www.hangzhouopen.com/en/media/news/medvedev-royer-hangzhou-2026-saturday,BLOCKED_FOR_AI:1,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+www.storks.jp,storks.jp,10,10,0,1,Basketball:10,https://www.storks.jp/schedule/list/?month=10&year=2026 https://www.storks.jp/stats/,ALLOWED:2,
+chibajets.jp,chibajets.jp,10,10,0,1,Basketball:10,https://chibajets.jp/schedule/list/?month=10&year=2026 https://chibajets.jp/stats/,ALLOWED:2,
+basket.fi,basket.fi,10,0,10,3,Basketball:10,https://basket.fi/uutiset/mantynen-ja-dolenc-johtivat-ktpn-voittoon-hurjilla-suorituksillaan-nikkarinen-vedossa-helsingissa/ https://basket.fi/uutiset/divarikatsaus-viikko-41-2026/ https://basket.fi/uutiset/miesten-i-divisioona-a-kausiennakko-2026-27/,ALLOWED:3,
+www.basquetmanresa.com,basquetmanresa.com,10,5,5,3,Basketball:6;UNKNOWN:2;Soccer:1;Tennis:1,https://www.basquetmanresa.com/en/news/baxi-manresa/game-report/2026/kidsus-battles-an-unbeatable-madrid-side/ https://www.basquetmanresa.com/en/news/baxi-manresa/game-report/2026/defeat-of-kidsus-on-the-complicated-court-of-bahcesehir/,ALLOWED:2,
+www.hindustantimes.com,hindustantimes.com,10,10,0,1,Cricket:6;UNKNOWN:4,https://www.hindustantimes.com/cricket/match-stats-pak-w-vs-zim-w-zim-w-in-pak-3-t20is-2026-2nd-t20i-pakistan-women-vs-zimbabwe-women-t20-pkwzmw05142026270518 https://www.hindustantimes.com/cricket/match-stats-ind-vs-wi-wi-in-ind-5-t20is-2026-3rd-t20i-india-vs-west-indies-t20-inwi10112026270275,ALLOWED:2,
+statsdmz.nba.com,nba.com,10,0,10,4,Basketball:7;UNCLASSIFIED:3,https://statsdmz.nba.com/pdfs/20261020/20261020_OKCSAS.pdf https://statsdmz.nba.com/pdfs/20261021/20261021_ATLORL.pdf https://statsdmz.nba.com/pdfs/20261021/20261021_MILWAS.pdf,NO_RULES_FILE:4,
+www.performanceodds.com,performanceodds.com,9,6,0,2,Soccer:8;UNKNOWN:1,https://www.performanceodds.com/team_stats_overall/17964/688913/ https://www.performanceodds.com/fixtures_match/8634951/ https://www.performanceodds.com/results_match/8634951/,BLOCKED_FOR_AI:3,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+www.matchendirect.fr,matchendirect.fr,9,5,4,2,Soccer:5;UNKNOWN:4,https://www.matchendirect.fr/live-score/kirghizistan-liban_c7txqebls70jxpsnw0fpsh5hw.html?p=stats https://www.matchendirect.fr/statistique/es-ben-aknoun-contre-oued-akbou.html,BLOCKED_FOR_AI:2,anthropic-ai
+www.eliteprospects.com,eliteprospects.com,9,9,0,1,Ice Hockey:8;UNKNOWN:1,https://www.eliteprospects.com/team/610/hpk/scores/2025-2026 https://www.eliteprospects.com/league/shl/game/888618/2026-10-17-lulea-hf-vs-hv71,ALLOWED:2,
+www.blazersedge.com,blazersedge.com,9,9,0,1,Ice Hockey:6;Basketball:3,https://www.blazersedge.com/gameday-coverage/117011/trail-blazers-portland-london-lions-final-score-stats-nba-preseason-today https://www.blazersedge.com/trail-blazers-analysis/117058/portland-trail-blazers-sacramento-kings-final-score-boxscore-lillard-morant-stats,BLOCKED_FOR_AI:2,ChatGPT-User;Claude-SearchBot;Claude-User;Claude-Web;ClaudeBot;anthropic-ai
+altiri.jp,altiri.jp,9,6,0,0,UNKNOWN:9,https://altiri.jp/lp/game_20261017/ https://altiri.jp/news/2026-27/players/luke-evans?nf=1,ALLOWED:2,
+www.futbol24.com,futbol24.com,9,3,6,2,UNKNOWN:7;Soccer:2,https://www.futbol24.com/match/2026/10/04/international/International/Friendly/2026/Kyrgyzstan/vs/Lebanon https://www.futbol24.com/match/2026/10/16/national/Algeria/Division-1/2026-2027/Oly-Akbou/vs/ES-Ben-Aknoun,ALLOWED:2,
+cadenaser.com,cadenaser.com,9,7,2,3,Soccer:4;Basketball:4;Baseball:1,https://cadenaser.com/resultados/futbol/primera/2026_2027/directo/regular_a_9_6a4496c62a78a88/alineaciones/ https://cadenaser.com/nacional/2026/08/15/pedri-y-gavi-las-unicas-ausencias-en-una-lista-de-flick-para-basilea-con-lamine-gordon-y-olmo-cadena-ser/ https://cadenaser.com/nacional/2026/08/16/el-barca-golea-al-basilea-con-la-mejor-version-de-sus-jovenes-estrellas-en-el-ultimo-amistoso-2-5-cadena-ser/,BLOCKED_FOR_AI:4,Claude-SearchBot;Claude-User;ClaudeBot
+www.football365.fr,football365.fr,9,3,5,2,UNKNOWN:6;Soccer:3,https://www.football365.fr/direct-foot/359214/359490/thionville-lusitanos-paris-13-atletico.html https://www.football365.fr/direct-foot/359214/359496/amiens-sc-versailles.html,ALLOWED:2,
+www.tolucafc.com,tolucafc.com,9,3,4,2,UNKNOWN:6;Soccer:3,https://www.tolucafc.com/noticias/estan-invictas https://www.tolucafc.com/noticias/merecido-finalista,ALLOWED:2,
+allsvenskan.se,allsvenskan.se,9,0,9,2,UNKNOWN:6;Cricket:2;Baseball:1,https://allsvenskan.se/nyheter/sa-spelas-omgang-18-23-av-allsvenskan/,ALLOWED:2,
+brondby.com,brondby.com,9,6,3,2,Soccer:6;Australian Rules:3,https://brondby.com/nyheder/herrer/2026/oktober/startopstillingen-mod-lyngby-bk https://brondby.com/nyheder/herrer/2026/oktober/truppen-hjemme-mod-lyngby-bk https://brondby.com/nyheder/herrer/2026/september/truppen-til-pokalkampen-ude-mod-vejle-boldklub,ALLOWED:5,
+www.sohu.com,sohu.com,9,8,1,1,Soccer:8;Australian Rules:1,https://www.sohu.com/a/1089057104_463728 https://www.sohu.com/a/1077957651_463728,BLOCKED_FOR_ALL:2,
+api-web.nhle.com,nhle.com,9,5,4,4,Ice Hockey:4;Soccer:2;UNCLASSIFIED:2;Baseball:1,https://api-web.nhle.com/v1/gamecenter/2026020009/boxscore https://api-web.nhle.com/v1/gamecenter/2026020052/boxscore,BLOCKED_FOR_AI:3,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+www.bahcesehirsporkulubu.org,bahcesehirsporkulubu.org,9,3,6,1,Basketball:9,https://www.bahcesehirsporkulubu.org/fikstur https://www.bahcesehirsporkulubu.org/,ALLOWED:2,
+www.sportschosun.com,sportschosun.com,9,9,0,2,Baseball:5;Basketball:4,https://www.sportschosun.com/baseball/2026-10-20/202610200100127350008264 https://www.sportschosun.com/baseball/2026-10-17/202610170100107020006912,ALLOWED:2,
+www.avispa.co.jp,avispa.co.jp,9,7,0,1,Soccer:9,https://www.avispa.co.jp/match/series/2026-27 https://www.avispa.co.jp/news/post-86833,ALLOWED:2,
+supersport.com,supersport.com,9,9,0,2,Cricket:9,https://supersport.com/cricket/tour/6beb8253-7b7f-4059-ae41-eabd62c2866c/results https://supersport.com/cricket/tour/4c6d5ae3-5f76-4e27-bea4-1ec9290c5769/results,ALLOWED:2,
+www.statpro.io,statpro.io,9,0,9,3,Basketball:6;UNCLASSIFIED:3,https://www.statpro.io/reference/nba/games/2026-10-20-okc-sas https://www.statpro.io/reference/nba/games/2026-10-21-atl-orl https://www.statpro.io/reference/nba/games/2026-10-21-mil-was,ALLOWED:3,
+fsrs.org,fsrs.org,9,9,0,1,Soccer:9,https://fsrs.org/sr-BA/takmicenja-prva-liga.html https://fsrs.org/sr-BA/takmicenja-prva-liga.html?tab=matches&kolo=12,RULES_UNKNOWN:3,
+hockeypredicts.com,hockeypredicts.com,9,9,0,1,Ice Hockey:9,https://hockeypredicts.com/en/team/307/ https://hockeypredicts.com/de/team/302/,BLOCKED_FOR_AI:2,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+lietuvosfutbolas.lt,lietuvosfutbolas.lt,9,7,0,1,Soccer:9,https://lietuvosfutbolas.lt/klubai/fk-be1-37756/?cid=23198632 https://lietuvosfutbolas.lt/klubai/fc-neptunas-36815/?cid=23198632,RULES_UNKNOWN:3,
+vysocina.ceskyhokej.cz,ceskyhokej.cz,9,7,0,1,Ice Hockey:9,https://vysocina.ceskyhokej.cz/game/detail/179868,BLOCKED_FOR_AI:1,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+www.hokejkv.cz,hokejkv.cz,9,7,0,1,Ice Hockey:9,https://www.hokejkv.cz/zapasy/MUZ/,BLOCKED_FOR_AI:1,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+m.weibo.cn,weibo.cn,8,5,0,1,Soccer:8,https://m.weibo.cn/2/detail/5354384441737776,BLOCKED_FOR_AI:1,ChatGPT-User;Claude-SearchBot;Claude-User;Claude-Web;ClaudeBot;GPTBot;OAI-SearchBot;anthropic-ai
+betimate.com,betimate.com,8,8,0,1,Soccer:8,https://betimate.com/en/football-predictions/tianjin-jinmen-tigers-vs-henan/2026-10-16/game,RULES_UNKNOWN:1,
+www.nhandinhbongda.com.vn,nhandinhbongda.com.vn,8,8,0,1,Soccer:8,https://www.nhandinhbongda.com.vn/tran-dau/henan-fc-vs-tianjin-jinmen-tiger-7799,ALLOWED:1,
+m.17500.cn,17500.cn,8,8,0,1,Soccer:8,https://m.17500.cn/zq/data-team/course-10766-0-0 https://m.17500.cn/zq/data-team/course-10218-0-0,ALLOWED:2,
+rsssf.org,rsssf.org,8,7,1,3,Soccer:7;Cricket:1,https://rsssf.org/tablesu/uae2026.html https://rsssf.org/tablesb/bih2026.html,NO_RULES_FILE:3,
+statof.com,statof.com,8,5,0,1,Soccer:8,https://statof.com/stats/indian-super-league/corners,BLOCKED_FOR_AI:1,ClaudeBot;GPTBot;anthropic-ai
+www.dailyfaceoff.com,dailyfaceoff.com,8,8,0,2,Ice Hockey:8,https://www.dailyfaceoff.com/starting-goalies/10-16-2026 https://www.dailyfaceoff.com/starting-goalies/2026-10-10,ALLOWED:2,
+www.rugbypass.com,rugbypass.com,8,6,2,2,Rugby Union:8,https://www.rugbypass.com/teams/new-zealand/fixtures-results/ https://www.rugbypass.com/live/auckland-vs-bay-of-plenty/ https://www.rugbypass.com/live/auckland-vs-bay-of-plenty/stats/,ALLOWED:3,
+news.ksb.co.jp,ksb.co.jp,8,8,0,1,Basketball:6;UNKNOWN:2,https://news.ksb.co.jp/article/16971331 https://news.ksb.co.jp/article/16971854,ALLOWED:2,
+sports.inquirer.net,inquirer.net,8,8,0,1,Basketball:6;UNKNOWN:2,https://sports.inquirer.net/685688/schedule-2026-pba-governors-cup/amp https://sports.inquirer.net/685617/pba-to-adopt-fiba-rules-to-help-gilas-program-but-it-has-pros-and-cons https://sports.inquirer.net/702222/…,BLOCKED_FOR_AI:3,GPTBot
+www.legabasket.it,legabasket.it,8,3,3,1,Basketball:6;UNKNOWN:2,https://www.legabasket.it/news/139733/preview-napoli-milano https://www.legabasket.it/calendar,ALLOWED:2,
+www.laliga.com,laliga.com,8,5,3,2,UNKNOWN:4;Basketball:2;Baseball:1;Soccer:1,https://www.laliga.com/ https://www.laliga.com/es-IN/partido/temporada-2026-2027-laliga-ea-sports-rcd-espanyol-de-barcelona-atletico-de-madrid-9 https://www.laliga.com/en-MA/match/temporada-2026-2027-laliga-ea-sports-levante-ud-real-betis-3,ALLOWED:1;BLOCKED_FOR_AI:4,ChatGPT-User;Claude-SearchBot;Claude-User;Claude-Web;ClaudeBot;GPTBot;OAI-SearchBot;anthropic-ai
+www.espn.com.au,espn.com.au,8,5,3,4,Soccer:4;Cricket:2;Baseball:1;Basketball:1,https://www.espn.com.au/football/match/_/gameId/401861475/beijing-guoan-qingdao-hainiu https://www.espn.com.au/cricket/series/21376/game/1521230/x https://www.espn.com.au/nbl,BLOCKED_FOR_AI:3,ChatGPT-User;GPTBot;anthropic-ai
+crypto.com,crypto.com,8,7,0,3,Basketball:5;UNCLASSIFIED:2;UNKNOWN:1,,ALLOWED:1,
+www.365scores.com,365scores.com,8,4,4,4,UNKNOWN:4;Soccer:2;Basketball:1;Baseball:1,https://www.365scores.com/football/match/friendly-international-570/kyrgyzstan-lebanon-5088-11295-570 https://www.365scores.com/es/football/match/conmebol-libertadores-102/independiente-del-valle-deportes-tolima-7635-9142-102 https://www.365scores.com/es/basketball/team/fuerza-regia-6861,ALLOWED:4,
+cplt20.prezly.com,prezly.com,8,2,5,1,UNKNOWN:6;Soccer:2,https://cplt20.prezly.com/hetmyer-hundred-bests-knight-riders https://cplt20.prezly.com/falcons-close-in-on-playoffs https://cplt20.prezly.com/falcons-win-thrilling-cpl-opener,ALLOWED:7,
+lnbp.mx,lnbp.mx,8,0,6,1,UNKNOWN:5;Soccer:3,,RULES_UNKNOWN:1,
+www.tntsports.co.uk,tntsports.co.uk,8,5,3,2,Soccer:5;UNKNOWN:2;Australian Rules:1,https://www.tntsports.co.uk/football/china-resources-beverage-cfa-super-league/2026/beijing-guoan-qingdao-west-coast_mtc20006671/live-lineup.shtml https://www.tntsports.co.uk/football/premier-league/2026-2027/live-liverpool-manchester-city_mtc21883285/live-stats.shtml https://www.tntsports.co.uk/football/oddset-pokalen/2026-2027/vejle-bk-brondby-if_mtc21918035/live.shtml,RULES_UNKNOWN:3,
+www.mykhel.com,mykhel.com,8,7,1,3,Cricket:6;Baseball:1;Basketball:1,https://www.mykhel.com/cricket/india-women-tour-of-south-africa-2026-schedule-results-sr11835/ https://www.mykhel.com/cricket/india-women-vs-zimbabwe-women-2026-2nd-t20i-scorecard-m270970/ https://www.mykhel.com/cricket/edinburgh-castle-rockers-vs-belfast-wolves-2026-final-scorecard-m273640/,ALLOWED:4,
+fesabal.info,fesabal.info,8,6,2,2,Baseball:6;Tennis:1;UNKNOWN:1,https://fesabal.info,RULES_UNKNOWN:2,
+www.accuweather.com,accuweather.com,8,7,1,4,Baseball:5;Cricket:3,https://www.accuweather.com/ https://www.accuweather.com/ko/kr/jamsil-4-sa-dong/2002263/current-weather/2002263 https://www.accuweather.com/en/kr/seoul/226081/weather-forecast/226081,RULES_UNKNOWN:5,
+isplus.com,isplus.com,8,6,2,2,Baseball:4;Basketball:4,https://isplus.com/article/view/isp202610200145 https://isplus.com/article/view/isp202610070243,BLOCKED_FOR_AI:2,GPTBot
+datencenter.dfb.de,dfb.de,8,8,0,1,Soccer:8,https://datencenter.dfb.de/matches/fc-augsburg-fc-bayern-muenchen-2419326/liveticker,NO_RULES_FILE:1,
+kalpa.fi,kalpa.fi,8,4,4,2,Ice Hockey:6;Basketball:2,https://kalpa.fi/fi-fi/article/otteluraportti/raportti-tapparan-loppukiri-vei-voiton-napeista/7738/ https://kalpa.fi/fi-fi/article/otteluraportti/raportti-vaikea-reissu-nordikselle/7739/,NO_RULES_FILE:2,
+api.kbl.or.kr,or.kr,8,8,0,1,Basketball:8,https://api.kbl.or.kr/match/list,NO_RULES_FILE:2,
+www.kbl.or.kr,or.kr,8,8,0,1,Basketball:8,https://www.kbl.or.kr/,RULES_UNKNOWN:1,
+www.jumpball.co.kr,jumpball.co.kr,8,8,0,1,Basketball:8,https://www.jumpball.co.kr/news/newsview.php?ncode=1065597864213758 https://www.jumpball.co.kr/news/newsview.php?ncode=1065588480336806,BLOCKED_FOR_AI:2,ChatGPT-User;GPTBot;anthropic-ai
+www.mallorcawomenschampionships.com,mallorcawomenschampionships.com,8,4,4,1,Tennis:8,https://www.mallorcawomenschampionships.com/,ALLOWED:1,
+fr.tennistemple.com,tennistemple.com,8,4,4,1,Tennis:8,https://fr.tennistemple.com/competitions/mallorca-2026/14497/orderofplay,ALLOWED:1,
+www.tennisendirect.net,tennisendirect.net,8,0,8,1,Tennis:8,https://www.tennisendirect.net/wta/tamara-zidansek/ https://www.tennisendirect.net/wta/joelle-lilly-sophie-steur/simple,BLOCKED_FOR_AI:2,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+www.lff.lt,lff.lt,8,5,1,1,Soccer:7;UNKNOWN:1,https://www.lff.lt/varzybos/23198632/ https://www.lff.lt/ivykusios-varzybos/fk-be1-fc-neptunas-24791500/,ALLOWED:2,
+www.bjnews.com.cn,bjnews.com.cn,8,8,0,0,Soccer:8,https://www.bjnews.com.cn/detail/1791721820019001.html,ALLOWED:1,
+www.beijing.gov.cn,beijing.gov.cn,8,8,0,0,Soccer:8,https://www.beijing.gov.cn/fwcj/calendar/tyss/6a38eb3a92c0e70bf722e62d.html,ALLOWED:1,
+news.bjd.com.cn,bjd.com.cn,8,8,0,0,Soccer:8,https://news.bjd.com.cn/2026/10/18/11998865.shtml,NO_RULES_FILE:1,
+bulinews.com,bulinews.com,8,8,0,0,Soccer:8,https://bulinews.com/fixture/978165/predicted-lineups/beijing-guoan-qingdao-west-coast,ALLOWED:1,
+prematchstats.com,prematchstats.com,8,4,0,0,Soccer:8,https://prematchstats.com/china/chinese-super-league/beijing-guoan-vs-qingdao-west-coast-stats/15552654,BLOCKED_FOR_AI:1,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+uaeproleague.ae,uaeproleague.ae,7,5,2,1,Soccer:5;UNKNOWN:2,https://uaeproleague.ae/en/fixtures/22e17f5f-7604-11f1-b32b-0289588efdb9 https://uaeproleague.ae/en/news-and-gallery/adnoc-pro-league-991,ALLOWED:2,
+www.playmakerstats.com,playmakerstats.com,7,6,1,3,Soccer:6;Australian Rules:1,https://www.playmakerstats.com/match/2026-10-16-al-dhafra-dubai-united/12676790 https://www.playmakerstats.com/live/2026-08-29-boca-juniors-lanus/12234390 https://www.playmakerstats.com/live/2026-09-19-nottingham-forest-coventry-city/12253137,RULES_UNKNOWN:3,
+infosport.dz,infosport.dz,7,5,0,2,Soccer:4;Basketball:3,https://infosport.dz/oa-esba-reporte-pour-vendredi/ https://infosport.dz/6e-journee-superdivision-messieurs-staoueli-leader-provisoire/,ALLOWED:2,
+lscluster.hockeytech.com,hockeytech.com,7,4,3,1,UNCLASSIFIED:4;Ice Hockey:2;UNKNOWN:1,https://lscluster.hockeytech.com/feed/index.php?feed=gc&key=50c2cd9b5e18e390&client_code=ahl&game_id=1029174&lang=en&fmt=json&tab=gamesummary https://lscluster.hockeytech.com/feed/index.php?feed=gc&tab=gamesummary&game_id=1029155&key=50c2cd9b5e18e390&client_code=ahl&fmt=json&lang_code=en,NO_RULES_FILE:3,
+www.uefa.com,uefa.com,7,3,4,2,UNKNOWN:4;Soccer:3,https://www.uefa.com/womenschampionsleague/news/02a9-217d330f6fd3-67b535229a8f-1000--women-s-champions-league-third-qualifying-round-inter-pari/ https://www.uefa.com/uefachampionsleague/match/61561--hearts-vs-benfica/ https://www.uefa.com/uefachampionsleague/match/61562--benfica-vs-hearts/,ALLOWED:3,
+www.bom.gov.au,bom.gov.au,7,6,1,5,Australian Rules:4;Tennis:3,https://www.bom.gov.au/products/IDV60801/IDV60801.95936.shtml https://www.bom.gov.au/places/qld/TCRT/observations/brisbane https://www.bom.gov.au/vic/observations/melbourne.shtml,ALLOWED:5,
+www.premierleague.com,premierleague.com,7,7,0,2,Soccer:6;Cricket:1,https://www.premierleague.com/en/news/4688862/fixture-amendments-for-premier-league-matches-in-october-and-november https://www.premierleague.com/en/clubs/39/wolverhampton-wanderers/stats,ALLOWED:2,
+api.weather.gov,weather.gov,7,7,0,6,Baseball:7,https://api.weather.gov/points/41.9482 https://api.weather.gov/points/39.051567 https://api.weather.gov/points/40.4469,BLOCKED_FOR_AI:7,ChatGPT-User;Claude-SearchBot;Claude-User;Claude-Web;ClaudeBot;GPTBot;OAI-SearchBot;anthropic-ai
+statz.ai,statz.ai,7,2,5,3,Baseball:4;Soccer:2;Australian Rules:1,https://statz.ai/team/fc-barcelona/corners https://statz.ai/team/basel/corners https://statz.ai/h2h/ifk-gteborg-vs-halmstad/19635884,ALLOWED:7,
+sports.caliente.mx,caliente.mx,7,3,1,4,UNKNOWN:3;Soccer:2;Basketball:1;UNCLASSIFIED:1,https://sports.caliente.mx/es_MX/e/32816027/Central-Ballester-%28R%29-vs-El-Porvenir-%28R%29 https://sports.caliente.mx/es_MX/Leagues-Cup/2026-08-25/Monterrey-vs-Chicago-Fire https://sports.caliente.mx/es_MX/e/32786749/Lobos-de-Puebla-vs-Fuerza-Regia,ALLOWED:7,
+forecast.weather.gov,weather.gov,7,5,1,2,UNKNOWN:5;Baseball:2,https://forecast.weather.gov/MapClick.php?lat=33.83&lon=-117.87 https://forecast.weather.gov/MapClick.php?lat=39.7007844&lon=-105.0031457 https://forecast.weather.gov/MapClick.php?lat=33.8355&lon=-117.9136,NO_RULES_FILE:7,
+www.realracingclub.es,realracingclub.es,7,6,1,2,Basketball:4;Soccer:2;Baseball:1,https://www.realracingclub.es/ https://www.realracingclub.es/partidos/temporada-2026-2027-laliga-ea-sports-5-r-racing-club-vs-deportivo-alaves-2966,ALLOWED:2,
+www.tennisexplorer.com,tennisexplorer.com,7,4,3,3,Tennis:5;Baseball:2,https://www.tennisexplorer.com/match-detail/?id=3354293 https://www.tennisexplorer.com https://www.tennisexplorer.com/player/Basilashvili/,ALLOWED:3,
+cz.basketball,cz.basketball,7,7,0,2,UNKNOWN:4;Basketball:2;Baseball:1,https://cz.basketball/zapas/340518 https://cz.basketball,ALLOWED:2,
+www.gamedaytweets.com,gamedaytweets.com,7,0,7,1,Ice Hockey:7,https://www.gamedaytweets.com/goalies,BLOCKED_FOR_AI:1,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+www.puckalytics.com,puckalytics.com,7,0,7,1,Ice Hockey:7,https://www.puckalytics.com/teams/edmonton-oilers,ALLOWED:1,
+www.si.com,si.com,6,4,0,2,Ice Hockey:2;UNKNOWN:2;Baseball:1;Basketball:1,https://www.si.com/nba/scoreboard/trail-blazers-vs-warriors-10-16-2026-1487 https://www.si.com/nba/suns/onsi/phoenix-suns-reveal-starters-preseason-finale-utah-jazz https://www.si.com/mlb,ALLOWED:3,
+www.accorstadium.com.au,accorstadium.com.au,6,4,0,1,Rugby Union:6,https://www.accorstadium.com.au/events/n2026_bledisloe_cup_wallabies_v_all_blacks,ALLOWED:1,
+passport.world.rugby,world.rugby,6,4,0,1,Rugby Union:6,https://passport.world.rugby/laws-of-the-game/laws-by-number/5-time/,ALLOWED:1,
+www.newzealandrugby.net,newzealandrugby.net,6,6,0,1,Rugby Union:6,https://www.newzealandrugby.net/p/all-blacks-2025-schedule.html,ALLOWED:1,
+www.bebasket.fr,bebasket.fr,6,6,0,0,UNKNOWN:6,https://www.bebasket.fr/equipe/altiri-chiba/calendrier https://www.bebasket.fr/equipe/hiroshima-dragonflies/calendrier,BLOCKED_FOR_AI:2,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+www.goldenstateofmind.com,goldenstateofmind.com,6,1,5,2,Basketball:4;UNKNOWN:2,https://www.goldenstateofmind.com/warriors-scores-results/112669/warriors-blazers-preseason-recap-steph-curry-draymond-green https://www.goldenstateofmind.com/warriors-game-previews/112590/how-to-watch-warriors-vs-lakers,BLOCKED_FOR_AI:2,ChatGPT-User;Claude-SearchBot;Claude-User;Claude-Web;ClaudeBot;anthropic-ai
+www.sfchronicle.com,sfchronicle.com,6,1,5,2,Basketball:4;UNKNOWN:2,https://www.sfchronicle.com/sports/warriors/article/warriors-get-solid-effort-georges-niang-preseason-22481186.php https://www.sfchronicle.com/sports/warriors/article/kerr-leaning-toward-small-ball-warriors-22474023.php,BLOCKED_FOR_AI:2,Claude-User;Claude-Web;ClaudeBot;anthropic-ai
+www.basketball.com.au,basketball.com.au,6,4,0,1,UNKNOWN:3;Basketball:3,https://www.basketball.com.au/games/brisbane-bullets-v-tasmania-jackjumpers-men-03-10-2026 https://www.basketball.com.au/news/nbl27-round-5-south-east-melbourne-phoenix-cairns-taipans-match-report,ALLOWED:2,
+www.cricinfo.com,cricinfo.com,6,4,2,1,Cricket:4;UNKNOWN:2,https://www.cricinfo.com/series/australia-in-south-africa-2026-27-1525634/south-africa-vs-australia-2nd-test-1525660/match-report https://www.cricinfo.com/team/sunrisers-leeds-men-1204496/match-schedule-fixtures-and-results https://www.cricinfo.com/team/london-spirit-men-1204500/match-schedule-fixtures-and-results,RULES_UNKNOWN:5,
+sports.ndtv.com,ndtv.com,6,2,4,3,UNKNOWN:3;Cricket:1;Soccer:1;Australian Rules:1,https://sports.ndtv.com/cricket/nam-sa-over-comparison/nam-vs-sa-match-6-windhoek-nasa09042026273845 https://sports.ndtv.com/cricket/bph-w-lns-w-head-to-head/bph-w-vs-lns-w-match-32-birmingham-bpwlpw08242023221199 https://sports.ndtv.com/cricket/eng-vs-pak-scorecard-live-cricket-score-pakistan-in-england-3-test-series-2026-3rd-test-enpk09092026264908,RULES_UNKNOWN:4,
+aflapi.afl.com.au,afl.com.au,6,5,1,3,Australian Rules:6,https://aflapi.afl.com.au/afl/v2/matches?compSeasonId=96&roundNumber=1&pageSize=50 https://aflapi.afl.com.au/afl/v2/matches?compSeasonId=84&pageSize=1000 https://aflapi.afl.com.au/afl/v2/matches?compSeasonId=72&pageSize=1000,NO_RULES_FILE:5,
+sports.news.nate.com,nate.com,6,3,3,2,Baseball:6,https://sports.news.nate.com/view/20260825n27331 https://sports.news.nate.com/view/20260825n27291 https://sports.news.nate.com/view/20260825n24943,BLOCKED_FOR_AI:6,ChatGPT-User;Claude-SearchBot;Claude-User;Claude-Web;ClaudeBot;GPTBot;OAI-SearchBot;anthropic-ai
+www.newspim.com,newspim.com,6,3,3,2,Baseball:5;UNKNOWN:1,https://www.newspim.com/news/view/20261007000832 https://www.newspim.com/news/view/20261007001640 https://www.newspim.com/news/view/20260825001162,ALLOWED:4,
+tennistonic.com,tennistonic.com,6,2,4,3,Cricket:4;Tennis:2,https://tennistonic.com/stat-tournaments/wta/17310/27035-61183/tamara-zidansek-vs-joelle-steur/ https://tennistonic.com/head-to-head-compare/Alejandro-Juan-Mano-Vs-Alejandro-Turriziani-Alvarez/ https://tennistonic.com/stat-tournaments/atp/21994/51259-106252/fumin-jiang-vs-chase-ferguson/,BLOCKED_FOR_AI:3,ChatGPT-User;Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+theawayend.co,theawayend.co,6,5,0,2,Soccer:4;UNKNOWN:2,https://theawayend.co/sikkim-premier-division-league/,ALLOWED:1,
+www.vfl-wolfsburg.de,vfl-wolfsburg.de,6,2,4,1,UNKNOWN:5;Australian Rules:1,https://www.vfl-wolfsburg.de/newsdetails/news-detail/detail/news/vom-punkt-gestoppt https://www.vfl-wolfsburg.de/matchcenter/matchcenter-frauen/uwcl-spieltag-1-2026/2027/abpfiff,NO_RULES_FILE:2,
+www.inter.it,inter.it,6,2,4,1,UNKNOWN:5;Australian Rules:1,https://www.inter.it/en/news/inter-women-wolfsburg-uefa-women-champions-league-2026-27 https://www.inter.it/en/matches?category=results&competition=all&teams=women,ALLOWED:2,
+es.leaguescup.com,leaguescup.com,6,0,5,0,UNKNOWN:6,https://es.leaguescup.com/noticias/cronica-toluca-acaba-con-el-sueno-del-leon-y-avanza-a-la-final-de-leagues-cup,ALLOWED:1,
+www.rotowire.com,rotowire.com,6,3,3,2,Australian Rules:3;Basketball:3,https://www.rotowire.com/basketball/nba-lineups.php https://www.rotowire.com/baseball/daily-lineups.php https://www.rotowire.com/baseball/headlines/wilber-dotel-news-opening-thursdays-contest-1025896,ALLOWED:4,
+www.cna.com.tw,cna.com.tw,6,0,6,1,Australian Rules:6,https://www.cna.com.tw/news/aspt/202608250364.aspx https://www.cna.com.tw/news/aspt/202608290198.aspx https://www.cna.com.tw/news/aspt/202609100304.aspx,BLOCKED_FOR_AI:6,ClaudeBot;GPTBot
+sports.news.naver.com,naver.com,6,2,4,3,Baseball:4;Tennis:2,https://sports.news.naver.com/kbaseball https://sports.news.naver.com/kbaseball/index,ALLOWED:1;BLOCKED_FOR_AI:2,ChatGPT-User;Claude-SearchBot;Claude-User;Claude-Web;ClaudeBot;GPTBot;OAI-SearchBot;anthropic-ai
+www.foxsports.com.au,foxsports.com.au,6,4,2,2,Basketball:4;Baseball:2,https://www.foxsports.com.au/basketball/nbl/nbl27-parker-jacksoncartwright-ruled-out-for-three-weeks-with-lowerleg-injury-ahead-of-perth-wildcats-clash/news-story/6ddc8aac413a928f2311fd9d6110907f https://www.foxsports.com.au/nrl/nrl-premiership/match-centre/NRL20260301/,ALLOWED:2,
+www.acb.com,acb.com,6,0,6,1,Baseball:6,https://www.acb.com/partido/ver/id/105379 https://www.acb.com/partido/ver/id/105378 https://www.acb.com/partido/ver/id/105380,ALLOWED:3,
+drive.google.com,google.com,6,6,0,0,UNKNOWN:6,https://drive.google.com/file/d/1yFpOYJQp4eemvdsqRbR6SHt3fqyg3L9r/view https://drive.google.com/file/d/1knXkrvMd7aZsG_A1xSc0yjPdNhhTYkib/view https://drive.google.com/file/d/1OL3beK_8_YxyPNlR_ryCWhhn-X_SMK5T/view,ALLOWED:3,
+www.irozhlas.cz,irozhlas.cz,6,6,0,1,Ice Hockey:6,https://www.irozhlas.cz/sport/elh-2026,BLOCKED_FOR_AI:1,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+ceskyhokej.cz,ceskyhokej.cz,6,4,2,2,Ice Hockey:3;UNKNOWN:2;Soccer:1,https://ceskyhokej.cz/en/competition/games/14?gameListWidget-filter%5Bclub%5D=15&gameListWidget-page=174 https://ceskyhokej.cz/en/competition/games/14?do=gameCalendarWidget-changeDate&gameCalendarWidget-date=2026-10-11&gameListWidget-filter%5Bclub%5D=11,BLOCKED_FOR_AI:2,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+www.ktwiz.co.kr,ktwiz.co.kr,6,2,4,1,UNKNOWN:4;Soccer:2,https://www.ktwiz.co.kr/game/regular/boxscore/20261012/20261012KTSS0 https://www.ktwiz.co.kr/game/regular/schedule/202509,ALLOWED:2,
+tennistourcalendar.com,tennistourcalendar.com,6,6,0,1,Tennis:6,https://tennistourcalendar.com/2026-rolex-shanghai-masters-daily-schedule-order-of-play-and-results/,ALLOWED:1,
+www.namikalappeenranta.fi,namikalappeenranta.fi,6,0,6,1,Basketball:6,https://www.namikalappeenranta.fi/tapahtuma/aanekosken-huima-lrnmky/ https://www.namikalappeenranta.fi/2026/09/edustuksen-harjoitusottelut-ja-kauden-avaus/,ALLOWED:2,
+www.aol.com,aol.com,6,6,0,1,Basketball:6,https://www.aol.com/articles/watch-thunder-vs-rockets-preseason-110321000.html,BLOCKED_FOR_AI:1,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+pro.ligasy.kz,ligasy.kz,6,2,4,2,Cricket:4;Ice Hockey:1;UNKNOWN:1,https://pro.ligasy.kz/ru/team/11-saryarqa?id_tab=articles&id_team=11&start=40 https://pro.ligasy.kz/kz/team/3-beibarys/schedule/16-pro-hokei-ligasy-2026-2027?id_tab=articles&id_team=3&start=10,ALLOWED:2,
+www.ecb.co.uk,ecb.co.uk,6,6,0,1,Cricket:6,https://www.ecb.co.uk/news/4562387/pakistan-to-host-sri-lanka-and-england-in-odi-triseries,NO_RULES_FILE:1,
+www.cz.basketball,cz.basketball,6,4,0,1,UNKNOWN:4;Basketball:2,https://www.cz.basketball/tym/15882,RULES_UNKNOWN:1,
+kv.cz.basketball,cz.basketball,6,4,0,1,UNKNOWN:4;Basketball:2,https://kv.cz.basketball/zapasy?c=15882&d_do=&d_od=&y=2026,ALLOWED:1,
+www.uskbasket.cz,uskbasket.cz,6,6,0,1,UNKNOWN:4;Basketball:2,https://www.uskbasket.cz/liga?sezona=2023,NO_RULES_FILE:1,
+www.bkzabiny.cz,bkzabiny.cz,6,6,0,1,UNKNOWN:4;Basketball:2,https://www.bkzabiny.cz/program-zapasu,ALLOWED:1,
+basket-dh.com,basket-dh.com,6,6,0,1,Basketball:6,https://basket-dh.com/teams/fighting-eagles-nagoya/,ALLOWED:1,
+basketballking.jp,basketballking.jp,6,6,0,1,Basketball:6,https://basketballking.jp/news/japan/20261016/638059.html,ALLOWED:1,
+www.pba.ph,pba.ph,6,4,0,1,Basketball:6,https://www.pba.ph/recap?match=548,RULES_UNKNOWN:1,
+www.teampilipinas.info,teampilipinas.info,6,6,0,1,Basketball:6,https://www.teampilipinas.info/2021/07/tnt-tropang-giga-full-lineup-game.html https://www.teampilipinas.info/2016/02/pba-live-updates-schedule-standings-pba.html?m=0,ALLOWED:2,
+stats-api-01.pba.ph,pba.ph,6,6,0,1,Basketball:6,https://stats-api-01.pba.ph/tournaments/pba-50th-season-commissioners-cup?game_id=161,RULES_UNKNOWN:1,
+www.rebanse.ph,rebanse.ph,6,6,0,1,Basketball:6,https://www.rebanse.ph/delta-pineda-semis-cameron-clark-best-import/,ALLOWED:1,
+matchscan.net,matchscan.net,6,6,0,1,Basketball:4;Soccer:2,https://matchscan.net/,RULES_UNKNOWN:1,
+m.koreabaseball.com,koreabaseball.com,6,3,3,1,Basketball:4;Baseball:2,https://m.koreabaseball.com/,ALLOWED:1,
+mobile.newsis.com,newsis.com,6,6,0,1,Basketball:4;Baseball:2,https://mobile.newsis.com/view/NISX20261020_0003833884,ALLOWED:1,
+aboutj.jleague.jp,jleague.jp,6,6,0,1,Soccer:6,https://aboutj.jleague.jp/corporate/news/article/75 https://aboutj.jleague.jp/corporate/news/article/76,NO_RULES_FILE:2,
+firsthalfscore.com,firsthalfscore.com,6,6,0,1,Soccer:6,https://firsthalfscore.com/first-half-goals/j1-league https://firsthalfscore.com/first-half-goals/j1-league/avispa-fukuoka,ALLOWED:2,
+www.news.com.au,news.com.au,6,6,0,1,Cricket:6,https://www.news.com.au/sport/cricket/australia-vs-south-africa-second-test-live-updates/live-coverage/eb7a292574a5b4065d030719dd6858fd,BLOCKED_FOR_AI:1,ChatGPT-User;Claude-SearchBot;Claude-User;Claude-Web;ClaudeBot;GPTBot;OAI-SearchBot;anthropic-ai
+www.napolibasketball.com,napolibasketball.com,6,3,3,1,Basketball:6,https://www.napolibasketball.com/stagione-25-26,ALLOWED:1,
+www.eurosport.it,eurosport.it,6,6,0,1,Basketball:6,https://www.eurosport.it/basket/serie-a/2026-2027/napoli-basketball-armani-olimpia-milano_mtc21932047/live-stats.shtml,RULES_UNKNOWN:1,
+www.olimpiamilano.com,olimpiamilano.com,6,3,3,1,Basketball:6,https://www.olimpiamilano.com/en/team/roster/,BLOCKED_FOR_AI:1,ClaudeBot;GPTBot
+www.repubblica.it,repubblica.it,6,0,6,1,Basketball:6,https://www.repubblica.it/sport/dirette/basket/serie-a-2026/calendario/,BLOCKED_FOR_AI:1,GPTBot;anthropic-ai
+www.zimcricket.org,zimcricket.org,6,6,0,1,Cricket:6,https://www.zimcricket.org/news/5201/ZC-retains-history-making-Zimbabwe-Women-squad-for-India-tour,RULES_UNKNOWN:1,
+thesportstak.com,thesportstak.com,6,6,0,1,Cricket:6,https://thesportstak.com/cricket/match/ind-w-vs-zim-w-1st-t20i-zimbabwe-women-tour-of-india-16-october-2026-270969/live,ALLOWED:1,
+www.cricdat.com,cricdat.com,6,6,0,1,Cricket:6,https://www.cricdat.com/stafanie-taylor-powers-west-indies-women-to-eight-wicket-victory/101009.htm https://www.cricdat.com/west-indies-women-beat-zimbabwe-women-by-8-wickets-today-in-the-1st-t20i-at-the-takashinga-sports-club-zimbabwe/101006.htm,BLOCKED_FOR_AI:2,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+www.olomouc.cz,olomouc.cz,6,4,0,1,Ice Hockey:6,https://www.olomouc.cz/akce-kalendar/detail/hc-olomouc-hc-energie-karlovy-vary-16-10-2026,ALLOWED:1,
+www.sport.cz,sport.cz,6,6,0,1,Ice Hockey:6,https://www.sport.cz/clanek/online-hokej-tipsport-extraliga-olomouc-karlovy-vary-16-10-2026-5527335,BLOCKED_FOR_AI:1,OAI-SearchBot;anthropic-ai
+www.apklh.cz,apklh.cz,6,4,0,1,Ice Hockey:6,https://www.apklh.cz/system-souteze,BLOCKED_FOR_AI:1,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+footybets.io,footybets.io,5,4,1,2,Soccer:4;Australian Rules:1,https://footybets.io/statistics/al-dhafra/ https://footybets.io/statistics/vejle/,ALLOWED:2,
+www.ysscores.com,ysscores.com,5,5,0,1,Soccer:3;UNKNOWN:2,https://www.ysscores.com/en/lineup/5739520/Br%C3%B6ndby-IF-vs-Lyngby-Boldklub https://www.ysscores.com/en/match/5868097/CA-Osasuna-vs-Racing-Santander,ALLOWED:2,
+www.shl.se,shl.se,5,3,0,0,UNKNOWN:5,https://www.shl.se/game-center/mwtzjf68g1/qa98unlbd6/?active-tab=game_summary&state=post-game https://www.shl.se/game-center/ux4bplsxbh/qa98unlbd6/?state=post-game https://www.shl.se/game-center/qY7-Aff0rWQqr/qY7-AdWvXPtqc/?state=post-game,RULES_UNKNOWN:4,
+weather.metoffice.gov.uk,metoffice.gov.uk,5,5,0,4,Cricket:4;UNKNOWN:1,https://weather.metoffice.gov.uk/forecast/gcw2hzs1u?new-design=false https://weather.metoffice.gov.uk/forecast/gcqdkqjw3 https://weather.metoffice.gov.uk/forecast/gcwfhjjxu?nearestTo=Headingley+%28Leeds%29,ALLOWED:5,
+www.carltonfc.com.au,carltonfc.com.au,5,5,0,2,Tennis:3;Australian Rules:2,https://www.carltonfc.com.au/news/2119507/afl-team-news-one-change-for-cats-elimination-final https://www.carltonfc.com.au/news/2084349/afl-team-news-big-h-returns-for-big-clash https://www.carltonfc.com.au/matches/injury-list,ALLOWED:3,
+www.thehundred.com,thehundred.com,5,5,0,5,Cricket:5,https://www.thehundred.com/news/4434556/the-hundred-2026-fixtures-revealed https://www.thehundred.com/news/4438190 https://www.thehundred.com/info/competition-rules,NO_RULES_FILE:3,
+dream.wnba.com,wnba.com,5,1,4,3,Baseball:4;Basketball:1,https://dream.wnba.com/news/historic-night-for-reese-as-dream-goes-4-0-on-west-coast-road-trip https://dream.wnba.com/news/dream-returns-with-a-decisive-win https://dream.wnba.com/roster,RULES_UNKNOWN:5,
+www.leaguescup.com,leaguescup.com,5,4,1,2,Soccer:5,https://www.leaguescup.com/news/match-preview-chicago-fire-hosts-monterrey-in-seatgeek-stadium-as-they-look-to-remain-perfect-in-leagues-cup https://www.leaguescup.com/about/ https://www.leaguescup.com/news/match-recap-lewandowski-scores-first-leagues-cup-goal-as-chicago-rallies-past-santos-laguna,ALLOWED:5,
+www.hanshintigers.jp,hanshintigers.jp,5,5,0,2,Baseball:5,https://www.hanshintigers.jp/data/player/2026/16.html https://www.hanshintigers.jp/news/topics/info_11287.html https://www.hanshintigers.jp/game/schedule/2026/08.html,RULES_UNKNOWN:3,
+www.vikings.com,vikings.com,5,5,0,0,UNKNOWN:5,https://www.vikings.com/news/previewing-2026-preseason-game-3-broncos https://www.vikings.com/news/how-to-watch-broncos-2026-preseason-week-3-game https://www.vikings.com/news/ravens-preseason-game-observations-2026,ALLOWED:5,
+www.lequipe.fr,lequipe.fr,5,2,1,1,UNKNOWN:3;Soccer:2,https://www.lequipe.fr/Football/match-direct/ligue-3/2026-2027/cannes-le-puy-en-velay-live/693487 https://www.lequipe.fr/Football/Actualites/Amiens-gagne-enfin-thionville-accroche-mais-toujours-leader-le-resume-de-la-quatrieme-journee-de-ligue-3/1714460 https://www.lequipe.fr/Football/match-direct/ligue-3/2026-2027/thionville-lusitanos-paris-13-atletico-live/693490,RULES_UNKNOWN:3,
+www.sydneyswans.com.au,sydneyswans.com.au,5,4,1,2,Australian Rules:5,https://www.sydneyswans.com.au/news/2119452/aflw-team-three-changes-for-dog https://www.sydneyswans.com.au/news/2118723/aflw-injury-update-round-4 https://www.sydneyswans.com.au/matches/8907,ALLOWED:5,
+www.portadelaidefc.com.au,portadelaidefc.com.au,5,5,0,1,Australian Rules:5,https://www.portadelaidefc.com.au/matches/8912 https://www.portadelaidefc.com.au/news/2119501/team-selection-parsons-to-debut-as-four-changes-made https://www.portadelaidefc.com.au/news/2118616/injury-report-tahau-sidelined-for-remainder-of-season,ALLOWED:5,
+www.news.cn,news.cn,5,3,1,1,Soccer:4;UNKNOWN:1,https://www.news.cn/sports/20260902/2f6c7e41328c4604b3525bf42ddd2ac5/c.html,ALLOWED:1,
+matchstats.uefa.com,uefa.com,5,1,4,2,Soccer:4;Australian Rules:1,,RULES_UNKNOWN:1,
+plus.ligue1.com,ligue1.com,5,0,5,1,UNKNOWN:4;Cricket:1,,ALLOWED:1,
+proleague.be,proleague.be,5,0,5,1,UNKNOWN:4;Cricket:1,,RULES_UNKNOWN:1,
+www.coveringthecorner.com,coveringthecorner.com,5,3,2,2,Baseball:5,https://www.coveringthecorner.com/cleveland-guardians-news/76054/guardians-news-armstrong-to-open-for-game-4 https://www.coveringthecorner.com/cleveland-guardians-analysis/74254/series-preview-athletics-at-guardians https://www.coveringthecorner.com/cleveland-guardians-discussion/74401/athletics-at-guardians-bibee-vs-lopez-discussion,BLOCKED_FOR_AI:3,ChatGPT-User;Claude-SearchBot;Claude-User;Claude-Web;ClaudeBot;anthropic-ai
+www.austadiums.com,austadiums.com,5,0,5,3,Basketball:4;Baseball:1,https://www.austadiums.com/sport/event/34503 https://www.austadiums.com/sport/event/34482,ALLOWED:2,
+www.jackjumpers.com.au,jackjumpers.com.au,5,4,1,2,Basketball:4;Tennis:1,https://www.jackjumpers.com.au/news/rd-4-preview-jackjumpers-hawks https://www.jackjumpers.com.au/,ALLOWED:2,
+news.mynavi.jp,mynavi.jp,5,0,5,1,Tennis:5,https://news.mynavi.jp/article/20260922-baseball_game02/ https://news.mynavi.jp/article/20260923-baseball_game05/ https://news.mynavi.jp/article/20260923-5013260/,ALLOWED:5,
+tennistemple.com,tennistemple.com,5,3,2,2,Tennis:2;Baseball:2;UNKNOWN:1,,ALLOWED:1,
+baseballsavant.com,baseballsavant.com,5,5,0,1,Basketball:5,,RULES_UNKNOWN:1,
+www.sport24.rest,sport24.rest,5,1,4,1,UNKNOWN:4;Soccer:1,https://www.sport24.rest/team/923624/last,ALLOWED:1,
+bulfc.co.ug,bulfc.co.ug,5,1,4,1,UNKNOWN:4;Soccer:1,https://bulfc.co.ug/results/,ALLOWED:1,
+www.the-afc.com,the-afc.com,5,1,4,1,UNKNOWN:4;Soccer:1,https://www.the-afc.com/en/club/afc_champions_league_elite.html/news/md1-al-ain-fc-uae-4-0-al-nassr-club-ksa,ALLOWED:1,
+www.footballwebpages.co.uk,footballwebpages.co.uk,5,1,4,1,UNKNOWN:4;Soccer:1,https://www.footballwebpages.co.uk/match/2026-2027/international-friendly/kyrgyz-republic/lebanon/593589,ALLOWED:1,
+www.footboom1.com,footboom1.com,5,1,4,1,UNKNOWN:4;Soccer:1,https://www.footboom1.com/en/football/game/kyrgyzstan-lebanon-2026-09-28,BLOCKED_FOR_AI:1,ClaudeBot;GPTBot;anthropic-ai
+mts.kg,mts.kg,5,1,4,1,UNKNOWN:4;Soccer:1,https://mts.kg/en/sport/,ALLOWED:1,
+www.alvark-tokyo.jp,alvark-tokyo.jp,5,5,0,1,Basketball:5,https://www.alvark-tokyo.jp/news/detail/team/id=261002,ALLOWED:1,
+sports.yahoo.co.jp,yahoo.co.jp,5,5,0,1,Basketball:5,https://sports.yahoo.co.jp/official/detail/2026100700097-spnaviow,NO_RULES_FILE:1,
+www.fnnews.com,fnnews.com,5,5,0,1,Baseball:5,https://www.fnnews.com/news/202610102057585125,ALLOWED:1,
+hannaryz.jp,hannaryz.jp,5,5,0,1,Basketball:5,https://hannaryz.jp/news/detail/id=24976,ALLOWED:1,
+fancrew.com.au,fancrew.com.au,5,5,0,1,Basketball:5,https://fancrew.com.au/games/illawarra-hawks-v-cairns-taipans-men-11-10-2026,ALLOWED:1,
+www.89ers.jp,89ers.jp,5,5,0,1,Basketball:5,https://www.89ers.jp/,ALLOWED:1,
+cdn-uat.nba.com,nba.com,5,5,0,1,Basketball:5,https://cdn-uat.nba.com/news/starting-5-october-10-2026,RULES_UNKNOWN:1,
+www.thedreamshake.com,thedreamshake.com,5,5,0,1,Basketball:5,https://www.thedreamshake.com/rockets-game-previews/41862/houston-rockets-vs-dallas-mavericks-game-preview,BLOCKED_FOR_AI:1,ChatGPT-User;Claude-SearchBot;Claude-User;Claude-Web;ClaudeBot;anthropic-ai
+aws-prod-web9.rotowire.com,rotowire.com,5,5,0,2,Basketball:4;UNKNOWN:1,https://aws-prod-web9.rotowire.com/basketball/nba-lineups.php,ALLOWED:1,
+oleball.com,oleball.com,4,4,0,1,Soccer:4,https://oleball.com/match/henan-football-club-vs-tianjin-tigers-M4YP98VB,ALLOWED:1,
+dailysports.net,dailysports.net,4,4,0,1,Soccer:4,https://dailysports.net/team/tianjin-jinmen-tiger/results/,ALLOWED:1,
+www.snipercantos.com,snipercantos.com,4,4,0,1,Soccer:4,https://www.snipercantos.com/en/ligas/china-chinese-super-league/,ALLOWED:1,
+www.ppsports.com,ppsports.com,4,4,0,1,Soccer:4,https://www.ppsports.com/article/news/2636223.html,ALLOWED:1,
+uaepl.ae,uaepl.ae,4,4,0,1,Soccer:4,https://uaepl.ae/en/news-and-gallery/adnoc-pro-league-989,ALLOWED:1,
+dfsc.ae,dfsc.ae,4,4,0,1,Soccer:4,https://dfsc.ae/%D8%A7%D9%84%D8%B8%D9%81%D8%B1%D8%A9-%D9%8A%D8%B3%D8%AA%D9%82%D8%A8%D9%84-%D9%8A%D9%88%D9%86%D8%A7%D9%8A%D8%AA%D8%AF-%D9%81%D9%8A-%D8%A7%D9%84%D8%B8%D9%87%D9%88%D8%B1-%D8%A7%D9%84%D8%A3%D9%88%D9%84/,ALLOWED:1,
+globalsportsarchive.com,globalsportsarchive.com,4,4,0,1,Soccer:4,https://globalsportsarchive.com/en/soccer/team/al-dhafra-scc/1752/matches,ALLOWED:1,
+www.footballfixtures.org,footballfixtures.org,4,4,0,1,Soccer:4,https://www.footballfixtures.org/team/dubai-united,RULES_UNKNOWN:1,
+www.footballfirst.com,footballfirst.com,4,4,0,1,Soccer:4,https://www.footballfirst.com/football-live-centre/team/dubai-united-fc/7907/results,ALLOWED:1,
+betting-insider.com,betting-insider.com,4,4,0,1,Soccer:4,https://betting-insider.com/en/football/matches/al-dhafra-vs-dubai-united/stats/,ALLOWED:1,
+uaecuesports.com,uaecuesports.com,4,4,0,1,Soccer:4,https://uaecuesports.com/coverage/al-dhafra-s-first-half-drought-meets-united-s-late-leak-107983/,ALLOWED:1,
+www.transfermarkt.com,transfermarkt.com,4,4,0,1,Soccer:4,https://www.transfermarkt.com/sporting-club-delhi/spielplan/verein/135976/saison_id/2025,ALLOWED:1,
+in.bookmyshow.com,bookmyshow.com,4,4,0,1,Soccer:4,https://in.bookmyshow.com/sports/sporting-club-delhi-v-s-mohun-bagan-super-giant/et05322u93,ALLOWED:1,
+www.scdelhi.in,scdelhi.in,4,4,0,1,Soccer:4,https://www.scdelhi.in/,RULES_UNKNOWN:1,
+dzballon.com,dzballon.com,4,4,0,1,Soccer:4,https://dzballon.com/2026/10/08/ligue-1-mobilis-olympique-akbou-es-ben-aknoun-reporte-la-nouvelle-date-du-match/,BLOCKED_FOR_AI:1,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+algeriezoom.com,algeriezoom.com,4,4,0,1,Soccer:4,https://algeriezoom.com/olympique-akbou-es-ben-aknoun-heure-chaine-suivre-match-vendredi/,ALLOWED:1,
+www.xtra-stats.com,xtra-stats.com,4,4,0,1,Soccer:4,https://www.xtra-stats.com/fr/football/equipe/ben-aknoun,ALLOWED:1,
+fr.besoccer.com,besoccer.com,4,4,0,1,Soccer:4,https://fr.besoccer.com/equipe/matchs/oued-akbou,RULES_UNKNOWN:1,
+jadwallive.com,jadwallive.com,4,4,0,1,Soccer:4,https://jadwallive.com/match/1611416,BLOCKED_FOR_AI:1,ClaudeBot;GPTBot
+www.footix.fr,footix.fr,4,4,0,1,Soccer:4,https://www.footix.fr/compositions-probables-olympique-akbou-vs-es-ben-aknoun-16-10-2026/,ALLOWED:1,
+www.mackolik.com,mackolik.com,4,4,0,1,Soccer:4,https://www.mackolik.com/mac/olympique-akbou-vs-es-ben-aknoun/9li9z9j43gpwykz1rsq73t6ok,BLOCKED_FOR_AI:1,GPTBot;anthropic-ai
+algerie.meteosun.com,meteosun.com,4,4,0,1,Soccer:4,https://algerie.meteosun.com/meteo/previsions-ville/AG/akbou-AG000090/prevision-J-7,BLOCKED_FOR_AI:1,ChatGPT-User;GPTBot
+sports.khan.co.kr,khan.co.kr,4,2,2,1,UNKNOWN:2;Baseball:2,https://sports.khan.co.kr/article/202610202159003/ https://sports.khan.co.kr/article/202610072126013,BLOCKED_FOR_AI:2,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+legabasket.it,legabasket.it,4,0,0,0,UNKNOWN:4,,ALLOWED:1,
+theahl.com,theahl.com,4,1,2,1,UNKNOWN:3;Soccer:1,https://theahl.com/stats/game-center/1029155 https://theahl.com/stats/game-center/1029073,ALLOWED:3,
+www.ipl.com,ipl.com,4,4,0,2,Cricket:4,https://www.ipl.com/matches/the-hundred-mens-129912/manchester-super-giants-men-vs-birmingham-phoenix-men-95169/scorecard https://www.ipl.com/matches/the-hundred-mens-129912/sunrisers-leeds-men-vs-manchester-super-giants-men-95172/scorecard https://www.ipl.com/matches/the-hundred-mens-129912/welsh-fire-men-vs-trent-rockets-men-95173/scorecard,BLOCKED_FOR_AI:4,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+afltables.com,afltables.com,4,4,0,4,Australian Rules:4,https://afltables.com/afl/teams/carlton/allgames.html https://afltables.com/afl/teams/brisbanel/allgames_tm.html https://afltables.com/afl/teams/melbourne/allgames_tm.html,NO_RULES_FILE:4,
+www.11v11.com,11v11.com,4,3,1,2,Cricket:3;Soccer:1,https://www.11v11.com/teams/wolverhampton-wanderers/tab/matches/season/2026/ https://www.11v11.com/teams/blackburn-rovers/tab/matches/season/2026/ https://www.11v11.com/teams/wolverhampton-wanderers/tab/opposingTeams/opposition/Blackburn%20Rovers/,ALLOWED:4,
+valkyries.wnba.com,wnba.com,4,2,2,4,Basketball:2;Baseball:1;Australian Rules:1,https://valkyries.wnba.com/news/gameday-preview-20260819 https://valkyries.wnba.com/news/gameday-preview-20260824 https://valkyries.wnba.com/news/gameday-recap-20260824,RULES_UNKNOWN:4,
+corneredge.bet,corneredge.bet,4,2,2,2,Soccer:3;UNKNOWN:1,https://corneredge.bet/team/brondby/corners/ https://corneredge.bet/team/independiente-del-valle/corners/ https://corneredge.bet/team/deportes-tolima/corners/,ALLOWED:3,
+indianexpress.com,indianexpress.com,4,4,0,2,Cricket:4,https://indianexpress.com/article/sports/cricket/keemo-paul-5-wickets-west-indies-defeat-india-tie-series-10922062/ https://indianexpress.com/section/sports/cricket/live-score/sri-lanka-vs-india-2nd-test-live-score-full-scorecard-highlights-india-in-sri-lanka-2-test-series-2026-slin08232026272146/,BLOCKED_FOR_AI:2,Claude-Web;ClaudeBot;anthropic-ai
+icehockeynewsaustralia.com,icehockeynewsaustralia.com,4,2,2,2,Soccer:3;UNKNOWN:1,https://icehockeynewsaustralia.com/2026/08/29/2026-goodall-cup-playoffs-canberra-brave-defeat-melbourne-mustangs-in-semifinals-to-advance/ https://icehockeynewsaustralia.com/2026/08/28/2026-goodall-cup-playoffs-canberra-brave-defeat-sydney-bears-in-the-preliminary-round-to-advance/,ALLOWED:2,
+www.windrawwin.com,windrawwin.com,4,3,0,1,Soccer:3;UNKNOWN:1,https://www.windrawwin.com/statistics/half-time-over-under-05-goals/denmark-superliga/ https://www.windrawwin.com/statistics/corners/mexico-liga-mx/,ALLOWED:2,
+cfcruzazul.com,cfcruzazul.com,4,4,0,0,UNKNOWN:4,https://cfcruzazul.com/previa-necaxa-cruz-azul-liga-mx-j6-ap26/ https://cfcruzazul.com/cronica-cruz-azul-atlas-liga-mx-j5-ap26/ https://cfcruzazul.com/cronica-atletico-san-luis-cruz-azul-liga-mx-j1-ap26/,RULES_UNKNOWN:4,
+etplofficial.com,etplofficial.com,4,2,2,1,Rugby League:3;UNKNOWN:1,,ALLOWED:1,
+www.saints.com.au,saints.com.au,4,3,1,2,Australian Rules:3;Baseball:1,https://www.saints.com.au/matches/8909 https://www.saints.com.au/news/2119057/aflw-team-selection-round-4-v-north-melbourne https://www.saints.com.au/news/2118711/aflw-injury-update-defender-ruled-out-for-season,ALLOWED:4,
+www.ttplus.cn,ttplus.cn,4,2,1,1,Soccer:3;UNKNOWN:1,https://www.ttplus.cn/publish/app/data/2026/09/01/626066/os_news.html,ALLOWED:1,
+api.sofascore.com,sofascore.com,4,0,4,3,Rugby League:1;UNKNOWN:1;Cricket:1;Baseball:1,https://api.sofascore.com/api/v1/sport/basketball/scheduled-events/2026-09-27,RULES_UNKNOWN:2,
+bbs.bt,bbs.bt,4,0,4,1,Cricket:2;UNKNOWN:2,,RULES_UNKNOWN:1,
+campo.dk,campo.dk,4,3,1,2,Soccer:3;Australian Rules:1,https://campo.dk/2026/10/11/foerste-gang-i-saesonen-ambaek-fra-start-mod-lyngby/ https://campo.dk/2026/09/17/mulig-comeback-til-broendby-angriber-i-pokalkamp/,ALLOWED:2,
+www.afa.com.ar,afa.com.ar,4,1,1,2,Soccer:3;Australian Rules:1,https://www.afa.com.ar/es/posts/agenda-de-la-fecha-13-a-la-15-del-torneo-clausura-mercado-libre-de-la-lpf https://www.afa.com.ar/es/posts/cronograma-y-designaciones-arbitrales-para-la-decima-fecha-del-torneo-clausura-y-de-las-categorias-de-ascenso,ALLOWED:2,
+caribbeancricket.com,caribbeancricket.com,4,0,4,0,UNKNOWN:4,,ALLOWED:1,
+tenki.jp,tenki.jp,4,0,4,1,Tennis:4,https://tenki.jp/leisure/baseball/3/15/31009/1hour.html,ALLOWED:2,
+wnba.com,wnba.com,4,3,1,2,Baseball:3;Tennis:1,,BLOCKED_FOR_AI:1,ChatGPT-User;Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+365scores.com,365scores.com,4,3,1,3,Soccer:2;Tennis:1;Baseball:1,,ALLOWED:1,
+thehockeynews.com,thehockeynews.com,4,4,0,2,Ice Hockey:2;Baseball:1;UNCLASSIFIED:1,https://thehockeynews.com/nhl/new-york-islanders/latest-news/islanders-new-ahl-affiliate-hamilton-hammers-release-full-2026-27-regular-season-schedule https://thehockeynews.com/nhl,ALLOWED:2,
+about.fiba.basketball,fiba.basketball,4,1,1,2,Basketball:3;Baseball:1,https://about.fiba.basketball/en/regions/africa/news/fiba-official-basketball-rules-2026-to-take-effect-october-1 https://about.fiba.basketball/en/news/fiba-official-basketball-rules-2026-to-take-effect-october-1,ALLOWED:2,
+bolivia.com,bolivia.com,4,4,0,1,Soccer:4,,ALLOWED:1,
+www.samsunglions.com,samsunglions.com,4,4,0,0,UNKNOWN:4,https://www.samsunglions.com/ https://www.samsunglions.com/intro/intro05_4.asp,ALLOWED:2,
+lakings.com,lakings.com,4,4,0,1,UNCLASSIFIED:4,,RULES_UNKNOWN:1,
+www.weather.com.cn,weather.com.cn,4,4,0,1,Soccer:4,https://www.weather.com.cn/shandong/qingdao/weather.shtml,ALLOWED:1,
+scangoal.com,scangoal.com,4,4,0,1,Soccer:4,https://scangoal.com/stats/china-super-league-corner-stats-2026,BLOCKED_FOR_AI:1,ClaudeBot;GPTBot
+ipv4.sportwin.cz,sportwin.cz,4,4,0,1,Ice Hockey:4,https://ipv4.sportwin.cz/clanek/60644-Tipsport-extraliga-2026-27-kompletni-program-terminy-play-off-kde-sledovat-a-favorite-nove-sezony.html,ALLOWED:1,
+pyrinto.fi,pyrinto.fi,4,4,0,1,Basketball:4,https://pyrinto.fi/ottelut/,ALLOWED:1,
+3pointstats.com,3pointstats.com,4,4,0,1,Basketball:4,https://3pointstats.com/p/beon-riley,RULES_UNKNOWN:1,
+allsportsradio.site,allsportsradio.site,4,4,0,1,Baseball:4,https://allsportsradio.site/kbo/902026101006010/preview,ALLOWED:1,
+www.nzbreakers.basketball,nzbreakers.basketball,4,4,0,1,Basketball:4,https://www.nzbreakers.basketball/news/jackson-cartwright-ruled-out-with-injury,ALLOWED:1,
+www.fcaugsburg.de,fcaugsburg.de,4,4,0,1,Soccer:4,https://www.fcaugsburg.de/en/article/bundesliga-schedules-matchdays-5-to-11-23436,ALLOWED:1,
+www.c3-chemnitz.de,c3-chemnitz.de,4,4,0,1,Basketball:4,https://www.c3-chemnitz.de/veranstaltungskalender/veranstaltungsdetail/niners-chemnitz-3,ALLOWED:1,
+www.hessenschau.de,hessenschau.de,4,4,0,1,Basketball:4,https://www.hessenschau.de/sport/ergebnisse-tabellen/basketball-1bl100~team_id-1473.html,BLOCKED_FOR_AI:1,ClaudeBot;GPTBot
+voetbalwedden.net,voetbalwedden.net,4,4,0,1,Soccer:4,,ALLOWED:1,
+pitchmath.com,pitchmath.com,4,4,0,1,Soccer:4,https://pitchmath.com/en/matches/1000062713/go-ahead-eagles-vs-sparta-rotterdam,ALLOWED:1,
+www.voetbalwedden.net,voetbalwedden.net,4,4,0,1,Soccer:4,https://www.voetbalwedden.net/wedstrijden/go-ahead-eagles-sparta/opstellingen/,ALLOWED:1,
+www.flashscore.fi,flashscore.fi,4,4,0,1,Ice Hockey:4,https://www.flashscore.fi/ottelu/jaakiekko/hifk-Ige43GcN/kalpa-tMuMK6vi/yhteenveto/kokoonpanot/,ALLOWED:1,
+www.liiga.fi,liiga.fi,4,4,0,1,Ice Hockey:4,https://www.liiga.fi/fi/liiga/kilpailusaannot,ALLOWED:1,
+deepmetricanalytics.com,deepmetricanalytics.com,4,4,0,1,Ice Hockey:4,https://deepmetricanalytics.com/nhl/game/2026020073,BLOCKED_FOR_AI:1,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+www.hcocelari.cz,hcocelari.cz,4,0,4,2,Basketball:2;Ice Hockey:2,https://www.hcocelari.cz/cz/match/8277-Vitezna-vlna-pokracuje-Ocelari-porazili-Mountfield,BLOCKED_FOR_AI:1,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+score24.com,score24.com,4,0,4,2,Basketball:4,https://score24.com/stats/statistics2.jsp?country=null&eventId=365949&lang=null&participantId1=137436&partner=sr&tz=1,ALLOWED:1,
+www.soccernews.com,soccernews.com,4,0,4,2,Basketball:2;Soccer:2,https://www.soccernews.com/matches/go-ahead-eagles-vs-sparta-rotterdam-eredivisie-2026-27-558880/?tab=lineups,BLOCKED_FOR_AI:1,ChatGPT-User;Claude-SearchBot;Claude-User;Claude-Web;ClaudeBot;GPTBot;OAI-SearchBot;anthropic-ai
+www.indiatoday.in,indiatoday.in,4,4,0,0,UNKNOWN:4,https://www.indiatoday.in/live-score/venue/rajiv-gandhi-international-stadium-hyderabad-158,ALLOWED:1,
+crickettaken.in,crickettaken.in,4,4,0,0,UNKNOWN:4,https://crickettaken.in/cricket-in-india/stadiums/rajiv-gandhi-international-stadium-hyderabad/pitch-report,ALLOWED:1,
+news.abplive.com,abplive.com,4,4,0,0,UNKNOWN:4,https://news.abplive.com/sports/cricket/ind-vs-wi-4th-t20i-live-toss-result-playing-11-updates-from-hyderabad-1871422/amp,ALLOWED:1,
+cricketonair.com,cricketonair.com,4,4,0,0,UNKNOWN:4,https://cricketonair.com/guides/india-vs-west-indies-4th-t20i-2026-preview/,ALLOWED:1,
+api-live.euroleague.net,euroleague.net,4,4,0,0,Basketball:4,https://api-live.euroleague.net/v2/competitions/U/seasons/U2026/games,NO_RULES_FILE:1,
+siauliuarena.lt,siauliuarena.lt,4,0,4,0,Basketball:4,https://siauliuarena.lt/event/bkt-eurocup-siauliai-lions-2/,ALLOWED:1,
+api.u-bt.ro,u-bt.ro,4,0,4,0,Basketball:4,https://api.u-bt.ro/seniori/rezultate-si-program,RULES_UNKNOWN:1,
+www.aragonplay.es,aragonplay.es,4,4,0,1,Basketball:4,https://www.aragonplay.es/aragondeporte/baloncesto/regreso-euroliga-ilusiona.html,ALLOWED:1,
+basketlfb.com,basketlfb.com,4,4,0,1,Basketball:4,https://basketlfb.com/laboulangerewonderligue/saison-reguliere/equipe/calendrier/2653-basket-landes,ALLOWED:1,
+jumpball.co.kr,jumpball.co.kr,4,4,0,1,Basketball:4,https://jumpball.co.kr/news/newsview.php?ncode=1065602359670378,BLOCKED_FOR_AI:1,ChatGPT-User;GPTBot;anthropic-ai
+www.stevegtennis.com,stevegtennis.com,4,0,4,1,Tennis:4,https://www.stevegtennis.com/head-to-head/women/Tamara_Zidansek/Joelle_Steur/,RULES_UNKNOWN:1,
+www.mumbaiindians.com,mumbaiindians.com,4,1,3,1,Cricket:4,https://www.mumbaiindians.com/news/indvwi-4th-t20i-report-tilak-nitish-put-on-a-fight-but-windies-overpower-india-to-level-series-2-2,ALLOWED:1,
+www.aba-liga.com,aba-liga.com,4,1,3,1,Cricket:4,https://www.aba-liga.com/news/55315,ALLOWED:1,
+sports.daum.net,daum.net,4,1,3,1,Cricket:4,https://sports.daum.net/match/80109201,ALLOWED:1,
+www.scoremania.com,scoremania.com,4,1,3,1,Cricket:4,https://www.scoremania.com/ice-hockey-live-centre/league/championship/194/info,ALLOWED:1,
+www.milehighreport.com,milehighreport.com,4,1,3,1,Cricket:4,https://www.milehighreport.com/denver-broncos-scores-results/188997/broncos-vs-seahawks-final-score-tnf-week-6,BLOCKED_FOR_AI:1,ChatGPT-User;Claude-SearchBot;Claude-User;Claude-Web;ClaudeBot;anthropic-ai
+www.gmanetwork.com,gmanetwork.com,4,4,0,1,Basketball:3;UNKNOWN:1,https://www.gmanetwork.com/news/sports/basketball/996736/pba-governors-cup-standings-and-results-recap-as-of-july-30-2026/story/ https://www.gmanetwork.com/news/sports/basketball/1006322/pba-alec-stockton-saves-the-day-as-converge-overcomes-tnt-in-ot/story/,ALLOWED:2,
+www.expressnews.com,expressnews.com,4,4,0,1,Basketball:4,https://www.expressnews.com/sports/spurs/article/san-antonio-spurs-okc-thunder-how-to-watch-22482941.php,BLOCKED_FOR_AI:1,Claude-User;Claude-Web;ClaudeBot;anthropic-ai
+www.aol.ca,aol.ca,4,4,0,1,Basketball:4,https://www.aol.ca/articles/full-injury-report-tuesdays-thunder-130111000.html,BLOCKED_FOR_AI:1,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+sports.iheart.com,iheart.com,4,4,0,1,Basketball:4,https://sports.iheart.com/content/2026-10-20-thunder-vs-spurs-injury-report-oct-20/,ALLOWED:1,
+chasecenter.com,chasecenter.com,3,3,0,1,Ice Hockey:2;Basketball:1,https://chasecenter.com/events/20261016-gsw-vs-por/,NO_RULES_FILE:1,
+www.thepaper.cn,thepaper.cn,3,1,2,1,UNKNOWN:2;Soccer:1,https://www.thepaper.cn/newsDetail_forward_34265265,ALLOWED:1,
+istatistik.sporbetsoft.com,sporbetsoft.com,3,1,2,1,UNKNOWN:2;Soccer:1,https://istatistik.sporbetsoft.com/en/match/sporting-delhi-mohun-bagan-sg-31149981,ALLOWED:1,
+old.statarea.com,statarea.com,3,1,2,1,UNKNOWN:2;Soccer:1,https://old.statarea.com/results.php?team_guest=ES+Ben+Aknoun+%28Algeria%29&team_host=Olympique+Akbou+%28Algeria%29,ALLOWED:1,
+www.livescore.com,livescore.com,3,1,2,0,UNKNOWN:3,https://www.livescore.com/en/basketball/japan/b-league/altiri-chiba-vs-hiroshima-dragonflies/1840257/,ALLOWED:1,
+www.crictracker.com,crictracker.com,3,2,1,1,UNKNOWN:2;Baseball:1,https://www.crictracker.com/…2593/ https://www.crictracker.com/live-scores/ecr-vs-tba-final-t20-european-t20-premier-league-20-sep-2026/,ALLOWED:2,
+k.sina.com.cn,sina.com.cn,3,2,1,1,UNKNOWN:2;Australian Rules:1,https://k.sina.com.cn/article_1644114654_61ff32de02002buzg.html https://k.sina.com.cn/article_2265295433_8705aa4902001cwmm.html,RULES_UNKNOWN:2,
+tribune.net.ph,tribune.net.ph,3,3,0,0,UNKNOWN:3,https://tribune.net.ph/2026/10/18/converge-clips-tnt-in-ot,ALLOWED:1,
+daytonflyers.com,daytonflyers.com,3,1,0,0,UNKNOWN:3,https://daytonflyers.com/sports/football/stats/2026/butler/boxscore/17648 https://daytonflyers.com/news/2026/10/17/defense-powers-flyerfootball-to-road-win-at-butler.aspx,ALLOWED:2,
+statmuse.com,statmuse.com,3,3,0,2,Baseball:3,,ALLOWED:1,
+www.lions.com.au,lions.com.au,3,2,1,2,Australian Rules:3,https://www.lions.com.au/news/2084246/team-announcement https://www.lions.com.au/news/2083516/qscan-injury-report-gardiner-closes-in-on-return https://www.lions.com.au/news/2131864/afl-team-announcement,ALLOWED:3,
+cricket.com.au,cricket.com.au,3,3,0,2,Cricket:2;UNKNOWN:1,,ALLOWED:1,
+www.xportsnews.com,xportsnews.com,3,3,0,2,Baseball:3,https://www.xportsnews.com/article/2187763 https://www.xportsnews.com/article/2187802 https://www.xportsnews.com/article/2199464,ALLOWED:3,
+www.itftennis.com,itftennis.com,3,3,0,2,Tennis:2;Baseball:1,https://www.itftennis.com/en/tournament/m25-oviedo/esp/2026/m-itf-esp-2026-044/ https://www.itftennis.com/en/tournament/m25-oviedo/esp/2026/m-itf-esp-2026-044/order-of-play/ https://www.itftennis.com,RULES_UNKNOWN:3,
+sports.kz,sports.kz,3,3,0,1,Soccer:3,,ALLOWED:1,
+gol.conmebol.com,conmebol.com,3,1,2,1,Soccer:3,https://gol.conmebol.com/libertadores/es/news/fechas-definidas-para-la-serie-entre-deportes-tolima-e-independiente-del-valle https://gol.conmebol.com/libertadores/es/news/independiente-del-valle-y-deportes-tolima-definen-al-ultimo-clasificado-cuartos-de-final https://gol.conmebol.com/libertadores/es/news/independiente-del-valle-avisa-elimino-tolima-y-va-por-el-campeon-defensor-en-cuartos,ALLOWED:3,
+pacificleague.com,pacificleague.com,3,3,0,3,Baseball:3,https://pacificleague.com/game/36345 https://pacificleague.com/en/stats/team/pitcher,ALLOWED:3,
+www.tudn.com,tudn.com,3,0,1,0,UNKNOWN:3,https://www.tudn.com/futbol/liga-mx/a-que-hora-y-donde-ver-el-partido-atlante-vs-leon-de-la-liga-mx-apertura-2026 https://www.tudn.com/futbol/liga-mx/atlante-vs-leon-liga-mx-ap-2026-08-28 https://www.tudn.com/futbol/liga-mx/roja-para-leon-romana-derriba-a-ocampos-y-deja-a-la-fiera-con-10-video/,ALLOWED:3,
+www.geelongcats.com.au,geelongcats.com.au,3,3,0,1,Tennis:3,https://www.geelongcats.com.au/news/2119044/afl-team-selection-cats-make-three-changes-for-elimination-final,ALLOWED:1,
+sports.ltn.com.tw,ltn.com.tw,3,1,2,1,UNKNOWN:2;Soccer:1,https://sports.ltn.com.tw/news/breakingnews/5563625,BLOCKED_FOR_AI:1,ClaudeBot;GPTBot;anthropic-ai
+news.videoland.com.tw,videoland.com.tw,3,1,2,1,UNKNOWN:2;Soccer:1,https://news.videoland.com.tw/article/8ebd4097-f67e-448d-b187-bfcd98f10534.html,ALLOWED:1,
+www.oursportscentral.com,oursportscentral.com,3,2,0,1,Soccer:2;UNKNOWN:1,https://www.oursportscentral.com/services/releases/colorado-rapids-2-fall-in-tight-battle-against-ventura-county-fc/n-6407094,ALLOWED:1,
+abc.net.au,abc.net.au,3,2,1,2,Rugby League:2;Baseball:1,,BLOCKED_FOR_AI:1,ChatGPT-User;Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+news.sbs.co.kr,sbs.co.kr,3,0,3,2,UNCLASSIFIED:2;Cricket:1,https://news.sbs.co.kr/english/article.do?news_id=N1008787988,ALLOWED:2,
+ofstats.com,ofstats.com,3,0,3,2,Baseball:2;Australian Rules:1,https://ofstats.com/matches/view/genoa-frosinone-2026-09-12 https://ofstats.com/matches/view/tottenham-hotspur-everton-2026-09-12 https://ofstats.com/matches/view/nottingham-forest-coventry-city-2026-09-19,ALLOWED:3,
+vejle-boldklub.dk,vejle-boldklub.dk,3,0,3,1,Australian Rules:3,https://vejle-boldklub.dk/ny-nulloesning-paa-udebane/ https://vejle-boldklub.dk/nyt https://vejle-boldklub.dk/vb-braendte-straffe-og-roeg-ud-af-betano-pokalen/,ALLOWED:3,
+www.dif.se,dif.se,3,0,3,1,Baseball:3,https://www.dif.se/nyheter/2026/infor-djurgarden-elfsborg https://www.dif.se/nyheter/2026/speldatum-satta-for-omgang-18-23-i-allsvenskan https://www.dif.se/nyheter/2026/norsk-briljans-visade-vagen-mot-gais,ALLOWED:3,
+wtafiles.wtatennis.com,wtatennis.com,3,0,3,0,UNKNOWN:3,https://wtafiles.wtatennis.com/pdf/draws/2026/1024/MDS.pdf https://wtafiles.wtatennis.com/pdf/draws/,RULES_UNKNOWN:3,
+wings.wnba.com,wnba.com,3,0,3,2,Tennis:2;Basketball:1,https://wings.wnba.com/news/wings-drop-close-road-game-with-mercury-87-86,RULES_UNKNOWN:2,
+news.yahoo.co.jp,yahoo.co.jp,3,0,3,1,Tennis:3,https://news.yahoo.co.jp/articles/6c2748829a9e4c55b2b35b6b0caa76432e3f2066 https://news.yahoo.co.jp/articles/c209a9a9df0e9c03d60b56ea4263a018cc533c83,BLOCKED_FOR_AI:3,ChatGPT-User;Claude-SearchBot;Claude-User;Claude-Web;ClaudeBot;GPTBot;OAI-SearchBot;anthropic-ai
+api.wtatennis.com,wtatennis.com,3,1,2,3,Tennis:2;Baseball:1,,NO_RULES_FILE:1,
+espn.com.au,espn.com.au,3,1,2,3,Tennis:1;Baseball:1;Basketball:1,,BLOCKED_FOR_AI:1,ChatGPT-User;GPTBot;anthropic-ai
+www.starnewskorea.com,starnewskorea.com,3,1,2,2,Baseball:3,https://www.starnewskorea.com/en/sports/2026/10/07/2026100716313989473 https://www.starnewskorea.com/en/sports/2026/09/23/2026092316391980624,ALLOWED:2,
+www.roosters.com.au,roosters.com.au,3,0,3,2,Soccer:2;Baseball:1,https://www.roosters.com.au/news/2026/10/05/captain-fantastic-teddy-stands-tall-as-roosters-win-epic-decider/ https://www.roosters.com.au/news/2026/09/25/preliminary-final-squad-update/,ALLOWED:2,
+cbcanarias.net,cbcanarias.net,3,1,2,1,Baseball:3,https://cbcanarias.net/event/la-laguna-tenerife-vs-casademont-zaragoza-3/ https://cbcanarias.net/2026/09/27/cruel-final-tras-un-gran-esfuerzo/,NO_RULES_FILE:3,
+api-gw.sports.naver.com,naver.com,3,2,1,2,Baseball:2;Soccer:1,https://api-gw.sports.naver.com/schedule/games?fields=basic&upperCategoryId=kbaseball&categoryId=kbo&fromDate=2026-10-01&toDate=2026-10-01 https://api-gw.sports.naver.com/schedule/games/20261003HTLG02026/record,RULES_UNKNOWN:2,
+www.realmadrid.com,realmadrid.com,3,0,3,1,Soccer:2;UNKNOWN:1,https://www.realmadrid.com/de-DE/news/basket/erste-mannshaft/berichte/cronica-hapoel-real-madrid-01-10-2026 https://www.realmadrid.com/es-ES/noticias/baloncesto/primer-equipo/cronicas/cronica-hapoel-real-madrid-01-10-2026,ALLOWED:2,
+griffinshockey.com,griffinshockey.com,3,0,3,1,Soccer:2;UNKNOWN:1,https://griffinshockey.com/news/oct-2-2026-griffins-5-at-monsters-2 https://griffinshockey.com/schedule/home-schedule,BLOCKED_FOR_AI:2,GPTBot
+www.hcbilitygri.cz,hcbilitygri.cz,3,3,0,1,Ice Hockey:3,https://www.hcbilitygri.cz/matches/MUZ/2027,NO_RULES_FILE:1,
+lyngby-boldklub.dk,lyngby-boldklub.dk,3,3,0,1,Soccer:3,https://lyngby-boldklub.dk/2026/10/10/truppen-mod-broendby-if/,ALLOWED:1,
+predictvantage.com,predictvantage.com,3,3,0,1,Soccer:3,https://predictvantage.com/leagues/denmark-superliga,ALLOWED:1,
+en.as.com,as.com,3,3,0,1,Soccer:3,https://en.as.com/resultados/futbol/inglaterra/2026_2027/directo/regular_a_6_6a38cde9456aa39/alineaciones/,BLOCKED_FOR_AI:1,Claude-SearchBot;Claude-User;ClaudeBot
+horizontedigital.mx,horizontedigital.mx,3,3,0,1,Soccer:3,https://horizontedigital.mx/delfines-coatzacoalcos-vence-dragones-penales/,ALLOWED:1,
+scores24.live,scores24.live,3,3,0,1,Soccer:3,https://scores24.live/es/soccer/m-26-09-2026-club-canoneros-marina-guerreros-del-pacifico,BLOCKED_FOR_AI:1,Claude-SearchBot;Claude-User;Claude-Web;ClaudeBot;GPTBot;OAI-SearchBot;anthropic-ai
+www.dbujylland.dk,dbujylland.dk,3,1,2,1,UNKNOWN:2;Soccer:1,https://www.dbujylland.dk/resultater/kamp/556151_506118/kampinfo,ALLOWED:1,
+www.zerozero.com.ar,zerozero.com.ar,3,1,2,1,UNKNOWN:2;Soccer:1,https://www.zerozero.com.ar/partido/2026-10-11-brondby-if-lyngby-bk/12244389,RULES_UNKNOWN:1,
+nationalbankopen.com,nationalbankopen.com,3,3,0,1,Tennis:3,https://nationalbankopen.com/matches-players/results/2026/van-de-zandschulp_vs_mensik,ALLOWED:1,
+frontend.d3.nhle.com,nhle.com,3,3,0,1,Soccer:3,https://frontend.d3.nhle.com/flames/news/topic/scotia-place/flames-doubled-by-ducks-10-10-26,BLOCKED_FOR_AI:1,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+www.silverscreenandroll.com,silverscreenandroll.com,3,0,3,1,Basketball:3,https://www.silverscreenandroll.com/lakers-injury-report/127269/lakers-injury-report-walker-kessler-luka-doncic-collin-sexton,BLOCKED_FOR_AI:1,ChatGPT-User;Claude-SearchBot;Claude-User;Claude-Web;ClaudeBot;anthropic-ai
+cdn.nba.com,nba.com,3,0,3,1,Basketball:3,https://cdn.nba.com/manage/2026/01/Official-2025-26-NBA-Playing-Rules.pdf,RULES_UNKNOWN:1,
+puckbank.com,puckbank.com,3,3,0,1,Soccer:3,https://puckbank.com/game/2026020105?v=preview,ALLOWED:1,
+www.bilietai.lt,bilietai.lt,3,3,0,1,Basketball:3,https://www.bilietai.lt/en/tickets/PASAL7JJC6/urbo-nkl-alytaus-patriotai-sakiu-vytis-vdu,ALLOWED:1,
+www.visitaanekoski.fi,visitaanekoski.fi,3,0,3,1,Basketball:3,https://www.visitaanekoski.fi/tapahtumat/4741/miesten-koripallo-1.divisioona-a,ALLOWED:1,
+www.forecasterhq.com,forecasterhq.com,3,3,0,1,American Football:3,https://www.forecasterhq.com/tools/nfl-weather/game/seahawks-at-broncos-week-6,ALLOWED:1,
+qa.philstar.com,philstar.com,3,3,0,1,Basketball:3,https://qa.philstar.com/pang-masa/pm-sports/2026/10/14/2563047/rhj-pasikat-agad,ALLOWED:1,
+tonite.abante.com.ph,abante.com.ph,3,3,0,1,Basketball:3,https://tonite.abante.com.ph/rondae-hollis-jefferson-3-pang-galing-pinsala-muling-masusukat/sports/,BLOCKED_FOR_AI:1,ChatGPT-User;Claude-User;Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+skedcheck.com,skedcheck.com,3,3,0,1,Basketball:3,https://skedcheck.com/pba-games-schedule-scores/,ALLOWED:1,
+www.football-lab.jp,football-lab.jp,3,3,0,1,Soccer:3,https://www.football-lab.jp/fuku/preview,ALLOWED:1,
+www.zerozero.pt,zerozero.pt,3,3,0,1,Basketball:3,https://www.zerozero.pt/squad_builder.php?match=12736244&team=262836,RULES_UNKNOWN:1,
+timesofindia.indiatimes.com,indiatimes.com,3,3,0,1,Cricket:3,https://timesofindia.indiatimes.com/sports/cricket/match-center-scorecard/india-women-vs-zimbabwe-women-live-score-update-1st-t20i-zimbabwe-women-in-india-3-t20i-series-2026/inwzmw10162026270969,ALLOWED:1,
+www.cricket.co.za,cricket.co.za,3,3,0,1,Cricket:3,https://www.cricket.co.za/proteas-women-to-host-india-for-five-match-t20i-series-in-april/,RULES_UNKNOWN:1,
+www.footlive.com,footlive.com,3,0,3,1,Soccer:3,https://www.footlive.com/score/potkozarje-vs-drina-zvornik-2026-10-21/,ALLOWED:1,
+www.capitalonearena.com,capitalonearena.com,3,3,0,1,Basketball:2;UNCLASSIFIED:1,https://www.capitalonearena.com/events/detail/washington-wizards-vs-milwaukee-bucks-10212026,ALLOWED:1,
+www.cp24.com,cp24.com,3,3,0,1,Ice Hockey:2;UNCLASSIFIED:1,https://www.cp24.com/local/hamilton/2026/05/21/hamilton-hammers-name-gives-new-ahl-franchise-a-steel-city-identity/,BLOCKED_FOR_AI:1,ChatGPT-User;Claude-Web;GPTBot;OAI-SearchBot;anthropic-ai
+www.hamiltonhammers.com,hamiltonhammers.com,3,0,3,1,UNCLASSIFIED:3,https://www.hamiltonhammers.com/games,ALLOWED:1,
+www.stats24.com,stats24.com,3,3,0,1,Ice Hockey:3,https://www.stats24.com/ice-hockey/beibarys-atyrau-vs-kulager-petropavl/3344934,ALLOWED:1,
+hkbeibarys.kz,hkbeibarys.kz,3,3,0,1,Ice Hockey:3,https://hkbeibarys.kz/ru/pro,ALLOWED:1,
+meteo.lt,meteo.lt,3,3,0,1,Soccer:3,,ALLOWED:1,
+www.meteo.lt,meteo.lt,3,3,0,1,Soccer:3,https://www.meteo.lt/?area=kaunas,ALLOWED:1,
+labb16.com,labb16.com,3,1,0,1,Basketball:3,,ALLOWED:1,
+www.czehockey.cz,czehockey.cz,3,3,0,1,Ice Hockey:3,https://www.czehockey.cz/competition/games/14,ALLOWED:1,
+sport.cz,sport.cz,3,3,0,1,Ice Hockey:3,,BLOCKED_FOR_AI:1,OAI-SearchBot;anthropic-ai
+www.livesport.cz,livesport.cz,3,1,0,1,Ice Hockey:3,https://www.livesport.cz/zpravy/hokej-tipsport-extraliga-2026-2027-rozpis-program-info/SE00jy54/,ALLOWED:1,
+www.clubtalleres.com.ar,clubtalleres.com.ar,3,3,0,1,Soccer:3,https://www.clubtalleres.com.ar/convocados-para-jugar-ante-boca-juniors-3/,ALLOWED:1,
+dknetwork.draftkings.com,draftkings.com,3,3,0,1,Baseball:3,https://dknetwork.draftkings.com/2026/10/16/cleveland-guardians-vs-tampa-bay-rays-alcs-game-4-delayed-due-to-rain-friday-10-16-26-2/,ALLOWED:1,
+staging-aws.sports.yahoo.com,yahoo.com,3,3,0,1,Baseball:3,https://staging-aws.sports.yahoo.com/mlb/live/guardians-rays-box-score-live-updates-lineups-starting-pitchers-news-highlights-where-to-watch-game-4-alcs-230808551.html,NO_RULES_FILE:1,
+www.draysbay.com,draysbay.com,3,3,0,1,Baseball:3,https://www.draysbay.com/tampa-bay-rays-analysis/91778/alcs-game-four-preview-tampa-bay-rays-vs-cleveland-guardians,BLOCKED_FOR_AI:1,ChatGPT-User;Claude-SearchBot;Claude-User;Claude-Web;ClaudeBot;anthropic-ai
+www.spotvnews.co.kr,spotvnews.co.kr,3,3,0,1,Baseball:3,https://www.spotvnews.co.kr/news/articleView.html?idxno=1013594,RULES_UNKNOWN:1,
+www2.edaily.co.kr,edaily.co.kr,3,3,0,1,Baseball:3,https://www2.edaily.co.kr/News/Read?mediaCodeNo=257&newsId=02145126645613904,ALLOWED:1,
+bab.7msport.com,7msport.com,3,3,0,1,Baseball:3,https://bab.7msport.com/analyse_data/index_en.shtml?n=100533,NO_RULES_FILE:1,
+www.live-result.com,live-result.com,3,3,0,1,Baseball:3,https://www.live-result.com/baseball/matches/match40066_Kia_Tigers-Lg_Twins-online,BLOCKED_FOR_AI:1,GPTBot
+megainspiration.co.kr,megainspiration.co.kr,3,3,0,1,Baseball:3,https://megainspiration.co.kr/kbo-2026-10-17-lg-kia/,ALLOWED:1,
+scoutingstats.ai,scoutingstats.ai,3,3,0,3,Soccer:3,https://scoutingstats.ai/ligue-3/amiens-sc-v-versailles/19733492 https://scoutingstats.ai/ligue-3/cannes-v-le-puy-en-velay/19733491 https://scoutingstats.ai/ligue-3/thionville-lusitanos-v-paris-13-atletico/19733486,ALLOWED:3,
+www.telefootball.net,telefootball.net,3,3,0,2,Soccer:3,https://www.telefootball.net/US/IFK-Goteborg-Halmstad-2026-09-12-667686.html https://www.telefootball.net/FR/Lille-Troyes-2026-09-13-667744.html,ALLOWED:2,
+au.headtopics.com,headtopics.com,2,2,0,0,UNKNOWN:2,https://au.headtopics.com/news/illawarra-hawks-stun-melbourne-united-in-thrilling-91-89-88932761,ALLOWED:1,
+propakistani.pk,propakistani.pk,2,2,0,0,UNKNOWN:2,https://propakistani.pk/2026/10/19/pakistan-beat-sri-lanka-to-make-winning-start-to-odi-tri-series/,ALLOWED:1,
+fibalivestats.dcd.shared.geniussports.com,geniussports.com,2,2,0,0,UNKNOWN:2,https://fibalivestats.dcd.shared.geniussports.com/data/2910255/data.json,NO_RULES_FILE:1,
+www.163.com,163.com,2,2,0,0,UNKNOWN:2,https://www.163.com/dy/article/L9I5JH5I0552YIYQ.html,ALLOWED:1,
+163.com,163.com,2,2,0,0,UNKNOWN:2,,ALLOWED:1,
+cbf.cz,cbf.cz,2,2,0,0,UNKNOWN:2,,RULES_UNKNOWN:1,
+www.lanacion.com.ar,lanacion.com.ar,2,2,0,0,UNKNOWN:2,https://www.lanacion.com.ar/deportes/canchallena/osasuna-vencio-2-0-a-racing-de-santander-por-la-liga-de-espana-2026-nid18102026/,ALLOWED:1,
+www.napolimagazine.com,napolimagazine.com,2,2,0,0,UNKNOWN:2,https://www.napolimagazine.com/basket/articolo/napoli-basketball-primo-stop-per-gli-azzurri-l-olimpia-milano-vince-82-98-…-18-10-2026,ALLOWED:1,
+owlsports.com,owlsports.com,2,2,0,0,UNKNOWN:2,https://owlsports.com/sports/football/stats/2026/charlotte/boxscore/14980 https://owlsports.com/news/2026/10/17/clarke-makes-history-football-falls-to-charlotte,ALLOWED:2,
+cba.sports.sina.com.cn,sina.com.cn,2,1,0,0,UNKNOWN:2,https://cba.sports.sina.com.cn/cba/schedule?qmonth=10,NO_RULES_FILE:1,
+www.leisu.com,leisu.com,2,1,0,0,UNKNOWN:2,https://www.leisu.com/cba/fixtures,BLOCKED_FOR_AI:1,ClaudeBot
+cbaleague.com,cbaleague.com,2,1,0,0,UNKNOWN:2,https://cbaleague.com/,NO_RULES_FILE:1,
+www.federugby.it,federugby.it,2,1,0,0,UNKNOWN:2,https://www.federugby.it/serie-a-elite-maschile-al-debutto-le-fiamme-oro-fermano-i-campioni-ditalia/,ALLOWED:1,
+www.onrugby.it,onrugby.it,2,1,0,0,UNKNOWN:2,https://www.onrugby.it/2026/10/17/la-serie-a-elite-parte-col-botto-subito-un-colpaccio-tutti-i-risultati-della-prima-giornata-e-la-classifica/,ALLOWED:1,
+www.bjorkloven.com,bjorkloven.com,2,1,0,0,UNKNOWN:2,https://www.bjorkloven.com/article/hzlatn2-2e4ad/view,RULES_UNKNOWN:1,
+www.svt.se,svt.se,2,1,0,0,UNKNOWN:2,https://www.svt.se/sport/ishockey/shl-2025-2026?inlagg=dfb63f9f81e495deeb547e3c52d13f71,BLOCKED_FOR_AI:1,ClaudeBot;GPTBot;anthropic-ai
+butlersports.com,butlersports.com,2,1,0,0,UNKNOWN:2,https://butlersports.com/news/2026/10/17/football-bulldogs-fall-in-defensive-battle-with-dayton.aspx,ALLOWED:1,
+www.infoatleti.es,infoatleti.es,2,1,1,0,UNKNOWN:2,https://www.infoatleti.es/partido/20261017,NO_RULES_FILE:1,
+www.breakinglaliga.com,breakinglaliga.com,2,1,1,0,UNKNOWN:2,https://www.breakinglaliga.com/es/matches/2026-27/md-9/espanyol-vs-atletico-madrid/,BLOCKED_FOR_AI:1,ChatGPT-User;Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+bntnews.bg,bntnews.bg,2,1,1,0,UNKNOWN:2,https://bntnews.bg/news/lokomotiv-plovdiv-rani-beroe-v-stara-zagora-1417529news.html,ALLOWED:1,
+bnrnews.bg,bnrnews.bg,2,1,1,0,UNKNOWN:2,https://bnrnews.bg/plovdiv/post/543602/bk-lokomotiv-s-dramatichna-pobeda-v-stara-zagora,ALLOWED:1,
+www.esake.gr,esake.gr,2,1,1,0,UNKNOWN:2,https://www.esake.gr/el/00000000?gamecenterseries=04,NO_RULES_FILE:1,
+www.karditsasport.gr,karditsasport.gr,2,1,1,0,UNKNOWN:2,https://www.karditsasport.gr/index.php/component/joomsport/match/16609?Itemid=614,ALLOWED:1,
+ballstatesports.com,ballstatesports.com,2,1,1,0,UNKNOWN:2,https://ballstatesports.com/sports/football/stats/2026/bowling-green/boxscore/14495,ALLOWED:1,
+bgsufalcons.com,bgsufalcons.com,2,1,1,0,UNKNOWN:2,https://bgsufalcons.com/game-center/25014,ALLOWED:1,
+bryantbulldogs.com,bryantbulldogs.com,2,1,1,0,UNKNOWN:2,https://bryantbulldogs.com/boxscore.aspx?id=12256&path=football,ALLOWED:1,
+goblackbears.com,goblackbears.com,2,1,1,0,UNKNOWN:2,https://goblackbears.com/sports/football/stats/2026/bryant/boxscore/16423,ALLOWED:1,
+www.whathifi.com,whathifi.com,2,2,0,2,Cricket:2,https://www.whathifi.com/streaming-entertainment/watch-the-hundred-2026-free,ALLOWED:1,
+africa.espn.com,espn.com,2,2,0,2,Cricket:1;Soccer:1,https://africa.espn.com/cricket/series/21376/scorecard/1471057/utils https://africa.espn.com/football/match/_/gameId/401841525/sarmiento-junin-union-santa-fe,BLOCKED_FOR_AI:2,GPTBot
+web1.koreabaseball.com,koreabaseball.com,2,2,0,2,Baseball:2,https://web1.koreabaseball.com/MediaNews/News/Preview/View.aspx?bdSe=62139 https://web1.koreabaseball.com/MediaNews/News/Preview/View.aspx?bdSe=62150,NO_RULES_FILE:2,
+www.aemet.es,aemet.es,2,1,1,2,Tennis:1;Australian Rules:1,https://www.aemet.es/es/eltiempo/observacion/ultimosdatos?datos=det&l=1249X&que=ast&w=0 https://www.aemet.es/en/eltiempo/prediccion/municipios/horas/tabla/valencia-id46250,ALLOWED:2,
+onlajny.com,onlajny.com,2,2,0,1,Soccer:2,,ALLOWED:1,
+www.wincomparator.com,wincomparator.com,2,1,1,1,Soccer:2,https://www.wincomparator.com/es-es/pronosticos/deportes-tolima-independiente-del-valle-8734930/ https://www.wincomparator.com/predictions/independiente-del-valle-deportes-tolima-8734931/,ALLOWED:2,
+www.chicagofirefc.com,chicagofirefc.com,2,2,0,1,Soccer:2,https://www.chicagofirefc.com/news/chicago-fire-fc-to-host-cf-monterrey-in-leagues-cup-2026-quarterfinals https://www.chicagofirefc.com/news/match-recap-chicago-fire-fc-extends-unbeaten-streak-to-seven-in-1-1-road-draw-at-red-bull-new-york,ALLOWED:2,
+www.rayados.com,rayados.com,2,2,0,1,Soccer:2,https://www.rayados.com/es/noticias/21558/rayados-enfrentara-al-chicago-fire-el-martes-25-de-agosto https://www.rayados.com/es/noticias/21571/rayados-cae-ante-leon-en-la-jornada-5,ALLOWED:2,
+mystics.wnba.com,wnba.com,2,2,0,1,Basketball:1;UNKNOWN:1,https://mystics.wnba.com/game-notes https://mystics.wnba.com/news/mystics-announce-2026-regular-season-schedule,RULES_UNKNOWN:2,
+www.fuerzaregia.com.mx,fuerzaregia.com.mx,2,1,1,1,Basketball:2,https://www.fuerzaregia.com.mx/noticias/fuerza-regia-buscara-empatar-la-serie-en-el-segundo-duelo-ante-lobos https://www.fuerzaregia.com.mx/,RULES_UNKNOWN:2,
+www.nikkansports.com,nikkansports.com,2,2,0,2,Baseball:2,https://www.nikkansports.com/baseball/news/202608250000776.html https://www.nikkansports.com/baseball/news/202609220000373.html,BLOCKED_FOR_AI:2,ChatGPT-User;Claude-Web;GPTBot;anthropic-ai
+yorkshireccc.com,yorkshireccc.com,2,2,0,1,Cricket:2,https://yorkshireccc.com/match/yorkshire-women-v-surrey-women-metro-bank-one-day-cup-women-26-aug-2026/ https://yorkshireccc.com/news/live-yorkshire-women-v-surrey-metro-bank-odc/,ALLOWED:2,
+www.ligaprofesional.ar,ligaprofesional.ar,2,2,0,0,UNKNOWN:2,https://www.ligaprofesional.ar/notas/primera/2026/08/07/agenda-de-la-fecha-4-a-la-7/ https://www.ligaprofesional.ar/notas/arbitraje/2026/08/25/autoridades-de-la-fecha-7-6/,ALLOWED:2,
+www.bocajuniors.com.ar,bocajuniors.com.ar,2,2,0,1,UNKNOWN:1;Soccer:1,https://www.bocajuniors.com.ar/noticias https://www.bocajuniors.com.ar/noticias/con-el-grito-final,BLOCKED_FOR_AI:2,ChatGPT-User;Claude-SearchBot;Claude-User;Claude-Web;ClaudeBot;GPTBot;OAI-SearchBot;anthropic-ai
+nfl.com,nfl.com,2,2,0,0,UNKNOWN:2,,ALLOWED:1,
+aces.wnba.com,wnba.com,2,2,0,0,UNKNOWN:2,https://aces.wnba.com/news/gallery-aces-tempo-8-23-2026 https://aces.wnba.com/news/gallery-aces-109-tempo-83-7-20-2026,RULES_UNKNOWN:2,
+www.nownews.com,nownews.com,2,2,0,2,Baseball:2,https://www.nownews.com/news/6872173,ALLOWED:1,
+www.ptt.cc,ptt.cc,2,2,0,2,Baseball:2,https://www.ptt.cc/bbs/Monkeys/M.1788429861.A.BAA.html https://www.ptt.cc/bbs/TSG-Hawks/M.1788430073.A.073.html,BLOCKED_FOR_AI:2,ChatGPT-User;Claude-User;Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+cricketnamibia.com,cricketnamibia.com,2,2,0,1,Cricket:2,https://cricketnamibia.com/cricket-namibia-to-host-the-proteas-and-zimbabwe-in-fnb-t20-tri-series/ https://cricketnamibia.com/celebrating-excellence-at-2026-cricket-namibia-annual-awards/,ALLOWED:2,
+www.westernbulldogs.com.au,westernbulldogs.com.au,2,2,0,1,Australian Rules:2,https://www.westernbulldogs.com.au/news/2119105/aflw-team-round-4-v-sydney-swans https://www.westernbulldogs.com.au/aflw/medical-room,ALLOWED:2,
+www.record.com.mx,record.com.mx,2,2,0,1,Soccer:2,https://www.record.com.mx/historia/donde-ver-fc-juarez-vs-pachuca-canales-y-hora-del-partido-de-liga-mx-2026090405295280000 https://www.record.com.mx/historia/oficial-gustavo-lema-regresa-para-dirigir-en-la-liga-mx-2026090221543043149,RULES_UNKNOWN:2,
+www.nmfc.com.au,nmfc.com.au,2,2,0,1,Australian Rules:2,https://www.nmfc.com.au/news/2119014/aflw-r4-team-stars-return-for-saturday-stoush https://www.nmfc.com.au/news/2118658/aflw-r4-injury-update-stk-v-nmfc,ALLOWED:2,
+www.goldcoastfc.com.au,goldcoastfc.com.au,2,1,1,2,Australian Rules:1;Baseball:1,https://www.goldcoastfc.com.au/news/2119511/aflw-round-4-team-girvan-and-mithen-are-in https://www.goldcoastfc.com.au/news/2139098/round-7-team-locked-in,NO_RULES_FILE:2,
+www.eurohockey.com,eurohockey.com,2,2,0,1,Soccer:2,https://www.eurohockey.com/game/detail/307838-herning-ik--rungsted-seier-capital.html,BLOCKED_FOR_AI:1,ChatGPT-User;Claude-User;Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+account.nrl.com,nrl.com,2,2,0,1,Rugby League:2,,BLOCKED_FOR_AI:1,ChatGPT-User;Claude-SearchBot;Claude-User;Claude-Web;ClaudeBot;GPTBot;OAI-SearchBot;anthropic-ai
+isport.blesk.cz,blesk.cz,2,1,1,1,Rugby League:2,https://isport.blesk.cz/clanek/fotbal-chance-liga/479501/online-slavia-zbrojovka-4-0-debakl-ctvrtou-branku-pridal-jurasek-dve-zraneni-opor.html,ALLOWED:2,
+matchendirect.fr,matchendirect.fr,2,0,2,0,UNKNOWN:2,,BLOCKED_FOR_AI:1,anthropic-ai
+forebet.com,forebet.com,2,0,2,1,UNKNOWN:1;Cricket:1,,ALLOWED:1,
+playerstats.football,playerstats.football,2,1,1,2,Baseball:1;Soccer:1,https://playerstats.football/fixture/genoa/frosinone/2026-09-12 https://playerstats.football/fixture/dalian-yingbo/shanghai-shenhua/2026-09-01,ALLOWED:2,
+www.baseball-almanac.com,baseball-almanac.com,2,0,2,2,Baseball:1;Australian Rules:1,https://www.baseball-almanac.com/box-scores/boxscore.php?boxid=202609110SLN https://www.baseball-almanac.com/box-scores/boxscore.php?boxid=202609160CN5,ALLOWED:2,
+m.cricbuzz.com,cricbuzz.com,2,0,2,2,Baseball:1;Australian Rules:1,https://m.cricbuzz.com/live-cricket-scorecard/161777/gaww-vs-tkrw-4th-match-womens-caribbean-premier-league-2026 https://m.cricbuzz.com/live-cricket-scorecard/152742/zim-vs-aus-2nd-odi-australia-tour-of-zimbabwe-2026,BLOCKED_FOR_AI:2,ChatGPT-User;Claude-SearchBot;Claude-User;Claude-Web;ClaudeBot;GPTBot;OAI-SearchBot;anthropic-ai
+acb.af,acb.af,2,0,2,1,Australian Rules:2,https://acb.af/en-US/post/acb-names-squad-for-the-t20i-series-against-india https://acb.af/en-US/post/acb-to-host-india-for-three-match-t20i-series-in-delhi,ALLOWED:2,
+gioscore.com,gioscore.com,2,1,1,1,Australian Rules:1;UNKNOWN:1,https://gioscore.com/football/match/brondby-if-vejle-boldklub/19872994 https://gioscore.com/es-ben-aknoun-olympique-akbou/MDAxNDQwOTEtMjMyNDc3,BLOCKED_FOR_AI:2,ClaudeBot;GPTBot;anthropic-ai
+www.fremantlefc.com.au,fremantlefc.com.au,2,0,2,1,Australian Rules:2,https://www.fremantlefc.com.au/news/2126694/ https://www.fremantlefc.com.au/news/2132870/freo-storm-home-to-seal-grand-final-berth-in-epic-finish-over-swans,ALLOWED:2,
+m.zhibo8.cc,zhibo8.cc,2,0,2,1,Australian Rules:2,https://m.zhibo8.cc/news/web/zuqiu/2026-09-17/6aabd8716495anative.htm https://m.zhibo8.cc/news/web/zuqiu/2026-09-17/6aabe51708f5fnative.htm,NO_RULES_FILE:2,
+elfsborg.se,elfsborg.se,2,0,2,1,Baseball:2,https://elfsborg.se/2026/09/15/supporterinfo-djurgardens-if-borta-1/ https://elfsborg.se/2026/09/13/kamaras-mal-avgjorde-mot-kalmar/,ALLOWED:2,
+xgstats.com,xgstats.com,2,0,2,1,Baseball:2,https://xgstats.com/teams/djurgardens-if https://xgstats.com/teams/if-elfsborg,ALLOWED:2,
+www.aftonbladet.se,aftonbladet.se,2,0,2,1,Baseball:2,https://www.aftonbladet.se/senastenytt/ttsport/sport/a/JOdbOX/mardrom-for-djurgarden-jattetavla-och-forlust,BLOCKED_FOR_AI:1,Claude-SearchBot;Claude-Web;ClaudeBot;anthropic-ai
+vff.dk,vff.dk,2,0,2,1,Baseball:2,https://vff.dk/ligaen/kampprogram https://vff.dk/nyhed/sport/15790-mohamed-riahi-alvorligt-knaeskadet,ALLOWED:2,
+fcn.dk,fcn.dk,2,0,2,1,Baseball:2,https://fcn.dk/nyheder/2026/september/highlights-fc-nordsjaelland-agf-1 https://fcn.dk/nyheder/2026/september/truppen-til-aftenens-kamp-i-herning,ALLOWED:2,
+matchpulsestats.com,matchpulsestats.com,2,0,2,1,Baseball:2,https://matchpulsestats.com/en/league/119/xg https://matchpulsestats.com/es/league/140/xg,ALLOWED:2,
+nevalleynews.org,nevalleynews.org,2,0,2,2,Tennis:1;Basketball:1,https://nevalleynews.org/21133/sports/copper-scores-go-ahead-basket-with-2-4-seconds-left-lifts-mercury-to-87-86-win-over-dallas/,ALLOWED:1,
+www.gurazeni.com,gurazeni.com,2,0,2,1,Tennis:2,https://www.gurazeni.com/player/910 https://www.gurazeni.com/player_pitching/2932/year:2026,ALLOWED:2,
+nikkansports.com,nikkansports.com,2,0,2,2,Tennis:1;Baseball:1,,BLOCKED_FOR_AI:1,ChatGPT-User;Claude-Web;GPTBot;anthropic-ai
+wtatennis.com,wtatennis.com,2,1,1,2,Tennis:1;Baseball:1,,ALLOWED:1,
+itftennis.com,itftennis.com,2,1,1,2,Tennis:1;Baseball:1,,RULES_UNKNOWN:1,
+cbssports.com,cbssports.com,2,1,1,2,Tennis:1;Baseball:1,,BLOCKED_FOR_AI:1,GPTBot
+basketball-reference.com,basketball-reference.com,2,1,1,2,Tennis:1;Baseball:1,,BLOCKED_FOR_AI:1,GPTBot
+www.lkl.lt,lkl.lt,2,2,0,1,Baseball:2,https://www.lkl.lt,ALLOWED:1,
+www.basketnews.lt,basketnews.lt,2,2,0,1,Baseball:2,https://www.basketnews.lt,ALLOWED:1,
+flashscore.com,flashscore.com,2,1,1,2,Baseball:2,,ALLOWED:1,
+athlonsports.com,athlonsports.com,2,2,0,1,Baseball:2,https://athlonsports.com/mlb https://athlonsports.com/wnba,ALLOWED:2,
+www.cbsnews.com,cbsnews.com,2,1,1,2,Basketball:1;Soccer:1,https://www.cbsnews.com/atlanta/news/jordin-canada-scores-19-andel-reese-records-another-double-double-as-dream-beat-liberty-95-84/ https://www.cbsnews.com/philadelphia/news/phillies-vs-braves-game-3-score-mlb-playoffs/,BLOCKED_FOR_AI:2,GPTBot
+dodgersdigest.com,dodgersdigest.com,2,0,2,1,Basketball:2,https://dodgersdigest.com/2026/09/22/dodgers-7-padres-0-8-relievers-combine-on-shutout-in-remix-of-2024-nlds-game-4/ https://dodgersdigest.com/2026/09/22/padres-dodgers-september-22-2026-pages-and-sasaki-return-as-dodgers-open-up-final-home-series-of-the-season-with-san-diego/,BLOCKED_FOR_AI:2,ChatGPT-User;Claude-Web;GPTBot;anthropic-ai
+www.fibalivestats.com,fibalivestats.com,2,0,2,1,Baseball:2,https://www.fibalivestats.com/u/NBL/2026092501/,NO_RULES_FILE:1,
+open-meteo.com,open-meteo.com,2,2,0,0,UNKNOWN:2,https://open-meteo.com/en/docs,ALLOWED:1,
+hapoelbc.com,hapoelbc.com,2,0,2,1,UNKNOWN:1;Soccer:1,https://hapoelbc.com/games/hapoel-ibi-tel-aviv-vs-real-madrid-8/,BLOCKED_FOR_AI:1,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+nbl1.com.au,nbl1.com.au,2,2,0,1,Basketball:2,,ALLOWED:1,
+nine.com.au,nine.com.au,2,0,2,1,Rugby League:2,,BLOCKED_FOR_AI:1,ChatGPT-User;Claude-Web;ClaudeBot;GPTBot;OAI-SearchBot;anthropic-ai
+easycredit-bbl.de,easycredit-bbl.de,2,2,0,1,Cricket:2,,NO_RULES_FILE:1,
+sport.de,sport.de,2,2,0,1,Cricket:2,,RULES_UNKNOWN:1,
+kicker.de,kicker.de,2,2,0,1,Cricket:2,,BLOCKED_FOR_AI:1,ChatGPT-User;Claude-SearchBot;Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+torbenrosenbohm.de,torbenrosenbohm.de,2,2,0,1,Cricket:2,,ALLOWED:1,
+goal.com,goal.com,2,2,0,1,Soccer:2,,ALLOWED:1,
+www.paobc.gr,paobc.gr,2,0,2,1,Soccer:2,https://www.paobc.gr/schedule/panathinaikos-bc-aktor-vikos-falcons-04-10-2026/,ALLOWED:1,
+www.championat.com,championat.com,2,0,2,1,Soccer:2,https://www.championat.com/football/news-6644730-kyrgyzstan-livan-rezultat-matcha-4-oktyabrya-2026-schet-3-1-tovarischeskij-match.html,ALLOWED:1,
+floridapanthers.com,floridapanthers.com,2,2,0,1,UNCLASSIFIED:2,,RULES_UNKNOWN:1,
+hanshintigers.jp,hanshintigers.jp,2,2,0,1,Baseball:2,https://hanshintigers.jp/home/nishi16/,RULES_UNKNOWN:1,
+ae.lapresse.it,lapresse.it,2,0,2,1,Tennis:2,https://ae.lapresse.it/sport-ae/2026/10/07/tennis-atp-masters-1000-shanghai-bellucci-knocked-out-in-the-first-round/,BLOCKED_FOR_AI:1,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+www.basketkorea.com,basketkorea.com,2,0,2,1,UNCLASSIFIED:2,https://www.basketkorea.com/news/newsview.php?ncode=1065613721301888,BLOCKED_FOR_AI:1,ChatGPT-User;GPTBot;anthropic-ai
+pc.dongqiudi.com,dongqiudi.com,2,0,2,1,Soccer:2,https://pc.dongqiudi.com/articles/6450059.html,RULES_UNKNOWN:1,
+www.sports.kz,sports.kz,2,1,1,1,Ice Hockey:1;UNKNOWN:1,https://www.sports.kz/live/match/5997441,ALLOWED:1,
+livevoetbal24.com,livevoetbal24.com,2,1,1,1,Soccer:1;UNKNOWN:1,https://livevoetbal24.com/wedstrijd/be1-nfafc-neptunas-klaipeda/2592479,ALLOWED:1,
+promediosinfo.com,promediosinfo.com,2,1,1,1,Soccer:1;UNKNOWN:1,https://promediosinfo.com/boca-juniors_talleres_2026-10-16_1493185_6WtiEiQi1As.html,ALLOWED:1,
+arizonasports.com,arizonasports.com,2,1,1,1,Basketball:1;UNKNOWN:1,https://arizonasports.com/nba/phoenix-suns/preseason-jazz-pros-cons,ALLOWED:1,
+www.cfl-china.cn,cfl-china.cn,1,1,0,0,UNKNOWN:1,https://www.cfl-china.cn/en/fixtures/details.html?match_id=8m5yl3l3nyueh4o8yqno04v10,NO_RULES_FILE:1,
+www.soccerway.com,soccerway.com,1,1,0,0,UNKNOWN:1,https://www.soccerway.com/match/mohun-bagan-nu3kFdnl/sc-delhi-zafT17en/summary/stats/,ALLOWED:1,
+www.chugoku-np.co.jp,chugoku-np.co.jp,1,1,0,0,UNKNOWN:1,https://www.chugoku-np.co.jp/articles/-/910995,BLOCKED_FOR_AI:1,ChatGPT-User;Claude-SearchBot;Claude-User;Claude-Web;ClaudeBot;GPTBot;OAI-SearchBot;anthropic-ai
+hiroshimadragonflies.com,hiroshimadragonflies.com,1,1,0,0,UNKNOWN:1,https://hiroshimadragonflies.com/topics_detail39/id=24854,ALLOWED:1,
+basketball.com.au,basketball.com.au,1,1,0,0,UNKNOWN:1,,ALLOWED:1,
+lakingsinsider.com,lakingsinsider.com,1,1,0,0,UNKNOWN:1,https://lakingsinsider.com/2026/10/17/reign-final-hsk-5-ont-2-lord-hicketts/,BLOCKED_FOR_AI:1,ClaudeBot;GPTBot
+hockeyroyalty.com,hockeyroyalty.com,1,1,0,0,UNKNOWN:1,https://hockeyroyalty.com/2026/10/18/penalties-continue-to-be-a-problem-in-the-ontario-reigns-5-2-loss-to-the-henderson-silver-knights/,ALLOWED:1,
+www.hendersonsilverknights.com,hendersonsilverknights.com,1,1,0,0,UNKNOWN:1,https://www.hendersonsilverknights.com/game-break-down-10-17-at-ontario/,ALLOWED:1,
+www.hv71.se,hv71.se,1,1,0,0,UNKNOWN:1,https://www.hv71.se/article/5qmatn2-3iaijd/view,RULES_UNKNOWN:1,
+www.brynas.se,brynas.se,1,1,0,0,UNKNOWN:1,https://www.brynas.se/article/dfvatn2-1ekad/view,RULES_UNKNOWN:1,
+stats.swehockey.se,swehockey.se,1,1,0,0,UNKNOWN:1,https://stats.swehockey.se/GamesByDate/2026-10-17/ByGroup/90,NO_RULES_FILE:1,
+www.hockeyweb.de,hockeyweb.de,1,1,0,0,UNKNOWN:1,https://www.hockeyweb.de/shl/spiele/bryn%C3%A4s-v%C3%A4xj%C3%B6-20261017-19454,ALLOWED:1,
+www.legaitalianarugby.com,legaitalianarugby.com,1,0,0,0,UNKNOWN:1,https://www.legaitalianarugby.com/2026/10/17/risultati-giornata-1-2627/,ALLOWED:1,
+plovdiv-online.com,plovdiv-online.com,1,0,1,0,UNKNOWN:1,https://plovdiv-online.com/news/plovdiv/bk-lokomotiv-pobedi-beroe-9895/,ALLOWED:1,
+www.sportime24.gr,sportime24.gr,1,0,1,0,UNKNOWN:1,https://www.sportime24.gr/,ALLOWED:1,
+ontarioreign.com,ontarioreign.com,1,1,0,0,UNKNOWN:1,https://ontarioreign.com/news/index/,BLOCKED_FOR_AI:1,GPTBot
+uefa.com,uefa.com,1,0,1,1,Soccer:1,,ALLOWED:1,
+cricinfo.com,cricinfo.com,1,1,0,1,Cricket:1,,RULES_UNKNOWN:1,
+ipl.com,ipl.com,1,1,0,1,Cricket:1,,BLOCKED_FOR_AI:1,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+sportsf1.com,sportsf1.com,1,1,0,1,Cricket:1,https://sportsf1.com/pitch-report-today-match/33084/cardiff-pitch-report-today-match-welsh-fire-women-vs-southern-brave-women,ALLOWED:1,
+cricsheet.org,cricsheet.org,1,1,0,1,Cricket:1,https://cricsheet.org/downloads/t20s_female_json.zip,ALLOWED:1,
+m.sports.naver.com,naver.com,1,1,0,1,Baseball:1,https://m.sports.naver.com/game/20260804WOLT02026,BLOCKED_FOR_AI:1,ChatGPT-User;Claude-SearchBot;Claude-User;Claude-Web;ClaudeBot;GPTBot;OAI-SearchBot;anthropic-ai
+www.londonspirit.com,londonspirit.com,1,1,0,1,Cricket:1,https://www.londonspirit.com/matches,ALLOWED:1,
+www.manchestersupergiants.co.uk,manchestersupergiants.co.uk,1,1,0,1,Cricket:1,https://www.manchestersupergiants.co.uk/,ALLOWED:1,
+www.slbenfica.pt,slbenfica.pt,1,1,0,1,Soccer:1,https://www.slbenfica.pt/es-es/agora/noticias/2026/07/20/futebol-benfica-sorteio-3-pre-eliminatoria-acesso-a-fase-liga-da-liga-europa,ALLOWED:1,
+translink.com.au,translink.com.au,1,1,0,1,Australian Rules:1,https://translink.com.au/plan-your-journey/event-transport/1114446,ALLOWED:1,
+www.espn.co.uk,espn.co.uk,1,1,0,1,Cricket:1,https://www.espn.co.uk/cricket/series/21376/scorecard/1521220/birmingham-phoenix-women-vs-sunrisers-leeds-women-24th-match-the-hundred-womens-competition-2026,BLOCKED_FOR_AI:1,ChatGPT-User;GPTBot;anthropic-ai
+resources.ecb.co.uk,ecb.co.uk,1,1,0,1,Cricket:1,https://resources.ecb.co.uk/ecb/document/2026/03/24/f8005182-b39c-4c25-83bd-1ffff0415b7a/The-Hundred-2026.pdf,RULES_UNKNOWN:1,
+www.wolves.co.uk,wolves.co.uk,1,1,0,1,Cricket:1,https://www.wolves.co.uk/news/mens-first-team/20260702-new-dates-for-west-brom-and-blues-derbies/,ALLOWED:1,
+www.efl.com,efl.com,1,0,1,1,Cricket:1,https://www.efl.com/match-centre/g2647250,RULES_UNKNOWN:1,
+www.westcoasteagles.com.au,westcoasteagles.com.au,1,1,0,1,Australian Rules:1,https://www.westcoasteagles.com.au/news/2078157/aflw-match-report-magpies-edge-eagles-in-pre-season-thriller,ALLOWED:1,
+www.chelseafc.com,chelseafc.com,1,1,0,1,Soccer:1,https://www.chelseafc.com/en/news/article/stamford-bridge-match-vs-real-sociedad-on-general-sale,ALLOWED:1,
+www.leedsunited.com,leedsunited.com,1,0,1,1,Soccer:1,https://www.leedsunited.com/en/news/ticket-update-on-rb-leipzig-and-fc-augsburg-friendly-matches,ALLOWED:1,
+www.joggeli.ch,joggeli.ch,1,1,0,1,Soccer:1,https://www.joggeli.ch/erste-mannschaft/spiele,ALLOWED:1,
+www.fcbarcelona.com,fcbarcelona.com,1,1,0,1,Soccer:1,https://www.fcbarcelona.com/en/futbol/primer-equip/resultats,ALLOWED:1,
+www.espn.in,espn.in,1,0,1,1,Cricket:1,https://www.espn.in/cricket/series/21376/game/1521230/sunrisers-leeds-women-vs-trent-rockets-women-final-the-hundred-womens-competition-2026,BLOCKED_FOR_AI:1,ChatGPT-User;GPTBot;anthropic-ai
+www.yokohama-stadium.co.jp,yokohama-stadium.co.jp,1,1,0,1,Baseball:1,https://www.yokohama-stadium.co.jp/about/,NO_RULES_FILE:1,
+www.giantsclub.com,giantsclub.com,1,1,0,1,Baseball:1,https://www.giantsclub.com/m/?pcode=499,RULES_UNKNOWN:1,
+lfcbeta.liverpoolfc.com,liverpoolfc.com,1,0,1,1,Soccer:1,https://lfcbeta.liverpoolfc.com/it/notizia/szoboszlai-scores-late-penalty-rescue-point-liverpool-season-opener-newcastle,ALLOWED:1,
+www.statsperform.com,statsperform.com,1,0,1,1,Soccer:1,https://www.statsperform.com/opta-event-definitions/,RULES_UNKNOWN:1,
+www.fantasypros.com,fantasypros.com,1,1,0,1,Baseball:1,https://www.fantasypros.com/mlb/lineups/2026-08-24/,ALLOWED:1,
+www.dropbox.com,dropbox.com,1,1,0,1,Basketball:1,https://www.dropbox.com/scl/fi/gwe615l1shhdpbqb33mjc/Game_38_Game_Notes.pdf?dl=0&rlkey=afojjhswuqk7hw8c6rsbw8kvy&st=mvbpc28k,BLOCKED_FOR_AI:1,ChatGPT-User;Claude-SearchBot;Claude-User;Claude-Web;ClaudeBot;GPTBot;OAI-SearchBot;anthropic-ai
+www.weather.go.kr,go.kr,1,1,0,1,Baseball:1,https://www.weather.go.kr/w/forecast/overall/short-term.do?stnId=109,ALLOWED:1,
+m.news.nate.com,nate.com,1,0,1,1,Baseball:1,https://m.news.nate.com/view/20260825n35050,BLOCKED_FOR_AI:1,ChatGPT-User;Claude-SearchBot;Claude-User;Claude-Web;ClaudeBot;GPTBot;OAI-SearchBot;anthropic-ai
+kqbd.mobi,kqbd.mobi,1,1,0,1,Soccer:1,https://kqbd.mobi/argentina-reserve-league/ket-qua-tran-dau-central-ballester-reserve-vs-el-porvenir-reserves-252327032,ALLOWED:1,
+sporty.com,sporty.com,1,1,0,1,Soccer:1,https://sporty.com/football/campeonato-de-reserva-de-primera-division-c/match/central-ballester-reserves-vs-club-el-porvenir-reserves/sr%3Amatch%3A111111114356776,ALLOWED:1,
+www.sportepoch.com,sportepoch.com,1,1,0,1,Soccer:1,https://www.sportepoch.com/soccer/schedules,ALLOWED:1,
+leon.bet,leon.bet,1,1,0,1,Soccer:1,https://leon.bet/de-de/blog/forecasts/soccer/central-ballester-2-club-el-porvenir-ii-reserve-25-08-2026-user,RULES_UNKNOWN:1,
+www.cloudbet.com,cloudbet.com,1,1,0,1,Tennis:1,https://www.cloudbet.com/es/sports/tennis/international-tc367-itf-oviedo-men/36006356,ALLOWED:1,
+tn.cz,tn.cz,1,1,0,1,Soccer:1,,RULES_UNKNOWN:1,
+1xbet.es,1xbet.es,1,1,0,1,Soccer:1,https://1xbet.es/es/line/football/142091-copa-libertadores/745595030-independiente-del-valle-deportes-tolima,BLOCKED_FOR_AI:1,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+www.primicias.ec,primicias.ec,1,1,0,1,Soccer:1,https://www.primicias.ec/deportes/futbol/envivo-deportes-tolima-independiente-valle-octavos-final-copa-libertadores-resultado-ver-partido-tv-130467/,ALLOWED:1,
+www.ecuavisa.com,ecuavisa.com,1,1,0,1,Soccer:1,https://www.ecuavisa.com/ecuador/clima-ecuador-25-agosto-inamhi-preve-lluvias-11-provincias-sierra-amazonia-20260825-0009.html,BLOCKED_FOR_AI:1,Claude-User;Claude-Web
+betolimp.co.za,betolimp.co.za,1,0,1,1,Soccer:1,https://betolimp.co.za/live,ALLOWED:1,
+www.interwetten.com,interwetten.com,1,0,1,1,Soccer:1,https://www.interwetten.com/en/sportsbook/live,ALLOWED:1,
+www.intermiamicf.com,intermiamicf.com,1,1,0,1,Soccer:1,https://www.intermiamicf.com/news/match-recap-inter-miami-cf-falls-against-cf-monterrey-in-second-leagues-cup-2026-phase-one-matchup,ALLOWED:1,
+mercury.wnba.com,wnba.com,1,1,0,1,Basketball:1,https://mercury.wnba.com/26season,RULES_UNKNOWN:1,
+puebla.quadratin.com.mx,quadratin.com.mx,1,1,0,1,Basketball:1,https://puebla.quadratin.com.mx/deportes/vence-lobos-puebla-a-fuerza-regia-y-va-a-copa-value/,ALLOWED:1,
+srilankacricket.lk,srilankacricket.lk,1,1,0,1,Cricket:1,https://srilankacricket.lk/2026/07/india-national-mens-tour-of-sri-lanka-2026/,ALLOWED:1,
+meteo.gov.lk,meteo.gov.lk,1,1,0,1,Cricket:1,https://meteo.gov.lk/en/,RULES_UNKNOWN:1,
+sikkimfootball.in,sikkimfootball.in,1,1,0,1,Soccer:1,https://sikkimfootball.in/club-competitions,ALLOWED:1,
+www.sikkimexpress.com,sikkimexpress.com,1,1,0,1,Soccer:1,https://www.sikkimexpress.com/news-details/sfa-unveils-2026-27-competition-calendar-a-division-s-league-to-kick-off-on-july-16,ALLOWED:1,
+www.sportfogadas.org,sportfogadas.org,1,0,1,1,UNCLASSIFIED:1,https://www.sportfogadas.org/ajanlatok/tenisz?start=2026-08-25,BLOCKED_FOR_AI:1,Claude-Web;ClaudeBot;anthropic-ai
+www.betfair.com,betfair.com,1,0,1,1,UNCLASSIFIED:1,https://www.betfair.com/betting/tennis/utr-men-clemson-usa/vincent-weaver-v-aryan-jit-singh/e-35968075,ALLOWED:1,
+dragons.jp,dragons.jp,1,1,0,1,Baseball:1,https://dragons.jp/game/schedule/?month=202608,NO_RULES_FILE:1,
+tbf.org.tr,tbf.org.tr,1,1,0,0,UNKNOWN:1,https://tbf.org.tr/ligler/13503/haber/a-kadin-milli-takimimiz-son-hazirlik-macinda-almanya-yi-maglup-etti-2026-08-27,RULES_UNKNOWN:1,
+t.me,t.me,1,1,0,0,UNKNOWN:1,https://t.me/lifefc_shv/6030,NO_RULES_FILE:1,
+cricketarchive.com,cricketarchive.com,1,1,0,0,UNKNOWN:1,https://cricketarchive.com/CricketIreland/Scorecards/1458/1458955.html,BLOCKED_FOR_AI:1,ClaudeBot;GPTBot
+festival.championat.uz,championat.uz,1,1,0,0,UNKNOWN:1,https://festival.championat.uz/news/proliga-buxdu-metallurg-tarkiblar-elon-qilindi,RULES_UNKNOWN:1,
+tribuna.uz,tribuna.uz,1,1,0,0,UNKNOWN:1,https://tribuna.uz/news/proliga-orol-markaziy-oyinda-kattaqorgondan-ustun-keldi-metallurgdan-yirik-galaba-1331926/,ALLOWED:1,
+tips.gg,tips.gg,1,0,1,1,Soccer:1,https://tips.gg/archive/beitar-haifa-yakov-football-vs-hapoel-bnei-arrara-ara-football/,ALLOWED:1,
+pglive.ph,pglive.ph,1,0,1,1,Soccer:1,https://pglive.ph/match/3073252/beitar-haifa-yakov-vs-hapoel-bnei-arrara-ara,ALLOWED:1,
+supersevens.lnr.fr,lnr.fr,1,0,1,1,Rugby Union:1,https://supersevens.lnr.fr/etape/2026-2027/pau/masculin,ALLOWED:1,
+clublanus.com,clublanus.com,1,1,0,0,UNKNOWN:1,https://clublanus.com/izquierdoz-pena-biafore-laplace-y-perez-presentes-en-zona-mixta/,BLOCKED_FOR_AI:1,ChatGPT-User;ClaudeBot;GPTBot;OAI-SearchBot;anthropic-ai
+planetabj.com,planetabj.com,1,1,0,0,UNKNOWN:1,https://planetabj.com/boca-juniors/dos-cambios-y-una-sorpresa-el-equipo-confirmado-de-boca-vs-lanus-por-el-torneo-clausura-2026/,ALLOWED:1,
+lanumero12.com.ar,lanumero12.com.ar,1,1,0,0,UNKNOWN:1,https://lanumero12.com.ar/formacion-boca-lanus-clausura-2026/,ALLOWED:1,
+www.tycsports.com,tycsports.com,1,1,0,0,UNKNOWN:1,https://www.tycsports.com/liga-profesional-de-futbol/argentina-torneo-clausura-2026-boca-juniors-vs-lanus-fecha-7-id757268.html,ALLOWED:1,
+mexico.as.com,as.com,1,0,0,0,UNKNOWN:1,https://mexico.as.com/resultados/futbol/mexico_apertura/2026/directo/regular_a_6_6a2d4a0547eb864/,BLOCKED_FOR_AI:1,Claude-SearchBot;Claude-User;ClaudeBot
+chile.as.com,as.com,1,0,0,0,UNKNOWN:1,https://chile.as.com/resultados/futbol/mexico_apertura/2026/directo/regular_a_6_6a2d4a0547eb864/alineaciones/,BLOCKED_FOR_AI:1,Claude-SearchBot;Claude-User;ClaudeBot
+www.eluniversal.com.mx,eluniversal.com.mx,1,1,0,0,UNKNOWN:1,https://www.eluniversal.com.mx/metropoli/clima-cdmx-a-que-hora-se-esperan-lluvias-y-granizo-este-viernes-28-de-agosto/,BLOCKED_FOR_AI:1,ChatGPT-User;Claude-SearchBot;Claude-User;Claude-Web;ClaudeBot;GPTBot;OAI-SearchBot;anthropic-ai
+clubnecaxa.mx,clubnecaxa.mx,1,1,0,0,UNKNOWN:1,https://clubnecaxa.mx/partidos/calendario/APERTURA-2026,RULES_UNKNOWN:1,
+pumas.mx,pumas.mx,1,1,0,0,UNKNOWN:1,https://pumas.mx/noticias/3647/pumas-empata-1-1-contra-necaxa-en-cu,NO_RULES_FILE:1,
+tempo.wnba.com,wnba.com,1,1,0,0,UNKNOWN:1,https://tempo.wnba.com/news/toronto-tempo-sign-kiana-williams-to-7-day-extreme-hardship-contract,RULES_UNKNOWN:1,
+sparks.wnba.com,wnba.com,1,1,0,0,UNKNOWN:1,https://sparks.wnba.com/,RULES_UNKNOWN:1,
+afl.com,afl.com,1,1,0,1,Australian Rules:1,,RULES_UNKNOWN:1,
+www.cfl.ca,cfl.ca,1,1,0,0,UNKNOWN:1,https://www.cfl.ca/2026/08/28/bomber-brigade-halts-alouettes-win-streak/,ALLOWED:1,
+www.gothamfc.com,gothamfc.com,1,1,0,0,UNKNOWN:1,https://www.gothamfc.com/news/recap-gotham-fc-portland-battle-to-draw-in-muchanticipated-rematch,ALLOWED:1,
+www.coloradorapids.com,coloradorapids.com,1,1,0,0,UNKNOWN:1,https://www.coloradorapids.com/rapids2/news/recap-colorado-rapids-2-fall-in-tight-battle-against-ventura-county-fc,ALLOWED:1,
+www.sultanes.com.mx,sultanes.com.mx,1,1,0,0,UNKNOWN:1,https://www.sultanes.com.mx/noticias/duelazo-de-pitcheo-en-el-juego-1-y-cae-monterrey-en-tijuana,RULES_UNKNOWN:1,
+www.sototenki.jp,sototenki.jp,1,1,0,1,Baseball:1,https://www.sototenki.jp/tenki/456356/3hours?genre=21,ALLOWED:1,
+matchs.tv,matchs.tv,1,1,0,1,Soccer:1,,ALLOWED:1,
+kickmetrics.io,kickmetrics.io,1,0,1,0,UNKNOWN:1,https://kickmetrics.io/en/soccer/match/sc-aubagne-air-bel-bourg-en-bresse/019f25cd-f24a-7bdf-818e-303ac65584bb,BLOCKED_FOR_AI:1,ClaudeBot;GPTBot
+offsidescores.com,offsidescores.com,1,0,1,0,UNKNOWN:1,https://offsidescores.com/pt/futebol/jogo/thionville-lusitanos-paris-13-atletico-20260829/8be47d51-2258-429b-a957-27dc573f6d65/detalhe,BLOCKED_FOR_AI:1,ClaudeBot;GPTBot
+www.knvb.nl,knvb.nl,1,0,1,0,UNKNOWN:1,https://www.knvb.nl/node/15406,RULES_UNKNOWN:1,
+gofrogs.com,gofrogs.com,1,0,1,0,UNKNOWN:1,https://gofrogs.com/news/2026/8/29/football-tcu-falls-to-north-carolina-15-10-in-dublin,ALLOWED:1,
+www.legaseriea.it,legaseriea.it,1,1,0,0,UNKNOWN:1,https://www.legaseriea.it/serie-a/news/lazio-genoa-2026-2027-1-0-cronaca-risultato-gol,ALLOWED:1,
+metalligaen.dk,metalligaen.dk,1,1,0,0,UNKNOWN:1,https://metalligaen.dk/nyheder/kampen-kort-finsk-fest-i-frederikshavn/,ALLOWED:1,
+www.lta.org.uk,lta.org.uk,1,0,0,0,UNKNOWN:1,https://www.lta.org.uk/fan-zone/british-tennis-players/francesca-jones/,ALLOWED:1,
+sportscafe.in,sportscafe.in,1,0,1,0,UNKNOWN:1,,ALLOWED:1,
+south.cwa.gov.tw,cwa.gov.tw,1,1,0,1,Baseball:1,https://south.cwa.gov.tw/eng,RULES_UNKNOWN:1,
+www.usab.com,usab.com,1,1,0,1,Soccer:1,https://www.usab.com/news/2026/08/sonia-citron-and-kiki-iriafen-added-to-2026-usa-basketball-womens-national-team-roster,ALLOWED:1,
+en.olympic.cn,olympic.cn,1,1,0,1,Soccer:1,https://en.olympic.cn/news/Sports_News/2026/0903/706963.html,RULES_UNKNOWN:1,
+www.gwsgiants.com.au,gwsgiants.com.au,1,1,0,1,Australian Rules:1,https://www.gwsgiants.com.au/matches/8903,ALLOWED:1,
+www.thecfa.cn,thecfa.cn,1,1,0,1,Soccer:1,https://www.thecfa.cn/zxb/index.html,RULES_UNKNOWN:1,
+m.elbotola.com,elbotola.com,1,1,0,1,Soccer:1,https://m.elbotola.com/en/analytics/match/3glrw7hnx2zeqdy/,ALLOWED:1,
+livesport.cz,livesport.cz,1,1,0,1,Rugby League:1,,ALLOWED:1,
+www.ceskenoviny.cz,ceskenoviny.cz,1,0,1,1,Rugby League:1,https://www.ceskenoviny.cz/zpravy/slavia-v-primem-souboji-o-prvni-misto-v-lize-rozdrtila-zbrojovku/2870539,BLOCKED_FOR_AI:1,ChatGPT-User;ClaudeBot;GPTBot;OAI-SearchBot;anthropic-ai
+ceskenoviny.cz,ceskenoviny.cz,1,0,1,1,Rugby League:1,,BLOCKED_FOR_AI:1,ChatGPT-User;ClaudeBot;GPTBot;OAI-SearchBot;anthropic-ai
+isport.cz,isport.cz,1,0,1,1,Rugby League:1,,ALLOWED:1,
+khelnow.com,khelnow.com,1,0,1,1,Soccer:1,,ALLOWED:1,
+worldfootball.net,worldfootball.net,1,0,1,0,UNKNOWN:1,,BLOCKED_FOR_AI:1,ChatGPT-User;Claude-User;Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+leballonrond.fr,leballonrond.fr,1,0,1,0,UNKNOWN:1,,RULES_UNKNOWN:1,
+apwin.com,apwin.com,1,0,1,0,UNKNOWN:1,,ALLOWED:1,
+football365.fr,football365.fr,1,0,1,0,UNKNOWN:1,,ALLOWED:1,
+totalcorner.com,totalcorner.com,1,0,1,0,UNKNOWN:1,,ALLOWED:1,
+asiancricket.org,asiancricket.org,1,0,1,1,Cricket:1,,BLOCKED_FOR_AI:1,ChatGPT-User;Claude-SearchBot;Claude-User;Claude-Web;ClaudeBot;GPTBot;OAI-SearchBot;anthropic-ai
+kawowo.com,kawowo.com,1,0,1,1,Cricket:1,,ALLOWED:1,
+ghanasoccernet.com,ghanasoccernet.com,1,0,1,1,Cricket:1,,BLOCKED_FOR_AI:1,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+futbol24.com,futbol24.com,1,0,1,1,Cricket:1,,ALLOWED:1,
+ceroacero.es,ceroacero.es,1,0,1,1,Cricket:1,,RULES_UNKNOWN:1,
+ausopen.com,ausopen.com,1,0,1,1,Soccer:1,https://ausopen.com/articles/news/i-feel-myself-becoming-more-complete-says-shelton-after-alcaraz-upset,ALLOWED:1,
+sports.core.api.espn.com,espn.com,1,0,1,0,UNKNOWN:1,,RULES_UNKNOWN:1,
+itl.nist.gov,nist.gov,1,0,0,0,UNKNOWN:1,https://itl.nist.gov/div898/handbook/prc/section2/prc241.htm,RULES_UNKNOWN:1,
+www.amstat.org,amstat.org,1,0,0,0,UNKNOWN:1,https://www.amstat.org/asa/files/pdfs/p-valuestatement.pdf,NO_RULES_FILE:1,
+www.scorebat.com,scorebat.com,1,0,1,1,Baseball:1,https://www.scorebat.com/goteborg-vs-halmstad-live-stream/,BLOCKED_FOR_AI:1,ClaudeBot
+www.sharks.com.au,sharks.com.au,1,0,1,1,Baseball:1,https://www.sharks.com.au/news/2026/09/10/fight-fire-with-fire-sparks-set-to-fly-in-heavyweight-battle/,ALLOWED:1,
+hs-consumer-api.espncricinfo.com,espncricinfo.com,1,0,1,1,Soccer:1,,RULES_UNKNOWN:1,
+cricketworld.com,cricketworld.com,1,0,1,1,Soccer:1,,NO_RULES_FILE:1,
+sportytrader.es,sportytrader.es,1,0,1,1,Soccer:1,,ALLOWED:1,
+match.uefa.com,uefa.com,1,1,0,1,Australian Rules:1,,RULES_UNKNOWN:1,
+www.worldweatheronline.com,worldweatheronline.com,1,0,1,1,Australian Rules:1,https://www.worldweatheronline.com/vejle-weather-history/syddanmark/dk.aspx,ALLOWED:1,
+www.forebet.com,forebet.com,1,0,1,1,Australian Rules:1,https://www.forebet.com/en/football/matches/vejle-bk-br%C3%B8ndby-2548493,ALLOWED:1,
+insidethelineup.com,insidethelineup.com,1,0,1,1,Australian Rules:1,https://insidethelineup.com/mlb/reds-lineup.html,ALLOWED:1,
+www.bestmlbhandicapper.com,bestmlbhandicapper.com,1,0,1,1,Australian Rules:1,https://www.bestmlbhandicapper.com/parks/great-american-ball-park-park-factors.html,ALLOWED:1,
+www.getafecf.com,getafecf.com,1,0,1,1,Australian Rules:1,https://www.getafecf.com/partidos/temporada-2026-2027-laliga-ea-sports-6-real-betis-vs-getafe-cf-2979,ALLOWED:1,
+m-aws.cricbuzz.com,cricbuzz.com,1,0,1,1,Australian Rules:1,https://m-aws.cricbuzz.com/cricket-news/140219/heads-century-leads-australias-clinical-win,NO_RULES_FILE:1,
+footyscores.live,footyscores.live,1,0,1,1,Australian Rules:1,https://footyscores.live/articles/afl-season-review-2026/,BLOCKED_FOR_AI:1,Claude-Web;anthropic-ai
+www.zerohanger.com,zerohanger.com,1,0,1,1,Australian Rules:1,https://www.zerohanger.com/sydney-fremantle-round-preliminary-finals-2026-mc169126-182588/,ALLOWED:1,
+udn.com,udn.com,1,0,1,1,Australian Rules:1,https://udn.com/news/story/7001/9763446,BLOCKED_FOR_AI:1,Claude-SearchBot;Claude-User;Claude-Web;ClaudeBot;GPTBot
+monkeys.rakuten.com.tw,rakuten.com.tw,1,0,1,1,Australian Rules:1,https://monkeys.rakuten.com.tw/,RULES_UNKNOWN:1,
+www.fdmvalencia.es,fdmvalencia.es,1,0,1,1,Australian Rules:1,https://www.fdmvalencia.es/es/eventos/bbva-open-internacional-de-valencia-wta-125-2026/,ALLOWED:1,
+openinternacionalvalencia.com,openinternacionalvalencia.com,1,0,1,1,Australian Rules:1,https://openinternacionalvalencia.com/en/tournament/,RULES_UNKNOWN:1,
+www.wtaschedule.com,wtaschedule.com,1,0,1,1,Australian Rules:1,https://www.wtaschedule.com/matches/MTgzNzcw/guiomar-maristany-zuleta-de-reales-vs-clara-burel,ALLOWED:1,
+www.tennisactu.net,tennisactu.net,1,0,1,1,Australian Rules:1,https://www.tennisactu.net/news-wta-valence-clara-burel-prend-sa-revanche-et-fonce-en-demi-finales-127082.html,ALLOWED:1,
+m.zhibo8.com,zhibo8.com,1,0,1,1,Australian Rules:1,https://m.zhibo8.com/news/web/zuqiu/2026-09-18/6aace17c15293native.htm,NO_RULES_FILE:1,
+www.hawthornfc.com.au,hawthornfc.com.au,1,0,1,1,Australian Rules:1,https://www.hawthornfc.com.au/news/2130904/prelim-final-team-unchanged,ALLOWED:1,
+bluehens.com,bluehens.com,1,0,1,1,Australian Rules:1,https://bluehens.com/sports/football/stats/2026/coastal-carolina/boxscore/35196,ALLOWED:1,
+www.athleticsnation.com,athleticsnation.com,1,0,1,1,Baseball:1,https://www.athleticsnation.com/athletics-scores-and-standings/109853/as-fall-to-guardians-12-6,BLOCKED_FOR_AI:1,ChatGPT-User;Claude-SearchBot;Claude-User;Claude-Web;ClaudeBot;anthropic-ai
+fieldlevelmedia.com,fieldlevelmedia.com,1,0,1,1,Baseball:1,https://fieldlevelmedia.com/mlb/angel-martinez-homers-twice-guardians-dominate-athletics/,ALLOWED:1,
+www.fotbollskanalen.se,fotbollskanalen.se,1,0,1,1,Baseball:1,https://www.fotbollskanalen.se/artiklar/allsvenskan/fem-spaningar-slarvigt-och-svagt-av-djurgarden,BLOCKED_FOR_AI:1,ChatGPT-User;Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+ipv6.elfsborg.se,elfsborg.se,1,0,1,1,Baseball:1,https://ipv6.elfsborg.se/2026/09/20/stark-trepoangare-borta-mot-djurgarden/,ALLOWED:1,
+www.tixr.com,tixr.com,1,0,1,1,Baseball:1,https://www.tixr.com/groups/etplofficial/events/etpl-2026-final-edinburgh-castle-rockers-v-belfast-wolves-198572,RULES_UNKNOWN:1,
+www.cricketeurope.com,cricketeurope.com,1,0,1,1,Baseball:1,https://www.cricketeurope.com/FINALSCORE/RESULTS/TOURNAMENTS/EuropeanT20PremierLeague.shtml,ALLOWED:1,
+www.cricketarchive.com,cricketarchive.com,1,0,1,1,Baseball:1,https://www.cricketarchive.com/CricketIreland/Scorecards/1458/1458982.html,BLOCKED_FOR_AI:1,ClaudeBot;GPTBot
+www.pitchcare.com,pitchcare.com,1,0,1,1,Baseball:1,https://www.pitchcare.com/blogs/news/the-craic-of-leather-on-willow-at-malahide,ALLOWED:1,
+ca.sports.yahoo.com,yahoo.com,1,0,1,1,Baseball:1,https://ca.sports.yahoo.com/news/edinburgh-castle-rockers-beat-belfast-174958677.html,BLOCKED_FOR_AI:1,ChatGPT-User;Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+www.vff.dk,vff.dk,1,0,1,1,Baseball:1,https://www.vff.dk/nyhedsarkiv/8-sport/15936-info-og-stats-for-vff-fcn-4,ALLOWED:1,
+www.eurosport.nl,eurosport.nl,1,0,1,1,Baseball:1,https://www.eurosport.nl/voetbal/3f-superliga/2026-2027/live-viborg-ff-fc-nordsjaelland_mtc21873592/live.shtml,RULES_UNKNOWN:1,
+villarrealcf.es,villarrealcf.es,1,0,1,1,Baseball:1,https://villarrealcf.es/en/calendario-primer-equipo/,ALLOWED:1,
+www.levanteud.com,levanteud.com,1,0,1,1,Baseball:1,https://www.levanteud.com/en/news/convocatoria-or-villarreal-cf-levante-ud-2627,ALLOWED:1,
+www.mundodeportivo.com,mundodeportivo.com,1,0,1,1,Baseball:1,https://www.mundodeportivo.com/futbol/laliga/20260920/1004229059/villarreal-mide-mejoria-pujante-levante.html,BLOCKED_FOR_AI:1,ClaudeBot;GPTBot
+www.europapress.es,europapress.es,1,0,1,1,Baseball:1,https://www.europapress.es/deportes/estadisticas-deportivas/noticia-villareal-levante-resumen-goles-resultado-partido-hoy-20260920202832.html,ALLOWED:1,
+beta2.jamaica-gleaner.com,jamaica-gleaner.com,1,0,1,0,UNKNOWN:1,https://beta2.jamaica-gleaner.com/article/sports/20260920/fairytale-finish,ALLOWED:1,
+web5.jamaica-gleaner.com,jamaica-gleaner.com,1,0,1,0,UNKNOWN:1,https://web5.jamaica-gleaner.com/article/sports/20260920/record-breaking-kingsmen-break-warriors,ALLOWED:1,
+nationnews.com,nationnews.com,1,0,1,0,UNKNOWN:1,https://nationnews.com/2026/09/21/moqims-historic-haul-carries-falcons-to-maiden-cpl-title/,ALLOWED:1,
+wicnews.com,wicnews.com,1,0,1,0,UNKNOWN:1,https://wicnews.com/antigua-barbuda/antigua-and-barbuda-falcons-make-history-clinch-maiden-cpl-title-with-dominant-win-over-jamaica,ALLOWED:1,
+jamaica-gleaner.com,jamaica-gleaner.com,1,0,1,0,UNKNOWN:1,https://jamaica-gleaner.com/article/sports/20260922/kingsmen-lose-cpl-final-falcons-8-wickets,ALLOWED:1,
+www.dawn.com,dawn.com,1,0,1,0,UNKNOWN:1,https://www.dawn.com/news/2031582,ALLOWED:1,
+canaltenis.com,canaltenis.com,1,0,1,0,UNKNOWN:1,https://canaltenis.com/cuadro-wta-seul-2026/,ALLOWED:1,
+taipans.com,taipans.com,1,0,1,1,Tennis:1,,ALLOWED:1,
+jackjumpers.com.au,jackjumpers.com.au,1,0,1,1,Tennis:1,,ALLOWED:1,
+www.flashscore.com.au,flashscore.com.au,1,0,1,1,Tennis:1,https://www.flashscore.com.au/basketball/australia/nbl/results/,ALLOWED:1,
+www.daily.co.jp,daily.co.jp,1,0,1,1,Tennis:1,https://www.daily.co.jp/baseball/2026/09/23/0020852122.shtml,ALLOWED:1,
+baseball.skyperfectv.co.jp,skyperfectv.co.jp,1,0,1,1,Tennis:1,https://baseball.skyperfectv.co.jp/starter/,ALLOWED:1,
+sp.baseball.findfriends.jp,findfriends.jp,1,0,1,1,Tennis:1,https://sp.baseball.findfriends.jp/?pid=game_flash&game_id=2026092205,ALLOWED:1,
+lequipe.fr,lequipe.fr,1,0,1,1,Tennis:1,,RULES_UNKNOWN:1,
+archysport.com,archysport.com,1,1,0,1,Baseball:1,,ALLOWED:1,
+news.livedoor.com,livedoor.com,1,1,0,1,Baseball:1,https://news.livedoor.com/article/detail/32391881/,BLOCKED_FOR_AI:1,ClaudeBot;GPTBot
+sp.baystars.co.jp,baystars.co.jp,1,1,0,1,Baseball:1,https://sp.baystars.co.jp/players/announce,NO_RULES_FILE:1,
+www.coretennis.net,coretennis.net,1,1,0,1,Baseball:1,http://www.coretennis.net,BLOCKED_FOR_AI:1,GPTBot
+www.bcneptunas.lt,bcneptunas.lt,1,1,0,1,Baseball:1,https://www.bcneptunas.lt,ALLOWED:1,
+www.bcsiauliai.lt,bcsiauliai.lt,1,1,0,1,Baseball:1,https://www.bcsiauliai.lt,ALLOWED:1,
+www.bclietkabelis.lt,bclietkabelis.lt,1,1,0,1,Baseball:1,https://www.bclietkabelis.lt,RULES_UNKNOWN:1,
+fan.lesflammes.com,lesflammes.com,1,1,0,1,Baseball:1,https://fan.lesflammes.com,NO_RULES_FILE:1,
+jaysjournal.com,jaysjournal.com,1,1,0,1,Baseball:1,https://jaysjournal.com,ALLOWED:1,
+soxmachine.com,soxmachine.com,1,1,0,1,Baseball:1,https://soxmachine.com,ALLOWED:1,
+insidetherink.com,insidetherink.com,1,1,0,1,Baseball:1,https://insidetherink.com,ALLOWED:1,
+clutchpoints.com,clutchpoints.com,1,1,0,1,Baseball:1,https://clutchpoints.com/wnba,BLOCKED_FOR_AI:1,ClaudeBot;GPTBot;anthropic-ai
+fesabal.com,fesabal.com,1,1,0,1,Baseball:1,,RULES_UNKNOWN:1,
+sports.chosun.com,chosun.com,1,1,0,1,Baseball:1,https://sports.chosun.com,ALLOWED:1,
+www.ventusky.com,ventusky.com,1,1,0,1,Baseball:1,https://www.ventusky.com,ALLOWED:1,
+flashscore.com.au,flashscore.com.au,1,0,1,1,Basketball:1,,ALLOWED:1,
+www.adelaide36ers.com,adelaide36ers.com,1,0,1,1,Basketball:1,https://www.adelaide36ers.com,ALLOWED:1,
+liberty.wnba.com,wnba.com,1,1,0,1,Basketball:1,https://liberty.wnba.com/news/liberty-fall-to-dream-95-84,RULES_UNKNOWN:1,
+www.therams.com,therams.com,1,1,0,1,Basketball:1,https://www.therams.com/news/game-recap-rams-defeat-giants-28-6-on-monday-night-football,ALLOWED:1,
+www.giants.com,giants.com,1,1,0,1,Basketball:1,https://www.giants.com/news/instant-analysis-giants-fall-to-rams-28-6,ALLOWED:1,
+www.wral.com,wral.com,1,1,0,1,Basketball:1,https://www.wral.com/news/ap/c991e-giants-qb-jaxson-dart-exits-with-knee-injury-on-first-series-vs-rams/,BLOCKED_FOR_AI:1,ClaudeBot;GPTBot
+www.latimes.com,latimes.com,1,1,0,1,Basketball:1,https://www.latimes.com/sports/rams/story/2026-09-21-rams-defeat-giants-aaron-donald-return,BLOCKED_FOR_AI:1,ClaudeBot;GPTBot
+www.nbcsportsbayarea.com,nbcsportsbayarea.com,1,1,0,1,Basketball:1,https://www.nbcsportsbayarea.com/mlb/san-francisco-giants/drew-gilbert-bo-davidson-blade-tidwell-twins/1965184/,BLOCKED_FOR_AI:1,ChatGPT-User;Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+www.truebluela.com,truebluela.com,1,0,1,1,Basketball:1,https://www.truebluela.com/dodgers-scores-standings/125086/freddie-freeman-tommy-edman-will-smith-dodgers-bullpen-padres,BLOCKED_FOR_AI:1,ChatGPT-User;Claude-SearchBot;Claude-User;Claude-Web;ClaudeBot;anthropic-ai
+www.yardbarker.com,yardbarker.com,1,0,1,1,Basketball:1,https://www.yardbarker.com/mlb/articles/recap_dodgers_begin_final_home_series_by_shutting_out_padres_with_bullpen_game/s1_17075_44337655,ALLOWED:1,
+dodgersnation.com,dodgersnation.com,1,1,0,1,Basketball:1,https://dodgersnation.com/dodgers-lineup-vs-padres-andy-pages-roki-sasaki-are-back/2026/09/22/?utm_source=chatgpt.com,ALLOWED:1,
+www.spotv.net,spotv.net,1,0,1,1,Baseball:1,https://www.spotv.net,ALLOWED:1,
+www.baystars.co.jp,baystars.co.jp,1,0,1,1,Baseball:1,https://www.baystars.co.jp/game/20260925/,ALLOWED:1,
+weathernews.jp,weathernews.jp,1,0,1,1,Baseball:1,https://weathernews.jp/s/weather_topic/stadium.html?id=yokohama,ALLOWED:1,
+www.dolphinsnrl.com.au,dolphinsnrl.com.au,1,0,1,1,Baseball:1,https://www.dolphinsnrl.com.au/news/2026/09/25/preliminary-final-team-announcement/,ALLOWED:1,
+www.rugbyleagueproject.org,rugbyleagueproject.org,1,0,1,1,Baseball:1,https://www.rugbyleagueproject.org/,ALLOWED:1,
+www.chosun.com,chosun.com,1,0,1,1,Baseball:1,https://www.chosun.com/sports/baseball/2026/09/27/lotte-hanwha-lineup,BLOCKED_FOR_AI:1,GPTBot
+www.penya.com,penya.com,1,0,1,1,Baseball:1,https://www.penya.com/es/inicio/noticias/288-2026-2027/5562-el-campeon-de-la-supercopa-empieza-la-acb-en-lugo,ALLOWED:1,
+www.championsleague.basketball,championsleague.basketball,1,0,1,1,Baseball:1,https://www.championsleague.basketball/en/qualifiers,ALLOWED:1,
+www.sportaragon.com,sportaragon.com,1,0,1,1,Baseball:1,https://www.sportaragon.com/articulo/basket-zaragoza/cronica-laguna-tenerife-80-81-casademont-zaragoza-otra-historia/20260927154519160141.html,ALLOWED:1,
+realmadrid.com,realmadrid.com,1,1,0,1,Soccer:1,,ALLOWED:1,
+clevelandmonsters.com,clevelandmonsters.com,1,0,1,1,Soccer:1,https://clevelandmonsters.com/news/monsters-come-up-short-in-5-2-loss-to-griffins,BLOCKED_FOR_AI:1,GPTBot
+www.sportsnet.ca,sportsnet.ca,1,0,1,1,Soccer:1,https://www.sportsnet.ca/nhl/video/nhl-highlights-devils-3-flyers-2-ot/,ALLOWED:1,
+pulsetasmania.com.au,pulsetasmania.com.au,1,0,1,1,Soccer:1,https://pulsetasmania.com.au/news/jackjumpers-beat-melbourne-united-84-82-in-hobart/,ALLOWED:1,
+news.ikbc.co.kr,ikbc.co.kr,1,0,1,1,Soccer:1,https://news.ikbc.co.kr/article/view2/kbc202610030024?d=pc,BLOCKED_FOR_AI:1,GPTBot
+www.gazzetta.gr,gazzetta.gr,1,0,1,1,Soccer:1,https://www.gazzetta.gr/basketball/basket-league/2574427/panathinaikos-vikos-falcons-103-74-sobaros-kai-sarotikos,ALLOWED:1,
+www.abendzeitung-muenchen.de,abendzeitung-muenchen.de,1,0,1,1,Soccer:1,https://www.abendzeitung-muenchen.de/sport/fcbayernbasketball/sollten-nicht-in-panik-verfallen-fc-bayern-coach-gavel-verlangt-mehr-konzentration-art-1163351,ALLOWED:1,
+www.kfu.kg,kfu.kg,1,0,1,1,Soccer:1,https://www.kfu.kg/news/1811,ALLOWED:1,
+www.footballinfo.net,footballinfo.net,1,0,1,1,Soccer:1,https://www.footballinfo.net/Fixtures/Details/1640507,NO_RULES_FILE:1,
+www.playoff.cz,playoff.cz,1,0,1,1,Ice Hockey:1,https://www.playoff.cz/cs/cz/ice-hockey/extraliga/2026-2027/hokej-cz-2928325/,ALLOWED:1,
+www.ruik.cz,ruik.cz,1,0,1,1,Ice Hockey:1,https://www.ruik.cz/vysledky/hokej/hc-olomouc-hc-karlovy-vary/454605/,ALLOWED:1,
+scoremondo.com,scoremondo.com,1,0,1,1,Soccer:1,https://scoremondo.com/en/match/beijing-guoan-fc-qingdao-west-coast-fc-31111852,ALLOWED:1,
+www.sportscore.mx,sportscore.mx,1,0,1,1,Soccer:1,https://www.sportscore.mx/football/match/dragones-de-oaxaca-vs-guerreros-del-pacifico/1l4rjnhny036m7v/,ALLOWED:1,
+www.onelightscore.com,onelightscore.com,1,1,0,1,Soccer:1,https://www.onelightscore.com/soccer/us-mls-next-pro/colorado-rapids-2-vs-ventura-county-2026-08-29,ALLOWED:1,
+footballan.com,footballan.com,1,1,0,1,Soccer:1,https://footballan.com/game/sassuolo-frosinone-2026-09-02/,ALLOWED:1,
+calcio.it,calcio.it,1,1,0,1,Australian Rules:1,https://calcio.it/europa/uefa-womens-champions-league/partite/2026-09-02-inter-milano-w-wolfsburg-w,ALLOWED:1,
+ballwhizz.com,ballwhizz.com,1,1,0,1,Soccer:1,https://ballwhizz.com/en/matches/12138,ALLOWED:1,
+football-italia.net,football-italia.net,1,1,0,1,Soccer:1,https://football-italia.net/match/italian-serie-a-2026-27-genoa-vs-frosinone-2026-09-12/,ALLOWED:1,
+socceryes.com,socceryes.com,1,1,0,1,Soccer:1,https://socceryes.com/match.php?id=1558631,ALLOWED:1,
+www.fotboll.com,fotboll.com,1,1,0,1,Soccer:1,https://www.fotboll.com/match/djurg%C3%A5rden-gais-19635886,ALLOWED:1,
+foot.be,foot.be,1,1,0,1,Soccer:1,https://foot.be/match/afc-champions-league/2026/810153/,ALLOWED:1,
+www.voetbalprimeur.be,voetbalprimeur.be,1,1,0,1,Soccer:1,https://www.voetbalprimeur.be/wedstrijden/2026-08-26/al-ahli-vs-auckland/statistieken,ALLOWED:1,
+pitcharium.com,pitcharium.com,1,1,0,1,Soccer:1,https://pitcharium.com/match/fc-juarez-vs-cf-pachuca-2026-09-05,ALLOWED:1,
+arynews.tv,arynews.tv,1,1,0,0,UNKNOWN:1,https://arynews.tv/south-africa-complete-innings-victory-over-australia-in-2nd-test,BLOCKED_FOR_AI:1,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+timesofoman.com,timesofoman.com,1,1,0,0,UNKNOWN:1,https://timesofoman.com/article/178285-bavuma-jansen-stars-as-south-africa-crush-australia-by-an-innings-and-31-runs-to-level-test-series-1-1,ALLOWED:1,
+www.soccerpunter.com,soccerpunter.com,1,1,0,0,UNKNOWN:1,https://www.soccerpunter.com/match/19721683/Be1-NFA-vs-Neptuna-Klaipeda,BLOCKED_FOR_AI:1,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+fr.propickai.com,propickai.com,1,1,0,0,UNKNOWN:1,https://fr.propickai.com/head-to-head/basketball/csc-djasr-kasentina-vs-usm-blida/,BLOCKED_FOR_AI:1,ClaudeBot;GPTBot
+www.swiftsistemas.com,swiftsistemas.com,1,1,0,0,UNKNOWN:1,https://www.swiftsistemas.com/swiftbet/esportes/basketball,ALLOWED:1,
+olomoucky.ceskyhokej.cz,ceskyhokej.cz,1,1,0,0,UNKNOWN:1,https://olomoucky.ceskyhokej.cz/competition/games/14,BLOCKED_FOR_AI:1,Claude-Web;ClaudeBot;GPTBot;anthropic-ai
+bocastats.com,bocastats.com,1,1,0,0,UNKNOWN:1,https://bocastats.com/partido/boca-vs-talleres-cordoba-2026-10-16/,BLOCKED_FOR_AI:1,Claude-Web;GPTBot;anthropic-ai

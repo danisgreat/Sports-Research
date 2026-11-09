@@ -1,3 +1,7 @@
+# Pregame sources by sport and field — MDS/P v24.9 / CR-2026.11.09-R4 / P-2026.11.09-v24.7, 9 November 2026
+
+Owner instruction: sweep every log for its pregame sources and add accurate, up-to-date alternates for every sport and competition. 201 log files (180 unique), 9,670 citations and 3,079 distinct URLs were audited under the eight-token rule: 694 are blocked for AI and 424 have unreadable rules. 226 candidates were tested by a policy-checked fetch. SRC-PRE-v1 adds research/source_routes/PREGAME_SOURCES.csv (139 sources, with field, replacement, when_to_check and use rule) and PREGAME_SOURCE_REJECTIONS.csv (118 rows, including 8 betting and prediction sites excluded by the firewall). Prompt 1 now reads both. Gaps that remain NOT_VERIFIED: all-league soccer xG, WNBA statistics, NCAA basketball ratings, and the official KBL and PBA statistics. No card, grade, ID, reference, release or ml/ code change. [Report](research/verification/source_sweep_2026-11-09-2/REPORT.md).
+
 # Owner per-game request formats — MDS/P v24.7 / CR-2026.11.09-R2 / P-2026.11.09-v24.5, 9 November 2026
 
 ## 2026-11-09 · owner-directed permanent closure of nine corner contracts

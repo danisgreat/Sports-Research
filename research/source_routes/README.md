@@ -33,3 +33,24 @@ AFL season table, NRL draw, WorldRugby tournaments, NFL scores and Cricsheet dow
 ## Historical evidence update ·9November2026
 
 The catalogue now includes236 route rows: the prior209 plus27 exact-event field routes. The [historical audit](../verification/historical_resolution_2026-11-09-1/REPORT.md) records139 additional exactURL checks,103 retrieval attempts including supported renderer captures,40 field cases and every remaining limitation. The latest combined access table has 620 unique URLs. Earlier486-check figures above describe R3. An admitted conditional table or threshold-invariant bound is not field-owner/independent-quorum certification. Some rediscovered pages were stale despite promising search snippets; opened content governs.
+
+## Pregame sources by sport and field ·9 November 2026 (SRC-PRE-v1)
+
+[PREGAME_SOURCES.csv](PREGAME_SOURCES.csv) lists 139 permitted sources that were actually retrieved, from a sweep of every log and 226 candidates. Each row gives:
+- sport and scope;
+- the field it supplies;
+- the URL and its eight-token access status;
+- the retrieval test (bytes, SHA-256, current-season marker);
+- `prices_on_page`, where `YES_BLOCK` means prices or tips are shown and are never read;
+- the sources it replaces;
+- **when_to_check**, so the source is read in time before the start;
+- the use rule.
+
+[PREGAME_SOURCE_REJECTIONS.csv](PREGAME_SOURCE_REJECTIONS.csv) holds 118 sources that must not be planned on, each with its reason and what to use instead:
+- candidates that are blocked, unknown, refused, script shells or out of scope;
+- the 30 most-cited log sources that now fail closed;
+- 8 betting and prediction sites excluded by the firewall.
+
+Prompt 1 reads both CSVs for the card's sport, after this catalogue's competition row. Re-audit each exact URL before opening it.
+
+Evidence: [sweep report](../verification/source_sweep_2026-11-09-2/REPORT.md).
