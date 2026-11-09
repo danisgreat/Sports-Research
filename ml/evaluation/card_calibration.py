@@ -1,4 +1,4 @@
-"""Calibration audit of the issued cards' own stated probabilities (GAME_PREDICTION_RANK_LOG.csv).
+"""Calibration audit of stated probabilities through the shared effective-history view.
 
 Descriptive only: these are historical, partly ungated cards with dependent rows within a card, settled under
 several scoring versions. Intervals resample whole cards. Nothing here recalibrates or relabels a card.
@@ -10,20 +10,26 @@ import pandas as pd
 
 from ml.config import REPO_ROOT
 from ml.core.metrics import brier_decomposition, calibration_fit, cluster_bootstrap_mean, reliability_table
+from ml.evaluation import card_history
 
 RANK_LOG = REPO_ROOT / "research" / "data" / "GAME_PREDICTION_RANK_LOG.csv"
 
 
 def load_rows() -> tuple[pd.DataFrame, dict]:
-    r = pd.read_csv(RANK_LOG, encoding="utf-8-sig", dtype=str)
+    from ml.evaluation import effective_settlement
+    stale = effective_settlement.unmatched_revisions(card_history.ROOT)
+    if stale:
+        raise ValueError(f"settlement revisions match no imported row: {stale}")
+    r, _ = card_history.build_rows(RANK_LOG)
     n0 = len(r)
-    r["p"] = pd.to_numeric(r["stated_p"], errors="coerce")
-    r["rank_n"] = pd.to_numeric(r["rank"], errors="coerce")
-    keep = r["p"].notna() & r["rank_pass_fail"].isin(["PASS", "FAIL"])
-    info = {"rows": n0, "with_numeric_p": int(r["p"].notna().sum()), "decisive_with_p": int(keep.sum()),
-            "excluded_statuses": r.loc[r["p"].notna() & ~keep, "rank_pass_fail"].value_counts().to_dict()}
-    d = r[keep].copy()
-    d["y"] = (d["rank_pass_fail"] == "PASS").astype(float)
+    eligible = card_history.analysis_rows(r)
+    d = eligible[eligible.p.notna() & eligible.grade.isin(["WIN", "LOSS"])].copy()
+    info = {"source": "EFFECTIVE_HISTORY_VIEW", "rows": n0, "with_numeric_p": int(r.p.notna().sum()),
+            "decisive_with_p": len(d), "excluded_numeric_rows": int(r.p.notna().sum()) - len(d),
+            "excluded_statuses": r.loc[r.p.notna() & ~r.index.isin(d.index), "grade"].value_counts().to_dict()}
+    d = d.rename(columns={"card": "card_id"})
+    d["rank_n"] = pd.to_numeric(d["rank"], errors="coerce")
+    d["y"] = d.grade.map({"WIN": 1., "LOSS": 0.})
     d["card_num"] = d["card_id"].str.extract(r"(\d+)").astype(float)
     return d, info
 

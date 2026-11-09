@@ -1,6 +1,7 @@
 """Full-history card table and retrospective summaries (prompt 6, LEARN-v1 §7) — reproducible, never hand counts.
 
-Builds one row per (card, original rank) from the committed records, without re-grading anything:
+Builds effective historical rows from committed records and explicit source-bound corrections:
+ordinary cards retain original ranks; recovered legacy views retain view and contract identity.
 
     research/data/GAME_PREDICTION_RANK_LOG.csv                      literal ranks/grades/stated p, P-001 onward (with source lines)
     HISTORICAL_PRIMARY_RECONCILIATION.csv             effective final-settlement Rank 1/2 grades P-126–P-576
@@ -37,7 +38,8 @@ V = ROOT / "research" / "verification"
 RANK_LOG = ROOT / "research" / "data" / "GAME_PREDICTION_RANK_LOG.csv"
 RECON = V / "mini_import_P-577_P-584_2026-10-13-1" / "HISTORICAL_PRIMARY_RECONCILIATION.csv"
 STATUS = ROOT / "GAME_LOG_STATUS_CURRENT.md"
-NOT_PRIMARY = {"LEGACY_ANALYST_NOT_PRIMARY", "RESEARCH_ONLY_NOT_PRIMARY"}
+NOT_PRIMARY = {"LEGACY_ANALYST_NOT_PRIMARY", "RESEARCH_ONLY_NOT_PRIMARY",
+               "LEGACY_ABSTENTION_NOT_PRIMARY", "LEGACY_VIEW_NOT_PRIMARY"}
 
 
 def combined_logs() -> list[Path]:
@@ -391,7 +393,7 @@ def inventory_rows(path: Path) -> list[dict]:
 
 
 def build_rows(rank_log: Path = RANK_LOG, *, inventories=None, logs=None) -> tuple[pd.DataFrame, pd.DataFrame]:
-    """(rows, reconciliation) — one row per card x original rank, plus effective-grade cross-check.
+    """(rows, reconciliation) — original ranks and explicit legacy view/contract identities.
 
     Inventory rows are appended only for cards the rank log does not already contain, so a refreshed rank log that
     already carries P-585 onward is never double counted.
@@ -455,6 +457,9 @@ def build_rows(rank_log: Path = RANK_LOG, *, inventories=None, logs=None) -> tup
     R = hr.recover_contracts(R, ROOT)
     R["literal_grade"] = R.get("literal_grade", R.grade).fillna(R.grade)
     R = hr.apply_row_revisions(R, ROOT)
+    from ml import historical_views
+    R = historical_views.apply(R, ROOT)
+    R = hr.apply_record_closures(R, ROOT)
     R["identity_status"] = np.where(R.card.isin(collided), "COLLIDING_ALIAS_GRADE_LINK_UNRESOLVED",
                                     np.where(R.card.isin(set(collisions.card)), "RESOLVED_CHRONOLOGICAL_BINDING", "NO_DETECTED_ALIAS_COLLISION"))
     # Owner-directed permanent closures cannot be reopened by later alias observations.
@@ -488,6 +493,15 @@ def build_rows(rank_log: Path = RANK_LOG, *, inventories=None, logs=None) -> tup
 
 
 # ------------------------------------------------------------------------------------------------- summaries
+def analysis_rows(R: pd.DataFrame) -> pd.DataFrame:
+    """Scored summaries never admit no-trial/missing-contract or diagnostic view rows."""
+    D = R[~R.cohort.isin(NOT_PRIMARY)]
+    if "record_disposition" in D:
+        blocked = D.record_disposition.fillna("").str.match(r"NOT_SCORABLE|CLOSED_|SUPERSEDED_")
+        D = D[~blocked]
+    return D
+
+
 def _rate(d: pd.DataFrame) -> str:
     k, n = int(d.y.sum()), int(d.y.notna().sum())
     if not n:
@@ -497,7 +511,8 @@ def _rate(d: pd.DataFrame) -> str:
 
 
 def slot_table(R: pd.DataFrame, by: str | None = None) -> pd.DataFrame:
-    D = R[R.y.notna() & ~R.cohort.isin(NOT_PRIMARY)]
+    D = analysis_rows(R)
+    D = D[D.y.notna()]
     groups = [("ALL", D)] if by is None else list(D.groupby(by))
     rows = []
     for key, d in groups:
@@ -522,7 +537,8 @@ def card_classes(R: pd.DataFrame) -> pd.DataFrame:
 
 
 def calibration_table(R: pd.DataFrame, edges=(0, .3, .4, .5, .6, .7, .8, .9, 1.0001)) -> tuple[pd.DataFrame, dict]:
-    D = R[R.y.notna() & R.p.notna() & ~R.cohort.isin(NOT_PRIMARY)]
+    D = analysis_rows(R)
+    D = D[D.y.notna() & D.p.notna()]
     rows = []
     for lo, hi in zip(edges, edges[1:]):
         d = D[(D.p >= lo) & (D.p < hi)]
@@ -540,7 +556,8 @@ def calibration_table(R: pd.DataFrame, edges=(0, .3, .4, .5, .6, .7, .8, .9, 1.0
 
 def rank1_weekly(R: pd.DataFrame) -> dict:
     """Rank-1 realised minus stated p, averaged within card then ISO week (dependence-aware)."""
-    D = R[(R["rank"] == 1) & R.y.notna() & R.p.notna() & (R.week != "UNDATED") & ~R.cohort.isin(NOT_PRIMARY)]
+    D = analysis_rows(R)
+    D = D[(D["rank"] == 1) & D.y.notna() & D.p.notna() & (D.week != "UNDATED")]
     return paired_week_interval(D.y - D.p, D.card, D.week)
 
 
@@ -551,7 +568,8 @@ def rank1_tests(R: pd.DataFrame) -> dict:
     (b) Rank 1 win minus the same card's mean Ranks 3-4 win (does Rank 1 beat the card's own lower rows?).
     """
     from ml.core.metrics import cluster_bootstrap_mean
-    D = R[~R.cohort.isin(NOT_PRIMARY) & (R.week != "UNDATED")]
+    D = analysis_rows(R)
+    D = D[D.week != "UNDATED"]
     r1 = D[(D["rank"] == 1) & D.y.notna()]
     a = r1[r1.p.notna()]
     res = dict(calibration=paired_week_interval(a.y - a.p, a.card, a.week))
@@ -572,7 +590,8 @@ def cohort_summary(R: pd.DataFrame) -> pd.DataFrame:
     for cohort, d in R.groupby("cohort"):
         slots = d[d.counted_slot]
         scored = slots[slots.y.notna() & slots.p.notna()]
-        paired = d[d.y.notna() & d.p.notna() & d.baseline.notna()]
+        eligible = analysis_rows(d)
+        paired = eligible[eligible.y.notna() & eligible.p.notna() & eligible.baseline.notna()]
         rows.append(dict(cohort=cohort, cards=d.card.nunique(), rows=len(d), primary_slots=len(slots),
                          wins=int((slots.grade == "WIN").sum()), losses=int((slots.grade == "LOSS").sum()),
                          pushes=int((slots.grade == "PUSH").sum()), decisive_scored=len(scored),
@@ -606,7 +625,8 @@ def build_report(R: pd.DataFrame, diff: pd.DataFrame, *, logs=None) -> dict:
                slots_family=slot_table(R[R["rank"] == 1], "family"), calibration=cal, cal_stats=cal_stats,
                classes=classes, rank1_week=rank1_weekly(R), rank1_tests=rank1_tests(R), collisions=collisions,
                cohorts=cohort_summary(R), slots_cohort=slot_table(R, "cohort"), coverage=canonical_coverage(R, logs))
-    D1 = R[(R["rank"] == 1) & R.y.notna() & R.p.notna() & ~R.cohort.isin(NOT_PRIMARY)]
+    D1 = analysis_rows(R)
+    D1 = D1[(D1["rank"] == 1) & D1.y.notna() & D1.p.notna()]
     band = pd.cut(D1.p, [0, .5, .55, .6, .65, .7, .8, .9, 1.0001], right=False)
     out["rank1_band"] = D1.groupby(band, observed=True).apply(
         lambda d: pd.Series(dict(rows=len(d), mean_p=d.p.mean(), realised=d.y.mean(), expected=d.p.sum(), wins=d.y.sum())),
@@ -627,10 +647,15 @@ def write(out: dict, folder: Path, receipt: dict) -> None:
     tmp.mkdir(parents=True)
     cols = ["card", "rank", "cohort", "era", "date", "date_basis", "week", "sport", "family", "event", "contract", "p", "q", "identity_status", "literal_grade",
             "baseline", "grade", "counted_slot", "informational_r2", "record_status", "grade_basis", "source"]
-    cols += [c for c in ("local_key", "probability_role", "effective_revision", "evidence", "record_disposition", "contract_recovery_source") if c in out["rows"]]
+    cols += [c for c in ("local_key", "probability_role", "effective_revision", "evidence", "record_disposition", "contract_recovery_source",
+                         "view_id", "contract_id", "rank_label", "rank_tied", "issued_verdict", "historical_eligibility", "reporting_resolution",
+                         "closure_status", "literal_record_status") if c in out["rows"]]
     out["rows"][cols].to_csv(tmp / "CARD_ROWS.csv", index=False, lineterminator="\n")
     out["coverage"].to_csv(tmp / "CANONICAL_COVERAGE.csv", index=False, lineterminator="\n")
+    views = out["rows"][out["rows"].cohort.isin({"LEGACY_ABSTENTION_NOT_PRIMARY", "LEGACY_VIEW_NOT_PRIMARY"})]
+    view_columns = [c for c in ("card", "view_id", "contract_id", "rank_label", "contract", "grade", "issued_verdict", "historical_eligibility", "source") if c in views]
     sections = [("Coverage and primary scores by cohort", out["cohorts"]), ("Slots by cohort", out["slots_cohort"]),
+                ("Recovered legacy view rows (diagnostic, not primary or prospective)", views[view_columns]),
                 ("Canonical records without contract rows (review, not invented forecasts)", out["coverage"][out["coverage"].rows == 0]),
                 ("Slots, all literal ranks", out["slots"]), ("Slots excluding colliding IDs (sensitivity)", out["slots_without_collisions"]), ("Slots by era", out["slots_era"]),
                 ("Slots by sport", out["slots_sport"]), ("Rank 1 by proposition family", out["slots_family"]),
@@ -643,6 +668,7 @@ def write(out: dict, folder: Path, receipt: dict) -> None:
             "Descriptive and outcome-exposed; original ranks and probabilities preserved; dated, source-bound settlement corrections applied explicitly.",
             "Pooled historical tables span different policies and timing strata; they do not validate the current method.",
             "Research-only analyst probabilities are retained as diagnostics and excluded from primary scores and calibration.",
+            "No-trial, missing-proposition and terminal unattainable records are excluded from scored summaries. Literal unresolved documentary placeholders are not live sporting tasks.",
             "Missing issue/known-at evidence is not inferred from import time or event date. No prospective eligibility is created.", ""]
     for title, frame in sections:
         text += [f"## {title}", "", md_table(frame, list(frame.columns), 3) if len(frame) else "None.", ""]
@@ -663,6 +689,17 @@ def _label(path) -> str:
         return "EXTERNAL:" + path.name
 
 
+def reporting_inputs(rank_log=RANK_LOG, *, inventories=None, logs=None):
+    """Every source used by the effective-history reporters, including discovery changes."""
+    from ml.evaluation import effective_settlement as es
+    from ml import historical_resolution as hr, historical_views
+    inventories = import_inventories() if inventories is None else inventories
+    logs = combined_logs() if logs is None else logs
+    return ([Path(rank_log), RECON, STATUS] + inventories + logs + es.revision_files(ROOT)
+            + hr.input_paths(ROOT) + historical_views.input_paths(ROOT)
+            + [path.parent / "LOCAL_ID_MAPPING.csv" for path in inventories])
+
+
 def main(argv=None):
     from ml import primary as p
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -676,10 +713,7 @@ def main(argv=None):
     stale = es.unmatched_revisions(ROOT)
     if stale:
         raise ValueError(f"settlement revisions match no imported row (stale or mistyped): {stale}")
-    inputs = [args.rank_log, RECON, STATUS] + inventories + logs + es.revision_files(ROOT)
-    from ml import historical_resolution as hr
-    inputs += hr.input_paths(ROOT)
-    inputs += [path.parent / "LOCAL_ID_MAPPING.csv" for path in inventories]
+    inputs = reporting_inputs(args.rank_log, inventories=inventories, logs=logs)
     hashes = {f: p.digest(f.read_bytes()) if f.exists() else "MISSING" for f in inputs}
     R, diff = build_rows(args.rank_log, inventories=inventories, logs=logs)
     out = build_report(R, diff, logs=logs)

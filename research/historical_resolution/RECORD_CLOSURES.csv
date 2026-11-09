@@ -1,0 +1,3 @@
+canonical_id,rank,contract,prior_grade,closure_status,effective_at,source_document,source_document_sha256
+P-418,0,,UNRESOLVED,CLOSED_NO_RECOVERED_ISSUED_CONTRACT,2026-11-09T10:46:51.621592+00:00,research/verification/historical_gap_resolution_2026-11-09-1/RESEARCH_CLOSURES.md,d9671d02e247ecde1333645f7ef48ef77628d0f788ae76cf149c8cafaf6f734c
+P-523,5,Corners (threshold never defined),VOID,CLOSED_UNDEFINED_PROPOSITION,2026-11-09T10:46:51.621592+00:00,research/verification/historical_gap_resolution_2026-11-09-1/RESEARCH_CLOSURES.md,d9671d02e247ecde1333645f7ef48ef77628d0f788ae76cf149c8cafaf6f734c

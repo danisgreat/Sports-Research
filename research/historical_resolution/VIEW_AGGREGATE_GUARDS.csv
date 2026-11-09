@@ -1,0 +1,8 @@
+canonical_id,aggregate_sha256,resolution
+P-012,8f2a5b384011bc18123b0ab6f1ba57992162665b935fcaffaea55864c1da904f,Replace lossy card/rank aggregate with literal view/contract rows; diagnostics only; preserve rank-index original
+P-013,2d922946fc3fdc52588fb1f27f103a5d65166b2be99fae3e3e019300c1e8df20,Replace lossy card/rank aggregate with literal view/contract rows; diagnostics only; preserve rank-index original
+P-018,da13433ba704a662a08e3677c2efad557788abb16bbafaae7fd6349c34bb8861,Replace lossy card/rank aggregate with literal view/contract rows; diagnostics only; preserve rank-index original
+P-035,e9ce14e90ea8d947c6309a600f5cb815725f7b4a1fe0b941bb1b0cb037caba12,Replace lossy card/rank aggregate with literal view/contract rows; diagnostics only; preserve rank-index original
+P-036,6f4630fd583efefe851cd946c229367fc0fd3dcb783d5178ee320e0af51c718e,Replace lossy card/rank aggregate with literal view/contract rows; diagnostics only; preserve rank-index original
+P-040,a9d58210ad03f636edd824e4c811868309b66f9c3c6aa0c7a91e375062cc6a2a,Replace lossy card/rank aggregate with literal view/contract rows; diagnostics only; preserve rank-index original
+P-060,bdb26f0a4493c0833b373dd0150863a2e2e2aa88a2858885d617932aa3a78c0a,Replace lossy card/rank aggregate with literal view/contract rows; diagnostics only; preserve rank-index original

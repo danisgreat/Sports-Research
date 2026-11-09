@@ -1299,3 +1299,10 @@ Supplement the owner’s v24.10 without changing its model separation or learnin
 ## 9 November 2026 - neighbouring-record chronology clarification
 
 Owner chronological instruction binds P126 to the intended28August slot between125 and127 and P418 to midSeptember (working14September), excluding unrelated June/July evidence. Add hash-bound neighbouring source extracts and a narrowed current queue; preserve issued originals, actual-start uncertainty, sporting grades and permanent closures. [Report](research/verification/historical_chronology_2026-11-09-1/REPORT.md).
+
+
+## 9 November 2026 ·historical gap closure and reporting repair
+
+Owner-directed closure of P126/P418 at explicit evidence limits; three missing-evidence VOID rows become terminal UNATTAINABLE, while P418 custody and P523 undefined proposition close without scored trials. Dates distinguish intended, secondary and verified event evidence. Preserve all original probabilities/ranks, Part 1–8 bytes, the Part 9 prefix and the nine permanent closures. Recover 54 literal propositions; retain P157 no-action exclusions. Replace seven cards' lossy rank aggregates with 72 hash-bound diagnostic view/contract rows and exclude non-scorable records from scored summaries. No model, framework prediction method, promotion or learning-store row changes. [Evidence, full sweep and verification](research/verification/historical_gap_resolution_2026-11-09-1/REPORT.md).
+
+The legacy `ml cards` calibration reporter now reads the shared effective view, refuses unmatched revisions/input drift, and records every source input. All four P509 learning-only rows remain diagnostic. No saved model-shadow output is overwritten.

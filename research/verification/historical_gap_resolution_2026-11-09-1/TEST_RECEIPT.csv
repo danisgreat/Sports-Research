@@ -1,0 +1,2 @@
+command,exit_code,elapsed_seconds,log_path,log_sha256,junit_path,junit_sha256
+python -m pytest ml/tests,0,612.19,C:\Users\danie\AppData\Local\Temp\sports_gap_resolution_20261109\pytest_release.txt,7f3c04d145f0534eb9f9e6de3229e20ad73b9bf703cbb72d8f260a49db587f0e,C:\Users\danie\AppData\Local\Temp\sports_gap_resolution_20261109\pytest_release.xml,9dc030dcdf85e23974997129a0055ce700771b3c05221c6502c64b02ac01724c

@@ -1,0 +1,20 @@
+host,url,robots_http,checked_at,status,agents_blocked,content_signal
+bhutanfootball.org,https://bhutanfootball.org/,200,2026-11-09T10:40:09+00:00,ALLOWED,,
+kickindi.com,https://kickindi.com/match-detail/drukpa-vs-rtc-september-14-2026/,200,2026-11-09T10:40:09+00:00,BLOCKED_FOR_AI,ClaudeBot;GPTBot,
+scangoal.com,https://scangoal.com/league/sikkim-s-league,200,2026-11-09T10:40:09+00:00,BLOCKED_FOR_AI,ClaudeBot;GPTBot,"search=yes, ai-input=yes, ai-train=no"
+site.api.espn.com,https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.friendly/summary?event=401921339,403,2026-11-09T10:40:09+00:00,RULES_UNKNOWN,,
+theawayend.co,https://theawayend.co/sikkim-premier-division-league/,200,2026-11-09T10:40:09+00:00,ALLOWED,,
+www.11v11.com,https://www.11v11.com/matches/kyrgyzstan-v-lebanon-04-october-2026-395345/,200,2026-11-09T10:40:09+00:00,ALLOWED,,
+www.bbs.bt,https://www.bbs.bt/,200,2026-11-09T10:40:09+00:00,ALLOWED,,
+www.bbs.bt,https://www.bbs.bt/245508/,200,2026-11-09T10:40:09+00:00,ALLOWED,,
+www.championat.com,https://www.championat.com/football/news-6644730-kyrgyzstan-livan-rezultat-matcha-4-oktyabrya-2026-schet-3-1-tovarischeskij-match.html,200,2026-11-09T10:40:09+00:00,ALLOWED,,
+www.footballinfo.net,https://www.footballinfo.net/Fixtures/Details/1640507,404,2026-11-09T10:40:09+00:00,NO_RULES_FILE,,
+www.kfu.kg,https://www.kfu.kg/news/1811,200,2026-11-09T10:40:09+00:00,ALLOWED,,
+www.rsssf.org,https://www.rsssf.org/tablesb/bhutan2026.html,404,2026-11-09T10:40:09+00:00,NO_RULES_FILE,,
+www.sikkimexpress.com,https://www.sikkimexpress.com/,200,2026-11-09T10:40:09+00:00,ALLOWED,,
+www.sofascore.com,https://www.sofascore.com/football/match/aakraman-sc-sikkim-boys-club/zxuhsicEi,403,2026-11-09T10:40:09+00:00,RULES_UNKNOWN,,
+www.sport24.rest,https://www.sport24.rest/assets/css/style.css?v=1782602034,200,2026-11-09T10:40:09+00:00,ALLOWED,,
+www.sport24.rest,https://www.sport24.rest/assets/site.css?v=1793894241,200,2026-11-09T10:40:09+00:00,ALLOWED,,
+www.sport24.rest,https://www.sport24.rest/team/1072608/last,200,2026-11-09T10:40:09+00:00,ALLOWED,,
+www.sport24.rest,https://www.sport24.rest/team/923624/last,200,2026-11-09T10:40:09+00:00,ALLOWED,,
+www.thesportsdb.com,https://www.thesportsdb.com/season/5881-bhutan-premier-league/2026,200,2026-11-09T10:40:09+00:00,BLOCKED_FOR_AI,GPTBot,"ai-train=no, search=yes, ai-input=yes"

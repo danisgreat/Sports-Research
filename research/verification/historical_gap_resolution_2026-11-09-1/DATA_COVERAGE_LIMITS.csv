@@ -1,0 +1,3 @@
+scope,rows,cards,decisive_rows,missing_numeric_p,missing_paired_baseline,limit
+ALL_ROWS,2549,638,2486,1497,2462,Coverage only; not all rows are eligible trials; no historical feature or known-at receipt backfilled
+ANALYST_PRIMARY_V1,70,16,68,0,44,Coverage only; not all rows are eligible trials; no historical feature or known-at receipt backfilled

@@ -4823,3 +4823,24 @@ For older rank-layout rows, the hash-bound dated closure appends to ROW_REVISION
 | P-630 | 6 | Over 10.5 full-match corners | UNATTAINABLE / RESOLVED / DO_NOT_RETRY |
 
 <!-- END OWNER PERMANENT CLOSURES 2026-11-09-1 -->
+
+
+<!-- BEGIN HISTORICAL GAP CLOSURES 2026-11-09-1 -->
+# Historical gap closure and reporting reconciliation ·9 November 2026
+
+Owner authority: close and settle the remaining gaps, then sweep every log. This addendum preserves the entire preceding Part 9 prefix and all original Part 1–8 cores. No ID, original probability, rank, fitted model or issue-time claim changes. The nine previously permanent closures are unchanged and were not researched again.
+
+| Card/rank | Prior literal | Effective disposition | Evidence and limitation |
+|---|---|---|---|
+| P126 R2, 1st Half Over 0.5 goals | VOID, missing data | UNATTAINABLE / COMPLETELY_RESOLVED / DO_NOT_RETRY | No admissible halftime or goal-time field recovered; final cannot imply period |
+| P126 R4, Total corners Over 7.5 (research threshold) | VOID, missing data | UNATTAINABLE / COMPLETELY_RESOLVED / DO_NOT_RETRY | No compatible corner field; absent values are not zero |
+| P418, record only | Administrative VOID / missing original | CLOSED_NO_RECOVERED_ISSUED_CONTRACT / NO_SCORED_TRIAL | Secondary September 14 Drukpa 1–3 RTC does not recover propositions; old five-issued versus none-issued summaries disagree |
+| P523 R5, Corners (threshold never defined) | Administrative VOID | CLOSED_UNDEFINED_PROPOSITION / NO_SCORED_TRIAL | No threshold is invented; old literal VOID retained, not operator-certified |
+| P537 R4, Corners Over 9.5 (unranked alternative) | VOID, missing data | UNATTAINABLE / COMPLETELY_RESOLVED / DO_NOT_RETRY | Exact-match final/half records omit corner values; event October 4, review October 5 |
+
+P126's owner-intended date is August 28 (not verified actual kickoff). Its winner and Over 2.5 retain old best-available WIN grades, conditionally corroborated by one secondary collector's 3–0 display; no independent owner certification or original issue proof is added. P418's June/July meetings are excluded targets; no five-row prediction is invented. Missing fields stay excluded from sporting scoring and model labels. The retirement-convention VOID rows for P136/P540 are retained under their stated legacy convention.
+
+The exact parent-BASE grade revisions and documentary closures are in [ROW_REVISIONS](../research/historical_resolution/ROW_REVISIONS.csv) and [RECORD_CLOSURES](../research/historical_resolution/RECORD_CLOSURES.csv), bound to [closure evidence](../research/verification/historical_gap_resolution_2026-11-09-1/RESEARCH_CLOSURES.md). The source registry preserves 19 exact policy/field attempts and their failures. Reachable Git custody search covered 1,666 unique text blobs; unavailable external chats and unreachable objects are outside that claim.
+
+The reporting sweep recovers 54 literal propositions without changing existing grades/probabilities. P157's four no-action labels remain non-scorable. Seven legacy cards' collapsed tied/live/alternate versions are replaced by 72 distinct source-bound diagnostic rows; no successful version is selected as primary. P306/P509/P517 recovered rows retain their start-crossed, learning-only or ambiguous custody limits. [Full report and gap register](../research/verification/historical_gap_resolution_2026-11-09-1/REPORT.md).
+<!-- END HISTORICAL GAP CLOSURES 2026-11-09-1 -->

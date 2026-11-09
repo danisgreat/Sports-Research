@@ -1,0 +1,101 @@
+check,result,detail
+CAPTURE:GR-001,PASS,Actual raw bytes retained outside repo; content decision separately scoped
+REFUSED:GR-002,PASS,Not opened and no snippet field admitted
+CAPTURE:GR-003,PASS,Actual raw bytes retained outside repo; content decision separately scoped
+REFUSED:GR-004,PASS,Not opened and no snippet field admitted
+CAPTURE:GR-005,PASS,Actual raw bytes retained outside repo; content decision separately scoped
+CAPTURE:GR-006,PASS,Actual raw bytes retained outside repo; content decision separately scoped
+REFUSED:GR-007,PASS,Not opened and no snippet field admitted
+CAPTURE:GR-008,PASS,Actual raw bytes retained outside repo; content decision separately scoped
+CAPTURE:GR-009,PASS,Actual raw bytes retained outside repo; content decision separately scoped
+REFUSED:GR-010,PASS,Not opened and no snippet field admitted
+CAPTURE:GR-011,PASS,Actual raw bytes retained outside repo; content decision separately scoped
+CAPTURE:GR-012,PASS,Actual raw bytes retained outside repo; content decision separately scoped
+CAPTURE:GR-013,PASS,Actual raw bytes retained outside repo; content decision separately scoped
+CAPTURE:GR-014,PASS,Actual raw bytes retained outside repo; content decision separately scoped
+CAPTURE:GR-015,PASS,Actual raw bytes retained outside repo; content decision separately scoped
+CAPTURE:GR-016,PASS,Actual raw bytes retained outside repo; content decision separately scoped
+CAPTURE:GR-017,PASS,Actual raw bytes retained outside repo; content decision separately scoped
+REFUSED:GR-018,PASS,Not opened and no snippet field admitted
+CAPTURE:GR-019,PASS,Actual raw bytes retained outside repo; content decision separately scoped
+EVIDENCE:ROW_REVISIONS.csv:P-148:2,PASS,Bound immutable evidence document
+EVIDENCE:ROW_REVISIONS.csv:P-149:2,PASS,Bound immutable evidence document
+EVIDENCE:ROW_REVISIONS.csv:P-176:5,PASS,Bound immutable evidence document
+EVIDENCE:ROW_REVISIONS.csv:P-178:5,PASS,Bound immutable evidence document
+EVIDENCE:ROW_REVISIONS.csv:P-179:5,PASS,Bound immutable evidence document
+EVIDENCE:ROW_REVISIONS.csv:P-233:5,PASS,Bound immutable evidence document
+EVIDENCE:ROW_REVISIONS.csv:P-234:3,PASS,Bound immutable evidence document
+EVIDENCE:ROW_REVISIONS.csv:P-235:5,PASS,Bound immutable evidence document
+EVIDENCE:ROW_REVISIONS.csv:P-250:2,PASS,Bound immutable evidence document
+EVIDENCE:ROW_REVISIONS.csv:P-251:3,PASS,Bound immutable evidence document
+EVIDENCE:ROW_REVISIONS.csv:P-255:2,PASS,Bound immutable evidence document
+EVIDENCE:ROW_REVISIONS.csv:P-256:1,PASS,Bound immutable evidence document
+EVIDENCE:ROW_REVISIONS.csv:P-368:2,PASS,Bound immutable evidence document
+EVIDENCE:ROW_REVISIONS.csv:P-369:1,PASS,Bound immutable evidence document
+EVIDENCE:ROW_REVISIONS.csv:P-377:2,PASS,Bound immutable evidence document
+EVIDENCE:ROW_REVISIONS.csv:P-399:2,PASS,Bound immutable evidence document
+EVIDENCE:ROW_REVISIONS.csv:P-401:1,PASS,Bound immutable evidence document
+EVIDENCE:ROW_REVISIONS.csv:P-401:3,PASS,Bound immutable evidence document
+EVIDENCE:ROW_REVISIONS.csv:P-407:1,PASS,Bound immutable evidence document
+EVIDENCE:ROW_REVISIONS.csv:P-409:2,PASS,Bound immutable evidence document
+EVIDENCE:ROW_REVISIONS.csv:P-419:5,PASS,Bound immutable evidence document
+EVIDENCE:ROW_REVISIONS.csv:P-430:5,PASS,Bound immutable evidence document
+EVIDENCE:ROW_REVISIONS.csv:P-105:4,PASS,Bound immutable evidence document
+EVIDENCE:ROW_REVISIONS.csv:P-117:4,PASS,Bound immutable evidence document
+EVIDENCE:ROW_REVISIONS.csv:P-290:4,PASS,Bound immutable evidence document
+EVIDENCE:ROW_REVISIONS.csv:P-341:3,PASS,Bound immutable evidence document
+EVIDENCE:ROW_REVISIONS.csv:P-003:3,PASS,Bound immutable evidence document
+EVIDENCE:ROW_REVISIONS.csv:P-100:4,PASS,Bound immutable evidence document
+EVIDENCE:ROW_REVISIONS.csv:P-102:4,PASS,Bound immutable evidence document
+EVIDENCE:ROW_REVISIONS.csv:P-104:4,PASS,Bound immutable evidence document
+EVIDENCE:ROW_REVISIONS.csv:P-121:4,PASS,Bound immutable evidence document
+EVIDENCE:ROW_REVISIONS.csv:P-123:4,PASS,Bound immutable evidence document
+EVIDENCE:ROW_REVISIONS.csv:P-341:3,PASS,Bound immutable evidence document
+EVIDENCE:ROW_REVISIONS.csv:P-126:2,PASS,Bound immutable evidence document
+EVIDENCE:ROW_REVISIONS.csv:P-126:4,PASS,Bound immutable evidence document
+EVIDENCE:ROW_REVISIONS.csv:P-537:4,PASS,Bound immutable evidence document
+EVIDENCE:RECORD_CLOSURES.csv:P-418:0,PASS,Bound immutable evidence document
+EVIDENCE:RECORD_CLOSURES.csv:P-523:5,PASS,Bound immutable evidence document
+EVIDENCE:EVENT_DATES.csv:P-638:,PASS,Bound immutable evidence document
+EVIDENCE:EVENT_DATES.csv:P-377:,PASS,Bound immutable evidence document
+EVIDENCE:EVENT_DATES.csv:P-126:,PASS,Bound immutable evidence document
+EVIDENCE:EVENT_DATES.csv:P-418:,PASS,Bound immutable evidence document
+EVIDENCE:EVENT_DATES.csv:P-537:,PASS,Bound immutable evidence document
+OLD_ROWS_PRESERVED:ROW_METADATA.csv,PASS,Every prior CSV field/value retained in original order; extra typed-date/reporting-role columns permitted
+OLD_ROWS_PRESERVED:ROW_REVISIONS.csv,PASS,Every prior CSV field/value retained in original order; extra typed-date/reporting-role columns permitted
+OLD_ROWS_PRESERVED:EVENT_DATES.csv,PASS,Every prior CSV field/value retained in original order; extra typed-date/reporting-role columns permitted
+LINK:REPORT.md:SOURCE_EXHAUSTION_CLOSURES.csv,PASS,New local link target exists
+LINK:REPORT.md:RESEARCH_CLOSURES.md,PASS,New local link target exists
+LINK:REPORT.md:OPEN_ITEMS.csv,PASS,New local link target exists
+LINK:REPORT.md:../historical_chronology_2026-11-09-1/REPORT.md,PASS,New local link target exists
+LINK:REPORT.md:GIT_CUSTODY_SEARCH_SCOPE.csv,PASS,New local link target exists
+LINK:REPORT.md:GIT_CUSTODY_SEARCH.csv,PASS,New local link target exists
+LINK:REPORT.md:SOURCE_ACCESS_AUDIT.csv,PASS,New local link target exists
+LINK:REPORT.md:SOURCE_CAPTURES.csv,PASS,New local link target exists
+LINK:REPORT.md:FIELD_DECISIONS.csv,PASS,New local link target exists
+LINK:REPORT.md:LOG_FILE_INVENTORY.csv,PASS,New local link target exists
+LINK:REPORT.md:LOG_SOURCE_OCCURRENCES.csv,PASS,New local link target exists
+LINK:REPORT.md:final_history_release/CARD_HISTORY.md,PASS,New local link target exists
+LINK:REPORT.md:final_history_release/CARD_ROWS.csv,PASS,New local link target exists
+LINK:REPORT.md:RECOVERED_PROPOSITIONS.csv,PASS,New local link target exists
+LINK:REPORT.md:NONSCORABLE_LABELS_BEFORE.csv,PASS,New local link target exists
+LINK:REPORT.md:RETIRED_LOSSY_AGGREGATES.csv,PASS,New local link target exists
+LINK:REPORT.md:UNRESOLVED_LITERAL_CLASSIFICATION.csv,PASS,New local link target exists
+LINK:REPORT.md:GAP_REGISTER.csv,PASS,New local link target exists
+LINK:REPORT.md:RETAINED_CERTIFICATION_LIMITS.csv,PASS,New local link target exists
+LINK:REPORT.md:DATA_COVERAGE_LIMITS.csv,PASS,New local link target exists
+LINK:REPORT.md:CURRENT_STATE_READBACK.md,PASS,New local link target exists
+LINK:REPORT.md:LOG_APPEND_RECEIPT.csv,PASS,New local link target exists
+LINK:REPORT.md:../../../archive/historical_gap_resolution_2026-11-09-1/MANIFEST.csv,PASS,New local link target exists
+LINK:REPORT.md:VERIFICATION_CHECKS.csv,PASS,New local link target exists
+LINK:REPORT.md:QUERY_RECEIPTS.csv,PASS,New local link target exists
+LINK:REPORT.md:VERIFICATION.md,PASS,New local link target exists
+LINK:REPORT.md:REPORTING_ROLE_CONTROLS.csv,PASS,New local link target exists
+LINK:REPORT.md:CALIBRATION_READBACK.md,PASS,New local link target exists
+LINK:VERIFICATION.md:REPORT.md,PASS,New local link target exists
+LINK:VERIFICATION.md:final_history_release/CARD_HISTORY.md,PASS,New local link target exists
+LINK:VERIFICATION.md:VERIFICATION_CHECKS.csv,PASS,New local link target exists
+LINK:VERIFICATION.md:TEST_RECEIPT.csv,PASS,New local link target exists
+LINK:VERIFICATION.md:TEST_RESULTS.md,PASS,New local link target exists
+LINK:VERIFICATION.md:PACKAGE_CHECKS.csv,PASS,New local link target exists
+NO_REPO_JSON_OR_EXECUTABLE_HELPERS,PASS,Research JSON/helpers/raw captures outside repo; permanent code under ml/

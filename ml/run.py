@@ -180,13 +180,19 @@ def run_all(workers: int, only: list[str] | None = None, log=print) -> list[dict
 
 
 def run_cards() -> None:
-    from ml.evaluation.card_calibration import audit
+    from ml.evaluation import card_calibration as calibration, card_history
     from ml.evaluation.writers import write_cards
 
     rec = receipt_base()
-    rec["rank_log_sha256"] = hashlib.sha256((REPO_ROOT / "research/data/GAME_PREDICTION_RANK_LOG.csv").read_bytes()).hexdigest()
-    rank_digest = lambda: hashlib.sha256((REPO_ROOT / "research/data/GAME_PREDICTION_RANK_LOG.csv").read_bytes()).hexdigest()
-    write_cards(audit(), finish_receipt(rec, [("rank log", rec["rank_log_sha256"], rank_digest)]))
+    inputs = card_history.reporting_inputs(calibration.RANK_LOG)
+    def digest(path):
+        return hashlib.sha256(path.read_bytes()).hexdigest() if path.exists() else "MISSING"
+    checks = [(card_history._label(path), digest(path), lambda path=path: digest(path)) for path in inputs]
+    rec.update({"input:" + label: expected for label, expected, _ in checks})
+    result = calibration.audit()
+    if inputs != card_history.reporting_inputs(calibration.RANK_LOG):
+        raise RuntimeError("history input discovery changed during calibration; rerun from stable inputs")
+    write_cards(result, finish_receipt(rec, checks))
 
 
 def run_decision_lab() -> None:

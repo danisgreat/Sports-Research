@@ -18,7 +18,8 @@ class HistoricalResolutionError(ValueError):
 
 
 def input_paths(root):
-    return [Path(root) / BASE / n for n in ("IDENTITY_BINDINGS.csv", "ROW_METADATA.csv", "ROW_REVISIONS.csv", "EVENT_DATES.csv")]
+    return [Path(root) / BASE / n for n in ("IDENTITY_BINDINGS.csv", "ROW_METADATA.csv", "ROW_REVISIONS.csv", "EVENT_DATES.csv",
+                                           "RECORD_CLOSURES.csv")]
 
 
 def _rows(path):
@@ -44,7 +45,33 @@ def event_dates(root):
         value = date.fromisoformat(r["event_date"]).isoformat()
         if value != r["event_date"] or not r["date_basis"]:
             raise HistoricalResolutionError("EVENT_DATE_INVALID")
-        out[r["canonical_id"]] = (value, "VERIFIED_EVENT_DATE:" + r["date_basis"])
+        status = r.get("date_status") or "VERIFIED_EVENT_DATE"
+        if status not in {"VERIFIED_EVENT_DATE", "OWNER_INTENDED_DATE", "SECONDARY_EVENT_DATE"}:
+            raise HistoricalResolutionError("EVENT_DATE_STATUS")
+        out[r["canonical_id"]] = (value, status + ":" + r["date_basis"])
+    return out
+
+
+def apply_record_closures(frame, root):
+    """Close a documentary/no-trial item without claiming a sporting void or non-issuance."""
+    out = frame.copy()
+    used = set()
+    for r in _rows(input_paths(root)[4]):
+        key = (r["canonical_id"], r["rank"], r["contract"])
+        if key in used:
+            raise HistoricalResolutionError("RECORD_CLOSURE_DUPLICATE")
+        used.add(key)
+        mask = (out.card == key[0]) & (out["rank"].astype(str) == key[1]) & (out.contract.fillna("") == key[2])
+        document = Path(root) / r["source_document"]
+        if mask.sum() != 1 or out.loc[mask, "grade"].iloc[0] != r["prior_grade"]:
+            raise HistoricalResolutionError("RECORD_CLOSURE_TARGET")
+        if not document.is_file() or _sha(document.read_bytes()) != r["source_document_sha256"]:
+            raise HistoricalResolutionError("RECORD_CLOSURE_EVIDENCE")
+        if r["closure_status"] not in {"CLOSED_NO_RECOVERED_ISSUED_CONTRACT", "CLOSED_UNDEFINED_PROPOSITION"}:
+            raise HistoricalResolutionError("RECORD_CLOSURE_STATUS")
+        out.loc[mask, "literal_record_status"] = out.loc[mask, "record_status"]
+        out.loc[mask, "record_status"] = r["closure_status"] + " / NO SCORED TRIAL"
+        out.loc[mask, "closure_status"] = r["closure_status"]
     return out
 
 
@@ -109,11 +136,18 @@ def recover_contracts(frame, root):
             mask = (out.card == r["canonical_id"]) & (out["rank"].astype(str) == r["rank"])
         if mask.sum() != 1:
             raise HistoricalResolutionError("CONTRACT_ROW_NOT_UNIQUE")
+        role = r.get("reporting_cohort")
+        if role and role not in {"LEGACY_ANALYST_NOT_PRIMARY", "RESEARCH_ONLY_NOT_PRIMARY"}:
+            raise HistoricalResolutionError("CONTRACT_RECOVERY_CANNOT_PROMOTE")
         current = out.loc[mask, "contract"].iloc[0]
         if isinstance(current, str) and current.strip() and current != r.get("replace_existing_if_matches"):
+            if current == r["contract"] and role:
+                out.loc[mask, "cohort"] = role
             continue  # the original rank-log text is already present; keep it literal
         out.loc[mask, "contract"] = r["contract"]
         out.loc[mask, "contract_recovery_source"] = r["source_path"] + ":" + r["start_line"]
+        if role:
+            out.loc[mask, "cohort"] = role
     return out
 
 

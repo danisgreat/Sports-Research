@@ -54,6 +54,23 @@ def test_contract_recovery_does_not_create_a_probability_or_grade(tmp_path):
         H.recover_contracts(frame, tmp_path)
 
 
+@pytest.mark.parametrize('existing', ['', 'Home Over 4.5 corners'])
+def test_recovery_can_exclude_diagnostic_rows_but_cannot_promote_them(tmp_path, existing):
+    text = '| 1 | Home Over 4.5 corners |\n'
+    (tmp_path / 'source.md').write_bytes(text.encode())
+    row = dict(canonical_id='P-900', rank='1', contract='Home Over 4.5 corners', source_path='source.md',
+               start_line=1, end_line=1, block_sha256=H._sha(text.encode()), row_literal=text.strip(),
+               reporting_cohort='LEGACY_ANALYST_NOT_PRIMARY')
+    write(H.input_paths(tmp_path)[1], [row])
+    frame = pd.DataFrame([dict(card='P-900', rank=1, contract=existing, grade='WIN', p=.7, cohort='RANK_LOG_LITERAL')])
+    out = H.recover_contracts(frame, tmp_path).iloc[0]
+    assert out.p == .7 and out.grade == 'WIN' and out.cohort == 'LEGACY_ANALYST_NOT_PRIMARY'
+    row['reporting_cohort'] = 'ANALYST_PRIMARY_V1'
+    write(H.input_paths(tmp_path)[1], [row])
+    with pytest.raises(H.HistoricalResolutionError, match='CANNOT_PROMOTE'):
+        H.recover_contracts(frame, tmp_path)
+
+
 def test_historical_revision_preserves_probability_and_refuses_wrong_prior(tmp_path):
     (tmp_path / 'revision.md').write_text('reviewed result')
     row = dict(canonical_id='P-900', rank='1', contract='Home Over 4.5 corners', prior_grade='UNRESOLVED',
@@ -141,3 +158,48 @@ def test_common_effective_view_refuses_future_reopening_of_unattainable_row():
     later = dict(close, sporting_grade='WIN', revision='revision-3', parent_revision='revision-2')
     with pytest.raises(E.RevisionError, match='PERMANENTLY_CLOSED'):
         E.apply_revisions(original, pd.DataFrame([close, later]))
+
+
+@pytest.mark.parametrize('status', ['OWNER_INTENDED_DATE', 'SECONDARY_EVENT_DATE'])
+def test_intended_and_secondary_dates_do_not_inherit_verified_status(tmp_path, status):
+    (tmp_path / 'date.md').write_bytes(b'Bound date with limited certainty')
+    row = dict(canonical_id='P-900', event_date='2026-09-14', date_basis='LIMITED',
+               date_status=status, source_document='date.md',
+               source_document_sha256=H._sha((tmp_path / 'date.md').read_bytes()))
+    write(H.input_paths(tmp_path)[3], [row])
+    assert H.event_dates(tmp_path)['P-900'] == ('2026-09-14', status + ':LIMITED')
+    row['date_status'] = 'GUESSED_VERIFIED'
+    write(H.input_paths(tmp_path)[3], [row])
+    with pytest.raises(H.HistoricalResolutionError, match='EVENT_DATE_STATUS'):
+        H.event_dates(tmp_path)
+
+
+def closure_fixture(root):
+    (root / 'closure.md').write_bytes(b'Original contract unavailable; no trial admitted')
+    row = dict(canonical_id='P-900', rank='0', contract='', prior_grade='UNRESOLVED',
+               closure_status='CLOSED_NO_RECOVERED_ISSUED_CONTRACT', source_document='closure.md',
+               source_document_sha256=H._sha((root / 'closure.md').read_bytes()))
+    frame = pd.DataFrame([dict(card='P-900', rank=0, contract='', grade='UNRESOLVED',
+                              record_status='OLD ADMINISTRATIVE VOID', p=float('nan'))])
+    return row, frame
+
+
+def test_documentary_closure_preserves_literal_status_and_does_not_invent_grade(tmp_path):
+    row, frame = closure_fixture(tmp_path)
+    write(H.input_paths(tmp_path)[4], [row])
+    out = H.apply_record_closures(frame, tmp_path).iloc[0]
+    assert out.grade == 'UNRESOLVED' and pd.isna(out.p)
+    assert out.literal_record_status == 'OLD ADMINISTRATIVE VOID'
+    assert out.closure_status == row['closure_status'] and 'NO SCORED TRIAL' in out.record_status
+
+
+@pytest.mark.parametrize('bad', ['target', 'prior', 'hash', 'status', 'duplicate'])
+def test_documentary_closure_refuses_unbound_or_ambiguous_updates(tmp_path, bad):
+    row, frame = closure_fixture(tmp_path)
+    if bad == 'target': row['contract'] = 'An invented contract'
+    if bad == 'prior': row['prior_grade'] = 'WIN'
+    if bad == 'hash': row['source_document_sha256'] = '0' * 64
+    if bad == 'status': row['closure_status'] = 'VERIFIED_WIN'
+    write(H.input_paths(tmp_path)[4], [row, row] if bad == 'duplicate' else [row])
+    with pytest.raises(H.HistoricalResolutionError, match='RECORD_CLOSURE'):
+        H.apply_record_closures(frame, tmp_path)

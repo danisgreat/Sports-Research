@@ -3,14 +3,20 @@
 
 **Generated current queue (STATE-v1, 2026-11-08).** The live values (next canonical ID, the active mini and its open cards, frozen league-day events without a settlement, ledger and store counts) are generated from the records in [CURRENT_STATE](CURRENT_STATE.md) by `python -m ml state`, and a test keeps them current. The rest of this file is the preserved status history and the canonical register; where its dated text differs from the generated block, the generated block is current.
 
-**Next canonical ID: P-638.** Every requested event is retained, regardless of calibration: first as a local working card in the authorised mini, then canonically through verified prompt-4 retention import (which may precede prompt-3 settlement under RETAIN-v1). No card is written to the active combined log directly. *(Clarified 2026-10-12, audit R10: the earlier wording "go directly to the active combined log" described retention, not a bypass of local staging.)* Canonical IDs identify retained cards; performance certification and live/late timing are separate labels.
+**Next canonical ID: P-639.** Every requested event is retained, regardless of calibration: first as a local working card in the authorised mini, then canonically through verified prompt-4 retention import (which may precede prompt-3 settlement under RETAIN-v1). No card is written to the active combined log directly. *(Clarified 2026-10-12, audit R10: the earlier wording "go directly to the active combined log" described retention, not a bypass of local staging.)* Canonical IDs identify retained cards; performance certification and live/late timing are separate labels.
 Active Combined Log: `prediction logs/PREDICTION_LOG_COMBINED_9.md`.
 Freeze: none (custody is the git history of `main`, CURRENT_RULES §9). The last control manifest is `archive/controls/CONTROL_MANIFEST_2026-10-09-3.md`. Current authority: CURRENT_STATE.md, METHOD.md and CURRENT_RULES.md.
 
 
+## Current historical sweep and terminal dispositions ·9 November 2026
+
+The [full sweep](research/verification/historical_gap_resolution_2026-11-09-1/REPORT.md) and [empty current sporting-settlement queue](research/verification/historical_gap_resolution_2026-11-09-1/OPEN_ITEMS.csv) supersede earlier P126/P418 open-item instructions. P126 ranks 2/4 and P537 rank 4 are UNATTAINABLE, terminal non-sporting closures. P418 is CLOSED_NO_RECOVERED_ISSUED_CONTRACT / NO_SCORED_TRIAL, preserving contradictory old issuance summaries. P523 rank 5 is CLOSED_UNDEFINED_PROPOSITION / NO_SCORED_TRIAL. No missing field becomes a sporting void. P126 winner/Over 2.5 retain conditional historical WIN labels. [Exact five dispositions](research/verification/historical_gap_resolution_2026-11-09-1/SOURCE_EXHAUSTION_CLOSURES.csv).
+
+54 missing labels recovered; 72 distinct legacy view rows replace lossy aggregates; four P157 no-action labels and all diagnostic rows stay excluded from scored summaries. Reserved P518–P522, issue-time/lineage/operator limits and absent ML-ready features remain disclosed historical limitations, not invented eligible forecasts. The nine permanently closed contracts below are unchanged. Highest P638 / next P639; no new ID.
+
 ## Current permanent closure ·9November2026
 
-The owner permanently closed P003R3, P100R4, P102R4, P104R4, P121R4, P123R4, P341R3 and P630R1/R6 as UNATTAINABLE / COMPLETELY_RESOLVED / DO_NOT_RETRY. These nine rows are no longer unresolved, retryable or scorable. [Exact registry](research/historical_resolution/PERMANENT_CLOSURES.csv), [dated closure](research/verification/historical_closure_2026-11-09-1/OWNER_CLOSURE.md), [current open queue: P126/P418 only](research/verification/historical_closure_2026-11-09-1/OPEN_ITEMS.csv). HighestP638 / nextP639 unchanged. This supersedes earlier open-corner snapshots; original log bytes and other grades remain unchanged.
+The owner permanently closed P003R3, P100R4, P102R4, P104R4, P121R4, P123R4, P341R3 and P630R1/R6 as UNATTAINABLE / COMPLETELY_RESOLVED / DO_NOT_RETRY. These nine rows are no longer unresolved, retryable or scorable. [Exact registry](research/historical_resolution/PERMANENT_CLOSURES.csv), [dated closure](research/verification/historical_closure_2026-11-09-1/OWNER_CLOSURE.md), [earlier two-item queue, now closed above](research/verification/historical_closure_2026-11-09-1/OPEN_ITEMS.csv). HighestP638 / nextP639 unchanged. This supersedes earlier open-corner snapshots; original log bytes and other grades remain unchanged.
 
 ## Current historical repair ·9November2026
 

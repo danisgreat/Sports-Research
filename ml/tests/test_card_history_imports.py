@@ -161,17 +161,40 @@ def test_revised_legacy_rows_override_existing_rank_log_without_becoming_primary
 
 
 def test_owner_closed_nine_corner_rows_are_terminal_and_excluded_from_scores(current_rows):
-    closed = current_rows[current_rows.grade == "UNATTAINABLE"]
+    registry = pd.read_csv(ch.ROOT / 'research/historical_resolution/PERMANENT_CLOSURES.csv', dtype=str)
+    keys = set(zip(registry.canonical_id, registry['rank']))
+    closed = current_rows[[ (r.card, str(r['rank'])) in keys for _, r in current_rows.iterrows() ]]
     assert len(closed) == 9 and closed.card.nunique() == 8
     assert closed.y.isna().all() and not closed.counted_slot.any()
     assert set(closed.record_disposition) == {"CLOSED_UNATTAINABLE_DO_NOT_RETRY"}
     assert (closed[closed.card == "P-630"].literal_grade == "UNRESOLVED").all()
     assert not ((current_rows.grade == "UNRESOLVED") & (current_rows.record_disposition == "RETAINED_CONTRACT")).any()
     original = pd.read_csv(ch.V / "historical_resolution_2026-11-09-1/final_history/CARD_ROWS.csv", dtype=str, keep_default_na=False)
-    old = original[original.card.isin(["P-126", "P-418"])]
+    old = original[original.card.isin(["P-126", "P-418"])].copy()
+    old.loc[(old.card == 'P-126') & old['rank'].isin(['2', '4']), 'grade'] = 'UNATTAINABLE'
     now = current_rows[current_rows.card.isin(["P-126", "P-418"])]
     assert {(r.card, str(r['rank']), r.contract if pd.notna(r.contract) else '', r.grade) for _, r in now.iterrows()} == {
         (r.card, r['rank'], r.contract, r.grade) for _, r in old.iterrows()}
+
+
+def test_new_missing_field_closures_and_recovered_contracts_remain_nonprospective(current_rows):
+    new = current_rows[(current_rows.card.eq('P-126') & current_rows['rank'].isin([2, 4])) |
+                       (current_rows.card.eq('P-537') & current_rows['rank'].eq(4))]
+    assert len(new) == 3 and set(new.grade) == {'UNATTAINABLE'}
+    assert set(new.literal_grade) == {'VOID'} and not new.counted_slot.any() and new.y.isna().all()
+    recovered = pd.read_csv(ch.ROOT / 'research/verification/historical_gap_resolution_2026-11-09-1/RECOVERED_PROPOSITIONS.csv', dtype=str)
+    assert len(recovered) == 54
+    for r in recovered.itertuples():
+        row = current_rows[(current_rows.card == r.canonical_id) & (current_rows['rank'] == int(r.rank))].iloc[0]
+        assert row.contract == r.contract and row.contract_recovery_source
+        if r.canonical_id in {'P-306', 'P-509', 'P-517'}:
+            assert row.cohort == 'LEGACY_ANALYST_NOT_PRIMARY' and not row.counted_slot
+    excluded = current_rows[current_rows.grade.isin(['WIN', 'LOSS']) &
+                            current_rows.record_disposition.eq('NOT_SCORABLE_OR_MISSING_PROPOSITION')]
+    assert len(excluded) == 4 and set(excluded.card) == {'P-157'}
+    learning_only = current_rows[current_rows.card.eq('P-509')]
+    assert len(learning_only) == 4 and set(learning_only.cohort) == {'LEGACY_ANALYST_NOT_PRIMARY'}
+    assert not learning_only.counted_slot.any()
 
 
 def test_current_primary_counts_and_research_exclusion(current_rows):

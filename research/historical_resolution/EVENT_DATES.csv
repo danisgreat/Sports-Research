@@ -1,3 +1,6 @@
-"canonical_id","event_date","date_basis","source_document","source_document_sha256"
-"P-638","2026-09-04","AFL_9022_SCHEDULED_UTC_DATE","research/verification/historical_resolution_2026-11-09-1/EVENT_DATE_CORRECTIONS.md","2dbfc6c576a18746b6c03ee76ae256460ff6678a01e89176cfcbddf91b4d7e66"
-"P-377","2026-09-11","SPORTSCORE_NATIVE_UTC_DATE","research/verification/historical_resolution_2026-11-09-1/EVENT_DATE_CORRECTIONS.md","2dbfc6c576a18746b6c03ee76ae256460ff6678a01e89176cfcbddf91b4d7e66"
+canonical_id,event_date,date_basis,source_document,source_document_sha256,date_status
+P-638,2026-09-04,AFL_9022_SCHEDULED_UTC_DATE,research/verification/historical_resolution_2026-11-09-1/EVENT_DATE_CORRECTIONS.md,2dbfc6c576a18746b6c03ee76ae256460ff6678a01e89176cfcbddf91b4d7e66,VERIFIED_EVENT_DATE
+P-377,2026-09-11,SPORTSCORE_NATIVE_UTC_DATE,research/verification/historical_resolution_2026-11-09-1/EVENT_DATE_CORRECTIONS.md,2dbfc6c576a18746b6c03ee76ae256460ff6678a01e89176cfcbddf91b4d7e66,VERIFIED_EVENT_DATE
+P-126,2026-08-28,NEIGHBOUR_CHRONOLOGY_OWNER_BINDING,research/verification/historical_gap_resolution_2026-11-09-1/RESEARCH_CLOSURES.md,d9671d02e247ecde1333645f7ef48ef77628d0f788ae76cf149c8cafaf6f734c,OWNER_INTENDED_DATE
+P-418,2026-09-14,RSSSF_ROUND_15_SEPTEMBER_TARGET,research/verification/historical_gap_resolution_2026-11-09-1/RESEARCH_CLOSURES.md,d9671d02e247ecde1333645f7ef48ef77628d0f788ae76cf149c8cafaf6f734c,SECONDARY_EVENT_DATE
+P-537,2026-10-04,KFU_ANNOUNCEMENT_AND_MATCH_RECORD,research/verification/historical_gap_resolution_2026-11-09-1/RESEARCH_CLOSURES.md,d9671d02e247ecde1333645f7ef48ef77628d0f788ae76cf149c8cafaf6f734c,VERIFIED_EVENT_DATE
