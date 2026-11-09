@@ -71,7 +71,7 @@ def test_prompt1_core_holds_the_shared_steps_and_indexes_eleven_sport_files():
     assert len(SPORT_FILES) == 11
     assert all(f"]({name}.md)" in core for name in SPORT_FILES), "the core must link every sport file"
     assert "Upcoming game — " not in core, "Upcoming game blocks live in the sport files"
-    assert core.count("**Reference stage and card freeze (MLSCOPE-v3).**") == 1
+    assert core.count("**Reference stage and card freeze (MLSCOPE-v3 / ML-SEP-v1).**") == 1
     shared = core[core.index("## Shared steps for every sport"):]
     for title in SHARED_TITLES:
         assert len(re.findall(r"^\*\*" + re.escape(title) + r"\*\*", shared, re.M)) == 1, f"core must hold {title} once"
@@ -90,10 +90,12 @@ def test_prompt1_core_holds_the_shared_steps_and_indexes_eleven_sport_files():
 def test_prompt1_freezes_the_reference_before_the_card_and_the_card_after_it():
     """MLSCOPE-v3: the reference is frozen before any probability is typed; the card is written and read back, then its own p is frozen."""
     core = text("1_GAME_CARD")
-    stage = core.index("**Reference stage and card freeze (MLSCOPE-v3).**")
+    stage = core.index("**Reference stage and card freeze (MLSCOPE-v3 / ML-SEP-v1).**")
     block = core[stage:core.index("\n", stage)]
     assert "Before any probability is typed" in block and "python -m ml pregame reference" in block
     assert "The reference is never edited." in block
+    assert "Fitted models are kept separate from the card (ML-SEP-v1" in block and "`model_p NONE`" in block
+    assert "never the model's probabilities" in block
     assert "read no other model, shadow, cycle or decision-lab output and no benchmark" in block
     assert "`python -m ml pregame run --mini" in block and "freezes the card's own final p" in block
     assert block.index("python -m ml pregame reference") < block.index("python -m ml pregame run --mini")

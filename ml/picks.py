@@ -19,7 +19,7 @@ import math
 import re
 from pathlib import Path
 
-from ml import reference as R
+from ml import ml_separation, reference as R
 
 ROOT = Path(__file__).resolve().parents[1]
 BEGIN, END = "<!-- BEGIN PICKS_V2 {key} -->", "<!-- END PICKS_V2 {key} -->"
@@ -172,6 +172,14 @@ def lint(meta: dict, rows: list[dict], root=ROOT) -> list[str]:
             problems.append(f"header: tier {meta['tier']} but the competition is tier {expected_tier} by rule")
     except Exception as exc:  # the tier rule needs the repository files; a missing one is a finding, not a crash
         problems.append(f"header: tier could not be checked ({type(exc).__name__})")
+    try:
+        separate_ok = ml_separation.promoted(meta["competition"], root)
+    except ValueError as exc:
+        problems.append(f"header: {exc}")
+        separate_ok = False
+    if ml_separation.is_model_reference(meta["reference_id"]) and not separate_ok:
+        problems.append(f"header: reference_id {meta['reference_id']} names a fitted model; until a promotion it is a separate shadow, "
+                        f"never the card's reference ({ml_separation.RULE})")
     seen, strong, informational, ranked = set(), 0, 0, []
     by_quantity: dict[str, set] = {}
     for row in rows:
@@ -206,7 +214,10 @@ def lint(meta: dict, rows: list[dict], root=ROOT) -> list[str]:
             if not MISSING_BASELINE.fullmatch(baseline):
                 _probability(baseline, "baseline_p", name)
             model = row["model_p"].strip()
-            if model != "NONE":
+            if model != "NONE" and not separate_ok:
+                problems.append(f"{name}: model_p must be NONE: fitted-model output is kept separate from cards ({ml_separation.RULE}); "
+                                "it is frozen and scored in its own shadow ledger")
+            elif model != "NONE":
                 if meta["model_stage"] != "EXECUTED":
                     problems.append(f"{name}: model_p must be NONE when model_stage is {meta['model_stage']}")
                 else:

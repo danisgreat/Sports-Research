@@ -1,0 +1,111 @@
+sport,feature,unit,window,required,description,typical_source
+TEAM_SPORT,season_games,games,season,Y,Games played this season before the target game,League official site; PREGAME_SOURCES rows for the sport
+TEAM_SPORT,season_score_for_pg,score per game,season,Y,Mean score for per game this season (points; goals; runs),League official site; StatMuse; Fox Sports
+TEAM_SPORT,season_score_against_pg,score per game,season,Y,Mean score against per game this season,League official site; StatMuse; Fox Sports
+TEAM_SPORT,last5_score_for_pg,score per game,last 5,Y,Mean score for over the last 5 completed games (any competition the side played),Team schedule/results page
+TEAM_SPORT,last5_score_against_pg,score per game,last 5,Y,Mean score against over the last 5 completed games,Team schedule/results page
+TEAM_SPORT,last10_score_for_pg,score per game,last 10,Y,Mean score for over the last 10 completed games,Team schedule/results page
+TEAM_SPORT,last10_score_against_pg,score per game,last 10,Y,Mean score against over the last 10 completed games,Team schedule/results page
+TEAM_SPORT,rest_days,days,since last game,Y,Whole days since the side's previous game,Team schedule
+TEAM_SPORT,key_absences,players,at start,Y,Regular starters confirmed out at the latest pregame check,Official injury report or team news
+TEAM_SPORT,lineup_confirmed,0/1,at start,Y,1 if the starting lineup was officially confirmed before the start,Official team sheet or league
+Basketball,season_games,games,season,Y,Games played this season before the target game,League official site; StatMuse
+Basketball,season_score_for_pg,points per game,season,Y,Points scored per game this season,League official site; StatMuse; Fox Sports
+Basketball,season_score_against_pg,points per game,season,Y,Points allowed per game this season,League official site; StatMuse; Fox Sports
+Basketball,last5_score_for_pg,points per game,last 5,Y,Points scored per game over the last 5 games,StatMuse game log; league box scores
+Basketball,last5_score_against_pg,points per game,last 5,Y,Points allowed per game over the last 5 games,StatMuse game log; league box scores
+Basketball,last10_score_for_pg,points per game,last 10,Y,Points scored per game over the last 10 games,StatMuse game log; league box scores
+Basketball,last10_score_against_pg,points per game,last 10,Y,Points allowed per game over the last 10 games,StatMuse game log; league box scores
+Basketball,rest_days,days,since last game,Y,Whole days since the previous game,Team schedule
+Basketball,back_to_back,0/1,schedule,Y,1 if the side played the previous day,Team schedule
+Basketball,key_absences,players,at start,Y,Regular starters confirmed out,Official injury report (official.nba.com for the NBA)
+Basketball,lineup_confirmed,0/1,at start,Y,1 if starters were confirmed before tip-off,League or team announcement
+Basketball,pace,possessions per game,season,N,Possessions per game where a sourced possession count exists,League stats; PBP-derived
+Ice Hockey,season_games,games,season,Y,Games played this season,League official site; StatMuse
+Ice Hockey,season_score_for_pg,goals per game,season,Y,Goals for per game this season (shootout winners excluded),League official site; MoneyPuck
+Ice Hockey,season_score_against_pg,goals per game,season,Y,Goals against per game this season,League official site; MoneyPuck
+Ice Hockey,last10_score_for_pg,goals per game,last 10,Y,Goals for per game over the last 10 games,League box scores; StatMuse
+Ice Hockey,last10_score_against_pg,goals per game,last 10,Y,Goals against per game over the last 10 games,League box scores; StatMuse
+Ice Hockey,rest_days,days,since last game,Y,Whole days since the previous game,Team schedule
+Ice Hockey,back_to_back,0/1,schedule,Y,1 if the side played the previous day,Team schedule
+Ice Hockey,starting_goalie_confirmed,0/1,at start,Y,1 if the starting goalie was confirmed before puck drop,Daily Faceoff; team announcement
+Ice Hockey,starting_goalie_save_pct,save percentage,season,Y,Season save percentage of the expected or confirmed starter,League stats; MoneyPuck
+Ice Hockey,key_absences,players,at start,Y,Regular skaters confirmed out,Team news; RotoWire lines
+Ice Hockey,xg_for_pct,percent,season,N,Expected-goals share at all strengths,MoneyPuck
+Baseball,season_games,games,season,Y,Games played this season,League official site; MLB Stats API
+Baseball,season_score_for_pg,runs per game,season,Y,Runs scored per game this season,League official site; MLB Stats API
+Baseball,season_score_against_pg,runs per game,season,Y,Runs allowed per game this season,League official site; MLB Stats API
+Baseball,last10_score_for_pg,runs per game,last 10,Y,Runs scored per game over the last 10 games,Box scores; StatMuse
+Baseball,last10_score_against_pg,runs per game,last 10,Y,Runs allowed per game over the last 10 games,Box scores; StatMuse
+Baseball,starter_confirmed,0/1,at start,Y,1 if the listed starting pitcher was confirmed before first pitch,MLB probable pitchers; league site
+Baseball,starter_era,earned runs per 9,season,Y,Season ERA of the starting pitcher,League stats; Baseball Savant; MyKBO; NPB
+Baseball,starter_innings_pg,innings per start,season,Y,Innings per start of the starting pitcher,League stats
+Baseball,bullpen_innings_last3d,innings,last 3 days,Y,Relief innings the side used over the previous three days,Box scores
+Baseball,lineup_confirmed,0/1,at start,Y,1 if the batting order was posted before first pitch,MLB.com starting lineups; team announcement
+Baseball,temperature_c,degrees C,at start,N,Forecast temperature at first pitch (open-air parks),MET Norway; Met Office; Time and Date
+Baseball,wind_kph,km/h,at start,N,Forecast wind speed at first pitch,MET Norway; Visual Crossing
+Soccer,season_games,games,season,Y,League games played this season,League official site; Soccerway
+Soccer,season_score_for_pg,goals per game,season,Y,League goals for per game this season (90 minutes),League official site; Soccerway
+Soccer,season_score_against_pg,goals per game,season,Y,League goals against per game this season (90 minutes),League official site; Soccerway
+Soccer,last5_score_for_pg,goals per game,last 5,Y,Goals for per game over the last 5 matches (90 minutes),Soccerway; Football Database
+Soccer,last5_score_against_pg,goals per game,last 5,Y,Goals against per game over the last 5 matches (90 minutes),Soccerway; Football Database
+Soccer,last10_score_for_pg,goals per game,last 10,Y,Goals for per game over the last 10 matches (90 minutes),Soccerway; Football Database
+Soccer,last10_score_against_pg,goals per game,last 10,Y,Goals against per game over the last 10 matches (90 minutes),Soccerway; Football Database
+Soccer,last10_first_half_goals_pg,goals per game,last 10,Y,Combined first-half goals per match over the side's last 10 matches,Match pages with goal minutes
+Soccer,last10_corners_for_pg,corners per game,last 10,Y,Corners won per match over the last 10 matches,ScoreMondo; Futbol24
+Soccer,last10_corners_against_pg,corners per game,last 10,Y,Corners conceded per match over the last 10 matches,ScoreMondo; Futbol24
+Soccer,rest_days,days,since last game,Y,Whole days since the previous match,Team schedule
+Soccer,key_absences,players,at start,Y,Regular starters confirmed out (injury or suspension),Club news; Physioroom; league site
+Soccer,lineup_confirmed,0/1,at start,Y,1 if the official XI was published before kick-off,League match centre; club
+Soccer,xg_for_pg,expected goals per game,season,N,Expected goals per match where a permitted source exists,American Soccer Analysis (MLS)
+Cricket,venue_first_innings_avg,runs,venue history,Y,Mean first-innings total at the venue in the same format,Cricsheet; board scorecards
+Cricket,last5_first_innings_avg,runs,last 5,Y,Mean first-innings total of the side over its last 5 completed matches in the format,Cricsheet; board scorecards
+Cricket,last5_powerplay_avg,runs,last 5,Y,Mean runs at the end of the powerplay checkpoint (over 6 or over 5 as the line states),Cricsheet ball-by-ball
+Cricket,key_absences,players,at start,Y,First-choice players not in the announced XI,Board and league team news
+Cricket,lineup_confirmed,0/1,at start,Y,1 if the XI was announced at the toss before the start,Board scorecard
+Cricket,batting_first,0/1,at start,Y,1 if the side bats first (known at the toss),Board scorecard
+Cricket,rain_probability_pct,percent,match window,Y,Forecast probability of rain during the match window,MET Norway; Met Office; Time and Date
+Cricket,temperature_c,degrees C,match window,N,Forecast temperature in the match window,MET Norway; Met Office
+Tennis,elo_overall,Elo,current,Y,Overall Elo rating,Tennis Abstract
+Tennis,elo_surface,Elo,current,Y,Surface-specific Elo rating for the match surface,Tennis Abstract
+Tennis,ranking,rank,current,Y,Official singles ranking at the start of the event,WTA; Live Tennis rankings
+Tennis,last10_win_pct,percent,last 10,Y,Match win percentage over the last 10 completed matches,Tennis Abstract; Tennis Temple
+Tennis,last10_games_won_pct,percent,last 10,Y,Share of games won over the last 10 completed matches,Tennis Abstract
+Tennis,matches_last_14d,matches,last 14 days,Y,Completed matches in the previous 14 days,Tennis Temple; draws
+Tennis,h2h_wins,matches,career,Y,Head-to-head wins against this opponent,Tennis Abstract; Ultimate Tennis Statistics
+Tennis,retirement_last_30d,0/1,last 30 days,Y,1 if the player retired or withdrew from a match in the previous 30 days,Draws and results
+Australian Rules,season_games,games,season,Y,Games played this season,AFL Tables; AFL
+Australian Rules,season_score_for_pg,points per game,season,Y,Points for per game this season,AFL Tables
+Australian Rules,season_score_against_pg,points per game,season,Y,Points against per game this season,AFL Tables
+Australian Rules,last5_score_for_pg,points per game,last 5,Y,Points for per game over the last 5 games,AFL Tables
+Australian Rules,last5_score_against_pg,points per game,last 5,Y,Points against per game over the last 5 games,AFL Tables
+Australian Rules,rest_days,days,since last game,Y,Whole days since the previous game,AFL fixture
+Australian Rules,key_absences,players,at start,Y,Regular selected players out (injury list and selection),AFL team line-ups; FootyWire injury list
+Australian Rules,lineup_confirmed,0/1,at start,Y,1 if final teams were confirmed before the bounce,AFL team line-ups
+Australian Rules,rain_probability_pct,percent,match window,N,Forecast rain probability at an open-air venue,MET Norway; Time and Date
+Rugby League,season_games,games,season,Y,Games played this season,NRL; Rugby League Project
+Rugby League,season_score_for_pg,points per game,season,Y,Points for per game this season,NRL; Rugby League Project
+Rugby League,season_score_against_pg,points per game,season,Y,Points against per game this season,NRL; Rugby League Project
+Rugby League,last5_score_for_pg,points per game,last 5,Y,Points for per game over the last 5 games,Rugby League Project
+Rugby League,last5_score_against_pg,points per game,last 5,Y,Points against per game over the last 5 games,Rugby League Project
+Rugby League,rest_days,days,since last game,Y,Whole days since the previous game,NRL draw
+Rugby League,key_absences,players,at start,Y,Regular starters out of the named team,NRL team lists; Zero Tackle
+Rugby League,lineup_confirmed,0/1,at start,Y,1 if the final 17 was confirmed before kick-off,NRL match centre
+Rugby Union,season_games,games,season,Y,Games played this season in the competition,Competition site; Ultimate Rugby
+Rugby Union,season_score_for_pg,points per game,season,Y,Points for per game this season,Competition site; Ultimate Rugby
+Rugby Union,season_score_against_pg,points per game,season,Y,Points against per game this season,Competition site; Ultimate Rugby
+Rugby Union,last5_score_for_pg,points per game,last 5,Y,Points for per game over the last 5 games,Ultimate Rugby; ItsRugby
+Rugby Union,last5_score_against_pg,points per game,last 5,Y,Points against per game over the last 5 games,Ultimate Rugby; ItsRugby
+Rugby Union,rest_days,days,since last game,Y,Whole days since the previous game,Fixture
+Rugby Union,key_absences,players,at start,Y,First-choice starters not in the named XV,Team announcement; RugbyPass
+Rugby Union,lineup_confirmed,0/1,at start,Y,1 if the matchday 23 was confirmed before kick-off,Competition site
+American Football,season_games,games,season,Y,Games played this season,NFL; StatMuse; CFL
+American Football,season_score_for_pg,points per game,season,Y,Points for per game this season,NFL; StatMuse
+American Football,season_score_against_pg,points per game,season,Y,Points against per game this season,NFL; StatMuse
+American Football,last5_score_for_pg,points per game,last 5,Y,Points for per game over the last 5 games,Box scores; nflverse
+American Football,last5_score_against_pg,points per game,last 5,Y,Points against per game over the last 5 games,Box scores; nflverse
+American Football,rest_days,days,since last game,Y,Whole days since the previous game,Schedule
+American Football,starting_qb_confirmed,0/1,at start,Y,1 if the expected starting quarterback was active (inactives list),NFL injury report and inactives
+American Football,key_absences,players,at start,Y,Regular starters ruled out or inactive,NFL injury report; RotoWire injuries
+American Football,epa_per_play,EPA per play,season,N,Offensive EPA per play,nflverse; Sumer Sports; rbsdm
+American Football,wind_kph,km/h,at start,N,Forecast wind at an open-air stadium,MET Norway; Visual Crossing

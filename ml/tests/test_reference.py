@@ -137,7 +137,8 @@ def root(tmp_path):
 
 
 def test_tier_ladder(root):
-    assert R.tier("Basketball/EXAMPLE-A", root)["tier"] == "A" and R.tier("Basketball/EXAMPLE-A", root)["reference"] == "RELEASE:EX-1"
+    a = R.tier("Basketball/EXAMPLE-A", root)                  # ML-SEP-v1: an unpromoted release is a shadow, not the reference
+    assert a["tier"] == "A" and a["release"] == "EX-1" and a["reference"] == "BASELINE_ONLY"
     b = R.tier("Basketball/EXAMPLE-B", root)
     assert b["tier"] == "B" and "100 verified" in b["basis"] and b["reference"] == "BASELINE_ONLY"
     assert R.tier("Basketball/NBL", root)["tier"] == "B" and R.tier("Basketball/NBL", root)["reference"] == "TB2-MD"
@@ -229,6 +230,9 @@ def test_reference_stage_for_a_release_reference_points_to_the_pregame_command(r
     work = _inputs(root)
     _write(work / "GAME.csv", [dict(local_key="LOCAL-EXAMPLE-G0001", competition="Basketball/EXAMPLE-A", home="H", away="A",
                                     scheduled_start="2026-11-01T09:00:00+00:00")])
+    from ml import ml_separation
+    _write(root / ml_separation.PROMOTIONS, [dict(competition="Basketball/EXAMPLE-A", release="EX-1", promoted_at="2027-01-01",
+                                                  lane_evidence="x", paired_interval="[-0.02, -0.01]", owner_decision="owner")])
     with pytest.raises(R.ReferenceError_, match="pregame reference"):
         R.run(work / "GAME.csv", work / "LINES.csv", work / "STANDINGS.csv", confirmed=True, root=root)
 

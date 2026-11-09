@@ -162,6 +162,10 @@ def test_closure_follows_relative_and_function_level_imports():
 
 # ------------------------------------------------------------------ REFMODEL-v1: the model runs before the card
 def _reference(rt):
+    from ml import ml_separation                                 # these tests exercise the promoted route (ML-SEP-v1)
+    competitions = sorted({rt["game"]["competition"], "Basketball/EXAMPLE-UNRELEASED"})
+    _write(rt["root"] / ml_separation.PROMOTIONS, [dict(competition=c, release="EXAMPLE-CHAT-v1", promoted_at="2027-01-01", lane_evidence="x",
+                                                        paired_interval="[-0.02, -0.01]", owner_decision="owner") for c in competitions])
     return pregame.reference(rt["work"] / "GAME.csv", rt["work"] / "LINES.csv", rt["work"] / "fixture.txt", confirmed=True, root=rt["root"])
 
 

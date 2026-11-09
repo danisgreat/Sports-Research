@@ -60,6 +60,12 @@ def root(tmp_path):
     return tmp_path
 
 
+def promote(root, competition=META["competition"]):
+    from ml import ml_separation
+    _write(root / ml_separation.PROMOTIONS, [dict(competition=competition, release="EX-1", promoted_at="2027-01-01", lane_evidence="x",
+                                                  paired_interval="[-0.02, -0.01]", owner_decision="owner")])
+
+
 def lint(root, meta=None, rows=None):
     parsed_meta, parsed_rows = P.parse(P.block(render(meta, rows), KEY))
     return P.lint(parsed_meta, parsed_rows, root)
@@ -141,6 +147,7 @@ def test_comparators_and_sides_are_bounded(root, label, change, needle):
 
 
 def test_model_p_is_bounded_when_the_model_ran(root):
+    promote(root)
     problems = lint(root, dict(model_stage="EXECUTED"), rows=edit(good_rows(), "HOME_ML", model_p="1.5"))
     assert any("model_p 1.5 is outside [0, 1]" in p for p in problems), problems
 
@@ -197,6 +204,7 @@ def test_a_reference_is_required_when_the_status_says_one_exists_and_forbidden_o
 
 
 def test_the_model_stage_may_carry_a_challenger_probability(root):
+    promote(root)                                              # only a promoted competition (ML-SEP-v1)
     rows = edit(good_rows(), "HOME_ML", model_p="0.5800")
     assert lint(root, meta=dict(model_stage="EXECUTED"), rows=rows) == []
 

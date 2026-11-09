@@ -34,7 +34,7 @@ from pathlib import Path
 import shutil
 import tempfile
 
-from ml import chat
+from ml import chat, ml_separation
 
 ROOT = chat.ROOT
 RECEIPTS = "research/pregame"
@@ -225,8 +225,10 @@ def _execute_cycle(g: dict, rec: dict, game, cycle_lines: list[dict], capture, r
     return rec, result["results"], accepted
 
 
-def reference(game, lines, capture, *, confirmed=False, root=ROOT, ledger=chat.LEDGER) -> dict:
-    """Tier A reference stage (REFMODEL-v1): freeze the release's model and the league baseline BEFORE the card exists."""
+def reference(game, lines, capture, *, confirmed=False, root=ROOT, ledger=chat.LEDGER, for_card=True) -> dict:
+    """Tier A reference stage (REFMODEL-v1): freeze the release's model and the league baseline BEFORE the card exists.
+
+    ``for_card=False`` is the league-day shadow lane, which freezes the model with no card (allowed under ML-SEP-v1)."""
     root = Path(root).resolve()
     if not confirmed:
         raise PregameError("pass --confirm-no-outcome-seen only if no live score, result or post-start report was opened")
@@ -236,6 +238,10 @@ def reference(game, lines, capture, *, confirmed=False, root=ROOT, ledger=chat.L
     cycle_lines = [{k: row[k] for k in chat.LINE_FIELDS} for row in _rows(lines)]
     if not cycle_lines:
         raise PregameError("LINES.csv needs at least one contract")
+    if for_card and not ml_separation.promoted(g["competition"], root):
+        raise PregameError(f"{ml_separation.RULE}: {g['competition']} has no promoted model, so the fitted release is kept separate "
+                           "from the card. Freeze the card from its declared reference, then run `python -m ml pregame run` "
+                           "(the model shadow, frozen after the card into its own ledger)")
     rec = _receipt_record(g, g["local_key"], "REFERENCE", root)
     rec, results, _ = _execute_cycle(g, rec, game, cycle_lines, capture, root, ledger)
     folder = root / RECEIPTS / g["local_key"]
@@ -312,6 +318,10 @@ def markdown(result: dict) -> str:
         head += f"\n\nReason: {result['reason']}"
     if not any(r.get("label") for r in result["results"]):
         return head + "\n"
+    if stage != "REFERENCE" and not ml_separation.promoted(result.get("competition", ""), ROOT):
+        # ML-SEP-v1: the card records that the shadow ran and where; the model's numbers stay in its receipt and ledger.
+        return head + (f"\n\nModel probabilities are kept separate from the card ({ml_separation.RULE}): they are in the receipt "
+                       "and the shadow ledger, where they are scored against this card on identical rows.") + tail
     lines = ["| Contract | Model p | League baseline p | Model rank |", "|---|---:|---:|---:|"]
     for r in result["results"]:
         lines.append(f"| {r['label']} | {r['p_card']} | {r['baseline_p']} | {r['model_rank']} |")

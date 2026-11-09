@@ -129,7 +129,7 @@ def run(competition: str, date: str, cache: Path, *, confirmed: bool = False, ro
             (tmp / "fixture.txt").write_text(
                 f"Fixture source {fx['source_url']}, slate {date}, event {fx['event_id']}: {fx['away']} at {fx['home']}, {fx['venue']}, scheduled {fx['start'].isoformat()}, "
                 f"state pre; raw body sha256 {fx['receipt']['raw_sha256']} retrieved {fx['receipt']['retrieved_at']}\n", encoding="utf-8")
-            model = pregame.reference(tmp / "GAME.csv", tmp / "LINES.csv", tmp / "fixture.txt", confirmed=True, root=root, ledger=ledger)
+            model = pregame.reference(tmp / "GAME.csv", tmp / "LINES.csv", tmp / "fixture.txt", confirmed=True, root=root, ledger=ledger, for_card=False)
             row = dict(event_id=fx["event_id"], local_key=key, home=fx["home"], away=fx["away"], start=fx["start"].isoformat(),
                        model_status=model["status"], reason=model["reason"], reference_status="", reference_p_home="", reference_p_over="")
             if model["status"] == "EXECUTED":

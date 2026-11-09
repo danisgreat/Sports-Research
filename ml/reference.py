@@ -32,7 +32,7 @@ import numpy as np
 from scipy import stats
 
 from ml.core.distributions import ScoreGrid
-from ml import source_access
+from ml import ml_separation, source_access
 
 ROOT = Path(__file__).resolve().parents[1]
 RELEASES = "research/cycle_releases/CURRENT_RELEASES.csv"
@@ -85,10 +85,8 @@ def league_key(competition: str) -> str | None:
 def reference_choice(competition: str, root=ROOT) -> dict | None:
     """The reference model declared for a competition and season, with its development evidence (REFSEL-v1)."""
     path = Path(root) / CHOICE
-    for r in (_rows(path) if path.exists() else []):
-        if r["competition"] == competition:
-            return r
-    return None
+    rows = [r for r in (_rows(path) if path.exists() else []) if r["competition"] == competition]
+    return rows[-1] if rows else None             # rows are append-only declarations: the latest one is in force
 
 
 def tier(competition: str, root=ROOT) -> dict:
@@ -101,8 +99,14 @@ def tier(competition: str, root=ROOT) -> dict:
     active = [r for r in _rows(root / RELEASES) if r["competition"] == competition] if (root / RELEASES).exists() else []
     if active:
         release = active[0]["active_experimental_release"]
-        return dict(competition=competition, tier="A", basis=f"active release {release}", release=release,
-                    reference=choice["reference_model"] if choice else "RELEASE:" + release)
+        declared = choice["reference_model"] if choice else "RELEASE:" + release
+        out = dict(competition=competition, tier="A", basis=f"active release {release}", release=release, reference=declared)
+        if ml_separation.is_model_reference(declared) and not ml_separation.promoted(competition, root):
+            # ML-SEP-v1: an unpromoted fitted model is never the reference; it runs only as a separate shadow.
+            key = league_key(competition)
+            out.update(reference=("BASELINE_ONLY" if key not in TB1_MD else "TB2-MD" if default_form(key) == "additive" else "TB1-MD"),
+                       basis=out["basis"] + f"; {ml_separation.RULE}: the release is a separate shadow, not the reference")
+        return out
     events = 0
     path = root / STORE_EVENTS
     if path.exists():
