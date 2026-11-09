@@ -8,7 +8,7 @@
 
 **Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §5.
 
-**P-2026.11.09-v24.8 · LOCAL_MINI_SETTLEMENT.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). **LOCAL_WORKING_TREE** (ENV-v2). Writes: the frozen mini's source identity, one settlement document with dated revisions at `research/active_minis/<MINI_KEY>_SETTLEMENT.md`, the ledger inputs and frozen-row settlements of section 4, then the prompt-4 import of section 6 and a commit and push. Original cards are immutable. Settle the original probabilities from the frozen card; the model never re-grades or replaces them. Historical MODEL_ASSISTED cards are settled on their frozen contracts like any other card. The decision lab is excluded.
+**P-2026.11.10-v24.9 · LOCAL_MINI_SETTLEMENT.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). **LOCAL_WORKING_TREE** (ENV-v2). Writes: the frozen mini's source identity, one settlement document with dated revisions at `research/active_minis/<MINI_KEY>_SETTLEMENT.md`, the ledger inputs and frozen-row settlements of section 4, then the prompt-4 import of section 6 and a commit and push. Original cards are immutable. Settle the original probabilities from the frozen card; the model never re-grades or replaces them. Historical MODEL_ASSISTED cards are settled on their frozen contracts like any other card. The decision lab is excluded.
 
 **ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](../../REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](../../CORE.md) §7.
 

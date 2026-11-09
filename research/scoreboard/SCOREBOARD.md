@@ -1,5 +1,15 @@
 # Scoreboard: current measurement and preserved historical results
 
+## Imports and corrections 2026-11-09 (P-584, P-623–P-638; descriptive; recorded 2026-11-10)
+
+Figures come from the [generated history](../verification/historical_gap_resolution_2026-11-09-1/final_history_release/CARD_HISTORY.md), which applies effective grades. Outcome-exposed and `INSUFFICIENT_EVIDENCE`. No model or method is promoted. Every earlier section below keeps its original figures.
+- **ANALYST_PRIMARY_V1 (P-612–P-623, P-625–P-628; 16 cards).** Primary 18W/13L/1P; Brier 0.1929 on 31 decisive slot rows; Rank 1 10–6, Rank 2 8–7–1. New since the last section: P-623 and P-625–P-628, primary 7W/3L.
+- **Frozen same-row baseline.** Primary slots: 12 rows on 6 cards, card Brier 0.1682 against baseline 0.1559, difference +0.0123 (card worse). All decisive analyst rows: 24 rows on 6 cards, 0.1805 against 0.1703, difference +0.0102 (card worse).
+- **Research-only, NOT_PRIMARY (P-624, P-629–P-638).** 28W/26L; two P-630 corner rows are UNATTAINABLE and unscored. P-638 is the historical Geelong–Carlton import.
+- **Terminal and revised rows.** P-584 is terminal, with its Under 4.5 top total a LOSS. P-596 Saryarka ML and P-598 Huima −8.5 are LOSS at revision 2. [26 dated older-row revisions](../historical_resolution/ROW_REVISIONS.csv) are applied. 12 rows are UNATTAINABLE and excluded; no missing field became a sporting void.
+- **Whole-history literal rank log.** Rank 1 348–204 (63.0%), Rank 2 297–227 (56.7%). This pools different policies and validates no current method.
+- **Not yet done.** The prompt 6 cohort review of these cards. 16 cards are below its trigger of about 30, and their MINI_SETTLEMENT review rows wait for it.
+
 ## Settlement revisions 2026-11-07 (P-604, P-606, P-620; descriptive)
 
 [Import report](../verification/settlement_import_2026-11-07-1/CANONICAL_IMPORT_REPORT.md). Applies the two data repairs the 2026-10-21 retrospective proposed and settles P-620's winner call.
