@@ -2,7 +2,7 @@
 
 **P-2026.10.22-v24.0 · CR-2026.10.22-R2.** Implements REV-21 and the request side of REV-15 of the [framework revamp review](research/verification/review_2026-10-22_framework_revamp/REPORT.md). The Upcoming game blocks in the prompt-1 sport files carry the owner's per-game formats (section 1, 2026-11-09) and are filled in by the owner; this page is how the agent reads them.
 
-## 1. The owner's per-game requests (REQ-v4, owner instruction 2026-11-09)
+## 1. The owner's per-game requests (REQ-v4, owner instruction 2026-11-09; Australian rules added 2026-11-10)
 
 These are the owner's own request formats, one per sport, kept verbatim. A request arrives as one of them, filled in. The same block heads the matching prompt-1 sport file.
 
@@ -86,7 +86,16 @@ Team B ML/Spread
 Combined Total: Over/Under X.X Runs
 ```
 
-AFL / AFLW and other sports keep the free-form block in their sport files until the owner supplies a format for them.
+```text
+Upcoming Australian Rules Game: Team A vs Team B, Competition,
+Estimated Game Time Start: Day Month Year, Time AM/PM AEDT (can be delayed so continue the process as normal)
+
+Team A ML/Spread
+Team B ML/Spread
+Combined Total: Over/Under X.X Points
+```
+
+Other sports keep the free-form block in their sport files until the owner supplies a format for them.
 
 ## 1b. How each line is read
 
@@ -98,7 +107,7 @@ AFL / AFLW and other sports keep the free-form block in their sport files until 
 - **"Over/Under X.X".** One two-way line: both Over and Under are priced from the same distribution.
 - **Supplied lines are questions, not evidence** (MARKET_BLIND). The line-implied 0.5 is written only as a settlement benchmark.
 
-**Per sport.** The endpoint is the framework default in `ml.config.SPORT_RULES` unless the line's own text names another. Only basketball has an owner convention for the operator's terms (BK-OT-1). Elsewhere, unknown operator terms are priced on both branches and settled by the sport file's rule.
+**Per sport.** The endpoint is the framework default in `ml.config.SPORT_RULES` unless the line's own text names another. Basketball (BK-OT-1) and Australian rules finals (AFL-ET-1) have owner conventions for the operator's terms. Elsewhere, unknown operator terms are priced on both branches and settled by the sport file's rule.
 
 | Request | Line | Family / quantity | Endpoint and settlement | Deep loss review (DEEPLOSS-v1) |
 |---|---|---|---|---|
@@ -116,6 +125,7 @@ AFL / AFLW and other sports keep the free-form block in their sport files until 
 | Rugby league | ML or Spread; Total Points | WINNER, HANDICAP, TOTAL | FULL_GAME_INCL_GOLDEN_POINT | Top side; top total |
 | Rugby union | ML or Spread; Total Points | WINNER, HANDICAP, TOTAL | 80 minutes (FULL_GAME); a draw is a live outcome and is priced | Top side; top total |
 | American football | ML or Spread; Total Points | WINNER, HANDICAP, TOTAL | Including overtime (FULL_GAME_INCL_OT); a regular-season tie is a live outcome | Top side; top total |
+| Australian rules (AFL, AFLW and state leagues) | ML or Spread; Total Points | WINNER, HANDICAP, TOTAL | Full game to the final siren of the fourth quarter (FULL_GAME); a home-and-away draw is a live outcome and is priced. Finals lines include extra time (AFL-ET-1). AFL and AFLW stay separate populations | Top side; top total |
 | Baseball | ML or Spread (run line); Total Runs | WINNER, HANDICAP, TOTAL | Including extra innings (FULL_GAME_INCL_EXTRAS); KBO and NPB ties are live outcomes | Top side; top total |
 
 **The DEEPLOSS-v1 roles in requests without a side line.** Soccer and cricket requests have no side line, so the review's top-total trigger covers the supplied full-match or full-innings total rows:

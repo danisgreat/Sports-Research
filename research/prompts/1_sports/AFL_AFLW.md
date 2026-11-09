@@ -1,20 +1,22 @@
 # PROMPT 1 — sport file: AFL / AFLW
 
-**P-2026.11.10-v24.9 · prompt 1 sport file.** Use this file together with the [prompt 1 core](../1_GAME_CARD.md): read the core first, then this file. The core holds every rule shared by all sports, including the shared rules of steps 1, 3, 4, 5 and 7; this file holds this sport's own instructions for steps 1–7. At each step apply the core's shared rules for that step together with this file's. Fill in the Upcoming game block below; it is the only part the owner edits. Do not read the other sport files.
+**P-2026.11.10-v24.10 · prompt 1 sport file.** Use this file together with the [prompt 1 core](../1_GAME_CARD.md): read the core first, then this file. The core holds every rule shared by all sports, including the shared rules of steps 1, 3, 4, 5 and 7; this file holds this sport's own instructions for steps 1–7. At each step apply the core's shared rules for that step together with this file's. Fill in the Upcoming game block below; it is the only part the owner edits. Do not read the other sport files.
 
 AFL / AFLW
 ----------------------------
 
 ## Upcoming game — AFL / AFLW
 
-**Inactive template:** run only when the user fills or explicitly invokes this sport’s event. Empty examples allocate no ID and trigger no forecast.
+**The owner's request (REQ-v4, 2026-11-10).** The owner fills this in and sends it. How each line becomes a contract, its endpoint and its deep-loss-review role: [GAME_REQUEST_TEMPLATE](../../../GAME_REQUEST_TEMPLATE.md) §1b. The estimated start can be delayed: verify the official start and continue the process as normal.
 
-- Event / official link: <participants and exact game identity>
-- Competition details: <Exact men’s/women’s/regional competition / stage; teams; selected side/interchange/emergencies and late changes.>
-- Scheduled start: <local date/time, venue timezone; verify UTC and Australia/Sydney>
-- Active local mini: <exact path>
-- Supplied contracts: <copy every exact proposition/line/period/action term, or NONE>
-- Research constraints: <actual request; only-confirmed issuance if expressly required>
+```text
+Upcoming Australian Rules Game: Team A vs Team B, Competition,
+Estimated Game Time Start: Day Month Year, Time AM/PM AEDT (can be delayed so continue the process as normal)
+
+Team A ML/Spread
+Team B ML/Spread
+Combined Total: Over/Under X.X Points
+```
 
 Read [COMMON_OPERATING_PROTOCOL](../COMMON_OPERATING_PROTOCOL.md), [MINI_LOG_IDENTITY_PROTOCOL](../../../WORKFLOW.md#part-b-mini_log_identity_protocol) and the complete seven-step sport workflow below. The primary card is ANALYST_PRIMARY_V1: the frozen reference plus logged adjustments (prompt header). The reference stage runs before any probability is written and the card freeze after it (MLSCOPE-v3, core step 7); no other model, shadow or decision-lab output is read. Read the [CORE](../../../CORE.md) page first.
 
@@ -66,7 +68,7 @@ Freeze the supported family/line-generation recipe before pricing (head-to-head,
 
 ## 6. AFL/AFLW playing conditions and rules
 
-Verify competition-specific pace and match duration: AFL men (four 20-min quarters + time-on) vs AFLW (four 15–17-min quarters). Confirm draw/finals rules (draw allowed in regular season; extra time in finals).
+Verify competition-specific pace and match duration: AFL men (four 20-min quarters + time-on) vs AFLW (four 15–17-min quarters). Confirm draw/finals rules (draw allowed in regular season; extra time in finals). Full-game lines in finals include extra time (AFL-ET-1).
 
 ## 7. Write, audit and return
 

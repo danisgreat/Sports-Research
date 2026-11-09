@@ -25,6 +25,8 @@
 
 **AFL is `NO_DEMONSTRATED_SKILL` and over-confident.** 10 decisions won 30% at a stated 0.662 (gap −0.36, card-cluster interval −0.60 to −0.10). Underdog cushions went 0/3. NFL, AFL and NRL together went 12 W / 20 L at Rank 1/2, the worst group. The evidence grade is capped at LOW and the departure ledger is required. AFL men's and AFLW evidence are never pooled.
 
+**AFL-ET-1 (owner convention, 10 November 2026; CR-2026.11.10-R2).** Every Australian rules finals line includes extra time: full-game totals, spreads and handicaps, team totals and winner lines settle on the final score after all extra time, in every competition whose finals use it. Only a contract whose own text names regulation, the end of the fourth quarter, a quarter or a half settles on that segment. The endpoint is `FROZEN_FRAMEWORK_CONVENTION` and needs no operator term. Price extra time as explicit mass, on the level-at-the-siren branch, and report whether a threshold was already crossed at the fourth-quarter siren. Home-and-away games have no extra time: a draw stands and is priced.
+
 ### 0.1 Blocking preconditions (§8.1)
 | Gate | Requirement | If it fails |
 |---|---|---|
@@ -199,7 +201,7 @@ A ruck or clearance edge is not points until it survives hitout or contest, clea
 | `AF-B5` | Suppression branch: one side limiting entries and entry quality, producing separation inside a low total |
 | `AF-B6` | Quarter and end-switch branch: wind vector applied by quarter, with kicking, marking, territory and conversion each treated separately |
 | `AF-B7` | Fourth-quarter territorial durability: interchange availability, conditioning and heat, ruck and clearance persistence, repeat entries, defensive exit quality |
-| `AF-B8` | Draw and extra-time treatment under the exact competition and operator terms |
+| `AF-B8` | Draw treatment under the exact competition; finals extra time is always included in full-game lines (AFL-ET-1, 2026-11-10) |
 
 ### 8.4 Contract derivation map
 
@@ -339,7 +341,7 @@ Added 2026-09-04; last reviewed 2026-11-08: the 2026 rule package, the Wildcard 
 
 **Extra time (all finals, including the Grand Final since 2016).** If scores are level at the final siren: a **6½-minute break**, then **two 3-minute halves plus time-on** (change ends at the interval, no break). Still level → repeat two more 3-minute halves, and so on **until a winner**. There are **no replays**.
 
-**Settlement (AFL).** Full-game line and total settle at the **final siren of the fourth quarter** — for home-and-away matches a **draw is a live outcome** (spread pushes at the line, moneyline is a push / dead-heat / "tie no bet" by book). For **finals**, the market endpoint must be frozen: "including extra time" vs "regulation / end of the fourth quarter." Quarter and half lines settle at each siren, **including accumulated time-on** (so a "1st quarter total" is over a ~30-minute quarter). Margin and "winning margin band" markets are common and interact with the behind granularity.
+**Settlement (AFL).** Full-game line and total settle at the **final siren of the fourth quarter** — for home-and-away matches a **draw is a live outcome** (spread pushes at the line, moneyline is a push / dead-heat / "tie no bet" by book). For **finals**, full-game lines include extra time (AFL-ET-1, 2026-11-10), unless the contract's own text names regulation or the end of the fourth quarter. Quarter and half lines settle at each siren, **including accumulated time-on** (so a "1st quarter total" is over a ~30-minute quarter). Margin and "winning margin band" markets are common and interact with the behind granularity.
 
 ### 9.3 AFLW (NAB AFLW Premiership) — 2026
 
@@ -351,7 +353,7 @@ Added 2026-09-04; last reviewed 2026-11-08: the 2026 rule package, the Wildcard 
 
 **Other AFLW-specific rules.** The **last-disposal out-of-bounds** rule has applied in AFLW for several seasons (the men's game only adopted it for 2026). Otherwise the laws match the men's game (18 a side, 6/1 scoring, marks, handball, bounce rule). Runner access is limited (three times per quarter, ≤90 seconds, not in the last three minutes).
 
-**Finals and extra time.** **Top eight** into a final-eight bracket (same 1v4 / 2v3 / 5v8 / 6v7 structure), culminating in the **AFLW Grand Final** at a host venue. Finals level at the siren go to **extra time** (two short halves, repeated until a winner) — no replays. Home-and-away draws stand (2 points each), separated on the ladder by percentage.
+**Finals and extra time.** **Top eight** into a final-eight bracket (same 1v4 / 2v3 / 5v8 / 6v7 structure), culminating in the **AFLW Grand Final** at a host venue. Finals level at the siren go to **extra time** (two short halves, repeated until a winner) — no replays; full-game lines include it (AFL-ET-1). Home-and-away draws stand (2 points each), separated on the ladder by percentage.
 
 ### 9.4 Lower grades and state leagues (context)
 
