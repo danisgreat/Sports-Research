@@ -314,3 +314,8 @@ The probability source is Part A section 7 (ANALYST_PRIMARY_V1 from the frozen r
 ## v24.15 operational and parameter amendment
 
 For v24.15 manifest-bound external work, EXT-v3 governs reduced/six-role scope, explicit numeric-or-unpriced coverage, official no-play delay amendments and independent source snapshot versions. The owner authorizes this statistical/admission correction before a v24.14 scored card. Subsequent source-only audits may update access snapshots without changing method identity; other statistical changes keep the freeze and owner-authority rules. See [EXT-v3](EXTERNAL_RESEARCH_PROTOCOL_V3.md).
+
+
+## Owner-directed ASSESS-100 amendment (CR-2026.11.11-R4)
+
+Current EXT-EVAL-v2 assessment happens at the first 100 eligible fully settled paired games with no minimum weeks or end-of-week wait. It uses event-equal scoring with explicit uncertainty/dependence diagnostics. This assessment-only release preserves forecast/profile/kit v24.15 and earlier separately registered model experiments. Read [the current plan](research/external/EVALUATION_PLAN_v24.16.md); old calendar language yields to this owner instruction for the current assessment.

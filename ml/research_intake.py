@@ -674,7 +674,7 @@ def main(argv=None):
             a.add_argument("--status", choices=("VERIFIED", "UNKNOWN"), default="UNKNOWN")
     sub.add_parser("package-check")
     ev = sub.add_parser("evaluate"); ev.add_argument("--forecasts", type=Path, required=True); ev.add_argument("--outcomes", type=Path, required=True)
-    ev.add_argument("--out", type=Path, required=True)
+    ev.add_argument("--out", type=Path, required=True); ev.add_argument("--cohort", type=Path)
     args = p.parse_args(argv)
     try:
         if args.command == "init":
@@ -712,6 +712,6 @@ def main(argv=None):
         elif args.command == "package-check": print(package_check())
         elif args.command == "evaluate":
             from ml.external_evaluation import evaluate
-            print(evaluate(args.forecasts, args.outcomes, args.out))
+            print(evaluate(args.forecasts, args.outcomes, args.out, cohort=args.cohort))
     except (X.ExternalError, ValueError, OSError, KeyError) as exc:
         print(f"REFUSED: {exc}"); raise SystemExit(2)

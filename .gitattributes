@@ -117,3 +117,9 @@ archive/verification_2026-10/settlement_2026-10-01/source_recovery/** -text whit
 
 # The v24.15 installed statistical table is a versioned evidence input.
 research/competition_parameters/COMPETITION_PARAMETERS.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+# ASSESS-100 original custody and count-based assessment source.
+archive/assessment_100_2026-11-11/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+research/verification/framework_change_2026-11-11-4/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+ml/evaluation/event_assessment.py -text
+ml/tests/test_assessment_100.py -text

@@ -178,8 +178,8 @@ Benchmarks retain BENCH-v1: settle first; accept exact-contract owner-supplied
 post-final probabilities only; never search for prices or feed benchmarks into cards.
 Run `ledger score` when such evidence exists and report missing coverage honestly.
 
-The [v24.15 evaluation plan](research/external/EVALUATION_PLAN_v24.15.md) keeps the
-100-event/eight-week floors and fixed first-completed-week cohort. Source-only refreshes
+The [current evaluation plan](research/external/EVALUATION_PLAN_v24.16.md) assesses the
+first 100 eligible fully settled paired games immediately, with no week minimum or end-of-week wait. Source-only refreshes
 do not restart it. Reduced/six-lane, late, exposed, changed-horizon and unpaired cases
 retain separate denominators. Predictive improvement remains unproven.
 
@@ -207,3 +207,6 @@ exist. Offline lifecycle tests and retrospective studies do not count as that pi
 
 
 **Windows checkout:** use a short local path outside sync folders. The current working clone enables Git core.longpaths. For another Windows clone, set that option during clone when needed; preserve the exact-byte .gitattributes rules for historical evidence.
+
+
+**Assessment policy v24.16 / EXT-EVAL-v2:** forecast/profile/kit remain v24.15. The first 100 eligible fully settled paired games trigger assessment immediately. Missing shared-contract settlements wait for their own evidence, not a calendar deadline. Freeze the first-100 cohort ordered by settlement availability and retain it with --cohort on later audits. Event-level uncertainty assumes independent games; report time/team dependence and all exclusions. READY means the assessment can be read, not that an advantage has been proved.

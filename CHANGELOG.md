@@ -1,5 +1,10 @@
 # Australian rules request format and finals extra time — MDS/P v24.12 / CR-2026.11.10-R2 / P-2026.11.10-v24.10, 10 November 2026
 
+## 11 November 2026 - v24.16 / CR-2026.11.11-R4
+
+Owner-directed ASSESS-100 / EXT-EVAL-v2: assess the first 100 eligible fully settled paired games immediately, without an eight-week or completed-week requirement. Add an event-equal inference path, fixed settlement-ordered cohort and reusable cohort-hash verification. Preserve forecast/profile/kit v24.15, all historical records and model cores. Time/dependence diagnostics, uncertainty, exact pre-start comparison/publication evidence and no automatic promotion remain. [Implementation](research/verification/framework_change_2026-11-11-4/IMPLEMENTATION.md).
+
+
 ## 11 November 2026 - v24.15 / CR-2026.11.11-R3
 
 Owner-authorized operational/statistical correction before any v24.14 card: EXT-v3 supports undated pre-start evidence, explicit reduced/six-lane modes, partial pricing, official delay amendments, separately dated source access and pre-exposure single-research comparisons. Install 32 measured soccer league rows in the main table/kit; correct aggregate-file cricket ingestion through a versioned hash-verified rebuild. Add shadow recent-team centres with explicit coverage/validation limits, settlement fact scorecards and effort reporting. Work in the clone outside OneDrive. Preserve originals and historical forecasts; live five-chat pilot and predictive benefit remain unproven. [Full explanation](research/verification/framework_change_2026-11-11-3/IMPLEMENTATION.md).

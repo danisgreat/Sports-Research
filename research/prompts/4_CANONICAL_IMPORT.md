@@ -8,7 +8,7 @@
 
 **Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §5.
 
-**P-2026.11.11-v24.13 · CANONICAL_IMPORT · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: active log suffix, current status/state/scoreboard, a new import report with preserved inputs, and declared append-only source observations in RESEARCH_SOURCE_REGISTER, plus the append-only LEARN-v1 learning store, training-candidate folders and review log. Never rewrite issued cores, closed parts or grades. Publish when this full prompt is invoked unless the user requests local-only.
+**P-2026.11.11-v24.14 · CANONICAL_IMPORT · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: active log suffix, current status/state/scoreboard, a new import report with preserved inputs, and declared append-only source observations in RESEARCH_SOURCE_REGISTER, plus the append-only LEARN-v1 learning store, training-candidate folders and review log. Never rewrite issued cores, closed parts or grades. Publish when this full prompt is invoked unless the user requests local-only.
 
 **ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](../../REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](../../CORE.md) §7.
 
@@ -93,3 +93,6 @@ For new settlement-9 packages inventory and preserve the source-discovery, attem
 
 For each imported card that has a learning log, run `python -m ml learning-log link --key <key> --canonical <P-ID>` (LEARNLOG-v1) and list the folder in the report. Import does not ingest into `research/learning_store/`, run ML commands or update learning status. List each imported card's learning record, settlement package, `PICKS_V2` block and ledger rows, with paths and hashes, in the import report so prompt 6 can ingest and score them. The card core is imported byte for byte, picks block included; the ledger is append-only and is never rewritten by an import.
 
+
+
+**ASSESS-100 handoff:** after verified settlement/import, report the actual eligible fully settled paired-game count. At the first 100, the current assessment is due immediately through prompt 6 / external evaluate; there is no minimum-week or end-of-week wait. Do not infer eligibility from raw card/pick counts or old logs missing pre-start comparator evidence. Preserve the exact first-100 cohort and report the finding separately from assessment readiness.

@@ -322,7 +322,7 @@ def test_evaluation_uses_exact_floor_and_never_moves_the_completed_cohort(tmp_pa
     assert all(r["disposition"] == "INSUFFICIENT_EVIDENCE" for r in result)
     add_range(99, 105); write(outcome, P.OUTCOME_FIELDS, labels)
     first = E.evaluate(path, outcome, tmp_path / "N105", as_of="2026-01-01T00:00:00Z")
-    assert first[0]["paired_events"] == 105 and first[0]["settled_weeks"] >= 8
+    assert first[0]["paired_events"] == 100 and first[0]["assessment_status"] == "READY"
     add_range(105, 115); write(outcome, P.OUTCOME_FIELDS, labels)
     E.evaluate(path, outcome, tmp_path / "N115", as_of="2026-01-01T00:00:00Z")
     assert (tmp_path / "N105/COHORT.csv").read_bytes() == (tmp_path / "N115/COHORT.csv").read_bytes()

@@ -63,3 +63,6 @@ All sports use [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md) for o
 
 
 **v24.15 additions:** [recent-team shadow centres and coverage](research/verification/framework_change_2026-11-11-3/team_strength/README.md), [corrected cricket normalization](research/bulk_history/cricket/v24.15/NORMALIZATION_RECEIPT.csv), [implementation and limits](research/verification/framework_change_2026-11-11-3/IMPLEMENTATION.md). The active working clone is `C:\Users\danie\Projects\Sports-Research`; the OneDrive checkout is a retained mirror.
+
+
+**Current 100-game assessment:** [EXT-EVAL-v2](research/external/EVALUATION_PLAN_v24.16.md), available immediately at 100 eligible fully settled games; no calendar minimum. Forecast/kit/profile remain v24.15.

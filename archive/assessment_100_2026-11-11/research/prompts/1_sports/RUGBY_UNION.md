@@ -1,0 +1,79 @@
+# PROMPT 1 — sport file: RUGBY UNION
+
+**P-2026.11.11-v24.13 · prompt 1 sport file.** Use this file together with the [prompt 1 core](../1_GAME_CARD.md): read the core first, then this file. The core holds every rule shared by all sports, including the shared rules of steps 1, 3, 4, 5 and 7; this file holds this sport's own instructions for steps 1–7. At each step apply the core's shared rules for that step together with this file's. Fill in the Upcoming game block below; it is the only part the owner edits. Do not read the other sport files.
+
+RUGBY UNION
+----------------------------
+
+## Upcoming game — RUGBY UNION
+
+**The owner's request (REQ-v5, 2026-11-11; REQ-v4 still read).** The owner fills this in and sends it. How each line becomes a contract, its endpoint and its deep-loss-review role: [GAME_REQUEST_TEMPLATE](../../../GAME_REQUEST_TEMPLATE.md) §1b. The estimated start can be delayed: verify the official start and continue the process as normal.
+
+```text
+Upcoming Rugby Union Game: Team A vs Team B, Competition,
+Estimated Game Time Start: Day Month Year, Time AM/PM AEDT (can be delayed so continue the process as normal)
+Home side / venue: Team A | Team B | Neutral (venue, if known)
+
+Team A ML  or  Team A Spread X.X
+Team B ML  or  Team B Spread X.X
+Combined Total: Over/Under X.X Points
+
+Rank: supplied lines only | all lines
+Run: Lane L1, L2, L3, L4, L5 or FULL | Mini <MINI_KEY> | Commit <SHA>   (research chats only; leave out for the repository)
+```
+
+Read [COMMON_OPERATING_PROTOCOL](../COMMON_OPERATING_PROTOCOL.md), [MINI_LOG_IDENTITY_PROTOCOL](../../../WORKFLOW.md#part-b-mini_log_identity_protocol) and the complete seven-step sport workflow below. The primary card is ANALYST_PRIMARY_V1: the frozen reference plus logged adjustments (prompt header). The reference stage runs before any probability is written and the card freeze after it (MLSCOPE-v3, core step 7); no other model, shadow or decision-lab output is read. Read the [CORE](../../../CORE.md) page first.
+
+Also apply the core's **Before step 1 — evidence standard** ([prompt 1 core](../1_GAME_CARD.md)).
+
+## 1. Read and establish authority
+
+Also apply the core's **Step 1 — Read and establish authority** shared rules ([prompt 1 core](../1_GAME_CARD.md)).
+
+Read COMMON_OPERATING_PROTOCOL and every control from the local working tree (`LOCAL_WORKING_TREE`, ENV-v2), recording branch, HEAD SHA and any uncommitted control changes. Print the [reading receipt](../README.md) after opening [CORE](../../../CORE.md) and the [prompt 1 core](../1_GAME_CARD.md) in full, then CURRENT_STATE and the named sections of RULES_REFERENCE and CARD_AND_LOG_TEMPLATES, RULES_RUGBY_UNION, the competition's PARAMETERS Part A row (independently source the exact competition online), [SOURCES §3.7](../../../SOURCES.md#37-rugby-union) (rugby union), ARCHIVE_USE_GUIDE, this prompt, the complete active mini, GAME_LOG_STATUS_CURRENT and relevant canonical event records. Read the named sections of large files and only this sport's workflow, and record the HEAD SHA, exactly what was read and the read time. Apply current controls over historical sport-engine notes.
+
+## 2. Identity, duplicate and timing gate
+
+Verify teams, competition (NRL, Super League, Rugby Championship, Six Nations, etc.), round/stage, venue, native ID, official scheduled kickoff, venue zone, UTC and Australia/Sydney time. Search every relevant local mini/carryover and canonical log body/status by ID, event key and aliases; doubleheaders and postponements need explicit identity handling. An existing event gets a dated addendum under its original local key or verified existing canonical reference, no new card or canonical assignment.
+
+For a new event, use the mini's next stable LOCAL-<MINI_KEY>-G0001-style event key under MINI_LOG_IDENTITY_PROTOCOL; set canonical ID NOT_ASSIGNED / PROMPT_4_IMPORT. Do not assign, reserve, forecast or advance a P-ID during research. Read canonical state only for duplicate/context checks; canonical allocation happens in prompt 4. Record current source state before research and again immediately before write. Keep cutoff, research completion, actual issue and state-recheck times separate. Continue until research is complete even if play starts. Keep actual issue phase and input evidence separate: independently proved pre-start fields with no outcome exposure may be CLEAN_PRE_START_INPUTS / POST_START_ISSUE, scored in its own research cohort; it is not a pre-start-issued prospective forecast. Live/final exposure or unverified known-at facts prevent the clean-input claim. Apply [TIMING_RESEARCH_PROTOCOL](../../../RESEARCH_PROTOCOL.md#part-e-timing_research_protocol), with no minimum lead or forced early freeze. Log the request in the mini's intake table (template §2-D) whatever its outcome. Confirm you hold the mini's issuing-writer lease and that the mini is not frozen for settlement; otherwise route the event to the next authorised mini (CURRENT_RULES §8). Follow [TIMING_RESEARCH_PROTOCOL](../../../RESEARCH_PROTOCOL.md#part-e-timing_research_protocol): complete research without a countdown deadline, even after start; freeze only the completed issued original. Complete the mandatory availability search and final recheck first (CURRENT_RULES §5b; ROSTER_AVAILABILITY_PROTOCOL). If selections remain genuinely unpublished or unverified, record the exact side/field and completed attempts, then use supported scenarios or qualitative/NO_FORECAST research with the honest `LINEUP_UNCONFIRMED` label; do not claim an unperformed scheduled retry.
+
+## 3. Evidence, team sheet and archive
+
+Also apply the core's **Step 3 — Evidence, line-ups and online history** shared rules ([prompt 1 core](../1_GAME_CARD.md)).
+
+**Availability research (AVAIL-2026.10.16-v4).** Read and apply [ROSTER_AVAILABILITY_PROTOCOL](../../../ROSTER_AVAILABILITY_PROTOCOL.md) §§1–6 for both sides: exact starters/starting role, selected bench/replacements, current injuries/illness/suspensions/absences, and late changes. Complete its official match → both teams → eligibility/medical → permitted provider → local-language/obscure-competition escalation before reporting a missing field. Record actual searches, evidence/times and failures in the existing Evidence receipt/A3/A8; update the existing lineup-state metadata and audit C20. A roster, probable starter or predicted side is not confirmation. Recheck around the actual competition release window and immediately before freeze; re-price changed inputs. Never invent a healthy roster, bench or confirmation. If material gaps survive the full search, retain supported scenarios or qualitative/NO_FORECAST research with the exact reason. Model output is read only through the reference stage this prompt runs and, after the card is written, the card freeze (RULES_REFERENCE Part A §1, MLSCOPE-v3); market and decision-lab material are never read.
+
+Follow official league match center → structured provider → quality corroboration routes. For each decisive claim retain URL, exact field/value or brief extract, source publication/update time when known, retrieval time and provenance/lineage. Log inaccessible/stale/conflicting sources. Three domains are not three independent collectors. No odds/tips/previews/fantasy inputs.
+
+Verify the starting XV, replacements and front-row eligibility, halves/kicking, possession/territory, discipline, workload and weather; probable is not confirmed. Research the exact competition's prior games online under HISTORICAL_SOURCE_PROTOCOL and print source URLs, dated event rows, true window n, endpoint filters, latest usable date and missingness. Use only results known before cutoff. Do not use postgame narrative or full-season aggregates from after cutoff.
+
+**Value-ranked checklist (CHECK-v1).** Work the high-value inputs first and time each to when it is published ([RESEARCH_CHECKLISTS](../../../RESEARCH_PROTOCOL.md#part-d-research_checklists), Rugby union): High: the team announcement (usually about two days before). Medium: weather and, for internationals, the World Rankings prior. Mind draws and neutral venues. Every confirmed fact that moves a number becomes an adjustment-ledger row with an effect-table size.
+
+## 4. Distribution, expected score and comparator
+
+Also apply the core's **Step 4 — Distribution, expected score and comparator** shared rules ([prompt 1 core](../1_GAME_CARD.md)).
+
+**Reference for this sport (REFMODEL-v1).** No stored history and no TB-1-MD constants: tier C. Start from a league-only anchor you can source and print `NONE` in the reference column; use Elo-style team strength as the card's own input and abstain readily. Widths are never below the competition's floor in [COMPETITION_PARAMETERS](../../../PARAMETERS.md#part-a-competition_parameters) without a written exception.
+
+Build the simplest defensible coherent rugby-union distribution using the actual competition’s try/conversion/penalty/drop-goal values, discipline and replacement rules. Do not import rugby-league scoring or parameters. Use only applicable measured regime effects; finals need not always reduce the mean. Print every parameter and its basis, formula/table, normalization, tail treatment, covariance and endpoint transitions. If the required calculation cannot be done, report a supported approximation with limitations, or qualitative research with NOT_ESTIMATED probabilities. Hand method: PROBABILITY_TOOLKIT §1.
+
+Produce expected score terms from CARD_AND_LOG_TEMPLATES §3a: team points, total, signed margin and supported SDs. Keep zeros; mark missing or irrelevant terms. Print all winner/draw/tie masses. For every candidate retain unconditional W/P/L/V and p_card=W/(W+L), with denominator and action convention.
+
+Attempt BASELINE_LEAGUE_V1 on the same line/endpoint from league-only inputs, frozen before issue. Print recipe, source cohort/n/cutoff and parameters separately from the team model. No 0.5 placeholder or retrospective baseline fill. Missing baseline does not stop the card; it limits later skill measurement.
+
+Show an adjustment table (venue, lineup, spine availability, rest/travel), unadjusted distribution/pair and low/base/high sensitivity on material uncertain inputs. Any adjustment-driven pair change is ADJUSTMENT_DEPENDENT, even below 0.25 SD. Report plausible probability ranges as sensitivity, not confidence intervals. Do not move individual probabilities outside the shared model.
+
+## 5. Candidate selection and dependence
+
+Also apply the core's **Step 5 — Candidate selection and dependence** shared rules ([prompt 1 core](../1_GAME_CARD.md)).
+
+Freeze the supported family/line-generation recipe before pricing (match winner, handicaps, totals, team totals). Price supplied rows and the declared derived universe; retain exclusions and unused supplied rows. Do not move thresholds repeatedly toward 90% to manufacture a strong gate. Values above the selection ceiling keep their true probabilities in the diagnostic appendix and are excluded, never capped.
+
+## 6. Rugby playing conditions and rules
+
+Distinguish Rugby League (NRL/SL: 80 mins, golden point in regular season vs extra time in finals) from Rugby Union (80 mins, regular season draw permitted, extra time in knockouts). Resolve draw/golden point/extra time per competition and endpoint.
+
+## 7. Write, audit and return
+
+Also apply the core's **Step 7 — Write, audit and return** shared rules ([prompt 1 core](../1_GAME_CARD.md)).

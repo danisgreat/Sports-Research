@@ -39,7 +39,7 @@ A refresh that changes a file's contents is a new round of changes: it takes the
 
 The current definition is ../../EXTERNAL_RESEARCH_PROTOCOL_V3.md. Run external package-check after installing the whole version. Initialize an immutable event manifest only after its exact artifacts are committed; L4 and L5 receive dependency-bound packets. All source observations retain their actual checked_at/valid_until dates: the v24.15 copies are byte-identical snapshots, not a fresh network audit. The parameter package is uncalibrated development/reference arithmetic, not model promotion. Cricket simulation and tennis form shock are sensitivity-only.
 
-The builder writes versioned upload files and supporting evidence. The separate owner-authorized v24.15 release installs 32 measured soccer rows into the shared reference table. Existing output versions cannot be overwritten. See EVALUATION_PLAN_v24.15.md for the future paired experiment. No model has been promoted, and historical availability has not been fabricated.
+The builder writes versioned upload files and supporting evidence. The separate owner-authorized v24.15 release installs 32 measured soccer rows into the shared reference table. Existing output versions cannot be overwritten. See EVALUATION_PLAN_v24.16.md for the current count-based paired assessment. No model has been promoted, and historical availability has not been fabricated.
 
 
 ## Current versus superseded packages
@@ -47,3 +47,6 @@ The builder writes versioned upload files and supporting evidence. The separate 
 Only v24.15 is current. v24.13 and v24.14 profiles/briefs/kit files are retained originals and must not be mixed into a current chat. The standalone kit header now names v24.15. Source-only snapshots use their own date-based versions; CURRENT_ACCESS.csv identifies the current reader/access pair with canonical-LF hashes. The initial v24.15 access copies retain the original 10 November observation/17 November UTC expiry; copying is not a fresh audit. Update the pointer after an actual audit without bumping the statistical method.
 
 Use [EXT-v3](../../EXTERNAL_RESEARCH_PROTOCOL_V3.md) for the shorter packet/batch flow, reduced/six roles, partial pricing, delay amendments, SINGLE freezing and fact scorecards. Live pilot remains PENDING actual event/lines and genuine chat returns.
+
+
+**Current assessment release v24.16:** [EXT-EVAL-v2](EVALUATION_PLAN_v24.16.md) runs at the first 100 eligible fully settled games without waiting for any number of weeks. Upload kit/profile/briefs stay v24.15; forecast values and identities have not changed. Prior evaluation plans are retained registrations, superseded for the unstarted current experiment by the owner amendment.

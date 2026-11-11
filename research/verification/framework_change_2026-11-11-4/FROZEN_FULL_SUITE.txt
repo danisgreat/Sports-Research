@@ -1,0 +1,23 @@
+........................................................................ [  8%]
+........................................................................ [ 16%]
+........................................................................ [ 24%]
+........................................................................ [ 32%]
+........................................................................ [ 40%]
+........................................................................ [ 48%]
+........................................................................ [ 57%]
+........................................................................ [ 65%]
+........................................................................ [ 73%]
+........................................................................ [ 81%]
+........................................................................ [ 89%]
+........................................................................ [ 97%]
+...................                                                      [100%]
+============================= slowest 8 durations =============================
+25.37s call     ml/tests/test_forecast_cycle.py::test_settlement_store_feedback_and_next_prediction_are_connected
+23.19s setup    ml/tests/test_learning_models.py::test_challenger_grid_is_one_coherent_distribution_and_refuses_leakage
+19.37s call     ml/tests/test_external_integrity_v2.py::test_full_card_append_learning_ledger_binding_and_settlement
+19.18s call     ml/tests/test_context_study.py::test_changing_a_future_result_cannot_change_an_earlier_prediction
+18.08s call     ml/tests/test_learning_lifecycle.py::test_research_to_learning_lifecycle
+17.91s call     ml/tests/test_learning_store.py::test_release_is_reproducible_immutable_and_explains_every_exclusion
+15.45s setup    ml/tests/test_card_history_imports.py::test_current_import_matches_preserved_cohort_rows
+15.39s call     ml/tests/test_card_history_tools.py::test_repository_history_table_invariants
+883 passed in 843.93s (0:14:03)
