@@ -1,0 +1,117 @@
+"""Kit commands (KIT-v1, CR-2026.11.11-R1).
+
+    python -m ml kit verify --receipt FILE [--params FILE] [--phases FILE]   re-run a chat's KIT_RECEIPT with the repository kit
+    python -m ml kit params --soccer-study DIR --sim-checks DIR [--out DIR]  rebuild the kit's parameter files (ml.kit.params)
+    python -m ml kit sha                                                     print the kit's own SHA-256 (what a receipt must show)
+
+A receipt is accepted only when its kit version is the repository's, its parameter-file hash matches the committed file
+of that version, and every probability reproduces: exact engines to 1e-9, a simulation (same seed and N) to 3 Monte Carlo
+standard errors. Anything else is REFUSED with the reason, and the chat's numbers are not used.
+"""
+from __future__ import annotations
+
+import argparse
+import ast
+import re
+from pathlib import Path
+
+from ml.kit import sr_kit as K
+
+ROOT = Path(__file__).resolve().parents[2]
+KIT_DIR = ROOT / "research" / "external" / "kit"
+VERSION = K.KIT_VERSION.split("-")[-1]
+
+
+def parse_receipt(text: str) -> dict:
+    m = re.search(r"<!-- BEGIN KIT_RECEIPT (\S+) -->(.*?)<!-- END KIT_RECEIPT \1 -->", text, re.S)
+    if not m:
+        raise K.KitError("no complete KIT_RECEIPT block")
+    head, rows, inputs, in_rows = {}, [], {}, False
+    for ln in m.group(2).strip().splitlines():
+        if ln.strip() == "rows:":
+            in_rows = True
+            continue
+        if in_rows:
+            rows.append(ln)
+            continue
+        name, _, value = ln.partition(": ")
+        if name.startswith("input."):
+            try:
+                inputs[name[6:]] = ast.literal_eval(value)
+            except (ValueError, SyntaxError):
+                inputs[name[6:]] = value
+        else:
+            head[name] = value
+    header, *data = rows
+    cols = header.split(",")
+    table = []
+    for d in data:
+        vals = d.rsplit(",", len(cols) - 1)       # labels may hold commas only at the front
+        table.append(dict(zip(cols, vals)))
+    return dict(engine=m.group(1), head=head, inputs=inputs, rows=table)
+
+
+def verify(text: str, params: Path | None = None, phases: Path | None = None) -> list[str]:
+    rec = parse_receipt(text)
+    problems = []
+    if rec["head"].get("kit_version") != K.KIT_VERSION:
+        return [f"kit_version {rec['head'].get('kit_version')} is not the repository's {K.KIT_VERSION}"]
+    if rec["head"].get("kit_sha256") != K.file_sha256():
+        problems.append("kit_sha256 differs from the repository kit: the chat ran an edited or older file (result re-run with the repository kit)")
+    params = params or KIT_DIR / f"KIT_PARAMETERS_{VERSION}.csv"
+    phases = phases or KIT_DIR / f"KIT_CRICKET_PHASES_{VERSION}.csv"
+    if rec["head"].get("params_sha256") not in ("NOT_USED", K.file_sha256(params)):
+        return problems + ["params_sha256 differs from the committed parameter file of this version"]
+    if rec["head"].get("phases_sha256") not in ("NOT_USED", K.file_sha256(phases)):
+        return problems + ["phases_sha256 differs from the committed cricket phase file of this version"]
+    result, _ = K.run(rec["engine"], rec["inputs"], params_path=params, phases_path=phases)
+    mine = {r["label"]: r for r in result["rows"]}
+    for r in rec["rows"]:
+        if r["label"] not in mine:
+            problems.append(f"{r['label']}: not produced by the re-run")
+            continue
+        got = mine[r["label"]]
+        se = float(r.get("mc_se") or 0)
+        tol = 3 * se if se else 1e-9
+        for k in ("w", "p", "l", "final_p"):
+            if abs(float(r[k]) - got[k]) > max(tol, 1e-9):
+                problems.append(f"{r['label']}: {k} {r[k]} does not reproduce ({got[k]:.10f}, tolerance {tol:.2e})")
+    return problems
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    sub = parser.add_subparsers(dest="command", required=True)
+    v = sub.add_parser("verify")
+    v.add_argument("--receipt", type=Path, required=True)
+    v.add_argument("--params", type=Path)
+    v.add_argument("--phases", type=Path)
+    sub.add_parser("sha")
+    p = sub.add_parser("params")
+    p.add_argument("--soccer-study", type=Path, required=True)
+    p.add_argument("--sim-checks", type=Path, required=True)
+    p.add_argument("--out", type=Path, default=KIT_DIR)
+    p.add_argument("--version", default=VERSION)
+    args = parser.parse_args(argv)
+    if args.command == "sha":
+        print(K.KIT_VERSION, K.file_sha256())
+        return
+    if args.command == "params":
+        from ml.kit import params as P
+        print(P.build(args.soccer_study, args.sim_checks, args.out, args.version))
+        return
+    try:
+        problems = verify(args.receipt.read_text(encoding="utf-8"), args.params, args.phases)
+    except K.KitError as exc:
+        print(f"REFUSED: {exc}")
+        raise SystemExit(2)
+    if problems:
+        print(f"KIT_RECEIPT NOT ACCEPTED ({len(problems)}):")
+        for p_ in problems:
+            print(" -", p_)
+        raise SystemExit(1)
+    print("KIT_RECEIPT REPRODUCED")
+
+
+if __name__ == "__main__":
+    main()

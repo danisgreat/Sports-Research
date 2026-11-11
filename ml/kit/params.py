@@ -1,0 +1,304 @@
+"""Build the kit's parameter files and fill the competition-parameter gaps (KIT-v1 / PARAM-FILL-v1, CR-2026.11.11-R1).
+
+    python -m ml kit params --soccer-study DIR --sim-checks DIR --out research/external/kit [--version v24.13]
+
+Inputs, all already in the repository or produced by its own commands:
+- research/competition_parameters/COMPETITION_PARAMETERS.csv (Part A, the card's table);
+- the soccer study (``python -m ml pooled soccer``): COMPETITION_ROWS.csv and DECISION.csv;
+- the simulator checks (``python -m ml sim-check cricket|tennis``): CRICKET_PHASES.csv, TENNIS_TOUR_RATES.csv and SIM_CHECKS_*.csv;
+- the learning store's verified NHL and MLB finals (overtime v shootout share; run dispersion).
+
+Writes only versioned kit parameter/phase CSVs and a supporting parameter-evidence table.
+The shared competition reference table, historical model artifacts and store remain unchanged.
+Retained prior draft study/simulator outputs are development evidence, never new qualification.
+"""
+from __future__ import annotations
+
+import argparse
+import csv
+import io
+import statistics
+from datetime import datetime, timezone
+from pathlib import Path
+
+import numpy as np
+
+from ml import reference as R
+from ml.kit import sr_kit as K
+
+ROOT = Path(__file__).resolve().parents[2]
+PARAMS = ROOT / "research" / "competition_parameters" / "COMPETITION_PARAMETERS.csv"
+EXTRA = ROOT / "research" / "competition_parameters" / "EXTRA_PARAMETERS.csv"
+PHASES = ROOT / "research" / "competition_parameters" / "CRICKET_PHASE_TABLES.csv"
+TENNIS = ROOT / "research" / "competition_parameters" / "TENNIS_TOUR_RATES.csv"
+STORE = ROOT / "research" / "learning_store"
+EXTRA_FIELDS = ("competition", "parameter", "value", "n", "basis", "status", "evidence_class", "declared_at")
+KIT_FIELDS = ("kit_version", "row_type", "competition", "sport", "engine", "status", "n_games", "mean_total", "mean_home_margin",
+              "home_win_rate", "draw_rate", "raw_margin_sd", "raw_total_sd", "resid_margin_sd", "resid_total_sd", "ref_sd_margin",
+              "ref_sd_total", "k", "home_edge", "ties", "ot_fraction", "ot_decided_share", "nb_dispersion", "dc_rho", "first_half_share",
+              "corners_mean", "corners_disp", "serve_point_win", "form_shock_sigma", "best_of", "surface", "cricket_group", "scale_sd",
+              "first_innings_mean", "first_innings_sd", "checkpoint_over", "checkpoint_mean", "checkpoint_sd", "note", "admission_status")
+SPORT_OF_FAMILY = {"FAMILY_PRIOR:AFL": "AFL", "FAMILY_PRIOR:AMERICAN_FOOTBALL": "American Football", "FAMILY_PRIOR:BASEBALL": "Baseball",
+                   "FAMILY_PRIOR:BASKETBALL_FIBA40": "Basketball", "FAMILY_PRIOR:BASKETBALL_NBA48": "Basketball",
+                   "FAMILY_PRIOR:ICE_HOCKEY": "Ice Hockey", "FAMILY_PRIOR:RUGBY_LEAGUE": "Rugby League", "FAMILY_PRIOR:SOCCER": "Soccer"}
+USABLE_MIN_GAMES = 150
+
+
+def _read(path) -> tuple[list[str], list[dict]]:
+    with open(path, newline="", encoding="utf-8-sig") as fh:
+        r = csv.DictReader(fh)
+        return list(r.fieldnames or []), [dict(x) for x in r]
+
+
+def _write(path: Path, fields, rows) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    buf = io.StringIO(newline="")
+    w = csv.DictWriter(buf, fieldnames=list(fields), lineterminator="\n", extrasaction="ignore")
+    w.writeheader()
+    w.writerows(rows)
+    path.write_bytes(buf.getvalue().encode("utf-8"))
+
+
+def _today() -> str:
+    return datetime.now(timezone.utc).date().isoformat()
+
+
+def soccer_rows(study: Path, existing: list[dict]) -> tuple[list[dict], dict]:
+    """New Part A rows for soccer competitions without one, and the recomputed soccer family prior."""
+    _, comp = _read(study / "COMPETITION_ROWS.csv")
+    have = {r["competition"] for r in existing}
+    new = []
+    for c in comp:
+        if c["competition"] in have:
+            continue
+        n = int(c["n_games"])
+        z_ok = True
+        if c["z_margin_sd"] and c["z_total_sd"]:
+            z_ok = 0.80 <= float(c["z_margin_sd"]) <= 1.25 and 0.80 <= float(c["z_total_sd"]) <= 1.25
+        usable = "USABLE_DEVELOPMENT" if n >= USABLE_MIN_GAMES and z_ok else "NOT_USABLE"
+        flags = ["FIELD_OWNER_ADMISSION_UNVERIFIED", "OPEN_DATA_OPENFOOTBALL"]
+        if not c["resid_margin_sd"]:
+            flags.append("LEAGUE_ONLY_NO_RESIDUAL")
+        if n < USABLE_MIN_GAMES:
+            flags.append(f"FEWER_THAN_{USABLE_MIN_GAMES}_GAMES")
+        slug = c["competition"].split("/")[-1].upper().replace(" ", "-").replace(".", "")
+        new.append(dict(row_type="COMPETITION", competition=c["competition"], model_dir=f"SOC-{slug}-TB1MD-K2-BULK", engine="dixon_coles",
+                        family="SOCCER", usable=usable, dev_rows=n, dev_seasons=c["seasons"], dev_first_date=c["first_date"],
+                        dev_last_date=c["last_date"], mean_total=c["mean_total"], mean_home_margin=c["mean_home_margin"],
+                        home_win_rate=c["home_win_rate"], raw_margin_sd=c["raw_margin_sd"], raw_total_sd=c["raw_total_sd"],
+                        resid_margin_sd=c["resid_margin_sd"], resid_total_sd=c["resid_total_sd"], z_margin_sd=c["z_margin_sd"],
+                        z_total_sd=c["z_total_sd"], flags=";".join(flags), evidence_class="BULK_OPEN_DATA_CURRENT_CAPTURE"))
+    members = [r for r in existing + new if r["row_type"] == "COMPETITION" and r["competition"].startswith("Soccer/")
+               and r["usable"] == "USABLE_DEVELOPMENT" and r["resid_margin_sd"]]
+    med = lambda k: round(statistics.median(float(r[k]) for r in members), 4)
+    prior = dict(row_type="FAMILY_PRIOR", competition="FAMILY_PRIOR:SOCCER", family="SOCCER", usable="USABLE_DEVELOPMENT",
+                 mean_total=med("mean_total"), mean_home_margin=med("mean_home_margin"), raw_margin_sd=med("raw_margin_sd"),
+                 raw_total_sd=med("raw_total_sd"), resid_margin_sd=med("resid_margin_sd"), resid_total_sd=med("resid_total_sd"),
+                 members=", ".join(sorted(r["competition"] for r in members)), evidence_class="MEDIAN_OF_USABLE_MEMBERS")
+    return new, prior
+
+
+def store_extras() -> list[dict]:
+    """Overtime v shootout (NHL) and run dispersion (MLB) from the learning store's verified finals."""
+    _, events = _read(STORE / "EVENTS.csv")
+    comp = {e["event_uid"]: e["competition"] for e in events}
+    last = {}
+    for r in _read(STORE / "RESULTS.csv")[1]:
+        last[r["event_uid"]] = r
+    out = []
+    nhl = [r for k, r in last.items() if comp.get(k) == "Ice Hockey/NHL" and r["status"] == "FINAL"]
+    ot = sum(r["decision"] == "Overtime" for r in nhl)
+    so = sum(r["decision"] == "Shootout" for r in nhl)
+    if ot + so:
+        out.append(dict(competition="Ice Hockey/NHL", parameter="ot_decided_share", value=round(ot / (ot + so), 4), n=ot + so,
+                        basis=f"learning-store NHL finals 2024-25: {ot} overtime and {so} shootout decisions", status="MEASURED",
+                        evidence_class="STORE_VERIFIED_FINALS_CURRENT_CAPTURE", declared_at=_today()))
+    mlb = [r for k, r in last.items() if comp.get(k) == "Baseball/MLB" and r["status"] == "FINAL"]
+    if mlb:
+        runs = np.array([float(r["reg_hs"] or r["hs"]) for r in mlb] + [float(r["reg_as"] or r["as_"]) for r in mlb])
+        mu, var = float(runs.mean()), float(runs.var(ddof=1))
+        phi = max(0.0, (var - mu) / mu ** 2)
+        out.append(dict(competition="Baseball/MLB", parameter="nb_dispersion", value=round(phi, 4), n=len(runs),
+                        basis=f"learning-store MLB regulation runs per team-game, September 2025: mean {mu:.3f}, variance {var:.3f}; "
+                              "phi = (var - mean) / mean^2, which also carries the spread of team strength, so it is an upper bound",
+                        status="MEASURED_UPPER_BOUND", evidence_class="STORE_VERIFIED_FINALS_CURRENT_CAPTURE", declared_at=_today()))
+    return out
+
+
+def soccer_extras(study: Path) -> list[dict]:
+    _, comp = _read(study / "COMPETITION_ROWS.csv")
+    _, decision = _read(study / "DECISION.csv")
+    d = {r["item"]: r["value"] for r in decision}
+    out = []
+    for c in comp:
+        if c["draw_rate"]:
+            out.append(dict(competition=c["competition"], parameter="draw_rate", value=c["draw_rate"], n=c["n_games"],
+                            basis="openfootball full-time results", status="MEASURED", evidence_class="BULK_OPEN_DATA_CURRENT_CAPTURE",
+                            declared_at=_today()))
+        if c["first_half_share"] and int(c["n_half_time"] or 0) >= 100:
+            out.append(dict(competition=c["competition"], parameter="first_half_share", value=c["first_half_share"], n=c["n_half_time"],
+                            basis="openfootball half-time and full-time goals (first-half goals / full-time goals)", status="MEASURED",
+                            evidence_class="BULK_OPEN_DATA_CURRENT_CAPTURE", declared_at=_today()))
+    out.append(dict(competition="Soccer/ALL", parameter="reference_form_and_rho", value=d.get("decision", ""), n=d.get("n_held_out_scored", ""),
+                    basis=f"POOLED-v1 held-out competitions; best on tuning {d.get('best_on_tuning')}; held-out three-way Brier "
+                          f"{d.get('held_out_brier3_diff_vs_current')}, O/U 2.5 log loss {d.get('held_out_logloss_ou25_diff_vs_current')}",
+                    status="DECIDED_BY_REGISTERED_RULE", evidence_class="BULK_OPEN_DATA_CURRENT_CAPTURE", declared_at=_today()))
+    return out
+
+
+def cricket_extras(checks: Path) -> tuple[list[dict], list[dict], dict]:
+    from ml.sim import validate as V
+    _, phases = _read(checks / "CRICKET_PHASES.csv")
+    scale = {p["group"]: p.get("scale_sd", "") for p in phases}
+    _, innings = _read(ROOT / "research" / "bulk_history" / "cricket" / "INNINGS.csv")
+    rows, kit = [], {}
+    by = {}
+    for r in innings:
+        if r["innings"] == "1" and r["reduced"] == "N" and r["result_type"] != "no_result":
+            by.setdefault(r["competition"], []).append(r)
+    for comp, rs in sorted(by.items()):
+        group = V.group_of(comp)
+        if not group or len(rs) < 40:
+            continue
+        overs = V.GROUP_OVERS[group]
+        cp = 6 if overs == 20 else 5
+        runs = np.array([float(r["runs"]) for r in rs])
+        cps = np.array([float(r[f"runs_at_over{cp}"]) for r in rs if r[f"runs_at_over{cp}"] != ""])
+        recent = [r for r in rs if r["start_date"] >= "2024-01-01"]
+        rec = np.array([float(r["runs"]) for r in recent]) if len(recent) >= 30 else runs
+        kit[comp] = dict(cricket_group=group, scale_sd=scale.get(group, ""), first_innings_mean=round(float(rec.mean()), 2),
+                         first_innings_sd=round(float(rec.std(ddof=1)), 2), checkpoint_over=cp, checkpoint_mean=round(float(cps.mean()), 2),
+                         checkpoint_sd=round(float(cps.std(ddof=1)), 2), n_games=len(rs))
+        for name, value in (("first_innings_mean_since_2024", kit[comp]["first_innings_mean"]), ("first_innings_sd_since_2024", kit[comp]["first_innings_sd"]),
+                            (f"checkpoint_over{cp}_mean", kit[comp]["checkpoint_mean"]), (f"checkpoint_over{cp}_sd", kit[comp]["checkpoint_sd"])):
+            rows.append(dict(competition=comp, parameter=name, value=value, n=len(rec) if "since" in name else len(cps),
+                             basis="Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded", status="MEASURED",
+                             evidence_class="BULK_OPEN_DATA_CURRENT_CAPTURE", declared_at=_today()))
+    for group, sd in sorted(scale.items()):
+        rows.append(dict(competition=f"Cricket/{group}", parameter="innings_scale_sd", value=sd, n="",
+                         basis="SIM-VALID-v1: chosen on seasons before 2025 so simulated spreads match observed spreads", status="FITTED",
+                         evidence_class="BULK_OPEN_DATA_CURRENT_CAPTURE", declared_at=_today()))
+    return rows, phases, kit
+
+
+def tennis_extras(checks: Path) -> tuple[list[dict], list[dict]]:
+    path = checks / "TENNIS_TOUR_RATES.csv"
+    if not path.exists():
+        return [], []
+    _, rates = _read(path)
+    rows = [dict(competition=f"Tennis/ATP {r['surface']} best-of-{r['best_of']}", parameter="serve_point_win", value=r["serve_point_win"],
+                 n=r["n_matches"], basis=f"TennisMyLife ATP tour-level results {r['period']} (aggregates only)", status="MEASURED",
+                 evidence_class="OPEN_DATA_NONCOMMERCIAL_AGGREGATE", declared_at=_today()) for r in rates]
+    if rates:
+        rows.append(dict(competition="Tennis/ATP", parameter="form_shock_sigma", value=rates[0]["form_shock_sigma"], n="",
+                         basis="SIM-VALID-v1: chosen by total-games log score on 2024, checked on 2025", status="FITTED",
+                         evidence_class="OPEN_DATA_NONCOMMERCIAL_AGGREGATE", declared_at=_today()))
+    rows.append(dict(competition="Tennis/WTA", parameter="serve_point_win", value="", n=0,
+                     basis="No permitted bulk WTA results source (the Sackmann repositories were withdrawn; mirrors are not used)",
+                     status="NOT_ESTIMATED", evidence_class="", declared_at=_today()))
+    return rows, rates
+
+
+def kit_rows(params: list[dict], extras: list[dict], cricket: dict, tennis: list[dict], version: str) -> list[dict]:
+    ex = {}
+    for e in extras:
+        ex.setdefault(e["competition"], {})[e["parameter"]] = e["value"]
+    nhl_ot = ex.get("Ice Hockey/NHL", {}).get("ot_decided_share", "")
+    mlb_phi = ex.get("Baseball/MLB", {}).get("nb_dispersion", "")
+    out = []
+    for r in params:
+        comp = r["competition"]
+        if r["row_type"] == "FAMILY_PRIOR":
+            sport = SPORT_OF_FAMILY.get(comp, "")
+        else:
+            sport = comp.split("/")[0]
+        fam = r.get("family", "")
+        base = sport if sport else fam
+        engine = {"Soccer": "soccer", "Ice Hockey": "hockey", "Baseball": "baseball"}.get(base, "points")
+        key = R.league_key(comp) if r["row_type"] == "COMPETITION" else None
+        spec = R.TB1_MD.get(key) if key else None
+        ties = ""
+        ot_fraction = ""
+        if engine == "points":
+            if base == "Basketball":
+                ties = "overtime_periods"
+                last = comp.split("/")[-1].strip().lower()
+                ot_fraction = round(5 / 48, 6) if last in ("nba", "nba g league") or comp.endswith("NBA48") else round(5 / 40, 6)
+            elif base == "American Football":
+                ties, ot_fraction = "overtime_nfl", round(10 / 60, 6)
+            elif base == "Rugby League":
+                ties = "golden_point"
+            else:
+                ties = "draw"
+        row = dict(kit_version=K.KIT_VERSION, row_type=r["row_type"], competition=comp, sport=base, engine=engine,
+                   status=r["usable"], n_games=r.get("dev_rows", ""), mean_total=r["mean_total"], mean_home_margin=r["mean_home_margin"],
+                   home_win_rate=r.get("home_win_rate", ""), raw_margin_sd=r["raw_margin_sd"], raw_total_sd=r["raw_total_sd"],
+                   resid_margin_sd=r["resid_margin_sd"], resid_total_sd=r["resid_total_sd"],
+                   ref_sd_margin=spec.get("sd_margin", "") if spec and spec["kind"] == "normal" else "",
+                   ref_sd_total=spec.get("sd_total", "") if spec and spec["kind"] == "normal" else "",
+                   k=spec["k"] if spec else 2, home_edge=spec["he"] if spec else r["mean_home_margin"], ties=ties, ot_fraction=ot_fraction,
+                   ot_decided_share=nhl_ot if engine == "hockey" else "", nb_dispersion=mlb_phi if engine == "baseball" else "",
+                   dc_rho=0.0 if engine == "soccer" else "", draw_rate=ex.get(comp, {}).get("draw_rate", ""),
+                   first_half_share=ex.get(comp, {}).get("first_half_share", ""),
+                   note=("TB-1-MD constants (" + key + ")" if spec else "k = 2 sport default, not validated for this competition; home edge = "
+                         "league mean home margin") + ("" if engine != "hockey" or comp == "Ice Hockey/NHL" else "; overtime share from the NHL")
+                        + ("" if engine != "baseball" or comp == "Baseball/MLB" else "; run dispersion from the MLB")
+                        + ("; first-half share from the soccer family median" if engine == "soccer" and not ex.get(comp, {}).get("first_half_share") else ""))
+        if engine == "soccer" and not row["first_half_share"]:
+            shares = [float(v["first_half_share"]) for v in ex.values() if v.get("first_half_share")]
+            row["first_half_share"] = round(statistics.median(shares), 4) if shares else ""
+        out.append(row)
+    out.append(dict(kit_version=K.KIT_VERSION, row_type="FAMILY_PRIOR", competition="FAMILY_PRIOR:RUGBY_UNION", sport="Rugby Union",
+                    engine="points", status="NOT_COVERED", ties="draw", k=2,
+                    note="No permitted bulk rugby union history yet: pass sd_margin and sd_total from the widest analogous benchmark "
+                         "and print NOT_COVERED (PARAMETERS Part A section 2)"))
+    for comp, c in sorted(cricket.items()):
+        out.append(dict(kit_version=K.KIT_VERSION, row_type="COMPETITION", competition=comp, sport=comp.split("/")[0], engine="cricket",
+                        status="USABLE_DEVELOPMENT", **c, note="first innings since 2024 when 30 or more, else since 2019"))
+    for t in tennis:
+        out.append(dict(kit_version=K.KIT_VERSION, row_type="COMPETITION", competition=f"Tennis/ATP {t['surface']} best-of-{t['best_of']}",
+                        sport="Tennis", engine="tennis", status="USABLE_DEVELOPMENT", n_games=t["n_matches"], serve_point_win=t["serve_point_win"],
+                        form_shock_sigma=t.get("form_shock_sigma", ""), best_of=t["best_of"], surface=t["surface"],
+                        mean_total=t["mean_total_games"], raw_total_sd=t["sd_total_games"], note="tour average; aggregates only"))
+    out.append(dict(kit_version=K.KIT_VERSION, row_type="COMPETITION", competition="Tennis/WTA", sport="Tennis", engine="tennis",
+                    status="NOT_ESTIMATED", note="no permitted bulk WTA source: take each player's serve and return points won from a "
+                                                 "permitted page and state the tour average used"))
+    for r in out:
+        r["admission_status"] = ("NOT_COVERED" if r.get("status") in ("NOT_COVERED", "NOT_ESTIMATED", "NOT_USABLE") else
+                                 "SENSITIVITY_ONLY_UNVALIDATED" if r.get("engine") in ("cricket", "tennis") else
+                                 "REFERENCE_ARITHMETIC_UNCALIBRATED")
+    return out
+
+
+def build(soccer_study: Path, sim_checks: Path, out: Path, version: str = "v24.14") -> dict:
+    fields, params = _read(PARAMS)
+    # EXT-v2 packages do not silently change the framework's frozen reference parameter table.
+    # New study rows remain development evidence until a separately authorized statistical release.
+    params_out = params
+    cricket_rows, phases, cricket_kit = cricket_extras(sim_checks)
+    tennis_rows, tennis_rates = tennis_extras(sim_checks)
+    extras = store_extras() + soccer_extras(soccer_study) + cricket_rows + tennis_rows
+    kit = kit_rows(params_out, extras, cricket_kit, tennis_rates, version)
+    out = Path(out)
+    if out.exists() and any(out.iterdir()):
+        raise ValueError("kit output version already exists; never overwrite a published parameter package")
+    _write(out / f"KIT_PARAMETERS_{version}.csv", KIT_FIELDS, kit)
+    _write(out / f"KIT_CRICKET_PHASES_{version}.csv", ("kit_version", "group", "innings", "over") + tuple("p_" + o for o in K.OUTCOMES) + ("scale_sd",),
+           [dict(kit_version=K.KIT_VERSION, **p) for p in phases])
+    _write(out / f"PARAMETER_EVIDENCE_{version}.csv", EXTRA_FIELDS, extras)
+    return dict(new_soccer_rows=0, extras=len(extras), kit_rows=len(kit), phases=len(phases), tennis=len(tennis_rates),
+                reference_table="UNCHANGED", evidence_class="DEVELOPMENT_NOT_PREDICTIVE_QUALIFICATION")
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("--soccer-study", type=Path, required=True)
+    parser.add_argument("--sim-checks", type=Path, required=True)
+    parser.add_argument("--out", type=Path, default=ROOT / "research" / "external" / "kit")
+    parser.add_argument("--version", default="v24.14")
+    args = parser.parse_args(argv)
+    print(build(args.soccer_study, args.sim_checks, args.out, args.version))
+
+
+if __name__ == "__main__":
+    main()

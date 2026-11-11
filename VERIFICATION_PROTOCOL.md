@@ -100,3 +100,8 @@ Check MINI_LOG_IDENTITY_PROTOCOL, C2/C16/C22 and settlement S18. Exercise two su
 ## Learning pipeline verification (LEARN-v1)
 
 Check [LEARNING_PIPELINE_PROTOCOL](ML_PIPELINE.md#part-c-learning_pipeline_protocol). For store work, verify every ingest receipt (sequence, export hash, counts, code hash), that quarantined rows carry reasons and that exact re-ingest adds nothing. Check that a five-times-researched match is one event and that a correction is a new revision visible only from its known-at time. Rebuild a feature snapshot or primary HISTORY "as of" its horizon after later ingests and confirm it is unchanged. `python -m ml training verify` must rebuild a release byte-identically from its recorded store view. `python -m ml prospective verify` and `python -m ml registry verify` must report intact chains. A study, ablation or backtest claim needs its receipt (code hash, input hashes, windows) and its evidence class. Synthetic-data tests prove mechanics only. The end-to-end lifecycle test (`ml/tests/test_learning_lifecycle.py`) and prompt-consistency test must pass with the rest of `python -m pytest ml/tests`.
+
+
+## EXT-v2 regression and release checks (CR-2026.11.11-R2)
+
+Run the complete ml/tests suite, the external integrity/lifecycle/cohort regressions, external package-check and generated-state consistency. Verify raw source/draft archive hashes and every protected history/store/mini prefix before commit. Test a clean committed checkout and a standalone kit import. Never use a green suite as predictive qualification. A local commit is not remote publication or pregame evidence. Changes after a run require the relevant checks again.

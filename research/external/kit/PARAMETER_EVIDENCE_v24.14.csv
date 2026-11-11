@@ -1,0 +1,142 @@
+competition,parameter,value,n,basis,status,evidence_class,declared_at
+Ice Hockey/NHL,ot_decided_share,0.7159,271,learning-store NHL finals 2024-25: 194 overtime and 77 shootout decisions,MEASURED,STORE_VERIFIED_FINALS_CURRENT_CAPTURE,2026-11-11
+Baseball/MLB,nb_dispersion,0.2922,748,"learning-store MLB regulation runs per team-game, September 2025: mean 4.279, variance 9.631; phi = (var - mean) / mean^2, which also carries the spread of team strength, so it is an upper bound",MEASURED_UPPER_BOUND,STORE_VERIFIED_FINALS_CURRENT_CAPTURE,2026-11-11
+Soccer/2. Bundesliga,draw_rate,0.2532,1323,openfootball full-time results,MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/2. Bundesliga,first_half_share,0.4397,1250,openfootball half-time and full-time goals (first-half goals / full-time goals),MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/A-League Men,draw_rate,0.2604,169,openfootball full-time results,MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/A-League Men,first_half_share,0.4568,161,openfootball half-time and full-time goals (first-half goals / full-time goals),MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Algeria Ligue 1,draw_rate,0.3312,160,openfootball full-time results,MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Algeria Ligue 1,first_half_share,0.4047,131,openfootball half-time and full-time goals (first-half goals / full-time goals),MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Argentina Liga Profesional,draw_rate,0.3125,240,openfootball full-time results,MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Argentina Liga Profesional,first_half_share,0.4468,206,openfootball half-time and full-time goals (first-half goals / full-time goals),MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Austrian 2. Liga,draw_rate,0.2411,336,openfootball full-time results,MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Austrian 2. Liga,first_half_share,0.4611,312,openfootball half-time and full-time goals (first-half goals / full-time goals),MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Austrian Bundesliga,draw_rate,0.2788,850,openfootball full-time results,MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Austrian Bundesliga,first_half_share,0.443,791,openfootball half-time and full-time goals (first-half goals / full-time goals),MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Belgian Pro League,draw_rate,0.283,417,openfootball full-time results,MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Belgian Pro League,first_half_share,0.4686,382,openfootball half-time and full-time goals (first-half goals / full-time goals),MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Botola Pro,draw_rate,0.305,200,openfootball full-time results,MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Botola Pro,first_half_share,0.4204,179,openfootball half-time and full-time goals (first-half goals / full-time goals),MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Brasileirao Serie A,draw_rate,0.2679,657,openfootball full-time results,MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Brasileirao Serie A,first_half_share,0.4441,614,openfootball half-time and full-time goals (first-half goals / full-time goals),MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Brasileirao Serie B,draw_rate,0.2632,57,openfootball full-time results,MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Bundesliga,draw_rate,0.2478,1566,openfootball full-time results,MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Bundesliga,first_half_share,0.4604,1484,openfootball half-time and full-time goals (first-half goals / full-time goals),MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Chinese Super League,draw_rate,0.2658,79,openfootball full-time results,MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Colombia Primera A,draw_rate,0.3353,167,openfootball full-time results,MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Colombia Primera A,first_half_share,0.5015,139,openfootball half-time and full-time goals (first-half goals / full-time goals),MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/EFL Championship,draw_rate,0.2625,2880,openfootball full-time results,MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/EFL Championship,first_half_share,0.4477,2662,openfootball half-time and full-time goals (first-half goals / full-time goals),MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/EFL League One,draw_rate,0.2313,908,openfootball full-time results,MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/EFL League One,first_half_share,0.4405,767,openfootball half-time and full-time goals (first-half goals / full-time goals),MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/EFL League Two,draw_rate,0.2802,828,openfootball full-time results,MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/EFL League Two,first_half_share,0.4352,765,openfootball half-time and full-time goals (first-half goals / full-time goals),MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Egyptian Premier League,draw_rate,0.3005,183,openfootball full-time results,MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Egyptian Premier League,first_half_share,0.3937,153,openfootball half-time and full-time goals (first-half goals / full-time goals),MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Eredivisie,draw_rate,0.2431,1592,openfootball full-time results,MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Eredivisie,first_half_share,0.4439,1514,openfootball half-time and full-time goals (first-half goals / full-time goals),MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Greek Super League,draw_rate,0.2248,298,openfootball full-time results,MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Greek Super League,first_half_share,0.436,279,openfootball half-time and full-time goals (first-half goals / full-time goals),MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/J1 League,draw_rate,0.2574,136,openfootball full-time results,MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/J1 League,first_half_share,0.408,127,openfootball half-time and full-time goals (first-half goals / full-time goals),MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/La Liga,draw_rate,0.2608,1959,openfootball full-time results,MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/La Liga,first_half_share,0.4404,1819,openfootball half-time and full-time goals (first-half goals / full-time goals),MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Liga MX,draw_rate,0.2382,340,openfootball full-time results,MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Liga MX,first_half_share,0.4523,315,openfootball half-time and full-time goals (first-half goals / full-time goals),MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Ligue 1,draw_rate,0.2462,1722,openfootball full-time results,MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Ligue 1,first_half_share,0.4477,1603,openfootball half-time and full-time goals (first-half goals / full-time goals),MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Ligue 2,draw_rate,0.2512,422,openfootball full-time results,MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Ligue 2,first_half_share,0.4434,394,openfootball half-time and full-time goals (first-half goals / full-time goals),MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/MLS,draw_rate,0.2378,164,openfootball full-time results,MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/MLS,first_half_share,0.4933,146,openfootball half-time and full-time goals (first-half goals / full-time goals),MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Premier League,draw_rate,0.241,1950,openfootball full-time results,MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Premier League,first_half_share,0.4448,1846,openfootball half-time and full-time goals (first-half goals / full-time goals),MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Primeira Liga,draw_rate,0.2481,1592,openfootball full-time results,MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Primeira Liga,first_half_share,0.4449,1491,openfootball half-time and full-time goals (first-half goals / full-time goals),MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Scottish Premiership,draw_rate,0.2405,291,openfootball full-time results,MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Scottish Premiership,first_half_share,0.4486,276,openfootball half-time and full-time goals (first-half goals / full-time goals),MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Segunda Division,draw_rate,0.2842,584,openfootball full-time results,MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Segunda Division,first_half_share,0.4185,524,openfootball half-time and full-time goals (first-half goals / full-time goals),MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Serie A,draw_rate,0.2711,1940,openfootball full-time results,MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Serie A,first_half_share,0.4398,1804,openfootball half-time and full-time goals (first-half goals / full-time goals),MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Serie B,draw_rate,0.3276,696,openfootball full-time results,MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Serie B,first_half_share,0.4598,628,openfootball half-time and full-time goals (first-half goals / full-time goals),MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Super Lig,draw_rate,0.2449,437,openfootball full-time results,MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/Super Lig,first_half_share,0.447,402,openfootball half-time and full-time goals (first-half goals / full-time goals),MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Soccer/ALL,reference_form_and_rho,KEEP_CURRENT average k=2.0 rho=0.0,11260,"POOLED-v1 held-out competitions; best on tuning additive k=10.0 rho=-0.05; held-out three-way Brier -0.00422 [-0.00563, -0.00265], O/U 2.5 log loss 0.00202 [0.00123, 0.00268]",DECIDED_BY_REGISTERED_RULE,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket One-Day Format/Men's ODI,first_innings_mean_since_2024,248.63,272,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket One-Day Format/Men's ODI,first_innings_sd_since_2024,68.94,272,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket One-Day Format/Men's ODI,checkpoint_over5_mean,21.94,792,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket One-Day Format/Men's ODI,checkpoint_over5_sd,8.52,792,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket One-Day Format/Women's ODI,first_innings_mean_since_2024,233.13,186,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket One-Day Format/Women's ODI,first_innings_sd_since_2024,72.66,186,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket One-Day Format/Women's ODI,checkpoint_over5_mean,19.86,380,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket One-Day Format/Women's ODI,checkpoint_over5_sd,8.68,380,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/BBL,first_innings_mean_since_2024,166.18,101,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/BBL,first_innings_sd_since_2024,32.36,101,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/BBL,checkpoint_over6_mean,45.52,382,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/BBL,checkpoint_over6_sd,11.55,382,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/BPL,first_innings_mean_since_2024,159.94,125,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/BPL,first_innings_sd_since_2024,33.84,125,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/BPL,checkpoint_over6_mean,43.98,292,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/BPL,checkpoint_over6_sd,11.78,292,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/CPL,first_innings_mean_since_2024,165.26,97,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/CPL,first_innings_sd_since_2024,35.33,97,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/CPL,checkpoint_over6_mean,45.02,247,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/CPL,checkpoint_over6_sd,12.92,247,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/ILT20,first_innings_mean_since_2024,160.87,102,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/ILT20,first_innings_sd_since_2024,30.25,102,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/ILT20,checkpoint_over6_mean,46.19,134,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/ILT20,checkpoint_over6_sd,11.81,134,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/IPL,first_innings_mean_since_2024,191.9,213,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/IPL,first_innings_sd_since_2024,37.5,213,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/IPL,checkpoint_over6_mean,51.42,537,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/IPL,checkpoint_over6_sd,14.31,537,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/LPL,first_innings_mean_since_2024,182.02,47,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/LPL,first_innings_sd_since_2024,31.87,47,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/LPL,checkpoint_over6_mean,48.94,137,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/LPL,checkpoint_over6_sd,14.68,137,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/MLC,first_innings_mean_since_2024,172.47,86,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/MLC,first_innings_sd_since_2024,38.17,86,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/MLC,checkpoint_over6_mean,50.61,106,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/MLC,checkpoint_over6_sd,15.39,106,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/Men's T20I,first_innings_mean_since_2024,148.21,1590,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/Men's T20I,first_innings_sd_since_2024,48.32,1590,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/Men's T20I,checkpoint_over6_mean,43.18,2864,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/Men's T20I,checkpoint_over6_sd,14.85,2864,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/PSL,first_innings_mean_since_2024,180.18,107,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/PSL,first_innings_sd_since_2024,36.01,107,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/PSL,checkpoint_over6_mean,50.72,273,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/PSL,checkpoint_over6_sd,13.47,273,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/SA20,first_innings_mean_since_2024,167.54,87,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/SA20,first_innings_sd_since_2024,37.79,87,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/SA20,checkpoint_over6_mean,46.92,119,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/SA20,checkpoint_over6_sd,13.94,119,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/T20 Blast,first_innings_mean_since_2024,176.07,354,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/T20 Blast,first_innings_sd_since_2024,32.32,354,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/T20 Blast,checkpoint_over6_mean,51.05,897,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/T20 Blast,checkpoint_over6_sd,12.36,897,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/WBBL,first_innings_mean_since_2024,153.49,77,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/WBBL,first_innings_sd_since_2024,27.96,77,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/WBBL,checkpoint_over6_mean,38.86,353,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/WBBL,checkpoint_over6_sd,10.07,353,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/WPL,first_innings_mean_since_2024,161.95,66,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/WPL,first_innings_sd_since_2024,29.31,66,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/WPL,checkpoint_over6_mean,43.65,89,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/WPL,checkpoint_over6_sd,12.01,89,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/Women's T20I,first_innings_mean_since_2024,119.99,1116,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/Women's T20I,first_innings_sd_since_2024,42.63,1116,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/Women's T20I,checkpoint_over6_mean,33.21,1828,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket T20/Women's T20I,checkpoint_over6_sd,13.26,1828,"Cricsheet ball-by-ball first innings, full scheduled overs, no-result excluded",MEASURED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket/ODI_MEN,innings_scale_sd,0.25,,SIM-VALID-v1: chosen on seasons before 2025 so simulated spreads match observed spreads,FITTED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket/ODI_WOMEN,innings_scale_sd,0.25,,SIM-VALID-v1: chosen on seasons before 2025 so simulated spreads match observed spreads,FITTED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket/T20_MEN,innings_scale_sd,0.25,,SIM-VALID-v1: chosen on seasons before 2025 so simulated spreads match observed spreads,FITTED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Cricket/T20_WOMEN,innings_scale_sd,0.25,,SIM-VALID-v1: chosen on seasons before 2025 so simulated spreads match observed spreads,FITTED,BULK_OPEN_DATA_CURRENT_CAPTURE,2026-11-11
+Tennis/ATP Clay best-of-3,serve_point_win,0.6202,587,TennisMyLife ATP tour-level results 2025-01-01 to latest (aggregates only),MEASURED,OPEN_DATA_NONCOMMERCIAL_AGGREGATE,2026-11-11
+Tennis/ATP Clay best-of-5,serve_point_win,0.6255,118,TennisMyLife ATP tour-level results 2025-01-01 to latest (aggregates only),MEASURED,OPEN_DATA_NONCOMMERCIAL_AGGREGATE,2026-11-11
+Tennis/ATP Grass best-of-3,serve_point_win,0.6654,165,TennisMyLife ATP tour-level results 2025-01-01 to latest (aggregates only),MEASURED,OPEN_DATA_NONCOMMERCIAL_AGGREGATE,2026-11-11
+Tennis/ATP Grass best-of-5,serve_point_win,0.655,122,TennisMyLife ATP tour-level results 2025-01-01 to latest (aggregates only),MEASURED,OPEN_DATA_NONCOMMERCIAL_AGGREGATE,2026-11-11
+Tennis/ATP Hard best-of-3,serve_point_win,0.6488,1375,TennisMyLife ATP tour-level results 2025-01-01 to latest (aggregates only),MEASURED,OPEN_DATA_NONCOMMERCIAL_AGGREGATE,2026-11-11
+Tennis/ATP Hard best-of-5,serve_point_win,0.639,252,TennisMyLife ATP tour-level results 2025-01-01 to latest (aggregates only),MEASURED,OPEN_DATA_NONCOMMERCIAL_AGGREGATE,2026-11-11
+Tennis/ATP,form_shock_sigma,0.2,,"SIM-VALID-v1: chosen by total-games log score on 2024, checked on 2025",FITTED,OPEN_DATA_NONCOMMERCIAL_AGGREGATE,2026-11-11
+Tennis/WTA,serve_point_win,,0,No permitted bulk WTA results source (the Sackmann repositories were withdrawn; mirrors are not used),NOT_ESTIMATED,,2026-11-11

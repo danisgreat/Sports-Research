@@ -60,6 +60,11 @@ LEAGUE_KEYS = {"nba": "NBA", "wnba": "WNBA", "nbl": "NBL", "nfl": "NFL", "afl": 
                "epl": "Premier League", "la liga": "La Liga", "laliga": "La Liga", "bundesliga": "Bundesliga", "serie a": "Serie A",
                "ligue 1": "Ligue 1"}
 NOT_TB1 = ("NHL", "MLB")        # toolkit 4.3: TB-1-MD has no resolution there; use the release or the baseline
+# LEAGUE-KEY-v2 (CR-2026.11.11-R1): a league name selects constants only inside its own sport. Before this, the bare name was
+# matched, so "Ice Hockey/Bundesliga" or "Basketball/Bundesliga" received the soccer Bundesliga constants.
+KEY_SPORTS = {"NBA": ("basketball",), "WNBA": ("basketball",), "NBL": ("basketball",), "NFL": ("american football",),
+              "AFL": ("afl", "australian rules"), "NRL": ("rugby league",), "Premier League": ("soccer",), "La Liga": ("soccer",),
+              "Bundesliga": ("soccer",), "Serie A": ("soccer",), "Ligue 1": ("soccer",)}
 
 PARAM_FIELDS = ("row_type", "competition", "model_dir", "engine", "family", "usable", "dev_rows", "dev_seasons", "dev_first_date",
                 "dev_last_date", "mean_total", "mean_home_margin", "home_win_rate", "raw_margin_sd", "raw_total_sd",
@@ -77,8 +82,13 @@ def _rows(path) -> list[dict]:
 
 
 def league_key(competition: str) -> str | None:
-    name = competition.split("/")[-1].strip().lower()
-    return LEAGUE_KEYS.get(name)
+    """The TB-1-MD constants key for ``Sport/Competition``, or None. The sport must match the key's own sport (LEAGUE-KEY-v2);
+    a bare name without a sport keeps the old lookup, because it names no sport to contradict."""
+    parts = [p.strip() for p in competition.split("/")]
+    key = LEAGUE_KEYS.get(parts[-1].lower())
+    if key is None or len(parts) == 1:
+        return key
+    return key if parts[0].lower() in KEY_SPORTS[key] else None
 
 
 # ------------------------------------------------------------------ tiers
@@ -178,13 +188,43 @@ def _normal_grid(mean_h: float, mean_a: float, sd_margin: float, sd_total: float
     return ScoreGrid.bivariate_normal(mean_h, mean_a, cov)
 
 
-def _resolve(grid: ScoreGrid, ties: str, margin: float, sd_margin: float, ot_fraction: float) -> ScoreGrid:
+OT_MODEL = "OT_PERIODS_V1"      # basketball overtime played as real extra periods (CR-2026.11.11-R1); "ONE_POINT" is the pre-v24.13 rule
+
+
+def overtime_period_grid(mean_h: float, mean_a: float, sd_margin: float, sd_total: float, fraction: float) -> ScoreGrid:
+    """One basketball overtime period: each side scores its regulation rate times the period's share of a game, with the
+    regulation margin and total spreads scaled by the square root of that share (the same scaling the one-point rule used for
+    the overtime winner)."""
+    if not 0 < fraction < 1:
+        raise ReferenceError_("an overtime period must be a positive fraction of a game")
+    var_x = (sd_total ** 2 + sd_margin ** 2) / 4 * fraction
+    cov_xy = (sd_total ** 2 - sd_margin ** 2) / 4 * fraction
+    grid = ScoreGrid.bivariate_normal(max(mean_h * fraction, 0.5), max(mean_a * fraction, 0.5),
+                                      np.array([[var_x, cov_xy], [cov_xy, var_x]]))
+    if grid.h0 or grid.a0:                       # pad to a 0-0 origin so it can be added to a tied state
+        p = np.zeros((grid.h0 + grid.p.shape[0], grid.a0 + grid.p.shape[1]))
+        p[grid.h0:, grid.a0:] = grid.p
+        grid = ScoreGrid(p)
+    return grid
+
+
+def _resolve(grid: ScoreGrid, ties: str, margin: float, sd_margin: float, ot_fraction: float, *, mean_h: float | None = None,
+             mean_a: float | None = None, sd_total: float | None = None, ot_model: str = OT_MODEL) -> ScoreGrid:
     if ties in ("draw", ""):
         return grid
+    if ties == "overtime" and ot_model == OT_MODEL and None not in (mean_h, mean_a, sd_total):
+        return resolve_overtime(grid, overtime_period_grid(mean_h, mean_a, sd_margin, sd_total, ot_fraction))
     # An extra period is an ot_fraction of a game: its margin has mean margin*f and SD sd*sqrt(f).
     p_home = float(stats.norm.cdf(margin * math.sqrt(max(ot_fraction, 1e-9)) / sd_margin))
     bonus = 3 if ties == "overtime_nfl" else 1
     return grid.resolve_ties(p_home, 0.0, bonus)
+
+
+def resolve_overtime(grid: ScoreGrid, period: ScoreGrid) -> ScoreGrid:
+    """Reference-only overtime arithmetic; do not alter the frozen model cycle's ScoreGrid code identity."""
+    from ml.kit.sr_kit import Grid
+    out = Grid(grid.p, grid.h0, grid.a0).periods(Grid(period.p, period.h0, period.a0))
+    return ScoreGrid(out.p, out.h0, out.a0)
 
 
 LM_PRIOR_WEIGHT = 200.0     # team-games of prior-season league mean blended into a young season's league mean (totals only)
@@ -325,7 +365,9 @@ def tb1_grid(competition: str, data: dict, neutral: bool = False, form: str | No
         sd_m = sd_t = float("nan")
     else:
         grid = _resolve(_normal_grid(mean_h, mean_a, spec["sd_margin"], spec["sd_total"]), spec["ties"], centre["margin"],
-                        spec["sd_margin"], spec["ot_fraction"])
+                        spec["sd_margin"], spec["ot_fraction"], mean_h=mean_h, mean_a=mean_a, sd_total=spec["sd_total"])
+        if spec["ties"] == "overtime":
+            centre = dict(centre, flags=centre["flags"] + [OT_MODEL])
         sd_m, sd_t = spec["sd_margin"], spec["sd_total"]
     return grid, dict(centre, key=key, sd_margin=sd_m, sd_total=sd_t, he=spec["he"], k=spec["k"])
 
@@ -349,12 +391,12 @@ def baseline_grid(competition: str, root=ROOT) -> tuple[ScoreGrid, dict]:
     sd_m, sd_t = float(row["raw_margin_sd"]), float(row["raw_total_sd"])
     ties = "overtime" if sport == "basketball" else "overtime_nfl" if sport in ("american football", "college football", "canadian football") else "draw"
     ot = {"nba": 5 / 48}.get(competition.split("/")[-1].strip().lower(), 5 / 40) if sport == "basketball" else 10 / 60
-    grid = _resolve(_normal_grid(mean_h, mean_a, sd_m, sd_t), ties, margin, sd_m, ot)
+    grid = _resolve(_normal_grid(mean_h, mean_a, sd_m, sd_t), ties, margin, sd_m, ot, mean_h=mean_h, mean_a=mean_a, sd_total=sd_t)
     stale = False
     last = row.get("dev_last_date", "")
     if last:
         stale = (datetime.now(timezone.utc).date() - datetime.fromisoformat(last).date()).days > STALE_AFTER_DAYS
-    return grid, dict(status=status, source=row["competition"], flags=["STALE_PROFILE"] if stale else [])
+    return grid, dict(status=status, source=row["competition"], flags=(["STALE_PROFILE"] if stale else []) + ([OT_MODEL] if ties == "overtime" else []))
 
 
 # ------------------------------------------------------------------ dated standings from the ESPN site API

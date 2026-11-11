@@ -65,6 +65,7 @@ DECISIONS = ("WIN", "LOSS", "DRAW", "NO_RESULT")
 OUTCOME_STATUS = ("FINAL", "ABANDONED", "POSTPONED", "CANCELLED", "FORFEIT", "AWARDED")
 GRADE_VOCAB = ("WIN", "LOSS", "PUSH", "VOID", "UNRESOLVED", "UNATTAINABLE")
 PLACEHOLDER = "NOT_YET_RESEARCHED"
+NONE_PUBLISHED = "NONE_PUBLISHED"
 MARKET = re.compile(r"\b(odds|bookmaker|sportsbook|betting|wager|tipster|implied probability|price)\b", re.I)
 KEY = re.compile(r"LOCAL-[A-Z0-9]+-G[0-9]{4,}")
 
@@ -242,7 +243,15 @@ def check(key: str, stage: str = "pregame", root=ROOT) -> list[str]:
             problems.append(f"FEATURES.csv line {i}: retrieved_at needs an ISO time with an offset")
     for side, feature in sorted(required - seen):
         problems.append(f"FEATURES.csv: required feature {side} {feature} is absent (write it, or MISSING with the reason)")
+    # LINEUP-CAPTURE-v1 (CR-2026.11.11-R1): every card captures each side's availability, because lineups and absences are the
+    # only route to the missing effect sizes. When nothing is published, one row per side says so: player NONE_PUBLISHED,
+    # role and status UNKNOWN, with the page that was checked and when.
+    for side in SIDES:
+        if not any(r["side"] == side for r in data["AVAILABILITY.csv"]):
+            problems.append(f"AVAILABILITY.csv: no row for {side}; capture its lineup and absences, or one NONE_PUBLISHED row with the page checked")
     for i, r in enumerate(data["AVAILABILITY.csv"], 2):
+        if r["player"] == NONE_PUBLISHED and (r["role"] != "UNKNOWN" or r["status"] != "UNKNOWN"):
+            problems.append(f"AVAILABILITY.csv line {i}: a {NONE_PUBLISHED} row has role and status UNKNOWN")
         if r["side"] not in SIDES or r["role"] not in ROLES or r["status"] not in AVAIL_STATUS or r["confirmation"] not in CONFIRMATION:
             problems.append(f"AVAILABILITY.csv line {i}: side/role/status/confirmation outside the vocabulary")
         if not r["source_url"].startswith("https://"):
@@ -348,6 +357,26 @@ def build(out, root=ROOT) -> dict:
                 settled=sum(r["admitted"] == "YES" and r["stage"] == "settled" for r in receipt), contracts=len(contracts))
 
 
+def readiness(root=ROOT):
+    """Report real feature availability; do not equate result-history size or a template with ML readiness."""
+    root = Path(root)
+    store = root / "research/learning_store"
+    count = lambda name: len(_read(store / name)[1]) if (store / name).exists() else 0
+    games, complete, observed = 0, 0, 0
+    for path in (root / LOG).glob("LOCAL-*"):
+        if not path.is_dir(): continue
+        games += 1
+        try:
+            if not check(path.name, "pregame", root): complete += 1
+            observed += sum(r["player"] != NONE_PUBLISHED and r["status"] != "UNKNOWN" for r in _read(path / "AVAILABILITY.csv")[1])
+        except (OSError, ValueError, KeyError): pass
+    availability = count("PLAYER_AVAILABILITY.csv")
+    return dict(stored_events=count("EVENTS.csv"), stored_player_availability=availability, research_logs=games,
+                complete_pregame_logs=complete, observed_research_availability=observed,
+                feature_evidence="FEATURE_EVIDENCE_INCOMPLETE" if availability == 0 and observed == 0 else "CAPTURED_REQUIRES_SCOPE_AND_HELD_OUT_REVIEW",
+                predictive_qualification="UNPROVEN", historical_backfill="PROHIBITED_OUTCOME_EXPOSED")
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = parser.add_subparsers(dest="cmd", required=True)
@@ -364,6 +393,7 @@ def main(argv=None):
     lk.add_argument("--canonical", required=True)
     b = sub.add_parser("build")
     b.add_argument("--out", required=True, type=Path)
+    sub.add_parser("readiness")
     args = parser.parse_args(argv)
     if args.cmd == "init":
         print(f"{RULE} learning log written: {init(args.mini, args.key, args.game, sport=args.sport)}")
@@ -377,6 +407,8 @@ def main(argv=None):
     elif args.cmd == "link":
         link(args.key, args.canonical)
         print(f"{args.key} linked to {args.canonical}")
+    elif args.cmd == "readiness":
+        print(readiness())
     else:
         print(build(args.out))
 

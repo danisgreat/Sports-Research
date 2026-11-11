@@ -53,3 +53,8 @@ Passing is recorded as a dated row in the development record of the card that fi
 - The illustrative baseball defaults and the test parameters in the unit tests are not sporting evidence.
 - Hockey, cricket and props need caller-supplied parameters; none has been estimated or validated in this release.
 - The structural shares quoted from the 22 October simulation review are development evidence on unadmitted archive data.
+
+
+## v24.14 admission clarification (CR-2026.11.11-R2)
+
+EXT-v2 does not waive the sensitivity-only rule for unvalidated simulators. The chat kit refuses PRIMARY cricket simulation and PRIMARY tennis form shock; purpose SENSITIVITY is explicit and cannot enter an admitted primary return. Exact tennis recursion without a form shock, exact hockey regulation/OT grids and reference score grids are arithmetic approximations, never a claim of empirical calibration. The retained v24.13 simulator checks are development outputs with lineage, not fresh competition/endpoint qualification. A baseball structural check alone does not complete the held-out gate. No simulator is promoted by this release. The reference-only overtime routine uses the shared kit calculation outside the frozen cycle import closure.

@@ -193,3 +193,23 @@ These modules sit outside the release import closure (`ml/code_identity.py`), so
 | `python -m ml sim <baseball\|tennis\|hockey\|cricket\|props> …` | Simulators with seed, N and Monte Carlo error; NOT_VALIDATED until `structure_check` passes (SIMULATION_PROTOCOL) | `ml/sim/` |
 
 Benchmarks load through `ml/benchmarks.py`, which refuses any price column. Tests: `test_reference.py`, `test_picks_ledger.py`, `test_releasegate.py`, `test_backfill_basketball.py`, `test_context_study.py`, `test_league_day.py`, `test_sim.py` and the additions to `test_pregame.py`.
+
+## Retained unpublished v24.13 additions (11 November 2026)
+
+| Command | What it does | Module |
+|---|---|---|
+| `python -m ml external event-key\|check\|merge` | Shared event key for research chats; checks a LANE_RETURN block; merges returns into corroborated evidence, conflicts, pooled prices and the chats' access log (EXT-v2) | `ml/external.py` |
+| `python -m ml kit verify\|params\|sha` | Re-runs a chat's KIT_RECEIPT with the repository kit; rebuilds the kit's parameter files and fills Part A gaps | `ml/kit/cli.py`, `ml/kit/params.py` |
+| (upload to a chat) | The self-contained calculation kit: one engine per sport, receipts (KIT-v1) | `ml/kit/sr_kit.py` |
+| `python -m ml bulk-history soccer\|cricket --cache DIR` | Open bulk history (openfootball, Cricsheet) through the checked fetcher; raw bodies stay outside the repository (BULK-v1) | `ml/bulk_history.py` |
+| `python -m ml pooled soccer --out DIR` | One recipe per sport, tuned on some competitions and judged on held-out ones (POOLED-v1) | `ml/pooled.py` |
+| `python -m ml sim-check baseball\|hockey\|cricket\|tennis --out DIR` | Structural and held-out checks for the simulators (SIM-VALID-v1) | `ml/sim/validate.py` |
+| `python -m ml history-pack --competition C --team T --as-of D --out DIR` | A side's dated games and L5/L10/L15/L20/season windows from the history the repository holds (PACK-v1) | `ml/history_pack.py` |
+| `python -m ml source-audit --url U --reader R`, `--lists DIR`, `--sport-slices DIR` | Per-reader access (SRC-ALT-v3), the weekly reader lists and the chats' per-sport source files | `ml/source_audit.py` |
+
+Changed: `ml/reference.py` (LEAGUE-KEY-v2: a league name selects constants only inside its own sport; OT-PERIODS-v1: basketball overtime as real extra periods, flag `OT_PERIODS_V1` on every receipt), `ml/core/distributions.py` (`ScoreGrid.resolve_ties_periods`), `ml/picks.py` (`rank_scope`, `event_key`, `external_runs`, `external_disagreement`), `ml/learning_log.py` (LINEUP-CAPTURE-v1: availability rows for both sides). None of these files is in the forecast cycle's import closure, so no release is retired. Tests: `ml/tests/test_release_v24_13.py`.
+
+
+## Release v24.14 integrity commands
+
+python -m ml external package-check validates the complete upload package. The init/packet/intake/status/review-source/admit commands enforce EXT-v2. append-card performs the lease-held hash-compare mini append; append-research retains nonnumeric work; bind-card binds exact central pricing, learning and ledger evidence. Legacy check/merge is diagnostic only. learning-log readiness reports actual feature evidence. external evaluate uses the verified prospective ledger and exact 100-event/eight-week paired experiment. See ../EXTERNAL_RESEARCH_PROTOCOL_V2.md and ../research/verification/framework_change_2026-11-11-2/IMPLEMENTATION.md. No model is promoted and the frozen cycle/shared reference table are unchanged.

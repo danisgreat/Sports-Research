@@ -86,3 +86,11 @@ research/verification/settlement_import_2026-11-09_permanent_closure/** -text
 research/verification/source_sweep_2026-11-09-2/** -text
 research/verification/source_sweep_2026-11-09-1/** -text
 research/learning_log/** -text
+# EXT-v2 immutable originals, manifests, upload packages and exact draft custody.
+archive/integrity_2026-11-11_v24_14/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+research/external/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+research/bulk_history/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+research/verification/framework_change_2026-11-11-1/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+research/verification/framework_change_2026-11-11-2/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+ml/kit/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+EXTERNAL_RESEARCH_PROTOCOL.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

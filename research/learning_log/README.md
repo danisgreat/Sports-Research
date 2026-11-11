@@ -45,3 +45,12 @@ python -m ml learning-log build --out research/learning_log/builds/<date>-<n>   
 ## Companion source and window evidence ·9 November 2026
 
 The [research coverage playbook](../source_routes/RESEARCH_COVERAGE_PLAYBOOK.md) links blank social-claim, game-metric and window-coverage tables for the card’s named evidence scope. They support the existing learning-log files; do not insert their additional columns into fixed-schema files. Current check/build commands do not verify complete metric-window membership or the truth of a source. Retain those checks in A9. No historical point-in-time feature logs are backfilled.
+
+## Lineups and absences on every card (LINEUP-CAPTURE-v1, 11 November 2026)
+
+`check --stage pregame` now needs at least one AVAILABILITY row for each side. Capture the confirmed starters and the players out, doubtful or questionable, each with its source and published time. When nothing has been published, write one row per side with player `NONE_PUBLISHED`, role and status `UNKNOWN`, and the page that was checked; never an empty file and never an assumed healthy roster. These rows are the only route to the availability effect sizes the effect tables still lack (LINEUP-H1 in the hypothesis register).
+
+
+## Readiness is measured (v24.14)
+
+Run python -m ml learning-log readiness to distinguish result-history size, real stored player availability, actual research logs and observed availability rows. Zero remains FEATURE_EVIDENCE_INCOMPLETE and qualification UNPROVEN. Do not backfill historical pregame features after seeing outcomes. An accepted feature schema or a NONE_PUBLISHED row is not a learned absence effect.

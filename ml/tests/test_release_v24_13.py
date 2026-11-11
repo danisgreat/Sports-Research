@@ -1,0 +1,340 @@
+"""CR-2026.11.11-R1 (v24.13): league keys by sport, overtime periods, per-reader access, the ranking scope, lineup capture,
+external lanes and their merge, the chat kit and its receipts, pooled studies and history packs. Offline; synthetic data."""
+import csv
+import io
+import json
+from pathlib import Path
+
+import numpy as np
+import pytest
+
+from ml import external as X, history_pack as HP, picks as P, pooled as PO, reference as R, source_audit as S
+from ml.core.distributions import ScoreGrid
+from ml.kit import sr_kit as K
+from ml.sim import tennis as T
+from ml.tests.test_picks_ledger import META, good_rows
+
+ROOT = Path(R.ROOT)
+
+
+# ------------------------------------------------------------------ LEAGUE-KEY-v2
+@pytest.mark.parametrize("competition,key", [
+    ("Soccer/Bundesliga", "Bundesliga"), ("Ice Hockey/Bundesliga", None), ("Basketball/Bundesliga", None),
+    ("Basketball/NBL", "NBL"), ("Cricket T20/NBL", None), ("AFL/AFL", "AFL"), ("Rugby League/NRL", "NRL"),
+    ("Rugby Union/Premier League", None), ("Soccer/Serie A", "Serie A"), ("Basketball/LBA Serie A", None), ("NBA", "NBA")])
+def test_a_league_name_selects_constants_only_inside_its_own_sport(competition, key):
+    assert R.league_key(competition) == key
+
+
+def test_a_hockey_bundesliga_is_no_longer_given_soccer_constants():
+    t = R.tier("Ice Hockey/Bundesliga", ROOT)
+    assert t["tier"] == "C" and t["reference"] == "BASELINE_ONLY"
+
+
+# ------------------------------------------------------------------ OT-PERIODS-v1
+NBA = dict(lm=114.0, lm_current=114.0, lm_prior=None, lm_blended=False, league_team_games=400,
+           home=dict(team="H", pf=1150, pa=1120, n=10), away=dict(team="A", pf=1130, pa=1140, n=10))
+
+
+def _one_point(info):
+    mh, ma = (info["total"] + info["margin"]) / 2, (info["total"] - info["margin"]) / 2
+    return R._resolve(R._normal_grid(mh, ma, 15.1, 19.4), "overtime", info["margin"], 15.1, 5 / 48, ot_model="ONE_POINT")
+
+
+def test_overtime_periods_keep_mass_leave_no_draw_and_carry_overtime_points_into_the_total():
+    grid, info = R.tb1_grid("Basketball/NBA", NBA)
+    old = _one_point(info)
+    assert abs(grid.p.sum() - 1) < 1e-9 and grid.winner()[1] < 1e-12 and R.OT_MODEL in info["flags"]
+    assert abs(grid.winner()[0] - old.winner()[0]) < 0.002                      # the overtime winner barely moves
+    mv, mp = grid.margin_pmf()
+    ov, op = old.margin_pmf()
+    assert mp[np.abs(mv) == 1].sum() < op[np.abs(ov) == 1].sum()                  # fewer one-point finishes than the bonus rule
+    assert grid.summary()["mean_home"] + grid.summary()["mean_away"] > old.summary()["mean_home"] + old.summary()["mean_away"] + 0.5
+    assert grid.total(229.5, "OVER").win > old.total(229.5, "OVER").win
+
+
+def test_resolve_ties_periods_refuses_a_period_that_cannot_decide():
+    g = ScoreGrid(np.array([[0.5, 0.0], [0.0, 0.5]]))
+    with pytest.raises(Exception, match="never decide"):
+        R.resolve_overtime(g, ScoreGrid(np.array([[1.0]])))
+
+
+def test_the_basketball_baseline_flags_the_overtime_model():
+    _, info = R.baseline_grid("Basketball/NBA", ROOT)
+    assert R.OT_MODEL in info["flags"]
+
+
+# ------------------------------------------------------------------ SRC-ALT-v3
+def test_each_reader_is_judged_by_its_own_agent_name_and_scripts_keep_the_union():
+    rules = "User-agent: GPTBot\nDisallow: /\n\nUser-agent: ClaudeBot\nDisallow: /\n\nUser-agent: *\nAllow: /\n"
+    row = S.classify("https://x.org/match", "200", rules)
+    assert row["status"] == "BLOCKED_FOR_AI" and row["script"] == "BLOCKED"
+    assert row["claude_agent"] == "ALLOWED" and row["chatgpt_browsing"] == "ALLOWED"
+    chat_blocked = "User-agent: ChatGPT-User\nDisallow: /\n\nUser-agent: *\nAllow: /\n"
+    row = S.classify("https://x.org/match", "200", chat_blocked)
+    assert row["chatgpt_browsing"] == "BLOCKED" and row["claude_agent"] == "ALLOWED"
+
+
+def test_ai_input_no_and_unreadable_rules_block_every_reader():
+    row = S.classify("https://x.org/a", "200", "User-agent: *\nContent-Signal: ai-input=no\nAllow: /\n")
+    assert {row[c] for c in S.READER_COLUMNS.values()} == {"BLOCKED"}
+    row = S.classify("https://x.org/a", "403", None)
+    assert {row[c] for c in S.READER_COLUMNS.values()} == {"RULES_UNKNOWN"}
+
+
+def test_host_lists_name_partly_blocked_paths_and_a_weekly_expiry():
+    rules = "User-agent: *\nDisallow: /search/\n"
+    row = S.host_row("x.org", "200", rules, "2026-11-11T00:00:00+00:00")
+    assert row["chatgpt_browsing"] == "PARTLY_BLOCKED" and row["chatgpt_blocked_paths"] == "/search/"
+    assert row["valid_until"] == "2026-11-18T00:00:00+00:00"
+
+
+def test_the_chats_do_not_open_list_holds_blocked_and_unknown_hosts_only(tmp_path):
+    rows = [S.host_row("a.org", "200", "User-agent: ChatGPT-User\nDisallow: /\n", "2026-11-11T00:00:00+00:00"),
+            S.host_row("b.org", "404", None, "2026-11-11T00:00:00+00:00"),
+            S.host_row("c.org", "500", None, "2026-11-11T00:00:00+00:00"),
+            S.host_row("d.org", "200", "User-agent: *\nDisallow: /admin/\n", "2026-11-11T00:00:00+00:00")]
+    paths = S.write_lists(tmp_path / "lists", rows, "v24.13")
+    with open(paths[1], newline="", encoding="utf-8") as fh:
+        hosts = {r["host"] for r in csv.DictReader(fh)}
+    assert hosts == {"a.org", "c.org"} and paths[1].name == "CHATGPT_DO_NOT_OPEN_v24.13.csv"
+
+
+# ------------------------------------------------------------------ FREEZE-v1 ranking scope and EXT-v1 header
+def _lint(meta_over=None, rows=None):
+    meta = dict(META, **(meta_over or {}))
+    return P.lint(meta, rows or good_rows(), ROOT)
+
+
+def test_cards_issued_under_the_freeze_name_their_ranking_scope():
+    late = dict(issued_at="2026-11-12T09:30:00+00:00", scheduled_start="2026-11-12T10:00:00+00:00")
+    assert any("rank_scope" in p for p in _lint(late))
+    assert not any("rank_scope" in p for p in _lint(dict(late, rank_scope="ALL")))
+    assert not any("rank_scope" in p for p in _lint())                 # earlier cards keep their method
+
+
+def test_supplied_only_refuses_a_ranked_derived_line_and_disagreement_refuses_a_rank():
+    rows = good_rows()
+    ranked = next(r for r in rows if r["most_likely_rank"])
+    ranked["line_source"] = "ANALYST_DERIVED"
+    ranked["line_implied_p"] = ""
+    assert any("ranks supplied lines only" in p for p in _lint(dict(rank_scope="SUPPLIED_ONLY"), rows))
+    rows = good_rows()
+    label = next(r["label"] for r in rows if r["most_likely_rank"])
+    assert any("external runs disagree" in p for p in _lint(dict(external_disagreement=label), rows))
+    assert any("unknown row" in p for p in _lint(dict(external_disagreement="NOPE")))
+
+
+def test_event_key_and_external_runs_headers_are_checked():
+    assert any("event_key must be" in p for p in _lint(dict(event_key="Chiba v Osaka")))
+    assert not any("event_key" in p for p in _lint(dict(event_key="EV-20261110-BKB-CHIBAJETS-OSAKAEVESS", external_runs="5")))
+    assert any("external_runs" in p for p in _lint(dict(external_runs="many")))
+
+
+# ------------------------------------------------------------------ EXT-v1 lanes
+def test_every_chat_derives_the_same_event_key_from_the_request():
+    k = X.event_key("Basketball", "2026-11-10", "Chiba Jets", "Osaka Evessa")
+    assert k == "EV-20261110-BKB-CHIBAJETS-OSAKAEVESS" == X.event_key("Basketball", "2026-11-10", "chiba jets", "Ōsaka Evessa")
+    with pytest.raises(X.ExternalError):
+        X.event_key("Curling", "2026-11-10", "A", "B")
+
+
+SHA = "a" * 40
+KEY = "EV-20261110-BKB-CHIBAJETS-OSAKAEVESS"
+
+
+def lane(lane_id, chat, evidence=(), probs=(), access=(), commit=SHA):
+    head = (f"<!-- BEGIN LANE_RETURN -->\nevent_key: {KEY}\nlane: {lane_id}\nchat_label: {chat}\nprofile_version: {X.PROFILE_VERSION}\ncommit: {commit}\n"
+            f"reader: CHATGPT_BROWSING\nstarted_at: 2026-11-10T08:00:00+11:00\ncompleted_at: 2026-11-10T08:40:00+11:00\n")
+    out = head + "\n[EVIDENCE]\n" + ",".join(X.SECTIONS["EVIDENCE"]) + "\n" + "\n".join(evidence)
+    out += "\n[PROBABILITIES]\n" + ",".join(X.SECTIONS["PROBABILITIES"]) + "\n" + "\n".join(probs)
+    if not access:
+        access = [next(csv.reader([e]))[3] + ",OPENED,2026-11-10T08:25:00+11:00," for e in evidence]
+    out += "\n[ACCESS_LOG]\n" + ",".join(X.SECTIONS["ACCESS_LOG"]) + "\n" + "\n".join(access) + "\n<!-- END LANE_RETURN -->\n"
+    return out
+
+
+EV = "HOME,status:Player A,OUT,https://www.club.jp/news/1,CLUB,2026-11-09T12:00:00+09:00,2026-11-10T08:10:00+11:00,OFFICIAL_CONFIRMED,"
+EV2 = "HOME,status:Player A,OUT,https://www.bleague.jp/game/1,LEAGUE,UNKNOWN,2026-11-10T08:20:00+11:00,OFFICIAL_CONFIRMED,"
+EV3 = "HOME,status:Player A,PROBABLE,https://news.example.com/a,MEDIA,UNKNOWN,2026-11-10T08:25:00+11:00,REPORTED,"
+PR = "Jets -14.5,handicap,HOME,-14.5,SUPPLIED,0.40,0.0,0.60,0.40," + "b" * 64
+
+
+def test_lane_returns_are_checked_for_shape_sources_receipts_and_market_terms():
+    assert X.check(X.parse(lane("L1", "CHAT-1", [EV]))) == []
+    assert any("only L5 and FULL price" in p for p in X.check(X.parse(lane("L1", "CHAT-1", [EV], [PR]))))
+    assert any("pricing lane" in p for p in X.check(X.parse(lane("L5", "CHAT-5"))))
+    hand = PR.replace("b" * 64, "by hand")
+    assert any("hand number is refused" in p for p in X.check(X.parse(lane("L5", "CHAT-5", probs=[hand]))))
+    market = EV.replace("OUT", "OUT per the odds")
+    assert any("market term" in p for p in X.check(X.parse(lane("L1", "CHAT-1", [market]))))
+    assert any("do-not-open" in p for p in X.check(X.parse(lane("L1", "CHAT-1", [EV])), {"club.jp"}))
+    assert any("commit" in p for p in X.check(X.parse(lane("L1", "CHAT-1", [EV], commit="abc"))))
+
+
+def test_merge_corroborates_by_domain_flags_conflicts_and_disagreeing_runs():
+    returns = [X.parse(lane("L1", "CHAT-1", [EV])), X.parse(lane("L4", "CHAT-4", [EV2, EV3])),
+               X.parse(lane("L5", "CHAT-5", probs=[PR])), X.parse(lane("FULL", "CHAT-2", probs=[PR.replace("0.40,0.0,0.60,0.40", "0.55,0.0,0.45,0.55")]))]
+    res = X.merge(returns, KEY, source_reviews=[dict(source_url=u, collector_id=c, lineage_status="VERIFIED", review_evidence_sha256="d" * 64) for u,c in [("https://www.club.jp/news/1", "CLUB"), ("https://www.bleague.jp/game/1", "LEAGUE")]])
+    out = {(e["field"], e["value"]): e for e in res["evidence"]}
+    assert out[("status:Player A", "OUT")]["corroboration"] == "CORROBORATED"
+    assert out[("status:Player A", "PROBABLE")]["corroboration"] == "SINGLE_SOURCE"
+    assert [c["field"] for c in res["conflicts"]] == ["status:Player A"]
+    (p,) = res["probabilities"]
+    assert p["status"] == "EXTERNAL_DISAGREEMENT" and p["median_p"] == 0.475 and res["disagreement"] == ["Jets -14.5"]
+
+
+def test_two_pages_of_one_site_are_one_source():
+    other = EV.replace("https://www.club.jp/news/1", "https://shop.club.jp/news/2")
+    res = X.merge([X.parse(lane("L1", "CHAT-1", [EV, other]))], KEY)
+    assert res["evidence"][0]["corroboration"] == "SINGLE_SOURCE"
+
+
+# ------------------------------------------------------------------ KIT-v1
+def _params(tmp_path):
+    from ml.kit import params as KP
+    rows = KP.kit_rows([dict(row_type="COMPETITION", competition="Basketball/NBA", usable="USABLE_DEVELOPMENT", dev_rows="4922",
+                             mean_total="229.15", mean_home_margin="2.0", home_win_rate="0.58", raw_margin_sd="15.43", raw_total_sd="19.9",
+                             resid_margin_sd="14.05", resid_total_sd="18.7", family="BASKETBALL"),
+                        dict(row_type="COMPETITION", competition="Soccer/Premier League", usable="USABLE_DEVELOPMENT", dev_rows="1900",
+                             mean_total="2.93", mean_home_margin="0.27", home_win_rate="0.45", raw_margin_sd="1.9", raw_total_sd="1.66",
+                             resid_margin_sd="1.71", resid_total_sd="1.65", family="SOCCER")],
+                       [dict(competition="Soccer/Premier League", parameter="first_half_share", value="0.45")], {}, [], "v24.13")
+    path = tmp_path / "KIT_PARAMETERS_v24.13.csv"
+    buf = io.StringIO(newline="")
+    w = csv.DictWriter(buf, fieldnames=list(KP.KIT_FIELDS), lineterminator="\n", extrasaction="ignore")
+    w.writeheader()
+    w.writerows(rows)
+    path.write_bytes(buf.getvalue().encode())
+    return path
+
+
+def test_the_kit_reproduces_the_repository_reference_for_the_nba(tmp_path):
+    grid, info = R.tb1_grid("Basketball/NBA", NBA)
+    params = K.load_params(_params(tmp_path))
+    row = K.row(params, "Basketball/NBA")
+    total, margin = K.tb2_centre(row, NBA["home"], NBA["away"], lm=NBA["lm"])
+    assert abs(total - info["total"]) < 1e-9 and abs(margin - info["margin"]) < 1e-9
+    lines = [dict(label="H-3.5", family="handicap", side="HOME", line=-3.5), dict(label="O229.5", family="total", side="OVER", line=229.5),
+             dict(label="ML", family="winner", side="HOME")]
+    out = K.points_from_centre(row, total, margin, lines)
+    ref = R.price_rows(grid, [dict(label="H-3.5", family="handicap", side="HOME", line="-3.5"), dict(label="O229.5", family="total", side="OVER", line="229.5"),
+                              dict(label="ML", family="winner", side="HOME", line="")])
+    for mine, theirs in zip(out["rows"], ref):
+        assert abs(mine["w"] - theirs["w"]) < 1e-6 and abs(mine["l"] - theirs["l"]) < 1e-6
+
+
+def test_the_kit_soccer_and_tennis_engines_match_the_repository():
+    g = K.Grid.poisson(1.6, 1.1)
+    s = ScoreGrid.poisson(1.6, 1.1)
+    assert np.allclose(g.p, s.p) and abs(g.total(2.5, "OVER")[0] - s.total(2.5, "OVER").win) < 1e-12
+    mine = K.tennis_match(0.66, 0.62, [], best_of=3)
+    theirs = T.match(0.66, 0.62, 3)
+    assert abs(mine["p_a"] - theirs["p_a"]) < 1e-12 and np.allclose(mine["grid"].p, theirs["games_grid"] / theirs["games_grid"].sum())
+
+
+def test_kit_receipts_reproduce_and_a_changed_number_is_refused(tmp_path, monkeypatch):
+    from ml.kit import cli as KC
+    params = _params(tmp_path)
+    inputs = dict(competition="Basketball/NBA", total=224.0, margin=4.5, lines=[dict(label="H-4.5", family="handicap", side="HOME", line=-4.5),
+                                                                             dict(label="U224.5", family="total", side="UNDER", line=224.5)])
+    _, text = K.run("points_from_centre", inputs, params_path=params)
+    assert KC.verify(text, params=params, phases=params) == []
+    forged = text.replace(text.split("\n")[-2].split(",")[-1], "0.9999999999")
+    assert any("does not reproduce" in p for p in KC.verify(forged, params=params, phases=params))
+    with pytest.raises(K.KitError, match="upload matching files"):
+        bad = tmp_path / "BAD.csv"
+        bad.write_text(params.read_text().replace(K.KIT_VERSION, "SR-KIT-v0"))
+        K.load_params(bad)
+
+
+def test_soccer_first_half_comes_from_the_share_and_corners_need_a_measured_row(tmp_path):
+    row = K.row(K.load_params(_params(tmp_path)), "Soccer/Premier League")
+    out = K.soccer_from_means(row, 1.5, 1.2, [dict(label="1H O0.5", family="first_half_total", side="OVER", line=0.5)])
+    assert abs(out["rows"][0]["final_p"] - (1 - np.exp(-(2.7 * 0.45)))) < 1e-9
+    with pytest.raises(K.KitError, match="NOT_ESTIMATED"):
+        K.soccer_from_means(row, 1.5, 1.2, [dict(label="C O10.5", family="corners_total", side="OVER", line=10.5)])
+
+
+def test_the_cricket_simulator_is_seeded_and_the_shock_widens_it():
+    table = np.tile([0.35, 0.35, 0.08, 0.01, 0.12, 0.04, 0.04, 0.01], (20, 1))
+    lines = [dict(label="O150", family="innings_total", side="OVER", line=150.5),
+             dict(label="PP O45", family="checkpoint_total", side="OVER", line=45.5, over=6)]
+    a = K.cricket_innings(table, lines, n=5000, seed=7, card=False)
+    b = K.cricket_innings(table, lines, n=5000, seed=7, card=False)
+    c = K.cricket_innings(table, lines, n=5000, seed=7, scale_sd=0.2, card=False)
+    assert a["rows"] == b["rows"] and c["sd"] > a["sd"] * 1.2
+    with pytest.raises(K.KitError):
+        K.cricket_innings(table, lines, n=5000, seed=7)               # a card needs N >= 100,000
+
+
+def test_a_mixture_is_a_proper_distribution_with_declared_weights():
+    m = K.mixture([(0.25, K.Grid.poisson(1.2, 1.0)), (0.75, K.Grid.poisson(1.6, 0.9))])
+    assert abs(m.p.sum() - 1) < 1e-12
+    with pytest.raises(K.KitError):
+        K.mixture([(0.5, K.Grid.poisson(1.2, 1.0)), (0.6, K.Grid.poisson(1.6, 0.9))])
+
+
+def test_barnett_clarke_combines_serve_and_return_against_the_tour():
+    pa, pb = K.barnett_clarke(0.68, 0.40, 0.62, 0.36, 0.64)
+    assert abs(pa - (0.64 + 0.04 - 0.0)) < 1e-12 and abs(pb - (0.64 - 0.02 - 0.04)) < 1e-12
+
+
+# ------------------------------------------------------------------ POOLED-v1 and PACK-v1
+def _soccer(path, games):
+    buf = io.StringIO(newline="")
+    w = csv.DictWriter(buf, fieldnames=["competition", "season", "date", "home", "away", "ht_home", "ht_away", "ft_home", "ft_away"],
+                       lineterminator="\n")
+    w.writeheader()
+    w.writerows(games)
+    path.write_bytes(buf.getvalue().encode())
+
+
+def test_walk_forward_never_lets_a_game_see_its_own_day():
+    rows = [dict(competition="Soccer/X", season="2025", date="2025-08-01", home="A", away="B", ft_home="5", ft_away="0"),
+            dict(competition="Soccer/X", season="2025", date="2025-08-01", home="C", away="D", ft_home="0", ft_away="0"),
+            dict(competition="Soccer/X", season="2025", date="2025-08-08", home="A", away="C", ft_home="1", ft_away="1")]
+    preds = PO.walk_forward(rows, "average", 2.0, 0.0)
+    assert preds[0]["exp_total"] == preds[1]["exp_total"]               # same day: no information from each other
+    assert preds[2]["exp_margin"] > preds[0]["exp_margin"]              # the next week sees A's five goals
+    assert PO.split("Soccer/X") in ("TUNE", "HELD_OUT") and PO.split("Soccer/X") == PO.split("Soccer/X")
+
+
+def test_history_pack_windows_use_true_n_and_exclude_the_request_day(tmp_path, monkeypatch):
+    games = [dict(competition="Soccer/X", season="2026", date=f"2026-0{m}-01", home="A FC" if m % 2 else "B FC", away="B FC" if m % 2 else "A FC",
+                  ht_home="0", ht_away="1", ft_home=str(m % 3), ft_away="1", source_url="https://raw.githubusercontent.com/x") for m in range(1, 8)]
+    path = tmp_path / "MATCHES.csv"
+    buf = io.StringIO(newline="")
+    w = csv.DictWriter(buf, fieldnames=list(games[0]), lineterminator="\n")
+    w.writeheader()
+    w.writerows(games)
+    path.write_bytes(buf.getvalue().encode())
+    monkeypatch.setattr(HP, "SOCCER", path)
+    name, listed, wins = HP.build("Soccer/X", "A FC", "2026-07-01")
+    assert name == "A FC" and all(g["date"] < "2026-07-01" for g in listed) and len(listed) == 6
+    w5 = next(w for w in wins if w["window"] == "L5")
+    assert w5["true_n"] == 5 and next(w for w in wins if w["window"] == "L20")["true_n"] == 6
+
+
+def test_bulk_cricket_info_and_soccer_list_scores_are_parsed(tmp_path, monkeypatch):
+    from ml import bulk_history as BH
+    info = BH._info("version,2.2.0\ninfo,team,A\ninfo,team,B\ninfo,toss_winner,A\ninfo,toss_decision,bat\n")
+    assert info["teams"] == ["A", "B"] and info["toss_winner"] == "A"
+    payload = json.dumps(dict(matches=[dict(date="2025-08-01", team1="A", team2="B", score=[2, 1]),
+                                       dict(date="2025-08-02", team1="C", team2="D", score={"ft": [0, 0], "ht": [0, 0]}),
+                                       dict(date="2025-08-03", team1="E", team2="F")])).encode()
+
+    def fake(url, cache, dataset, receipts):
+        if url.endswith("/2025-26/en.1.json"):
+            receipts.append(dict(dataset=dataset, url=url, retrieved_at="t", bytes=len(payload), sha256="c" * 64, cache_file="c"))
+            return payload
+        raise OSError("HTTP Error 404: Not Found")
+    monkeypatch.setattr(BH, "fetch", fake)
+    res = BH.soccer(tmp_path / "cache", seasons=("2025-26",), years=(), out=tmp_path / "soccer")
+    assert res["matches"] == 2 and res["unplayed_or_unscored"] == 1
+
+
+def test_raw_downloads_never_land_inside_the_repository():
+    from ml import bulk_history as BH
+    with pytest.raises(ValueError, match="outside the repository"):
+        BH.fetch("https://example.org/x", ROOT / "research", "x", [])

@@ -18,7 +18,7 @@ The framework is Markdown, CSV and text. Code, its tests and `requirements.txt` 
 
 **One authority mode per run (R09).** Each run prints one mode in its reading receipt:
 - `LOCAL_WORKING_TREE`: every prompt, 1 to 8, run by the repository agent in this repository (ENV-v2, owner instruction 22 October 2026). Print branch, HEAD and every uncommitted difference to a control file; those working files govern this run and the receipt names them.
-- `PUBLISHED_MAIN_PINNED`: only for reading legacy minis made outside the repository under ENV-v1; the external-chat route is retired ([WORKFLOW](WORKFLOW.md#part-a-execution_environment_protocol) §1, REQ-v3). All controls come from the one printed full SHA of `origin/main`.
+- `PUBLISHED_MAIN_PINNED`: for reading legacy minis made outside the repository under ENV-v1, and for the owner's external research chats (EXT-v2, [EXTERNAL_RESEARCH_PROTOCOL](EXTERNAL_RESEARCH_PROTOCOL.md)), which read every control at the one full SHA the owner's request names and repeat it in their return. Cards are still made only here ([WORKFLOW](WORKFLOW.md#part-a-execution_environment_protocol) §1). All controls come from the one printed full SHA of `origin/main`.
 
 Where the published and local versions of a control differ, the receipt lists the difference and which one was applied. Never change branches, pull over dirty work or assume a stale download is current.
 

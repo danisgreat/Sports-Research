@@ -1,0 +1,260 @@
+"""Bulk results history from open, permitted datasets (BULK-v1, CR-2026.11.11-R1).
+
+One builder per dataset. Every download goes through the repository's one fetcher (``ml.source_access``, the SCRIPT reader:
+all eight agent tokens must be permitted), raw bodies stay in a cache folder OUTSIDE the repository, and only sporting
+columns are written to ``research/bulk_history/<sport>/`` with the URL, retrieval time and SHA-256 of every body in
+RECEIPTS.csv. Captured today means known today: these rows are history for future cards and studies, never point-in-time
+evidence for a past forecast.
+
+    python -m ml bulk-history soccer   --cache DIR [--seasons 2021-22,...] [--years 2021,...]
+    python -m ml bulk-history cricket  --cache DIR [--since 2019-01-01]
+
+Sources (each checked with ``python -m ml source-audit`` before use):
+- Soccer: openfootball/football.json (public domain), raw.githubusercontent.com (each league file tried by name).
+- Cricket: Cricsheet ball-by-ball CSV (cricsheet.org/downloads), Open Data Commons Attribution licence.
+No odds, lines or prices are read; none of these datasets carries them.
+
+A site's own terms apply as well as its robots rules (BULK-v1). The MLB Stats API passes the robots check, but its copyright
+notice permits only "individual, non-commercial, non-bulk use", so no MLB bulk builder exists; baseball checks use the
+learning store's verified finals. TennisMyLife (ATP) allows non-commercial research but not redistribution of its raw
+database, so only tour-level aggregates derived from it may be committed (``ml.kit.params``), never its match rows.
+"""
+from __future__ import annotations
+
+import argparse
+import csv
+import hashlib
+import io
+import json
+import zipfile
+from datetime import datetime, timezone
+from pathlib import Path
+
+from ml import source_access
+
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / "research" / "bulk_history"
+UA = "sports-results-research/1.0"
+RECEIPT_FIELDS = ("dataset", "url", "retrieved_at", "bytes", "sha256", "cache_file")
+
+# openfootball league codes -> repository competition names (Sport/Competition)
+SOCCER_CODES = {
+    "en.1": "Soccer/Premier League", "en.2": "Soccer/EFL Championship", "en.3": "Soccer/EFL League One", "en.4": "Soccer/EFL League Two",
+    "de.1": "Soccer/Bundesliga", "de.2": "Soccer/2. Bundesliga", "es.1": "Soccer/La Liga", "es.2": "Soccer/Segunda Division",
+    "it.1": "Soccer/Serie A", "it.2": "Soccer/Serie B", "fr.1": "Soccer/Ligue 1", "fr.2": "Soccer/Ligue 2",
+    "nl.1": "Soccer/Eredivisie", "pt.1": "Soccer/Primeira Liga", "be.1": "Soccer/Belgian Pro League", "at.1": "Soccer/Austrian Bundesliga",
+    "at.2": "Soccer/Austrian 2. Liga", "sco.1": "Soccer/Scottish Premiership", "tr.1": "Soccer/Super Lig", "gr.1": "Soccer/Greek Super League",
+    "mx.1": "Soccer/Liga MX", "au.1": "Soccer/A-League Men", "dz.1": "Soccer/Algeria Ligue 1", "eg.1": "Soccer/Egyptian Premier League",
+    "ma.1": "Soccer/Botola Pro", "ar.1": "Soccer/Argentina Liga Profesional", "br.1": "Soccer/Brasileirao Serie A",
+    "br.2": "Soccer/Brasileirao Serie B", "cn.1": "Soccer/Chinese Super League", "co.1": "Soccer/Colombia Primera A", "jp.1": "Soccer/J1 League",
+    "mls": "Soccer/MLS",
+}
+SOCCER_FIELDS = ("competition", "code", "season", "date", "round", "home", "away", "ht_home", "ht_away", "ft_home", "ft_away",
+                 "source_url", "source_sha256")
+
+# Cricsheet csv2 archives: (file stem, competition, format overs). The Hundred and multi-day formats are excluded: the owner's
+# cricket request is a 20- or 50-over first innings.
+CRICKET_ARCHIVES = (
+    ("t20s_male", "Cricket T20/Men's T20I", 20), ("t20s_female", "Cricket T20/Women's T20I", 20),
+    ("ipl_male", "Cricket T20/IPL", 20), ("bbl_male", "Cricket T20/BBL", 20), ("wbb_female", "Cricket T20/WBBL", 20),
+    ("psl_male", "Cricket T20/PSL", 20), ("cpl_male", "Cricket T20/CPL", 20), ("ntb_male", "Cricket T20/T20 Blast", 20),
+    ("sat_male", "Cricket T20/SA20", 20), ("ilt_male", "Cricket T20/ILT20", 20), ("bpl_male", "Cricket T20/BPL", 20),
+    ("lpl_male", "Cricket T20/LPL", 20), ("mlc_male", "Cricket T20/MLC", 20), ("wpl_female", "Cricket T20/WPL", 20),
+    ("odis_male", "Cricket One-Day Format/Men's ODI", 50), ("odis_female", "Cricket One-Day Format/Women's ODI", 50),
+)
+INNINGS_FIELDS = ("competition", "format_overs", "match_id", "start_date", "season", "venue", "innings", "batting_team", "bowling_team",
+                  "runs", "wickets", "legal_balls", "runs_at_over5", "runs_at_over6", "runs_at_over10", "wkts_at_over6",
+                  "scheduled_overs", "reduced", "target", "result_type", "toss_winner", "toss_decision", "source_archive_sha256")
+PHASE_FIELDS = ("competition", "format_overs", "year", "innings", "over", "legal_balls", "dots", "ones", "twos", "threes", "fours", "sixes",
+                "other_runs", "wickets", "wides", "noballs", "extras_runs", "matches")
+
+
+
+def _now() -> str:
+    return datetime.now(timezone.utc).isoformat(timespec="seconds")
+
+
+def fetch(url: str, cache: Path, dataset: str, receipts: list) -> bytes:
+    """One checked download; the raw body goes to the cache outside the repository, its hash to the receipts."""
+    cache = Path(cache)
+    if cache.resolve().is_relative_to(ROOT.resolve()):
+        raise ValueError("the cache must be outside the repository: raw bodies are never committed")
+    raw = source_access.fetch_bytes(url, user_agent=UA, timeout=180)
+    sha = hashlib.sha256(raw).hexdigest()
+    cache.mkdir(parents=True, exist_ok=True)
+    (cache / sha).write_bytes(raw)
+    receipts.append(dict(dataset=dataset, url=url, retrieved_at=_now(), bytes=len(raw), sha256=sha, cache_file=sha))
+    return raw
+
+
+def _write(path: Path, fields, rows) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    buf = io.StringIO(newline="")
+    w = csv.DictWriter(buf, fieldnames=list(fields), lineterminator="\n", extrasaction="ignore")
+    w.writeheader()
+    w.writerows(rows)
+    path.write_bytes(buf.getvalue().encode("utf-8"))
+
+
+def _append_receipts(folder: Path, receipts: list) -> None:
+    path = folder / "RECEIPTS.csv"
+    old = []
+    if path.exists():
+        with open(path, newline="", encoding="utf-8") as fh:
+            old = list(csv.DictReader(fh))
+    _write(path, RECEIPT_FIELDS, old + receipts)
+
+
+# ------------------------------------------------------------------ soccer
+def soccer(cache: Path, seasons=("2021-22", "2022-23", "2023-24", "2024-25", "2025-26", "2026-27"), years=("2025", "2026"),
+           out: Path = OUT / "soccer") -> dict:
+    receipts, rows, missing = [], [], []
+    for folder in list(seasons) + list(years):
+        for code, competition in SOCCER_CODES.items():
+            url = f"https://raw.githubusercontent.com/openfootball/football.json/master/{folder}/{code}.json"
+            try:
+                raw = fetch(url, cache, "soccer", receipts)
+            except Exception as exc:          # a league the dataset does not hold for this season: recorded, never guessed
+                if "404" not in str(exc):
+                    receipts.append(dict(dataset="soccer", url=url, retrieved_at=_now(), bytes=0, sha256="FAILED:" + str(exc)[:60],
+                                         cache_file=""))
+                continue
+            sha = receipts[-1]["sha256"]
+            for m in json.loads(raw).get("matches", []):
+                score = m.get("score") or {}
+                if isinstance(score, list):           # a few files write the full-time score as a bare pair
+                    score = {"ft": score}
+                ft = score.get("ft")
+                if not ft or len(ft) != 2:
+                    missing.append((competition, folder, m.get("date", ""), m.get("team1", ""), m.get("team2", "")))
+                    continue
+                ht = score.get("ht") or ["", ""]
+                rows.append(dict(competition=competition, code=code, season=folder, date=m.get("date", ""), round=m.get("round", ""),
+                                 home=m.get("team1", ""), away=m.get("team2", ""), ht_home=ht[0], ht_away=ht[1], ft_home=ft[0],
+                                 ft_away=ft[1], source_url=url, source_sha256=sha))
+    rows.sort(key=lambda r: (r["competition"], r["date"], r["home"]))
+    _write(out / "MATCHES.csv", SOCCER_FIELDS, rows)
+    _append_receipts(out, receipts)
+    return dict(matches=len(rows), unplayed_or_unscored=len(missing), competitions=len({r["competition"] for r in rows}))
+
+
+# ------------------------------------------------------------------ cricket
+def _legal(row: dict) -> bool:
+    return not (row.get("wides") or "").strip() and not (row.get("noballs") or "").strip()
+
+
+def _info(text: str) -> dict:
+    info, teams = {}, []
+    for line in csv.reader(io.StringIO(text)):
+        if len(line) >= 3 and line[0] == "info":
+            if line[1] == "team":
+                teams.append(line[2])
+            else:
+                info.setdefault(line[1], line[2] if len(line) == 3 else ",".join(line[2:]))
+    info["teams"] = teams
+    return info
+
+
+def cricket(cache: Path, since: str = "2019-01-01", out: Path = OUT / "cricket") -> dict:
+    receipts, innings_rows, phase = [], [], {}
+    for stem, competition, overs in CRICKET_ARCHIVES:
+        url = f"https://cricsheet.org/downloads/{stem}_csv2.zip"
+        try:
+            raw = fetch(url, cache, "cricket", receipts)
+        except Exception as exc:              # an archive that does not exist is recorded, never guessed
+            receipts.append(dict(dataset="cricket", url=url, retrieved_at=_now(), bytes=0, sha256="FAILED:" + type(exc).__name__,
+                                 cache_file=""))
+            continue
+        sha = receipts[-1]["sha256"]
+        with zipfile.ZipFile(io.BytesIO(raw)) as zf:
+            names = set(zf.namelist())
+            for name in sorted(n for n in names if n.endswith(".csv") and not n.endswith("_info.csv")):
+                info_name = name[:-4] + "_info.csv"
+                info = _info(zf.read(info_name).decode("utf-8", "replace")) if info_name in names else {"teams": []}
+                balls = list(csv.DictReader(io.StringIO(zf.read(name).decode("utf-8", "replace"))))
+                if not balls or balls[0].get("start_date", "") < since:
+                    continue
+                by_inn: dict[int, list] = {}
+                for b in balls:
+                    try:
+                        inn = int(b["innings"])
+                    except (KeyError, ValueError):
+                        continue
+                    if inn in (1, 2):
+                        by_inn.setdefault(inn, []).append(b)
+                result_type = "no_result" if info.get("outcome") == "no result" or "result" in info and info["result"] == "no result" else (
+                    info.get("result", "") or "decided")
+                for inn, rows in by_inn.items():
+                    runs = wkts = legal = 0
+                    marks = {}
+                    for b in rows:
+                        over = int(float(b["ball"]))
+                        if over >= 5 and 5 not in marks:
+                            marks[5] = (runs, wkts)
+                        if over >= 6 and 6 not in marks:
+                            marks[6] = (runs, wkts)
+                        if over >= 10 and 10 not in marks:
+                            marks[10] = (runs, wkts)
+                        bat = int(b.get("runs_off_bat") or 0)
+                        extras = int(b.get("extras") or 0)
+                        out_now = bool((b.get("wicket_type") or "").strip()) and b.get("wicket_type") not in ("retired hurt", "retired not out")
+                        runs += bat + extras
+                        wkts += out_now
+                        legal += _legal(b)
+                        key = (competition, overs, rows[0].get("start_date", "")[:4], inn, over + 1)
+                        p = phase.setdefault(key, dict(legal_balls=0, dots=0, ones=0, twos=0, threes=0, fours=0, sixes=0, other_runs=0,
+                                                       wickets=0, wides=0, noballs=0, extras_runs=0, matches=set()))
+                        p["matches"].add(b["match_id"])
+                        if _legal(b):
+                            p["legal_balls"] += 1
+                            if out_now:
+                                p["wickets"] += 1
+                            col = {0: "dots", 1: "ones", 2: "twos", 3: "threes", 4: "fours", 6: "sixes"}.get(bat, "other_runs")
+                            p[col] += 1
+                        else:
+                            p["wides"] += bool((b.get("wides") or "").strip())
+                            p["noballs"] += bool((b.get("noballs") or "").strip())
+                            p["wickets"] += out_now
+                        p["extras_runs"] += extras
+                    for m in (5, 6, 10):        # an innings that ended at or before the checkpoint keeps its final score there
+                        marks.setdefault(m, (runs, wkts))
+                    teams = info.get("teams", [])
+                    batting = rows[0].get("batting_team", "")
+                    innings_rows.append(dict(
+                        competition=competition, format_overs=overs, match_id=rows[0]["match_id"], start_date=rows[0].get("start_date", ""),
+                        season=rows[0].get("season", ""), venue=rows[0].get("venue", ""), innings=inn, batting_team=batting,
+                        bowling_team=rows[0].get("bowling_team", "") or next((t for t in teams if t != batting), ""),
+                        runs=runs, wickets=wkts, legal_balls=legal, runs_at_over5=marks[5][0], runs_at_over6=marks[6][0],
+                        runs_at_over10=marks[10][0], wkts_at_over6=marks[6][1], scheduled_overs=overs,
+                        reduced="Y" if info.get("method") or "D/L" in info.get("outcome", "") else "N", target="",
+                        result_type=result_type, toss_winner=info.get("toss_winner", ""), toss_decision=info.get("toss_decision", ""),
+                        source_archive_sha256=sha))
+    phase_rows = [dict(competition=c, format_overs=o, year=y, innings=i, over=v, matches=len(p.pop("matches")), **p)
+                  for (c, o, y, i, v), p in sorted(phase.items())]
+    innings_rows.sort(key=lambda r: (r["competition"], r["start_date"], r["match_id"], r["innings"]))
+    _write(out / "INNINGS.csv", INNINGS_FIELDS, innings_rows)
+    _write(out / "PHASE_RATES.csv", PHASE_FIELDS, phase_rows)
+    _append_receipts(out, receipts)
+    return dict(innings=len(innings_rows), phase_rows=len(phase_rows), competitions=len({r["competition"] for r in innings_rows}))
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    sub = parser.add_subparsers(dest="dataset", required=True)
+    for name in ("soccer", "cricket"):
+        p = sub.add_parser(name)
+        p.add_argument("--cache", type=Path, required=True, help="folder OUTSIDE the repository for raw bodies")
+        if name == "soccer":
+            p.add_argument("--seasons", default="2021-22,2022-23,2023-24,2024-25,2025-26,2026-27")
+            p.add_argument("--years", default="2025,2026")
+        if name == "cricket":
+            p.add_argument("--since", default="2019-01-01")
+    args = parser.parse_args(argv)
+    if args.dataset == "soccer":
+        print(soccer(args.cache, tuple(args.seasons.split(",")), tuple(args.years.split(","))))
+    else:
+        print(cricket(args.cache, args.since))
+
+
+if __name__ == "__main__":
+    main()

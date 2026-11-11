@@ -25,7 +25,13 @@ ROOT = Path(__file__).resolve().parents[1]
 BEGIN, END = "<!-- BEGIN PICKS_V2 {key} -->", "<!-- END PICKS_V2 {key} -->"
 META_REQUIRED = ("tier", "competition", "reference_id", "reference_status", "model_stage", "abstain", "fast_card", "timing", "scheduled_start",
                  "issued_at")
-META_OPTIONAL = ("reference_frozen_at", "width_floor_exception", "tier_basis", "notes", "issue_evidence", "contract_scopes")
+META_OPTIONAL = ("reference_frozen_at", "width_floor_exception", "tier_basis", "notes", "issue_evidence", "contract_scopes", "rank_scope",
+                 "event_key", "external_runs", "external_disagreement", "external_manifest_sha256", "external_packet_sha256", "contract_definitions")
+# FREEZE-v1 (CR-2026.11.11-R1): from this issue time a card names its ranking scope. SUPPLIED_ONLY (the default the request
+# template asks for) ranks only the lines the owner supplied, so that the top-two count is not lifted by easy derived lines.
+RANK_SCOPES = ("SUPPLIED_ONLY", "ALL")
+RANK_SCOPE_FROM = "2026-11-11T00:00:00+11:00"
+EVENT_KEY = re.compile(r"(?:EV-\d{8}-[A-Z0-9]+-[A-Z0-9]+-[A-Z0-9]+|EV2-[A-F0-9]{32})")
 SIDES = {"WINNER": ("HOME", "AWAY", "DRAW"), "HANDICAP": ("HOME", "AWAY"), "TOTAL": ("OVER", "UNDER"),
          "TEAM_TOTAL": ("OVER", "UNDER"), "CORNERS": ("OVER", "UNDER", "HOME", "AWAY"),
          "PERIOD": ("HOME", "AWAY", "DRAW", "OVER", "UNDER"), "PLAYER": ("OVER", "UNDER", "YES", "NO"),
@@ -160,6 +166,20 @@ def lint(meta: dict, rows: list[dict], root=ROOT) -> list[str]:
             problems.append("header: timing PREGAME but issued_at is not before scheduled_start; use POST_START_ISSUE")
         if meta["timing"] == "POST_START_ISSUE" and not late:
             problems.append("header: timing POST_START_ISSUE but issued_at is before scheduled_start")
+    if "issued_at" in times and times["issued_at"] >= _when(RANK_SCOPE_FROM, "rank_scope_from") and not meta.get("rank_scope"):
+        problems.append("header: rank_scope (SUPPLIED_ONLY or ALL) is required for cards issued under FREEZE-v1")
+    if meta.get("rank_scope") and meta["rank_scope"] not in RANK_SCOPES:
+        problems.append("header: rank_scope must be SUPPLIED_ONLY or ALL")
+    if meta.get("event_key") and not EVENT_KEY.fullmatch(meta["event_key"]):
+        problems.append("header: event_key must be the shared external key EV-YYYYMMDD-SPORT-HOME-AWAY (python -m ml external event-key)")
+    if meta.get("event_key", "").startswith("EV2-"):
+        for field in ("external_manifest_sha256", "external_packet_sha256"):
+            if not re.fullmatch(r"[0-9a-f]{64}", meta.get(field, "")):
+                problems.append(f"header: {field} must name the admitted EXT-v2 package")
+        if not meta.get("contract_definitions"):
+            problems.append("header: EXT-v2 requires contract_definitions (period, endpoint, action and unit)")
+    if meta.get("external_runs") and not re.fullmatch(r"[1-9][0-9]?", meta["external_runs"]):
+        problems.append("header: external_runs is the number of lane returns merged (1-99)")
     if meta.get("issue_evidence") and not ISSUE_EVIDENCE.fullmatch(meta["issue_evidence"]):
         problems.append("header: issue_evidence must be COMMIT:<sha> or PREGAME_RECEIPT:research/pregame/<key>/<file>")
     if "reference_frozen_at" in times and "issued_at" in times and times["reference_frozen_at"] > times["issued_at"]:
@@ -181,6 +201,9 @@ def lint(meta: dict, rows: list[dict], root=ROOT) -> list[str]:
         problems.append(f"header: reference_id {meta['reference_id']} names a fitted model; until a promotion it is a separate shadow, "
                         f"never the card's reference ({ml_separation.RULE})")
     seen, strong, informational, ranked = set(), 0, 0, []
+    disagreement = {x.strip() for x in meta.get("external_disagreement", "").split("|") if x.strip()}
+    if disagreement - {r["label"] for r in rows}:
+        problems.append("header: external_disagreement names an unknown row")
     by_quantity: dict[str, set] = {}
     for row in rows:
         name = row["label"] or "<unlabelled>"
@@ -238,6 +261,10 @@ def lint(meta: dict, rows: list[dict], root=ROOT) -> list[str]:
                     problems.append(f"{name}: most_likely_rank must be 1-4 or blank")
                 else:
                     ranked.append((int(rank), final, row["label"]))
+                    if row["label"] in disagreement:
+                        problems.append(f"{name}: the external runs disagree on this contract (EXT-v1); it stays unranked")
+                    if meta.get("rank_scope") == "SUPPLIED_ONLY" and row["line_source"] != "SUPPLIED":
+                        problems.append(f"{name}: rank_scope SUPPLIED_ONLY ranks supplied lines only; an ANALYST_DERIVED row stays unranked")
                     if final > SELECTION_CEILING:
                         problems.append(f"{name}: a ranked row may not exceed the {SELECTION_CEILING} selection ceiling")
                     strong += final >= STRONG

@@ -236,3 +236,19 @@ Source: [framework_change_2026-10-22-2](research/verification/framework_change_2
 | REV-H4 WIDTH-1 | Margin and total z RMS per family | In 0.85-1.15 over 40 cards per family; outside it the competition row is the first suspect | BLOCKED_DESIGN |
 
 Any amendment to these designs gets a new dated version before its new evaluation cohort. Development numbers above are in-sample to date and are not evidence of prospective skill.
+
+## 11 November 2026 registrations (EXT-H1, SOC-H1, LINEUP-H1, FREEZE-H1), registered before any v24.13 card is scored
+
+Source: [framework_change_2026-11-11-1](research/verification/framework_change_2026-11-11-1/IMPLEMENTATION.md). Start trigger: the first card that reads MDS-2026.11.11-v24.13. All counts start at 0.
+
+| Hypothesis | Frozen comparison / collection floor | Acceptance design and stopping | Current status |
+|---|---|---|---|
+| EXT-H1 Abstaining on contracts where the external pricing runs disagree (both sides of 0.5, or spread above 0.10) improves the ranked rows | Ranked supplied rows of cards with two or more pricing runs, against the same cards' disagreed contracts as they would have been ranked (counterfactual rank recorded in the card's appendix) | After 60 cards with at least one disagreed contract over 8 weeks: keep the rule if the disagreed contracts' Brier is not better than the ranked rows' (one-sided week-block interval); drop it otherwise | NOT_STARTED |
+| SOC-H1 Soccer: the margin from TB-2-MD (additive, k 10) and the total from TB-1-MD (average, k 2) beats TB-1-MD alone | Walk-forward on the 2026-27 season of every soccer competition in the bulk history (games after 11 November 2026 only, so none was seen by POOLED-v1), identical games | Adopt only if three-way Brier improves with a competition-block interval below zero and O/U 2.5 log loss is not worse (upper bound at most 0.001); a single decision at the end of the 2026-27 European season | NOT_STARTED (post-hoc idea from POOLED-v1: the tuned additive form won on winner, lost on totals) |
+| LINEUP-H1 Confirmed absences captured at every card (LINEUP-CAPTURE-v1) give a measurable effect size per sport | Learning-log availability rows joined to settled margins, sport by sport, starter-weighted absences | Estimate after 200 cards in a sport; an effect row is written MEASURED_NOT_CONFIRMED and enters at half size until it improves a held-out half | NOT_STARTED |
+| FREEZE-H1 The v24.13 method, frozen, beats the league baseline | Paired Brier of final p against BASELINE_P on supplied rows, all strata reported apart | After about 100 settled v24.13 cards: report the interval whatever it shows; a statistical change waits for this report (FREEZE-v1) | NOT_STARTED |
+
+
+## 11 November 2026 amendment: EXT-EVAL-v1 (CR-2026.11.11-R2)
+
+The unstarted EXT-H1 and FREEZE-H1 draft registrations above are superseded prospectively by [EVALUATION_PLAN_v24.14](research/external/EVALUATION_PLAN_v24.14.md). Primary comparison: frozen FIVE_LANES:v24.14 versus SINGLE_RESEARCH:v24.14 on identical supplied contracts and evidence horizon. Secondary comparisons: REFERENCE and BASELINE. One decision at the close of the first ISO week reaching at least 100 paired settled events and eight settled ISO weeks; include every eligible event in that completed week. Primary practical effect is a -0.01 Brier difference, paired interval below zero, existing calibration/log-loss guards, and external publication/source audit. Counts are floors, not guaranteed power. Report effort, all exclusions and competition strata. No early favourable stop, backfilled baseline, historical availability fabrication or automatic promotion. Status NOT_STARTED; original registration text is preserved.

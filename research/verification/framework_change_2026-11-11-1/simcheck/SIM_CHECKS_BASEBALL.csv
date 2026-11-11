@@ -1,0 +1,3 @@
+check,competition,quantity,observed,simulated,difference,tolerance,n_observed,n_sim,seed,result,basis,checked_at
+STRUCTURE,Baseball/MLB,one_run_share,0.2834,0.2948,0.0114,0.03,374,200000,20261111,PASS,MLB learning-store finals 2025 (n=374); ILLUSTRATIVE plate-appearance environment scaled to the observed regulation run means 4.310/4.249,2026-11-10T23:18:18+00:00
+STRUCTURE,Baseball/MLB,extras_share,0.0802,0.1014,0.0212,0.03,374,200000,20261111,PASS,MLB learning-store finals 2025 (n=374); ILLUSTRATIVE plate-appearance environment scaled to the observed regulation run means 4.310/4.249,2026-11-10T23:18:18+00:00

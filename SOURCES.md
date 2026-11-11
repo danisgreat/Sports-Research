@@ -18,6 +18,40 @@
 
 **What changed.** The source adapters, parsers, retrieval jobs, probes and the matrix generator are gone. The **routes** in the sport tables below (sections 2 and 3, and the reachability matrix) remain the way to find each fact; the **commands** that fetched, parsed or hashed them (`sources.py`, `research/src/...`, `python -B -m ...`, `*.json` receipts) are historical. Wherever an older section below names one of those, read it as a description of what the route returns, and open the page yourself.
 
+## SRC-ALT-v3. Each reader is judged by its own agent name ·11 November 2026
+
+**Owner instruction, 11 November 2026** (implementing the 11 November review). It supersedes the "conservative union" paragraph of SRC-ALT-v2 below for pages opened **by hand**; everything else in SRC-ALT-v2 stays in force.
+
+| Reader | Agent name checked | Who it is |
+|---|---|---|
+| `CLAUDE_AGENT` | Claude-User | The repository agent opening one page at the owner's request |
+| `CHATGPT_BROWSING` | ChatGPT-User | A ChatGPT research chat opening one page at the owner's request (EXTERNAL_RESEARCH_PROTOCOL) |
+| `SCRIPT` | All eight names (unchanged) | `ml.source_access` and every bulk or repeated download: a script behaves like a crawler, so a site that refuses any AI crawler is refused |
+
+- A site's rules are applied **as written to the reader that opens the page**. A page blocked for that reader is never opened by it, and never reached another way (another user agent, proxy, cache, mirror, archive, translation or reader service, embed). An `ai-input=no` signal, or rules that cannot be read (403, 429, 5xx, timeout, an HTML page), block every reader.
+- **Check first, then open.** The check is the site's robots.txt, read before the page. Trying a page to find out whether it is blocked is not allowed: by then it has been read. `python -m ml source-audit --url <url>` prints all three readers; `--reader CLAUDE_AGENT` prints one.
+- **Technical failure is not a block.** An allowed page that returns 403, an empty script shell or a timeout is logged as `TECHNICAL_FAILURE` with the reader, and the research moves to the next permitted source. It is never retried through another route.
+- **Lists, refreshed weekly.** `python -m ml source-audit --lists` writes [READER_ACCESS](research/external/access/READER_ACCESS_v24.13.csv) (every audited host, every reader, with the paths a partly blocked host refuses) and the chats' [do-not-open list](research/external/access/CHATGPT_DO_NOT_OPEN_v24.13.csv). Each row has `valid_until` = check date + 7 days; a list past its date is refreshed before the next batch. The repository fetcher still checks live before every fetch.
+- **Chat-side failures are kept by reader.** Each LANE_RETURN has an ACCESS_LOG; the merge writes it to the event's intake folder, so a host that fails for ChatGPT and not here (or the reverse) is visible.
+- **Bulk data also obeys the site's own terms (BULK-v1).** A robots pass is not permission for every use: the MLB Stats API passes robots but its notice permits only "individual, non-commercial, non-bulk use", so no MLB bulk download is made; TennisMyLife permits non-commercial research but not redistribution, so only aggregates derived from it are committed.
+
+Checked 11 November 2026 over 1,179 hosts: ChatGPT-User blocked at the root on 91, partly blocked on 545, allowed on 289, no rules file on 83, unreadable rules on 171; the Claude agent blocked at the root on 60; scripts blocked on 231. Examples: Basketball-Reference and Hockey-Reference block only GPTBot at the root, so a hand reader may open their pages outside the listed paths; ESPN and NBA.com block ChatGPT-User at the root but only some paths for Claude-User; X, Instagram and Facebook block every AI reader.
+
+## SOCIAL-v2. Social media and reporters ·11 November 2026
+
+Amends §1.8 (the evidence standard there still applies). Social posts are the fastest route to team news, but the platforms most reporters use refuse AI readers. Use, in this order:
+
+1. **The club's or league's own website and match centre.** A team sheet or injury update posted on social is usually also on the official site.
+2. **The reporter's outlet.** A beat reporter's news normally appears in their publication's article or live blog. It is one secondary source and needs a second, different registrable domain.
+3. **Permitted platforms.** Official Bluesky accounts (domain handles, or linked from the organisation's own site), YouTube press conferences, and public Telegram channels the club's own site links. Check each with the reader's own rules first.
+4. **Owner capture** for X, Instagram and Facebook (OWNER-CAPTURE-v1, below).
+
+Standards for any social post used: confirm the account by finding it linked from the organisation's own website (look-alike and parody accounts are common); record the exact text, the post's own timestamp (its published time) and the account; an official team, league or federation account is the field owner for its own news; a reporter counts as one secondary source; "expected" or "projected" is never "confirmed"; use the original post, never a repost, screenshot or aggregator account. Mirrors of X, embedded-post feeds (`syndication.twitter.com`, `publish.twitter.com`) and reader services (`r.jina.ai`) are workarounds and are not used; the 2026-09 platform table in §1.8 is historical for those routes.
+
+## OWNER-CAPTURE-v1. Material the owner reads and pastes ·11 November 2026
+
+For a page or post no agent may open (blocked for its reader, or behind a login), the owner may open it in their own browser and paste it. The owner saves, under `research/active_minis/received/<event key or local key>/OWNER_CAPTURE_<n>.md`: the exact text (or a faithful transcription of an image), the URL, the account or site, the post's or page's own published time, and the time the owner read it. It is evidence with source class `OWNER_CAPTURE`: one source, never two, so a decisive fact still needs an independent second source. It supersedes, for owner captures only, WORKFLOW Part A §1's rule that owner material is re-opened by the agent before use (the agent cannot open it). The owner is responsible for the platform's own terms; no agent opens the page, and no capture is made of prices or tips.
+
 ## SRC-ALT-v2. Current agent access and competition routes ·9November2026
 
 The [agent-accessible catalogue](research/source_routes/README.md) and [209 competition/scope rows](research/source_routes/COMPETITION_ROUTES.csv) govern current routing. They distinguish access, actual extraction, field coverage, quality and independence. Dated root-host access assertions elsewhere below are historical candidates, not permission to open an exact event URL.

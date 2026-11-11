@@ -25,6 +25,8 @@
 | Current exact competition source routes and access/coverage limits | [research/source_routes/README.md](research/source_routes/README.md) |
 | R3 implementation and unresolved backlog | [research/verification/framework_change_2026-11-09-3/IMPLEMENTATION.md](research/verification/framework_change_2026-11-09-3/IMPLEMENTATION.md) |
 | Reusable source discoveries | [RESEARCH_SOURCE_REGISTER.md](RESEARCH_SOURCE_REGISTER.md) |
+| External research lanes (EXT-v2, 2026-11-11): the owner's research chats, the event key, lane returns, the merge, and the files a chat uploads (profile, lane briefs, kit, parameter files, do-not-open list, per-sport sources) | [EXTERNAL_RESEARCH_PROTOCOL.md](EXTERNAL_RESEARCH_PROTOCOL.md), [research/external/](research/external/README.md) |
+| Open bulk results history (soccer, cricket) with provenance; studies and simulator checks that use it | [research/bulk_history/](research/bulk_history/DATA_PROVENANCE.md), [framework change 2026-11-11-1](research/verification/framework_change_2026-11-11-1/IMPLEMENTATION.md) |
 | Current values (IDs, active log, versions, scoreboard) | [CURRENT_STATE.md](CURRENT_STATE.md) |
 | Who runs which prompt, the remote fallback (REF-v2), delivery and prompt-4 intake (the external-chat route is retired, REQ-v3) | [EXECUTION_ENVIRONMENT_PROTOCOL](WORKFLOW.md#part-a-execution_environment_protocol) |
 | The one page a game card reads in full before research (v24.0) | [CORE.md](CORE.md), with [GAME_REQUEST_TEMPLATE.md](GAME_REQUEST_TEMPLATE.md) for the owner's request and [RESEARCH_PROTOCOL.md (RESEARCH_CHECKLISTS)](RESEARCH_PROTOCOL.md#part-d-research_checklists) for what to research per sport and where |

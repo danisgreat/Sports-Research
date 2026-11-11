@@ -1,0 +1,400 @@
+"""Structural and held-out checks for the simulators (SIM-VALID-v1, CR-2026.11.11-R1; SIMULATION_PROTOCOL section 4).
+
+A simulator may price a card row only after its structural check agrees with the competition's observed shares and its
+held-out check passes. This module runs those checks on data the repository may use and writes one dated row per check.
+
+    python -m ml sim-check baseball --out DIR      MLB learning-store finals: one-run and extra-innings shares
+    python -m ml sim-check hockey   --out DIR      NHL learning-store finals: margins, regulation ties, OT v shootout;
+                                                   late-game parameters fitted on the first half of the season (results
+                                                   only: INDIRECT_RESULT_FIT), checked on the second half
+    python -m ml sim-check cricket  --out DIR      Cricsheet first innings: phase tables from seasons before 2025, coverage
+                                                   of held-out 2025-26 totals and checkpoint totals
+    python -m ml sim-check tennis   --cache DIR --out DIR
+                                                   TennisMyLife ATP results (aggregates only): tour serve rates by surface
+                                                   and best-of, and the match-level form shock sigma fitted on 2024,
+                                                   checked on 2025
+
+Pass rule (registered here): structural shares within 3 percentage points of observed; held-out 50% and 80% central
+intervals: the share of held-out results inside each interval within 3 points (5 below 300 results) of the model's OWN
+probability for that interval. Totals are whole numbers, so an inclusive interval holds more than its nominal width; the
+model's own mass is the fair target, not 50% or 80%. A pass is development evidence on current-capture data, not a
+qualification of any card.
+"""
+from __future__ import annotations
+
+import argparse
+import csv
+import io
+import math
+from collections import defaultdict
+from datetime import datetime, timezone
+from pathlib import Path
+
+import numpy as np
+
+ROOT = Path(__file__).resolve().parents[2]
+STORE = ROOT / "research" / "learning_store"
+BULK = ROOT / "research" / "bulk_history"
+FIELDS = ("check", "competition", "quantity", "observed", "simulated", "difference", "tolerance", "n_observed", "n_sim", "seed",
+          "result", "basis", "checked_at")
+TOL = 0.03
+
+
+def _now() -> str:
+    return datetime.now(timezone.utc).isoformat(timespec="seconds")
+
+
+def _store_finals(competition: str) -> list[dict]:
+    with open(STORE / "EVENTS.csv", newline="", encoding="utf-8") as fh:
+        events = {e["event_uid"]: e for e in csv.DictReader(fh) if e["competition"] == competition}
+    last = {}
+    with open(STORE / "RESULTS.csv", newline="", encoding="utf-8") as fh:
+        for r in csv.DictReader(fh):
+            if r["event_uid"] in events:
+                last[r["event_uid"]] = r
+    out = []
+    for uid, r in last.items():
+        if r["status"] == "FINAL":
+            out.append(dict(r, **{k: events[uid][k] for k in ("event_at", "season", "home", "away")}))
+    return sorted(out, key=lambda r: r["event_at"])
+
+
+def _row(check, competition, quantity, observed, simulated, n_obs, n_sim, seed, basis, tol=TOL) -> dict:
+    diff = simulated - observed
+    return dict(check=check, competition=competition, quantity=quantity, observed=round(observed, 4), simulated=round(simulated, 4),
+                difference=round(diff, 4), tolerance=tol, n_observed=n_obs, n_sim=n_sim, seed=seed,
+                result="PASS" if abs(diff) <= tol else "FAIL", basis=basis, checked_at=_now())
+
+
+def baseball(n: int = 200_000, seed: int = 20261111) -> list[dict]:
+    from ml.sim import baseball as B
+    games = _store_finals("Baseball/MLB")
+    hs = np.array([int(g["hs"]) for g in games])
+    as_ = np.array([int(g["as_"]) for g in games])
+    one_run = float((np.abs(hs - as_) == 1).mean())
+    extras = float(np.mean([g["decision"].upper() == "EXTRAS" for g in games]))
+    home_reg = np.array([int(g["reg_hs"] or g["hs"]) for g in games])
+    away_reg = np.array([int(g["reg_as"] or g["as_"]) for g in games])
+    mean_home, mean_away = float(home_reg.mean()), float(away_reg.mean())
+    base = B.Environment()
+    env_h, env_a = B.scale_to_runs(base, mean_home, n=50_000, seed=seed), B.scale_to_runs(base, mean_away, n=50_000, seed=seed + 1)
+    res = B.simulate_game(env_h, env_a, n, seed, ghost_runner=True, card=False)
+    s = B.structure_check(res)
+    basis = (f"MLB learning-store finals 2025 (n={len(games)}); ILLUSTRATIVE plate-appearance environment scaled to the observed "
+             f"regulation run means {mean_home:.3f}/{mean_away:.3f}")
+    return [_row("STRUCTURE", "Baseball/MLB", "one_run_share", one_run, s["one_run_share"], len(games), n, seed, basis),
+            _row("STRUCTURE", "Baseball/MLB", "extras_share", extras, s["extras_share"], len(games), n, seed, basis)]
+
+
+def hockey(n: int = 200_000, seed: int = 20261111) -> list[dict]:
+    from ml.sim import hockey as H
+    games = _store_finals("Ice Hockey/NHL")
+    half = len(games) // 2
+    parts = {"FIT_FIRST_HALF": games[:half], "HELD_OUT_SECOND_HALF": games[half:]}
+
+    def shares(gs):
+        hs = np.array([int(g["hs"]) for g in gs]); as_ = np.array([int(g["as_"]) for g in gs])
+        rh = np.array([int(g["reg_hs"]) for g in gs]); ra = np.array([int(g["reg_as"]) for g in gs])
+        dec = [g["decision"] for g in gs]
+        return dict(one_goal=float((np.abs(hs - as_) == 1).mean()), two_goal=float((np.abs(hs - as_) == 2).mean()),
+                    reg_tie=float((rh == ra).mean()), ot=float(np.mean([d == "Overtime" for d in dec])),
+                    so=float(np.mean([d == "Shootout" for d in dec])), reg_home=float(rh.mean()), reg_away=float(ra.mean()))
+
+    fit = shares(parts["FIT_FIRST_HALF"])
+    ot_rate = -math.log(1 - fit["ot"] / (fit["ot"] + fit["so"])) / 5.0
+    best = None
+    for attack in (1.5, 2.0, 2.5, 3.0):
+        for en_rate in (0.3, 0.5, 0.7, 0.9):
+            late = H.LateGame(2.0, attack, en_rate)
+            r = H.simulate_game(fit["reg_home"], fit["reg_away"], 60_000, seed, late, ot_rate_per_min=ot_rate, card=False)
+            # one correction so the simulated regulation means equal the observed ones (empty-net goals are part of them)
+            ch = fit["reg_home"] / r["reg_home"].mean() * fit["reg_home"]
+            ca = fit["reg_away"] / r["reg_away"].mean() * fit["reg_away"]
+            r = H.simulate_game(ch, ca, 60_000, seed, late, ot_rate_per_min=ot_rate, card=False)
+            s = H.structure_check(r)
+            loss = (s["one_goal_share"] - fit["one_goal"]) ** 2 + (s["two_goal_share"] - fit["two_goal"]) ** 2 + \
+                   (s["regulation_tie_share"] - fit["reg_tie"]) ** 2
+            if best is None or loss < best[0]:
+                best = (loss, attack, en_rate, ch, ca)
+    _, attack, en_rate, ch, ca = best
+    out = []
+    late = H.LateGame(2.0, attack, en_rate)
+    basis = (f"NHL learning-store finals 2024-25 (n={len(games)}); INDIRECT_RESULT_FIT on the first half: pull at 2.0 minutes, attack "
+             f"x{attack}, empty-net {en_rate}/min, overtime goal rate {ot_rate:.4f}/min; no play-by-play (the NHL API disallows "
+             "Anthropic crawler tokens), so empty-net goals are not observed directly")
+    for name, gs in parts.items():
+        obs = shares(gs)
+        r = H.simulate_game(ch, ca, n, seed + 7, late, ot_rate_per_min=ot_rate, card=False)
+        s = H.structure_check(r)
+        for q, o, sv in (("one_goal_share", obs["one_goal"], s["one_goal_share"]), ("two_goal_share", obs["two_goal"], s["two_goal_share"]),
+                         ("regulation_tie_share", obs["reg_tie"], s["regulation_tie_share"]), ("overtime_share", obs["ot"], s["overtime_share"]),
+                         ("shootout_share", obs["so"], s["shootout_share"])):
+            out.append(_row(name, "Ice Hockey/NHL", q, o, sv, len(gs), n, seed + 7, basis))
+    return out
+
+
+T20_GROUPS = {"T20_MEN": ("Cricket T20/IPL", "Cricket T20/BBL", "Cricket T20/PSL", "Cricket T20/CPL", "Cricket T20/T20 Blast",
+                          "Cricket T20/SA20", "Cricket T20/ILT20", "Cricket T20/BPL", "Cricket T20/LPL", "Cricket T20/MLC",
+                          "Cricket T20/Men's T20I"),
+              "T20_WOMEN": ("Cricket T20/WBBL", "Cricket T20/WPL", "Cricket T20/Women's T20I"),
+              "ODI_MEN": ("Cricket One-Day Format/Men's ODI",), "ODI_WOMEN": ("Cricket One-Day Format/Women's ODI",)}
+GROUP_OVERS = {"T20_MEN": 20, "T20_WOMEN": 20, "ODI_MEN": 50, "ODI_WOMEN": 50}
+HELD_OUT_FROM = "2025-01-01"
+
+
+def group_of(competition: str) -> str | None:
+    return next((g for g, comps in T20_GROUPS.items() if competition in comps), None)
+
+
+def phase_table(rows: list[dict], group: str, innings: int, before: str | None = None) -> np.ndarray:
+    """Per-over outcome probabilities (0,1,2,3,4,6,W,X) pooled over a group's competitions (only years before ``before``)."""
+    overs = GROUP_OVERS[group]
+    acc = np.zeros((overs, 8))
+    for r in rows:
+        if group_of(r["competition"]) != group or int(r["innings"]) != innings or (before and r["year"] >= before[:4]):
+            continue
+        o = int(r["over"])
+        if 1 <= o <= overs:
+            legal = float(r["legal_balls"])
+            acc[o - 1] += [float(r["dots"]), float(r["ones"]), float(r["twos"]), float(r["threes"]), float(r["fours"]),
+                           float(r["sixes"]), float(r["wickets"]), float(r["wides"]) + float(r["noballs"])]
+            acc[o - 1, 0] += float(r["other_runs"])          # 5s and other rare outcomes are folded into dots (rare)
+    acc[acc.sum(axis=1) == 0] = 1.0
+    return acc / acc.sum(axis=1, keepdims=True)
+
+
+SCALE_SDS = (0.0, 0.08, 0.12, 0.16, 0.20, 0.25)
+MIN_TRAIN, MIN_HELD = 40, 20
+
+
+def _fit_scale(K, table, target_mean: float, scale_sd: float, overs: int, seed: int) -> float:
+    lo, hi = 0.5, 1.8
+    line = [dict(label="t", family="innings_total", side="OVER", line=0)]
+    for _ in range(12):
+        mid = (lo + hi) / 2
+        m = K.cricket_innings(table, line, n=20_000, seed=seed, run_scale=mid, scale_sd=scale_sd, card=False)["mean"]
+        lo, hi = (mid, hi) if m < target_mean else (lo, mid)
+    return (lo + hi) / 2
+
+
+def cricket(n: int = 60_000, seed: int = 20261111) -> tuple[list[dict], list[dict]]:
+    """Per group (T20 men, T20 women, ODI men, ODI women): one per-over phase table from years before 2025; each competition
+    gets its own scoring scale fitted to its training mean (as a card fits the scale to its centre); the group's innings-level
+    shock ``scale_sd`` is chosen on the training seasons so simulated spreads match observed spreads; then the held-out
+    innings from 2025 on are checked for 50% and 80% interval coverage, for the full innings and the over-5/6 checkpoint.
+    The published phase table pools every year."""
+    from ml.kit import sr_kit as K
+    with open(BULK / "cricket" / "PHASE_RATES.csv", newline="", encoding="utf-8") as fh:
+        phases = list(csv.DictReader(fh))
+    with open(BULK / "cricket" / "INNINGS.csv", newline="", encoding="utf-8") as fh:
+        innings = list(csv.DictReader(fh))
+    out, tables = [], []
+    for group, overs in GROUP_OVERS.items():
+        checkpoint = 6 if overs == 20 else 5
+        table = phase_table(phases, group, 1, before=HELD_OUT_FROM)
+        for inn in (1, 2):
+            published = phase_table(phases, group, inn)
+            for i in range(overs):
+                tables.append(dict(group=group, innings=inn, over=i + 1, **{f"p_{o}": round(float(p), 6) for o, p in zip(K.OUTCOMES, published[i])}))
+        full = [r for r in innings if group_of(r["competition"]) == group and r["innings"] == "1" and r["reduced"] == "N"
+                and r["result_type"] != "no_result" and int(r["legal_balls"]) >= 1]
+        comps = {}
+        for c in sorted({r["competition"] for r in full}):
+            train = [r for r in full if r["competition"] == c and r["start_date"] < HELD_OUT_FROM]
+            held = [r for r in full if r["competition"] == c and r["start_date"] >= HELD_OUT_FROM]
+            if len(train) >= MIN_TRAIN:
+                comps[c] = (np.array([float(r["runs"]) for r in train]), held)
+        if not comps:
+            continue
+        line = [dict(label="t", family="innings_total", side="OVER", line=0),
+                dict(label="c", family="checkpoint_total", side="OVER", line=0, over=checkpoint)]
+        best = None
+        for sd in SCALE_SDS:
+            gap = []
+            for c, (train, _) in comps.items():
+                sc = _fit_scale(K, table, float(train.mean()), sd, overs, seed)
+                sim = K.cricket_innings(table, line, n=20_000, seed=seed, run_scale=sc, scale_sd=sd, card=False)
+                gap.append(abs(sim["sd"] - float(train.std(ddof=1))) / float(train.std(ddof=1)))
+            score = float(np.mean(gap))
+            if best is None or score < best[0]:
+                best = (score, sd)
+        scale_sd = best[1]
+        cover = {("innings_total", 0.5): [], ("innings_total", 0.8): [], ("checkpoint", 0.5): [], ("checkpoint", 0.8): []}
+        expected = {k: [] for k in cover}
+        rel_mean, n_held, n_comps = [], 0, 0
+        for c, (train, held) in comps.items():
+            if len(held) < MIN_HELD:
+                continue
+            sc = _fit_scale(K, table, float(train.mean()), scale_sd, overs, seed)
+            sim = K.cricket_innings(table, line, n=n, seed=seed + 1, run_scale=sc, scale_sd=scale_sd, card=False, keep_samples=True)
+            obs = np.array([float(r["runs"]) for r in held])
+            obs_cp = np.array([float(r[f"runs_at_over{checkpoint}"]) for r in held if r[f"runs_at_over{checkpoint}"] != ""])
+            for (q, width) in cover:
+                simv, o = (sim["runs"], obs) if q == "innings_total" else (sim["checkpoints"][checkpoint], obs_cp)
+                lo_q, hi_q = np.quantile(simv, [(1 - width) / 2, (1 + width) / 2])
+                cover[(q, width)] += list(((o >= lo_q) & (o <= hi_q)).astype(float))
+                expected[(q, width)] += [float(((simv >= lo_q) & (simv <= hi_q)).mean())] * len(o)
+            rel_mean.append((float(sim["runs"].mean()) - float(obs.mean())) / float(obs.mean()))
+            n_held += len(held)
+            n_comps += 1
+        basis = (f"Cricsheet {group} first innings; per-over phase table pooled over the group, years before {HELD_OUT_FROM}; "
+                 f"per-competition scoring scale fitted to its training mean; innings shock scale_sd {scale_sd} chosen on training "
+                 f"spreads from {SCALE_SDS}; held out from {HELD_OUT_FROM}: {n_held} innings over {n_comps} competitions")
+        tol = 0.03 if n_held >= 300 else 0.05
+        for (q, width), hits in cover.items():
+            name = q if q == "innings_total" else f"checkpoint_over{checkpoint}"
+            out.append(_row("HELD_OUT_COVERAGE", group, f"{name}_central_{int(width * 100)}", float(np.mean(hits)) if hits else float("nan"),
+                            float(np.mean(expected[(q, width)])) if hits else float("nan"), len(hits), n, seed + 1,
+                            basis + "; observed = held-out share inside the interval, simulated = the model's own mass in it", tol))
+        out.append(_row("HELD_OUT_MEAN", group, "innings_total_mean_relative_drift", 0.0, float(np.mean(rel_mean)) if rel_mean else float("nan"),
+                        n_held, n, seed + 1, basis + "; a mean drift is the season-to-season change the card's centre must carry", 0.05))
+        for t in tables:
+            if t["group"] == group:
+                t["scale_sd"] = scale_sd
+    return out, tables
+
+
+def tennis(cache: Path, seed: int = 20261111, sample: int = 500) -> tuple[list[dict], list[dict]]:
+    """Tour serve rates by surface and best-of from TennisMyLife ATP results (only these aggregates are written), and the
+    form-shock sigma: fitted on 2024 matches by the log score of total games, checked on 2025 by interval coverage."""
+    from ml import bulk_history as BH
+    from ml.kit import sr_kit as K
+    receipts, matches = [], []
+    for year in (2023, 2024, 2025, 2026):
+        raw = BH.fetch(f"https://raw.githubusercontent.com/Tennismylife/TML-Database/master/{year}.csv", cache, "tennis", receipts)
+        for r in csv.DictReader(io.StringIO(raw.decode("utf-8", "replace"))):
+            score = r.get("score", "")
+            if not score or any(x in score.upper() for x in ("RET", "W/O", "DEF", "ABD", "UNK")) or r.get("tourney_level") == "D":
+                continue
+            try:
+                svpt = [float(r["w_svpt"]), float(r["l_svpt"])]
+                won = [float(r["w_1stWon"]) + float(r["w_2ndWon"]), float(r["l_1stWon"]) + float(r["l_2ndWon"])]
+            except (ValueError, TypeError, KeyError):         # a row without serve statistics is left out, never filled
+                continue
+            games = 0
+            for s in score.split():
+                a, _, b = s.partition("-")
+                games += int(a.split("(")[0]) + int(b.split("(")[0]) if a and b and a.split("(")[0].isdigit() and b.split("(")[0].isdigit() else 0
+            if not games or min(svpt) <= 0:
+                continue
+            matches.append(dict(date=r["tourney_date"], surface=r["surface"], best_of=int(r["best_of"] or 3), winner=r["winner_id"],
+                                loser=r["loser_id"], games=games, w_svpt=svpt[0], w_won=won[0], l_svpt=svpt[1], l_won=won[1]))
+    matches.sort(key=lambda m: m["date"])
+    agg = defaultdict(lambda: [0.0, 0.0, [], 0])
+    for m in matches:
+        if m["date"] < "20250101":
+            continue
+        a = agg[(m["surface"], m["best_of"])]
+        a[0] += m["w_won"] + m["l_won"]; a[1] += m["w_svpt"] + m["l_svpt"]; a[2].append(m["games"]); a[3] += 1
+    rates = [dict(tour="ATP", surface=s, best_of=b, serve_point_win=round(v[0] / v[1], 4), mean_total_games=round(float(np.mean(v[2])), 3),
+                  sd_total_games=round(float(np.std(v[2], ddof=1)), 3), n_matches=v[3], period="2025-01-01 to latest", source="TennisMyLife ATP")
+             for (s, b), v in sorted(agg.items()) if v[3] >= 50]
+    tour = {(r["surface"], r["best_of"]): r["serve_point_win"] for r in rates}
+
+    def player_rates(before: str):
+        """Each player's serve and return points won over the 52 weeks before ``before`` (results known before it)."""
+        lo = str(int(before[:4]) - 1) + before[4:]
+        sv, rt = defaultdict(lambda: [0.0, 0.0]), defaultdict(lambda: [0.0, 0.0])
+        for m in matches:
+            if lo <= m["date"] < before:
+                sv[m["winner"]][0] += m["w_won"]; sv[m["winner"]][1] += m["w_svpt"]
+                sv[m["loser"]][0] += m["l_won"]; sv[m["loser"]][1] += m["l_svpt"]
+                rt[m["winner"]][0] += m["l_svpt"] - m["l_won"]; rt[m["winner"]][1] += m["l_svpt"]
+                rt[m["loser"]][0] += m["w_svpt"] - m["w_won"]; rt[m["loser"]][1] += m["w_svpt"]
+        return sv, rt
+
+    def evaluate(year: str, sigmas):
+        g = np.random.default_rng(seed)
+        pool = [m for m in matches if m["date"].startswith(year) and m["best_of"] == 3 and m["surface"] in ("Hard", "Clay", "Grass")]
+        pick = sorted(g.choice(len(pool), min(sample, len(pool)), replace=False))
+        cache_rates: dict = {}
+        res = {s: dict(logscore=0.0, cover50=0, cover80=0, mass50=0.0, mass80=0.0, n=0) for s in sigmas}
+        for i in pick:
+            m = pool[i]
+            month = m["date"][:6] + "01"
+            if month not in cache_rates:
+                cache_rates[month] = player_rates(month)
+            sv, rt = cache_rates[month]
+            if min(sv[m["winner"]][1], sv[m["loser"]][1]) < 300:
+                continue
+            ts = tour.get((m["surface"], 3))
+            if ts is None:
+                continue
+            spw_a, spw_b = sv[m["winner"]][0] / sv[m["winner"]][1], sv[m["loser"]][0] / sv[m["loser"]][1]
+            rpw_a, rpw_b = rt[m["winner"]][0] / rt[m["winner"]][1], rt[m["loser"]][0] / rt[m["loser"]][1]
+            try:
+                pa, pb = K.barnett_clarke(spw_a, rpw_a, spw_b, rpw_b, ts)
+            except K.KitError:
+                continue
+            for s in sigmas:
+                r = K.tennis_match(pa, pb, [], best_of=3, sigma=s, nodes=7)
+                tv, tp = r["grid"].total_pmf()
+                p_obs = float(tp[tv == m["games"]].sum()) if m["games"] in tv else 0.0
+                res[s]["logscore"] += -math.log(max(p_obs, 1e-6))
+                cdf = np.cumsum(tp)
+                q = lambda a: tv[np.searchsorted(cdf, a)]
+                res[s]["cover50"] += q(0.25) <= m["games"] <= q(0.75)
+                res[s]["cover80"] += q(0.10) <= m["games"] <= q(0.90)
+                res[s]["mass50"] += float(tp[(tv >= q(0.25)) & (tv <= q(0.75))].sum())
+                res[s]["mass80"] += float(tp[(tv >= q(0.10)) & (tv <= q(0.90))].sum())
+                res[s]["n"] += 1
+        return res
+
+    sigmas = (0.0, 0.1, 0.2, 0.3)
+    fit = evaluate("2024", sigmas)
+    best = min(sigmas, key=lambda s: fit[s]["logscore"] / max(fit[s]["n"], 1))
+    held = evaluate("2025", (0.0, best))
+    out = []
+    basis = (f"TennisMyLife ATP best-of-3 tour-level matches; serve/return points won over the previous 52 weeks; Barnett-Clarke "
+             f"combination; sigma chosen by mean log score of total games on {fit[best]['n']} sampled 2024 matches from {sigmas}")
+    for s in (0.0, best):
+        h = held[s]
+        for width, key, mass in ((0.5, "cover50", "mass50"), (0.8, "cover80", "mass80")):
+            cov = h[key] / h["n"] if h["n"] else float("nan")
+            exp_ = h[mass] / h["n"] if h["n"] else float("nan")
+            out.append(_row("HELD_OUT_COVERAGE", "Tennis/ATP", f"total_games_central_{int(width * 100)}_sigma_{s}", cov, exp_, h["n"],
+                            0, seed, basis + "; observed = held-out share inside the interval, simulated = the model's own mass in it",
+                            0.03 if h["n"] >= 300 else 0.05))
+        out.append(dict(check="HELD_OUT_LOGSCORE", competition="Tennis/ATP", quantity=f"total_games_mean_logscore_sigma_{s}",
+                        observed="", simulated=round(h["logscore"] / max(h["n"], 1), 4), difference="", tolerance="", n_observed=h["n"],
+                        n_sim=0, seed=seed, result="REPORTED", basis=basis, checked_at=_now()))
+    for r in rates:
+        r["form_shock_sigma"] = best
+    return out, rates
+
+
+def _csv(rows: list[dict], fields=None) -> bytes:
+    buf = io.StringIO(newline="")
+    w = csv.DictWriter(buf, fieldnames=list(fields or rows[0]), lineterminator="\n")
+    w.writeheader()
+    w.writerows(rows)
+    return buf.getvalue().encode("utf-8")
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("sport", choices=("baseball", "hockey", "cricket", "tennis"))
+    parser.add_argument("--out", type=Path, required=True)
+    parser.add_argument("--cache", type=Path, help="tennis: folder OUTSIDE the repository for the raw TennisMyLife files")
+    args = parser.parse_args(argv)
+    args.out.mkdir(parents=True, exist_ok=True)
+    extra = None
+    if args.sport == "baseball":
+        rows = baseball()
+    elif args.sport == "hockey":
+        rows = hockey()
+    elif args.sport == "cricket":
+        rows, extra = cricket()
+        (args.out / "CRICKET_PHASES.csv").write_bytes(_csv(extra))
+    else:
+        if not args.cache:
+            parser.error("tennis needs --cache")
+        rows, extra = tennis(args.cache)
+        (args.out / "TENNIS_TOUR_RATES.csv").write_bytes(_csv(extra))
+    (args.out / f"SIM_CHECKS_{args.sport.upper()}.csv").write_bytes(_csv(rows, FIELDS))
+    for r in rows:
+        print(r["check"], r["competition"], r["quantity"], "obs", r["observed"], "sim", r["simulated"], r["result"])
+
+
+if __name__ == "__main__":
+    main()

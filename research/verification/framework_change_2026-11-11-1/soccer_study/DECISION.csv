@@ -1,0 +1,16 @@
+item,value
+matches_file_sha256,6004f5619e1cb689554ac7ab2079feb733282bdf9cb05077e57f37d94b22562a
+tuning_competitions,Soccer/Austrian Bundesliga; Soccer/EFL Championship; Soccer/EFL League One; Soccer/EFL League Two; Soccer/Eredivisie; Soccer/Ligue 2; Soccer/Primeira Liga; Soccer/Segunda Division; Soccer/Serie B
+held_out_competitions,Soccer/2. Bundesliga; Soccer/Austrian 2. Liga; Soccer/Belgian Pro League; Soccer/Brasileirao Serie A; Soccer/Bundesliga; Soccer/La Liga; Soccer/Liga MX; Soccer/Ligue 1; Soccer/Premier League; Soccer/Serie A; Soccer/Super Lig
+n_tune_scored,9248
+n_held_out_scored,11260
+best_on_tuning,additive k=10.0 rho=-0.05
+held_out_brier3_diff_vs_current,"-0.00422 [-0.00563, -0.00265]"
+held_out_logloss_ou25_diff_vs_current,"0.00202 [0.00123, 0.00268]"
+decision,KEEP_CURRENT average k=2.0 rho=0.0
+contrast_ADDITIVE_k2_rho0_brier3,"0.00159 [-0.00284, 0.00667]"
+contrast_ADDITIVE_k2_rho0_logloss_ou25,"0.01658 [0.01467, 0.01850]"
+contrast_AVERAGE_k2_rho-0.05_brier3,"-0.00011 [-0.00039, 0.00015]"
+contrast_AVERAGE_k2_rho-0.05_logloss_ou25,"-0.00000 [-0.00000, 0.00000]"
+contrast_AVERAGE_k2_rho-0.10_brier3,"0.00016 [-0.00040, 0.00070]"
+contrast_AVERAGE_k2_rho-0.10_logloss_ou25,"-0.00000 [-0.00000, 0.00000]"

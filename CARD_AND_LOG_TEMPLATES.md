@@ -473,3 +473,8 @@ Use [TIMING_RESEARCH_PROTOCOL](RESEARCH_PROTOCOL.md#part-e-timing_research_proto
 **Local research record and updated-document delivery (owner update, 16 October 2026).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](WORKFLOW.md#part-b-mini_log_identity_protocol); summarised in [CORE](CORE.md) §2.
 
 **Settlement S18 — local-to-canonical handoff.** Check local-key markers/mappings/manifest consistency; unimported new events remain NOT_ASSIGNED / PROMPT_4_IMPORT; known canonical references and legacy source aliases are distinguished. Prompt 4 supplies the final canonical mapping in new import evidence without rewriting frozen originals. Settlement-10 runs S1–S19 (S19 is the v24.0 ledger settlement, above; 2026-11-07 fix, it previously read S1–S18); settlement-9 retains S1–S17; settlement-8 retains S1–S16.
+
+
+## EXT-v2 external card additions (v24.14)
+
+PICKS_V2 for EV2 events adds external_manifest_sha256 and external_packet_sha256 (64 lowercase hex characters), and contract_definitions encoded LABEL=period~endpoint~action~unit in immutable CONTRACTS.csv order. The repository-issued card carries its own verified central receipt, learning log, frozen ledger and bind-card receipt. No change applies retrospectively. Non-numeric retention has CARD markers, full A1-A9, exact event key/competition/start and a RESEARCH_STATUS marker (NO_FORECAST or QUALITATIVE), without a priced PICKS_V2 block. The lease-held append preserves every previous byte before the footer and advances only LOCAL ordinal/counts, never P-IDs. See EXTERNAL_RESEARCH_PROTOCOL_V2.md.

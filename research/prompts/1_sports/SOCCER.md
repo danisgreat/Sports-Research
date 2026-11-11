@@ -1,21 +1,25 @@
 # PROMPT 1 — sport file: SOCCER
 
-**P-2026.11.10-v24.10 · prompt 1 sport file.** Use this file together with the [prompt 1 core](../1_GAME_CARD.md): read the core first, then this file. The core holds every rule shared by all sports, including the shared rules of steps 1, 3, 4, 5 and 7; this file holds this sport's own instructions for steps 1–7. At each step apply the core's shared rules for that step together with this file's. Fill in the Upcoming game block below; it is the only part the owner edits. Do not read the other sport files.
+**P-2026.11.11-v24.12 · prompt 1 sport file.** Use this file together with the [prompt 1 core](../1_GAME_CARD.md): read the core first, then this file. The core holds every rule shared by all sports, including the shared rules of steps 1, 3, 4, 5 and 7; this file holds this sport's own instructions for steps 1–7. At each step apply the core's shared rules for that step together with this file's. Fill in the Upcoming game block below; it is the only part the owner edits. Do not read the other sport files.
 
 SOCCER
 ----------------------------
 
 ## Upcoming game — SOCCER
 
-**The owner's request (REQ-v4, 2026-11-09).** The owner fills this in and sends it. How each line becomes a contract, its endpoint and its deep-loss-review role: [GAME_REQUEST_TEMPLATE](../../../GAME_REQUEST_TEMPLATE.md) §1b. The estimated start can be delayed: verify the official start and continue the process as normal.
+**The owner's request (REQ-v5, 2026-11-11; REQ-v4 still read).** The owner fills this in and sends it. How each line becomes a contract, its endpoint and its deep-loss-review role: [GAME_REQUEST_TEMPLATE](../../../GAME_REQUEST_TEMPLATE.md) §1b. The estimated start can be delayed: verify the official start and continue the process as normal.
 
 ```text
 Upcoming Soccer/Football Game: Team A vs Team B, Competition,
 Estimated Game Time Start: Day Month Year, Time AM/PM AEDT (can be delayed so continue the process as normal)
+Home side / venue: Team A | Team B | Neutral (venue, if known)
 
 Combined First Half Goals: Over/Under 0.5 Goals;
 Combined Total Goals: Over/Under 2.5 Goals;
 Combined Total Corners: Over/Under 10.5 Corners;
+
+Rank: supplied lines only | all lines
+Run: Lane L1, L2, L3, L4, L5 or FULL | Mini <MINI_KEY> | Commit <SHA>   (research chats only; leave out for the repository)
 ```
 
 Read [COMMON_OPERATING_PROTOCOL](../COMMON_OPERATING_PROTOCOL.md), [MINI_LOG_IDENTITY_PROTOCOL](../../../WORKFLOW.md#part-b-mini_log_identity_protocol) and the complete seven-step sport workflow below. The primary card is ANALYST_PRIMARY_V1: the frozen reference plus logged adjustments (prompt header). The reference stage runs before any probability is written and the card freeze after it (MLSCOPE-v3, core step 7); no other model, shadow or decision-lab output is read. Read the [CORE](../../../CORE.md) page first.

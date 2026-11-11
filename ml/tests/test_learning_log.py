@@ -52,6 +52,23 @@ def _fill(folder, **override):
                  published_at="2026-10-21T00:00:00+00:00", retrieved_at="2026-10-22T08:00:00+00:00", known_at="2026-10-21T00:00:00+00:00")
         r.update(override)
     _put(folder / "FEATURES.csv", LL.FEATURES, rows)
+    _put(folder / "AVAILABILITY.csv", LL.AVAILABILITY, [
+        dict(side=side, team=team, player=LL.NONE_PUBLISHED, role="UNKNOWN", status="UNKNOWN", confirmation="REPORTED",
+             source_url="https://example.org/team-news", published_at="", retrieved_at="2026-10-22T08:00:00+00:00",
+             known_at="2026-10-22T08:00:00+00:00") for side, team in (("HOME", "Home FC"), ("AWAY", "Away FC"))])
+
+
+def test_every_card_captures_both_sides_availability_or_says_none_was_published(repo):
+    """LINEUP-CAPTURE-v1: an empty availability file fails; NONE_PUBLISHED rows name the page checked."""
+    folder = _init(repo)
+    _fill(folder)
+    assert LL.check(KEY, root=repo["root"]) == []
+    rows = _rows(folder / "AVAILABILITY.csv")
+    _put(folder / "AVAILABILITY.csv", LL.AVAILABILITY, rows[:1])
+    assert any("no row for AWAY" in p for p in LL.check(KEY, root=repo["root"]))
+    rows[1].update(role="STARTER")
+    _put(folder / "AVAILABILITY.csv", LL.AVAILABILITY, rows)
+    assert any("NONE_PUBLISHED row has role and status UNKNOWN" in p for p in LL.check(KEY, root=repo["root"]))
 
 
 def test_init_copies_identity_and_contracts_and_lists_the_required_features(repo):

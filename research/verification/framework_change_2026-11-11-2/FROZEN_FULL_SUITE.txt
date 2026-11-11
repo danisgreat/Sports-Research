@@ -1,0 +1,35 @@
+........................................................................ [  8%]
+........................................................................ [ 17%]
+........................................................................ [ 25%]
+........................................................................ [ 34%]
+........................................................................ [ 42%]
+........................................................................ [ 51%]
+........................................................................ [ 59%]
+........................................................................ [ 68%]
+........................................................................ [ 76%]
+........................................................................ [ 85%]
+........................................................................ [ 93%]
+...................................................                      [100%]
+============================== warnings summary ===============================
+ml/tests/test_external_integrity_v2.py::test_evaluation_uses_exact_floor_and_never_moves_the_completed_cohort
+ml/tests/test_external_integrity_v2.py::test_evaluation_uses_exact_floor_and_never_moves_the_completed_cohort
+ml/tests/test_external_integrity_v2.py::test_evaluation_uses_exact_floor_and_never_moves_the_completed_cohort
+ml/tests/test_external_integrity_v2.py::test_evaluation_uses_exact_floor_and_never_moves_the_completed_cohort
+ml/tests/test_external_integrity_v2.py::test_evaluation_uses_exact_floor_and_never_moves_the_completed_cohort
+ml/tests/test_external_integrity_v2.py::test_evaluation_uses_exact_floor_and_never_moves_the_completed_cohort
+ml/tests/test_external_integrity_v2.py::test_evaluation_uses_exact_floor_and_never_moves_the_completed_cohort
+ml/tests/test_external_integrity_v2.py::test_evaluation_uses_exact_floor_and_never_moves_the_completed_cohort
+  C:\Users\danie\AppData\Local\Temp\sr_integrity_20261111_upa1of2b\validation\ml\core\metrics.py:166: RuntimeWarning: invalid value encountered in sqrt
+    se = np.sqrt(np.diag(np.linalg.inv(info)))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================= slowest 8 durations =============================
+26.36s call     ml/tests/test_forecast_cycle.py::test_settlement_store_feedback_and_next_prediction_are_connected
+18.80s setup    ml/tests/test_learning_models.py::test_challenger_grid_is_one_coherent_distribution_and_refuses_leakage
+18.71s call     ml/tests/test_external_integrity_v2.py::test_full_card_append_learning_ledger_binding_and_settlement
+16.86s call     ml/tests/test_context_study.py::test_changing_a_future_result_cannot_change_an_earlier_prediction
+15.29s call     ml/tests/test_league_day.py::test_settle_day_ingests_finals_once_and_settles_each_frozen_bundle
+15.18s call     ml/tests/test_learning_lifecycle.py::test_research_to_learning_lifecycle
+15.05s call     ml/tests/test_league_day.py::test_open_fixtures_are_frozen_with_the_model_the_baseline_and_the_tb2_reference
+14.95s call     ml/tests/test_league_day.py::test_a_failed_settlement_is_recorded_and_leaves_the_bundle_open
+843 passed, 8 warnings in 601.72s (0:10:01)
