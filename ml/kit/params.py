@@ -1,6 +1,6 @@
 """Build the kit's parameter files and fill the competition-parameter gaps (KIT-v1 / PARAM-FILL-v1, CR-2026.11.11-R1).
 
-    python -m ml kit params --soccer-study DIR --sim-checks DIR --out research/external/kit [--version v24.13]
+    python -m ml kit params --soccer-study DIR --sim-checks DIR --out research/external/kit [--version v24.15]
 
 Inputs, all already in the repository or produced by its own commands:
 - research/competition_parameters/COMPETITION_PARAMETERS.csv (Part A, the card's table);
@@ -17,6 +17,7 @@ from __future__ import annotations
 import argparse
 import csv
 import io
+import hashlib
 import statistics
 from datetime import datetime, timezone
 from pathlib import Path
@@ -98,6 +99,42 @@ def soccer_rows(study: Path, existing: list[dict]) -> tuple[list[dict], dict]:
     return new, prior
 
 
+def install_soccer(study: Path, target: Path, *, expected_sha256: str, archive: Path) -> dict:
+    """Explicit owner-authorized statistical release, separate from upload-package building.
+
+    Replace only soccer competition/family rows. Preserve the exact previous table and
+    refuse stale input or occupied archive paths. Descriptive means do not qualify a model.
+    """
+    from ml import research_intake as I
+    raw = Path(target).read_bytes()
+    if hashlib.sha256(raw).hexdigest() != expected_sha256: raise ValueError("reference table changed since review")
+    fields, old = _read(target)
+    keep = [r for r in old if not (r["row_type"] == "COMPETITION" and r["competition"].startswith("Soccer/")) and r["competition"] != "FAMILY_PRIOR:SOCCER"]
+    rows, prior = soccer_rows(study, keep)
+    for r in rows:
+        if int(r["dev_rows"]) >= 100:
+            r["usable"] = "USABLE_DEVELOPMENT"
+            r["flags"] += ";LEAGUE_MEAN_MEASURED_NOT_CALIBRATED"
+    prior["engine"] = "dixon_coles"
+    candidate = [{f: str(r.get(f, "")) for f in fields} for r in keep + rows + [prior]]
+    if not rows: raise ValueError("no measured soccer rows")
+    if len({r["competition"] for r in candidate}) != len(candidate): raise ValueError("duplicate parameter scopes")
+    if candidate == old: return dict(status="ALREADY_CURRENT", soccer_rows=len(rows))
+    Path(archive).parent.mkdir(parents=True, exist_ok=True)
+    with Path(archive).open("xb") as f: f.write(raw)
+    # Freeze the previous bytes before mutation and compare again immediately before replacement.
+    temporary = Path(target).with_name(Path(target).name + ".replacement.txt")
+    with temporary.open("xb") as f: f.write(I.csv_bytes(fields, candidate))
+    try:
+        if Path(target).read_bytes() != raw: raise ValueError("reference table changed immediately before write")
+        import os
+        os.replace(temporary, target)
+    finally:
+        if temporary.exists(): temporary.unlink()
+    return dict(status="INSTALLED_DESCRIPTIVE_NOT_QUALIFIED", soccer_rows=len(rows), prior_sha256=expected_sha256,
+                study_rows_sha256=hashlib.sha256((Path(study) / "COMPETITION_ROWS.csv").read_bytes()).hexdigest())
+
+
 def store_extras() -> list[dict]:
     """Overtime v shootout (NHL) and run dispersion (MLB) from the learning store's verified finals."""
     _, events = _read(STORE / "EVENTS.csv")
@@ -150,7 +187,7 @@ def cricket_extras(checks: Path) -> tuple[list[dict], list[dict], dict]:
     from ml.sim import validate as V
     _, phases = _read(checks / "CRICKET_PHASES.csv")
     scale = {p["group"]: p.get("scale_sd", "") for p in phases}
-    _, innings = _read(ROOT / "research" / "bulk_history" / "cricket" / "INNINGS.csv")
+    _, innings = _read(ROOT / "research" / "bulk_history" / "cricket" / "v24.15" / "INNINGS.csv")
     rows, kit = [], {}
     by = {}
     for r in innings:
@@ -270,7 +307,7 @@ def kit_rows(params: list[dict], extras: list[dict], cricket: dict, tennis: list
     return out
 
 
-def build(soccer_study: Path, sim_checks: Path, out: Path, version: str = "v24.14") -> dict:
+def build(soccer_study: Path, sim_checks: Path, out: Path, version: str = "v24.15") -> dict:
     fields, params = _read(PARAMS)
     # EXT-v2 packages do not silently change the framework's frozen reference parameter table.
     # New study rows remain development evidence until a separately authorized statistical release.
@@ -295,8 +332,15 @@ def main(argv=None):
     parser.add_argument("--soccer-study", type=Path, required=True)
     parser.add_argument("--sim-checks", type=Path, required=True)
     parser.add_argument("--out", type=Path, default=ROOT / "research" / "external" / "kit")
-    parser.add_argument("--version", default="v24.14")
+    parser.add_argument("--version", default="v24.15")
+    parser.add_argument("--install-soccer", action="store_true", help="separate explicit statistical release before building uploads")
+    parser.add_argument("--expected-table-sha256")
+    parser.add_argument("--archive-table", type=Path)
     args = parser.parse_args(argv)
+    if args.install_soccer:
+        if not args.expected_table_sha256 or not args.archive_table:
+            parser.error("--install-soccer requires --expected-table-sha256 and --archive-table")
+        print(install_soccer(args.soccer_study, PARAMS, expected_sha256=args.expected_table_sha256, archive=args.archive_table))
     print(build(args.soccer_study, args.sim_checks, args.out, args.version))
 
 

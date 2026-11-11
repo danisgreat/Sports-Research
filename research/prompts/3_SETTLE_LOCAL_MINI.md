@@ -8,7 +8,7 @@
 
 **Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §5.
 
-**P-2026.11.11-v24.12 · LOCAL_MINI_SETTLEMENT.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). **LOCAL_WORKING_TREE** (ENV-v2). Writes: the frozen mini's source identity, one settlement document with dated revisions at `research/active_minis/<MINI_KEY>_SETTLEMENT.md`, the ledger inputs and frozen-row settlements of section 4, then the prompt-4 import of section 6 and a commit and push. Original cards are immutable. Settle the original probabilities from the frozen card; the model never re-grades or replaces them. Historical MODEL_ASSISTED cards are settled on their frozen contracts like any other card. The decision lab is excluded.
+**P-2026.11.11-v24.13 · LOCAL_MINI_SETTLEMENT.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). **LOCAL_WORKING_TREE** (ENV-v2). Writes: the frozen mini's source identity, one settlement document with dated revisions at `research/active_minis/<MINI_KEY>_SETTLEMENT.md`, the ledger inputs and frozen-row settlements of section 4, then the prompt-4 import of section 6 and a commit and push. Original cards are immutable. Settle the original probabilities from the frozen card; the model never re-grades or replaces them. Historical MODEL_ASSISTED cards are settled on their frozen contracts like any other card. The decision lab is excluded.
 
 **ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](../../REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](../../CORE.md) §7.
 
@@ -108,3 +108,8 @@ After the original contracts are settled, record in the settlement package, as M
 
 Account separately for settled unique events, events still pending and events with incomplete learning records. This mini settlement (about 40–50 games) is the first review level: report preliminary calibration and BASELINE_P diagnostics computed by hand (Brier per row, PROBABILITY_TOOLKIT §10) and data-integrity findings only. Never declare a method superior here, and never change ranks. Record a MINI_SETTLEMENT review row in the package (disposition usually NO_CHANGE, INSUFFICIENT_EVIDENCE or DATA_REPAIR_REQUIRED) for prompt 6 to append to `research/learning_status/REVIEW_LOG.csv`.
 
+
+
+## External fact accuracy at settlement (EXT-v3)
+
+For a manifest-bound event generate exact fact IDs with `python -m ml research-ops fact-template --event EVENT_DIR --out OBSERVATIONS.csv`, review actual sporting evidence and run `research-ops score-facts --event EVENT_DIR --observations OBSERVATIONS.csv --final-at VERIFIED_FINAL --out NEW_SCORES`. Retain missing observations as UNRESOLVED and exclude projected statements from confirmed-fact accuracy. Report lane and original-collector coverage; overlapping facts are dependent. Twenty to thirty games are an early descriptive review, not predictive promotion or early experiment stopping. Continue the existing owner-supplied post-settlement benchmark procedure; never search for prices or feed benchmarks into forecasts. Unpriced contracts remain outside numerical scores and preserve their original disposition.

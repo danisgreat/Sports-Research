@@ -1,0 +1,3 @@
+role,path,sha256,snapshot_id
+reader_access,research/external/access/READER_ACCESS_v24.15.csv,7ab77e2e590bc86708cc74edd0ca0bc80d94caf6a859211fb4990b847de23827,OBSERVED_2026-11-10T233154Z_UNCHANGED
+do_not_open,research/external/access/CHATGPT_DO_NOT_OPEN_v24.15.csv,70a5b1b2933a6cd8c9f10ca64a81e3352808f06539a4d2d269bc6e95763391ae,OBSERVED_2026-11-10T233154Z_UNCHANGED

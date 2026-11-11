@@ -127,7 +127,7 @@ def test_copied_feed_does_not_create_independent_quorum(event):
 def test_bad_lane_is_retained_but_not_accepted(event, change):
     text = make_return(event, "L1")
     if change == "future": text = text.replace("2026-11-10T23:00:00+00:00", "2027-01-01T00:00:00+00:00")
-    if change == "version": text = text.replace("profile_version: v24.14", "profile_version: UNRELATED")
+    if change == "version": text = text.replace("profile_version: v24.15", "profile_version: UNRELATED")
     if change == "manifest": text = text.replace(I.manifest_hash(event["folder"]), "0" * 64)
     if change == "exposure": text = text.replace("NONE_DECLARED", "OUTCOME_SEEN")
     if change == "access": text = text.replace(",OPENED,", ",RULES_UNKNOWN,")
@@ -312,7 +312,7 @@ def test_evaluation_uses_exact_floor_and_never_moves_the_completed_cohort(tmp_pa
             group = []
             for name, prob in (("SINGLE_RESEARCH", .55), ("FIVE_LANES", .65), ("REFERENCE", .5), ("BASELINE", .5)):
                 issued = start - pd.Timedelta(hours=1 if name == "FIVE_LANES" else 2)
-                group.append(_rows(name, "v24.14", "CHAMPION" if name != "FIVE_LANES" else "CANDIDATE", f"EXAMPLE:{i}", start, prob, 1, issued=issued))
+                group.append(_rows(name, "v24.15", "CHAMPION" if name != "FIVE_LANES" else "CANDIDATE", f"EXAMPLE:{i}", start, prob, 1, issued=issued))
             P.freeze(path, group, now=start-pd.Timedelta(minutes=30))
             labels.append(dict(event_id=f"EXAMPLE:{i}", contract_key="WIN-H", result="WIN" if i % 2 else "LOSS",
                                final_at=(start+pd.Timedelta(hours=3)).isoformat(), available_at=(start+pd.Timedelta(hours=4)).isoformat(), evidence_sha256="e"*64))

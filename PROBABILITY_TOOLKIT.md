@@ -807,3 +807,8 @@ P(A beats B) = 1 / (1 + 10^(−(Elo_A − Elo_B)/400)).
 6. Ranking is by p_card. No q is printed on a new card (§5 is non-operative).
 7. `BASELINE_P` (league-only `BASELINE_LEAGUE_V1`) is printed for every numeric row, or an enumerated missing reason (SELECTION_RULES §9). `TEAM_BASELINE_P` (TB-1-MD) is optional and is labelled a team-model reference.
 8. Every ranked row prints its line distance from the centre (units and z) and, when priced from a mixture, its `p_base`.
+
+
+## v24.15 operational and parameter amendment
+
+For v24.15 use the exact measured soccer competition row in research/competition_parameters/COMPETITION_PARAMETERS.csv and the matching upload kit. The old five worked soccer constants are historical method examples, not a fallback that overrides an available exact league row. A measured mean is not calibrated probability skill. Missing corners and unvalidated cricket contracts retain an explicit UNPRICED disposition. See [EXT-v3](EXTERNAL_RESEARCH_PROTOCOL_V3.md).

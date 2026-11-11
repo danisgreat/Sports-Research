@@ -26,6 +26,7 @@ import csv
 import hashlib
 import io
 import json
+import re
 import zipfile
 from datetime import datetime, timezone
 from pathlib import Path
@@ -155,12 +156,24 @@ def _info(text: str) -> dict:
     return info
 
 
-def cricket(cache: Path, since: str = "2019-01-01", out: Path = OUT / "cricket") -> dict:
+def cricket(cache: Path, since: str = "2019-01-01", out: Path = OUT / "cricket", *, receipts_file: Path | None = None) -> dict:
     receipts, innings_rows, phase = [], [], {}
+    replay = {}
+    if receipts_file:
+        with Path(receipts_file).open(encoding="utf-8", newline="") as f:
+            replay = {r["url"]: r for r in csv.DictReader(f)}
+    excluded_members = []
     for stem, competition, overs in CRICKET_ARCHIVES:
         url = f"https://cricsheet.org/downloads/{stem}_csv2.zip"
         try:
-            raw = fetch(url, cache, "cricket", receipts)
+            if receipts_file:
+                receipt = replay[url]
+                raw = (Path(cache) / receipt["cache_file"]).read_bytes()
+                if hashlib.sha256(raw).hexdigest() != receipt["sha256"]:
+                    raise ValueError("retained raw archive hash differs from its original receipt")
+                receipts.append(dict(receipt))
+            else:
+                raw = fetch(url, cache, "cricket", receipts)
         except Exception as exc:              # an archive that does not exist is recorded, never guessed
             receipts.append(dict(dataset="cricket", url=url, retrieved_at=_now(), bytes=0, sha256="FAILED:" + type(exc).__name__,
                                  cache_file=""))
@@ -169,11 +182,16 @@ def cricket(cache: Path, since: str = "2019-01-01", out: Path = OUT / "cricket")
         with zipfile.ZipFile(io.BytesIO(raw)) as zf:
             names = set(zf.namelist())
             for name in sorted(n for n in names if n.endswith(".csv") and not n.endswith("_info.csv")):
+                if not re.fullmatch(r"(?:.*/)?[0-9]+\.csv", name):
+                    excluded_members.append(dict(archive_sha256=sha, member=name, reason="NOT_AN_INDIVIDUAL_NUMERIC_MATCH_FILE"))
+                    continue
                 info_name = name[:-4] + "_info.csv"
                 info = _info(zf.read(info_name).decode("utf-8", "replace")) if info_name in names else {"teams": []}
                 balls = list(csv.DictReader(io.StringIO(zf.read(name).decode("utf-8", "replace"))))
                 if not balls or balls[0].get("start_date", "") < since:
                     continue
+                if {b.get("match_id") for b in balls} != {Path(name).stem}:
+                    raise ValueError("individual cricket member contains mixed or mismatched match IDs: " + name)
                 by_inn: dict[int, list] = {}
                 for b in balls:
                     try:
@@ -235,6 +253,10 @@ def cricket(cache: Path, since: str = "2019-01-01", out: Path = OUT / "cricket")
     _write(out / "INNINGS.csv", INNINGS_FIELDS, innings_rows)
     _write(out / "PHASE_RATES.csv", PHASE_FIELDS, phase_rows)
     _append_receipts(out, receipts)
+    _write(out / "EXCLUDED_MEMBERS.csv", ("archive_sha256", "member", "reason"), excluded_members)
+    _write(out / "NORMALIZATION_RECEIPT.csv", ("normalized_at", "code_sha256", "source_mode", "innings", "excluded_members"),
+           [dict(normalized_at=_now(), code_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+                 source_mode="HASH_VERIFIED_RETAINED_DOWNLOADS" if receipts_file else "CHECKED_NETWORK_DOWNLOADS", innings=len(innings_rows), excluded_members=len(excluded_members))])
     return dict(innings=len(innings_rows), phase_rows=len(phase_rows), competitions=len({r["competition"] for r in innings_rows}))
 
 
@@ -249,11 +271,13 @@ def main(argv=None):
             p.add_argument("--years", default="2025,2026")
         if name == "cricket":
             p.add_argument("--since", default="2019-01-01")
+            p.add_argument("--receipt-replay", type=Path)
+            p.add_argument("--out", type=Path, default=OUT / "cricket")
     args = parser.parse_args(argv)
     if args.dataset == "soccer":
         print(soccer(args.cache, tuple(args.seasons.split(",")), tuple(args.years.split(","))))
     else:
-        print(cricket(args.cache, args.since))
+        print(cricket(args.cache, args.since, args.out, receipts_file=args.receipt_replay))
 
 
 if __name__ == "__main__":

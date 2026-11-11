@@ -256,3 +256,8 @@ Evaluation verifies the chain, exact-release scope, settled evidence and identic
 ## v24.14 integrity release
 
 The reference-only overtime repair calls the standalone kit grid outside the frozen cycle code identity. The existing shared competition parameter table remains byte-unchanged. The study and simulator CSVs above are retained prior draft outputs, with original path/hash lineage in research/verification/framework_change_2026-11-11-1/RETAINED_OUTPUT_LINEAGE.csv. Copying these outputs is not a fresh run or a qualification. Kit admission and exact receipt verification follow EXTERNAL_RESEARCH_PROTOCOL_V2.md.
+
+
+## v24.15 operational and parameter amendment
+
+The owner-authorized v24.15 statistical release installs all 32 measured soccer competition rows into the shared table and kit. Exact league means replace the former generic fallback; current-capture development evidence is not historical pregame proof. TEAM-CENTRE-v1 computes a recent-team starting centre in a separate shadow lane and is not promoted. Cricket uses the corrected versioned normalization. No failed simulator or unestimated effect is promoted. See [EXT-v3](EXTERNAL_RESEARCH_PROTOCOL_V3.md).

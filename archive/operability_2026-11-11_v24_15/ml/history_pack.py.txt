@@ -1,0 +1,188 @@
+"""Team history packs for research lanes (PACK-v1, CR-2026.11.11-R1).
+
+A pack gives one side's dated games before the request, built here from history the repository already holds, so a research
+chat does not re-collect the same windows for every card. It states the date the data runs to; games after that date are
+the lane's job (L2), from permitted sources, with true n.
+
+    python -m ml history-pack --competition "Soccer/Premier League" --team "Arsenal FC" --as-of 2026-11-10 --out FOLDER
+
+Sources: research/bulk_history/soccer/MATCHES.csv (openfootball), research/bulk_history/cricket/INNINGS.csv (Cricsheet,
+first innings) and the learning store's verified finals (NBA, NHL, MLB). Only games dated strictly before the as-of date
+are used: a same-day game is never assumed finished. Captured today means known today; a pack is current history for a new
+card, never point-in-time evidence for a past one. Tennis has no pack: its permitted bulk source may not be redistributed.
+"""
+from __future__ import annotations
+
+import argparse
+import csv
+import difflib
+import io
+import hashlib
+from datetime import datetime, timezone
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+SOCCER = ROOT / "research" / "bulk_history" / "soccer" / "MATCHES.csv"
+CRICKET = ROOT / "research" / "bulk_history" / "cricket" / "INNINGS.csv"
+STORE = ROOT / "research" / "learning_store"
+GAME_FIELDS = ("date", "competition", "season", "venue_role", "opponent", "score_for", "score_against", "total", "result",
+               "ht_for", "ht_against", "checkpoint_for", "source", "sample_scope")
+WINDOW_FIELDS = ("team", "window", "true_n", "first_date", "last_date", "for_pg", "against_pg", "total_pg", "win_rate", "draw_rate",
+                 "ht_total_pg", "checkpoint_for_pg", "sample_scope")
+
+
+class PackError(ValueError):
+    pass
+
+
+def _read(path: Path) -> list[dict]:
+    with open(path, newline="", encoding="utf-8") as fh:
+        return list(csv.DictReader(fh))
+
+
+def _resolve(team: str, names: set) -> str:
+    if team in names:
+        return team
+    hits = [n for n in names if team.lower() in n.lower() or n.lower() in team.lower()]
+    if len(hits) == 1:
+        return hits[0]
+    near = difflib.get_close_matches(team, sorted(names), n=5, cutoff=0.4)
+    raise PackError(f"team {team!r} not found uniquely; candidates: {', '.join(hits or near) or 'none'}")
+
+
+def soccer_games(competition: str | None, team: str, as_of: str) -> list[dict]:
+    if not competition: raise PackError("exact competition required; cross-competition form needs a separate declared view")
+    rows = [r for r in _read(SOCCER) if r["date"] < as_of[:10] and r["competition"] == competition]
+    names = {r["home"] for r in rows} | {r["away"] for r in rows}
+    name = _resolve(team, names)
+    out = []
+    for r in rows:
+        if name not in (r["home"], r["away"]):
+            continue
+        home = r["home"] == name
+        f, a = (int(r["ft_home"]), int(r["ft_away"])) if home else (int(r["ft_away"]), int(r["ft_home"]))
+        hf, ha = (r["ht_home"], r["ht_away"]) if home else (r["ht_away"], r["ht_home"])
+        out.append(dict(date=r["date"], competition=r["competition"], season=r["season"], venue_role="HOME" if home else "AWAY",
+                        opponent=r["away"] if home else r["home"], score_for=f, score_against=a, total=f + a,
+                        result="W" if f > a else "D" if f == a else "L", ht_for=hf, ht_against=ha, checkpoint_for="", source=r["source_url"], sample_scope="EXACT_COMPETITION_MATCHES"))
+    return name, out
+
+
+def cricket_games(competition: str | None, team: str, as_of: str, view="BATTING_FIRST") -> list[dict]:
+    if not competition: raise PackError("exact cricket competition and format required")
+    if view not in ("BATTING_FIRST", "CHASING", "BOWLING_FIRST"): raise PackError("invalid cricket innings view")
+    innings = "2" if view == "CHASING" else "1"
+    rows = [r for r in _read(CRICKET) if r["start_date"] < as_of[:10] and r["innings"] == innings and r["competition"] == competition]
+    names = {r["batting_team"] for r in rows} | {r["bowling_team"] for r in rows}
+    name = _resolve(team, names)
+    out = []
+    for r in rows:
+        if (r["bowling_team"] != name) if view == "BOWLING_FIRST" else (r["batting_team"] != name):
+            continue
+        cp = r["runs_at_over6"] if int(r["format_overs"]) == 20 else r["runs_at_over5"]
+        out.append(dict(date=r["start_date"], competition=r["competition"], season=r["season"], venue_role=r["venue"],
+                        opponent=r["batting_team"] if view == "BOWLING_FIRST" else r["bowling_team"],
+                        score_for="" if view == "BOWLING_FIRST" else int(r["runs"]), score_against=int(r["runs"]) if view == "BOWLING_FIRST" else "", total=int(r["runs"]),
+                        result="REDUCED" if r["reduced"] == "Y" else "", ht_for="", ht_against="", checkpoint_for=cp,
+                        source=f"cricsheet match {r['match_id']}", sample_scope=view + "_INNINGS_NOT_LAST_MATCHES"))
+    return name, out
+
+
+def store_games(competition: str, team: str, as_of: str) -> list[dict]:
+    events = {e["event_uid"]: e for e in _read(STORE / "EVENTS.csv") if e["competition"] == competition and e["event_at"][:10] < as_of[:10]}
+    if not events:
+        raise PackError(f"{competition}: no stored finals and no bulk history (the lane researches every window online)")
+    last = {}
+    for r in _read(STORE / "RESULTS.csv"):
+        if r["event_uid"] in events:
+            last[r["event_uid"]] = r
+    names = {e["home"] for e in events.values()} | {e["away"] for e in events.values()}
+    name = _resolve(team, names)
+    out = []
+    for uid, r in last.items():
+        e = events[uid]
+        if r["status"] != "FINAL" or name not in (e["home"], e["away"]):
+            continue
+        home = e["home"] == name
+        f, a = (int(r["hs"]), int(r["as_"])) if home else (int(r["as_"]), int(r["hs"]))
+        out.append(dict(date=e["event_at"][:10], competition=competition, season=e["season"], venue_role="HOME" if home else "AWAY",
+                        opponent=e["away"] if home else e["home"], score_for=f, score_against=a, total=f + a,
+                        result="W" if f > a else "D" if f == a else "L", ht_for="", ht_against="", checkpoint_for="",
+                        source=f"learning store {uid}", sample_scope="EXACT_COMPETITION_MATCHES"))
+    return name, out
+
+
+def windows(name: str, games: list[dict]) -> list[dict]:
+    games = sorted(games, key=lambda g: g["date"], reverse=True)
+    out = []
+    season = games[0]["season"] if games else ""
+    for label, sel in (("L5", games[:5]), ("L10", games[:10]), ("L15", games[:15]), ("L20", games[:20]),
+                       ("SEASON", [g for g in games if g["season"] == season])):
+        if not sel:
+            out.append(dict(team=name, window=label, true_n=0))
+            continue
+        num = lambda k: [float(g[k]) for g in sel if str(g[k]) != ""]
+        mean = lambda xs: round(sum(xs) / len(xs), 3) if xs else ""
+        decided = [g for g in sel if g["result"] in ("W", "D", "L")]
+        out.append(dict(team=name, window=label, true_n=len(sel), first_date=sel[-1]["date"], last_date=sel[0]["date"],
+                        for_pg=mean(num("score_for")), against_pg=mean(num("score_against")), total_pg=mean(num("total")),
+                        win_rate=mean([1.0 if g["result"] == "W" else 0.0 for g in decided]),
+                        draw_rate=mean([1.0 if g["result"] == "D" else 0.0 for g in decided]),
+                        ht_total_pg=mean([float(g["ht_for"]) + float(g["ht_against"]) for g in sel if g["ht_for"] != ""]),
+                        checkpoint_for_pg=mean(num("checkpoint_for")), sample_scope="|".join(sorted({g.get("sample_scope", "UNSPECIFIED") for g in sel}))))
+    return out
+
+
+def build(competition: str, team: str, as_of: str, *, cricket_view="BATTING_FIRST") -> tuple[str, list[dict], list[dict]]:
+    try: datetime.strptime(as_of[:10], "%Y-%m-%d")
+    except ValueError: raise PackError("as-of must be a real ISO date") from None
+    sport = competition.split("/")[0]
+    if sport == "Soccer":
+        name, games = soccer_games(competition, team, as_of)
+    elif sport.startswith("Cricket"):
+        name, games = cricket_games(competition, team, as_of, cricket_view)
+    elif sport == "Tennis":
+        raise PackError("tennis has no pack: its bulk source may not be redistributed; the lane uses permitted player pages")
+    else:
+        name, games = store_games(competition, team, as_of)
+    games.sort(key=lambda g: g["date"], reverse=True)
+    return name, games[:40], windows(name, games)
+
+
+def _csv(fields, rows) -> bytes:
+    buf = io.StringIO(newline="")
+    w = csv.DictWriter(buf, fieldnames=list(fields), lineterminator="\n", extrasaction="ignore")
+    w.writeheader()
+    w.writerows(rows)
+    return buf.getvalue().encode("utf-8")
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("--competition", required=True)
+    parser.add_argument("--team", required=True, action="append", help="repeat for the second side")
+    parser.add_argument("--as-of", required=True, help="YYYY-MM-DD: games dated before this day only")
+    parser.add_argument("--out", type=Path, required=True)
+    parser.add_argument("--cricket-view", choices=("BATTING_FIRST", "CHASING", "BOWLING_FIRST"), default="BATTING_FIRST")
+    args = parser.parse_args(argv)
+    args.out.mkdir(parents=True, exist_ok=True)
+    try:
+        for team in args.team:
+            name, games, wins = build(args.competition, team, args.as_of, cricket_view=args.cricket_view)
+            stem = "".join(ch for ch in name if ch.isalnum())[:30] + "_" + hashlib.sha256(name.encode()).hexdigest()[:8]
+            if args.competition.startswith("Cricket"): stem += "_" + args.cricket_view
+            (args.out / f"PACK_{stem}_GAMES.csv").write_bytes(_csv(GAME_FIELDS, games))
+            (args.out / f"PACK_{stem}_WINDOWS.csv").write_bytes(_csv(WINDOW_FIELDS, wins))
+            latest = games[0]["date"] if games else "NONE"
+            print(f"{name}: {len(games)} games listed; data runs to {latest}; games after {latest} are the lane's to find (true n)")
+            meta = dict(team=name, competition=args.competition, requested_as_of=args.as_of,
+                        captured_at=datetime.now(timezone.utc).isoformat(), point_in_time_status="CURRENT_CAPTURE_NOT_HISTORICAL_PREGAME_PROOF",
+                        sample_scope=games[0]["sample_scope"] if games else "NO_OBSERVATIONS")
+            (args.out / f"PACK_{stem}_METADATA.csv").write_bytes(_csv(tuple(meta), [meta]))
+    except PackError as exc:
+        print(f"REFUSED: {exc}")
+        raise SystemExit(2)
+
+
+if __name__ == "__main__":
+    main()

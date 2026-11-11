@@ -19,7 +19,7 @@ from pathlib import Path
 from ml import external as X
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "EXT-v2"
+VERSION = "EXT-v3"
 EVENT_FIELDS = ("manifest_version", "profile_version", "commit", "event_key", "sport", "competition", "native_event_id",
                 "home", "away", "scheduled_start", "game_number", "mini_path", "local_key", "writer", "created_at")
 CONTRACT_FIELDS = ("label", "family", "side", "line", "period", "endpoint", "action", "unit")
@@ -29,7 +29,7 @@ ART_FIELDS = ("role", "path", "sha256")
 REVIEW_FIELDS = ("source_url", "collector_id", "lineage_status", "review_evidence_path", "review_evidence_sha256", "reviewed_at")
 INTAKE_FIELDS = ("sequence", "lane", "chat_label", "return_sha256", "file", "packet_sha256", "parent_sha256", "status",
                  "problems", "recorded_at", "prev_sha256", "row_sha256")
-IMMUTABLE = ("EVENT.csv", "CONTRACTS.csv", "REQUIREMENTS.csv", "LANES.csv", "ARTIFACTS.csv")
+IMMUTABLE = ("EVENT.csv", "CONTRACTS.csv", "REQUIREMENTS.csv", "LANES.csv", "ARTIFACTS.csv", "POLICY.csv")
 COMPLETE = ("DONE", "UNAVAILABLE", "NOT_APPLICABLE")
 GENESIS = "0" * 64
 
@@ -107,6 +107,9 @@ def load(folder, root=ROOT):
     if len(events) != 1:
         raise X.ExternalError("one immutable event manifest required")
     e = events[0]
+    from ml import research_operations as O
+    if O.policy(folder)["method_version"] != X.PROFILE_VERSION:
+        raise X.ExternalError("policy method version differs from current release")
     saved = folder / "MANIFEST_SHA256.txt"
     if saved.exists() and saved.read_text(encoding="utf-8").strip() != manifest_hash(folder):
         raise X.ExternalError("immutable manifest files changed")
@@ -129,7 +132,8 @@ def load(folder, root=ROOT):
     return e
 
 
-def initialize(event, contracts, requirements, out, *, artifacts, root=ROOT, at=None):
+def initialize(event, contracts, requirements, out, *, artifacts, root=ROOT, at=None, mode="FULL_FIVE", lanes=None, reason=""):
+    from ml import research_operations as O
     """Create only after controls/kit/reference inputs exist at the supplied committed revision."""
     stamp = at or now()
     e = {k: str(event.get(k, "")) for k in EVENT_FIELDS}
@@ -160,7 +164,11 @@ def initialize(event, contracts, requirements, out, *, artifacts, root=ROOT, at=
             raise X.ExternalError("invalid research requirement")
         if r["required"] not in ("YES", "NO") or r["corroboration_required"] not in ("YES", "NO"):
             raise X.ExternalError("requirement flags are YES/NO")
-    lanes = [dict(lane=f"L{i}", chat_label=f"CHAT-{i}", depends_on="L1" if i == 4 else "L1|L2|L3|L4" if i == 5 else "") for i in range(1, 6)]
+    if mode not in ("FULL_FIVE", "REDUCED", "FULL_SIX") or (mode == "REDUCED" and not reason.strip()):
+        raise X.ExternalError("supported mode and an explicit reason for reduced research required")
+    lanes = O.lane_assignments(mode, lanes, requirements)
+    pol = dict(method_version=X.PROFILE_VERSION, research_mode=mode, pricing_policy="PARTIAL_EXPLICIT",
+               omitted_lanes="|".join(sorted({"L1", "L2", "L3", "L4", "L5"} - {r["lane"] for r in lanes})), reason=reason)
     ars = []
     for role, relative in artifacts.items():
         p = contained(root, relative)
@@ -175,7 +183,7 @@ def initialize(event, contracts, requirements, out, *, artifacts, root=ROOT, at=
     out.mkdir(parents=True, exist_ok=False)
     for name, fields, rows in (("EVENT.csv", EVENT_FIELDS, [e]), ("CONTRACTS.csv", CONTRACT_FIELDS, contracts),
                               ("REQUIREMENTS.csv", REQ_FIELDS, requirements), ("LANES.csv", LANE_FIELDS, lanes),
-                              ("ARTIFACTS.csv", ART_FIELDS, ars), ("SOURCE_REVIEW.csv", REVIEW_FIELDS, []),
+                              ("ARTIFACTS.csv", ART_FIELDS, ars), ("POLICY.csv", O.POLICY_FIELDS, [pol]), ("SOURCE_REVIEW.csv", REVIEW_FIELDS, []),
                               ("INTAKE.csv", INTAKE_FIELDS, [])):
         (out / name).write_bytes(csv_bytes(fields, rows))
     load(out, root)
@@ -232,7 +240,8 @@ def validate_return(ret, text, folder, *, root=ROOT, at=None):
         expected = packet_hash(folder, lane)
         if h.get("input_package_sha256") != expected: problems.append("stale or missing dependency-bound input package")
     except X.ExternalError as exc: problems.append(str(exc))
-    horizon = clock(e["scheduled_start"])
+    from ml import research_operations as O
+    horizon = clock(O.effective_start(folder, e))
     if clock(at or now()) >= horizon: problems.append("post-start intake is retained but cannot be admitted as pregame")
     for field in ("started_at", "completed_at"):
         if X._time_ok(h.get(field, "")) and clock(h[field]) >= horizon: problems.append(f"{field} is outside pregame horizon")
@@ -246,20 +255,20 @@ def validate_return(ret, text, folder, *, root=ROOT, at=None):
             if dep in current and clock(h["started_at"]) < clock(current[dep]["recorded_at"]):
                 problems.append(f"{lane} starts before accepted dependency {dep}")
     for r in ret["EVIDENCE"]:
-        for field in ("published_at", "retrieved_at"):
-            if not X._time_ok(r[field]) or clock(r[field]) >= horizon:
-                problems.append(f"{r['field']}: {field} is unknown or outside the pregame horizon")
+        if not X._time_ok(r["retrieved_at"]) or clock(r["retrieved_at"]) >= horizon:
+            problems.append(f"{r['field']}: retrieval is unknown or outside the pregame horizon")
+        if r["published_at"] not in ("", "UNKNOWN") and (not X._time_ok(r["published_at"]) or clock(r["published_at"]) >= horizon):
+            problems.append(f"{r['field']}: publication is outside the pregame horizon")
     for r in ret["ACCESS_LOG"]:
         if not X._time_ok(r["checked_at"]): continue
         if clock(r["checked_at"]) >= horizon or (X._time_ok(h.get("completed_at", "")) and clock(r["checked_at"]) > clock(h["completed_at"])):
             problems.append("access check is after completion or the horizon")
     arts = {r["role"]: r for r in read(Path(folder) / "ARTIFACTS.csv", ART_FIELDS)}
     rules = read(contained(root, arts["access"]["path"]))
-    by_host = {r["host"].lower(): r for r in rules}
     from urllib.parse import urlparse
     reader_column = {"CHATGPT_BROWSING": "chatgpt_browsing", "CLAUDE_AGENT": "claude_agent"}.get(h.get("reader"))
     path_column = "chatgpt_blocked_paths" if h.get("reader") == "CHATGPT_BROWSING" else "claude_blocked_paths"
-    access_sources = [dict(source_url=r["url"], source_class="PROVIDER" if r["url"].startswith("https://") else "OWNER_CAPTURE")
+    access_sources = [dict(source_url=r["url"], source_class="PROVIDER" if r["url"].startswith("https://") else "OWNER_CAPTURE", retrieved_at=r["checked_at"])
                       for r in ret["ACCESS_LOG"] if r["result"] == "OPENED"]
     for r in ret["EVIDENCE"] + access_sources:
         if r["source_class"] == "OWNER_CAPTURE":
@@ -271,13 +280,17 @@ def validate_return(ret, text, folder, *, root=ROOT, at=None):
         parsed = urlparse(r["source_url"])
         if reader_column is None:
             problems.append("OWNER input must use an actual owner capture; no automated owner-reader access is inferred"); continue
+        if not X._time_ok(r.get("retrieved_at", "")): continue
+        by_host = {v["host"].lower(): v for v in O.access_rows(folder, root, r["retrieved_at"])}
         rule = by_host.get((parsed.hostname or "").lower())
         if not rule: problems.append(f"{r['source_url']}: no pinned reader access decision"); continue
         status = rule.get(reader_column, "RULES_UNKNOWN")
         if status not in ("ALLOWED", "NO_RULES_FILE", "PARTLY_BLOCKED"):
             problems.append(f"{r['source_url']}: blocked or unknown reader access")
-        if not X._time_ok(rule.get("valid_until", "")) or clock(rule["valid_until"]) <= clock(at or now()):
-            problems.append("reader access decision expired; refresh the versioned package")
+        if not X._time_ok(rule.get("valid_until", "")) or clock(rule["valid_until"]) <= clock(r["retrieved_at"]):
+            problems.append("reader access decision expired at retrieval; activate an audited source refresh")
+        if rule.get("checked_at") and clock(rule["checked_at"]) > clock(r["retrieved_at"]):
+            problems.append("reader access observation was not available at retrieval")
         if status == "PARTLY_BLOCKED":
             for path in rule.get(path_column, "").split():
                 pattern = re.escape(path).replace(r"\*", ".*")
@@ -307,8 +320,8 @@ def verify_prices(ret, text, folder, root=ROOT):
     arts = {r["role"]: contained(root, r["path"]) for r in read(Path(folder) / "ARTIFACTS.csv", ART_FIELDS)}
     expected = {r["label"]: r for r in read(Path(folder) / "CONTRACTS.csv", CONTRACT_FIELDS)}
     rows = ret["PROBABILITIES"]
-    if len(rows) != len(expected) or {r["label"] for r in rows} != set(expected):
-        problems.append("pricing must cover every expected supplied contract exactly once")
+    from ml import research_operations as O
+    problems += O.pricing_coverage(ret, expected)
     receipts = {}
     for m in re.finditer(r"<!-- BEGIN KIT_RECEIPT (\S+) -->.*?<!-- END KIT_RECEIPT \1 -->", text, re.S):
         receipt = m.group(0)
@@ -426,14 +439,24 @@ def _admit(folder, *, root=ROOT, at=None):
         if not facts or (r["corroboration_required"] == "YES" and any(v["corroboration"] != "CORROBORATED" for v in facts)):
             gaps.append(r["requirement_id"])
     if gaps: raise X.ExternalError("information remains incomplete: " + ",".join(gaps))
-    res.update(admission="READY_FOR_CARD", manifest_sha256=manifest_hash(folder), input_package_sha256=packet_hash(folder, "L5"),
+    from ml import research_operations as O
+    price_return = next(r for r in returns if r["header"]["lane"] == "L5")
+    res.update(unpriced=price_return.get("UNPRICED", []), research_mode=O.policy(folder)["research_mode"], operations_sha256=O.operations_sha(folder),
+               effective_start=O.effective_start(folder, e),
+               comparator_status="SINGLE_FROZEN" if (Path(folder) / "COMPARISON_SINGLE.csv").exists() else "UNPAIRED_NO_SINGLE",
+               admission="READY_FOR_CARD" if price_return["PROBABILITIES"] else "READY_RESEARCH_ONLY", manifest_sha256=manifest_hash(folder), input_package_sha256=packet_hash(folder, "L5"),
                admitted_at=at or now(), predictive_qualification="UNPROVEN")
     return res
 
 
 def bind_card(folder, receipt_path, *, root=ROOT, at=None):
+    with locked(folder):
+        return _bind_card(folder, receipt_path, root=root, at=at)
+
+
+def _bind_card(folder, receipt_path, *, root=ROOT, at=None):
     """Gate an already appended central card through existing card/learning/ledger validators; never issue a second card."""
-    from ml import picks, learning_log, ledger as card_ledger
+    from ml import picks, learning_log, ledger as card_ledger, research_operations as O
     target = Path(folder) / "CARD_BINDING.csv"
     if target.exists():
         prior = read(target)[0]
@@ -443,15 +466,15 @@ def bind_card(folder, receipt_path, *, root=ROOT, at=None):
         begin, end = f"<!-- BEGIN CARD {e['local_key']} -->".encode(), f"<!-- END CARD {e['local_key']} -->".encode()
         if raw.count(begin) != 1 or raw.count(end) != 1: raise X.ExternalError("bound card markers changed")
         block = raw[raw.index(begin):raw.index(end)+len(end)]
-        if sha(block) != prior.get("card_block_sha256") or manifest_hash(folder) != prior["manifest_sha256"] or packet_hash(folder, "L5") != prior["input_package_sha256"]:
+        if sha(block) != prior.get("card_block_sha256") or manifest_hash(folder) != prior["manifest_sha256"] or packet_hash(folder, "L5") != prior["input_package_sha256"] or O.operations_sha(folder) != prior.get("operations_sha256"):
             raise X.ExternalError("bound card or package changed; retain a dated addendum")
         return prior
-    res = admit(folder, root=root, at=at)
+    res = _admit(folder, root=root, at=at)
     e = load(folder, root)
     mini = contained(root, e["mini_path"])
     meta, rows, problems = picks.lint_card(mini, e["local_key"], root=root)
     if problems: raise X.ExternalError("card lint: " + " | ".join(problems))
-    if meta.get("event_key") != e["event_key"] or meta.get("competition") != e["competition"] or meta.get("scheduled_start") != e["scheduled_start"]:
+    if meta.get("event_key") != e["event_key"] or meta.get("competition") != e["competition"] or meta.get("scheduled_start") != O.effective_start(folder, e):
         raise X.ExternalError("final card identity differs from its admitted event manifest")
     expected = {r["label"]: r for r in read(Path(folder) / "CONTRACTS.csv", CONTRACT_FIELDS)}
     if meta.get("external_manifest_sha256") != res["manifest_sha256"] or meta.get("external_packet_sha256") != res["input_package_sha256"]:
@@ -459,7 +482,9 @@ def bind_card(folder, receipt_path, *, root=ROOT, at=None):
     definitions = "|".join(c["label"] + "=" + "~".join(c[k] for k in ("period", "endpoint", "action", "unit")) for c in expected.values())
     if meta.get("contract_definitions") != definitions:
         raise X.ExternalError("final card endpoint/period/action/unit definitions differ from manifest")
-    if {r["label"] for r in rows} != set(expected): raise X.ExternalError("final card contract coverage differs from admitted package")
+    unpriced = O.check_card_coverage(mini.read_text(encoding="utf-8"), e["local_key"], rows, folder)
+    if O.policy(folder)["research_mode"] != "FULL_FIVE" and meta.get("research_mode") != O.policy(folder)["research_mode"]:
+        raise X.ExternalError("card must label its reduced/six-lane research mode")
     for r in rows:
         c = expected[r["label"]]
         if r["family"].lower() != c["family"].lower() or r["side"].upper() != c["side"].upper() or not same_number(r["line"], c["line"]):
@@ -469,6 +494,7 @@ def bind_card(folder, receipt_path, *, root=ROOT, at=None):
     pricing = {"PROBABILITIES": [{k: str(r[k]).lower() if k == "family" else str(r[k]) for k in ("label", "family", "side", "line", "w", "p", "l", "final_p")}
                                 for r in rows]}
     for r in pricing["PROBABILITIES"]: r["kit_receipt_sha256"] = K.receipt_sha256(receipt_text)
+    pricing["UNPRICED"] = unpriced
     errors = verify_prices(pricing, receipt_text, folder, root)
     if errors: raise X.ExternalError("central pricing receipt: " + " | ".join(errors))
     errors = learning_log.check(e["local_key"], "pregame", root=root)
@@ -478,7 +504,7 @@ def bind_card(folder, receipt_path, *, root=ROOT, at=None):
     if errors: raise X.ExternalError("card adjustments: " + " | ".join(errors))
     saved_rows = card_ledger.read(Path(root) / card_ledger.LEDGER)
     saved_rows = saved_rows[saved_rows.local_key == e["local_key"]]
-    if len(saved_rows) != len(rows) or set(saved_rows.label) != set(expected):
+    if len(saved_rows) != len(rows) or set(saved_rows.label) != {r["label"] for r in rows}:
         raise X.ExternalError("card must be ledgered exactly once before its external binding")
     for r in rows:
         saved = saved_rows[saved_rows.label == r["label"]].iloc[0]
@@ -488,7 +514,7 @@ def bind_card(folder, receipt_path, *, root=ROOT, at=None):
     block = raw[raw.index(begin):raw.index(end)+len(end)]
     receipt = dict(event_key=e["event_key"], local_key=e["local_key"], manifest_sha256=res["manifest_sha256"],
                    input_package_sha256=res["input_package_sha256"], mini_sha256=sha(mini.read_bytes()),
-                   card_block_sha256=sha(block), bound_at=at or now(), status="CARD_BOUND_NOT_PUBLICATION_PROOF")
+                   card_block_sha256=sha(block), operations_sha256=O.operations_sha(folder), bound_at=at or now(), status="CARD_BOUND_NOT_PUBLICATION_PROOF")
     if target.exists():
         prior = read(target)[0]
         if any(prior[k] != receipt[k] for k in receipt if k != "bound_at"):
@@ -500,13 +526,18 @@ def bind_card(folder, receipt_path, *, root=ROOT, at=None):
 
 
 def append_card(folder, card_path, receipt_path, expected_mini_sha256, writer, *, root=ROOT, at=None, research_only=None):
+    with locked(folder):
+        return _append_card(folder, card_path, receipt_path, expected_mini_sha256, writer, root=root, at=at, research_only=research_only)
+
+
+def _append_card(folder, card_path, receipt_path, expected_mini_sha256, writer, *, root=ROOT, at=None, research_only=None):
     """Lease-held, compare-before-write mini append. Existing bytes before the footer are preserved exactly."""
     import os
     import tempfile
-    from ml import picks
+    from ml import picks, research_operations as O
     e = load(folder, root)
     if research_only not in (None, "NO_FORECAST", "QUALITATIVE"): raise X.ExternalError("invalid research retention disposition")
-    res = admit(folder, root=root, at=at) if research_only is None else dict(manifest_sha256=manifest_hash(folder), input_package_sha256="NOT_ADMITTED")
+    res = _admit(folder, root=root, at=at) if research_only is None else dict(manifest_sha256=manifest_hash(folder), input_package_sha256="NOT_ADMITTED")
     if writer != e["writer"]: raise X.ExternalError("only the manifest writer may append")
     mini, card = contained(root, e["mini_path"]), Path(card_path).read_bytes()
     text = card.decode("utf-8")
@@ -524,8 +555,11 @@ def append_card(folder, card_path, receipt_path, expected_mini_sha256, writer, *
         if errors: raise X.ExternalError("candidate card: " + " | ".join(errors))
         if meta.get("external_manifest_sha256") != res["manifest_sha256"] or meta.get("external_packet_sha256") != res["input_package_sha256"]:
             raise X.ExternalError("candidate does not bind the admitted package")
-        if meta.get("event_key") != e["event_key"] or meta.get("competition") != e["competition"] or meta.get("scheduled_start") != e["scheduled_start"]:
+        if meta.get("event_key") != e["event_key"] or meta.get("competition") != e["competition"] or meta.get("scheduled_start") != O.effective_start(folder, e):
             raise X.ExternalError("candidate event identity differs from the manifest")
+        unpriced = O.check_card_coverage(text, e["local_key"], priced, folder)
+        if O.policy(folder)["research_mode"] != "FULL_FIVE" and meta.get("research_mode") != O.policy(folder)["research_mode"]:
+            raise X.ExternalError("card must label its reduced/six-lane research mode")
         contracts = read(Path(folder) / "CONTRACTS.csv", CONTRACT_FIELDS)
         definitions = "|".join(c["label"] + "=" + "~".join(c[k] for k in ("period", "endpoint", "action", "unit")) for c in contracts)
         if meta.get("contract_definitions") != definitions: raise X.ExternalError("candidate endpoint/action definitions differ from manifest")
@@ -533,9 +567,9 @@ def append_card(folder, card_path, receipt_path, expected_mini_sha256, writer, *
         rec = Path(receipt_path).read_text(encoding="utf-8")
         probs = [{k: str(r[k]).lower() if k == "family" else str(r[k]) for k in ("label", "family", "side", "line", "w", "p", "l", "final_p")} for r in priced]
         for r in probs: r["kit_receipt_sha256"] = K.receipt_sha256(rec)
-        errors = verify_prices({"PROBABILITIES": probs}, rec, folder, root)
+        errors = verify_prices({"PROBABILITIES": probs, "UNPRICED": unpriced}, rec, folder, root)
         if errors: raise X.ExternalError("candidate pricing: " + " | ".join(errors))
-    with locked(mini.parent):
+    with locked(mini.parent) if mini.parent.resolve() != Path(folder).resolve() else contextlib.nullcontext():
         original = mini.read_bytes()
         if sha(original) != expected_mini_sha256: raise X.ExternalError("mini changed since read")
         prior = original.decode("utf-8")
@@ -589,9 +623,18 @@ def append_card(folder, card_path, receipt_path, expected_mini_sha256, writer, *
 
 def package_check(root=ROOT):
     root = Path(root)
-    paths = ["ml/kit/sr_kit.py", "research/external/EXTERNAL_PROFILE_v24.14.md", "research/external/LANE_BRIEFS_v24.14.md",
-             "research/external/kit/KIT_PARAMETERS_v24.14.csv", "research/external/kit/KIT_CRICKET_PHASES_v24.14.csv",
-             "research/external/access/READER_ACCESS_v24.14.csv", "research/external/access/CHATGPT_DO_NOT_OPEN_v24.14.csv"]
+    paths = ["ml/kit/sr_kit.py", "research/external/EXTERNAL_PROFILE_v24.15.md", "research/external/LANE_BRIEFS_v24.15.md",
+             "research/external/kit/v24.15/KIT_PARAMETERS_v24.15.csv", "research/external/kit/v24.15/KIT_CRICKET_PHASES_v24.15.csv",
+             "research/external/access/READER_ACCESS_v24.15.csv", "research/external/access/CHATGPT_DO_NOT_OPEN_v24.15.csv"]
+    pointer = root / "research/external/access/CURRENT_ACCESS.csv"
+    if not pointer.is_file(): raise X.ExternalError("current access snapshot pointer is missing")
+    current = read(pointer, ("role", "path", "sha256", "snapshot_id"))
+    if {r["role"] for r in current} != {"reader_access", "do_not_open"} or len(current) != 2:
+        raise X.ExternalError("current access pointer must name one reader and exclusion snapshot")
+    for r in current:
+        target = contained(root, r["path"])
+        if artifact_sha(target.read_bytes()) != r["sha256"]: raise X.ExternalError("current source snapshot hash changed")
+        paths[5 if r["role"] == "reader_access" else 6] = r["path"]
     missing = [p for p in paths if not (root / p).is_file()]
     if missing: raise X.ExternalError("incomplete release package: " + ",".join(missing))
     from ml.kit import sr_kit as K
@@ -612,9 +655,12 @@ def main(argv=None):
     i.add_argument("--event-csv", type=Path, required=True); i.add_argument("--contracts", type=Path, required=True)
     i.add_argument("--requirements", type=Path, required=True); i.add_argument("--artifacts", type=Path, required=True)
     i.add_argument("--out", type=Path, required=True)
+    i.add_argument("--mode", choices=("FULL_FIVE", "REDUCED", "FULL_SIX"), default="FULL_FIVE")
+    i.add_argument("--lanes", nargs="+"); i.add_argument("--reason", default="")
     for command in ("packet", "intake", "status", "admit", "bind-card", "append-card", "append-research", "review-source"):
         a = sub.add_parser(command); a.add_argument("--event", type=Path, required=True)
-        if command == "packet": a.add_argument("--lane", required=True)
+        if command == "packet":
+            a.add_argument("--lane", required=True); a.add_argument("--out", type=Path)
         if command == "intake": a.add_argument("--return", dest="source", type=Path, required=True); a.add_argument("--parent", default="")
         if command == "bind-card": a.add_argument("--receipt", type=Path, required=True)
         if command == "append-card":
@@ -633,10 +679,10 @@ def main(argv=None):
     try:
         if args.command == "init":
             print(initialize(read(args.event_csv)[0], read(args.contracts, CONTRACT_FIELDS), read(args.requirements, REQ_FIELDS), args.out,
-                             artifacts={r["role"]: r["path"] for r in read(args.artifacts)}))
+                             artifacts={r["role"]: r["path"] for r in read(args.artifacts)}, mode=args.mode, lanes=args.lanes, reason=args.reason))
         elif args.command == "packet":
-            load(args.event); print("manifest_sha256:", manifest_hash(args.event)); print("input_package_sha256:", packet_hash(args.event, args.lane))
-            print("Dependencies are the exact accepted originals under this event's received/ folder; pricing uses the reviewed merged evidence.")
+            from ml.research_operations import packet
+            print(packet(args.event, args.lane, out=args.out))
         elif args.command == "intake":
             result = intake(args.event, args.source, parent=args.parent); print(result)
             if result["status"] == "REFUSED": raise SystemExit(1)
@@ -652,8 +698,8 @@ def main(argv=None):
         elif args.command == "review-source": review_source(args.event, args.url, args.collector, args.evidence, status=args.status)
         elif args.command == "admit":
             result = admit(args.event)
-            output = args.event / ("ADMISSION_" + sha(str(result["inputs"]).encode())[:16] + ".csv")
-            receipt = {k: result[k] for k in ("event_key", "admission", "manifest_sha256", "input_package_sha256", "admitted_at", "predictive_qualification")}
+            output = args.event / ("ADMISSION_" + sha((str(result["inputs"]) + result["operations_sha256"]).encode())[:16] + ".csv")
+            receipt = {k: result[k] for k in ("event_key", "admission", "research_mode", "effective_start", "operations_sha256", "comparator_status", "manifest_sha256", "input_package_sha256", "admitted_at", "predictive_qualification")}
             if output.exists():
                 prior = read(output)[0]
                 if any(str(receipt[k]) != prior.get(k) for k in receipt if k != "admitted_at"):

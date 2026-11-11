@@ -1,24 +1,24 @@
-# Files for the external research chats (v24.14)
+# Files for the external research chats (v24.15)
 
-Rules: [EXTERNAL_RESEARCH_PROTOCOL](../../EXTERNAL_RESEARCH_PROTOCOL.md) (EXT-v2). Every file a chat uploads carries the version in its name, so an old copy left in a chat is easy to spot. Replace all of them together when the version changes.
+Rules: [EXTERNAL_RESEARCH_PROTOCOL](../../EXTERNAL_RESEARCH_PROTOCOL.md) (EXT-v3). Every file a chat uploads carries the version in its name, so an old copy left in a chat is easy to spot. Replace all of them together when the version changes.
 
 ## Upload to every chat (or once to a ChatGPT Project)
 
 | File | What it is |
 |---|---|
-| [EXTERNAL_PROFILE_v24.14.md](EXTERNAL_PROFILE_v24.14.md) | The one page every chat reads first |
-| [LANE_BRIEFS_v24.14.md](LANE_BRIEFS_v24.14.md) | The five lane briefs and the return block; paste one brief per chat |
-| [`ml/kit/sr_kit.py`](../../ml/kit/sr_kit.py) | The calculation kit (version SR-KIT-v24.14 inside the file); numpy and scipy only |
-| [kit/KIT_PARAMETERS_v24.14.csv](kit/KIT_PARAMETERS_v24.14.csv) | Competition rows for the kit: league numbers, widths, tie rules, first-half share, overtime share, dispersion, cricket and tennis rows |
-| [kit/KIT_CRICKET_PHASES_v24.14.csv](kit/KIT_CRICKET_PHASES_v24.14.csv) | Per-over ball outcome tables for T20 and ODI, men and women, with each group's innings shock |
-| [access/CHATGPT_DO_NOT_OPEN_v24.14.csv](access/CHATGPT_DO_NOT_OPEN_v24.14.csv) | Hosts a chat never opens (blocked for ChatGPT-User at the root, or rules unreadable), with what to use instead where known; valid to the `valid_until` date |
-| `sources/PREGAME_SOURCES_<SPORT>_v24.14.csv` | The permitted pregame sources for the game's sport only ([sources/](sources/README.md)) |
+| [EXTERNAL_PROFILE_v24.15.md](EXTERNAL_PROFILE_v24.15.md) | The one page every chat reads first |
+| [LANE_BRIEFS_v24.15.md](LANE_BRIEFS_v24.15.md) | The five lane briefs and the return block; paste one brief per chat |
+| [`ml/kit/sr_kit.py`](../../ml/kit/sr_kit.py) | The calculation kit (version SR-KIT-v24.15 inside the file); numpy and scipy only |
+| [kit/v24.15/KIT_PARAMETERS_v24.15.csv](kit/v24.15/KIT_PARAMETERS_v24.15.csv) | Competition rows for the kit: league numbers, widths, tie rules, first-half share, overtime share, dispersion, cricket and tennis rows |
+| [kit/v24.15/KIT_CRICKET_PHASES_v24.15.csv](kit/v24.15/KIT_CRICKET_PHASES_v24.15.csv) | Per-over ball outcome tables for T20 and ODI, men and women, with each group's innings shock |
+| [access/CHATGPT_DO_NOT_OPEN_v24.15.csv](access/CHATGPT_DO_NOT_OPEN_v24.15.csv) | Hosts a chat never opens (blocked for ChatGPT-User at the root, or rules unreadable), with what to use instead where known; valid to the `valid_until` date |
+| `sources/PREGAME_SOURCES_<SPORT>_v24.15.csv` | The permitted pregame sources for the game's sport only ([sources/](sources/README.md)) |
 
 ## Kept here, not uploaded
 
 | File | What it is |
 |---|---|
-| [access/READER_ACCESS_v24.14.csv](access/READER_ACCESS_v24.14.csv) | Every audited host, judged for each reader (Claude agent, ChatGPT browsing, repository scripts), with the blocked paths of partly blocked hosts |
+| [access/READER_ACCESS_v24.15.csv](access/READER_ACCESS_v24.15.csv) | Every audited host, judged for each reader (Claude agent, ChatGPT browsing, repository scripts), with the blocked paths of partly blocked hosts |
 
 ## Refreshing (weekly, or before a batch when a list is past its `valid_until`)
 
@@ -37,6 +37,13 @@ A refresh that changes a file's contents is a new round of changes: it takes the
 
 ## Admission and release status
 
-The current definition is ../../EXTERNAL_RESEARCH_PROTOCOL_V2.md. Run external package-check after installing the whole version. Initialize an immutable event manifest only after its exact artifacts are committed; L4 and L5 receive dependency-bound packets. All source observations retain their actual checked_at/valid_until dates: the v24.14 copies are byte-identical snapshots, not a fresh network audit. The parameter package is uncalibrated development/reference arithmetic, not model promotion. Cricket simulation and tennis form shock are sensitivity-only.
+The current definition is ../../EXTERNAL_RESEARCH_PROTOCOL_V3.md. Run external package-check after installing the whole version. Initialize an immutable event manifest only after its exact artifacts are committed; L4 and L5 receive dependency-bound packets. All source observations retain their actual checked_at/valid_until dates: the v24.15 copies are byte-identical snapshots, not a fresh network audit. The parameter package is uncalibrated development/reference arithmetic, not model promotion. Cricket simulation and tennis form shock are sensitivity-only.
 
-Kit parameters build only the versioned upload files and supporting evidence; they do not rewrite the shared frozen reference table. Existing output versions cannot be overwritten. See EVALUATION_PLAN_v24.14.md for the future paired experiment. No model has been promoted, and historical availability has not been fabricated.
+The builder writes versioned upload files and supporting evidence. The separate owner-authorized v24.15 release installs 32 measured soccer rows into the shared reference table. Existing output versions cannot be overwritten. See EVALUATION_PLAN_v24.15.md for the future paired experiment. No model has been promoted, and historical availability has not been fabricated.
+
+
+## Current versus superseded packages
+
+Only v24.15 is current. v24.13 and v24.14 profiles/briefs/kit files are retained originals and must not be mixed into a current chat. The standalone kit header now names v24.15. Source-only snapshots use their own date-based versions; CURRENT_ACCESS.csv identifies the current reader/access pair with canonical-LF hashes. The initial v24.15 access copies retain the original 10 November observation/17 November UTC expiry; copying is not a fresh audit. Update the pointer after an actual audit without bumping the statistical method.
+
+Use [EXT-v3](../../EXTERNAL_RESEARCH_PROTOCOL_V3.md) for the shorter packet/batch flow, reduced/six roles, partial pricing, delay amendments, SINGLE freezing and fact scorecards. Live pilot remains PENDING actual event/lines and genuine chat returns.

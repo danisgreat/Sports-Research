@@ -12,8 +12,8 @@ import pandas as pd
 
 from ml.evaluation import prospective as P
 
-MODELS = ("SINGLE_RESEARCH:v24.14", "REFERENCE:v24.14", "BASELINE:v24.14")
-FIVE = "FIVE_LANES:v24.14"
+MODELS = ("SINGLE_RESEARCH:v24.15", "REFERENCE:v24.15", "BASELINE:v24.15")
+FIVE = "FIVE_LANES:v24.15"
 MIN_EVENTS = 100
 MIN_WEEKS = 8
 DELTA = 0.01
@@ -42,6 +42,8 @@ def evaluate(forecasts, outcomes, out, *, as_of=None):
         single, five = by_tag[MODELS[0]][key], by_tag[FIVE][key]
         if pd.Timestamp(single["issued_at"]) > pd.Timestamp(five["issued_at"]):
             raise ValueError("SINGLE_RESEARCH must be frozen before FIVE_LANES")
+        if any(single[k] != five[k] for k in ("competition", "endpoint", "family", "side", "line")) or pd.Timestamp(single["scheduled_start"]) != pd.Timestamp(five["scheduled_start"]):
+            raise ValueError("paired comparisons need identical scope and evidenced horizon; delay-changed pairs stay excluded")
         start = pd.Timestamp(five["scheduled_start"]).tz_convert("UTC")
         monday = start.normalize() - pd.Timedelta(days=start.weekday())
         if monday + pd.Timedelta(days=7) > horizon: continue

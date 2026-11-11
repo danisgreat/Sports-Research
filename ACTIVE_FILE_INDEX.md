@@ -25,7 +25,7 @@
 | Current exact competition source routes and access/coverage limits | [research/source_routes/README.md](research/source_routes/README.md) |
 | R3 implementation and unresolved backlog | [research/verification/framework_change_2026-11-09-3/IMPLEMENTATION.md](research/verification/framework_change_2026-11-09-3/IMPLEMENTATION.md) |
 | Reusable source discoveries | [RESEARCH_SOURCE_REGISTER.md](RESEARCH_SOURCE_REGISTER.md) |
-| External research lanes (EXT-v2, 2026-11-11): the owner's research chats, the event key, lane returns, the merge, and the files a chat uploads (profile, lane briefs, kit, parameter files, do-not-open list, per-sport sources) | [EXTERNAL_RESEARCH_PROTOCOL.md](EXTERNAL_RESEARCH_PROTOCOL.md), [research/external/](research/external/README.md) |
+| External research operation (EXT-v3, v24.15, 2026-11-11): the owner's research chats, the event key, lane returns, the merge, and the files a chat uploads (profile, lane briefs, kit, parameter files, do-not-open list, per-sport sources) | [EXT-v3 guide](EXTERNAL_RESEARCH_PROTOCOL_V3.md), [current upload package](research/external/README.md) |
 | Open bulk results history (soccer, cricket) with provenance; studies and simulator checks that use it | [research/bulk_history/](research/bulk_history/DATA_PROVENANCE.md), [framework change 2026-11-11-1](research/verification/framework_change_2026-11-11-1/IMPLEMENTATION.md) |
 | Current values (IDs, active log, versions, scoreboard) | [CURRENT_STATE.md](CURRENT_STATE.md) |
 | Who runs which prompt, the remote fallback (REF-v2), delivery and prompt-4 intake (the external-chat route is retired, REQ-v3) | [EXECUTION_ENVIRONMENT_PROTOCOL](WORKFLOW.md#part-a-execution_environment_protocol) |
@@ -60,3 +60,6 @@
 ## 2. Current historical-research status
 
 All sports use [HISTORICAL_SOURCE_PROTOCOL](HISTORICAL_SOURCE_PROTOCOL.md) for online form windows and [ROSTER_AVAILABILITY_PROTOCOL](ROSTER_AVAILABILITY_PROTOCOL.md) for confirmed players. The old store is retired; old inventory counts and store-derived profiles are not current input authority. [RESULTS_REBUILD_PLAN](archive/consolidation_2026-11-07/archived/RESULTS_REBUILD_PLAN.md) is a future proposal, not an executed rebuild.
+
+
+**v24.15 additions:** [recent-team shadow centres and coverage](research/verification/framework_change_2026-11-11-3/team_strength/README.md), [corrected cricket normalization](research/bulk_history/cricket/v24.15/NORMALIZATION_RECEIPT.csv), [implementation and limits](research/verification/framework_change_2026-11-11-3/IMPLEMENTATION.md). The active working clone is `C:\Users\danie\Projects\Sports-Research`; the OneDrive checkout is a retained mirror.

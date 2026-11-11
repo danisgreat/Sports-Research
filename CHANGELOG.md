@@ -1,5 +1,10 @@
 # Australian rules request format and finals extra time — MDS/P v24.12 / CR-2026.11.10-R2 / P-2026.11.10-v24.10, 10 November 2026
 
+## 11 November 2026 - v24.15 / CR-2026.11.11-R3
+
+Owner-authorized operational/statistical correction before any v24.14 card: EXT-v3 supports undated pre-start evidence, explicit reduced/six-lane modes, partial pricing, official delay amendments, separately dated source access and pre-exposure single-research comparisons. Install 32 measured soccer league rows in the main table/kit; correct aggregate-file cricket ingestion through a versioned hash-verified rebuild. Add shadow recent-team centres with explicit coverage/validation limits, settlement fact scorecards and effort reporting. Work in the clone outside OneDrive. Preserve originals and historical forecasts; live five-chat pilot and predictive benefit remain unproven. [Full explanation](research/verification/framework_change_2026-11-11-3/IMPLEMENTATION.md).
+
+
 Owner instructions, 10 November 2026: add the Australian rules game request to the per-game formats, and treat AFL finals lines as including extra time. REQ-v4 now covers ten sports. GAME_REQUEST_TEMPLATE §1 holds the format verbatim, §1b reads its lines, and it replaces the free-form block in the AFL/AFLW prompt-1 sport file. AFL-ET-1, owner convention of the same date: every Australian rules finals line includes extra time, unless its own text names regulation or a segment. No retained final records extra time, so no earlier grade is revised. No card, grade, probability, canonical ID, method, model or selection rule changes. [Implementation](research/verification/framework_change_2026-11-10-2/IMPLEMENTATION.md).
 
 # Records and versions aligned — MDS/P v24.11 / CR-2026.11.10-R1 / P-2026.11.10-v24.9, 10 November 2026

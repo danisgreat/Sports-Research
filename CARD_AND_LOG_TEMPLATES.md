@@ -478,3 +478,17 @@ Use [TIMING_RESEARCH_PROTOCOL](RESEARCH_PROTOCOL.md#part-e-timing_research_proto
 ## EXT-v2 external card additions (v24.14)
 
 PICKS_V2 for EV2 events adds external_manifest_sha256 and external_packet_sha256 (64 lowercase hex characters), and contract_definitions encoded LABEL=period~endpoint~action~unit in immutable CONTRACTS.csv order. The repository-issued card carries its own verified central receipt, learning log, frozen ledger and bind-card receipt. No change applies retrospectively. Non-numeric retention has CARD markers, full A1-A9, exact event key/competition/start and a RESEARCH_STATUS marker (NO_FORECAST or QUALITATIVE), without a priced PICKS_V2 block. The lease-held append preserves every previous byte before the footer and advances only LOCAL ordinal/counts, never P-IDs. See EXTERNAL_RESEARCH_PROTOCOL_V2.md.
+
+
+## Current EXT-v3 partial-card additions (v24.15)
+
+All supplied contract definitions remain in `contract_definitions`, including unpriced rows. Only numeric contracts appear in PICKS_V2 and the numerical ledger. Add `research_mode: REDUCED` or FULL_SIX when applicable. Use the evidenced effective start in `scheduled_start`; keep `original_scheduled_start` and the retained delay amendment for a delayed event.
+
+```text
+<!-- BEGIN UNPRICED LOCAL-EXAMPLE-G0001 -->
+label,status,reason
+EXAMPLE corners,UNSUPPORTED,No permitted exact-scope parameters
+<!-- END UNPRICED LOCAL-EXAMPLE-G0001 -->
+```
+
+The block must match accepted L5 dispositions exactly; it is outside PICKS_V2 and inside the card. Unknown probabilities are never zero, ranked or graded as numeric picks. All-unpriced work uses the complete A1-A9 research-only card. The current definition is [EXT-v3](EXTERNAL_RESEARCH_PROTOCOL_V3.md); archived templates keep their original versions.

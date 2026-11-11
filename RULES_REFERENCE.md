@@ -309,3 +309,8 @@ Document the distribution family, means, SDs, dispersion and covariance or the e
 ## 10. Primary probability source
 
 The probability source is Part A section 7 (ANALYST_PRIMARY_V1 from the frozen reference plus the adjustment ledger). A workshop model reaches a card only as the frozen reference; it never overwrites p_card. Historical MODEL_ASSISTED_PRIMARY_V3 cards keep their original [model source](ML_PIPELINE.md#part-a-primary_prediction_protocol) and cohort.
+
+
+## v24.15 operational and parameter amendment
+
+For v24.15 manifest-bound external work, EXT-v3 governs reduced/six-role scope, explicit numeric-or-unpriced coverage, official no-play delay amendments and independent source snapshot versions. The owner authorizes this statistical/admission correction before a v24.14 scored card. Subsequent source-only audits may update access snapshots without changing method identity; other statistical changes keep the freeze and owner-authority rules. See [EXT-v3](EXTERNAL_RESEARCH_PROTOCOL_V3.md).

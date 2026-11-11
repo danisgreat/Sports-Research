@@ -1,0 +1,3 @@
+# Recent-team centre study
+
+Fixed recipe, no tuning on reported outcomes. Competition split is a deterministic SHA-256 split. Each forecast uses strictly earlier dates from its own competition and exact endpoint; same-day games are excluded. Last 200 games per competition are an explicit bounded diagnostic sample, not prospective validation. Inputs were captured after historical outcomes. No historical availability/publication proof is inferred. MAE evaluates a starting centre only; it does not validate probabilities, uncertainty, player effects or profitability. Sports lacking multiple competitions or permitted history retain those limits. No candidate is promoted.

@@ -1,3 +1,5 @@
+> Superseded by [EXT-v3](EXTERNAL_RESEARCH_PROTOCOL_V3.md). The original format details below remain historical; current admission and timing rules are in v3.
+
 # External research lanes (EXT-v2)
 
 **MDS-2026.11.11-v24.14 / CR-2026.11.11-R2 / P-2026.11.11-v24.12.** Owner-authorized corrections to all eighteen review findings. Replaces the unpublished EXT-v1 draft, preserved in [the archive](archive/integrity_2026-11-11_v24_14/working_draft/EXTERNAL_RESEARCH_PROTOCOL.md). No model is promoted; prospective improvement remains unproven.

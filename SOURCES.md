@@ -1420,3 +1420,8 @@ Useful recovered sporting fields include PHL's official period/shootout game rec
 Use the [execution playbook](research/source_routes/RESEARCH_COVERAGE_PLAYBOOK.md) with the controlling SRC-ALT-v2, §1.8, availability and historical-source protocols. It records the current social access check and how to retain exact claims, ownership, time and lineage; cycle sources for the same field; and disclose per-metric L5/L10/L15/L20 coverage. Older X/syndication/platform success claims do not authorize reaching a currently blocked post.
 
 [Reviewed field observations](research/verification/source_sweep_2026-11-09-1/FIELD_DECISIONS.csv) supplement the source register. Examples include timed NBA injury PDFs, the current NBL list, B.League registrations, separate A-League men/women squad releases, CFL practice reports and a current Basket.fi live-statistics incident. Their explicit scope/freshness limits govern reuse. [Sweep and remaining reporting/custody issues](research/verification/source_sweep_2026-11-09-1/REPORT.md).
+
+
+## v24.15 operational and parameter amendment
+
+EXT-v3 uses separately versioned, actually audited access snapshots. Weekly source-only refreshes do not change the forecast method version. Current permission is checked at each actual retrieval, with old accesses retaining their original observation/expiry evidence. UNKNOWN publication dates are accepted only with actual pre-start retrieval; no earlier publication time is inferred. The initial v24.15 snapshots preserve the 10 November observation and 18 November AEDT expiry. See [EXT-v3](EXTERNAL_RESEARCH_PROTOCOL_V3.md).

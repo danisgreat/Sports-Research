@@ -18,7 +18,7 @@ The return block:
     event_key: EV-20261110-BKB-CHIBAJETS-OSAKAEVESS
     lane: L1
     chat_label: CHAT-1
-    profile_version: v24.13
+    profile_version: v24.15
     commit: <the 40-character commit the chat read>
     reader: CHATGPT_BROWSING
     started_at: 2026-11-10T08:00:00+11:00
@@ -32,8 +32,8 @@ The return block:
     url,result,checked_at,notes
     <!-- END LANE_RETURN -->
 
-Merge rules: evidence is pooled by (side, field, value); a fact is CORROBORATED only with two different registrable domains
-(two pages of one site, or a copied feed, are one source); a single-valued field with two values is a CONFLICT the card must
+Merge rules: evidence is pooled by (side, field, value); a fact is CORROBORATED only with two reviewed original collector IDs
+(two pages or domains using one copied feed are one collector); a single-valued field with two values is a CONFLICT the card must
 resolve or price as a scenario. Pricing returns (L5, FULL) are pooled per contract: median, minimum, maximum and spread;
 a contract is EXTERNAL_DISAGREEMENT when the runs fall on both sides of 0.5 or the spread exceeds 0.10, and the card may not
 rank it. Market terms anywhere in a return are refused.
@@ -52,11 +52,11 @@ import urllib.parse
 from datetime import datetime
 from pathlib import Path
 
-PROFILE_VERSION = "v24.14"
+PROFILE_VERSION = "v24.15"
 SPORT_CODES = {"Basketball": "BKB", "Soccer": "SOC", "Cricket": "CRI", "Tennis": "TEN", "Ice Hockey": "IHO", "Rugby League": "RGL",
                "Rugby Union": "RGU", "American Football": "AMF", "Baseball": "BSB", "Australian Rules": "AUS"}
 EVENT_KEY = re.compile(r"(?:EV-\d{8}-[A-Z0-9]+-[A-Z0-9]+-[A-Z0-9]+|EV2-[A-F0-9]{32})")
-LANES = ("L1", "L2", "L3", "L4", "L5", "FULL")
+LANES = ("L1", "L2", "L3", "L4", "L5", "L6", "FULL")
 PRICING_LANES = ("L5", "FULL")
 READERS = ("CHATGPT_BROWSING", "CLAUDE_AGENT", "OWNER")
 SIDES = ("HOME", "AWAY", "EVENT")
@@ -70,7 +70,8 @@ HEADER = ("event_key", "lane", "chat_label", "profile_version", "commit", "reade
 SECTIONS = {"EVIDENCE": ("side", "field", "value", "source_url", "source_class", "published_at", "retrieved_at", "confirmation", "notes"),
             "PROBABILITIES": ("label", "family", "side", "line", "line_source", "w", "p", "l", "final_p", "kit_receipt_sha256"),
             "ACCESS_LOG": ("url", "result", "checked_at", "notes")}
-OPTIONAL_SECTIONS = {"REQUIREMENTS": ("requirement_id", "status", "reason")}
+OPTIONAL_SECTIONS = {"REQUIREMENTS": ("requirement_id", "status", "reason"),
+                     "UNPRICED": ("label", "status", "reason")}
 MARKET = re.compile(r"\b(odds|bookmaker|sportsbook|betting|wager|tipster|implied probability|moneyline price|line movement)\b", re.I)
 DISAGREE_SPREAD = 0.10
 TWO_LABEL_SUFFIXES = ("co.uk", "com.au", "org.au", "net.au", "co.nz", "co.jp", "or.jp", "co.kr", "com.br", "com.ar", "co.za",
@@ -218,9 +219,9 @@ def check(ret: dict, do_not_open: set | None = None) -> list[str]:
             problems.append(f"{where}: evidence has no OPENED access record (owner captures require a recorded intake access)")
         if do_not_open and domain(r["source_url"]) in do_not_open:
             problems.append(f"{where}: {domain(r['source_url'])} is on the chats' do-not-open list; this fact cannot be used")
-    if h["lane"] in PRICING_LANES and not ret["PROBABILITIES"]:
+    if h["lane"] in PRICING_LANES and not ret["PROBABILITIES"] and not ret.get("UNPRICED"):
         problems.append("PROBABILITIES: a pricing lane (L5 or FULL) returns every supplied contract")
-    if h["lane"] not in PRICING_LANES and ret["PROBABILITIES"]:
+    if h["lane"] not in PRICING_LANES and (ret["PROBABILITIES"] or ret.get("UNPRICED")):
         problems.append("PROBABILITIES: only L5 and FULL price; research lanes return evidence")
     labels = [r["label"] for r in ret["PROBABILITIES"]]
     if len(labels) != len(set(labels)):

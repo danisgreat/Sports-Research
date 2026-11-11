@@ -26,7 +26,7 @@ BEGIN, END = "<!-- BEGIN PICKS_V2 {key} -->", "<!-- END PICKS_V2 {key} -->"
 META_REQUIRED = ("tier", "competition", "reference_id", "reference_status", "model_stage", "abstain", "fast_card", "timing", "scheduled_start",
                  "issued_at")
 META_OPTIONAL = ("reference_frozen_at", "width_floor_exception", "tier_basis", "notes", "issue_evidence", "contract_scopes", "rank_scope",
-                 "event_key", "external_runs", "external_disagreement", "external_manifest_sha256", "external_packet_sha256", "contract_definitions")
+                 "event_key", "external_runs", "external_disagreement", "external_manifest_sha256", "external_packet_sha256", "contract_definitions", "research_mode", "original_scheduled_start")
 # FREEZE-v1 (CR-2026.11.11-R1): from this issue time a card names its ranking scope. SUPPLIED_ONLY (the default the request
 # template asks for) ranks only the lines the owner supplied, so that the top-two count is not lifted by easy derived lines.
 RANK_SCOPES = ("SUPPLIED_ONLY", "ALL")

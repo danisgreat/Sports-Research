@@ -1,0 +1,2 @@
+command,n,seed,fit_n,fit_steps,recorded_at,qualification,tennis_rates_source,tennis_rates_sha256
+python -B -m ml sim-check cricket --out research/verification/framework_change_2026-11-11-3/simcheck,60000,20261111,20000,12,2026-11-11T07:35:13.582389+00:00,FAILED_NOT_VALIDATED_NO_PROMOTION,research/verification/framework_change_2026-11-11-1/simcheck/TENNIS_TOUR_RATES.csv,11afcf54893cd13d49cb665fe3f565e65c3430238b1b991ad744c4c7be3c8e43

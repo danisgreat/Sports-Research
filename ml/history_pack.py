@@ -23,7 +23,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SOCCER = ROOT / "research" / "bulk_history" / "soccer" / "MATCHES.csv"
-CRICKET = ROOT / "research" / "bulk_history" / "cricket" / "INNINGS.csv"
+CRICKET = ROOT / "research" / "bulk_history" / "cricket" / "v24.15" / "INNINGS.csv"
 STORE = ROOT / "research" / "learning_store"
 GAME_FIELDS = ("date", "competition", "season", "venue_role", "opponent", "score_for", "score_against", "total", "result",
                "ht_for", "ht_against", "checkpoint_for", "source", "sample_scope")

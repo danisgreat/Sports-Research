@@ -184,9 +184,9 @@ def cricket(n: int = 60_000, seed: int = 20261111) -> tuple[list[dict], list[dic
     innings from 2025 on are checked for 50% and 80% interval coverage, for the full innings and the over-5/6 checkpoint.
     The published phase table pools every year."""
     from ml.kit import sr_kit as K
-    with open(BULK / "cricket" / "PHASE_RATES.csv", newline="", encoding="utf-8") as fh:
+    with open(BULK / "cricket" / "v24.15" / "PHASE_RATES.csv", newline="", encoding="utf-8") as fh:
         phases = list(csv.DictReader(fh))
-    with open(BULK / "cricket" / "INNINGS.csv", newline="", encoding="utf-8") as fh:
+    with open(BULK / "cricket" / "v24.15" / "INNINGS.csv", newline="", encoding="utf-8") as fh:
         innings = list(csv.DictReader(fh))
     out, tables = [], []
     for group, overs in GROUP_OVERS.items():

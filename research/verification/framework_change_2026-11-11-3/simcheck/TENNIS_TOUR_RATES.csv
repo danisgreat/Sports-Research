@@ -1,0 +1,7 @@
+tour,surface,best_of,serve_point_win,mean_total_games,sd_total_games,n_matches,period,source,form_shock_sigma
+ATP,Clay,3,0.6202,23.095,5.679,587,2025-01-01 to latest,TennisMyLife ATP,0.2
+ATP,Clay,5,0.6255,36.076,9.027,118,2025-01-01 to latest,TennisMyLife ATP,0.2
+ATP,Grass,3,0.6654,24.709,5.841,165,2025-01-01 to latest,TennisMyLife ATP,0.2
+ATP,Grass,5,0.655,37.664,9.686,122,2025-01-01 to latest,TennisMyLife ATP,0.2
+ATP,Hard,3,0.6488,23.761,5.984,1375,2025-01-01 to latest,TennisMyLife ATP,0.2
+ATP,Hard,5,0.639,36.448,9.879,252,2025-01-01 to latest,TennisMyLife ATP,0.2

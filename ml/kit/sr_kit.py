@@ -1,7 +1,7 @@
 """Sports Research calculation kit for research chats (KIT-v1, CR-2026.11.11-R1).
 
 ONE self-contained file: it needs Python 3.10+, numpy and scipy. Test the actual chat runtime; never assume availability.
-Upload it with the parameter files of the same version (KIT_PARAMETERS_v24.13.csv and KIT_CRICKET_PHASES_v24.13.csv) and run
+Upload it with the parameter files of the same version (KIT_PARAMETERS_v24.15.csv and KIT_CRICKET_PHASES_v24.15.csv) and run
 it; never retype its arithmetic by hand. Every run prints a KIT_RECEIPT block. The repository re-runs the receipt with
 ``python -m ml kit verify --receipt FILE``: an exact engine must reproduce every probability to 1e-9, a simulation (same
 seed) to 3 Monte Carlo standard errors. A receipt that does not reproduce is not used.
@@ -21,7 +21,7 @@ One engine per sport; league differences are parameter rows and rule switches, n
 Usage inside a chat:
 
     import sr_kit as K
-    params = K.load_params("KIT_PARAMETERS_v24.13.csv")
+    params = K.load_params("KIT_PARAMETERS_v24.15.csv")
     row = K.row(params, "Basketball/B League")
     out = K.points_from_centre(row, total=173.0, margin=11.5, lines=[
         dict(label="Jets -14.5", family="handicap", side="HOME", line=-14.5),
@@ -43,7 +43,7 @@ import numpy as np
 from scipy import stats
 from scipy.signal import fftconvolve
 
-KIT_VERSION = "SR-KIT-v24.14"
+KIT_VERSION = "SR-KIT-v24.15"
 
 
 def convolve2d(a, b):
