@@ -67,7 +67,10 @@ def generate(root=ROOT) -> str:
     root = Path(root)
     top = highest_canonical(root)
     mini = active_mini(root)
-    facts = mini_facts(mini) if mini and mini.exists() else dict(last_key="UNKNOWN", next_key="UNKNOWN", cards=[], open_cards=[])
+    if mini is None:  # no repository mini (CR-2026.11.12-R1): each research chat keeps its own
+        facts = dict(last_key="NONE", next_key="NONE", cards=[], open_cards=[])
+    else:
+        facts = mini_facts(mini) if mini.exists() else dict(last_key="UNKNOWN", next_key="UNKNOWN", cards=[], open_cards=[])
     store = ri.load_store(root / "research" / "learning_store")
     ledger = _rows(root / "research" / "adjustment_ledger" / "ADJUSTMENT_LEDGER.csv")
     adjustments = _rows(root / "research" / "adjustment_ledger" / "ADJUSTMENTS.csv")

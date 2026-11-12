@@ -20,6 +20,8 @@ from pathlib import Path
 
 import pandas as pd
 
+from ml import relocation
+
 ROOT = Path(__file__).resolve().parents[2]
 V = "research/verification"
 REVISION_FIELDS = ("canonical_id", "local_key", "original_rank", "original_contract", "revision", "parent_revision",
@@ -73,7 +75,7 @@ def read_revisions(path: Path, root=ROOT) -> pd.DataFrame:
             raise RevisionError(f"{path}:{i}: grade {r['sporting_grade']!r} not in {GRADES}")
         if _number(r["revision"]) != _number(r["parent_revision"]) + 1:
             raise RevisionError(f"{path}:{i}: {r['revision']} must directly follow its parent {r['parent_revision']}")
-        if not (Path(root) / r["source_document"]).is_file():
+        if relocation.resolve(root, r["source_document"]) is None:
             raise RevisionError(f"{path}:{i}: source document {r['source_document']} does not exist")
         if not r["effective_at"]:
             raise RevisionError(f"{path}:{i}: effective_at is required")

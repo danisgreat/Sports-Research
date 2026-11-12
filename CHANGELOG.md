@@ -1,5 +1,9 @@
 # Australian rules request format and finals extra time — MDS/P v24.12 / CR-2026.11.10-R2 / P-2026.11.10-v24.10, 10 November 2026
 
+## 12 November 2026 - CR-2026.11.12-R1 (records only)
+
+Owner instruction: remove the active mini logs from the repository so that each research chat keeps its own mini. All ten files under `research/active_minis/` move unchanged (git renames) to `archive/retired_active_minis_2026-11-12/research/active_minis/`; every one was already settled and imported or held no cards. CURRENT_STATE's active-mini pointer is NONE and the generated state block is rebuilt. No method, prompt, profile, kit, model, probability, grade or canonical ID changes.
+
 ## 11 November 2026 - v24.16 / CR-2026.11.11-R4
 
 Owner-directed ASSESS-100 / EXT-EVAL-v2: assess the first 100 eligible fully settled paired games immediately, without an eight-week or completed-week requirement. Add an event-equal inference path, fixed settlement-ordered cohort and reusable cohort-hash verification. Preserve forecast/profile/kit v24.15, all historical records and model cores. Time/dependence diagnostics, uncertainty, exact pre-start comparison/publication evidence and no automatic promotion remain. [Implementation](research/verification/framework_change_2026-11-11-4/IMPLEMENTATION.md).
