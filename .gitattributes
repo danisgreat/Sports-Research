@@ -141,3 +141,4 @@ ml/tests/test_audit_controls.py -text whitespace=blank-at-eol,blank-at-eof,space
 ml/tests/test_audit_packets.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 ml/tests/test_timing_enforcement.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 research/contract_reviews/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+ml/tests/test_timing_v3.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

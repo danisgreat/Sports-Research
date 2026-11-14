@@ -1,0 +1,2 @@
+source,archive_path,sha256,bytes,base_commit
+.gitattributes,POST_CHECKOUT_GITATTRIBUTES.txt,732110351314a656209c47fd91481625d16cbb8a29519ec5addcac078167f490,8387,294aeb7af050d51ff1986d01ec17fe5c66aac8c4
