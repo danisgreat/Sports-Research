@@ -231,7 +231,7 @@ LEARN_COMMANDS = {"ingest": "ml.research_ingest", "features": "ml.features", "tr
                   "settlement-view": "ml.evaluation.effective_settlement", "state": "ml.state", "source-audit": "ml.source_audit",
                   "learning-log": "ml.learning_log",
                   "bulk-history": "ml.bulk_history", "external": "ml.external", "kit": "ml.kit.cli", "pooled": "ml.pooled",
-                  "research-ops": "ml.research_operations", "team-strength": "ml.team_strength", "sim-check": "ml.sim.validate", "history-pack": "ml.history_pack"}
+                  "research-ops": "ml.research_operations", "audit-controls": "ml.audit_controls", "team-strength": "ml.team_strength", "sim-check": "ml.sim.validate", "history-pack": "ml.history_pack"}
 
 
 def main(argv: list[str]) -> None:

@@ -633,7 +633,7 @@ def forecast(request: dict, lg: League | None, history: list[dict], contracts: l
              feedback: list[dict] | None = None, rng=None, *, competition_source: list[dict] | None = None) -> dict:
     """``rng`` is accepted for call compatibility and ignored: the V3 primary distribution is deterministic."""
     generating_code = source_hash()
-    allowed_request = {"event_id", "competition", "home", "away", "scheduled_start", "issue_at", "actual_start", "endpoint", "venue", "outcome_exposure", "candidate_recipe", "research_started_at"}
+    allowed_request = {"event_id", "competition", "home", "away", "scheduled_start", "issue_at", "actual_start", "endpoint", "venue", "outcome_exposure", "candidate_recipe", "research_started_at", "not_started_observed_at", "not_started_source"}
     if "cutoff" in request:
         raise AdmissionError("no separate cutoff: supply scheduled_start (the expected start in the game log)")
     allowed_history = {"event_id", "competition", "endpoint", "date", "final_at", "available_at", "status", "admission", "source_url", "evidence_path", "evidence_sha256", "source_kind", "season", "home", "away", "hs", "as_", "reg_hs", "reg_as", "decision", "stage", "bat", "bowl", "venue", "runs", "legal_balls", "wickets"}
@@ -661,6 +661,11 @@ def forecast(request: dict, lg: League | None, history: list[dict], contracts: l
     # TIMING-v3: research that began before the verified actual start makes a later issue PRE_START_RESEARCH (pooled with PREGAME).
     phase = ("TIMING_UNVERIFIED" if start is None else "PREGAME" if issue < start
              else "PRE_START_RESEARCH" if began is not None and began < start else "POST_START_ISSUE")
+    if phase == "PRE_START_RESEARCH":
+        from ml import timing
+        errors = timing.problems(dict(request, issued_at=request["issue_at"]), actual_start=request["actual_start"])
+        if errors:
+            raise AdmissionError(" | ".join(errors))
     train = admit_history(history, cutoff, request["event_id"], lg.path, lg.endpoint)
     if competition_source is not None and any(not r.get("source_kind") for r in history):
         raise AdmissionError("reviewed source route requires each history row labelled ARCHIVE_REVIEWED, WEB_RECOVERED or WEB_CORRECTED")

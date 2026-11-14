@@ -378,9 +378,12 @@ def adjustment_lambda(reference, final, outcome, min_rows: int = MIN_LAMBDA_ROWS
     return dict(n=n, status="ESTIMATED", reason="", lam=lam, se=math.sqrt(1 / hess) if hess > 0 else float("nan"))
 
 
-def _frame(ledger: pd.DataFrame, results: pd.DataFrame) -> pd.DataFrame:
+def _frame(ledger: pd.DataFrame, results: pd.DataFrame, *, timing_reviewed=False) -> pd.DataFrame:
     if not {"local_key", "label", "grade"} <= set(results.columns):
         raise LedgerError("RESULTS.csv needs local_key,label,grade")
+    ledger = ledger.copy()
+    if not timing_reviewed:
+        ledger.loc[ledger["timing"] == "PRE_START_RESEARCH", "timing"] = "TIMING_UNVERIFIED"
     frame = ledger.merge(results[["local_key", "label", "grade"]], on=["local_key", "label"], how="inner", validate="one_to_one")
     frame = frame[frame["grade"].isin(["WIN", "LOSS"])].copy()
     frame["y"] = (frame["grade"] == "WIN").astype(float)
@@ -444,7 +447,9 @@ def score(ledger_path, results_path, benchmarks_path=None, root=ROOT, adjustment
     root = Path(root)
     ledger = read(Path(ledger_path))
     results = pd.read_csv(results_path, dtype=str)
-    frame = _frame(ledger, results)
+    from ml import timing_corrections as T
+    effective = T.apply(ledger, root)
+    frame = _frame(effective, results, timing_reviewed=True)
     if benchmarks_path:
         bench = B.load(benchmarks_path)
         wide = bench.pivot(index=["local_key", "label"], columns="benchmark_id", values="p").reset_index()
@@ -471,7 +476,8 @@ def score(ledger_path, results_path, benchmarks_path=None, root=ROOT, adjustment
     lam = lams[0] if len(lams) == 1 else dict(n=sum(l["n"] for l in lams), status="BY_STRATUM", reason="see lambda_by_stratum",
                                                lam=float("nan"), se=float("nan"))
     return dict(scores=rows, lam=lam, lambda_by_stratum=lams, calibration=cal, rows=len(frame),
-                events=int(frame["local_key"].nunique()) if len(frame) else 0, effects=effect_scores(frame, adjustments))
+                events=int(frame["local_key"].nunique()) if len(frame) else 0, effects=effect_scores(frame, adjustments),
+                effective_timing=effective[["local_key", "label", "timing", "timing_revision"]].to_dict("records"))
 
 
 def coverage(ledger_path, actuals_path) -> list[dict]:
@@ -503,6 +509,9 @@ def main(argv=None):
     ad.add_argument("--mini", type=Path, required=True)
     ad.add_argument("--key", required=True)
     sub.add_parser("verify")
+    tc = sub.add_parser("correct-timing", help="append an official-first-play review without editing the ledger")
+    for name in ("key", "actual-start", "source-url", "evidence", "reason"):
+        tc.add_argument("--" + name, required=True)
     sc = sub.add_parser("score")
     sc.add_argument("--results", type=Path, required=True)
     sc.add_argument("--benchmarks", type=Path)
@@ -514,8 +523,13 @@ def main(argv=None):
     try:
         if args.command == "add":
             print(add(args.mini, args.key))
+        elif args.command == "correct-timing":
+            from ml import timing_corrections as T
+            print(T.correct(ROOT / LEDGER, args.key, args.actual_start, args.source_url, args.evidence, args.reason, root=ROOT))
         elif args.command == "verify":
             frame, adjustments = read(ROOT / LEDGER), read_adjustments(ROOT / ADJUSTMENTS)
+            from ml import timing_corrections as T
+            T.apply(frame, ROOT)
             print(f"ledger ok: {len(frame)} rows, {frame['local_key'].nunique()} cards; adjustments chain ok: {len(adjustments)} rows")
         elif args.command == "score":
             result = score(ROOT / LEDGER, args.results, args.benchmarks, adjustments_path=ROOT / ADJUSTMENTS)
@@ -526,6 +540,7 @@ def main(argv=None):
             (args.out / "ADJUSTMENT_LAMBDA.csv").write_bytes(_csv(result["lambda_by_stratum"], ["stratum", "n", "status", "reason", "lam", "se"]))
             ecols = ["effect_row_id", "effect_version", "stratum", "n_rows", "n_events", "mean_diff", "k_weeks", "status"]
             (args.out / "EFFECT_SCORES.csv").write_bytes(_csv(result["effects"], ecols))
+            (args.out / "TIMING_EFFECTIVE.csv").write_bytes(_csv(result["effective_timing"], ["local_key", "label", "timing", "timing_revision"]))
             print(f"scored {result['rows']} decisive rows on {result['events']} cards in {len(result['lambda_by_stratum'])} strata; "
                   f"{len(result['effects'])} effect rows")
         else:
@@ -535,7 +550,7 @@ def main(argv=None):
                                                                       "status"]))
             for r in rows:
                 print(r)
-    except (LedgerError, picks.PicksError, B.BenchmarkError, FileExistsError) as exc:
+    except (ValueError, FileExistsError) as exc:
         print(f"REFUSED: {exc}")
         raise SystemExit(2)
 

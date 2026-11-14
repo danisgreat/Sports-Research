@@ -1,5 +1,22 @@
 # Card, mini, settlement and canonical formats
 
+**Required new numeric-card supplement (AUDIT-v1).** Add audit_policy: AUDIT-v1, audit_event_key: EV2-<native-fixture hash>, audit_review: research/<event>/CONTRACT_REVIEW.csv and audit_review_sha256: <exact byte SHA-256> to PICKS_V2. Generate/fill the CSV with audit-controls template, then card lint. See [AUDIT_REVIEW_PROTOCOL](AUDIT_REVIEW_PROTOCOL.md) for exact fields, missingness, first-play and handover commands. Existing issued formats remain unchanged.
+
+New cards' A1 timing table uses these separate fixed rows (outside PICKS_V2):
+
+| Field | Recorded value |
+|---|---|
+| request_received_at | Actual offset-aware receipt time, or UNKNOWN with reason |
+| research_started_at | Actual offset-aware research start |
+| research_completed_at | Actual offset-aware end of evidence research |
+| saved_at | Actual offset-aware document save/write observation |
+| not_started_observed_at / not_started_source | TIMING-v3 official event-state observation time and URL |
+| outcome_exposure | NONE_RECORDED or the actual exposure and exclusion |
+
+Never substitute a source publication time or save time for message receipt/research
+start. These are declared clocks; the separately retained freeze and official
+first-play evidence determine the applicable issue/research/assessment status.
+
 **ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](CORE.md) §7.
 
 **Execution environment (ENV-v2).** Defined in [EXECUTION_ENVIRONMENT_PROTOCOL](WORKFLOW.md#part-a-execution_environment_protocol); summarised in [CORE](CORE.md) §1.

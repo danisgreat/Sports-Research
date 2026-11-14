@@ -1,5 +1,7 @@
 # PROMPT 3 — Freeze, settle and review a local mini
 
+**SCV-v14 / AUDIT-v1:** verify received HANDOVER.csv and all members before import. Before scoring PRE_START_RESEARCH, append an official first-play review with ledger correct-timing; ledger score applies effective revisions and exports TIMING_EFFECTIVE.csv. Unreviewed late-written claims score as TIMING_UNVERIFIED. Preserve originals and missing queues; see [AUDIT_REVIEW_PROTOCOL](../../AUDIT_REVIEW_PROTOCOL.md).
+
 **Canonical assignment happens in this settlement phase, through the prompt-4 import (MINI-v2).** Preserve local event keys through original copies, settlement markers, queues and manifests. The settlement document's own LOCAL_ID_MAPPING says canonical ID NOT_ASSIGNED / PENDING_PROMPT_4_IMPORT; never plan P-numbers while settling. When the settlement is written and verified, run [prompt 4](4_CANONICAL_IMPORT.md) on it in the same session (section 6): that import alone assigns the IDs and records the final mapping. Events that stay pending are not imported and get no ID. Existing canonical references retain their real mappings. S18 checks this handoff. Retain reviewed labels locally by local key; defer the canonical-only research_learning exporter until prompt 4 has assigned and verified the mapping.
 
 **Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](../../WORKFLOW.md#part-b-mini_log_identity_protocol); summarised in [CORE](../../CORE.md) §2.
@@ -8,7 +10,7 @@
 
 **Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §5.
 
-**P-2026.11.15-v24.15 · LOCAL_MINI_SETTLEMENT.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). **LOCAL_WORKING_TREE** (ENV-v2). Writes: the frozen mini's source identity, one settlement document with dated revisions at `research/active_minis/<MINI_KEY>_SETTLEMENT.md`, the ledger inputs and frozen-row settlements of section 4, then the prompt-4 import of section 6 and a commit and push. Original cards are immutable. Settle the original probabilities from the frozen card; the model never re-grades or replaces them. Historical MODEL_ASSISTED cards are settled on their frozen contracts like any other card. The decision lab is excluded.
+**P-2026.11.15-v24.16 · LOCAL_MINI_SETTLEMENT.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). **LOCAL_WORKING_TREE** (ENV-v2). Writes: the frozen mini's source identity, one settlement document with dated revisions at `research/active_minis/<MINI_KEY>_SETTLEMENT.md`, the ledger inputs and frozen-row settlements of section 4, then the prompt-4 import of section 6 and a commit and push. Original cards are immutable. Settle the original probabilities from the frozen card; the model never re-grades or replaces them. Historical MODEL_ASSISTED cards are settled on their frozen contracts like any other card. The decision lab is excluded.
 
 **ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](../../REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](../../CORE.md) §7.
 
@@ -32,7 +34,7 @@ Freeze the supplied mini before settlement: record FROZEN_SOURCE with its file n
 
 Write one settlement document in mini-settlement-10 sections: settlement blocks and revisions per card, LOCAL_ID_MAPPING, UNRESOLVED_CARRYOVER and SETTLEMENT_MANIFEST. Do not reproduce the frozen cards; name the frozen mini by file name and inventory. The section-6 import joins the frozen mini and this document into PREDICTION_MINI_SETTLED. A rerun writes a new revision document; never overwrite an earlier one.
 
-Before scoring, preserve actual issue phase and independent pre-start-input proof under TIMING_RESEARCH_PROTOCOL. No settlement creates a pre-start freeze/issue receipt; late-issued clean-input research is separately scored and is never prospective pre-start issuance.
+Before scoring, preserve actual issue phase and independent pre-start-input proof under TIMING_RESEARCH_PROTOCOL. No settlement creates a pre-start freeze/issue receipt; reviewed PRE_START_RESEARCH is pooled with PREGAME for ordinary scoring, while actual publication and the stricter ASSESS-100 freezes remain separately evidenced.
 
 ## 2. Establish outcomes and exact terms
 
@@ -117,4 +119,4 @@ For a manifest-bound event generate exact fact IDs with `python -m ml research-o
 
 **ASSESS-100 handoff:** after verified settlement/import, report the actual eligible fully settled paired-game count. At the first 100, the current assessment is due immediately through prompt 6 / external evaluate; there is no minimum-week or end-of-week wait. Do not infer eligibility from raw card/pick counts or old logs missing pre-start comparator evidence. Preserve the exact first-100 cohort and report the finding separately from assessment readiness.
 
-**Timing check at settlement (TIMING-v3, CR-2026.11.15-R1 / P-2026.11.15-v24.15).** For every `PRE_START_RESEARCH` card, retrieve the official actual first play (game sheet, play-by-play or match centre). If `research_started_at` was not before it, or the declared not-started observation contradicts it, append a dated settlement revision that re-labels the card `POST_START_ISSUE`; never change the original card. An actual first play that cannot be found leaves the declaration standing and is recorded as UNVERIFIED in the settlement.
+**Timing check at settlement (TIMING-v3, CR-2026.11.15-R1 / P-2026.11.15-v24.16).** For every `PRE_START_RESEARCH` card, retrieve the official actual first play (game sheet, play-by-play or match centre). If `research_started_at` was not before it, or the declared not-started observation contradicts it, append a dated settlement revision that re-labels the card `POST_START_ISSUE`; never change the original card. An actual first play that cannot be found leaves the declaration standing and is recorded as UNVERIFIED in the settlement.

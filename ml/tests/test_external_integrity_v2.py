@@ -28,8 +28,8 @@ def event(tmp_path):
     (root / "PHASES.csv").write_text("kit_version,group,innings,over\n", encoding="utf-8")
     (root / "REFERENCE.md").write_text("EXAMPLE frozen centre 224 and 4.5; no outcome seen.\n", encoding="utf-8")
     (root / "sr_kit.py").write_bytes(Path(K.__file__).read_bytes())
-    write(root / "ACCESS.csv", ("host", "chatgpt_browsing", "chatgpt_blocked_paths", "valid_until"),
-          [dict(host=h, chatgpt_browsing="ALLOWED", chatgpt_blocked_paths="", valid_until="2026-11-18T00:00:00+00:00")
+    write(root / "ACCESS.csv", ("host", "chatgpt_browsing", "chatgpt_blocked_paths", "checked_at", "valid_until"),
+          [dict(host=h, chatgpt_browsing="ALLOWED", chatgpt_blocked_paths="", checked_at="2026-11-10T23:00:00+00:00", valid_until="2026-11-18T00:00:00+00:00")
            for h in ("club.example.org", "league.example.net")])
     artifacts = dict(kit="sr_kit.py", params=params.name, phases="PHASES.csv", reference="REFERENCE.md", access="ACCESS.csv")
     subprocess.run(["git", "init", "-q", str(root)], check=True)

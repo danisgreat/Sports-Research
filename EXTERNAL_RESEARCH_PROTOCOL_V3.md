@@ -1,5 +1,7 @@
 # External research operation (EXT-v3 / v24.15)
 
+**AUDIT-v1 operational supplement (v24.18; statistical profile stays v24.15).** Read [AUDIT_REVIEW_PROTOCOL](AUDIT_REVIEW_PROTOCOL.md) and upload [AUDIT_CHAT_BRIEF_v1](research/external/AUDIT_CHAT_BRIEF_v1.md). New event manifests automatically pin the committed audit protocol. Generated packets include the actual dated reader-access CSV and the pinned protocol, and refuse expired/future-dated access decisions. L1-L4/L6 remain evidence-only; L5 alone prices supported lines. Mandatory contract-review and handover checks apply. Existing comparison freezes and denominators are unchanged.
+
 This is the current protocol for several chats researching one game. Read the current
 [profile](research/external/EXTERNAL_PROFILE_v24.15.md) and
 [lane briefs](research/external/LANE_BRIEFS_v24.15.md). The repository writer owns one

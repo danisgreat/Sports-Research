@@ -1,5 +1,7 @@
 # Scoring and validation
 
+**Current scoring revision: SCV-2026.11.15-v14 (CR-2026.11.15-R2).** [AUDIT_REVIEW_PROTOCOL](AUDIT_REVIEW_PROTOCOL.md) governs effective first-play revisions: ledger correct-timing binds official normalized evidence and original ledger rows; ledger score reads that append-only chain and emits TIMING_EFFECTIVE.csv. PRE_START_RESEARCH is pooled with PREGAME only after review; pending reviews score as TIMING_UNVERIFIED, contradictory reviews as POST_START_ISSUE. Original ledger/card bytes remain immutable. This supersedes earlier wording that pooled unreviewed declarations. ASSESS-100 and its stricter freezes are unchanged.
+
 **Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](WORKFLOW.md#part-b-mini_log_identity_protocol); summarised in [CORE](CORE.md) §2.
 
 **Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_PROTOCOL.md#part-b-research_exhaustiveness_protocol); summarised in [CORE](CORE.md) §5.

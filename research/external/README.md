@@ -1,5 +1,7 @@
 # Files for the external research chats (v24.15)
 
+**Required operational supplement:** upload [AUDIT_CHAT_BRIEF_v1.md](AUDIT_CHAT_BRIEF_v1.md) with the unchanged v24.15 statistical files, and read [AUDIT_REVIEW_PROTOCOL](../../AUDIT_REVIEW_PROTOCOL.md) at the event commit. Each generated packet now includes the effective actual-reader access rows and pinned audit controls. A versioned exclusion list alone is insufficient for path-specific permission.
+
 Rules: [EXTERNAL_RESEARCH_PROTOCOL](../../EXTERNAL_RESEARCH_PROTOCOL.md) (EXT-v3). Every file a chat uploads carries the version in its name, so an old copy left in a chat is easy to spot. Replace all of them together when the version changes.
 
 ## Upload to every chat (or once to a ChatGPT Project)
@@ -14,7 +16,7 @@ Rules: [EXTERNAL_RESEARCH_PROTOCOL](../../EXTERNAL_RESEARCH_PROTOCOL.md) (EXT-v3
 | [access/CHATGPT_DO_NOT_OPEN_v24.15.csv](access/CHATGPT_DO_NOT_OPEN_v24.15.csv) | Hosts a chat never opens (blocked for ChatGPT-User at the root, or rules unreadable), with what to use instead where known; valid to the `valid_until` date |
 | `sources/PREGAME_SOURCES_<SPORT>_v24.15.csv` | The permitted pregame sources for the game's sport only ([sources/](sources/README.md)) |
 
-## Kept here, not uploaded
+## Available in every generated packet (also upload directly if packets are unavailable)
 
 | File | What it is |
 |---|---|

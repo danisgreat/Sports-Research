@@ -1,5 +1,10 @@
 # Australian rules request format and finals extra time — MDS/P v24.12 / CR-2026.11.10-R2 / P-2026.11.10-v24.10, 10 November 2026
 
+## 15 November 2026 - v24.18 / CR-2026.11.15-R2 / P-2026.11.15-v24.16 / SCV-v14
+
+Owner-authorized implementation of the audit recommendations and two reproduced timing gaps. Shared card/primary evidence admission; hash-chained official-first-play corrections consumed by scoring; mandatory new-card contract reviews; opponent-strength and measured-availability checks; method/sample/uncertainty and legacy separation; actual source-access rows in packets; native rematch identity and exact final-mini handover manifests. No invented effects, predictive promotion, historical card rewrites or ASSESS-100 backfill. [Implementation and issue closure](research/verification/framework_change_2026-11-15-2/IMPLEMENTATION.md).
+
+
 ## 15 November 2026 - v24.17 / CR-2026.11.15-R1 / P-2026.11.15-v24.15 (TIMING-v3)
 
 Owner instruction after reviewing the 14 Nov audit: research that begins before the actual start is good enough; a card written after the start is fine if writing began before it. New timing label `PRE_START_RESEARCH` (ml/picks.py lint, ml/ledger.py derivation and scoring strata, ml/primary.py phase, ml/learning_log.py input check; tests in ml/tests/test_timing_v3.py). It requires `research_started_at`, a not-started observation (URL and time, at or after the research start) and `outcome_exposure: NONE_RECORDED`, and is pooled with `PREGAME` in scoring. RESEARCH_PROTOCOL Part E, CORE, SCORING_AND_VALIDATION §12, CARD_AND_LOG_TEMPLATES and prompts 1 and 3 updated; every prompt file restamped P-2026.11.15-v24.15. The 14 Nov audit's 30-minute proposal is withdrawn. Not changed: the input horizon, ENV-v2 issuance, the EXT-v3 paired-experiment freezes, earlier labels.

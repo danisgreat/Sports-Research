@@ -241,6 +241,19 @@ def packet(folder, lane, *, root=I.ROOT, at=None, out=None):
              (Path(folder) / "CONTRACTS.csv").read_text(encoding="utf-8-sig"), "## Assigned requirements", "",
              I.csv_bytes(I.REQ_FIELDS, reqs).decode(), "## Pinned artifacts", "", (Path(folder) / "ARTIFACTS.csv").read_text(encoding="utf-8-sig")]
     current = I.accepted(folder)
+    access = access_rows(folder, root, stamp)
+    if not access or any(not X._time_ok(r.get("checked_at", "")) or not X._time_ok(r.get("valid_until", ""))
+                         or I.clock(r["checked_at"]) > I.clock(stamp) or I.clock(r["valid_until"]) <= I.clock(stamp) for r in access):
+        raise X.ExternalError("reader-access packet is missing, future-dated or expired; activate an audited refresh")
+    lines += ["## Source access decisions available before research", "",
+              "Read the decision for your actual reader and exact URL path BEFORE opening a source. BLOCKED and RULES_UNKNOWN are refusals; find an allowed alternate. Redirects need their own decision. These are dated observations, not permanent permissions.", "",
+              I.csv_bytes(tuple(access[0]), access).decode(),
+              "## Audit controls (AUDIT-v1)", "",
+              "One assigned role only. L1-L4 and L6 return evidence, never independent primary prices. L2 checks opponent strength before a plus-handicap lean. L1 identifies material availability changes; L5 uses measured exact-scope effects or leaves affected lines UNPRICED and retains assumed scenarios separately. Simulation count is not sample size or calibration. Retired v4.12 outputs are separate legacy diagnostics. Prefer statistics-only sources; disclose prediction/odds content and alternatives when a stats-only exception is necessary.", "",
+              "Record exact competition, native event ID, date, participants and scheduled start; adjacent-day rematches are distinct. Read AUDIT_REVIEW_PROTOCOL.md at the pinned release. Raw chat clocks and hashes do not prove publication."]
+    for artifact in I.read(Path(folder) / "ARTIFACTS.csv", I.ART_FIELDS):
+        if artifact["role"] == "audit_controls":
+            lines += ["## Pinned audit control protocol", "", I.contained(root, artifact["path"]).read_text(encoding="utf-8-sig")]
     for dep in filter(None, assignment["depends_on"].split("|")):
         lines += ["## Accepted " + dep, "", I.contained(folder, current[dep]["file"]).read_text(encoding="utf-8-sig")]
     if lane == "L5": lines += ["## Reviewed collectors", "", (Path(folder) / "SOURCE_REVIEW.csv").read_text(encoding="utf-8-sig")]

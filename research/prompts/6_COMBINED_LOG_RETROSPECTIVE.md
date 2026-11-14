@@ -1,12 +1,14 @@
 # PROMPT 6 — Review cards and independently verified sporting shadows
 
+**AUDIT-v1 / SCV-v14:** use effective timing reviews, unique-game denominators and method-specific cohorts. Separate qualitative leans, numeric scenarios, issued primary forecasts and legacy v4.12. Do not turn hindsight or this 21-game batch into new predictive parameters; register hypotheses and preserve unresolved evidence. See [AUDIT_REVIEW_PROTOCOL](../../AUDIT_REVIEW_PROTOCOL.md).
+
 **Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](../../WORKFLOW.md#part-b-mini_log_identity_protocol); summarised in [CORE](../../CORE.md) §2.
 
 **Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](../../RESEARCH_PROTOCOL.md#part-b-research_exhaustiveness_protocol); summarised in [CORE](../../CORE.md) §5.
 
 **Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §5.
 
-**P-2026.11.15-v24.15 · COHORT_RETROSPECTIVE · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Trigger: user request, about 30 newly settled cards, or a DUE/EARLY_REVIEW row from `python -m ml learning-status` (INTERIM about 100 and COMPREHENSIVE about 300 newly settled unique games; per-sport and per-competition clocks); none proves statistical sufficiency. Writes: a new uniquely named report, authorized scoreboard/state summaries, dated hypothesis amendments and CHANGELOG. No original log/grade/forecast, active rule/prompt or previous report changes. The decision lab is excluded.
+**P-2026.11.15-v24.16 · COHORT_RETROSPECTIVE · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Trigger: user request, about 30 newly settled cards, or a DUE/EARLY_REVIEW row from `python -m ml learning-status` (INTERIM about 100 and COMPREHENSIVE about 300 newly settled unique games; per-sport and per-competition clocks); none proves statistical sufficiency. Writes: a new uniquely named report, authorized scoreboard/state summaries, dated hypothesis amendments and CHANGELOG. No original log/grade/forecast, active rule/prompt or previous report changes. The decision lab is excluded.
 
 **ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](../../REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](../../CORE.md) §7.
 

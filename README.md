@@ -1,5 +1,7 @@
 # Sports Research
 
+**Current operational controls:** [AUDIT-v1](AUDIT_REVIEW_PROTOCOL.md), MDS v24.18 / SCV-v14. Research chats use assigned roles and dated source-access packets; new numeric cards have hash-bound contract reviews; final-mini handovers and effective first-play reviews are checked before scoring. See [the implementation and validation record](research/verification/framework_change_2026-11-15-2/IMPLEMENTATION.md).
+
 **Executable forecast cycle (CYCLE-v1).** Defined in [FORECAST_CYCLE_PROTOCOL](REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](CORE.md) §7.
 
 **Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](WORKFLOW.md#part-b-mini_log_identity_protocol); summarised in [CORE](CORE.md) §2.

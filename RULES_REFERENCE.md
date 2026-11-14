@@ -1,5 +1,7 @@
 # Operating rules reference
 
+**Current owner-authorized audit controls:** [AUDIT_REVIEW_PROTOCOL](AUDIT_REVIEW_PROTOCOL.md), AUDIT-v1 / SCV-v14. Apply it to new cards and handovers alongside the current CORE. Preserve missingness and the original historical method; neither unsupported scenarios nor retired v4.12 may supply new primary probabilities.
+
 **Consolidated 2026-11-07, CR-2026.11.07-R3.** Part A (formerly CURRENT_RULES) and Part B (formerly SELECTION_RULES) were joined verbatim on 2026-11-07 (R2) and then rewritten (R3): contradictions are resolved by the framework's own precedence (owner instruction, then [CORE](CORE.md), whose v24 text governs any pre-v24 sentence, then the v24 protocols), repeated text is stated once, and rules that apply only to cards issued before P-2026.10.22-v24.0 are kept by reference to their archived text. Section numbers are unchanged, so references such as "CURRENT_RULES section 7" or "SELECTION_RULES §9" still point to the right place. What changed and why: [consolidation report](research/verification/framework_change_2026-11-07-3/CONTRADICTIONS.md). Verbatim originals: [CURRENT_RULES](archive/consolidation_2026-11-07/merged_sources/CURRENT_RULES.md), [SELECTION_RULES](archive/consolidation_2026-11-07/merged_sources/SELECTION_RULES.md).
 
 **Versions in force:** see [CURRENT_STATE](CURRENT_STATE.md) (method, control, scoring, selection and prompt suite). Rule IDs cited below (MINI-v2, EXH-v1, HIST-v3, AVAIL-v4, RETAIN-v3, MLSCOPE-v3, ENV-v2, REF-v2, REQ-v3) are defined where [CORE](CORE.md) §9 lists them.

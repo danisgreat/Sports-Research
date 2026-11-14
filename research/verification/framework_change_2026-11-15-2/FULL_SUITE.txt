@@ -1,0 +1,35 @@
+........................................................................ [  7%]
+........................................................................ [ 15%]
+........................................................................ [ 23%]
+........................................................................ [ 30%]
+........................................................................ [ 38%]
+........................................................................ [ 46%]
+........................................................................ [ 53%]
+........................................................................ [ 61%]
+........................................................................ [ 69%]
+................................................F....................... [ 76%]
+........................................................................ [ 84%]
+........................................................................ [ 92%]
+........................................................................ [100%]
+================================== FAILURES ===================================
+_________ test_dependency_map_covers_every_prompt_in_both_directions __________
+
+    def test_dependency_map_covers_every_prompt_in_both_directions():
+        deps = _map()
+        assert set(deps) == set(NAMES)
+        for name, listed in deps.items():
+            body = text(name)
+            named = {c for c in CONTROLS if re.search(r"(?<![A-Z_])" + c + r"(?![A-Z_])", body)}
+            assert all((ROOT / f"{c}.md").exists() for c in listed), f"{name}: map lists a missing control"
+>           assert set(listed) == named, f"{name}: map {sorted(set(listed) ^ named)} out of date"
+E           AssertionError: 1_GAME_CARD: map ['AUDIT_REVIEW_PROTOCOL'] out of date
+E           assert {'ADJUSTMENT_...ROTOCOL', ...} == {'ADJUSTMENT_...T_STATE', ...}
+E
+E             Extra items in the right set:
+E             'AUDIT_REVIEW_PROTOCOL'
+E             Use -v to get more diff
+
+ml\tests\test_prompt_consistency.py:60: AssertionError
+=========================== short test summary info ===========================
+FAILED ml/tests/test_prompt_consistency.py::test_dependency_map_covers_every_prompt_in_both_directions
+1 failed, 935 passed in 947.25s (0:15:47)

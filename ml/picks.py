@@ -27,7 +27,8 @@ META_REQUIRED = ("tier", "competition", "reference_id", "reference_status", "mod
                  "issued_at")
 META_OPTIONAL = ("reference_frozen_at", "width_floor_exception", "tier_basis", "notes", "issue_evidence", "contract_scopes", "rank_scope",
                  "event_key", "external_runs", "external_disagreement", "external_manifest_sha256", "external_packet_sha256", "contract_definitions", "research_mode", "original_scheduled_start",
-                 "research_started_at", "not_started_observed_at", "not_started_source", "outcome_exposure")
+                 "research_started_at", "not_started_observed_at", "not_started_source", "outcome_exposure",
+                 "audit_policy", "audit_event_key", "audit_review", "audit_review_sha256")
 # TIMING-v3 (CR-2026.11.15-R1, owner instruction 15 Nov 2026): research that began before the actual start is enough. A card
 # finished after the start counts with PREGAME cards when it declares when research began, a not-started observation taken
 # at or after that moment (official live page or match centre, with its time) and no outcome exposure.
@@ -139,24 +140,8 @@ def threshold(row: dict) -> float | None:
 
 
 def pre_start_research_problems(meta: dict) -> list[str]:
-    """TIMING-v3: the declarations a PRE_START_RESEARCH card needs, checked against each other (empty list = consistent)."""
-    problems = [f"header: timing PRE_START_RESEARCH requires {f}" for f in PRE_START_RESEARCH_FIELDS if not meta.get(f)]
-    if problems:
-        return problems
-    if meta["outcome_exposure"] != "NONE_RECORDED":
-        problems.append("header: PRE_START_RESEARCH requires outcome_exposure NONE_RECORDED; an exposed card is not a forecast of record")
-    if not URL.fullmatch(meta["not_started_source"].strip()):
-        problems.append("header: not_started_source must be the URL of the official live page or match centre that showed play had not begun")
-    try:
-        began, seen = _when(meta["research_started_at"], "research_started_at"), _when(meta["not_started_observed_at"], "not_started_observed_at")
-        issued = _when(meta["issued_at"], "issued_at")
-    except PicksError as exc:
-        return problems + [str(exc)]
-    if seen < began:
-        problems.append("header: not_started_observed_at must be at or after research_started_at (the observation proves research began before play)")
-    if seen > issued or began > issued:
-        problems.append("header: research_started_at and not_started_observed_at must not be after issued_at")
-    return problems
+    from ml import timing
+    return timing.problems(meta)
 
 
 def lint(meta: dict, rows: list[dict], root=ROOT) -> list[str]:
@@ -346,6 +331,8 @@ def lint(meta: dict, rows: list[dict], root=ROOT) -> list[str]:
     should_abstain = "YES" if strong == 0 and informational == 0 else "NO"
     if meta["abstain"] != should_abstain:
         problems.append(f"header: abstain should be {should_abstain} ({strong} ranked row(s) at >= {STRONG}, {informational} information row(s))")
+    from ml import audit_controls
+    problems += audit_controls.problems(meta, rows, root)
     return problems
 
 

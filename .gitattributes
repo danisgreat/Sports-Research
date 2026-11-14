@@ -128,3 +128,16 @@ ml/tests/test_assessment_100.py -text
 archive/retired_active_minis_2026-11-12/** -text
 research/verification/mini_import_P-639_P-659_2026-11-14-1/** -text
 research/verification/combined_rollover_2026-11-14-1/** -text
+
+# AUDIT-v1 exact original custody, tested admission code and operational evidence.
+archive/superseded_2026-11-15-2/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+research/verification/framework_change_2026-11-15-2/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+ml/audit_controls.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+ml/timing.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+ml/timing_corrections.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+ml/ledger.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+ml/primary.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+ml/tests/test_audit_controls.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+ml/tests/test_audit_packets.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+ml/tests/test_timing_enforcement.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+research/contract_reviews/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

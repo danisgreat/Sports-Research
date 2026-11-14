@@ -1,5 +1,7 @@
 # Workflow: where prompts run, local keys and delivery
 
+**AUDIT-v1 operations:** [AUDIT_REVIEW_PROTOCOL](AUDIT_REVIEW_PROTOCOL.md) requires assigned-role packets, a hash-bound contract review for new numeric cards, dated access decisions before source use, and the actual final cumulative mini with HANDOVER.csv. Verify every received member before settlement/import. The handover declares a writer; it never grants a repository lease or proves publication. Missing originals stay missing.
+
 **Consolidated 2026-11-07, CR-2026.11.07-R3.** The execution-environment and mini-identity protocols were joined verbatim on 2026-11-07 (R2) and then rewritten (R3) to remove contradictions and repetition; part and section numbers are unchanged. What changed and why: [consolidation report](research/verification/framework_change_2026-11-07-3/CONTRADICTIONS.md). Verbatim originals: [EXECUTION_ENVIRONMENT_PROTOCOL](archive/consolidation_2026-11-07/merged_sources/EXECUTION_ENVIRONMENT_PROTOCOL.md), [MINI_LOG_IDENTITY_PROTOCOL](archive/consolidation_2026-11-07/merged_sources/MINI_LOG_IDENTITY_PROTOCOL.md). Versions in force: [CURRENT_STATE](CURRENT_STATE.md).
 
 ---

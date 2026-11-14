@@ -1,12 +1,14 @@
 # PROMPT 2 — Start the next local mini
 
+**AUDIT-v1 handover:** use a unique chat-owned MINI_KEY and one writer. Keep balanced card markers and separate request/research-start/research-end/save clocks. Before delivery run audit-controls handover and deliver the final cumulative mini plus every manifest member; see [AUDIT_REVIEW_PROTOCOL](../../AUDIT_REVIEW_PROTOCOL.md).
+
 **Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](../../WORKFLOW.md#part-b-mini_log_identity_protocol); summarised in [CORE](../../CORE.md) §2.
 
 **Persistent research and corroboration (EXH-v1).** Defined in [RESEARCH_EXHAUSTIVENESS_PROTOCOL](../../RESEARCH_PROTOCOL.md#part-b-research_exhaustiveness_protocol); summarised in [CORE](../../CORE.md) §5.
 
 **Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §5.
 
-**P-2026.11.15-v24.15 · LOCAL_MINI_STAGING.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). **LOCAL_WORKING_TREE** (ENV-v2). Writes: one new Markdown mini at `research/active_minis/<MINI_KEY>.md` (no execution manifest), the CURRENT_STATE active-mini line, then a commit and push of exactly those paths. Creating a mini consumes no event ID and runs no model. Workshop forecasts and the decision lab are excluded.
+**P-2026.11.15-v24.16 · LOCAL_MINI_STAGING.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). **LOCAL_WORKING_TREE** (ENV-v2). Writes: one new Markdown mini at `research/active_minis/<MINI_KEY>.md` (no execution manifest), the CURRENT_STATE active-mini line, then a commit and push of exactly those paths. Creating a mini consumes no event ID and runs no model. Workshop forecasts and the decision lab are excluded.
 
 **ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](../../REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](../../CORE.md) §7.
 

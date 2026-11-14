@@ -1,0 +1,4 @@
+command,exit_code,passed,failed,seconds,disposition
+python -B -m pytest ml/tests -q -p no:cacheprovider,1,935,1,947.25,"Only failure was missing AUDIT_REVIEW_PROTOCOL dependency-map entries; corrected, no Python source changes"
+python -B -m pytest ml/tests/test_prompt_consistency.py ml/tests/test_relocation.py ml/tests/test_card_history_imports.py -q -p no:cacheprovider,0,95,0,44.73,All prompt consistency and custody checks passed after the documentation-only fix
+Focused audit/timing/operability regression run,0,72,0,171.97,Earlier targeted regression run; full-run code identity is recorded separately

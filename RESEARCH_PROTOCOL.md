@@ -1,5 +1,7 @@
 # Research protocol: completion, persistence, retention, checklists and timing
 
+**AUDIT-v1 supplement:** [AUDIT_REVIEW_PROTOCOL](AUDIT_REVIEW_PROTOCOL.md) adds required opponent-strength and material-availability checks, method/sample/uncertainty evidence, actual-reader/path source decisions, exact rematch identity and final-mini custody. A required unsupported effect becomes UNPRICED plus separately labelled sensitivity; no predictive parameter is inferred from the audit losses. The TIMING-v3 acceptance policy remains; executable first-play review is now required before pooled scoring.
+
 **Consolidated 2026-11-07, CR-2026.11.07-R3.** Five protocols joined verbatim on 2026-11-07 (R2) and then rewritten (R3): contradictions are resolved by the framework's precedence (owner instruction, then [CORE](CORE.md) for v24 cards, then the v24 protocols), repeated text is stated once, and the publication times in Part D were rechecked on 2026-11-07. Part and section numbers are unchanged. What changed and why: [consolidation report](research/verification/framework_change_2026-11-07-3/CONTRADICTIONS.md). Verbatim originals: [archive/consolidation_2026-11-07/merged_sources/](archive/consolidation_2026-11-07/merged_sources/).
 
 Versions in force are in [CURRENT_STATE](CURRENT_STATE.md); rule IDs (MINI-v2, EXH-v1, HIST-v3, AVAIL-v4, RETAIN-v3, MLSCOPE-v3, ENV-v2, REF-v1) are defined where [CORE](CORE.md) §9 lists them. **The owner's standing rule governs every part: research is never rushed or cut short for the start time.**

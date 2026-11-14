@@ -136,6 +136,12 @@ def initialize(event, contracts, requirements, out, *, artifacts, root=ROOT, at=
     from ml import research_operations as O
     """Create only after controls/kit/reference inputs exist at the supplied committed revision."""
     stamp = at or now()
+    from ml import audit_controls as A
+    if clock(stamp) >= clock(A.FROM):
+        artifacts = dict(artifacts)
+        if artifacts.get("audit_controls", "AUDIT_REVIEW_PROTOCOL.md") != "AUDIT_REVIEW_PROTOCOL.md":
+            raise X.ExternalError("new event must pin the current AUDIT_REVIEW_PROTOCOL.md")
+        artifacts["audit_controls"] = "AUDIT_REVIEW_PROTOCOL.md"
     e = {k: str(event.get(k, "")) for k in EVENT_FIELDS}
     for k in ("sport", "competition", "native_event_id", "home", "away", "scheduled_start", "mini_path", "local_key", "writer"):
         if not e[k]: raise X.ExternalError(f"event missing {k}")
@@ -625,7 +631,8 @@ def package_check(root=ROOT):
     root = Path(root)
     paths = ["ml/kit/sr_kit.py", "research/external/EXTERNAL_PROFILE_v24.15.md", "research/external/LANE_BRIEFS_v24.15.md",
              "research/external/kit/v24.15/KIT_PARAMETERS_v24.15.csv", "research/external/kit/v24.15/KIT_CRICKET_PHASES_v24.15.csv",
-             "research/external/access/READER_ACCESS_v24.15.csv", "research/external/access/CHATGPT_DO_NOT_OPEN_v24.15.csv"]
+             "research/external/access/READER_ACCESS_v24.15.csv", "research/external/access/CHATGPT_DO_NOT_OPEN_v24.15.csv",
+             "AUDIT_REVIEW_PROTOCOL.md", "research/external/AUDIT_CHAT_BRIEF_v1.md"]
     pointer = root / "research/external/access/CURRENT_ACCESS.csv"
     if not pointer.is_file(): raise X.ExternalError("current access snapshot pointer is missing")
     current = read(pointer, ("role", "path", "sha256", "snapshot_id"))
