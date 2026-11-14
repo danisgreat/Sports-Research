@@ -1,0 +1,1041 @@
+{
+  "event": "Pro Hokei Ligasy 2026/27 fixture #131 / game 2715 / 2026-11-12 Torpedo vs Arlan",
+  "authority": "CHAT_LOCAL_DRAFT_NOT_ISSUED",
+  "method": "EXACT_FINITE_POISSON_60M_SCENARIO_MIX_NOT_PRIMARY",
+  "sporting_inputs": "Official league schedule/team pages and 26-game standings as of 2026-10-30; technical forfeit excluded from Arlan form windows",
+  "official_reference_status": "NOT_RUN_INPUT_UNAVAILABLE; no registered league model / calibrated reference / matchup goalie sheet",
+  "settlement": "NOT_PERFORMED",
+  "market_inputs": "NONE",
+  "cutoff": "2026-11-12T18:30:00+05:00",
+  "model_caveats": [
+    "not a fitted model",
+    "no goalie verification",
+    "independent Poisson ignores correlated scores/goal-differential and empty-net tails",
+    "OT one-goal-on-regulation-draw is an illustrative sensitivity case, not a verified operator endpoint",
+    "no claim of actual pre-event model issuance or certified likelihood"
+  ],
+  "official_season": {
+    "Torpedo": {
+      "played_or_official_G": 26,
+      "official_GF": 138,
+      "official_GA": 46
+    },
+    "Arlan": {
+      "played_or_official_G": 26,
+      "official_GF": 92,
+      "official_GA": 58
+    }
+  },
+  "form": {
+    "Torpedo": {
+      "L5": {
+        "n": 5,
+        "GF": 20,
+        "GA": 6,
+        "GFpg": 4.0,
+        "GApg": 1.2,
+        "from": "2026-10-20",
+        "through": "2026-10-30",
+        "items": [
+          [
+            "2026-10-20",
+            "Almaty",
+            "A",
+            4,
+            0,
+            "REG"
+          ],
+          [
+            "2026-10-25",
+            "Aqtobe",
+            "H",
+            4,
+            2,
+            "REG"
+          ],
+          [
+            "2026-10-26",
+            "Aqtobe",
+            "H",
+            3,
+            1,
+            "REG"
+          ],
+          [
+            "2026-10-29",
+            "Nomad",
+            "H",
+            6,
+            3,
+            "REG"
+          ],
+          [
+            "2026-10-30",
+            "Nomad",
+            "H",
+            3,
+            0,
+            "REG"
+          ]
+        ]
+      },
+      "L10": {
+        "n": 10,
+        "GF": 71,
+        "GA": 10,
+        "GFpg": 7.1,
+        "GApg": 1.0,
+        "from": "2026-10-11",
+        "through": "2026-10-30",
+        "items": [
+          [
+            "2026-10-11",
+            "Ertis",
+            "H",
+            13,
+            0,
+            "REG"
+          ],
+          [
+            "2026-10-12",
+            "Ertis",
+            "H",
+            8,
+            0,
+            "REG"
+          ],
+          [
+            "2026-10-15",
+            "Ertis",
+            "A",
+            9,
+            2,
+            "REG"
+          ],
+          [
+            "2026-10-16",
+            "Ertis",
+            "A",
+            12,
+            1,
+            "REG"
+          ],
+          [
+            "2026-10-19",
+            "Almaty",
+            "A",
+            9,
+            1,
+            "REG"
+          ],
+          [
+            "2026-10-20",
+            "Almaty",
+            "A",
+            4,
+            0,
+            "REG"
+          ],
+          [
+            "2026-10-25",
+            "Aqtobe",
+            "H",
+            4,
+            2,
+            "REG"
+          ],
+          [
+            "2026-10-26",
+            "Aqtobe",
+            "H",
+            3,
+            1,
+            "REG"
+          ],
+          [
+            "2026-10-29",
+            "Nomad",
+            "H",
+            6,
+            3,
+            "REG"
+          ],
+          [
+            "2026-10-30",
+            "Nomad",
+            "H",
+            3,
+            0,
+            "REG"
+          ]
+        ]
+      },
+      "L15": {
+        "n": 15,
+        "GF": 94,
+        "GA": 23,
+        "GFpg": 6.266666666666667,
+        "GApg": 1.5333333333333334,
+        "from": "2026-09-28",
+        "through": "2026-10-30",
+        "items": [
+          [
+            "2026-09-28",
+            "Aqtobe",
+            "A",
+            6,
+            2,
+            "REG"
+          ],
+          [
+            "2026-10-01",
+            "Beibarys",
+            "A",
+            4,
+            3,
+            "REG"
+          ],
+          [
+            "2026-10-02",
+            "Beibarys",
+            "A",
+            9,
+            2,
+            "REG"
+          ],
+          [
+            "2026-10-06",
+            "Nomad",
+            "H",
+            2,
+            3,
+            "OT"
+          ],
+          [
+            "2026-10-07",
+            "Nomad",
+            "H",
+            2,
+            3,
+            "SO"
+          ],
+          [
+            "2026-10-11",
+            "Ertis",
+            "H",
+            13,
+            0,
+            "REG"
+          ],
+          [
+            "2026-10-12",
+            "Ertis",
+            "H",
+            8,
+            0,
+            "REG"
+          ],
+          [
+            "2026-10-15",
+            "Ertis",
+            "A",
+            9,
+            2,
+            "REG"
+          ],
+          [
+            "2026-10-16",
+            "Ertis",
+            "A",
+            12,
+            1,
+            "REG"
+          ],
+          [
+            "2026-10-19",
+            "Almaty",
+            "A",
+            9,
+            1,
+            "REG"
+          ],
+          [
+            "2026-10-20",
+            "Almaty",
+            "A",
+            4,
+            0,
+            "REG"
+          ],
+          [
+            "2026-10-25",
+            "Aqtobe",
+            "H",
+            4,
+            2,
+            "REG"
+          ],
+          [
+            "2026-10-26",
+            "Aqtobe",
+            "H",
+            3,
+            1,
+            "REG"
+          ],
+          [
+            "2026-10-29",
+            "Nomad",
+            "H",
+            6,
+            3,
+            "REG"
+          ],
+          [
+            "2026-10-30",
+            "Nomad",
+            "H",
+            3,
+            0,
+            "REG"
+          ]
+        ]
+      },
+      "L20": {
+        "n": 20,
+        "GF": 117,
+        "GA": 34,
+        "GFpg": 5.85,
+        "GApg": 1.7,
+        "from": "2026-09-16",
+        "through": "2026-10-30",
+        "items": [
+          [
+            "2026-09-16",
+            "Qulager",
+            "H",
+            3,
+            2,
+            "OT"
+          ],
+          [
+            "2026-09-17",
+            "Qulager",
+            "H",
+            6,
+            3,
+            "REG"
+          ],
+          [
+            "2026-09-20",
+            "Gornyak",
+            "H",
+            4,
+            3,
+            "REG"
+          ],
+          [
+            "2026-09-21",
+            "Gornyak",
+            "H",
+            1,
+            2,
+            "REG"
+          ],
+          [
+            "2026-09-27",
+            "Aqtobe",
+            "A",
+            9,
+            1,
+            "REG"
+          ],
+          [
+            "2026-09-28",
+            "Aqtobe",
+            "A",
+            6,
+            2,
+            "REG"
+          ],
+          [
+            "2026-10-01",
+            "Beibarys",
+            "A",
+            4,
+            3,
+            "REG"
+          ],
+          [
+            "2026-10-02",
+            "Beibarys",
+            "A",
+            9,
+            2,
+            "REG"
+          ],
+          [
+            "2026-10-06",
+            "Nomad",
+            "H",
+            2,
+            3,
+            "OT"
+          ],
+          [
+            "2026-10-07",
+            "Nomad",
+            "H",
+            2,
+            3,
+            "SO"
+          ],
+          [
+            "2026-10-11",
+            "Ertis",
+            "H",
+            13,
+            0,
+            "REG"
+          ],
+          [
+            "2026-10-12",
+            "Ertis",
+            "H",
+            8,
+            0,
+            "REG"
+          ],
+          [
+            "2026-10-15",
+            "Ertis",
+            "A",
+            9,
+            2,
+            "REG"
+          ],
+          [
+            "2026-10-16",
+            "Ertis",
+            "A",
+            12,
+            1,
+            "REG"
+          ],
+          [
+            "2026-10-19",
+            "Almaty",
+            "A",
+            9,
+            1,
+            "REG"
+          ],
+          [
+            "2026-10-20",
+            "Almaty",
+            "A",
+            4,
+            0,
+            "REG"
+          ],
+          [
+            "2026-10-25",
+            "Aqtobe",
+            "H",
+            4,
+            2,
+            "REG"
+          ],
+          [
+            "2026-10-26",
+            "Aqtobe",
+            "H",
+            3,
+            1,
+            "REG"
+          ],
+          [
+            "2026-10-29",
+            "Nomad",
+            "H",
+            6,
+            3,
+            "REG"
+          ],
+          [
+            "2026-10-30",
+            "Nomad",
+            "H",
+            3,
+            0,
+            "REG"
+          ]
+        ]
+      }
+    },
+    "Arlan": {
+      "L5": {
+        "n": 5,
+        "GF": 23,
+        "GA": 7,
+        "GFpg": 4.6,
+        "GApg": 1.4,
+        "from": "2026-10-21",
+        "through": "2026-10-30",
+        "items": [
+          [
+            "2026-10-21",
+            "Ertis",
+            "H",
+            9,
+            2,
+            "REG"
+          ],
+          [
+            "2026-10-25",
+            "Almaty",
+            "H",
+            3,
+            0,
+            "REG"
+          ],
+          [
+            "2026-10-26",
+            "Almaty",
+            "H",
+            4,
+            3,
+            "REG"
+          ],
+          [
+            "2026-10-29",
+            "Gornyak",
+            "A",
+            3,
+            2,
+            "REG"
+          ],
+          [
+            "2026-10-30",
+            "Gornyak",
+            "A",
+            4,
+            0,
+            "REG"
+          ]
+        ]
+      },
+      "L10": {
+        "n": 10,
+        "GF": 38,
+        "GA": 21,
+        "GFpg": 3.8,
+        "GApg": 2.1,
+        "from": "2026-10-10",
+        "through": "2026-10-30",
+        "items": [
+          [
+            "2026-10-10",
+            "Nomad",
+            "H",
+            3,
+            2,
+            "OT"
+          ],
+          [
+            "2026-10-11",
+            "Nomad",
+            "H",
+            2,
+            4,
+            "REG"
+          ],
+          [
+            "2026-10-14",
+            "Saryarqa",
+            "H",
+            1,
+            4,
+            "REG"
+          ],
+          [
+            "2026-10-15",
+            "Saryarqa",
+            "H",
+            4,
+            3,
+            "SO"
+          ],
+          [
+            "2026-10-20",
+            "Ertis",
+            "H",
+            5,
+            1,
+            "REG"
+          ],
+          [
+            "2026-10-21",
+            "Ertis",
+            "H",
+            9,
+            2,
+            "REG"
+          ],
+          [
+            "2026-10-25",
+            "Almaty",
+            "H",
+            3,
+            0,
+            "REG"
+          ],
+          [
+            "2026-10-26",
+            "Almaty",
+            "H",
+            4,
+            3,
+            "REG"
+          ],
+          [
+            "2026-10-29",
+            "Gornyak",
+            "A",
+            3,
+            2,
+            "REG"
+          ],
+          [
+            "2026-10-30",
+            "Gornyak",
+            "A",
+            4,
+            0,
+            "REG"
+          ]
+        ]
+      },
+      "L15": {
+        "n": 15,
+        "GF": 55,
+        "GA": 34,
+        "GFpg": 3.6666666666666665,
+        "GApg": 2.2666666666666666,
+        "from": "2026-09-28",
+        "through": "2026-10-30",
+        "items": [
+          [
+            "2026-09-28",
+            "Ertis",
+            "H",
+            5,
+            3,
+            "REG"
+          ],
+          [
+            "2026-10-02",
+            "Almaty",
+            "H",
+            1,
+            2,
+            "REG"
+          ],
+          [
+            "2026-10-03",
+            "Almaty",
+            "H",
+            3,
+            2,
+            "REG"
+          ],
+          [
+            "2026-10-06",
+            "Qulager",
+            "A",
+            4,
+            3,
+            "REG"
+          ],
+          [
+            "2026-10-07",
+            "Qulager",
+            "A",
+            4,
+            3,
+            "REG"
+          ],
+          [
+            "2026-10-10",
+            "Nomad",
+            "H",
+            3,
+            2,
+            "OT"
+          ],
+          [
+            "2026-10-11",
+            "Nomad",
+            "H",
+            2,
+            4,
+            "REG"
+          ],
+          [
+            "2026-10-14",
+            "Saryarqa",
+            "H",
+            1,
+            4,
+            "REG"
+          ],
+          [
+            "2026-10-15",
+            "Saryarqa",
+            "H",
+            4,
+            3,
+            "SO"
+          ],
+          [
+            "2026-10-20",
+            "Ertis",
+            "H",
+            5,
+            1,
+            "REG"
+          ],
+          [
+            "2026-10-21",
+            "Ertis",
+            "H",
+            9,
+            2,
+            "REG"
+          ],
+          [
+            "2026-10-25",
+            "Almaty",
+            "H",
+            3,
+            0,
+            "REG"
+          ],
+          [
+            "2026-10-26",
+            "Almaty",
+            "H",
+            4,
+            3,
+            "REG"
+          ],
+          [
+            "2026-10-29",
+            "Gornyak",
+            "A",
+            3,
+            2,
+            "REG"
+          ],
+          [
+            "2026-10-30",
+            "Gornyak",
+            "A",
+            4,
+            0,
+            "REG"
+          ]
+        ]
+      },
+      "L20": {
+        "n": 20,
+        "GF": 77,
+        "GA": 46,
+        "GFpg": 3.85,
+        "GApg": 2.3,
+        "from": "2026-09-12",
+        "through": "2026-10-30",
+        "items": [
+          [
+            "2026-09-12",
+            "Aqtobe",
+            "A",
+            5,
+            4,
+            "REG"
+          ],
+          [
+            "2026-09-15",
+            "Beibarys",
+            "A",
+            3,
+            1,
+            "REG"
+          ],
+          [
+            "2026-09-16",
+            "Beibarys",
+            "A",
+            1,
+            0,
+            "REG"
+          ],
+          [
+            "2026-09-23",
+            "Saryarqa",
+            "A",
+            2,
+            5,
+            "REG"
+          ],
+          [
+            "2026-09-27",
+            "Ertis",
+            "H",
+            11,
+            2,
+            "REG"
+          ],
+          [
+            "2026-09-28",
+            "Ertis",
+            "H",
+            5,
+            3,
+            "REG"
+          ],
+          [
+            "2026-10-02",
+            "Almaty",
+            "H",
+            1,
+            2,
+            "REG"
+          ],
+          [
+            "2026-10-03",
+            "Almaty",
+            "H",
+            3,
+            2,
+            "REG"
+          ],
+          [
+            "2026-10-06",
+            "Qulager",
+            "A",
+            4,
+            3,
+            "REG"
+          ],
+          [
+            "2026-10-07",
+            "Qulager",
+            "A",
+            4,
+            3,
+            "REG"
+          ],
+          [
+            "2026-10-10",
+            "Nomad",
+            "H",
+            3,
+            2,
+            "OT"
+          ],
+          [
+            "2026-10-11",
+            "Nomad",
+            "H",
+            2,
+            4,
+            "REG"
+          ],
+          [
+            "2026-10-14",
+            "Saryarqa",
+            "H",
+            1,
+            4,
+            "REG"
+          ],
+          [
+            "2026-10-15",
+            "Saryarqa",
+            "H",
+            4,
+            3,
+            "SO"
+          ],
+          [
+            "2026-10-20",
+            "Ertis",
+            "H",
+            5,
+            1,
+            "REG"
+          ],
+          [
+            "2026-10-21",
+            "Ertis",
+            "H",
+            9,
+            2,
+            "REG"
+          ],
+          [
+            "2026-10-25",
+            "Almaty",
+            "H",
+            3,
+            0,
+            "REG"
+          ],
+          [
+            "2026-10-26",
+            "Almaty",
+            "H",
+            4,
+            3,
+            "REG"
+          ],
+          [
+            "2026-10-29",
+            "Gornyak",
+            "A",
+            3,
+            2,
+            "REG"
+          ],
+          [
+            "2026-10-30",
+            "Gornyak",
+            "A",
+            4,
+            0,
+            "REG"
+          ]
+        ]
+      }
+    }
+  },
+  "scenario_inputs_and_outputs": [
+    {
+      "id": "LOW",
+      "home_lambda": 3.2,
+      "away_lambda": 1.75,
+      "weight": 0.25,
+      "metrics": {
+        "Torpedo_-1.5_reg": 0.4807629265866345,
+        "Arlan_+1.5_reg": 0.5192370734133654,
+        "Under_6.5_reg": 0.7694574399912936,
+        "Over_6.5_reg": 0.2305425600087064,
+        "Under_6.5_ot_goal_scenario": 0.7349029971445042,
+        "Over_6.5_ot_goal_scenario": 0.26509700285549576,
+        "Regulation_Torpedo_win": 0.6631754586919478,
+        "Regulation_Arlan_win": 0.18470845581548817,
+        "Regulation_draw": 0.15211608549256406,
+        "Total_goals_60m_mean": 4.95,
+        "Torpedo_goals_mean": 3.2,
+        "Arlan_goals_mean": 1.7499999999999998,
+        "Torpedo_margin_mean": 1.45,
+        "Total_goals_60m_sd": 2.224859546128699,
+        "Torpedo_margin_sd": 2.224859546128699,
+        "Joint_failure_Under6.5_and_Torpedo_-1.5_reg": 0.08995750506131944,
+        "Joint_failure_Under6.5_and_Torpedo_-1.5_ot_scenario": 0.12451194790810882,
+        "Both_win_Under6.5_and_Torpedo_-1.5_ot_scenario": 0.3401778716392476,
+        "Reg_3_3": 0.03455444284678936
+      }
+    },
+    {
+      "id": "BASE",
+      "home_lambda": 3.6,
+      "away_lambda": 2.0,
+      "weight": 0.5,
+      "metrics": {
+        "Torpedo_-1.5_reg": 0.5083628500401256,
+        "Arlan_+1.5_reg": 0.4916371499598743,
+        "Under_6.5_reg": 0.670257797974306,
+        "Over_6.5_reg": 0.3297422020256941,
+        "Under_6.5_ot_goal_scenario": 0.631918346961811,
+        "Over_6.5_ot_goal_scenario": 0.36808165303818907,
+        "Regulation_Torpedo_win": 0.6776013320683593,
+        "Regulation_Arlan_win": 0.18243309526131668,
+        "Regulation_draw": 0.13996557267032408,
+        "Total_goals_60m_mean": 5.6000000000000005,
+        "Torpedo_goals_mean": 3.6000000000000005,
+        "Arlan_goals_mean": 2.0,
+        "Torpedo_margin_mean": 1.5999999999999999,
+        "Total_goals_60m_sd": 2.366431913239847,
+        "Torpedo_margin_sd": 2.3664319132398464,
+        "Joint_failure_Under6.5_and_Torpedo_-1.5_reg": 0.12807962430512357,
+        "Joint_failure_Under6.5_and_Torpedo_-1.5_ot_scenario": 0.1664190753176186,
+        "Both_win_Under6.5_and_Torpedo_-1.5_ot_scenario": 0.3067002723195552,
+        "Reg_3_3": 0.038339451012495036
+      }
+    },
+    {
+      "id": "HIGH",
+      "home_lambda": 4.1,
+      "away_lambda": 2.35,
+      "weight": 0.25,
+      "metrics": {
+        "Torpedo_-1.5_reg": 0.5324805867060022,
+        "Arlan_+1.5_reg": 0.46751941329399777,
+        "Under_6.5_reg": 0.534412462436191,
+        "Over_6.5_reg": 0.46558753756380894,
+        "Under_6.5_ot_goal_scenario": 0.49514315446429,
+        "Over_6.5_ot_goal_scenario": 0.5048568455357098,
+        "Regulation_Torpedo_win": 0.6878907652700003,
+        "Regulation_Arlan_win": 0.18358809395561046,
+        "Regulation_draw": 0.12852114077438925,
+        "Total_goals_60m_mean": 6.449999999999999,
+        "Torpedo_goals_mean": 4.099999999999999,
+        "Arlan_goals_mean": 2.3499999999999996,
+        "Torpedo_margin_mean": 1.7499999999999993,
+        "Total_goals_60m_sd": 2.539685019840059,
+        "Torpedo_margin_sd": 2.5396850198400585,
+        "Joint_failure_Under6.5_and_Torpedo_-1.5_reg": 0.18248226191622566,
+        "Joint_failure_Under6.5_and_Torpedo_-1.5_ot_scenario": 0.2217515698881266,
+        "Both_win_Under6.5_and_Torpedo_-1.5_ot_scenario": 0.2493753110584189,
+        "Reg_3_3": 0.03926930797190094
+      }
+    }
+  ],
+  "mixture": {
+    "Torpedo_-1.5_reg": 0.5074923033432219,
+    "Arlan_+1.5_reg": 0.49250769665677796,
+    "Under_6.5_reg": 0.6610963745940241,
+    "Over_6.5_reg": 0.3389036254059759,
+    "Under_6.5_ot_goal_scenario": 0.6234707113831041,
+    "Over_6.5_ot_goal_scenario": 0.37652928861689594,
+    "Regulation_Torpedo_win": 0.6765672220246667,
+    "Regulation_Arlan_win": 0.183290685073433,
+    "Regulation_draw": 0.14014209290190038,
+    "Total_goals_60m_mean": 5.65,
+    "Torpedo_goals_mean": 3.625,
+    "Arlan_goals_mean": 2.025,
+    "Torpedo_margin_mean": 1.5999999999999996,
+    "Total_goals_60m_sd": 2.374352098112113,
+    "Torpedo_margin_sd": 2.3743520981121127,
+    "Joint_failure_Under6.5_and_Torpedo_-1.5_reg": 0.13214975389694805,
+    "Joint_failure_Under6.5_and_Torpedo_-1.5_ot_scenario": 0.16977541710786814,
+    "Both_win_Under6.5_and_Torpedo_-1.5_ot_scenario": 0.30073843183419424,
+    "Reg_3_3": 0.03762566321092009
+  },
+  "league_only_anchor": {
+    "goals_per_team_per_game": 3.2716535433070866,
+    "reg_6.5_under": 0.5197151436102039,
+    "reg_6.5_over": 0.4802848563897959,
+    "not_validated_same_line_baseline": true
+  },
+  "source_urls": [
+    "https://pro.ligasy.kz/ru/schedule",
+    "https://pro.ligasy.kz/ru/standings?date=&id_stage=&order=3&order_direction=2",
+    "https://pro.ligasy.kz/ru/game/2715-tor-arl",
+    "https://pro.ligasy.kz/ru/team/12-torpedo/schedule/16-pro-hokei-ligasy-2026-2027?id_tab=articles&id_team=12&start=100",
+    "https://pro.ligasy.kz/ru/team/2-arlan",
+    "https://pro.ligasy.kz/ru/documents"
+  ]
+}

@@ -35,5 +35,6 @@ def test_changed_relocated_file_is_refused(tmp_path):
 def test_repository_settlement_view_reads_relocated_revision_documents():
     relocation.table.cache_clear()
     rows = es.effective_rows()
-    assert (rows["sporting_grade"] == "UNRESOLVED").sum() == 0
+    unresolved = rows[rows["sporting_grade"] == "UNRESOLVED"]
+    assert set(unresolved["canonical_id"]) <= {"P-647"} and len(unresolved) == 3  # P-647 corners (CR-2026.11.14-R1)
     assert (rows["revision_source"] != "").sum() >= 16

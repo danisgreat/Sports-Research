@@ -1,0 +1,32 @@
+{
+  "event_key": "LOCAL-20261112CC53B5C806-G0007",
+  "mini_key": "20261112CC53B5C806",
+  "append_time_aedt": "2026-11-13T22:13:03+11:00",
+  "status": "CHAT_LOCAL_DRAFT_NOT_REPOSITORY_ISSUED",
+  "old_file_size": 166390,
+  "old_file_sha256": "3ab4974f0497229d141a4a056bc80095273c4e747a17c48016a4c01ae59d879f",
+  "new_file_size": 197955,
+  "new_file_sha256": "131470bd299f0d2ff0b94f98cde4747e59e8331ad0e60ecad636b802d98b5553",
+  "previous_6_card_cores_unchanged_sha256": {
+    "LOCAL-20261112CC53B5C806-G0001": "8df3f49b5bc50b45a4ff8fa8ff0a609c168f7d730c0abf1559e54cde3bbe17e2",
+    "LOCAL-20261112CC53B5C806-G0002": "0d5f6f8805cb9723cdd66b2e45a5d8e84960dd43a06642fd0ef2950a22699e3b",
+    "LOCAL-20261112CC53B5C806-G0003": "064588c8adf78cedfcc0971c8577a93107874d851bc6bf5666dcda130c026a52",
+    "LOCAL-20261112CC53B5C806-G0004": "ce067572d1b836fc64ec9af8579095aec63350c769293b598a40481d2276e14a",
+    "LOCAL-20261112CC53B5C806-G0005": "842b7421be49b49729cb6f6d92ad297b8b1040b4b72381d802355e352d324900",
+    "LOCAL-20261112CC53B5C806-G0006": "697e89d5af21605c7fceb228964d18efc1df24c055989d911be1600509d66c60"
+  },
+  "pre_append_snapshot_path": "/mnt/data/PREDICTION_MINI_RUNNING_LOG_20261112CC53B5C806_BEFORE_G0007.md",
+  "pre_append_snapshot_sha256": "3ab4974f0497229d141a4a056bc80095273c4e747a17c48016a4c01ae59d879f",
+  "script_path": "/mnt/data/hockey_shadow_motor_liberec_20261113.py",
+  "script_sha256": "fd52462321a2131f931e50264d6182ca88d12f23888ca8ba8569585e0426c67d",
+  "executed_shadow_json": "/mnt/data/HOCKEY_SHADOW_DIAGNOSTIC_20261112CC53B5C806-G0007.json",
+  "shadow_json_sha256": "3ec0edf3a69a5dbca55dca6f8f18a3afcac91b9d7f27962b43cae05266356340",
+  "new_card_sha256": "f846ac98980fb7f5920642659969cf2c685c5c4f0dd1b6d008168999d547a34d",
+  "cards_after": 7,
+  "pending_event_count_after": 7,
+  "next_local_event": "LOCAL-20261112CC53B5C806-G0008",
+  "github_writes": "NONE",
+  "canonical_id": "NOT_ASSIGNED",
+  "settlement": "NOT_PERFORMED",
+  "primary_p": "NOT_ESTIMATED"
+}

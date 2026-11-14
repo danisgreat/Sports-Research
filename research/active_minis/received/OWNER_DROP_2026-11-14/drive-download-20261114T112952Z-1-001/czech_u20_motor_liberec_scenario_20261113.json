@@ -1,0 +1,173 @@
+{
+  "status": "UNCALIBRATED_ASSUMPTION_ONLY_NOT_PRIMARY_NOT_ISSUED",
+  "computed_at_melbourne": "2026-11-13T22:04:20+11:00",
+  "source_urls": {
+    "official_league_table": "https://www.czehockey.cz/souteze-juniori/komercni-banka-extraliga-junioru",
+    "official_fixture": "https://czehockey.cz/game/detail/178203",
+    "club_h2h": "https://hcmotor.cz/zapasy.asp?filtrTym=LIB&kde=vsechno&sezona=2026&stats=true",
+    "motor_history": "https://www.eliteprospects.com/team/3143/hc-motor-ceske-budejovice-u20",
+    "liberec_history": "https://www.eliteprospects.com/team/3993/bili-tygri-liberec-u20",
+    "rules": "https://ceskyhokej.cz/competition/description/1"
+  },
+  "league": {
+    "goals_for": 910,
+    "team_games": 296,
+    "mean_goals_per_team_game": 3.074324324324324
+  },
+  "motor": {
+    "gp": 19,
+    "gf": 69,
+    "ga": 45,
+    "last5_gf": 16,
+    "last5_ga": 10,
+    "last5": [
+      [
+        "2026-10-31",
+        "at Pardubice",
+        "2-3 SO"
+      ],
+      [
+        "2026-10-30",
+        "at Mountfield HK",
+        "3-4"
+      ],
+      [
+        "2026-10-23",
+        "vs Plzeň",
+        "5-1"
+      ],
+      [
+        "2026-10-19",
+        "vs Slavia Praha",
+        "3-1"
+      ],
+      [
+        "2026-10-17",
+        "at Litvínov",
+        "3-1"
+      ]
+    ],
+    "gf_pg": 3.6315789473684212,
+    "ga_pg": 2.3684210526315788,
+    "last5_gf_pg": 3.2,
+    "last5_ga_pg": 2.0,
+    "blended_gf_pg": 3.5236842105263158,
+    "blended_ga_pg": 2.276315789473684
+  },
+  "liberec": {
+    "gp": 17,
+    "gf": 41,
+    "ga": 71,
+    "last5_gf": 14,
+    "last5_ga": 16,
+    "last5": [
+      [
+        "2026-10-31",
+        "vs Vítkovice",
+        "5-4 SO"
+      ],
+      [
+        "2026-10-30",
+        "vs Třinec",
+        "1-5"
+      ],
+      [
+        "2026-10-28",
+        "vs Poruba",
+        "3-2"
+      ],
+      [
+        "2026-10-24",
+        "at Litvínov",
+        "4-3 OT"
+      ],
+      [
+        "2026-10-23",
+        "at Karlovy Vary",
+        "1-2"
+      ]
+    ],
+    "gf_pg": 2.411764705882353,
+    "ga_pg": 4.176470588235294,
+    "last5_gf_pg": 2.8,
+    "last5_ga_pg": 3.2,
+    "blended_gf_pg": 2.5088235294117647,
+    "blended_ga_pg": 3.932352941176471
+  },
+  "raw_additive_cross_base": [
+    3.7280185758513933,
+    2.3925696594427244
+  ],
+  "scenarios": [
+    {
+      "name": "constrained",
+      "weight": 0.25,
+      "lambda_motor": 3.2,
+      "lambda_liberec": 2.1,
+      "reg_expected_total": 5.300000000000001,
+      "reg_expected_margin": 1.1,
+      "P_over_5_5": 0.43652660771192825,
+      "P_under_5_5": 0.5634733922880717,
+      "P_motor_minus_1_5": 0.4223397316647166,
+      "P_liberec_plus_1_5": 0.5776602683352834,
+      "P_motor_winner_proxy": 0.6969080759144101,
+      "P_regulation_draw": 0.16041007699863008,
+      "grid_mass": 1.0
+    },
+    {
+      "name": "base_additive_cross",
+      "weight": 0.5,
+      "lambda_motor": 3.7280185758513933,
+      "lambda_liberec": 2.3925696594427244,
+      "reg_expected_total": 6.120588235294118,
+      "reg_expected_margin": 1.335448916408669,
+      "P_over_5_5": 0.5734899183505071,
+      "P_under_5_5": 0.4265100816494929,
+      "P_motor_minus_1_5": 0.46626090528651504,
+      "P_liberec_plus_1_5": 0.533739094713485,
+      "P_motor_winner_proxy": 0.7181489545405656,
+      "P_regulation_draw": 0.14414714990428518,
+      "grid_mass": 0.9999999999999999
+    },
+    {
+      "name": "open_play",
+      "weight": 0.25,
+      "lambda_motor": 4.1,
+      "lambda_liberec": 2.75,
+      "reg_expected_total": 6.85,
+      "reg_expected_margin": 1.3499999999999996,
+      "P_over_5_5": 0.6797254278615898,
+      "P_under_5_5": 0.32027457213841015,
+      "P_motor_minus_1_5": 0.47109445569712827,
+      "P_liberec_plus_1_5": 0.5289055443028717,
+      "P_motor_winner_proxy": 0.707968625972082,
+      "P_regulation_draw": 0.13735121330486508,
+      "grid_mass": 0.9999999999999998
+    }
+  ],
+  "mixture": {
+    "P_over_5_5": 0.5658079680686331,
+    "P_under_5_5": 0.4341920319313669,
+    "P_motor_minus_1_5": 0.45648899948371874,
+    "P_liberec_plus_1_5": 0.5435110005162813,
+    "P_motor_win_proxy": 0.7102936527419058,
+    "E_motor_score_proxy": 3.777674324554357,
+    "E_liberec_score_proxy": 2.466633690620713,
+    "E_total_proxy": 6.24430801517507,
+    "E_margin_proxy": 1.311040633933644,
+    "SD_total_proxy": 2.5140743305950948,
+    "SD_margin_proxy": 2.4850185865539185,
+    "joint_failure_over_and_L_plus": 0.15220101126989152,
+    "P_both_decisive": 1.0,
+    "grid_mass": 0.9999999999999999
+  },
+  "notes": [
+    "30 goals per team finite grid with tail mass displayed, independent Poisson before OT",
+    "regulation tie split proportional to assumed means and adds exactly one scoreboard goal for OT/SO winner",
+    "empty-net effects not separately identifiable; no fabricated correction",
+    "supplied half-goal totals and handicap invariant to one-goal tie-break in OT/SO",
+    "uncertain starting goalies, U20 roster, L10-L20 per-game history and operator settlement convention",
+    "scenario weights 0.25/0.50/0.25 declared before calculation"
+  ],
+  "sha256_payload_without_hash": "a7ff2144f234c4869bd7d811bca5b964705080c8a5087368701531ddce08bec8"
+}

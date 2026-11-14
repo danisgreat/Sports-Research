@@ -1,0 +1,118 @@
+{
+  "event": "Wonju DB Promy vs Suwon KT Sonicboom, KBL 2026-11-13 19:00 KST / 21:00 AEDT",
+  "status": "ASSUMPTION_DRIVEN_UNCALIBRATED_SCENARIO_NOT_PRIMARY",
+  "seed": 20261113,
+  "n": 600000,
+  "rho_total_margin_assumed": 0.08,
+  "season_rates": {
+    "wonju_PF": 90.1,
+    "wonju_PA": 89.3,
+    "suwon_PF": 85.0,
+    "suwon_PA": 86.5,
+    "n_per_team": 13
+  },
+  "stated_half_sum_raw_team_blend_total": 175.45,
+  "scenarios": [
+    {
+      "name": "LOW",
+      "weight": 0.25,
+      "reg_total_mean": 172.5,
+      "reg_margin_mean": 3.0,
+      "total_sd": 19.5,
+      "margin_sd": 15.5
+    },
+    {
+      "name": "BASE",
+      "weight": 0.5,
+      "reg_total_mean": 176.0,
+      "reg_margin_mean": 5.1,
+      "total_sd": 18.0,
+      "margin_sd": 14.5
+    },
+    {
+      "name": "HIGH",
+      "weight": 0.25,
+      "reg_total_mean": 181.0,
+      "reg_margin_mean": 7.5,
+      "total_sd": 19.0,
+      "margin_sd": 15.5
+    }
+  ],
+  "endpoints": "FULL_GAME_INCLUDING_5MIN_OVERTIME; 4x10min regulation; margin integer; user lines half-point no push",
+  "ot_parameters": "scenarios use assumed regulation T/M normal, rounded team scores; ties trigger Poisson(10) points/team each 5m extra period until resolved",
+  "probabilities": {
+    "WONJU_MINUS_5_5": {
+      "fraction": 0.49364166666666665,
+      "mc_se": 0.0006454450294141015,
+      "W": 0.49364166666666665,
+      "P": 0.0,
+      "L": 0.5063583333333334,
+      "V": 0.0
+    },
+    "SUWON_PLUS_5_5": {
+      "fraction": 0.5063583333333334,
+      "mc_se": 0.0006454450294141015,
+      "W": 0.5063583333333334,
+      "P": 0.0,
+      "L": 0.49364166666666665,
+      "V": 0.0
+    },
+    "OVER_179_5": {
+      "fraction": 0.44347166666666665,
+      "mc_se": 0.000641358645806639,
+      "W": 0.44347166666666665,
+      "P": 0.0,
+      "L": 0.5565283333333333,
+      "V": 0.0
+    },
+    "UNDER_179_5": {
+      "fraction": 0.5565283333333333,
+      "mc_se": 0.0006413586458066391,
+      "W": 0.5565283333333333,
+      "P": 0.0,
+      "L": 0.4434716666666667,
+      "V": 0.0
+    }
+  },
+  "expected": {
+    "wonju": 91.02325,
+    "suwon": 85.863565,
+    "total": 176.886815,
+    "wonju_minus_suwon_margin": 5.159685,
+    "total_sd": 19.252527214778194,
+    "margin_sd": 15.122516403278976,
+    "ot_rate": 0.024858333333333333,
+    "winner_wonju": 0.6336116666666667,
+    "winner_suwon": 0.3663883333333333
+  },
+  "joint_failure_top_two_if_under_and_suwon_cushion": 0.230445,
+  "limitations": [
+    "Team ORtg/DRtg/pace and lineup stints not verified",
+    "No official reference freeze, promotion, adjustment ledger or model lint",
+    "Scenario centers, rho and widths are explicit assumptions not trained, validated or market-derived",
+    "Official first tip and starting fives not verified",
+    "Includes assumed overtime mechanism and not fitted KBL overtime statistics"
+  ],
+  "case_probabilities": {
+    "LOW": {
+      "WONJU_MINUS_5_5": 0.43842219818664957,
+      "SUWON_PLUS_5_5": 0.5615778018133504,
+      "OVER_179_5": 0.36860553619356645,
+      "UNDER_179_5": 0.6313944638064335
+    },
+    "BASE": {
+      "WONJU_MINUS_5_5": 0.4904972221111955,
+      "SUWON_PLUS_5_5": 0.5095027778888045,
+      "OVER_179_5": 0.43284770241283294,
+      "UNDER_179_5": 0.5671522975871671
+    },
+    "HIGH": {
+      "WONJU_MINUS_5_5": 0.5550755363547876,
+      "SUWON_PLUS_5_5": 0.4449244636452125,
+      "OVER_179_5": 0.5394949131298585,
+      "UNDER_179_5": 0.46050508687014147
+    }
+  },
+  "method": "6e5 seeded Monte Carlo draws; sample T and M correlated Gaussian per assumed regime; round home and away points; append sampled 5 minute OT points for tied regulation scores, then price supplied sides and totals.",
+  "code_sha256": "a7532d6fb0020dd89c032c79d01e9f914d3116c4c8311f8981ee480ec969d8d5"
+}

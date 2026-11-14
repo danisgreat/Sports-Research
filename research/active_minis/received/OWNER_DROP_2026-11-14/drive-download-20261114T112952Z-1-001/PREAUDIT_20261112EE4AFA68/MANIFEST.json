@@ -1,0 +1,157 @@
+{
+  "package_schema": "CHAT_LOCAL_PREAUDIT_PACKAGE_V1",
+  "mini_key": "20261112EE4AFA68",
+  "authority_mode": "CHAT_LOCAL_ONLY / GITHUB_READ_ONLY",
+  "pinned_repository": "danisgreat/Sports-Research",
+  "pinned_branch": "main",
+  "pinned_sha": "008cedc4ff469e7a808292aa3667a7bffe22e273",
+  "canonical_import": "NOT_IMPORTED",
+  "canonical_ids_assigned": [],
+  "original_mini_path": "PREDICTION_MINI_RUNNING_LOG_20261112EE4AFA68.md",
+  "original_mini_size_bytes": 314991,
+  "original_mini_sha256": "83c6296e3c22df3a3a979c21bc1b42cd40d3a03d1994ccaf0ebaeae4e52d3b43",
+  "original_initial_receipt": "MINI_VERIFICATION_RECEIPT_20261112EE4AFA68.md",
+  "receipt_current_validity": "HISTORICAL_BASELINE_ONLY",
+  "source_note": "PREAUDIT_SOURCE_INDEX_LOCATOR_ONLY_NOT_REVERIFIED",
+  "event_count": 11,
+  "event_ids": [
+    "LOCAL-20261112EE4AFA68-G0001",
+    "LOCAL-20261112EE4AFA68-G0002",
+    "LOCAL-20261112EE4AFA68-G0003",
+    "LOCAL-20261112EE4AFA68-G0004",
+    "LOCAL-20261112EE4AFA68-G0005",
+    "LOCAL-20261112EE4AFA68-G0006",
+    "LOCAL-20261112EE4AFA68-G0007",
+    "LOCAL-20261112EE4AFA68-G0008",
+    "LOCAL-20261112EE4AFA68-G0009",
+    "LOCAL-20261112EE4AFA68-G0010",
+    "LOCAL-20261112EE4AFA68-G0011"
+  ],
+  "next_event_key": "LOCAL-20261112EE4AFA68-G0012",
+  "numeric_cards": 0,
+  "qualitative_cards": 11,
+  "source_links_card_url_pairs": 134,
+  "unique_source_urls": 129,
+  "sections_A1_A9_all_cards": true,
+  "queue_intake_linebreak_warnings": {
+    "QUEUE": {
+      "blank_line_table_row_breaks": 6,
+      "approx_lines": [
+        36,
+        38,
+        40,
+        44,
+        46,
+        49
+      ]
+    },
+    "INTAKE": {
+      "blank_line_table_row_breaks": 6,
+      "approx_lines": [
+        58,
+        60,
+        62,
+        64,
+        70,
+        74
+      ]
+    }
+  },
+  "frozen_model_receipt_available": false,
+  "settlement_receipt_available": false,
+  "audit_status": "STRUCTURE_CHECKED_NOT_PREAUDIT_CERTIFIED",
+  "static_authority_files_included": false,
+  "authority_file_links": 18,
+  "files": [
+    {
+      "path": "AUTHORITY_LINKS.md",
+      "size_bytes": 3042,
+      "sha256": "e958070d2e3dd66f9d109581ae18d335132473267a4e93b6fcd18ad74387b132"
+    },
+    {
+      "path": "CARDS/G0001.md",
+      "size_bytes": 22501,
+      "sha256": "36a22e95982f320777c7713cbef7233d26aece38c0dc305b1d72a2eced32c965"
+    },
+    {
+      "path": "CARDS/G0002.md",
+      "size_bytes": 25724,
+      "sha256": "0a38a822d985198fbd8c072ca1c7e81cf30d49d981bb0a6ecd119a4f3dc29114"
+    },
+    {
+      "path": "CARDS/G0003.md",
+      "size_bytes": 30500,
+      "sha256": "afe7392651df39bd3d3b32239f74540135c577136636a35cca0594c062571cbd"
+    },
+    {
+      "path": "CARDS/G0004.md",
+      "size_bytes": 27756,
+      "sha256": "e4e1c848fc90c2f9e867e1eee7f580dfc9a45ef4c151fea1dbf99fdd24f3bddb"
+    },
+    {
+      "path": "CARDS/G0005.md",
+      "size_bytes": 29797,
+      "sha256": "36da86e715b4d3add0d81aad9b6a4060c5f15edb864ea4d34580421c36536b3d"
+    },
+    {
+      "path": "CARDS/G0006.md",
+      "size_bytes": 31716,
+      "sha256": "1464efce5bc642f9c1dd26d989a4abaa4ef36352282b9a0c4c382eea8732fae9"
+    },
+    {
+      "path": "CARDS/G0007.md",
+      "size_bytes": 24372,
+      "sha256": "e84e72b1e7545cf6254d120fc2de383efa969b19bc505218647507721ee3ec84"
+    },
+    {
+      "path": "CARDS/G0008.md",
+      "size_bytes": 30515,
+      "sha256": "6b1c9beeed5fc8b964fc4ac80440728c706ed604d338c3c96d2fcdf9963a350d"
+    },
+    {
+      "path": "CARDS/G0009.md",
+      "size_bytes": 27603,
+      "sha256": "15549477c90b43af6953815a1c2eae27093b2e7d0156504f9dcdea935297a415"
+    },
+    {
+      "path": "CARDS/G0010.md",
+      "size_bytes": 25194,
+      "sha256": "5aedeb0b4c8797d8cc6377df59118e0273adc686187b57bc778f3839a791666e"
+    },
+    {
+      "path": "CARDS/G0011.md",
+      "size_bytes": 19827,
+      "sha256": "e5fa3f95b4215b56502131a2bc369da84494b3c39a7deeb3cb964f6bbcba24e6"
+    },
+    {
+      "path": "EVENT_INDEX.csv",
+      "size_bytes": 3560,
+      "sha256": "45b7d92b53999f09904d03e49d1143ac89caeb48d65b7970632ad93317ad3abc"
+    },
+    {
+      "path": "MINI_VERIFICATION_RECEIPT_20261112EE4AFA68.md",
+      "size_bytes": 4620,
+      "sha256": "d74f6a4f7d650df1455c007bbb38aeeabd5670cbcbc46847876de580387e2b17"
+    },
+    {
+      "path": "PREAUDIT_REPORT.md",
+      "size_bytes": 5534,
+      "sha256": "8842c124ffef80ec916585c976b82883def0748e385806fc21dcece4830a5d5a"
+    },
+    {
+      "path": "PREDICTION_MINI_RUNNING_LOG_20261112EE4AFA68.md",
+      "size_bytes": 314991,
+      "sha256": "83c6296e3c22df3a3a979c21bc1b42cd40d3a03d1994ccaf0ebaeae4e52d3b43"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 1300,
+      "sha256": "1bc3fbf90791423ab704e3a24bb1cfeda76ad375103f17f028fa2940b2a18e2b"
+    },
+    {
+      "path": "SOURCE_URL_INDEX.csv",
+      "size_bytes": 23307,
+      "sha256": "2733f9ca3589bc4096b99932c2ab661508dc6121ced6fa1a454c842fdf033762"
+    }
+  ]
+}

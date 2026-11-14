@@ -1,0 +1,39 @@
+{
+  "event_key": "LOCAL-20261112CC53B5C806-G0004",
+  "mini_key": "20261112CC53B5C806",
+  "timestamp_aedt": "2026-11-13T18:59:21+11:00",
+  "original_bytes": 86979,
+  "new_bytes": 117439,
+  "original_sha256": "88f2e962696f963672800e4500459b4414c5b06f55927e39d0429828e720a447",
+  "new_sha256": "aebac6b30385a89811692baf3266c096099cbe4c469337d129691c4f02744906",
+  "card_sha256": "a57607c58893de44c28b48a2846abef6cb57b6292d19ba1f59957befabc204f6",
+  "prior_card_bytes_preserved": true,
+  "verified_prior_cards": [
+    "LOCAL-20261112CC53B5C806-G0001",
+    "LOCAL-20261112CC53B5C806-G0002",
+    "LOCAL-20261112CC53B5C806-G0003"
+  ],
+  "new_cards": 4,
+  "numeric_primary_cards": 0,
+  "qualitative_cards": 4,
+  "pending_events": 4,
+  "intake_0004_count": 1,
+  "next_local_event_key": "LOCAL-20261112CC53B5C806-G0005",
+  "simulation_source_sha256": "5afb6c96d52dc1afd2b6819abfaccda2b6dd6a17a3152d53fc1fa31a803b02e2",
+  "simulation_json_sha256": "cbcdbebc287b193c7f365efb985aa4602a534ae219da6bc2ba4e9469b238fcc8",
+  "readback_verified": true,
+  "github_writes": false,
+  "repository_issued": false,
+  "canonical_id": "NOT_ASSIGNED",
+  "research_completion": "INFORMATION_INCOMPLETE",
+  "changed_fields": [
+    "authority frozen count",
+    "queue item",
+    "intake new row",
+    "new G0004 card",
+    "footer key",
+    "footer card counts",
+    "footer queue counts",
+    "footer timestamp"
+  ]
+}

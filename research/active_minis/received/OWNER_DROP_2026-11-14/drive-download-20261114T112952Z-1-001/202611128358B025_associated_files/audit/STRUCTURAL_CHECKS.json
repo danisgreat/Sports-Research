@@ -1,0 +1,150 @@
+{
+  "mini_key": "202611128358B025",
+  "main_log_bytes": 225984,
+  "main_log_sha256": "a87c1cec9a5fcdea84ea22973864863f8fca4336ea8ea10ce974821be4c82498",
+  "convenience_copy_same_bytes": true,
+  "format_marker_count": 1,
+  "new_cards_section_count": 1,
+  "footer_section_count": 1,
+  "draft_cards_count": 11,
+  "draft_card_keys": [
+    "LOCAL-202611128358B025-G0001",
+    "LOCAL-202611128358B025-G0002",
+    "LOCAL-202611128358B025-G0003",
+    "LOCAL-202611128358B025-G0004",
+    "LOCAL-202611128358B025-G0005",
+    "LOCAL-202611128358B025-G0006",
+    "LOCAL-202611128358B025-G0007",
+    "LOCAL-202611128358B025-G0008",
+    "LOCAL-202611128358B025-G0009",
+    "LOCAL-202611128358B025-G0010",
+    "LOCAL-202611128358B025-G0011"
+  ],
+  "intake_keys_present_exactly_once": true,
+  "expected_next_key": "LOCAL-202611128358B025-G0012",
+  "snapshot_card_retention": {
+    "PREDICTION_MINI_RUNNING_LOG_202611128358B025_before_G0004.md": {
+      "event_card_count": 3,
+      "event_ids": [
+        "LOCAL-202611128358B025-G0001",
+        "LOCAL-202611128358B025-G0002",
+        "LOCAL-202611128358B025-G0003"
+      ],
+      "cards_preserved_byte_for_byte": true,
+      "changed_ids": []
+    },
+    "PREDICTION_MINI_RUNNING_LOG_202611128358B025_before_G0006.md": {
+      "event_card_count": 5,
+      "event_ids": [
+        "LOCAL-202611128358B025-G0001",
+        "LOCAL-202611128358B025-G0002",
+        "LOCAL-202611128358B025-G0003",
+        "LOCAL-202611128358B025-G0004",
+        "LOCAL-202611128358B025-G0005"
+      ],
+      "cards_preserved_byte_for_byte": true,
+      "changed_ids": []
+    },
+    "PREDICTION_MINI_RUNNING_LOG_202611128358B025_before_G0007.md": {
+      "event_card_count": 6,
+      "event_ids": [
+        "LOCAL-202611128358B025-G0001",
+        "LOCAL-202611128358B025-G0002",
+        "LOCAL-202611128358B025-G0003",
+        "LOCAL-202611128358B025-G0004",
+        "LOCAL-202611128358B025-G0005",
+        "LOCAL-202611128358B025-G0006"
+      ],
+      "cards_preserved_byte_for_byte": true,
+      "changed_ids": []
+    },
+    "PREDICTION_MINI_RUNNING_LOG_202611128358B025_before_G0008.md": {
+      "event_card_count": 7,
+      "event_ids": [
+        "LOCAL-202611128358B025-G0001",
+        "LOCAL-202611128358B025-G0002",
+        "LOCAL-202611128358B025-G0003",
+        "LOCAL-202611128358B025-G0004",
+        "LOCAL-202611128358B025-G0005",
+        "LOCAL-202611128358B025-G0006",
+        "LOCAL-202611128358B025-G0007"
+      ],
+      "cards_preserved_byte_for_byte": true,
+      "changed_ids": []
+    },
+    "PREDICTION_MINI_RUNNING_LOG_202611128358B025_before_G0009.md": {
+      "event_card_count": 8,
+      "event_ids": [
+        "LOCAL-202611128358B025-G0001",
+        "LOCAL-202611128358B025-G0002",
+        "LOCAL-202611128358B025-G0003",
+        "LOCAL-202611128358B025-G0004",
+        "LOCAL-202611128358B025-G0005",
+        "LOCAL-202611128358B025-G0006",
+        "LOCAL-202611128358B025-G0007",
+        "LOCAL-202611128358B025-G0008"
+      ],
+      "cards_preserved_byte_for_byte": true,
+      "changed_ids": []
+    },
+    "PREDICTION_MINI_RUNNING_LOG_202611128358B025_before_G0010.md": {
+      "event_card_count": 9,
+      "event_ids": [
+        "LOCAL-202611128358B025-G0001",
+        "LOCAL-202611128358B025-G0002",
+        "LOCAL-202611128358B025-G0003",
+        "LOCAL-202611128358B025-G0004",
+        "LOCAL-202611128358B025-G0005",
+        "LOCAL-202611128358B025-G0006",
+        "LOCAL-202611128358B025-G0007",
+        "LOCAL-202611128358B025-G0008",
+        "LOCAL-202611128358B025-G0009"
+      ],
+      "cards_preserved_byte_for_byte": true,
+      "changed_ids": []
+    },
+    "PREDICTION_MINI_RUNNING_LOG_202611128358B025_before_G0011.md": {
+      "event_card_count": 10,
+      "event_ids": [
+        "LOCAL-202611128358B025-G0001",
+        "LOCAL-202611128358B025-G0002",
+        "LOCAL-202611128358B025-G0003",
+        "LOCAL-202611128358B025-G0004",
+        "LOCAL-202611128358B025-G0005",
+        "LOCAL-202611128358B025-G0006",
+        "LOCAL-202611128358B025-G0007",
+        "LOCAL-202611128358B025-G0008",
+        "LOCAL-202611128358B025-G0009",
+        "LOCAL-202611128358B025-G0010"
+      ],
+      "cards_preserved_byte_for_byte": true,
+      "changed_ids": []
+    }
+  },
+  "python_syntax_only": {
+    "b_league_20261113_kawasaki_saga_diagnostic.py": "PASS_SYNTAX_ONLY",
+    "hockey_czech_u20_20261113_diagnostic.py": "PASS_SYNTAX_ONLY",
+    "hockey_diagnostic_20261113.py": "PASS_SYNTAX_ONLY",
+    "kbl_20261113_wonju_suwon_diagnostic.py": "PASS_SYNTAX_ONLY",
+    "nba_nyk_ind_20261114_diagnostic.py": "PASS_SYNTAX_ONLY",
+    "ncaab_bryant_rutgers_20261114_diagnostic.py": "PASS_SYNTAX_ONLY",
+    "tennis_orleans_piros_altmaier_20261113_diagnostic.py": "PASS_SYNTAX_ONLY",
+    "tennis_scenario_20261112.py": "PASS_SYNTAX_ONLY",
+    "tennis_stockholm_scenario_20261113.py": "PASS_SYNTAX_ONLY",
+    "tennis_stockholm_tabilo_tirante_20261114_diagnostic.py": "PASS_SYNTAX_ONLY",
+    "wnbl_20261113_geelong_perth_diagnostic.py": "PASS_SYNTAX_ONLY"
+  },
+  "json_parse": {
+    "nba_nyk_ind_20261114_results.json": "PASS_JSON_PARSE",
+    "ncaab_bryant_rutgers_20261114_results.json": "PASS_JSON_PARSE",
+    "tennis_stockholm_tabilo_tirante_20261114_results.json": "PASS_JSON_PARSE"
+  },
+  "not_checked": [
+    "Original source links and captures not re-fetched",
+    "Forecast calibration/selection skill",
+    "Statistical and model parameter validity",
+    "Full program execution/output equivalence",
+    "Official repo source-audit, card linter, model reference, pregame freeze, lease, git status",
+    "Canonical import and independent settlement"
+  ]
+}

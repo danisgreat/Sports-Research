@@ -1,5 +1,10 @@
 # Scoreboard: current measurement and preserved historical results
 
+## Import 2026-11-14 (P-639–P-659; descriptive; chat-local research only)
+
+- **Research-only, NOT_PRIMARY (P-639–P-659).** 21 games, 90 chat-local records (six parallel chats on the 12–14 Nov games, three strands on the 9–12 Nov games). Literal rows 131W/142L, 3 UNRESOLVED (P-647 corners). Primary rows 0; ASSESS-100 eligible paired games 0.
+- Rank-1 / first leans 35-42; top side leans 29-54; top total leans 50-35. Numeric diagnostic rows 206, mean Brier 0.2594 (constant 0.5 = 0.2500). Rows are dependent; nothing here is a skill estimate. [Audit](../verification/mini_import_P-639_P-659_2026-11-14-1/AUDIT_REPORT.md).
+
 ## Imports and corrections 2026-11-09 (P-584, P-623–P-638; descriptive; recorded 2026-11-10)
 
 Figures come from the [generated history](../verification/historical_gap_resolution_2026-11-09-1/final_history_release/CARD_HISTORY.md), which applies effective grades. Outcome-exposed and `INSUFFICIENT_EVIDENCE`. No model or method is promoted. Every earlier section below keeps its original figures.

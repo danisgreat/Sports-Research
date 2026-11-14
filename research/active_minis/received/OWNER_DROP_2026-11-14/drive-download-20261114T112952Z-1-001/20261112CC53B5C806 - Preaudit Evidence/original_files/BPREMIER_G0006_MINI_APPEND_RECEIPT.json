@@ -1,0 +1,27 @@
+{
+  "source_bytes_sha256": "8af4fc4ccdb893a8c3c9c384b2148698065b5a18bc429cf1ab7636506ce684aa",
+  "source_bytes": 140952,
+  "destination_bytes_sha256": "3ab4974f0497229d141a4a056bc80095273c4e747a17c48016a4c01ae59d879f",
+  "destination_bytes": 166390,
+  "previous_cores_sha256": [
+    "600d26f2888e9457bab56038ed212df657affd3b47f985edf2497afd2f1f72d6",
+    "16e9a1ec354d9c80b0037b2509d3f98203c1a1a24c1c75ebc6d0ca02f3112a0c",
+    "f7311307b59bc6300d58cbdde635c7284626868febb2a1058e1258535570a1eb",
+    "48cadd98f4ca5765d28f284633f7b90d464c7c74229773bf26ba5045a2b61269",
+    "7b5579bb9416c5571a4f9ab9df359246207a5d38e7ece98dbeccadeeb95f3904"
+  ],
+  "all_previous_cores_preserved": true,
+  "previous_cards": 5,
+  "new_cards": 6,
+  "local_next_key": "LOCAL-20261112CC53B5C806-G0007",
+  "new_core_sha256": "77df675bced409c9820529a84715ac96183b6e2831e1d742bc355b488b02a209",
+  "shadow_file": "BPREMIER_SHADOW_DIAGNOSTIC_20261112CC53B5C806-G0006.json",
+  "research_status": "INFORMATION_INCOMPLETE",
+  "issue_status": "CHAT_LOCAL_READ_ONLY_DRAFT_NOT_ISSUED",
+  "github_writes": false,
+  "canon_allocated": false,
+  "settled": false,
+  "marker_integrity": true,
+  "readback": true,
+  "footer_time_note": "Updated footer to 2026-11-13T21:13:19+11:00, post scheduled start; all G0001-G0006 card blocks untouched"
+}

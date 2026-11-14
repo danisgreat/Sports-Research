@@ -1,0 +1,17 @@
+{
+  "mini": "/mnt/data/PREDICTION_MINI_RUNNING_LOG_20261112D3C239297F.md",
+  "size_bytes": 273744,
+  "sha256": "fb1eb981d000119883e8e7cfe06e45113117a9cb0615a7ea052e54d13fe1711b",
+  "previous_sha256": "273e838118be564c550bc578f222ba4c881d8b1ebd668301f5538b289ac6a8b3",
+  "old_card_count": 9,
+  "new_card_count": 10,
+  "prior_cards_byte_preserved": true,
+  "key": "LOCAL-20261112D3C239297F-G0010",
+  "next_key": "LOCAL-20261112D3C239297F-G0011",
+  "save_time": "2026-11-14T09:59:45+11:00",
+  "main_SHA": "008cedc4ff469e7a808292aa3667a7bffe22e273",
+  "github_writes": 0,
+  "formal_issue": "NOT_ISSUED",
+  "numeric_primary": "NONE",
+  "research_diagnostic_json_sha256": "7fc07231a657180f17182dea80804736130624f99494c0cad3083f9f7d063a4d"
+}

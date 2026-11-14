@@ -1,0 +1,692 @@
+{
+  "mini_key": "20261112CC53B5C806",
+  "mini_path": "PREDICTION_MINI_RUNNING_LOG_20261112CC53B5C806.md",
+  "mini_bytes": 246441,
+  "mini_sha256": "9da07f291fe663b9a5c41792613c0419fa0820081a6912c6564b9de7ae4ac5b5",
+  "card_count": 9,
+  "cards": {
+    "LOCAL-20261112CC53B5C806-G0001": "600d26f2888e9457bab56038ed212df657affd3b47f985edf2497afd2f1f72d6",
+    "LOCAL-20261112CC53B5C806-G0002": "16e9a1ec354d9c80b0037b2509d3f98203c1a1a24c1c75ebc6d0ca02f3112a0c",
+    "LOCAL-20261112CC53B5C806-G0003": "f7311307b59bc6300d58cbdde635c7284626868febb2a1058e1258535570a1eb",
+    "LOCAL-20261112CC53B5C806-G0004": "48cadd98f4ca5765d28f284633f7b90d464c7c74229773bf26ba5045a2b61269",
+    "LOCAL-20261112CC53B5C806-G0005": "7b5579bb9416c5571a4f9ab9df359246207a5d38e7ece98dbeccadeeb95f3904",
+    "LOCAL-20261112CC53B5C806-G0006": "77df675bced409c9820529a84715ac96183b6e2831e1d742bc355b488b02a209",
+    "LOCAL-20261112CC53B5C806-G0007": "a616fbe5626a152580976615432318534f525956777e70c1e277821f747dd881",
+    "LOCAL-20261112CC53B5C806-G0008": "cddf4862f379089865cda227ee66062a8bb589527d00c560c940c8bdaef3255c",
+    "LOCAL-20261112CC53B5C806-G0009": "089ec58118edc6c6bd6c47087c2f154b3d5b554aea7f1087d01db522900fe3cc"
+  },
+  "intake_counts": {
+    "INTAKE-0001": 1,
+    "INTAKE-0002": 1,
+    "INTAKE-0003": 1,
+    "INTAKE-0004": 1,
+    "INTAKE-0005": 1,
+    "INTAKE-0006": 1,
+    "INTAKE-0007": 1,
+    "INTAKE-0008": 1,
+    "INTAKE-0009": 1
+  },
+  "queue_counts": {
+    "Q-0001": 1,
+    "Q-0002": 1,
+    "Q-0003": 1,
+    "Q-0004": 1,
+    "Q-0005": 1,
+    "Q-0006": 1,
+    "Q-0007": 1,
+    "Q-0008": 1,
+    "Q-0009": 1
+  },
+  "checks": [
+    {
+      "check": "Exact current mini file exists",
+      "passed": true,
+      "detail": "PREDICTION_MINI_RUNNING_LOG_20261112CC53B5C806.md"
+    },
+    {
+      "check": "Mini format single marker",
+      "passed": true,
+      "detail": "count=1"
+    },
+    {
+      "check": "Exact 9 unique card blocks",
+      "passed": true,
+      "detail": [
+        "LOCAL-20261112CC53B5C806-G0001",
+        "LOCAL-20261112CC53B5C806-G0002",
+        "LOCAL-20261112CC53B5C806-G0003",
+        "LOCAL-20261112CC53B5C806-G0004",
+        "LOCAL-20261112CC53B5C806-G0005",
+        "LOCAL-20261112CC53B5C806-G0006",
+        "LOCAL-20261112CC53B5C806-G0007",
+        "LOCAL-20261112CC53B5C806-G0008",
+        "LOCAL-20261112CC53B5C806-G0009"
+      ]
+    },
+    {
+      "check": "Single footer",
+      "passed": true,
+      "detail": "begin / end: 1/1"
+    },
+    {
+      "check": "Footer next G0010",
+      "passed": true,
+      "detail": "<!-- BEGIN FOOTER -->\n| Field | Value |\n|---|---|\n| Last local event key / next local event key | `LOCAL-20261112CC53B5C806-G0009` / `LOCAL-20261112CC53B5C806-G0010` |\n| New canonical IDs assigned | NONE; assignment only at `PROMPT_4_IMPORT` |\n| Repository next-ID snapshot | `P-639` (read-only context; unallocated) |\n| New cards / numeric / qualitative / NO_FORECAST | `9 / 0 / 9 / 0` (G0001–G0009, all qualitative primary with independently executed uncalibrated diagnostics; no numeric primary) |\n| Pending events / unresolved evidence records | `9 / 0` (evidence gaps within pending cards; no independent terminal unresolved record) |\n| Local mini status / import status | `ACTIVE_CHAT_LOCAL_DRAFT` / `NOT_PERFORMED` |\n| Repository active-mini pointer | NONE (by `CR-2026.11.12-R1`; not modified) |\n| GitHub writes performed | NO |\n| GitHub push performed | NO |\n| Repository issue/freeze | `NOT_ISSUED` / `NO_REMOTE_FREEZE` |\n| Last update | `2026-11-14T00:08:53+11:00` (G0009 chat-local appended after official earliest start; actual first serve unverified) |\n<!-- END FOOTER -->\n"
+    },
+    {
+      "check": "Exactly nine intake rows",
+      "passed": true,
+      "detail": {
+        "INTAKE-0001": 1,
+        "INTAKE-0002": 1,
+        "INTAKE-0003": 1,
+        "INTAKE-0004": 1,
+        "INTAKE-0005": 1,
+        "INTAKE-0006": 1,
+        "INTAKE-0007": 1,
+        "INTAKE-0008": 1,
+        "INTAKE-0009": 1
+      }
+    },
+    {
+      "check": "Exactly nine queue rows",
+      "passed": true,
+      "detail": {
+        "Q-0001": 1,
+        "Q-0002": 1,
+        "Q-0003": 1,
+        "Q-0004": 1,
+        "Q-0005": 1,
+        "Q-0006": 1,
+        "Q-0007": 1,
+        "Q-0008": 1,
+        "Q-0009": 1
+      }
+    },
+    {
+      "check": "Intake table Markdown continuity",
+      "passed": false,
+      "detail": "Malformed mid-table stray heading/row: # NEW LOCAL EVENT CARDS`; no official forecast issue/freeze |"
+    },
+    {
+      "check": "Authority status explicitly unissued",
+      "passed": true,
+      "detail": "local chat-draft authority stated; not a remote verification"
+    },
+    {
+      "check": "Earlier card cores unchanged across six snapshots",
+      "passed": true,
+      "detail": {
+        "G0003": {
+          "file": "PREDICTION_MINI_RUNNING_LOG_20261112CC53B5C806_BEFORE_G0004.md",
+          "cards_in_snapshot": 3,
+          "prior_core_changed_in_current": [],
+          "sha256": "88f2e962696f963672800e4500459b4414c5b06f55927e39d0429828e720a447"
+        },
+        "G0004": {
+          "file": "PREDICTION_MINI_RUNNING_LOG_20261112CC53B5C806_BEFORE_G0005.md",
+          "cards_in_snapshot": 4,
+          "prior_core_changed_in_current": [],
+          "sha256": "aebac6b30385a89811692baf3266c096099cbe4c469337d129691c4f02744906"
+        },
+        "G0005": {
+          "file": "PREDICTION_MINI_RUNNING_LOG_20261112CC53B5C806_BEFORE_G0006.md",
+          "cards_in_snapshot": 5,
+          "prior_core_changed_in_current": [],
+          "sha256": "8af4fc4ccdb893a8c3c9c384b2148698065b5a18bc429cf1ab7636506ce684aa"
+        },
+        "G0006": {
+          "file": "PREDICTION_MINI_RUNNING_LOG_20261112CC53B5C806_BEFORE_G0007.md",
+          "cards_in_snapshot": 6,
+          "prior_core_changed_in_current": [],
+          "sha256": "3ab4974f0497229d141a4a056bc80095273c4e747a17c48016a4c01ae59d879f"
+        },
+        "G0007": {
+          "file": "PREDICTION_MINI_RUNNING_LOG_20261112CC53B5C806_BEFORE_G0008.md",
+          "cards_in_snapshot": 7,
+          "prior_core_changed_in_current": [],
+          "sha256": "131470bd299f0d2ff0b94f98cde4747e59e8331ad0e60ecad636b802d98b5553"
+        },
+        "G0008": {
+          "file": "PREDICTION_MINI_RUNNING_LOG_20261112CC53B5C806_BEFORE_G0009.md",
+          "cards_in_snapshot": 8,
+          "prior_core_changed_in_current": [],
+          "sha256": "2dc5090b975d66e8cfc0551f0deff3a4c9fad7fd77be9f4b587795f37d2ea0b3"
+        },
+        "G0009": {
+          "file": "PREDICTION_MINI_RUNNING_LOG_20261112CC53B5C806.md",
+          "cards_in_snapshot": 9,
+          "prior_core_changed_in_current": [],
+          "sha256": "9da07f291fe663b9a5c41792613c0419fa0820081a6912c6564b9de7ae4ac5b5"
+        }
+      }
+    },
+    {
+      "check": "All existing append receipt SHA links align with available snapshots",
+      "passed": true,
+      "detail": {
+        "G0001": {
+          "file": "SVRCINA_VIRTANEN_MINI_APPEND_RECEIPT.json",
+          "status": "PRESENT",
+          "pre_sha_matches_available_snapshot": true,
+          "post_sha_matches_available_snapshot": true,
+          "chain_verified": true,
+          "receipt_pre_sha": "852c3a4b97d0d3b4e61b4ca22db6b982617070da0c637b46dfd6a38275b9ae0b",
+          "receipt_post_sha": "66010eae0a8b00a50a75624b1baa7c656240958525165d0a1edb22db79423d4b"
+        },
+        "G0002": {
+          "file": null,
+          "status": "MISSING_STANDALONE_RECEIPT",
+          "chain_verified": null
+        },
+        "G0003": {
+          "file": "TIRANTE_SHEVCHENKO_MINI_APPEND_RECEIPT_G0003.json",
+          "status": "PRESENT",
+          "pre_sha_matches_available_snapshot": true,
+          "post_sha_matches_available_snapshot": true,
+          "chain_verified": true,
+          "receipt_pre_sha": "43a3a9cbf0f18bee1711b835da80d205c933535484b9fd4f7920455e2f3b3672",
+          "receipt_post_sha": "88f2e962696f963672800e4500459b4414c5b06f55927e39d0429828e720a447"
+        },
+        "G0004": {
+          "file": "WNBL_G0004_MINI_APPEND_RECEIPT.json",
+          "status": "PRESENT",
+          "pre_sha_matches_available_snapshot": true,
+          "post_sha_matches_available_snapshot": true,
+          "chain_verified": true,
+          "receipt_pre_sha": "88f2e962696f963672800e4500459b4414c5b06f55927e39d0429828e720a447",
+          "receipt_post_sha": "aebac6b30385a89811692baf3266c096099cbe4c469337d129691c4f02744906"
+        },
+        "G0005": {
+          "file": "KBL_G0005_MINI_APPEND_RECEIPT.json",
+          "status": "PRESENT",
+          "pre_sha_matches_available_snapshot": true,
+          "post_sha_matches_available_snapshot": true,
+          "chain_verified": true,
+          "receipt_pre_sha": "aebac6b30385a89811692baf3266c096099cbe4c469337d129691c4f02744906",
+          "receipt_post_sha": "8af4fc4ccdb893a8c3c9c384b2148698065b5a18bc429cf1ab7636506ce684aa"
+        },
+        "G0006": {
+          "file": "BPREMIER_G0006_MINI_APPEND_RECEIPT.json",
+          "status": "PRESENT",
+          "pre_sha_matches_available_snapshot": true,
+          "post_sha_matches_available_snapshot": true,
+          "chain_verified": true,
+          "receipt_pre_sha": "8af4fc4ccdb893a8c3c9c384b2148698065b5a18bc429cf1ab7636506ce684aa",
+          "receipt_post_sha": "3ab4974f0497229d141a4a056bc80095273c4e747a17c48016a4c01ae59d879f"
+        },
+        "G0007": {
+          "file": "HOCKEY_G0007_MINI_APPEND_RECEIPT.json",
+          "status": "PRESENT",
+          "pre_sha_matches_available_snapshot": true,
+          "post_sha_matches_available_snapshot": true,
+          "chain_verified": true,
+          "receipt_pre_sha": "3ab4974f0497229d141a4a056bc80095273c4e747a17c48016a4c01ae59d879f",
+          "receipt_post_sha": "131470bd299f0d2ff0b94f98cde4747e59e8331ad0e60ecad636b802d98b5553"
+        },
+        "G0008": {
+          "file": "PIROS_ALTMAIER_G0008_MINI_APPEND_RECEIPT.json",
+          "status": "PRESENT",
+          "pre_sha_matches_available_snapshot": true,
+          "post_sha_matches_available_snapshot": true,
+          "chain_verified": true,
+          "receipt_pre_sha": "131470bd299f0d2ff0b94f98cde4747e59e8331ad0e60ecad636b802d98b5553",
+          "receipt_post_sha": "2dc5090b975d66e8cfc0551f0deff3a4c9fad7fd77be9f4b587795f37d2ea0b3"
+        },
+        "G0009": {
+          "file": "TABILO_TIRANTE_G0009_MINI_APPEND_RECEIPT.json",
+          "status": "PRESENT",
+          "pre_sha_matches_available_snapshot": true,
+          "post_sha_matches_available_snapshot": true,
+          "chain_verified": true,
+          "receipt_pre_sha": "2dc5090b975d66e8cfc0551f0deff3a4c9fad7fd77be9f4b587795f37d2ea0b3",
+          "receipt_post_sha": "9da07f291fe663b9a5c41792613c0419fa0820081a6912c6564b9de7ae4ac5b5"
+        }
+      }
+    },
+    {
+      "check": "Standalone append receipt available for each of nine cards",
+      "passed": false,
+      "detail": {
+        "G0001": {
+          "file": "SVRCINA_VIRTANEN_MINI_APPEND_RECEIPT.json",
+          "status": "PRESENT",
+          "pre_sha_matches_available_snapshot": true,
+          "post_sha_matches_available_snapshot": true,
+          "chain_verified": true,
+          "receipt_pre_sha": "852c3a4b97d0d3b4e61b4ca22db6b982617070da0c637b46dfd6a38275b9ae0b",
+          "receipt_post_sha": "66010eae0a8b00a50a75624b1baa7c656240958525165d0a1edb22db79423d4b"
+        },
+        "G0002": {
+          "file": null,
+          "status": "MISSING_STANDALONE_RECEIPT",
+          "chain_verified": null
+        },
+        "G0003": {
+          "file": "TIRANTE_SHEVCHENKO_MINI_APPEND_RECEIPT_G0003.json",
+          "status": "PRESENT",
+          "pre_sha_matches_available_snapshot": true,
+          "post_sha_matches_available_snapshot": true,
+          "chain_verified": true,
+          "receipt_pre_sha": "43a3a9cbf0f18bee1711b835da80d205c933535484b9fd4f7920455e2f3b3672",
+          "receipt_post_sha": "88f2e962696f963672800e4500459b4414c5b06f55927e39d0429828e720a447"
+        },
+        "G0004": {
+          "file": "WNBL_G0004_MINI_APPEND_RECEIPT.json",
+          "status": "PRESENT",
+          "pre_sha_matches_available_snapshot": true,
+          "post_sha_matches_available_snapshot": true,
+          "chain_verified": true,
+          "receipt_pre_sha": "88f2e962696f963672800e4500459b4414c5b06f55927e39d0429828e720a447",
+          "receipt_post_sha": "aebac6b30385a89811692baf3266c096099cbe4c469337d129691c4f02744906"
+        },
+        "G0005": {
+          "file": "KBL_G0005_MINI_APPEND_RECEIPT.json",
+          "status": "PRESENT",
+          "pre_sha_matches_available_snapshot": true,
+          "post_sha_matches_available_snapshot": true,
+          "chain_verified": true,
+          "receipt_pre_sha": "aebac6b30385a89811692baf3266c096099cbe4c469337d129691c4f02744906",
+          "receipt_post_sha": "8af4fc4ccdb893a8c3c9c384b2148698065b5a18bc429cf1ab7636506ce684aa"
+        },
+        "G0006": {
+          "file": "BPREMIER_G0006_MINI_APPEND_RECEIPT.json",
+          "status": "PRESENT",
+          "pre_sha_matches_available_snapshot": true,
+          "post_sha_matches_available_snapshot": true,
+          "chain_verified": true,
+          "receipt_pre_sha": "8af4fc4ccdb893a8c3c9c384b2148698065b5a18bc429cf1ab7636506ce684aa",
+          "receipt_post_sha": "3ab4974f0497229d141a4a056bc80095273c4e747a17c48016a4c01ae59d879f"
+        },
+        "G0007": {
+          "file": "HOCKEY_G0007_MINI_APPEND_RECEIPT.json",
+          "status": "PRESENT",
+          "pre_sha_matches_available_snapshot": true,
+          "post_sha_matches_available_snapshot": true,
+          "chain_verified": true,
+          "receipt_pre_sha": "3ab4974f0497229d141a4a056bc80095273c4e747a17c48016a4c01ae59d879f",
+          "receipt_post_sha": "131470bd299f0d2ff0b94f98cde4747e59e8331ad0e60ecad636b802d98b5553"
+        },
+        "G0008": {
+          "file": "PIROS_ALTMAIER_G0008_MINI_APPEND_RECEIPT.json",
+          "status": "PRESENT",
+          "pre_sha_matches_available_snapshot": true,
+          "post_sha_matches_available_snapshot": true,
+          "chain_verified": true,
+          "receipt_pre_sha": "131470bd299f0d2ff0b94f98cde4747e59e8331ad0e60ecad636b802d98b5553",
+          "receipt_post_sha": "2dc5090b975d66e8cfc0551f0deff3a4c9fad7fd77be9f4b587795f37d2ea0b3"
+        },
+        "G0009": {
+          "file": "TABILO_TIRANTE_G0009_MINI_APPEND_RECEIPT.json",
+          "status": "PRESENT",
+          "pre_sha_matches_available_snapshot": true,
+          "post_sha_matches_available_snapshot": true,
+          "chain_verified": true,
+          "receipt_pre_sha": "2dc5090b975d66e8cfc0551f0deff3a4c9fad7fd77be9f4b587795f37d2ea0b3",
+          "receipt_post_sha": "9da07f291fe663b9a5c41792613c0419fa0820081a6912c6564b9de7ae4ac5b5"
+        }
+      }
+    },
+    {
+      "check": "Current mini matches G0009 append receipt",
+      "passed": true,
+      "detail": "9da07f291fe663b9a5c41792613c0419fa0820081a6912c6564b9de7ae4ac5b5"
+    },
+    {
+      "check": "9 scripts and 9 JSON results available",
+      "passed": true,
+      "detail": {
+        "G0001": {
+          "script": "tennis_shadow_svrcina_virtanen_20261112.py",
+          "script_present": true,
+          "data": "TENNIS_SHADOW_DIAGNOSTIC_20261112CC53B5C806-G0001.json",
+          "data_present": true,
+          "data_json_valid": true
+        },
+        "G0002": {
+          "script": "hockey_shadow_torpedo_arlan_20261112.py",
+          "script_present": true,
+          "data": "HOCKEY_SHADOW_DIAGNOSTIC_20261112CC53B5C806-G0002.json",
+          "data_present": true,
+          "data_json_valid": true
+        },
+        "G0003": {
+          "script": "tennis_shadow_tirante_shevchenko_20261113.py",
+          "script_present": true,
+          "data": "TENNIS_SHADOW_DIAGNOSTIC_20261112CC53B5C806-G0003.json",
+          "data_present": true,
+          "data_json_valid": true
+        },
+        "G0004": {
+          "script": "wnbl_shadow_geelong_perth_20261113.py",
+          "script_present": true,
+          "data": "WNBL_SHADOW_DIAGNOSTIC_20261112CC53B5C806-G0004.json",
+          "data_present": true,
+          "data_json_valid": true
+        },
+        "G0005": {
+          "script": "kbl_shadow_wonju_suwon_20261113.py",
+          "script_present": true,
+          "data": "KBL_SHADOW_DIAGNOSTIC_20261112CC53B5C806-G0005.json",
+          "data_present": true,
+          "data_json_valid": true
+        },
+        "G0006": {
+          "script": "bpremier_shadow_kawasaki_saga_20261113.py",
+          "script_present": true,
+          "data": "BPREMIER_SHADOW_DIAGNOSTIC_20261112CC53B5C806-G0006.json",
+          "data_present": true,
+          "data_json_valid": true
+        },
+        "G0007": {
+          "script": "hockey_shadow_motor_liberec_20261113.py",
+          "script_present": true,
+          "data": "HOCKEY_SHADOW_DIAGNOSTIC_20261112CC53B5C806-G0007.json",
+          "data_present": true,
+          "data_json_valid": true
+        },
+        "G0008": {
+          "script": "tennis_shadow_piros_altmaier_20261113.py",
+          "script_present": true,
+          "data": "TENNIS_SHADOW_DIAGNOSTIC_20261112CC53B5C806-G0008.json",
+          "data_present": true,
+          "data_json_valid": true
+        },
+        "G0009": {
+          "script": "tennis_shadow_tabilo_tirante_20261114.py",
+          "script_present": true,
+          "data": "TENNIS_SHADOW_DIAGNOSTIC_20261112CC53B5C806-G0009.json",
+          "data_present": true,
+          "data_json_valid": true
+        }
+      }
+    },
+    {
+      "check": "G0001 code/data hashes consistent with append receipt",
+      "passed": true,
+      "detail": {
+        "code_match": true,
+        "data_match": true
+      }
+    },
+    {
+      "check": "G0003 code/data hashes consistent with append receipt",
+      "passed": true,
+      "detail": {
+        "code_match": true,
+        "data_match": true
+      }
+    },
+    {
+      "check": "G0004 code/data hashes consistent with append receipt",
+      "passed": true,
+      "detail": {
+        "code_match": true,
+        "data_match": true
+      }
+    },
+    {
+      "check": "G0007 code/data hashes consistent with append receipt",
+      "passed": true,
+      "detail": {
+        "code_match": true,
+        "data_match": true
+      }
+    },
+    {
+      "check": "G0008 code/data hashes consistent with append receipt",
+      "passed": true,
+      "detail": {
+        "code_match": true,
+        "data_match": true
+      }
+    },
+    {
+      "check": "G0009 code/data hashes consistent with append receipt",
+      "passed": true,
+      "detail": {
+        "code_match": true,
+        "data_match": true
+      }
+    }
+  ],
+  "receipts": {
+    "G0001": {
+      "file": "SVRCINA_VIRTANEN_MINI_APPEND_RECEIPT.json",
+      "status": "PRESENT",
+      "pre_sha_matches_available_snapshot": true,
+      "post_sha_matches_available_snapshot": true,
+      "chain_verified": true,
+      "receipt_pre_sha": "852c3a4b97d0d3b4e61b4ca22db6b982617070da0c637b46dfd6a38275b9ae0b",
+      "receipt_post_sha": "66010eae0a8b00a50a75624b1baa7c656240958525165d0a1edb22db79423d4b"
+    },
+    "G0002": {
+      "file": null,
+      "status": "MISSING_STANDALONE_RECEIPT",
+      "chain_verified": null
+    },
+    "G0003": {
+      "file": "TIRANTE_SHEVCHENKO_MINI_APPEND_RECEIPT_G0003.json",
+      "status": "PRESENT",
+      "pre_sha_matches_available_snapshot": true,
+      "post_sha_matches_available_snapshot": true,
+      "chain_verified": true,
+      "receipt_pre_sha": "43a3a9cbf0f18bee1711b835da80d205c933535484b9fd4f7920455e2f3b3672",
+      "receipt_post_sha": "88f2e962696f963672800e4500459b4414c5b06f55927e39d0429828e720a447"
+    },
+    "G0004": {
+      "file": "WNBL_G0004_MINI_APPEND_RECEIPT.json",
+      "status": "PRESENT",
+      "pre_sha_matches_available_snapshot": true,
+      "post_sha_matches_available_snapshot": true,
+      "chain_verified": true,
+      "receipt_pre_sha": "88f2e962696f963672800e4500459b4414c5b06f55927e39d0429828e720a447",
+      "receipt_post_sha": "aebac6b30385a89811692baf3266c096099cbe4c469337d129691c4f02744906"
+    },
+    "G0005": {
+      "file": "KBL_G0005_MINI_APPEND_RECEIPT.json",
+      "status": "PRESENT",
+      "pre_sha_matches_available_snapshot": true,
+      "post_sha_matches_available_snapshot": true,
+      "chain_verified": true,
+      "receipt_pre_sha": "aebac6b30385a89811692baf3266c096099cbe4c469337d129691c4f02744906",
+      "receipt_post_sha": "8af4fc4ccdb893a8c3c9c384b2148698065b5a18bc429cf1ab7636506ce684aa"
+    },
+    "G0006": {
+      "file": "BPREMIER_G0006_MINI_APPEND_RECEIPT.json",
+      "status": "PRESENT",
+      "pre_sha_matches_available_snapshot": true,
+      "post_sha_matches_available_snapshot": true,
+      "chain_verified": true,
+      "receipt_pre_sha": "8af4fc4ccdb893a8c3c9c384b2148698065b5a18bc429cf1ab7636506ce684aa",
+      "receipt_post_sha": "3ab4974f0497229d141a4a056bc80095273c4e747a17c48016a4c01ae59d879f"
+    },
+    "G0007": {
+      "file": "HOCKEY_G0007_MINI_APPEND_RECEIPT.json",
+      "status": "PRESENT",
+      "pre_sha_matches_available_snapshot": true,
+      "post_sha_matches_available_snapshot": true,
+      "chain_verified": true,
+      "receipt_pre_sha": "3ab4974f0497229d141a4a056bc80095273c4e747a17c48016a4c01ae59d879f",
+      "receipt_post_sha": "131470bd299f0d2ff0b94f98cde4747e59e8331ad0e60ecad636b802d98b5553"
+    },
+    "G0008": {
+      "file": "PIROS_ALTMAIER_G0008_MINI_APPEND_RECEIPT.json",
+      "status": "PRESENT",
+      "pre_sha_matches_available_snapshot": true,
+      "post_sha_matches_available_snapshot": true,
+      "chain_verified": true,
+      "receipt_pre_sha": "131470bd299f0d2ff0b94f98cde4747e59e8331ad0e60ecad636b802d98b5553",
+      "receipt_post_sha": "2dc5090b975d66e8cfc0551f0deff3a4c9fad7fd77be9f4b587795f37d2ea0b3"
+    },
+    "G0009": {
+      "file": "TABILO_TIRANTE_G0009_MINI_APPEND_RECEIPT.json",
+      "status": "PRESENT",
+      "pre_sha_matches_available_snapshot": true,
+      "post_sha_matches_available_snapshot": true,
+      "chain_verified": true,
+      "receipt_pre_sha": "2dc5090b975d66e8cfc0551f0deff3a4c9fad7fd77be9f4b587795f37d2ea0b3",
+      "receipt_post_sha": "9da07f291fe663b9a5c41792613c0419fa0820081a6912c6564b9de7ae4ac5b5"
+    }
+  },
+  "snapshots": {
+    "G0003": {
+      "file": "PREDICTION_MINI_RUNNING_LOG_20261112CC53B5C806_BEFORE_G0004.md",
+      "cards_in_snapshot": 3,
+      "prior_core_changed_in_current": [],
+      "sha256": "88f2e962696f963672800e4500459b4414c5b06f55927e39d0429828e720a447"
+    },
+    "G0004": {
+      "file": "PREDICTION_MINI_RUNNING_LOG_20261112CC53B5C806_BEFORE_G0005.md",
+      "cards_in_snapshot": 4,
+      "prior_core_changed_in_current": [],
+      "sha256": "aebac6b30385a89811692baf3266c096099cbe4c469337d129691c4f02744906"
+    },
+    "G0005": {
+      "file": "PREDICTION_MINI_RUNNING_LOG_20261112CC53B5C806_BEFORE_G0006.md",
+      "cards_in_snapshot": 5,
+      "prior_core_changed_in_current": [],
+      "sha256": "8af4fc4ccdb893a8c3c9c384b2148698065b5a18bc429cf1ab7636506ce684aa"
+    },
+    "G0006": {
+      "file": "PREDICTION_MINI_RUNNING_LOG_20261112CC53B5C806_BEFORE_G0007.md",
+      "cards_in_snapshot": 6,
+      "prior_core_changed_in_current": [],
+      "sha256": "3ab4974f0497229d141a4a056bc80095273c4e747a17c48016a4c01ae59d879f"
+    },
+    "G0007": {
+      "file": "PREDICTION_MINI_RUNNING_LOG_20261112CC53B5C806_BEFORE_G0008.md",
+      "cards_in_snapshot": 7,
+      "prior_core_changed_in_current": [],
+      "sha256": "131470bd299f0d2ff0b94f98cde4747e59e8331ad0e60ecad636b802d98b5553"
+    },
+    "G0008": {
+      "file": "PREDICTION_MINI_RUNNING_LOG_20261112CC53B5C806_BEFORE_G0009.md",
+      "cards_in_snapshot": 8,
+      "prior_core_changed_in_current": [],
+      "sha256": "2dc5090b975d66e8cfc0551f0deff3a4c9fad7fd77be9f4b587795f37d2ea0b3"
+    },
+    "G0009": {
+      "file": "PREDICTION_MINI_RUNNING_LOG_20261112CC53B5C806.md",
+      "cards_in_snapshot": 9,
+      "prior_core_changed_in_current": [],
+      "sha256": "9da07f291fe663b9a5c41792613c0419fa0820081a6912c6564b9de7ae4ac5b5"
+    }
+  },
+  "models": {
+    "G0001": {
+      "script": "tennis_shadow_svrcina_virtanen_20261112.py",
+      "script_present": true,
+      "data": "TENNIS_SHADOW_DIAGNOSTIC_20261112CC53B5C806-G0001.json",
+      "data_present": true,
+      "data_json_valid": true
+    },
+    "G0002": {
+      "script": "hockey_shadow_torpedo_arlan_20261112.py",
+      "script_present": true,
+      "data": "HOCKEY_SHADOW_DIAGNOSTIC_20261112CC53B5C806-G0002.json",
+      "data_present": true,
+      "data_json_valid": true
+    },
+    "G0003": {
+      "script": "tennis_shadow_tirante_shevchenko_20261113.py",
+      "script_present": true,
+      "data": "TENNIS_SHADOW_DIAGNOSTIC_20261112CC53B5C806-G0003.json",
+      "data_present": true,
+      "data_json_valid": true
+    },
+    "G0004": {
+      "script": "wnbl_shadow_geelong_perth_20261113.py",
+      "script_present": true,
+      "data": "WNBL_SHADOW_DIAGNOSTIC_20261112CC53B5C806-G0004.json",
+      "data_present": true,
+      "data_json_valid": true
+    },
+    "G0005": {
+      "script": "kbl_shadow_wonju_suwon_20261113.py",
+      "script_present": true,
+      "data": "KBL_SHADOW_DIAGNOSTIC_20261112CC53B5C806-G0005.json",
+      "data_present": true,
+      "data_json_valid": true
+    },
+    "G0006": {
+      "script": "bpremier_shadow_kawasaki_saga_20261113.py",
+      "script_present": true,
+      "data": "BPREMIER_SHADOW_DIAGNOSTIC_20261112CC53B5C806-G0006.json",
+      "data_present": true,
+      "data_json_valid": true
+    },
+    "G0007": {
+      "script": "hockey_shadow_motor_liberec_20261113.py",
+      "script_present": true,
+      "data": "HOCKEY_SHADOW_DIAGNOSTIC_20261112CC53B5C806-G0007.json",
+      "data_present": true,
+      "data_json_valid": true
+    },
+    "G0008": {
+      "script": "tennis_shadow_piros_altmaier_20261113.py",
+      "script_present": true,
+      "data": "TENNIS_SHADOW_DIAGNOSTIC_20261112CC53B5C806-G0008.json",
+      "data_present": true,
+      "data_json_valid": true
+    },
+    "G0009": {
+      "script": "tennis_shadow_tabilo_tirante_20261114.py",
+      "script_present": true,
+      "data": "TENNIS_SHADOW_DIAGNOSTIC_20261112CC53B5C806-G0009.json",
+      "data_present": true,
+      "data_json_valid": true
+    }
+  },
+  "known_limitations": [
+    "G0002 has no separate append receipt in the available files (although the card and simulation artifacts are present).",
+    "The request-intake Markdown table contains a stray malformed heading/row near original line 81, splitting the table. The unmodified original is retained; this package does not correct the source.",
+    "The mini is CHAT_LOCAL_DRAFT / NOT_ISSUED: no repository issue/freeze, canonical P-ID or settlement; numeric diagnostics are not calibrated primary probabilities.",
+    "Actual pre-start timing and some injury/lineup/medical/source-known-at fields are unresolved in multiple cards. Pre-audit should check those card-specific gaps.",
+    "Repository-side HEAD, remote state and code execution environment are not reproduced by this archive; source scripts and stored results are included but not rerun."
+  ],
+  "original_files_count": 41,
+  "source_files": [
+    "BPREMIER_G0006_MINI_APPEND_RECEIPT.json",
+    "BPREMIER_SHADOW_DIAGNOSTIC_20261112CC53B5C806-G0006.json",
+    "G0004_GEELONG_PERTH_CARD_DRAFT.md",
+    "G0005_WONJU_SUWON_CARD_DRAFT.md",
+    "G0006_KAWASAKI_SAGA_CARD_DRAFT.md",
+    "G0007_MOTOR_LIBEREC_CARD_DRAFT.md",
+    "G0008_PIROS_ALTMAIER_CARD_DRAFT.md",
+    "G0009_TABILO_TIRANTE_CARD_DRAFT.md",
+    "HOCKEY_FORM_EVIDENCE_20261112CC53B5C806-G0002.json",
+    "HOCKEY_G0007_MINI_APPEND_RECEIPT.json",
+    "HOCKEY_SHADOW_DIAGNOSTIC_20261112CC53B5C806-G0002.json",
+    "HOCKEY_SHADOW_DIAGNOSTIC_20261112CC53B5C806-G0007.json",
+    "KBL_G0005_MINI_APPEND_RECEIPT.json",
+    "KBL_SHADOW_DIAGNOSTIC_20261112CC53B5C806-G0005.json",
+    "PIROS_ALTMAIER_G0008_MINI_APPEND_RECEIPT.json",
+    "PREDICTION_MINI_RUNNING_LOG_20261112CC53B5C806.md",
+    "PREDICTION_MINI_RUNNING_LOG_20261112CC53B5C806_BEFORE_G0004.md",
+    "PREDICTION_MINI_RUNNING_LOG_20261112CC53B5C806_BEFORE_G0005.md",
+    "PREDICTION_MINI_RUNNING_LOG_20261112CC53B5C806_BEFORE_G0006.md",
+    "PREDICTION_MINI_RUNNING_LOG_20261112CC53B5C806_BEFORE_G0007.md",
+    "PREDICTION_MINI_RUNNING_LOG_20261112CC53B5C806_BEFORE_G0008.md",
+    "PREDICTION_MINI_RUNNING_LOG_20261112CC53B5C806_BEFORE_G0009.md",
+    "PREDICTION_MINI_RUNNING_LOG_20261112CC53B5C806_INITIAL_SNAPSHOT.md",
+    "SVRCINA_VIRTANEN_MINI_APPEND_RECEIPT.json",
+    "TABILO_TIRANTE_G0009_MINI_APPEND_RECEIPT.json",
+    "TENNIS_SHADOW_DIAGNOSTIC_20261112CC53B5C806-G0001.json",
+    "TENNIS_SHADOW_DIAGNOSTIC_20261112CC53B5C806-G0003.json",
+    "TENNIS_SHADOW_DIAGNOSTIC_20261112CC53B5C806-G0008.json",
+    "TENNIS_SHADOW_DIAGNOSTIC_20261112CC53B5C806-G0009.json",
+    "TIRANTE_SHEVCHENKO_MINI_APPEND_RECEIPT_G0003.json",
+    "WNBL_G0004_MINI_APPEND_RECEIPT.json",
+    "WNBL_SHADOW_DIAGNOSTIC_20261112CC53B5C806-G0004.json",
+    "bpremier_shadow_kawasaki_saga_20261113.py",
+    "hockey_shadow_motor_liberec_20261113.py",
+    "hockey_shadow_torpedo_arlan_20261112.py",
+    "kbl_shadow_wonju_suwon_20261113.py",
+    "tennis_shadow_piros_altmaier_20261113.py",
+    "tennis_shadow_svrcina_virtanen_20261112.py",
+    "tennis_shadow_tabilo_tirante_20261114.py",
+    "tennis_shadow_tirante_shevchenko_20261113.py",
+    "wnbl_shadow_geelong_perth_20261113.py"
+  ]
+}

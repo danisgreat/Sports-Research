@@ -1,0 +1,14 @@
+{
+  "path": "/mnt/data/PREDICTION_MINI_RUNNING_LOG_20261112CC53B5C806.md",
+  "bytes": 33524,
+  "sha256": "66010eae0a8b00a50a75624b1baa7c656240958525165d0a1edb22db79423d4b",
+  "previous_sha256": "852c3a4b97d0d3b4e61b4ca22db6b982617070da0c637b46dfd6a38275b9ae0b",
+  "card": "LOCAL-20261112CC53B5C806-G0001",
+  "next_card": "LOCAL-20261112CC53B5C806-G0002",
+  "timestamp": "2026-11-12T23:55:32+11:00",
+  "executed_paths": 750000,
+  "research_status": "UNCALIBRATED_QUALITATIVE",
+  "model_shadow_json_sha256": "c23673d09eef9fbd9f1a0061efb9af0084aa3abdf5a612eab119d2cb82d62ec4",
+  "model_shadow_script_sha256": "cfe13547f6ba81cc1b55f27ccccb08c50ec34715266d7337a41c4e40abe8fc36",
+  "github_writes": "NONE"
+}

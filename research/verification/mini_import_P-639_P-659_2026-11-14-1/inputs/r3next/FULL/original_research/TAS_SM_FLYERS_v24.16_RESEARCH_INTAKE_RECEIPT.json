@@ -1,0 +1,13 @@
+{
+  "repository_head_read_only": "bb32393ba7163c5cfdae2332da9bb9db352ffd98",
+  "method": "v24.16",
+  "local_compilation_time": "2026-11-12T19:00:37+11:00",
+  "draft_id": "RESEARCH-DRAFT-10",
+  "status": "READ_ONLY_RESEARCH_ONLY_NOT_ISSUED_UNSETTLED",
+  "original_mini_sha256": "c2ef357192f3680bfa4389ace6709fc716dd69819b64fb42f4ff647b6be3446f",
+  "updated_mini_sha256": "c78272f2941288bafd9c4cd5f5293d6fa920f73d352bbc108414177bade0b793",
+  "draft_sha256": "99b3e6539a59f0934990cb9382305c8a3cd5224ab78bb757756f6cbd5b863412",
+  "original_footer_preserved": true,
+  "official_cards_added": 0,
+  "settled_contracts": 0
+}

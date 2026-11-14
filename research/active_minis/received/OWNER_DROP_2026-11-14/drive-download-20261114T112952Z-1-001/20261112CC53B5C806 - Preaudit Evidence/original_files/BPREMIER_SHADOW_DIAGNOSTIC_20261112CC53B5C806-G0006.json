@@ -1,0 +1,130 @@
+{
+  "identity": {
+    "local_key": "LOCAL-20261112CC53B5C806-G0006",
+    "game": "Kawasaki Brave Thunders vs Saga Ballooners",
+    "native_schedule_key": "506581",
+    "date": "2026-11-13",
+    "league": "2026-27 B.LEAGUE PREMIER"
+  },
+  "version": "shadow-research-v1",
+  "status": "UNVALIDATED_CONDITIONAL_DIAGNOSTIC_NOT_PRIMARY",
+  "seed": 20261113506,
+  "source_inputs": {
+    "kawasaki_record": "4-12",
+    "saga_record": "1-13",
+    "K_points_for_season": 1256,
+    "K_points_against_season": 1355,
+    "K_games": 16,
+    "S_points_for_season": 1095,
+    "S_points_against_season": 1333,
+    "S_games": 14,
+    "cross_means_before_shrink": {
+      "home": 86.85714285714286,
+      "away": 81.45089285714286,
+      "total": 168.30803571428572,
+      "margin": 5.40625
+    },
+    "src_k": "https://www.bleague.jp/en/club_detail/?TeamID=727&tab=2",
+    "src_s": "https://www.bleague.jp/club_detail/?TeamID=1638",
+    "src_teams": "https://www.bleague.jp/game_detail/?ScheduleKey=506581"
+  },
+  "method": "Three predetermined uncalibrated regulation total/margin independent Gaussian scenarios with 40-min game, independent margins/total, integer team score rounding; explicit five-minute OT when tied via discrete scoring branch; no actual possession, referee, shot variance, injury effect fit, covariance fit or verified prestart freeze; scenarios are sensitivity only. The centres are deliberately shrunk toward historical B League FIBA40 context; no validated release. Do not treat sample error as epistemic uncertainty.",
+  "scenarios": [
+    {
+      "name": "low",
+      "weight": 0.25,
+      "n": 300000,
+      "reg_total": 160.0,
+      "reg_margin": 2.5,
+      "sd_total": 18.5,
+      "sd_margin": 15.2
+    },
+    {
+      "name": "base",
+      "weight": 0.5,
+      "n": 600000,
+      "reg_total": 164.0,
+      "reg_margin": 4.9,
+      "sd_total": 18.5,
+      "sd_margin": 15.2
+    },
+    {
+      "name": "high",
+      "weight": 0.25,
+      "n": 300000,
+      "reg_total": 174.0,
+      "reg_margin": 7.4,
+      "sd_total": 18.5,
+      "sd_margin": 15.2
+    }
+  ],
+  "per_scenario": {
+    "low": {
+      "games": 300000,
+      "mean_kawasaki": 81.4622,
+      "mean_saga": 79.0027,
+      "mean_total": 160.4649,
+      "mean_margin": 2.4595,
+      "reg_tie_OT_rate": 0.02617,
+      "kawasaki_winner": 0.565027,
+      "kawasaki_minus9_5": 0.321317,
+      "saga_plus9_5": 0.678683,
+      "over169_5": 0.31323,
+      "under169_5": 0.68677,
+      "both_saga_cushion_and_under": 0.46357,
+      "joint_failure_saga_cushion_and_under": 0.098117
+    },
+    "base": {
+      "games": 600000,
+      "mean_kawasaki": 84.6577,
+      "mean_saga": 79.7923,
+      "mean_total": 164.45,
+      "mean_margin": 4.8654,
+      "reg_tie_OT_rate": 0.02485,
+      "kawasaki_winner": 0.624887,
+      "kawasaki_minus9_5": 0.380087,
+      "saga_plus9_5": 0.619913,
+      "over169_5": 0.391267,
+      "under169_5": 0.608733,
+      "both_saga_cushion_and_under": 0.374202,
+      "joint_failure_saga_cushion_and_under": 0.145555
+    },
+    "high": {
+      "games": 300000,
+      "mean_kawasaki": 90.9068,
+      "mean_saga": 83.5122,
+      "mean_total": 174.419,
+      "mean_margin": 7.3946,
+      "reg_tie_OT_rate": 0.02336,
+      "kawasaki_winner": 0.686573,
+      "kawasaki_minus9_5": 0.444573,
+      "saga_plus9_5": 0.555427,
+      "over169_5": 0.60297,
+      "under169_5": 0.39703,
+      "both_saga_cushion_and_under": 0.21764,
+      "joint_failure_saga_cushion_and_under": 0.265183
+    }
+  },
+  "aggregate": {
+    "games": 1200000,
+    "mean_kawasaki": 85.421114,
+    "mean_saga": 80.52489,
+    "mean_total": 165.946004,
+    "mean_margin": 4.896224,
+    "p_kawasaki_win": 0.625343,
+    "p_saga_win": 0.374657,
+    "p_k_minus9_5": 0.381516,
+    "p_s_plus9_5": 0.618484,
+    "p_under169_5": 0.575317,
+    "p_over169_5": 0.424683,
+    "joint_saga_plus_and_under": 0.357403,
+    "joint_both_fail": 0.163603,
+    "OT_rate": 0.024807
+  },
+  "endpoint": "Full match including all OT, as rules framework BK-OT-1; ±9.5 spread and 169.5 total no pushes",
+  "integrity": {
+    "all_mass_pairs_complement": true,
+    "winner_not_tied": true,
+    "scenarios_sum_n": 1200000
+  }
+}

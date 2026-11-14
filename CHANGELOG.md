@@ -1,5 +1,9 @@
 # Australian rules request format and finals extra time — MDS/P v24.12 / CR-2026.11.10-R2 / P-2026.11.10-v24.10, 10 November 2026
 
+## 14 November 2026 - CR-2026.11.14-R1 (records only)
+
+Owner instruction: audit every file in the owner drop, assign canonical IDs to each game in chronological order, run prompts 3 (settle), 4 (import) and 5 (next combined log) in order. Owner decisions: one ID per game; proceed without the missing D3C239297F final mini; write in the Projects clone. Results: P-639–P-659 imported to Part 9 (90 records, 113/113 exact readback), Part 9 closed, Part 10 opened. Every record is chat-local and NOT_ISSUED (zero primary rows). Audit findings, the disclosed session breach (hcmotor.cz opened before the audit) and proposals: [AUDIT_REPORT](research/verification/mini_import_P-639_P-659_2026-11-14-1/AUDIT_REPORT.md). Repair: `-text` for `archive/retired_active_minis_2026-11-12/**` (RELOC-v1 hashes failed on autocrlf clones). Test scope: the empty-unresolved-queue assertions in `test_card_history_imports.py` and `test_relocation.py` now apply to P-001–P-638 and pins the only later unresolved rows to P-647's three corner rows. No method, prompt, model, probability or earlier grade changes.
+
 ## 12 November 2026 - CR-2026.11.12-R1 (records only)
 
 Owner instruction: remove the active mini logs from the repository so that each research chat keeps its own mini. All ten files under `research/active_minis/` move unchanged (git renames) to `archive/retired_active_minis_2026-11-12/research/active_minis/`; every one was already settled and imported or held no cards. CURRENT_STATE's active-mini pointer is NONE and the generated state block is rebuilt. No method, prompt, profile, kit, model, probability, grade or canonical ID changes.

@@ -1,0 +1,172 @@
+{
+  "type": "LOCAL_RESEARCH_UNCALIBRATED_SHADOW",
+  "event": "2026-11-13 19:00 AEDT, WNBL Geelong Venom v Perth Lynx",
+  "seed": 202611131849,
+  "n": 1200000,
+  "scenario_weights": [
+    0.25,
+    0.5,
+    0.25
+  ],
+  "sources": {
+    "official_fixtures": "https://www.wnbl.com.au/news/how-to-watch-geelong-v-perth",
+    "season_scores": [
+      "https://schedule.nbl.com.au/wnbl",
+      "https://www.wnbl.com.au/news/lynx-hold-strong-to-overcome-spirit",
+      "https://www.sofascore.com/basketball/match/perth-lynx-adelaide-lightning/RQYsiRY"
+    ]
+  },
+  "historic_inputs": {
+    "geelong_for": [
+      90,
+      74,
+      68,
+      77,
+      67
+    ],
+    "geelong_against": [
+      103,
+      69,
+      77,
+      70,
+      80
+    ],
+    "perth_for": [
+      86,
+      90,
+      86,
+      94
+    ],
+    "perth_against": [
+      83,
+      82,
+      99,
+      84
+    ],
+    "geelong_home_totals": [
+      143,
+      145,
+      147
+    ],
+    "perth_away_totals": [
+      172,
+      185
+    ]
+  },
+  "reference": {
+    "family_prior": "BASKETBALL_FIBA40",
+    "prior_mean_total": 166.65,
+    "prior_total_sd": 17.93,
+    "prior_margin_sd": 13.97,
+    "no_WNBL_row": true
+  },
+  "assumptions": [
+    "Results are unvalidated conditional probabilities and NOT official p_card.",
+    "Independent regulation total and margin normal draws with integer score rounding; covariance not fitted.",
+    "Small-sample league scores control centre, no teammate-minute-usage model.",
+    "Overtime branch: regulation tie after rounding triggers 5-min Poisson additions to each team, repeated until no tie.",
+    "No released reference receipt, prospective evaluation, calibration or freeze was executed.",
+    "Model does not use current/future score, live scores or any betting prices."
+  ],
+  "scenarios": [
+    {
+      "name": "low_geelong_control",
+      "scenario_weight": 0.25,
+      "n": 300000,
+      "inputs": {
+        "mu_regulation_total_before_ot_offset": 154.45,
+        "mu_final_target_total": 155.0,
+        "mu_perth_minus_geelong": 0.0,
+        "sd_total": 19.723000000000003,
+        "sd_margin": 15.367000000000003,
+        "assumed_corr_total_margin": 0.0
+      },
+      "simulated": {
+        "geelong_plus_6_5": 0.6612166666666667,
+        "perth_minus_6_5": 0.3387833333333333,
+        "over_163_5": 0.33476333333333336,
+        "under_163_5": 0.6652366666666667,
+        "geelong_wins": 0.49927,
+        "perth_wins": 0.50073,
+        "average_geelong_pts": 77.53134,
+        "average_perth_pts": 77.57139,
+        "average_total": 155.10273,
+        "average_perth_margin": 0.04005,
+        "ot_frequency": 0.02643,
+        "joint_failure_geelong_cushion_and_over": 0.22815666666666667,
+        "joint_failure_geelong_cushion_and_under": 0.11062666666666666
+      }
+    },
+    {
+      "name": "base_attack_defence",
+      "scenario_weight": 0.5,
+      "n": 600000,
+      "inputs": {
+        "mu_regulation_total_before_ot_offset": 164.95,
+        "mu_final_target_total": 165.5,
+        "mu_perth_minus_geelong": 1.81,
+        "sd_total": 19.723000000000003,
+        "sd_margin": 15.367000000000003,
+        "assumed_corr_total_margin": 0.0
+      },
+      "simulated": {
+        "geelong_plus_6_5": 0.6181166666666666,
+        "perth_minus_6_5": 0.38188333333333335,
+        "over_163_5": 0.5375216666666667,
+        "under_163_5": 0.4624783333333333,
+        "geelong_wins": 0.45307,
+        "perth_wins": 0.54693,
+        "average_geelong_pts": 81.83917166666667,
+        "average_perth_pts": 83.64885,
+        "average_total": 165.48802166666667,
+        "average_perth_margin": 1.8096783333333333,
+        "ot_frequency": 0.025785,
+        "joint_failure_geelong_cushion_and_over": 0.17963666666666667,
+        "joint_failure_geelong_cushion_and_under": 0.20224666666666666
+      }
+    },
+    {
+      "name": "high_perth_tempo",
+      "scenario_weight": 0.25,
+      "n": 300000,
+      "inputs": {
+        "mu_regulation_total_before_ot_offset": 175.45,
+        "mu_final_target_total": 176.0,
+        "mu_perth_minus_geelong": 5.5,
+        "sd_total": 19.723000000000003,
+        "sd_margin": 15.367000000000003,
+        "assumed_corr_total_margin": 0.0
+      },
+      "simulated": {
+        "geelong_plus_6_5": 0.5241066666666667,
+        "perth_minus_6_5": 0.47589333333333333,
+        "over_163_5": 0.7334833333333334,
+        "under_163_5": 0.2665166666666667,
+        "geelong_wins": 0.35980666666666666,
+        "perth_wins": 0.6401933333333333,
+        "average_geelong_pts": 85.28506,
+        "average_perth_pts": 90.79625,
+        "average_total": 176.08131,
+        "average_perth_margin": 5.51119,
+        "ot_frequency": 0.024406666666666667,
+        "joint_failure_geelong_cushion_and_over": 0.12867333333333333,
+        "joint_failure_geelong_cushion_and_under": 0.34722
+      }
+    }
+  ],
+  "mixture": {
+    "geelong_plus_6_5": 0.6053891666666666,
+    "perth_minus_6_5": 0.39461083333333336,
+    "over_163_5": 0.5358225,
+    "under_163_5": 0.4641775,
+    "geelong_wins": 0.44130416666666666,
+    "perth_wins": 0.5586958333333334,
+    "average_geelong_pts": 81.62368583333334,
+    "average_perth_pts": 83.916335,
+    "average_total": 165.54002083333333,
+    "average_perth_margin": 2.2926491666666666,
+    "ot_frequency": 0.025601666666666665,
+    "joint_failure_geelong_cushion_and_over": 0.17902583333333333,
+    "joint_failure_geelong_cushion_and_under": 0.215585
+  }
+}

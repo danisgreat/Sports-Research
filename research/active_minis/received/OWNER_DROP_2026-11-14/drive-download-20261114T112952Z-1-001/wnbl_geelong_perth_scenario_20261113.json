@@ -1,0 +1,199 @@
+{
+  "disposition": "UNCALIBRATED_SCENARIO_ONLY_NOT_PRIMARY",
+  "run_time": "2026-11-13T18:55:32+11:00",
+  "seed": 20261113,
+  "n": 600000,
+  "competition": "Australia WNBL 2026-27",
+  "fixture": "Geelong Venom vs Perth Lynx",
+  "scheduled_start_AEDT": "2026-11-13T19:00:00+11:00",
+  "source_sporting_records": {
+    "Geelong": [
+      [
+        "2026-10-15",
+        "Tasmania Jewels",
+        "A",
+        90,
+        103
+      ],
+      [
+        "2026-10-24",
+        "Southside Melbourne Flyers",
+        "H",
+        74,
+        69
+      ],
+      [
+        "2026-10-31",
+        "UC Capitals",
+        "H",
+        68,
+        77
+      ],
+      [
+        "2026-11-02",
+        "Bendigo Spirit",
+        "A",
+        77,
+        70
+      ],
+      [
+        "2026-11-05",
+        "Townsville Fire",
+        "H",
+        67,
+        80
+      ]
+    ],
+    "Perth": [
+      [
+        "2026-10-17",
+        "Townsville Fire",
+        "H",
+        86,
+        83
+      ],
+      [
+        "2026-10-24",
+        "Adelaide Lightning",
+        "A",
+        90,
+        82
+      ],
+      [
+        "2026-11-03",
+        "Townsville Fire",
+        "A",
+        86,
+        99
+      ],
+      [
+        "2026-11-10",
+        "Bendigo Spirit",
+        "H",
+        94,
+        84
+      ]
+    ]
+  },
+  "season_means": {
+    "G_PF": 75.2,
+    "G_PA": 79.8,
+    "P_PF": 89.0,
+    "P_PA": 87.0
+  },
+  "venue_means": {
+    "G_home_PF": 69.66666666666667,
+    "G_home_PA": 75.33333333333333,
+    "P_away_PF": 88.0,
+    "P_away_PA": 90.5
+  },
+  "base_regulation_mean_formula": "0.65*season matchup and 0.35*home-away matchup, both equally opponent-adjusted",
+  "base_regulation_means": {
+    "Geelong": 80.74416666666667,
+    "Perth": 83.44333333333333
+  },
+  "assumptions": {
+    "scenario_weights": [
+      0.25,
+      0.5,
+      0.25
+    ],
+    "total_sd": 20.0,
+    "margin_sd": 16.5,
+    "total_margin_latent_correlation": 0,
+    "team_score_correlation_implied": 0.19003346969133506,
+    "score_rounding": "nearest integer each team",
+    "OT_trigger": "equal regulation scores",
+    "OT_points_team": "Poisson mean 9.5 for each team in each 5-minute OT until untied",
+    "form_gap": "Current WNBL possession/efficiency inputs, stable minute usage and starting fives unavailable; using team PF/PA proxies with widened SD; no fitted model"
+  },
+  "scenarios": {
+    "low": {
+      "weight": 0.25,
+      "n": 150000,
+      "regulation_mean_G_assumed": 75.5,
+      "regulation_mean_P_assumed": 83.0,
+      "proportions": {
+        "geelong_plus_6_5": 0.47290666666666664,
+        "perth_minus_6_5": 0.5270933333333333,
+        "over_163_5": 0.40902,
+        "under_163_5": 0.59098,
+        "geelong_winner": 0.32444666666666666,
+        "perth_winner": 0.6755533333333333,
+        "joint_Gplus_Under_fail": 0.21118
+      },
+      "observed_mean_G": 75.71574666666666,
+      "observed_mean_P": 83.25398,
+      "observed_total_mean": 158.96972666666667,
+      "observed_margin_G_minus_P": -7.538233333333333,
+      "overtime_rate": 0.022,
+      "mean_OT_periods": 0.024373333333333334
+    },
+    "base": {
+      "weight": 0.5,
+      "n": 300000,
+      "regulation_mean_G_assumed": 80.74416666666667,
+      "regulation_mean_P_assumed": 83.44333333333333,
+      "proportions": {
+        "geelong_plus_6_5": 0.5878933333333334,
+        "perth_minus_6_5": 0.4121066666666667,
+        "over_163_5": 0.5224933333333334,
+        "under_163_5": 0.4775066666666667,
+        "geelong_winner": 0.43321,
+        "perth_winner": 0.56679,
+        "joint_Gplus_Under_fail": 0.21246333333333334
+      },
+      "observed_mean_G": 80.9731,
+      "observed_mean_P": 83.72366333333333,
+      "observed_total_mean": 164.69676333333334,
+      "observed_margin_G_minus_P": -2.7505633333333335,
+      "overtime_rate": 0.023463333333333333,
+      "mean_OT_periods": 0.025803333333333334
+    },
+    "high": {
+      "weight": 0.25,
+      "n": 150000,
+      "regulation_mean_G_assumed": 84.0,
+      "regulation_mean_P_assumed": 87.0,
+      "proportions": {
+        "geelong_plus_6_5": 0.58216,
+        "perth_minus_6_5": 0.41784,
+        "over_163_5": 0.6504,
+        "under_163_5": 0.3496,
+        "geelong_winner": 0.4288533333333333,
+        "perth_winner": 0.5711466666666667,
+        "joint_Gplus_Under_fail": 0.26900666666666667
+      },
+      "observed_mean_G": 84.22074,
+      "observed_mean_P": 87.19397333333333,
+      "observed_total_mean": 171.41471333333334,
+      "observed_margin_G_minus_P": -2.9732333333333334,
+      "overtime_rate": 0.0232,
+      "mean_OT_periods": 0.02572
+    }
+  },
+  "mixture_probabilities": {
+    "geelong_plus_6_5": 0.5577133333333333,
+    "perth_minus_6_5": 0.44228666666666666,
+    "over_163_5": 0.5261016666666667,
+    "under_163_5": 0.4738983333333333,
+    "geelong_winner": 0.40493,
+    "perth_winner": 0.59507,
+    "joint_Gplus_Under_fail": 0.22627833333333333
+  },
+  "moment_estimates": {
+    "Geelong_points_mean": 80.47067166666666,
+    "Perth_points_mean": 84.47382,
+    "Geelong_points_sd": 13.467979427102787,
+    "Perth_points_sd": 13.140763598091754,
+    "total_mean": 164.94449166666666,
+    "total_sd": 20.75182764220051,
+    "margin_GminusP_mean": -4.003148333333334,
+    "margin_sd": 16.65814890940759,
+    "overtime_probability": 0.023031666666666666,
+    "regulation_tie_prob": 0.023031666666666666
+  },
+  "sampling_SE_upper_bound": 0.0006454972243679028,
+  "no_market_data": true,
+  "no_repository_model": true
+}

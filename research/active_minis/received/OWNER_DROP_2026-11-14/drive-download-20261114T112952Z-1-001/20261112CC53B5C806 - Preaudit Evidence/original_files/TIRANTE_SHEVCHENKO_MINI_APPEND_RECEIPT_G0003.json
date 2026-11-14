@@ -1,0 +1,23 @@
+{
+  "type": "CHAT_LOCAL_DRAFT_APPEND_READBACK",
+  "mini_key": "20261112CC53B5C806",
+  "event_key": "LOCAL-20261112CC53B5C806-G0003",
+  "timestamp_aedt": "2026-11-13T01:10:58+11:00",
+  "original_sha256": "43a3a9cbf0f18bee1711b835da80d205c933535484b9fd4f7920455e2f3b3672",
+  "new_sha256": "88f2e962696f963672800e4500459b4414c5b06f55927e39d0429828e720a447",
+  "original_bytes": 60814,
+  "new_bytes": 86979,
+  "new_card_sha256": "1a5988bbc8e96dcd277ef52e7c650ae1fb37e93b35ea942716c1dccecfe604e4",
+  "prior_card_bytes_preserved": true,
+  "intake_0003_count": 1,
+  "pending_events": 3,
+  "numeric_primary_cards": 0,
+  "qualitative_cards": 3,
+  "next_local_key": "LOCAL-20261112CC53B5C806-G0004",
+  "model_source_sha256": "68ef67d4f6758d51197e82d3d5b0c31c9863356fe8ec058b9a5bcec570e037a1",
+  "shadow_json_sha256": "249931437875a878cc64f343f24202ee4871b9fea80d13af750048db0747deec",
+  "github_write": false,
+  "repository_issue": false,
+  "canonical_id": "NOT_ASSIGNED",
+  "research_completion": "INFORMATION_INCOMPLETE"
+}

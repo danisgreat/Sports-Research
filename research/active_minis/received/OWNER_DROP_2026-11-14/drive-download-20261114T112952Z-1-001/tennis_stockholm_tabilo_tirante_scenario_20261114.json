@@ -1,0 +1,450 @@
+{
+  "fixture": "Alejandro Tabilo vs Thiago Agustin Tirante, Stockholm ATP 250 SF, 2026-11-13 14:00 CET",
+  "scheduled_start": "2026-11-14T00:00:00+11:00",
+  "status": "ILLUSTRATIVE_NOT_PRIMARY_NOT_ISSUED",
+  "governing_research_mode": "SPORTS_ONLY_MARKET_BLIND",
+  "timing": "RUN_AFTER_SCHEDULE; INPUT_CLEANLINESS_UNVERIFIED; LIVE_SCORE_POSSIBLY_EXPOSED_IN_SEARCH",
+  "method": "exact best of three (game-hold from serve point p; set and tiebreak recursion; two initial service orders; 0.25/0.5/0.25 mixture); independent points and fixed serves within each scenario; uncertainty NOT calibrated",
+  "scenarios": [
+    {
+      "id": "Tabilo_left_hand_rest_advantage",
+      "weight": 0.25,
+      "p_tabilo_serve": 0.681,
+      "p_tirante_serve": 0.653,
+      "parameters": {
+        "hold_tabilo": 0.8765173541114057,
+        "hold_tirante": 0.8345739999245168,
+        "tie_break_win_A_first": 0.547460701507642,
+        "tie_break_win_B_first": 0.547460701507642
+      },
+      "summary": {
+        "tabilo_match_winner": 0.6328466550352823,
+        "tirante_match_winner": 0.36715334496471774,
+        "tabilo_minus_1_5": 0.55288811095077,
+        "tirante_plus_1_5": 0.44711188904923005,
+        "over_24_5": 0.5446353258509946,
+        "under_24_5": 0.4553646741490054,
+        "three_sets": 0.4839719812872817,
+        "E_tabilo_games": 13.641363859018169,
+        "E_tirante_games": 12.459810315062322,
+        "E_total_games": 26.10117417408049,
+        "E_tabilo_margin_games": 1.1815535439558467,
+        "sd_total_games": 6.016984242030556,
+        "sd_margin_games": 3.751307553750783,
+        "joint_failure_tirante_plus_and_over": 0.31079782708669923,
+        "mass": 1.0000000000000002
+      }
+    },
+    {
+      "id": "Base_balanced",
+      "weight": 0.5,
+      "p_tabilo_serve": 0.672,
+      "p_tirante_serve": 0.667,
+      "parameters": {
+        "hold_tabilo": 0.8638397500501837,
+        "hold_tirante": 0.8564669668899512,
+        "tie_break_win_A_first": 0.5085128809547717,
+        "tie_break_win_B_first": 0.5085128809547717
+      },
+      "summary": {
+        "tabilo_match_winner": 0.5241002979410204,
+        "tirante_match_winner": 0.4758997020589796,
+        "tabilo_minus_1_5": 0.44110201919627184,
+        "tirante_plus_1_5": 0.5588979808037282,
+        "over_24_5": 0.5642356424546902,
+        "under_24_5": 0.43576435754530984,
+        "three_sets": 0.49948335584562864,
+        "E_tabilo_games": 13.311472300074989,
+        "E_tirante_games": 13.10044236355377,
+        "E_total_games": 26.411914663628757,
+        "E_tabilo_margin_games": 0.2110299365212196,
+        "sd_total_games": 6.006992367293265,
+        "sd_margin_games": 3.8094751248271077,
+        "joint_failure_tirante_plus_and_over": 0.232621182787213,
+        "mass": 0.9999999999999999
+      }
+    },
+    {
+      "id": "Tirante_high_serve_case",
+      "weight": 0.25,
+      "p_tabilo_serve": 0.657,
+      "p_tirante_serve": 0.689,
+      "parameters": {
+        "hold_tabilo": 0.8410162962439982,
+        "hold_tirante": 0.8871472655743349,
+        "tie_break_win_A_first": 0.4454829254937785,
+        "tie_break_win_B_first": 0.44548292549377844
+      },
+      "summary": {
+        "tabilo_match_winner": 0.3500313521637638,
+        "tirante_match_winner": 0.6499686478362362,
+        "tabilo_minus_1_5": 0.2754056992223119,
+        "tirante_plus_1_5": 0.724594300777688,
+        "over_24_5": 0.5457748224949612,
+        "under_24_5": 0.45422517750503877,
+        "three_sets": 0.47944909779909256,
+        "E_tabilo_games": 12.44177938471281,
+        "E_tirante_games": 13.754966415282933,
+        "E_total_games": 26.196745799995742,
+        "E_tabilo_margin_games": -1.3131870305701234,
+        "sd_total_games": 6.048941908354303,
+        "sd_margin_games": 3.660832391157276,
+        "joint_failure_tirante_plus_and_over": 0.13358168716910254,
+        "mass": 0.9999999999999998
+      }
+    }
+  ],
+  "mixed": {
+    "tabilo_match_winner": 0.5077696507702717,
+    "tirante_match_winner": 0.4922303492297283,
+    "tabilo_minus_1_5": 0.42762446214140637,
+    "tirante_plus_1_5": 0.5723755378585936,
+    "over_24_5": 0.554720358313834,
+    "under_24_5": 0.44527964168616596,
+    "three_sets": 0.49059694769440787,
+    "E_tabilo_games": 13.176521960970238,
+    "E_tirante_games": 13.103915364363198,
+    "E_total_games": 26.280437325333438,
+    "E_tabilo_margin_games": 0.07260659660703972,
+    "sd_total_games": 6.021532701702887,
+    "sd_margin_games": 3.862858817105282,
+    "joint_failure_tirante_plus_and_over": 0.22740546995755695,
+    "mass": 0.9999999999999999
+  },
+  "source_urls": {
+    "official_fixture": "https://www.stockholmopen.se/en/tournament/spelschema?dayToDisplay=2",
+    "official_qf": "https://www.stockholmopen.se/en/tournament/nyheter/torsdag-1-sammanfattning",
+    "official_head_to_head": "https://www.stockholmopen.se/en/tournament/head-to-head/singles/te30/t0a1",
+    "tabilo_season": "https://www.tennisabstract.com/cgi-bin/player-classic.cgi?f=A2026qq&p=AlejandroTabilo",
+    "tirante_season": "https://www.tennisabstract.com/cgi-bin/player-classic.cgi?f=ACareerqq&p=202058%2FThiago-Agustin-Tirante&q=ZacharySvajda",
+    "tabilo_results_alternate": "https://www.betexplorer.com/tennis/player/tabilo-alejandro/YgVnM5vO/results/",
+    "tirante_results_alternate": "https://tennis-db.com/players/203/thiago-agustin-tirante/matches",
+    "tabilo_qf": "https://www.tennis.com/tournaments/stockholm-open/matches/a-michelsen-vs-a-tabilo-2026-11-12",
+    "tirante_qf": "https://www.tennis.com/tournaments/stockholm-open/matches/t-tirante-vs-a-shevchenko-2026-11-12"
+  },
+  "pre_match_prior_games": {
+    "tabilo": [
+      [
+        "2026-11-12",
+        "Alex Michelsen",
+        "W",
+        "7-5 7-6"
+      ],
+      [
+        "2026-11-11",
+        "Lorenzo Sonego",
+        "W",
+        "7-6 6-7 7-5"
+      ],
+      [
+        "2026-11-02",
+        "Rafael Jodar",
+        "L",
+        "2-6 3-6"
+      ],
+      [
+        "2026-10-26",
+        "Rafael Jodar",
+        "L",
+        "4-6 2-6"
+      ],
+      [
+        "2026-10-07",
+        "Pablo Carreno Busta",
+        "L",
+        "6-4 6-7 4-6"
+      ],
+      [
+        "2026-09-30",
+        "Denis Shapovalov",
+        "L",
+        "5-7 6-3 4-6"
+      ],
+      [
+        "2026-09-30",
+        "Tommy Paul",
+        "W",
+        "6-1 6-2"
+      ],
+      [
+        "2026-09-23",
+        "Adrian Mannarino",
+        "L",
+        "4-6 4-6"
+      ],
+      [
+        "2026-09-19",
+        "Daniel Merida Aguilar",
+        "L",
+        "7-5 3-6 3-6"
+      ],
+      [
+        "2026-08-31",
+        "Alexander Zverev",
+        "L",
+        "2-6 6-7 2-6"
+      ],
+      [
+        "2026-08-31",
+        "Alexei Popyrin",
+        "W",
+        "2-6 7-6 7-6 6-2"
+      ],
+      [
+        "2026-08-05",
+        "Hubert Hurkacz",
+        "L",
+        "4-6 6-7"
+      ],
+      [
+        "2026-08-02",
+        "Rafael Jodar",
+        "L",
+        "7-6 4-6 4-6"
+      ],
+      [
+        "2026-08-01",
+        "Ben Shelton",
+        "W",
+        "4-6 7-5 6-4"
+      ],
+      [
+        "2026-07-30",
+        "Terence Atmane",
+        "W",
+        "6-3 7-6"
+      ],
+      [
+        "2026-07-27",
+        "Tallon Griekspoor",
+        "W",
+        "7-6 4-6 6-4"
+      ],
+      [
+        "2026-07-22",
+        "Tiago Torres",
+        "L",
+        "4-6 4-6"
+      ],
+      [
+        "2026-07-18",
+        "Andrey Rublev",
+        "L",
+        "4-6 6-4 4-6"
+      ],
+      [
+        "2026-07-16",
+        "Lautaro Midon",
+        "W",
+        "6-4 6-7 6-4"
+      ],
+      [
+        "2026-06-30",
+        "Kamil Majchrzak",
+        "L",
+        "3-6 5-7 5-7"
+      ]
+    ],
+    "tirante": [
+      [
+        "2026-11-12",
+        "Aleksandr Shevchenko",
+        "W",
+        "7-6 6-7 6-3"
+      ],
+      [
+        "2026-11-08",
+        "Jaume Munar",
+        "W",
+        "7-6 6-3"
+      ],
+      [
+        "2026-11-04",
+        "Jan-Lennard Struff",
+        "L",
+        "7-6 3-6 6-7"
+      ],
+      [
+        "2026-11-01",
+        "Mattia Bellucci",
+        "L",
+        "4-6 4-6"
+      ],
+      [
+        "2026-10-31",
+        "Zachary Svajda",
+        "W",
+        "3-6 6-1 6-4"
+      ],
+      [
+        "2026-10-24",
+        "Adrian Mannarino",
+        "L",
+        "4-6 4-6"
+      ],
+      [
+        "2026-10-19",
+        "Facundo Diaz Acosta",
+        "L",
+        "7-6 1-6 4-6"
+      ],
+      [
+        "2026-10-10",
+        "Rafael Jodar",
+        "L",
+        "6-4 2-6 3-6"
+      ],
+      [
+        "2026-10-08",
+        "Hamad Medjedovic",
+        "W",
+        "6-4 6-2"
+      ],
+      [
+        "2026-09-30",
+        "Jan-Lennard Struff",
+        "L",
+        "1-6 4-6"
+      ],
+      [
+        "2026-09-19",
+        "Mert Alkaya",
+        "W",
+        "6-2 6-4"
+      ],
+      [
+        "2026-08-31",
+        "Adrian Mannarino",
+        "L",
+        "6-4 6-3 3-6 3-6 3-6"
+      ],
+      [
+        "2026-08-21",
+        "Arthur Fils",
+        "L",
+        "3-6 2-6"
+      ],
+      [
+        "2026-08-19",
+        "Jakub Mensik",
+        "W",
+        "5-7 6-4 6-4"
+      ],
+      [
+        "2026-08-17",
+        "Martin Landaluce",
+        "W",
+        "7-6 7-6"
+      ],
+      [
+        "2026-08-15",
+        "Novak Djokovic",
+        "W",
+        "2-6 6-4 6-4"
+      ],
+      [
+        "2026-08-13",
+        "Jan Choinski",
+        "W",
+        "7-6 6-7 7-6"
+      ],
+      [
+        "2026-08-09",
+        "Learner Tien",
+        "L",
+        "4-6 4-6"
+      ],
+      [
+        "2026-08-07",
+        "Alexei Popyrin",
+        "W",
+        "6-3 6-4"
+      ],
+      [
+        "2026-08-05",
+        "Taylor Fritz",
+        "W",
+        "7-5 6-3"
+      ]
+    ]
+  },
+  "form_windows": {
+    "tabilo": {
+      "L5": {
+        "n": 5,
+        "wins": 2,
+        "losses": 3,
+        "games_for": 61,
+        "games_against": 70,
+        "games_per_match": 26.2
+      },
+      "L10": {
+        "n": 10,
+        "wins": 3,
+        "losses": 7,
+        "games_for": 119,
+        "games_against": 137,
+        "games_per_match": 25.6
+      },
+      "L15": {
+        "n": 15,
+        "wins": 6,
+        "losses": 9,
+        "games_for": 196,
+        "games_against": 212,
+        "games_per_match": 27.2
+      },
+      "L20": {
+        "n": 20,
+        "wins": 8,
+        "losses": 12,
+        "games_for": 266,
+        "games_against": 291,
+        "games_per_match": 27.85
+      }
+    },
+    "tirante": {
+      "L5": {
+        "n": 5,
+        "wins": 3,
+        "losses": 2,
+        "games_for": 71,
+        "games_against": 67,
+        "games_per_match": 27.6
+      },
+      "L10": {
+        "n": 10,
+        "wins": 4,
+        "losses": 6,
+        "games_for": 119,
+        "games_against": 131,
+        "games_per_match": 25.0
+      },
+      "L15": {
+        "n": 15,
+        "wins": 7,
+        "losses": 8,
+        "games_for": 188,
+        "games_against": 201,
+        "games_per_match": 25.933333333333334
+      },
+      "L20": {
+        "n": 20,
+        "wins": 11,
+        "losses": 9,
+        "games_for": 255,
+        "games_against": 261,
+        "games_per_match": 25.8
+      }
+    }
+  },
+  "key_limitations": [
+    "Sport level sources show match near/after nominal start; no verified first ball",
+    "Official full QF records existed before scheduled start but capture time after start",
+    "2026 surface rate data not independently verified as pre-start frozen snapshot",
+    "serve-point scenario adjustments not fitted or calibrated",
+    "no tour-only same-line baseline built",
+    "unconfirmed health/actual first server and retirement operator terms",
+    "models do not include dynamic form shocks beyond scenario-level mixture"
+  ]
+}

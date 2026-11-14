@@ -1,0 +1,19 @@
+check,result,status
+Original mini-log copied byte-for-byte,TRUE,SNAPSHOT_ONLY
+Exactly one mini-log-10 marker,TRUE,PASS
+Ten sequential local card identities,TRUE,PASS
+Ten BEGIN and ten END card markers,TRUE,PASS
+Each card has A1–A9 appendix sections,TRUE,PASS
+Ten intake entries,TRUE,PASS
+Ten pending events,TRUE,PASS
+Twenty-seven unresolved evidence entries,TRUE,PASS
+Next local key is G0011,TRUE,PASS
+Ten / zero numeric / eight qualitative / two no-forecast footer,TRUE,PASS
+No GitHub write claimed,TRUE,PASS
+No canonical ID assignment claimed,TRUE,PASS
+Forty exact-scope directions extracted into contracts,TRUE,PASS
+Source URLs listed from original only,TRUE,INDEX_ONLY
+Repo verify-log CLI executed,FALSE,NOT_EXECUTED
+External links and claims independently revalidated for pre-audit,FALSE,NOT_EXECUTED
+Formal pregame freeze and reference receipts present,FALSE,NOT_PRESENT
+Official game settlement/import executed,FALSE,NOT_EXECUTED

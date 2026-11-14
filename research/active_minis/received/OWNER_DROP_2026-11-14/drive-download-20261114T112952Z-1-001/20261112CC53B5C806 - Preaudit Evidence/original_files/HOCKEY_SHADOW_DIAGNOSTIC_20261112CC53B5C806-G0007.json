@@ -1,0 +1,190 @@
+{
+  "event_id": "LOCAL-20261112CC53B5C806-G0007",
+  "label": "EXPLORATORY_SHADOW_UNCALIBRATED_NOT_PRIMARY",
+  "seed": 20261113,
+  "execution": "MONTE_CARLO_EXECUTED",
+  "total_simulations": 1200000,
+  "source_league_goals": 910,
+  "source_league_team_games": 296,
+  "league_mean_team_goals": 3.074324324324324,
+  "shrinkage_k_assumed": 10,
+  "shrunk_rates": {
+    "attack_motor": 3.439422180801491,
+    "defense_motor": 2.6118359739049395,
+    "attack_liberec": 2.6571571571571573,
+    "defense_liberec": 3.7682682682682684,
+    "lambda_motor": 3.6038452245348798,
+    "lambda_liberec": 2.634496565531048
+  },
+  "scenario_results": [
+    {
+      "name": "LOW_CONVERSION",
+      "weight": 0.25,
+      "simulations": 300000,
+      "inputs": {
+        "name": "LOW_CONVERSION",
+        "weight": 0.25,
+        "lambda_motor": 3.1,
+        "lambda_liberec": 2.05,
+        "p_empty_net_if_leading_by_one": 0.15
+      },
+      "probabilities": {
+        "motor_minus_1_5": 0.44115,
+        "liberec_plus_1_5": 0.55885,
+        "over_5_5": 0.42684666666666665,
+        "under_5_5": 0.5731533333333333,
+        "motor_win": 0.6935066666666667,
+        "liberec_win": 0.30649333333333334,
+        "loss_both_lib_plus_and_over": 0.20902666666666667
+      },
+      "moments": {
+        "motor_mean": 3.2327833333333333,
+        "liberec_mean": 2.1304666666666665,
+        "total_mean": 5.36325,
+        "margin_mean": 1.1023166666666666,
+        "total_sd": 2.2558264052965895,
+        "margin_sd": 2.314558553962769
+      },
+      "regulation_draw_rate_before_ot": null
+    },
+    {
+      "name": "BASE_SHRUNK_SEASON",
+      "weight": 0.5,
+      "simulations": 600000,
+      "inputs": {
+        "name": "BASE_SHRUNK_SEASON",
+        "weight": 0.5,
+        "lambda_motor": 3.603845,
+        "lambda_liberec": 2.634497,
+        "p_empty_net_if_leading_by_one": 0.3
+      },
+      "probabilities": {
+        "motor_minus_1_5": 0.45813,
+        "liberec_plus_1_5": 0.54187,
+        "over_5_5": 0.6194933333333333,
+        "under_5_5": 0.38050666666666666,
+        "motor_win": 0.6603166666666667,
+        "liberec_win": 0.33968333333333334,
+        "loss_both_lib_plus_and_over": 0.13994333333333334
+      },
+      "moments": {
+        "motor_mean": 3.7404083333333333,
+        "liberec_mean": 2.7351816666666666,
+        "total_mean": 6.47559,
+        "margin_mean": 1.0052266666666667,
+        "total_sd": 2.4811766332192744,
+        "margin_sd": 2.564509572729691
+      },
+      "regulation_draw_rate_before_ot": null
+    },
+    {
+      "name": "HIGH_PACE_WEAK_GOALTENDING",
+      "weight": 0.25,
+      "simulations": 300000,
+      "inputs": {
+        "name": "HIGH_PACE_WEAK_GOALTENDING",
+        "weight": 0.25,
+        "lambda_motor": 4.25,
+        "lambda_liberec": 2.9,
+        "p_empty_net_if_leading_by_one": 0.45
+      },
+      "probabilities": {
+        "motor_minus_1_5": 0.54067,
+        "liberec_plus_1_5": 0.45933,
+        "over_5_5": 0.7518533333333334,
+        "under_5_5": 0.24814666666666665,
+        "motor_win": 0.70266,
+        "liberec_win": 0.29734,
+        "loss_both_lib_plus_and_over": 0.10726
+      },
+      "moments": {
+        "motor_mean": 4.40145,
+        "liberec_mean": 3.006196666666667,
+        "total_mean": 7.4076466666666665,
+        "margin_mean": 1.3952533333333332,
+        "total_sd": 2.6553425758563725,
+        "margin_sd": 2.7420542425626
+      },
+      "regulation_draw_rate_before_ot": null
+    }
+  ],
+  "mixture_probabilities": {
+    "motor_minus_1_5": 0.47452,
+    "liberec_plus_1_5": 0.52548,
+    "over_5_5": 0.6044216666666666,
+    "under_5_5": 0.3955783333333333,
+    "motor_win": 0.6792,
+    "liberec_win": 0.3208,
+    "loss_both_lib_plus_and_over": 0.14904333333333333
+  },
+  "mixture_means_note": "Scenario-weighted conditional means; SD field is weighted mean of scenario SDs, not exact mixture SD",
+  "mixture_moments": {
+    "motor_mean": 3.7787625,
+    "liberec_mean": 2.6517566666666665,
+    "total_mean": 6.430519166666667,
+    "margin_mean": 1.1270058333333333,
+    "total_sd": 2.468380561897878,
+    "margin_sd": 2.5464079854961876
+  },
+  "liberec_verified_windows": {
+    "L5": {
+      "n": 5,
+      "GF": 14,
+      "GA": 16,
+      "GF_per_game": 2.8,
+      "GA_per_game": 3.2,
+      "total_per_game": 6.0,
+      "complete_window": true
+    },
+    "L10": {
+      "n": 10,
+      "GF": 28,
+      "GA": 40,
+      "GF_per_game": 2.8,
+      "GA_per_game": 4.0,
+      "total_per_game": 6.8,
+      "complete_window": true
+    },
+    "L15": {
+      "n": 15,
+      "GF": 38,
+      "GA": 64,
+      "GF_per_game": 2.5333,
+      "GA_per_game": 4.2667,
+      "total_per_game": 6.8,
+      "complete_window": true
+    },
+    "L20": {
+      "n": 17,
+      "GF": 41,
+      "GA": 71,
+      "GF_per_game": 2.4118,
+      "GA_per_game": 4.1765,
+      "total_per_game": 6.5882,
+      "complete_window": false
+    }
+  },
+  "motor_verified_L5": {
+    "n": 5,
+    "GF": 16,
+    "GA": 10,
+    "GF_per_game": 3.2,
+    "GA_per_game": 2.0,
+    "total_per_game": 5.2,
+    "complete_window": true
+  },
+  "source_urls": [
+    "https://ceskyhokej.cz/competition/standings/1",
+    "https://www.hcbilitygri.cz/matches/JUN",
+    "https://www.jchokej.cz/archiv-kratkych-zprav?page=2",
+    "https://czehockey.cz/game/detail/178203"
+  ],
+  "limitations": [
+    "No verified Czech U20-goalie starters or injury/line changes",
+    "No independently fitted Czech junior scoring family, EN propensity or OTTie win model",
+    "Poisson goal process omits correlated scoring, penalties, score effects and conditional shooting quality",
+    "Empty-net branch may double-count an effect in raw season rates and is sensitivity only",
+    "Operator settlement terms for full game including overtime/shootout are unknown",
+    "NOT qualified to publish primary forecast probability; no GitHub pregame run or freeze"
+  ]
+}

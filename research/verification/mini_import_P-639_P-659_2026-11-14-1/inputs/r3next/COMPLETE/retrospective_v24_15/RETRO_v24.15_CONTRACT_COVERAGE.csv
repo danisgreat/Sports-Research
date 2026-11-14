@@ -1,0 +1,27 @@
+draft,fixture,label,family,side,period,unit,disposition,status,numeric_p,official_issue,settled
+DRAFT-001,Polona Hercog vs Varvara Lepchenko,Hercog ML,MATCH,Winner,FULL_MATCH,match,UNPRICED,UNAVAILABLE,,NO,NO
+DRAFT-001,Polona Hercog vs Varvara Lepchenko,Lepchenko ML,MATCH,Winner,FULL_MATCH,match,UNPRICED,UNAVAILABLE,,NO,NO
+DRAFT-001,Polona Hercog vs Varvara Lepchenko,Hercog -1.5 games,HANDICAP,Hercog,FULL_MATCH,games,UNPRICED,UNAVAILABLE,,NO,NO
+DRAFT-001,Polona Hercog vs Varvara Lepchenko,Lepchenko +1.5 games,HANDICAP,Lepchenko,FULL_MATCH,games,UNPRICED,UNAVAILABLE,,NO,NO
+DRAFT-001,Polona Hercog vs Varvara Lepchenko,Over 21.5 games,TOTAL,OVER,FULL_MATCH,games,UNPRICED,UNAVAILABLE,,NO,NO
+DRAFT-001,Polona Hercog vs Varvara Lepchenko,Under 21.5 games,TOTAL,UNDER,FULL_MATCH,games,UNPRICED,UNAVAILABLE,,NO,NO
+DRAFT-002,Perth Lynx (W) vs Bendigo Spirit (W),Perth Lynx -10.5,SPREAD,Perth,FULL_GAME_OT_INCLUDED,points,UNPRICED,UNAVAILABLE,,NO,NO
+DRAFT-002,Perth Lynx (W) vs Bendigo Spirit (W),Bendigo Spirit +10.5,SPREAD,Bendigo,FULL_GAME_OT_INCLUDED,points,UNPRICED,UNAVAILABLE,,NO,NO
+DRAFT-002,Perth Lynx (W) vs Bendigo Spirit (W),Over 167.5 points,TOTAL,OVER,FULL_GAME_OT_INCLUDED,points,UNPRICED,UNAVAILABLE,,NO,NO
+DRAFT-002,Perth Lynx (W) vs Bendigo Spirit (W),Under 167.5 points,TOTAL,UNDER,FULL_GAME_OT_INCLUDED,points,UNPRICED,UNAVAILABLE,,NO,NO
+DRAFT-003,Ulsan Hyundai Mobis Phoebus vs Goyang Sono Skygunners,Mobis Phoebus +3.0,SPREAD,Mobis,FULL_GAME_OT_INCLUDED,points,UNPRICED,UNAVAILABLE,,NO,NO
+DRAFT-003,Ulsan Hyundai Mobis Phoebus vs Goyang Sono Skygunners,Goyang Skygunners -3.0,SPREAD,Goyang,FULL_GAME_OT_INCLUDED,points,UNPRICED,UNAVAILABLE,,NO,NO
+DRAFT-003,Ulsan Hyundai Mobis Phoebus vs Goyang Sono Skygunners,Over 175.5 points,TOTAL,OVER,FULL_GAME_OT_INCLUDED,points,UNPRICED,UNAVAILABLE,,NO,NO
+DRAFT-003,Ulsan Hyundai Mobis Phoebus vs Goyang Sono Skygunners,Under 175.5 points,TOTAL,UNDER,FULL_GAME_OT_INCLUDED,points,UNPRICED,UNAVAILABLE,,NO,NO
+DRAFT-004,Colorado Avalanche @ Toronto Maple Leafs,Colorado Avalanche ML,MATCH,Colorado,FULL_MATCH_OT_SO,winner,UNPRICED,UNAVAILABLE,,NO,NO
+DRAFT-004,Colorado Avalanche @ Toronto Maple Leafs,Toronto Maple Leafs +1.5,SPREAD,Toronto,FULL_MATCH_OT_SO,goals,UNPRICED,UNAVAILABLE,,NO,NO
+DRAFT-004,Colorado Avalanche @ Toronto Maple Leafs,Over 6.5 goals,TOTAL,OVER,FULL_MATCH_OT_SO,goals,UNPRICED,UNAVAILABLE,,NO,NO
+DRAFT-004,Colorado Avalanche @ Toronto Maple Leafs,Under 6.5 goals,TOTAL,UNDER,FULL_MATCH_OT_SO,goals,UNPRICED,UNAVAILABLE,,NO,NO
+DRAFT-005,Colorado Eagles @ Abbotsford Canucks,Colorado Eagles ML,MATCH,Colorado Eagles,FULL_MATCH_OT_SO,winner,UNPRICED,UNAVAILABLE,,NO,NO
+DRAFT-005,Colorado Eagles @ Abbotsford Canucks,Abbotsford Canucks ML,MATCH,Abbotsford,FULL_MATCH_OT_SO,winner,UNPRICED,UNAVAILABLE,,NO,NO
+DRAFT-005,Colorado Eagles @ Abbotsford Canucks,Over 5.5 goals,TOTAL,OVER,FULL_MATCH_OT_SO,goals,UNPRICED,UNAVAILABLE,,NO,NO
+DRAFT-005,Colorado Eagles @ Abbotsford Canucks,Under 5.5 goals,TOTAL,UNDER,FULL_MATCH_OT_SO,goals,UNPRICED,UNAVAILABLE,,NO,NO
+DRAFT-006,Creighton Bluejays @ Kansas State Wildcats,Creighton -3.5,SPREAD,Creighton,FULL_GAME_OT_INCLUDED,points,UNPRICED,UNAVAILABLE,,NO,NO
+DRAFT-006,Creighton Bluejays @ Kansas State Wildcats,Kansas State +3.5,SPREAD,Kansas State,FULL_GAME_OT_INCLUDED,points,UNPRICED,UNAVAILABLE,,NO,NO
+DRAFT-006,Creighton Bluejays @ Kansas State Wildcats,Over 159.5 points,TOTAL,OVER,FULL_GAME_OT_INCLUDED,points,UNPRICED,UNAVAILABLE,,NO,NO
+DRAFT-006,Creighton Bluejays @ Kansas State Wildcats,Under 159.5 points,TOTAL,UNDER,FULL_GAME_OT_INCLUDED,points,UNPRICED,UNAVAILABLE,,NO,NO

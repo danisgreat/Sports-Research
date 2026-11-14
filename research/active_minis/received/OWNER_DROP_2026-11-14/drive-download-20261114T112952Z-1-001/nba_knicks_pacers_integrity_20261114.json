@@ -1,0 +1,28 @@
+{
+  "local_key": "LOCAL-20261112D3C239297F-G0011",
+  "timestamp": "2026-11-14T11:11:01+11:00",
+  "previous_size": 273744,
+  "updated_size": 300547,
+  "prior_cards_sha256": [
+    "5f747b1e60bda6b2cedcc12eb82e1654bb00458afeeb66f9705ae139072e8c5a",
+    "9e80bc58efc8327982aa57406398c7a8d9c8e5fb1e3d0efe20f46c454e43fa3f",
+    "661d7cd250941212b078c5b4707fbd0e04f66df6d1b85a8e8f571d21477e43d2",
+    "4b751a56828f9e52efe225def2f1f6ee008bf0da5ef7f1e6671c3d8bc44b008a",
+    "50cfef0a9d6731e596fe97582b168895a3dddfbb3acce3dc6911e503741d8a36",
+    "8a6fcaeca18f68a7159ee3e2553e25982e6155da3b9298f23cf0607ee7094716",
+    "bdceca1f5e4a8447c277d401f75919d8b9ba68e8c4ac4e986e288caca4a94688",
+    "ac44d030e9a40fc49bd0c0e9bd8a36feced3f9760b2abfc7cf4ab6dcd6d92c12",
+    "4dd30094e284b4b7bd61a9a48842c1137e268e29c438a0c352229fbe341ee38c",
+    "98ab7a0c72cc334841e7ce1670be0290d33987bf6c1d45f4b2d0f054038c03ee"
+  ],
+  "all_prior_cards_byte_preserved": true,
+  "mini_sha256": "fc276d2766f3e0dbff35af58aed2c2957baced5e4ee5b0a7fbf7f90d71b837ae",
+  "cards": 11,
+  "next_key": "LOCAL-20261112D3C239297F-G0012",
+  "old_file_sha256": "fb1eb981d000119883e8e7cfe06e45113117a9cb0615a7ea052e54d13fe1711b",
+  "git_writes": 0,
+  "formal_issuance": "NOT_ISSUED",
+  "research_diagnostic_only": true,
+  "primary_p_card": "NOT_ESTIMATED",
+  "model_path": "/mnt/data/nba_knicks_pacers_scenario_20261114.json"
+}

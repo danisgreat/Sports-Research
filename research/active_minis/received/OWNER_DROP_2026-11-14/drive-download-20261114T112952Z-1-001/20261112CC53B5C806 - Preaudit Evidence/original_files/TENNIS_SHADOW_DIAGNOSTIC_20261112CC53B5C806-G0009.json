@@ -1,0 +1,144 @@
+{
+  "event": "Alejandro Tabilo vs Thiago Agustin Tirante / Stockholm ATP 250 SF / 2026-11-13",
+  "method": "Exact best-of-three game/tiebreak/set/match Markov-chain enumeration; initial server 50:50",
+  "status": "EXPLORATORY_SHADOW_NOT_FRAMEWORK_PRIMARY_NOT_CALIBRATED",
+  "contracts": [
+    "Tabilo -1.5 completed match games",
+    "Tirante +1.5 completed match games",
+    "Over 24.5 completed match games",
+    "Under 24.5 completed match games"
+  ],
+  "input_data": {
+    "Tabilo": {
+      "all_serve": 0.659,
+      "all_return": 0.365,
+      "indoor_serve": 0.631,
+      "indoor_return": 0.324,
+      "all_n": 68,
+      "indoor_n": 4
+    },
+    "Tirante": {
+      "all_serve": 0.667,
+      "all_return": 0.356,
+      "indoor_serve": 0.674,
+      "indoor_return": 0.307,
+      "all_n": 58,
+      "indoor_n": 7
+    }
+  },
+  "source_urls": [
+    "https://pythiatennis.com/alejandro-tabilo-vs-thiago-agustin-tirante-prediction-and-stats/?d=2026-11-13",
+    "https://www.stockholmopen.se/en/tournament/spelschema?dayToDisplay=7",
+    "https://www.stockholmopen.se/en/tournament/resultat?resultDay=6"
+  ],
+  "sensitivities": {
+    "k_shrink_match_equivalents": 20,
+    "serve_stress_plus_minus_points": 0.015,
+    "scenario_weights": "NONE; no weighted average published"
+  },
+  "assumptions": [
+    "IID service points, fixed player point probability per scenario",
+    "No injury/retirement/withdrawal/shortened match",
+    "Alternating service games and standard 6-6 tiebreak, first to 7 by 2",
+    "First server 50:50",
+    "No Elo, H2H, odds, external predictions or rest/fatigue effects entered into probabilities",
+    "No competition/level/opponent-adjusted calibration; small indoor n"
+  ],
+  "results": {
+    "all_surface_52wk": {
+      "service_point_win_Tabilo": 0.6515,
+      "service_point_win_Tirante": 0.651,
+      "service_hold_Tabilo": 0.832119755685915,
+      "service_hold_Tirante": 0.8312970347997427,
+      "Tabilo_minus_1_5": 0.4244144323082121,
+      "Tirante_plus_1_5": 0.575585567691788,
+      "Over_24_5": 0.5478204229364353,
+      "Under_24_5": 0.4521795770635649,
+      "Tabilo_win": 0.5024603444510332,
+      "Tirante_win": 0.497539655548967,
+      "deciding_set": 0.49999461925489225,
+      "expected_total_games": 25.944727561778013,
+      "expected_margin_Tabilo": 0.022686204830354457,
+      "both_qualitative_leans_lose": 0.22742776768308648,
+      "Tirante_plus_and_Over_both_win": 0.3508337583113097,
+      "total_state_mass": 1.0000000000000002,
+      "terminal_game_margin_states": 224
+    },
+    "indoor_shrink20_matches": {
+      "service_point_win_Tabilo": 0.65325,
+      "service_point_win_Tirante": 0.6572222222222222,
+      "service_hold_Tabilo": 0.8349810086180425,
+      "service_hold_Tirante": 0.8413698255905233,
+      "Tabilo_minus_1_5": 0.4020457173219764,
+      "Tirante_plus_1_5": 0.5979542826780233,
+      "Over_24_5": 0.5509033715769678,
+      "Under_24_5": 0.44909662842303194,
+      "Tabilo_win": 0.4805447424542174,
+      "Tirante_win": 0.5194552575457823,
+      "deciding_set": 0.49966339824158224,
+      "expected_total_games": 26.038012219152318,
+      "expected_margin_Tabilo": -0.17748374337965728,
+      "both_qualitative_leans_lose": 0.2121244194415854,
+      "Tirante_plus_and_Over_both_win": 0.36098207369657676,
+      "total_state_mass": 0.9999999999999997,
+      "terminal_game_margin_states": 224
+    },
+    "indoor_only_52wk_small_n": {
+      "service_point_win_Tabilo": 0.662,
+      "service_point_win_Tirante": 0.6749999999999999,
+      "service_hold_Tabilo": 0.8488589272005586,
+      "service_hold_Tirante": 0.8681503738342149,
+      "Tabilo_minus_1_5": 0.357408558408767,
+      "Tirante_plus_1_5": 0.6425914415912329,
+      "Over_24_5": 0.5599453074814105,
+      "Under_24_5": 0.4400546925185896,
+      "Tabilo_win": 0.437490092108544,
+      "Tirante_win": 0.562509907891456,
+      "deciding_set": 0.49651045984492,
+      "expected_total_games": 26.33790328031562,
+      "expected_margin_Tabilo": -0.5498483256365683,
+      "both_qualitative_leans_lose": 0.1812416990667175,
+      "Tirante_plus_and_Over_both_win": 0.3837784481393609,
+      "total_state_mass": 1.0,
+      "terminal_game_margin_states": 224
+    },
+    "tabilo_improves_tirante_slips_1p5pp": {
+      "service_point_win_Tabilo": 0.66825,
+      "service_point_win_Tirante": 0.6422222222222221,
+      "service_hold_Tabilo": 0.8583322348871972,
+      "service_hold_Tirante": 0.816478163074984,
+      "Tabilo_minus_1_5": 0.5482807150648793,
+      "Tirante_plus_1_5": 0.4517192849351205,
+      "Over_24_5": 0.5356705370588549,
+      "Under_24_5": 0.46432946294114485,
+      "Tabilo_win": 0.6253705370849929,
+      "Tirante_win": 0.3746294629150069,
+      "deciding_set": 0.48575954350637,
+      "expected_total_games": 25.822266444296382,
+      "expected_margin_Tabilo": 1.1520851887020724,
+      "both_qualitative_leans_lose": 0.3117095515214,
+      "Tirante_plus_and_Over_both_win": 0.2990993735153756,
+      "total_state_mass": 0.9999999999999998,
+      "terminal_game_margin_states": 224
+    },
+    "tirante_improves_tabilo_slips_1p5pp": {
+      "service_point_win_Tabilo": 0.63825,
+      "service_point_win_Tirante": 0.6722222222222222,
+      "service_hold_Tabilo": 0.8095406366883792,
+      "service_hold_Tirante": 0.8641619634611476,
+      "Tabilo_minus_1_5": 0.26855777736757175,
+      "Tirante_plus_1_5": 0.7314422226324284,
+      "Over_24_5": 0.5249612631119386,
+      "Under_24_5": 0.4750387368880616,
+      "Tabilo_win": 0.33829436402628166,
+      "Tirante_win": 0.6617056359737186,
+      "deciding_set": 0.4759944957318788,
+      "expected_total_games": 25.67040003090799,
+      "expected_margin_Tabilo": -1.4937515432857593,
+      "both_qualitative_leans_lose": 0.13369803101696515,
+      "Tirante_plus_and_Over_both_win": 0.39010151676133203,
+      "total_state_mass": 1.0000000000000002,
+      "terminal_game_margin_states": 224
+    }
+  }
+}

@@ -1,0 +1,28 @@
+event,attempt,result,next_step
+R01,"web search (standard, then extended) for final score",final found in search summary; summaries used for discovery only,open audited permitted pages
+R02,"web search (standard, then extended) for final score",final found in search summary; summaries used for discovery only,open audited permitted pages
+R03,"web search (standard, then extended) for final score",final found in search summary; summaries used for discovery only,open audited permitted pages
+R04,"web search (standard, then extended) for final score",final found in search summary; summaries used for discovery only,open audited permitted pages
+R06,"web search (standard, then extended) for final score",final found in search summary; summaries used for discovery only,open audited permitted pages
+R05,"web search (standard, then extended) for final score",final found in search summary; summaries used for discovery only,open audited permitted pages
+R07,"web search (standard, then extended) for final score",final found in search summary; summaries used for discovery only,open audited permitted pages
+R08,"web search (standard, then extended) for final score",final found in search summary; summaries used for discovery only,open audited permitted pages
+R09,"web search (standard, then extended) for final score",final found in search summary; summaries used for discovery only,open audited permitted pages
+R10,"web search (standard, then extended) for final score",final found in search summary; summaries used for discovery only,open audited permitted pages
+E11,"web search (standard, then extended) for final score",final found in search summary; summaries used for discovery only,open audited permitted pages
+E12,"web search (standard, then extended) for final score",final found in search summary; summaries used for discovery only,open audited permitted pages
+E13,"web search (standard, then extended) for final score",final found in search summary; summaries used for discovery only,open audited permitted pages
+E14,"web search (standard, then extended) for final score",final found in search summary; summaries used for discovery only,open audited permitted pages
+E15,"web search (standard, then extended) for final score",final found in search summary; summaries used for discovery only,open audited permitted pages
+E16,"web search (standard, then extended) for final score",final found in search summary; summaries used for discovery only,open audited permitted pages
+E17,"web search (standard, then extended) for final score",final found in search summary; summaries used for discovery only,open audited permitted pages
+E18,"web search (standard, then extended) for final score",final found in search summary; summaries used for discovery only,open audited permitted pages
+E19,"web search (standard, then extended) for final score",final found in search summary; summaries used for discovery only,open audited permitted pages
+E20,"web search (standard, then extended) for final score",final found in search summary; summaries used for discovery only,open audited permitted pages
+E21,"web search (standard, then extended) for final score",final found in search summary; summaries used for discovery only,open audited permitted pages
+R09,J.League match page + live commentary for corner kicks,stats table not in fetched text,UNRESOLVED; corners rows stay UNRESOLVED
+R05,OurSportsCentral releases,pages were 9 and 10 Oct games,Colorado Eagles recap + games page opened instead
+E21,talkbasket.net report,HTTP 403,single lineage (SI); evidence C
+E14,wnbl.com.au report,page is a 28 Dec 2025 game,single lineage; evidence C
+E18,tennisexplorer Orléans pages,'Tournament does not exist',single lineage (ATP); evidence C
+R09,cerezo.jp result page + jleague.jp live page (both ALLOWED) for corner kicks,no team-labelled CK counts in fetched text,UNRESOLVED retained

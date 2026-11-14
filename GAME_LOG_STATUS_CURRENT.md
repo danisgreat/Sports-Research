@@ -3,8 +3,8 @@
 
 **Generated current queue (STATE-v1, 2026-11-08).** The live values (next canonical ID, the active mini and its open cards, frozen league-day events without a settlement, ledger and store counts) are generated from the records in [CURRENT_STATE](CURRENT_STATE.md) by `python -m ml state`, and a test keeps them current. The rest of this file is the preserved status history and the canonical register; where its dated text differs from the generated block, the generated block is current.
 
-**Next canonical ID: P-639.** Every requested event is retained, regardless of calibration: first as a local working card in the authorised mini, then canonically through verified prompt-4 retention import (which may precede prompt-3 settlement under RETAIN-v1). No card is written to the active combined log directly. *(Clarified 2026-10-12, audit R10: the earlier wording "go directly to the active combined log" described retention, not a bypass of local staging.)* Canonical IDs identify retained cards; performance certification and live/late timing are separate labels.
-Active Combined Log: `prediction logs/PREDICTION_LOG_COMBINED_9.md`.
+**Next canonical ID: P-660.** Every requested event is retained, regardless of calibration: first as a local working card in the authorised mini, then canonically through verified prompt-4 retention import (which may precede prompt-3 settlement under RETAIN-v1). No card is written to the active combined log directly. *(Clarified 2026-10-12, audit R10: the earlier wording "go directly to the active combined log" described retention, not a bypass of local staging.)* Canonical IDs identify retained cards; performance certification and live/late timing are separate labels.
+Active Combined Log: `prediction logs/PREDICTION_LOG_COMBINED_10.md`.
 Freeze: none (custody is the git history of `main`, CURRENT_RULES §9). The last control manifest is `archive/controls/CONTROL_MANIFEST_2026-10-09-3.md`. Current authority: CURRENT_STATE.md, METHOD.md and CURRENT_RULES.md.
 
 
@@ -1137,3 +1137,49 @@ P-616 (TNT v Converge, 114–112 OT, regulation 106–106) revision-2, appended 
 | **P-636** | LG Twins at KIA Tigers | `LOCAL-20261016A691119714D1-G0008` | TERMINAL_SPORTING_REVIEW; original issue/cohort retained; see mini_import_P-629_P-636_2026-11-09-1 |
 
 | **P-637** | Beijing Guoan v Qingdao West Coast,18October2026 | `LOCAL-20261018MELILL01-G0004` | TERMINAL_SPORTING_REVIEW; original issue/cohort retained; see mini_import_P-637_2026-11-09-1 |
+
+| **P-639** | Polona Hercog v Varvara Lepchenko · 2026-11-09 | `R3NEXT-B/DRAFT-001` (+2 parallel) | TERMINAL_SPORTING_REVIEW; chat-local NOT_ISSUED; see mini_import_P-639_P-659_2026-11-14-1 |
+
+| **P-640** | Perth Lynx (W) v Bendigo Spirit (W) · 2026-11-10 | `R3NEXT-A/Perth_Lynx_Bendigo_Spirit_2026_READ_ONLY_RESEARCH_DRAFT.md` (+2 parallel) | TERMINAL_SPORTING_REVIEW; chat-local NOT_ISSUED; see mini_import_P-639_P-659_2026-11-14-1 |
+
+| **P-641** | Ulsan Hyundai Mobis Phoebus v Goyang Sono Skygunners · 2026-11-10 | `R3NEXT-A/Mobis_Phoebus_Goyang_Skygunners_KBL_2026_Read_Only_Research_Draft.md` (+2 parallel) | TERMINAL_SPORTING_REVIEW; chat-local NOT_ISSUED; see mini_import_P-639_P-659_2026-11-14-1 |
+
+| **P-642** | Colorado Avalanche @ Toronto Maple Leafs · 2026-11-10 ET | `R3NEXT-A/Colorado_Avalanche_Toronto_Maple_Leafs_2026_Read_Only_Research_Draft.md` (+2 parallel) | TERMINAL_SPORTING_REVIEW; chat-local NOT_ISSUED; see mini_import_P-639_P-659_2026-11-14-1 |
+
+| **P-643** | Creighton Bluejays @ Kansas State Wildcats · 2026-11-10 CT | `R3NEXT-A/Creighton_Kansas_State_NCAAB_2026_READ_ONLY_RESEARCH_DRAFT.md` (+2 parallel) | TERMINAL_SPORTING_REVIEW; chat-local NOT_ISSUED; see mini_import_P-639_P-659_2026-11-14-1 |
+
+| **P-644** | Colorado Eagles @ Abbotsford Canucks · 2026-11-10 PT | `R3NEXT-A/Colorado_Eagles_Abbotsford_Canucks_AHL_2026_READ_ONLY_RESEARCH_DRAFT.md` (+2 parallel) | TERMINAL_SPORTING_REVIEW; chat-local NOT_ISSUED; see mini_import_P-639_P-659_2026-11-14-1 |
+
+| **P-645** | Akita Northern Happinets v Ibaraki Robots · 2026-11-11 | `R3NEXT-A/Akita_Ibaraki_BPremier_2026_v24.15_READ_ONLY_RESEARCH_DRAFT.md` (+2 parallel) | TERMINAL_SPORTING_REVIEW; chat-local NOT_ISSUED; see mini_import_P-639_P-659_2026-11-14-1 |
+
+| **P-646** | Hiroshima Dragonflies v Sendai 89ers · 2026-11-11 | `R3NEXT-A/Hiroshima_Dragonflies_Sendai_89ers_BPremier_2026_v24.15_READ_ONLY_RESEARCH_DRAFT.md` (+2 parallel) | TERMINAL_SPORTING_REVIEW; chat-local NOT_ISSUED; see mini_import_P-639_P-659_2026-11-14-1 |
+
+| **P-647** | Urawa Red Diamonds v Cerezo Osaka · 2026-11-11 | `R3NEXT-A/Urawa_Reds_Cerezo_Osaka_LevainCup_2026_v24.15_RESEARCH_DRAFT.md` (+4 parallel) | TERMINAL_SPORTING_REVIEW; chat-local NOT_ISSUED; see mini_import_P-639_P-659_2026-11-14-1 |
+
+| **P-648** | Tasmania Jewels (W) v Southside Melbourne Flyers (W) · 2026-11-12 | `R3NEXT-A/Tasmania_Jewels_Southside_Flyers_WNBL_2026_v24.16_READ_ONLY_RESEARCH_DRAFT.md` (+2 parallel) | TERMINAL_SPORTING_REVIEW; chat-local NOT_ISSUED; see mini_import_P-639_P-659_2026-11-14-1 |
+
+| **P-649** | Dalibor Svrčina v Otto Virtanen · 2026-11-12 | `LOCAL-20261112EE4AFA68-G0001` (+5 parallel) | TERMINAL_SPORTING_REVIEW; chat-local NOT_ISSUED; see mini_import_P-639_P-659_2026-11-14-1 |
+
+| **P-650** | Torpedo Ust-Kamenogorsk v Arlan Kokshetau · 2026-11-12 | `LOCAL-20261112EE4AFA68-G0002` (+5 parallel) | TERMINAL_SPORTING_REVIEW; chat-local NOT_ISSUED; see mini_import_P-639_P-659_2026-11-14-1 |
+
+| **P-651** | Thiago Agustín Tirante v Aleksandr Shevchenko · 2026-11-12 | `LOCAL-20261112EE4AFA68-G0003` (+5 parallel) | TERMINAL_SPORTING_REVIEW; chat-local NOT_ISSUED; see mini_import_P-639_P-659_2026-11-14-1 |
+
+| **P-652** | Geelong Venom (W) v Perth Lynx (W) · 2026-11-13 | `LOCAL-20261112EE4AFA68-G0004` (+5 parallel) | TERMINAL_SPORTING_REVIEW; chat-local NOT_ISSUED; see mini_import_P-639_P-659_2026-11-14-1 |
+
+| **P-653** | Wonju DB Promy v Suwon KT Sonicboom · 2026-11-13 | `LOCAL-20261112EE4AFA68-G0005` (+5 parallel) | TERMINAL_SPORTING_REVIEW; chat-local NOT_ISSUED; see mini_import_P-639_P-659_2026-11-14-1 |
+
+| **P-654** | Kawasaki Brave Thunders v Saga Ballooners · 2026-11-13 | `LOCAL-20261112EE4AFA68-G0006` (+5 parallel) | TERMINAL_SPORTING_REVIEW; chat-local NOT_ISSUED; see mini_import_P-639_P-659_2026-11-14-1 |
+
+| **P-655** | BANES Motor České Budějovice U20 v Bílí Tygři Liberec U20 · 2026-11-13 | `LOCAL-20261112EE4AFA68-G0007` (+5 parallel) | TERMINAL_SPORTING_REVIEW; chat-local NOT_ISSUED; see mini_import_P-639_P-659_2026-11-14-1 |
+
+| **P-656** | Zsombor Piros v Daniel Altmaier · 2026-11-13 | `LOCAL-20261112EE4AFA68-G0008` (+5 parallel) | TERMINAL_SPORTING_REVIEW; chat-local NOT_ISSUED; see mini_import_P-639_P-659_2026-11-14-1 |
+
+| **P-657** | Alejandro Tabilo v Thiago Agustín Tirante · 2026-11-13 | `LOCAL-20261112EE4AFA68-G0009` (+4 parallel) | TERMINAL_SPORTING_REVIEW; chat-local NOT_ISSUED; see mini_import_P-639_P-659_2026-11-14-1 |
+
+| **P-658** | Bryant Bulldogs @ Rutgers Scarlet Knights · 2026-11-13 ET | `LOCAL-20261112EE4AFA68-G0010` (+2 parallel) | TERMINAL_SPORTING_REVIEW; chat-local NOT_ISSUED; see mini_import_P-639_P-659_2026-11-14-1 |
+
+| **P-659** | New York Knicks @ Indiana Pacers · 2026-11-13 ET | `LOCAL-20261112EE4AFA68-G0011` (+1 parallel) | TERMINAL_SPORTING_REVIEW; chat-local NOT_ISSUED; see mini_import_P-639_P-659_2026-11-14-1 |
+
+## Owner-drop import and Part 9→10 rollover — 14 November 2026
+
+P-639–P-659 (one per game, chronological) imported to Part 9 with every parallel chat record as an addendum; Part 9 closed, [Part 10](prediction%20logs/PREDICTION_LOG_COMBINED_10.md) active. Highest P-659 / next P-660. Open: P-647 corners UNRESOLVED; P-657–P-659 D3C239297F records MISSING_ORIGINAL. [Import report](research/verification/mini_import_P-639_P-659_2026-11-14-1/CANONICAL_IMPORT_REPORT.md).

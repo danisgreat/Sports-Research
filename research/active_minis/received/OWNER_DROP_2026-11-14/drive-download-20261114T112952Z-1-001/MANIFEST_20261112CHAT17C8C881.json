@@ -1,0 +1,136 @@
+{
+  "bundle_type": "research_pre_audit_handoff",
+  "mini_key": "20261112CHAT17C8C881",
+  "primary_file": "mini/20261112CHAT17C8C881.md",
+  "last_event_key": "LOCAL-20261112CHAT17C8C881-G0009",
+  "next_event_key": "LOCAL-20261112CHAT17C8C881-G0010",
+  "event_count": 9,
+  "request_intake_count": 9,
+  "open_evidence_count": 52,
+  "event_headers": {
+    "LOCAL-20261112CHAT17C8C881-G0001": [
+      "## CARD LOCAL-20261112CHAT17C8C881-G0001 — Svrčina v Virtanen (Orléans, 12 Nov 2026 local)"
+    ],
+    "LOCAL-20261112CHAT17C8C881-G0002": [
+      "## LOCAL-20261112CHAT17C8C881-G0002 — Torpedo Ust-Kamenogorsk vs Arlan Kokshetau"
+    ],
+    "LOCAL-20261112CHAT17C8C881-G0003": [
+      "## CARD LOCAL-20261112CHAT17C8C881-G0003 — Thiago Agustín Tirante v Aleksandr Shevchenko (Stockholm ATP 250 QF)"
+    ],
+    "LOCAL-20261112CHAT17C8C881-G0004": [
+      "## CARD LOCAL-20261112CHAT17C8C881-G0004 — Geelong Venom (W) vs Perth Lynx (W), WNBL Round 5"
+    ],
+    "LOCAL-20261112CHAT17C8C881-G0005": [
+      "## CARD LOCAL-20261112CHAT17C8C881-G0005 — Wonju DB Promy vs Suwon KT Sonicboom, KBL 2026–27"
+    ],
+    "LOCAL-20261112CHAT17C8C881-G0006": [
+      "## CARD LOCAL-20261112CHAT17C8C881-G0006 — Kawasaki Brave Thunders vs Saga Ballooners, 2026–27 B.LEAGUE PREMIER"
+    ],
+    "LOCAL-20261112CHAT17C8C881-G0007": [
+      "## CARD LOCAL-20261112CHAT17C8C881-G0007 — Motor České Budějovice U20 vs Bílí Tygři Liberec U20, 2026–27 Czech Extraliga Juniorů"
+    ],
+    "LOCAL-20261112CHAT17C8C881-G0008": [
+      "## CARD LOCAL-20261112CHAT17C8C881-G0008 — Piros vs Altmaier, Orléans Challenger QF, 13 November 2026"
+    ],
+    "LOCAL-20261112CHAT17C8C881-G0009": [
+      "## CARD LOCAL-20261112CHAT17C8C881-G0009 — Alejandro Tabilo vs Thiago Agustín Tirante, Stockholm ATP 250 semifinal"
+    ]
+  },
+  "syntax_check_by_script": {
+    "calculations/bleague_scoregrid_G0006.py": "AST_PARSE_PASS_ONLY_NOT_EXECUTED",
+    "calculations/hockey_research_G0002.py": "AST_PARSE_PASS_ONLY_NOT_EXECUTED",
+    "calculations/icehockey_poisson_G0007.py": "AST_PARSE_PASS_ONLY_NOT_EXECUTED",
+    "calculations/kbl_scoregrid_G0005.py": "AST_PARSE_PASS_ONLY_NOT_EXECUTED",
+    "calculations/tennis_markov_20261112G0001.py": "AST_PARSE_PASS_ONLY_NOT_EXECUTED",
+    "calculations/tennis_markov_20261112G0003.py": "AST_PARSE_PASS_ONLY_NOT_EXECUTED",
+    "calculations/tennis_markov_20261113G0008.py": "AST_PARSE_PASS_ONLY_NOT_EXECUTED",
+    "calculations/tennis_markov_20261114G0009.py": "AST_PARSE_PASS_ONLY_NOT_EXECUTED",
+    "calculations/wnbl_scoregrid_G0004.py": "AST_PARSE_PASS_ONLY_NOT_EXECUTED"
+  },
+  "limitations": [
+    "This bundle is a local chat-only pre-audit handoff. It is not a certified model-run, issued prediction log, or repository commit.",
+    "The primary mini is mini/20261112CHAT17C8C881.md; the support/ files are historical/working sidecars and MUST NOT replace the primary mini.",
+    "There are nine documented local events G0001..G0009. Card G0002 uses a nonstandard heading (\"## LOCAL-...\") instead of \"## CARD LOCAL-...\". Its body remains intact; the bundle preserves original bytes.",
+    "There are 52 OPEN_UNVERIFIED evidence records. Research cards and calculations must not be treated as validated calibrated probabilities.",
+    "The original initialization snapshot has zero cards and is preserved only as a historical provenance source; it is NOT the latest log.",
+    "The G0009 append sidecar is not byte-identical to the G0009 section in the canonical local mini. Treat it as a nonauthoritative working artifact; avoid double importing it.",
+    "No owner-local Git checkout, ml source audit, model certification, league calibration, card lint, official canonical import or settlement is evidenced by this bundling step.",
+    "No changes to original source files or the GitHub repository were made; the originals have only been copied into this archive."
+  ],
+  "source_file_manifest": [
+    {
+      "archive_path": "mini/20261112CHAT17C8C881.md",
+      "original_path": "/mnt/data/research/active_minis/20261112CHAT17C8C881.md",
+      "size_bytes": 222301,
+      "sha256": "6011036b8988e3bf5093b12dae0a88f088c216871e876794fc1bfd8d93cf01d6"
+    },
+    {
+      "archive_path": "support/PREDICTION_MINI_RUNNING_LOG_20261112CHAT17C8C881.md",
+      "original_path": "/mnt/data/PREDICTION_MINI_RUNNING_LOG_20261112CHAT17C8C881.md",
+      "size_bytes": 6747,
+      "sha256": "11d86d55cf033ec1652d566429ef815869412d9498cc15f3ef431a5b979d1cec"
+    },
+    {
+      "archive_path": "support/G0009_CARD_APPEND.md",
+      "original_path": "/mnt/data/G0009_CARD_APPEND.md",
+      "size_bytes": 23276,
+      "sha256": "ff0fbcefa211ab284fc9dce7cca3b89518162a45cec11aa05f091a34cfc32eea"
+    },
+    {
+      "archive_path": "calculations/bleague_scoregrid_G0006.py",
+      "original_path": "/mnt/data/bleague_scoregrid_G0006.py",
+      "size_bytes": 3576,
+      "sha256": "c959f9e1d9aaa39680e688222dbecac15ee66c7b23b25acfc6cc3ab8a3297bc7"
+    },
+    {
+      "archive_path": "calculations/hockey_research_G0002.py",
+      "original_path": "/mnt/data/hockey_research_G0002.py",
+      "size_bytes": 5276,
+      "sha256": "04eb1a64bd1eef072e110cbdcbc87cacd799db1c9c7e4d74aca01fa1f8222545"
+    },
+    {
+      "archive_path": "calculations/icehockey_poisson_G0007.py",
+      "original_path": "/mnt/data/icehockey_poisson_G0007.py",
+      "size_bytes": 2609,
+      "sha256": "5e031ff2778f4e54f9e7a6bc82c71ceec6560f92201608be722125cc7f7858f1"
+    },
+    {
+      "archive_path": "calculations/kbl_scoregrid_G0005.py",
+      "original_path": "/mnt/data/kbl_scoregrid_G0005.py",
+      "size_bytes": 3440,
+      "sha256": "c48f4af2428156855785181bbde8504641af24350f7cc82675cf2ae904c6b555"
+    },
+    {
+      "archive_path": "calculations/tennis_markov_20261112G0001.py",
+      "original_path": "/mnt/data/tennis_markov_20261112G0001.py",
+      "size_bytes": 3501,
+      "sha256": "1046f280f084f270841bf07e8beddf86a424e19d4c079848ec46c10c77177d82"
+    },
+    {
+      "archive_path": "calculations/tennis_markov_20261112G0003.py",
+      "original_path": "/mnt/data/tennis_markov_20261112G0003.py",
+      "size_bytes": 4051,
+      "sha256": "ce9ce3119442daf25ed1677087056e566322b60c8697b56000ee1cbdb61a20b5"
+    },
+    {
+      "archive_path": "calculations/tennis_markov_20261113G0008.py",
+      "original_path": "/mnt/data/tennis_markov_20261113G0008.py",
+      "size_bytes": 4070,
+      "sha256": "d0f00d99a675ef63e397de200a639ee4799738bccc95ae7010db59a716097052"
+    },
+    {
+      "archive_path": "calculations/tennis_markov_20261114G0009.py",
+      "original_path": "/mnt/data/tennis_markov_20261114G0009.py",
+      "size_bytes": 3997,
+      "sha256": "4a4907606855d461c69c179fe132c3e3e548bdeeae6e48946511689f008153d4"
+    },
+    {
+      "archive_path": "calculations/wnbl_scoregrid_G0004.py",
+      "original_path": "/mnt/data/wnbl_scoregrid_G0004.py",
+      "size_bytes": 2868,
+      "sha256": "ad31a10311814a79772b65a034a9dbe250171acb58ef0b7a5d28b242e03915ce"
+    }
+  ],
+  "no_git_mutation": true,
+  "source_audit_or_certification_performed": false
+}

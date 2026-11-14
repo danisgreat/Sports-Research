@@ -1,0 +1,334 @@
+{
+  "seed": 2026111401,
+  "n": 600000,
+  "method": "3-scenario jointly correlated latent total-margin normal, integer-score + regulation tie NBA overtime by Poisson 11.8 points per side per 5m; UNCALIBRATED scenario diagnostic",
+  "endpoint": "FULL_GAME_INCL_OT",
+  "population_width": {
+    "total_sd": 20.57,
+    "margin_sd": 15.455000000000002,
+    "rho": 0.1
+  },
+  "scenario_inputs": [
+    {
+      "name": "slow",
+      "weight": 0.25,
+      "reg_total_mean": 211.5,
+      "reg_knicks_margin_mean": 3.5
+    },
+    {
+      "name": "base",
+      "weight": 0.5,
+      "reg_total_mean": 219.0,
+      "reg_knicks_margin_mean": 5.5
+    },
+    {
+      "name": "fast",
+      "weight": 0.25,
+      "reg_total_mean": 228.0,
+      "reg_knicks_margin_mean": 7.5
+    }
+  ],
+  "cases": [
+    {
+      "name": "slow",
+      "weight": 0.25,
+      "n": 150000,
+      "regulation_center_total": 211.5,
+      "regulation_center_margin": 3.5,
+      "actual_mean_total": 212.125,
+      "actual_mean_margin": 3.556,
+      "knicks_cover": 0.401007,
+      "pacers_cover": 0.598993,
+      "over": 0.35902,
+      "under": 0.64098,
+      "knicks_winner": 0.590673,
+      "ties_in_regulation": 0.025667
+    },
+    {
+      "name": "base",
+      "weight": 0.5,
+      "n": 300000,
+      "regulation_center_total": 219.0,
+      "regulation_center_margin": 5.5,
+      "actual_mean_total": 219.586,
+      "actual_mean_margin": 5.461,
+      "knicks_cover": 0.44887,
+      "pacers_cover": 0.55113,
+      "over": 0.498977,
+      "under": 0.501023,
+      "knicks_winner": 0.637263,
+      "ties_in_regulation": 0.024127
+    },
+    {
+      "name": "fast",
+      "weight": 0.25,
+      "n": 150000,
+      "regulation_center_total": 228.0,
+      "regulation_center_margin": 7.5,
+      "actual_mean_total": 228.516,
+      "actual_mean_margin": 7.518,
+      "knicks_cover": 0.50242,
+      "pacers_cover": 0.49758,
+      "over": 0.665333,
+      "under": 0.334667,
+      "knicks_winner": 0.687467,
+      "ties_in_regulation": 0.022687
+    }
+  ],
+  "mean_knicks": 112.726,
+  "mean_indiana": 107.227,
+  "mean_total": 219.953,
+  "mean_margin_nyk": 5.499,
+  "sd_total": 21.774,
+  "sd_margin": 15.535,
+  "p": {
+    "Knicks -7.5": 0.450292,
+    "Pacers +7.5": 0.549708,
+    "Over 219.5": 0.505577,
+    "Under 219.5": 0.494423,
+    "Knicks winner": 0.638167,
+    "Pacers winner": 0.361833
+  },
+  "joint_loss_pacers_and_under": 0.243727,
+  "joint_loss_pacers_and_over": 0.206565,
+  "form": {
+    "Knicks": {
+      "L5": {
+        "n": 5,
+        "wins": 4,
+        "points_for": 114.2,
+        "points_against": 98.4,
+        "game_total": 212.6
+      },
+      "L10": {
+        "n": 10,
+        "wins": 6,
+        "points_for": 111.3,
+        "points_against": 103.2,
+        "game_total": 214.5
+      },
+      "L15": {
+        "n": 11,
+        "wins": 6,
+        "points_for": 110.273,
+        "points_against": 103.455,
+        "game_total": 213.727
+      },
+      "L20": {
+        "n": 11,
+        "wins": 6,
+        "points_for": 110.273,
+        "points_against": 103.455,
+        "game_total": 213.727
+      }
+    },
+    "Pacers": {
+      "L5": {
+        "n": 5,
+        "wins": 2,
+        "points_for": 109.8,
+        "points_against": 110.2,
+        "game_total": 220.0
+      },
+      "L10": {
+        "n": 10,
+        "wins": 3,
+        "points_for": 111.1,
+        "points_against": 112.7,
+        "game_total": 223.8
+      },
+      "L15": {
+        "n": 12,
+        "wins": 4,
+        "points_for": 111.583,
+        "points_against": 114.0,
+        "game_total": 225.583
+      },
+      "L20": {
+        "n": 12,
+        "wins": 4,
+        "points_for": 111.583,
+        "points_against": 114.0,
+        "game_total": 225.583
+      }
+    }
+  },
+  "prior_games": {
+    "Knicks": [
+      [
+        "2026-10-20",
+        "PHI",
+        "H",
+        100,
+        106
+      ],
+      [
+        "2026-10-23",
+        "BOS",
+        "A",
+        103,
+        107
+      ],
+      [
+        "2026-10-25",
+        "ORL",
+        "H",
+        102,
+        111
+      ],
+      [
+        "2026-10-27",
+        "DET",
+        "H",
+        111,
+        97
+      ],
+      [
+        "2026-10-28",
+        "CHI",
+        "A",
+        133,
+        127
+      ],
+      [
+        "2026-10-30",
+        "PHI",
+        "A",
+        93,
+        98
+      ],
+      [
+        "2026-11-02",
+        "BKN",
+        "H",
+        103,
+        90
+      ],
+      [
+        "2026-11-04",
+        "CHI",
+        "H",
+        135,
+        105
+      ],
+      [
+        "2026-11-07",
+        "CLE",
+        "A",
+        109,
+        97
+      ],
+      [
+        "2026-11-10",
+        "MIL",
+        "H",
+        117,
+        85
+      ],
+      [
+        "2026-11-11",
+        "CLE",
+        "H",
+        107,
+        115
+      ]
+    ],
+    "Pacers": [
+      [
+        "2026-10-21",
+        "NOP",
+        "A",
+        123,
+        120
+      ],
+      [
+        "2026-10-23",
+        "DAL",
+        "H",
+        105,
+        121
+      ],
+      [
+        "2026-10-25",
+        "BKN",
+        "A",
+        136,
+        109
+      ],
+      [
+        "2026-10-26",
+        "MIL",
+        "A",
+        102,
+        110
+      ],
+      [
+        "2026-10-28",
+        "PHI",
+        "H",
+        109,
+        114
+      ],
+      [
+        "2026-10-30",
+        "MIA",
+        "A",
+        125,
+        145
+      ],
+      [
+        "2026-11-01",
+        "BKN",
+        "H",
+        90,
+        98
+      ],
+      [
+        "2026-11-02",
+        "ATL",
+        "H",
+        104,
+        108
+      ],
+      [
+        "2026-11-04",
+        "MEM",
+        "A",
+        107,
+        103
+      ],
+      [
+        "2026-11-07",
+        "DEN",
+        "H",
+        102,
+        114
+      ],
+      [
+        "2026-11-09",
+        "DAL",
+        "A",
+        122,
+        125
+      ],
+      [
+        "2026-11-11",
+        "WAS",
+        "H",
+        114,
+        101
+      ]
+    ]
+  },
+  "source_urls": {
+    "Knicks": "https://www.basketball-reference.com/teams/NYK/2027.html",
+    "Pacers": "https://www.basketball-reference.com/teams/IND/2027.html"
+  },
+  "notes": [
+    "No formal repo reference/ML release, calibration, or historical skill validation",
+    "Nesmith questionable; McConnell probable; starting fives unconfirmed",
+    "Cup game; FIBA early group stage irrelevant; NBA 48-minute basketball",
+    "No odds, prices, betting picks, or current-game outcomes were simulation inputs",
+    "Scheduled 2026-11-14T11:10:00+11:00; actual first tip unknown; commit/push not made"
+  ]
+}

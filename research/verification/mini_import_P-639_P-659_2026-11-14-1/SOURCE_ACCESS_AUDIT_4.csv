@@ -1,0 +1,6 @@
+host,url,robots_http,status,agents_blocked,content_signal,claude_agent,chatgpt_browsing,script,checked_at
+theahl.com,https://theahl.com/stats/game-center/1029282,200,ALLOWED,,,ALLOWED,ALLOWED,ALLOWED,2026-11-14T12:07:14+00:00
+www.abbotsfordcanucks.ca,https://www.abbotsfordcanucks.ca/,ERROR:URLError,RULES_UNKNOWN,,,RULES_UNKNOWN,RULES_UNKNOWN,RULES_UNKNOWN,2026-11-14T12:07:14+00:00
+www.coloradoeagles.com,https://www.coloradoeagles.com/games,200,ALLOWED,,,ALLOWED,ALLOWED,ALLOWED,2026-11-14T12:07:14+00:00
+www.coloradoeagles.com,https://www.coloradoeagles.com/news/all,200,ALLOWED,,,ALLOWED,ALLOWED,ALLOWED,2026-11-14T12:07:14+00:00
+www.theahl.com,https://www.theahl.com/stats/game-center/1029282,200,ALLOWED,,,ALLOWED,ALLOWED,ALLOWED,2026-11-14T12:07:14+00:00

@@ -1,0 +1,463 @@
+{
+  "status": "ILLUSTRATIVE_NOT_PRIMARY; UNCALIBRATED_QUALITATIVE; NO_OFFICIAL_REFERENCE_RUN",
+  "event": "Kawasaki Brave Thunders vs Saga Ballooners",
+  "nominal_start": "2026-11-13T21:05:00+11:00",
+  "model": {
+    "seed": 20261113,
+    "N": 600000,
+    "method": "Three-scenario bivariate normal regulation total and margin with integer rounding and explicit 5-min OT Poisson branching",
+    "widths": {
+      "total": 19.426000000000002,
+      "home_margin": 16.434
+    },
+    "correlation_assumed": 0.08,
+    "regulation_ot_poisson_pts_per_team": 9.5,
+    "low_base_high_weights": [
+      0.25,
+      0.5,
+      0.25
+    ],
+    "league_efficiency_benchmark_ASSUMED": 112.0,
+    "possessions_per_game_derived": 74.52143653165638,
+    "form_blend_ASSUMED": 0.2,
+    "venue_margin_assumed": 0.61,
+    "league_profile_old_not_frozen": {
+      "total_mean": 159.19,
+      "margin_sd": 14.94,
+      "total_sd": 17.66
+    },
+    "input_rating_approach": "range from average of team OFFRTG and opponent DEFRTG to additive league-centered strength; not calibrated"
+  },
+  "source_urls": {
+    "official_game": "https://www.bleague.jp/game_detail/?ScheduleKey=506581",
+    "official_kawasaki": "https://www.bleague.jp/record/?club1=727&club2=0",
+    "official_saga": "https://www.bleague.jp/record/?club1=1638&club2=0",
+    "secondary_kawasaki": "https://bleague.sports-shirabe.com/kawasaki-brave-thunders/",
+    "secondary_saga": "https://bleague.sports-shirabe.com/saga-ballooners/",
+    "eff_kawasaki": "https://www.bleague-db.com/teams/727",
+    "eff_saga": "https://www.bleague-db.com/teams/1638",
+    "saga_dudzinski_injury": "https://ballooners.jp/news/detail/id=52366",
+    "saga_uchio_injury": "https://ballooners.jp/news/detail/id=48255?nf=0",
+    "kawasaki_araya_injury": "https://kawasaki-bravethunders.com/news/detail/id=25908"
+  },
+  "season": {
+    "Kawasaki": {
+      "ppg": 78.5,
+      "opp_ppg": 84.7,
+      "offrtg": 106.4,
+      "defrtg": 116.2,
+      "games": 16
+    },
+    "Saga": {
+      "ppg": 78.2,
+      "opp_ppg": 95.2,
+      "offrtg": 103.9,
+      "defrtg": 126.5,
+      "games": 14
+    }
+  },
+  "history": {
+    "Kawasaki": [
+      [
+        "2026-11-11",
+        "Shimane",
+        "H",
+        74,
+        95
+      ],
+      [
+        "2026-11-09",
+        "Altiri Chiba",
+        "H",
+        76,
+        85
+      ],
+      [
+        "2026-11-06",
+        "Shiga",
+        "A",
+        75,
+        81
+      ],
+      [
+        "2026-11-01",
+        "Yokohama BC",
+        "H",
+        66,
+        77
+      ],
+      [
+        "2026-10-31",
+        "Yokohama BC",
+        "H",
+        65,
+        75
+      ],
+      [
+        "2026-10-26",
+        "Utsunomiya",
+        "A",
+        92,
+        89
+      ],
+      [
+        "2026-10-24",
+        "Sendai",
+        "H",
+        82,
+        93
+      ],
+      [
+        "2026-10-21",
+        "Osaka",
+        "H",
+        101,
+        67
+      ],
+      [
+        "2026-10-19",
+        "Shimane",
+        "A",
+        69,
+        80
+      ],
+      [
+        "2026-10-16",
+        "Ibaraki",
+        "H",
+        74,
+        82
+      ],
+      [
+        "2026-10-10",
+        "Alvark Tokyo",
+        "H",
+        82,
+        94
+      ],
+      [
+        "2026-10-08",
+        "Akita",
+        "A",
+        87,
+        81
+      ],
+      [
+        "2026-10-04",
+        "Altiri Chiba",
+        "A",
+        82,
+        74
+      ],
+      [
+        "2026-10-03",
+        "Altiri Chiba",
+        "A",
+        90,
+        99
+      ],
+      [
+        "2026-09-27",
+        "Nagoya D",
+        "H",
+        78,
+        90
+      ],
+      [
+        "2026-09-26",
+        "Nagoya D",
+        "H",
+        63,
+        93
+      ]
+    ],
+    "Saga": [
+      [
+        "2026-11-08",
+        "Chiba Jets",
+        "H",
+        103,
+        111
+      ],
+      [
+        "2026-11-01",
+        "Mikawa",
+        "A",
+        78,
+        84
+      ],
+      [
+        "2026-10-31",
+        "Mikawa",
+        "A",
+        83,
+        100
+      ],
+      [
+        "2026-10-26",
+        "Alvark Tokyo",
+        "H",
+        88,
+        112
+      ],
+      [
+        "2026-10-21",
+        "Nagasaki",
+        "H",
+        66,
+        84
+      ],
+      [
+        "2026-10-18",
+        "Kyoto",
+        "A",
+        70,
+        115
+      ],
+      [
+        "2026-10-16",
+        "Hokkaido",
+        "H",
+        90,
+        109
+      ],
+      [
+        "2026-10-12",
+        "Gunma",
+        "H",
+        61,
+        72
+      ],
+      [
+        "2026-10-10",
+        "Kobe",
+        "A",
+        84,
+        77
+      ],
+      [
+        "2026-10-08",
+        "Alvark Tokyo",
+        "A",
+        74,
+        90
+      ],
+      [
+        "2026-10-04",
+        "San-En",
+        "H",
+        89,
+        93
+      ],
+      [
+        "2026-10-03",
+        "San-En",
+        "H",
+        61,
+        97
+      ],
+      [
+        "2026-09-27",
+        "Hiroshima",
+        "H",
+        61,
+        89
+      ],
+      [
+        "2026-09-25",
+        "Hiroshima",
+        "H",
+        87,
+        100
+      ]
+    ]
+  },
+  "windows": {
+    "Kawasaki": {
+      "L5": {
+        "n": 5,
+        "points_for": 71.2,
+        "points_against": 82.6,
+        "mean_total": 153.8,
+        "wins": 0,
+        "losses": 5,
+        "full_window_available": true
+      },
+      "L10": {
+        "n": 10,
+        "points_for": 77.4,
+        "points_against": 82.4,
+        "mean_total": 159.8,
+        "wins": 2,
+        "losses": 8,
+        "full_window_available": true
+      },
+      "L15": {
+        "n": 15,
+        "points_for": 79.533,
+        "points_against": 84.133,
+        "mean_total": 163.667,
+        "wins": 4,
+        "losses": 11,
+        "full_window_available": true
+      },
+      "L20": {
+        "n": 16,
+        "points_for": 78.5,
+        "points_against": 84.688,
+        "mean_total": 163.188,
+        "wins": 4,
+        "losses": 12,
+        "full_window_available": false
+      },
+      "season": {
+        "n": 16,
+        "pf": 78.5,
+        "pa": 84.688,
+        "record": "4-12"
+      }
+    },
+    "Saga": {
+      "L5": {
+        "n": 5,
+        "points_for": 83.6,
+        "points_against": 98.2,
+        "mean_total": 181.8,
+        "wins": 0,
+        "losses": 5,
+        "full_window_available": true
+      },
+      "L10": {
+        "n": 10,
+        "points_for": 79.7,
+        "points_against": 95.4,
+        "mean_total": 175.1,
+        "wins": 1,
+        "losses": 9,
+        "full_window_available": true
+      },
+      "L15": {
+        "n": 14,
+        "points_for": 78.214,
+        "points_against": 95.214,
+        "mean_total": 173.429,
+        "wins": 1,
+        "losses": 13,
+        "full_window_available": false
+      },
+      "L20": {
+        "n": 14,
+        "points_for": 78.214,
+        "points_against": 95.214,
+        "mean_total": 173.429,
+        "wins": 1,
+        "losses": 13,
+        "full_window_available": false
+      },
+      "season": {
+        "n": 14,
+        "pf": 78.214,
+        "pa": 95.214,
+        "record": "1-13"
+      }
+    }
+  },
+  "cases": [
+    {
+      "case": "LOW_SLOW_MIDPOINT",
+      "weight": 0.25,
+      "N": 150000,
+      "expected_reg_kawasaki": 83.0218,
+      "expected_reg_saga": 80.3255,
+      "expected_reg_total": 163.3473,
+      "expected_reg_kawasaki_margin": 2.6963,
+      "initial_regulation_tie_rate": 0.02405,
+      "final_mean_kawasaki": 83.2505,
+      "final_mean_saga": 80.5263,
+      "final_mean_total": 163.7768,
+      "final_mean_margin": 2.7243,
+      "rates": {
+        "KAWASAKI_MINUS_9_5": 0.34079333333333334,
+        "SAGA_PLUS_9_5": 0.6592066666666667,
+        "OVER_169_5": 0.38344666666666666,
+        "UNDER_169_5": 0.6165533333333333
+      }
+    },
+    {
+      "case": "BASE_BLEND",
+      "weight": 0.5,
+      "N": 300000,
+      "expected_reg_kawasaki": 87.2833,
+      "expected_reg_saga": 82.0593,
+      "expected_reg_total": 169.3426,
+      "expected_reg_kawasaki_margin": 5.2241,
+      "initial_regulation_tie_rate": 0.0225,
+      "final_mean_kawasaki": 87.4954,
+      "final_mean_saga": 82.2795,
+      "final_mean_total": 169.7749,
+      "final_mean_margin": 5.2158,
+      "rates": {
+        "KAWASAKI_MINUS_9_5": 0.3977233333333333,
+        "SAGA_PLUS_9_5": 0.6022766666666667,
+        "OVER_169_5": 0.50318,
+        "UNDER_169_5": 0.49682
+      }
+    },
+    {
+      "case": "HIGH_FAST_ADDITIVE",
+      "weight": 0.25,
+      "N": 150000,
+      "expected_reg_kawasaki": 91.6443,
+      "expected_reg_saga": 83.7494,
+      "expected_reg_total": 175.3937,
+      "expected_reg_kawasaki_margin": 7.8949,
+      "initial_regulation_tie_rate": 0.02239,
+      "final_mean_kawasaki": 91.8625,
+      "final_mean_saga": 83.9975,
+      "final_mean_total": 175.86,
+      "final_mean_margin": 7.865,
+      "rates": {
+        "KAWASAKI_MINUS_9_5": 0.4602733333333333,
+        "SAGA_PLUS_9_5": 0.5397266666666667,
+        "OVER_169_5": 0.62414,
+        "UNDER_169_5": 0.37586
+      }
+    }
+  ],
+  "overall": {
+    "rates": {
+      "KAWASAKI_MINUS_9_5": 0.3991283333333333,
+      "SAGA_PLUS_9_5": 0.6008716666666667,
+      "OVER_169_5": 0.5034866666666666,
+      "UNDER_169_5": 0.4965133333333333
+    },
+    "MC_standard_error_max": 0.0006454815297584117,
+    "ranking": [
+      "SAGA_PLUS_9_5",
+      "OVER_169_5",
+      "UNDER_169_5",
+      "KAWASAKI_MINUS_9_5"
+    ],
+    "mean_score": [
+      87.52592666666666,
+      82.27069333333333
+    ],
+    "mean_total": 169.79662,
+    "mean_kawasaki_margin": 5.255233333333333,
+    "total_sd": 20.163989682325603,
+    "margin_sd": 16.556341160178544,
+    "P_home_win": 0.6250033333333334,
+    "P_away_win": 0.37499666666666664,
+    "joint_failure_first_two": 0.18557833333333335
+  },
+  "limits": [
+    "Input sources reflect pre-13-Nov results, but publishing times not independently verified for every row.",
+    "Neither exact tip time nor starters/bench confirmed.",
+    "No venue-specific rest/fouling/possession model fit.",
+    "Prior B League width parameters are development-only and not validated for 2026-27 B.Premier.",
+    "Assumed midpoint/additive rate reconciliation and home effect are NOT approved adjustments.",
+    "No formal league-only baseline run or model reference freeze.",
+    "No official issued numerical probability or certified accuracy.",
+    "No market odds/predictions used."
+  ]
+}

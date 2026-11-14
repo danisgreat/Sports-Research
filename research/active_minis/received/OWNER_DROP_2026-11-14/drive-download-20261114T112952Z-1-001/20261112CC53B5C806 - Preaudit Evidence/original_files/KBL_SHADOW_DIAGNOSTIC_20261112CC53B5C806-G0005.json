@@ -1,0 +1,109 @@
+{
+  "status": "EXECUTED_UNCALIBRATED_EXPLORATORY_SHADOW_NOT_PRIMARY",
+  "N": 1200000,
+  "seed": 13112026,
+  "scenarios": [
+    {
+      "scenario": "low_scoring_KT_short_rotation",
+      "weight": 0.25,
+      "n": 300000,
+      "regulation_means": [
+        89.0,
+        80.5
+      ],
+      "wonju_minus5_5": 0.5801433333333333,
+      "suwon_plus5_5": 0.41985666666666666,
+      "over179_5": 0.31596,
+      "under179_5": 0.68404,
+      "wonju_win": 0.71014,
+      "suwon_win": 0.28986,
+      "mean_wonju": 89.27797666666666,
+      "mean_suwon": 80.75553,
+      "mean_total": 170.03350666666665,
+      "mean_margin": 8.522446666666667,
+      "ot_rate": 0.022556666666666666,
+      "joint_loss_under_and_suwon": 0.17982333333333334
+    },
+    {
+      "scenario": "central_regime",
+      "weight": 0.5,
+      "n": 600000,
+      "regulation_means": [
+        90.1,
+        85.3
+      ],
+      "wonju_minus5_5": 0.48443,
+      "suwon_plus5_5": 0.51557,
+      "over179_5": 0.426405,
+      "under179_5": 0.573595,
+      "wonju_win": 0.6225116666666667,
+      "suwon_win": 0.3774883333333333,
+      "mean_wonju": 90.35901,
+      "mean_suwon": 85.5491,
+      "mean_total": 175.90811,
+      "mean_margin": 4.80991,
+      "ot_rate": 0.02472,
+      "joint_loss_under_and_suwon": 0.20355666666666666
+    },
+    {
+      "scenario": "fast_Bass_perimeter_responds",
+      "weight": 0.25,
+      "n": 300000,
+      "regulation_means": [
+        95.0,
+        89.0
+      ],
+      "wonju_minus5_5": 0.5139433333333333,
+      "suwon_plus5_5": 0.4860566666666667,
+      "over179_5": 0.5961733333333333,
+      "under179_5": 0.40382666666666667,
+      "wonju_win": 0.6506566666666667,
+      "suwon_win": 0.34934333333333334,
+      "mean_wonju": 95.21658666666667,
+      "mean_suwon": 89.27249,
+      "mean_total": 184.48907666666668,
+      "mean_margin": 5.944096666666667,
+      "ot_rate": 0.023886666666666667,
+      "joint_loss_under_and_suwon": 0.30300666666666665
+    }
+  ],
+  "summary": {
+    "wonju_minus5_5": 0.5157366666666666,
+    "suwon_plus5_5": 0.4842633333333333,
+    "over179_5": 0.4412358333333333,
+    "under179_5": 0.5587641666666666,
+    "wonju_win": 0.651455,
+    "suwon_win": 0.348545,
+    "mean_wonju": 91.30314583333333,
+    "mean_suwon": 85.281555,
+    "mean_total": 176.58470083333333,
+    "sd_total": 20.692141562329873,
+    "mean_margin": 6.021590833333334,
+    "sd_margin": 15.455554384619012,
+    "ot_rate": 0.023970833333333334,
+    "both_under_and_suwon": 0.2655133333333333,
+    "joint_loss_under_and_suwon": 0.22248583333333333,
+    "both_decisive": 1.0
+  },
+  "model": "bivariate Gaussian regulation scoreboard rounded to integers + conditional equal-score 5min overtime score increments; not calibrated; no referee/foul state; scenario weights subjective.",
+  "widths": {
+    "total": 19.723000000000003,
+    "margin": 15.367000000000003,
+    "rho": 0.0
+  },
+  "source_urls": [
+    "https://www.kbl.or.kr/match/schedule",
+    "https://statgg.com/en/kbl/matches/S49G01N66",
+    "https://www.aiscore.com/en/head-to-head/basketball/busan-ktf-sonicboom-vs-wonju-dongbu-promy",
+    "https://www.jumpball.co.kr/news/newsview.php?ncode=1065577530368244",
+    "https://www.dailyil.com/ko/briefing/2026-11-13_KBL/",
+    "https://en.24score.com/basketball/match/369525-wonju_db-suwon_kt"
+  ],
+  "disclaimers": [
+    "Distinct scenario weights unvalidated and not independently qualified for KBL.",
+    "No actual KBL ml reference, official pregame run or frozen card.",
+    "Overtime model is approximate: only tied regulation score receives one extra-period point proxy.",
+    "Season scoring includes historical roster and injuries; proposed adjustments illustrative and not independently measured.",
+    "Do not use retrospective match results or market lines as model features."
+  ]
+}

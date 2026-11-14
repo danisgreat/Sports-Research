@@ -1,0 +1,128 @@
+event,canonical_id,requirement,status
+R01,P-639,final score,CLOSED
+R01,P-639,period scores,CLOSED
+R01,P-639,two permitted lineages,OPEN
+R01,P-639,final wall-clock,OPEN
+R01,P-639,actual first play,OPEN
+R01,P-639,operator terms,NOT_APPLICABLE_FRAMEWORK_CONVENTION
+R02,P-640,final score,CLOSED
+R02,P-640,period scores,CLOSED
+R02,P-640,two permitted lineages,CLOSED
+R02,P-640,final wall-clock,OPEN
+R02,P-640,actual first play,OPEN
+R02,P-640,operator terms,NOT_APPLICABLE_FRAMEWORK_CONVENTION
+R03,P-641,final score,CLOSED
+R03,P-641,period scores,CLOSED
+R03,P-641,two permitted lineages,CLOSED
+R03,P-641,final wall-clock,OPEN
+R03,P-641,actual first play,OPEN
+R03,P-641,operator terms,NOT_APPLICABLE_FRAMEWORK_CONVENTION
+R04,P-642,final score,CLOSED
+R04,P-642,period scores,CLOSED
+R04,P-642,two permitted lineages,CLOSED
+R04,P-642,final wall-clock,OPEN
+R04,P-642,actual first play,OPEN
+R04,P-642,operator terms,NOT_APPLICABLE_FRAMEWORK_CONVENTION
+R06,P-643,final score,CLOSED
+R06,P-643,period scores,OPEN
+R06,P-643,two permitted lineages,OPEN
+R06,P-643,final wall-clock,OPEN
+R06,P-643,actual first play,OPEN
+R06,P-643,operator terms,NOT_APPLICABLE_FRAMEWORK_CONVENTION
+R05,P-644,final score,CLOSED
+R05,P-644,period scores,CLOSED
+R05,P-644,two permitted lineages,CLOSED
+R05,P-644,final wall-clock,OPEN
+R05,P-644,actual first play,OPEN
+R05,P-644,operator terms,NOT_APPLICABLE_FRAMEWORK_CONVENTION
+R07,P-645,final score,CLOSED
+R07,P-645,period scores,CLOSED
+R07,P-645,two permitted lineages,CLOSED
+R07,P-645,final wall-clock,OPEN
+R07,P-645,actual first play,OPEN
+R07,P-645,operator terms,NOT_APPLICABLE_FRAMEWORK_CONVENTION
+R08,P-646,final score,CLOSED
+R08,P-646,period scores,OPEN
+R08,P-646,two permitted lineages,CLOSED
+R08,P-646,final wall-clock,OPEN
+R08,P-646,actual first play,OPEN
+R08,P-646,operator terms,NOT_APPLICABLE_FRAMEWORK_CONVENTION
+R09,P-647,final score,CLOSED
+R09,P-647,period scores,CLOSED
+R09,P-647,two permitted lineages,CLOSED
+R09,P-647,final wall-clock,OPEN
+R09,P-647,actual first play,OPEN
+R09,P-647,operator terms,NOT_APPLICABLE_FRAMEWORK_CONVENTION
+R10,P-648,final score,CLOSED
+R10,P-648,period scores,CLOSED
+R10,P-648,two permitted lineages,CLOSED
+R10,P-648,final wall-clock,OPEN
+R10,P-648,actual first play,OPEN
+R10,P-648,operator terms,NOT_APPLICABLE_FRAMEWORK_CONVENTION
+E11,P-649,final score,CLOSED
+E11,P-649,period scores,CLOSED
+E11,P-649,two permitted lineages,CLOSED
+E11,P-649,final wall-clock,OPEN
+E11,P-649,actual first play,OPEN
+E11,P-649,operator terms,NOT_APPLICABLE_FRAMEWORK_CONVENTION
+E12,P-650,final score,CLOSED
+E12,P-650,period scores,CLOSED
+E12,P-650,two permitted lineages,CLOSED
+E12,P-650,final wall-clock,OPEN
+E12,P-650,actual first play,OPEN
+E12,P-650,operator terms,NOT_APPLICABLE_FRAMEWORK_CONVENTION
+E13,P-651,final score,CLOSED
+E13,P-651,period scores,CLOSED
+E13,P-651,two permitted lineages,CLOSED
+E13,P-651,final wall-clock,OPEN
+E13,P-651,actual first play,OPEN
+E13,P-651,operator terms,NOT_APPLICABLE_FRAMEWORK_CONVENTION
+E14,P-652,final score,CLOSED
+E14,P-652,period scores,CLOSED
+E14,P-652,two permitted lineages,OPEN
+E14,P-652,final wall-clock,OPEN
+E14,P-652,actual first play,OPEN
+E14,P-652,operator terms,NOT_APPLICABLE_FRAMEWORK_CONVENTION
+E15,P-653,final score,CLOSED
+E15,P-653,period scores,CLOSED
+E15,P-653,two permitted lineages,CLOSED
+E15,P-653,final wall-clock,OPEN
+E15,P-653,actual first play,OPEN
+E15,P-653,operator terms,NOT_APPLICABLE_FRAMEWORK_CONVENTION
+E16,P-654,final score,CLOSED
+E16,P-654,period scores,OPEN
+E16,P-654,two permitted lineages,CLOSED
+E16,P-654,final wall-clock,OPEN
+E16,P-654,actual first play,OPEN
+E16,P-654,operator terms,NOT_APPLICABLE_FRAMEWORK_CONVENTION
+E17,P-655,final score,CLOSED
+E17,P-655,period scores,CLOSED
+E17,P-655,two permitted lineages,CLOSED
+E17,P-655,final wall-clock,OPEN
+E17,P-655,actual first play,OPEN
+E17,P-655,operator terms,NOT_APPLICABLE_FRAMEWORK_CONVENTION
+E18,P-656,final score,CLOSED
+E18,P-656,period scores,CLOSED
+E18,P-656,two permitted lineages,OPEN
+E18,P-656,final wall-clock,OPEN
+E18,P-656,actual first play,OPEN
+E18,P-656,operator terms,NOT_APPLICABLE_FRAMEWORK_CONVENTION
+E19,P-657,final score,CLOSED
+E19,P-657,period scores,CLOSED
+E19,P-657,two permitted lineages,CLOSED
+E19,P-657,final wall-clock,OPEN
+E19,P-657,actual first play,OPEN
+E19,P-657,operator terms,NOT_APPLICABLE_FRAMEWORK_CONVENTION
+E20,P-658,final score,CLOSED
+E20,P-658,period scores,CLOSED
+E20,P-658,two permitted lineages,CLOSED
+E20,P-658,final wall-clock,OPEN
+E20,P-658,actual first play,OPEN
+E20,P-658,operator terms,NOT_APPLICABLE_FRAMEWORK_CONVENTION
+E21,P-659,final score,CLOSED
+E21,P-659,period scores,OPEN
+E21,P-659,two permitted lineages,OPEN
+E21,P-659,final wall-clock,OPEN
+E21,P-659,actual first play,OPEN
+E21,P-659,operator terms,NOT_APPLICABLE_FRAMEWORK_CONVENTION
+R09,P-647,corner kicks,OPEN

@@ -1,0 +1,464 @@
+{
+  "disposition": "ILLUSTRATIVE_SCENARIO_ONLY_NOT_OFFICIAL_P_CARD",
+  "fixture": "Thiago Agustin Tirante vs Aleksandr Shevchenko, 2026-11-12, Stockholm ATP250 QF",
+  "scheduled_start_utc": "2026-11-12T14:00:00+00:00",
+  "model": "best-of-three Markov game hold; explicit 6-6 set tie breaks; alternating serve; first set first server 50/50; independent service probabilities conditional on scenario; set-to-set form shocks via mixture not estimated",
+  "source": "https://www.tennislive.co.uk/atp/match/thiago-agustin-tirante-VS-alexander-shevchenko/bnp-paribas-nordic-open-stockholm-2026/",
+  "scope": "regular match completed best-of-3; retires/walkovers excluded; assumed ordinary tiebreak through three sets",
+  "mixture": [
+    {
+      "label": "Shevchenko_stronger_indoors",
+      "weight": 0.25,
+      "tir_point_serve": 0.682,
+      "shev_point_serve": 0.7
+    },
+    {
+      "label": "Balanced_base",
+      "weight": 0.5,
+      "tir_point_serve": 0.7,
+      "shev_point_serve": 0.686
+    },
+    {
+      "label": "Tirante_fresher_serve",
+      "weight": 0.25,
+      "tir_point_serve": 0.714,
+      "shev_point_serve": 0.666
+    }
+  ],
+  "scenarios": [
+    {
+      "label": "Shevchenko_stronger_indoors",
+      "weight": 0.25,
+      "tir_point_serve": 0.682,
+      "shev_point_serve": 0.7,
+      "summary": {
+        "tirante_winner": 0.4159802318233953,
+        "shevchenko_winner": 0.5840197681766047,
+        "tirante_plus_0_5_games": 0.4438973091734097,
+        "shevchenko_minus_0_5_games": 0.5561026908265903,
+        "under_23_5_games": 0.41180273260928635,
+        "over_23_5_games": 0.5881972673907137,
+        "three_sets": 0.4936717648239202,
+        "E_tirante_games": 13.135255952451706,
+        "E_shevchenko_games": 13.824633783643014,
+        "E_total_games": 26.95988973609472,
+        "E_tirante_margin": -0.6893778311913081,
+        "sd_total_games": 6.119613006798596,
+        "sd_margin_games": 3.531506728009904,
+        "sum_mass": 1.0
+      },
+      "parameters": {
+        "hold_tir": 0.8778789257764686,
+        "hold_shev": 0.9007889655172414,
+        "tb_tir_serves_first": 0.46868787266593,
+        "tb_shev_serves_first": 0.46868787266593004
+      }
+    },
+    {
+      "label": "Balanced_base",
+      "weight": 0.5,
+      "tir_point_serve": 0.7,
+      "shev_point_serve": 0.686,
+      "summary": {
+        "tirante_winner": 0.5653866408907651,
+        "shevchenko_winner": 0.43461335910923493,
+        "tirante_plus_0_5_games": 0.5955715310658325,
+        "shevchenko_minus_0_5_games": 0.4044284689341675,
+        "under_23_5_games": 0.40652438555192943,
+        "over_23_5_games": 0.5934756144480706,
+        "three_sets": 0.4961802033694279,
+        "E_tirante_games": 13.797653398451404,
+        "E_shevchenko_games": 13.26543993619635,
+        "E_total_games": 27.063093334647753,
+        "E_tirante_margin": 0.5322134622550543,
+        "sd_total_games": 6.12609327861097,
+        "sd_margin_games": 3.520875865717348,
+        "sum_mass": 0.9999999999999999
+      },
+      "parameters": {
+        "hold_tir": 0.9007889655172414,
+        "hold_shev": 0.8832313315300598,
+        "tb_tir_serves_first": 0.5244180010817311,
+        "tb_shev_serves_first": 0.524418001081731
+      }
+    },
+    {
+      "label": "Tirante_fresher_serve",
+      "weight": 0.25,
+      "tir_point_serve": 0.714,
+      "shev_point_serve": 0.666,
+      "summary": {
+        "tirante_winner": 0.7144097146515075,
+        "shevchenko_winner": 0.2855902853484925,
+        "tirante_plus_0_5_games": 0.7418557652955643,
+        "shevchenko_minus_0_5_games": 0.2581442347044357,
+        "under_23_5_games": 0.45394582132547234,
+        "over_23_5_games": 0.5460541786745277,
+        "three_sets": 0.45666916489375103,
+        "E_tirante_games": 14.07169033485523,
+        "E_shevchenko_games": 12.27082692223653,
+        "E_total_games": 26.34251725709176,
+        "E_tirante_margin": 1.8008634126186998,
+        "sd_total_games": 6.149427438821233,
+        "sd_margin_games": 3.3556223792117397,
+        "sum_mass": 1.0000000000000004
+      },
+      "parameters": {
+        "hold_tir": 0.9165459309919685,
+        "hold_shev": 0.8549641641477661,
+        "tb_tir_serves_first": 0.5829383133114888,
+        "tb_shev_serves_first": 0.5829383133114889
+      }
+    }
+  ],
+  "mixed": {
+    "tirante_winner": 0.5652908070641083,
+    "shevchenko_winner": 0.4347091929358917,
+    "tirante_plus_0_5_games": 0.5942240341501598,
+    "shevchenko_minus_0_5_games": 0.4057759658498402,
+    "under_23_5_games": 0.4196993312596544,
+    "over_23_5_games": 0.5803006687403456,
+    "three_sets": 0.4856753341141318,
+    "E_tirante_games": 13.700563271052436,
+    "E_shevchenko_games": 13.15658514456806,
+    "E_total_games": 26.857148415620497,
+    "E_tirante_margin": 0.5439781264843759,
+    "sd_total_games": 6.137658073776975,
+    "sd_margin_games": 3.5925645227647465,
+    "sum_mass": 1.0
+  },
+  "data_form": {
+    "tirante": {
+      "L5": {
+        "n": 5,
+        "wins": 2,
+        "losses": 3,
+        "games_for": 62,
+        "games_against": 64,
+        "total_games": 126,
+        "games_per_match": 25.2
+      },
+      "L10": {
+        "n": 10,
+        "wins": 4,
+        "losses": 6,
+        "games_for": 114,
+        "games_against": 122,
+        "total_games": 236,
+        "games_per_match": 23.6
+      },
+      "L15": {
+        "n": 15,
+        "wins": 7,
+        "losses": 8,
+        "games_for": 185,
+        "games_against": 200,
+        "total_games": 385,
+        "games_per_match": 25.667
+      },
+      "L20": {
+        "n": 20,
+        "wins": 11,
+        "losses": 9,
+        "games_for": 252,
+        "games_against": 261,
+        "total_games": 513,
+        "games_per_match": 25.65
+      }
+    },
+    "shevchenko": {
+      "L5": {
+        "n": 5,
+        "wins": 4,
+        "losses": 1,
+        "games_for": 67,
+        "games_against": 42,
+        "total_games": 109,
+        "games_per_match": 21.8
+      },
+      "L10": {
+        "n": 10,
+        "wins": 7,
+        "losses": 3,
+        "games_for": 128,
+        "games_against": 93,
+        "total_games": 221,
+        "games_per_match": 22.1
+      },
+      "L15": {
+        "n": 15,
+        "wins": 7,
+        "losses": 8,
+        "games_for": 180,
+        "games_against": 168,
+        "total_games": 348,
+        "games_per_match": 23.2
+      },
+      "L20": {
+        "n": 20,
+        "wins": 9,
+        "losses": 11,
+        "games_for": 247,
+        "games_against": 231,
+        "total_games": 478,
+        "games_per_match": 23.9
+      }
+    }
+  },
+  "source_limitations": [
+    "Point-service strength assumptions not fitted and not matched to recent opponents",
+    "Indoor 2026 sample small/conflicting across providers",
+    "No formal baseline or repository reference run",
+    "No independent first-ball timestamp",
+    "No medical confirmation",
+    "Operator retirement conventions unknown",
+    "No actual issue in repository"
+  ],
+  "prior_games": {
+    "tirante": [
+      [
+        "2026-11-08",
+        "Jaume Munar",
+        "W",
+        "7-6 6-3"
+      ],
+      [
+        "2026-11-04",
+        "Jan-Lennard Struff",
+        "L",
+        "7-6 3-6 6-7"
+      ],
+      [
+        "2026-11-01",
+        "Mattia Bellucci",
+        "L",
+        "4-6 4-6"
+      ],
+      [
+        "2026-10-31",
+        "Zachary Svajda",
+        "W",
+        "3-6 6-1 6-4"
+      ],
+      [
+        "2026-10-24",
+        "Adrian Mannarino",
+        "L",
+        "4-6 6-7"
+      ],
+      [
+        "2026-10-19",
+        "Facundo Diaz Acosta",
+        "L",
+        "7-6 1-6 4-6"
+      ],
+      [
+        "2026-10-10",
+        "Rafael Jodar",
+        "L",
+        "6-4 2-6 3-6"
+      ],
+      [
+        "2026-10-08",
+        "Hamad Medjedovic",
+        "W",
+        "6-4 6-2"
+      ],
+      [
+        "2026-09-30",
+        "Jan-Lennard Struff",
+        "L",
+        "1-6 4-6"
+      ],
+      [
+        "2026-09-19",
+        "Mert Alkaya",
+        "W",
+        "6-2 6-4"
+      ],
+      [
+        "2026-08-31",
+        "Adrian Mannarino",
+        "L",
+        "6-4 6-3 3-6 3-6 3-6"
+      ],
+      [
+        "2026-08-21",
+        "Arthur Fils",
+        "L",
+        "3-6 2-6"
+      ],
+      [
+        "2026-08-19",
+        "Jakub Mensik",
+        "W",
+        "5-7 6-4 6-4"
+      ],
+      [
+        "2026-08-17",
+        "Martin Landaluce",
+        "W",
+        "7-6 7-6"
+      ],
+      [
+        "2026-08-15",
+        "Novak Djokovic",
+        "W",
+        "2-6 6-4 6-4"
+      ],
+      [
+        "2026-08-13",
+        "Jan Choinski",
+        "W",
+        "7-6 6-7 7-6"
+      ],
+      [
+        "2026-08-09",
+        "Learner Tien",
+        "L",
+        "4-6 4-6"
+      ],
+      [
+        "2026-08-07",
+        "Alexei Popyrin",
+        "W",
+        "6-3 6-4"
+      ],
+      [
+        "2026-08-05",
+        "Taylor Fritz",
+        "W",
+        "7-5 6-3"
+      ],
+      [
+        "2026-08-04",
+        "Duncan Chan",
+        "W",
+        "6-3 1-6 7-6"
+      ]
+    ],
+    "shevchenko": [
+      [
+        "2026-11-11",
+        "Casper Ruud",
+        "W",
+        "6-7 6-4 6-3"
+      ],
+      [
+        "2026-11-10",
+        "Adrian Mannarino",
+        "W",
+        "6-1 6-3"
+      ],
+      [
+        "2026-11-08",
+        "Jacob Fearnley",
+        "W",
+        "6-2 6-4"
+      ],
+      [
+        "2026-11-07",
+        "Viktor Durasovic",
+        "W",
+        "6-1 6-1"
+      ],
+      [
+        "2026-11-02",
+        "Luka Pavlovic",
+        "L",
+        "3-6 6-4 4-6"
+      ],
+      [
+        "2026-10-18",
+        "Stefanos Sakellaridis",
+        "L",
+        "6-7 4-6"
+      ],
+      [
+        "2026-10-17",
+        "Daniil Glinka",
+        "W",
+        "6-3 6-7 7-5"
+      ],
+      [
+        "2026-10-16",
+        "Mattia Bellucci",
+        "L",
+        "4-6 4-6"
+      ],
+      [
+        "2026-10-15",
+        "Jay Dylan Hara Friend",
+        "W",
+        "6-0 6-4"
+      ],
+      [
+        "2026-10-13",
+        "Miomir Kecmanovic",
+        "W",
+        "6-3 6-4"
+      ],
+      [
+        "2026-10-05",
+        "Yoshihito Nishioka",
+        "L",
+        "2-6 4-6"
+      ],
+      [
+        "2026-09-24",
+        "Hubert Hurkacz",
+        "L",
+        "3-6 6-7"
+      ],
+      [
+        "2026-08-30",
+        "Dino Prizmic",
+        "L",
+        "6-2 3-6 3-6 7-5 5-7"
+      ],
+      [
+        "2026-08-14",
+        "Botic van de Zandschulp",
+        "L",
+        "4-6 4-6"
+      ],
+      [
+        "2026-08-12",
+        "Christopher O'Connell",
+        "L",
+        "4-6 1-6"
+      ],
+      [
+        "2026-08-11",
+        "Pablo Llamas Ruiz",
+        "W",
+        "6-3 6-4"
+      ],
+      [
+        "2026-08-01",
+        "Kyrian Jacquet",
+        "L",
+        "6-4 4-6 3-6"
+      ],
+      [
+        "2026-07-21",
+        "Jan-Lennard Struff",
+        "L",
+        "6-3 6-7 4-6"
+      ],
+      [
+        "2026-07-18",
+        "Stefanos Tsitsipas",
+        "L",
+        "4-6 6-3 3-6"
+      ],
+      [
+        "2026-07-17",
+        "Quentin Halys",
+        "W",
+        "7-6 6-3"
+      ]
+    ]
+  },
+  "calculation": "exact finite match score states, each probability is W mass (no pushes on .5 lines), no simulated randomness"
+}

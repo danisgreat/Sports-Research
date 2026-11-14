@@ -1,0 +1,151 @@
+{
+  "label": "UNCALIBRATED_RESEARCH_DIAGNOSTIC_ONLY_NOT_PRIMARY",
+  "seed": 20261114,
+  "n": 600000,
+  "scenarios": [
+    {
+      "name": "low_scoring",
+      "weight": 0.25,
+      "n": 150000,
+      "rutgers_mean": 77.0,
+      "bryant_mean": 58.0,
+      "margin_sd": 15.5,
+      "total_sd": 19.5,
+      "corr_margin_total": 0.15,
+      "probabilities": {
+        "bryant_plus_21_5": 0.56476,
+        "rutgers_minus_21_5": 0.43524,
+        "over_148_5": 0.24874666666666667,
+        "under_148_5": 0.7512533333333333,
+        "rutgers_wins": 0.8896733333333333,
+        "bryant_wins": 0.11032666666666667
+      },
+      "expected_rutgers": 77.08705333333333,
+      "expected_bryant": 58.11292666666667,
+      "expected_total": 135.19998,
+      "expected_margin": 18.974126666666667,
+      "ot_rate": 0.011706666666666667
+    },
+    {
+      "name": "base",
+      "weight": 0.5,
+      "n": 300000,
+      "rutgers_mean": 82.0,
+      "bryant_mean": 61.0,
+      "margin_sd": 16.5,
+      "total_sd": 21.0,
+      "corr_margin_total": 0.15,
+      "probabilities": {
+        "bryant_plus_21_5": 0.5104633333333334,
+        "rutgers_minus_21_5": 0.4895366666666667,
+        "over_148_5": 0.40025333333333335,
+        "under_148_5": 0.5997466666666667,
+        "rutgers_wins": 0.8993266666666667,
+        "bryant_wins": 0.10067333333333334
+      },
+      "expected_rutgers": 82.13996666666667,
+      "expected_bryant": 61.07243,
+      "expected_total": 143.21239666666668,
+      "expected_margin": 21.067536666666665,
+      "ot_rate": 0.01066
+    },
+    {
+      "name": "high_scoring",
+      "weight": 0.25,
+      "n": 150000,
+      "rutgers_mean": 88.0,
+      "bryant_mean": 65.0,
+      "margin_sd": 17.5,
+      "total_sd": 22.5,
+      "corr_margin_total": 0.15,
+      "probabilities": {
+        "bryant_plus_21_5": 0.46416666666666667,
+        "rutgers_minus_21_5": 0.5358333333333334,
+        "over_148_5": 0.5811533333333333,
+        "under_148_5": 0.41884666666666664,
+        "rutgers_wins": 0.90646,
+        "bryant_wins": 0.09354
+      },
+      "expected_rutgers": 88.08526666666667,
+      "expected_bryant": 65.04296,
+      "expected_total": 153.12822666666668,
+      "expected_margin": 23.042306666666665,
+      "ot_rate": 0.009646666666666666
+    }
+  ],
+  "inputs": {
+    "Rutgers": {
+      "games": 2,
+      "points": 182,
+      "points_allowed": 118,
+      "fga": 120,
+      "fta": 59,
+      "oreb": 25,
+      "tov": 19,
+      "opp_fga": 116,
+      "opp_fta": 33,
+      "opp_oreb": 19,
+      "opp_tov": 29,
+      "possessions_per_game": 71.0125,
+      "opponent_possessions_per_game": 70.8375,
+      "off_rating": 128.14645308924486,
+      "def_rating": 83.28921828127757
+    },
+    "Bryant": {
+      "games": 4,
+      "points": 250,
+      "points_allowed": 287,
+      "fga": 227,
+      "fta": 69,
+      "oreb": 39,
+      "tov": 71,
+      "opp_fga": 239,
+      "opp_fta": 90,
+      "opp_oreb": 45,
+      "opp_tov": 56,
+      "possessions_per_game": 72.94375,
+      "opponent_possessions_per_game": 73.1875,
+      "off_rating": 85.68246080027419,
+      "def_rating": 98.03586678052946
+    }
+  },
+  "possessions_estimator": "FGA-OREB+TO+0.475*FTA",
+  "pace_estimate": 71.978125,
+  "opponent_average_off_efficiency": {
+    "Rutgers": 113.09115993488716,
+    "Bryant": 84.48583954077588
+  },
+  "pace_times_efficiency_centres": {
+    "Rutgers": 81.40089646188301,
+    "Bryant": 60.8113231919591
+  },
+  "reference_status": "NOT_RUN_NO_RELEASE; NCAA tournament/season profile not validated",
+  "model_status": "NO_FIT_NO_ISSUE",
+  "rank_scope": "SUPPLIED_ONLY",
+  "endpoint": "full-game including NCAA 5-minute OT",
+  "overtime_assumption": "draw at regulation; independent Poi(8.4),Poi(8.1) points each 5-min OT; uncalibrated",
+  "overall_probabilities": {
+    "bryant_plus_21_5": 0.5124633333333334,
+    "rutgers_minus_21_5": 0.4875366666666667,
+    "over_148_5": 0.40760166666666664,
+    "under_148_5": 0.5923983333333334,
+    "rutgers_wins": 0.8986966666666667,
+    "bryant_wins": 0.10130333333333333
+  },
+  "means": {
+    "rutgers": 82.36306333333333,
+    "bryant": 61.32518666666667,
+    "total": 143.68825,
+    "margin_rutgers": 21.037876666666666,
+    "total_sd": 21.983574366728902,
+    "margin_sd": 16.590122423441876
+  },
+  "ot_rate": 0.010668333333333333,
+  "joint_failure_of_under148_5_and_bryant_plus21_5": 0.22349166666666667,
+  "margin_total_corr": 0.15682493372752326,
+  "complement_check": {
+    "side": 1.0,
+    "total": 1.0
+  },
+  "mc_se_max": 0.0006452966570012873
+}

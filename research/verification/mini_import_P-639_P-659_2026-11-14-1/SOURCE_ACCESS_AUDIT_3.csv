@@ -1,0 +1,8 @@
+host,url,robots_http,status,agents_blocked,content_signal,claude_agent,chatgpt_browsing,script,checked_at
+star.ohmynews.com,https://star.ohmynews.com/NWS_Web/OhmyStar/at_pg.aspx?CNTN_CD=A0003284916&PAGE_CD=N0002&BLCK_NO=&CMPT_CD=M0147,200,ALLOWED,,,ALLOWED,ALLOWED,ALLOWED,2026-11-14T12:01:55+00:00
+statgg.com,https://statgg.com/en/kbl/matches/S49G01N66,200,BLOCKED_FOR_AI,ClaudeBot;Claude-Web;anthropic-ai;GPTBot,,ALLOWED,ALLOWED,BLOCKED,2026-11-14T12:01:55+00:00
+www.ahl.com,https://www.ahl.com/,ERROR:URLError,RULES_UNKNOWN,,,RULES_UNKNOWN,RULES_UNKNOWN,RULES_UNKNOWN,2026-11-14T12:01:55+00:00
+www.basketkorea.com,https://www.basketkorea.com/,200,BLOCKED_FOR_AI,anthropic-ai;GPTBot;ChatGPT-User,,ALLOWED,BLOCKED,BLOCKED,2026-11-14T12:01:55+00:00
+www.eliteprospects.com,https://www.eliteprospects.com/league/ahl/scores,200,ALLOWED,,"ai-train=no, search=yes, ai-input=yes",ALLOWED,ALLOWED,ALLOWED,2026-11-14T12:01:55+00:00
+www.newsis.com,https://www.newsis.com/sports/,200,ALLOWED,,,ALLOWED,ALLOWED,ALLOWED,2026-11-14T12:01:55+00:00
+www.yna.co.kr,https://www.yna.co.kr/sports/basketball,200,BLOCKED_FOR_AI,ClaudeBot;Claude-Web;anthropic-ai;GPTBot;OAI-SearchBot;ChatGPT-User,,ALLOWED,BLOCKED,BLOCKED,2026-11-14T12:01:55+00:00

@@ -1,0 +1,173 @@
+
+<!-- BEGIN CARD LOCAL-20261112CC53B5C806-G0006 -->
+## Card · LOCAL-20261112CC53B5C806-G0006 · Basketball / Japan B.LEAGUE PREMIER · Kawasaki Brave Thunders vs Saga Ballooners · 2026-11-13
+
+- **Local event key:** `LOCAL-20261112CC53B5C806-G0006` — `LOCAL_UNIMPORTED_EVENT`, `CHAT_LOCAL_READ_ONLY_DRAFT`; no canonical P-ID reserved or assigned.
+- **Native ID / aliases:** Official B.League ScheduleKey `506581`; Kawasaki Brave Thunders / 川崎ブレイブサンダース vs Saga Ballooners / 佐賀バルーナーズ. No prior G0001–G0005 identity collision detected in the accessible chat-local mini.
+- **Authority / versions:** GitHub read-only pinned `008cedc4ff469e7a808292aa3667a7bffe22e273`, MDS v24.16, CR-2026.11.11-R4 forecast controls, CR-2026.11.12-R1 records revision, prompt v24.14, SCV-v13, SEL-v4. User override: no GitHub changes.
+- **Method:** `UNCALIBRATED_QUALITATIVE` primary, with separate **executed 1,200,000-match shadow diagnostic** based on published regular-season data, scenario conditions and unvalidated normal/OT approximations. No released reference, no frozen primary distribution, no certified `p_card`, no audited league baseline; analysis-only.
+- **Learning record:** `LEARN_RECORD_INCOMPLETE`, current league official L5 date/opponent/scores included below; pregame availability exact starters/minutes and L10–20 source rows unverified.
+- **Timing:** Official scheduled `2026-11-13 19:05 JST (+09:00)` = `2026-11-13 10:05 UTC` = `2026-11-13 21:05 AEDT (+11:00)`; report/source collection and local append occur **after scheduled tip**; actual first possession `NOT_VERIFIED`; `POST_SCHEDULED_START / ACTUAL_START_UNVERIFIED / NOT_CERTIFIED_PREGAME`. User requested prior to scheduled tip, but this numerical analysis is not claimed to have been frozen before play. **No target-game live score or final consulted.**
+- **Home/venue:** Kawasaki home, Tokyu Dresse Todoroki Arena, Kawasaki, Japan. Indoor arena: outdoor weather not applicable; current temperature does not affect basketball venue.
+- **Endpoint:** Final score including *all overtime* under repository basketball control `BK-OT-1`, half-point spread/total with no possible push on a normally completed basketball game. Operator-specific abandonment/void terms not provided; sports research convention distinct from operator settlement.
+- **Distribution:** Shadow `BPREMIER-KAW-SAG-20261113-NORMAL-OT-SENS-v1`, file `BPREMIER_SHADOW_DIAGNOSTIC_20261112CC53B5C806-G0006.json`; 3 scenario joint score grids (25% low, 50% base, 25% high), regulation independent normal total/margin, integer score formation, explicit tied-regulation overtime, `n=1,200,000`, RNG seed `20261113506`. The chosen parameters are subjective sensitivity assumptions, **not estimated fitting results**; no demonstrated prospective calibration.
+- **Expected score (SHADOW_DIAGNOSTIC_ONLY):** Kawasaki 85.4211, Saga 80.5249, total 165.9460, Kawasaki margin +4.8962. Source cross-team raw means before shrink: Kawasaki 86.857, Saga 81.451, total 168.308, margin +5.406. Joint-margin/total volatility, 3-point distribution and possessions not fitted. NO PRIMARY EXPECTED SCORE ISSUED.
+- **Baseline:** `BASELINE_P: BASELINE_UNAVAILABLE`, because the available historical `Basketball/B League` (2022–25, 2,937 development rows; mean total 159.19, raw total σ17.66, raw margin σ14.94; residual total 16.28) is an **unadmitted development sample for the pre-2026 B.League restructuring**, not a verified current 2026–27 B.PREMIER same-contract baseline. FIBA40 family prior 166.65 is a diagnostic sensitivity anchor only.
+- **Availability:** Official Kawasaki report dated 13 Nov: Hirohide Araya (荒谷裕秀) suffered left ACL tear on 11 Nov vs Shimane, expected surgery; season 5.8 PPG (secondary outlet). Official Saga report dated 11 Nov: Sori Uchio (内尾聡理) dislocated left elbow on 8 Nov, recovery approximately 4 months. Not confirmed active tonight. Exact starting five/bench for both sides `LINEUP_UNCONFIRMED`, player-minute restrictions unknown. Do not infer full health for any remaining player.
+- **Regime / context:** Kawasaki 4–12, Saga 1–13 entering event; recent L5 both 0–5, Kawasaki rest since 11 Nov (2 days) vs Saga since 8 Nov (5 days); home court Kawasaki, travel Saga. Strength comparison should recognize **both teams weak** rather than classifying Kawasaki as a strong favorite. Kawasaki's late home schedule 9/11/13 November; Araya/Uchio injury scenarios can affect usage, pace and width, with no fitted point shifts applied.
+- **Settlement action:** `NOT_PERFORMED`, source to verify B.League official ScheduleKey=506581 final quarter scores incl OT, actual tip, lineups and status; corroborate official club recap/independent score provider; inspect operator abandonment rules if future settlement requested. No automatic scheduled job.
+- **Known-at / integrity:** Official B.League fixture and club result pages pre-event historical data (latest previous matches 11 Nov / 8 Nov). Kawasaki injury official post dated 13 Nov, exact publication hour UNKNOWN; Saga report 11 Nov, pre-target. Retrieval approximately 21:04–21:08 AEDT on 13 Nov; **do not assert all sources were available before first possession**. No target game's live state exposed in computation.
+
+### Decision block
+
+**Research judgement:** `Saga +9.5` is the strongest *conditional* lean (low confidence), followed by `Under 169.5` (low confidence). Kawasaki may win outright yet fail to cover 10 points. The two teams' opposing recent total environments, roster absences and uncertain exact starters materially reduce confidence. Neither is a formally issued Rank-1 probability; no high-confidence selection.
+
+| Priority (qualitative) | Role | Source tag | Exact supplied proposition | PRIMARY p_card | Conditional shadow share | Shadow scenario range | Main failure route |
+|---|---|---|---|---|---:|---:|---|
+| 1 | LEAN | SUPPLIED | Saga Ballooners **+9.5 points** (full game incl OT) | NOT_ESTIMATED | **61.8484%** | 55.54–67.87% | Saga's weak 1–13 profile and perimeter/paint defense allow a double-digit Kawasaki win |
+| 2 | LEAN | SUPPLIED | **Under 169.5 total points** (full game incl OT) | NOT_ESTIMATED | **57.5317%** | 39.70–68.68% | Saga's opponents average ~95 PPG; high-scoring scenario and fouling/OT push over |
+| 3 | INFORMATIONAL | SUPPLIED | **Over 169.5 total points** (full game incl OT) | NOT_ESTIMATED | 42.4683% | 31.32–60.30% | Kawasaki's poor recent attack and slow home outcomes |
+| 4 | INFORMATIONAL | SUPPLIED | Kawasaki Brave Thunders **−9.5 points** (full game incl OT) | NOT_ESTIMATED | 38.1516% | 32.13–44.46% | Five straight Kawasaki defeats and lost wing rotation; need >=10-point victory |
+
+**Supplied rows:** ALL FOUR priced in one separate scenario model and assessed qualitatively; no primary p_card issued. Shadow winner: Kawasaki 62.5343%, Saga 37.4657%, no draw after OT. **Rank-1 gate:** NOT_ASSESSABLE (no released primary, no suitable same-line population baseline or certified precision). **Rank-2 floor:** NOT_ASSESSABLE. **Baseline coverage:** 0/4 (formal). **Joint failure of Saga +9.5 and Under 169.5** in diagnostic: 16.3603% of simulations (Kawasaki wins by ≥10 AND ≥170 combined); joint both-wins 35.7403%. This is a conditional simulation dependency, not validated forecast reliability. **Abstention:** NO_STRONG_PICK. **Shadow gate:** no qualified release; `NOT_RUN_NO_RELEASE`. **No model improvement certification.**
+
+### Appendix
+
+#### A1. Identity, timing, venue, duplicate and match state
+
+- `ScheduleKey=506581`, official Japanese B.PREMIER round; distinct from previous chat requests; Kawasaki listed HOME; Saga AWAY. Official schedule 19:05 JST (21:05 AEDT), 13 Nov 2026. Available source still showed pregame at retrieval, but this does NOT prove the game had not tipped.
+- `RESEARCH_POST_SCHEDULED_START`; actual first ball `NOT_VERIFIED`; no live target outcome used. Issue/freeze/settlement `NOT_ISSUED`, `NOT_FROZEN`, `NOT_SETTLED`. Keep this outside prospective prestart scoring.
+- Distinct team aliases: `川崎 / Kawasaki Brave Thunders`, `佐賀 / Saga Ballooners`. B.PREMIER 2026–27, not automatically comparable with 2025–26 B1 development series.
+
+#### A2. Exact frozen requests, eligibility, score budget
+
+| Key | Owner supplied line | Full-game final incl OT proposition | Action convention | Directional evidence |
+|---|---|---|---|---|
+| KAW−9.5 | Thunders −9.5 | Kawasaki wins by 10 or more | half line, no push | Poor opponent 1–13 and high Saga points allowed, but Kawasaki 0–5 in recent five |
+| SAG+9.5 | Ballooners +9.5 | Saga loses by 9 or fewer, or wins | half line, no push | Kawasaki low recent offense, higher spread cushion, though Saga fragile defensively |
+| O169.5 | Total Over 169.5 | Both teams combine for ≥170 | half line, no push | Saga last-five totals 181.8; offensive-strength and late-foul ceiling |
+| U169.5 | Total Under 169.5 | Both combine for ≤169 | half line, no push | Kawasaki last-five totals 153.8; weak Kawasaki scoring and shot efficiency |
+
+- **Budget:** At a target 170 points, if Saga scores 75, Kawasaki needs 95; if Saga 80, Kawasaki needs 90; if Saga 85, Kawasaki needs 85. Alternatively, if Kawasaki scores 80, Saga needs 90; if Kawasaki 85, Saga needs 85; if Kawasaki 90, Saga needs 80.
+- Spread threshold: If Saga reaches 80, Kawasaki must reach at least 90 to cover −9.5; if Saga 85, Kawasaki ≥95; if Saga 75, Kawasaki ≥85. Losing outcome of +9.5 is ≥10-point Kawasaki margin regardless of total.
+- `rank_scope=SUPPLIED_ONLY` by user's supplied contracts. Both sides of each supplied symmetric line are complementary probabilities in the diagnostic, never independent evidence.
+
+#### A3. Evidence, form windows, sources, lineup and medical
+
+**Official pre-target standings and season production:** B.League page `https://www.bleague.jp/game_detail/?ScheduleKey=506581` before this event shows Kawasaki 4–12, Saga 1–13, PF 78.5 vs 78.2 PPG; Kawasaki 43.5% FG, 29.9% 3P, 41.3 RPG; Saga 41.1% FG, 31.3% 3P, 32.4 RPG. Official club result pages, compiled over the already played games, give Kawasaki 1,256–1,355 over 16, Saga 1,095–1,333 over 14. **Calculations:** Kawasaki PF78.500 PA84.688; Saga PF78.214 PA95.214.
+
+**Verified latest five, all pre-target and complete:**
+
+| Date | Kawasaki opponent / venue | Kawasaki score | Total | Source |
+|---|---|---|---:|---|
+| 2026-11-11 | Shimane, home | 74–95 L | 169 | Official Kawasaki club results `https://www.bleague.jp/en/club_detail/?TeamID=727&tab=2` |
+| 2026-11-09 | Altiri Chiba, home | 76–85 L | 161 | Same |
+| 2026-11-06 | Shiga, away | 75–81 L | 156 | Same |
+| 2026-11-01 | Yokohama BC, home | 66–77 L | 143 | Same |
+| 2026-10-31 | Yokohama BC, home | 65–75 L | 140 | Same |
+
+**Kawasaki L5 actual 5:** 0–5; PF 356/5=71.2, PA 413/5=82.6, sum 153.8. Earlier game 2026-10-26 vs Utsunomiya 92–89 W recovered, but full L10/15/20 dated event rows not completely opened; do not invent windows.
+
+| Date | Saga opponent / venue | Saga score | Total | Source |
+|---|---|---|---:|---|
+| 2026-11-08 | Chiba Jets, home | 103–111 L | 214 | Official Saga club results `https://www.bleague.jp/club_detail/?TeamID=1638` |
+| 2026-11-01 | Mikawa, away | 78–84 L | 162 | Same |
+| 2026-10-31 | Mikawa, away | 83–100 L | 183 | Same |
+| 2026-10-26 | Alvark Tokyo, home | 88–112 L | 200 | Same |
+| 2026-10-21 | Nagasaki, home | 66–84 L | 150 | Same |
+
+**Saga L5 actual 5:** 0–5; PF 418/5=83.6, PA 491/5=98.2, sum 181.8. Earlier 2026-10-18 at Kyoto 70–115 L recovered, but full L10/15/20 dataset not verified.
+
+**Window inventory, no fabricated rows:**
+| Window | Kawasaki W–L | PF/G | PA/G | n | Saga W–L | PF/G | PA/G | n |
+|---|---|---:|---:|---:|---|---:|---:|---:|
+| L5 | 0–5 | 71.20 | 82.60 | 5 | 0–5 | 83.60 | 98.20 | 5 |
+| L10 | NOT_VERIFIED | — | — | 0 verified complete L10 | NOT_VERIFIED | — | — | 0 verified complete L10 |
+| L15 | NOT_VERIFIED | — | — | 0 verified complete L15 | NOT_AVAILABLE: only 14 season matches | — | — | 0 |
+| L20 | NOT_VERIFIED | — | — | only 16 season matches | NOT_AVAILABLE: only 14 season matches | — | — | 0 |
+| Season to date | 4–12 | 78.50 | 84.69 | 16 | 1–13 | 78.21 | 95.21 | 14 |
+
+**Medical primary sources:**
+- Kawasaki `https://kawasaki-bravethunders.com/news/detail/id=25908` (13 November): Hirohide Araya, torn left ACL during 11 November first quarter, surgery planned, return UNKNOWN. Basketball King corroborates his prior 16 games and 5.8 PPG (`https://basketballking.jp/news/japan/20261113/643190.html`).
+- Saga `https://ballooners.jp/news/detail/id=52402` (11 November; also path `id=48255` returns matching article): Sori Uchio, left elbow dislocation on 8 November, estimated four months recovery and planned surgery.
+- Saga official player page `https://www.bleague.jp/club_detail/?TeamID=1638` identifies Nassir Little as 25.1 PPG club leader, David Dudzinski 7.0 RPG, and Taiki Sumida 5.6 APG. Such roster/leadership values are **not** confirmed game starters; do not use them as minute or active-status confirmations.
+- Kawasaki pregame club preview `https://kawasaki-bravethunders.com/lp/game_20261109_20261111_20261113/` previews Saga's Nassir Little and Damyean Dotson as major perimeter/wing threats; coach Kawasaki Dai Oketani noted in team material. These are preview descriptions, not tonight's actual box score.
+- **Both sides starter five, bench, scratches and minute restrictions:** NOT_VERIFIED for exact fixture; current team roster ≠ actual starting/available list. No medical status asserted for other players. Last-source recheck after scheduled start cannot establish pre-first-play lineups. Injury announcement publication hour may be unknown.
+
+**Source provenance:** Official organizer/club pages and medical releases, + second independent report on Kawasaki Araya injury; retrieved 2026-11-13 about 21:04–21:08 AEDT (source timestamp for some articles date-only; exact hour unknown). Event's actual tip and state not confirmed. Prior games not duplicated in calculations. **No web odds used.**
+
+#### A4. Baseline, formulas, shadow arithmetic, sensitivity
+
+- Official season raw scored/allowed cross: `K=(78.50+95.214)/2=86.857`, `S=(78.214+84.688)/2=81.451`, total `168.308`, margin `+5.406`; this is a crude opponent-mixing projection, not opponent-adjusted possession/ORtg/DRtg.
+- The 2026–27 B.PREMIER tier has no verified active calibrated reference release. Historical B League `USABLE_DEVELOPMENT` input is a population **diagnostic**, with unadmitted development cohort and changed competition identity; it is **not** promoted to a primary probability or same-line `BASELINE_P`.
+- **Exact executed shadow:** `python /mnt/data/bpremier_shadow_kawasaki_saga_20261113.py`; completed 1,200,000 trials with RNG seed 20261113506. Scenarios fixed BEFORE simulation: low 300,000 at regulation μtotal160.0/μmargin+2.5, base 600,000 at 164.0/+4.9, high 300,000 at 174.0/+7.4; each σtotal18.5, σmargin15.2. Draw independent total and margin normal values, derive integer team points, resolve tied-regulation with 5-minute OT scoring (discrete assumed 4–12 points per side, additional periods if still tied), derive all rows from common score states. This **does not** represent actual possession/usage/fouls/lineup covariance; assumed overtime generation is illustrative.
+- **Shadow expected:** K85.421, S80.525, total165.946, margin+4.896. OT simulated rate 2.481%. Numerics are normalized shares of actual executed trials but **not validated event probabilities**. W/P/L/V on each half line: W=share, P=0, L=1−share, V=0 under completed-game convention.
+- **Low/base/high shadow:** Saga +9.5 = 67.868%, 61.991%, 55.543%; Under 169.5 = 68.677%, 60.873%, 39.703%. These wide outcome intervals are *epistemic sensitivity*, not Monte Carlo confidence intervals.
+- **Independent constraints and dependence:** half-point complementary lines exactly sum to one; no draw after overtime; one coherent score grid per scenario. Winner K 62.534%, S 37.466%. Joint failure if top two both selected: 16.3603%; shared risks of superior Kawasaki scoring and Saga defense breakdown; not an independence calculation. Precision of 1m simulation is much smaller than structural uncertainty; numerical display precision is diagnostic only.
+- **Reference/gates not executed:** official repository `ml reference`, `ml card lint`, pregame freeze, ledgers, RELEASE model and same-line league baseline were NOT_RUN because no writable local repository environment / release was used. No printed `p_card`, no Grade/eligible prospective model claims.
+
+#### A5. Four supplied contracts — coherent W/P/L/V shadow only
+
+| Contract | Shadow WIN | PUSH | LOSS | VOID | Basis / scope |
+|---|---:|---:|---:|---:|---|
+| Kawasaki −9.5 | 0.381516 | 0 | 0.618484 | 0 | full incl OT; margin ≥10 |
+| Saga +9.5 | 0.618484 | 0 | 0.381516 | 0 | full incl OT; margin ≤9 |
+| Over 169.5 | 0.424683 | 0 | 0.575317 | 0 | full incl OT; total ≥170 |
+| Under 169.5 | 0.575317 | 0 | 0.424683 | 0 | full incl OT; total ≤169 |
+
+Primary probabilities for **all four** are `NOT_ESTIMATED`; do not replace `p_card` with shadow WIN values. Qualitative direction remains Saga +9.5 then Under 169.5. Total source dispersion is high; stronger high-state gives a 60.3% shadow OVER, so Under cannot be called safe.
+
+#### A6. Adjustment ledger, regime, rest, injuries, double-count
+
+| Fact / mechanic | Verified source | Mechanism and potential direction | Applied primary effect |
+|---|---|---|---|
+| Kawasaki home court / Saga travel | Official B.League home/away, venue | helps Kawasaki margin, Saga travel impacts recovery | UNFITTED; covered by scenario margin only, no separate fixed points |
+| Kawasaki Araya injury | Official 13 Nov ACL release | scorer/wing depth, perimeter assignment; replacement minutes unknown | SCENARIO/width, NOT calibrated |
+| Saga Uchio injury | Official 11 Nov elbow release | limited reserve guard depth; half-court execution/defense unknown | SCENARIO/width, NOT calibrated |
+| Kawasaki two-day rest; Saga five days | Official dated L5 | rest differs, but FIBA40 effect not measured | WIDTH ONLY; no automatic scalar |
+| Kawasaki L5 low vs Saga L5 high | Official previous results | conflicting tempo; do not cherry-pick last result | scenario low/base/high, not separate 5+ repeated adjustments |
+| Foreign players Little/Dotson | Official Kawasaki preview | Saga high-upside scoring branch despite 1–13 record | SCENARIO high, not a certain availability claim |
+
+No researched hard numeric effects existed to move a certified reference ledger. Large-adjustment/Rank delta `NOT_ASSESSABLE`; no team/player impact double-counting introduced.
+
+#### A7. Checks, odds firewall, model output and prior context
+
+- `MARKET_BLIND` yes. No bookmaker/odds/consensus forecasts referenced or used.
+- Current historical B.League prior does NOT prove new B.PREMIER scoring distribution (league structural change); league-only exact-contract baseline and official possession indicators missing.
+- Baseline, primary reference and pregame freeze `NOT_RUN`. Shadow separate from primary, not a model release; no Brier/skill qualification. No opponent-adjusted ORtg/DRtg/pace, crew, active minutes or shot-quality model fitted.
+- Five-game samples overlap season-to-date; they are not separate independent confirmations. No H2H adjustment applied because verified same-regime recent H2H could not be established. Team records and pre-target box rows used only as descriptive inputs.
+- Distinct margin versus total risks: Saga cushion fails on Kawasaki double-digit victory; Under fails on high combined scoring. Both can fail simultaneously as observed in simulation.
+
+#### A8. Evidence and settlement capture plan
+
+| Field / source route | Found / attempted | Remaining required action |
+|---|---|---|
+| Event identity and venue — official `bleague.jp/game_detail/?ScheduleKey=506581` + club schedule | CONFIRMED scheduled 19:05 JST, home Kawasaki | actual opening jump/OT/revisions not verified |
+| Season PPG and records — official organizer | CONFIRMED Kawasaki 4–12 / Saga 1–13 and scored rates | final 2026–27 pace/shot denominator archive, league aggregate prior |
+| L5 results — official B.League club pages | 5 dated complete final scores per side extracted | more L10/L15/L20 dated rows (use organizer full results, alternate provider) |
+| Injuries — both official clubs, secondary Kawasaki journalist | 2 major injury releases verified | actual starters/bench, replacements, minutes, further medical updates |
+| Current previous H2H — official matches | Not verified for current-roster regime | research prior meetings if needed for future retrospective, no unsupported numeric effect |
+| Current match result — B.League official box/quarter page and club recap | NOT CONSULTED; no outcome exposure | after event, explicit user request for settlement; capture final/OT by target ID |
+| Operator settlement | Not supplied | clarify if future settlement conflicts with BK-OT-1 sports convention |
+
+**Open event queue (Q-0006):** actor = same chat on explicit follow-up; field = official final/quarters/actual first tip/rotations; source `https://www.bleague.jp/game_detail/?ScheduleKey=506581`, corroborate `kawasaki-bravethunders.com` and `ballooners.jp`; due `2026-11-15T21:05:00+11:00` *triage target only*, final-time basis `UNKNOWN`, last source attempt `2026-11-13 ~21:08 AEDT`, scheduled automation `NO`. Nothing has been graded.
+
+#### A9. Integrity receipt and research-completion matrix
+
+| Requirement | Actual completed work | Gap / impact | Status |
+|---|---|---|---|
+| Authority + fixture/native ID + duplicate + timing | GitHub pinned control, official 506581, home/venue, both aliases, new G0006 without collision | actual first possession not verified; issue post scheduled | DONE_WITH_GAP |
+| Both starters, bench, absences and recheck | Official both-club injuries, roster previews, secondary report Kawasaki | exact starting five/bench late confirmations missing for both | INFORMATION_INCOMPLETE |
+| Online history and comparison | B.League official both club previous-game results, 5 actual rows each, dated and deduped | recent H2H, full opponent/pace data and second independent score confirmation missing | INFORMATION_INCOMPLETE |
+| L5/L10/L15/L20/season/league | actual L5 and season verified with n; prior B League parameter row | verified complete L10–20 and modern B.PREMIER league averages missing | INFORMATION_INCOMPLETE |
+| Venue/rules/rest/special situations | FIBA40 with 5-minute overtime, 2-day vs 5-day, injury branches and double-digit handicap kill paths | exact clock/foul distributions missing | DONE_WITH_GAPS |
+| Reference + formal baseline + pregame freeze | Historical parameter row and crude scoring cross calculation | repository `ml reference`, source-freeze and same-line baseline unavailable/unexecuted | NOT_RUN |
+| Distribution and uncertainty arithmetic | reproducible 1.2m separate shadow script/JSON, three explicitly assumed cases, score/OT and joint controls | not calibrated, no exact injury impact or pace/shot variance fit | SHADOW_EXECUTED_ONLY |
+| All supplied contract analysis | full-game ±9.5, Over/Under169.5, complementary simulation masses, mechanisms | primary certified p_card unavailable | DONE_SHADOW/QUALITATIVE |
+| Score budget, winner/joint, sensitivity | budget with 3 Saga scores, winner, joint failure, scenario ranges | no official primary reference; no valid gate | DONE_SHADOW_ONLY |
+| A1–A9, intake, queue, local append and custody | All nine sections, source URLs and local text/readback receipt; previous 5 cards preserved | no repository verification/lint/commit/push by user override | CHAT_LOCAL_ONLY |
+
+**Overall research status:** `INFORMATION_INCOMPLETE`, with actual source gaps above. **Forecast:** `UNCALIBRATED_QUALITATIVE / SHADOW_1_200_000_EXECUTED / PRIMARY_NOT_RUN`. **Issue status:** `POST_SCHEDULED_START_NOT_CERTIFIED_PREGAME / CHAT_LOCAL_DRAFT_NOT_REPOSITORY_ISSUED`. **Risk:** `NO_STRONG_PICK`.
+
+**SPORTS_ONLY_MARKET_BLIND:** YES · **OUTCOME_EXPOSURE:** NO_TARGET_SCORE_SEEN · **SETTLEMENT:** NOT_PERFORMED · **CANONICAL_IMPORT:** NOT_PERFORMED
+<!-- END CARD LOCAL-20261112CC53B5C806-G0006 -->

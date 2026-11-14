@@ -123,3 +123,8 @@ archive/assessment_100_2026-11-11/** -text whitespace=blank-at-eol,blank-at-eof,
 research/verification/framework_change_2026-11-11-4/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 ml/evaluation/event_assessment.py -text
 ml/tests/test_assessment_100.py -text
+
+# CR-2026.11.14-R1: retired minis (RELOC-v1 hash-verified) and the 14 Nov 2026 owner drop/import keep exact bytes.
+archive/retired_active_minis_2026-11-12/** -text
+research/verification/mini_import_P-639_P-659_2026-11-14-1/** -text
+research/verification/combined_rollover_2026-11-14-1/** -text

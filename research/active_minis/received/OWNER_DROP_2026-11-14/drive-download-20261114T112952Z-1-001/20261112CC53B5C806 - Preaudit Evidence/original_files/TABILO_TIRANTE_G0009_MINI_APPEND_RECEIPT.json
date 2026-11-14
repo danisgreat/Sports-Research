@@ -1,0 +1,28 @@
+{
+  "event_key": "LOCAL-20261112CC53B5C806-G0009",
+  "written_at_aedt": "2026-11-14T00:08:53+11:00",
+  "repo_write": "NO",
+  "repository_head_snapshot": "008cedc4ff469e7a808292aa3667a7bffe22e273",
+  "original_bytes": 222507,
+  "original_sha256": "2dc5090b975d66e8cfc0551f0deff3a4c9fad7fd77be9f4b587795f37d2ea0b3",
+  "new_bytes": 246441,
+  "new_sha256": "9da07f291fe663b9a5c41792613c0419fa0820081a6912c6564b9de7ae4ac5b5",
+  "new_card_sha256": "f43795a82af0a215c6391650632342c743b43f775fb41b01e7f27be24bf569fa",
+  "model_script_sha256": "6f00f2994a14831dabccc80e4c75759c70de33d840175b1a229858e96212b04c",
+  "model_data_sha256": "e1a8cc62f0e2103fbefdb48318a58d1ece12f59b16cc2479771612dd2b5af786",
+  "preserved_prior_8_card_cores": true,
+  "counts": {
+    "previous": 8,
+    "current": 9,
+    "numeric_primary": 0,
+    "qualitative_primary": 9,
+    "no_forecast": 0,
+    "queue": 9,
+    "intake": 9,
+    "next_local_key": "LOCAL-20261112CC53B5C806-G0010"
+  },
+  "issue": "CHAT_LOCAL_UNISSUED_POST_SCHEDULED_TIMING_UNVERIFIED",
+  "settlement": "NOT_PERFORMED",
+  "canonical_id": "NOT_ALLOCATED",
+  "github_commit": "NONE"
+}

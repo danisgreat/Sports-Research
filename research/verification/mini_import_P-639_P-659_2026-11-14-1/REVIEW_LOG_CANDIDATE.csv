@@ -1,0 +1,2 @@
+date,level,scope,disposition,note
+2026-11-14,MINI_SETTLEMENT,OWNER_DROP_2026-11-14 / P-639..P-659,DATA_REPAIR_REQUIRED,90 chat-local records on 21 games; zero primary rows; timing/freeze/source-audit gaps; see AUDIT_REPORT.md

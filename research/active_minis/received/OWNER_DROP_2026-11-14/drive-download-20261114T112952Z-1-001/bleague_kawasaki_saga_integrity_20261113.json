@@ -1,0 +1,17 @@
+{
+  "mini": "/mnt/data/PREDICTION_MINI_RUNNING_LOG_20261112D3C239297F.md",
+  "backup": "/mnt/data/PREDICTION_MINI_PRE_G0006_READBACK.md",
+  "pre_bytes": 148940,
+  "post_bytes": 178507,
+  "pre_sha256": "056cccad5970abf4587102c2018da4ab69a9bf51b938a893dfd439c3bd98a593",
+  "post_sha256": "aa4c22b07702c8f3cfb85ab5f4bd133c4aa629af6c6cf952a7ebb29cff6d5ca7",
+  "original_card_blocks_sha256": "121f74a68809d7bb51488100d5886facb95491bac688e206ec6fc5dd6ebe3cbf",
+  "old_card_blocks_unchanged": true,
+  "cards": 6,
+  "next_local_key": "LOCAL-20261112D3C239297F-G0007",
+  "new_event_key": "LOCAL-20261112D3C239297F-G0006",
+  "time_local": "2026-11-13T21:21:35+11:00",
+  "github_writes": false,
+  "formal_model_freeze_lint": false,
+  "research_status": "UNCALIBRATED_QUALITATIVE_TIMING_UNVERIFIED_CHAT_LOCAL_NOT_ISSUED"
+}

@@ -1,0 +1,332 @@
+{
+  "fixture": "Piros vs Altmaier, Orleans Challenger 125 quarterfinal, 2026-11-13",
+  "nominal_kickoff": "2026-11-13T23:00:00+11:00 (13:00 Europe/Paris; time sources conflict)",
+  "model_disposition": "ILLUSTRATIVE_SCENARIO_NOT_PRIMARY_OR_CERTIFIED",
+  "distribution": "exact best-of-3 point-to-game-to-set finite recursion, standard seven-point tiebreak to 2 margin, alternating server, random initial server 50/50, complete-match condition, low/base/high mixture",
+  "form_data": {
+    "Piros": {
+      "L5": {
+        "verified_n": 5,
+        "target_n": 5,
+        "wins": 4,
+        "losses": 1,
+        "games_for": 69,
+        "games_against": 66,
+        "games_per_match": 27.0,
+        "closure": "COMPLETE_DATED_L5"
+      },
+      "L10": {
+        "verified_n": 5,
+        "target_n": 10,
+        "wins": 4,
+        "losses": 1,
+        "games_for": 69,
+        "games_against": 66,
+        "games_per_match": 27.0,
+        "closure": "PARTIAL_REMAINDER_NOT_SOURCE_VERIFIED"
+      },
+      "L15": {
+        "verified_n": 5,
+        "target_n": 15,
+        "wins": 4,
+        "losses": 1,
+        "games_for": 69,
+        "games_against": 66,
+        "games_per_match": 27.0,
+        "closure": "PARTIAL_REMAINDER_NOT_SOURCE_VERIFIED"
+      },
+      "L20": {
+        "verified_n": 5,
+        "target_n": 20,
+        "wins": 4,
+        "losses": 1,
+        "games_for": 69,
+        "games_against": 66,
+        "games_per_match": 27.0,
+        "closure": "PARTIAL_REMAINDER_NOT_SOURCE_VERIFIED"
+      }
+    },
+    "Altmaier": {
+      "L5": {
+        "verified_n": 5,
+        "target_n": 5,
+        "wins": 3,
+        "losses": 2,
+        "games_for": 69,
+        "games_against": 66,
+        "games_per_match": 27.0,
+        "closure": "COMPLETE_DATED_L5"
+      },
+      "L10": {
+        "verified_n": 5,
+        "target_n": 10,
+        "wins": 3,
+        "losses": 2,
+        "games_for": 69,
+        "games_against": 66,
+        "games_per_match": 27.0,
+        "closure": "PARTIAL_REMAINDER_NOT_SOURCE_VERIFIED"
+      },
+      "L15": {
+        "verified_n": 5,
+        "target_n": 15,
+        "wins": 3,
+        "losses": 2,
+        "games_for": 69,
+        "games_against": 66,
+        "games_per_match": 27.0,
+        "closure": "PARTIAL_REMAINDER_NOT_SOURCE_VERIFIED"
+      },
+      "L20": {
+        "verified_n": 5,
+        "target_n": 20,
+        "wins": 3,
+        "losses": 2,
+        "games_for": 69,
+        "games_against": 66,
+        "games_per_match": 27.0,
+        "closure": "PARTIAL_REMAINDER_NOT_SOURCE_VERIFIED"
+      }
+    }
+  },
+  "prior_games": {
+    "Piros": [
+      [
+        "2026-11-11",
+        "Clement Tabur",
+        "W",
+        "2-6 7-6 6-3",
+        "Orleans Challenger indoor"
+      ],
+      [
+        "2026-11-10",
+        "Luca Nardi",
+        "W",
+        "7-6 1-6 6-4",
+        "Orleans Challenger indoor"
+      ],
+      [
+        "2026-11-06",
+        "Dalibor Svrcina",
+        "L",
+        "6-4 0-6 4-6",
+        "Bratislava Challenger indoor"
+      ],
+      [
+        "2026-11-04",
+        "Sascha Gueymard Wayenburg",
+        "W",
+        "6-3 6-7 6-3",
+        "Bratislava Challenger indoor"
+      ],
+      [
+        "2026-11-02",
+        "Matthew William Donald",
+        "W",
+        "6-3 6-3",
+        "Bratislava Challenger indoor"
+      ]
+    ],
+    "Altmaier": [
+      [
+        "2026-11-11",
+        "Buvaysar Gadamauri",
+        "W",
+        "3-6 7-5 6-1",
+        "Orleans Challenger indoor"
+      ],
+      [
+        "2026-11-10",
+        "Adrien Gobat",
+        "W",
+        "6-2 3-6 6-3",
+        "Orleans Challenger indoor"
+      ],
+      [
+        "2026-10-31",
+        "Alex Molcan",
+        "L",
+        "4-6 6-7",
+        "Paris Masters qualifying indoor"
+      ],
+      [
+        "2026-10-29",
+        "Jiri Lehecka",
+        "L",
+        "5-7 4-6",
+        "Basel ATP indoor"
+      ],
+      [
+        "2026-10-26",
+        "Juan Manuel Cerundolo",
+        "W",
+        "6-7 7-6 6-4",
+        "Basel ATP indoor"
+      ]
+    ]
+  },
+  "2026_indoor_win_loss_public_source": {
+    "Piros": "13-3 TennisExplorer",
+    "Altmaier": "6-4 TennisExplorer (TennisTonic 6-5; conflicting scope)"
+  },
+  "2026_orleans_first_two_game_hold_public_source": {
+    "Piros": "23 holds / 30 service games = 76.7%",
+    "Altmaier": "24 holds / 27 service games = 88.9%; public stats are from only 2 matches"
+  },
+  "scenarios": [
+    {
+      "name": "Altmaier_indoor_serve_advantage",
+      "weight": 0.25,
+      "p_piros_serve": 0.626,
+      "p_altmaier_serve": 0.688,
+      "derived_parameters": {
+        "hold_tir": 0.7872562590057649,
+        "hold_shev": 0.8858513061282147,
+        "tb_tir_serves_first": 0.3967023083213749,
+        "tb_shev_serves_first": 0.39670230832137493
+      },
+      "outputs": {
+        "piros_plus_2_5_games": 0.37140775602556003,
+        "altmaier_minus_2_5_games": 0.62859224397444,
+        "over_22_5_games": 0.5508918824501393,
+        "under_22_5_games": 0.4491081175498607,
+        "piros_match_winner": 0.22383596708523368,
+        "altmaier_match_winner": 0.7761640329147663,
+        "three_sets": 0.4248699315604056,
+        "E_piros_games": 11.150656082504991,
+        "E_altmaier_games": 13.76300802800617,
+        "E_combined_games": 24.913664110511164,
+        "E_piros_minus_altmaier_games": -2.61235194550118,
+        "SD_total_games": 5.992817936357318,
+        "SD_margin_games": 3.5265388173699033,
+        "sum_mass": 0.9999999999999998,
+        "p_cover_plus_2_5_and_over": 0.3093809786441612,
+        "p_fail_both_top_two": 0.3870813401684617
+      }
+    },
+    {
+      "name": "base_moderate_altmaier_serve_advantage",
+      "weight": 0.5,
+      "p_piros_serve": 0.649,
+      "p_altmaier_serve": 0.669,
+      "derived_parameters": {
+        "hold_tir": 0.8279830019256005,
+        "hold_shev": 0.8594443343176296,
+        "tb_tir_serves_first": 0.4663094605704765,
+        "tb_shev_serves_first": 0.46630946057047656
+      },
+      "outputs": {
+        "piros_plus_2_5_games": 0.5676202554051756,
+        "altmaier_minus_2_5_games": 0.4323797445948244,
+        "over_22_5_games": 0.6298567794840879,
+        "under_22_5_games": 0.3701432205159121,
+        "piros_match_winner": 0.40337817455525704,
+        "altmaier_match_winner": 0.596621825444743,
+        "three_sets": 0.4916078907728261,
+        "E_piros_games": 12.566321595723599,
+        "E_altmaier_games": 13.442235960179621,
+        "E_combined_games": 26.00855755590322,
+        "E_piros_minus_altmaier_games": -0.8759143644560226,
+        "SD_total_games": 5.973773401243643,
+        "SD_margin_games": 3.88112199010272,
+        "sum_mass": 1.0000000000000002,
+        "p_cover_plus_2_5_and_over": 0.43531677816593295,
+        "p_fail_both_top_two": 0.2378397432766695
+      }
+    },
+    {
+      "name": "Piros_indoor_strength_branch",
+      "weight": 0.25,
+      "p_piros_serve": 0.669,
+      "p_altmaier_serve": 0.653,
+      "derived_parameters": {
+        "hold_tir": 0.8594443343176296,
+        "hold_shev": 0.8345739999245168,
+        "tb_tir_serves_first": 0.5270108059825072,
+        "tb_shev_serves_first": 0.5270108059825072
+      },
+      "outputs": {
+        "piros_plus_2_5_games": 0.724794733133643,
+        "altmaier_minus_2_5_games": 0.27520526686635705,
+        "over_22_5_games": 0.635964651228622,
+        "under_22_5_games": 0.364035348771378,
+        "piros_match_winner": 0.5774084535309139,
+        "altmaier_match_winner": 0.42259154646908614,
+        "three_sets": 0.4946354136308698,
+        "E_piros_games": 13.402057226444805,
+        "E_altmaier_games": 12.70540196289237,
+        "E_combined_games": 26.107459189337177,
+        "E_piros_minus_altmaier_games": 0.6966552635524348,
+        "SD_total_games": 5.977767037815491,
+        "SD_margin_games": 3.8766470977721275,
+        "sum_mass": 1.0,
+        "p_cover_plus_2_5_and_over": 0.5008225883794647,
+        "p_fail_both_top_two": 0.14006320401719966
+      }
+    }
+  ],
+  "scenario_mixture": [
+    {
+      "name": "Altmaier_indoor_serve_advantage",
+      "weight": 0.25,
+      "p_piros_serve": 0.626,
+      "p_altmaier_serve": 0.688
+    },
+    {
+      "name": "base_moderate_altmaier_serve_advantage",
+      "weight": 0.5,
+      "p_piros_serve": 0.649,
+      "p_altmaier_serve": 0.669
+    },
+    {
+      "name": "Piros_indoor_strength_branch",
+      "weight": 0.25,
+      "p_piros_serve": 0.669,
+      "p_altmaier_serve": 0.653
+    }
+  ],
+  "mixed_outputs": {
+    "piros_plus_2_5_games": 0.5578607499923885,
+    "altmaier_minus_2_5_games": 0.44213925000761145,
+    "over_22_5_games": 0.6116425231617343,
+    "under_22_5_games": 0.3883574768382657,
+    "piros_match_winner": 0.4020001924316654,
+    "altmaier_match_winner": 0.5979998075683346,
+    "three_sets": 0.4756802816842319,
+    "E_piros_games": 12.421339125099248,
+    "E_altmaier_games": 13.338220477814446,
+    "E_combined_games": 25.759559602913694,
+    "E_piros_minus_altmaier_games": -0.9168813527151976,
+    "SD_total_games": 5.999584905287572,
+    "SD_margin_games": 3.970911799778864,
+    "sum_mass": 1.0,
+    "p_cover_plus_2_5_and_over": 0.42020928083887293,
+    "p_fail_both_top_two": 0.2507060076847501
+  },
+  "research_sources": {
+    "official_atp_draw": "https://www.protennislive.com/posting/2026/2273/mds.pdf",
+    "official_venue_schedule": "https://opendorleans.com/programmation/",
+    "event_time_court_reporting": "https://tennistonic.com/tennis-news/1081224/prediction-preview-h2h-altmaier-piros-martinez-portero-and-basavareddy-to-play-on-court-1-on-friday-orleans-challenger/",
+    "history_piros": "https://en.24score.com/tennis/match/211800-piros_zsombor-altmaier_daniel",
+    "player_indoor_stats": "https://www.tennisexplorer.com/match-detail/?id=3377369",
+    "basel_altmaier_v_cerundolo": "https://www.tennis.com/tournaments/swiss-indoors-basel/matches/d-altmaier-vs-j-cerundolo-2026-10-26",
+    "basel_altmaier_v_lehecka": "https://www.tennis.com/tournaments/swiss-indoors-basel/matches/d-altmaier-vs-j-lehecka-2026-10-29",
+    "paris_altmaier_v_molcan": "https://www.tennis.com/tournaments/rolex-paris-masters/matches/a-molcan-vs-d-altmaier-2026-10-31",
+    "public_match_stat_summary": "https://www.stevegtennis.com/head-to-head/men/Zsombor_Piros/Daniel_Altmaier/"
+  },
+  "excluded_sources": [
+    "betting odds",
+    "market movements",
+    "analyst predictions"
+  ],
+  "limitation": [
+    "Point-serve input values uncalibrated and not directly fitted from opponent-adjusted tour-level stats",
+    "10/15/20 pre-cutoff dated event rows missing or incomplete",
+    "Starting fitness/withdrawal and live first point not independently verified",
+    "No tested match-form shock sigma; only mixture scenarios",
+    "No competition-specific league-only baseline sample for O/U 22.5 and margin +/-2.5",
+    "Retirement and operator settlement unknown; conditional on full completion",
+    "No official GitHub ml reference, lint, pregame freeze, learning-log or import",
+    "No independent cross-source full lineup/medical verification"
+  ]
+}

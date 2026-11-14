@@ -168,7 +168,12 @@ def test_owner_closed_nine_corner_rows_are_terminal_and_excluded_from_scores(cur
     assert closed.y.isna().all() and not closed.counted_slot.any()
     assert set(closed.record_disposition) == {"CLOSED_UNATTAINABLE_DO_NOT_RETRY"}
     assert (closed[closed.card == "P-630"].literal_grade == "UNRESOLVED").all()
-    assert not ((current_rows.grade == "UNRESOLVED") & (current_rows.record_disposition == "RETAINED_CONTRACT")).any()
+    # The 9 Nov 2026 closure emptied the queue for every card up to P-638; later imports may carry genuinely
+    # unresolved rows (P-647 corners, CR-2026.11.14-R1), which must stay UNRESOLVED and listed in their import queue.
+    historical = current_rows.card.str.extract(r"P-(\d+)", expand=False).astype(float) <= 638
+    assert not ((current_rows.grade == "UNRESOLVED") & (current_rows.record_disposition == "RETAINED_CONTRACT") & historical).any()
+    later = current_rows[(current_rows.grade == "UNRESOLVED") & ~historical]
+    assert set(later.card) <= {"P-647"} and len(later) == 3
     original = pd.read_csv(ch.V / "historical_resolution_2026-11-09-1/final_history/CARD_ROWS.csv", dtype=str, keep_default_na=False)
     old = original[original.card.isin(["P-126", "P-418"])].copy()
     old.loc[(old.card == 'P-126') & old['rank'].isin(['2', '4']), 'grade'] = 'UNATTAINABLE'

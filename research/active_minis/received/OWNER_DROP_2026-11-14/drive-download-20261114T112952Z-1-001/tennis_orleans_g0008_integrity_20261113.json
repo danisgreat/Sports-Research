@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-11-13T23:01:03+11:00",
+  "mini": "/mnt/data/PREDICTION_MINI_RUNNING_LOG_20261112D3C239297F.md",
+  "before_sha256": "7748e4a6d37ec3a1b3f37c9e7067bfa3846461a87c227315c090ad53e268421c",
+  "after_sha256": "a96275285e5de5cd7ab7241a14f6fbecbdf18b15e085283b38b84e414b177431",
+  "cards_before": 7,
+  "cards_after": 8,
+  "all_previous_cards_unchanged": true,
+  "new_id": "LOCAL-20261112D3C239297F-G0008",
+  "next": "LOCAL-20261112D3C239297F-G0009",
+  "queue_count": 8,
+  "intake_count_game": 8,
+  "github_writes": false,
+  "canonical_allocated": false,
+  "timing_disposition": "POST_NOMINAL_START_RESEARCH_TIMING_UNVERIFIED",
+  "official_status": "RESEARCH_ONLY_CHAT_LOCAL_NOT_ISSUED",
+  "script_sha256": "3c1d316bcb3f2b110d9339d8615d62f73cf07d6a83844e1e362dc4f54803bedd",
+  "json_sha256": "8a17220788f08077e2e27f487be7d92acb5cfb7f948d4cbb65d991bf1294127b",
+  "bytes": 226276
+}

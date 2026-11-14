@@ -1,0 +1,6 @@
+id,canonical_ids,item,next_source_or_action,actor,status,automation
+U-639-1,P-647,"Urawa-Cerezo combined corners (3 rows: v4.12 Over/Under 10.5, DRAFT-010 Under 10.5)",J.League match stats tab or a second permitted provider,owner/repository agent on request,UNRESOLVED,NOT_SCHEDULED
+U-639-2,"P-657,P-658,P-659",D3C239297F G0009-G0011 card text,"owner supplies final 300,547-byte mini SHA fc276d27...",owner,MISSING_ORIGINAL,NOT_SCHEDULED
+U-639-3,P-639..P-659,Final wall-clock and actual first-play times,field-owner play-by-play,-,NOT_VERIFIED,NOT_SCHEDULED
+U-639-4,"P-639,P-643,P-652,P-656,P-659",Second permitted lineage (evidence C),field-owner box score on a permitted host,-,OPEN_GRADES_UNAFFECTED,NOT_SCHEDULED
+U-639-5,P-639..P-659,Chat source permissions (cards opened sources without SRC-ALT audit),see AUDIT_REPORT §3,owner,DISCLOSED,-

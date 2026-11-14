@@ -1,0 +1,25 @@
+{
+  "created_at": "2026-11-11T21:06:10+11:00",
+  "github_head_read_only": "4d8bd1771d20974bcbfc7c694a009cd44e95a693",
+  "drafts_retained": 8,
+  "official_events_issued": 0,
+  "settlement_status": "NOT_SETTLED",
+  "original_prefix_sha256": "61d094a1ef1ee5ab6c4fbc183fb092f9aabd55d01e8904af448dad325dadf8f4",
+  "original_footer_sha256": "7366cd77220ec0274caa69210b9d1ea400ca23349b8c9239383f803a4ecd5a26",
+  "report_sha256": "b5d473fb821b24b2e8a9f0d05c1f49152cfe3b1b860adff0bb75ac9d00f4edf3",
+  "mini_sha256": "78fb3c8bffcba6e75798a983aa57614410c69315f0410524732be6a6ddf1941b",
+  "diagnostics": {
+    "Hiroshima ML": 0.562757887305462,
+    "Sendai ML": 0.4372421126945381,
+    "Hiroshima -2.5": 0.49626163976883475,
+    "Sendai +2.5": 0.5037383602311652,
+    "Over 170.5": 0.4537939593421818,
+    "Under 170.5": 0.5462060406578182
+  },
+  "sensitivity": {
+    "season total - 4": 0.6340435673364601,
+    "season total + 4": 0.45603853239328723,
+    "season+L5 mix under": 0.5533037874495254,
+    "season+L5 mix sendai +2.5": 0.5290804294356086
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "seed": 20261114011,
+  "N": 200000,
+  "source_year": 2026,
+  "inputs": {
+    "nyk": {
+      "ortg": 116.2,
+      "drtg": 109.0,
+      "pace": 94.9,
+      "scored": 110.3,
+      "allowed": 103.5
+    },
+    "ind": {
+      "ortg": 111.4,
+      "drtg": 113.8,
+      "pace": 100.2,
+      "scored": 111.6,
+      "allowed": 114.0
+    },
+    "pace_harmonic": 97.47801127626857,
+    "raw_away": 112.09971296770885,
+    "raw_home": 107.42076842644798,
+    "mu_reg_away": 111.09971296770885,
+    "mu_reg_home": 108.42076842644798,
+    "total_sd": 18.7,
+    "margin_sd": 14.05
+  },
+  "central": {
+    "nyk": 111.38868073689714,
+    "ind": 108.75372443011277,
+    "total": 220.1424051670099,
+    "nyk_margin": 2.634956306784346,
+    "reg_total": 219.52048139415683,
+    "reg_margin": 2.6789445412608757,
+    "ot_rate_assumed": 0.046,
+    "p_ind_plus7_5": 0.635445,
+    "p_nyk_minus7_5": 0.364555,
+    "p_under219_5": 0.48703,
+    "p_over219_5": 0.51297,
+    "p_nyk_win": 0.57303
+  },
+  "sensitivity": [
+    {
+      "scenario": "base",
+      "p_ind_plus7_5": 0.6354,
+      "p_nyk_minus7_5": 0.3646,
+      "p_under219_5": 0.487,
+      "p_over219_5": 0.513
+    },
+    {
+      "scenario": "Nesmith-out margin +2 NYK",
+      "p_ind_plus7_5": 0.5818,
+      "p_nyk_minus7_5": 0.4182,
+      "p_under219_5": 0.487,
+      "p_over219_5": 0.513
+    },
+    {
+      "scenario": "Knicks offense stronger margin +4 NYK",
+      "p_ind_plus7_5": 0.5249,
+      "p_nyk_minus7_5": 0.4751,
+      "p_under219_5": 0.487,
+      "p_over219_5": 0.513
+    },
+    {
+      "scenario": "Indiana slows tempo total -6",
+      "p_ind_plus7_5": 0.6354,
+      "p_nyk_minus7_5": 0.3646,
+      "p_under219_5": 0.6112,
+      "p_over219_5": 0.3888
+    },
+    {
+      "scenario": "pace lifts total +6",
+      "p_ind_plus7_5": 0.6354,
+      "p_nyk_minus7_5": 0.3646,
+      "p_under219_5": 0.3639,
+      "p_over219_5": 0.6361
+    },
+    {
+      "scenario": "cross-raw net gap +4 NYK, total +2",
+      "p_ind_plus7_5": 0.5249,
+      "p_nyk_minus7_5": 0.4751,
+      "p_under219_5": 0.4454,
+      "p_over219_5": 0.5546
+    },
+    {
+      "scenario": "Pacers efficient margin -3 NYK",
+      "p_ind_plus7_5": 0.7116,
+      "p_nyk_minus7_5": 0.2884,
+      "p_under219_5": 0.487,
+      "p_over219_5": 0.513
+    }
+  ],
+  "method": "Independent normal marginal total/margin shocks with 4.6%-probability illustrative 12pt OT; correlation captured by score-transform; uncalibrated; no repo issuance.",
+  "notes": [
+    "Evidence known at report date; event first possession state must be checked before declaring pre-start",
+    "No actual opponent adjusted regression or fitted WNBA/NBA reference run"
+  ]
+}

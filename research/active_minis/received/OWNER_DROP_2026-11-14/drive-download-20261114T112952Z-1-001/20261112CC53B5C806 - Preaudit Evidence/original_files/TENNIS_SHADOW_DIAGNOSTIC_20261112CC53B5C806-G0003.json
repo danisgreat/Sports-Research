@@ -1,0 +1,222 @@
+{
+  "type": "EXPLORATORY_ANALYST_SCENARIOS_NOT_PRIMARY",
+  "contract": "full completed tennis match, best of 3, tiebreak to 7 by 2 at 6-6",
+  "input_basis": "52wk individual serve- and return-points-won percentages from PythiaTennis, each opponent match-up averaged without validated opponent adjustment; 20-match shrink parameter chosen as sensitivity only; no calibrated effect sizes",
+  "assumptions": [
+    "IID serving points per player throughout match",
+    "both players hold fixed point-service strength in a scenario",
+    "initial server equally likely",
+    "no retirement/withdrawal",
+    "no fatigue/conditioning between sets",
+    "no ranking or form fed in as numerical effects"
+  ],
+  "source": {
+    "url": "https://pythiatennis.com/alexander-shevchenko-vs-thiago-agustin-tirante-prediction-and-stats/?d=2026-11-12",
+    "indoor_match_n": {
+      "tirante": 6,
+      "shevchenko": 11
+    },
+    "overall_match_n": {
+      "tirante": 57,
+      "shevchenko": 66
+    },
+    "indoor_service_point_win": {
+      "tirante": 0.663,
+      "shevchenko": 0.672
+    },
+    "indoor_return_point_win": {
+      "tirante": 0.317,
+      "shevchenko": 0.353
+    },
+    "overall_service_point_win": {
+      "tirante": 0.666,
+      "shevchenko": 0.633
+    },
+    "overall_return_point_win": {
+      "tirante": 0.358,
+      "shevchenko": 0.357
+    }
+  },
+  "distributions": {
+    "all_surface_52wk": {
+      "pA": 0.6545000000000001,
+      "pB": 0.6375,
+      "holdA": 0.8370073312074592,
+      "holdB": 0.808214728580455,
+      "p_tirante_plus_0_5": 0.6096611256678459,
+      "p_shevchenko_minus_0_5": 0.3903388743321541,
+      "p_over_23_5": 0.5476057503526921,
+      "p_under_23_5": 0.4523942496473079,
+      "p_tirante_matchwin": 0.5834885469788801,
+      "p_shevchenko_matchwin": 0.4165114530211199,
+      "p_deciding_set": 0.4937522062889379,
+      "expected_total": 25.723161432200897,
+      "expected_margin_tirante": 0.7831340880610724,
+      "joint_tirante_plus_and_under": 0.2785077040439198,
+      "joint_shev_minus_and_over": 0.21645232872876602,
+      "joint_shev_minus_and_under": 0.17388654560338862,
+      "score_examples": [
+        {
+          "games": "13-9",
+          "sets": "2-0",
+          "p": 0.04967797402033812
+        },
+        {
+          "games": "12-7",
+          "sets": "2-0",
+          "p": 0.040068139105767
+        },
+        {
+          "games": "13-10",
+          "sets": "2-0",
+          "p": 0.03827320439901705
+        },
+        {
+          "games": "9-13",
+          "sets": "0-2",
+          "p": 0.03405903499650904
+        },
+        {
+          "games": "12-6",
+          "sets": "2-0",
+          "p": 0.03161664747122
+        },
+        {
+          "games": "12-8",
+          "sets": "2-0",
+          "p": 0.029907863918993652
+        },
+        {
+          "games": "13-8",
+          "sets": "2-0",
+          "p": 0.02932337223883338
+        },
+        {
+          "games": "10-13",
+          "sets": "0-2",
+          "p": 0.028039305813699216
+        }
+      ]
+    },
+    "indoor_shrink20": {
+      "pA": 0.6546153846153847,
+      "pB": 0.6516935483870968,
+      "holdA": 0.8371936430778887,
+      "holdB": 0.8324376059140632,
+      "p_tirante_plus_0_5": 0.5406314941181155,
+      "p_shevchenko_minus_0_5": 0.4593685058818845,
+      "p_over_23_5": 0.5590399572588314,
+      "p_under_23_5": 0.4409600427411686,
+      "p_tirante_matchwin": 0.514345287984313,
+      "p_shevchenko_matchwin": 0.485654712015687,
+      "p_deciding_set": 0.49981703333378513,
+      "expected_total": 25.988628182484245,
+      "expected_margin_tirante": 0.13160590636739644,
+      "joint_tirante_plus_and_under": 0.22935878672121376,
+      "joint_shev_minus_and_over": 0.2477672498619296,
+      "joint_shev_minus_and_under": 0.21160125601995486,
+      "score_examples": [
+        {
+          "games": "13-9",
+          "sets": "2-0",
+          "p": 0.0444376854664604
+        },
+        {
+          "games": "9-13",
+          "sets": "0-2",
+          "p": 0.04162889544928787
+        },
+        {
+          "games": "13-10",
+          "sets": "2-0",
+          "p": 0.036300373836048415
+        },
+        {
+          "games": "10-13",
+          "sets": "0-2",
+          "p": 0.03438864408037041
+        },
+        {
+          "games": "12-7",
+          "sets": "2-0",
+          "p": 0.03353232047737767
+        },
+        {
+          "games": "7-12",
+          "sets": "0-2",
+          "p": 0.03100085541552086
+        },
+        {
+          "games": "12-8",
+          "sets": "2-0",
+          "p": 0.026206908593739763
+        },
+        {
+          "games": "8-12",
+          "sets": "0-2",
+          "p": 0.02446002721533973
+        }
+      ]
+    },
+    "indoor_only_52wk": {
+      "pA": 0.655,
+      "pB": 0.6775,
+      "holdA": 0.8378137868646669,
+      "holdB": 0.8716777975206065,
+      "p_tirante_plus_0_5": 0.417187925857037,
+      "p_shevchenko_minus_0_5": 0.582812074142963,
+      "p_over_23_5": 0.5580838731441211,
+      "p_under_23_5": 0.4419161268558789,
+      "p_tirante_matchwin": 0.39243374184104307,
+      "p_shevchenko_matchwin": 0.6075662581589569,
+      "p_deciding_set": 0.48957058513951995,
+      "expected_total": 26.16821781508741,
+      "expected_margin_tirante": -0.9559814768218066,
+      "joint_tirante_plus_and_under": 0.15485838283221096,
+      "joint_shev_minus_and_over": 0.2957543301192951,
+      "joint_shev_minus_and_under": 0.28705774402366785,
+      "score_examples": [
+        {
+          "games": "9-13",
+          "sets": "0-2",
+          "p": 0.056945975231605356
+        },
+        {
+          "games": "10-13",
+          "sets": "0-2",
+          "p": 0.047357363130505474
+        },
+        {
+          "games": "7-12",
+          "sets": "0-2",
+          "p": 0.04204376722470067
+        },
+        {
+          "games": "13-9",
+          "sets": "2-0",
+          "p": 0.034208636041388935
+        },
+        {
+          "games": "8-12",
+          "sets": "0-2",
+          "p": 0.033094829279294115
+        },
+        {
+          "games": "13-10",
+          "sets": "2-0",
+          "p": 0.03090874703358634
+        },
+        {
+          "games": "8-13",
+          "sets": "0-2",
+          "p": 0.029703451654704636
+        },
+        {
+          "games": "6-12",
+          "sets": "0-2",
+          "p": 0.028639961824174005
+        }
+      ]
+    }
+  }
+}

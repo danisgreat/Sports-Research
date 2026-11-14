@@ -1,0 +1,47 @@
+{
+  "audit_purpose": "file availability / integrity precheck, NOT a sporting-data or performance certification",
+  "mini_key": "20261112D3C239297F",
+  "mini_sha256": "fc276d2766f3e0dbff35af58aed2c2957baced5e4ee5b0a7fbf7f90d71b837ae",
+  "mini_size_bytes": 300547,
+  "card_count": 11,
+  "all_11_card_marker_pairs_matched": true,
+  "all_11_cards_have_A1_through_A9": true,
+  "footer_next_local_key": "LOCAL-20261112D3C239297F-G0012",
+  "included_original_files": 35,
+  "original_breakdown": {
+    "mini_log": 1,
+    "scripts": 11,
+    "scenario_json": 11,
+    "integrity_receipts": 6,
+    "historical_pre_update_snapshots": 6
+  },
+  "all_17_existing_json_parse": true,
+  "all_11_python_sources_compile": true,
+  "receipt_cross_checks": {
+    "G0006_after_equals_G0007_before": true,
+    "G0007_after_equals_G0008_before": true,
+    "G0008_after_equals_G0009_before": true,
+    "G0009_after_equals_G0010_before": true,
+    "G0010_after_equals_G0011_before": true,
+    "G0011_receipt_equals_current_log": true
+  },
+  "historical_backup_card_counts": {
+    "PREDICTION_MINI_PRE_G0003_READBACK.md": 2,
+    "PREDICTION_MINI_PRE_G0004_READBACK.md": 3,
+    "PREDICTION_MINI_PRE_G0006_READBACK.md": 5,
+    "PREDICTION_MINI_PRE_G0007_READBACK.md": 6,
+    "PREDICTION_MINI_PRE_G0008_READBACK.md": 7,
+    "PREDICTION_MINI_PRE_G0009_READBACK.md": 8
+  },
+  "missing_referenced_artifacts": [
+    "tennis_illustrative_model_output.txt"
+  ],
+  "unknown_or_unverified": [
+    "formal ML reference/issuance/commit/push did not occur",
+    "most individual historical model run receipts not available",
+    "no repository canonical prediction IDs assigned",
+    "some pre-append snapshots not present for all eleven cards",
+    "sporting evidence claims and computations have not been independently re-audited"
+  ],
+  "original_files_modified": false
+}

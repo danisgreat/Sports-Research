@@ -1,0 +1,12 @@
+event_id,fixture,supporting_files,research_status,canonical_id
+LOCAL-202611128358B025-G0001,Dalibor Svrcina vs Otto Virtanen — Challenger Orleans R2,tennis_scenario_20261112.py,CHAT_LOCAL_DRAFT_NOT_REPOSITORY_ISSUED,NOT_ASSIGNED
+LOCAL-202611128358B025-G0002,Torpedo Ust-Kamenogorsk vs Arlan Kokshetau — Kazakhstan hockey,hockey_diagnostic_20261113.py,CHAT_LOCAL_DRAFT_NOT_REPOSITORY_ISSUED,NOT_ASSIGNED
+LOCAL-202611128358B025-G0003,Thiago Agustin Tirante vs Aleksandr Shevchenko — Stockholm ATP QF,tennis_stockholm_scenario_20261113.py,CHAT_LOCAL_DRAFT_NOT_REPOSITORY_ISSUED,NOT_ASSIGNED
+LOCAL-202611128358B025-G0004,Geelong Venom (W) vs Perth Lynx (W) — WNBL,wnbl_20261113_geelong_perth_diagnostic.py,CHAT_LOCAL_DRAFT_NOT_REPOSITORY_ISSUED,NOT_ASSIGNED
+LOCAL-202611128358B025-G0005,Wonju DB Promy vs Suwon KT Sonicboom — KBL,kbl_20261113_wonju_suwon_diagnostic.py,CHAT_LOCAL_DRAFT_NOT_REPOSITORY_ISSUED,NOT_ASSIGNED
+LOCAL-202611128358B025-G0006,Kawasaki Brave Thunders vs Saga Ballooners — B.League,b_league_20261113_kawasaki_saga_diagnostic.py,CHAT_LOCAL_DRAFT_NOT_REPOSITORY_ISSUED,NOT_ASSIGNED
+LOCAL-202611128358B025-G0007,Ceske Budejovice U20 vs Liberec U20 — Czech U20 hockey,hockey_czech_u20_20261113_diagnostic.py,CHAT_LOCAL_DRAFT_NOT_REPOSITORY_ISSUED,NOT_ASSIGNED
+LOCAL-202611128358B025-G0008,Zsombor Piros vs Daniel Altmaier — Orleans Challenger QF,tennis_orleans_piros_altmaier_20261113_diagnostic.py,CHAT_LOCAL_DRAFT_NOT_REPOSITORY_ISSUED,NOT_ASSIGNED
+LOCAL-202611128358B025-G0009,Alejandro Tabilo vs Thiago Agustin Tirante — Stockholm ATP SF,tennis_stockholm_tabilo_tirante_20261114_diagnostic.py; tennis_stockholm_tabilo_tirante_20261114_results.json,CHAT_LOCAL_DRAFT_NOT_REPOSITORY_ISSUED,NOT_ASSIGNED
+LOCAL-202611128358B025-G0010,Bryant vs Rutgers — NCAA basketball,ncaab_bryant_rutgers_20261114_diagnostic.py; ncaab_bryant_rutgers_20261114_results.json,CHAT_LOCAL_DRAFT_NOT_REPOSITORY_ISSUED,NOT_ASSIGNED
+LOCAL-202611128358B025-G0011,New York Knicks vs Indiana Pacers — NBA Cup,nba_nyk_ind_20261114_diagnostic.py; nba_nyk_ind_20261114_results.json,CHAT_LOCAL_DRAFT_NOT_REPOSITORY_ISSUED,NOT_ASSIGNED
