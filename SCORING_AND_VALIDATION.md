@@ -115,7 +115,7 @@ For cards with a `PICKS_V2` block the headline is not a slot count. It is the **
 - width coverage: z = (actual − centre) / sd for the card's printed margin and total, as RMS and as the shares beyond one and two SD, against the 0.85-1.15 band, `INSUFFICIENT_EVIDENCE` below 40 cards;
 - the descriptive count of the most-likely list (rank 1, rank 2) with mechanical protection labelled; never the headline.
 
-Strata stay separate: tier, `PREGAME` against `POST_START_ISSUE` against `TIMING_UNVERIFIED`, fast card against full card, supplied against analyst-derived lines, reference executed against baseline only. Cohorts before v24.0 are not pooled with v24.0 cards. A row with no frozen reference has no "final minus reference" and is reported in its own count.
+Strata stay separate: tier, `PREGAME` (with `PRE_START_RESEARCH`, pooled under TIMING-v3, CR-2026.11.15-R1) against `POST_START_ISSUE` against `TIMING_UNVERIFIED`, fast card against full card, supplied against analyst-derived lines, reference executed against baseline only. Cohorts before v24.0 are not pooled with v24.0 cards. A row with no frozen reference has no "final minus reference" and is reported in its own count.
 
 
 ## 13. Current count-based assessment (SCV-v13 / ASSESS-100)

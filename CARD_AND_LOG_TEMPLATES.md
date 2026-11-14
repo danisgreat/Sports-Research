@@ -113,7 +113,7 @@ Insert immediately before the footer. Preserve earlier card/addendum bytes; upda
 - **Analysis status:** ANALYST_PRIMARY_V1 / UNCALIBRATED_ANALYST_PRIMARY | UNCALIBRATED_QUALITATIVE | NO_FORECAST (legacy cards: RESEARCH_ONLY_NO_MODEL, MODEL_ASSISTED_PRIMARY_V3, MODEL_ASSISTED_CYCLE_V1)
 - **Timing:** <state; cutoff = game-log scheduled start (or earlier actual issue / verified first play, with which); research completion; actual issue time; source state/recheck time; source publication time; actual start or NOT_VERIFIED>
 - **Scheduled start:** <venue timezone, UTC and Australia/Sydney with offsets; source>
-- **Scheduled lead / band:** <descriptive minutes only; actual issue phase PREGAME / POST_START_ISSUE / TIMING_UNVERIFIED; input evidence CLEAN_PRE_START_INPUTS / KNOWN_AT_UNVERIFIED / OUTCOME_EXPOSED>
+- **Scheduled lead / band:** <descriptive minutes only; actual issue phase PREGAME / PRE_START_RESEARCH / POST_START_ISSUE / TIMING_UNVERIFIED; input evidence CLEAN_PRE_START_INPUTS / KNOWN_AT_UNVERIFIED / OUTCOME_EXPOSED>
 - **Endpoint / definition:** <regulation/extras; tie/push/void/retirement/listed pitcher/abandonment convention; operator status>
 - **Distribution object:** <id/family/parameters/approximation or NOT_COMPUTED>
 - **Expected score:** <sport units; team means/SDs, total and signed margin, endpoint; N/A/NOT_COMPUTED as appropriate>
@@ -210,7 +210,7 @@ A window shorter than its label prints its true n. A missing window prints `HIST
 
 **LEDGER-v2 additions (2026-11-08).**
 
-- The PICKS_V2 header may carry `issue_evidence: COMMIT:<sha>` or `PREGAME_RECEIPT:research/pregame/<key>/<file>`. Without verified evidence, the ledger records the card as `TIMING_UNVERIFIED`.
+- The PICKS_V2 header may carry `issue_evidence: COMMIT:<sha>` or `PREGAME_RECEIPT:research/pregame/<key>/<file>`. Without verified evidence, the ledger records the card as `TIMING_UNVERIFIED`. **TIMING-v3:** a card finished after the start whose research began before it uses `timing: PRE_START_RESEARCH` with `research_started_at`, `not_started_observed_at`, `not_started_source` (URL) and `outcome_exposure: NONE_RECORDED`; `card lint` checks them and the ledger pools the card with `PREGAME`.
 - Every probability must be in [0, 1]. Times are ISO 8601 with an offset. A row's side must suit its family.
 - A card whose final p differs from its reference on any row also carries an ADJUSTMENTS_V1 block ([ADJUSTMENT_LEDGER_PROTOCOL](ADJUSTMENT_LEDGER_PROTOCOL.md) section 3a):
 
@@ -411,7 +411,7 @@ Pending cards get state evidence, literal original reference and next check, wit
 | C24 | v24.0 ledger: every number that differs from the reference has an adjustment row with source, publication time, retrieval time, corroboration, effect row, size and entry size; no double count with a rating or the form windows; widths at or above the floor or an exception written; scenarios carry weights fixed before pricing |
 | C25 | v24.0 picks block: `python -m ml card lint` passes (its output is quoted in A9), `ledger add` ran once, the block is inside the card markers and agrees with the decision block |
 | C26 | v24.0 content: probability for every supplied contract, winner, most-likely list with line distances and SUPPLIED/ANALYST_DERIVED labels, information list, abstain flag consistent with the numbers, covering pairs counted once |
-| C27 | v24.0 timing: fast card flag and addendum pointer; `PREGAME`, `POST_START_ISSUE` or `TIMING_UNVERIFIED` with the request, completion, freeze and push times; commit SHA and push time reported only after remote readback |
+| C27 | v24.0 timing: fast card flag and addendum pointer; `PREGAME`, `PRE_START_RESEARCH` (with research start and not-started observation), `POST_START_ISSUE` or `TIMING_UNVERIFIED` with the request, completion, freeze and push times; commit SHA and push time reported only after remote readback |
 
 ## 8. Canonical entry and rollover
 

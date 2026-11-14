@@ -26,7 +26,13 @@ BEGIN, END = "<!-- BEGIN PICKS_V2 {key} -->", "<!-- END PICKS_V2 {key} -->"
 META_REQUIRED = ("tier", "competition", "reference_id", "reference_status", "model_stage", "abstain", "fast_card", "timing", "scheduled_start",
                  "issued_at")
 META_OPTIONAL = ("reference_frozen_at", "width_floor_exception", "tier_basis", "notes", "issue_evidence", "contract_scopes", "rank_scope",
-                 "event_key", "external_runs", "external_disagreement", "external_manifest_sha256", "external_packet_sha256", "contract_definitions", "research_mode", "original_scheduled_start")
+                 "event_key", "external_runs", "external_disagreement", "external_manifest_sha256", "external_packet_sha256", "contract_definitions", "research_mode", "original_scheduled_start",
+                 "research_started_at", "not_started_observed_at", "not_started_source", "outcome_exposure")
+# TIMING-v3 (CR-2026.11.15-R1, owner instruction 15 Nov 2026): research that began before the actual start is enough. A card
+# finished after the start counts with PREGAME cards when it declares when research began, a not-started observation taken
+# at or after that moment (official live page or match centre, with its time) and no outcome exposure.
+PRE_START_RESEARCH_FIELDS = ("research_started_at", "not_started_observed_at", "not_started_source", "outcome_exposure")
+URL = re.compile(r"https?://\S+")
 # FREEZE-v1 (CR-2026.11.11-R1): from this issue time a card names its ranking scope. SUPPLIED_ONLY (the default the request
 # template asks for) ranks only the lines the owner supplied, so that the top-two count is not lifted by easy derived lines.
 RANK_SCOPES = ("SUPPLIED_ONLY", "ALL")
@@ -41,7 +47,9 @@ COLUMNS = ("label", "family", "quantity", "side", "line", "line_source", "refere
            "line_implied_p", "centre", "sd", "z", "most_likely_rank", "information_row")
 FAMILIES = ("WINNER", "HANDICAP", "TOTAL", "TEAM_TOTAL", "PERIOD", "PLAYER", "CORNERS", "OTHER")
 QUANTITIES = ("MARGIN", "TOTAL", "TEAM_TOTAL", "PERIOD", "PLAYER", "COUNT", "N/A")
-TIMINGS = ("PREGAME", "POST_START_ISSUE", "TIMING_UNVERIFIED")
+TIMINGS = ("PREGAME", "PRE_START_RESEARCH", "POST_START_ISSUE", "TIMING_UNVERIFIED")
+# Scoring pools these timing labels into one cohort (TIMING-v3): verified pre-start issue and verified pre-start research.
+PRE_START_COHORT = ("PREGAME", "PRE_START_RESEARCH")
 REFERENCE_STATUSES = ("EXECUTED", "BASELINE_ONLY", "NOT_AVAILABLE", "NOT_RUN_NO_RELEASE", "NOT_RUN_STALE_RELEASE",
                       "NOT_RUN_INPUT_REFUSED", "NOT_RUN_NO_TB1_CONSTANTS", "FAILED")
 HAS_REFERENCE = ("EXECUTED", "BASELINE_ONLY")
@@ -130,6 +138,27 @@ def threshold(row: dict) -> float | None:
     return None
 
 
+def pre_start_research_problems(meta: dict) -> list[str]:
+    """TIMING-v3: the declarations a PRE_START_RESEARCH card needs, checked against each other (empty list = consistent)."""
+    problems = [f"header: timing PRE_START_RESEARCH requires {f}" for f in PRE_START_RESEARCH_FIELDS if not meta.get(f)]
+    if problems:
+        return problems
+    if meta["outcome_exposure"] != "NONE_RECORDED":
+        problems.append("header: PRE_START_RESEARCH requires outcome_exposure NONE_RECORDED; an exposed card is not a forecast of record")
+    if not URL.fullmatch(meta["not_started_source"].strip()):
+        problems.append("header: not_started_source must be the URL of the official live page or match centre that showed play had not begun")
+    try:
+        began, seen = _when(meta["research_started_at"], "research_started_at"), _when(meta["not_started_observed_at"], "not_started_observed_at")
+        issued = _when(meta["issued_at"], "issued_at")
+    except PicksError as exc:
+        return problems + [str(exc)]
+    if seen < began:
+        problems.append("header: not_started_observed_at must be at or after research_started_at (the observation proves research began before play)")
+    if seen > issued or began > issued:
+        problems.append("header: research_started_at and not_started_observed_at must not be after issued_at")
+    return problems
+
+
 def lint(meta: dict, rows: list[dict], root=ROOT) -> list[str]:
     """Every problem found; an empty list means the block is internally consistent."""
     problems: list[str] = []
@@ -166,6 +195,10 @@ def lint(meta: dict, rows: list[dict], root=ROOT) -> list[str]:
             problems.append("header: timing PREGAME but issued_at is not before scheduled_start; use POST_START_ISSUE")
         if meta["timing"] == "POST_START_ISSUE" and not late:
             problems.append("header: timing POST_START_ISSUE but issued_at is before scheduled_start")
+        if meta["timing"] == "PRE_START_RESEARCH" and not late:
+            problems.append("header: timing PRE_START_RESEARCH but issued_at is before scheduled_start; use PREGAME")
+    if meta["timing"] == "PRE_START_RESEARCH":
+        problems += pre_start_research_problems(meta)
     if "issued_at" in times and times["issued_at"] >= _when(RANK_SCOPE_FROM, "rank_scope_from") and not meta.get("rank_scope"):
         problems.append("header: rank_scope (SUPPLIED_ONLY or ALL) is required for cards issued under FREEZE-v1")
     if meta.get("rank_scope") and meta["rank_scope"] not in RANK_SCOPES:

@@ -214,7 +214,7 @@ def check(key: str, stage: str = "pregame", root=ROOT) -> list[str]:
             if required:
                 problems.append(f"{name} line {i}: {field} needs an ISO time with an offset")
             return
-        if start is not None and t >= start and card["timing"] == "PREGAME":
+        if start is not None and t >= start and card["timing"] in ("PREGAME", "PRE_START_RESEARCH"):  # TIMING-v3: same input horizon
             problems.append(f"{name} line {i}: {field} {r[field]} is not before the scheduled start; a post-start fact is not a pregame feature")
 
     required = {(s, f["feature"]) for s in SIDES for f in required_features(card["sport"], root)}

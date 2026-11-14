@@ -20,6 +20,10 @@ LEDGER-v2 (CR-2026.11.08-R2):
   receipt for the same key whose card-block hash matches and whose run time is before the start, or the card header's
   ``issue_evidence: COMMIT:<sha>`` naming a commit that already holds this exact card block and was made before the start.
   Otherwise its rows are ledgered TIMING_UNVERIFIED, and the claim is kept in ``timing_claimed``.
+- **TIMING-v3 (CR-2026.11.15-R1).** A card that says PRE_START_RESEARCH is ledgered so only when its header declares when
+  research began, a not-started observation (URL and time) at or after that moment, and outcome_exposure NONE_RECORDED, all
+  consistent with the issue time. Its evidence string names the observation; the declaration is checked again at
+  settlement against the official actual first play. Scoring pools PRE_START_RESEARCH with PREGAME.
 - **Adjustments are structured data.** A card's ``ADJUSTMENTS_V1`` block becomes immutable, hash-chained rows in
   ADJUSTMENTS.csv, keyed by card and effect-table row version. Each row holds the fact, its source and times, the applied
   size and the frozen counterfactual p of every affected row without that adjustment. Sizes are checked against
@@ -117,6 +121,12 @@ def _card_text(mini, key: str) -> str:
 def derive_timing(meta: dict, card: str, key: str, mini, root=ROOT) -> tuple[str, str]:
     """(timing, evidence). PREGAME only when a pregame receipt or a commit proves the card existed before the start."""
     claimed = meta["timing"]
+    if claimed == "PRE_START_RESEARCH":
+        problems = picks.pre_start_research_problems(meta)
+        if problems:
+            return "TIMING_UNVERIFIED", "CLAIMED_PRE_START_RESEARCH:" + problems[0].removeprefix("header: ")
+        return "PRE_START_RESEARCH", (f"DECLARED_RESEARCH_START:{meta['research_started_at']}"
+                                      f"|NOT_STARTED:{meta['not_started_source']}@{meta['not_started_observed_at']}")
     if claimed != "PREGAME":
         return claimed, "CLAIM_NOT_PREGAME"
     root = Path(root)
@@ -385,7 +395,8 @@ def stratum(frame: pd.DataFrame) -> pd.Series:
     """SCORING_AND_VALIDATION §12: timing, fast or full card, supplied or derived line, reference executed or baseline only."""
     ref = frame["reference_status"].map(lambda s: "EXECUTED" if s == "EXECUTED" else "BASELINE_ONLY" if s == "BASELINE_ONLY" else "NONE")
     card = frame["fast_card"].map(lambda f: "FAST" if f == "YES" else "FULL")
-    return "timing=" + frame["timing"] + "|card=" + card + "|line=" + frame["line_source"] + "|reference=" + ref
+    timing = frame["timing"].map(lambda t: "PREGAME" if t in picks.PRE_START_COHORT else t)  # TIMING-v3 pools the two
+    return "timing=" + timing + "|card=" + card + "|line=" + frame["line_source"] + "|reference=" + ref
 
 
 def _paired(frame: pd.DataFrame, other: str, scope: str, label: str, stratum_name: str) -> dict | None:

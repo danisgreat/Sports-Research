@@ -303,12 +303,15 @@ When the analysis is ready, recheck decisive availability and the actual event s
 
 ## 2. Record input quality and issuance separately
 
+**TIMING-v3 (CR-2026.11.15-R1, owner instruction 15 November 2026).** Research that **begins before the actual start** is enough. A card whose writing finishes after the start counts as a forecast of record and is scored together with `PREGAME` cards when it is labelled `PRE_START_RESEARCH` and declares, in its PICKS_V2 header: `research_started_at` (when research began), `not_started_observed_at` and `not_started_source` (an official live page or match centre, observed at or after the research start, showing play had not begun) and `outcome_exposure: NONE_RECORDED`. Decision inputs still follow the horizon in §1 (facts published by the scheduled start), and no live or final target information may be used. Never shorten research or request a game earlier to meet a time: late lineups and team news only appear near the start. At settlement the official actual first play is checked; if research in fact began after it, the card is revised to `POST_START_ISSUE` by a dated settlement revision.
+
 Use the card's Timing, Known-at, Evidence receipt, Lineup state and A1, A3, A8, A9 metadata. Source publication or update, the horizon, retrieval, research completion, final recheck, actual issue and actual first play are separate facts. A scheduled start and lead minutes are descriptive unless independently verified.
 
 | Dimension | Label | Evidence required |
 |---|---|---|
 | Actual issue phase | PREGAME | A reliable exact-event not-started observation at issue, or an independently evidenced issue before actual first play; no minimum lead |
-| Actual issue phase | POST_START_ISSUE | Reliable evidence that play began before the actual issue; the real issue time is kept even if the analysis is outcome-blind |
+| Actual issue phase | PRE_START_RESEARCH | TIMING-v3: issued after the start, with a declared research start and a not-started observation at or after it, and no outcome exposure; scored with PREGAME |
+| Actual issue phase | POST_START_ISSUE | Reliable evidence that play began before the actual issue and before research began (or no research-start declaration); the real issue time is kept even if the analysis is outcome-blind |
 | Actual issue phase | TIMING_UNVERIFIED | Insufficient start, not-started or issue evidence; a scheduled time or a stale 0–0 cannot certify the phase |
 | Input evidence | CLEAN_PRE_START_INPUTS | Every decision-driving field demonstrably available before the horizon and the actual first play, with no target live or final exposure, audited and preserved |
 | Input evidence | KNOWN_AT_UNVERIFIED | At least one decisive field or start boundary lacks publication or known-at proof; a game date never proves availability |
@@ -328,7 +331,7 @@ Report current confirmed facts separately from those admissible at the horizon w
 
 Keep each card's results in its own declared policy, timing and evidence cohort: counts and proper scores separately for PREGAME, CLEAN_PRE_START_INPUTS / POST_START_ISSUE, unverified and outcome-exposed work; zero when none qualify; missing baselines NOT_COMPUTABLE. There is no lead-time penalty and no advance-completion target.
 
-Historical timing, contracts, ranks, probabilities, baselines, grades and labels are immutable; new source proof is a dated addendum. A new prospective test needs its own preregistration. Late-issued clean-input research is never pooled with pre-start-issued forecasts to claim a prospective advantage. **Models (MLSCOPE-v3):** a model reaches a card only as the reference frozen before the card; the reference stage and the pregame freeze each carry their own pre-start receipts. The manual card never waits for a model shadow, and a late card may have no eligible prospective row. The current reference models fit no player or lineup effects; those facts enter as ledger rows or declared scenarios, never as invented adjustments.
+Historical timing, contracts, ranks, probabilities, baselines, grades and labels are immutable; new source proof is a dated addendum. A new prospective test needs its own preregistration. Under TIMING-v3, `PRE_START_RESEARCH` cards are pooled with `PREGAME` cards; other late-issued clean-input research (research begun after the start) is never pooled with them to claim a prospective advantage. **Models (MLSCOPE-v3):** a model reaches a card only as the reference frozen before the card; the reference stage and the pregame freeze each carry their own pre-start receipts. The manual card never waits for a model shadow, and a late card may have no eligible prospective row. The current reference models fit no player or lineup effects; those facts enter as ledger rows or declared scenarios, never as invented adjustments.
 
 ## 5. Required checks
 
