@@ -268,3 +268,18 @@ The owner's instruction is to permit assessment at 100 games without waiting eig
 ## Owner-authorized on-request audits - CR-2026.11.15-R3 (AUDIT-ANYTIME-v1)
 
 The owner's instruction is that a comprehensive audit can be done at any time, without 100 games, eight weeks or another minimum. EVALUATION_PLAN_v24.19 adds an on-request audit of every eligible settled paired game to date. The registered EXT-EVAL-v2 first-100 cohort, its ordering, its promotion criterion and FREEZE-v1 are unchanged; an on-request audit cannot return PROMOTION_ELIGIBLE. No forecast, distribution, kit parameter or historical experiment is revised.
+
+## On-request audit amendment - CR-2026.11.16-R1 (16 November 2026)
+
+From the [on-request audit of P-001 to P-685](research/verification/retrospective_2026-11-16-1/RETROSPECTIVE_REPORT.md). Every original registration above is preserved. All six rest on outcome-exposed tables and are PROPOSED_NOT_TESTED / SAMPLE_SIZE_NOT_ESTIMATED; none is applied to any card (FREEZE-v1). Details, evidence and the test for each: [CHANGE_PROPOSAL](research/verification/framework_change_2026-11-16-1/CHANGE_PROPOSAL.md) priority 4.
+
+| ID | Hypothesis | Status |
+|---|---|---|
+| H-NODIR | A stated probability within 5 points of 0.5 is no direction and is never ranked | PROPOSED_NOT_TESTED |
+| H-BAND | Stated 0.60 to 0.65 is overconfident by about 10 points | PROPOSED_NOT_TESTED |
+| H-AVAIL-CHAT | A chat lean resting on an absence with no measured effect is recorded UNPRICED (deep loss pattern, 4 reviews: P-674, P-676) | PROPOSED_NOT_TESTED |
+| H-OWN-EVIDENCE | A lean contradicting a figure printed on the same card is refused at intake (deep loss pattern, 4 reviews: P-662, P-671, P-678, P-680) | PROPOSED_NOT_TESTED |
+| H-SPORT | Tennis, American football and Australian rules stated probabilities are worse than 0.5 | PROPOSED_NOT_TESTED |
+| H-PERIOD | Period and corner Overs win more often than Unders at supplied lines | PROPOSED_NOT_TESTED |
+
+The registered FIVE_LANES against SINGLE_RESEARCH assessment (EXT-EVAL-v2) has no eligible game and no longer matches the owner's operation of one chat per game. A replacement cohort (ONE-CHAT-v1, proposal M-1 to M-6) is BLOCKED_DESIGN pending an owner decision; the existing registration stands until then.

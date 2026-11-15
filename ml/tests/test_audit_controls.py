@@ -176,3 +176,13 @@ def test_handover_refuses_path_escape_and_overwrite(tmp_path):
     with pytest.raises(FileExistsError):
         A.handover(tmp_path, p.name, "EXAMPLE", "writer", [], out)
     assert out.read_bytes() == original
+
+
+@pytest.mark.parametrize("family,side,line,flagged", [
+    ("PERIOD", "AWAY", "3.5", True), ("CORNERS", "HOME", "1.5", True), ("OTHER", "AWAY", "0.5", True),
+    ("PERIOD", "OVER", "110.5", False), ("CORNERS", "UNDER", "10.5", False), ("PERIOD", "HOME", "-3.5", False)])
+def test_plus_handicap_check_covers_period_and_corner_side_lines_but_not_totals(review, family, side, line, flagged):
+    root, meta, rows = bind(review)
+    priced = good_rows()
+    priced[0].update(family=family, side=side, line=line)
+    assert any("opponent-strength" in e for e in A.problems(meta, priced, root)) is flagged

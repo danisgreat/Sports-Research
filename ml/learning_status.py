@@ -145,7 +145,8 @@ def status(store: ri.Store, *, releases_root=None, bundles_root=None, feedback=(
             wanted = {"INTERIM": "ALL", "COMPREHENSIVE": "ALL", "SPORT": "SPORT", "COMPETITION": "COMPETITION"}[review_level]
             if level != wanted or (scope_rule not in ("*", scope)):
                 continue
-            past = reviews[(reviews.level == review_level) & (reviews.scope == scope)]
+            # An owner-requested review (AUDIT-ANYTIME-v1) of the same scope resets the clock like a scheduled one.
+            past = reviews[reviews.level.isin([review_level, "USER_REQUEST"]) & (reviews.scope == scope)]
             through = max((p.clock(t) for t in past.through_at), default=None)
             mine = settled[settled.competition.map(lambda c: _in_scope(level, scope, c))] if len(settled) else settled
             since = int(sum(1 for t in mine.settled_at if through is None or t > through))

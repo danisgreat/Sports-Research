@@ -151,3 +151,8 @@ research/verification/mini_import_P-660_P-685_2026-11-15-1/** -text
 archive/source_recovery_2026-11-16-1/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 research/verification/source_recovery_2026-11-15-1/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 research/source_routes/SETTLEMENT_SOURCES.csv -text
+
+# On-request audit and repairs, CR-2026.11.16-R1: keep report tables and archived originals byte-exact.
+archive/superseded_2026-11-16-1/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+research/verification/retrospective_2026-11-16-1/** -text
+research/verification/framework_change_2026-11-16-1/** -text

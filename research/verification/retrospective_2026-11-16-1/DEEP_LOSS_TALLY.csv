@@ -1,0 +1,22 @@
+canonical_id,event,contract,verdict,review_reason,registered_class,alias,class_basis
+P-660,Chicago State Cougars @ San Diego Toreros,Chicago State +16.5,ERROR,plus-handicap without an opponent-strength check,SMALL_SAMPLE_STRENGTH_OVERREACH,PLUS_HANDICAP_WITHOUT_OPPONENT_CHECK,ASSIGNED_2026-11-16_FROM_REVIEW_VERDICT_TEXT
+P-662,Perth Scorchers Women v Adelaide Strikers Women,Adelaide innings Under 150.5,ERROR,lean against the card's own scoring evidence,OTHER,LEAN_AGAINST_OWN_PRINTED_EVIDENCE,ASSIGNED_2026-11-16_FROM_REVIEW_VERDICT_TEXT
+P-663,Jonas Forejtek v Marvin Moeller,Over 22.5 games,VARIANCE with MODEL_LIMIT,,VARIANCE,,ASSIGNED_2026-11-16_FROM_REVIEW_VERDICT_TEXT
+P-666,Alytaus Patriotai v Mažeikių M Basket,Over 166.5,VARIANCE,,VARIANCE,,ASSIGNED_2026-11-16_FROM_REVIEW_VERDICT_TEXT
+P-667,Vimmerby HC v Nybro Vikings IF,Nybro ML,VARIANCE,,VARIANCE,,ASSIGNED_2026-11-16_FROM_REVIEW_VERDICT_TEXT
+P-667,Vimmerby HC v Nybro Vikings IF,Under 5.5 goals,VARIANCE with MODEL_LIMIT,,VARIANCE,,ASSIGNED_2026-11-16_FROM_REVIEW_VERDICT_TEXT
+P-668,IF Malmö Redhawks v Växjö Lakers HC,Malmo ML,MODEL_LIMIT,,OTHER,MODEL_LIMIT,ASSIGNED_2026-11-16_FROM_REVIEW_VERDICT_TEXT
+P-670,Norway v Wales,First half Over 0.5 goals,VARIANCE,,VARIANCE,,ASSIGNED_2026-11-16_FROM_REVIEW_VERDICT_TEXT
+P-671,Georgia Tech @ Clemson,Over 47.5,ERROR,lean against the card's own absence evidence,OTHER,LEAN_AGAINST_OWN_PRINTED_EVIDENCE,ASSIGNED_2026-11-16_FROM_REVIEW_VERDICT_TEXT
+P-672,Alabama @ Vanderbilt,Vanderbilt +14.5,MIXED,,OTHER,MIXED,ASSIGNED_2026-11-16_FROM_REVIEW_VERDICT_TEXT
+P-673,Laval Rocket @ Rochester Americans,Laval ML,VARIANCE,,VARIANCE,,ASSIGNED_2026-11-16_FROM_REVIEW_VERDICT_TEXT
+P-674,Dallas Mavericks @ Cleveland Cavaliers,Dallas -8.5,ERROR,unmeasured availability priced as an edge,UNFITTED_ANALYST_ADJUSTMENT,UNMEASURED_AVAILABILITY_PRICED,ASSIGNED_2026-11-16_FROM_REVIEW_VERDICT_TEXT
+P-674,Dallas Mavericks @ Cleveland Cavaliers,Under 227.5,ERROR,"same unmeasured availability effect, applied to the total",UNFITTED_ANALYST_ADJUSTMENT,UNMEASURED_AVAILABILITY_PRICED,ASSIGNED_2026-11-16_FROM_REVIEW_VERDICT_TEXT
+P-675,Buffalo Sabres @ Dallas Stars,Buffalo +1.5,VARIANCE,,VARIANCE,,ASSIGNED_2026-11-16_FROM_REVIEW_VERDICT_TEXT
+P-676,Brooklyn Nets @ Memphis Grizzlies,Nets +4.5,ERROR,unmeasured availability against a large measured strength gap,UNFITTED_ANALYST_ADJUSTMENT,UNMEASURED_AVAILABILITY_PRICED,ASSIGNED_2026-11-16_FROM_REVIEW_VERDICT_TEXT
+P-676,Brooklyn Nets @ Memphis Grizzlies,Under 224.5,ERROR,same unmeasured availability effect,UNFITTED_ANALYST_ADJUSTMENT,UNMEASURED_AVAILABILITY_PRICED,ASSIGNED_2026-11-16_FROM_REVIEW_VERDICT_TEXT
+P-678,Australia v England,England innings Under 282.5,ERROR,lean against the card's own batting-first evidence,OTHER,LEAN_AGAINST_OWN_PRINTED_EVIDENCE,ASSIGNED_2026-11-16_FROM_REVIEW_VERDICT_TEXT
+P-680,Niigata Albirex BB v Gifu Swoops,Niigata -6.5,MODEL_LIMIT,,OTHER,MODEL_LIMIT,ASSIGNED_2026-11-16_FROM_REVIEW_VERDICT_TEXT
+P-680,Niigata Albirex BB v Gifu Swoops,Over 158.5,ERROR,lean against the card's own recent-form and availability evidence,OTHER,LEAN_AGAINST_OWN_PRINTED_EVIDENCE,ASSIGNED_2026-11-16_FROM_REVIEW_VERDICT_TEXT
+P-684,Australia v New Zealand,New Zealand +3.5,MODEL_LIMIT,,OTHER,MODEL_LIMIT,ASSIGNED_2026-11-16_FROM_REVIEW_VERDICT_TEXT
+P-685,Dubai Basketball v Spartak Office Shoes Subotica,Spartak +12.5,ERROR,plus-handicap against the card's own opponent-strength finding,SMALL_SAMPLE_STRENGTH_OVERREACH,PLUS_HANDICAP_WITHOUT_OPPONENT_CHECK,ASSIGNED_2026-11-16_FROM_REVIEW_VERDICT_TEXT

@@ -176,6 +176,11 @@ def test_learning_counters_and_review_clocks_by_sport_and_competition(tmp_path):
     res = LS.status(store, reviews=log, alerts=alerts)
     t = res["triggers"].set_index(["level", "scope"])
     assert t.loc[("INTERIM", "ALL"), "settled_since_last"] == 0 and t.loc[("SPORT", "Basketball"), "status"] == "EARLY_REVIEW"
+    # An owner-requested review of a scope resets that scope's clocks; one for another scope does not.
+    asked = pd.DataFrame([dict(log.iloc[0], review_id="RV2", level="USER_REQUEST")])
+    t = LS.status(store, reviews=asked)["triggers"].set_index(["level", "scope"])
+    assert t.loc[("INTERIM", "ALL"), "settled_since_last"] == 0 == t.loc[("COMPREHENSIVE", "ALL"), "settled_since_last"]
+    assert t.loc[("SPORT", "Basketball"), "settled_since_last"] == len(frame)
     bad = tmp_path / "REVIEW_LOG.csv"
     bad.write_bytes(p.csv_bytes([dict(log.iloc[0], disposition="AUTO_PROMOTE")]))
     with pytest.raises(p.AdmissionError, match="disposition"):

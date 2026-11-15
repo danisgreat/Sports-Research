@@ -139,8 +139,11 @@ def problems(meta, picks, root):
         except ValueError:
             errors.append(prefix + "sample_coverage must be a measured fraction in (0,1]")
         pick = by_label[r["label"]]
+        # A plus handicap is any priced side line above zero, whichever family carries it: a first-half, period or
+        # corners handicap (side HOME/AWAY with a line) is the same underdog cushion as a full-game one.
         try:
-            plus = pick["family"] == "HANDICAP" and float(pick["line"]) > 0
+            plus = (pick["family"] == "HANDICAP" or (pick["family"] in ("PERIOD", "CORNERS", "OTHER")
+                    and pick.get("side", "").strip().upper() in ("HOME", "AWAY"))) and float(pick["line"]) > 0
         except (ValueError, KeyError):
             plus = False
         if r["opponent_check"] not in ("CHECKED", "UNAVAILABLE", "NOT_APPLICABLE"):

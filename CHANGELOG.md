@@ -1,5 +1,9 @@
 # Australian rules request format and finals extra time — MDS/P v24.12 / CR-2026.11.10-R2 / P-2026.11.10-v24.10, 10 November 2026
 
+## 16 November 2026 - CR-2026.11.16-R1 (audit, repairs and records; no method change)
+
+Owner instruction: review all files, apply the framework improvement rules and say how to improve it. On-request comprehensive audit of P-001 to P-685 (AUDIT-ANYTIME-v1): [report](research/verification/retrospective_2026-11-16-1/RETROSPECTIVE_REPORT.md). Main finding: no current card is a forecast of record (0 ledger rows, 0 frozen model-lane games, 0 games eligible for the 100-game assessment, 0 learning-log games), and the November chat numbers are not distinguishable from 0.5. Four defect repairs with tests: plus-handicap check extended to period and corner side lines; timing-correction binding fixed to the ledger's registered columns; stale correction lock recovered; owner-requested reviews counted by the review clocks. PROMPTS.md and CURRENT_STATE pointers corrected. Six hypotheses registered PROPOSED_NOT_TESTED. No forecast, grade, selection rule, parameter, model, prompt version or scoring version changed. [Proposal](research/verification/framework_change_2026-11-16-1/CHANGE_PROPOSAL.md), [implementation](research/verification/framework_change_2026-11-16-1/IMPLEMENTATION.md).
+
 ## 16 November 2026 - SRC-RECOVERY-20261116R1 (sources only)
 
 Owner request: find and add permitted sources for unresolved sporting fields. Added eight exact-field settlement routes, official J.League CK-table alternatives and a mixed-clock reader snapshot, with immutable source captures kept externally. Fresh reader checks still refuse ESPNcricinfo/Sofascore unknown rules and blocked Cricbuzz. WBBL phases are explicit one-run bounds, not invented exact scores. Original audits, grades, canonical IDs, training studies and MDS v24.20/profile v24.15 remain unchanged. [Evidence and limits](research/verification/source_recovery_2026-11-15-1/REPORT.md).

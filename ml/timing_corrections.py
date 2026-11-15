@@ -14,6 +14,7 @@ from urllib.parse import urlparse
 from ml import timing
 
 PATH = "research/adjustment_ledger/TIMING_CORRECTIONS.csv"
+STALE_LOCK_SECONDS = 600
 FIELDS = ("sequence", "local_key", "ledger_rows_sha256", "previous_timing", "effective_timing", "actual_start",
           "source_url", "evidence_path", "evidence_sha256", "recorded_at", "reason", "prev_sha256", "row_sha256")
 PROOF_FIELDS = ("local_key", "actual_start", "source_url", "observed_at", "note")
@@ -101,8 +102,14 @@ def card_rows(ledger, key):
     errors = timing.problems(meta)
     if errors:
         raise ValueError("invalid original timing declaration: " + " | ".join(errors))
-    # Include original chain identities; appending unrelated cards cannot alter this binding.
-    binding = sha(csv_bytes(tuple(ledger.columns), rows.to_dict("records")))
+    # Include original chain identities; appending unrelated cards cannot alter this binding. The binding covers the
+    # ledger's own registered columns in their registered order, so a later extra or derived column on the frame (or a
+    # reordered read) cannot make every earlier correction look stale.
+    from ml import ledger as L
+    missing = [c for c in L.FIELDS if c not in ledger.columns]
+    if missing:
+        raise ValueError("ledger lacks registered columns: " + ", ".join(missing))
+    binding = sha(csv_bytes(tuple(L.FIELDS), rows[list(L.FIELDS)].to_dict("records")))
     return binding, meta
 
 
@@ -133,7 +140,18 @@ def apply(ledger, root):
 @contextlib.contextmanager
 def locked(path):
     lock = path.with_suffix(".lock")
-    with lock.open("x") as f:
+    try:
+        f = lock.open("x")
+    except FileExistsError:
+        # A correction holds the lock for well under a second. A lock older than STALE_LOCK_SECONDS was left by a
+        # process that died; it is removed once, otherwise the refusal names the file so it can be checked by hand.
+        age = datetime.now(timezone.utc).timestamp() - lock.stat().st_mtime
+        if age < STALE_LOCK_SECONDS:
+            raise RuntimeError(f"timing corrections are locked by another writer ({lock}, {age:.0f}s old); retry, or "
+                               f"delete the file if no correction is running") from None
+        lock.unlink()
+        f = lock.open("x")
+    with f:
         f.write(str(os.getpid()))
     try:
         yield

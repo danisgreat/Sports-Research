@@ -99,3 +99,24 @@ def test_timing_review_cannot_target_unknown_card_or_use_missing_evidence(settle
     evidence.unlink()
     with pytest.raises(ValueError, match="evidence"):
         correction(settled)
+
+
+def test_binding_ignores_extra_frame_columns_and_a_dead_lock_is_recovered_but_a_live_one_refuses(settled):
+    import os, time
+    root, _, _, original = settled
+    ledger = L.read(root / L.LEDGER)
+    binding, _ = T.card_rows(ledger, KEY)
+    widened = ledger.assign(derived_note="x")[["derived_note", *ledger.columns]]
+    assert T.card_rows(widened, KEY)[0] == binding
+    with pytest.raises(ValueError, match="registered columns"):
+        T.card_rows(ledger.drop(columns=["information_row"]), KEY)
+    lock = (root / T.PATH).with_suffix(".lock")
+    lock.parent.mkdir(parents=True, exist_ok=True)
+    lock.write_text("999999")
+    with pytest.raises(RuntimeError, match="locked by another writer"):
+        correction(settled)
+    assert lock.exists() and not (root / T.PATH).exists()
+    old = time.time() - T.STALE_LOCK_SECONDS - 5
+    os.utime(lock, (old, old))
+    assert correction(settled)["status"] == "APPENDED" and not lock.exists()
+    assert (root / L.LEDGER).read_bytes() == original
