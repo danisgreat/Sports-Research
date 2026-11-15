@@ -1,0 +1,142 @@
+{
+  "event": "LOCAL-20261114B4496A3F-G0008",
+  "prior_frozen_input_sha": "0a4d512d265adbca82493a6200fc546d95956335149cbe3e51704bba52e8cab1",
+  "goalie_addendum_sha": "c24775046672345819ce4d7f2b32824734456d999e8703abed6283c25fb23192",
+  "prior_unadjusted_model_sha": "ad52586369aba123e70d7f9f5fe571674e1767ab98217027521d8767833d8691",
+  "computed_at": "2026-11-15T00:53:57+11:00",
+  "record_type": "POST_GOALIE_EVIDENCE_REPRICE LOCAL ANALYST",
+  "sourced_goalies": [
+    "Isak Sörqvist (Vimmerby)",
+    "Pontus Eltonius (Nybro)"
+  ],
+  "shots_per_team_proxy": {
+    "Vimmerby": 25.378654970760234,
+    "Nybro": 28.232456140350877
+  },
+  "shrunken_goalie_goal_deltas": {
+    "Vimmerby": -0.1497340643274858,
+    "Nybro": -0.29361754385964967
+  },
+  "reg_goals_centres": {
+    "Vimmerby": 2.679432602339181,
+    "Nybro": 2.5311631578947362,
+    "total": 5.210595760233917
+  },
+  "full_game": {
+    "reg_win_Vimmerby": 0.4356432537629383,
+    "reg_draw": 0.17921530507119945,
+    "reg_win_Nybro": 0.3851414411658624,
+    "full_Vimmerby_ML": 0.5252509062985379,
+    "full_Nybro_ML": 0.4747490937014621,
+    "full_Over5_5": 0.42093859172249987,
+    "full_Under5_5": 0.5790614082775002,
+    "tie_reg_over5_5": 0.07397019951018567,
+    "tie_reg_under5_5": 0.10524510556101374,
+    "mean_reg_goals": 5.210595759952539,
+    "mean_full_goals": 5.389811065023738,
+    "n_goal_grid_states": 400,
+    "mass_in_grid": 0.9999999999839233,
+    "OT_home_win_assumption": 0.5
+  },
+  "benchmark_family_only": {
+    "reg_win_Vimmerby": 0.4709075287475137,
+    "reg_draw": 0.16782705264812514,
+    "reg_win_Nybro": 0.36126541860436123,
+    "full_Vimmerby_ML": 0.5548210550715762,
+    "full_Nybro_ML": 0.4451789449284238,
+    "full_Over5_5": 0.5249926428476394,
+    "full_Under5_5": 0.47500735715235964,
+    "tie_reg_over5_5": 0.08697695285339115,
+    "tie_reg_under5_5": 0.08085009979473393,
+    "mean_reg_goals": 5.819999997468099,
+    "mean_full_goals": 5.987827050116225,
+    "n_goal_grid_states": 400,
+    "mass_in_grid": 0.999999999852163,
+    "OT_home_win_assumption": 0.5
+  },
+  "scenario": {
+    "low_total_goalies_overperform_or_lower_conversion": {
+      "reg_win_Vimmerby": 0.43110989206016986,
+      "reg_draw": 0.19127544915570394,
+      "reg_win_Nybro": 0.3776146587841263,
+      "full_Vimmerby_ML": 0.5267476166380217,
+      "full_Nybro_ML": 0.4732523833619783,
+      "full_Over5_5": 0.31606937201692936,
+      "full_Under5_5": 0.683930627983071,
+      "tie_reg_over5_5": 0.0584479389916711,
+      "tie_reg_under5_5": 0.13282751016403282,
+      "mean_reg_goals": 4.610595760199899,
+      "mean_full_goals": 4.801871209355602,
+      "n_goal_grid_states": 400,
+      "mass_in_grid": 0.9999999999980868,
+      "OT_home_win_assumption": 0.5
+    },
+    "high_total_goalies_underperform_or_early_pp": {
+      "reg_win_Vimmerby": 0.4393768125540263,
+      "reg_draw": 0.16920395056698823,
+      "reg_win_Nybro": 0.3914192368789853,
+      "full_Vimmerby_ML": 0.5239787878375203,
+      "full_Nybro_ML": 0.4760212121624794,
+      "full_Over5_5": 0.5234386454579897,
+      "full_Under5_5": 0.47656135454201015,
+      "tie_reg_over5_5": 0.087651528008748,
+      "tie_reg_under5_5": 0.08155242255824025,
+      "mean_reg_goals": 5.810595758433987,
+      "mean_full_goals": 5.979799709000975,
+      "n_goal_grid_states": 400,
+      "mass_in_grid": 0.9999999998954983,
+      "OT_home_win_assumption": 0.5
+    },
+    "Vimmerby_attack_outperforms_Nybro": {
+      "reg_win_Vimmerby": 0.5575131053541198,
+      "reg_draw": 0.1686979170133427,
+      "reg_win_Nybro": 0.27378897763253685,
+      "full_Vimmerby_ML": 0.6418620638607911,
+      "full_Nybro_ML": 0.3581379361392082,
+      "full_Over5_5": 0.42093859167471054,
+      "full_Under5_5": 0.57906140832529,
+      "tie_reg_over5_5": 0.06759121756049995,
+      "tie_reg_under5_5": 0.10110669945284274,
+      "mean_reg_goals": 5.2105957585439295,
+      "mean_full_goals": 5.379293675557272,
+      "n_goal_grid_states": 400,
+      "mass_in_grid": 0.9999999999013935,
+      "OT_home_win_assumption": 0.5
+    },
+    "Nybro_attack_outperforms_Vimmerby": {
+      "reg_win_Vimmerby": 0.31928116380866034,
+      "reg_draw": 0.1748949626263725,
+      "reg_win_Nybro": 0.5058238735649667,
+      "full_Vimmerby_ML": 0.4067286451218466,
+      "full_Nybro_ML": 0.593271354878153,
+      "full_Over5_5": 0.420938591707229,
+      "full_Under5_5": 0.5790614082927713,
+      "tie_reg_over5_5": 0.07133534195057055,
+      "tie_reg_under5_5": 0.10355962067580197,
+      "mean_reg_goals": 5.210595759500076,
+      "mean_full_goals": 5.385490722126447,
+      "n_goal_grid_states": 400,
+      "mass_in_grid": 0.9999999999575508,
+      "OT_home_win_assumption": 0.5
+    },
+    "no_goalie_adjustment": {
+      "reg_win_Vimmerby": 0.41474100782296397,
+      "reg_draw": 0.17195594717622517,
+      "reg_win_Nybro": 0.41330304500081094,
+      "full_Vimmerby_ML": 0.5007189814110766,
+      "full_Nybro_ML": 0.49928101858892354,
+      "full_Over5_5": 0.49726740890119747,
+      "full_Under5_5": 0.5027325910988024,
+      "tie_reg_over5_5": 0.08450848864420772,
+      "tie_reg_under5_5": 0.08744745853201744,
+      "mean_reg_goals": 5.653947367386701,
+      "mean_full_goals": 5.825903314562926,
+      "n_goal_grid_states": 400,
+      "mass_in_grid": 0.9999999999403011,
+      "OT_home_win_assumption": 0.5
+    }
+  },
+  "status": "UNCALIBRATED_ANALYST_PRIMARY / CHAT_LOCAL_UNISSUED_DRAFT / NO_STRONG_PICK",
+  "source": "Dagens Vimmerby 2026-11-14 13:37 CET official lineup report; Elite Prospects goalie SV; Swedish Hockey team stats",
+  "uncertainty": "Starting goalie confirmation is credible local team-sheet reporting, but other Nybro forwards/defenders and full operator terms not verified. Goalie SV shrunk 50% is assumption. Match 14Nov score NOT_EXPOSED."
+}

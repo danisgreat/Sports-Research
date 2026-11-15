@@ -1,10 +1,29 @@
 """Regression checks for current imports and future log/inventory discovery."""
 import math
+from pathlib import Path
 
 import pandas as pd
 import pytest
 
 from ml.evaluation import card_history as ch
+
+
+def queued_unresolved(verification):
+    """P-IDs an import queue lists as UNRESOLVED, and the UNRESOLVED effective rows those imports carry (after P-638)."""
+    import re
+    ids, rows = set(), 0
+    for q in Path(verification).glob("mini_import_*/UNRESOLVED_POST_IMPORT.csv"):
+        frame = pd.read_csv(q, dtype=str, keep_default_na=False)
+        if "status" in frame:
+            for value in frame[frame.status == "UNRESOLVED"].canonical_ids:
+                ids |= set(re.findall(r"P-\d+", value))
+    for e in Path(verification).glob("mini_import_*/EFFECTIVE_SETTLEMENT_ROWS.csv"):
+        frame = pd.read_csv(e, dtype=str, keep_default_na=False)
+        if not {"canonical_id", "sporting_grade"} <= set(frame):
+            continue  # older import schemas carry no effective grades
+        late = frame.canonical_id.str.extract(r"P-(\d+)", expand=False).astype(float) > 638
+        rows += int(((frame.sporting_grade == "UNRESOLVED") & late).sum())
+    return ids, rows
 
 
 def local_inventory(path, **changes):
@@ -169,11 +188,13 @@ def test_owner_closed_nine_corner_rows_are_terminal_and_excluded_from_scores(cur
     assert set(closed.record_disposition) == {"CLOSED_UNATTAINABLE_DO_NOT_RETRY"}
     assert (closed[closed.card == "P-630"].literal_grade == "UNRESOLVED").all()
     # The 9 Nov 2026 closure emptied the queue for every card up to P-638; later imports may carry genuinely
-    # unresolved rows (P-647 corners, CR-2026.11.14-R1), which must stay UNRESOLVED and listed in their import queue.
+    # unresolved rows (P-647 corners, CR-2026.11.14-R1; P-660-P-685 queues, CR-2026.11.15-R5), which must stay
+    # UNRESOLVED and be listed in their import's UNRESOLVED_POST_IMPORT queue.
     historical = current_rows.card.str.extract(r"P-(\d+)", expand=False).astype(float) <= 638
     assert not ((current_rows.grade == "UNRESOLVED") & (current_rows.record_disposition == "RETAINED_CONTRACT") & historical).any()
     later = current_rows[(current_rows.grade == "UNRESOLVED") & ~historical]
-    assert set(later.card) <= {"P-647"} and len(later) == 3
+    queued, expected = queued_unresolved(ch.V)
+    assert set(later.card) <= queued and len(later) == expected and expected >= 3
     original = pd.read_csv(ch.V / "historical_resolution_2026-11-09-1/final_history/CARD_ROWS.csv", dtype=str, keep_default_na=False)
     old = original[original.card.isin(["P-126", "P-418"])].copy()
     old.loc[(old.card == 'P-126') & old['rank'].isin(['2', '4']), 'grade'] = 'UNATTAINABLE'

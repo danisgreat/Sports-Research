@@ -1,0 +1,470 @@
+{
+  "event": "LOCAL-20261114B4496A3F-G0008",
+  "frozen_at_local_AEDT": "2026-11-15T00:49:29+11:00",
+  "official_fixture": {
+    "sweden_date": "2026-11-14",
+    "sweden_time": "15:00 CET",
+    "scheduled_AEDT": "2026-11-15T01:00:00+11:00",
+    "venue": "VBO Arena, Kungsgatan 52, Vimmerby, Sweden",
+    "league": "HockeyAllsvenskan 2026/27",
+    "home": "Vimmerby HC",
+    "away": "Nybro Vikings IF",
+    "native_team_game_center": "cxkpwcpff8/h0st0pvci0",
+    "swehockey_event_numeric_id": "NOT_FETCHED"
+  },
+  "supplied_lines": [
+    "Vimmerby ML",
+    "Nybro Vikings ML",
+    "Over 5.5 full-game goals",
+    "Under 5.5 full-game goals"
+  ],
+  "official_full_game_team_history_source": "https://stats.swehockey.se/ScheduleAndResults/Schedule/20962 (last update 2026-11-13 22:54 Sweden)",
+  "Vimmerby_chronological_dates": [
+    [
+      "2026-09-18",
+      "A",
+      "Nybro Vikings",
+      6,
+      7,
+      null
+    ],
+    [
+      "2026-09-20",
+      "H",
+      "IK Oskarshamn",
+      1,
+      4,
+      null
+    ],
+    [
+      "2026-09-23",
+      "H",
+      "AIK",
+      2,
+      4,
+      null
+    ],
+    [
+      "2026-09-25",
+      "H",
+      "Visby Roma",
+      2,
+      4,
+      null
+    ],
+    [
+      "2026-09-27",
+      "A",
+      "BIK Karlskoga",
+      3,
+      1,
+      null
+    ],
+    [
+      "2026-09-30",
+      "H",
+      "MoDo",
+      3,
+      2,
+      null
+    ],
+    [
+      "2026-10-02",
+      "H",
+      "Almtuna",
+      4,
+      7,
+      null
+    ],
+    [
+      "2026-10-07",
+      "H",
+      "Kalmar",
+      4,
+      5,
+      null
+    ],
+    [
+      "2026-10-09",
+      "A",
+      "Södertälje",
+      2,
+      3,
+      null
+    ],
+    [
+      "2026-10-14",
+      "A",
+      "Leksands",
+      0,
+      4,
+      null
+    ],
+    [
+      "2026-10-16",
+      "H",
+      "Mora",
+      4,
+      3,
+      null
+    ],
+    [
+      "2026-10-21",
+      "H",
+      "Västerås",
+      0,
+      3,
+      null
+    ],
+    [
+      "2026-10-23",
+      "A",
+      "Almtuna",
+      6,
+      1,
+      null
+    ],
+    [
+      "2026-10-28",
+      "A",
+      "AIK",
+      1,
+      4,
+      null
+    ],
+    [
+      "2026-10-30",
+      "H",
+      "MoDo",
+      2,
+      3,
+      null
+    ],
+    [
+      "2026-11-01",
+      "A",
+      "Kalmar",
+      3,
+      6,
+      null
+    ],
+    [
+      "2026-11-10",
+      "A",
+      "Östersunds",
+      0,
+      3,
+      null
+    ],
+    [
+      "2026-11-13",
+      "A",
+      "IK Oskarshamn",
+      4,
+      3,
+      "SO"
+    ]
+  ],
+  "Nybro_chronological_dates": [
+    [
+      "2026-09-18",
+      "H",
+      "Vimmerby",
+      7,
+      6,
+      null
+    ],
+    [
+      "2026-09-20",
+      "A",
+      "Östersunds",
+      3,
+      2,
+      null
+    ],
+    [
+      "2026-09-23",
+      "H",
+      "BIK Karlskoga",
+      0,
+      1,
+      null
+    ],
+    [
+      "2026-09-25",
+      "A",
+      "Kalmar",
+      1,
+      5,
+      null
+    ],
+    [
+      "2026-09-28",
+      "H",
+      "MoDo",
+      2,
+      3,
+      null
+    ],
+    [
+      "2026-09-30",
+      "A",
+      "Mora",
+      2,
+      1,
+      null
+    ],
+    [
+      "2026-10-02",
+      "H",
+      "AIK",
+      3,
+      5,
+      null
+    ],
+    [
+      "2026-10-07",
+      "A",
+      "Leksands",
+      1,
+      7,
+      null
+    ],
+    [
+      "2026-10-09",
+      "A",
+      "Västerås",
+      0,
+      2,
+      null
+    ],
+    [
+      "2026-10-11",
+      "A",
+      "Almtuna",
+      2,
+      4,
+      null
+    ],
+    [
+      "2026-10-14",
+      "H",
+      "IK Oskarshamn",
+      2,
+      3,
+      null
+    ],
+    [
+      "2026-10-16",
+      "A",
+      "Södertälje",
+      2,
+      5,
+      null
+    ],
+    [
+      "2026-10-21",
+      "H",
+      "Visby Roma",
+      1,
+      0,
+      null
+    ],
+    [
+      "2026-10-23",
+      "H",
+      "Södertälje",
+      3,
+      1,
+      null
+    ],
+    [
+      "2026-10-28",
+      "H",
+      "MoDo",
+      0,
+      3,
+      null
+    ],
+    [
+      "2026-10-30",
+      "A",
+      "BIK Karlskoga",
+      1,
+      2,
+      null
+    ],
+    [
+      "2026-11-01",
+      "A",
+      "Visby Roma",
+      3,
+      4,
+      null
+    ],
+    [
+      "2026-11-11",
+      "A",
+      "Almtuna",
+      5,
+      0,
+      null
+    ],
+    [
+      "2026-11-13",
+      "H",
+      "Kalmar",
+      4,
+      3,
+      null
+    ]
+  ],
+  "windows": {
+    "Vimmerby": {
+      "L5": {
+        "n": 5,
+        "gf": 2,
+        "ga": 3.8,
+        "o5_5": 2,
+        "last_date": "2026-11-13",
+        "first_date": "2026-10-28"
+      },
+      "L10": {
+        "n": 10,
+        "gf": 2.2,
+        "ga": 3.3,
+        "o5_5": 4,
+        "last_date": "2026-11-13",
+        "first_date": "2026-10-09"
+      },
+      "L15": {
+        "n": 15,
+        "gf": 2.53333,
+        "ga": 3.46667,
+        "o5_5": 7,
+        "last_date": "2026-11-13",
+        "first_date": "2026-09-25"
+      },
+      "L18": {
+        "n": 18,
+        "gf": 2.61111,
+        "ga": 3.72222,
+        "o5_5": 9,
+        "last_date": "2026-11-13",
+        "first_date": "2026-09-18"
+      }
+    },
+    "Nybro": {
+      "L5": {
+        "n": 5,
+        "gf": 2.6,
+        "ga": 2.4,
+        "o5_5": 2,
+        "last_date": "2026-11-13",
+        "first_date": "2026-10-28"
+      },
+      "L10": {
+        "n": 10,
+        "gf": 2.3,
+        "ga": 2.5,
+        "o5_5": 4,
+        "last_date": "2026-11-13",
+        "first_date": "2026-10-11"
+      },
+      "L15": {
+        "n": 15,
+        "gf": 2.06667,
+        "ga": 2.86667,
+        "o5_5": 6,
+        "last_date": "2026-11-13",
+        "first_date": "2026-09-28"
+      },
+      "L19": {
+        "n": 19,
+        "gf": 2.21053,
+        "ga": 3,
+        "o5_5": 8,
+        "last_date": "2026-11-13",
+        "first_date": "2026-09-18"
+      }
+    }
+  },
+  "official_team_stats": {
+    "Vimmerby": {
+      "n": 18,
+      "GF": 47,
+      "GA": 67,
+      "ShotsFor": 439,
+      "ShotsAgainst": 537,
+      "ShootingPct": 10.71,
+      "teamSavePct": 87.52,
+      "PP_goal": 10,
+      "PP_chances": 53,
+      "PK_success_pct": 70.49,
+      "PP_pct": 18.87
+    },
+    "Nybro": {
+      "n": 19,
+      "GF": 42,
+      "GA": 57,
+      "ShotsFor": 506,
+      "ShotsAgainst": 501,
+      "ShootingPct": 8.3,
+      "teamSavePct": 88.62,
+      "PP_goal": 12,
+      "PP_chances": 66,
+      "PK_success_pct": 75.86,
+      "PP_pct": 18.18
+    }
+  },
+  "historical_H2H": [
+    {
+      "date": "2026-09-18",
+      "home": "Nybro",
+      "score": "7-6",
+      "venue": "Liljas Arena",
+      "competition": "HockeyAllsvenskan",
+      "is_current_season": true
+    }
+  ],
+  "availability": {
+    "both_starting_goalies": "NOT_CONFIRMED",
+    "exact_XIs_lines_scratches": "NOT_CONFIRMED",
+    "game_lineup_publisher": "https://www.leksandsif.se/game-center/cxkpwcpff8/h0st0pvci0/?active-tab=line_up&state=pre-game",
+    "last_game_Nybro_goalie": "Hugo Ollas (#80), 13 Nov vs Kalmar, saves36/39; NOT 14 Nov confirmation",
+    "last_game_Vimmerby_goalie": "NOT_VERIFIED",
+    "injury_health_suspensions": "NOT_FOUND_AFTER_SEARCH (not all healthy assertion)"
+  },
+  "model_recipe_frozen_before_pricing": {
+    "league_specific_row": "NOT_AVAILABLE (FAMILY_PRIOR ICE_HOCKEY has mean5.82, home margin0.34, raw total SD2.53, raw margin SD2.25; not a HockeyAllsvenskan-specific fit)",
+    "expected_reggoals_season_matchup": "0.5 * (ownGFpergame + opponentGApergame)",
+    "expected_reggoals_recent_matchup": "0.5 * (ownL5GF + opponentL5GA)",
+    "season_weight": 0.75,
+    "last5_weight": 0.25,
+    "home_reg_goals_adjustment": 0.2,
+    "away_reg_goals_adjustment": -0.2,
+    "home_adjustment_basis": "Analyst assumption +0.40 goal game-margin, close to ICE_HOCKEY_FAMILY_PRIOR +0.34 home margin. Not a fitted league coefficient.",
+    "rounding": "no rounding until outputs; unit scoring goal count",
+    "reg_goal_dist": "Independent Poisson home and away; no unvalidated 100k sim",
+    "full_game_ML": "P(reg W) + 0.5 P(reg tie). True OT/SO advantage unknown, 50% conditional split.",
+    "full_game_5_5": "P(reg total>=6) for standard one-goal OT/SO after a tied 60min regulation. Ties at even regulation totals; +1 cannot move 4 goals over 5.5.",
+    "OT_total_extra_on_reg_draw": 1,
+    "goalie_mixture": "GOALIE_UNCONFIRMED; use ±0.4 goal to home vs away scoring centre sensitivity, not a fitted probability",
+    "shot_PP_PK_effect": "descriptive only; no additive effect because opportunities/player PP roles unknown",
+    "empty_net": "not modelled separately; ordinary team goal rates include historical EN mixture; process uncertainty remains",
+    "operator_ML_full_game": "Assume 2-way includes OT/SO; exact operator action terms unknown",
+    "raw_match_13_nov_Vimmerby": "4-3 SO victory at Oskarshamn; 60-min regulation was 3-3, not 4-3. All match totals copied as official final and L5 adjusted for regulation V scoring goal.",
+    "final_totals_OT_convention": "one added goal in decided SO/OT match; consistent with official scorelines. Rules exact operator still UNCONFIRMED.",
+    "prestart_frozen_inputs_only": "true; no current Vimmerby vs Nybro game score seen",
+    "research_model_release": "NOT_EXECUTED; local analyst only"
+  },
+  "sources": [
+    "https://stats.swehockey.se/ScheduleAndResults/Schedule/20962",
+    "https://stats.swehockey.se/Teams/Statistics/ScoringAndGoalkeeping/20962",
+    "https://stats.swehockey.se/Teams/Statistics/PowerplayAndPenaltyKilling/20962",
+    "https://stats.swehockey.se/ScheduleAndResults/Overview/20962",
+    "https://www.leksandsif.se/game-center/cxkpwcpff8/h0st0pvci0/?active-tab=line_up&state=pre-game",
+    "https://www.vimmerbyhockey.se/game-center/cxkpwcpff8/h0st0pvci0/?state=pre-game",
+    "https://www.svenskalag.se/nybrovikings-a-laget/match/20802073/vimmerby-hc"
+  ]
+}

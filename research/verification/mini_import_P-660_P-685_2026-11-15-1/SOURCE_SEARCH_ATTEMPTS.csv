@@ -1,0 +1,33 @@
+event,attempt,result,next_step
+E01,web search (extended) for final,search summaries used for discovery only,audited permitted pages opened
+E02,web search (extended) for final,search summaries used for discovery only,audited permitted pages opened
+E03,web search (extended) for final,search summaries used for discovery only,audited permitted pages opened
+E04,web search (extended) for final,search summaries used for discovery only,audited permitted pages opened
+E05,web search (extended) for final,search summaries used for discovery only,audited permitted pages opened
+E06,web search (extended) for final,search summaries used for discovery only,audited permitted pages opened
+E07,web search (extended) for final,search summaries used for discovery only,audited permitted pages opened
+E08,web search (extended) for final,search summaries used for discovery only,audited permitted pages opened
+E09,web search (extended) for final,search summaries used for discovery only,audited permitted pages opened
+E10,web search (extended) for final,search summaries used for discovery only,audited permitted pages opened
+E11,web search (extended) for final,search summaries used for discovery only,audited permitted pages opened
+E12,web search (extended) for final,search summaries used for discovery only,audited permitted pages opened
+E13,web search (extended) for final,search summaries used for discovery only,audited permitted pages opened
+E14,web search (extended) for final,search summaries used for discovery only,audited permitted pages opened
+E15,web search (extended) for final,search summaries used for discovery only,audited permitted pages opened
+E16,web search (extended) for final,search summaries used for discovery only,audited permitted pages opened
+E17,web search (extended) for final,search summaries used for discovery only,audited permitted pages opened
+E18,web search (extended) for final,search summaries used for discovery only,audited permitted pages opened
+E19,web search (extended) for final,search summaries used for discovery only,audited permitted pages opened
+E20,web search (extended) for final,search summaries used for discovery only,audited permitted pages opened
+E21,web search (extended) for final,search summaries used for discovery only,audited permitted pages opened
+E22,web search (extended) for final,search summaries used for discovery only,audited permitted pages opened
+E23,web search (extended) for final,search summaries used for discovery only,audited permitted pages opened
+E24,web search (extended) for final,search summaries used for discovery only,audited permitted pages opened
+E25,web search (extended) for final,search summaries used for discovery only,audited permitted pages opened
+E26,web search (extended) for final,search summaries used for discovery only,audited permitted pages opened
+E05,"hpk.fi, tappara.fi (2 pages), Flashscore (3 pages); Elite Prospects 403; Sofascore RULES_UNKNOWN; Leijonat/Ilkka-Pohjalainen BLOCKED_FOR_AI",no final on any permitted page,UNRESOLVED
+E02,"Brisbane Heat, AAP, cricket.com.au scorecard; ESPNcricinfo RULES_UNKNOWN; revsportz BLOCKED_FOR_AI; cricketworld 403",six-over score not published on permitted pages,UNRESOLVED
+E03,"AAP, CricTracker, cricket.com.au report and scorecard; crex BLOCKED_FOR_AI; cricketworld 403",six-over score not published on permitted pages,UNRESOLVED
+E19,Tribune India; TNT Sports RULES_UNKNOWN; ABC/France24 BLOCKED_FOR_AI,five-over score not on permitted pages,UNRESOLVED
+E24,J.League match page and live page (3 reads),stats tab not in fetched text,corners UNRESOLVED
+E25,"nrl.com news (redirect to sign-in), rlwc2026.com (score placeholder), SBS/RNZ/NZ Herald BLOCKED_FOR_AI",score from AAP sidebar only,evidence C

@@ -1,5 +1,9 @@
 # Australian rules request format and finals extra time — MDS/P v24.12 / CR-2026.11.10-R2 / P-2026.11.10-v24.10, 10 November 2026
 
+## 15 November 2026 - CR-2026.11.15-R5 (records only)
+
+Owner instruction: fully review and settle every game log in the to-be-settled folder under the framework rules. Seven chat-local minis (75 cards, 26 games, 14-15 Nov) copied byte for byte to research/active_minis/received/OWNER_DROP_2026-11-15/; audited; finals from audited permitted sources; P-660–P-685 imported to Part 10 one ID per game in order of scheduled start (101/101 exact readback); 140 W / 135 L / 50 UNRESOLVED rows, zero primary; 21 deep loss review groups. P-664 (Tappara U20 v HPK U20) final not verified. Owner note: future game logs come from one chat per game. Package: research/verification/mini_import_P-660_P-685_2026-11-15-1.
+
 ## 15 November 2026 - v24.20 / CR-2026.11.15-R4 / P-2026.11.15-v24.18 (CARD-TRAIN-v1)
 
 Owner instruction: all the records and settled game logs must be ingested, admitted and used in an actual training run. New `ml/card_training.py` (`ml card-training run|verify`): ingests the effective card history, admits or excludes every row with a reason, and trains walk-forward calibration (identity, Platt, per-sport Platt) and outcome (L2 logistic) models on earlier weeks only, with card-clustered intervals. Prompt 4 runs it after every import; prompt 6 too. Studies only (ML-SEP-v1). Tests: ml/tests/test_card_training.py. ML_PIPELINE section 12, CORE, RULES_REFERENCE; prompts restamped. Originals in archive/superseded_2026-11-15-4.

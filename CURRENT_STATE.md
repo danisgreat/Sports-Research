@@ -8,6 +8,8 @@
 
 **Previous release - MDS/P v24.17 / CR-2026.11.15-R1 / P-2026.11.15-v24.15 (owner instruction 15 November 2026): TIMING-v3.** Research that begins before the actual start is enough. A card finished after the start counts as a forecast of record and is scored with `PREGAME` cards when it is labelled `PRE_START_RESEARCH` and declares its research start, a not-started observation (official live page or match centre, URL and time, at or after the research start) and `outcome_exposure: NONE_RECORDED`. `card lint`, the ledger, primary admission and the learning-log check enforce it; settlement re-checks the official actual first play and re-labels a card `POST_START_ISSUE` by dated revision if research did not in fact begin before it. Unchanged: the input horizon (facts published by the scheduled start), the no-outcome-exposure rule, ENV-v2 (only repository-issued cards are forecasts; chat cards are research), and the EXT-v3 paired-experiment freezes registered for ASSESS-100. Earlier cards keep their labels. Every prompt file carries the v24.15 suite stamp; only prompts 1 and 3 changed in substance. [Rule text](RESEARCH_PROTOCOL.md#part-e-timing_research_protocol).
 
+**Settlement and import - CR-2026.11.15-R5, 15 November 2026 (owner instruction, records only):** the owner drop `Mini logs and stuff - to be settled/` (seven chat-local minis, 75 cards on 26 games, 14-15 November) is audited, settled and imported as **P-660–P-685**, one canonical ID per game in order of scheduled start; parallel chat cards are byte-exact addenda. 140 W / 135 L / 50 UNRESOLVED literal rows, zero primary rows; 21 deep loss review groups; Tappara U20 v HPK U20 (P-664) has no verified final. [Import](research/verification/mini_import_P-660_P-685_2026-11-15-1/CANONICAL_IMPORT_REPORT.md), [audit](research/verification/mini_import_P-660_P-685_2026-11-15-1/AUDIT_REPORT.md). Part 10 is now 1,530,426 B, above the 1.5 MB rollover trigger; rollover was not requested and is not required for import.
+
 **Settlement, import and rollover - CR-2026.11.14-R1, 14 November 2026 (owner instruction, records only):** the owner drop `Mini logs and stuff - to be settled/` (seven chat-local minis, 90 records on 21 games, 9-14 November) is audited, settled and imported. **One canonical ID per game, in chronological order of scheduled start: P-639 to P-659** (highest P-659, next P-660); every chat record of a game is kept byte for byte under its ID. All 90 records are chat-local and NOT_ISSUED, so every row is diagnostic (ANALYST_NOT_PRIMARY) and the primary denominator is zero; 0 games are ASSESS-100 eligible. Part 9 is closed and **Part 10 is the active Combined Log**. Method, prompts, models, probabilities and grades of earlier cards are unchanged. [Audit](research/verification/mini_import_P-639_P-659_2026-11-14-1/AUDIT_REPORT.md), [import](research/verification/mini_import_P-639_P-659_2026-11-14-1/CANONICAL_IMPORT_REPORT.md), [rollover](research/verification/combined_rollover_2026-11-14-1/README.md).
 
 **Records change - CR-2026.11.12-R1, 12 November 2026 (owner instruction):** there is **no active mini in the repository**. Every file that was under `research/active_minis/` is moved unchanged to [archive/retired_active_minis_2026-11-12/](archive/retired_active_minis_2026-11-12/README.md). All of them were already settled and imported (P-590 to P-600, P-623 to P-628) or held no cards; the open sporting queue is empty and no unresolved settlement row exists. Each research chat starts and keeps its own mini under its own distinct MINI_KEY. Method, prompts, profile, kit, scoring, models, probabilities, grades and canonical IDs are unchanged (MDS/P v24.16 stays current; highest P-638, next P-639).
@@ -101,14 +103,14 @@ FORMAT + PROCEDURE: MDS-v16.0 / CR-R7 / P-v16.0 / PRIMARY-v3.2; SCV-v10 and SEL-
 
 | Item | Value |
 |---|---|
-| Highest canonical ID / next | P-659 / **P-660** (from the import mappings) |
+| Highest canonical ID / next | P-685 / **P-686** (from the import mappings) |
 | Active local mini | `NONE`; last / next local key `NONE` / `NONE` (footer) |
 | Open cards in the active mini | 0 of 0: none |
 | Frozen league-day events without settlement | 0: none |
 | Learning store | view 15; 5402 events, 5402 results, 8 team-statistic rows, 0 player-availability rows |
 | Adjustment ledger | 0 contract rows on 0 cards; 0 adjustment rows |
 | Prospective shadow ledger | 12 frozen rows on 2 events (`research/prospective/CYCLE_SHADOW_LEDGER.csv`) |
-| Effective settlements (imported local-key rows) | 504 rows, 16 revised by settlement imports, 3 UNRESOLVED |
+| Effective settlements (imported local-key rows) | 829 rows, 16 revised by settlement imports, 53 UNRESOLVED |
 | Permanently closed unattainable contracts | 9 exact rows; DO_NOT_RETRY; excluded from sporting scores |
 | Active releases | MLB-CYCLE-4 (Baseball/MLB; CARRIED_FORWARD_BEFORE_GATE_V2; STALE_FOR_CURRENT_CODE); NHL-CYCLE-6 (Ice Hockey/NHL; BOUND_GATE_V2; STALE_FOR_CURRENT_CODE); NBA-CYCLE-4 (Basketball/NBA; BOUND_GATE_V2; STALE_FOR_CURRENT_CODE) |
 
@@ -129,8 +131,8 @@ FORMAT + PROCEDURE: MDS-v16.0 / CR-R7 / P-v16.0 / PRIMARY-v3.2; SCV-v10 and SEL-
 | Mini-log format | `mini-log-10` (in-progress `mini-log-2` through `mini-log-9` retain their format and issued cores) |
 | Settlement format | `mini-settlement-10` with source discovery, attempts and closure / S1-S19 (settlement-9 and earlier retain original formats) |
 | Freeze | None. Custody is the git history of `main` (CURRENT_RULES §9). Cards record the HEAD SHA they read. The last control manifest, `CONTROL_MANIFEST_2026-10-09-3.md`, is in [archive/controls/](archive/controls/). |
-| Highest committed canonical ID | **P-659** |
-| Next canonical ID | **P-660** (equal to the line in GAME_LOG_STATUS_CURRENT.md) |
+| Highest committed canonical ID | **P-685** |
+| Next canonical ID | **P-686** (equal to the line in GAME_LOG_STATUS_CURRENT.md) |
 | Reserved IDs | P-518 to P-522 |
 | Active Combined Log | [prediction logs/PREDICTION_LOG_COMBINED_10.md](prediction%20logs/PREDICTION_LOG_COMBINED_10.md) |
 | Previous parts | Parts 1 to 8, immutable; Part 6 keeps its original P-518 to P-522 source block; Part 7 closed with 51 originals P-550 to P-600; Part 8 closed with 22 originals P-601 to P-622; Part 9 closed 14 November 2026 with 37 originals P-623 to P-659 |
@@ -222,3 +224,7 @@ Prompts 3→4 on `research/active_minis/received/OWNER_DROP_2026-11-14/` (178 fi
 ## Combined Log rollover — 2026-11-14T23:31:00+11:00
 
 Active destination: [Part 10](prediction%20logs/PREDICTION_LOG_COMBINED_10.md); Part 9 closed after 2,877,120 bytes / 37 originals P-623–P-659 (owner request; 1.5 MB threshold also exceeded). Highest P-659 / next P-660 and reserved P-518–P-522 unchanged by the rollover; zero IDs consumed. [Rollover receipt](research/verification/combined_rollover_2026-11-14-1/README.md), [queue continuity](research/verification/combined_rollover_2026-11-14-1/QUEUE_CONTINUITY.md).
+
+## Owner-drop settlement and import — 2026-11-15T12:13:44+00:00
+
+Prompts 3→4 on `research/active_minis/received/OWNER_DROP_2026-11-15/` (53 files, byte-identical to the owner's folder). P-660–P-685 assigned one per game by scheduled start; 75 card cores and 26 settlement blocks appended to Part 10 with 101/101 exact readback. Finals verified from audited permitted sources (13 games two lineages, 12 single-lineage evidence C, 1 unverified). Literal rows 140 W / 135 L / 50 UNRESOLVED; 78 numeric diagnostic rows, mean Brier 0.2145; zero primary rows. Highest P-685, next P-686. [Import report](research/verification/mini_import_P-660_P-685_2026-11-15-1/CANONICAL_IMPORT_REPORT.md).

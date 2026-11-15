@@ -1,0 +1,2 @@
+date,level,scope,disposition,note
+2026-11-15,MINI_SETTLEMENT,OWNER_DROP_2026-11-15 / P-660..P-685,DATA_REPAIR_REQUIRED,75 chat-local cards on 26 games; zero primary rows; timing/freeze/source-audit gaps; one final unverified; see AUDIT_REPORT.md

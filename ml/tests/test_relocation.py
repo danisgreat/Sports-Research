@@ -36,5 +36,8 @@ def test_repository_settlement_view_reads_relocated_revision_documents():
     relocation.table.cache_clear()
     rows = es.effective_rows()
     unresolved = rows[rows["sporting_grade"] == "UNRESOLVED"]
-    assert set(unresolved["canonical_id"]) <= {"P-647"} and len(unresolved) == 3  # P-647 corners (CR-2026.11.14-R1)
+    from ml.evaluation import card_history as ch
+    from ml.tests.test_card_history_imports import queued_unresolved
+    queued, expected = queued_unresolved(ch.V)  # only rows their import queue lists (CR-2026.11.14-R1 onward)
+    assert set(unresolved["canonical_id"]) <= queued and len(unresolved) == expected
     assert (rows["revision_source"] != "").sum() >= 16

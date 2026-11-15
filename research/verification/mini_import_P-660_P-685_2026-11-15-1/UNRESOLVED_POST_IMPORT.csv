@@ -1,0 +1,7 @@
+id,canonical_ids,item,next_source_or_action,actor,status,automation
+U-660-1,P-664,"Tappara U20 v HPK U20 final (24 rows: ML both sides, Over/Under 5.5)","permitted club/league report (tappara.fi or hpk.fi match report); Leijonat BLOCKED_FOR_AI, Elite Prospects 403",owner/repository agent on request,UNRESOLVED,NOT_SCHEDULED
+U-660-2,"P-661,P-662","WBBL six-over scores, Hobart and Adelaide (22 rows)",permitted ball-by-ball; cricket.com.au scorecard rendered without data,owner/repository agent on request,UNRESOLVED,NOT_SCHEDULED
+U-660-3,P-678,England score after 5 completed overs (2 rows),permitted ball-by-ball (ESPNcricinfo and TNT RULES_UNKNOWN),owner/repository agent on request,UNRESOLVED,NOT_SCHEDULED
+U-660-4,P-683,Kashiwa-Kawasaki combined corners (2 rows),J.League stats tab,owner/repository agent on request,UNRESOLVED,NOT_SCHEDULED
+U-660-5,"P-660,P-665,P-668,P-672,P-673,P-676,P-677,P-678,P-681,P-682,P-684,P-685",Second permitted lineage for evidence-C events,field-owner box score from a permitted host,-,GRADES_UNAFFECTED,NOT_SCHEDULED
+U-660-6,P-660..P-685,Final wall-clock and actual first play,official play-by-play / match centres,-,NOT_VERIFIED,NOT_SCHEDULED

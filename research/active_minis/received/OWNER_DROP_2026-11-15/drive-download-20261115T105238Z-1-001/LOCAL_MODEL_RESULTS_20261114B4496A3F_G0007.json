@@ -1,0 +1,137 @@
+{
+  "event": "LOCAL-20261114B4496A3F-G0007",
+  "timestamp": "2026-11-14T22:59:52+11:00",
+  "frozen_input_sha256": "df981f1dda55fdaaab62e1a240610300a8993dcfbbd6b09afbdc1737f683765a",
+  "n13": {
+    "A_scored": 82.61538461538461,
+    "A_allowed": 84.46153846153847,
+    "M_scored": 77.38461538461539,
+    "M_allowed": 88.38461538461539,
+    "A_full_scored": 83.6923076923077,
+    "A_full_allowed": 85.15384615384616,
+    "M_full_scored": 78.76923076923077,
+    "M_full_allowed": 89.23076923076923
+  },
+  "n10": {
+    "A_scored": 84.3,
+    "A_allowed": 80.7,
+    "M_scored": 78.9,
+    "M_allowed": 90.8,
+    "A_full_scored": 85.7,
+    "A_full_allowed": 81.6,
+    "M_full_scored": 80.7,
+    "M_full_allowed": 91.9
+  },
+  "n5": {
+    "A_scored": 81.8,
+    "A_allowed": 80,
+    "M_scored": 84.6,
+    "M_allowed": 96.2,
+    "A_full_scored": 81.8,
+    "A_full_allowed": 80,
+    "M_full_scored": 88.2,
+    "M_full_allowed": 98.4
+  },
+  "season_matchup_reg": {
+    "alytus": 85.5,
+    "mazeikiai": 80.92307692307693
+  },
+  "last5_matchup_reg": {
+    "alytus": 89.0,
+    "mazeikiai": 82.3
+  },
+  "pre_OT_centre": {
+    "alytus": 87.295,
+    "mazeikiai": 80.59115384615384,
+    "total": 167.88615384615383,
+    "home_margin": 6.703846153846158
+  },
+  "std": {
+    "reg_total": 19.723000000000003,
+    "reg_margin": 15.367000000000003
+  },
+  "OT": {
+    "p_reg_tie": 0.023601132993408935,
+    "extra_points_if_tie": 18,
+    "full_total_expected": 168.3109742400352,
+    "full_team_points_approx": [
+      87.50741019694068,
+      80.80356404309453
+    ],
+    "spread_OT_tail_beyond_12_5": "ignored, small but positive"
+  },
+  "rows": {
+    "Alytus_minus_12_5": {
+      "p_conditional": 0.3530192251203059,
+      "w": 0.3530192251203059,
+      "l": 0.6469807748796941,
+      "push": 0,
+      "void": "NOT_ESTIMATED"
+    },
+    "Mazeikiai_plus_12_5": {
+      "p_conditional": 0.6469807748796941,
+      "w": 0.6469807748796941,
+      "l": 0.3530192251203059,
+      "push": 0,
+      "void": "NOT_ESTIMATED"
+    },
+    "Over_166_5": {
+      "p_conditional": 0.5353116013207222,
+      "w": 0.5353116013207222,
+      "l": 0.4646883986792778,
+      "push": 0,
+      "void": "NOT_ESTIMATED"
+    },
+    "Under_166_5": {
+      "p_conditional": 0.4646883986792778,
+      "w": 0.4646883986792778,
+      "l": 0.5353116013207222,
+      "push": 0,
+      "void": "NOT_ESTIMATED"
+    }
+  },
+  "league_family_baseline_not_verified_NKL": {
+    "Mazeikiai_plus_12_5_family_prior": 0.7631495180279388,
+    "Alytus_minus_12_5_family_prior": 0.23685048197206116,
+    "Over_166_5_family_prior": 0.5030340599900462,
+    "Under_166_5_family_prior": 0.4969659400099538
+  },
+  "sensitivity": {
+    "margin_Aly_minus_5": {
+      "mu_margin": 1.7038461538461576,
+      "mu_reg_total": 167.88615384615383,
+      "p_Mazeikiai_plus_12_5": 0.7588332634125897,
+      "p_Over_166_5": 0.5359905998297596,
+      "p_tie_regulation": 0.025797388839788493
+    },
+    "margin_base": {
+      "mu_margin": 6.703846153846158,
+      "mu_reg_total": 167.88615384615383,
+      "p_Mazeikiai_plus_12_5": 0.6469807748796941,
+      "p_Over_166_5": 0.5353116013207222,
+      "p_tie_regulation": 0.023601132993408935
+    },
+    "margin_Aly_plus_5": {
+      "mu_margin": 11.703846153846158,
+      "mu_reg_total": 167.88615384615383,
+      "p_Mazeikiai_plus_12_5": 0.5206596860463221,
+      "p_Over_166_5": 0.534020051858219,
+      "p_tie_regulation": 0.019423549360814474
+    },
+    "total_base_minus_5": {
+      "mu_margin": 6.703846153846158,
+      "mu_reg_total": 162.88615384615383,
+      "p_Mazeikiai_plus_12_5": 0.6469807748796941,
+      "p_Over_166_5": 0.43532879868290214,
+      "p_tie_regulation": 0.023601132993408935
+    },
+    "total_base_plus_5": {
+      "mu_margin": 6.703846153846158,
+      "mu_reg_total": 172.88615384615383,
+      "p_Mazeikiai_plus_12_5": 0.6469807748796941,
+      "p_Over_166_5": 0.6332042343247554,
+      "p_tie_regulation": 0.023601132993408935
+    }
+  },
+  "notes": "No NBA-scale extrapolation; 13 official NKL dates per side current season; OT removed from training regulation scores 15 October Aly 110:105->96:96 and 12 Nov Maze 103:96->85:85. Coherent normal T, M with independent covariance assumption, expected OT total +18. Full-match p conditional on normal sports settlement. No repository ml reference execution, not calibrated, no starters confirmed, no actual result exposure."
+}

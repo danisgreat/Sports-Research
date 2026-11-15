@@ -1,0 +1,289 @@
+{
+  "event": "LOCAL-20261114B4496A3F-G0006",
+  "freeze_at_aedt": "2026-11-14T22:26:47+11:00",
+  "authority_sha": "008cedc4ff469e7a808292aa3667a7bffe22e273",
+  "fixture": {
+    "competition": "KB Extraliga junioru 2026/27",
+    "round": 21,
+    "official_game_id": "3162",
+    "secondary_hokejcz_id": "2928790",
+    "participants": [
+      "Mountfield HK U20",
+      "HC RT TORAX Poruba 2011 U20"
+    ],
+    "venue": "CPP Arena, Hradec Kralove, Czechia",
+    "scheduled_local": "2026-11-14T12:30:00+01:00",
+    "scheduled_AEDT": "2026-11-14T22:30:00+11:00",
+    "official_state": "0:0 pregame placeholder / no confirmed opening faceoff, no live score used"
+  },
+  "history": {
+    "Hradec": [
+      [
+        "2026-09-04",
+        0,
+        1
+      ],
+      [
+        "2026-09-05",
+        3,
+        2
+      ],
+      [
+        "2026-09-11",
+        5,
+        6
+      ],
+      [
+        "2026-09-12",
+        3,
+        4
+      ],
+      [
+        "2026-09-18",
+        5,
+        1
+      ],
+      [
+        "2026-09-19",
+        1,
+        4
+      ],
+      [
+        "2026-09-25",
+        8,
+        1
+      ],
+      [
+        "2026-09-26",
+        3,
+        4
+      ],
+      [
+        "2026-09-28",
+        1,
+        7
+      ],
+      [
+        "2026-10-02",
+        2,
+        5
+      ],
+      [
+        "2026-10-03",
+        5,
+        2
+      ],
+      [
+        "2026-10-09",
+        2,
+        3
+      ],
+      [
+        "2026-10-10",
+        1,
+        8
+      ],
+      [
+        "2026-10-16",
+        11,
+        4
+      ],
+      [
+        "2026-10-17",
+        1,
+        5
+      ],
+      [
+        "2026-10-23",
+        1,
+        2
+      ],
+      [
+        "2026-10-24",
+        1,
+        0
+      ],
+      [
+        "2026-10-28",
+        6,
+        1
+      ],
+      [
+        "2026-10-30",
+        4,
+        3
+      ],
+      [
+        "2026-11-13",
+        3,
+        2
+      ]
+    ],
+    "Poruba": [
+      [
+        "2026-09-04",
+        4,
+        3
+      ],
+      [
+        "2026-09-05",
+        5,
+        6
+      ],
+      [
+        "2026-09-11",
+        1,
+        3
+      ],
+      [
+        "2026-09-12",
+        4,
+        2
+      ],
+      [
+        "2026-09-18",
+        1,
+        5
+      ],
+      [
+        "2026-09-19",
+        2,
+        7
+      ],
+      [
+        "2026-09-25",
+        6,
+        2
+      ],
+      [
+        "2026-09-26",
+        0,
+        2
+      ],
+      [
+        "2026-09-28",
+        2,
+        1
+      ],
+      [
+        "2026-10-03",
+        1,
+        3
+      ],
+      [
+        "2026-10-08",
+        3,
+        5
+      ],
+      [
+        "2026-10-10",
+        3,
+        4
+      ],
+      [
+        "2026-10-16",
+        2,
+        1
+      ],
+      [
+        "2026-10-17",
+        2,
+        3
+      ],
+      [
+        "2026-10-23",
+        3,
+        4
+      ],
+      [
+        "2026-10-24",
+        3,
+        1
+      ],
+      [
+        "2026-10-28",
+        2,
+        3
+      ],
+      [
+        "2026-10-30",
+        0,
+        1
+      ],
+      [
+        "2026-10-31",
+        3,
+        1
+      ],
+      [
+        "2026-11-13",
+        0,
+        4
+      ]
+    ],
+    "league_season_GF_sum": 945,
+    "league_team_games": 310,
+    "Hradec_GF_GA": [
+      66,
+      65
+    ],
+    "Poruba_GF_GA": [
+      47,
+      61
+    ],
+    "notes": "Score arrays are listed final results; OT or shootout goal is in reported finals. All entries are from before this 14 Nov fixture. Older historical window n is exactly 20, same season."
+  },
+  "goalies": {
+    "Hradec": "STARTER_NOT_VERIFIED",
+    "Poruba": "STARTER_NOT_VERIFIED",
+    "Poruba_historical": "Jakub Sirhal: 17 GP, save% 92.88 listed in league leader table; not confirmation for 14 Nov",
+    "Hradec_historical": "Dominik Huzl played at Poruba 18 September; not confirmation for 14 Nov"
+  },
+  "lineups": {
+    "Hradec": "EXACT_MATCH_LINEUP_NOT_VERIFIED",
+    "Poruba": "EXACT_MATCH_LINEUP_NOT_VERIFIED",
+    "Hradec_top_scorer": "Lukas Kral 16G 13A",
+    "Poruba_top_scorer": "Tomas Hansel 8G 12A"
+  },
+  "competition_rules": {
+    "regulation_minutes": 60,
+    "regular_season_ot_minutes": 5,
+    "ot_skater_format": "3-on-3",
+    "shootout_if_tied": true,
+    "nominal_full_match_one_extra_goal_for_tie": true,
+    "operator_spread_total_endpoints": "UNKNOWN_DEFINITION; calculate full-game incl OT/SO conditional, also compare regulation-only"
+  },
+  "model_predeclared": {
+    "method": "independent_poisson_regulation_goals + one-goal branch for overtime/shootout on regulation ties",
+    "home_goal_centre": "0.80*((Hradec_GF_rate + Poruba_GA_rate)/2)+0.20*((Hradec_L5_GF + Poruba_L5_GA)/2)+0.15",
+    "away_goal_centre": "0.80*((Poruba_GF_rate + Hradec_GA_rate)/2)+0.20*((Poruba_L5_GF + Hradec_L5_GA)/2)-0.15",
+    "home_advantage_split": "+0.15 home goals, -0.15 away goals (ANALYST_ASSUMPTION not measured by junior data)",
+    "season_weight": 0.8,
+    "L5_weight": 0.2,
+    "same-line_league_baseline": "identical neutral goals rates each=league_GF_sum/league_team_games, i.e. historical league-only 2026/27 before game",
+    "OT_tie_winner_prob": "lambda_home/(lambda_home+lambda_away) (assumption); for the supplied +1.5/-1.5 & 5.5 values not decisive",
+    "candidate_scope": "SUPPLIED_ONLY: Hradec -1.5, Poruba +1.5, Over5.5, Under5.5",
+    "no_overdispersion_model": "Poisson underestimates youth variance without source fitted dispersion; uncalibrated",
+    "empty_net_tail": "not separately estimated, historical scoring rates include EN empirically but no shot/process branch",
+    "goalie_mixture": "unconfirmed, scenario ±0.4 relative team goals each (not fitted), report sensitivity",
+    "no_market_inputs": true
+  },
+  "source_urls": [
+    "https://www.czehockey.cz/souteze-juniori/komercni-banka-extraliga-junioru",
+    "https://www.czehockey.cz/game/detail/178209",
+    "https://czehockey.cz/competition/description/1",
+    "https://www.mountfield-hk.cz/zapasy.asp?sezona=2027JUN",
+    "https://hcporuba.cz/matches/JUN",
+    "https://www.onlajny.com/match/index/date/2026-11-14/id/540513",
+    "https://www.czehockey.cz/competition/player-stats/1?playerCompetitionStatsWidget-filter%5Btype%5D=goalie"
+  ],
+  "limitations": [
+    "starting goalie and active lineups not verified",
+    "special teams exact-game role missing",
+    "official operator spread/total settlement wording not supplied",
+    "source access audit code not run",
+    "not a repository reference run/issued pregame card",
+    "online game state is pregame placeholder; actual faceoff unknown",
+    "model independent Poisson lacks dispersion and EN tail"
+  ]
+}

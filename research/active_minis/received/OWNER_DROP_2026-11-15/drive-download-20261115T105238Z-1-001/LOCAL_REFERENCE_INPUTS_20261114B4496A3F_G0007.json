@@ -1,0 +1,312 @@
+{
+  "event": "LOCAL-20261114B4496A3F-G0007",
+  "freeze_at_AEDT": "2026-11-14T22:57:54+11:00",
+  "scheduled_AEDT": "2026-11-14T23:10:00+11:00",
+  "scheduled_Lithuania": "2026-11-14T14:10:00+02:00",
+  "competition": "URBO-NKL 2026-27, Lithuania second tier, round 14",
+  "venue": "Alytaus sporto ir rekreacijos centras, Naujoji g. 52, Alytus, Lithuania",
+  "native_match_url": "https://nkl.lt/matches/125862/",
+  "original_supplied_contracts": [
+    "Alytus -12.5",
+    "Mazeikiai +12.5",
+    "Full game Over 166.5",
+    "Full game Under 166.5"
+  ],
+  "alytus_rows": [
+    {
+      "date": "2026-09-28",
+      "full_pf": 83,
+      "full_pa": 108,
+      "opponent": "Zalgiris-2",
+      "homeaway": "H",
+      "ot": false,
+      "reg_pf": 83,
+      "reg_pa": 108
+    },
+    {
+      "date": "2026-10-01",
+      "full_pf": 68,
+      "full_pa": 96,
+      "opponent": "Jurbarkas",
+      "homeaway": "A",
+      "ot": false,
+      "reg_pf": 68,
+      "reg_pa": 96
+    },
+    {
+      "date": "2026-10-08",
+      "full_pf": 80,
+      "full_pa": 87,
+      "opponent": "Suduva",
+      "homeaway": "H",
+      "ot": false,
+      "reg_pf": 80,
+      "reg_pa": 87
+    },
+    {
+      "date": "2026-10-10",
+      "full_pf": 86,
+      "full_pa": 75,
+      "opponent": "Atletas",
+      "homeaway": "H",
+      "ot": false,
+      "reg_pf": 86,
+      "reg_pa": 75
+    },
+    {
+      "date": "2026-10-15",
+      "full_pf": 110,
+      "full_pa": 105,
+      "opponent": "Vytis-VDU",
+      "homeaway": "H",
+      "ot": true,
+      "reg_pf": 96,
+      "reg_pa": 96
+    },
+    {
+      "date": "2026-10-17",
+      "full_pf": 77,
+      "full_pa": 92,
+      "opponent": "Silute",
+      "homeaway": "A",
+      "ot": false,
+      "reg_pf": 77,
+      "reg_pa": 92
+    },
+    {
+      "date": "2026-10-22",
+      "full_pf": 90,
+      "full_pa": 70,
+      "opponent": "Kretinga",
+      "homeaway": "H",
+      "ot": false,
+      "reg_pf": 90,
+      "reg_pa": 70
+    },
+    {
+      "date": "2026-10-24",
+      "full_pf": 85,
+      "full_pa": 74,
+      "opponent": "Omega-Tauras",
+      "homeaway": "A",
+      "ot": false,
+      "reg_pf": 85,
+      "reg_pa": 74
+    },
+    {
+      "date": "2026-10-29",
+      "full_pf": 81,
+      "full_pa": 84,
+      "opponent": "Palanga",
+      "homeaway": "H",
+      "ot": false,
+      "reg_pf": 81,
+      "reg_pa": 84
+    },
+    {
+      "date": "2026-10-31",
+      "full_pf": 101,
+      "full_pa": 91,
+      "opponent": "Rytas-2",
+      "homeaway": "A",
+      "ot": false,
+      "reg_pf": 101,
+      "reg_pa": 91
+    },
+    {
+      "date": "2026-11-05",
+      "full_pf": 87,
+      "full_pa": 76,
+      "opponent": "Olimpas Plunge",
+      "homeaway": "H",
+      "ot": false,
+      "reg_pf": 87,
+      "reg_pa": 76
+    },
+    {
+      "date": "2026-11-07",
+      "full_pf": 73,
+      "full_pa": 58,
+      "opponent": "Ukmerges Stekas",
+      "homeaway": "A",
+      "ot": false,
+      "reg_pf": 73,
+      "reg_pa": 58
+    },
+    {
+      "date": "2026-11-12",
+      "full_pf": 67,
+      "full_pa": 91,
+      "opponent": "Telsiai",
+      "homeaway": "A",
+      "ot": false,
+      "reg_pf": 67,
+      "reg_pa": 91
+    }
+  ],
+  "mazeikiai_rows": [
+    {
+      "date": "2026-10-01",
+      "full_pf": 70,
+      "full_pa": 86,
+      "opponent": "Palanga",
+      "homeaway": "A",
+      "ot": false,
+      "reg_pf": 70,
+      "reg_pa": 86
+    },
+    {
+      "date": "2026-10-03",
+      "full_pf": 75,
+      "full_pa": 72,
+      "opponent": "Rytas-2",
+      "homeaway": "H",
+      "ot": false,
+      "reg_pf": 75,
+      "reg_pa": 72
+    },
+    {
+      "date": "2026-10-08",
+      "full_pf": 72,
+      "full_pa": 83,
+      "opponent": "Telsiai",
+      "homeaway": "A",
+      "ot": false,
+      "reg_pf": 72,
+      "reg_pa": 83
+    },
+    {
+      "date": "2026-10-10",
+      "full_pf": 62,
+      "full_pa": 91,
+      "opponent": "Jurbarkas",
+      "homeaway": "H",
+      "ot": false,
+      "reg_pf": 62,
+      "reg_pa": 91
+    },
+    {
+      "date": "2026-10-15",
+      "full_pf": 85,
+      "full_pa": 92,
+      "opponent": "Kedainiai BC",
+      "homeaway": "A",
+      "ot": false,
+      "reg_pf": 85,
+      "reg_pa": 92
+    },
+    {
+      "date": "2026-10-17",
+      "full_pf": 77,
+      "full_pa": 90,
+      "opponent": "Neptunas-II",
+      "homeaway": "H",
+      "ot": false,
+      "reg_pf": 77,
+      "reg_pa": 90
+    },
+    {
+      "date": "2026-10-22",
+      "full_pf": 72,
+      "full_pa": 80,
+      "opponent": "Olimpas Plunge",
+      "homeaway": "H",
+      "ot": false,
+      "reg_pf": 72,
+      "reg_pa": 80
+    },
+    {
+      "date": "2026-10-24",
+      "full_pf": 70,
+      "full_pa": 74,
+      "opponent": "Ukmerges Stekas",
+      "homeaway": "A",
+      "ot": false,
+      "reg_pf": 70,
+      "reg_pa": 74
+    },
+    {
+      "date": "2026-10-29",
+      "full_pf": 85,
+      "full_pa": 109,
+      "opponent": "Suduva",
+      "homeaway": "H",
+      "ot": false,
+      "reg_pf": 85,
+      "reg_pa": 109
+    },
+    {
+      "date": "2026-10-31",
+      "full_pf": 97,
+      "full_pa": 88,
+      "opponent": "Atletas",
+      "homeaway": "A",
+      "ot": false,
+      "reg_pf": 97,
+      "reg_pa": 88
+    },
+    {
+      "date": "2026-11-05",
+      "full_pf": 77,
+      "full_pa": 101,
+      "opponent": "Vytis-VDU",
+      "homeaway": "H",
+      "ot": false,
+      "reg_pf": 77,
+      "reg_pa": 101
+    },
+    {
+      "date": "2026-11-07",
+      "full_pf": 79,
+      "full_pa": 98,
+      "opponent": "Silute",
+      "homeaway": "A",
+      "ot": false,
+      "reg_pf": 79,
+      "reg_pa": 98
+    },
+    {
+      "date": "2026-11-12",
+      "full_pf": 103,
+      "full_pa": 96,
+      "opponent": "Vilkaviskis Perlas Go",
+      "homeaway": "H",
+      "ot": true,
+      "reg_pf": 85,
+      "reg_pa": 85
+    }
+  ],
+  "model_spec_frozen_before_pricing": {
+    "family": "ANALYST_FIBA40_NKL_PROXY_NORMAL_MARGIN_TOTAL_OT_BRANCH",
+    "comparison_baseline": "FAMILY_PRIOR:BASKETBALL_FIBA40 from repository: 166.65 full game total, +1.49 home margin (NOT a fitted NKL row)",
+    "season_form_weight": 0.7,
+    "last5_form_weight": 0.3,
+    "per_team_season_regulation_from": "mean of own regulation points for and opponent's regulation points allowed, each equally weighted",
+    "per_team_last5_regulation_from": "mean of own last five regulation points for and opponent last five regulation points allowed, each equally weighted",
+    "home_margin_points": 1.49,
+    "regulation_total_sd": 19.723000000000003,
+    "regulation_margin_sd": 15.367000000000003,
+    "margin_total_correlation": 0.0,
+    "OT_trigger": "approx regulation margin in [-0.5,0.5]; normal continuity correction; 5-minute OT follows tied regulation; P(M<=0.5)-P(M<-0.5) assuming normal margin",
+    "OT_total_bonus_points_if_tied": 18.0,
+    "OT_final_margin_assumption": "one 5min OT cannot realistically exceed +12 on tied regulation; treat chance of a -12.5 cover after tied regulation as zero; sensitivity acknowledged",
+    "operator_full_game_OT_included": "Frozen BK-OT-1 repo convention (unless user states regulation-only)",
+    "match_tip_status": "scheduled (official site), actual first possession NOT VERIFIED",
+    "roster_effects": "Užupis debuted Nov12 (17 pts), Poška left Nov10; no arbitrary numerical player adjustment; width and scenario only",
+    "starter_availability": "match centre shows roster pages but not 14 Nov active 12 or starting fives; status UNVERIFIED",
+    "exact_source_access": "web official league pages; git read-only; no runtime release or source audit executed",
+    "no live or final exposure": "true as at freeze",
+    "no market sources": "no odds, model predictions or sportsbook forecasts used; searches may return them incidentally but were excluded",
+    "cutoff": "event start 2026-11-14 23:10 AEDT; only dated prior results through Nov12 included"
+  },
+  "sources": [
+    "https://nkl.lt/matches/125862/",
+    "https://nkl.lt/komandos/alytaus-patriotai/",
+    "https://nkl.lt/komandos/mazeikiu-m-basket/",
+    "https://nkl.lt/telsiai-reabilitavosi-po-pirmojo-pralaimejimo-ir-apkartino-uzupio-debiuta-patriotuose/",
+    "https://nkl.lt/14-tasku-deficita-panaikinusi-m-basket-po-pratesimo-palauze-perla-go/",
+    "https://nkl.lt/43-taskus-pelniusio-hallo-sou-ir-patriotu-triumfas-pratesimo-dramoje/",
+    "https://nkl.lt/praejusio-sezono-urbo-nkl-cempionas-uzupis-papilde-patriotus/",
+    "https://nkl.lt/alytaus-patriotai-atsisveikino-su-pauliumi-poska/"
+  ]
+}

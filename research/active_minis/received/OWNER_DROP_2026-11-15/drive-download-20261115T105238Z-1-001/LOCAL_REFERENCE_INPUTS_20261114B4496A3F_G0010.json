@@ -1,0 +1,155 @@
+{
+  "event": "LOCAL-20261114B4496A3F-G0010",
+  "frozen_at_AEDT": "2026-11-15T01:56:27+11:00",
+  "scheduled_start": "2026-11-15T02:00:00+11:00",
+  "fixture": "AEK Athens BC vs Doxa Lefkadas ELABET, Greece Stoiximan Basket League 2026-27 Round 7, SUNEL Arena, Athens, Greece, 2026-11-14 17:00 EET",
+  "official_match": "https://www.esake.gr/el/action/EsaketeamView?idteam=00000010&mode=3",
+  "contract": [
+    "AEK -7.5",
+    "Doxa Lefkadas +7.5",
+    "Combined total Over 160.5",
+    "Combined total Under 160.5"
+  ],
+  "official_six_AEK_results": {
+    "source": "https://www.aekbc.gr/en/match-schedule-2026-27/",
+    "rows": [
+      [
+        "2026-10-03",
+        "H",
+        "Maroussi",
+        91,
+        70
+      ],
+      [
+        "2026-10-10",
+        "A",
+        "Aris",
+        58,
+        88
+      ],
+      [
+        "2026-10-17",
+        "H",
+        "Mykonos",
+        84,
+        79
+      ],
+      [
+        "2026-10-24",
+        "A",
+        "PAOK",
+        62,
+        65
+      ],
+      [
+        "2026-10-31",
+        "A",
+        "Vikos Falcons",
+        84,
+        95
+      ],
+      [
+        "2026-11-08",
+        "H",
+        "Panathinaikos",
+        74,
+        83
+      ]
+    ]
+  },
+  "official_six_Doxa_results": {
+    "source": "https://doxalefkadas.gr/schedule/",
+    "rows": [
+      [
+        "2026-10-03",
+        "A",
+        "Kolossos Rodou",
+        75,
+        91
+      ],
+      [
+        "2026-10-10",
+        "A",
+        "PAOK",
+        73,
+        86
+      ],
+      [
+        "2026-10-17",
+        "H",
+        "Promitheas Patras",
+        79,
+        80
+      ],
+      [
+        "2026-10-24",
+        "H",
+        "Iraklis",
+        94,
+        86
+      ],
+      [
+        "2026-10-31",
+        "A",
+        "Mykonos",
+        73,
+        59
+      ],
+      [
+        "2026-11-07",
+        "H",
+        "Aris",
+        77,
+        88
+      ]
+    ]
+  },
+  "roster_availability": {
+    "AEK_ten_active_named": "Landers Nolley II, Dimitris Katsivelis, Giannoulis Larentzakis, Dimitris Flionis, Chartonas (Greek source: Χαρτώνας), Gymnopoulos (Γυμνόπουλος), Nelly Joseph, Frank Bartley, Georgios Tsalmpouris, Thomas Heurtel",
+    "AEK_OUT": "Derrick Williams (right calf complaint, not in game squad), Keyshawn Feazell (injury), Lukas Lekavicius (injury), Greg Brown (Achilles tendon tear), Gaios Skordilis (injury/absent)",
+    "AEK_held_roster_size": 10,
+    "AEK_only_2_bigs": "Joseph, Tsalmpouris",
+    "AEK_Flionis": "listed in ten, recovered from minor issue",
+    "AEK_Heurtel": "listed in ten, returned from issue",
+    "AEK_actual_starting_five": "UNVERIFIED official confirmed starters not posted",
+    "Doxa_roster": "Harmon, Sharma, Arsenopoulos, Parrish, Gant, Robinson, Jones, Chatzinikolas, Tsairelis, Poulianitis (registered / projected only; not official active Nov14)",
+    "Doxa_actual_active_roster_and_starting_five": "UNVERIFIED",
+    "AEK_key_availability_source": "https://www.sdna.gr/mpasket/1486622_me-synthesi-anagkis-i-aek-kontra-sti-doxa-leykadas; published 2026-11-14 14:30 EET before tip",
+    "AEK_corroboration": "https://www.onsports.gr/basket/basket-league/story/878417/aek-me-dekada-kai-molis-dyo-psiloys-kontra-sti-doksa-lefkadas"
+  },
+  "method_freeze": {
+    "normal_model": "total and margin normal conditional on full competition game",
+    "season_weight": 0.75,
+    "last5_weight": 0.25,
+    "matchup_expected_reg_scores": "for each side: 0.5*(own points scored per game + opponent points conceded per game), 75% season and 25% last 5",
+    "home_score_offset": 0.745,
+    "away_score_offset": -0.745,
+    "home_edge_total": 1.49,
+    "nonusable_GBL_historical_reference": "Greek GBL row in repo marked NOT_USABLE due DATA_DEFECT_FLAG. Never treat it as validated baseline.",
+    "fallback_family": "FAMILY_PRIOR:BASKETBALL_FIBA40 mean total166.65, home margin1.49, raw total SD17.93, margin SD13.97; +10% width for unknown exact league",
+    "frozen_spread_SD": 15.367000000000003,
+    "frozen_total_SD": 19.723000000000003,
+    "AEK_missing_playmaker_big_effect": "UNPRICED: important qualitative downside/uncertainty; no unverified points subtraction",
+    "Doxa_unconfirmed_starters_effect": "UNPRICED",
+    "OT": "regulation tie probability from normal margin [-0.5,+0.5]; +18 total if tie in one 5-minute OT, no repeat-OT and tiny margin-adjustment conditional",
+    "normal_coefficient_correlation": "independence total/margin assumed, not measured for Greece",
+    "operator_OT_inclusion": "assume framework BK-OT-1 includes OT; operator specific abandonment unknown",
+    "same_line_baseline_NKL_or_GBL": "NOT_ESTIMATED due unusable GBL competition row and no independent verified year-to-date league finals",
+    "analysis_only": "No qualified, calibrated model; no issue/repo write/official starter verification; no market odds",
+    "no_target_game_result_exposure": true,
+    "first_tip": "NOT_VERIFIED at snapshot"
+  },
+  "source_refs": [
+    "https://www.aekbc.gr/anakoinosi-gia-aek-doxa-lefkadas-elabet/",
+    "https://www.aekbc.gr/en/match-schedule-2026-27/",
+    "https://doxalefkadas.gr/schedule/",
+    "https://doxalefkadas.gr/%CE%BC%CE%B5-%CE%B1%CE%BD%CF%84%CE%B9%CF%80%CE%B1%CE%BB%CE%BF-%CF%84%CE%B7%CE%BD-%CE%B1%CE%B5%CE%BA-%CF%83%CF%84%CE%B7%CE%BD-%CF%80%CF%81%CF%89%CF%84%CE%B5%CF%85%CE%BF%CF%85%CF%83%CE%B1-14-11-1700/",
+    "https://www.sdna.gr/mpasket/1486622_me-synthesi-anagkis-i-aek-kontra-sti-doxa-leykadas",
+    "https://www.esake.gr/el/action/EsaketeamView?idteam=00000010&mode=3"
+  ],
+  "repository": {
+    "main_SHA": "9259aad8619be5dca7964c394381635ae278b5e2",
+    "current_methods": "MDS-2026.11.15-v24.18 / CR-2026.11.15-R2 / P-2026.11.15-v24.16 / SCV-v14, AUDIT-v1 / TIMING-v3",
+    "GitHub_writes": 0
+  }
+}

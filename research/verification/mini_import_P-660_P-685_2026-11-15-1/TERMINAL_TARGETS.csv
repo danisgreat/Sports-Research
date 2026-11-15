@@ -1,0 +1,51 @@
+canonical_id,quantity,actual,definition,evidence_class,known_at
+P-660,MARGIN,20,San Diego minus Chicago State,C,2026-11-15T12:09:48+00:00
+P-660,TOTAL,154,full-game total (tennis: games; cricket: the named innings),C,2026-11-15T12:09:48+00:00
+P-661,MARGIN,86,Hobart innings runs,B,2026-11-15T12:09:48+00:00
+P-661,TOTAL,86,full-game total (tennis: games; cricket: the named innings),B,2026-11-15T12:09:48+00:00
+P-662,MARGIN,202,Adelaide innings runs,B,2026-11-15T12:09:48+00:00
+P-662,TOTAL,202,full-game total (tennis: games; cricket: the named innings),B,2026-11-15T12:09:48+00:00
+P-663,MARGIN,-6,Forejtek games minus Moeller games,B,2026-11-15T12:09:48+00:00
+P-663,TOTAL,20,full-game total (tennis: games; cricket: the named innings),B,2026-11-15T12:09:48+00:00
+P-665,MARGIN,1,Hradec minus Poruba,C,2026-11-15T12:09:48+00:00
+P-665,TOTAL,5,full-game total (tennis: games; cricket: the named innings),C,2026-11-15T12:09:48+00:00
+P-666,MARGIN,4,Alytus minus Mažeikiai,B,2026-11-15T12:09:48+00:00
+P-666,TOTAL,166,full-game total (tennis: games; cricket: the named innings),B,2026-11-15T12:09:48+00:00
+P-667,MARGIN,3,Vimmerby minus Nybro,B,2026-11-15T12:09:48+00:00
+P-667,TOTAL,7,full-game total (tennis: games; cricket: the named innings),B,2026-11-15T12:09:48+00:00
+P-668,MARGIN,-1,Malmö minus Växjö,C,2026-11-15T12:09:48+00:00
+P-668,TOTAL,3,full-game total (tennis: games; cricket: the named innings),C,2026-11-15T12:09:48+00:00
+P-669,MARGIN,-4,AEK minus Doxa,B,2026-11-15T12:09:48+00:00
+P-669,TOTAL,150,full-game total (tennis: games; cricket: the named innings),B,2026-11-15T12:09:48+00:00
+P-670,MARGIN,2,Norway minus Wales,B,2026-11-15T12:09:48+00:00
+P-670,TOTAL,4,full-game total (tennis: games; cricket: the named innings),B,2026-11-15T12:09:48+00:00
+P-671,MARGIN,14,Georgia Tech minus Clemson,B,2026-11-15T12:09:48+00:00
+P-671,TOTAL,26,full-game total (tennis: games; cricket: the named innings),B,2026-11-15T12:09:48+00:00
+P-672,MARGIN,15,Alabama minus Vanderbilt,C,2026-11-15T12:09:48+00:00
+P-672,TOTAL,27,full-game total (tennis: games; cricket: the named innings),C,2026-11-15T12:09:48+00:00
+P-673,MARGIN,-1,Laval minus Rochester (incl. OT),C,2026-11-15T12:09:48+00:00
+P-673,TOTAL,9,full-game total (tennis: games; cricket: the named innings),C,2026-11-15T12:09:48+00:00
+P-674,MARGIN,-10,Dallas minus Cleveland,B,2026-11-15T12:09:48+00:00
+P-674,TOTAL,244,full-game total (tennis: games; cricket: the named innings),B,2026-11-15T12:09:48+00:00
+P-675,MARGIN,-2,Buffalo minus Dallas,B,2026-11-15T12:09:48+00:00
+P-675,TOTAL,2,full-game total (tennis: games; cricket: the named innings),B,2026-11-15T12:09:48+00:00
+P-676,MARGIN,-19,Brooklyn minus Memphis,C,2026-11-15T12:09:48+00:00
+P-676,TOTAL,239,full-game total (tennis: games; cricket: the named innings),C,2026-11-15T12:09:48+00:00
+P-677,MARGIN,11,Chicago minus Minnesota,C,2026-11-15T12:09:48+00:00
+P-677,TOTAL,223,full-game total (tennis: games; cricket: the named innings),C,2026-11-15T12:09:48+00:00
+P-678,MARGIN,355,England innings runs,C,2026-11-15T12:09:48+00:00
+P-678,TOTAL,355,full-game total (tennis: games; cricket: the named innings),C,2026-11-15T12:09:48+00:00
+P-679,MARGIN,-12,Brisbane minus Tasmania,B,2026-11-15T12:09:48+00:00
+P-679,TOTAL,196,full-game total (tennis: games; cricket: the named innings),B,2026-11-15T12:09:48+00:00
+P-680,MARGIN,3,Niigata minus Gifu,B,2026-11-15T12:09:48+00:00
+P-680,TOTAL,143,full-game total (tennis: games; cricket: the named innings),B,2026-11-15T12:09:48+00:00
+P-681,MARGIN,2,LG minus KT,C,2026-11-15T12:09:48+00:00
+P-681,TOTAL,164,full-game total (tennis: games; cricket: the named innings),C,2026-11-15T12:09:48+00:00
+P-682,MARGIN,3,KCC minus KOGAS,C,2026-11-15T12:09:48+00:00
+P-682,TOTAL,157,full-game total (tennis: games; cricket: the named innings),C,2026-11-15T12:09:48+00:00
+P-683,MARGIN,1,Kashiwa minus Kawasaki,B,2026-11-15T12:09:48+00:00
+P-683,TOTAL,9,full-game total (tennis: games; cricket: the named innings),B,2026-11-15T12:09:48+00:00
+P-684,MARGIN,20,Australia minus New Zealand,C,2026-11-15T12:09:48+00:00
+P-684,TOTAL,44,full-game total (tennis: games; cricket: the named innings),C,2026-11-15T12:09:48+00:00
+P-685,MARGIN,18,Dubai minus Spartak,C,2026-11-15T12:09:48+00:00
+P-685,TOTAL,168,full-game total (tennis: games; cricket: the named innings),C,2026-11-15T12:09:48+00:00

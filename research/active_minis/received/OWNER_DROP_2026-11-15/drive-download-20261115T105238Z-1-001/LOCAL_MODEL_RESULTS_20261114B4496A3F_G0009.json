@@ -1,0 +1,246 @@
+{
+  "event": "LOCAL-20261114B4496A3F-G0009",
+  "computed_at_AEDT": "2026-11-15T01:15:31+11:00",
+  "input_sha256": "49b2a6f1bbb9bf33c7bd48f2f72e90cb51d65fd8558de956da37ecf6599db41f",
+  "team_form": {
+    "M15": {
+      "n": 15,
+      "gf": 3.066666666666667,
+      "ga": 2.466666666666667,
+      "overs5.5": 7
+    },
+    "V15": {
+      "n": 15,
+      "gf": 2.533333333333333,
+      "ga": 3.1333333333333333,
+      "overs5.5": 7
+    },
+    "M10": {
+      "n": 10,
+      "gf": 3.3,
+      "ga": 2.3,
+      "overs5.5": 4
+    },
+    "V10": {
+      "n": 10,
+      "gf": 1.8,
+      "ga": 2.6,
+      "overs5.5": 2
+    },
+    "M5": {
+      "n": 5,
+      "gf": 3.2,
+      "ga": 2,
+      "overs5.5": 1
+    },
+    "V5": {
+      "n": 5,
+      "gf": 1.8,
+      "ga": 2.6,
+      "overs5.5": 1
+    }
+  },
+  "season_matchup_means": {
+    "Malmö": 3.1,
+    "Växjö": 2.5
+  },
+  "L5_matchup_means": {
+    "Malmö": 2.9000000000000004,
+    "Växjö": 1.9
+  },
+  "model": "25% nested last-five plus 75% current season; +0.17/-0.17 home split; independent regulation Poisson truncated21x21, normalized; match tie OT/SO split 50/50; no explicit empty-net or goalie estimate; same grid for all exact owner lines; NOT calibrated",
+  "central": {
+    "reg_home_win": 0.5891239388992652,
+    "reg_away_win": 0.250027005424754,
+    "reg_tie": 0.16084905567598096,
+    "MalmoML": 0.6695484667372559,
+    "VaxjoPlus1.5": 0.5867914690667085,
+    "Over5.5": 0.4538678956186798,
+    "Under5.5": 0.5461321043813206,
+    "joint_MalmoML_and_VaxjoPlus1.5": 0.2563399358039641,
+    "joint_VaxjoPlus1.5_and_Under5.5": 0.3654334690324209,
+    "joint_MalmoML_and_Under5.5": 0.35193473480129434,
+    "tie_under5.5": 0.09185956030336773,
+    "tie_over5.5": 0.06898949537261324,
+    "mean_reg_total": 5.39999999924009,
+    "mean_reg_margin": 1.0399999992412836,
+    "mass": 0.9999999999576631,
+    "grid_shape": [
+      21,
+      21
+    ],
+    "mean_reg_H": 3.22,
+    "mean_reg_A": 2.18,
+    "mean_full_total": 5.560849055675981,
+    "sigma_reg_margin_Poisson": 2.32379000772445,
+    "sigma_reg_total_Poisson": 2.32379000772445,
+    "VaxjoPlus1.5_complement_Malmo_minus1.5": 0.41320853093329146
+  },
+  "family_prior_only_not_SHL_exact_baseline": {
+    "reg_home_win": 0.4709075287993966,
+    "reg_away_win": 0.36126541857372524,
+    "reg_tie": 0.16782705262687928,
+    "MalmoML": 0.554821055112835,
+    "VaxjoPlus1.5": 0.690889506674916,
+    "Over5.5": 0.5249926429077733,
+    "Under5.5": 0.4750073570922267,
+    "joint_MalmoML_and_VaxjoPlus1.5": 0.24571056178775127,
+    "joint_VaxjoPlus1.5_and_Under5.5": 0.3584121329646105,
+    "joint_MalmoML_and_Under5.5": 0.25897588854305936,
+    "tie_under5.5": 0.08085009978449881,
+    "tie_over5.5": 0.08697695284238041,
+    "mean_reg_total": 5.819999999615223,
+    "mean_reg_margin": 0.33999999969795847,
+    "mass": 0.9999999999787568,
+    "grid_shape": [
+      21,
+      21
+    ],
+    "mean_reg_H": 3.08,
+    "mean_reg_A": 2.74,
+    "mean_full_total": 5.98782705262688,
+    "sigma_reg_margin_Poisson": 2.4124676163629637,
+    "sigma_reg_total_Poisson": 2.4124676163629637,
+    "VaxjoPlus1.5_complement_Malmo_minus1.5": 0.309110493325084
+  },
+  "sensitivity": {
+    "stronger_malmo_attack": {
+      "reg_home_win": 0.7023180851050569,
+      "reg_away_win": 0.16168578621989477,
+      "reg_tie": 0.13599612867504873,
+      "MalmoML": 0.7703161494425813,
+      "VaxjoPlus1.5": 0.4678596821964017,
+      "Over5.5": 0.45386789549700146,
+      "Under5.5": 0.5461321045030001,
+      "joint_MalmoML_and_VaxjoPlus1.5": 0.2381758316389825,
+      "joint_VaxjoPlus1.5_and_Under5.5": 0.3120882449891888,
+      "joint_MalmoML_and_Under5.5": 0.4012974729813285,
+      "tie_under5.5": 0.082217350424654,
+      "tie_over5.5": 0.053778778250394746,
+      "mean_reg_total": 5.399999995328268,
+      "mean_reg_margin": 1.7399999953283039,
+      "mass": 0.999999999734861,
+      "grid_shape": [
+        21,
+        21
+      ],
+      "mean_reg_H": 3.5700000000000003,
+      "mean_reg_A": 1.83,
+      "mean_full_total": 5.535996128675049,
+      "sigma_reg_margin_Poisson": 2.32379000772445,
+      "sigma_reg_total_Poisson": 2.32379000772445,
+      "VaxjoPlus1.5_complement_Malmo_minus1.5": 0.5321403178035983
+    },
+    "stronger_vaxjo_attack": {
+      "reg_home_win": 0.4695518388022235,
+      "reg_away_win": 0.35595595348283665,
+      "reg_tie": 0.17449220771493984,
+      "MalmoML": 0.5567979426596934,
+      "VaxjoPlus1.5": 0.6980251523315343,
+      "Over5.5": 0.4538678956386467,
+      "Under5.5": 0.5461321043613531,
+      "joint_MalmoML_and_VaxjoPlus1.5": 0.25482309499122746,
+      "joint_VaxjoPlus1.5_and_Under5.5": 0.41231327184918376,
+      "joint_MalmoML_and_Under5.5": 0.29921781705234995,
+      "tie_under5.5": 0.09684449832225922,
+      "tie_over5.5": 0.07764770939268056,
+      "mean_reg_total": 5.399999999894272,
+      "mean_reg_margin": 0.3399999999134094,
+      "mass": 0.9999999999942251,
+      "grid_shape": [
+        21,
+        21
+      ],
+      "mean_reg_H": 2.87,
+      "mean_reg_A": 2.5300000000000002,
+      "mean_full_total": 5.574492207714941,
+      "sigma_reg_margin_Poisson": 2.32379000772445,
+      "sigma_reg_total_Poisson": 2.32379000772445,
+      "VaxjoPlus1.5_complement_Malmo_minus1.5": 0.3019748476684657
+    },
+    "lower_scoring_both": {
+      "reg_home_win": 0.594895185802995,
+      "reg_away_win": 0.23396490090637817,
+      "reg_tie": 0.17113991329062714,
+      "MalmoML": 0.6804651424483085,
+      "VaxjoPlus1.5": 0.5942942018075107,
+      "Over5.5": 0.33156151469874406,
+      "Under5.5": 0.6684384853012558,
+      "joint_MalmoML_and_VaxjoPlus1.5": 0.274759344255819,
+      "joint_VaxjoPlus1.5_and_Under5.5": 0.4420433720088094,
+      "joint_MalmoML_and_Under5.5": 0.44084527335787427,
+      "tie_under5.5": 0.11958687348958054,
+      "tie_over5.5": 0.051553039801046606,
+      "mean_reg_total": 4.699999999903826,
+      "mean_reg_margin": 1.0399999999038665,
+      "mass": 0.9999999999947377,
+      "grid_shape": [
+        21,
+        21
+      ],
+      "mean_reg_H": 2.87,
+      "mean_reg_A": 1.83,
+      "mean_full_total": 4.8711399132906275,
+      "sigma_reg_margin_Poisson": 2.16794833886788,
+      "sigma_reg_total_Poisson": 2.16794833886788,
+      "VaxjoPlus1.5_complement_Malmo_minus1.5": 0.4057057981924893
+    },
+    "higher_scoring_both": {
+      "reg_home_win": 0.5842668775854016,
+      "reg_away_win": 0.26345709457335725,
+      "reg_tie": 0.15227602784124056,
+      "MalmoML": 0.6604048915060221,
+      "VaxjoPlus1.5": 0.5807963056741617,
+      "Over5.5": 0.5702459196077129,
+      "Under5.5": 0.4297540803922871,
+      "joint_MalmoML_and_VaxjoPlus1.5": 0.24120119718018407,
+      "joint_VaxjoPlus1.5_and_Under5.5": 0.29099979358369377,
+      "joint_MalmoML_and_Under5.5": 0.27147689104400485,
+      "tie_under5.5": 0.06824330459678134,
+      "tie_over5.5": 0.08403272324445926,
+      "mean_reg_total": 6.099999995318722,
+      "mean_reg_margin": 1.0399999953378474,
+      "mass": 0.9999999997343489,
+      "grid_shape": [
+        21,
+        21
+      ],
+      "mean_reg_H": 3.5700000000000003,
+      "mean_reg_A": 2.5300000000000002,
+      "mean_full_total": 6.2522760278412415,
+      "sigma_reg_margin_Poisson": 2.4698178070456938,
+      "sigma_reg_total_Poisson": 2.4698178070456938,
+      "VaxjoPlus1.5_complement_Malmo_minus1.5": 0.41920369432583826
+    },
+    "no_home_edge": {
+      "reg_home_win": 0.5312842528558246,
+      "reg_away_win": 0.299619220308885,
+      "reg_tie": 0.16909652683529086,
+      "MalmoML": 0.61583251627347,
+      "VaxjoPlus1.5": 0.6422863496514857,
+      "Over5.5": 0.4538678956330408,
+      "Under5.5": 0.5461321043669594,
+      "joint_MalmoML_and_VaxjoPlus1.5": 0.2581188659249555,
+      "joint_VaxjoPlus1.5_and_Under5.5": 0.3890853646220393,
+      "joint_MalmoML_and_Under5.5": 0.3266133613407935,
+      "tie_under5.5": 0.0948968165559408,
+      "tie_over5.5": 0.07419971027935007,
+      "mean_reg_total": 5.399999999709449,
+      "mean_reg_margin": 0.6999999997143105,
+      "mass": 0.9999999999839596,
+      "grid_shape": [
+        21,
+        21
+      ],
+      "mean_reg_H": 3.0500000000000003,
+      "mean_reg_A": 2.35,
+      "mean_full_total": 5.569096526835291,
+      "sigma_reg_margin_Poisson": 2.32379000772445,
+      "sigma_reg_total_Poisson": 2.32379000772445,
+      "VaxjoPlus1.5_complement_Malmo_minus1.5": 0.3577136503485143
+    }
+  },
+  "formal_gate": "NO_STRONG_PICK if top below 65% or goalie/official operator action missing",
+  "published_primary": "NOT_ISSUED / LOCAL_DIAGNOSTIC",
+  "known_result_exposure": "NONE; only prior fixtures through Nov12 included"
+}

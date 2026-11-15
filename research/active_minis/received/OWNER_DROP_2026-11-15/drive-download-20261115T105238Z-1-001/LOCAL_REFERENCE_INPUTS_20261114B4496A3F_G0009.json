@@ -1,0 +1,295 @@
+{
+  "event": "LOCAL-20261114B4496A3F-G0009",
+  "frozen_at_AEDT": "2026-11-15T01:14:44+11:00",
+  "scheduled_at_AEDT": "2026-11-15T01:15:00+11:00",
+  "native_event_gamecentre": "elycp73xwh/qa98unlbd6",
+  "official": "SHL 2026-27 men's regular season, Malmö Arena, 2026-11-14 15:15 CET = 2026-11-15 01:15 AEDT",
+  "contracts": [
+    "Malmö Redhawks ML",
+    "Växjö Lakers HC +1.5 goals",
+    "Over 5.5 total goals",
+    "Under 5.5 total goals"
+  ],
+  "malmo_history": [
+    [
+      "2026-09-19",
+      "A",
+      "HV71",
+      5,
+      4
+    ],
+    [
+      "2026-09-22",
+      "A",
+      "Växjö",
+      3,
+      4
+    ],
+    [
+      "2026-09-26",
+      "H",
+      "Frölunda",
+      1,
+      2
+    ],
+    [
+      "2026-10-01",
+      "A",
+      "Skellefteå",
+      3,
+      4
+    ],
+    [
+      "2026-10-03",
+      "H",
+      "Brynäs",
+      1,
+      0
+    ],
+    [
+      "2026-10-08",
+      "A",
+      "Luleå",
+      3,
+      2
+    ],
+    [
+      "2026-10-10",
+      "A",
+      "Färjestad",
+      2,
+      6
+    ],
+    [
+      "2026-10-15",
+      "H",
+      "Örebro",
+      6,
+      0
+    ],
+    [
+      "2026-10-17",
+      "A",
+      "Djurgården",
+      2,
+      3
+    ],
+    [
+      "2026-10-22",
+      "A",
+      "Björklöven",
+      4,
+      2
+    ],
+    [
+      "2026-10-24",
+      "H",
+      "Timrå",
+      1,
+      2
+    ],
+    [
+      "2026-10-27",
+      "H",
+      "Linköping",
+      8,
+      2
+    ],
+    [
+      "2026-10-29",
+      "A",
+      "Rögle",
+      3,
+      0
+    ],
+    [
+      "2026-10-31",
+      "H",
+      "HV71",
+      3,
+      2
+    ],
+    [
+      "2026-11-12",
+      "A",
+      "Frölunda",
+      1,
+      4
+    ]
+  ],
+  "vaxjo_history": [
+    [
+      "2026-09-19",
+      "A",
+      "Frölunda",
+      4,
+      5
+    ],
+    [
+      "2026-09-22",
+      "H",
+      "Malmö",
+      4,
+      3
+    ],
+    [
+      "2026-09-24",
+      "A",
+      "Djurgården",
+      3,
+      4
+    ],
+    [
+      "2026-09-26",
+      "H",
+      "HV71",
+      7,
+      5
+    ],
+    [
+      "2026-10-01",
+      "A",
+      "Björklöven",
+      2,
+      4
+    ],
+    [
+      "2026-10-03",
+      "H",
+      "Rögle",
+      3,
+      2
+    ],
+    [
+      "2026-10-08",
+      "H",
+      "Linköping",
+      0,
+      3
+    ],
+    [
+      "2026-10-10",
+      "A",
+      "Örebro",
+      2,
+      4
+    ],
+    [
+      "2026-10-15",
+      "H",
+      "Skellefteå",
+      1,
+      2
+    ],
+    [
+      "2026-10-17",
+      "A",
+      "Brynäs",
+      3,
+      2
+    ],
+    [
+      "2026-10-22",
+      "H",
+      "Luleå",
+      2,
+      1
+    ],
+    [
+      "2026-10-24",
+      "A",
+      "Färjestad",
+      1,
+      4
+    ],
+    [
+      "2026-10-29",
+      "A",
+      "Timrå",
+      0,
+      3
+    ],
+    [
+      "2026-10-31",
+      "H",
+      "Färjestad",
+      1,
+      5
+    ],
+    [
+      "2026-11-12",
+      "H",
+      "Timrå",
+      5,
+      0
+    ]
+  ],
+  "official_team_stats": {
+    "MIF": {
+      "GP": 15,
+      "GF": 46,
+      "GA": 37,
+      "ShotsFor": 470,
+      "ShotsAgainst": 407,
+      "TeamSave_pct": 0.9091,
+      "PP_pct": null,
+      "PK_pct": null
+    },
+    "VAX": {
+      "GP": 15,
+      "GF": 38,
+      "GA": 47,
+      "ShotsFor": 349,
+      "ShotsAgainst": 384,
+      "TeamSave_pct": 0.8776,
+      "PP_pct": null,
+      "PK_pct": null
+    }
+  },
+  "standings": {
+    "MIF_rank": 4,
+    "MIF_points": 25,
+    "MIF_goal_diff": 9,
+    "VAX_rank": 11,
+    "VAX_points": 18,
+    "VAX_goal_diff": -9
+  },
+  "current_roster_known_at": {
+    "MIF_Fredrik_Händemark": "returned after injury in 12 Nov game, official club",
+    "MIF_Carl_Persson": "scored season 10th goal Nov12, official club",
+    "MIF_starting_goalie": "NOT_VERIFIED",
+    "VAX_starting_goalie": "NOT_VERIFIED",
+    "both_confirmed_skater_lines": "NOT_VERIFIED"
+  },
+  "regime": {
+    "reg_minutes": 60,
+    "OT_minutes": 5,
+    "OT_3on3": true,
+    "SO_if_tied": true,
+    "full_ML_includes_OT_SO_assumed": true,
+    "total_goals_SHL_full_game_5_5": "one winning goal after tied regulation, ties add 1 (does not move across 5.5)"
+  },
+  "frozen_model_recipe": {
+    "season_weight": 0.75,
+    "last5_weight": 0.25,
+    "team_scoring": "0.5*(own goals for/game + opponent goals conceded/game)",
+    "recent": "0.5*(own L5 scoring + opponent L5 allowed)",
+    "home_margin_correction_goals": 0.34,
+    "home_team_scoring_offset": 0.17,
+    "away_team_scoring_offset": -0.17,
+    "regulation_goals_independent_poisson": true,
+    "goalie_states": "unconfirmed; do NOT assert starter or adjustment; scenario +/-0.35 expected goal per side",
+    "OT_SO_tie_split_home": 0.5,
+    "empty_net": "implicit in average goal rates, not structurally separated; distribution low evidence",
+    "relevant_width_floor": "family prior total SD 2.24 residual / margin 2.46 residual; Poisson width to be checked",
+    "no_NHL_shots_preseason_modelling": "true; SHL independent",
+    "status": "SHL-only uncalibrated analyst diagnostic, no certified issue, no market inputs, no inplay scores"
+  },
+  "sources": [
+    "https://stats.swehockey.se/ScheduleAndResults/Schedule/20961",
+    "https://stats.swehockey.se/Teams/Statistics/ScoringAndGoalkeeping/20961",
+    "https://stats.swehockey.se/ScheduleAndResults/Standings/20961",
+    "https://www.malmoredhawks.com/article/ny1atof-33nad/view",
+    "https://www.malmoredhawks.com/game-center/elycp73xwh/qa98unlbd6/?active-tab=line_up&state=pre-game"
+  ]
+}

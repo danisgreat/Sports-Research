@@ -1,0 +1,88 @@
+{
+  "event": "LOCAL-20261114B4496A3F-G0008",
+  "addendum_time_AEDT": "2026-11-15T00:53:21+11:00",
+  "basis": "2026-11-14 13:37 CET local pregame lineup report (source posted BEFORE original 00:49 AEDT freeze but only discovered AFTER; immutable freeze preserved).",
+  "start_game_2026_11_14": {
+    "Vimmerby_starting_goalie": "Isak Sörqvist",
+    "Vimmerby_backup_goalie": "Tomas Rydén",
+    "Nybro_starting_goalie": "Pontus Eltonius",
+    "Nybro_Nov13_goalie": "Hugo Ollas, not asserted to be Nov14 backup",
+    "Vimmerby_absence": "Hannes Hellberg not in lineup; reason UNKNOWN (journalist speculated post-Friday issue; not asserted injury)",
+    "Vimmerby_roster_change": "Jesper Norbäck replaces Hellberg in line with Anton Carlsson, Max Karlsson",
+    "Vimmerby_extra_absence": "William Alftberg absent 13 Nov, not in 14 Nov listed selected lineup",
+    "Vimmerby_lines": {
+      "pair1": [
+        "Arvid Hurtig",
+        "Nick Bochen"
+      ],
+      "forwards1": [
+        "Kalle Carlsson",
+        "Gustaf Kangas",
+        "Hugo Lejon"
+      ],
+      "pair2": [
+        "Oskar Lindgren",
+        "Alfred Hjälm"
+      ],
+      "forwards2": [
+        "Anton Carlsson",
+        "Max Karlsson",
+        "Jesper Norbäck"
+      ],
+      "pair3": [
+        "Gustaf Malmkvist",
+        "Linus Millner Westberg"
+      ],
+      "forwards3": [
+        "Adam Peterson",
+        "Hugo Orrsten",
+        "Johan Mörnsjö"
+      ],
+      "pair4": [
+        "Victor Hedin Raftheim"
+      ],
+      "forwards4": [
+        "Isac Andersson",
+        "Hampus Karlsson",
+        "Kevin Wennström"
+      ]
+    },
+    "Nybro_forward_and_defense_lines": "NOT_VERIFIED"
+  },
+  "goalie_season_observed": {
+    "Vimmerby_Isak_Sorqvist_SV": 0.896,
+    "Vimmerby_Isak_GP": 14,
+    "Nybro_Pontus_Eltonius_SV": 0.898,
+    "Nybro_Pontus_GP": 13,
+    "source": "EliteProspects season hockeyallsvenskan 2026-27 goalie stats, crawl around 14-15 Nov",
+    "independent_confirmation_old": "Swehockey earlier 11 appearances both goalie save percentages ~.894"
+  },
+  "team_shot_and_save_data": {
+    "Vimmerby_team_save": 0.8752,
+    "Nybro_team_save": 0.8862,
+    "Vimmerby_SOG_for": 439,
+    "Vimmerby_team_GP": 18,
+    "Vimmerby_SOG_allowed": 537,
+    "Nybro_SOG_for": 506,
+    "Nybro_GP": 19,
+    "Nybro_SOG_allowed": 501
+  },
+  "adjustment_recipe_frozen_before_repricing": {
+    "shot_exposure_Vimmerby": "0.5*(Vimmerby shots-for/18 + Nybro shots-against/19)",
+    "shot_exposure_Nybro": "0.5*(Nybro shots-for/19 + Vimmerby shots-against/18)",
+    "goalie_delta_Nybro_goals": "-0.5*(Vimmerby_Isak_SV - Vimmerby_team_SV)*expected_Nybro_shots",
+    "goalie_delta_Vimmerby_goals": "-0.5*(Nybro_Pontus_SV - Nybro_team_SV)*expected_Vimmerby_shots",
+    "shrink_factor": 0.5,
+    "shrink_basis": "Explicit analyst conservatism due goalie SV sampling and team-vs-goalie confounding; NOT fitted to HockeyAllsvenskan, not an effect-table coefficient",
+    "other_effects": "Hannes Hellberg absent, opponent PP/PK unaltered numerically, no invented player effects",
+    "identical_base_distribution": "independent-Poisson regulation goals then 50:50 split in OT/SO regulation-draw branch",
+    "file_to_update": "write separate GOALIE_ADJUSTED model result, preserve unadjusted model and frozen reference unchanged"
+  },
+  "sources": [
+    "https://www.dagensvimmerby.se/sport/ishockey/e/327571/han-missar-matchen-har-ar-vh-s-lag-mot-nybro/",
+    "https://www.eliteprospects.com/league/hockeyallsvenskan/stats/2026-2027/total?nation=SWE&tab=goalies",
+    "https://stats.swehockey.se/Teams/Statistics/ScoringAndGoalkeeping/20962",
+    "https://www.leksandsif.se/game-center/cxkpwcpff8/h0st0pvci0/?active-tab=line_up&state=pre-game"
+  ],
+  "no_result_or_inplay_data_used": true
+}
