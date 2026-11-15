@@ -320,4 +320,8 @@ For v24.15 manifest-bound external work, EXT-v3 governs reduced/six-role scope, 
 
 ## Owner-directed ASSESS-100 amendment (CR-2026.11.11-R4)
 
-Current EXT-EVAL-v2 assessment happens at the first 100 eligible fully settled paired games with no minimum weeks or end-of-week wait. It uses event-equal scoring with explicit uncertainty/dependence diagnostics. This assessment-only release preserves forecast/profile/kit v24.15 and earlier separately registered model experiments. Read [the current plan](research/external/EVALUATION_PLAN_v24.16.md); old calendar language yields to this owner instruction for the current assessment.
+Current EXT-EVAL-v2 assessment happens at the first 100 eligible fully settled paired games with no minimum weeks or end-of-week wait. It uses event-equal scoring with explicit uncertainty/dependence diagnostics. This assessment-only release preserves forecast/profile/kit v24.15 and earlier separately registered model experiments. Read [the current plan](research/external/EVALUATION_PLAN_v24.19.md); old calendar language yields to this owner instruction for the current assessment.
+
+## Owner-directed audits at any time (AUDIT-ANYTIME-v1, CR-2026.11.15-R3)
+
+The owner may request a comprehensive audit at any time: the prompt 6 retrospective at any level and the paired assessment with `external evaluate --on-request`, at any number of settled games, with no 100-game, 300-game, eight-week or calendar minimum. Learning-status counts are reminders. The audit covers every eligible settled game to date and reports its real uncertainty. Promotion still uses only the frozen first-100 cohort, FREEZE-v1 is unchanged, and small-audit findings become registered hypotheses. See [SCORING_AND_VALIDATION](SCORING_AND_VALIDATION.md) section 14.

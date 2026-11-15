@@ -154,7 +154,7 @@ Validate with `python -m ml ingest add --export <folder> --store <copy of the st
 
 **Evaluation.** `python -m ml prospective evaluate` compares identical settled pre-start contracts only, averaged within event, then week, with a t-interval over weeks: Brier, log loss, calibration slope and intercept, rank-1 accuracy, Hit@2, NDCG@2 and coverage. A preregistered minimum effect gives the weeks needed at 80% power; a result that cannot resolve it is INSUFFICIENT_EVIDENCE.
 
-**Review levels** (workflow triggers, not sample-size guarantees):
+**Review levels** (workflow reminders, not sample-size guarantees or prerequisites; under AUDIT-ANYTIME-v1 the owner may request any level at any time and any game count):
 
 | Level | Trigger | Prompt | May conclude |
 |---|---|---|---|

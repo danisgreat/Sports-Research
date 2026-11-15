@@ -2,6 +2,11 @@
 
 No minimum weeks or completed-week wait. Forecast identities stay v24.15: this changes
 assessment policy, not issued probabilities. Temporal coverage remains a reported diagnostic.
+
+AUDIT-ANYTIME-v1 (CR-2026.11.15-R3, owner instruction 15 Nov 2026): ``on_request=True`` audits every
+eligible settled paired game available at the horizon, at any count (no 100-game, week or calendar
+wait). It reports the same scores, intervals and diagnostics. The frozen first-100 cohort stays the only
+basis for a promotion decision, so an on-request audit never returns PROMOTION_ELIGIBLE.
 """
 from pathlib import Path
 import csv
@@ -29,7 +34,9 @@ def _digest(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
-def evaluate(forecasts, outcomes, out, *, as_of=None, cohort=None):
+def evaluate(forecasts, outcomes, out, *, as_of=None, cohort=None, on_request=False):
+    if on_request and cohort is not None:
+        raise ValueError("an on-request audit covers every eligible game to date; use --cohort without --on-request to re-audit the frozen first-100 cohort")
     rows = P.verify_ledger(Path(forecasts))
     labels = pd.read_csv(outcomes, keep_default_na=False, dtype=str)
     if tuple(labels.columns) != P.OUTCOME_FIELDS:
@@ -91,8 +98,8 @@ def evaluate(forecasts, outcomes, out, *, as_of=None, cohort=None):
         if any(str(events[r.event_id][f]) != getattr(r, f) for r in original.itertuples() for f in COHORT_FIELDS):
             raise ValueError("frozen cohort qualification metadata changed; retain the original report and audit")
     else:
-        selected = ordered[:MIN_EVENTS]
-    ready = len(selected) == MIN_EVENTS
+        selected = list(ordered) if on_request else ordered[:MIN_EVENTS]
+    ready = len(selected) == MIN_EVENTS and not on_request
     selected_set = set(selected)
     selected_rows = [r for r in rows if r["event_id"] in selected_set]
     selected_labels = labels[labels.event_id.isin(selected_set)]
@@ -108,8 +115,11 @@ def evaluate(forecasts, outcomes, out, *, as_of=None, cohort=None):
         disposition = r["disposition"]
         if count < MIN_EVENTS: disposition = "INSUFFICIENT_EVIDENCE"
         if champion != MODELS[0] and count >= MIN_EVENTS: disposition = "SECONDARY_DIAGNOSTIC_ONLY"
+        if on_request and disposition == "PROMOTION_ELIGIBLE": disposition = "SECONDARY_DIAGNOSTIC_ONLY"
+        status = ("AUDITED_ON_REQUEST" if on_request else
+                  "READY" if ready and count >= MIN_EVENTS else "COLLECTING_INSUFFICIENT_PAIRS")
         result.append(dict(champion=champion, candidate=FIVE, assessment_version=ASSESSMENT_VERSION,
-            assessment_status="READY" if ready and count >= MIN_EVENTS else "COLLECTING_INSUFFICIENT_PAIRS",
+            assessment_status=status,
             paired_events=count, settled_weeks=weeks, event_days=days, mean_brier_difference=iv.get("mean", ""),
             interval_low=iv.get("lo", ""), interval_high=iv.get("hi", ""), log_loss_difference=log_iv.get("mean", ""),
             disposition=disposition, minimum_events=MIN_EVENTS, minimum_weeks=MIN_WEEKS, minimum_effect=DELTA,
@@ -126,14 +136,19 @@ def evaluate(forecasts, outcomes, out, *, as_of=None, cohort=None):
     receipt = dict(ledger_sha256=_digest(forecasts) if Path(forecasts).is_file() else "NOT_PRESENT",
         outcomes_sha256=_digest(outcomes), cohort_sha256=_digest(out / "COHORT.csv"), assessment_version=ASSESSMENT_VERSION,
         events=len(selected), eligible_settled_events=len(events), settled_weeks=weeks, minimum_weeks=0,
-        decision_window="FROZEN_FIRST_100_SETTLED_EVENTS" if ready else "COLLECTING_INSUFFICIENT_PAIRS",
+        decision_window=("ON_REQUEST_ALL_ELIGIBLE_TO_DATE" if on_request else
+                         "FROZEN_FIRST_100_SETTLED_EVENTS" if ready else "COLLECTING_INSUFFICIENT_PAIRS"),
         assessment_ready_at=events[selected[-1]]["qualified_at"] if ready else "", evaluated_as_of=horizon.isoformat(),
         evaluator_sha256=_digest(__file__), scoring_sha256=_digest(A.__file__), settlement_validator_sha256=_digest(P.__file__),
         reused_cohort_sha256=_digest(cohort) if cohort is not None else "NONE")
     _write(out / "COHORT_RECEIPT.csv", tuple(receipt), [receipt])
     if breakdown: _write(out / "STRATA.csv", tuple(breakdown[0]), breakdown)
+    on_request_note = ("**On-request audit (AUDIT-ANYTIME-v1):** every eligible settled paired game available at the horizon "
+        f"({len(selected)} games), run at the owner's request with no game-count, week or calendar minimum. With few games the "
+        "intervals are wide; read them as they are. Promotion is decided only on the frozen first-100 cohort, so this audit "
+        "never returns PROMOTION_ELIGIBLE.\n\n") if on_request else ""
     (out / "README.md").write_text(
-        "# Count-based external research assessment\n\n"
+        "# Count-based external research assessment\n\n" + on_request_note +
         "Assess immediately at 100 eligible fully settled paired games. No week minimum and no end-of-week wait. "
         "The first 100 are ordered by actual complete shared-contract settlement availability, with event ID as a deterministic tie break. "
         "Every game contributes equally after averaging its contracts; pushes/voids are not decisive trials. "

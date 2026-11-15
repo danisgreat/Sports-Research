@@ -682,6 +682,7 @@ def main(argv=None):
     sub.add_parser("package-check")
     ev = sub.add_parser("evaluate"); ev.add_argument("--forecasts", type=Path, required=True); ev.add_argument("--outcomes", type=Path, required=True)
     ev.add_argument("--out", type=Path, required=True); ev.add_argument("--cohort", type=Path)
+    ev.add_argument("--on-request", action="store_true", help="AUDIT-ANYTIME-v1: audit every eligible game to date, at any count")
     args = p.parse_args(argv)
     try:
         if args.command == "init":
@@ -719,6 +720,6 @@ def main(argv=None):
         elif args.command == "package-check": print(package_check())
         elif args.command == "evaluate":
             from ml.external_evaluation import evaluate
-            print(evaluate(args.forecasts, args.outcomes, args.out, cohort=args.cohort))
+            print(evaluate(args.forecasts, args.outcomes, args.out, cohort=args.cohort, on_request=args.on_request))
     except (X.ExternalError, ValueError, OSError, KeyError) as exc:
         print(f"REFUSED: {exc}"); raise SystemExit(2)

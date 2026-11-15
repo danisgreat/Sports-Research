@@ -1,5 +1,9 @@
 # Australian rules request format and finals extra time — MDS/P v24.12 / CR-2026.11.10-R2 / P-2026.11.10-v24.10, 10 November 2026
 
+## 15 November 2026 - v24.19 / CR-2026.11.15-R3 / P-2026.11.15-v24.17 / SCV-v15 (AUDIT-ANYTIME-v1)
+
+Owner instruction: a comprehensive audit can be done at any time, without 100 games, eight weeks or any other minimum. Prompt 6 runs at any level on request; learning-status counts are reminders. `ml/external_evaluation.py` gains `on_request` (CLI `external evaluate --on-request`): every eligible settled paired game to date, status AUDITED_ON_REQUEST, never PROMOTION_ELIGIBLE. The frozen first-100 cohort, FREEZE-v1, forecasts, models and settlements are unchanged. New research/external/EVALUATION_PLAN_v24.19.md; SCORING section 14; CORE, RULES_REFERENCE, ML_PIPELINE, EXTERNAL_RESEARCH_PROTOCOL_V3, HYPOTHESIS_REGISTER and indexes updated; prompt suite restamped. Tests: ml/tests/test_audit_anytime.py. Originals in archive/superseded_2026-11-15-3.
+
 ## 15 November 2026 - v24.18 / CR-2026.11.15-R2 / P-2026.11.15-v24.16 / SCV-v14
 
 Owner-authorized implementation of the audit recommendations and two reproduced timing gaps. Shared card/primary evidence admission; hash-chained official-first-play corrections consumed by scoring; mandatory new-card contract reviews; opponent-strength and measured-availability checks; method/sample/uncertainty and legacy separation; actual source-access rows in packets; native rematch identity and exact final-mini handover manifests. No invented effects, predictive promotion, historical card rewrites or ASSESS-100 backfill. [Implementation and issue closure](research/verification/framework_change_2026-11-15-2/IMPLEMENTATION.md).

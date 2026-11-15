@@ -10,7 +10,8 @@ Counts are derived from verified artifacts, never typed in:
 
 Review clocks run per scope (ALL, each sport, each competition) and level. Defaults: INTERIM after ~100 newly
 settled unique games (ALL), COMPREHENSIVE after ~300 (ALL), SPORT after 100 in that sport, COMPETITION after 50 in
-that competition. These are workflow triggers, not sample-size guarantees. An alert (material software defect,
+that competition. These are workflow triggers and reminders, not sample-size guarantees or prerequisites: under
+AUDIT-ANYTIME-v1 (CR-2026.11.15-R3) the owner may request any review level at any time and any count. An alert (material software defect,
 source-quality failure or sustained deterioration) makes the scope EARLY_REVIEW regardless of the count. A due
 review never promotes a model by itself; its recorded disposition must use the review vocabulary.
 """
