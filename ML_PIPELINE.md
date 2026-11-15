@@ -194,3 +194,15 @@ Added after the [full-history retrospective](research/verification/retrospective
 ## 11. Reference lane and adjustment ledger (v24.0, 22 October 2026)
 
 Verified finals feed (a) the cycle releases, (b) the TB-2-MD standings reference and (c) the width and effect tables ([PARAMETERS](PARAMETERS.md#part-a-competition_parameters) Parts A and B). A competition needs two agreeing lineages and a passing `python -m ml release-gate` before a release is frozen. A historical fact captured now is known now, never on its game date, so no context feature is fitted on history without a known-at time. The 2023-24 to 2025-26 NBA backfill (3,693 finals) was the first lane built this way; its release NBA-CYCLE-1 is experimental, with 0 settled prospective events at its release. The adjustment ledger ([ADJUSTMENT_LEDGER_PROTOCOL](ADJUSTMENT_LEDGER_PROTOCOL.md)) is a separate append-only record of the analyst's departures from the reference; it feeds prompt 6's λ, never the store's training rows, until a prompt-8 decision says otherwise.
+
+## 12. Card-record training (CARD-TRAIN-v1)
+
+Owner instruction, 15 November 2026 (CR-2026.11.15-R4): all the records and settled game logs must be ingested, admitted and used in an actual training run.
+
+`python -m ml card-training run --out research/card_training/<YYYY-MM-DD-n>` (code: `ml/card_training.py`) does three things in one hash-bound, reproducible run:
+
+1. **Ingest.** The effective card history from `ml.evaluation.card_history.build_rows`: every committed combined log, the rank log, every mini-import inventory and every validated settlement revision, P-001 onward, one row per settled contract row. INPUTS.csv binds every input file's SHA-256.
+2. **Admit.** Each row is OUTCOME_AND_CALIBRATION (decisive, dated, stated p in (0,1)), OUTCOME_ONLY (decisive and dated, reason NO_STATED_P) or EXCLUDED (NOT_DECISIVE:<grade> or UNDATED). ADMISSION.csv counts them.
+3. **Train.** Walk-forward by ISO week: each week's rows are predicted by models fitted only on rows issued before that Monday whose outcome was available by then. Calibration: IDENTITY, PLATT (shrunk to identity) and SPORT_PLATT (per sport, shrunk to the pooled fit; never per league). Outcome model: L2 logistic regression on sport, family, rank, direction and logit(stated p) with a missing flag, against the training base rate. SCORES.csv reports Brier and log loss with card-clustered intervals.
+
+`python -m ml card-training verify --run <folder>` rebuilds the predictions from ROWS.csv and requires identical bytes. Evidence class HISTORICAL_OUTCOME_EXPOSED_STUDY. Timing is approximate: issue at the card date and the outcome available two days later, because per-row settlement times are not in the history. Nothing is applied to a card, pick, probability or rank (ML-SEP-v1); promotion still needs ML_PROMOTIONS.csv and the owner. This is separate from the sporting learning store (sections 3 to 5), which still needs source captures for each final; card games whose finals were not captured stay out of the store and are listed in the run report.

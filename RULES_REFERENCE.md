@@ -325,3 +325,7 @@ Current EXT-EVAL-v2 assessment happens at the first 100 eligible fully settled p
 ## Owner-directed audits at any time (AUDIT-ANYTIME-v1, CR-2026.11.15-R3)
 
 The owner may request a comprehensive audit at any time: the prompt 6 retrospective at any level and the paired assessment with `external evaluate --on-request`, at any number of settled games, with no 100-game, 300-game, eight-week or calendar minimum. Learning-status counts are reminders. The audit covers every eligible settled game to date and reports its real uncertainty. Promotion still uses only the frozen first-100 cohort, FREEZE-v1 is unchanged, and small-audit findings become registered hypotheses. See [SCORING_AND_VALIDATION](SCORING_AND_VALIDATION.md) section 14.
+
+## Card-record training (CARD-TRAIN-v1, CR-2026.11.15-R4)
+
+Every settled record and game log is ingested, admitted and used in an actual training run: `python -m ml card-training run --out research/card_training/<YYYY-MM-DD-n>`, run by prompt 4 after every import and by prompt 6. Every row is admitted or excluded with a reason; models are fitted walk-forward on earlier weeks only. The run is a study under ML-SEP-v1. See [ML_PIPELINE](ML_PIPELINE.md) §12.
