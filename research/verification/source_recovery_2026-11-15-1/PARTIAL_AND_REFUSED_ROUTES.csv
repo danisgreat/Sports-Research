@@ -1,0 +1,10 @@
+url,permission,retrieval,disposition
+https://tulospalvelu.leijonat.fi/,NO_RULES_FILE,HTTP403,No result read; use Tulokset field route
+https://www.eliteprospects.com/team/1754/tappara-u20,ALLOWED,ROSTER_OPENED_TARGET_ROW_TIMEOUT,Matching indexed clue is not an opened second-source final
+https://www.jleague.jp/match/leaguecup/2026/111504/stats/,ALLOWED,HTML_READ_CK_VALUES_NOT_EXTRACTED,Use dated official club-record CK rows
+https://www.espncricinfo.com/,RULES_UNKNOWN,NOT_OPENED,Do not whitelist; use permitted alternate
+https://www.sofascore.com/,RULES_UNKNOWN,NOT_OPENED,Do not whitelist; use permitted alternate
+https://www.cricbuzz.com/,BLOCKED,NOT_OPENED,Do not whitelist or proxy
+https://www.jatkoaika.com/U20-SM-sarja/otteluohjelma,BLOCKED_FOR_CHATGPT,NOT_OPENED,Different Claude decision does not authorize this ChatGPT reader
+https://cricketfieldguide.com/match/hobart-hurricanes-women-v-brisbane-heat-women-01m7er2qx1er4sc03wmscpg0h8/commentary?inning=1,ALLOWED_FOR_HAND_READER,TOOL_RESTRICTED_URL_FETCH,No bypass; first-innings over table available on main scorecard
+https://www.jleague.jp/en/club/cerezo/,ALLOWED,UNREADABLE_IN_TOOL,Incorrect guessed route abandoned; verified slug is cosaka

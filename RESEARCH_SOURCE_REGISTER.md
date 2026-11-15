@@ -1,5 +1,7 @@
 # Reusable research and settlement source observations
 
+**Current targeted settlement routes - 16 November 2026.** Consult [SETTLEMENT_SOURCES.csv](research/source_routes/SETTLEMENT_SOURCES.csv) and its [field evidence](research/verification/source_recovery_2026-11-15-1/REPORT.md) for the P-661/P-662/P-664/P-678/P-683 queues and older P-647 corners. This is a new observation, not a rewrite of the original audit/settlement. Per-reader SRC-ALT-v3 governs access; blocked or unknown sources remain refused.
+
 **Current access admission:** [SOURCES SRC-ALT-v2](SOURCES.md) and [exact competition routes](research/source_routes/COMPETITION_ROUTES.csv) supersede older access assertions in this historical register. Recheck exact URLs for all eight tokens; a reachable root is not event evidence.
 
 **SRC-2026.10.16-v1 / EXH-v1.** Start research/settlement here, in SOURCES and in earlier package registers, then open and revalidate actual routes. This is a discovery index, not a complete source universe or permission to stop. [RESEARCH_EXHAUSTIVENESS_PROTOCOL](RESEARCH_PROTOCOL.md#part-b-research_exhaustiveness_protocol) requires alternative routes, independent corroboration and field closure. Missing fields need more sources even when another field is complete.

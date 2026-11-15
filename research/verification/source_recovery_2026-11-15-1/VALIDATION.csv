@@ -1,0 +1,6 @@
+check,result,count
+external_capture_hashes,PASS,22
+archived_control_originals,PASS,9
+verified_source_routes,PASS,8
+package_check,PASS,9
+source_and_prompt_tests,PASS_88_TESTS,88

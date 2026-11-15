@@ -1,0 +1,15 @@
+host,url,robots_http,status,agents_blocked,content_signal,claude_agent,chatgpt_browsing,script,checked_at
+cricketfieldguide.com,https://cricketfieldguide.com/match/adelaide-strikers-women-v-perth-scorchers-women-01m7er2qx1erbbjrzatatsg1s7,200,BLOCKED_FOR_AI,ClaudeBot;Claude-Web;anthropic-ai,,ALLOWED,ALLOWED,BLOCKED,2026-11-15T13:08:25+00:00
+cricketfieldguide.com,https://cricketfieldguide.com/match/hobart-hurricanes-women-v-brisbane-heat-women-01m7er2qx1er4sc03wmscpg0h8,200,BLOCKED_FOR_AI,ClaudeBot;Claude-Web;anthropic-ai,,ALLOWED,ALLOWED,BLOCKED,2026-11-15T13:08:25+00:00
+tulokset.live,https://tulokset.live/jaakiekko/ottelu/tappara-hpk-2026-11-14-2710291,200,ALLOWED,,,ALLOWED,ALLOWED,ALLOWED,2026-11-15T13:08:25+00:00
+tulospalvelu.leijonat.fi,https://tulospalvelu.leijonat.fi/,404,NO_RULES_FILE,,,NO_RULES_FILE,NO_RULES_FILE,NO_RULES_FILE,2026-11-15T13:08:25+00:00
+www.cricbuzz.com,https://www.cricbuzz.com/,200,BLOCKED_FOR_AI,ClaudeBot;Claude-User;Claude-SearchBot;Claude-Web;anthropic-ai;GPTBot;OAI-SearchBot;ChatGPT-User,,BLOCKED,BLOCKED,BLOCKED,2026-11-15T13:08:25+00:00
+www.eliteprospects.com,https://www.eliteprospects.com/team/1754/tappara-u20,200,ALLOWED,,"ai-train=no, search=yes, ai-input=yes",ALLOWED,ALLOWED,ALLOWED,2026-11-15T13:08:25+00:00
+www.espncricinfo.com,https://www.espncricinfo.com/,403,RULES_UNKNOWN,,,RULES_UNKNOWN,RULES_UNKNOWN,RULES_UNKNOWN,2026-11-15T13:08:25+00:00
+www.jleague.jp,https://www.jleague.jp/en/club/kashiwa/,200,ALLOWED,,,ALLOWED,ALLOWED,ALLOWED,2026-11-15T13:08:25+00:00
+www.jleague.jp,https://www.jleague.jp/en/club/kawasakif/,200,ALLOWED,,,ALLOWED,ALLOWED,ALLOWED,2026-11-15T13:08:25+00:00
+www.jleague.jp,https://www.jleague.jp/match/leaguecup/2026/111504/stats/,200,ALLOWED,,,ALLOWED,ALLOWED,ALLOWED,2026-11-15T13:08:25+00:00
+www.sofascore.com,https://www.sofascore.com/,403,RULES_UNKNOWN,,,RULES_UNKNOWN,RULES_UNKNOWN,RULES_UNKNOWN,2026-11-15T13:08:25+00:00
+www.theguardian.com,https://www.theguardian.com/sport/live/2026/nov/15/australia-vs-england-cricket-second-odi-mens-one-day-international-adelaide-live-scores-updates?page=with:block-6af7b2a58f080d8d1c27a584,200,BLOCKED_FOR_AI,ClaudeBot;Claude-User;Claude-SearchBot;anthropic-ai,,BLOCKED,ALLOWED,BLOCKED,2026-11-15T13:08:25+00:00
+www.jleague.jp,https://www.jleague.jp/en/club/cosaka/,200,ALLOWED,,,ALLOWED,ALLOWED,ALLOWED,2026-11-15T13:14:26+00:00
+www.jleague.jp,https://www.jleague.jp/en/club/urawa/,200,ALLOWED,,,ALLOWED,ALLOWED,ALLOWED,2026-11-15T13:14:26+00:00

@@ -1,5 +1,9 @@
 # Australian rules request format and finals extra time — MDS/P v24.12 / CR-2026.11.10-R2 / P-2026.11.10-v24.10, 10 November 2026
 
+## 16 November 2026 - SRC-RECOVERY-20261116R1 (sources only)
+
+Owner request: find and add permitted sources for unresolved sporting fields. Added eight exact-field settlement routes, official J.League CK-table alternatives and a mixed-clock reader snapshot, with immutable source captures kept externally. Fresh reader checks still refuse ESPNcricinfo/Sofascore unknown rules and blocked Cricbuzz. WBBL phases are explicit one-run bounds, not invented exact scores. Original audits, grades, canonical IDs, training studies and MDS v24.20/profile v24.15 remain unchanged. [Evidence and limits](research/verification/source_recovery_2026-11-15-1/REPORT.md).
+
 ## 15 November 2026 - CR-2026.11.15-R5 (records only)
 
 Owner instruction: fully review and settle every game log in the to-be-settled folder under the framework rules. Seven chat-local minis (75 cards, 26 games, 14-15 Nov) copied byte for byte to research/active_minis/received/OWNER_DROP_2026-11-15/; audited; finals from audited permitted sources; P-660–P-685 imported to Part 10 one ID per game in order of scheduled start (101/101 exact readback); 140 W / 135 L / 50 UNRESOLVED rows, zero primary; 21 deep loss review groups. P-664 (Tappara U20 v HPK U20) final not verified. Owner note: future game logs come from one chat per game. Package: research/verification/mini_import_P-660_P-685_2026-11-15-1.

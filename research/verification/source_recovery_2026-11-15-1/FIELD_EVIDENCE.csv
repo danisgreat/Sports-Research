@@ -1,0 +1,7 @@
+canonical_id,field,observation,lower,upper,unit,derivation,source_routes,contract_relation,affected_rows,disposition
+P-664,final and periods,2-4,2,4,goals,PERIOD_SUM 1-1 + 0-1 + 1-2; home2 away4 total6,FIN_U20_TULOKSET_FINAL,ML and O/U5.5,24,SOURCE_FOUND_REVISION_REQUIRED
+P-661,Hobart after6 complete overs,INTERVAL,23,24,runs,SUM first6=23; innings86-SUM represented85=1 unplaced; interval23..24,WBBL_CFG_HOBART_6,entire interval below41.5,10,BOUND_FOUND_CORROBORATION_AND_REVISION_REQUIRED
+P-662,Adelaide after6 complete overs,INTERVAL,39,40,runs,SUM first6=39; innings202-SUM represented201=1 unplaced; interval39..40,WBBL_CFG_ADELAIDE_6,entire interval below41.5,12,BOUND_FOUND_CORROBORATION_AND_REVISION_REQUIRED
+P-678,England after5 complete overs,19/1,19,19,runs,Direct England first-innings over5 commentary,ODI_GUARDIAN_ENGLAND_5,below26.5,2,SOURCE_FOUND_REVISION_REQUIRED
+P-683,combined corners,7,7,7,corners,Kashiwa CK4 + Kawasaki CK3; same dated official event,JLC_KASHIWA_CK|JLC_KAWASAKI_CK,below10.5,2,SOURCE_FOUND_REVISION_REQUIRED
+P-647,combined corners,12,12,12,corners,Urawa CK8 + Cerezo CK4; 11 Nov first leg,JLC_URAWA_CK|JLC_CEREZO_CK,above10.5,3,SOURCE_FOUND_REVISION_REQUIRED

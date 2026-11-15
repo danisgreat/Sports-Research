@@ -1,5 +1,7 @@
 # Source register: Markdown only (2026-10-09)
 
+**16 November 2026 - targeted settlement-source update (SRC-RECOVERY-20261116R1).** [Tested settlement sources](research/source_routes/SETTLEMENT_SOURCES.csv) now include dated Finnish U20 results, WBBL over-by-over bounds, England five-over commentary and official J.League club-record CK fields. [Evidence and limits](research/verification/source_recovery_2026-11-15-1/REPORT.md). Follow SRC-ALT-v3 for the actual reader: Cricket Field Guide and Guardian allow interactive ChatGPT/Claude reading but refuse scripts. A current access decision is not evidence of past permission, complete coverage or source independence. Postgame facts do not become pregame features by backdating their capture.
+
 **Local keys until settlement; updated mini after every game (MINI-v2).** Defined in [MINI_LOG_IDENTITY_PROTOCOL](WORKFLOW.md#part-b-mini_log_identity_protocol); summarised in [CORE](CORE.md) §2.
 
 **Reuse and discovery:** Consult [RESEARCH_SOURCE_REGISTER](RESEARCH_SOURCE_REGISTER.md) and prior settlement registers, reopen exact routes and record current fields. This is a starting map. EXH-v1 requires further discovery for missing fields and independent second-source verification even with an owner observation. Failed/partial routes stay in the attempt ledger; unread pages/shared collectors cannot pass corroboration.

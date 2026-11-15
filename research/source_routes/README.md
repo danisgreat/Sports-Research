@@ -1,5 +1,7 @@
 # Agent-accessible source routes ·9 November 2026
 
+**Targeted source recovery - 16 November 2026.** [SETTLEMENT_SOURCES.csv](SETTLEMENT_SOURCES.csv) lists eight opened exact-field routes with reader permissions, capture hashes, lineage and coverage limits. [Report](../verification/source_recovery_2026-11-15-1/REPORT.md). Access/field extraction are separate: readable robots does not guarantee page data; placeholder pages and search snippets do not close fields. The new current reader snapshot rechecks 16 hosts and preserves the other 1,168 hosts original observation/expiry clocks.
+
 209 explicit competition/scope rows covering all ten named sports and the OTHER_SPORTS onboarding lane, plus venue weather. [COMPETITION_ROUTES.csv](COMPETITION_ROUTES.csv) gives checked exact URLs, alternates, field tests and limits. [SOURCE_ACCESS_AUDIT.csv](SOURCE_ACCESS_AUDIT.csv) contains 486 exact URL checks of five Anthropic and three OpenAI agent tokens. [CAPTURE_TESTS.csv](CAPTURE_TESTS.csv) records actual retrievals, failures, external raw paths and hashes. Access is a dated observation, not a guarantee of future availability, permission for every URL, or proof of accuracy.
 
 ## Other-sport onboarding

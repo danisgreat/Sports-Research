@@ -146,3 +146,8 @@ archive/superseded_2026-11-15-3/** -text whitespace=blank-at-eol,blank-at-eof,sp
 archive/superseded_2026-11-15-4/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 research/card_training/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 research/verification/mini_import_P-660_P-685_2026-11-15-1/** -text
+
+# Targeted settlement source recovery: preserve exact source observations and originals.
+archive/source_recovery_2026-11-16-1/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+research/verification/source_recovery_2026-11-15-1/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+research/source_routes/SETTLEMENT_SOURCES.csv -text

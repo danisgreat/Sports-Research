@@ -1,5 +1,7 @@
 # Files for the external research chats (v24.15)
 
+**Current source observation:** [CURRENT_ACCESS.csv](access/CURRENT_ACCESS.csv) selects v24.15-OBS20261116R1. Only 16 touched hosts were freshly checked; all 1,168 other observation/expiry clocks remain unchanged. This is a source-only refresh, not a new statistical profile. For settlement also supply [SETTLEMENT_SOURCES.csv](../source_routes/SETTLEMENT_SOURCES.csv); its hand-reader-only routes must not be bulk-fetched.
+
 **Required operational supplement:** upload [AUDIT_CHAT_BRIEF_v1.md](AUDIT_CHAT_BRIEF_v1.md) with the unchanged v24.15 statistical files, and read [AUDIT_REVIEW_PROTOCOL](../../AUDIT_REVIEW_PROTOCOL.md) at the event commit. Each generated packet now includes the effective actual-reader access rows and pinned audit controls. A versioned exclusion list alone is insufficient for path-specific permission.
 
 Rules: [EXTERNAL_RESEARCH_PROTOCOL](../../EXTERNAL_RESEARCH_PROTOCOL.md) (EXT-v3). Every file a chat uploads carries the version in its name, so an old copy left in a chat is easy to spot. Replace all of them together when the version changes.
@@ -13,14 +15,14 @@ Rules: [EXTERNAL_RESEARCH_PROTOCOL](../../EXTERNAL_RESEARCH_PROTOCOL.md) (EXT-v3
 | [`ml/kit/sr_kit.py`](../../ml/kit/sr_kit.py) | The calculation kit (version SR-KIT-v24.15 inside the file); numpy and scipy only |
 | [kit/v24.15/KIT_PARAMETERS_v24.15.csv](kit/v24.15/KIT_PARAMETERS_v24.15.csv) | Competition rows for the kit: league numbers, widths, tie rules, first-half share, overtime share, dispersion, cricket and tennis rows |
 | [kit/v24.15/KIT_CRICKET_PHASES_v24.15.csv](kit/v24.15/KIT_CRICKET_PHASES_v24.15.csv) | Per-over ball outcome tables for T20 and ODI, men and women, with each group's innings shock |
-| [access/CHATGPT_DO_NOT_OPEN_v24.15.csv](access/CHATGPT_DO_NOT_OPEN_v24.15.csv) | Hosts a chat never opens (blocked for ChatGPT-User at the root, or rules unreadable), with what to use instead where known; valid to the `valid_until` date |
+| [access/observations_20261116R1/CHATGPT_DO_NOT_OPEN_v24.15-OBS20261116R1.csv](access/observations_20261116R1/CHATGPT_DO_NOT_OPEN_v24.15-OBS20261116R1.csv) | Hosts a chat never opens (blocked for ChatGPT-User at the root, or rules unreadable), with what to use instead where known; valid to the `valid_until` date |
 | `sources/PREGAME_SOURCES_<SPORT>_v24.15.csv` | The permitted pregame sources for the game's sport only ([sources/](sources/README.md)) |
 
 ## Available in every generated packet (also upload directly if packets are unavailable)
 
 | File | What it is |
 |---|---|
-| [access/READER_ACCESS_v24.15.csv](access/READER_ACCESS_v24.15.csv) | Every audited host, judged for each reader (Claude agent, ChatGPT browsing, repository scripts), with the blocked paths of partly blocked hosts |
+| [access/observations_20261116R1/READER_ACCESS_v24.15-OBS20261116R1.csv](access/observations_20261116R1/READER_ACCESS_v24.15-OBS20261116R1.csv) | Every audited host, judged for each reader (Claude agent, ChatGPT browsing, repository scripts), with the blocked paths of partly blocked hosts |
 
 ## Refreshing (weekly, or before a batch when a list is past its `valid_until`)
 

@@ -1,0 +1,15 @@
+host,url,robots_http,status,agents_blocked,content_signal,claude_agent,chatgpt_browsing,script,checked_at
+cricketfieldguide.com,https://cricketfieldguide.com/match/hobart-hurricanes-women-v-brisbane-heat-women-01m7er2qx1er4sc03wmscpg0h8,200,BLOCKED_FOR_AI,ClaudeBot;Claude-Web;anthropic-ai,,ALLOWED,ALLOWED,BLOCKED,2026-11-15T12:49:29+00:00
+www.cricket.com.au,https://www.cricket.com.au/matches/CA:40641?tab=scorecard,200,ALLOWED,,,ALLOWED,ALLOWED,ALLOWED,2026-11-15T12:49:29+00:00
+www.jleague.jp,https://www.jleague.jp/match/leaguecup/2026/111504/live/,200,ALLOWED,,,ALLOWED,ALLOWED,ALLOWED,2026-11-15T12:49:29+00:00
+hpk.fi,https://hpk.fi/joukkue/hpk-u20/otteluohjelma-u20/,200,ALLOWED,,,ALLOWED,ALLOWED,ALLOWED,2026-11-15T12:49:29+00:00
+www.tappara.fi,https://www.tappara.fi/fi-fi/article/a-nuoret/u20-ottelut/12/?filter_view=1&results=1,404,NO_RULES_FILE,,,NO_RULES_FILE,NO_RULES_FILE,NO_RULES_FILE,2026-11-15T12:49:29+00:00
+tulospalvelu.leijonat.fi,https://tulospalvelu.leijonat.fi/,404,NO_RULES_FILE,,,NO_RULES_FILE,NO_RULES_FILE,NO_RULES_FILE,2026-11-15T12:49:29+00:00
+www.jatkoaika.com,https://www.jatkoaika.com/U20-SM-sarja/otteluohjelma,200,BLOCKED_FOR_AI,ClaudeBot;Claude-Web;anthropic-ai;GPTBot;ChatGPT-User,"search=yes,ai-train=no,use=reference",ALLOWED,BLOCKED,BLOCKED,2026-11-15T12:49:29+00:00
+www.hockeyarchives.info,https://www.hockeyarchives.info/Finjun2027.htm,200,ALLOWED,,,ALLOWED,ALLOWED,ALLOWED,2026-11-15T12:49:29+00:00
+tulokset.live,https://tulokset.live/jaakiekko/ottelu/tappara-hpk-2026-11-14-2710291,200,ALLOWED,,,ALLOWED,ALLOWED,ALLOWED,2026-11-15T12:49:29+00:00
+en.sportsand.me,https://en.sportsand.me/ice-hockey/finland-championship-u20?tab=table,200,ALLOWED,,,ALLOWED,ALLOWED,ALLOWED,2026-11-15T12:49:29+00:00
+www.espncricinfo.com,https://www.espncricinfo.com/,403,RULES_UNKNOWN,,,RULES_UNKNOWN,RULES_UNKNOWN,RULES_UNKNOWN,2026-11-15T12:49:29+00:00
+www.sofascore.com,https://www.sofascore.com/,403,RULES_UNKNOWN,,,RULES_UNKNOWN,RULES_UNKNOWN,RULES_UNKNOWN,2026-11-15T12:49:29+00:00
+www.flashscore.com,https://www.flashscore.com/,200,ALLOWED,,,ALLOWED,ALLOWED,ALLOWED,2026-11-15T12:49:29+00:00
+www.cricbuzz.com,https://www.cricbuzz.com/,200,BLOCKED_FOR_AI,ClaudeBot;Claude-User;Claude-SearchBot;Claude-Web;anthropic-ai;GPTBot;OAI-SearchBot;ChatGPT-User,,BLOCKED,BLOCKED,BLOCKED,2026-11-15T12:49:29+00:00

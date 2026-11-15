@@ -402,6 +402,8 @@ cricket.co.za,https://cricket.co.za/,403,RULES_UNKNOWN,,,2026-11-08T23:49:56+00:
 cricket.com.au,https://cricket.com.au/,200,ALLOWED,,,2026-11-08T23:46:17+00:00
 cricketarchive.com,https://cricketarchive.com/,200,BLOCKED_FOR_AI,ClaudeBot;GPTBot,,2026-11-08T23:49:56+00:00
 cricketarchive.com,https://cricketarchive.com/CricketIreland/Scorecards/1458/1458955.html,200,BLOCKED_FOR_AI,ClaudeBot;GPTBot,,2026-11-08T23:46:17+00:00
+cricketfieldguide.com,https://cricketfieldguide.com/match/adelaide-strikers-women-v-perth-scorchers-women-01m7er2qx1erbbjrzatatsg1s7,200,BLOCKED_FOR_AI,ClaudeBot;Claude-Web;anthropic-ai,,2026-11-15T13:08:25+00:00
+cricketfieldguide.com,https://cricketfieldguide.com/match/hobart-hurricanes-women-v-brisbane-heat-women-01m7er2qx1er4sc03wmscpg0h8,200,BLOCKED_FOR_AI,ClaudeBot;Claude-Web;anthropic-ai,,2026-11-15T13:08:25+00:00
 cricketnamibia.com,https://cricketnamibia.com/celebrating-excellence-at-2026-cricket-namibia-annual-awards/,200,ALLOWED,,,2026-11-08T23:46:17+00:00
 cricketnamibia.com,https://cricketnamibia.com/cricket-namibia-to-host-the-proteas-and-zimbabwe-in-fnb-t20-tri-series/,200,ALLOWED,,,2026-11-08T23:46:17+00:00
 cricketonair.com,https://cricketonair.com/guides/india-vs-west-indies-4th-t20i-2026-preview/,200,ALLOWED,,,2026-11-08T23:46:17+00:00
@@ -1660,6 +1662,8 @@ tryhoop.com,https://tryhoop.com/,200,ALLOWED,,,2026-11-08T23:52:53+00:00
 tryhoop.com,https://tryhoop.com/?p=18412,200,ALLOWED,,,2026-11-08T23:46:17+00:00
 tryhoop.com,https://tryhoop.com/news/contents_type=32,200,ALLOWED,,,2026-11-08T23:46:17+00:00
 tryhoop.com,https://tryhoop.com/schedule/list/?month=10&year=2026,200,ALLOWED,,,2026-11-08T23:46:17+00:00
+tulokset.live,https://tulokset.live/jaakiekko/ottelu/tappara-hpk-2026-11-14-2710291,200,ALLOWED,,,2026-11-15T13:08:25+00:00
+tulospalvelu.leijonat.fi,https://tulospalvelu.leijonat.fi/,404,NO_RULES_FILE,,,2026-11-15T13:08:25+00:00
 tvnobar.space,https://tvnobar.space/match/lanzhou-longyuan-athletic-vs-beijing-guoan-1788262500,200,BLOCKED_FOR_AI,ClaudeBot;Claude-Web;anthropic-ai;GPTBot;ChatGPT-User,"search=yes,ai-train=no,use=reference",2026-11-08T23:34:51.033106+00:00
 uaecuesports.com,https://uaecuesports.com/coverage/al-dhafra-s-first-half-drought-meets-united-s-late-leak-107983/,200,ALLOWED,,,2026-11-08T23:46:17+00:00
 uaepl.ae,https://uaepl.ae/en/news-and-gallery/adnoc-pro-league-989,200,ALLOWED,,,2026-11-08T23:46:17+00:00
@@ -2158,6 +2162,7 @@ www.cpbl.com.tw,https://www.cpbl.com.tw/player/trans,404,NO_RULES_FILE,,,2026-11
 www.cpbl.com.tw,https://www.cpbl.com.tw/xmdoc/cont?SId=0Q312683610715489822,404,NO_RULES_FILE,,,2026-11-08T23:34:51.033106+00:00
 www.cpblstats.com,https://www.cpblstats.com/,ERROR:URLError,RULES_UNKNOWN,,,2026-11-08T23:49:56+00:00
 www.cplt20.com,https://www.cplt20.com/,200,RULES_UNKNOWN,,,2026-11-08T23:49:56+00:00
+www.cricbuzz.com,https://www.cricbuzz.com/,200,BLOCKED_FOR_AI,ClaudeBot;Claude-User;Claude-SearchBot;Claude-Web;anthropic-ai;GPTBot;OAI-SearchBot;ChatGPT-User,,2026-11-15T13:08:25+00:00
 www.cricbuzz.com,https://www.cricbuzz.com/cricket-match-facts/145302/ldnw-vs-brmw-28th-match-the-hundred-womens-competition-2026,200,BLOCKED_FOR_AI,ClaudeBot;Claude-User;Claude-SearchBot;Claude-Web;anthropic-ai;GPTBot;OAI-SearchBot;ChatGPT-User,,2026-11-08T23:46:17+00:00
 www.cricbuzz.com,https://www.cricbuzz.com/cricket-match/live-scores,200,BLOCKED_FOR_AI,ClaudeBot;Claude-User;Claude-SearchBot;Claude-Web;anthropic-ai;GPTBot;OAI-SearchBot;ChatGPT-User,,2026-11-08T23:34:51.033106+00:00
 www.cricbuzz.com,https://www.cricbuzz.com/cricket-match/live-scores/recent-matches,200,BLOCKED_FOR_AI,ClaudeBot;Claude-User;Claude-SearchBot;Claude-Web;anthropic-ai;GPTBot;OAI-SearchBot;ChatGPT-User,,2026-11-08T23:34:51.033106+00:00
@@ -2307,6 +2312,7 @@ www.eliteprospects.com,https://www.eliteprospects.com/league/,200,ALLOWED,,"ai-t
 www.eliteprospects.com,https://www.eliteprospects.com/league/nhl,200,ALLOWED,,"ai-train=no, search=yes, ai-input=yes",2026-11-08T23:49:56+00:00
 www.eliteprospects.com,https://www.eliteprospects.com/league/shl/game/888618/2026-10-17-lulea-hf-vs-hv71,200,ALLOWED,,"ai-train=no, search=yes, ai-input=yes",2026-11-08T23:46:17+00:00
 www.eliteprospects.com,https://www.eliteprospects.com/team/,200,ALLOWED,,"ai-train=no, search=yes, ai-input=yes",2026-11-08T23:34:51.033106+00:00
+www.eliteprospects.com,https://www.eliteprospects.com/team/1754/tappara-u20,200,ALLOWED,,"ai-train=no, search=yes, ai-input=yes",2026-11-15T13:08:25+00:00
 www.eliteprospects.com,https://www.eliteprospects.com/team/610/hpk/scores/2025-2026,200,ALLOWED,,"ai-train=no, search=yes, ai-input=yes",2026-11-08T23:46:17+00:00
 www.eloratings.net,https://www.eloratings.net/,404,NO_RULES_FILE,,,2026-11-08T23:49:56+00:00
 www.eluniversal.com.mx,https://www.eluniversal.com.mx/metropoli/clima-cdmx-a-que-hora-se-esperan-lluvias-y-granizo-este-viernes-28-de-agosto/,200,BLOCKED_FOR_AI,ClaudeBot;Claude-User;Claude-SearchBot;Claude-Web;anthropic-ai;GPTBot;OAI-SearchBot;ChatGPT-User,,2026-11-08T23:46:17+00:00
@@ -2395,7 +2401,7 @@ www.espn.com,https://www.espn.com/wnba/team/schedule/_/name/por,200,BLOCKED_FOR_
 www.espn.com,https://www.espn.com/wnba/team/schedule/_/name/tor,200,BLOCKED_FOR_AI,anthropic-ai;GPTBot;ChatGPT-User,,2026-11-08T23:46:17+00:00
 www.espn.com,https://www.espn.com/wnba/video/_/gameId/401857121,200,BLOCKED_FOR_AI,anthropic-ai;GPTBot;ChatGPT-User,,2026-11-08T23:46:17+00:00
 www.espn.in,https://www.espn.in/cricket/series/21376/game/1521230/sunrisers-leeds-women-vs-trent-rockets-women-final-the-hundred-womens-competition-2026,200,BLOCKED_FOR_AI,anthropic-ai;GPTBot;ChatGPT-User,,2026-11-08T23:46:17+00:00
-www.espncricinfo.com,https://www.espncricinfo.com/,403,RULES_UNKNOWN,,,2026-11-08T23:46:17+00:00
+www.espncricinfo.com,https://www.espncricinfo.com/,403,RULES_UNKNOWN,,,2026-11-15T13:08:25+00:00
 www.espncricinfo.com,https://www.espncricinfo.com/series/bangladesh-in-australia-2026-1527258/australia-vs-bangladesh-1st-test-1527273/live-cricket-score,403,RULES_UNKNOWN,,,2026-11-08T23:46:17+00:00
 www.espncricinfo.com,https://www.espncricinfo.com/series/indian-premier-league-{year}-{seriesId}/match-schedule-fixtures-and-results,403,RULES_UNKNOWN,,,2026-11-08T23:34:51.033106+00:00
 www.espncricinfo.com,https://www.espncricinfo.com/series/pakistan-tour-in-england-2026-1496563/england-vs-pakistan-3rd-test-1496584/full-scorecard,403,RULES_UNKNOWN,,,2026-11-08T23:46:17+00:00
@@ -2740,13 +2746,18 @@ www.jatkoaika.com,https://www.jatkoaika.com/LIIGA/Kokoonpanot/HPK-Ilves/62530,20
 www.jc.ae,https://www.jc.ae/en/fixtures-and-results/results/,404,NO_RULES_FILE,,,2026-11-08T23:34:51.033106+00:00
 www.jleague.co,https://www.jleague.co/,200,ALLOWED,,,2026-11-08T23:34:51.033106+00:00
 www.jleague.jp,https://www.jleague.jp/,200,ALLOWED,,,2026-11-08T23:52:53+00:00
+www.jleague.jp,https://www.jleague.jp/en/club/cosaka/,200,ALLOWED,,,2026-11-15T13:14:26+00:00
+www.jleague.jp,https://www.jleague.jp/en/club/kashiwa/,200,ALLOWED,,,2026-11-15T13:08:25+00:00
+www.jleague.jp,https://www.jleague.jp/en/club/kawasakif/,200,ALLOWED,,,2026-11-15T13:08:25+00:00
 www.jleague.jp,https://www.jleague.jp/en/club/machida/,200,ALLOWED,,,2026-11-08T23:46:17+00:00
+www.jleague.jp,https://www.jleague.jp/en/club/urawa/,200,ALLOWED,,,2026-11-15T13:14:26+00:00
 www.jleague.jp,https://www.jleague.jp/match/j1/2025/101802/lineup/,200,ALLOWED,,,2026-11-08T23:46:17+00:00
 www.jleague.jp,https://www.jleague.jp/match/j1/2026/101010/,200,ALLOWED,,,2026-11-08T23:46:17+00:00
 www.jleague.jp,https://www.jleague.jp/match/j1/2026/101012/lineup/,200,ALLOWED,,,2026-11-08T23:46:17+00:00
 www.jleague.jp,https://www.jleague.jp/match/j1/2026/101812/,200,ALLOWED,,,2026-11-08T23:46:17+00:00
 www.jleague.jp,https://www.jleague.jp/match/j1/2026/101812/live/,200,ALLOWED,,,2026-11-08T23:46:17+00:00
 www.jleague.jp,https://www.jleague.jp/match/j1/2026/101812/stats/,200,ALLOWED,,,2026-11-08T23:46:17+00:00
+www.jleague.jp,https://www.jleague.jp/match/leaguecup/2026/111504/stats/,200,ALLOWED,,,2026-11-15T13:08:25+00:00
 www.jleague.jp,https://www.jleague.jp/news/,200,ALLOWED,,,2026-11-08T23:34:51.033106+00:00
 www.jleague.jp,https://www.jleague.jp/news/article/35296/?navicode=j1,200,ALLOWED,,,2026-11-08T23:34:51.033106+00:00
 www.jleague.jp,https://www.jleague.jp/release/,200,ALLOWED,,,2026-11-08T23:34:51.033106+00:00
@@ -3512,7 +3523,7 @@ www.soccerzz.com,https://www.soccerzz.com/live/2026-10-16-al-dhafra-dubai-united
 www.soccerzz.com,https://www.soccerzz.com/live/2026-10-18-beijing-guoan-qingdao-west-coast/12060320,403,RULES_UNKNOWN,,,2026-11-08T23:34:51.033106+00:00
 www.soccerzz.com,https://www.soccerzz.com/match/2026-10-16-sporting-delhi-mohun-bagan-super-giant/12735151,403,RULES_UNKNOWN,,,2026-11-08T23:46:17+00:00
 www.sofascore.com,https://www.sofascore.com,403,RULES_UNKNOWN,,,2026-11-08T23:46:17+00:00
-www.sofascore.com,https://www.sofascore.com/,403,RULES_UNKNOWN,,,2026-11-08T23:52:53+00:00
+www.sofascore.com,https://www.sofascore.com/,403,RULES_UNKNOWN,,,2026-11-15T13:08:25+00:00
 www.sofascore.com,https://www.sofascore.com/basketball/match/guerri-napoli-basketball-ea7-emporio-armani-milano/FwbsVygc,403,RULES_UNKNOWN,,,2026-11-08T23:46:17+00:00
 www.sofascore.com,https://www.sofascore.com/basketball/match/hapoel-tel-aviv-real-madrid/PvbsETH,403,RULES_UNKNOWN,,,2026-11-08T23:46:17+00:00
 www.sofascore.com,https://www.sofascore.com/basketball/match/las-vegas-aces-indiana-fever/cubsalo,403,RULES_UNKNOWN,,,2026-11-08T23:46:17+00:00
@@ -3708,6 +3719,7 @@ www.theguardian.com,https://www.theguardian.com/sport/2026/jul/23/london-spirit-
 www.theguardian.com,https://www.theguardian.com/sport/2026/oct/04/nrl-grand-final-sydney-roosters-newcastle-knights-match-report,200,BLOCKED_FOR_AI,ClaudeBot;Claude-User;Claude-SearchBot;anthropic-ai,,2026-11-08T23:46:17+00:00
 www.theguardian.com,https://www.theguardian.com/sport/2026/oct/17/bledisloe-cup-australia-wallabies-new-zealand-all-blacks-second-rugby-test-match-report,200,BLOCKED_FOR_AI,ClaudeBot;Claude-User;Claude-SearchBot;anthropic-ai,,2026-11-08T23:46:17+00:00
 www.theguardian.com,https://www.theguardian.com/sport/2026/sep/01/maia-bouchier-powers-england-to-record-odi-run-chase-against-ireland,200,BLOCKED_FOR_AI,ClaudeBot;Claude-User;Claude-SearchBot;anthropic-ai,,2026-11-08T23:34:51.033106+00:00
+www.theguardian.com,https://www.theguardian.com/sport/live/2026/nov/15/australia-vs-england-cricket-second-odi-mens-one-day-international-adelaide-live-scores-updates?page=with:block-6af7b2a58f080d8d1c27a584,200,BLOCKED_FOR_AI,ClaudeBot;Claude-User;Claude-SearchBot;anthropic-ai,,2026-11-15T13:08:25+00:00
 www.theguardian.com,https://www.theguardian.com/sport/live/2026/oct/10/south-africa-v-australia-first-test-day-two-durban-kingsmead-cricket-ground-live-updates?page=with%3Ablock-6aca309b8f084a13d13c8cec,200,BLOCKED_FOR_AI,ClaudeBot;Claude-User;Claude-SearchBot;anthropic-ai,,2026-11-08T23:46:17+00:00
 www.theguardian.com,https://www.theguardian.com/sport/live/2026/oct/18/south-africa-v-australia-second-test-day-one-cricket-st-georges-park-gqeberha-live-updates,200,BLOCKED_FOR_AI,ClaudeBot;Claude-User;Claude-SearchBot;anthropic-ai,,2026-11-08T23:46:17+00:00
 www.theguardian.com,https://www.theguardian.com/sport/live/2026/sep/12/afl-finals-live-updates-brisbane-lions-vs-adelaide-crows-semi-final-2026-latest,200,BLOCKED_FOR_AI,ClaudeBot;Claude-User;Claude-SearchBot;anthropic-ai,,2026-11-08T23:46:17+00:00
