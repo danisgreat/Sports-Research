@@ -46,11 +46,11 @@
 | Item | Value |
 |---|---|
 | Status | ACTIVE |
-| Method | MDS-2026.11.16-v26.0 (ONE-CHAT-v2: sealed cards, committed inputs, anytime-valid demonstration); previous MDS-2026.11.16-v25.0 (ONE-CHAT-v1: the chat's card is the measured forecast; STATS-ONLY-v2); earlier versions: [history](research/history/CURRENT_STATE_RELEASES.md) |
-| Control revision | CR-2026.11.16-R3 (ONE-CHAT-v2 release); previous CR-2026.11.16-R2 (ONE-CHAT-v1 release); earlier versions: [history](research/history/CURRENT_STATE_RELEASES.md) |
-| Scoring version | SCV-2026.11.16-v17 (section 16: the anytime-valid demonstration); previous SCV-2026.11.16-v16 (section 15: the measured-card assessment); earlier versions: [history](research/history/CURRENT_STATE_RELEASES.md) |
-| Selection version | SEL-2026.10.22-v4 for cards with a `PICKS_V2` block (a probability for every contract, most-likely list, information list, abstain flag); SEL-2026.10.12-v3 / P_ORDER_V2 retained for earlier cards, whose Rank-1 gate and Rank-2 floor stay as written for them; historical manual mixtures remain in their own cohort |
-| Prompt suite | P-2026.11.16-v26.0 (prompts 3, 4 and 6: sealing, committed inputs, the anytime verdict); previous P-2026.11.16-v25.0 (prompts 3, 4 and 6 run the ONE-CHAT-v1 intake, scoring and deep loss register); earlier versions: [history](research/history/CURRENT_STATE_RELEASES.md) |
+| Method | MDS-2026.11.16-v27.0 (generated from VERSIONS.csv) |
+| Control revision | CR-2026.11.16-R4 (generated from VERSIONS.csv) |
+| Scoring version | SCV-2026.11.16-v18 (generated from VERSIONS.csv) |
+| Selection version | SEL-2026.10.22-v4 (generated from VERSIONS.csv) |
+| Prompt suite | P-2026.11.16-v27.0 (generated from VERSIONS.csv) |
 | Learning pipeline | MLSCOPE-v3 with ML-SEP-v1 (no promoted model) and LEARNLOG-v1; store, ledger and release values are in the generated block above. No active release: MLB-CYCLE-4, NHL-CYCLE-6 and NBA-CYCLE-4 were retired on 16 November 2026 (stale, zero frozen games); the declared card references are unchanged. One-chat intakes and scores: [research/one_chat/](research/one_chat/README.md). |
 | Active local mini | NONE (owner instruction 12 November 2026, CR-2026.11.12-R1). The repository holds no active mini. Each research chat starts and keeps its own mini under its own distinct MINI_KEY (WORKFLOW prompt 2: parallel minis use distinct namespaces). The former files, all settled or empty, are in [archive/retired_active_minis_2026-11-12/](archive/retired_active_minis_2026-11-12/README.md) |
 | Mini-log format | `mini-log-10` (in-progress `mini-log-2` through `mini-log-9` retain their format and issued cores) |
@@ -104,7 +104,7 @@ Full tables: [research/scoreboard/SCOREBOARD.md](research/scoreboard/SCOREBOARD.
 | Base rates and regimes | [BASE_RATES_REGISTER.md](PARAMETERS.md#part-c-base_rates_register) |
 | Sources and reachability | [SOURCES.md](SOURCES.md) |
 | Previous results | [ARCHIVE_USE_GUIDE.md](ARCHIVE_USE_GUIDE.md), [Previous Sports Results/README.md](https://github.com/danisgreat/Sports-Research/blob/2ea94f6f718d1f43c7af9e567008495114ef9cef/Previous%20Sports%20Results/README.md) |
-| Scoring | [SCORING_AND_VALIDATION.md](SCORING_AND_VALIDATION.md) |
+| Scoring | SCV-2026.11.16-v18 (generated from VERSIONS.csv) |
 | Verification | [VERIFICATION_PROTOCOL.md](VERIFICATION_PROTOCOL.md) |
 | Proposed improvements | [HYPOTHESIS_REGISTER.md](HYPOTHESIS_REGISTER.md) |
 | Retrospective and recommendation status | [FRAMEWORK_RETROSPECTIVE_2026-10-09.md](archive/root_documents_2026-10-14/FRAMEWORK_RETROSPECTIVE_2026-10-09.md); latest audit [retrospective_2026-11-16-1](research/verification/retrospective_2026-11-16-1/RETROSPECTIVE_REPORT.md) (on request, P-001 to P-685) with its [improvement plan](research/verification/framework_change_2026-11-16-1/CHANGE_PROPOSAL.md); earlier cohort retrospectives of 11, 16 and 21 October under research/verification/ |

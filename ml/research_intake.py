@@ -580,7 +580,8 @@ def _append_card(folder, card_path, receipt_path, expected_mini_sha256, writer, 
         if sha(original) != expected_mini_sha256: raise X.ExternalError("mini changed since read")
         prior = original.decode("utf-8")
         if begin in prior:
-            if prior[prior.index(begin):prior.index(end)+len(end)].strip() == text.strip():
+            existing = prior[prior.index(begin):prior.index(end)+len(end)]
+            if existing.replace("\r\n", "\n").strip() == text.replace("\r\n", "\n").strip():
                 return dict(status="ALREADY_EXISTS", local_key=e["local_key"])
             raise X.ExternalError("existing card is immutable; use an addendum")
         lease_rows = [line for line in prior.splitlines() if re.search(r"^\|[^|]*writer[^|]*lease[^|]*\|", line, re.I)]

@@ -170,6 +170,12 @@ def write(root=ROOT) -> bool:
         if anchor not in text:
             raise ValueError("CURRENT_STATE.md has no state table to place the generated block before")
         new = text.replace(anchor, block + "\n\n**Versions and pointers (hand-maintained):**\n\n" + anchor, 1)
+    # Legacy readers still consume these rows. Generate them from the same
+    # registry rather than leaving a second, hand-maintained current version.
+    labels={"Method":"method","Control revision":"control_revision","Scoring":"scoring","Scoring version":"scoring","Selection":"selection","Selection version":"selection","Prompt suite":"prompt_suite"}
+    v=versions(root)
+    for label,item in labels.items():
+        new=re.sub(r"(?m)^\| "+re.escape(label)+r" \|[^\n]*$",lambda _:f"| {label} | {v[item]['current']} (generated from VERSIONS.csv) |",new)
     changed = new != text
     if changed:
         path.write_bytes(new.encode("utf-8"))

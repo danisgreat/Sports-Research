@@ -42,3 +42,5 @@ Archived controls: archive/superseded_2026-11-16-4/ORIGINALS.csv. Supplied revie
 Rollback: revert code/rules through a checked change. Published original request/card blobs, historical forecasts and prior registrations remain immutable records. Never rewrite or delete them to change a verdict.
 
 Registration publication occurs on 17 November 2026 Sydney time; the 16 November version strings identify the owner-directed change, not a backdated registration. Seals bind the exact published plan hash and commit.
+
+CI portability repairs: CURRENT_STATE legacy-reader version rows are generated from VERSIONS.csv; the older mini writer recognises an identical LF-source retry in a CRLF mini without rewriting stored bytes. The strengthened end-to-end fixture exercises this on every OS. Main ruleset 27373770 requires the passing check and a PR; forecast-data ruleset 27374750 prevents force pushes and deletion without requiring code CI for timely data seals.

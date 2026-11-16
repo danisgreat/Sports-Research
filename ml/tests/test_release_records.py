@@ -21,6 +21,7 @@ def test_versions_file_is_what_core_the_prompts_and_current_state_print():
             assert suite in found, path.name
     state = (S.ROOT / S.STATE).read_text(encoding="utf-8")
     assert all(v[i]["current"] in state for i in S.VERSION_ITEMS)
+    assert f"| Prompt suite | {suite} " in state
     assert S.restamp() == [], "a release leaves nothing for restamp to change"
 
 
