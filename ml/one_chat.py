@@ -25,6 +25,7 @@ import subprocess
 import time
 import os
 import tempfile
+import json
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -595,16 +596,15 @@ def github_push_activity(root=ROOT) -> list[dict]:
     slug = _remote_slug(root)
     if not slug:
         return []
-    res = subprocess.run(["gh", "api", "--paginate", f"repos/{slug}/activity?activity_type=push&per_page=100",
-                          "--jq", '.[] | select(.activity_type == "push") | [.before, .after, .timestamp, .ref] | @tsv'],
+    res = subprocess.run(["gh", "api", "--paginate", "--slurp", f"repos/{slug}/activity?per_page=100"],
                          capture_output=True, text=True)
     if res.returncode:
         return []
     out = []
-    for line in res.stdout.splitlines():
-        parts = line.split("\t")
-        if len(parts) == 4 and parts[3] in ("refs/heads/main", f"refs/heads/{SEAL_BRANCH}"):
-            out.append(dict(before=parts[0], after=parts[1], pushed_at_server=parts[2], ref=parts[3]))
+    for page in json.loads(res.stdout):
+        for event in page:
+            if event.get("activity_type") in ("push","pr_merge","merge_queue_merge") and event.get("ref") in ("refs/heads/main",f"refs/heads/{SEAL_BRANCH}"):
+                out.append(dict(before=event["before"],after=event["after"],pushed_at_server=event["timestamp"],ref=event["ref"]))
     return out
 
 

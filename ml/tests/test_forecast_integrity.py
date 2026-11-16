@@ -224,3 +224,42 @@ def test_typed_feature_builder_keeps_missingness_and_flags_invalid_boolean(
     assert len(coverage) == 1
     assert any(r["reason"] == "VALUE_OUTSIDE_DEFINITION" for r in issues)
     assert any(r["admission"] == "EXCLUDED" for r in features)
+
+
+def test_protected_main_merge_publications_are_valid_independent_server_events(
+    monkeypatch, tmp_path
+):
+    import json
+    from types import SimpleNamespace
+
+    events = [
+        dict(
+            before="a",
+            after="b",
+            timestamp="2026-11-17T01:00:00Z",
+            ref="refs/heads/main",
+            activity_type="pr_merge",
+        ),
+        dict(
+            before="b",
+            after="c",
+            timestamp="2026-11-17T02:00:00Z",
+            ref="refs/heads/forecast-seals",
+            activity_type="push",
+        ),
+        dict(
+            before="c",
+            after="d",
+            timestamp="2026-11-17T03:00:00Z",
+            ref="refs/heads/main",
+            activity_type="branch_creation",
+        ),
+    ]
+    monkeypatch.setattr(O, "_remote_slug", lambda root: "example/repo")
+    monkeypatch.setattr(
+        O.subprocess,
+        "run",
+        lambda *a, **kw: SimpleNamespace(returncode=0, stdout=json.dumps([events])),
+    )
+    result = O.github_push_activity(tmp_path)
+    assert [r["after"] for r in result] == ["b", "c"]
