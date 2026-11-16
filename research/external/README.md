@@ -1,4 +1,18 @@
-# Files for the external research chats (v24.15)
+# Files for the external research chats (v25.0)
+
+## Current operation: one chat per game (ONE-CHAT-v1, 16 November 2026)
+
+Upload to each chat (or once to a ChatGPT Project):
+
+| File | What it is |
+|---|---|
+| [ONE_CHAT_BRIEF_v25.0.md](ONE_CHAT_BRIEF_v25.0.md) | The one brief: what the chat does and the `ONECHAT_V1` block that ends every card |
+| [`ml/kit/sr_kit.py`](../../ml/kit/sr_kit.py) and the kit parameter files below | The calculation kit (unchanged, v24.15) |
+| The current do-not-open list and `sources/PREGAME_SOURCES_<SPORT>_v24.15.csv` | Where the chat may read (unchanged) |
+
+Assessment: [EVALUATION_PLAN_v25.0.md](EVALUATION_PLAN_v25.0.md). The profile, the lane briefs and the audit supplement described below belong to the five-lane route (EXT-v3). They are retained and are not uploaded for new games.
+
+## Five-lane package (v24.15, retained; takes no new game)
 
 **Current source observation:** [CURRENT_ACCESS.csv](access/CURRENT_ACCESS.csv) selects v24.15-OBS20261116R1. Only 16 touched hosts were freshly checked; all 1,168 other observation/expiry clocks remain unchanged. This is a source-only refresh, not a new statistical profile. For settlement also supply [SETTLEMENT_SOURCES.csv](../source_routes/SETTLEMENT_SOURCES.csv); its hand-reader-only routes must not be bulk-fetched.
 

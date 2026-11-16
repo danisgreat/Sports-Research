@@ -156,3 +156,12 @@ research/source_routes/SETTLEMENT_SOURCES.csv -text
 archive/superseded_2026-11-16-1/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 research/verification/retrospective_2026-11-16-1/** -text
 research/verification/framework_change_2026-11-16-1/** -text
+
+# v25.0 / CR-2026.11.16-R2: keep archived originals and the new registers byte-exact.
+archive/superseded_2026-11-16-2/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+research/verification/framework_change_2026-11-16-2/** -text
+research/one_chat/** -text
+research/deep_loss/** -text
+VERSIONS.csv -text
+research/verification/settlement_import_2026-11-16-1/** -text
+research/verification/combined_rollover_2026-11-16-1/** -text

@@ -185,3 +185,16 @@ def test_learning_counters_and_review_clocks_by_sport_and_competition(tmp_path):
     bad.write_bytes(p.csv_bytes([dict(log.iloc[0], disposition="AUTO_PROMOTE")]))
     with pytest.raises(p.AdmissionError, match="disposition"):
         LS.read_reviews(bad)
+
+
+def test_card_clocks_count_card_games_and_reset_on_a_review_of_the_scope():
+    rows = pd.DataFrame([dict(card=f"P-{i:03d}", date=f"2026-11-{1 + i % 20:02d}", sport="Soccer" if i % 3 else "Tennis",
+                              admission="EXCLUDED" if i == 0 else "OUTCOME_ONLY") for i in range(130) for _ in range(2)])
+    none = pd.DataFrame(columns=LS.REVIEW_FIELDS)
+    t = LS.card_triggers(rows, none).set_index("scope")
+    assert t.loc["ALL", "settled_since_last"] == 129 and t.loc["ALL", "status"] == "DUE" and t.loc["Tennis", "status"] == "NOT_DUE"
+    log = pd.DataFrame([dict(review_id="RV", level="COMPREHENSIVE", scope="ALL", through_at="2026-11-10T00:00:00+00:00",
+                             disposition="NO_CHANGE", report_path="", recorded_at="2026-11-10T00:00:00+00:00")])
+    t = LS.card_triggers(rows, log).set_index("scope")
+    assert t.loc["ALL", "settled_since_last"] == int((rows.drop_duplicates("card").date > "2026-11-10").sum()) - 0
+    assert t.loc["Soccer", "last_review_through"] == "NEVER"

@@ -203,3 +203,7 @@ unique games and disclose repeated contracts, copied sources and mixed methods.
 All 21 match finals from the audited batch are recorded, but three corner-market
 rows remain unresolved and some originals/source lineages remain missing. This
 release does not close those queues or add any games to ASSESS-100 retrospectively.
+
+## Sources that carry prices (STATS-ONLY-v2, CR-2026.11.16-R2)
+
+The stats-only exception also covers data files and bulk history. A file that carries prices beside sporting fields may be used when its access rules allow the reader: the price, odds, tip and prediction fields are dropped as the file is read, only named sporting fields are kept, and the receipt lists the fields kept and dropped. Nothing dropped is read for any forecast or study. Full rule: RULES_REFERENCE, "Stats-only use of sources that carry prices".

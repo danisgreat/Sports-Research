@@ -1,0 +1,7 @@
+check,result
+prefix_exact,PASS
+committed_blob_equals_pre_closure,PASS
+closure_appended_once,PASS
+part11_no_canonical_blocks,PASS
+part11_header_end_marker,PASS
+ids_unchanged,"PASS (highest P-685, next P-686)"

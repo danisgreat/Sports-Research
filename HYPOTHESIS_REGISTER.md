@@ -283,3 +283,7 @@ From the [on-request audit of P-001 to P-685](research/verification/retrospectiv
 | H-PERIOD | Period and corner Overs win more often than Unders at supplied lines | PROPOSED_NOT_TESTED |
 
 The registered FIVE_LANES against SINGLE_RESEARCH assessment (EXT-EVAL-v2) has no eligible game and no longer matches the owner's operation of one chat per game. A replacement cohort (ONE-CHAT-v1, proposal M-1 to M-6) is BLOCKED_DESIGN pending an owner decision; the existing registration stands until then.
+
+## Owner-ordered measured-card cohort - CR-2026.11.16-R2 (ONE-CHAT-v1 / EVAL-ONECHAT-v1)
+
+Owner order, 16 November 2026: implement the audit's recommendations. The BLOCKED_DESIGN note in the CR-2026.11.16-R1 amendment is resolved: [EVALUATION_PLAN_v25.0](research/external/EVALUATION_PLAN_v25.0.md) registers the ONE-CHAT-v1 cohort (first 100 eligible games by settlement; game-mean Brier on supplied lines against 0.25; criterion -0.01 with the interval below zero) before any cohort game. EXT-EVAL-v2 and every earlier registration are preserved and take no new game. H-NODIR, H-BAND, H-AVAIL-CHAT, H-OWN-EVIDENCE, H-SPORT and H-PERIOD are now REGISTERED_FOR_COHORT: their flags and splits are fixed in the plan and in `ml/one_chat.py`, they change no card during the cohort, and their status stays PROPOSED_NOT_TESTED until its assessment. FREEZE-v1 holds until then.

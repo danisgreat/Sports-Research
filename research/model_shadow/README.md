@@ -58,3 +58,7 @@ Every generated file ends with a receipt: run time, repository HEAD, SHA-256 of 
 - No column carrying a price, line movement or market-derived probability (`assert_no_market_columns`; check C-ML-07).
 - No JSON, pickles or notebooks.
 - No hand-edited numbers in generated files. A correction is a re-run with a new receipt, and the earlier file stays in git history.
+
+## Retired from use — 16 November 2026 (CR-2026.11.16-R2)
+
+Owner order of 16 November 2026. The three per-league cycle releases (MLB-CYCLE-4, NHL-CYCLE-6, NBA-CYCLE-4) are RETIRED in the model registry and removed from `research/cycle_releases/CURRENT_RELEASES.csv`: each was stale for the current code and had frozen no game. The 29 per-league `*-r1` workshop folders here are HISTORICAL_DEVELOPMENT and are not the route forward: the owner's rule is one model per sport, judged on held-out competitions (POOLED-v1). They stay in place, unedited, because the generated index and its receipts link to them; nothing reads them for a card. No declared card reference changed.

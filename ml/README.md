@@ -213,3 +213,14 @@ Changed: `ml/reference.py` (LEAGUE-KEY-v2: a league name selects constants only 
 ## Release v24.14 integrity commands
 
 python -m ml external package-check validates the complete upload package. The init/packet/intake/status/review-source/admit commands enforce EXT-v2. append-card performs the lease-held hash-compare mini append; append-research retains nonnumeric work; bind-card binds exact central pricing, learning and ledger evidence. Legacy check/merge is diagnostic only. learning-log readiness reports actual feature evidence. external evaluate uses the verified prospective ledger and exact 100-event/eight-week paired experiment. See ../EXTERNAL_RESEARCH_PROTOCOL_V2.md and ../research/verification/framework_change_2026-11-11-2/IMPLEMENTATION.md. No model is promoted and the frozen cycle/shared reference table are unchanged.
+
+## One chat per game, deep loss register, versions (v25.0)
+
+```text
+python -m ml one-chat intake --drop FOLDER --out research/one_chat/intake/<run>      read the ONECHAT_V1 blocks of an owner drop
+python -m ml one-chat score --intake research/one_chat/intake/* --outcomes OUTCOMES.csv [...] --out research/one_chat/scores/<run> [--on-request | --cohort COHORT.csv]
+python -m ml one-chat template --sport Basketball                                    an empty block with the sport's FACTS rows
+python -m ml deep-loss check | tally                                                 the deep loss register and its pattern tally
+python -m ml learning-status ... --card-rows research/card_training/<run>/ROWS.csv   review clocks counted on card games
+python -m ml state --restamp                                                         print VERSIONS.csv into the prompts and CORE
+```

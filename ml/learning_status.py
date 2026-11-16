@@ -164,6 +164,29 @@ def status(store: ri.Store, *, releases_root=None, bundles_root=None, feedback=(
                 generated_at=(p.clock(now) if now else datetime.now(timezone.utc)).isoformat())
 
 
+CARD_THRESHOLD = 100
+
+
+def card_triggers(card_rows: pd.DataFrame, reviews: pd.DataFrame, threshold: int = CARD_THRESHOLD) -> pd.DataFrame:
+    """Review clocks on the games the cards covered (level CARDS), not on backfilled store results.
+
+    ``card_rows`` is a CARD-TRAIN-v1 ROWS.csv: one row per settled contract with its card, date and sport. A card counts
+    once, on its date, when it has at least one admitted row. Any review of scope ALL (or of the sport) resets the clock.
+    """
+    cards = card_rows[card_rows.admission != "EXCLUDED"].drop_duplicates("card")[["card", "date", "sport"]]
+    out = []
+    for scope in ["ALL", *sorted(cards.sport.unique())]:
+        mine = cards if scope == "ALL" else cards[cards.sport == scope]
+        past = reviews[reviews.scope == scope] if len(reviews) else reviews
+        through = max((p.clock(t) for t in past.through_at), default=None) if len(past) else None
+        since = int(sum(1 for d in mine.date if through is None or str(d) > through.date().isoformat()))
+        out.append(dict(level="CARDS", scope=scope, settled_since_last=since, threshold=int(threshold),
+                        last_review_through=through.isoformat() if through else "NEVER",
+                        status="DUE" if since >= threshold else "NOT_DUE",
+                        reason="settled card games since the last review of this scope; a reminder only (AUDIT-ANYTIME-v1)"))
+    return pd.DataFrame(out)
+
+
 def read_thresholds(path: Path | None):
     if not path:
         return DEFAULT_THRESHOLDS
@@ -199,12 +222,16 @@ def main(argv=None):
     parser.add_argument("--review-log", type=Path)
     parser.add_argument("--thresholds", type=Path)
     parser.add_argument("--alerts", type=Path)
+    parser.add_argument("--card-rows", type=Path, help="a card-training ROWS.csv: adds CARDS clocks counted on card games")
     parser.add_argument("--out", type=Path, help="new folder for LEARNING_STATUS.csv / REVIEW_TRIGGERS.csv / .md")
     args = parser.parse_args(argv)
     res = status(ri.load_store(args.store), releases_root=args.releases_root, bundles_root=args.bundles_root,
                  feedback=args.feedback, shadow_ledger=args.shadow_ledger, outcomes=args.outcomes,
                  reviews=read_reviews(args.review_log), thresholds=read_thresholds(args.thresholds),
                  alerts=read_alerts(args.alerts))
+    if args.card_rows:
+        res["triggers"] = pd.concat([res["triggers"], card_triggers(pd.read_csv(args.card_rows, dtype=str, keep_default_na=False),
+                                                                    read_reviews(args.review_log))], ignore_index=True)
     print(res["status"].to_string(index=False))
     print(res["triggers"].to_string(index=False))
     if args.out:

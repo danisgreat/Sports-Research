@@ -329,3 +329,36 @@ The owner may request a comprehensive audit at any time: the prompt 6 retrospect
 ## Card-record training (CARD-TRAIN-v1, CR-2026.11.15-R4)
 
 Every settled record and game log is ingested, admitted and used in an actual training run: `python -m ml card-training run --out research/card_training/<YYYY-MM-DD-n>`, run by prompt 4 after every import and by prompt 6. Every row is admitted or excluded with a reason; models are fitted walk-forward on earlier weeks only. The run is a study under ML-SEP-v1. See [ML_PIPELINE](ML_PIPELINE.md) §12.
+
+## One chat per game (ONE-CHAT-v1, CR-2026.11.16-R2)
+
+Owner order, 16 November 2026. The measured forecast is the card one research chat writes for one game under the [brief](research/external/ONE_CHAT_BRIEF_v25.0.md). It replaces, for new games, the five-lane external route (EXT-v3) and its unstarted FIVE_LANES against SINGLE_RESEARCH assessment, which never admitted a game; their text and registrations are kept.
+
+- **The block.** Every card ends with one `ONECHAT_V1` block: the header (identity, scheduled start, request, research start and end, the not-started observation, outcome exposure), a PICKS table with a probability for both sides of every supplied line, and a FACTS table of the sport's required pregame figures ([CARD_AND_LOG_TEMPLATES](CARD_AND_LOG_TEMPLATES.md)).
+- **A number or UNPRICED.** A supplied line carries a probability on every side or UNPRICED on every side (one side may be marked LEAN). An unpriced line is retained, never ranked and never scored.
+- **Intake.** `python -m ml one-chat intake` reads the owner's original files, records each file's hash and saved time and admits or refuses each block with its reasons. It never changes a number. Rank is a fixed function of the stated numbers: highest stated probability first, one side per line.
+- **Flags, not rules.** The intake marks NO_DIRECTION, CONTRADICTS_OWN_CENTRE, UNMEASURED_AVAILABILITY_PRICED, PLUS_HANDICAP and NO_RESULT_SOURCE on the favoured side. A flag changes nothing during the cohort (FREEZE-v1); it lets the registered hypotheses be tested.
+- **Comparator.** Computed here at import, never by the chat: the constant 0.5 on supplied lines, and a league base rate where one was frozen before the result.
+- **Timing (TIMING-v3 unchanged).** A card counts when the research began and the not-started observation was made at or before the official first play, with no outcome exposure. The file's saved time is reported; research is never hurried to beat it.
+- **Settlement.** Every row is graded from a permitted result page whose saved capture is recorded by SHA-256; `OUTCOMES.csv` carries the grades. Canonical IDs, byte-exact retention, deep loss reviews and CARD-TRAIN-v1 are unchanged.
+- **Assessment.** [EVALUATION_PLAN_v25.0](research/external/EVALUATION_PLAN_v25.0.md) and [SCORING_AND_VALIDATION](SCORING_AND_VALIDATION.md) §15.
+
+Replaces: CORE §2 "External research lanes (EXT-v3)" as the route for new games, and ASSESS-100 / EXT-EVAL-v2 as the current assessment. Originals: archive/superseded_2026-11-16-2.
+
+## Stats-only use of sources that carry prices (STATS-ONLY-v2, CR-2026.11.16-R2)
+
+Owner instruction, 16 November 2026: a source that includes prices may be used for its data, with the prices stripped. This extends the stats-only exception for pages ([AUDIT_REVIEW_PROTOCOL](AUDIT_REVIEW_PROTOCOL.md)) to data files and bulk history.
+
+1. The source's own access rules still apply to the reader that opens it (SRC-ALT-v3): robots rules, terms and licence are read first; an unread rule is not permission.
+2. Price, odds, implied-probability, line-movement, tip and prediction fields are dropped as the file is read, before any value is stored, computed, cached in the repository or committed. Only named sporting fields are kept (an allow-list, not a block-list).
+3. The receipt lists the fields kept and the fields dropped, with the URL, retrieval time and SHA-256 of the raw body. The raw body stays outside the repository.
+4. No dropped field is read by a person or a model for any forecast, reference, adjustment, baseline or study. The decision lab stays firewalled.
+5. A source whose only content is prices or predictions is still not used.
+
+Replaces: nothing; narrows no earlier rule. SPORTS_ONLY / MARKET_BLIND is unchanged.
+
+## Deep loss register and card review clocks (CR-2026.11.16-R2)
+
+- Each deep loss review (DEEPLOSS-v1) also appends one row to [DEEP_LOSS_REGISTER.csv](research/deep_loss/DEEP_LOSS_REGISTER.csv): the card, the contract, the trigger, the verdict and one failure class from Part B §8, with a printed alias where the review used its own name. `python -m ml deep-loss tally` counts reviews per class; three or more is a pattern routed to prompt 8. The prose review is unchanged.
+- `python -m ml learning-status --card-rows <card-training ROWS.csv>` adds review clocks counted on settled card games (level CARDS). Clocks remain reminders (AUDIT-ANYTIME-v1).
+- Release identities live in [VERSIONS.csv](VERSIONS.csv); `python -m ml state --restamp` prints them into the prompt files and CORE, and `python -m ml state --write` into CURRENT_STATE.

@@ -2,6 +2,7 @@
 
     python -m ml state            print the generated block
     python -m ml state --write    replace the block between the STATE markers in CURRENT_STATE.md
+    python -m ml state --restamp  print VERSIONS.csv into every prompt file and CORE's version line (G-2, CR-2026.11.16-R2)
 
 Every value is read from validated records: the highest canonical ID from the import mappings, the active mini and its
 footer's next local key, the learning-store view and row counts, open local cards and frozen league-day events without a
@@ -17,6 +18,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 STATE = "CURRENT_STATE.md"
+VERSIONS = "VERSIONS.csv"
+VERSION_ITEMS = ("method", "control_revision", "prompt_suite", "scoring", "selection")
+CORE_LINE = re.compile(r"\*\*MDS-[^*\n]*? · CR-[^*\n]*? · P-[^*\n]*? · SCV-[^*\n]*? · SEL-[^*\n]*?\.\*\*")
 BEGIN, END = "<!-- BEGIN GENERATED STATE (python -m ml state --write) -->", "<!-- END GENERATED STATE -->"
 ACTIVE_POINTER = re.compile(r"\| Active local mini \| \[(research/active_minis/[^\]]+\.md)\]")
 
@@ -26,6 +30,45 @@ def _rows(path: Path) -> list[dict]:
         return []
     with open(path, newline="", encoding="utf-8") as fh:
         return list(csv.DictReader(fh))
+
+
+def versions(root=ROOT) -> dict:
+    """The one place the release identities are written (VERSIONS.csv): item, current, previous."""
+    rows = {r["item"]: r for r in _rows(Path(root) / VERSIONS)}
+    if tuple(rows) != VERSION_ITEMS or any(not r["current"] for r in rows.values()):
+        raise ValueError("VERSIONS.csv must list " + ", ".join(VERSION_ITEMS) + " with a current value each")
+    return rows
+
+
+def version_line(root=ROOT) -> str:
+    v = versions(root)
+    return "**" + " · ".join(v[i]["current"] for i in VERSION_ITEMS) + ".**"
+
+
+def restamp(root=ROOT) -> list[str]:
+    """Print the current versions where they are repeated: the suite version in every prompt file and CORE's version line.
+
+    Only the previous suite string named in VERSIONS.csv is replaced, so dated history that cites older versions is kept.
+    """
+    root = Path(root)
+    v = versions(root)
+    changed = []
+    old, new = v["prompt_suite"]["previous"], v["prompt_suite"]["current"]
+    if old and old != new:
+        for path in sorted((root / "research" / "prompts").rglob("*.md")):
+            data = path.read_bytes()
+            if old.encode() in data:
+                path.write_bytes(data.replace(old.encode(), new.encode()))
+                changed.append(path.relative_to(root).as_posix())
+    core = root / "CORE.md"
+    text = core.read_bytes().decode("utf-8")
+    if len(CORE_LINE.findall(text)) != 1:
+        raise ValueError("CORE.md must carry exactly one version line")
+    fresh = CORE_LINE.sub(lambda _: version_line(root), text)
+    if fresh != text:
+        core.write_bytes(fresh.encode("utf-8"))
+        changed.append("CORE.md")
+    return changed
 
 
 def highest_canonical(root=ROOT) -> int:
@@ -90,6 +133,7 @@ def generate(root=ROOT) -> str:
         "",
         "| Item | Value |",
         "|---|---|",
+        f"| Versions (from `{VERSIONS}`) | " + " · ".join(versions(root)[i]["current"] for i in VERSION_ITEMS) + " |",
         f"| Highest canonical ID / next | P-{top:03d} / **P-{top + 1:03d}** (from the import mappings) |",
         f"| Active local mini | `{mini.relative_to(root).as_posix() if mini else 'NONE'}`; last / next local key `{facts['last_key']}` / `{facts['next_key']}` (footer) |",
         f"| Open cards in the active mini | {len(facts['open_cards'])} of {len(facts['cards'])}: " + (", ".join(f"`{c}`" for c in facts["open_cards"]) or "none") + " |",
@@ -134,8 +178,11 @@ def committed_block(root=ROOT) -> str | None:
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--write", action="store_true")
+    parser.add_argument("--restamp", action="store_true", help="print VERSIONS.csv into the prompt files and CORE's version line")
     args = parser.parse_args(argv)
-    if args.write:
+    if args.restamp:
+        print("restamped: " + (", ".join(restamp()) or "nothing to change"))
+    elif args.write:
         print("CURRENT_STATE.md updated" if write() else "CURRENT_STATE.md already current")
     else:
         print(generate())

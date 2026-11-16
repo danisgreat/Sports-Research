@@ -10384,3 +10384,18 @@ No card carried a primary p_card, frozen reference or same-row baseline; BASELIN
 <!-- END RESEARCH ADDENDUM P-685 2026-11-15-settlement -->
 
 <!-- END IMPORT BATCH 2026-11-15 P-660..P-685 OWNER_DROP_2026-11-15 -->
+
+
+<!-- BEGIN COMBINED LOG CLOSURE 2026-11-16-10-to-11 -->
+## Part 10 closure — 2026-11-16T19:19:56+11:00
+
+**CLOSED.** Owner order of 16 November 2026 to implement the audit recommendations, which include this rollover (K-1); prompt 5 (P-2026.11.16-v25.0 · COMBINED_LOG_ROLLOVER), authority LOCAL_WORKING_TREE at main `c1d0403ed9c754758e1e1d96bc256197ce67470d`. Measured before closure: **1,530,426 raw bytes**, **26 canonical originals P-660–P-685**. Trigger: the default 1.5 MB threshold is exceeded. The [import](../research/verification/mini_import_P-660_P-685_2026-11-15-1/CANONICAL_IMPORT_REPORT.md) is complete: 101/101 readback blocks match and every BEGIN/END marker of the batch is balanced.
+
+Pre-closure identity: 1,530,426 bytes, SHA-256 `3d244e69376c761459648a72887cc70e749857e707d41c865dd8a38118bea57b`, equal to the committed blob at `c1d0403ed9c754758e1e1d96bc256197ce67470d`. The complete prefix and every imported core remain byte-for-byte unchanged. Only this closure is appended. [Snapshot, continuity and verification](../research/verification/combined_rollover_2026-11-16-1/README.md).
+
+Highest global canonical ID **P-685**; next **P-686**, unchanged by the rollover; reserved **P-518–P-522** remain reserved. No allocation, forecast, settlement, copied card or model promotion.
+
+Queues carried unchanged at closure: the 50 UNRESOLVED rows of P-660–P-685 and the three P-647 corner rows (sources located on 16 November, SRC-RECOVERY-20261116R1; their settlement revision is written to the successor part), MISSING_ORIGINAL card text for P-657–P-659, unverified final wall-clocks and first-play times, single-lineage results, and every earlier queue at its existing disposition. [Queue continuity](../research/verification/combined_rollover_2026-11-16-1/QUEUE_CONTINUITY.md).
+
+Successor: **[ACTIVE Part 11](PREDICTION_LOG_COMBINED_11.md)**. Future revisions for Part 10 originals append to the active part with original and prior-revision pointers. Resolve live routing from [CURRENT_STATE](../CURRENT_STATE.md). RESEARCH_ONLY / MARKET_BLIND; no qualification change.
+<!-- END COMBINED LOG CLOSURE 2026-11-16-10-to-11 -->
