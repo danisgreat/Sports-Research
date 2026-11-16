@@ -126,6 +126,13 @@ def generate(root=ROOT) -> str:
         stale = "CURRENT_CODE" if _rows(root / r["release_path"])[0]["code_sha256"] == cycle.code_hash() else "STALE_FOR_CURRENT_CODE"
         releases.append(f"{r['active_experimental_release']} ({r['competition']}; {cycle.gate_binding(root / r['release_path'])}; {stale})")
     open_league = league_day_open(root)
+    historical = sorted((root / "research/card_training").glob("*/ROWS.csv"))
+    history_line = "No card-training run recorded"
+    if historical:
+        from ml.evidence_status import historical_summary
+        counts, _, _ = historical_summary(historical[-1].parent)
+        history_line = (f"{counts['historical_cards']} cards; {counts['admitted_contract_rows']} admitted contract rows, "
+                        f"{counts['probability_rows']} with stated p; historical study, not prospective issuance")
     lines = [
         BEGIN,
         "",
@@ -135,6 +142,7 @@ def generate(root=ROOT) -> str:
         "|---|---|",
         f"| Versions (from `{VERSIONS}`) | " + " · ".join(versions(root)[i]["current"] for i in VERSION_ITEMS) + " |",
         f"| Highest canonical ID / next | P-{top:03d} / **P-{top + 1:03d}** (from the import mappings) |",
+        f"| Historical cards used for training | {history_line} |",
         f"| Active local mini | `{mini.relative_to(root).as_posix() if mini else 'NONE'}`; last / next local key `{facts['last_key']}` / `{facts['next_key']}` (footer) |",
         f"| Open cards in the active mini | {len(facts['open_cards'])} of {len(facts['cards'])}: " + (", ".join(f"`{c}`" for c in facts["open_cards"]) or "none") + " |",
         f"| Frozen league-day events without settlement | {len(open_league)}: " + (", ".join(f"`{c}`" for c in open_league) or "none") + " |",

@@ -109,3 +109,90 @@ American Football,starting_qb_confirmed,0/1,at start,Y,1 if the expected startin
 American Football,key_absences,players,at start,Y,Regular starters ruled out or inactive,NFL injury report; RotoWire injuries
 American Football,epa_per_play,EPA per play,season,N,Offensive EPA per play,nflverse; Sumer Sports; rbsdm
 American Football,wind_kph,km/h,at start,N,Forecast wind at an open-air stadium,MET Norway; Visual Crossing
+American Football,venue,text,at start,Y,The verified venue,Sport source list; field-specific captured evidence
+American Football,travel_km,km,since last game,Y,Travel distance with its source and convention,Sport source list; field-specific captured evidence
+American Football,opponent_strength,rating,pregame,Y,Opponent-adjusted strength from a named frozen method,Sport source list; field-specific captured evidence
+American Football,opponent_strength_method,text,pregame,Y,Method and horizon for opponent strength,Sport source list; field-specific captured evidence
+American Football,availability_effect,probability points,pregame,Y,Sourced measured with-and-without availability effect; otherwise MISSING,Sport source list; field-specific captured evidence
+American Football,adjustment_basis,text,pregame,Y,Evidence and counterfactual for the adjustment; otherwise MISSING,Sport source list; field-specific captured evidence
+American Football,last20_score_for_pg,score per game,last 20,Y,Mean score for over 20 completed prior games,Sport source list; field-specific captured evidence
+American Football,last20_score_against_pg,score per game,last 20,Y,Mean score against over 20 completed prior games,Sport source list; field-specific captured evidence
+Australian Rules,venue,text,at start,Y,The verified venue,Sport source list; field-specific captured evidence
+Australian Rules,travel_km,km,since last game,Y,Travel distance with its source and convention,Sport source list; field-specific captured evidence
+Australian Rules,opponent_strength,rating,pregame,Y,Opponent-adjusted strength from a named frozen method,Sport source list; field-specific captured evidence
+Australian Rules,opponent_strength_method,text,pregame,Y,Method and horizon for opponent strength,Sport source list; field-specific captured evidence
+Australian Rules,availability_effect,probability points,pregame,Y,Sourced measured with-and-without availability effect; otherwise MISSING,Sport source list; field-specific captured evidence
+Australian Rules,adjustment_basis,text,pregame,Y,Evidence and counterfactual for the adjustment; otherwise MISSING,Sport source list; field-specific captured evidence
+Australian Rules,last20_score_for_pg,score per game,last 20,Y,Mean score for over 20 completed prior games,Sport source list; field-specific captured evidence
+Australian Rules,last20_score_against_pg,score per game,last 20,Y,Mean score against over 20 completed prior games,Sport source list; field-specific captured evidence
+Baseball,venue,text,at start,Y,The verified venue,Sport source list; field-specific captured evidence
+Baseball,travel_km,km,since last game,Y,Travel distance with its source and convention,Sport source list; field-specific captured evidence
+Baseball,opponent_strength,rating,pregame,Y,Opponent-adjusted strength from a named frozen method,Sport source list; field-specific captured evidence
+Baseball,opponent_strength_method,text,pregame,Y,Method and horizon for opponent strength,Sport source list; field-specific captured evidence
+Baseball,availability_effect,probability points,pregame,Y,Sourced measured with-and-without availability effect; otherwise MISSING,Sport source list; field-specific captured evidence
+Baseball,adjustment_basis,text,pregame,Y,Evidence and counterfactual for the adjustment; otherwise MISSING,Sport source list; field-specific captured evidence
+Baseball,last20_score_for_pg,score per game,last 20,Y,Mean score for over 20 completed prior games,Sport source list; field-specific captured evidence
+Baseball,last20_score_against_pg,score per game,last 20,Y,Mean score against over 20 completed prior games,Sport source list; field-specific captured evidence
+Basketball,venue,text,at start,Y,The verified venue,Sport source list; field-specific captured evidence
+Basketball,travel_km,km,since last game,Y,Travel distance with its source and convention,Sport source list; field-specific captured evidence
+Basketball,opponent_strength,rating,pregame,Y,Opponent-adjusted strength from a named frozen method,Sport source list; field-specific captured evidence
+Basketball,opponent_strength_method,text,pregame,Y,Method and horizon for opponent strength,Sport source list; field-specific captured evidence
+Basketball,availability_effect,probability points,pregame,Y,Sourced measured with-and-without availability effect; otherwise MISSING,Sport source list; field-specific captured evidence
+Basketball,adjustment_basis,text,pregame,Y,Evidence and counterfactual for the adjustment; otherwise MISSING,Sport source list; field-specific captured evidence
+Basketball,last20_score_for_pg,score per game,last 20,Y,Mean score for over 20 completed prior games,Sport source list; field-specific captured evidence
+Basketball,last20_score_against_pg,score per game,last 20,Y,Mean score against over 20 completed prior games,Sport source list; field-specific captured evidence
+Cricket,venue,text,at start,Y,The verified venue,Sport source list; field-specific captured evidence
+Cricket,travel_km,km,since last game,Y,Travel distance with its source and convention,Sport source list; field-specific captured evidence
+Cricket,opponent_strength,rating,pregame,Y,Opponent-adjusted strength from a named frozen method,Sport source list; field-specific captured evidence
+Cricket,opponent_strength_method,text,pregame,Y,Method and horizon for opponent strength,Sport source list; field-specific captured evidence
+Cricket,availability_effect,probability points,pregame,Y,Sourced measured with-and-without availability effect; otherwise MISSING,Sport source list; field-specific captured evidence
+Cricket,adjustment_basis,text,pregame,Y,Evidence and counterfactual for the adjustment; otherwise MISSING,Sport source list; field-specific captured evidence
+Cricket,last10_first_innings_avg,runs,last 10,Y,First-innings average in the same format,Sport source list; field-specific captured evidence
+Cricket,last20_first_innings_avg,runs,last 20,Y,First-innings average in the same format,Sport source list; field-specific captured evidence
+Ice Hockey,venue,text,at start,Y,The verified venue,Sport source list; field-specific captured evidence
+Ice Hockey,travel_km,km,since last game,Y,Travel distance with its source and convention,Sport source list; field-specific captured evidence
+Ice Hockey,opponent_strength,rating,pregame,Y,Opponent-adjusted strength from a named frozen method,Sport source list; field-specific captured evidence
+Ice Hockey,opponent_strength_method,text,pregame,Y,Method and horizon for opponent strength,Sport source list; field-specific captured evidence
+Ice Hockey,availability_effect,probability points,pregame,Y,Sourced measured with-and-without availability effect; otherwise MISSING,Sport source list; field-specific captured evidence
+Ice Hockey,adjustment_basis,text,pregame,Y,Evidence and counterfactual for the adjustment; otherwise MISSING,Sport source list; field-specific captured evidence
+Ice Hockey,last20_score_for_pg,score per game,last 20,Y,Mean score for over 20 completed prior games,Sport source list; field-specific captured evidence
+Ice Hockey,last20_score_against_pg,score per game,last 20,Y,Mean score against over 20 completed prior games,Sport source list; field-specific captured evidence
+Rugby League,venue,text,at start,Y,The verified venue,Sport source list; field-specific captured evidence
+Rugby League,travel_km,km,since last game,Y,Travel distance with its source and convention,Sport source list; field-specific captured evidence
+Rugby League,opponent_strength,rating,pregame,Y,Opponent-adjusted strength from a named frozen method,Sport source list; field-specific captured evidence
+Rugby League,opponent_strength_method,text,pregame,Y,Method and horizon for opponent strength,Sport source list; field-specific captured evidence
+Rugby League,availability_effect,probability points,pregame,Y,Sourced measured with-and-without availability effect; otherwise MISSING,Sport source list; field-specific captured evidence
+Rugby League,adjustment_basis,text,pregame,Y,Evidence and counterfactual for the adjustment; otherwise MISSING,Sport source list; field-specific captured evidence
+Rugby League,last20_score_for_pg,score per game,last 20,Y,Mean score for over 20 completed prior games,Sport source list; field-specific captured evidence
+Rugby League,last20_score_against_pg,score per game,last 20,Y,Mean score against over 20 completed prior games,Sport source list; field-specific captured evidence
+Rugby Union,venue,text,at start,Y,The verified venue,Sport source list; field-specific captured evidence
+Rugby Union,travel_km,km,since last game,Y,Travel distance with its source and convention,Sport source list; field-specific captured evidence
+Rugby Union,opponent_strength,rating,pregame,Y,Opponent-adjusted strength from a named frozen method,Sport source list; field-specific captured evidence
+Rugby Union,opponent_strength_method,text,pregame,Y,Method and horizon for opponent strength,Sport source list; field-specific captured evidence
+Rugby Union,availability_effect,probability points,pregame,Y,Sourced measured with-and-without availability effect; otherwise MISSING,Sport source list; field-specific captured evidence
+Rugby Union,adjustment_basis,text,pregame,Y,Evidence and counterfactual for the adjustment; otherwise MISSING,Sport source list; field-specific captured evidence
+Rugby Union,last20_score_for_pg,score per game,last 20,Y,Mean score for over 20 completed prior games,Sport source list; field-specific captured evidence
+Rugby Union,last20_score_against_pg,score per game,last 20,Y,Mean score against over 20 completed prior games,Sport source list; field-specific captured evidence
+Soccer,venue,text,at start,Y,The verified venue,Sport source list; field-specific captured evidence
+Soccer,travel_km,km,since last game,Y,Travel distance with its source and convention,Sport source list; field-specific captured evidence
+Soccer,opponent_strength,rating,pregame,Y,Opponent-adjusted strength from a named frozen method,Sport source list; field-specific captured evidence
+Soccer,opponent_strength_method,text,pregame,Y,Method and horizon for opponent strength,Sport source list; field-specific captured evidence
+Soccer,availability_effect,probability points,pregame,Y,Sourced measured with-and-without availability effect; otherwise MISSING,Sport source list; field-specific captured evidence
+Soccer,adjustment_basis,text,pregame,Y,Evidence and counterfactual for the adjustment; otherwise MISSING,Sport source list; field-specific captured evidence
+Soccer,last20_score_for_pg,score per game,last 20,Y,Mean score for over 20 completed prior games,Sport source list; field-specific captured evidence
+Soccer,last20_score_against_pg,score per game,last 20,Y,Mean score against over 20 completed prior games,Sport source list; field-specific captured evidence
+TEAM_SPORT,venue,text,at start,Y,The verified venue,Sport source list; field-specific captured evidence
+TEAM_SPORT,travel_km,km,since last game,Y,Travel distance with its source and convention,Sport source list; field-specific captured evidence
+TEAM_SPORT,opponent_strength,rating,pregame,Y,Opponent-adjusted strength from a named frozen method,Sport source list; field-specific captured evidence
+TEAM_SPORT,opponent_strength_method,text,pregame,Y,Method and horizon for opponent strength,Sport source list; field-specific captured evidence
+TEAM_SPORT,availability_effect,probability points,pregame,Y,Sourced measured with-and-without availability effect; otherwise MISSING,Sport source list; field-specific captured evidence
+TEAM_SPORT,adjustment_basis,text,pregame,Y,Evidence and counterfactual for the adjustment; otherwise MISSING,Sport source list; field-specific captured evidence
+TEAM_SPORT,last20_score_for_pg,score per game,last 20,Y,Mean score for over 20 completed prior games,Sport source list; field-specific captured evidence
+TEAM_SPORT,last20_score_against_pg,score per game,last 20,Y,Mean score against over 20 completed prior games,Sport source list; field-specific captured evidence
+Tennis,venue,text,at start,Y,The verified venue,Sport source list; field-specific captured evidence
+Tennis,travel_km,km,since last game,Y,Travel distance with its source and convention,Sport source list; field-specific captured evidence
+Tennis,opponent_strength,rating,pregame,Y,Opponent-adjusted strength from a named frozen method,Sport source list; field-specific captured evidence
+Tennis,opponent_strength_method,text,pregame,Y,Method and horizon for opponent strength,Sport source list; field-specific captured evidence
+Tennis,availability_effect,probability points,pregame,Y,Sourced measured with-and-without availability effect; otherwise MISSING,Sport source list; field-specific captured evidence
+Tennis,adjustment_basis,text,pregame,Y,Evidence and counterfactual for the adjustment; otherwise MISSING,Sport source list; field-specific captured evidence
+Tennis,last20_win_pct,percent,last 20,Y,Match win percentage over 20 completed prior matches,Sport source list; field-specific captured evidence

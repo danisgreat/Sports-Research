@@ -1,7 +1,12 @@
-# One-chat seals, intakes and scores (ONE-CHAT-v2)
+# One-chat requests, forecasts and evidence (v27.0)
 
-- `sealed/` — card files sealed before play by `python -m ml one-chat seal`: each file under its SHA-256 prefix, `SEALS.csv` (card key, block hash, file hash, path, owner-clock time) and `PUSH_RECEIPTS.csv` (GitHub's server push times for main, refreshed with `python -m ml one-chat receipts`). Rows are appended, never edited.
-- `intake/<YYYY-MM-DD-n>/` — one immutable run of `python -m ml one-chat intake` on an owner drop: CARDS.csv, PICKS.csv, FACTS.csv, INTAKE_RECEIPT.csv and MANIFEST.csv (the SHA-256 of each). Commit the folder before scoring.
-- `scores/<YYYY-MM-DD-n>/` — one immutable run of `python -m ml one-chat score`: SUMMARY.csv (the verdict, e-value and lower bound), SEQUENCE.csv (every game in order with d, bet and e-value), COVERAGE.csv (every card with its timing, seal and exclusion), CUSTODY_PROBLEMS.csv, SPORT_EVIDENCE.csv, TABLES.csv and, once, COHORT.csv with COHORT_RECEIPT.csv.
+Read [RUNBOOK](RUNBOOK.md) and [the registered evaluation plan](../external/EVALUATION_PLAN_v27.0.md).
 
-Rules: [RULES_REFERENCE](../../RULES_REFERENCE.md) "Sealing, custody and the anytime test". Plan: [EVALUATION_PLAN_v26.0](../external/EVALUATION_PLAN_v26.0.md). Brief for the chats: [ONE_CHAT_BRIEF_v26.0](../external/ONE_CHAT_BRIEF_v26.0.md). No card had been sealed at release: the sequence starts with the first sealed card.
+- `forecast-seals` is the append-only publication branch for original requests, full contract definitions and exact card blobs. It leaves protected main, HEAD, the user index and unrelated work untouched.
+- Before research use `ml one-chat register-request`. It retains the request's exact source and publishes the request index. `ml one-chat disposition` explicitly accounts for an unsealed request that yields no forecast; it cannot remove a sealed forecast.
+- `ml one-chat seal` publishes the exact original card and request together. Independent GitHub activity, not an editable local receipt, establishes their first server publication.
+- `intake/<run>` holds hash-bound derivatives. Scoring replays their values from the exact published blobs and verifies every registered request/seal is accounted for.
+- `scores/<run>` retains coverage, source/custody problems, current changing-average bounds, the frozen assessed prefix, calibration, proper scores and the secondary first-100 checkpoint.
+- `ml.evidence_status` accounts for every historical card and builds typed research-feature candidates without filling missing historical facts from later pages. It does not relabel historical studies as prospective forecasts.
+
+The old `sealed/PUSH_RECEIPTS.csv` is retained as a documentary mirror. It is not independent proof and cannot override the live server check. No actual game was sealed at the v27 registration.

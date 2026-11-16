@@ -1,6 +1,8 @@
 # Current state
 
-**Current release - MDS-2026.11.16-v26.0 / CR-2026.11.16-R3 / P-2026.11.16-v26.0 / SCV-2026.11.16-v17: ONE-CHAT-v2.** Owner order 16 November 2026: the demonstrated predictive advantage fully implemented. Cards are sealed before play (`ml one-chat seal`: commit, push, GitHub's own push time); scoring uses only committed, hash-checked intakes, outcomes and captures; one game counts once across every intake; whole-number lines are scored given no push; and the verdict comes from an anytime-valid test that can declare the advantage DEMONSTRATED as soon as the evidence is strong enough (e-value 20 with mean advantage at least 0.01, within 400 games). Fixes all six defects found by the independent review of v25.0. [Plan](research/external/EVALUATION_PLAN_v26.0.md), [brief](research/external/ONE_CHAT_BRIEF_v26.0.md), [implementation](research/verification/framework_change_2026-11-16-3/IMPLEMENTATION.md).
+**Current release ? MDS-2026.11.16-v27.0 / CR-2026.11.16-R4 / P-2026.11.16-v27.0 / SCV-2026.11.16-v18: ONE-CHAT-v3.** Original-request contracts and exact published blobs govern admission; GitHub push activity is independently re-verified; data seals use `forecast-seals`; complete request coverage is required. The confidence sequence targets the changing average conditional advantage, and reports a frozen assessed prefix separately from current performance. [Runbook](research/one_chat/RUNBOOK.md), [plan](research/external/EVALUATION_PLAN_v27.0.md), [implementation](research/verification/framework_change_2026-11-16-4/IMPLEMENTATION.md).
+
+**Historical logs are used.** All 685 cards, 3,150 contract rows: 3,082 admitted (1,291 stated probabilities, 1,791 outcome-only), 68 excluded with reasons. Positive historical study comparisons remain reported. [Per-card audit and historical scores](research/verification/framework_change_2026-11-16-4/historical_evidence/REPORT.md). Running new checks after settlement does not backdate a request, probability or publication time. Current prospective status remains `NOT_YET_DEMONSTRATED` because no actual request/card has yet been sealed under this registration. This is not a statement that no historical learning occurred.
 
 **Previous release - MDS-2026.11.16-v25.0 / CR-2026.11.16-R2 / P-2026.11.16-v25.0 / SCV-2026.11.16-v16: ONE-CHAT-v1.** Owner order 16 November 2026: the card one research chat writes for one game is the measured forecast. Each card ends with an `ONECHAT_V1` block (a probability for both sides of every supplied line, timing header, FACTS table); `ml one-chat intake` reads it, `ml one-chat score` measures it against 0.5 on supplied lines; the first 100 eligible games are the registered cohort and FREEZE-v1 holds until they are assessed. Also: STATS-ONLY-v2 (price-carrying sources may be used with the prices stripped), one version file (`VERSIONS.csv`), the deep loss register and card-game review clocks. [Brief](research/external/ONE_CHAT_BRIEF_v25.0.md), [plan](research/external/EVALUATION_PLAN_v25.0.md), [implementation](research/verification/framework_change_2026-11-16-2/IMPLEMENTATION.md).
 
@@ -24,8 +26,9 @@
 
 | Item | Value |
 |---|---|
-| Versions (from `VERSIONS.csv`) | MDS-2026.11.16-v26.0 · CR-2026.11.16-R3 · P-2026.11.16-v26.0 · SCV-2026.11.16-v17 · SEL-2026.10.22-v4 |
+| Versions (from `VERSIONS.csv`) | MDS-2026.11.16-v27.0 · CR-2026.11.16-R4 · P-2026.11.16-v27.0 · SCV-2026.11.16-v18 · SEL-2026.10.22-v4 |
 | Highest canonical ID / next | P-685 / **P-686** (from the import mappings) |
+| Historical cards used for training | 685 cards; 3082 admitted contract rows, 1291 with stated p; historical study, not prospective issuance |
 | Active local mini | `NONE`; last / next local key `NONE` / `NONE` (footer) |
 | Open cards in the active mini | 0 of 0: none |
 | Frozen league-day events without settlement | 0: none |

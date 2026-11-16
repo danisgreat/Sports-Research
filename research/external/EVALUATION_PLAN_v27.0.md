@@ -1,0 +1,37 @@
+# Prospective evidence: ONE-CHAT-v3 / SCV-v18
+
+Registration takes effect at its first independently verified GitHub publication on main, under the owner's instruction to implement the repository review accurately. Replaces v26.0 before any real sealed game. Original registrations and historical forecasts remain unchanged. Every seal binds this plan's exact hash and published commit; a forecast cannot precede its evaluation registration. This registers an evaluation, not a successful result.
+
+## Population and immutable inputs
+
+The forecast is the original card's probabilities on the owner's supplied contracts, conditional on a decisive result where a push is possible. The primary comparator is exactly 0.5 on supplied two-way lined contracts. A league sporting-data-only comparator is reported on the identical rows only where its probability, recipe and provenance were frozen in the original request's CONTRACTS.csv. Missing comparators remain missing.
+
+Before research, register the unchanged owner request, namespaced native event identity, official schedule URL, UTC-aware start, and every contract's label, family, side, line, period, endpoint, action, unit and exact original request excerpt. Publication on `forecast-seals` freezes the request independently of the code branch. A request change needs a new key; retain and report the previous request. Unpriced, unsealed, late, outcome-exposed, unresolved and excluded requests remain in the census.
+
+Seal the original ONECHAT_V1 card before first play. Its exact Git blob, original request, contract definitions and metadata must coexist in a commit whose publication time is independently fetched from GitHub's activity API. A client clock or editable receipt mirror is insufficient. Card numbers and research facts are replayed from that blob; committing a changed derivative and regenerating hashes never changes the forecast of record. Every registered request and sealed game must be accounted for in the supplied intake set.
+
+Results require the frozen native event identity, terminal grades for every row, saved result capture and hash, plus a separately identified official first-play capture, hash and exact excerpt. These checks establish identity and byte custody; source truth and interpretation still require the documented settlement review. Hashes alone do not verify sporting truth. An earlier unresolved candidate holds back later games in scheduled-start order. One event counts once across all intakes and aliases. Doubleheaders have distinct native identities and UTC starts.
+
+## Statistical target and decision
+
+For each eligible game, d = 0.25 minus its mean decisive-row Brier score. Its range is [-0.75, 0.25]. The target at game n is the average conditional expected advantage through n, allowing different conditional means over time. The card protocol and selection policy remain frozen.
+
+The lower confidence sequence uses the predictable empirical-Bernstein construction in Howard et al., *Time-uniform, nonparametric, nonasymptotic confidence sequences*, Theorem 4 and Appendix A.8: https://arxiv.org/abs/1810.08240. For X=d+0.75, use a predictable running forecast of X shrunk with one pseudo-observation at 0.75. The variance proxy is the cumulative squared prediction error. Mix equally over the fixed lambdas (0.05, 0.1, 0.2, 0.35, 0.5, 0.65, 0.8, 0.9), with psi(lambda)=-log(1-lambda)-lambda. Invert the current mixture, not its historical maximum, to bound the current average conditional mean. No constant-mean assumption or running intersection of bounds for different means is imposed.
+
+- Alpha: 0.05. Practical observed mean threshold: 0.01. Decision horizon: 400 games.
+- `DEMONSTRATED`: a registered prefix within 400 games crosses mixture evidence 20 while its observed mean d is at least 0.01. Freeze that assessed prefix and report its own mean and lower bound. This is evidence on that prefix; it does not promise persistent future performance.
+- `NOT_YET_DEMONSTRATED`: the sequence has fewer than 400 games and has not crossed.
+- `NOT_DEMONSTRATED`: no crossing in the first 400 games.
+- `NOT_ASSESSABLE`: any input, original-request, custody, complete-sequence or identity check failed.
+
+Continue reporting the current mean and current lower bound separately after a crossing. A past positive bound is never reused for a deteriorating current average. Per-sport inference uses alpha/11 on the fixed eleven sport sections. A new sport section or any changed statistical constant requires a new registration. Simulations validate implementation; they are not evidence of real predictive success.
+
+The first 100 eligible games are a secondary descriptive checkpoint, available immediately without any week/calendar minimum. Freeze exactly the actual first 100 with a hash receipt; later scoring verifies membership and reuses that file. Its t interval is descriptive and assumes independent games. It is not the sequential verdict.
+
+Report calibration, log loss, Brier, coverage/abstention, contract family, sport, ranking and missing-comparator counts. Historical hypothesis flags remain exploratory and do not change a card. No model, recalibration, rule or hypothesis is promoted merely because a subgroup appears favourable.
+
+## Historical evidence is retained
+
+All 685 historical cards are used by CARD-TRAIN-v1 and itemised by `ml.evidence_status`. Their original cohorts and probabilities remain intact. Historical studies with positive comparisons are reported as such. New validators applied after results cannot establish that newer rules, requested lines or numbers were frozen before those results. Such records cannot be inserted into this new registration by relabelling them. Recoverable original custody may support a separately declared historical audit, with its original method and limits.
+
+No genuine game had been registered/sealed under this plan at release. Current prospective status: `NOT_YET_DEMONSTRATED`.

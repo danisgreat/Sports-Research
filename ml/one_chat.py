@@ -1,28 +1,16 @@
-"""One chat per game: the chat's own card as the measured forecast (ONE-CHAT-v2, CR-2026.11.16-R3).
+"""ONE-CHAT-v3: original requests, exact published blobs and current-average inference.
 
-    python -m ml one-chat intake --drop FOLDER --out NEW_FOLDER             read every card file in an owner drop
-    python -m ml one-chat seal --card FILE [FILE ...] [--no-push]           seal cards in git before the game
-    python -m ml one-chat receipts                                          mirror GitHub's server push times
-    python -m ml one-chat score --intake FOLDER [...] --outcomes OUTCOMES.csv [...] --out NEW_FOLDER
-                                [--captures DIR] [--cohort COHORT.csv] [--baseline BASELINE.csv] [--on-request]
-    python -m ml one-chat history --rows research/card_training/<run>/ROWS.csv --out NEW_FOLDER
-    python -m ml one-chat template --sport Basketball                       print an empty block for a chat to fill
+Use research/one_chat/RUNBOOK.md for the active operator flow. Code changes
+use protected main; only immutable request/card data publish on forecast-seals.
+The evaluator re-fetches server activity, replays imported values from exact
+published blobs, accounts for the complete request population and re-hashes
+settlement/first-play captures. Historical studies never become new forecasts
+merely because they pass a later validator.
 
-The owner runs one research chat per game. Each card ends with one ``ONECHAT_V1`` block: header clocks, a PICKS table
-with a probability for both sides of every supplied line, and a FACTS table of the pregame figures the research found.
-
-Custody (v26.0). ``seal`` copies the card file into ``research/one_chat/sealed/``, commits it and pushes it to
-``origin/main``, then records GitHub's own server time for that push. A card counts for the assessment only if its exact
-block was sealed by a push that GitHub timestamped at or before the official first play. Every input to ``score`` (the
-intakes, the outcome files and the sealed cards) must be committed and unchanged, and every settled grade must point to a
-saved result capture whose SHA-256 is re-checked. Nothing here changes a card or a number.
-
-Predictive advantage (EVAL-ONECHAT-v2). For each eligible game the advantage is d = 0.25 - (mean Brier score of the card's
-numbers on its supplied lines), so d > 0 means the card beat a constant 0.5. Games enter one fixed sequence ordered by
-scheduled start. An anytime-valid test (a betting e-process; Ville's inequality) is updated game by game: advantage is
-DEMONSTRATED the first time the e-value against "mean d <= 0" reaches 20 (5% error, whenever it is checked) while the
-running mean d is at least 0.01. It is NOT_DEMONSTRATED if 400 games pass without that. The 95% anytime-valid lower bound
-on mean d is printed with every run. The first 100 games are also frozen for a fixed-sample t interval (secondary).
+The primary confidence sequence targets the average conditional advantage
+through the current game and allows drift. A successful assessed prefix and
+continuing performance are reported separately. The first 100 are a secondary,
+calendar-free descriptive checkpoint. See EVALUATION_PLAN_v27.0.md.
 """
 from __future__ import annotations
 
@@ -35,14 +23,17 @@ import math
 import re
 import subprocess
 import time
+import os
+import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
 
 from ml import picks as P
 from ml import timing as T
+from ml import forecast_integrity as F
 
 ROOT = Path(__file__).resolve().parents[1]
-RULE = "ONE-CHAT-v2"
+RULE = "ONE-CHAT-v3"
 FORMAT = "ONECHAT_V1"
 DICTIONARY = "research/learning_log/FEATURE_DICTIONARY.csv"
 BLOCK = re.compile(r"<!-- BEGIN ONECHAT_V1 (?P<key>[^\s>]+) -->\s*\n(?P<body>.*?)\n\s*<!-- END ONECHAT_V1 (?P=key) -->", re.S)
@@ -65,6 +56,8 @@ D_LOW, D_HIGH = -0.75, 0.25  # bounds of d = 0.25 - Brier
 BET_CAP = 0.75              # fraction of the largest safe bet (simulated: about 1% false alarms on a mean-zero null)
 PRIOR_VAR = 0.0625          # prior variance of d for the first bets
 SPORT_SECTIONS = 11         # sport sections of prompt 1: per-sport claims use 1 / (ALPHA / 11)
+SUPPORTED_SPORTS = ("Baseball","Basketball","Cricket","Soccer","Ice Hockey","Tennis","American Football",
+                    "Australian Rules","Rugby League","Rugby Union","Other Sports")
 COHORT_SIZE = 100
 CRITERION = -0.01           # secondary fixed-100 test: mean Brier minus 0.25 at or below this, interval below zero
 
@@ -77,14 +70,19 @@ ROW_FIELDS = ("card_key", "game_id", "label", "family", "side", "line", "p", "le
 FACT_FIELDS = ("card_key", "game_id") + FACT_COLUMNS + ("status",)
 INTAKE_FILES = ("CARDS.csv", "PICKS.csv", "FACTS.csv", "INTAKE_RECEIPT.csv")
 OUTCOME_FIELDS = ("card_key", "label", "side", "grade", "event_id", "actual_start", "settled_at", "final_source",
-                  "final_capture_sha256", "final_capture_path")
+                  "final_capture_sha256", "final_capture_path", "first_play_source", "first_play_capture_path",
+                  "first_play_capture_sha256", "first_play_excerpt")
 
 SEALED = "research/one_chat/sealed"
 SEALS = SEALED + "/SEALS.csv"
-SEAL_FIELDS = ("card_key", "block_sha256", "file_sha256", "sealed_path", "sealed_at_client")
+SEAL_FIELDS = ("card_key", "block_sha256", "file_sha256", "sealed_path", "sealed_at_client", "policy_sha256", "policy_commit")
+PLAN = "research/external/EVALUATION_PLAN_v27.0.md"
 RECEIPTS = SEALED + "/PUSH_RECEIPTS.csv"
 RECEIPT_FIELDS = ("before", "after", "pushed_at_server", "ref", "source", "retrieved_at")
 SCORES = "research/one_chat/scores"
+SEAL_BRANCH = "forecast-seals"
+REQUEST_INDEX = "research/one_chat/REQUEST_INDEX.csv"
+DISPOSITIONS = "research/one_chat/REQUEST_DISPOSITIONS.csv"
 ELIGIBLE = "SEALED_PRE_START_SERVER"
 
 
@@ -119,7 +117,7 @@ def _slug(text: str) -> str:
 
 def game_id(meta: dict) -> str:
     """One identity per game, whichever chat carded it: sport, competition, the two sides and the start date as written."""
-    day = meta["scheduled_start"][:10]
+    day = T.clock(meta["scheduled_start"], "scheduled_start").astimezone(timezone.utc).isoformat()
     return "GAME-" + sha("\x1f".join((_slug(meta["sport"]), _slug(meta["competition"]), _slug(meta["home"]), _slug(meta["away"]), day)).encode())[:12].upper()
 
 
@@ -175,6 +173,8 @@ def _number(value: str):
 def check(meta: dict, picks: list[dict], facts: list[dict], key: str, root=ROOT) -> tuple[list[str], dict]:
     """Problems refuse the card's numbers; ``derived`` carries favoured sides, ranks and flags for an admitted card."""
     problems = [f"header: missing {f}" for f in HEADER if not meta.get(f)]
+    if meta.get("sport") not in SUPPORTED_SPORTS:
+        problems.append("header: use one of the eleven registered sport sections")
     if meta.get("format") != FORMAT:
         problems.append(f"header: format must be {FORMAT}")
     if meta.get("card_key") != key:
@@ -427,39 +427,133 @@ class Repo:
     """One read of the repository's custody state for a whole run: tracked and changed files, what origin/main holds,
     GitHub's first server push time for every commit, and every sealed file's first commit."""
 
-    def __init__(self, root=ROOT):
+    def __init__(self, root=ROOT, lookup=None):
         self.root = Path(root)
         self.tracked = set(_git(self.root, "ls-files", "-z", check=False).stdout.split("\0")) - {""}
         self.changed = set(_git(self.root, "diff", "--name-only", "-z", "HEAD", check=False).stdout.split("\0")) - {""}
         up = _git(self.root, "rev-parse", "--verify", "-q", "refs/remotes/origin/main", check=False).stdout.strip()
-        self.upstream = set(_git(self.root, "rev-list", up, check=False).stdout.split()) if up else set()
+        seal_ref = _git(self.root, "rev-parse", "--verify", "-q", f"refs/remotes/origin/{SEAL_BRANCH}", check=False).stdout.strip()
+        self.seal_ref = seal_ref
+        self.upstream = set(_git(self.root, "rev-list", *[r for r in (up, seal_ref) if r], check=False).stdout.split()) if up or seal_ref else set()
         path = self.root / RECEIPTS
-        self.receipts = sorted(((T.clock(r["pushed_at_server"], "pushed_at_server"), r) for r in (read_csv(path) if path.exists() else [])),
+        # A locally edited mirror is never independent timestamp evidence.
+        self.live_receipts = (lookup or github_push_activity)(self.root)
+        self.receipts = sorted(((T.clock(r["pushed_at_server"], "pushed_at_server"), r) for r in self.live_receipts
+                                if r.get("ref") in ("refs/heads/main", f"refs/heads/{SEAL_BRANCH}")),
                                key=lambda x: x[0])
         self._pushed = {}
+        self._ancestry = {}
+        self._blob_cache = {}
+        self._reader = None
+        self._content_commits = {}
+        raw_log = _git(self.root,"log","--all","--reverse","--format=@%H","--raw","--no-abbrev","--",SEALED,F.REQUEST_ROOT,PLAN,check=False).stdout
+        current = ""
+        for ln in raw_log.splitlines():
+            if ln.startswith("@"):
+                current = ln[1:]
+            elif ln.startswith(":") and "\t" in ln:
+                info,name=ln.split("\t",1)
+                self._content_commits.setdefault((name,info.split()[3]),[]).append(current)
         self.added = {}
-        log = _git(self.root, "log", "--diff-filter=A", "--format=@%H %cI", "--name-only", "--", SEALED, check=False).stdout
+        log = _git(self.root, "log", "--all", "--diff-filter=A", "--format=@%H %cI", "--name-only", "--", SEALED, check=False).stdout
         commit = None
         for line in log.splitlines():
             if line.startswith("@"):
                 commit = line[1:].split()
             elif line.strip() and commit:
                 self.added[line.strip()] = (commit[0], commit[1])     # log is newest first: the last write is the first add
-        self.seals = read_csv(self.root / SEALS) if (self.root / SEALS).exists() else []
+        self.seals = []
+        for ref in (seal_ref, "HEAD"):
+            raw = self.blob(ref, SEALS) if ref else None
+            if raw:
+                self.seals += F.rows(raw)
+        pending = request_staging(self.root) / "PENDING.csv"
+        if pending.exists():
+            self.seals += read_csv(pending)
+        unique = {}
+        for r in self.seals:
+            unique[(r["card_key"], r["block_sha256"], r["sealed_path"])] = r
+        self.seals = list(unique.values())
+        raw_requests = self.blob(seal_ref, REQUEST_INDEX) if seal_ref else None
+        self.requests = F.rows(raw_requests) if raw_requests else []
+        raw_dispositions=self.blob(seal_ref,DISPOSITIONS) if seal_ref else None
+        self.dispositions=F.rows(raw_dispositions) if raw_dispositions else []
+        self.registry_problems = []
+        for (path,oid),commits in self._content_commits.items():
+            if path==SEALS:
+                for c in commits:
+                    if c in self.upstream:
+                        earlier=self.blob(c,SEALS)
+                        latest=self.blob(seal_ref,SEALS) if seal_ref else None
+                        if earlier and latest and any(r not in F.rows(latest) for r in F.rows(earlier)):
+                            self.registry_problems.append("Published seal registry was rewritten or omitted earlier records")
+                            break
 
     def committed(self, path) -> bool:
         rel = _rel(path, self.root)
-        return rel is not None and rel in self.tracked and rel not in self.changed
+        return rel is not None and Path(path).is_file() and self.blob("HEAD", rel) == Path(path).read_bytes()
+
+    def blob(self, commit, path):
+        key=(commit,path)
+        if key not in self._blob_cache:
+            if any(x in commit+path for x in ("\n","\r","\0")):
+                raise OneChatError("invalid git object path")
+            if self._reader is None:
+                self._reader=subprocess.Popen(["git","-C",str(self.root),"cat-file","--batch"],stdin=subprocess.PIPE,stdout=subprocess.PIPE)
+            self._reader.stdin.write(f"{commit}:{path}\n".encode())
+            self._reader.stdin.flush()
+            header=self._reader.stdout.readline().decode().strip().split()
+            if header[-1:] == ["missing"]:
+                raw=None
+            elif len(header)==3 and header[1]=="blob":
+                raw=self._reader.stdout.read(int(header[2]))
+                self._reader.stdout.read(1)
+            else:
+                raise OneChatError("invalid blob response from git")
+            self._blob_cache[key]=raw
+        return self._blob_cache[key]
+
+    def __del__(self):
+        reader=getattr(self,"_reader",None)
+        if reader is not None:
+            try:
+                reader.stdin.close()
+                reader.stdout.close()
+                reader.wait(timeout=1)
+            except (OSError,subprocess.TimeoutExpired):
+                reader.kill()
+
+    def first_content(self, path, digest):
+        ref=self.seal_ref or "HEAD"
+        raw=self.blob(ref,path)
+        if path==PLAN:
+            raw=self.blob("refs/remotes/origin/main",path)
+        if raw is None or sha(raw)!=digest:
+            # Pending, not-yet-pushed objects are still reportable, never eligible.
+            refs=_git(self.root,"for-each-ref","--format=%(objectname)","refs/forecast-pending",check=False).stdout.split()
+            raw=next((self.blob(c,path) for c in refs if self.blob(c,path) is not None and sha(self.blob(c,path))==digest),None)
+        if raw is None:
+            return ""
+        oid=hashlib.sha1(b"blob "+str(len(raw)).encode()+b"\0"+raw).hexdigest()
+        commits=self._content_commits.get((path,oid),[])
+        unpublished = ""
+        for commit in commits:
+            raw = self.blob(commit, path)
+            if raw is not None and sha(raw) == digest:
+                if commit in self.upstream:
+                    return commit
+                unpublished = unpublished or commit
+        return unpublished
 
     def pushed_at(self, commit: str, committed_at: str = "") -> str:
         """GitHub's time of the first push to main that carried the commit. Pushes more than a day before the commit's own
         (client) time are skipped for speed: a client clock set late can only make the found push later, never earlier."""
         if commit not in self._pushed:
-            made = committed_at or _git(self.root, "show", "-s", "--format=%cI", commit, check=False).stdout.strip()
-            floor = T.clock(made, "committed_at").timestamp() - 86400 if made else float("-inf")
             found = ""
             for when, r in self.receipts:
-                if when.timestamp() >= floor and _git(self.root, "merge-base", "--is-ancestor", commit, r["after"], check=False).returncode == 0:
+                if r["after"] not in self._ancestry:
+                    self._ancestry[r["after"]]=set(_git(self.root,"rev-list",r["after"],check=False).stdout.split())
+                if commit in self._ancestry[r["after"]]:
                     found = r["pushed_at_server"]
                     break
             self._pushed[commit] = found
@@ -501,7 +595,7 @@ def github_push_activity(root=ROOT) -> list[dict]:
     slug = _remote_slug(root)
     if not slug:
         return []
-    res = subprocess.run(["gh", "api", "--paginate", f"repos/{slug}/activity?activity_type=push&ref=refs/heads/main&per_page=100",
+    res = subprocess.run(["gh", "api", "--paginate", f"repos/{slug}/activity?activity_type=push&per_page=100",
                           "--jq", '.[] | select(.activity_type == "push") | [.before, .after, .timestamp, .ref] | @tsv'],
                          capture_output=True, text=True)
     if res.returncode:
@@ -509,7 +603,7 @@ def github_push_activity(root=ROOT) -> list[dict]:
     out = []
     for line in res.stdout.splitlines():
         parts = line.split("\t")
-        if len(parts) == 4:
+        if len(parts) == 4 and parts[3] in ("refs/heads/main", f"refs/heads/{SEAL_BRANCH}"):
             out.append(dict(before=parts[0], after=parts[1], pushed_at_server=parts[2], ref=parts[3]))
     return out
 
@@ -517,6 +611,7 @@ def github_push_activity(root=ROOT) -> list[dict]:
 def record_receipts(root=ROOT, lookup=None) -> int:
     """Append any push activity not yet recorded to PUSH_RECEIPTS.csv. Returns the number added."""
     root = Path(root)
+    _git(root,"fetch","-q","origin",SEAL_BRANCH,check=False)
     path = root / RECEIPTS
     have = {(r["after"], r["pushed_at_server"]) for r in read_csv(path)} if path.exists() else set()
     found = (lookup or github_push_activity)(root)
@@ -534,61 +629,139 @@ def record_receipts(root=ROOT, lookup=None) -> int:
     return len(new)
 
 
+def request_staging(root):
+    rel = _git(root, "rev-parse", "--git-path", "forecast-staging").stdout.strip()
+    path = Path(rel)
+    return path if path.is_absolute() else Path(root) / path
+
+
+def publish_seal_tree(root, payload, push=True):
+    """Only declared data blobs are published; HEAD, the index and main are untouched."""
+    _git(root, "fetch", "-q", "origin", SEAL_BRANCH, check=False)
+    ref = f"refs/remotes/origin/{SEAL_BRANCH}"
+    base = _git(root, "rev-parse", "--verify", "-q", ref, check=False).stdout.strip()
+    if not base:
+        base = _git(root, "rev-parse", "refs/remotes/origin/main").stdout.strip()
+    with tempfile.TemporaryDirectory(prefix="forecast-index-") as temp:
+        env = dict(os.environ, GIT_INDEX_FILE=str(Path(temp) / "index"))
+        def run(*args, data=None):
+            r = subprocess.run(["git", "-C", str(root), *args], input=data, capture_output=True, env=env)
+            if r.returncode:
+                raise OneChatError(r.stderr.decode(errors="replace"))
+            return r.stdout.decode().strip()
+        run("read-tree", base)
+        reader = Repo(root)
+        sources=[]
+        for i,(name, raw) in enumerate(payload.items()):
+            old = reader.blob(base,name)
+            if old is not None and old != raw and name not in (SEALS, REQUEST_INDEX,DISPOSITIONS):
+                raise OneChatError("published request/card blobs are immutable: " + name)
+            if old is not None and name in (SEALS,REQUEST_INDEX,DISPOSITIONS) and any(r not in F.rows(raw) for r in F.rows(old)):
+                raise OneChatError("publication would drop or alter an earlier registry entry; refresh and retry")
+            file=Path(temp)/f"blob-{i}"
+            file.write_bytes(raw)
+            sources.append(file.as_posix())
+        blobs=run("hash-object","-w","--stdin-paths",data=("\n".join(sources)+"\n").encode()).splitlines()
+        entries="".join(f"100644 {blob}\t{name}\n" for blob,name in zip(blobs,payload))
+        run("update-index","--index-info",data=entries.encode())
+        tree = run("write-tree")
+        commit = run("commit-tree", tree, "-p", base, "-m", f"Publish immutable forecast data ({RULE})")
+    _git(root, "update-ref", f"refs/forecast-pending/{commit}", commit)
+    if push:
+        result = _git(root, "push", "origin", f"{commit}:refs/heads/{SEAL_BRANCH}", check=False)
+        if result.returncode:
+            raise OneChatError("seal push refused; no force or main push attempted: " + result.stderr.strip())
+        _git(root, "fetch", "-q", "origin", SEAL_BRANCH)
+    return commit
+
+
+def publish_request(key, root=ROOT):
+    folder = request_staging(root) / F.request_path(key)
+    payload = {F.request_path(key)+"/"+name:(folder/name).read_bytes() for name in (*F.REQUEST_FILES,"MANIFEST.csv")}
+    repo = Repo(root)
+    event = F.rows(payload[F.request_path(key)+"/EVENT.csv"])[0]
+    index = repo.requests
+    row = dict(card_key=key, event_id=event["event_id"], sport=event["sport"],competition=event["competition"],scheduled_start=event["scheduled_start"],
+               request_sha256=sha(payload[F.request_path(key)+"/REQUEST.txt"]), status="REQUESTED")
+    if any(r["card_key"]==key and r!=row for r in index):
+        raise OneChatError("request identity already registered")
+    if row not in index:
+        index.append(row)
+    payload[REQUEST_INDEX] = csv_bytes(tuple(row),index)
+    return publish_seal_tree(root,payload)
+
+
+def request_disposition(key,status,reason,root=ROOT):
+    repo=Repo(root)
+    if key not in {r["card_key"] for r in repo.requests} or not reason.strip():
+        raise OneChatError("a registered request and an explicit disposition reason are required")
+    if key in {r["card_key"] for r in repo.seals}:
+        raise OneChatError("a sealed forecast cannot be removed by a request disposition; intake and settle it")
+    row=dict(card_key=key,status=status,reason=reason)
+    if any(r["card_key"]==key and r!=row for r in repo.dispositions):
+        raise OneChatError("an earlier terminal request disposition is immutable")
+    rows=repo.dispositions if row in repo.dispositions else repo.dispositions+[row]
+    return publish_seal_tree(root,{DISPOSITIONS:csv_bytes(tuple(row),rows)})
+
+
 def seal(files, root=ROOT, *, push=True, lookup=None, wait=(0, 3, 6, 12)) -> dict:
-    """Copy whole card files into the repository, commit them, push to origin/main and record GitHub's push time."""
+    """Publish exact card and original-request blobs on the data-only branch."""
     root = Path(root)
-    seals_path = root / SEALS
-    existing = {r["file_sha256"] for r in read_csv(seals_path)} if seals_path.exists() else set()
-    rows, paths, refused = [], [], []
-    for f in map(Path, files):
-        data = f.read_bytes()
-        blocks = card_blocks(data.decode("utf-8", errors="replace"), root)
-        bad = [f"{k}: {' | '.join(p)}" for k, _, _, _, _, p, _ in blocks if p]
-        if not blocks or bad:
-            refused.append(f"{f.name}: " + ("; ".join(bad) if bad else "no ONECHAT_V1 block"))
-            continue
-        digest = sha(data)
+    repo = Repo(root, lookup=lookup)
+    existing = {r["file_sha256"] for r in repo.seals}
+    rows, payload = [], {}
+    old = {r["block_sha256"]: r for r in repo.seals}
+    plan=repo.blob("refs/remotes/origin/main",PLAN)
+    if plan is None:
+        raise OneChatError("publish the current evaluation registration on main before sealing forecasts")
+    policy_commit=repo.first_content(PLAN,sha(plan))
+    policy_time=repo.pushed_at(policy_commit) if policy_commit else ""
+    if not policy_time:
+        raise OneChatError("current registration has no independently verified main publication time")
+    for file in map(Path, files):
+        raw = file.read_bytes()
+        blocks = card_blocks(raw.decode("utf-8"), root)
+        if not blocks or any(x[5] for x in blocks):
+            raise OneChatError("not sealed: incomplete or invalid card")
+        digest = sha(raw)
         if digest in existing:
             continue
-        dest = root / SEALED / f"{digest[:16]}{f.suffix.lower() or '.md'}"
-        dest.parent.mkdir(parents=True, exist_ok=True)
-        dest.write_bytes(data)
-        existing.add(digest)
-        paths.append(dest)
-        rows += [dict(card_key=k, block_sha256=b, file_sha256=digest, sealed_path=_rel(dest, root), sealed_at_client=_now())
-                 for k, b, *_ in blocks]
-    if refused:
-        for p in paths:
-            p.unlink()
-        raise OneChatError("not sealed (fix and re-run): " + " || ".join(refused))
+        path = f"{SEALED}/{digest}.md"
+        payload[path] = raw
+        for key, block_sha, meta, pk, fc, problems, derived in blocks:
+            if any(r["card_key"]==key and r["block_sha256"]!=block_sha for r in repo.seals):
+                raise OneChatError(key+": an earlier forecast is already sealed; never replace its block")
+            folder = request_staging(root) / F.request_path(key)
+            if not folder.exists():
+                folder = root / F.request_path(key)
+            request = {name: (folder / name).read_bytes() for name in (*F.REQUEST_FILES, "MANIFEST.csv") if (folder / name).exists()}
+            if len(request) != 4:
+                raise OneChatError(f"{key}: register the unchanged original request and contract definitions before sealing")
+            problems = F.request_problems(request, meta, pk)
+            if problems:
+                raise OneChatError("not sealed: " + " | ".join(problems))
+            for name, data in request.items():
+                payload[F.request_path(key) + "/" + name] = data
+            if block_sha not in old:
+                rows.append(dict(card_key=key, block_sha256=block_sha, file_sha256=digest,
+                                 sealed_path=path, sealed_at_client=_now(),policy_sha256=sha(plan),policy_commit=policy_commit))
     if not rows:
         return dict(sealed=0, commit="", pushed=False, server_time="", note="nothing new to seal")
-    data = seals_path.read_bytes() if seals_path.exists() else b""
-    body = csv_bytes(SEAL_FIELDS, rows)
-    seals_path.write_bytes(data + (body.split(b"\n", 1)[1] if data else body))
-    rels = [_rel(p, root) for p in paths] + [SEALS]
-    _git(root, "add", "--", *rels)
-    _git(root, "commit", "-q", "-m", f"Seal {len(rows)} one-chat card block(s) before play ({RULE})", "--", *rels)
-    commit = _git(root, "rev-parse", "HEAD").stdout.strip()
-    result = dict(sealed=len(rows), commit=commit, pushed=False, server_time="")
-    if not push:
-        return result
-    res = _git(root, "push", "origin", "HEAD:main", check=False)
-    if res.returncode:
-        result["note"] = "push failed; the cards are committed locally but have no server time: " + res.stderr.strip()[:200]
-        return result
-    result["pushed"] = True
-    for delay in wait:
-        time.sleep(delay)
-        record_receipts(root, lookup)
-        t = server_time(root, commit)
-        if t:
-            result["server_time"] = t
-            break
-    if (root / RECEIPTS).exists() and not Repo(root).committed(root / RECEIPTS):
-        _git(root, "add", "--", RECEIPTS)
-        _git(root, "commit", "-q", "-m", "Record GitHub push times for sealed cards", "--", RECEIPTS)
-        _git(root, "push", "origin", "HEAD:main", check=False)
+    all_rows = list(old.values()) + rows
+    payload[SEALS] = csv_bytes(SEAL_FIELDS, all_rows)
+    commit = publish_seal_tree(root, payload, push)
+    staging = request_staging(root)
+    staging.mkdir(parents=True, exist_ok=True)
+    (staging / "PENDING.csv").write_bytes(csv_bytes(SEAL_FIELDS, all_rows))
+    result = dict(sealed=len(rows), commit=commit, pushed=push, server_time="", branch=SEAL_BRANCH)
+    if push:
+        for delay in wait:
+            if delay:
+                time.sleep(delay)
+            t = Repo(root, lookup=lookup).pushed_at(commit)
+            if t:
+                result["server_time"] = t
+                break
     return result
 
 
@@ -604,15 +777,38 @@ def seal_evidence(repo, block_sha: str) -> dict:
         return dict(seal="UNSEALED", seal_time="", seal_basis="")
     for r in rows:
         f = repo.root / r["sealed_path"]
-        if not f.exists() or sha(f.read_bytes()) != r["file_sha256"] or block_sha not in {b for _, b, *_ in card_blocks(f.read_text(encoding="utf-8", errors="replace"), repo.root)}:
-            continue
-        if r["sealed_path"] not in repo.added:
+        commit = repo.first_content(r["sealed_path"], r["file_sha256"])
+        if not commit:
             return dict(seal="SEALED_NOT_COMMITTED", seal_time="", seal_basis="")
-        commit, committed_at = repo.added[r["sealed_path"]]
+        raw = repo.blob(commit, r["sealed_path"])
+        if raw is None or block_sha not in {x[1] for x in card_blocks(raw.decode("utf-8"), repo.root)}:
+            continue
+        committed_at = _git(repo.root, "show", "-s", "--format=%cI", commit).stdout.strip()
+        original_seals = repo.blob(commit, SEALS)
+        if original_seals is None or not any(x["block_sha256"] == block_sha and x["file_sha256"] == r["file_sha256"]
+                                              and x["sealed_path"] == r["sealed_path"] for x in F.rows(original_seals)):
+            return dict(seal="SEAL_METADATA_NOT_BOUND", seal_time="", seal_basis="")
+        key, _, meta, pk, fc, problems, derived = next(x for x in card_blocks(raw.decode("utf-8"), repo.root) if x[1] == block_sha)
+        request = {name: repo.blob(commit, F.request_path(key) + "/" + name) for name in (*F.REQUEST_FILES, "MANIFEST.csv")}
+        if any(v is None for v in request.values()):
+            return dict(seal="NO_ORIGINAL_REQUEST", seal_time="", seal_basis="")
+        manifest = {x["file"]: x["sha256"] for x in F.rows(request["MANIFEST.csv"])}
+        if set(manifest) != set(F.REQUEST_FILES) or any(sha(request[name]) != manifest[name] for name in F.REQUEST_FILES):
+            return dict(seal="REQUEST_CHANGED", seal_time="", seal_basis="")
+        problems += F.request_problems(request, meta, pk)
+        if problems:
+            return dict(seal="REQUEST_OR_CARD_INVALID", seal_time="", seal_basis="")
         if commit not in repo.upstream:
             return dict(seal="SEALED_NOT_PUSHED", seal_time=committed_at, seal_basis="COMMITTER_TIME", seal_commit=commit)
         pushed = repo.pushed_at(commit, committed_at)
-        return dict(seal="SEALED", seal_time=pushed or committed_at, seal_basis="SERVER_PUSH_TIME" if pushed else "COMMITTER_TIME", seal_commit=commit)
+        policy=repo.blob(r.get("policy_commit",""),PLAN) if r.get("policy_commit") else None
+        policy_time=repo.pushed_at(r["policy_commit"]) if policy is not None else ""
+        if (policy is None or sha(policy)!=r.get("policy_sha256") or not policy_time
+                or (pushed and T.clock(policy_time,"policy publication")>T.clock(pushed,"forecast publication"))):
+            return dict(seal="REGISTRATION_NOT_PREDECLARED",seal_time="",seal_basis="")
+        return dict(seal="SEALED", seal_time=pushed or committed_at, seal_basis="SERVER_PUSH_TIME" if pushed else "COMMITTER_TIME", seal_commit=commit,
+                    verified_meta=meta, verified_picks=pk, verified_derived=derived, verified_facts=fc,
+                    request_contracts=F.rows(request["CONTRACTS.csv"]), request_event=F.rows(request["EVENT.csv"])[0])
     return dict(seal="SEAL_FILE_CHANGED", seal_time="", seal_basis="")
 
 
@@ -647,7 +843,7 @@ def _slope(ps: list[float], ys: list[int]):
 
 
 def e_process(ds: list[float], m: float = 0.0) -> list[dict]:
-    """Anytime-valid test of H0: E[d_i | earlier games] <= m, for d in [D_LOW, D_HIGH].
+    """Legacy conditional-mean diagnostic, retained for replay; not the v27 decision.
 
     Wealth E_n = prod (1 + lambda_i (d_i - m)); lambda_i is chosen from earlier games only (predictable plug-in), between 0
     and BET_CAP / (m - D_LOW), so every factor stays positive. Under H0 the wealth is a nonnegative supermartingale, and by
@@ -668,22 +864,14 @@ def e_process(ds: list[float], m: float = 0.0) -> list[dict]:
 
 
 def lower_bound(ds: list[float], alpha: float = ALPHA, step: float = 0.0005) -> float | None:
-    """95% anytime-valid lower confidence bound on the mean advantage: the largest m whose null was ever rejected."""
-    if not ds:
-        return None
-    best, m = None, -0.25
-    while m < D_HIGH:
-        if max(r["e_value"] for r in e_process(ds, m)) >= 1 / alpha:
-            best = m
-        else:
-            break
-        m = round(m + step, 6)
-    return best
+    """95% lower confidence bound for the current average conditional advantage."""
+    path = F.confidence_path(ds, alpha)
+    return path[-1]["lower_bound_95"] if path else None
 
 
 def advantage(ds: list[float], alpha: float = ALPHA) -> dict:
     """The registered decision on a fixed sequence of game advantages d."""
-    path = e_process(ds)
+    path = F.confidence_path(ds, alpha)
     crossing, running = None, 0.0
     for i, r in enumerate(path):
         running += ds[i]
@@ -698,7 +886,9 @@ def advantage(ds: list[float], alpha: float = ALPHA) -> dict:
         verdict = "NOT_YET_DEMONSTRATED"
     return dict(verdict=verdict, games=len(ds), crossed_at_game=crossing or "", e_value=path[-1]["e_value"] if path else 1.0,
                 max_e_value=max((r["e_value"] for r in path), default=1.0), mean_d=path[-1]["mean_d"] if path else float("nan"),
-                lower_bound_95=lower_bound(ds, alpha), path=path)
+                 lower_bound_95=path[-1]["lower_bound_95"] if path else None,
+                 assessed_prefix_mean=path[crossing-1]["mean_d"] if crossing else None,
+                 assessed_prefix_lower_bound=path[crossing-1]["lower_bound_95"] if crossing else None, path=path)
 
 
 def timing_label(card: dict, actual_start: str, seal: dict) -> str:
@@ -753,6 +943,14 @@ def _read_outcomes(paths, repo, captures, require_committed) -> tuple[dict, list
                     digests[cap] = sha(cap.read_bytes()) if cap.exists() else ""
                 if digests[cap] != r["final_capture_sha256"]:
                     raise OneChatError(f"{r['card_key']} {r['label']}: capture {cap} is missing or its SHA-256 differs from the outcome row")
+                proof = Path(r.get("first_play_capture_path", ""))
+                if not proof.is_absolute():
+                    proof = Path(captures) / proof
+                raw = proof.read_bytes() if proof.is_file() else b""
+                if not (re.match(r"https?://\S+$", r.get("first_play_source", ""))
+                        and raw and sha(raw) == r.get("first_play_capture_sha256")
+                        and r.get("first_play_excerpt", "") and r["first_play_excerpt"] in raw.decode("utf-8", errors="replace")):
+                    raise OneChatError(f"{r['card_key']}: verified first-play capture, source and exact excerpt are required")
                 if not r.get("event_id", "").strip():
                     raise OneChatError(f"{r['card_key']} {r['label']}: event_id (the competition's native match identity) is required")
             key = (r["card_key"], r["label"], r["side"].upper())
@@ -769,7 +967,10 @@ def score(intakes, outcomes, out, *, root=ROOT, captures=None, cohort=None, base
     if out.exists():
         raise OneChatError(f"{out} already exists; a score report is written once")
     custody = []
+    if not require_committed:
+        custody.append("Diagnostic run without committed-input enforcement; never confirmatory")
     repo = Repo(root)
+    custody += repo.registry_problems
     cards, picks, facts = {}, [], {}
     for folder in intakes:
         custody += verify_intake(folder, root, require_committed, repo)
@@ -779,10 +980,49 @@ def score(intakes, outcomes, out, *, root=ROOT, captures=None, cohort=None, base
                     raise OneChatError(f"card {c['card_key']} appears in two intakes")
                 cards[c["card_key"]] = c
         picks += read_csv(Path(folder) / "PICKS.csv")
+        for r in read_csv(Path(folder) / "FACTS.csv"):
+            facts.setdefault(r["card_key"],[]).append(r)
     grades, problems = _read_outcomes(outcomes, repo, captures, require_committed)
     custody += problems
-    base = {(r["card_key"], r["label"], r["side"].upper()): float(r["baseline_p"]) for r in read_csv(baseline)} if baseline else {}
+    if baseline is not None:
+        raise OneChatError("Freeze sporting baseline probabilities and provenance in the original request CONTRACTS.csv before sealing; post-result comparator files are not admitted")
+    base = {}
     seals = {k: seal_evidence(repo, c["block_sha256"]) for k, c in cards.items()}
+    # Regenerating a derivative's manifest cannot change the forecast of record.
+    for key, card in cards.items():
+        seal = seals[key]
+        if seal["seal"]=="SEALED" and seal["seal_basis"]!="SERVER_PUSH_TIME":
+            custody.append(key+": server publication is not independently verifiable; do not omit it from the registered sequence")
+        earlier=[r for r in repo.seals if r["card_key"]==key]
+        if earlier and earlier[0]["block_sha256"]!=card["block_sha256"]:
+            custody.append(key+": an earlier published block is the forecast of record")
+        if seal["seal"] != "SEALED":
+            continue
+        mine = [r for r in picks if r["card_key"] == key and r["game_id"] == card["game_id"]]
+        expected = rows_for(key, card["game_id"], seal["verified_derived"])
+        canonical = lambda rs: csv_bytes(ROW_FIELDS, sorted(rs, key=lambda r: (r["label"], r["side"])))
+        if canonical(mine) != canonical(expected):
+            custody.append(f"{key}: parsed probabilities/contracts/ranks differ from the exact published block")
+        expected_facts = [dict(card_key=key,game_id=card["game_id"],**r,status="MISSING" if r["value"]=="MISSING" else "OBSERVED") for r in seal["verified_facts"]]
+        fc_csv = lambda rs:csv_bytes(FACT_FIELDS,sorted(rs,key=lambda r:(r["side"],r["field"])))
+        if fc_csv(facts.get(key,[]))!=fc_csv(expected_facts):
+            custody.append(f"{key}: parsed research facts differ from the published block")
+        if any(card.get(f, "") != seal["verified_meta"].get(f, "") for f in HEADER if f in CARD_FIELDS):
+            custody.append(f"{key}: intake header differs from the exact published block")
+        if card["facts_last_observed_at"] != seal["verified_derived"]["_facts"]["last"]:
+            custody.append(f"{key}: intake fact clocks differ from the published block")
+        events = {g["event_id"] for (ck, _, _), g in grades.items() if ck == key and g["grade"] in TERMINAL}
+        if events and events != {seal["request_event"]["event_id"]}:
+            custody.append(f"{key}: settled event identity differs from the frozen original request")
+        for r in seal["request_contracts"]:
+            if r["baseline_p"]:
+                base[(key,r["label"],r["side"])]=float(r["baseline_p"])
+    missing_sealed = sorted({r["card_key"] for r in repo.seals} - set(cards))
+    if missing_sealed:
+        custody.append("Sealed games omitted from supplied intakes: " + ", ".join(missing_sealed))
+    for r in repo.requests:
+        if r["card_key"] not in cards and r["card_key"] not in {d["card_key"] for d in repo.dispositions}:
+            custody.append(r["card_key"]+": registered request has no accounted-for card/disposition intake")
 
     # One game, one card across every intake: the same game identity, or the same native event identity in the outcomes.
     owner = {}
@@ -861,7 +1101,16 @@ def score(intakes, outcomes, out, *, root=ROOT, captures=None, cohort=None, base
         games.append(dict(card_key=key, game_id=card["game_id"], sport=card["sport"], timing=label, settled_at=settled,
                           scheduled_start=card["scheduled_start"], rows=rows, d=d))
 
-    # One fixed sequence, ordered by scheduled start (known before the game), cut at the first sealed candidate still unsettled.
+    for req in repo.requests:
+        key=req["card_key"]
+        if key not in cards:
+            d=next((r for r in repo.dispositions if r["card_key"]==key),{})
+            raw=repo.blob(repo.seal_ref,F.request_path(key)+"/CONTRACTS.csv")
+            count=len({r["label"] for r in F.rows(raw)}) if raw else 0
+            coverage.append(dict(card_key=key,game_id="NATIVE-"+sha(req["event_id"].encode())[:12],sport=req["sport"],competition=req["competition"],
+                scheduled_start=req["scheduled_start"],timing="NO_FORECAST",seal="UNSEALED",seal_time="",seal_basis="",
+                supplied_lines=count,priced_lines=0,settled_at="",eligible="",exclusion=d.get("status","REQUEST_NOT_ACCOUNTED_FOR")+":"+d.get("reason",""),candidate=""))
+    # One fixed sequence, ordered by scheduled start, cut at the first pending candidate.
     order = lambda c: (T.clock(c["scheduled_start"], "scheduled_start"), c["game_id"], c["card_key"])
     pending = sorted((c for c in coverage if c["candidate"] and c["exclusion"] == "NOT_FULLY_SETTLED"), key=order)
     cut = order(pending[0]) if pending else None
@@ -885,6 +1134,8 @@ def score(intakes, outcomes, out, *, root=ROOT, captures=None, cohort=None, base
             raise OneChatError("the cohort file does not match its COHORT_RECEIPT.csv (hash and 100 games)")
         if len(set(wanted)) != COHORT_SIZE or len(wanted) != COHORT_SIZE:
             raise OneChatError("a frozen cohort holds exactly 100 distinct games")
+        if wanted != [g["game_id"] for g in sequence[:COHORT_SIZE]]:
+            raise OneChatError("cohort is not the first 100 games of the complete registered sequence")
         if require_committed and not (repo.committed(cohort) and repo.committed(receipt)):
             custody.append(f"{cohort}: cohort not committed, or changed since the last commit")
         have = {g["game_id"]: g for g in sequence}
@@ -911,9 +1162,15 @@ def score(intakes, outcomes, out, *, root=ROOT, captures=None, cohort=None, base
         if not sel:
             return
         ps, ys = [r["pf"] for r in sel], [r["y"] for r in sel]
+        grouped={}
+        for r in sel:
+            grouped.setdefault(r["card_key"],[]).append((r["pf"]-r["y"])**2)
+        interval=_mean_interval([sum(v)/len(v) for v in grouped.values()])
         tables.append(dict(table=table, stratum=stratum, rows=len(sel), games=len({r["card_key"] for r in sel}),
                            mean_stated_p=round(sum(ps) / len(ps), 4), win_rate=round(sum(ys) / len(ys), 4),
-                           brier=round(sum((p - y) ** 2 for p, y in zip(ps, ys)) / len(ps), 4)))
+                            brier=round(sum((p - y) ** 2 for p, y in zip(ps, ys)) / len(ps), 4),
+                            log_loss=sum(-math.log(p if y else 1-p) for p,y in zip(ps,ys))/len(ps),
+                            game_mean_brier=interval["mean"],game_mean_brier_lo=interval["lo"],game_mean_brier_hi=interval["hi"]))
 
     for lo, hi in zip(BANDS, BANDS[1:]):
         add("calibration_band_favoured", f"[{lo:.2f},{hi:.2f})", [r for r in fav if lo <= r["pf"] < hi])
@@ -941,17 +1198,21 @@ def score(intakes, outcomes, out, *, root=ROOT, captures=None, cohort=None, base
         by_game.setdefault(r["card_key"], []).append((r["pf"] - r["y"]) ** 2 - (r["baseline"] - r["y"]) ** 2)
     secondary = _mean_interval([sum(v) / len(v) for v in by_game.values()])
     slope = _slope([r["pf"] for r in fav], [r["y"] for r in fav])
-    all_lines = sum(int(c["supplied_lines"] or 0) for c in cards.values())
-    priced_lines = sum(int(c["priced_lines"] or 0) for c in cards.values())
+    all_lines = sum(int(c["supplied_lines"] or 0) for c in coverage)
+    priced_lines = sum(int(c["priced_lines"] or 0) for c in coverage)
     summary = dict(rule=RULE, run_label="ON_REQUEST" if on_request else "ROUTINE", advantage=decision["verdict"],
                    games_in_sequence=decision["games"], games_held_back_by_unsettled_earlier_game=held_back,
                    crossed_at_game=decision["crossed_at_game"], e_value=decision["e_value"], max_e_value=decision["max_e_value"],
                    e_threshold=1 / ALPHA, practical_mean_d=PRACTICAL, horizon_games=HORIZON, mean_d=decision["mean_d"],
                    lower_bound_95=decision["lower_bound_95"], custody_problems=len(custody),
+                    assessed_prefix_mean=decision["assessed_prefix_mean"],
+                    assessed_prefix_lower_bound=decision["assessed_prefix_lower_bound"],
+                    statistical_rule=F.STATISTICAL_RULE,
                    cohort_status=cohort_status, cohort_games=len(chosen), cohort_finding=finding,
                    cohort_brier_minus_quarter_mean=fixed["mean"], cohort_brier_minus_quarter_lo=fixed["lo"],
                    cohort_brier_minus_quarter_hi=fixed["hi"], criterion=CRITERION,
                    admitted_cards=len(cards), duplicate_cards=len(duplicate),
+                    registered_requests=len(repo.requests),request_dispositions=len(repo.dispositions),
                    sealed_pre_start_server=sum(c["timing"] == ELIGIBLE for c in coverage),
                    sealed_pre_start_client_only=sum(c["timing"] == "SEALED_PRE_START_CLIENT" for c in coverage),
                    unsealed=sum(c["seal"] == "UNSEALED" for c in coverage),
@@ -970,7 +1231,7 @@ def score(intakes, outcomes, out, *, root=ROOT, captures=None, cohort=None, base
                                                  [dict(g, game=i + 1, **{k: decision["path"][i][k] for k in ("bet", "e_value", "mean_d")})
                                                   for i, g in enumerate(sequence)]))
     (out / "SPORT_EVIDENCE.csv").write_bytes(csv_bytes(("sport", "games", "verdict", "crossed_at_game", "e_value", "threshold", "mean_d", "lower_bound"), sports))
-    (out / "TABLES.csv").write_bytes(csv_bytes(("table", "stratum", "rows", "games", "mean_stated_p", "win_rate", "brier"), tables))
+    (out / "TABLES.csv").write_bytes(csv_bytes(("table", "stratum", "rows", "games", "mean_stated_p", "win_rate", "brier", "log_loss", "game_mean_brier","game_mean_brier_lo","game_mean_brier_hi"), tables))
     if cohort_status == "COHORT_FROZEN_NOW" and not custody:
         data = csv_bytes(("card_key", "game_id", "scheduled_start", "settled_at"), chosen)
         (out / "COHORT.csv").write_bytes(data)
@@ -1021,6 +1282,15 @@ def main(argv=None):
     se.add_argument("--card", required=True, nargs="+", type=Path)
     se.add_argument("--no-push", action="store_true")
     sub.add_parser("receipts")
+    request = sub.add_parser("register-request")
+    request.add_argument("--source", required=True, type=Path)
+    request.add_argument("--event", required=True, type=Path)
+    request.add_argument("--contracts", required=True, type=Path)
+    request.add_argument("--card-key", required=True)
+    disposition=sub.add_parser("disposition")
+    disposition.add_argument("--card-key",required=True)
+    disposition.add_argument("--status",choices=("NO_FORECAST","CANCELLED","LATE_UNSEALED","UNPRICED"),required=True)
+    disposition.add_argument("--reason",required=True)
     s = sub.add_parser("score")
     s.add_argument("--intake", required=True, nargs="+", type=Path)
     s.add_argument("--outcomes", required=True, nargs="+", type=Path)
@@ -1042,6 +1312,11 @@ def main(argv=None):
             print(seal(args.card, push=not args.no_push))
         elif args.cmd == "receipts":
             print(f"{record_receipts()} new push receipts")
+        elif args.cmd == "register-request":
+            print(F.register_request(args.source, args.event, args.contracts, args.card_key, request_staging(ROOT)))
+            print("request publication: " + publish_request(args.card_key))
+        elif args.cmd == "disposition":
+            print(request_disposition(args.card_key,args.status,args.reason))
         elif args.cmd == "score":
             print(score(args.intake, args.outcomes, args.out, captures=args.captures, on_request=args.on_request,
                         cohort=args.cohort, baseline=args.baseline))
@@ -1049,7 +1324,7 @@ def main(argv=None):
             print(history(args.rows, args.out))
         else:
             print(template(args.sport))
-    except OneChatError as exc:
+    except (OneChatError,ValueError,OSError) as exc:
         raise SystemExit(f"{RULE}: {exc}")
 
 
