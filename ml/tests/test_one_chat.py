@@ -147,12 +147,13 @@ class Server:
         return list(self.seen)
 
 
-def seal(repo, files, at="2026-11-20T07:00:00Z", event_id=None):
-    prepare_requests(repo, files, event_id)
+def seal(repo, files, at="2026-11-20T07:00:00Z", event_id=None, transform=None):
+    prepare_requests(repo, files, event_id,transform=transform)
     return O.seal(files, repo, lookup=Server(at), wait=(0,))
 
 
-def prepare_requests(repo, files, event_id=None):
+def prepare_requests(repo, files, event_id=None, *,publish=True,transform=None):
+    keys=[]
     for file in files:
         for key, _, meta, pk, _, problems, _ in O.card_blocks(file.read_text(encoding="utf-8")):
             if problems:
@@ -165,9 +166,15 @@ def prepare_requests(repo, files, event_id=None):
             contracts = [dict(**{f: r[f] for f in ("label", "family", "side", "line")}, period="FULL_MATCH", endpoint="REGULATION",
                               action="NORMAL", unit="POINTS", request_excerpt=f"{r['family']} {r['side']} {r['line']}",
                               baseline_p="", baseline_id="UNAVAILABLE:NO_FROZEN_LEAGUE_BASELINE") for r in pk]
+            if transform:
+                contracts=transform(contracts)
             (path / "CONTRACTS.csv").write_bytes(O.csv_bytes(F.CONTRACT_FIELDS, contracts))
             (path / "REQUEST.txt").write_text("\n".join(r["request_excerpt"] for r in contracts), encoding="utf-8")
             F.register_request(path / "REQUEST.txt", path / "EVENT.csv", path / "CONTRACTS.csv", key, O.request_staging(repo))
+            keys.append(key)
+    if keys and publish:
+        O.publish_requests(keys,repo)
+        Server("2026-11-20T04:30:00Z")(repo)
 
 
 def commit_all(repo, message="records"):
@@ -325,6 +332,11 @@ def test_review_defect_5_whole_number_lines_are_scored_on_the_probability_given_
 
 
 def test_unsealed_late_sealed_client_timed_post_start_and_exposed_cards_never_enter_the_sequence(repo, tmp_path, monkeypatch):
+    all_cards=[card(key="K1-G0001",home="A1",away="B1"),card(key="K2-G0001",home="A2",away="B2"),
+        card(key="K3-G0001",home="A3",away="B3"),card(key="K4-G0001",home="A4",away="B4"),
+        card(key="K5-G0001",home="A5",away="B5",outcome_exposure="saw the first quarter"),card(key="K6-G0001",home="A6",away="B6")]
+    prereg=drop(tmp_path,all_cards,name="all-requests")
+    prepare_requests(repo,sorted(prereg.glob("*.md")))
     good = build(repo, tmp_path, [card(key="K1-G0001", home="A1", away="B1")], name="good")
     unsealed = build(repo, tmp_path, [card(key="K2-G0001", home="A2", away="B2")], sealed=False, name="unsealed")
     late = build(repo, tmp_path, [card(key="K3-G0001", home="A3", away="B3")], at="2026-11-20T09:00:00Z", name="late")

@@ -44,3 +44,5 @@ Rollback: revert code/rules through a checked change. Published original request
 Registration publication occurs on 17 November 2026 Sydney time; the 16 November version strings identify the owner-directed change, not a backdated registration. Seals bind the exact published plan hash and commit.
 
 CI portability repairs: CURRENT_STATE legacy-reader version rows are generated from VERSIONS.csv; the older mini writer recognises an identical LF-source retry in a CRLF mini without rewriting stored bytes. The strengthened end-to-end fixture exercises this on every OS. Main ruleset 27373770 requires the passing check and a PR; forecast-data ruleset 27374750 prevents force pushes and deletion without requiring code CI for timely data seals.
+
+Automated PR review corrections: all-VOID never-started games use captured official cancellation evidence and remain terminal exclusions; sealing verifies a public request-index entry before research, including failed-publication cases; frozen baseline sides are case-normalised. Each has an adversarial regression fixture. Required review conversations are resolved only after these fixes are verified.

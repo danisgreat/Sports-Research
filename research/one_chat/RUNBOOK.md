@@ -24,7 +24,7 @@ Period, endpoint, units and action/retirement/overtime rules are explicit. The r
 python -m ml one-chat register-request --source REQUEST.txt --event EVENT.csv --contracts CONTRACTS.csv --card-key <MINI_KEY>-G0001
 ```
 
-This preserves exact source bytes in Git staging storage and publishes only the registered request data to `forecast-seals`. It never changes or pushes code on main. Keep the original external request. A different request under an existing key is refused.
+This preserves exact source bytes in Git staging storage and publishes only the registered request data to `forecast-seals`. It never changes or pushes code on main. Keep the original external request. A different request under an existing key is refused. Seal requires an independently published request-index entry before research starts; local staging after a failed publication is insufficient.
 
 ## 2. Research and write the card
 
@@ -44,7 +44,7 @@ The command publishes exact card/request blobs on `forecast-seals` through an is
 
 Settle every side from permitted sources. Save result pages outside the repository, re-hash them, verify definitions, and prefer independent corroboration where available. Record the actual first play from an official page with a retained capture and exact excerpt. If it cannot be established, leave timing unverified; do not substitute scheduled time silently.
 
-OUTCOMES.csv columns are printed by `ml.one_chat.OUTCOME_FIELDS`: card_key, label, side, grade, event_id, actual_start, settled_at, final_source, final_capture_sha256, final_capture_path, first_play_source, first_play_capture_path, first_play_capture_sha256, first_play_excerpt. Relative captures resolve under `../one_chat_captures` or an explicit `--captures` directory. Hash checks verify bytes, not source truth; settlement remains an evidence-based review. Preserve originals and append corrections.
+OUTCOMES.csv columns are printed by `ml.one_chat.OUTCOME_FIELDS`: card_key, label, side, grade, event_id, actual_start, settled_at, final_source, final_capture_sha256, final_capture_path, first_play_source, first_play_capture_path, first_play_capture_sha256, first_play_excerpt, cancellation_at, cancellation_excerpt. Relative captures resolve under `../one_chat_captures` or an explicit `--captures` directory. For a game officially cancelled before any play, void every contract, leave actual_start empty and retain the official cancellation capture plus cancellation_at and its exact cancellation_excerpt. Do not invent first-play evidence; this terminal game is excluded without holding back later games. Hash checks verify bytes, not source truth; settlement remains an evidence-based review. Preserve originals and append corrections.
 
 ## 5. Intake, score and build training candidates
 

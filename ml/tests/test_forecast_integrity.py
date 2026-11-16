@@ -39,6 +39,15 @@ def test_recommitted_and_rehashed_parsed_numbers_do_not_replace_published_foreca
 
 
 def test_omitting_a_sealed_intake_is_not_assessable(repo, tmp_path):
+    prereg = M.drop(
+        tmp_path,
+        [
+            M.card(key="EARLY", home="Earlier"),
+            M.card(key="LATER", home="Later", start="2026-11-20T09:00:00Z"),
+        ],
+        name="preregister",
+    )
+    M.prepare_requests(repo, list(prereg.glob("*.md")))
     early = M.build(repo, tmp_path, [M.card(key="EARLY", home="Earlier")], name="early")
     later = M.build(
         repo,
@@ -263,3 +272,75 @@ def test_protected_main_merge_publications_are_valid_independent_server_events(
     )
     result = O.github_push_activity(tmp_path)
     assert [r["after"] for r in result] == ["b", "c"]
+
+
+def test_unpublished_or_late_request_cannot_be_bundled_into_a_seal(repo, tmp_path):
+    drop = M.drop(tmp_path, [M.card()])
+    files = list(drop.glob("*.md"))
+    M.prepare_requests(repo, files, publish=False)
+    with pytest.raises(O.OneChatError, match="request must be independently published"):
+        O.seal(files, repo, lookup=M.Server("2026-11-20T07:00:00Z"), wait=(0,))
+    O.publish_request("CHAT1-G0001", repo)
+    M.Server("2026-11-20T06:00:00Z")(repo)
+    with pytest.raises(O.OneChatError, match="before research"):
+        O.seal(files, repo, lookup=M.Server("2026-11-20T07:00:00Z"), wait=(0,))
+
+
+def test_lowercase_frozen_baselines_are_scored_on_the_same_rows(repo, tmp_path):
+    drop = M.drop(tmp_path, [M.card()])
+
+    def lower(rows):
+        return [
+            dict(
+                r,
+                side=r["side"].lower(),
+                baseline_p="0.5",
+                baseline_id="EXAMPLE_LEAGUE_BASELINE:frozen",
+            )
+            for r in rows
+        ]
+
+    M.seal(repo, list(drop.glob("*.md")), transform=lower)
+    intake = repo / "research/one_chat/intake/lower"
+    O.intake(drop, intake, repo)
+    outcomes = M.outcomes(repo, tmp_path / "cap", ["CHAT1-G0001"])
+    M.commit_all(repo)
+    result = M.run(repo, tmp_path, [intake], [outcomes], "baseline-case")
+    assert result["baseline_paired_games"] == 1 and result["custody_problems"] == 0
+
+
+def test_captured_never_started_cancellation_does_not_block_later_games(repo, tmp_path):
+    cards = [
+        M.card(key="CANCELLED", home="Cancelled"),
+        M.card(key="PLAYED", home="Played", start="2026-11-20T09:00:00Z"),
+    ]
+    folder = M.build(repo, tmp_path, cards)
+    path = M.outcomes(
+        repo, tmp_path / "cap", ["CANCELLED", "PLAYED"], start="2026-11-20T09:00:00Z"
+    )
+    page = tmp_path / "cap/cancellation.html"
+    page.write_text("Official: game cancelled before any play", encoding="utf-8")
+    rows = O.read_csv(path)
+    for r in rows:
+        if r["card_key"] == "CANCELLED":
+            r.update(
+                grade="VOID",
+                actual_start="",
+                final_capture_path=page.name,
+                final_capture_sha256=O.sha(page.read_bytes()),
+                first_play_source="",
+                first_play_capture_path="",
+                first_play_capture_sha256="",
+                first_play_excerpt="",
+                cancellation_at="2026-11-20T08:00:00Z",
+                cancellation_excerpt="game cancelled before any play",
+            )
+    path.write_bytes(O.csv_bytes(O.OUTCOME_FIELDS, rows))
+    M.commit_all(repo)
+    result = M.run(repo, tmp_path, [folder], [path], "cancelled")
+    assert result["games_in_sequence"] == 1 and result["custody_problems"] == 0
+    cover = O.read_csv(repo / O.SCORES / "cancelled/COVERAGE.csv")
+    assert (
+        next(r for r in cover if r["card_key"] == "CANCELLED")["exclusion"]
+        == "NO_DECISIVE_CONTRACT"
+    )

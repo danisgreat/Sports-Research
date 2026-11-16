@@ -72,7 +72,7 @@ FACT_FIELDS = ("card_key", "game_id") + FACT_COLUMNS + ("status",)
 INTAKE_FILES = ("CARDS.csv", "PICKS.csv", "FACTS.csv", "INTAKE_RECEIPT.csv")
 OUTCOME_FIELDS = ("card_key", "label", "side", "grade", "event_id", "actual_start", "settled_at", "final_source",
                   "final_capture_sha256", "final_capture_path", "first_play_source", "first_play_capture_path",
-                  "first_play_capture_sha256", "first_play_excerpt")
+                  "first_play_capture_sha256", "first_play_excerpt", "cancellation_at", "cancellation_excerpt")
 
 SEALED = "research/one_chat/sealed"
 SEALS = SEALED + "/SEALS.csv"
@@ -447,7 +447,7 @@ class Repo:
         self._blob_cache = {}
         self._reader = None
         self._content_commits = {}
-        raw_log = _git(self.root,"log","--all","--reverse","--format=@%H","--raw","--no-abbrev","--",SEALED,F.REQUEST_ROOT,PLAN,check=False).stdout
+        raw_log = _git(self.root,"log","--all","--reverse","--format=@%H","--raw","--no-abbrev","--",SEALED,F.REQUEST_ROOT,PLAN,REQUEST_INDEX,check=False).stdout
         current = ""
         for ln in raw_log.splitlines():
             if ln.startswith("@"):
@@ -676,19 +676,56 @@ def publish_seal_tree(root, payload, push=True):
 
 
 def publish_request(key, root=ROOT):
-    folder = request_staging(root) / F.request_path(key)
-    payload = {F.request_path(key)+"/"+name:(folder/name).read_bytes() for name in (*F.REQUEST_FILES,"MANIFEST.csv")}
+    return publish_requests([key],root)
+
+
+def publish_requests(keys,root=ROOT):
     repo = Repo(root)
-    event = F.rows(payload[F.request_path(key)+"/EVENT.csv"])[0]
-    index = repo.requests
-    row = dict(card_key=key, event_id=event["event_id"], sport=event["sport"],competition=event["competition"],scheduled_start=event["scheduled_start"],
-               request_sha256=sha(payload[F.request_path(key)+"/REQUEST.txt"]), status="REQUESTED")
-    if any(r["card_key"]==key and r!=row for r in index):
-        raise OneChatError("request identity already registered")
-    if row not in index:
-        index.append(row)
+    index=list(repo.requests)
+    payload={}
+    changed=False
+    for key in keys:
+        folder=request_staging(root)/F.request_path(key)
+        payload.update({F.request_path(key)+"/"+name:(folder/name).read_bytes() for name in (*F.REQUEST_FILES,"MANIFEST.csv")})
+        event=F.rows(payload[F.request_path(key)+"/EVENT.csv"])[0]
+        row=dict(card_key=key,event_id=event["event_id"],sport=event["sport"],competition=event["competition"],scheduled_start=event["scheduled_start"],
+                 request_sha256=sha(payload[F.request_path(key)+"/REQUEST.txt"]),status="REQUESTED")
+        if any(r["card_key"]==key and r!=row for r in index):
+            raise OneChatError("request identity already registered")
+        if row not in index:
+            index.append(row)
+            changed=True
+    if not changed:
+        return repo.seal_ref
     payload[REQUEST_INDEX] = csv_bytes(tuple(row),index)
     return publish_seal_tree(root,payload)
+
+
+def request_registration(repo,key,payload):
+    """First independently published index entry carrying these exact request bytes."""
+    cache=getattr(repo,"_request_cache",{})
+    identity=(key,sha(payload["MANIFEST.csv"]))
+    if identity in cache:
+        return cache[identity]
+    matches=[]
+    for (path,_),commits in repo._content_commits.items():
+        if path!=REQUEST_INDEX:
+            continue
+        for commit in commits:
+            if commit not in repo.upstream:
+                continue
+            index=repo.blob(commit,REQUEST_INDEX)
+            if not index or not any(r["card_key"]==key and r["request_sha256"]==sha(payload["REQUEST.txt"]) for r in F.rows(index)):
+                continue
+            if any(repo.blob(commit,F.request_path(key)+"/"+name)!=raw for name,raw in payload.items()):
+                continue
+            when=repo.pushed_at(commit)
+            if when:
+                matches.append((T.clock(when,"request publication"),commit,when))
+    result=min(matches) if matches else None
+    cache[identity]=result
+    repo._request_cache=cache
+    return result
 
 
 def request_disposition(key,status,reason,root=ROOT):
@@ -740,6 +777,10 @@ def seal(files, root=ROOT, *, push=True, lookup=None, wait=(0, 3, 6, 12)) -> dic
             problems = F.request_problems(request, meta, pk)
             if problems:
                 raise OneChatError("not sealed: " + " | ".join(problems))
+            registration=request_registration(repo,key,request)
+            if (registration is None or registration[0]>T.clock(meta["research_start_at"],"research start")
+                    or registration[0]<T.clock(policy_time,"policy publication")):
+                raise OneChatError(key+": request must be independently published after the policy and before research starts")
             for name, data in request.items():
                 payload[F.request_path(key) + "/" + name] = data
             if block_sha not in old:
@@ -806,6 +847,10 @@ def seal_evidence(repo, block_sha: str) -> dict:
         if (policy is None or sha(policy)!=r.get("policy_sha256") or not policy_time
                 or (pushed and T.clock(policy_time,"policy publication")>T.clock(pushed,"forecast publication"))):
             return dict(seal="REGISTRATION_NOT_PREDECLARED",seal_time="",seal_basis="")
+        registration=request_registration(repo,key,request)
+        if (registration is None or registration[0]>T.clock(meta["research_start_at"],"research start")
+                or registration[0]<T.clock(policy_time,"policy publication")):
+            return dict(seal="REQUEST_NOT_PUBLISHED_BEFORE_RESEARCH",seal_time="",seal_basis="")
         return dict(seal="SEALED", seal_time=pushed or committed_at, seal_basis="SERVER_PUSH_TIME" if pushed else "COMMITTER_TIME", seal_commit=commit,
                     verified_meta=meta, verified_picks=pk, verified_derived=derived, verified_facts=fc,
                     request_contracts=F.rows(request["CONTRACTS.csv"]), request_event=F.rows(request["EVENT.csv"])[0])
@@ -943,11 +988,18 @@ def _read_outcomes(paths, repo, captures, require_committed) -> tuple[dict, list
                     digests[cap] = sha(cap.read_bytes()) if cap.exists() else ""
                 if digests[cap] != r["final_capture_sha256"]:
                     raise OneChatError(f"{r['card_key']} {r['label']}: capture {cap} is missing or its SHA-256 differs from the outcome row")
+                cancelled=r["grade"]=="VOID" and not r.get("actual_start","")
                 proof = Path(r.get("first_play_capture_path", ""))
                 if not proof.is_absolute():
                     proof = Path(captures) / proof
                 raw = proof.read_bytes() if proof.is_file() else b""
-                if not (re.match(r"https?://\S+$", r.get("first_play_source", ""))
+                if cancelled:
+                    excerpt=r.get("cancellation_excerpt","")
+                    if not excerpt or excerpt not in cap.read_text(encoding="utf-8",errors="replace") or not r.get("cancellation_at"):
+                        raise OneChatError(r["card_key"]+": captured cancellation evidence is required for a game that never started")
+                    if T.clock(r["cancellation_at"],"cancelled at")>T.clock(r["settled_at"],"settled at"):
+                        raise OneChatError("cancellation evidence cannot follow its settlement")
+                elif not (re.match(r"https?://\S+$", r.get("first_play_source", ""))
                         and raw and sha(raw) == r.get("first_play_capture_sha256")
                         and r.get("first_play_excerpt", "") and r["first_play_excerpt"] in raw.decode("utf-8", errors="replace")):
                     raise OneChatError(f"{r['card_key']}: verified first-play capture, source and exact excerpt are required")
@@ -957,6 +1009,9 @@ def _read_outcomes(paths, repo, captures, require_committed) -> tuple[dict, list
             if key in grades and grades[key]["grade"] != r["grade"]:
                 raise OneChatError(f"{key}: two outcome rows give different grades")
             grades[key] = r
+    cancelled_keys={r["card_key"] for r in grades.values() if r["grade"]=="VOID" and not r.get("actual_start")}
+    if any(r["grade"]!="VOID" for r in grades.values() if r["card_key"] in cancelled_keys):
+        raise OneChatError("a never-started cancellation must void every contract of the game")
     return grades, problems
 
 
@@ -1016,7 +1071,7 @@ def score(intakes, outcomes, out, *, root=ROOT, captures=None, cohort=None, base
             custody.append(f"{key}: settled event identity differs from the frozen original request")
         for r in seal["request_contracts"]:
             if r["baseline_p"]:
-                base[(key,r["label"],r["side"])]=float(r["baseline_p"])
+                base[(key,r["label"],r["side"].upper())]=float(r["baseline_p"])
     missing_sealed = sorted({r["card_key"] for r in repo.seals} - set(cards))
     if missing_sealed:
         custody.append("Sealed games omitted from supplied intakes: " + ", ".join(missing_sealed))
