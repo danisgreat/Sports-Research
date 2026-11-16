@@ -8,7 +8,7 @@
 
 **Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §5.
 
-**P-2026.11.16-v25.0 · CANONICAL_IMPORT · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: active log suffix, current status/state/scoreboard, a new import report with preserved inputs, and declared append-only source observations in RESEARCH_SOURCE_REGISTER, plus the append-only LEARN-v1 learning store, training-candidate folders and review log. Never rewrite issued cores, closed parts or grades. Publish when this full prompt is invoked unless the user requests local-only.
+**P-2026.11.16-v26.0 · CANONICAL_IMPORT · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: active log suffix, current status/state/scoreboard, a new import report with preserved inputs, and declared append-only source observations in RESEARCH_SOURCE_REGISTER, plus the append-only LEARN-v1 learning store, training-candidate folders and review log. Never rewrite issued cores, closed parts or grades. Publish when this full prompt is invoked unless the user requests local-only.
 
 **ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](../../REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](../../CORE.md) §7.
 
@@ -102,3 +102,7 @@ For each imported card that has a learning log, run `python -m ml learning-log l
 Before settlement, run `python -m ml one-chat intake --drop <owner drop folder> --out research/one_chat/intake/<YYYY-MM-DD-n>` on the owner's original files. Each file's saved time is read there, so run it before copying. Report admitted, refused (with reasons), no-block and duplicate-game cards and the share of supplied lines that carry a number. A refused card is retained and imported as research; its numbers are not scored. Flags are reported, never applied.
 
 After settlement and import, run `python -m ml one-chat score --intake research/one_chat/intake/* --outcomes <every package's OUTCOMES.csv> --out research/one_chat/scores/<YYYY-MM-DD-n>`. Before 100 eligible games it reports PROGRESS; at 100 it freezes the cohort. Put its summary, calibration table and slope in the import report for every drop. Canonical IDs, byte-exact retention and CARD-TRAIN-v1 are unchanged. Plan: [EVALUATION_PLAN_v25.0](../external/EVALUATION_PLAN_v25.0.md).
+
+## One chat per game: custody and the verdict, v26.0 (ONE-CHAT-v2)
+
+Before scoring, run `python -m ml one-chat receipts` to refresh GitHub's push times and commit `research/one_chat/sealed/PUSH_RECEIPTS.csv` if it changed. Commit every intake folder (with its MANIFEST.csv) and every OUTCOMES.csv first; the score refuses to decide on uncommitted or changed inputs. Report the verdict line (`advantage`, games in the sequence, e-value, lower bound), the custody problems, the sealed / client-only / unsealed counts and the cards held back by an unsettled earlier game. Once the first 100 games are frozen, every later run passes `--cohort` with that COHORT.csv. Plan: [EVALUATION_PLAN_v26.0](../external/EVALUATION_PLAN_v26.0.md).

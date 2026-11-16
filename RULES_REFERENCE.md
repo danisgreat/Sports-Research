@@ -362,3 +362,17 @@ Replaces: nothing; narrows no earlier rule. SPORTS_ONLY / MARKET_BLIND is unchan
 - Each deep loss review (DEEPLOSS-v1) also appends one row to [DEEP_LOSS_REGISTER.csv](research/deep_loss/DEEP_LOSS_REGISTER.csv): the card, the contract, the trigger, the verdict and one failure class from Part B §8, with a printed alias where the review used its own name. `python -m ml deep-loss tally` counts reviews per class; three or more is a pattern routed to prompt 8. The prose review is unchanged.
 - `python -m ml learning-status --card-rows <card-training ROWS.csv>` adds review clocks counted on settled card games (level CARDS). Clocks remain reminders (AUDIT-ANYTIME-v1).
 - Release identities live in [VERSIONS.csv](VERSIONS.csv); `python -m ml state --restamp` prints them into the prompt files and CORE, and `python -m ml state --write` into CURRENT_STATE.
+
+## Sealing, custody and the anytime test (ONE-CHAT-v2, CR-2026.11.16-R3)
+
+Owner order, 16 November 2026: the demonstrated predictive advantage is to be fully implemented, after an independent review of v25.0 found six defects. This section amends "One chat per game" above; the card format is unchanged.
+
+- **Seal before play.** `python -m ml one-chat seal --card <file>` validates the card, copies the whole file into `research/one_chat/sealed/`, appends `SEALS.csv`, commits, pushes to `origin/main` and records GitHub's server time for that push in `PUSH_RECEIPTS.csv`. A card counts only if its exact block reached GitHub at or before the official first play (SEALED_PRE_START_SERVER). `python -m ml one-chat receipts` refreshes the push times from GitHub before scoring.
+- **Timing inside the card.** The not-started check and every observed fact must fall between `research_start_at` and `research_end_at` (intake refuses otherwise); at scoring, all of them and the research end must be at or before the first play, and the research must end before the seal.
+- **Committed, hash-checked inputs.** Every intake writes MANIFEST.csv; scoring refuses to decide (NOT_ASSESSABLE) unless every intake file matches its manifest and is committed unchanged, the outcome files are committed, and a reused cohort is committed with its receipt.
+- **Settlement rows.** Each terminal grade carries `event_id` (the competition's native match identity), `final_source`, `final_capture_sha256` and `final_capture_path`; scoring re-hashes the capture and refuses a missing or different file.
+- **One game across intakes.** Cards sharing a game identity or an `event_id` anywhere in the scored intakes are one game; the first sealed card is the card of record.
+- **Whole-number lines** are scored on each side's share given no push.
+- **The verdict** is the anytime-valid test in [EVALUATION_PLAN_v26.0](research/external/EVALUATION_PLAN_v26.0.md); the fixed first-100 interval is secondary, its cohort is frozen once with a receipt and any other cohort is refused.
+
+Replaces: the v25.0 eligibility rule based on the file's saved time, and the v25.0 decision rule (fixed first-100 t interval). Originals: archive/superseded_2026-11-16-3.

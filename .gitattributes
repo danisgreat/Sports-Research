@@ -165,3 +165,7 @@ research/deep_loss/** -text
 VERSIONS.csv -text
 research/verification/settlement_import_2026-11-16-1/** -text
 research/verification/combined_rollover_2026-11-16-1/** -text
+
+# v26.0 / CR-2026.11.16-R3: archived originals and the new verification folder keep exact bytes.
+archive/superseded_2026-11-16-3/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+research/verification/framework_change_2026-11-16-3/** -text

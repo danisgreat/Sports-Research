@@ -14,7 +14,6 @@ from urllib.parse import urlparse
 from ml import timing
 
 PATH = "research/adjustment_ledger/TIMING_CORRECTIONS.csv"
-STALE_LOCK_SECONDS = 600
 FIELDS = ("sequence", "local_key", "ledger_rows_sha256", "previous_timing", "effective_timing", "actual_start",
           "source_url", "evidence_path", "evidence_sha256", "recorded_at", "reason", "prev_sha256", "row_sha256")
 PROOF_FIELDS = ("local_key", "actual_start", "source_url", "observed_at", "note")
@@ -139,24 +138,41 @@ def apply(ledger, root):
 
 @contextlib.contextmanager
 def locked(path):
+    """An operating-system lock on a side file: held only while this process is alive and inside the block.
+
+    The lock file itself may stay on disk; a leftover file is not a lock. A writer that is still alive keeps its lock
+    however old the file is, so it can never be taken over; a writer that died releases it automatically.
+    """
     lock = path.with_suffix(".lock")
+    lock.parent.mkdir(parents=True, exist_ok=True)
+    f = open(lock, "a+b")
     try:
-        f = lock.open("x")
-    except FileExistsError:
-        # A correction holds the lock for well under a second. A lock older than STALE_LOCK_SECONDS was left by a
-        # process that died; it is removed once, otherwise the refusal names the file so it can be checked by hand.
-        age = datetime.now(timezone.utc).timestamp() - lock.stat().st_mtime
-        if age < STALE_LOCK_SECONDS:
-            raise RuntimeError(f"timing corrections are locked by another writer ({lock}, {age:.0f}s old); retry, or "
-                               f"delete the file if no correction is running") from None
-        lock.unlink()
-        f = lock.open("x")
-    with f:
-        f.write(str(os.getpid()))
-    try:
-        yield
+        try:
+            if os.name == "nt":
+                import msvcrt
+                f.seek(0)
+                msvcrt.locking(f.fileno(), msvcrt.LK_NBLCK, 1)
+            else:
+                import fcntl
+                fcntl.flock(f.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except OSError:
+            raise RuntimeError(f"timing corrections are locked by another writer ({lock}); retry when it has finished") from None
+        try:
+            f.seek(0)
+            f.truncate()
+            f.write(str(os.getpid()).encode())
+            f.flush()
+            yield
+        finally:
+            if os.name == "nt":
+                import msvcrt
+                f.seek(0)
+                msvcrt.locking(f.fileno(), msvcrt.LK_UNLCK, 1)
+            else:
+                import fcntl
+                fcntl.flock(f.fileno(), fcntl.LOCK_UN)
     finally:
-        lock.unlink()
+        f.close()
 
 
 def correct(ledger_path, key, actual_start, source_url, evidence, reason, *, root, at=None):

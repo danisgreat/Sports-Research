@@ -71,7 +71,7 @@ def test_the_printed_template_parses_once_filled():
 
 
 def test_the_briefs_worked_example_is_a_valid_block_apart_from_its_elided_facts():
-    brief = (S.ROOT / "research/external/ONE_CHAT_BRIEF_v25.0.md").read_text(encoding="utf-8").replace("<MINI_KEY>", "CHATX")
+    brief = (S.ROOT / "research/external/ONE_CHAT_BRIEF_v26.0.md").read_text(encoding="utf-8").replace("<MINI_KEY>", "CHATX")
     body = re.sub(r"https://<[^>]+>", "https://example.org/x", O.BLOCK.search(brief)["body"].replace(chr(10) + "...", ""))
     meta, picks, facts = O.parse(body)
     problems, derived = O.check(meta, picks, facts, "CHATX-G0001")

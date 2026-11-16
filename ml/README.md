@@ -224,3 +224,12 @@ python -m ml deep-loss check | tally                                            
 python -m ml learning-status ... --card-rows research/card_training/<run>/ROWS.csv   review clocks counted on card games
 python -m ml state --restamp                                                         print VERSIONS.csv into the prompts and CORE
 ```
+
+## Sealing and the anytime verdict (v26.0)
+
+```text
+python -m ml one-chat seal --card FILE [FILE ...] [--no-push]    commit and push card files before play; records GitHub's push time
+python -m ml one-chat receipts                                   refresh GitHub push times into research/one_chat/sealed/PUSH_RECEIPTS.csv
+python -m ml one-chat score ... [--captures DIR]                 committed inputs only; prints the verdict, e-value and lower bound
+python -m ml one-chat history --rows ROWS.csv --out DIR          the same test on historical cards (context only)
+```
