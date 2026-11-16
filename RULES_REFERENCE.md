@@ -363,7 +363,7 @@ Replaces: nothing; narrows no earlier rule. SPORTS_ONLY / MARKET_BLIND is unchan
 - `python -m ml learning-status --card-rows <card-training ROWS.csv>` adds review clocks counted on settled card games (level CARDS). Clocks remain reminders (AUDIT-ANYTIME-v1).
 - Release identities live in [VERSIONS.csv](VERSIONS.csv); `python -m ml state --restamp` prints them into the prompt files and CORE, and `python -m ml state --write` into CURRENT_STATE.
 
-## Sealing, custody and the anytime test (ONE-CHAT-v2, CR-2026.11.16-R3)
+## Sealing, custody and the anytime test (ONE-CHAT-v3, CR-2026.11.16-R3)
 
 Owner order, 16 November 2026: the demonstrated predictive advantage is to be fully implemented, after an independent review of v25.0 found six defects. This section amends "One chat per game" above; the card format is unchanged.
 
@@ -373,6 +373,10 @@ Owner order, 16 November 2026: the demonstrated predictive advantage is to be fu
 - **Settlement rows.** Each terminal grade carries `event_id` (the competition's native match identity), `final_source`, `final_capture_sha256` and `final_capture_path`; scoring re-hashes the capture and refuses a missing or different file.
 - **One game across intakes.** Cards sharing a game identity or an `event_id` anywhere in the scored intakes are one game; the first sealed card is the card of record.
 - **Whole-number lines** are scored on each side's share given no push.
-- **The verdict** is the anytime-valid test in [EVALUATION_PLAN_v26.0](research/external/EVALUATION_PLAN_v26.0.md); the fixed first-100 interval is secondary, its cohort is frozen once with a receipt and any other cohort is refused.
+- **The verdict** is the anytime-valid test in [EVALUATION_PLAN_v27.0](research/external/EVALUATION_PLAN_v27.0.md); the fixed first-100 interval is secondary, its cohort is frozen once with a receipt and any other cohort is refused.
 
 Replaces: the v25.0 eligibility rule based on the file's saved time, and the v25.0 decision rule (fixed first-100 t interval). Originals: archive/superseded_2026-11-16-3.
+
+## ONE-CHAT-v3: current request, custody and evaluation authority
+
+Owner-authorized replacement for v25/v26: [RUNBOOK](research/one_chat/RUNBOOK.md) and [EVALUATION_PLAN_v27.0](research/external/EVALUATION_PLAN_v27.0.md). Register the unchanged original request and fully defined exact contracts before research. Publish data on `forecast-seals`, independently re-fetch server push times, replay the scored values from the exact committed blobs, account for every request and seal, and verify saved result/first-play captures. Main is a protected code branch with CI. Do not manufacture historical pregame proof. The changing-average confidence bound and frozen-prefix decision replace the v26 constant-mean interpretation. Per-sport inference uses the fixed eleven sections. Any statistical or population change is a new registration. No actual predictive advantage is asserted merely by implementation, historical win rate or passing tests.

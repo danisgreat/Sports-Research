@@ -10,7 +10,7 @@
 
 **Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §5.
 
-**P-2026.11.16-v26.0 · LOCAL_MINI_SETTLEMENT.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). **LOCAL_WORKING_TREE** (ENV-v2). Writes: the frozen mini's source identity, one settlement document with dated revisions at `research/active_minis/<MINI_KEY>_SETTLEMENT.md`, the ledger inputs and frozen-row settlements of section 4, then the prompt-4 import of section 6 and a commit and push. Original cards are immutable. Settle the original probabilities from the frozen card; the model never re-grades or replaces them. Historical MODEL_ASSISTED cards are settled on their frozen contracts like any other card. The decision lab is excluded.
+**P-2026.11.16-v27.0 · LOCAL_MINI_SETTLEMENT.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). **LOCAL_WORKING_TREE** (ENV-v2). Writes: the frozen mini's source identity, one settlement document with dated revisions at `research/active_minis/<MINI_KEY>_SETTLEMENT.md`, the ledger inputs and frozen-row settlements of section 4, then the prompt-4 import of section 6 and a commit and push. Original cards are immutable. Settle the original probabilities from the frozen card; the model never re-grades or replaces them. Historical MODEL_ASSISTED cards are settled on their frozen contracts like any other card. The decision lab is excluded.
 
 **ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](../../REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](../../CORE.md) §7.
 
@@ -116,21 +116,6 @@ Account separately for settled unique events, events still pending and events wi
 
 For a manifest-bound event generate exact fact IDs with `python -m ml research-ops fact-template --event EVENT_DIR --out OBSERVATIONS.csv`, review actual sporting evidence and run `research-ops score-facts --event EVENT_DIR --observations OBSERVATIONS.csv --final-at VERIFIED_FINAL --out NEW_SCORES`. Retain missing observations as UNRESOLVED and exclude projected statements from confirmed-fact accuracy. Report lane and original-collector coverage; overlapping facts are dependent. Twenty to thirty games are an early descriptive review, not predictive promotion or early experiment stopping. Continue the existing owner-supplied post-settlement benchmark procedure; never search for prices or feed benchmarks into forecasts. Unpriced contracts remain outside numerical scores and preserve their original disposition.
 
+## Current one-chat workflow (ONE-CHAT-v3)
 
-**ASSESS-100 handoff:** after verified settlement/import, report the actual eligible fully settled paired-game count. At the first 100, the current assessment is due immediately through prompt 6 / external evaluate; there is no minimum-week or end-of-week wait. Do not infer eligibility from raw card/pick counts or old logs missing pre-start comparator evidence. Preserve the exact first-100 cohort and report the finding separately from assessment readiness.
-
-**Timing check at settlement (TIMING-v3, CR-2026.11.15-R1 / P-2026.11.16-v26.0).** For every `PRE_START_RESEARCH` card, retrieve the official actual first play (game sheet, play-by-play or match centre). If `research_started_at` was not before it, or the declared not-started observation contradicts it, append a dated settlement revision that re-labels the card `POST_START_ISSUE`; never change the original card. An actual first play that cannot be found leaves the declaration standing and is recorded as UNVERIFIED in the settlement.
-
-## One chat per game: settlement inputs (ONE-CHAT-v1)
-
-For cards that end with an `ONECHAT_V1` block:
-
-- Settle every row of the block's PICKS table, both sides of every line, from a permitted result page. Start with the card's `result_source`; use a second permitted source where one exists.
-- Save each result page that settles a row outside the repository and record its SHA-256. A grade without a saved capture cannot be scored.
-- Write `OUTCOMES.csv` in the settlement package: `card_key,label,side,grade,actual_start,settled_at,final_source,final_capture_sha256`. `actual_start` is the official first play.
-- Run prompt 6's ingest step for these captured finals at import (`python -m ml ingest add`), and report games settled against learning-store events added.
-- Each deep loss review appends one row to `research/deep_loss/DEEP_LOSS_REGISTER.csv` with its verdict and one registered failure class; run `python -m ml deep-loss check`. Item 11 of the review quotes the earlier count of that class from `python -m ml deep-loss tally`.
-
-## One chat per game: settlement inputs, v26.0 (ONE-CHAT-v2)
-
-In `OUTCOMES.csv` add `event_id` (the competition's native match identity, the same for every row of one game) and `final_capture_path` (the saved result page, relative to the captures folder outside the repository, default `../one_chat_captures`). `final_capture_sha256` must be that file's SHA-256: scoring re-hashes it. Commit the OUTCOMES.csv file; an uncommitted file makes the score NOT_ASSESSABLE.
+For ONECHAT_V1 cards use [the current runbook](../one_chat/RUNBOOK.md) and [v27 evaluation plan](../external/EVALUATION_PLAN_v27.0.md). These replace the v25/v26 one-chat and external-evaluate handoffs. The reference-first/lane instructions above apply to separate legacy PICKS_V2 cards. Original requests, exact contract definitions, before-play publication, independent server timing, complete request accounting and captured first-play evidence govern the one-chat assessment. Preserve research even when it cannot qualify.

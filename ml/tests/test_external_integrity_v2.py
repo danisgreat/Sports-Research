@@ -241,7 +241,8 @@ def test_full_card_append_learning_ledger_binding_and_settlement(event):
     card_text = f"<!-- BEGIN CARD {e['local_key']} -->\n" + TP.render(meta, rows, key=e["local_key"])
     card_text += "\n" + "\n".join(f"### A{i} EXAMPLE synthetic research procedure and evidence" for i in range(1, 10))
     card_text += f"\n<!-- END CARD {e['local_key']} -->"
-    card = root / "CANDIDATE.md"; card.write_text(card_text, encoding="utf-8")
+    # Exercise an LF source against a CRLF destination on every OS.
+    card = root / "CANDIDATE.md"; card.write_bytes(card_text.encode("utf-8"))
     receipt = root / "CENTRAL_RECEIPT.md"; receipt.write_text(event["receipt"], encoding="utf-8")
     mini = root / "MINI.md"
     before = ("# EXAMPLE existing mini\r\n| Writer/lease | EXAMPLE; expires 2026-11-12T00:00:00+00:00 |\r\n"

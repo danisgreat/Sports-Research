@@ -291,3 +291,7 @@ Owner order, 16 November 2026: implement the audit's recommendations. The BLOCKE
 ## Owner-ordered demonstration of predictive advantage - CR-2026.11.16-R3 (ONE-CHAT-v2 / EVAL-ONECHAT-v2)
 
 Owner order, 16 November 2026, after an independent review of v25.0 (six defects, all reproduced and fixed with tests). [EVALUATION_PLAN_v26.0](research/external/EVALUATION_PLAN_v26.0.md) replaces EVALUATION_PLAN_v25.0 before any game was scored. The claim: the mean advantage d over a constant 0.5 on supplied lines is above zero. Decision by an anytime-valid e-process (threshold 20, practical mean 0.01, horizon 400 games, bet cap 0.75); eligibility now needs a GitHub-timed seal before play and committed, hash-checked inputs. Status: REGISTERED_NOT_STARTED. The six hypotheses keep their flags and stay PROPOSED_NOT_TESTED. Historical context: on 280 unsealed historical cards the same test would cross (e-value 59, lower bound +0.005); on the 31 chat-research cards on supplied lines it shows nothing (e-value 1.0). Neither is evidence for the registered claim.
+
+## 16 November 2026 ? ONE-CHAT-v3 replacement before any real sealed game
+
+Owner-authorized v27 registration: original request, complete seal sequence, exact Git blobs, current-average empirical-Bernstein confidence sequence and frozen assessed prefix replace ONE-CHAT-v2. [Plan](research/external/EVALUATION_PLAN_v27.0.md). Historical associations remain retrospective; the six research hypotheses remain exploratory, not adopted. No new model is promoted.

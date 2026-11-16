@@ -21,6 +21,7 @@ def test_versions_file_is_what_core_the_prompts_and_current_state_print():
             assert suite in found, path.name
     state = (S.ROOT / S.STATE).read_text(encoding="utf-8")
     assert all(v[i]["current"] in state for i in S.VERSION_ITEMS)
+    assert f"| Prompt suite | {suite} " in state
     assert S.restamp() == [], "a release leaves nothing for restamp to change"
 
 
@@ -71,7 +72,7 @@ def test_the_printed_template_parses_once_filled():
 
 
 def test_the_briefs_worked_example_is_a_valid_block_apart_from_its_elided_facts():
-    brief = (S.ROOT / "research/external/ONE_CHAT_BRIEF_v26.0.md").read_text(encoding="utf-8").replace("<MINI_KEY>", "CHATX")
+    brief = (S.ROOT / "research/external/ONE_CHAT_BRIEF_v27.0.md").read_text(encoding="utf-8").replace("<MINI_KEY>", "CHATX")
     body = re.sub(r"https://<[^>]+>", "https://example.org/x", O.BLOCK.search(brief)["body"].replace(chr(10) + "...", ""))
     meta, picks, facts = O.parse(body)
     problems, derived = O.check(meta, picks, facts, "CHATX-G0001")

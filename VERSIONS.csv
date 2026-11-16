@@ -1,6 +1,6 @@
 item,current,previous
-method,MDS-2026.11.16-v26.0,MDS-2026.11.16-v25.0
-control_revision,CR-2026.11.16-R3,CR-2026.11.16-R2
-prompt_suite,P-2026.11.16-v26.0,P-2026.11.16-v25.0
-scoring,SCV-2026.11.16-v17,SCV-2026.11.16-v16
+method,MDS-2026.11.16-v27.0,MDS-2026.11.16-v26.0
+control_revision,CR-2026.11.16-R4,CR-2026.11.16-R3
+prompt_suite,P-2026.11.16-v27.0,P-2026.11.16-v26.0
+scoring,SCV-2026.11.16-v18,SCV-2026.11.16-v17
 selection,SEL-2026.10.22-v4,SEL-2026.10.22-v4

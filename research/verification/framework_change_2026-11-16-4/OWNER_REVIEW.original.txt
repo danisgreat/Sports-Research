@@ -1,0 +1,125 @@
+# Sports-Research GitHub Repository Review
+
+Reviewed 16 November 2026 · `main` branch · Read-only
+
+Repository: [danisgreat/Sports-Research](https://github.com/danisgreat/Sports-Research?utm_source=chatgpt.com)
+
+The latest `main` commit is `a90932c` (v26.0), dated 16 November 2026.
+
+One important distinction stands out: the repository has substantial forecasting infrastructure, but its latest evaluation procedure still reports `NOT_YET_DEMONSTRATED`, with zero prospectively sealed games. This means improvements to the software and research methodology should not yet be interpreted as proof of predictive superiority.
+
+I’m evaluating two separate questions: how well the system has been engineered, and how much evidence exists that its predictions outperform appropriate benchmarks.
+
+Overall repository rating
+
+# 6.5/10
+
+Promising system, not yet production-validated
+
+This rating reflects the software, research framework and operational maturity—not a verified prediction success rate. The architecture is relatively advanced for a personal sports analytics project, but predictive validation, data quality and automation lag behind its documentation.
+
+## 1. Detailed scores
+
+| Category                 | Score    | Assessment                                                                             |
+| ------------------------ | -------- | -------------------------------------------------------------------------------------- |
+| Research methodology     | 8.5/10   | Strong pregame evidence requirements and multi-sport coverage                          |
+| Statistical evaluation   | 7/10     | Brier scoring, calibration and an anytime-valid test, but a limited primary comparator |
+| Code and testing         | 7.5/10   | Substantial modular Python implementation and regression tests                         |
+| Historical data quality  | 5/10     | Incomplete coverage, limited structured research features and unresolved results       |
+| Automation and CI        | 4/10     | No current Actions workflow or protected `main` branch found                           |
+| Predictive effectiveness | Unproven | No eligible v26.0 prospective evaluation games                                         |
+
+The latest commit reports 994 passing tests. I verified the presence of extensive test code and reviewed representative implementations, but did not independently execute that suite.
+
+## 2. What the historical results reveal
+
+The repository's 16 November retrospective provides a particularly useful warning about confidence calibration.
+
+Reported Rank 1 and Rank 2 historical outcomes
+
+Rank 1
+
+# 62.6%
+
+381 wins, 228 losses
+
+Rank 2
+
+# 57.1%
+
+331 wins, 249 losses
+
+These win rates mix historical selection policies and lines of unequal difficulty. They are not evidence of an advantage over fair prices or a qualified forecasting model.
+
+Historical calibration by stated probability band
+
+Reported probabilities against observed win rates; selected bands from the November retrospective.
+
+Stated probability
+
+Observed win rate
+
+0%25%50%75%100%55–60%60–65%65–70%70–75%
+
+The 60–65% confidence band is particularly concerning: forecasts averaging 62.1% succeeded only 51.7% of the time in that historical sample. That result requires prospective confirmation, but it suggests overconfidence in an important selection range.
+
+Source: [16 November retrospective](https://github.com/danisgreat/Sports-Research/blob/main/research/verification/retrospective_2026-11-16-1/RETROSPECTIVE_REPORT.md?utm_source=chatgpt.com).
+
+## 3. Improvements, in priority order
+
+P0 — Make the prospective evidence independently auditable
+
+The scorer currently evaluates contracts entered in each card without comparing them against an immutable copy of the user's original requested lines. It also reads locally mirrored GitHub push receipts.
+
+Add an original-request manifest with contract hashes, externally verifiable first-play timestamps, and independent re-verification of push receipts. This would close important opportunities for accidental selection bias or incorrect timing evidence.
+
+P0 — Run the first genuine prospective validation
+
+Freeze the methodology and collect the first 100 eligible games, then continue toward the registered 400-game decision horizon. Track all requested games, including unpriced, late, unresolved and excluded games.
+
+Compare forecasts against the pre-registered 0.5 benchmark and stronger sporting-data-only baselines. Report Brier score, log loss, calibration, coverage and uncertainty by sport and contract. No retrospective analysis should substitute for this experiment.
+
+P1 — Build a reliable structured training dataset
+
+The retrospective reports 5,402 learning-store events, but only 20 associated with carded games and very limited team statistics. Capture all researched L5/L10/L20 results, opponent strength, lineup status, injuries, venue, rest, and contextual adjustments in machine-readable form.
+
+Enforce real competition/event IDs, source provenance, missingness checks, deduplication and point-in-time data availability. Prioritise dataset quality over collecting more loosely structured results.
+
+P1 — Introduce CI and protected releases
+
+Restore a GitHub Actions workflow that runs tests, formatting/static checks, card-schema validation and a small end-to-end evaluation fixture on every proposed change.
+
+Protect `main` with required passing checks. Replace the current seal command's direct-to-main push dependency with a controlled, timestamped ingestion path that still permits cards to be sealed promptly before play.
+
+P2 — Improve forecasting models only after the data and evaluation are stable
+
+Develop sport-specific baselines with hierarchical competition effects, opponent-adjusted strengths, rest/travel and verified availability features. Use chronological backtesting, held-out competitions and prospective shadow comparisons.
+
+Test whether ML or adaptive expert weighting genuinely improves calibrated probabilities over simpler models. Avoid promoting RL or complex ensembles solely because they fit historical results.
+
+P2 — Simplify the documentation and operating workflow
+
+The latest tree contains approximately 5,350 tracked entries, with large archive and verification directories. Maintain one current specification, one version registry and one concise runbook. Keep superseded designs accessible, but clearly separate them from active rules.
+
+Reduce repeated instructions and use generated documentation where practical. This would lower the chance of different research chats applying different policies.
+
+## 4. What would raise the rating?
+
+| Milestone                                                                         | Potential rating |
+| --------------------------------------------------------------------------------- | ---------------- |
+| Current v26.0 implementation                                                      | 6.5/10           |
+| Request-level custody, CI and data-quality repairs verified                       | 7.5/10           |
+| First 100 prospective games completed with auditable results                      | 8/10             |
+| Repeatable, independently validated advantage with robust sport-level calibration | 9/10             |
+
+These are indicative engineering milestones, not guaranteed scores. A system that correctly demonstrates no advantage can still be excellent research software, whereas a high historical win rate without reliable provenance should not receive a high scientific-validity rating.
+
+## Final recommendation
+
+The next improvement should not be another major forecasting-model version. The highest-value work is to make the v26.0 experiment trustworthy, operate it consistently and collect sufficient prospective evidence.
+
+The repository already contains substantial research rules, numerical tooling, historical records and integrity tests. Turning those components into a reliable end-to-end measurement system would provide more value than adding further prediction algorithms immediately.
+
+The review was a static inspection of the current GitHub tree, key Python modules, tests, evaluation plan and retrospective—not a full dynamic security or performance audit. No repository files were modified.
+
+Key references: [Evaluation plan](https://github.com/danisgreat/Sports-Research/blob/main/research/external/EVALUATION_PLAN_v26.0.md?utm_source=chatgpt.com) · [Scoring implementation](https://github.com/danisgreat/Sports-Research/blob/main/ml/one_chat.py?utm_source=chatgpt.com) · [v26.0 implementation review](https://github.com/danisgreat/Sports-Research/blob/main/research/verification/framework_change_2026-11-16-3/IMPLEMENTATION.md?utm_source=chatgpt.com)

@@ -8,6 +8,9 @@ import subprocess
 import pytest
 
 from ml import one_chat as O
+from ml import forecast_integrity as F
+
+LIVE_PUSHES = {}
 
 FACTS = O.required_facts("Basketball")
 START = "2026-11-20T08:00:00+00:00"
@@ -105,7 +108,7 @@ def git(root, *args):
 
 
 @pytest.fixture()
-def repo(tmp_path):
+def repo(tmp_path, monkeypatch):
     origin = tmp_path / "origin.git"
     subprocess.run(["git", "init", "-q", "--bare", "-b", "main", str(origin)], check=True)
     root = tmp_path / "repo"
@@ -114,10 +117,16 @@ def repo(tmp_path):
     git(root, "config", "user.name", "Example")
     git(root, "config", "core.autocrlf", "false")
     (root / "README.md").write_text("example\n", encoding="utf-8")
+    plan=root/O.PLAN
+    plan.parent.mkdir(parents=True,exist_ok=True)
+    plan.write_bytes((O.ROOT/O.PLAN).read_bytes())
     git(root, "add", "README.md")
+    git(root,"add",O.PLAN)
     git(root, "commit", "-q", "-m", "start")
     git(root, "remote", "add", "origin", str(origin))
     git(root, "push", "-q", "origin", "main")
+    LIVE_PUSHES[str(root)] = [dict(before="",after=git(root,"rev-parse","HEAD"),pushed_at_server="2026-11-20T04:00:00Z",ref="refs/heads/main")]
+    monkeypatch.setattr(O, "github_push_activity", lambda root: list(LIVE_PUSHES.get(str(root), [])))
     return root
 
 
@@ -127,14 +136,45 @@ class Server:
         self.at, self.seen = at, []
 
     def __call__(self, root):
-        head = git(root, "rev-parse", "refs/remotes/origin/main")
+        ref = f"refs/remotes/origin/{O.SEAL_BRANCH}"
+        self.seen = LIVE_PUSHES.setdefault(str(root), [])
+        check = subprocess.run(["git", "-C", str(root), "rev-parse", "--verify", ref], capture_output=True, text=True)
+        if check.returncode:
+            return list(self.seen)
+        head = check.stdout.strip()
         if not any(r["after"] == head for r in self.seen):
-            self.seen.append(dict(before="", after=head, pushed_at_server=self.at, ref="refs/heads/main"))
+            self.seen.append(dict(before="", after=head, pushed_at_server=self.at, ref=f"refs/heads/{O.SEAL_BRANCH}"))
         return list(self.seen)
 
 
-def seal(repo, files, at="2026-11-20T07:00:00Z"):
+def seal(repo, files, at="2026-11-20T07:00:00Z", event_id=None, transform=None):
+    prepare_requests(repo, files, event_id,transform=transform)
     return O.seal(files, repo, lookup=Server(at), wait=(0,))
+
+
+def prepare_requests(repo, files, event_id=None, *,publish=True,transform=None):
+    keys=[]
+    for file in files:
+        for key, _, meta, pk, _, problems, _ in O.card_blocks(file.read_text(encoding="utf-8")):
+            if problems:
+                continue
+            path = O.request_staging(repo) / "test-inputs" / key
+            path.mkdir(parents=True, exist_ok=True)
+            event = {f: meta[f] for f in ("sport", "competition", "home", "away", "scheduled_start")}
+            event.update(event_id=event_id or "TEST:" + O.game_id(meta), schedule_source="https://example.org/official-schedule")
+            (path / "EVENT.csv").write_bytes(O.csv_bytes(F.EVENT_FIELDS, [event]))
+            contracts = [dict(**{f: r[f] for f in ("label", "family", "side", "line")}, period="FULL_MATCH", endpoint="REGULATION",
+                              action="NORMAL", unit="POINTS", request_excerpt=f"{r['family']} {r['side']} {r['line']}",
+                              baseline_p="", baseline_id="UNAVAILABLE:NO_FROZEN_LEAGUE_BASELINE") for r in pk]
+            if transform:
+                contracts=transform(contracts)
+            (path / "CONTRACTS.csv").write_bytes(O.csv_bytes(F.CONTRACT_FIELDS, contracts))
+            (path / "REQUEST.txt").write_text("\n".join(r["request_excerpt"] for r in contracts), encoding="utf-8")
+            F.register_request(path / "REQUEST.txt", path / "EVENT.csv", path / "CONTRACTS.csv", key, O.request_staging(repo))
+            keys.append(key)
+    if keys and publish:
+        O.publish_requests(keys,repo)
+        Server("2026-11-20T04:30:00Z")(repo)
 
 
 def commit_all(repo, message="records"):
@@ -148,24 +188,28 @@ def outcomes(repo, captures, keys, *, over=lambda n: True, start=START, name="OU
     rows = []
     for n, key in enumerate(keys):
         page = captures / f"{key}.html"
-        page.write_text(f"final for {key}", encoding="utf-8")
+        page.write_text(f"final for {key}; actual first play {start}", encoding="utf-8")
         digest = "f" * 64 if fake_hash else O.sha(page.read_bytes())
         if fake_hash:
             page.unlink()
         for label, side, won in (("L1", "HOME", False), ("L1", "AWAY", True), ("L2", "OVER", over(n)), ("L2", "UNDER", not over(n))):
-            rows.append(dict(card_key=key, label=label, side=side, grade=grade or ("WIN" if won else "LOSS"), event_id=event(n, key),
+            req = O.request_staging(repo) / F.request_path(key) / "EVENT.csv"
+            native = O.read_csv(req)[0]["event_id"] if req.exists() and event(n, key) == f"EVT-{key}" else event(n, key)
+            rows.append(dict(card_key=key, label=label, side=side, grade=grade or ("WIN" if won else "LOSS"), event_id=native,
                              actual_start=start, settled_at=f"2026-11-20T{11 + n // 60:02d}:{n % 60:02d}:00+00:00",
-                             final_source=R, final_capture_sha256=digest, final_capture_path=page.name))
+                             final_source=R, final_capture_sha256=digest, final_capture_path=page.name,
+                             first_play_source=R, first_play_capture_sha256=digest, first_play_capture_path=page.name,
+                             first_play_excerpt=f"actual first play {start}"))
     path = repo / "research" / name
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_bytes(O.csv_bytes(O.OUTCOME_FIELDS, rows))
     return path
 
 
-def build(repo, tmp_path, cards, *, at="2026-11-20T07:00:00Z", sealed=True, name="in1"):
+def build(repo, tmp_path, cards, *, at="2026-11-20T07:00:00Z", sealed=True, name="in1", event_id=None):
     d = drop(tmp_path, cards, name="drop-" + name)
     if sealed:
-        seal(repo, sorted(d.glob("*.md")), at)
+        seal(repo, sorted(d.glob("*.md")), at, event_id)
     O.intake(d, repo / "research/one_chat/intake" / name, repo)
     return repo / "research/one_chat/intake" / name
 
@@ -180,13 +224,13 @@ def run(repo, tmp_path, intakes, outs, name, **kw):
 
 
 def test_a_sealed_skilled_sequence_is_demonstrated_and_the_first_hundred_freeze_once(repo, tmp_path):
-    folder = build(repo, tmp_path, many(105))
-    keys = [f"CHAT1-G{i:04d}" for i in range(1, 106)]
+    folder = build(repo, tmp_path, many(150))
+    keys = [f"CHAT1-G{i:04d}" for i in range(1, 151)]
     path = outcomes(repo, tmp_path / "cap", keys, over=lambda n: n % 5 != 0)
     commit_all(repo)
     s = run(repo, tmp_path, [folder], [path], "s1")
-    assert s["custody_problems"] == 0 and s["sealed_pre_start_server"] == 105 and s["games_in_sequence"] == 105
-    assert s["advantage"] == "DEMONSTRATED" and 0 < s["crossed_at_game"] <= 105 and s["lower_bound_95"] > 0
+    assert s["custody_problems"] == 0 and s["sealed_pre_start_server"] == 150 and s["games_in_sequence"] == 150
+    assert s["advantage"] == "DEMONSTRATED" and 0 < s["crossed_at_game"] <= 150 and s["lower_bound_95"] > 0
     assert s["cohort_status"] == "COHORT_FROZEN_NOW" and s["cohort_finding"] == "MEETS_REGISTERED_CRITERION"
     out = repo / "research/one_chat/scores/s1"
     assert len(O.read_csv(out / "COHORT.csv")) == 100 and O.read_csv(out / "SEQUENCE.csv")[0]["card_key"] == "CHAT1-G0001"
@@ -217,7 +261,7 @@ def test_review_defect_1_one_game_in_a_hundred_intakes_counts_once(repo, tmp_pat
         O.intake(d, out, repo)
     folders = [out for _, out in pairs]
     keys = [f"CHAT{i}-G0001" for i in range(1, 101)]
-    path = outcomes(repo, tmp_path / "cap", keys, event=lambda n, k: "EVT-ONE-GAME")
+    path = outcomes(repo, tmp_path / "cap", keys)
     commit_all(repo)
     s = run(repo, tmp_path, folders, [path], "s1")
     assert s["games_in_sequence"] == 1 and s["duplicate_cards"] == 99
@@ -226,8 +270,8 @@ def test_review_defect_1_one_game_in_a_hundred_intakes_counts_once(repo, tmp_pat
 
 def test_review_defect_1b_respelled_teams_are_one_game_when_the_settled_event_is_one(repo, tmp_path):
     cards = [card(key=f"CHAT{i}-G0001", home="Alpha" + " FC" * i, away="Beta") for i in range(1, 6)]
-    folder = build(repo, tmp_path, cards)
-    path = outcomes(repo, tmp_path / "cap", [f"CHAT{i}-G0001" for i in range(1, 6)], event=lambda n, k: "EVT-SAME")
+    folder = build(repo, tmp_path, cards, event_id="TEST:SAME")
+    path = outcomes(repo, tmp_path / "cap", [f"CHAT{i}-G0001" for i in range(1, 6)], event=lambda n, k: "TEST:SAME")
     commit_all(repo)
     s = run(repo, tmp_path, [folder], [path], "s1")
     assert s["games_in_sequence"] == 1 and s["duplicate_cards"] == 4
@@ -288,6 +332,11 @@ def test_review_defect_5_whole_number_lines_are_scored_on_the_probability_given_
 
 
 def test_unsealed_late_sealed_client_timed_post_start_and_exposed_cards_never_enter_the_sequence(repo, tmp_path, monkeypatch):
+    all_cards=[card(key="K1-G0001",home="A1",away="B1"),card(key="K2-G0001",home="A2",away="B2"),
+        card(key="K3-G0001",home="A3",away="B3"),card(key="K4-G0001",home="A4",away="B4"),
+        card(key="K5-G0001",home="A5",away="B5",outcome_exposure="saw the first quarter"),card(key="K6-G0001",home="A6",away="B6")]
+    prereg=drop(tmp_path,all_cards,name="all-requests")
+    prepare_requests(repo,sorted(prereg.glob("*.md")))
     good = build(repo, tmp_path, [card(key="K1-G0001", home="A1", away="B1")], name="good")
     unsealed = build(repo, tmp_path, [card(key="K2-G0001", home="A2", away="B2")], sealed=False, name="unsealed")
     late = build(repo, tmp_path, [card(key="K3-G0001", home="A3", away="B3")], at="2026-11-20T09:00:00Z", name="late")
@@ -298,9 +347,11 @@ def test_unsealed_late_sealed_client_timed_post_start_and_exposed_cards_never_en
     # The last push carries a card with no server record at all: only its own (client) commit time is known.
     d = drop(tmp_path, [card(key="K4-G0001", home="A4", away="B4")], name="drop-client")
     monkeypatch.setenv("GIT_COMMITTER_DATE", "2026-11-20T07:30:00+00:00")
-    O.seal(sorted(d.glob("*.md")), repo, push=False)
+    prepare_requests(repo,sorted(d.glob("*.md")))
+    pending=O.seal(sorted(d.glob("*.md")), repo, push=False)
     monkeypatch.delenv("GIT_COMMITTER_DATE")
-    git(repo, "push", "-q", "origin", "main")
+    git(repo, "push", "-q", "origin", pending["commit"]+":refs/heads/"+O.SEAL_BRANCH)
+    git(repo,"fetch","-q","origin",O.SEAL_BRANCH)
     client = repo / "research/one_chat/intake/client"
     O.intake(d, client, repo)
     keys = ["K1-G0001", "K2-G0001", "K3-G0001", "K4-G0001", "K5-G0001"]
