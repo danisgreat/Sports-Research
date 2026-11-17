@@ -1,67 +1,65 @@
 # ONECHAT_V1 template: Other Sports (v29.0)
 
-Copy the block, use the card key and header values from your request packet, and fill every empty field. Every FACTS row stays; write MISSING with the reason when a value cannot be found.
+Use the skeleton in your chat packet when you have one. Otherwise copy this block: the card key and the header values come from the owner's registered request; write one PICKS row per side of every supplied line (two rows per line, same label); keep every FACTS row, writing MISSING with the reason when a value cannot be found. Replace every FILL and every field ending in ?.
 
 ```text
-<!-- BEGIN ONECHAT_V1 <MINI_KEY>-G0001 -->
+<!-- BEGIN ONECHAT_V1 CARD_KEY -->
 format: ONECHAT_V1
-card_key: <MINI_KEY>-G0001
+card_key: FILL
 sport: Other Sports
-competition: 
-home: 
-away: 
-scheduled_start: 
-request_at: 
-research_start_at: 
-research_end_at: 
-not_started_source: 
-not_started_observed_at: 
-outcome_exposure: 
+competition: FILL
+home: FILL
+away: FILL
+scheduled_start: FILL
+request_at: FILL
+research_start_at: FILL
+research_end_at: FILL
+not_started_source: FILL
+not_started_observed_at: FILL
+outcome_exposure: FILL
 
 PICKS
 label,family,side,line,p,lean,centre,availability_basis,result_source
-L1,HANDICAP,HOME,-3.5,0.47,,2.1,NONE,https://
-L1,HANDICAP,AWAY,3.5,0.53,,-2.1,NONE,https://
-L2,TOTAL,OVER,158.5,0.55,,160.2,NONE,https://
-L2,TOTAL,UNDER,158.5,0.45,,160.2,NONE,https://
+L1,FAMILY?,SIDE?,LINE?,P?,,CENTRE?,BASIS?,RESULT_URL?
+L1,FAMILY?,SIDE?,LINE?,P?,,CENTRE?,BASIS?,RESULT_URL?
 
 FACTS
 side,field,value,source,observed_at
-HOME,season_games,,,
-HOME,season_score_for_pg,,,
-HOME,season_score_against_pg,,,
-HOME,last5_score_for_pg,,,
-HOME,last5_score_against_pg,,,
-HOME,last10_score_for_pg,,,
-HOME,last10_score_against_pg,,,
-HOME,rest_days,,,
-HOME,key_absences,,,
-HOME,lineup_confirmed,,,
-HOME,venue,,,
-HOME,travel_km,,,
-HOME,opponent_strength,,,
-HOME,opponent_strength_method,,,
-HOME,availability_effect,,,
-HOME,adjustment_basis,,,
-HOME,last20_score_for_pg,,,
-HOME,last20_score_against_pg,,,
-AWAY,season_games,,,
-AWAY,season_score_for_pg,,,
-AWAY,season_score_against_pg,,,
-AWAY,last5_score_for_pg,,,
-AWAY,last5_score_against_pg,,,
-AWAY,last10_score_for_pg,,,
-AWAY,last10_score_against_pg,,,
-AWAY,rest_days,,,
-AWAY,key_absences,,,
-AWAY,lineup_confirmed,,,
-AWAY,venue,,,
-AWAY,travel_km,,,
-AWAY,opponent_strength,,,
-AWAY,opponent_strength_method,,,
-AWAY,availability_effect,,,
-AWAY,adjustment_basis,,,
-AWAY,last20_score_for_pg,,,
-AWAY,last20_score_against_pg,,,
-<!-- END ONECHAT_V1 <MINI_KEY>-G0001 -->
+HOME,season_games,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+HOME,season_score_for_pg,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+HOME,season_score_against_pg,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+HOME,last5_score_for_pg,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+HOME,last5_score_against_pg,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+HOME,last10_score_for_pg,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+HOME,last10_score_against_pg,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+HOME,rest_days,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+HOME,key_absences,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+HOME,lineup_confirmed,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+HOME,venue,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+HOME,travel_km,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+HOME,opponent_strength,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+HOME,opponent_strength_method,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+HOME,availability_effect,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+HOME,adjustment_basis,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+HOME,last20_score_for_pg,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+HOME,last20_score_against_pg,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+AWAY,season_games,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+AWAY,season_score_for_pg,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+AWAY,season_score_against_pg,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+AWAY,last5_score_for_pg,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+AWAY,last5_score_against_pg,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+AWAY,last10_score_for_pg,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+AWAY,last10_score_against_pg,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+AWAY,rest_days,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+AWAY,key_absences,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+AWAY,lineup_confirmed,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+AWAY,venue,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+AWAY,travel_km,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+AWAY,opponent_strength,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+AWAY,opponent_strength_method,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+AWAY,availability_effect,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+AWAY,adjustment_basis,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+AWAY,last20_score_for_pg,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+AWAY,last20_score_against_pg,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+<!-- END ONECHAT_V1 CARD_KEY -->
 ```

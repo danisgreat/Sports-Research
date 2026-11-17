@@ -334,14 +334,23 @@ def watch(folder, *, every: int = 120, once: bool = False, push: bool = True, ro
 
 
 def write_templates(out) -> dict:
+    """One template per sport for a chat that cannot run this repository: the block's shape, the PICKS columns and
+    every required FACTS row of the sport. The chat packet's skeleton, when there is one, takes precedence."""
     out = Path(out)
     out.mkdir(parents=True, exist_ok=True)
     written = []
     for sport in O.SUPPORTED_SPORTS:
+        head = [f"{f}: {O.FORMAT if f == 'format' else sport if f == 'sport' else 'FILL'}" for f in O.HEADER]
+        picks = ["L1,FAMILY?,SIDE?,LINE?,P?,,CENTRE?,BASIS?,RESULT_URL?", "L1,FAMILY?,SIDE?,LINE?,P?,,CENTRE?,BASIS?,RESULT_URL?"]
+        facts = [f"{side},{f},VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?" for side in ("HOME", "AWAY") for f in O.required_facts(sport)]
+        block = "\n".join(["<!-- BEGIN ONECHAT_V1 CARD_KEY -->", *head, "", "PICKS", ",".join(O.PICK_COLUMNS), *picks, "",
+                           "FACTS", ",".join(O.FACT_COLUMNS), *facts, "<!-- END ONECHAT_V1 CARD_KEY -->"])
+        text = (f"# ONECHAT_V1 template: {sport} (v29.0)\n\nUse the skeleton in your chat packet when you have one. "
+                "Otherwise copy this block: the card key and the header values come from the owner's registered request; "
+                "write one PICKS row per side of every supplied line (two rows per line, same label); keep every FACTS row, "
+                "writing MISSING with the reason when a value cannot be found. Replace every FILL and every field ending "
+                "in ?.\n\n```text\n" + block + "\n```\n")
         name = f"ONECHAT_V1_{sport.upper().replace(' ', '_')}_v29.0.md"
-        text = (f"# ONECHAT_V1 template: {sport} (v29.0)\n\nCopy the block, use the card key and header values from your "
-                "request packet, and fill every empty field. Every FACTS row stays; write MISSING with the reason when a "
-                "value cannot be found.\n\n```text\n" + O.template(sport) + "\n```\n")
         (out / name).write_text(text, encoding="utf-8")
         written.append(name)
     return dict(templates=len(written), folder=str(out))

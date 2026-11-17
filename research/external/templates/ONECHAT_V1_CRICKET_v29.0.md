@@ -1,61 +1,59 @@
 # ONECHAT_V1 template: Cricket (v29.0)
 
-Copy the block, use the card key and header values from your request packet, and fill every empty field. Every FACTS row stays; write MISSING with the reason when a value cannot be found.
+Use the skeleton in your chat packet when you have one. Otherwise copy this block: the card key and the header values come from the owner's registered request; write one PICKS row per side of every supplied line (two rows per line, same label); keep every FACTS row, writing MISSING with the reason when a value cannot be found. Replace every FILL and every field ending in ?.
 
 ```text
-<!-- BEGIN ONECHAT_V1 <MINI_KEY>-G0001 -->
+<!-- BEGIN ONECHAT_V1 CARD_KEY -->
 format: ONECHAT_V1
-card_key: <MINI_KEY>-G0001
+card_key: FILL
 sport: Cricket
-competition: 
-home: 
-away: 
-scheduled_start: 
-request_at: 
-research_start_at: 
-research_end_at: 
-not_started_source: 
-not_started_observed_at: 
-outcome_exposure: 
+competition: FILL
+home: FILL
+away: FILL
+scheduled_start: FILL
+request_at: FILL
+research_start_at: FILL
+research_end_at: FILL
+not_started_source: FILL
+not_started_observed_at: FILL
+outcome_exposure: FILL
 
 PICKS
 label,family,side,line,p,lean,centre,availability_basis,result_source
-L1,HANDICAP,HOME,-3.5,0.47,,2.1,NONE,https://
-L1,HANDICAP,AWAY,3.5,0.53,,-2.1,NONE,https://
-L2,TOTAL,OVER,158.5,0.55,,160.2,NONE,https://
-L2,TOTAL,UNDER,158.5,0.45,,160.2,NONE,https://
+L1,FAMILY?,SIDE?,LINE?,P?,,CENTRE?,BASIS?,RESULT_URL?
+L1,FAMILY?,SIDE?,LINE?,P?,,CENTRE?,BASIS?,RESULT_URL?
 
 FACTS
 side,field,value,source,observed_at
-HOME,venue_first_innings_avg,,,
-HOME,last5_first_innings_avg,,,
-HOME,last5_powerplay_avg,,,
-HOME,key_absences,,,
-HOME,lineup_confirmed,,,
-HOME,batting_first,,,
-HOME,rain_probability_pct,,,
-HOME,venue,,,
-HOME,travel_km,,,
-HOME,opponent_strength,,,
-HOME,opponent_strength_method,,,
-HOME,availability_effect,,,
-HOME,adjustment_basis,,,
-HOME,last10_first_innings_avg,,,
-HOME,last20_first_innings_avg,,,
-AWAY,venue_first_innings_avg,,,
-AWAY,last5_first_innings_avg,,,
-AWAY,last5_powerplay_avg,,,
-AWAY,key_absences,,,
-AWAY,lineup_confirmed,,,
-AWAY,batting_first,,,
-AWAY,rain_probability_pct,,,
-AWAY,venue,,,
-AWAY,travel_km,,,
-AWAY,opponent_strength,,,
-AWAY,opponent_strength_method,,,
-AWAY,availability_effect,,,
-AWAY,adjustment_basis,,,
-AWAY,last10_first_innings_avg,,,
-AWAY,last20_first_innings_avg,,,
-<!-- END ONECHAT_V1 <MINI_KEY>-G0001 -->
+HOME,venue_first_innings_avg,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+HOME,last5_first_innings_avg,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+HOME,last5_powerplay_avg,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+HOME,key_absences,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+HOME,lineup_confirmed,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+HOME,batting_first,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+HOME,rain_probability_pct,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+HOME,venue,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+HOME,travel_km,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+HOME,opponent_strength,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+HOME,opponent_strength_method,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+HOME,availability_effect,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+HOME,adjustment_basis,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+HOME,last10_first_innings_avg,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+HOME,last20_first_innings_avg,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+AWAY,venue_first_innings_avg,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+AWAY,last5_first_innings_avg,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+AWAY,last5_powerplay_avg,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+AWAY,key_absences,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+AWAY,lineup_confirmed,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+AWAY,batting_first,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+AWAY,rain_probability_pct,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+AWAY,venue,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+AWAY,travel_km,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+AWAY,opponent_strength,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+AWAY,opponent_strength_method,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+AWAY,availability_effect,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+AWAY,adjustment_basis,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+AWAY,last10_first_innings_avg,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+AWAY,last20_first_innings_avg,VALUE_OR_MISSING?,SOURCE_URL_OR_REASON?,OBSERVED_AT?
+<!-- END ONECHAT_V1 CARD_KEY -->
 ```
