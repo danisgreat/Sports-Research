@@ -24,7 +24,7 @@ were late. Preserved descriptive and training results below keep their original 
 | Registered assessment horizon | 400 games |
 | Current verdict | NOT_YET_DEMONSTRATED |
 
-[Registered plan](../external/EVALUATION_PLAN_v28.0.md) · [runbook](../one_chat/RUNBOOK.md).
+[Registered plan](../external/EVALUATION_PLAN_v29.0.md) · [runbook](../one_chat/RUNBOOK.md).
 The registry, benchmark and sequential test are unchanged. Historical Track H and
 prospective Track P never share sample counts or statistical verdicts. Later live
 results come from the one-chat scoring command with actual intake/outcome files.

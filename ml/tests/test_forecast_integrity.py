@@ -142,8 +142,12 @@ def test_first_play_capture_is_required_and_rehashed(repo, tmp_path):
         r["first_play_capture_sha256"] = "0" * 64
     outcomes.write_bytes(O.csv_bytes(O.OUTCOME_FIELDS, rows))
     M.commit_all(repo)
-    with pytest.raises(O.OneChatError, match="first-play capture"):
-        M.run(repo, tmp_path, [folder], [outcomes], "bad-clock")
+    result = M.run(repo, tmp_path, [folder], [outcomes], "bad-clock")
+    cover = O.read_csv(repo / O.SCORES / "bad-clock/COVERAGE.csv")
+    assert (
+        result["games_in_sequence"] == 0 and result["games_first_play_unverified"] == 1
+    )
+    assert cover[0]["exclusion"] == "FIRST_PLAY_UNVERIFIED"
 
 
 def test_seal_uses_data_branch_without_changing_main_or_publishing_unrelated_work(
@@ -278,12 +282,13 @@ def test_unpublished_or_late_request_cannot_be_bundled_into_a_seal(repo, tmp_pat
     drop = M.drop(tmp_path, [M.card()])
     files = list(drop.glob("*.md"))
     M.prepare_requests(repo, files, publish=False)
-    with pytest.raises(O.OneChatError, match="request must be independently published"):
-        O.seal(files, repo, lookup=M.Server("2026-11-20T07:00:00Z"), wait=(0,))
+    first = O.seal(files, repo, lookup=M.Server("2026-11-20T07:00:00Z"), wait=(0,))
+    assert first["sealed"] == 0
+    assert "request must be independently published" in first["refused"][0]["reason"]
     O.publish_request("CHAT1-G0001", repo)
     M.Server("2026-11-20T06:00:00Z")(repo)
-    with pytest.raises(O.OneChatError, match="before research"):
-        O.seal(files, repo, lookup=M.Server("2026-11-20T07:00:00Z"), wait=(0,))
+    late = O.seal(files, repo, lookup=M.Server("2026-11-20T07:00:00Z"), wait=(0,))
+    assert late["sealed"] == 0 and "before research" in late["refused"][0]["reason"]
 
 
 def test_lowercase_frozen_baselines_are_scored_on_the_same_rows(repo, tmp_path):

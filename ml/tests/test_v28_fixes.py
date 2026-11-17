@@ -125,7 +125,7 @@ def test_a_failed_gh_call_raises_instead_of_reading_as_no_pushes(tmp_path, monke
 
 def test_registered_constants_match_the_published_plan():
     plan = (ROOT / O.PLAN).read_text(encoding="utf-8")
-    assert O.PLAN.endswith("EVALUATION_PLAN_v28.0.md") and O.HORIZON == 600 and F.LAMBDAS == (0.5, 0.7, 0.9)
+    assert O.PLAN.endswith("EVALUATION_PLAN_v29.0.md") and O.HORIZON == 600 and F.LAMBDAS == (0.5, 0.7, 0.9)
     assert "(0.5, 0.7, 0.9)" in plan and "600 games" in plan and "Alpha: 0.05" in plan and "0.01" in plan
 
 

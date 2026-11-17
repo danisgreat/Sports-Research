@@ -315,8 +315,10 @@ def test_review_defect_3_edited_intakes_uncommitted_outcomes_and_invented_captur
     s = run(repo, tmp_path, [folder], [later], "s2")
     assert s["advantage"] == "NOT_ASSESSABLE"
     fake = outcomes(repo, tmp_path / "cap3", ["CHAT1-G0001"], name="FAKE.csv", fake_hash=True)
-    with pytest.raises(O.OneChatError, match="missing or its SHA-256 differs"):
-        O.score([folder], [fake], repo / "research/one_chat/scores/s3", root=repo, captures=tmp_path / "cap3")
+    commit_all(repo, "fake capture")
+    s = O.score([folder], [fake], repo / "research/one_chat/scores/s3", root=repo, captures=tmp_path / "cap3")
+    problems = [r["problem"] for r in O.read_csv(repo / "research/one_chat/scores/s3/CUSTODY_PROBLEMS.csv")]
+    assert s["advantage"] == "NOT_ASSESSABLE" and any("missing or its SHA-256 differs" in p for p in problems)
 
 
 def test_review_defect_5_whole_number_lines_are_scored_on_the_probability_given_no_push(repo, tmp_path):
@@ -376,8 +378,8 @@ def test_an_unsettled_earlier_game_holds_back_later_games_until_it_settles(repo,
 
 def test_seal_refuses_an_incomplete_card_and_does_not_reseal_the_same_file(repo, tmp_path):
     d = drop(tmp_path, [card(facts=[])], name="bad")
-    with pytest.raises(O.OneChatError, match="not sealed"):
-        seal(repo, sorted(d.glob("*.md")))
+    refused = seal(repo, sorted(d.glob("*.md")))
+    assert refused["sealed"] == 0 and "incomplete or invalid card" in refused["refused"][0]["reason"]
     assert not (repo / O.SEALED).exists() or not list((repo / O.SEALED).glob("*.md"))
     d2 = drop(tmp_path, [card()], name="good")
     first = seal(repo, sorted(d2.glob("*.md")))

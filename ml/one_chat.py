@@ -25,7 +25,7 @@ import subprocess
 import time
 import os
 import tempfile
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from ml import picks as P
@@ -60,6 +60,7 @@ SPORT_SECTIONS = 11         # sport sections of prompt 1: per-sport claims use 1
 SUPPORTED_SPORTS = ("Baseball","Basketball","Cricket","Soccer","Ice Hockey","Tennis","American Football",
                     "Australian Rules","Rugby League","Rugby Union","Other Sports")
 COHORT_SIZE = 100
+SETTLEMENT_DEADLINE_DAYS = 14  # v29.0: rows still unsettled this long after the scheduled start are dropped
 CRITERION = -0.01           # secondary fixed-100 test: mean Brier minus 0.25 at or below this, interval below zero
 
 CARD_FIELDS = ("card_key", "game_id", "status", "problems", "file", "file_sha256", "file_saved_at", "block_sha256", "sport",
@@ -77,7 +78,7 @@ OUTCOME_FIELDS = ("card_key", "label", "side", "grade", "event_id", "actual_star
 SEALED = "research/one_chat/sealed"
 SEALS = SEALED + "/SEALS.csv"
 SEAL_FIELDS = ("card_key", "block_sha256", "file_sha256", "sealed_path", "sealed_at_client", "policy_sha256", "policy_commit")
-PLAN = "research/external/EVALUATION_PLAN_v28.0.md"
+PLAN = "research/external/EVALUATION_PLAN_v29.0.md"
 RECEIPTS = SEALED + "/PUSH_RECEIPTS.csv"
 RECEIPT_FIELDS = ("before", "after", "pushed_at_server", "ref", "source", "retrieved_at")
 SCORES = "research/one_chat/scores"
@@ -761,13 +762,33 @@ def request_disposition(key,status,reason,root=ROOT):
     return publish_seal_tree(root,{DISPOSITIONS:csv_bytes(tuple(row),rows)})
 
 
-def seal(files, root=ROOT, *, push=True, lookup=None, wait=(0, 3, 6, 12)) -> dict:
-    """Publish exact card and original-request blobs on the data-only branch."""
-    root = Path(root)
+RACE = ("seal push refused", "refresh and retry")
+
+
+def seal(files, root=ROOT, *, push=True, lookup=None, wait=(0, 3, 6, 12), attempts=5, pause=4) -> dict:
+    """Publish exact card and original-request blobs on the data-only branch, card by card.
+
+    A card that is incomplete, changed after an earlier seal, unregistered or researched before its request was
+    published is refused on its own and listed in ``refused``; every other new card in the same files is still sealed.
+    When another chat's seal moved the branch first, the seal is rebuilt on top of it and retried (never forced)."""
+    for n in range(attempts):
+        try:
+            return _seal_once(files, Path(root), push=push, lookup=lookup, wait=wait)
+        except OneChatError as exc:
+            if n == attempts - 1 or not any(r in str(exc) for r in RACE):
+                raise
+            time.sleep(pause * (n + 1))
+            _git(root, "fetch", "-q", "origin", SEAL_BRANCH, check=False)
+
+
+def _seal_once(files, root, *, push, lookup, wait) -> dict:
     repo = Repo(root, lookup=lookup)
     existing = {r["file_sha256"] for r in repo.seals}
-    rows, payload = [], {}
-    old = {r["block_sha256"]: r for r in repo.seals}
+    sealed_blocks = {r["block_sha256"] for r in repo.seals}
+    first_block = {}
+    for r in repo.seals:
+        first_block.setdefault(r["card_key"], r["block_sha256"])
+    rows, payload, refused = [], {}, []
     plan=repo.blob("refs/remotes/origin/main",PLAN)
     if plan is None:
         raise OneChatError("publish the current evaluation registration on main before sealing forecasts")
@@ -778,44 +799,62 @@ def seal(files, root=ROOT, *, push=True, lookup=None, wait=(0, 3, 6, 12)) -> dic
                            + (f" ({repo.activity_error})" if repo.activity_error else ""))
     for file in map(Path, files):
         raw = file.read_bytes()
-        blocks = card_blocks(raw.decode("utf-8"), root)
-        if not blocks or any(x[5] for x in blocks):
-            raise OneChatError("not sealed: incomplete or invalid card")
         digest = sha(raw)
         if digest in existing:
             continue
+        blocks = card_blocks(raw.decode("utf-8", errors="replace"), root)
+        if not blocks:
+            refused.append(dict(file=file.name, card_key="", reason="no ONECHAT_V1 block"))
+            continue
         path = f"{SEALED}/{digest}.md"
-        payload[path] = raw
+        new_rows, request_payload = [], {}
         for key, block_sha, meta, pk, fc, problems, derived in blocks:
-            if any(r["card_key"]==key and r["block_sha256"]!=block_sha for r in repo.seals):
-                raise OneChatError(key+": an earlier forecast is already sealed; never replace its block")
+            if block_sha in sealed_blocks:
+                continue
+            if key in first_block:
+                refused.append(dict(file=file.name, card_key=key, reason="an earlier version of this card is already sealed; "
+                                    "the first sealed card is the forecast of record"))
+                continue
+            if problems:
+                refused.append(dict(file=file.name, card_key=key, reason="incomplete or invalid card: " + " | ".join(problems)[:300]))
+                continue
             folder = request_staging(root) / F.request_path(key)
             if not folder.exists():
                 folder = root / F.request_path(key)
             request = {name: (folder / name).read_bytes() for name in (*F.REQUEST_FILES, "MANIFEST.csv") if (folder / name).exists()}
             if len(request) != 4:
-                raise OneChatError(f"{key}: register the unchanged original request and contract definitions before sealing")
-            problems = F.request_problems(request, meta, pk)
-            if problems:
-                raise OneChatError("not sealed: " + " | ".join(problems))
+                refused.append(dict(file=file.name, card_key=key, reason="no registered request under this card key"))
+                continue
+            request_issues = F.request_problems(request, meta, pk)
+            if request_issues:
+                refused.append(dict(file=file.name, card_key=key, reason="card differs from its registered request: " + " | ".join(request_issues)[:300]))
+                continue
             registration=request_registration(repo,key,request)
             if (registration is None or registration[0]>T.clock(meta["research_start_at"],"research start")
                     or registration[0]<T.clock(policy_time,"policy publication")):
-                raise OneChatError(key+": request must be independently published after the policy and before research starts")
+                refused.append(dict(file=file.name, card_key=key, reason="request must be independently published after the policy and before research starts"))
+                continue
             for name, data in request.items():
-                payload[F.request_path(key) + "/" + name] = data
-            if block_sha not in old:
-                rows.append(dict(card_key=key, block_sha256=block_sha, file_sha256=digest,
-                                 sealed_path=path, sealed_at_client=_now(),policy_sha256=sha(plan),policy_commit=policy_commit))
+                request_payload[F.request_path(key) + "/" + name] = data
+            new_rows.append(dict(card_key=key, block_sha256=block_sha, file_sha256=digest, sealed_path=path,
+                                 sealed_at_client=_now(), policy_sha256=sha(plan), policy_commit=policy_commit))
+            first_block[key] = block_sha
+        if new_rows:
+            payload[path] = raw
+            payload.update(request_payload)
+            rows += new_rows
+            sealed_blocks |= {r["block_sha256"] for r in new_rows}
     if not rows:
-        return dict(sealed=0, commit="", pushed=False, server_time="", note="nothing new to seal")
-    all_rows = list(old.values()) + rows
+        return dict(sealed=0, commit="", pushed=False, server_time="", refused=refused,
+                    note="nothing new to seal" if not refused else "nothing sealed; see refused")
+    all_rows = list(repo.seals) + rows
     payload[SEALS] = csv_bytes(SEAL_FIELDS, all_rows)
     commit = publish_seal_tree(root, payload, push)
     staging = request_staging(root)
     staging.mkdir(parents=True, exist_ok=True)
     (staging / "PENDING.csv").write_bytes(csv_bytes(SEAL_FIELDS, all_rows))
-    result = dict(sealed=len(rows), commit=commit, pushed=push, server_time="", branch=SEAL_BRANCH)
+    result = dict(sealed=len(rows), cards=";".join(r["card_key"] for r in rows), commit=commit, pushed=push,
+                  server_time="", branch=SEAL_BRANCH, refused=refused)
     if push:
         for delay in wait:
             if delay:
@@ -990,55 +1029,68 @@ def _conditional(rows: list[dict]) -> dict:
 
 
 def _read_outcomes(paths, repo, captures, require_committed) -> tuple[dict, list[str]]:
+    """Grades by (card, label, side). Missing or changed captures and identities are custody problems (the run decides
+    nothing until they are repaired); a game whose first play cannot be verified is marked and later excluded."""
     grades, problems, digests = {}, [], {}
+
+    def capture(path_text):
+        cap = Path(path_text)
+        if not cap.is_absolute():
+            cap = Path(captures) / cap
+        if cap not in digests:
+            digests[cap] = sha(cap.read_bytes()) if cap.is_file() else ""
+        return cap, digests[cap]
+
     for path in ([paths] if isinstance(paths, (str, Path)) else list(paths)):
         if require_committed and not repo.committed(path):
             problems.append(f"{path}: outcomes file not committed, or changed since the last commit")
         for r in read_csv(path):
             if r["grade"] not in TERMINAL + ("UNRESOLVED",):
                 raise OneChatError(f"outcome grade {r['grade']!r} is not WIN, LOSS, PUSH, VOID or UNRESOLVED")
+            r = dict(r, _first_play="")
+            name = f"{r['card_key']} {r['label']}"
             if r["grade"] in TERMINAL:
+                cap = None
                 if not (re.match(r"https?://\S+$", r.get("final_source", "")) and re.fullmatch(r"[0-9a-f]{64}", r.get("final_capture_sha256", ""))):
-                    raise OneChatError(f"{r['card_key']} {r['label']}: a settled grade needs its result page and the SHA-256 of the saved capture")
-                cap = Path(r.get("final_capture_path", ""))
-                if not r.get("final_capture_path"):
-                    raise OneChatError(f"{r['card_key']} {r['label']}: final_capture_path is required (the saved result page)")
-                if not cap.is_absolute():
-                    cap = Path(captures) / cap
-                if cap not in digests:
-                    digests[cap] = sha(cap.read_bytes()) if cap.exists() else ""
-                if digests[cap] != r["final_capture_sha256"]:
-                    raise OneChatError(f"{r['card_key']} {r['label']}: capture {cap} is missing or its SHA-256 differs from the outcome row")
-                cancelled=r["grade"]=="VOID" and not r.get("actual_start","")
-                proof = Path(r.get("first_play_capture_path", ""))
-                if not proof.is_absolute():
-                    proof = Path(captures) / proof
-                raw = proof.read_bytes() if proof.is_file() else b""
-                if cancelled:
-                    excerpt=r.get("cancellation_excerpt","")
-                    if not excerpt or excerpt not in cap.read_text(encoding="utf-8",errors="replace") or not r.get("cancellation_at"):
-                        raise OneChatError(r["card_key"]+": captured cancellation evidence is required for a game that never started")
-                    if T.clock(r["cancellation_at"],"cancelled at")>T.clock(r["settled_at"],"settled at"):
-                        raise OneChatError("cancellation evidence cannot follow its settlement")
-                elif not (re.match(r"https?://\S+$", r.get("first_play_source", ""))
-                        and raw and sha(raw) == r.get("first_play_capture_sha256")
-                        and r.get("first_play_excerpt", "") and r["first_play_excerpt"] in raw.decode("utf-8", errors="replace")):
-                    raise OneChatError(f"{r['card_key']}: verified first-play capture, source and exact excerpt are required")
+                    problems.append(f"{name}: a settled grade needs its result page and the SHA-256 of the saved capture")
+                elif not r.get("final_capture_path"):
+                    problems.append(f"{name}: final_capture_path is required (the saved result page)")
+                else:
+                    cap, digest = capture(r["final_capture_path"])
+                    if digest != r["final_capture_sha256"]:
+                        problems.append(f"{name}: capture {cap} is missing or its SHA-256 differs from the outcome row")
+                        cap = None
                 if not r.get("event_id", "").strip():
-                    raise OneChatError(f"{r['card_key']} {r['label']}: event_id (the competition's native match identity) is required")
+                    problems.append(f"{name}: event_id (the competition's native match identity) is required")
+                if r["grade"] == "VOID" and not r.get("actual_start", ""):
+                    r["_first_play"] = "CANCELLED"
+                    excerpt = r.get("cancellation_excerpt", "")
+                    try:
+                        late = T.clock(r["cancellation_at"], "cancelled at") > T.clock(r["settled_at"], "settled at")
+                    except (KeyError, ValueError):
+                        late = True
+                    if not excerpt or cap is None or excerpt not in cap.read_text(encoding="utf-8", errors="replace") or late:
+                        problems.append(f"{r['card_key']}: captured cancellation evidence (excerpt and time) is required for a game that never started")
+                else:
+                    proof, digest = capture(r.get("first_play_capture_path", "")) if r.get("first_play_capture_path") else (None, "")
+                    ok = (re.match(r"https?://\S+$", r.get("first_play_source", "")) and digest and digest == r.get("first_play_capture_sha256")
+                          and r.get("first_play_excerpt", "") and r["first_play_excerpt"] in proof.read_text(encoding="utf-8", errors="replace"))
+                    r["_first_play"] = "VERIFIED" if ok else "UNVERIFIED"
             key = (r["card_key"], r["label"], r["side"].upper())
             if key in grades and grades[key]["grade"] != r["grade"]:
                 raise OneChatError(f"{key}: two outcome rows give different grades")
             grades[key] = r
-    cancelled_keys={r["card_key"] for r in grades.values() if r["grade"]=="VOID" and not r.get("actual_start")}
-    if any(r["grade"]!="VOID" for r in grades.values() if r["card_key"] in cancelled_keys):
-        raise OneChatError("a never-started cancellation must void every contract of the game")
+    cancelled_keys={r["card_key"] for r in grades.values() if r["_first_play"]=="CANCELLED"}
+    for key in sorted(cancelled_keys):
+        if any(r["grade"]!="VOID" for r in grades.values() if r["card_key"]==key):
+            problems.append(f"{key}: a never-started cancellation must void every contract of the game")
     return grades, problems
 
 
 def score(intakes, outcomes, out, *, root=ROOT, captures=None, cohort=None, baseline=None, on_request=False,
-          require_committed=True) -> dict:
+          require_committed=True, as_of=None) -> dict:
     root, out = Path(root), Path(out)
+    as_of = T.clock(as_of, "as_of") if as_of else datetime.now(timezone.utc)
     captures = Path(captures) if captures else root.parent / "one_chat_captures"
     if out.exists():
         raise OneChatError(f"{out} already exists; a score report is written once")
@@ -1135,15 +1187,23 @@ def score(intakes, outcomes, out, *, root=ROOT, captures=None, cohort=None, base
             if k != keep:
                 duplicate[k] = keep
 
-    games, coverage = [], []
+    games, coverage, worst = [], [], {}
     for key, card in cards.items():
         mine = [r for r in picks if r["card_key"] == key and card["game_id"] == r["game_id"]]
         lined = [r for r in mine if r["line"] != ""]
         priced = [r for r in lined if r["p"] != "UNPRICED"]
-        got = [grades.get((key, r["label"], r["side"])) for r in mine]
-        starts = {g["actual_start"] for g in got if g}
+        got = {(r["label"], r["side"]): grades.get((key, r["label"], r["side"])) for r in mine}
+        done = {k: g for k, g in got.items() if g is not None and g["grade"] in TERMINAL}
+        open_rows = [r for r in mine if (r["label"], r["side"]) not in done]
+        starts = {g["actual_start"] for g in done.values() if g.get("actual_start")}
+        first_play = {g["_first_play"] for g in done.values()}
         label = timing_label(card, next(iter(starts)), seals[key]) if len(starts) == 1 else "TIMING_UNKNOWN"
-        terminal = all(g is not None and g["grade"] in TERMINAL for g in got) and bool(got)
+        try:
+            due = as_of >= T.clock(card["scheduled_start"], "scheduled_start") + timedelta(days=SETTLEMENT_DEADLINE_DAYS)
+        except ValueError:
+            due = False
+        dropped = [r for r in priced if (r["label"], r["side"]) not in done] if due else []
+        scored = [r for r in priced if (r["label"], r["side"]) in done]
         reason = ""
         if key in duplicate:
             reason = f"DUPLICATE_GAME_OF_{duplicate[key]}"
@@ -1151,27 +1211,36 @@ def score(intakes, outcomes, out, *, root=ROOT, captures=None, cohort=None, base
             reason = "NO_LINED_CONTRACT"
         elif len(priced) < len(lined):
             reason = "UNPRICED_SUPPLIED_LINE"
-        elif not terminal:
+        elif open_rows and not due:
             reason = "NOT_FULLY_SETTLED"
-        elif not any(grades[(key, r["label"], r["side"])]["grade"] in DECISIVE for r in priced):
-            reason = "NO_DECISIVE_CONTRACT"
+        elif not any(done[(r["label"], r["side"])]["grade"] in DECISIVE for r in scored):
+            reason = "SETTLEMENT_UNATTAINABLE" if dropped else "NO_DECISIVE_CONTRACT"
+        elif "UNVERIFIED" in first_play:
+            reason = "FIRST_PLAY_UNVERIFIED"
         elif label != ELIGIBLE:
             reason = label
-        settled = max((g["settled_at"] for g in got if g), key=lambda s: T.clock(s, "settled_at"), default="")
+        settled = max((g["settled_at"] for g in done.values()), key=lambda s: T.clock(s, "settled_at"), default="")
+        candidate = key not in duplicate and seals[key]["seal"] == "SEALED" and lined and len(priced) == len(lined)
         coverage.append(dict(card_key=key, game_id=card["game_id"], sport=card["sport"], competition=card["competition"],
                              scheduled_start=card["scheduled_start"], timing=label, seal=seals[key]["seal"],
                              seal_time=seals[key].get("seal_time", ""), seal_basis=seals[key].get("seal_basis", ""),
                              supplied_lines=card["supplied_lines"], priced_lines=card["priced_lines"], settled_at=settled,
-                             eligible="Y" if not reason else "", exclusion=reason,
-                             candidate="Y" if key not in duplicate and seals[key]["seal"] == "SEALED" and lined and len(priced) == len(lined) else ""))
+                             dropped_rows=len(dropped), eligible="Y" if not reason else "", exclusion=reason,
+                             candidate="Y" if candidate else ""))
+        cond = _conditional(mine) if priced else {}
+        # Worst case (sensitivity, never the verdict): every dropped supplied line counts as lost by the favoured side.
+        if candidate and (not reason or reason == "SETTLEMENT_UNATTAINABLE") and dropped:
+            errors = [(cond[(r["label"], r["side"])] - (1 if done[(r["label"], r["side"])]["grade"] == "WIN" else 0)) ** 2
+                      for r in scored if done[(r["label"], r["side"])]["grade"] in DECISIVE]
+            for lab in sorted({r["label"] for r in dropped}):
+                fav = max(cond[(r["label"], r["side"])] for r in priced if r["label"] == lab)
+                errors += [fav ** 2] * sum(1 for r in priced if r["label"] == lab)
+            worst[key] = 0.25 - sum(errors) / len(errors)
         if reason:
             continue
-        cond = _conditional(mine)
         rows = []
-        for r in mine:
-            if r["p"] == "UNPRICED":
-                continue
-            g = grades[(key, r["label"], r["side"])]["grade"]
+        for r in scored:
+            g = done[(r["label"], r["side"])]["grade"]
             if g in DECISIVE:
                 rows.append(dict(r, y=1 if g == "WIN" else 0, pf=cond[(r["label"], r["side"])], baseline=base.get((key, r["label"], r["side"]))))
         lined_rows = [r for r in rows if r["line"] != ""]
@@ -1200,6 +1269,12 @@ def score(intakes, outcomes, out, *, root=ROOT, captures=None, cohort=None, base
     decision = advantage(ds)
     if custody:
         decision["verdict"] = "NOT_ASSESSABLE"
+    # Sensitivity: the same sequence with every row dropped at the settlement deadline counted as lost.
+    unattainable = sorted((c for c in coverage if c["card_key"] in worst and c["exclusion"] == "SETTLEMENT_UNATTAINABLE"
+                           and (cut is None or order(c) < cut)), key=order)
+    worst_sequence = sorted([(order(c), worst.get(c["card_key"], by_key[c["card_key"]]["d"])) for c in coverage
+                             if c["eligible"] and (cut is None or order(c) < cut)] + [(order(c), worst[c["card_key"]]) for c in unattainable])
+    worst_case = advantage([d for _, d in worst_sequence])
 
     # Secondary: the first 100 games of the sequence, frozen once, with a fixed-sample t interval.
     frozen = sorted((root / SCORES).glob("*/COHORT.csv")) if (root / SCORES).exists() else []
@@ -1283,6 +1358,12 @@ def score(intakes, outcomes, out, *, root=ROOT, captures=None, cohort=None, base
                    crossed_at_game=decision["crossed_at_game"], e_value=decision["e_value"], max_e_value=decision["max_e_value"],
                    e_threshold=1 / ALPHA, practical_mean_d=PRACTICAL, horizon_games=HORIZON, mean_d=decision["mean_d"],
                    lower_bound_95=decision["lower_bound_95"], custody_problems=len(custody),
+                   as_of=as_of.isoformat(timespec="seconds"), settlement_deadline_days=SETTLEMENT_DEADLINE_DAYS,
+                   games_scored_after_dropping_rows=sum(1 for c in coverage if c["eligible"] and c["dropped_rows"]),
+                   games_settlement_unattainable=sum(c["exclusion"] == "SETTLEMENT_UNATTAINABLE" for c in coverage),
+                   games_first_play_unverified=sum(c["exclusion"] == "FIRST_PLAY_UNVERIFIED" for c in coverage),
+                   worst_case_verdict="NOT_ASSESSABLE" if custody else worst_case["verdict"],
+                   worst_case_e_value=worst_case["e_value"], worst_case_lower_bound_95=worst_case["lower_bound_95"],
                     assessed_prefix_mean=decision["assessed_prefix_mean"],
                     assessed_prefix_lower_bound=decision["assessed_prefix_lower_bound"],
                     statistical_rule=F.STATISTICAL_RULE,
@@ -1354,11 +1435,27 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = parser.add_subparsers(dest="cmd", required=True)
     a = sub.add_parser("intake")
-    a.add_argument("--drop", required=True, type=Path)
+    src = a.add_mutually_exclusive_group(required=True)
+    src.add_argument("--drop", type=Path, help="a folder of card files (diagnostic; the scored record is the sealed copy)")
+    src.add_argument("--from-seals", action="store_true", help="the first sealed version of every sealed card (use this to score)")
     a.add_argument("--out", required=True, type=Path)
     se = sub.add_parser("seal")
-    se.add_argument("--card", required=True, nargs="+", type=Path)
+    seal_src = se.add_mutually_exclusive_group(required=True)
+    seal_src.add_argument("--card", nargs="+", type=Path)
+    seal_src.add_argument("--watch", type=Path, help="seal every new card saved in this folder, repeating until stopped")
+    se.add_argument("--every", type=int, default=120, help="seconds between passes with --watch")
+    se.add_argument("--once", action="store_true", help="with --watch: one pass, then stop")
     se.add_argument("--no-push", action="store_true")
+    prep = sub.add_parser("prepare", help="draft requests, contracts and card skeletons from the owner's request messages")
+    prep.add_argument("--message", required=True, type=Path)
+    prep.add_argument("--mini", required=True)
+    prep.add_argument("--out", required=True, type=Path)
+    prep.add_argument("--schedules", type=Path)
+    prep.add_argument("--first", type=int, default=1)
+    reg = sub.add_parser("register-requests", help="register and publish every prepared request in a folder at once")
+    reg.add_argument("--folder", required=True, type=Path)
+    tpl = sub.add_parser("templates", help="write one ONECHAT_V1 template per sport")
+    tpl.add_argument("--out", required=True, type=Path)
     sub.add_parser("receipts")
     request = sub.add_parser("register-request")
     request.add_argument("--source", required=True, type=Path)
@@ -1377,6 +1474,7 @@ def main(argv=None):
     s.add_argument("--on-request", action="store_true")
     s.add_argument("--cohort", type=Path)
     s.add_argument("--baseline", type=Path)
+    s.add_argument("--as-of", help="offset-aware time for the settlement deadline (default: now)")
     h = sub.add_parser("history")
     h.add_argument("--rows", required=True, type=Path)
     h.add_argument("--out", required=True, type=Path)
@@ -1388,10 +1486,22 @@ def main(argv=None):
     t.add_argument("--sport", required=True)
     args = parser.parse_args(argv)
     try:
+        from ml import one_chat_ops as OPS
         if args.cmd == "intake":
-            print(intake(args.drop, args.out))
+            print(OPS.intake_from_seals(args.out) if args.from_seals else intake(args.drop, args.out))
+        elif args.cmd == "seal" and args.watch:
+            OPS.watch(args.watch, every=args.every, once=args.once, push=not args.no_push)
         elif args.cmd == "seal":
-            print(seal(args.card, push=not args.no_push))
+            result = seal(args.card, push=not args.no_push)
+            for r in result.get("refused", []):
+                print(f"REFUSED {r['card_key'] or r['file']}: {r['reason']}")
+            print({k: v for k, v in result.items() if k != "refused"})
+        elif args.cmd == "prepare":
+            print(OPS.prepare(args.message, args.mini, args.out, schedules=args.schedules, first=args.first))
+        elif args.cmd == "register-requests":
+            print(OPS.register_folder(args.folder))
+        elif args.cmd == "templates":
+            print(OPS.write_templates(args.out))
         elif args.cmd == "receipts":
             print(f"{record_receipts()} new push receipts")
         elif args.cmd == "register-request":
@@ -1401,7 +1511,7 @@ def main(argv=None):
             print(request_disposition(args.card_key,args.status,args.reason))
         elif args.cmd == "score":
             print(score(args.intake, args.outcomes, args.out, captures=args.captures, on_request=args.on_request,
-                        cohort=args.cohort, baseline=args.baseline))
+                        cohort=args.cohort, baseline=args.baseline, as_of=args.as_of))
         elif args.cmd == "power":
             if args.out.exists():
                 raise OneChatError(f"{args.out} already exists")

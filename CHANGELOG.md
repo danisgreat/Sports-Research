@@ -1,5 +1,15 @@
 # Australian rules request format and finals extra time — MDS/P v24.12 / CR-2026.11.10-R2 / P-2026.11.10-v24.10, 10 November 2026
 
+## 18 November 2026 — v29.0 / CR-2026.11.18-R1 / P-2026.11.18-v29.0 / SCV-2026.11.18-v20: several chats a day
+
+Owner order: run four chats a day with up to ten games each, and fix what blocks that. Four problems were reproduced against v28.0 before the change: an intake of a chat's later copy voided the whole run; one unsettled game held back every later game indefinitely; one missing first-play capture stopped the whole scoring run; and one unfinished card in a mini blocked sealing of the rest. Fixes, each with tests in `ml/tests/test_v29_parallel.py`:
+- `intake --from-seals` scores the first sealed copies;
+- a registered 14-day settlement deadline, with a worst-case sensitivity;
+- evidence problems recorded per game;
+- sealing card by card, with retries when chats publish at the same time.
+
+New `ml/one_chat_ops.py` adds `prepare` (requests, contracts, skeletons and a chat packet from the owner's messages), `register-requests` (a whole mini in one push), `seal --watch` and `templates` (per-sport blocks on main). Brief v29.0, plan v29.0 and runbook §7 are updated. Statistical constants are unchanged; no card, grade or canonical ID changed. [Implementation](research/verification/framework_change_2026-11-18-1/IMPLEMENTATION.md).
+
 ## 17 November 2026 — v28.0 / CR-2026.11.17-R1 / P-2026.11.17-v28.0 / SCV-2026.11.17-v19: review fixes
 
 Owner order: implement every fix from the review of v27.0.
