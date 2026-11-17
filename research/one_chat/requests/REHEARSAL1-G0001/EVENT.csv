@@ -1,0 +1,2 @@
+event_id,sport,competition,home,away,scheduled_start,schedule_source
+TEST:GAME-3FA03993BA45,Basketball,Rehearsal League,Rehearsal Alpha,Rehearsal Beta,2026-11-18T08:07:45+00:00,https://example.org/official-schedule
