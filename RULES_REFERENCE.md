@@ -343,7 +343,7 @@ Owner order, 16 November 2026. The measured forecast is the card one research ch
 - **Settlement.** Every row is graded from a permitted result page whose saved capture is recorded by SHA-256; `OUTCOMES.csv` carries the grades. Canonical IDs, byte-exact retention, deep loss reviews and CARD-TRAIN-v1 are unchanged.
 - **Assessment.** [EVALUATION_PLAN_v25.0](research/external/EVALUATION_PLAN_v25.0.md) and [SCORING_AND_VALIDATION](SCORING_AND_VALIDATION.md) §15.
 
-Replaces: CORE §2 "External research lanes (EXT-v3)" as the route for new games, and ASSESS-100 / EXT-EVAL-v2 as the current assessment. Originals: archive/superseded_2026-11-16-2.
+Replaces: CORE §2 "External research lanes (EXT-v3)" as the route for new games, and ASSESS-100 / EXT-EVAL-v2 as the current assessment. Originals: https://github.com/danisgreat/Sports-Research/blob/8f2f38faf2dda46986c20df3d503f4f8115e225b/archive/superseded_2026-11-16-2.
 
 ## Stats-only use of sources that carry prices (STATS-ONLY-v2, CR-2026.11.16-R2)
 
@@ -375,7 +375,7 @@ Owner order, 16 November 2026: the demonstrated predictive advantage is to be fu
 - **Whole-number lines** are scored on each side's share given no push.
 - **The verdict** is the anytime-valid test in [EVALUATION_PLAN_v27.0](research/external/EVALUATION_PLAN_v27.0.md); the fixed first-100 interval is secondary, its cohort is frozen once with a receipt and any other cohort is refused.
 
-Replaces: the v25.0 eligibility rule based on the file's saved time, and the v25.0 decision rule (fixed first-100 t interval). Originals: archive/superseded_2026-11-16-3.
+Replaces: the v25.0 eligibility rule based on the file's saved time, and the v25.0 decision rule (fixed first-100 t interval). Originals: https://github.com/danisgreat/Sports-Research/blob/8f2f38faf2dda46986c20df3d503f4f8115e225b/archive/superseded_2026-11-16-3.
 
 ## ONE-CHAT-v3: current request, custody and evaluation authority
 
