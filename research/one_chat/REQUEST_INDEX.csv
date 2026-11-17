@@ -1,2 +1,3 @@
 card_key,event_id,sport,competition,scheduled_start,request_sha256,status
 REHEARSAL1-G0001,TEST:GAME-3FA03993BA45,Basketball,Rehearsal League,2026-11-18T08:07:45+00:00,873ec00ced57adf0016ffa8bbf7da8316d7443e1e9bb711e030e4b3ce747a1da,REQUESTED
+REHEARSAL1-G0002,TEST:GAME-9954428C5F35,Basketball,Rehearsal League,2026-11-18T08:09:01+00:00,873ec00ced57adf0016ffa8bbf7da8316d7443e1e9bb711e030e4b3ce747a1da,REQUESTED
