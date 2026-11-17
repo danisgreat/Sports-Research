@@ -70,7 +70,7 @@ def skeletons(out):
 
 def test_prepare_reads_the_owners_messages_into_requests_contracts_and_skeletons(tmp_path):
     summary, out = prepared(tmp_path)
-    assert summary == dict(prepared=2, refused=0, out=str(out))
+    assert summary == dict(prepared=2, refused=0, schedules_needed=0, out=str(out))
     first = O.read_csv(out / "MINI7-G0001/CONTRACTS.csv")
     assert [(r["label"], r["family"], r["side"], r["line"]) for r in first] == [
         ("L1", "HANDICAP", "HOME", "-4.5"), ("L1", "HANDICAP", "AWAY", "4.5"), ("L2", "TOTAL", "OVER", "178.5"), ("L2", "TOTAL", "UNDER", "178.5")]
@@ -88,7 +88,7 @@ def test_prepare_reads_the_owners_messages_into_requests_contracts_and_skeletons
 
 @pytest.mark.parametrize("text,needle", [
     (MESSAGES.replace("Schedule: https://example.org/nbl/schedule\n", "", 1), "no official schedule page"),
-    (MESSAGES.replace("Sydney Kings Spread +4.5", "Sydney Kings ML"), "same way"),
+    (MESSAGES.replace("Sydney Kings Spread +4.5", "Sydney Kings to cover"), "line not understood"),
     (MESSAGES.replace("Sydney Kings Spread +4.5", "Sydney Kings Spread +5.5"), "equal and opposite"),
     (MESSAGES.replace("Melbourne United Spread", "Melbourne Utd Spread"), "neither"),
     (MESSAGES.replace("Upcoming Basketball Game: Melbourne", "Upcoming Darts Game: Melbourne"), "no request format"),
@@ -113,7 +113,7 @@ Combined Total Corners: Over/Under 10.5 Corners;
 Upcoming Cricket Game: Perth Scorchers Women vs Adelaide Strikers Women, WBBL, Format: T20,
 Estimated Game Time Start: 22 November 2026, 7:10 PM AEDT
 Home side / venue: Perth Scorchers Women
-Team A bats: not known
+Adelaide Strikers Women bats: not known
 Schedule: https://example.org/wbbl
 
 Adelaide Strikers Women 1st Innings Runs at end of 20 overs (T20) Total: Over/Under 150.5 Runs
@@ -304,3 +304,56 @@ def test_a_card_refused_inside_an_already_sealed_file_is_retried(repo, tmp_path)
     M.Server("2026-11-20T07:05:00Z")(repo)
     two = OPS.watch(minis, once=True, root=repo, lookup=M.Server("2026-11-20T07:55:00Z"), log=lambda *a: None)[0]
     assert two["sealed"] == 1 and two["cards"] == "MINI7-G0002"   # the unchanged file is checked again, card by card
+
+
+# ------------------------------------------------------------------- the owner's own request text (v29.1)
+
+OWNER = Path(__file__).resolve().parent / "fixtures" / "OWNER_REQUESTS_2026-11-18.txt"
+OWNER_SCHEDULES = ("competition,schedule_source\nAdriatic League,https://example.org/aba\nChallenger,https://example.org/challenger\n"
+                   "Japan J-League Cup,https://example.org/jl\nNCAAF,https://example.org/ncaaf\n"
+                   "Rugby League World Cup Finals,https://example.org/rlwc\nSwedish Hockey League,https://example.org/shl\n")
+
+
+def owner_prepared(tmp_path, schedules=True):
+    sched = tmp_path / "schedules.csv"
+    sched.write_text(OWNER_SCHEDULES, encoding="utf-8")
+    out = tmp_path / "owner"
+    return OPS.prepare(OWNER, "MINI30", out, schedules=sched if schedules else None), out
+
+
+def test_the_owners_request_text_is_read_as_written(tmp_path):
+    summary, out = owner_prepared(tmp_path)
+    assert (summary["prepared"], summary["refused"]) == (6, 4)
+    report = {r["card_key"]: r for r in O.read_csv(out / "PREPARE_REPORT.csv")}
+    assert all("template placeholders" in report[k]["detail"] for k in ("MINI30-G0003", "MINI30-G0007", "MINI30-G0009", "MINI30-G0010"))
+    lines = lambda key: [(r["label"], r["family"], r["side"], r["line"]) for r in O.read_csv(out / key / "CONTRACTS.csv")]
+    assert lines("MINI30-G0001")[:2] == [("L1", "HANDICAP", "HOME", "-12.5"), ("L1", "HANDICAP", "AWAY", "12.5")]  # "Dubai" = BC Dubai
+    assert lines("MINI30-G0004")[:2] == [("L1", "HANDICAP", "HOME", "-3.5"), ("L1", "HANDICAP", "AWAY", "3.5")]    # "Spread: -3.5"
+    assert lines("MINI30-G0005") == [("L1", "WINNER", "HOME", ""), ("L1", "WINNER", "AWAY", ""),                   # ML and +1.5:
+                                     ("L2", "HANDICAP", "HOME", "-1.5"), ("L2", "HANDICAP", "AWAY", "1.5"),           # two contracts
+                                     ("L3", "TOTAL", "OVER", "5.5"), ("L3", "TOTAL", "UNDER", "5.5")]
+    event = O.read_csv(out / "MINI30-G0008" / "EVENT.csv")[0]
+    assert (event["home"], event["away"]) == ("Vanderbilt", "Alabama")                                               # "Alabama @ Vanderbilt"
+    assert lines("MINI30-G0008")[:2] == [("L1", "HANDICAP", "HOME", "14.5"), ("L1", "HANDICAP", "AWAY", "-14.5")]
+    hockey = (out / "MINI30-G0005" / "SKELETON.md").read_text(encoding="utf-8")
+    assert O.card_blocks(fill(hockey))[0][5] == []                                                                   # fillable as is
+
+
+def test_competitions_without_a_schedule_page_are_listed_once(tmp_path):
+    summary, out = owner_prepared(tmp_path, schedules=False)
+    needed = [r["competition"] for r in O.read_csv(out / "SCHEDULES_NEEDED.csv")]
+    assert summary["prepared"] == 0 and summary["schedules_needed"] == 6
+    assert "Challenger Monastir - Semi Finals" in needed and "NCAAF" in needed
+
+
+def test_a_short_name_that_fits_both_sides_is_refused(tmp_path):
+    text = MESSAGES.split("\n\nUpcoming")[0].replace("Sydney Kings", "Sydney Melbourne").replace(
+        "Melbourne United Spread \u22124.5", "Melbourne Spread \u22124.5")
+    summary, out = prepared(tmp_path, text)
+    assert summary["refused"] == 1 and "fits both" in O.read_csv(out / "PREPARE_REPORT.csv")[0]["detail"]
+
+
+def test_an_exact_full_name_wins_over_a_shorter_name_inside_the_other():
+    assert OPS._side("Tennessee", "Tennessee", "Middle Tennessee") == "HOME"
+    assert OPS._side("Middle Tennessee", "Tennessee", "Middle Tennessee") == "AWAY"
+    assert OPS._side("Middle", "Tennessee", "Middle Tennessee") == "AWAY"

@@ -40,7 +40,7 @@ are separate; no historical rows enter its registry or sequential test.
 
 | Item | Value |
 |---|---|
-| Versions (from `VERSIONS.csv`) | MDS-2026.11.18-v29.0 · CR-2026.11.18-R1 · P-2026.11.18-v29.0 · SCV-2026.11.18-v20 · SEL-2026.10.22-v4 |
+| Versions (from `VERSIONS.csv`) | MDS-2026.11.18-v29.1 · CR-2026.11.18-R2 · P-2026.11.18-v29.1 · SCV-2026.11.18-v20 · SEL-2026.10.22-v4 |
 | Highest canonical ID / next | P-685 / **P-686** (from the import mappings) |
 | Historical cards used for training | 685 cards; 3082 admitted contract rows, 1291 with stated p; historical study, not prospective issuance |
 | Active local mini | `NONE`; last / next local key `NONE` / `NONE` (footer) |
@@ -60,11 +60,11 @@ are separate; no historical rows enter its registry or sequential test.
 | Item | Value |
 |---|---|
 | Status | ACTIVE |
-| Method | MDS-2026.11.18-v29.0 (generated from VERSIONS.csv) |
-| Control revision | CR-2026.11.18-R1 (generated from VERSIONS.csv) |
+| Method | MDS-2026.11.18-v29.1 (generated from VERSIONS.csv) |
+| Control revision | CR-2026.11.18-R2 (generated from VERSIONS.csv) |
 | Scoring version | SCV-2026.11.18-v20 (generated from VERSIONS.csv) |
 | Selection version | SEL-2026.10.22-v4 (generated from VERSIONS.csv) |
-| Prompt suite | P-2026.11.18-v29.0 (generated from VERSIONS.csv) |
+| Prompt suite | P-2026.11.18-v29.1 (generated from VERSIONS.csv) |
 | Learning pipeline | MLSCOPE-v3 with ML-SEP-v1 (no promoted model) and LEARNLOG-v1; store, ledger and release values are in the generated block above. No active release: MLB-CYCLE-4, NHL-CYCLE-6 and NBA-CYCLE-4 were retired on 16 November 2026 (stale, zero frozen games); the declared card references are unchanged. One-chat intakes and scores: [research/one_chat/](research/one_chat/README.md). |
 | Active local mini | NONE (owner instruction 12 November 2026, CR-2026.11.12-R1). The repository holds no active mini. Each research chat starts and keeps its own mini under its own distinct MINI_KEY (WORKFLOW prompt 2: parallel minis use distinct namespaces). The former files, all settled or empty, are in [archive/retired_active_minis_2026-11-12/](archive/retired_active_minis_2026-11-12/README.md) |
 | Mini-log format | `mini-log-10` (in-progress `mini-log-2` through `mini-log-9` retain their format and issued cores) |

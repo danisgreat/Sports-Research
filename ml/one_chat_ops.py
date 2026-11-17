@@ -17,6 +17,7 @@ import os
 import re
 import tempfile
 import time
+import unicodedata
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -41,6 +42,9 @@ ENDPOINTS = {
 }
 NUM = r"([+\-−]?\d+(?:\.\d+)?)"
 REPORT_FIELDS = ("game", "card_key", "status", "detail")
+SCHEDULES = "research/one_chat/SCHEDULE_SOURCES.csv"   # competition,schedule_source: one official schedule page per competition
+SEPARATOR = re.compile(r"^\s*[-_=*~.]{3,}\s*$")
+PLACEHOLDER = re.compile(r"\b(Team|Player) [AB]\b|\bX\.X\b|Day Month Year|Time AM/PM|\bCompetition,")
 
 
 class PrepareError(ValueError):
@@ -56,7 +60,8 @@ def _line(value: float) -> str:
 
 
 def split_messages(text: str) -> list[str]:
-    """One message per game: each starts at a line beginning 'Upcoming'."""
+    """One message per game: each starts at a line beginning 'Upcoming'. Separator lines (-----) are not part of a game."""
+    text = "\n".join("" if SEPARATOR.match(ln) else ln for ln in text.splitlines())
     starts = [m.start() for m in re.finditer(r"(?mi)^\s*Upcoming\s", text)]
     return [text[a:b].strip("\n") for a, b in zip(starts, starts[1:] + [len(text)])]
 
@@ -80,21 +85,39 @@ def _start(line: str) -> str:
     return local.replace(tzinfo=timezone(offset)).isoformat()
 
 
+def _words(name: str) -> list[str]:
+    plain = unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode("ascii").lower()
+    return re.findall(r"[a-z0-9]+", plain)
+
+
 def _side(team: str, home: str, away: str) -> str:
-    t = team.strip().lower()
-    if t == home.lower():
-        return "HOME"
-    if t == away.lower():
-        return "AWAY"
-    raise PrepareError(f"line names {team!r}, which is neither {home!r} nor {away!r} as written in the header")
+    """Which side a line names: the full name, or a shortened one ("Dubai" for "BC Dubai", "lakers HC" for
+    "Växjö Lakers HC") whose words all belong to exactly one of the two names in the header."""
+    words = _words(team)
+    # An exact full name wins first, so "Tennessee" against "Middle Tennessee" is not ambiguous.
+    exact = [side for side, name in (("HOME", home), ("AWAY", away)) if words and words == _words(name)]
+    if len(exact) == 1:
+        return exact[0]
+    matches = []
+    for side, name in (("HOME", home), ("AWAY", away)):
+        full = _words(name)
+        if words and (words == full or all(w in full for w in words)):
+            matches.append(side)
+    if len(matches) == 1:
+        return matches[0]
+    if not matches:
+        raise PrepareError(f"line names {team!r}, which is neither {home!r} nor {away!r} as written in the header")
+    raise PrepareError(f"line names {team!r}, which fits both {home!r} and {away!r}; write the side's name in full")
 
 
 def parse_message(message: str) -> dict:
-    lines = [ln.strip() for ln in message.splitlines() if ln.strip()]
-    m = re.match(r"Upcoming\s+(?P<sport>.+?)\s+(?:Game|Match)\s*:\s*(?P<a>.+?)\s+(?:vs\.?|v)\s+(?P<b>.+?),\s*(?P<rest>.+?),?$",
+    lines = [ln.strip() for ln in message.splitlines() if ln.strip() and not SEPARATOR.match(ln)]
+    if PLACEHOLDER.search(message):
+        raise PrepareError("the request still holds template placeholders (Team A/B, X.X, Day Month Year); fill them in or leave the game out")
+    m = re.match(r"Upcoming\s+(?P<sport>.+?)\s+(?:Game|Match)\s*:\s*(?P<a>.+?)\s+(?P<sep>vs\.?|v|@|at)\s+(?P<b>.+?),\s*(?P<rest>.+?),?$",
                  lines[0], re.I)
     if not m:
-        raise PrepareError("header is not 'Upcoming <Sport> Game: Team A vs Team B, Competition,'")
+        raise PrepareError("header is not 'Upcoming <Sport> Game: Team A vs Team B, Competition,' (or 'Away @ Home')")
     sport = SPORTS.get(m["sport"].strip().lower())
     if not sport:
         raise PrepareError(f"sport {m['sport']!r} has no request format; use the free-form route")
@@ -103,12 +126,12 @@ def parse_message(message: str) -> dict:
     start = next((_start(ln) for ln in lines if ln.lower().startswith("estimated game time start")), None)
     if not start:
         raise PrepareError("no 'Estimated Game Time Start' line")
-    home, away = a, b
+    # "Away @ Home" names the home side; with "vs" and no home line, HOME and AWAY are the first- and second-named sides.
+    home, away = (b, a) if m["sep"].lower() in ("@", "at") else (a, b)
     venue = next((ln.split(":", 1)[1].strip() for ln in lines if ln.lower().startswith("home side")), "")
-    if venue and venue.split("(")[0].strip().lower() == b.lower():
-        home, away = b, a
-    elif venue and venue.split("(")[0].strip().lower() not in (a.lower(), "neutral") and not venue.lower().startswith("neutral"):
-        raise PrepareError(f"home side {venue!r} is neither side named in the header")
+    if venue and not venue.lower().startswith("neutral"):
+        named = _side(venue.split("(")[0], a, b)
+        home, away = (a, b) if named == "HOME" else (b, a)
     native = next((ln.split(":", 1)[1].strip() for ln in lines if re.match(r"(native|event)\s*id\s*:", ln, re.I)), "")
     schedule = next((ln.split(":", 1)[1].strip() for ln in lines if re.match(r"schedule\s*:", ln, re.I)), "")
     return dict(sport=sport, competition=competition, home=home, away=away, scheduled_start=start, native=native,
@@ -161,27 +184,27 @@ def contracts_for(game: dict) -> list[dict]:
             line = _line(_num(m[1]))
             add("total", "TOTAL", [("OVER", line), ("UNDER", line)], period, endpoint, unit, ln)
             continue
-        m = re.match(r"^(?P<team>.+?)\s+(?:ML|Moneyline)\s*$", ln, re.I)
+        m = re.match(r"^(?P<team>.+?)\s+(?:ML|Moneyline|ML/Spread)\s*:?\s*$", ln, re.I)
         if m:
             side_lines.setdefault("ML", []).append((_side(m["team"], home, away), None, ln))
             continue
-        m = re.match(r"^(?P<team>.+?)\s+(?:Spread|Handicap Games|Handicap|Puck Line|Run Line|Line)?\s*" + NUM + r"\s*(?:points|games|goals|runs)?\s*$", ln, re.I)
+        m = re.match(r"^(?P<team>.+?)\s+(?:(?:ML/Spread|Spread|Handicap|Games|Puck\s*Line|Run\s*Line|Line)\s*:?\s*)*"
+                     + NUM + r"\s*(?:points|pts|games|goals|runs)?\s*$", ln, re.I)
         if m:
             side_lines.setdefault("SPREAD", []).append((_side(m["team"], home, away), _num(m[2]), ln))
             continue
         raise PrepareError(f"line not understood: {ln!r}")
-    if "ML" in side_lines and "SPREAD" in side_lines:
-        raise PrepareError("one side is written as ML and the other as a spread; write both sides the same way")
+    # "Team A ML" and "Team B +1.5" are two contracts, each priced on both sides (GAME_REQUEST_TEMPLATE §1b).
     if "ML" in side_lines:
         excerpt = side_lines["ML"][0][2]
-        add("side", "WINNER", [("HOME", ""), ("AWAY", "")], period, endpoint, unit, excerpt)
+        add("winner", "WINNER", [("HOME", ""), ("AWAY", "")], period, endpoint, unit, excerpt)
     if "SPREAD" in side_lines:
         given = {s: v for s, v, _ in side_lines["SPREAD"]}
         if "HOME" in given and "AWAY" in given and abs(given["HOME"] + given["AWAY"]) > 1e-9:
             raise PrepareError("the two spreads are not equal and opposite")
         h = given["HOME"] if "HOME" in given else -given["AWAY"]
         excerpt = side_lines["SPREAD"][0][2]
-        add("side", "HANDICAP", [("HOME", _line(h)), ("AWAY", _line(-h))], period, endpoint, unit, excerpt)
+        add("handicap", "HANDICAP", [("HOME", _line(h)), ("AWAY", _line(-h))], period, endpoint, unit, excerpt)
     if not items:
         raise PrepareError("no supplied line was found")
     rows = []
@@ -221,15 +244,22 @@ def prepare(message, mini: str, out, *, schedules=None, first: int = 1) -> dict:
     if not re.fullmatch(r"[A-Za-z0-9_]+", mini):
         raise O.OneChatError("the mini key uses letters, digits and _ only")
     text = Path(message).read_text(encoding="utf-8-sig").replace("\r\n", "\n")
-    routes = {r["competition"].strip().lower(): r["schedule_source"].strip() for r in O.read_csv(schedules)} if schedules else {}
+    routes = {}
+    for path in [p for p in (O.ROOT / SCHEDULES, Path(schedules) if schedules else None) if p is not None and Path(p).exists()]:
+        routes.update({r["competition"].strip().lower(): r["schedule_source"].strip() for r in O.read_csv(path) if r.get("schedule_source", "").strip()})
+    needed = {}
     report, games = [], []
     for n, msg in enumerate(split_messages(text), start=first):
         key = f"{mini}-G{n:04d}"
         try:
             game = parse_message(msg)
             contracts = contracts_for(game)
-            source = game["schedule"] or routes.get(game["competition"].lower(), "")
+            # The schedules file names a competition, or the start of one ("Challenger" covers "Challenger Monastir - SF").
+            comp = game["competition"].lower()
+            prefix = max((k for k in routes if comp == k or comp.startswith(k + " ")), key=len, default="")
+            source = game["schedule"] or routes.get(prefix, "")
             if not re.match(r"https?://\S+$", source):
+                needed[game["competition"]] = game["sport"]
                 raise PrepareError(f"no official schedule page for {game['competition']!r}: add a 'Schedule: <url>' line "
                                    "or a row in the schedules file")
             event = dict(event_id=_event_id(game), sport=game["sport"], competition=game["competition"], home=game["home"],
@@ -255,6 +285,7 @@ def prepare(message, mini: str, out, *, schedules=None, first: int = 1) -> dict:
               "Follow ONE_CHAT_BRIEF_v29.0.md from the repository's main branch. Work the games in the order below (earliest start first).",
               "For each game: research, then fill the skeleton's FILL and ? fields, and hand over the finished card at once.",
               "Keep the card key, sport, competition, home, away, scheduled_start and every PICKS label, family, side and line exactly as given.",
+              "HOME and AWAY are the sides named in each skeleton's home and away fields (the request's first- and second-named sides unless it names a home side or uses '@'); price them by name.",
               "Give both sides of every line a probability (they sum to 1), or write UNPRICED on both. Never change a card you have already handed over.", ""]
     for key, game, contracts, payload in ordered:
         packet += [f"## {key} · {game['home']} v {game['away']} · {game['competition']} · {game['scheduled_start']}", "",
@@ -262,7 +293,11 @@ def prepare(message, mini: str, out, *, schedules=None, first: int = 1) -> dict:
                    "Card skeleton:", "", "```text", skeleton(key, game, contracts).rstrip("\n"), "```", ""]
     (out / "CHAT_PACKET.md").write_text("\n".join(packet), encoding="utf-8")
     (out / "PREPARE_REPORT.csv").write_bytes(O.csv_bytes(REPORT_FIELDS, report))
-    return dict(prepared=len(games), refused=sum(r["status"] == "REFUSED" for r in report), out=str(out))
+    if needed:
+        # Fill these once (official schedule pages), add them to research/one_chat/SCHEDULE_SOURCES.csv, and re-run.
+        (out / "SCHEDULES_NEEDED.csv").write_bytes(O.csv_bytes(("competition", "sport", "schedule_source"),
+                                                               [dict(competition=c, sport=s, schedule_source="") for c, s in sorted(needed.items())]))
+    return dict(prepared=len(games), refused=sum(r["status"] == "REFUSED" for r in report), schedules_needed=len(needed), out=str(out))
 
 
 def register_folder(folder, root=O.ROOT) -> dict:
