@@ -1,0 +1,2 @@
+event_id,sport,competition,home,away,scheduled_start,schedule_source
+TEST:GAME-9954428C5F35,Basketball,Rehearsal League,Rehearsal Gamma,Rehearsal Delta,2026-11-18T08:09:01+00:00,https://example.org/official-schedule
