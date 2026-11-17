@@ -1,5 +1,21 @@
 # Australian rules request format and finals extra time — MDS/P v24.12 / CR-2026.11.10-R2 / P-2026.11.10-v24.10, 10 November 2026
 
+## 17 November 2026 — HPPV-v1 historical pre-event validation (separate Track H)
+
+Implemented the owner's eight-stage Historical Prospective Performance Validation
+Framework. A frozen census retains all 685 cards and 3,150 rows, original ranks,
+probabilities, settlements and source references. New commands recover reviewed
+originals, classify A–E evidence, append hash-chained custody/qualification revisions,
+validate exact endpoints and independent outcomes, enforce sports-only benchmark
+cutoffs, deduplicate actual event-contracts, and regenerate event-level statistics,
+calibration, dependence sensitivities and historical verdicts from hash-bound inputs.
+A separate strict-cutoff chronological algorithm study holds out entire events and
+uses no unavailable features/labels. Initial assessment: zero independently Tier-A
+qualified cards, HISTORICAL_EVIDENCE_INSUFFICIENT; missing custody proof is not
+invented. README, state and scoreboard display separate H and P sections. No
+canonical card or prospective v27.0 registry/test/400-game horizon is changed.
+[Implementation and reproduction](research/verification/historical_pre_event_v1/README.md).
+
 ## CR-2026.11.16-R4 ? v27.0: historical accounting, original-request custody and CI
 
 Owner instruction: implement the repository review accurately and publish main. Every one of the 685 historical cards is accounted for, with its original cohort and missingness. Historical studies and current prospective certification are separately reported. Added immutable original requests and contract definitions, exact published-blob replay, independently verified server receipts, complete sequence checks, captured official first-play evidence, changing-average confidence sequences, typed feature candidates, protected code releases and a separate forecast-data branch. No historical card, grade or probability is rewritten and no success label is forced. See research/verification/framework_change_2026-11-16-4/IMPLEMENTATION.md.

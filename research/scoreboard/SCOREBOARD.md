@@ -1,5 +1,34 @@
 # Scoreboard: current measurement and preserved historical results
 
+## A. Historical pre-event forecasting evidence — HPPV-v1 (17 November 2026)
+
+| Measurement | Initial assessment |
+|---|---|
+| Historical cards / contract rows | 685 / 3,150 |
+| Cards with stated probabilities | 280 |
+| Independently Tier-A qualified cards / contracts | 0 / 0 |
+| Verified supplied-contract paired events | 0 |
+| Historical skill verdict | HISTORICAL_EVIDENCE_INSUFFICIENT |
+
+[Registration, evidence intake and reproduction](../verification/historical_pre_event_v1/README.md)
+· [initial validation report](../verification/historical_pre_event_v1/HISTORICAL_PROSPECTIVE_VALIDATION_REPORT.md).
+All cards remain in the census. Original timing and custody are unverified until
+independent evidence is recovered; this is not a finding that all historical forecasts
+were late. Preserved descriptive and training results below keep their original labels.
+
+## B. Current v27.0 prospective evidence — ONE-CHAT-v3 (17 November 2026)
+
+| Measurement | Current implementation snapshot |
+|---|---|
+| Registered qualifying games | 0 |
+| Registered assessment horizon | 400 games |
+| Current verdict | NOT_YET_DEMONSTRATED |
+
+[Registered plan](../external/EVALUATION_PLAN_v27.0.md) · [runbook](../one_chat/RUNBOOK.md).
+The registry, benchmark and sequential test are unchanged. Historical Track H and
+prospective Track P never share sample counts or statistical verdicts. Later live
+results come from the one-chat scoring command with actual intake/outcome files.
+
 ## Import 2026-11-14 (P-639–P-659; descriptive; chat-local research only)
 
 - **Research-only, NOT_PRIMARY (P-639–P-659).** 21 games, 90 chat-local records (six parallel chats on the 12–14 Nov games, three strands on the 9–12 Nov games). Literal rows 131W/142L, 3 UNRESOLVED (P-647 corners). Primary rows 0; ASSESS-100 eligible paired games 0.

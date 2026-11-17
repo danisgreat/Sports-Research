@@ -1,4 +1,8 @@
 # Preserve forensic originals and generated evidence exactly across Windows clones.
+research/verification/historical_pre_event_v1/** -text
+research/verification/hppv_runs/** -text
+research/verification/hppv_captures/** -text
+research/verification/hppv_model_studies/** -text
 archive/superseded_2026-10-14-3/** -text
 archive/superseded_2026-10-14-4/** -text
 archive/superseded_2026-10-14-5/** -text
@@ -176,3 +180,19 @@ research/verification/framework_change_2026-11-16-4/** -text
 .github/workflows/*.yml text eol=lf
 research/verification/**/OUTCOMES.csv -text
 research/verification/framework_change_2026-11-16-4/OWNER_REVIEW.original.txt -text whitespace=cr-at-eol
+
+# HPPV-v1: keep the frozen training inputs and generating code byte-exact on every clone.
+"ml/card_training.py" -text
+"ml/historical_pre_event.py" -text
+"ml/historical_pre_event_backtest.py" -text
+"ml/tests/test_historical_pre_event.py" -text
+"research/data/GAME_PREDICTION_RANK_LOG.csv" -text
+"research/verification/mini_import_P-577_P-584_2026-10-13-1/HISTORICAL_PRIMARY_RECONCILIATION.csv" -text
+"research/verification/mini_import_P-577_P-584_2026-10-13-1/IMPORTED_ROW_INVENTORY.csv" -text
+"research/verification/mini_import_P-585_P-589_2026-10-14-1/IMPORTED_ROW_INVENTORY.csv" -text
+"research/verification/mini_import_P-590_P-600_2026-10-16-1/EFFECTIVE_SETTLEMENT_ROWS.csv" -text
+"research/verification/mini_import_P-590_P-600_2026-10-16-1/LOCAL_ID_MAPPING.csv" -text
+"research/verification/mini_import_P-601_P-622_2026-10-21-1/EFFECTIVE_SETTLEMENT_ROWS.csv" -text
+"research/verification/mini_import_P-601_P-622_2026-10-21-1/LOCAL_ID_MAPPING.csv" -text
+"research/verification/settlement_import_2026-11-07-1/SETTLEMENT_REVISIONS.csv" -text
+"research/verification/settlement_import_2026-11-07-2/SETTLEMENT_REVISIONS.csv" -text
