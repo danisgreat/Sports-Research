@@ -783,7 +783,6 @@ def seal(files, root=ROOT, *, push=True, lookup=None, wait=(0, 3, 6, 12), attemp
 
 def _seal_once(files, root, *, push, lookup, wait) -> dict:
     repo = Repo(root, lookup=lookup)
-    existing = {r["file_sha256"] for r in repo.seals}
     sealed_blocks = {r["block_sha256"] for r in repo.seals}
     first_block = {}
     for r in repo.seals:
@@ -800,8 +799,7 @@ def _seal_once(files, root, *, push, lookup, wait) -> dict:
     for file in map(Path, files):
         raw = file.read_bytes()
         digest = sha(raw)
-        if digest in existing:
-            continue
+        # Checked card by card, never by file: a card refused earlier in an already sealed file is retried each time.
         blocks = card_blocks(raw.decode("utf-8", errors="replace"), root)
         if not blocks:
             refused.append(dict(file=file.name, card_key="", reason="no ONECHAT_V1 block"))
@@ -1103,7 +1101,8 @@ def score(intakes, outcomes, out, *, root=ROOT, captures=None, cohort=None, base
     for folder in intakes:
         custody += verify_intake(folder, root, require_committed, repo)
         for c in read_csv(Path(folder) / "CARDS.csv"):
-            if c["status"] == "ADMITTED":
+            # A duplicate of another sealed card is kept so the score can account for it and choose the card of record.
+            if c["status"] in ("ADMITTED", "DUPLICATE_GAME"):
                 if c["card_key"] in cards:
                     raise OneChatError(f"card {c['card_key']} appears in two intakes")
                 cards[c["card_key"]] = c
@@ -1193,15 +1192,26 @@ def score(intakes, outcomes, out, *, root=ROOT, captures=None, cohort=None, base
         lined = [r for r in mine if r["line"] != ""]
         priced = [r for r in lined if r["p"] != "UNPRICED"]
         got = {(r["label"], r["side"]): grades.get((key, r["label"], r["side"])) for r in mine}
-        done = {k: g for k, g in got.items() if g is not None and g["grade"] in TERMINAL}
+        try:
+            cutoff = T.clock(card["scheduled_start"], "scheduled_start") + timedelta(days=SETTLEMENT_DEADLINE_DAYS)
+        except ValueError:
+            cutoff = None
+        due = cutoff is not None and as_of >= cutoff
+
+        def settled_by_cutoff(g):
+            # A row counts only if it was settled by the deadline: a row settled later cannot bring a dropped game back.
+            if cutoff is None:
+                return True
+            try:
+                return T.clock(g["settled_at"], "settled_at") <= cutoff
+            except (KeyError, ValueError):
+                return False
+
+        done = {k: g for k, g in got.items() if g is not None and g["grade"] in TERMINAL and settled_by_cutoff(g)}
         open_rows = [r for r in mine if (r["label"], r["side"]) not in done]
         starts = {g["actual_start"] for g in done.values() if g.get("actual_start")}
         first_play = {g["_first_play"] for g in done.values()}
         label = timing_label(card, next(iter(starts)), seals[key]) if len(starts) == 1 else "TIMING_UNKNOWN"
-        try:
-            due = as_of >= T.clock(card["scheduled_start"], "scheduled_start") + timedelta(days=SETTLEMENT_DEADLINE_DAYS)
-        except ValueError:
-            due = False
         dropped = [r for r in priced if (r["label"], r["side"]) not in done] if due else []
         scored = [r for r in priced if (r["label"], r["side"]) in done]
         reason = ""

@@ -39,6 +39,16 @@ Prompt 8, branch `feature/v29-parallel-chats` from main `c04b5ddc2`, merged thro
 
 Updated: four existing tests whose expected error became a refusal or a recorded problem. The Windows job also runs the new file.
 
+## Review findings on the pull request (automated Codex review), fixed before merge
+
+| Finding | Fix | Test |
+|---|---|---|
+| P1: a row settled after the 14-day deadline still counted, so a dropped game could return on a later run | A row counts only if `settled_at` is on or before the deadline | `test_a_row_settled_after_the_deadline_cannot_bring_a_dropped_game_back` |
+| P2: two chats sealing the same game made a from-seals score NOT_ASSESSABLE (the duplicate looked like a missing sealed card) | The score keeps intake duplicates and chooses the first sealed card of record | `test_the_same_game_sealed_by_two_chats_counts_once_and_stays_assessable` |
+| P2: a card refused inside an already sealed file was never retried | Sealing checks card by card, never by file digest | `test_a_card_refused_inside_an_already_sealed_file_is_retried` |
+
+All three tests fail on the code before the fix and pass after it.
+
 ## Not changed
 
 The statistical constants (lambdas 0.5, 0.7, 0.9; horizon 600; alpha 0.05; practical mean 0.01), custody, the comparator and the card format are unchanged. No real request or seal existed on `forecast-seals` at registration.

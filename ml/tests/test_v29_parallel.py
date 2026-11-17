@@ -243,3 +243,64 @@ def test_committed_templates_are_the_generated_templates(tmp_path):
     assert len(list(tmp_path.glob("*.md"))) == len(O.SUPPORTED_SPORTS)
     text = (committed / "ONECHAT_V1_BASKETBALL_v29.0.md").read_text(encoding="utf-8")
     assert all(re.search(rf"^HOME,{f},", text, re.M) for f in O.required_facts("Basketball"))
+
+
+# --------------------------------------------------------------------------------- review findings on PR #9
+
+def test_a_row_settled_after_the_deadline_cannot_bring_a_dropped_game_back(repo, tmp_path):
+    intake = sealed_pair(repo, tmp_path)
+    settled = M.outcomes(repo, tmp_path / "cap", ["MINI7-G0002"], start="2026-11-20T08:50:00+00:00")
+    late = M.outcomes(repo, tmp_path / "cap", ["MINI7-G0001"], start="2026-11-20T08:20:00+00:00", name="LATE.csv")
+    rows = O.read_csv(late)
+    for r in rows:
+        r["settled_at"] = "2026-12-10T00:00:00+00:00"          # graded after the 4 December deadline
+    late.write_bytes(O.csv_bytes(O.OUTCOME_FIELDS, rows))
+    M.commit_all(repo)
+    s = M.run(repo, tmp_path, [intake], [settled, late], "late", as_of="2026-12-15T00:00:00+00:00")
+    cover = {c["card_key"]: c for c in O.read_csv(repo / O.SCORES / "late/COVERAGE.csv")}
+    assert cover["MINI7-G0001"]["exclusion"] == "SETTLEMENT_UNATTAINABLE"
+    assert s["games_in_sequence"] == 1 and s["games_settlement_unattainable"] == 1
+
+
+def test_the_same_game_sealed_by_two_chats_counts_once_and_stays_assessable(repo, tmp_path):
+    game = MESSAGES.split("\n\nUpcoming")[0]
+    _, out = prepared(tmp_path, game + "\n\n" + game)          # one game given to two chats by mistake
+    register(repo, out)
+    sk = skeletons(out)
+    files = []
+    for key in ("MINI7-G0001", "MINI7-G0002"):
+        f = tmp_path / f"{key}.md"
+        f.write_text(fill(sk[key]), encoding="utf-8")
+        files.append(f)
+    assert O.seal(files, repo, lookup=M.Server("2026-11-20T07:00:00Z"), wait=(0,))["sealed"] == 2
+    intake = repo / "research/one_chat/intake/dupes"
+    OPS.intake_from_seals(intake, repo)
+    outcomes = M.outcomes(repo, tmp_path / "cap", ["MINI7-G0001", "MINI7-G0002"], start="2026-11-20T08:20:00+00:00")
+    M.commit_all(repo)
+    s = M.run(repo, tmp_path, [intake], [outcomes], "dupes", as_of="2026-11-21T00:00:00+00:00")
+    assert (s["custody_problems"], s["games_in_sequence"], s["duplicate_cards"]) == (0, 1, 1)
+
+
+def test_a_card_refused_inside_an_already_sealed_file_is_retried(repo, tmp_path):
+    _, out = prepared(tmp_path)
+    first, second = out / "MINI7-G0001", out / "MINI7-G0002"
+    later = tmp_path / "later"
+    later.mkdir()
+    second.rename(later / "MINI7-G0002")                       # only game 1's request is registered at first
+    register(repo, out)
+    sk1 = (first / "SKELETON.md").read_text(encoding="utf-8")
+    sk2 = (later / "MINI7-G0002/SKELETON.md").read_text(encoding="utf-8")
+    card2 = fill(sk2).replace("2026-11-20T05:05:00+00:00", "2026-11-20T07:10:00+00:00").replace(
+        "2026-11-20T05:30:00+00:00", "2026-11-20T07:20:00+00:00").replace(
+        "2026-11-20T06:25:00+00:00", "2026-11-20T07:45:00+00:00").replace(
+        "2026-11-20T06:30:00+00:00", "2026-11-20T07:50:00+00:00").replace(
+        "2026-11-20T05:00:00+00:00", "2026-11-20T07:06:00+00:00")
+    minis = tmp_path / "minis"
+    minis.mkdir()
+    (minis / "MINI7.md").write_text(fill(sk1) + "\n" + card2, encoding="utf-8")
+    one = OPS.watch(minis, once=True, root=repo, lookup=M.Server("2026-11-20T07:00:00Z"), log=lambda *a: None)[0]
+    assert one["sealed"] == 1 and [r["card_key"] for r in one["refused"]] == ["MINI7-G0002"]
+    OPS.register_folder(later, repo)                           # the missing request is registered afterwards
+    M.Server("2026-11-20T07:05:00Z")(repo)
+    two = OPS.watch(minis, once=True, root=repo, lookup=M.Server("2026-11-20T07:55:00Z"), log=lambda *a: None)[0]
+    assert two["sealed"] == 1 and two["cards"] == "MINI7-G0002"   # the unchanged file is checked again, card by card
