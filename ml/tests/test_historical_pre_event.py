@@ -510,7 +510,17 @@ def test_run_verifies_from_frozen_evidence_snapshot_after_live_ledger_changes(
 
 
 def test_committed_assessment_rebuilds_identically():
-    assert H.verify(H.ROOT / H.BASE) == "HISTORICAL_EVIDENCE_INSUFFICIENT"
+    # The current run binds the current code; the initial run in BASE verifies at its own implementation commit.
+    assert H.verify(H.ROOT / H.CURRENT_RUN) == "HISTORICAL_EVIDENCE_INSUFFICIENT"
+
+
+def test_the_initial_run_differs_from_the_current_run_only_in_its_code_hash():
+    import csv
+    def rows(folder):
+        return {(r["role"], r["path"]): r["sha256"] for r in csv.DictReader(open(H.ROOT / folder / "MANIFEST.csv", encoding="utf-8"))}
+    initial, current = rows(H.BASE), rows(H.CURRENT_RUN)
+    assert set(initial) == set(current)
+    assert {k for k in initial if initial[k] != current[k]} == {("INPUT", "ml/historical_pre_event.py")}
 
 
 def test_frozen_source_reads_ignore_later_working_log_changes(tmp_path):

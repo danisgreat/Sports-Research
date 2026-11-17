@@ -25,7 +25,6 @@ import subprocess
 import time
 import os
 import tempfile
-import json
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -49,10 +48,11 @@ NO_DIRECTION = 0.05         # H-NODIR: a stated p within this of 0.5 (flag only)
 BANDS = (0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.9, 1.0)
 DECISIVE, TERMINAL = ("WIN", "LOSS"), ("WIN", "LOSS", "PUSH", "VOID")
 
-# Registered assessment constants (EVALUATION_PLAN_v26.0). Changing any of them is a new registration.
+# Registered assessment constants (EVALUATION_PLAN_v28.0, with forecast_integrity.LAMBDAS). Changing any of them is a
+# new registration. BET_CAP and PRIOR_VAR belong to the retired v26 e-process kept only for replay.
 ALPHA = 0.05                # e-value threshold 1 / ALPHA = 20
 PRACTICAL = 0.01            # running mean advantage required at the crossing
-HORIZON = 400               # games after which, without a crossing, advantage is NOT_DEMONSTRATED
+HORIZON = 600               # games after which, without a crossing, advantage is NOT_DEMONSTRATED (v28.0)
 D_LOW, D_HIGH = -0.75, 0.25  # bounds of d = 0.25 - Brier
 BET_CAP = 0.75              # fraction of the largest safe bet (simulated: about 1% false alarms on a mean-zero null)
 PRIOR_VAR = 0.0625          # prior variance of d for the first bets
@@ -77,7 +77,7 @@ OUTCOME_FIELDS = ("card_key", "label", "side", "grade", "event_id", "actual_star
 SEALED = "research/one_chat/sealed"
 SEALS = SEALED + "/SEALS.csv"
 SEAL_FIELDS = ("card_key", "block_sha256", "file_sha256", "sealed_path", "sealed_at_client", "policy_sha256", "policy_commit")
-PLAN = "research/external/EVALUATION_PLAN_v27.0.md"
+PLAN = "research/external/EVALUATION_PLAN_v28.0.md"
 RECEIPTS = SEALED + "/PUSH_RECEIPTS.csv"
 RECEIPT_FIELDS = ("before", "after", "pushed_at_server", "ref", "source", "retrieved_at")
 SCORES = "research/one_chat/scores"
@@ -85,6 +85,10 @@ SEAL_BRANCH = os.environ.get("ONE_CHAT_SEAL_BRANCH", "forecast-seals")
 if SEAL_BRANCH != "forecast-seals" and not re.fullmatch(r"test-forecast-seals[A-Za-z0-9_-]*", SEAL_BRANCH):
     # Only the registered branch or an explicitly named rehearsal branch; a rehearsal never touches forecast-seals.
     raise SystemExit(f"ONE_CHAT_SEAL_BRANCH must be forecast-seals or test-forecast-seals*, not {SEAL_BRANCH!r}")
+# Local staging and unpublished seal commits are kept per seal branch, so a rehearsal never mixes with the
+# registered evaluation. The registered branch keeps the original names.
+STAGING = "forecast-staging" if SEAL_BRANCH == "forecast-seals" else f"forecast-staging-{SEAL_BRANCH}"
+PENDING_REFS = "refs/forecast-pending" if SEAL_BRANCH == "forecast-seals" else f"refs/forecast-pending-{SEAL_BRANCH}"
 REQUEST_INDEX = "research/one_chat/REQUEST_INDEX.csv"
 DISPOSITIONS = "research/one_chat/REQUEST_DISPOSITIONS.csv"
 ELIGIBLE = "SEALED_PRE_START_SERVER"
@@ -439,12 +443,11 @@ class Repo:
         seal_ref = _git(self.root, "rev-parse", "--verify", "-q", f"refs/remotes/origin/{SEAL_BRANCH}", check=False).stdout.strip()
         self.seal_ref = seal_ref
         self.upstream = set(_git(self.root, "rev-list", *[r for r in (up, seal_ref) if r], check=False).stdout.split()) if up or seal_ref else set()
-        path = self.root / RECEIPTS
-        # A locally edited mirror is never independent timestamp evidence.
-        self.live_receipts = (lookup or github_push_activity)(self.root)
-        self.receipts = sorted(((T.clock(r["pushed_at_server"], "pushed_at_server"), r) for r in self.live_receipts
-                                if r.get("ref") in ("refs/heads/main", f"refs/heads/{SEAL_BRANCH}")),
-                               key=lambda x: x[0])
+        # A locally edited mirror is never independent timestamp evidence. GitHub's activity is fetched once, and only
+        # when a server time is first needed; a failed fetch is recorded, never read as "no pushes".
+        self._lookup = lookup
+        self._receipts = None
+        self.activity_error = ""
         self._pushed = {}
         self._ancestry = {}
         self._blob_cache = {}
@@ -534,7 +537,7 @@ class Repo:
             raw=self.blob("refs/remotes/origin/main",path)
         if raw is None or sha(raw)!=digest:
             # Pending, not-yet-pushed objects are still reportable, never eligible.
-            refs=_git(self.root,"for-each-ref","--format=%(objectname)","refs/forecast-pending",check=False).stdout.split()
+            refs=_git(self.root,"for-each-ref","--format=%(objectname)",PENDING_REFS,check=False).stdout.split()
             raw=next((self.blob(c,path) for c in refs if self.blob(c,path) is not None and sha(self.blob(c,path))==digest),None)
         if raw is None:
             return ""
@@ -549,9 +552,20 @@ class Repo:
                 unpublished = unpublished or commit
         return unpublished
 
+    @property
+    def receipts(self):
+        if self._receipts is None:
+            try:
+                live = (self._lookup or github_push_activity)(self.root)
+            except OneChatError as exc:
+                self.activity_error, live = str(exc), []
+            self.live_receipts = live
+            self._receipts = sorted(((T.clock(r["pushed_at_server"], "pushed_at_server"), r) for r in live
+                                     if r.get("ref") in ("refs/heads/main", f"refs/heads/{SEAL_BRANCH}")), key=lambda x: x[0])
+        return self._receipts
+
     def pushed_at(self, commit: str, committed_at: str = "") -> str:
-        """GitHub's time of the first push to main that carried the commit. Pushes more than a day before the commit's own
-        (client) time are skipped for speed: a client clock set late can only make the found push later, never earlier."""
+        """GitHub's server time of the first push to main or the seal branch that carried the commit ("" if none)."""
         if commit not in self._pushed:
             found = ""
             for when, r in self.receipts:
@@ -595,14 +609,17 @@ def _remote_slug(root) -> str | None:
 
 
 def github_push_activity(root=ROOT) -> list[dict]:
-    """GitHub's own record of pushes to main (server timestamps), every page. Empty if gh is unavailable."""
+    """GitHub's own record of pushes to main and the seal branch (server timestamps), every page.
+
+    Empty for a remote that is not on GitHub; raises OneChatError when GitHub cannot be read, so a failed fetch is never
+    mistaken for an absence of pushes."""
     slug = _remote_slug(root)
     if not slug:
         return []
     res = subprocess.run(["gh", "api", "--paginate", "--slurp", f"repos/{slug}/activity?per_page=100"],
                          capture_output=True, text=True)
     if res.returncode:
-        return []
+        raise OneChatError("GitHub push activity could not be fetched (gh api): " + (res.stderr or "").strip()[:200])
     out = []
     for page in json.loads(res.stdout):
         for event in page:
@@ -633,7 +650,7 @@ def record_receipts(root=ROOT, lookup=None) -> int:
 
 
 def request_staging(root):
-    rel = _git(root, "rev-parse", "--git-path", "forecast-staging").stdout.strip()
+    rel = _git(root, "rev-parse", "--git-path", STAGING).stdout.strip()
     path = Path(rel)
     return path if path.is_absolute() else Path(root) / path
 
@@ -669,7 +686,7 @@ def publish_seal_tree(root, payload, push=True):
         run("update-index","--index-info",data=entries.encode())
         tree = run("write-tree")
         commit = run("commit-tree", tree, "-p", base, "-m", f"Publish immutable forecast data ({RULE})")
-    _git(root, "update-ref", f"refs/forecast-pending/{commit}", commit)
+    _git(root, "update-ref", f"{PENDING_REFS}/{commit}", commit)
     if push:
         result = _git(root, "push", "origin", f"{commit}:refs/heads/{SEAL_BRANCH}", check=False)
         if result.returncode:
@@ -757,7 +774,8 @@ def seal(files, root=ROOT, *, push=True, lookup=None, wait=(0, 3, 6, 12)) -> dic
     policy_commit=repo.first_content(PLAN,sha(plan))
     policy_time=repo.pushed_at(policy_commit) if policy_commit else ""
     if not policy_time:
-        raise OneChatError("current registration has no independently verified main publication time")
+        raise OneChatError("current registration has no independently verified main publication time"
+                           + (f" ({repo.activity_error})" if repo.activity_error else ""))
     for file in map(Path, files):
         raw = file.read_bytes()
         blocks = card_blocks(raw.decode("utf-8"), root)
@@ -810,7 +828,7 @@ def seal(files, root=ROOT, *, push=True, lookup=None, wait=(0, 3, 6, 12)) -> dic
 
 
 def server_time(root, commit: str) -> str:
-    """GitHub's server time of the first push to main that carried the commit, from PUSH_RECEIPTS.csv."""
+    """GitHub's server time of the first push that carried the commit, fetched live (never from the receipts mirror)."""
     return Repo(root).pushed_at(commit)
 
 
@@ -1075,6 +1093,8 @@ def score(intakes, outcomes, out, *, root=ROOT, captures=None, cohort=None, base
         for r in seal["request_contracts"]:
             if r["baseline_p"]:
                 base[(key,r["label"],r["side"].upper())]=float(r["baseline_p"])
+    if repo.activity_error:
+        custody.append(repo.activity_error)
     missing_sealed = sorted({r["card_key"] for r in repo.seals} - set(cards))
     if missing_sealed:
         custody.append("Sealed games omitted from supplied intakes: " + ", ".join(missing_sealed))
@@ -1360,6 +1380,10 @@ def main(argv=None):
     h = sub.add_parser("history")
     h.add_argument("--rows", required=True, type=Path)
     h.add_argument("--out", required=True, type=Path)
+    pw = sub.add_parser("power", help="the registered decision's error rate and power, by simulation")
+    pw.add_argument("--out", required=True, type=Path)
+    pw.add_argument("--runs", type=int, default=200)
+    pw.add_argument("--null-runs", type=int, default=400)
     t = sub.add_parser("template")
     t.add_argument("--sport", required=True)
     args = parser.parse_args(argv)
@@ -1378,6 +1402,14 @@ def main(argv=None):
         elif args.cmd == "score":
             print(score(args.intake, args.outcomes, args.out, captures=args.captures, on_request=args.on_request,
                         cohort=args.cohort, baseline=args.baseline))
+        elif args.cmd == "power":
+            if args.out.exists():
+                raise OneChatError(f"{args.out} already exists")
+            rows = F.power_study(horizon=HORIZON, runs=args.runs, null_runs=args.null_runs, alpha=ALPHA, practical=PRACTICAL)
+            args.out.mkdir(parents=True)
+            (args.out / "POWER.csv").write_bytes(csv_bytes(tuple(rows[0]), rows))
+            for r in rows:
+                print(r)
         elif args.cmd == "history":
             print(history(args.rows, args.out))
         else:

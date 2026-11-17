@@ -39,8 +39,9 @@ CONTRACT_FIELDS = (
     "baseline_id",
 )
 REQUEST_FILES = ("REQUEST.txt", "EVENT.csv", "CONTRACTS.csv")
-LAMBDAS = (0.05, 0.1, 0.2, 0.35, 0.5, 0.65, 0.8, 0.9)
-STATISTICAL_RULE = "AVERAGE-CONDITIONAL-MEAN-EB-v1"
+# Registered in EVALUATION_PLAN_v28.0 (v27.0 used eight values from 0.05 to 0.9).
+LAMBDAS = (0.5, 0.7, 0.9)
+STATISTICAL_RULE = "AVERAGE-CONDITIONAL-MEAN-EB-v2"
 
 
 def digest(raw):
@@ -228,3 +229,69 @@ def confidence_path(ds, alpha=0.05):
             )
         )
     return result
+
+
+POWER_SCENARIOS = (
+    ("MEAN_ZERO_NULL", None),
+    ("COIN_RESULTS_CARD_STATES_55_75", (0.55, 0.75)),
+    ("CALIBRATED_FAVOURED_55_65", (0.55, 0.65)),
+    ("CALIBRATED_FAVOURED_58_72", (0.58, 0.72)),
+    ("CALIBRATED_FAVOURED_62_78", (0.62, 0.78)),
+)
+
+
+def _simulated_game(rng, scenario, band):
+    """One game's d: two supplied lines; the card states p on its favoured side."""
+    if band is None:
+        return rng.choice((0.15, -0.15))
+    out = []
+    for _ in range(2):
+        p = rng.uniform(*band)
+        truth = 0.5 if scenario.startswith("COIN") else p
+        out.append(0.25 - (p - (1 if rng.random() < truth else 0)) ** 2)
+    return sum(out) / 2
+
+
+def first_crossing(ds, *, alpha=0.05, practical=0.01, horizon=None):
+    """First game at which the evidence reaches 1/alpha with mean d at least the practical threshold."""
+    total = 0.0
+    for i, r in enumerate(confidence_path(ds, alpha)):
+        total += ds[i]
+        if horizon is not None and i >= horizon:
+            return None
+        if r["e_value"] >= 1 / alpha and total / (i + 1) >= practical:
+            return i + 1
+    return None
+
+
+def power_study(
+    *, horizon, runs=200, null_runs=400, seed=20261117, alpha=0.05, practical=0.01
+):
+    """Deterministic simulation of the registered decision (Python's random module, fixed seed)."""
+    import random
+
+    rows = []
+    for n, (scenario, band) in enumerate(POWER_SCENARIOS):
+        rng = random.Random(seed + n)
+        count = null_runs if band is None else runs
+        hits = []
+        for _ in range(count):
+            ds = [_simulated_game(rng, scenario, band) for _ in range(horizon)]
+            hit = first_crossing(ds, alpha=alpha, practical=practical, horizon=horizon)
+            if hit:
+                hits.append(hit)
+        hits.sort()
+        rows.append(
+            dict(
+                scenario=scenario,
+                runs=count,
+                horizon=horizon,
+                lambdas=" ".join(str(x) for x in LAMBDAS),
+                demonstrated_within_400=sum(h <= 400 for h in hits),
+                demonstrated_within_horizon=len(hits),
+                share_within_horizon=round(len(hits) / count, 4),
+                median_crossing_game=hits[len(hits) // 2] if hits else "",
+                seed=seed + n,
+            )
+        )
+    return rows

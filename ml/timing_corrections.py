@@ -138,41 +138,11 @@ def apply(ledger, root):
 
 @contextlib.contextmanager
 def locked(path):
-    """An operating-system lock on a side file: held only while this process is alive and inside the block.
+    """One writer at a time, through the shared cross-platform lock (ml.file_lock)."""
+    from ml import file_lock
 
-    The lock file itself may stay on disk; a leftover file is not a lock. A writer that is still alive keeps its lock
-    however old the file is, so it can never be taken over; a writer that died releases it automatically.
-    """
-    lock = path.with_suffix(".lock")
-    lock.parent.mkdir(parents=True, exist_ok=True)
-    f = open(lock, "a+b")
-    try:
-        try:
-            if os.name == "nt":
-                import msvcrt
-                f.seek(0)
-                msvcrt.locking(f.fileno(), msvcrt.LK_NBLCK, 1)
-            else:
-                import fcntl
-                fcntl.flock(f.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
-        except OSError:
-            raise RuntimeError(f"timing corrections are locked by another writer ({lock}); retry when it has finished") from None
-        try:
-            f.seek(0)
-            f.truncate()
-            f.write(str(os.getpid()).encode())
-            f.flush()
-            yield
-        finally:
-            if os.name == "nt":
-                import msvcrt
-                f.seek(0)
-                msvcrt.locking(f.fileno(), msvcrt.LK_UNLCK, 1)
-            else:
-                import fcntl
-                fcntl.flock(f.fileno(), fcntl.LOCK_UN)
-    finally:
-        f.close()
+    with file_lock.exclusive(path, what="timing corrections"):
+        yield
 
 
 def correct(ledger_path, key, actual_start, source_url, evidence, reason, *, root, at=None):

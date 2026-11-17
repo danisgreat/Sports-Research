@@ -26,6 +26,9 @@ from scipy import stats
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = "research/verification/historical_pre_event_v1"
+# The current verified run. A run binds this file's exact bytes, so a code change needs a new run; the initial run
+# in BASE stays unchanged and verifies at its implementation commit (8f2f38f).
+CURRENT_RUN = "research/verification/hppv_runs/2026-11-17-1"
 TRAIN = "research/card_training/2026-11-16-1/ROWS.csv"
 AUDIT = "research/verification/framework_change_2026-11-16-4/historical_evidence/HISTORICAL_CARD_AUDIT.csv"
 VERSION = "HPPV-v1"
@@ -193,16 +196,16 @@ def append_evidence(root, ledger, row_id, payload, reviewer, reason):
         payload=canonical(payload),
     )
     row["sha256"] = digest(canonical(row).encode())
-    # Exclusive lock serializes writers and avoids a lost append from parallel reviewers.
-    import fcntl
+    # Exclusive lock serializes writers and avoids a lost append from parallel reviewers (Windows and POSIX).
+    from ml import file_lock
 
-    with ledger.open("r+b") as f:
-        fcntl.flock(f, fcntl.LOCK_EX)
-        if f.read() != before:
-            raise ValueError("ledger changed; inspect new head before retrying")
-        f.seek(0, 2)
-        f.write(csv_bytes([row], LEDGER_FIELDS).split(b"\n", 1)[1])
-        f.flush()
+    with file_lock.exclusive(ledger, wait=10.0, what="the evidence ledger"):
+        with ledger.open("r+b") as f:
+            if f.read() != before:
+                raise ValueError("ledger changed; inspect new head before retrying")
+            f.seek(0, 2)
+            f.write(csv_bytes([row], LEDGER_FIELDS).split(b"\n", 1)[1])
+            f.flush()
     return row
 
 

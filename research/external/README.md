@@ -1,4 +1,4 @@
-# Files for the external research chats (v27.0)
+# Files for the external research chats (v28.0)
 
 Current operator authority: [RUNBOOK](../one_chat/RUNBOOK.md). Register the original request before research; publish the card on the data-only seal branch before play.
 
@@ -8,13 +8,13 @@ Upload to each chat (or once to a ChatGPT Project):
 
 | File | What it is |
 |---|---|
-| [ONE_CHAT_BRIEF_v27.0.md](ONE_CHAT_BRIEF_v27.0.md) | The one brief: what the chat does and the `ONECHAT_V1` block that ends every card (v25.0 is retained; do not upload it) |
+| [ONE_CHAT_BRIEF_v28.0.md](ONE_CHAT_BRIEF_v28.0.md) | The one brief: what the chat does and the `ONECHAT_V1` block that ends every card (v25.0, v26.0 and v27.0 are retained; do not upload them) |
 | [`ml/kit/sr_kit.py`](../../ml/kit/sr_kit.py) and the kit parameter files below | The calculation kit (unchanged, v24.15) |
 | The current do-not-open list and `sources/PREGAME_SOURCES_<SPORT>_v24.15.csv` | Where the chat may read (unchanged) |
 
 **Owner step before play:** save the finished card file and run `python -m ml one-chat seal --card "<file>"`. It commits the file, pushes it and records GitHub's push time; a card sealed after the game starts is kept but never counts.
 
-Assessment: [EVALUATION_PLAN_v27.0.md](EVALUATION_PLAN_v27.0.md) (supersedes v25.0, under which no game was scored). The profile, the lane briefs and the audit supplement described below belong to the five-lane route (EXT-v3). They are retained and are not uploaded for new games.
+Assessment: [EVALUATION_PLAN_v28.0.md](EVALUATION_PLAN_v28.0.md) (supersedes v25.0, v26.0 and v27.0, under none of which a real game was scored). The profile, the lane briefs and the audit supplement described below belong to the five-lane route (EXT-v3). They are retained and are not uploaded for new games.
 
 ## Five-lane package (v24.15, retained; takes no new game)
 

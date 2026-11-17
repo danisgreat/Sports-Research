@@ -1,5 +1,17 @@
 # Australian rules request format and finals extra time — MDS/P v24.12 / CR-2026.11.10-R2 / P-2026.11.10-v24.10, 10 November 2026
 
+## 17 November 2026 — v28.0 / CR-2026.11.17-R1 / P-2026.11.17-v28.0 / SCV-2026.11.17-v19: review fixes
+
+Owner order: implement every fix from the review of v27.0.
+- **Windows bug:** `historical-pre-event append` crashed on Windows (`fcntl`). New `ml/file_lock.py` gives one cross-platform OS lock, now used there and by timing corrections, and a static test forbids POSIX-only imports elsewhere. A `windows-portability` CI job runs the lock, custody and historical tests on Windows.
+- **Historical run:** a code change invalidates a run's current claim, so the initial HPPV run stays unchanged (it verifies at 8f2f38f). A new run, hppv_runs/2026-11-17-1, verifies with the current code; every output is byte-identical and only the code hash differs.
+- **Rehearsal staging:** local staging and pending seal commits are now kept per seal branch, so a rehearsal cannot enter the registered evaluation.
+- **GitHub activity:** fetched lazily, once per repository read, only when a server time is needed. A failed fetch raises and makes a score NOT_ASSESSABLE with the reason.
+- **Statistics:** v28.0 registers lambdas (0.5, 0.7, 0.9) and a 600-game horizon with a reproducible power study (`ml one-chat power`) before any real request or card was registered.
+- **Records:** stale v26/v27 pointers fixed, the workflow and archive rules now match practice, the drop-workflow trust model is documented, the HPPV README link and three lost dashes are corrected, and one_chat cleanups are done.
+
+No card, grade, canonical ID, historical output or custody rule changed. [Implementation](research/verification/framework_change_2026-11-17-1/IMPLEMENTATION.md).
+
 ## 17 November 2026 — DROP-SEAL-v1: sealing through a drop branch (operational only)
 
 Owner instruction: let an external research chat that can push files, but cannot run repository commands, register
@@ -26,7 +38,7 @@ invented. README, state and scoreboard display separate H and P sections. No
 canonical card or prospective v27.0 registry/test/400-game horizon is changed.
 [Implementation and reproduction](research/verification/historical_pre_event_v1/README.md).
 
-## CR-2026.11.16-R4 ? v27.0: historical accounting, original-request custody and CI
+## CR-2026.11.16-R4 — v27.0: historical accounting, original-request custody and CI
 
 Owner instruction: implement the repository review accurately and publish main. Every one of the 685 historical cards is accounted for, with its original cohort and missingness. Historical studies and current prospective certification are separately reported. Added immutable original requests and contract definitions, exact published-blob replay, independently verified server receipts, complete sequence checks, captured official first-play evidence, changing-average confidence sequences, typed feature candidates, protected code releases and a separate forecast-data branch. No historical card, grade or probability is rewritten and no success label is forced. See research/verification/framework_change_2026-11-16-4/IMPLEMENTATION.md.
 

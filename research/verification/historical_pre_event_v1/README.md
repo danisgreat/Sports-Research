@@ -17,7 +17,7 @@ real run can be issued until verified availability records are recovered.
 Run from the repository root with `research/requirements.txt` installed:
 
 ```bash
-python -m ml historical-pre-event verify --run research/verification/historical_pre_event_v1
+python -m ml historical-pre-event verify --run research/verification/hppv_runs/2026-11-17-1
 python -m ml historical-pre-event run --out research/verification/hppv_runs/EXAMPLE_RUN
 python -m ml historical-pre-event append --row-id R00001 --evidence /path/to/reviewed-evidence.txt --reviewer 'Reviewer name' --reason 'Recovered original independently timed publication'
 python -m ml historical-pre-event backtest --features /path/to/reviewed-features.csv --out research/verification/hppv_model_studies/EXAMPLE_RUN
@@ -62,7 +62,7 @@ repository artifacts are required). It can contain `original`, `event`, `outcome
 unavailable evidence; do not fill missing fields with invented data. Each revision
 is a full replacement assessment, not an implicit merge with earlier revisions.
 The CSV ledger stores its canonical payload and chain hash. See the synthetic
-`fixture` in [tests](../../../../ml/tests/test_historical_pre_event.py) for a complete
+`fixture` in [tests](../../../ml/tests/test_historical_pre_event.py) for a complete
 working example; those example sources are fixtures, not real evidence.
 
 An artifact reference has exactly these required provenance fields:
@@ -163,3 +163,5 @@ qualifying games and `NOT_YET_DEMONSTRATED`; use the current one-chat command wi
 its required intake/outcome arguments (see `python -m ml one-chat score --help`)
 for later updates. Never add H counts to P, pool their verdicts, or infer that a
 historical result validates the current method.
+
+**Which run verifies with which code (17 November 2026).** A run binds the exact bytes of `ml/historical_pre_event.py`. The initial run in this folder is unchanged and verifies at its implementation commit (`git checkout 8f2f38f` then the verify command with `--run research/verification/historical_pre_event_v1`). After the Windows lock fix (v28.0) the current verified run is [hppv_runs/2026-11-17-1](../hppv_runs/2026-11-17-1/README.md): every output is byte-identical to this folder's; only the code hash in MANIFEST.csv differs. This folder remains the registration and evidence-ledger home.
