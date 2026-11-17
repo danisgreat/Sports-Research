@@ -139,3 +139,25 @@ def test_a_concurrent_publication_is_retried_and_other_errors_are_not(repo, monk
     except O.OneChatError:
         pass
     assert len(calls) == 1
+
+
+def test_a_re_pushed_request_is_checked_against_the_published_bytes_on_a_fresh_checkout(repo):
+    import shutil
+    key, files = request_files(M.card())
+    assert D.process(repo, *push_drop(repo, request_drop(key, files)))[0]["status"] == "REGISTERED"
+    published = seal_branch(repo, F.request_path(key) + "/CONTRACTS.csv")
+
+    shutil.rmtree(O.request_staging(repo), ignore_errors=True)                       # every workflow run starts with empty staging
+    same = D.process(repo, *push_drop(repo, {**request_drop(key, files), "drops/requests/x.txt": b"touch"}))
+    assert [r["status"] for r in same if r["kind"] == "request"] == []   # unchanged files are not a new drop
+
+    shutil.rmtree(O.request_staging(repo), ignore_errors=True)
+    edited = dict(files, **{"CONTRACTS.csv": files["CONTRACTS.csv"].replace(b"REGULATION", b"INCLUDING_OVERTIME")})
+    result = D.process(repo, *push_drop(repo, request_drop(key, edited)))
+    assert result[0]["status"] == "FAILED" and "immutable" in result[0]["detail"]
+    assert seal_branch(repo, F.request_path(key) + "/CONTRACTS.csv") == published
+
+    shutil.rmtree(O.request_staging(repo), ignore_errors=True)
+    D_files = request_drop(key, files)                            # restoring the original bytes is a no-op, not an error
+    again = D.process(repo, *push_drop(repo, D_files))
+    assert again[0]["status"] == "ALREADY_REGISTERED"

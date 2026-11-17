@@ -80,6 +80,13 @@ def _restore_published_request(root, key: str) -> None:
         (folder / name).write_bytes(raw)
 
 
+def _published(root, key: str) -> bool:
+    """The key is in the published request index on the seal branch."""
+    res = O.subprocess.run(["git", "-C", str(root), "cat-file", "blob", f"refs/remotes/origin/{O.SEAL_BRANCH}:{O.REQUEST_INDEX}"],
+                           capture_output=True)
+    return not res.returncode and any(r["card_key"] == key for r in F.rows(res.stdout))
+
+
 def process(root, before: str, after: str, *, lookup=None, wait=(0, 3, 6, 12)) -> list[dict]:
     """Register every complete request drop, then seal every card drop. One result row per drop."""
     root = Path(root)
@@ -108,8 +115,15 @@ def process(root, before: str, after: str, *, lookup=None, wait=(0, 3, 6, 12)) -
                 folder.mkdir()
                 for name in F.REQUEST_FILES:
                     (folder / name).write_bytes(blob(root, after, f"{DROP_ROOT}/requests/{key}/{name}"))
+                # Each run starts with empty staging: load any published registration first, so an edited
+                # re-push is compared with the immutable published bytes and refused, never reported as registered.
+                _restore_published_request(root, key)
                 outcome = F.register_request(folder / "REQUEST.txt", folder / "EVENT.csv", folder / "CONTRACTS.csv",
                                              key, O.request_staging(root))
+                if outcome["status"] == "ALREADY_REGISTERED" and _published(root, key):
+                    results.append(dict(item, status="ALREADY_REGISTERED",
+                                        detail=f"identical to the request already published on {O.SEAL_BRANCH}"))
+                    continue
                 registered.append(key)
                 results.append(dict(item, status="STAGED", detail=outcome["status"]))
             except (O.OneChatError, ValueError, OSError) as exc:
