@@ -1,5 +1,15 @@
 # Australian rules request format and finals extra time — MDS/P v24.12 / CR-2026.11.10-R2 / P-2026.11.10-v24.10, 10 November 2026
 
+## 17 November 2026 — DROP-SEAL-v1: sealing through a drop branch (operational only)
+
+Owner instruction: let an external research chat that can push files, but cannot run repository commands, register
+requests and seal cards. It pushes to the `card-drops` branch (`drops/requests/<CARD_KEY>/`, then
+`drops/cards/<CARD_KEY>.md`); the new `seal-drops` workflow runs `ml/drop_seal.py`, which calls the unchanged
+`forecast_integrity.register_request`, `one_chat.publish_requests` and `one_chat.seal` and marks the drop commit
+green or red. `ONE_CHAT_SEAL_BRANCH` may name only `forecast-seals` (default) or a `test-forecast-seals*` rehearsal
+branch. No method, prompt, contract, timing rule, registry, statistical test or version changes; the drop push time
+is not timing evidence. [Drop rules](drops/README.md), [runbook §3a](research/one_chat/RUNBOOK.md).
+
 ## 17 November 2026 — HPPV-v1 historical pre-event validation (separate Track H)
 
 Implemented the owner's eight-stage Historical Prospective Performance Validation

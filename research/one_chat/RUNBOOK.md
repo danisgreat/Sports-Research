@@ -40,6 +40,15 @@ python -m ml one-chat seal --card CARD.md
 
 The command publishes exact card/request blobs on `forecast-seals` through an isolated Git index. HEAD, the user's index and main are untouched; unrelated work is never published. A failed/non-fast-forward data push is refused without force. Retry only after refreshing and reconciling the append-only registry. Seal refusal or late delivery retains research but provides no prospective qualification. Never overwrite an earlier sealed card; retain corrections as separately identified records and keep the first forecast of record.
 
+### 3a. Sealing from a chat that can only push files (DROP-SEAL-v1)
+
+A research chat that cannot run these commands pushes to the `card-drops` branch instead: the request files to
+`drops/requests/<CARD_KEY>/` before research, then the card to `drops/cards/<CARD_KEY>.md` before first play. The
+`seal-drops` workflow runs `python -m ml.drop_seal`, which calls the same `register-request` and `seal` code with
+`main`'s reviewed code, and marks the drop commit green (done) or red (not sealed, reason in the run summary).
+Research may start only after the request's check is green. Rules and file formats: [drops/README.md](../../drops/README.md).
+Rehearsals push to `test-card-drops…` and seal to `test-forecast-seals`, which is never scored.
+
 ## 4. Settle and retain evidence
 
 Settle every side from permitted sources. Save result pages outside the repository, re-hash them, verify definitions, and prefer independent corroboration where available. Record the actual first play from an official page with a retained capture and exact excerpt. If it cannot be established, leave timing unverified; do not substitute scheduled time silently.

@@ -1,0 +1,60 @@
+name: Seal drops
+
+# DROP-SEAL-v1. An outside research chat pushes request/card files to the drop branch; this job registers and seals
+# them with the unchanged ONE-CHAT-v3 code. The workflow file must also exist on the drop branch (GitHub runs the
+# copy in the pushed commit), but the sealing code for `card-drops` is always checked out from `main`.
+#   card-drops         -> forecast-seals        (the registered evaluation)
+#   test-card-drops*   -> test-forecast-seals   (rehearsal only; never counted)
+
+on:
+  push:
+    branches: [card-drops, 'test-card-drops*']
+
+permissions:
+  contents: write   # push to the seal branch (never main: main is protected and the code never pushes it)
+  statuses: write   # green/red mark on the drop commit
+
+jobs:
+  seal:
+    name: seal-drops
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      ONE_CHAT_SEAL_BRANCH: ${{ github.ref_name == 'card-drops' && 'forecast-seals' || 'test-forecast-seals' }}
+      GH_TOKEN: ${{ github.token }}
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - name: Mark drop as pending
+        run: >
+          gh api -X POST "repos/${{ github.repository }}/statuses/${{ github.sha }}"
+          -f state=pending -f context=seal-drops -f description="Registering/sealing drops"
+          -f target_url="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+      - uses: actions/checkout@v7.0.1
+        with:
+          # Reviewed code from main for the real branch; a rehearsal branch may test its own code.
+          ref: ${{ github.ref_name == 'card-drops' && 'main' || github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version: '3.14'
+          cache: pip
+          cache-dependency-path: research/requirements.txt
+      - name: Dependencies
+        run: python -m pip install -r research/requirements.txt
+      - name: Git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git config core.autocrlf false
+      - name: Register requests and seal cards
+        run: >
+          python -B -m ml.drop_seal --before "${{ github.event.before }}" --after "${{ github.sha }}"
+          --summary "$GITHUB_STEP_SUMMARY"
+      - name: Report result on the drop commit
+        if: always()
+        run: |
+          if [ "${{ job.status }}" = "success" ]; then s=success; d="Drops registered/sealed on $ONE_CHAT_SEAL_BRANCH"
+          else s=failure; d="A drop was NOT registered/sealed - open the run summary"; fi
+          gh api -X POST "repos/${{ github.repository }}/statuses/${{ github.sha }}" \
+            -f state="$s" -f context=seal-drops -f description="$d" \
+            -f target_url="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"

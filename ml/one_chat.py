@@ -81,7 +81,10 @@ PLAN = "research/external/EVALUATION_PLAN_v27.0.md"
 RECEIPTS = SEALED + "/PUSH_RECEIPTS.csv"
 RECEIPT_FIELDS = ("before", "after", "pushed_at_server", "ref", "source", "retrieved_at")
 SCORES = "research/one_chat/scores"
-SEAL_BRANCH = "forecast-seals"
+SEAL_BRANCH = os.environ.get("ONE_CHAT_SEAL_BRANCH", "forecast-seals")
+if SEAL_BRANCH != "forecast-seals" and not re.fullmatch(r"test-forecast-seals[A-Za-z0-9_-]*", SEAL_BRANCH):
+    # Only the registered branch or an explicitly named rehearsal branch; a rehearsal never touches forecast-seals.
+    raise SystemExit(f"ONE_CHAT_SEAL_BRANCH must be forecast-seals or test-forecast-seals*, not {SEAL_BRANCH!r}")
 REQUEST_INDEX = "research/one_chat/REQUEST_INDEX.csv"
 DISPOSITIONS = "research/one_chat/REQUEST_DISPOSITIONS.csv"
 ELIGIBLE = "SEALED_PRE_START_SERVER"
