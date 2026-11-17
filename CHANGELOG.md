@@ -1,5 +1,16 @@
 # Australian rules request format and finals extra time — MDS/P v24.12 / CR-2026.11.10-R2 / P-2026.11.10-v24.10, 10 November 2026
 
+## 18 November 2026 — v29.1 / CR-2026.11.18-R2 / P-2026.11.18-v29.1: the owner's request text as written
+
+Owner request: the chats work from the owner's usual request messages. Run on the owner's own text, `prepare` had refused all ten games. Six were real games refused for wording; four were unfilled templates, and refusing those is correct. `prepare` now reads:
+- short side names;
+- separator lines;
+- spread wordings with a colon;
+- `Away @ Home` headers;
+- a moneyline on one side with a spread on the other, as two contracts.
+
+It refuses template placeholders with a clear reason, and lists competitions still needing an official schedule page, once, in SCHEDULES_NEEDED.csv. A new `research/one_chat/SCHEDULE_SOURCES.csv` is read by default; a row covers competitions that start with it. Tests run on the owner's exact text (`ml/tests/fixtures/OWNER_REQUESTS_2026-11-18.txt`). No rule, registration or scoring change. [Implementation](research/verification/framework_change_2026-11-18-2/IMPLEMENTATION.md).
+
 ## 18 November 2026 — v29.0 / CR-2026.11.18-R1 / P-2026.11.18-v29.0 / SCV-2026.11.18-v20: several chats a day
 
 Owner order: run four chats a day with up to ten games each, and fix what blocks that. Four problems were reproduced against v28.0 before the change: an intake of a chat's later copy voided the whole run; one unsettled game held back every later game indefinitely; one missing first-play capture stopped the whole scoring run; and one unfinished card in a mini blocked sealing of the rest. Fixes, each with tests in `ml/tests/test_v29_parallel.py`:

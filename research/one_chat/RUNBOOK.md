@@ -110,3 +110,15 @@ python -m ml one-chat score --intake research/one_chat/intake/<run> --outcomes <
 ```
 
 A row still unsettled 14 days after its scheduled start is dropped by rule; the run reports the worst case with every dropped line counted as lost. A game whose first play cannot be verified is excluded, and a capture problem is reported without stopping the run. [Plan](EVALUATION_PLAN_v29.0.md).
+
+### 7a. Writing the requests (v29.1)
+
+Write the requests as you always do, one `Upcoming …` message per game, separated by dashed lines if you like. `prepare` reads:
+- short side names (`Dubai -12.5` for BC Dubai, `lakers HC +1.5` for Växjö Lakers HC); a name that fits both sides is refused;
+- `Handicap Games Spread: -3.5` and similar wordings, with or without a colon;
+- `Away @ Home` headers (the second name is the home side); with `vs` and no `Home side / venue` line, HOME and AWAY are the first- and second-named sides, and the chat prices them by name;
+- a moneyline on one side and a spread on the other (`Redhawks ML`, `lakers HC +1.5`) as two contracts, each priced on both sides.
+
+A message that still holds template placeholders (`Team A`, `X.X`, `Day Month Year`) is refused and nothing is guessed.
+
+**Schedule pages, once per competition.** Every request needs its competition's official schedule page. Add a `Schedule: <url>` line to the message, or keep one row per competition in `research/one_chat/SCHEDULE_SOURCES.csv` (`competition,schedule_source`). A row also covers every competition that starts with it, so `Challenger` covers `Challenger Monastir - Semi Finals`. When pages are missing, `prepare` writes `SCHEDULES_NEEDED.csv` listing each competition once; fill it in, add the rows, and run `prepare` again.
