@@ -21,6 +21,7 @@ All six real games also need an official schedule page. Without one, `prepare` l
 ## Tests
 
 Added to `ml/tests/test_v29_parallel.py`:
+- an exact full name wins over a shorter name inside the other side's name (`Tennessee` v `Middle Tennessee`; Codex review);
 - the owner's text parsed as above;
 - the needed-schedules list;
 - a short name that fits both sides is refused.

@@ -351,3 +351,9 @@ def test_a_short_name_that_fits_both_sides_is_refused(tmp_path):
         "Melbourne United Spread \u22124.5", "Melbourne Spread \u22124.5")
     summary, out = prepared(tmp_path, text)
     assert summary["refused"] == 1 and "fits both" in O.read_csv(out / "PREPARE_REPORT.csv")[0]["detail"]
+
+
+def test_an_exact_full_name_wins_over_a_shorter_name_inside_the_other():
+    assert OPS._side("Tennessee", "Tennessee", "Middle Tennessee") == "HOME"
+    assert OPS._side("Middle Tennessee", "Tennessee", "Middle Tennessee") == "AWAY"
+    assert OPS._side("Middle", "Tennessee", "Middle Tennessee") == "AWAY"

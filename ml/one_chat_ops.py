@@ -94,6 +94,10 @@ def _side(team: str, home: str, away: str) -> str:
     """Which side a line names: the full name, or a shortened one ("Dubai" for "BC Dubai", "lakers HC" for
     "Växjö Lakers HC") whose words all belong to exactly one of the two names in the header."""
     words = _words(team)
+    # An exact full name wins first, so "Tennessee" against "Middle Tennessee" is not ambiguous.
+    exact = [side for side, name in (("HOME", home), ("AWAY", away)) if words and words == _words(name)]
+    if len(exact) == 1:
+        return exact[0]
     matches = []
     for side, name in (("HOME", home), ("AWAY", away)):
         full = _words(name)
