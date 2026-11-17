@@ -1,5 +1,15 @@
 # Current state
 
+**Historical verification added 17 November 2026 (HPPV-v1, Track H).**
+[Registration and operator guide](research/verification/historical_pre_event_v1/README.md)
+and [reproducible initial report](research/verification/historical_pre_event_v1/HISTORICAL_PROSPECTIVE_VALIDATION_REPORT.md).
+All 685 cards / 3,150 rows are retained, including 280 cards with stated p. No
+independent original-custody evidence is inferred: initially 0 Tier-A qualified
+cards and **HISTORICAL_EVIDENCE_INSUFFICIENT**. Existing training use and historical
+scores remain intact. Track P stays ONE-CHAT-v3 / v27.0, **0 qualifying games /
+400-game horizon**, **NOT_YET_DEMONSTRATED** at this snapshot. Counts and verdicts
+are separate; no historical rows enter its registry or sequential test.
+
 **Current release ? MDS-2026.11.16-v27.0 / CR-2026.11.16-R4 / P-2026.11.16-v27.0 / SCV-2026.11.16-v18: ONE-CHAT-v3.** Original-request contracts and exact published blobs govern admission; GitHub push activity is independently re-verified; data seals use `forecast-seals`; complete request coverage is required. The confidence sequence targets the changing average conditional advantage, and reports a frozen assessed prefix separately from current performance. [Runbook](research/one_chat/RUNBOOK.md), [plan](research/external/EVALUATION_PLAN_v27.0.md), [implementation](research/verification/framework_change_2026-11-16-4/IMPLEMENTATION.md).
 
 **Historical logs are used.** All 685 cards, 3,150 contract rows: 3,082 admitted (1,291 stated probabilities, 1,791 outcome-only), 68 excluded with reasons. Positive historical study comparisons remain reported. [Per-card audit and historical scores](research/verification/framework_change_2026-11-16-4/historical_evidence/REPORT.md). Running new checks after settlement does not backdate a request, probability or publication time. Current prospective status remains `NOT_YET_DEMONSTRATED` because no actual request/card has yet been sealed under this registration. This is not a statement that no historical learning occurred.

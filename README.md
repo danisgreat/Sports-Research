@@ -1,5 +1,17 @@
 # Sports Research
 
+**Historical evidence (Track H, HPPV-v1):** [685-card census and reproducible
+validation](research/verification/historical_pre_event_v1/README.md). All 3,150
+contract rows are retained; 280 cards have stated probabilities. Initial independently
+Tier-A qualified cards: **0**; verdict **HISTORICAL_EVIDENCE_INSUFFICIENT** while
+original publication/custody evidence is recovered. Historical training scores remain
+reported separately.
+
+**Current prospective evidence (Track P, ONE-CHAT-v3 / v27.0):** **0 qualifying
+games**, **400-game horizon**, **NOT_YET_DEMONSTRATED** at this implementation
+snapshot. The existing [registered plan](research/external/EVALUATION_PLAN_v27.0.md)
+is unchanged. H and P counts, tests and verdicts are never pooled.
+
 Current one-chat workflow: [RUNBOOK](research/one_chat/RUNBOOK.md). Historical training use and prospective qualification are separately reported in [CURRENT_STATE](CURRENT_STATE.md).
 
 **Current operational controls:** [AUDIT-v1](AUDIT_REVIEW_PROTOCOL.md), MDS v24.18 / SCV-v14. Research chats use assigned roles and dated source-access packets; new numeric cards have hash-bound contract reviews; final-mini handovers and effective first-play reviews are checked before scoring. See [the implementation and validation record](research/verification/framework_change_2026-11-15-2/IMPLEMENTATION.md).

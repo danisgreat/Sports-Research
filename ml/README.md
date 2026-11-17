@@ -6,6 +6,13 @@
 
 # `ml/` — primary sporting runtime and maintainer model workshop
 
+**HPPV-v1 (17 November 2026):** `python -m ml historical-pre-event run|verify|append|backtest`
+implements the separate historical evidence track. [Operator guide and schemas](../research/verification/historical_pre_event_v1/README.md).
+The frozen 685-card census, reviewed custody evidence, exact endpoints, independent
+outcomes, same-contract benchmarks and event-level statistics never feed the v27.0
+prospective registry. The strict-cutoff model study is retrospective and separate
+from proof of original forecast issuance.
+
 **ML/RL scope (MLSCOPE-v3).** Owner instruction, 22 October 2026: models run where they are needed. Prompt 1 first freezes the competition's declared reference (a release or TB-2-MD / TB-1-MD or the league-only baseline; `python -m ml reference …` or `pregame reference`), then researches the game online and prices every p_card as ANALYST_PRIMARY_V1 / UNCALIBRATED_ANALYST_PRIMARY: the reference plus logged adjustments ([PROBABILITY_TOOLKIT](../PROBABILITY_TOOLKIT.md); code may do the arithmetic, with every input and step printed). After the card is written to the mini, prompt 1 runs `pregame run`, which re-uses the executed reference and freezes the card's own final p on the same contracts, or records NOT_RUN_NO_RELEASE. Nothing a model prints after the card changes the card's p_card, ranks or picks, and the reference is never edited. Prompt 3 settles the shadow with the card; prompt 6 ingests and evaluates; prompt 8 builds releases and decides promotion. A model is judged only after at least 8 weeks and 50 paired games; a progress review falls due when either is reached first. RL has no forecasting role: online expert weighting updates at settlement. Details: [FORECAST_CYCLE_PROTOCOL](../REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol). Supersedes MLSCOPE-v1, NOCODE-v1 and any older text that forbids code or models in prompts 1–5.
 
 **Repeat bug audit:** [implementation and coverage](../research/verification/ml_bug_audit_2026-10-14-1/IMPLEMENTATION.md) repairs source parsing, grids, chronology, failure handling, reports, shadow outcomes and decision mechanics. Read the [additional artifact admission notice](../research/model_shadow/BUG_AUDIT_ADMISSION_2026-10-14.md) before using old outputs with the new implementation. Fixed historical fit/grid smoke checks are not predictive validation; fresh model outputs need controlled regeneration.
