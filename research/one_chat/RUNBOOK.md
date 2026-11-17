@@ -1,6 +1,6 @@
-# Current runbook: one chat per game (v28.0)
+# Current runbook: one chat per game (v29.0)
 
-Authority for ONECHAT_V1 cards: this runbook, CORE and [EVALUATION_PLAN_v28.0](../external/EVALUATION_PLAN_v28.0.md). The reference-first PICKS_V2 and five-lane documents describe separate retained workflows and are not extra prerequisites for a one-chat card. One writer publishes each request/card. Historical records keep their original rules.
+Authority for ONECHAT_V1 cards: this runbook, CORE and [EVALUATION_PLAN_v29.0](../external/EVALUATION_PLAN_v29.0.md). The reference-first PICKS_V2 and five-lane documents describe separate retained workflows and are not extra prerequisites for a one-chat card. One writer publishes each request/card. Historical records keep their original rules.
 
 ## 1. Preserve and register the original request
 
@@ -28,7 +28,7 @@ This preserves exact source bytes in Git staging storage and publishes only the 
 
 ## 2. Research and write the card
 
-Give the chat [ONE_CHAT_BRIEF_v28.0](../external/ONE_CHAT_BRIEF_v28.0.md), the kit, the sport's current permitted-source list and do-not-open list. Price both sides of each exact requested contract or retain UNPRICED. Supply the ONECHAT_V1 block, offset-aware research clocks and sport-specific FACTS rows. Keep missing values with their real reasons. No unsupported probability, absence effect, source or model execution is invented.
+Give the chat [ONE_CHAT_BRIEF_v29.0](../external/ONE_CHAT_BRIEF_v29.0.md), the kit, the sport's current permitted-source list and do-not-open list. Price both sides of each exact requested contract or retain UNPRICED. Supply the ONECHAT_V1 block, offset-aware research clocks and sport-specific FACTS rows. Keep missing values with their real reasons. No unsupported probability, absence effect, source or model execution is invented.
 
 Capture L5/L10/L20 history, opponent strength, venue, rest/travel, availability/lineup status and adjustment evidence where available. Use the existing LEARNLOG PRIOR_GAMES.csv and AVAILABILITY.csv schemas for raw histories/player rows; retained aggregates are not substitutes for raw game-level lineage. The feature builder preserves missingness and rejects incompatible types. Sources with prices may supply sporting fields only; retain access restrictions and exclude price/tip data from research.
 
@@ -82,3 +82,31 @@ The evidence report accounts for every historical card, preserves its original c
 Changes to code/rules go through a branch/PR and the `framework-validation` required check. CI runs static checks, formatting on the new integrity modules, schema/custody end-to-end fixtures and the full regression suite. Main protection requires the check and blocks force pushes/deletion, including administrators. Forecast data seals use the separate branch and do not bypass code review.
 
 Freeze this registered method until its declared verdict; a statistical change restarts the registration. Richer hierarchical or ML models remain shadow studies until point-in-time feature data, chronological/held-out-competition comparisons and prospective evidence justify use. Dataset creation or a passing test suite does not prove prediction skill.
+
+## 7. Several chats a day (v29.0): four chats, up to ten games each
+
+Write each chat's requests as one text file, one REQ-v5 message per game (add `Schedule: <official schedule URL>` to a message, or keep one row per competition in a schedules CSV with columns `competition,schedule_source`; an optional `Native ID: <id>` line gives the competition's own match ID).
+
+```text
+python -m ml one-chat prepare --message CHAT1.txt --mini MINI21 --out <prep folder>/MINI21 --schedules SCHEDULES.csv
+python -m ml one-chat register-requests --folder <prep folder>/MINI21
+```
+
+`prepare` reads every message exactly as written and writes, per game, REQUEST.txt (the message itself), EVENT.csv, CONTRACTS.csv and SKELETON.md, plus one CHAT_PACKET.md in start order; a message it cannot read is listed in PREPARE_REPORT.csv with the reason and is not registered. `register-requests` registers and publishes the whole mini in one push. Paste CHAT_PACKET.md and [ONE_CHAT_BRIEF_v29.0](../external/ONE_CHAT_BRIEF_v29.0.md) into the chat only after the publication shows on GitHub. Use a new mini key per chat per day (MINI21, MINI22, …); never give the same game to two chats.
+
+Save each chat's cumulative mini into one folder (for example `C:/chat-minis/MINI21.md`) whenever the chat hands over a card, and leave the sealer running:
+
+```text
+python -m ml one-chat seal --watch C:/chat-minis
+```
+
+Each pass (every two minutes) seals every new finished card in every mini, card by card: an unfinished, changed or unregistered card is reported and skipped, and the mini's other cards are still sealed. A card must be sealed before its own game's first play; the earliest games come first in each packet for this reason.
+
+After settlement, score from the sealed copies, never from the chats' later files:
+
+```text
+python -m ml one-chat intake --from-seals --out research/one_chat/intake/<run>
+python -m ml one-chat score --intake research/one_chat/intake/<run> --outcomes <every OUTCOMES.csv> --out research/one_chat/scores/<run>
+```
+
+A row still unsettled 14 days after its scheduled start is dropped by rule; the run reports the worst case with every dropped line counted as lost. A game whose first play cannot be verified is excluded, and a capture problem is reported without stopping the run. [Plan](EVALUATION_PLAN_v29.0.md).

@@ -154,9 +154,13 @@ def process(root, before: str, after: str, *, lookup=None, wait=(0, 3, 6, 12)) -
                 for b in blocks:
                     _restore_published_request(root, b[0])
                 outcome = _publish(lambda: O.seal([file], root, lookup=lookup, wait=wait), root)
-                if outcome["sealed"]:
+                refused = "; ".join(f"{r['card_key'] or 'card'}: {r['reason']}" for r in outcome.get("refused", []))
+                if outcome["sealed"] and not refused:
                     results.append(dict(item, status="SEALED", commit=outcome["commit"],
                                         detail=f"server time {outcome['server_time'] or 'pending'} on {O.SEAL_BRANCH}"))
+                elif refused:
+                    sealed = f"sealed {outcome['cards']}; " if outcome["sealed"] else ""
+                    results.append(dict(item, status="FAILED", commit=outcome.get("commit", ""), detail=sealed + "not sealed: " + refused))
                 else:
                     results.append(dict(item, status="ALREADY_SEALED", detail=outcome.get("note", "")))
             except (O.OneChatError, ValueError, OSError, UnicodeDecodeError) as exc:

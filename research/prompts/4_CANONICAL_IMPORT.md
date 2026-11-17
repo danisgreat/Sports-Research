@@ -8,7 +8,7 @@
 
 **Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §5.
 
-**P-2026.11.17-v28.0 · CANONICAL_IMPORT · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: active log suffix, current status/state/scoreboard, a new import report with preserved inputs, and declared append-only source observations in RESEARCH_SOURCE_REGISTER, plus the append-only LEARN-v1 learning store, training-candidate folders and review log. Never rewrite issued cores, closed parts or grades. Publish when this full prompt is invoked unless the user requests local-only.
+**P-2026.11.18-v29.0 · CANONICAL_IMPORT · LOCAL_WORKING_TREE.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). Writes: active log suffix, current status/state/scoreboard, a new import report with preserved inputs, and declared append-only source observations in RESEARCH_SOURCE_REGISTER, plus the append-only LEARN-v1 learning store, training-candidate folders and review log. Never rewrite issued cores, closed parts or grades. Publish when this full prompt is invoked unless the user requests local-only.
 
 **ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](../../REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](../../CORE.md) §7.
 
@@ -95,4 +95,4 @@ For each imported card that has a learning log, run `python -m ml learning-log l
 
 ## Current one-chat workflow (ONE-CHAT-v3)
 
-For ONECHAT_V1 cards use [the current runbook](../one_chat/RUNBOOK.md) and [v28 evaluation plan](../external/EVALUATION_PLAN_v28.0.md). These replace the v25/v26 one-chat and external-evaluate handoffs. The reference-first/lane instructions above apply to separate legacy PICKS_V2 cards. Original requests, exact contract definitions, before-play publication, independent server timing, complete request accounting and captured first-play evidence govern the one-chat assessment. Preserve research even when it cannot qualify.
+For ONECHAT_V1 cards use [the current runbook](../one_chat/RUNBOOK.md) and [v29 evaluation plan](../external/EVALUATION_PLAN_v29.0.md). These replace the v25/v26 one-chat and external-evaluate handoffs. The reference-first/lane instructions above apply to separate legacy PICKS_V2 cards. Original requests, exact contract definitions, before-play publication, independent server timing, complete request accounting and captured first-play evidence govern the one-chat assessment. Preserve research even when it cannot qualify.

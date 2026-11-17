@@ -10,7 +10,7 @@
 
 **Online history and confirmed players (HIST-2026.10.16-v3 / AVAIL-2026.10.16-v4).** Defined in [HISTORICAL_SOURCE_PROTOCOL](../../HISTORICAL_SOURCE_PROTOCOL.md); summarised in [CORE](../../CORE.md) §5.
 
-**P-2026.11.17-v28.0 · LOCAL_MINI_SETTLEMENT.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). **LOCAL_WORKING_TREE** (ENV-v2). Writes: the frozen mini's source identity, one settlement document with dated revisions at `research/active_minis/<MINI_KEY>_SETTLEMENT.md`, the ledger inputs and frozen-row settlements of section 4, then the prompt-4 import of section 6 and a commit and push. Original cards are immutable. Settle the original probabilities from the frozen card; the model never re-grades or replaces them. Historical MODEL_ASSISTED cards are settled on their frozen contracts like any other card. The decision lab is excluded.
+**P-2026.11.18-v29.0 · LOCAL_MINI_SETTLEMENT.** Read [COMMON_OPERATING_PROTOCOL](COMMON_OPERATING_PROTOCOL.md). **LOCAL_WORKING_TREE** (ENV-v2). Writes: the frozen mini's source identity, one settlement document with dated revisions at `research/active_minis/<MINI_KEY>_SETTLEMENT.md`, the ledger inputs and frozen-row settlements of section 4, then the prompt-4 import of section 6 and a commit and push. Original cards are immutable. Settle the original probabilities from the frozen card; the model never re-grades or replaces them. Historical MODEL_ASSISTED cards are settled on their frozen contracts like any other card. The decision lab is excluded.
 
 **ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](../../REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](../../CORE.md) §7.
 
@@ -118,4 +118,4 @@ For a manifest-bound event generate exact fact IDs with `python -m ml research-o
 
 ## Current one-chat workflow (ONE-CHAT-v3)
 
-For ONECHAT_V1 cards use [the current runbook](../one_chat/RUNBOOK.md) and [v28 evaluation plan](../external/EVALUATION_PLAN_v28.0.md). These replace the v25/v26 one-chat and external-evaluate handoffs. The reference-first/lane instructions above apply to separate legacy PICKS_V2 cards. Original requests, exact contract definitions, before-play publication, independent server timing, complete request accounting and captured first-play evidence govern the one-chat assessment. Preserve research even when it cannot qualify.
+For ONECHAT_V1 cards use [the current runbook](../one_chat/RUNBOOK.md) and [v29 evaluation plan](../external/EVALUATION_PLAN_v29.0.md). These replace the v25/v26 one-chat and external-evaluate handoffs. The reference-first/lane instructions above apply to separate legacy PICKS_V2 cards. Original requests, exact contract definitions, before-play publication, independent server timing, complete request accounting and captured first-play evidence govern the one-chat assessment. Preserve research even when it cannot qualify.

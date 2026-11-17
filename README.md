@@ -9,7 +9,7 @@ reported separately.
 
 **Current prospective evidence (Track P, ONE-CHAT-v3 / v27.0):** **0 qualifying
 games**, **400-game horizon**, **NOT_YET_DEMONSTRATED** at this implementation
-snapshot. The existing [registered plan](research/external/EVALUATION_PLAN_v28.0.md)
+snapshot. The existing [registered plan](research/external/EVALUATION_PLAN_v29.0.md)
 is unchanged. H and P counts, tests and verdicts are never pooled.
 
 Current one-chat workflow: [RUNBOOK](research/one_chat/RUNBOOK.md). Historical training use and prospective qualification are separately reported in [CURRENT_STATE](CURRENT_STATE.md).
