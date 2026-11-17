@@ -7,6 +7,8 @@ the test forecast's verified issue time. The entire test event is held out.
 
 from __future__ import annotations
 
+import csv
+import io
 import json
 import math
 import tempfile
@@ -81,7 +83,16 @@ def run(features, out, root=H.ROOT):
     if out.exists():
         raise FileExistsError(out)
     ledger_raw = (root / H.BASE / "EVIDENCE_REVISIONS.csv").read_bytes()
-    _, inputs, _ = H.build(root, ledger_raw=ledger_raw)
+    assessment, inputs, _ = H.build(root, ledger_raw=ledger_raw)
+    # Admission is fixed over the full census before feature coverage is known.
+    # Re-assessing or deduplicating only the feature subset could promote a later
+    # duplicate and move the original forecast's cutoff forward.
+    admitted = {
+        row["row_id"]: row
+        for row in csv.DictReader(
+            io.StringIO(assessment["ORIGINAL_FORECASTS.csv"].decode("utf-8"))
+        )
+    }
     inputs["ml/historical_pre_event_backtest.py"] = H.digest(
         (root / "ml/historical_pre_event_backtest.py").read_bytes()
     )
@@ -100,11 +111,14 @@ def run(features, out, root=H.ROOT):
     for f in feature_rows:
         if f["row_id"] not in known:
             raise ValueError("feature row absent from frozen census")
-        d = H.assess(known[f["row_id"]], latest.get(f["row_id"], {}), root, inputs)
-        if not d["accuracy"]:
+        d = dict(admitted.get(f["row_id"], {}))
+        if d.get("accuracy") != "True":
             raise ValueError(
-                "strict study needs Tier A and independent decisive outcomes"
+                "strict study needs census-admitted Tier A and independent decisive outcomes: "
+                + d.get("reason", "NO_CENSUS_DECISION")
             )
+        d["accuracy"] = True
+        d["paired"] = d["paired"] == "True"
         if (
             latest[f["row_id"]]["outcome"]["proof"].get("availability_time_verified")
             is not True
@@ -139,8 +153,6 @@ def run(features, out, root=H.ROOT):
                 features_available_at=record["available_at"],
             )
         )
-    H.deduplicate(examples)
-    examples = [e for e in examples if e["accuracy"]]
     pred = walk_forward(examples)
     if features.read_bytes() != raw:
         raise ValueError("features changed during study")

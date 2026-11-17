@@ -139,6 +139,9 @@ Its proof additionally requires `pre_event_data_verified: true`. Feature names
 must be identical across rows; values must be finite. Reviewers must verify the
 source data and feature engineering were available by the actual original issue
 cutoff. Unknown feature/label availability is rejected rather than assigned a lag.
+Admission and duplicate resolution are taken from the full census before feature
+coverage is selected. A later duplicate cannot replace the earliest verified
+issuance when only the later row has features; that feature input is rejected.
 Each row must have Tier A and an independently verified decisive result whose
 outcome proof also has `availability_time_verified: true`. Logistic
 regression uses fixed L2=1 and at least 30 distinct prior events, excludes the entire

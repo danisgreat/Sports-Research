@@ -625,7 +625,21 @@ def test_strict_study_runs_with_reviewed_real_time_contracts_and_hashes_outputs(
     for name in ("historical_pre_event_backtest.py", "card_training.py"):
         (tmp_path / "ml").mkdir(exist_ok=True)
         shutil.copy(H.ROOT / "ml" / name, tmp_path / "ml" / name)
-    monkeypatch.setattr(H, "build", lambda root, **kwargs: ({}, {}, "SYNTHETIC"))
+
+    def synthetic_census(root, **kwargs):
+        inputs = {}
+        decisions = [
+            dict(row, **H.assess(row, e, root, inputs))
+            for row, e in zip(rows, evidence)
+        ]
+        H.deduplicate(decisions)
+        return (
+            {"ORIGINAL_FORECASTS.csv": H.csv_bytes(decisions, list(decisions[0]))},
+            inputs,
+            "SYNTHETIC",
+        )
+
+    monkeypatch.setattr(H, "build", synthetic_census)
     monkeypatch.setattr(B, "MIN_TRAIN_EVENTS", 1)
     features = []
     for row in rows:
@@ -659,3 +673,32 @@ def test_strict_study_runs_with_reviewed_real_time_contracts_and_hashes_outputs(
     for row in H.read_csv(out / "MANIFEST.csv"):
         if row["role"] == "OUTPUT":
             assert H.digest((out / row["path"]).read_bytes()) == row["sha256"]
+
+
+def test_feature_subset_cannot_promote_a_later_census_duplicate(tmp_path, monkeypatch):
+    train = tmp_path / H.TRAIN
+    train.parent.mkdir(parents=True)
+    train.write_bytes(
+        H.csv_bytes([dict(row_id="R00001"), dict(row_id="R00002")], ("row_id",))
+    )
+    ledger = tmp_path / H.BASE / "EVIDENCE_REVISIONS.csv"
+    ledger.parent.mkdir(parents=True)
+    ledger.write_bytes(H.csv_bytes([], H.LEDGER_FIELDS))
+    (tmp_path / "ml").mkdir()
+    for name in ("historical_pre_event_backtest.py", "card_training.py"):
+        shutil.copy(H.ROOT / "ml" / name, tmp_path / "ml" / name)
+    # Full-census admission has already selected R00001. Only R00002 has features.
+    decisions = [
+        dict(row_id="R00001", accuracy=True, reason="VERIFIED"),
+        dict(row_id="R00002", accuracy=False, reason="DUPLICATE_EVENT_CONTRACT"),
+    ]
+    output = H.csv_bytes(decisions, list(decisions[0]))
+    monkeypatch.setattr(
+        H,
+        "build",
+        lambda root, **kwargs: ({"ORIGINAL_FORECASTS.csv": output}, {}, "SYNTHETIC"),
+    )
+    features = tmp_path / "later-only-features.csv"
+    features.write_bytes(H.csv_bytes([dict(row_id="R00002")], ("row_id",)))
+    with pytest.raises(ValueError, match="DUPLICATE_EVENT_CONTRACT"):
+        B.run(features, tmp_path / "study", tmp_path)
