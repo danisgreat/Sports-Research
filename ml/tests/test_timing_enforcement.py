@@ -110,8 +110,10 @@ def test_binding_ignores_extra_frame_columns_and_a_live_lock_is_never_taken_over
     assert T.card_rows(widened, KEY)[0] == binding
     with pytest.raises(ValueError, match="registered columns"):
         T.card_rows(ledger.drop(columns=["information_row"]), KEY)
+    from ml import file_lock
+
     path = root / T.PATH
-    lock = path.with_suffix(".lock")
+    lock = file_lock.lock_path(path)
     with T.locked(path):
         old = time.time() - 7 * 86400
         os.utime(lock, (old, old))                      # an aged file held by a live writer is still a lock

@@ -1,6 +1,6 @@
-# Current runbook: one chat per game (v27.0)
+# Current runbook: one chat per game (v28.0)
 
-Authority for ONECHAT_V1 cards: this runbook, CORE and [EVALUATION_PLAN_v27.0](../external/EVALUATION_PLAN_v27.0.md). The reference-first PICKS_V2 and five-lane documents describe separate retained workflows and are not extra prerequisites for a one-chat card. One writer publishes each request/card. Historical records keep their original rules.
+Authority for ONECHAT_V1 cards: this runbook, CORE and [EVALUATION_PLAN_v28.0](../external/EVALUATION_PLAN_v28.0.md). The reference-first PICKS_V2 and five-lane documents describe separate retained workflows and are not extra prerequisites for a one-chat card. One writer publishes each request/card. Historical records keep their original rules.
 
 ## 1. Preserve and register the original request
 
@@ -28,7 +28,7 @@ This preserves exact source bytes in Git staging storage and publishes only the 
 
 ## 2. Research and write the card
 
-Give the chat [ONE_CHAT_BRIEF_v27.0](../external/ONE_CHAT_BRIEF_v27.0.md), the kit, the sport's current permitted-source list and do-not-open list. Price both sides of each exact requested contract or retain UNPRICED. Supply the ONECHAT_V1 block, offset-aware research clocks and sport-specific FACTS rows. Keep missing values with their real reasons. No unsupported probability, absence effect, source or model execution is invented.
+Give the chat [ONE_CHAT_BRIEF_v28.0](../external/ONE_CHAT_BRIEF_v28.0.md), the kit, the sport's current permitted-source list and do-not-open list. Price both sides of each exact requested contract or retain UNPRICED. Supply the ONECHAT_V1 block, offset-aware research clocks and sport-specific FACTS rows. Keep missing values with their real reasons. No unsupported probability, absence effect, source or model execution is invented.
 
 Capture L5/L10/L20 history, opponent strength, venue, rest/travel, availability/lineup status and adjustment evidence where available. Use the existing LEARNLOG PRIOR_GAMES.csv and AVAILABILITY.csv schemas for raw histories/player rows; retained aggregates are not substitutes for raw game-level lineage. The feature builder preserves missingness and rejects incompatible types. Sources with prices may supply sporting fields only; retain access restrictions and exclude price/tip data from research.
 
@@ -47,7 +47,9 @@ A research chat that cannot run these commands pushes to the `card-drops` branch
 `seal-drops` workflow runs `python -m ml.drop_seal`, which calls the same `register-request` and `seal` code with
 `main`'s reviewed code, and marks the drop commit green (done) or red (not sealed, reason in the run summary).
 Research may start only after the request's check is green. Rules and file formats: [drops/README.md](../../drops/README.md).
-Rehearsals push to `test-card-drops…` and seal to `test-forecast-seals`, which is never scored.
+Rehearsals push to `test-card-drops…` and seal to `test-forecast-seals`, which is never scored; a local rehearsal (`ONE_CHAT_SEAL_BRANCH=test-forecast-seals…`) keeps its own staging and pending commits apart from the registered branch.
+
+**Trust.** GitHub runs the copy of `seal-drops.yml` held in the pushed drop commit, with write access to the seal branches. Whoever can push to `card-drops` can therefore also change what that run does, exactly as they could push to `forecast-seals` directly. Neither can backdate anything: the only timing evidence is GitHub's own push time on `forecast-seals`, and `main` accepts changes only through a reviewed pull request. Give drop access only to a chat you would trust to push seals.
 
 ## 4. Settle and retain evidence
 
