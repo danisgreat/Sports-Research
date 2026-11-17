@@ -53,7 +53,7 @@ timing column cannot override immutable issue records.
 - [PROTECTED_BASELINE.csv](PROTECTED_BASELINE.csv) binds 2,228 existing historical,
   received, issued, archive and release files; the byte check currently has zero
   differences. No canonical ID, sporting grade, forecast or historical core changed.
-- [Archived originals](../../../archive/superseded_2026-11-15-2/ORIGINALS.csv) bind
+- [Archived originals](https://github.com/danisgreat/Sports-Research/blob/8f2f38faf2dda46986c20df3d503f4f8115e225b/archive/superseded_2026-11-15-2/ORIGINALS.csv) bind
   34 exact pre-change document/control originals. Raw-byte Git attributes preserve
   their custody, tested admission files and the new verification folder on Windows.
 - Full-suite result, final hash verification and publication identity are recorded

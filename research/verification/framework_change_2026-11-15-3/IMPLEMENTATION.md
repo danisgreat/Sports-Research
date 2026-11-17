@@ -30,7 +30,7 @@ whatever to do the comprehensive audit, you can do it anytime".
 - Rules: CORE, SCORING_AND_VALIDATION section 14, RULES_REFERENCE, ML_PIPELINE, EXTERNAL_RESEARCH_PROTOCOL_V3,
   HYPOTHESIS_REGISTER, research/external/EVALUATION_PLAN_v24.19.md (supersedes v24.16 by adding on-request
   audits), indexes, CURRENT_STATE, CHANGELOG; prompt 6 text; all prompt files restamped to P-2026.11.15-v24.17.
-- Originals: [archive/superseded_2026-11-15-3](../../../archive/superseded_2026-11-15-3/ORIGINALS.csv)
+- Originals: [https://github.com/danisgreat/Sports-Research/blob/8f2f38faf2dda46986c20df3d503f4f8115e225b/archive/superseded_2026-11-15-3](https://github.com/danisgreat/Sports-Research/blob/8f2f38faf2dda46986c20df3d503f4f8115e225b/archive/superseded_2026-11-15-3/ORIGINALS.csv)
   holds the exact committed bytes of the 34 changed documents.
 
 ## Validation

@@ -37,7 +37,7 @@ The current method was registered after those games. Applying a validator to an 
 
 Adversarial tests cover regenerated/committed derivative hashes, original request changes, subset omission, receipt forgery, immutable blob publication, first-play capture re-hashing, nonstationary confidence bounds and publication without touching unrelated work. Historical census reconciles 685 / 3,150 / 3,082 / 1,291 / 1,791 / 68. Static checks and new-module formatting run in CI; the complete regression suite is required. Exact counts and live CI outcome are reported with the release. Existing numerical warnings remain visible.
 
-Archived controls: archive/superseded_2026-11-16-4/ORIGINALS.csv. Supplied review: OWNER_REVIEW.original.txt. Historical evidence: historical_evidence/REPORT.md. Active operator flow: research/one_chat/RUNBOOK.md.
+Archived controls: https://github.com/danisgreat/Sports-Research/blob/8f2f38faf2dda46986c20df3d503f4f8115e225b/archive/superseded_2026-11-16-4/ORIGINALS.csv. Supplied review: OWNER_REVIEW.original.txt. Historical evidence: historical_evidence/REPORT.md. Active operator flow: research/one_chat/RUNBOOK.md.
 
 Rollback: revert code/rules through a checked change. Published original request/card blobs, historical forecasts and prior registrations remain immutable records. Never rewrite or delete them to change a verdict.
 

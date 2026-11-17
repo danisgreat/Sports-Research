@@ -25,7 +25,7 @@ Document repairs: PROMPTS.md named suite v24.14 and now points to the index with
 - REVIEW_LOG.csv: four appended rows for this audit (ALL — DATA_REPAIR_REQUIRED; Baseball/MLB, Ice Hockey/NHL and Basketball/NBA — INSUFFICIENT_EVIDENCE).
 - HYPOTHESIS_REGISTER.md: a dated amendment registering H-NODIR, H-BAND, H-AVAIL-CHAT, H-OWN-EVIDENCE, H-SPORT and H-PERIOD as PROPOSED_NOT_TESTED and recording M-1 as awaiting an owner decision.
 - CHANGELOG.md and CURRENT_STATE.md: one entry and two pointers.
-- Originals of the five changed documents: [archive/superseded_2026-11-16-1](../../../archive/superseded_2026-11-16-1/README.md). Changed code keeps its originals in git history.
+- Originals of the five changed documents: [https://github.com/danisgreat/Sports-Research/blob/8f2f38faf2dda46986c20df3d503f4f8115e225b/archive/superseded_2026-11-16-1](https://github.com/danisgreat/Sports-Research/blob/8f2f38faf2dda46986c20df3d503f4f8115e225b/archive/superseded_2026-11-16-1/README.md). Changed code keeps its originals in git history.
 
 ## Not done, and why
 

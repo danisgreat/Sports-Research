@@ -134,7 +134,6 @@ research/verification/mini_import_P-639_P-659_2026-11-14-1/** -text
 research/verification/combined_rollover_2026-11-14-1/** -text
 
 # AUDIT-v1 exact original custody, tested admission code and operational evidence.
-archive/superseded_2026-11-15-2/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 research/verification/framework_change_2026-11-15-2/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 ml/audit_controls.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 ml/timing.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
@@ -146,8 +145,6 @@ ml/tests/test_audit_packets.py -text whitespace=blank-at-eol,blank-at-eof,space-
 ml/tests/test_timing_enforcement.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 research/contract_reviews/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 ml/tests/test_timing_v3.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
-archive/superseded_2026-11-15-3/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
-archive/superseded_2026-11-15-4/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 research/card_training/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 research/verification/mini_import_P-660_P-685_2026-11-15-1/** -text
 
@@ -157,12 +154,10 @@ research/verification/source_recovery_2026-11-15-1/** -text whitespace=blank-at-
 research/source_routes/SETTLEMENT_SOURCES.csv -text
 
 # On-request audit and repairs, CR-2026.11.16-R1: keep report tables and archived originals byte-exact.
-archive/superseded_2026-11-16-1/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 research/verification/retrospective_2026-11-16-1/** -text
 research/verification/framework_change_2026-11-16-1/** -text
 
 # v25.0 / CR-2026.11.16-R2: keep archived originals and the new registers byte-exact.
-archive/superseded_2026-11-16-2/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 research/verification/framework_change_2026-11-16-2/** -text
 research/one_chat/** -text
 research/deep_loss/** -text
@@ -171,11 +166,9 @@ research/verification/settlement_import_2026-11-16-1/** -text
 research/verification/combined_rollover_2026-11-16-1/** -text
 
 # v26.0 / CR-2026.11.16-R3: archived originals and the new verification folder keep exact bytes.
-archive/superseded_2026-11-16-3/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 research/verification/framework_change_2026-11-16-3/** -text
 
 # CR-2026.11.16-R4: exact control archive and verification evidence.
-archive/superseded_2026-11-16-4/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 research/verification/framework_change_2026-11-16-4/** -text
 .github/workflows/*.yml text eol=lf
 research/verification/**/OUTCOMES.csv -text
