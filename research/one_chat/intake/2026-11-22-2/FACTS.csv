@@ -1,0 +1,477 @@
+card_key,game_id,side,field,value,source,observed_at,status
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,HOME,season_games,3,https://utsports.com/sports/mbball/schedule,2026-11-18T12:55:54+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,HOME,season_score_for_pg,81.0,https://utsports.com/sports/mbball/schedule,2026-11-18T12:55:54+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,HOME,season_score_against_pg,61.333333,https://utsports.com/sports/mbball/schedule,2026-11-18T12:55:54+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,HOME,last5_score_for_pg,MISSING,Only 3 completed regular season games as of research cutoff,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,HOME,last5_score_against_pg,MISSING,Only 3 completed regular season games as of research cutoff,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,HOME,last10_score_for_pg,MISSING,Only 3 completed regular season games as of research cutoff,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,HOME,last10_score_against_pg,MISSING,Only 3 completed regular season games as of research cutoff,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,HOME,rest_days,3,https://utsports.com/sports/mbball/schedule,2026-11-18T12:55:54+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,HOME,back_to_back,NO,https://utsports.com/sports/mbball/schedule,2026-11-18T12:55:54+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,HOME,key_absences,MISSING,No verified comprehensive injury report by research cutoff,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,HOME,lineup_confirmed,MISSING,No confirmed starting five in accessible official prematch sources,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,HOME,venue,Food City Center Knoxville TN,https://utsports.com/game-center/30166,2026-11-18T12:55:54+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,HOME,travel_km,MISSING,No verifiable traveled route distance established,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,HOME,opponent_strength,MISSING,Opponent adjusted efficiencies not computed before cutoff,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,HOME,opponent_strength_method,MISSING,No independently verified schedule strength adjustment method fitted,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,HOME,availability_effect,MISSING,No measured with without team outcome impact for pending or unknown absences,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,HOME,adjustment_basis,MISSING,No measured or admitted numeric lineup travel or home adjustment applied,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,HOME,last20_score_for_pg,MISSING,Only 3 completed regular season games; fewer than 20,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,HOME,last20_score_against_pg,MISSING,Only 3 completed regular season games; fewer than 20,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,AWAY,season_games,4,https://msuspartans.com/sports/mens-basketball/schedule,2026-11-18T12:55:54+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,AWAY,season_score_for_pg,93.0,https://msuspartans.com/sports/mens-basketball/schedule,2026-11-18T12:55:54+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,AWAY,season_score_against_pg,66.25,https://msuspartans.com/sports/mens-basketball/schedule,2026-11-18T12:55:54+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,AWAY,last5_score_for_pg,MISSING,Only 4 completed regular season games as of research cutoff,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,AWAY,last5_score_against_pg,MISSING,Only 4 completed regular season games as of research cutoff,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,AWAY,last10_score_for_pg,MISSING,Only 4 completed regular season games as of research cutoff,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,AWAY,last10_score_against_pg,MISSING,Only 4 completed regular season games as of research cutoff,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,AWAY,rest_days,3,https://msuspartans.com/sports/mens-basketball/schedule,2026-11-18T12:55:54+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,AWAY,back_to_back,NO,https://msuspartans.com/sports/mens-basketball/schedule,2026-11-18T12:55:54+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,AWAY,key_absences,Jordan Scott shoulder status uncertain per 16 Nov coach remarks,https://www.aol.com/articles/msu-head-basketball-coach-izzo-160517000.html,2026-11-18T12:55:54+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,AWAY,lineup_confirmed,MISSING,No confirmed starting five in accessible official prematch sources,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,AWAY,venue,Food City Center Knoxville TN,https://utsports.com/game-center/30166,2026-11-18T12:55:54+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,AWAY,travel_km,MISSING,No verifiable traveled route distance established,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,AWAY,opponent_strength,MISSING,Opponent adjusted efficiencies not computed before cutoff,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,AWAY,opponent_strength_method,MISSING,No independently verified schedule strength adjustment method fitted,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,AWAY,availability_effect,MISSING,No measured with without team outcome impact for pending or unknown absences,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,AWAY,adjustment_basis,MISSING,No measured or admitted numeric lineup travel or home adjustment applied,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,AWAY,last20_score_for_pg,MISSING,Only 4 completed regular season games; fewer than 20,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0002,GAME-F290A625F0EA,AWAY,last20_score_against_pg,MISSING,Only 4 completed regular season games; fewer than 20,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,HOME,season_games,19,https://www.bleague.jp/club_detail/?TeamID=704,2026-11-18T21:02:15+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,HOME,season_score_for_pg,92.8,https://www.bleague.jp/club_detail/?TeamID=704,2026-11-18T21:02:15+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,HOME,season_score_against_pg,95.9,https://www.bleague.jp/club_detail/?TeamID=704,2026-11-18T21:02:15+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,HOME,last5_score_for_pg,99.4,https://www.bleague-db.com/teams/704,2026-11-18T21:02:15+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,HOME,last5_score_against_pg,94.8,https://www.bleague-db.com/teams/704,2026-11-18T21:02:15+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,HOME,last10_score_for_pg,92.3,https://www.bleague-db.com/teams/704,2026-11-18T21:02:15+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,HOME,last10_score_against_pg,91.1,https://www.bleague-db.com/teams/704,2026-11-18T21:02:15+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,HOME,rest_days,1,https://www.bleague.jp/club_detail/?TeamID=704,2026-11-18T21:02:15+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,HOME,back_to_back,NO,https://www.bleague.jp/club_detail/?TeamID=704,2026-11-18T21:02:15+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,HOME,key_absences,Nate Williams injury list since Nov 9; Luke Maye contract terminated Nov 13; Matt Costello returned,https://chibajets.jp/news/detail/id=27523,2026-11-18T21:02:15+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,HOME,lineup_confirmed,MISSING,No official confirmed starting five verified before freeze,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,HOME,venue,LaLa arena TOKYO-BAY,https://www.bleague.jp/game_detail/?ScheduleKey=506605,2026-11-18T21:02:15+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,HOME,travel_km,MISSING,No verified team-specific journey distance,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,HOME,opponent_strength,MISSING,No opponent-adjusted efficiency computation,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,HOME,opponent_strength_method,MISSING,No fitted strength-of-schedule method,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,HOME,availability_effect,MISSING,Absence-to-points impact not quantified,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,HOME,adjustment_basis,MISSING,No independently estimated numeric adjustment applied,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,HOME,last20_score_for_pg,MISSING,Only 19 completed league matches,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,HOME,last20_score_against_pg,MISSING,Only 19 completed league matches,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,AWAY,season_games,18,https://www.bleague.jp/club_detail/?TeamID=693,2026-11-18T21:02:15+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,AWAY,season_score_for_pg,83.3,https://www.bleague.jp/club_detail/?TeamID=693,2026-11-18T21:02:15+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,AWAY,season_score_against_pg,90.7,https://www.bleague.jp/club_detail/?TeamID=693,2026-11-18T21:02:15+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,AWAY,last5_score_for_pg,94.6,https://www.bleague-db.com/teams/693,2026-11-18T21:02:15+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,AWAY,last5_score_against_pg,101.0,https://www.bleague-db.com/teams/693,2026-11-18T21:02:15+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,AWAY,last10_score_for_pg,89.1,https://www.bleague-db.com/teams/693,2026-11-18T21:02:15+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,AWAY,last10_score_against_pg,95.9,https://www.bleague-db.com/teams/693,2026-11-18T21:02:15+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,AWAY,rest_days,2,https://www.bleague.jp/club_detail/?TeamID=693,2026-11-18T21:02:15+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,AWAY,back_to_back,NO,https://www.bleague.jp/club_detail/?TeamID=693,2026-11-18T21:02:15+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,AWAY,key_absences,Reid Travis injury list since Nov 5; Angelo Chol returned,https://www.bleague.jp/media_news/detail/id=667179,2026-11-18T21:02:15+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,AWAY,lineup_confirmed,MISSING,No official confirmed starting five verified before freeze,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,AWAY,venue,LaLa arena TOKYO-BAY,https://www.bleague.jp/game_detail/?ScheduleKey=506605,2026-11-18T21:02:15+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,AWAY,travel_km,MISSING,No verified team-specific journey distance,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,AWAY,opponent_strength,MISSING,No opponent-adjusted efficiency computation,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,AWAY,opponent_strength_method,MISSING,No fitted strength-of-schedule method,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,AWAY,availability_effect,MISSING,Absence-to-points impact not quantified,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,AWAY,adjustment_basis,MISSING,No independently estimated numeric adjustment applied,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,AWAY,last20_score_for_pg,MISSING,Only 18 completed league matches,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0003,GAME-B9CC4ED3812A,AWAY,last20_score_against_pg,MISSING,Only 18 completed league matches,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0005,GAME-44ACC5FE4173,HOME,season_games,15,https://www.hockey.com/ahl/teams/syracuse-crunch/schedule,2026-11-19T10:52:29+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0005,GAME-44ACC5FE4173,HOME,season_score_for_pg,2.6667,https://www.hockey.com/ahl/teams/syracuse-crunch/schedule,2026-11-19T10:52:29+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0005,GAME-44ACC5FE4173,HOME,season_score_against_pg,3.2667,https://www.hockey.com/ahl/teams/syracuse-crunch/schedule,2026-11-19T10:52:29+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0005,GAME-44ACC5FE4173,HOME,last10_score_for_pg,3.0000,https://www.hockey.com/ahl/teams/syracuse-crunch/schedule,2026-11-19T10:52:29+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0005,GAME-44ACC5FE4173,HOME,last10_score_against_pg,3.1000,https://www.hockey.com/ahl/teams/syracuse-crunch/schedule,2026-11-19T10:52:29+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0005,GAME-44ACC5FE4173,HOME,rest_days,3,https://www.hockey.com/ahl/teams/syracuse-crunch/schedule,2026-11-19T10:52:29+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0005,GAME-44ACC5FE4173,HOME,back_to_back,NO,https://www.hockey.com/ahl/teams/syracuse-crunch/schedule,2026-11-19T10:52:29+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0005,GAME-44ACC5FE4173,HOME,starting_goalie_confirmed,MISSING,Neither official team preview nor checked fixture has a verified announced starter at cutoff,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0005,GAME-44ACC5FE4173,HOME,starting_goalie_save_pct,MISSING,Starter not confirmed; a candidate goalie career or season percentage is not a confirmed-starter input,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0005,GAME-44ACC5FE4173,HOME,key_absences,MISSING,No fully verified game-day active and scratch list for this exact fixture,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0005,GAME-44ACC5FE4173,HOME,venue,Upstate Medical University Arena Syracuse NY,https://www.amerks.com/news/detail/game-preview-amerks-begin-three-game-roadie-in-syracuse,2026-11-19T10:52:29+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0005,GAME-44ACC5FE4173,HOME,travel_km,MISSING,No verified measured traveled distance for this game,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0005,GAME-44ACC5FE4173,HOME,opponent_strength,MISSING,No fully audited opponent-adjusted team strength in pregame record,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0005,GAME-44ACC5FE4173,HOME,opponent_strength_method,MISSING,No admitted opponent-strength method run,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0005,GAME-44ACC5FE4173,HOME,availability_effect,MISSING,No measured with-versus-without goalie or skater adjustment for this match,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0005,GAME-44ACC5FE4173,HOME,adjustment_basis,MISSING,No independently measured numeric roster travel or home adjustment applied,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0005,GAME-44ACC5FE4173,HOME,last20_score_for_pg,MISSING,Only 15 current-season fixtures completed; cross-season 20-game window not certified,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0005,GAME-44ACC5FE4173,HOME,last20_score_against_pg,MISSING,Only 15 current-season fixtures completed; cross-season 20-game window not certified,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0005,GAME-44ACC5FE4173,AWAY,season_games,15,https://www.hockey.com/ahl/teams/rochester-americans/schedule,2026-11-19T10:52:29+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0005,GAME-44ACC5FE4173,AWAY,season_score_for_pg,3.2000,https://www.hockey.com/ahl/teams/rochester-americans/schedule,2026-11-19T10:52:29+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0005,GAME-44ACC5FE4173,AWAY,season_score_against_pg,2.6000,https://www.hockey.com/ahl/teams/rochester-americans/schedule,2026-11-19T10:52:29+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0005,GAME-44ACC5FE4173,AWAY,last10_score_for_pg,3.1000,https://www.hockey.com/ahl/teams/rochester-americans/schedule,2026-11-19T10:52:29+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0005,GAME-44ACC5FE4173,AWAY,last10_score_against_pg,3.1000,https://www.hockey.com/ahl/teams/rochester-americans/schedule,2026-11-19T10:52:29+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0005,GAME-44ACC5FE4173,AWAY,rest_days,3,https://www.hockey.com/ahl/teams/rochester-americans/schedule,2026-11-19T10:52:29+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0005,GAME-44ACC5FE4173,AWAY,back_to_back,NO,https://www.hockey.com/ahl/teams/rochester-americans/schedule,2026-11-19T10:52:29+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0005,GAME-44ACC5FE4173,AWAY,starting_goalie_confirmed,MISSING,Neither official team preview nor checked fixture has a verified announced starter at cutoff,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0005,GAME-44ACC5FE4173,AWAY,starting_goalie_save_pct,MISSING,Starter not confirmed; a candidate goalie career or season percentage is not a confirmed-starter input,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0005,GAME-44ACC5FE4173,AWAY,key_absences,MISSING,No fully verified game-day active and scratch list for this exact fixture,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0005,GAME-44ACC5FE4173,AWAY,venue,Upstate Medical University Arena Syracuse NY,https://www.amerks.com/news/detail/game-preview-amerks-begin-three-game-roadie-in-syracuse,2026-11-19T10:52:29+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0005,GAME-44ACC5FE4173,AWAY,travel_km,MISSING,No verified measured traveled distance for this game,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0005,GAME-44ACC5FE4173,AWAY,opponent_strength,MISSING,No fully audited opponent-adjusted team strength in pregame record,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0005,GAME-44ACC5FE4173,AWAY,opponent_strength_method,MISSING,No admitted opponent-strength method run,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0005,GAME-44ACC5FE4173,AWAY,availability_effect,MISSING,No measured with-versus-without goalie or skater adjustment for this match,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0005,GAME-44ACC5FE4173,AWAY,adjustment_basis,MISSING,No independently measured numeric roster travel or home adjustment applied,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0005,GAME-44ACC5FE4173,AWAY,last20_score_for_pg,MISSING,Only 15 current-season fixtures completed; cross-season 20-game window not certified,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0005,GAME-44ACC5FE4173,AWAY,last20_score_against_pg,MISSING,Only 15 current-season fixtures completed; cross-season 20-game window not certified,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,HOME,season_games,14,https://www.nba.com/team/1610612754/schedule,2026-11-19T11:01:07+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,HOME,season_score_for_pg,112.0714,https://www.nba.com/team/1610612754/schedule,2026-11-19T11:01:07+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,HOME,season_score_against_pg,114.5000,https://www.nba.com/team/1610612754/schedule,2026-11-19T11:01:07+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,HOME,last5_score_for_pg,113.6000,https://www.nba.com/team/1610612754/schedule,2026-11-19T11:01:07+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,HOME,last5_score_against_pg,115.0000,https://www.nba.com/team/1610612754/schedule,2026-11-19T11:01:07+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,HOME,last10_score_for_pg,110.3000,https://www.nba.com/team/1610612754/schedule,2026-11-19T11:01:07+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,HOME,last10_score_against_pg,114.3000,https://www.nba.com/team/1610612754/schedule,2026-11-19T11:01:07+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,HOME,rest_days,2,https://www.nba.com/team/1610612754/schedule,2026-11-19T11:01:07+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,HOME,back_to_back,NO,https://www.nba.com/team/1610612754/schedule,2026-11-19T11:01:07+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,HOME,key_absences,Haliburton out; Nembhard out; Furphy out; Sheppard out,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-18_06_00PM.pdf,2026-11-19T11:02:10+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,HOME,lineup_confirmed,MISSING,Official game-day starting five not independently confirmed at freeze,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,HOME,venue,Gainbridge Fieldhouse Indianapolis,https://www.nba.com/team/1610612754/schedule,2026-11-19T11:01:07+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,HOME,travel_km,MISSING,No measured verified route distance available,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,HOME,opponent_strength,MISSING,No reproducible opponent-adjusted numerical series evaluated,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,HOME,opponent_strength_method,MISSING,No audited opponent adjustment fitted,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,HOME,availability_effect,MISSING,Missing measured player on-off effect for the confirmed status mix,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,HOME,adjustment_basis,MISSING,No measured numeric injury rest travel or home adjustment applied,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,HOME,last20_score_for_pg,MISSING,Only current season 14 or 15 games completed,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,HOME,last20_score_against_pg,MISSING,Only current season 14 or 15 games completed,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,AWAY,season_games,15,https://www.nba.com/team/1610612745/schedule,2026-11-19T11:01:07+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,AWAY,season_score_for_pg,117.8000,https://www.nba.com/team/1610612745/schedule,2026-11-19T11:01:07+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,AWAY,season_score_against_pg,109.5333,https://www.nba.com/team/1610612745/schedule,2026-11-19T11:01:07+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,AWAY,last5_score_for_pg,121.4000,https://www.nba.com/team/1610612745/schedule,2026-11-19T11:01:07+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,AWAY,last5_score_against_pg,114.6000,https://www.nba.com/team/1610612745/schedule,2026-11-19T11:01:07+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,AWAY,last10_score_for_pg,115.2000,https://www.nba.com/team/1610612745/schedule,2026-11-19T11:01:07+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,AWAY,last10_score_against_pg,109.9000,https://www.nba.com/team/1610612745/schedule,2026-11-19T11:01:07+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,AWAY,rest_days,1,https://www.nba.com/team/1610612745/schedule,2026-11-19T11:01:07+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,AWAY,back_to_back,NO,https://www.nba.com/team/1610612745/schedule,2026-11-19T11:01:07+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,AWAY,key_absences,Capela out; Thompson questionable; Copeland out; Phillips out,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-18_06_00PM.pdf,2026-11-19T11:02:10+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,AWAY,lineup_confirmed,MISSING,Official game-day starting five not independently confirmed at freeze,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,AWAY,venue,Gainbridge Fieldhouse Indianapolis,https://www.nba.com/team/1610612745/schedule,2026-11-19T11:01:07+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,AWAY,travel_km,MISSING,No measured verified route distance available,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,AWAY,opponent_strength,MISSING,No reproducible opponent-adjusted numerical series evaluated,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,AWAY,opponent_strength_method,MISSING,No audited opponent adjustment fitted,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,AWAY,availability_effect,MISSING,Missing measured player on-off effect for the confirmed status mix,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,AWAY,adjustment_basis,MISSING,No measured numeric injury rest travel or home adjustment applied,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,AWAY,last20_score_for_pg,MISSING,Only current season 14 or 15 games completed,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0006,GAME-4C3E2603D623,AWAY,last20_score_against_pg,MISSING,Only current season 14 or 15 games completed,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,HOME,season_games,14,https://www.nba.com/team/1610612760/thunder/schedule,2026-11-19T11:50:44+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,HOME,season_score_for_pg,112.1429,https://www.nba.com/team/1610612760/thunder/schedule,2026-11-19T11:50:44+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,HOME,season_score_against_pg,107.0714,https://www.nba.com/team/1610612760/thunder/schedule,2026-11-19T11:50:44+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,HOME,last5_score_for_pg,112.4000,https://www.nba.com/team/1610612760/thunder/schedule,2026-11-19T11:50:44+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,HOME,last5_score_against_pg,106.4000,https://www.nba.com/team/1610612760/thunder/schedule,2026-11-19T11:50:44+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,HOME,last10_score_for_pg,112.5000,https://www.nba.com/team/1610612760/thunder/schedule,2026-11-19T11:50:44+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,HOME,last10_score_against_pg,109.6000,https://www.nba.com/team/1610612760/thunder/schedule,2026-11-19T11:50:44+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,HOME,rest_days,2,https://www.nba.com/team/1610612760/thunder/schedule,2026-11-19T11:50:44+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,HOME,back_to_back,NO,https://www.nba.com/team/1610612760/thunder/schedule,2026-11-19T11:50:44+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,HOME,key_absences,Chet Holmgren OUT; Jalen Williams OUT; Cason Wallace OUT; Thomas Sorber OUT; Jaylin Williams AVAILABLE,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-18_06_45PM.pdf,2026-11-19T11:50:44+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,HOME,lineup_confirmed,MISSING,No independently verified official starting five before card freeze,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,HOME,venue,Paycom Center Oklahoma City,https://www.nba.com/game/atl-vs-okc-0022600265,2026-11-19T11:50:44+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,HOME,travel_km,MISSING,Exact route travel distance not measured,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,HOME,opponent_strength,MISSING,No opponent adjusted efficiency series fitted,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,HOME,opponent_strength_method,MISSING,No verified strength model calculation,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,HOME,availability_effect,MISSING,No measured player absence effect,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,HOME,adjustment_basis,MISSING,No numerical injury home travel adjustment applied,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,HOME,last20_score_for_pg,MISSING,Fewer than 20 completed games in current season,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,HOME,last20_score_against_pg,MISSING,Fewer than 20 completed games in current season,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,AWAY,season_games,14,https://www.nba.com/team/1610612737/schedule,2026-11-19T11:50:44+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,AWAY,season_score_for_pg,117.7857,https://www.nba.com/team/1610612737/schedule,2026-11-19T11:50:44+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,AWAY,season_score_against_pg,116.0714,https://www.nba.com/team/1610612737/schedule,2026-11-19T11:50:44+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,AWAY,last5_score_for_pg,121.4000,https://www.nba.com/team/1610612737/schedule,2026-11-19T11:50:44+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,AWAY,last5_score_against_pg,121.6000,https://www.nba.com/team/1610612737/schedule,2026-11-19T11:50:44+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,AWAY,last10_score_for_pg,116.5000,https://www.nba.com/team/1610612737/schedule,2026-11-19T11:50:44+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,AWAY,last10_score_against_pg,117.8000,https://www.nba.com/team/1610612737/schedule,2026-11-19T11:50:44+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,AWAY,rest_days,2,https://www.nba.com/team/1610612737/schedule,2026-11-19T11:50:44+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,AWAY,back_to_back,NO,https://www.nba.com/team/1610612737/schedule,2026-11-19T11:50:44+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,AWAY,key_absences,CJ McCollum OUT; Kingston Flemings OUT; Mouhamed Gueye OUT; Jock Landale OUT; Asa Newell OUT; Henri Veesaar OUT; Rafael Castro OUT,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-18_06_45PM.pdf,2026-11-19T11:50:44+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,AWAY,lineup_confirmed,MISSING,No independently verified official starting five before card freeze,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,AWAY,venue,Paycom Center Oklahoma City,https://www.nba.com/game/atl-vs-okc-0022600265,2026-11-19T11:50:44+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,AWAY,travel_km,MISSING,Exact route travel distance not measured,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,AWAY,opponent_strength,MISSING,No opponent adjusted efficiency series fitted,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,AWAY,opponent_strength_method,MISSING,No verified strength model calculation,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,AWAY,availability_effect,MISSING,No measured player absence effect,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,AWAY,adjustment_basis,MISSING,No numerical injury home travel adjustment applied,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,AWAY,last20_score_for_pg,MISSING,Fewer than 20 completed games in current season,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0008,GAME-09E3173B31B3,AWAY,last20_score_against_pg,MISSING,Fewer than 20 completed games in current season,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,HOME,season_games,15,https://www.cbssports.com/nba/teams/NO/new-orleans-pelicans/schedule/,2026-11-19T12:02:55+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,HOME,season_score_for_pg,115.8000,https://www.cbssports.com/nba/teams/NO/new-orleans-pelicans/schedule/,2026-11-19T12:02:55+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,HOME,season_score_against_pg,122.8667,https://www.cbssports.com/nba/teams/NO/new-orleans-pelicans/schedule/,2026-11-19T12:02:55+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,HOME,last5_score_for_pg,106.4000,https://www.cbssports.com/nba/teams/NO/new-orleans-pelicans/schedule/,2026-11-19T12:02:55+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,HOME,last5_score_against_pg,127.0000,https://www.cbssports.com/nba/teams/NO/new-orleans-pelicans/schedule/,2026-11-19T12:02:55+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,HOME,last10_score_for_pg,114.0000,https://www.cbssports.com/nba/teams/NO/new-orleans-pelicans/schedule/,2026-11-19T12:02:55+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,HOME,last10_score_against_pg,123.5000,https://www.cbssports.com/nba/teams/NO/new-orleans-pelicans/schedule/,2026-11-19T12:02:55+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,HOME,rest_days,1,https://www.nba.com/pelicans/schedule,2026-11-19T12:02:55+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,HOME,back_to_back,NO,https://www.nba.com/pelicans/schedule,2026-11-19T12:02:55+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,HOME,key_absences,Bennedict Mathurin OUT; Bryce McGowens OUT; Trey Murphy III OUT; Dejounte Murray OUT; Trendon Watford OUT,https://www.nba.com/pelicans/news/pelicans-vs-pistons-injury-report-game-preview-11-18-2026,2026-11-19T12:02:55+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,HOME,lineup_confirmed,MISSING,No full certified official starting five independently verified before research cutoff,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,HOME,venue,Smoothie King Center New Orleans,https://www.nba.com/pelicans/news/pelicans-vs-pistons-injury-report-game-preview-11-18-2026,2026-11-19T12:02:55+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,HOME,travel_km,MISSING,No sourced actual travel route distance,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,HOME,opponent_strength,MISSING,No audited opponent-adjusted numerical model,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,HOME,opponent_strength_method,MISSING,No fitted opponent adjusted ORtg or DRtg,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,HOME,availability_effect,MISSING,No measured injury or rotation point effect,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,HOME,adjustment_basis,MISSING,No supported numeric player injury or road fatigue adjustment fitted,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,HOME,last20_score_for_pg,MISSING,Fewer than 20 completed games in 2026-27 season,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,HOME,last20_score_against_pg,MISSING,Fewer than 20 completed games in 2026-27 season,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,AWAY,season_games,13,https://www.cbssports.com/nba/teams/DET/detroit-pistons/schedule/regular/,2026-11-19T12:02:55+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,AWAY,season_score_for_pg,114.8462,https://www.cbssports.com/nba/teams/DET/detroit-pistons/schedule/regular/,2026-11-19T12:02:55+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,AWAY,season_score_against_pg,108.9231,https://www.cbssports.com/nba/teams/DET/detroit-pistons/schedule/regular/,2026-11-19T12:02:55+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,AWAY,last5_score_for_pg,120.8000,https://www.cbssports.com/nba/teams/DET/detroit-pistons/schedule/regular/,2026-11-19T12:02:55+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,AWAY,last5_score_against_pg,120.4000,https://www.cbssports.com/nba/teams/DET/detroit-pistons/schedule/regular/,2026-11-19T12:02:55+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,AWAY,last10_score_for_pg,113.8000,https://www.cbssports.com/nba/teams/DET/detroit-pistons/schedule/regular/,2026-11-19T12:02:55+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,AWAY,last10_score_against_pg,109.9000,https://www.cbssports.com/nba/teams/DET/detroit-pistons/schedule/regular/,2026-11-19T12:02:55+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,AWAY,rest_days,0,https://www.nba.com/pistons/schedule,2026-11-19T12:02:55+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,AWAY,back_to_back,YES,https://www.nba.com/pistons/schedule,2026-11-19T12:02:55+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,AWAY,key_absences,Jalen Duren OUT; Ronald Holland II OUT; Taurean Prince OUT; Duncan Robinson OUT; Cade Cunningham QUESTIONABLE in the official pregame preview,https://www.nba.com/pelicans/news/pelicans-vs-pistons-injury-report-game-preview-11-18-2026,2026-11-19T12:02:55+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,AWAY,lineup_confirmed,MISSING,No full certified official starting five independently verified before research cutoff,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,AWAY,venue,Smoothie King Center New Orleans,https://www.nba.com/pelicans/news/pelicans-vs-pistons-injury-report-game-preview-11-18-2026,2026-11-19T12:02:55+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,AWAY,travel_km,MISSING,No sourced actual travel route distance,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,AWAY,opponent_strength,MISSING,No audited opponent-adjusted numerical model,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,AWAY,opponent_strength_method,MISSING,No fitted opponent adjusted ORtg or DRtg,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,AWAY,availability_effect,MISSING,No measured injury or rotation point effect,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,AWAY,adjustment_basis,MISSING,No supported numeric player injury or road fatigue adjustment fitted,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,AWAY,last20_score_for_pg,MISSING,Fewer than 20 completed games in 2026-27 season,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0009,GAME-8F93556937EE,AWAY,last20_score_against_pg,MISSING,Fewer than 20 completed games in 2026-27 season,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,HOME,season_games,5,https://bigsouthsports.com/schedule.aspx?schedule=4481,2026-11-19T12:26:14+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,HOME,season_score_for_pg,75.4000,https://bigsouthsports.com/schedule.aspx?schedule=4481,2026-11-19T12:26:14+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,HOME,season_score_against_pg,73.6000,https://bigsouthsports.com/schedule.aspx?schedule=4481,2026-11-19T12:26:14+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,HOME,last5_score_for_pg,75.4000,https://bigsouthsports.com/schedule.aspx?schedule=4481,2026-11-19T12:26:14+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,HOME,last5_score_against_pg,73.6000,https://bigsouthsports.com/schedule.aspx?schedule=4481,2026-11-19T12:26:14+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,HOME,last10_score_for_pg,MISSING,Fewer than ten completed current season games,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,HOME,last10_score_against_pg,MISSING,Fewer than ten completed current season games,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,HOME,rest_days,3,https://bigsouthsports.com/schedule.aspx?schedule=4481,2026-11-19T12:26:14+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,HOME,back_to_back,NO,https://bigsouthsports.com/schedule.aspx?schedule=4481,2026-11-19T12:26:14+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,HOME,key_absences,MISSING,No complete verified injury and suspension status at research cutoff,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,HOME,lineup_confirmed,MISSING,No certified official starting five verified,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,HOME,venue,Timmons Arena Furman University Greenville South Carolina,https://upstatespartans.com/game-center/6709,2026-11-19T12:26:14+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,HOME,travel_km,MISSING,No measured actual team travel route distance,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,HOME,opponent_strength,MISSING,No adjusted opponent strength estimate independently validated,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,HOME,opponent_strength_method,MISSING,No auditable opponent adjustment calculation,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,HOME,availability_effect,MISSING,No measured injury replacement or availability impact,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,HOME,adjustment_basis,MISSING,No supported numerical home venue travel or lineup adjustment,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,HOME,last20_score_for_pg,MISSING,Fewer than twenty current season completed games,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,HOME,last20_score_against_pg,MISSING,Fewer than twenty current season completed games,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,AWAY,season_games,3,https://samfordsports.com/sports/mens-basketball/schedule,2026-11-19T12:26:14+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,AWAY,season_score_for_pg,77.3333,https://samfordsports.com/sports/mens-basketball/schedule,2026-11-19T12:26:14+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,AWAY,season_score_against_pg,78.6667,https://samfordsports.com/sports/mens-basketball/schedule,2026-11-19T12:26:14+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,AWAY,last5_score_for_pg,MISSING,Fewer than five completed current season games,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,AWAY,last5_score_against_pg,MISSING,Fewer than five completed current season games,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,AWAY,last10_score_for_pg,MISSING,Fewer than ten completed current season games,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,AWAY,last10_score_against_pg,MISSING,Fewer than ten completed current season games,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,AWAY,rest_days,4,https://samfordsports.com/sports/mens-basketball/schedule,2026-11-19T12:26:14+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,AWAY,back_to_back,NO,https://samfordsports.com/sports/mens-basketball/schedule,2026-11-19T12:26:14+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,AWAY,key_absences,MISSING,No complete verified injury and suspension status at research cutoff,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,AWAY,lineup_confirmed,MISSING,No certified official starting five verified,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,AWAY,venue,Timmons Arena Furman University Greenville South Carolina,https://upstatespartans.com/game-center/6709,2026-11-19T12:26:14+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,AWAY,travel_km,MISSING,No measured actual team travel route distance,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,AWAY,opponent_strength,MISSING,No adjusted opponent strength estimate independently validated,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,AWAY,opponent_strength_method,MISSING,No auditable opponent adjustment calculation,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,AWAY,availability_effect,MISSING,No measured injury replacement or availability impact,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,AWAY,adjustment_basis,MISSING,No supported numerical home venue travel or lineup adjustment,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,AWAY,last20_score_for_pg,MISSING,Fewer than twenty current season completed games,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0010,GAME-8FE59B593C15,AWAY,last20_score_against_pg,MISSING,Fewer than twenty current season completed games,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,HOME,season_games,15,https://www.nba.com/team/1610612747/lakers/schedule,2026-11-19T14:10:45+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,HOME,season_score_for_pg,122.4667,https://www.nba.com/team/1610612747/lakers/schedule,2026-11-19T14:10:45+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,HOME,season_score_against_pg,114.8000,https://www.nba.com/team/1610612747/lakers/schedule,2026-11-19T14:10:45+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,HOME,last5_score_for_pg,123.4000,https://www.nba.com/team/1610612747/lakers/schedule,2026-11-19T14:10:45+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,HOME,last5_score_against_pg,115.8000,https://www.nba.com/team/1610612747/lakers/schedule,2026-11-19T14:10:45+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,HOME,last10_score_for_pg,122.1000,https://www.nba.com/team/1610612747/lakers/schedule,2026-11-19T14:10:45+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,HOME,last10_score_against_pg,115.4000,https://www.nba.com/team/1610612747/lakers/schedule,2026-11-19T14:10:45+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,HOME,rest_days,0,https://www.nba.com/team/1610612747/lakers/schedule,2026-11-19T14:10:45+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,HOME,back_to_back,YES,https://www.nba.com/team/1610612747/lakers/schedule,2026-11-19T14:10:45+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,HOME,key_absences,Austin Reaves OUT; Quentin Grimes AVAILABLE,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-18_08_15PM.pdf,2026-11-19T14:10:45+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,HOME,lineup_confirmed,MISSING,No certified starting five independently verified,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,HOME,venue,Crypto.com Arena Los Angeles California,https://www.nba.com/game/uta-vs-lal-0022600268,2026-11-19T14:10:45+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,HOME,travel_km,MISSING,No measured travel distance to venue,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,HOME,opponent_strength,MISSING,No independently calculated opponent strength,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,HOME,opponent_strength_method,MISSING,No reproducible opponent adjustment fitted,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,HOME,availability_effect,MISSING,No measured point effects of injuries,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,HOME,adjustment_basis,MISSING,No quantified lineup rest home or travel adjustment,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,HOME,last20_score_for_pg,MISSING,Current season has fewer than twenty completed games,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,HOME,last20_score_against_pg,MISSING,Current season has fewer than twenty completed games,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,AWAY,season_games,15,https://www.nba.com/team/1610612762/jazz/schedule,2026-11-19T14:10:45+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,AWAY,season_score_for_pg,108.7333,https://www.nba.com/team/1610612762/jazz/schedule,2026-11-19T14:10:45+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,AWAY,season_score_against_pg,117.2667,https://www.nba.com/team/1610612762/jazz/schedule,2026-11-19T14:10:45+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,AWAY,last5_score_for_pg,113.8000,https://www.nba.com/team/1610612762/jazz/schedule,2026-11-19T14:10:45+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,AWAY,last5_score_against_pg,116.0000,https://www.nba.com/team/1610612762/jazz/schedule,2026-11-19T14:10:45+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,AWAY,last10_score_for_pg,106.9000,https://www.nba.com/team/1610612762/jazz/schedule,2026-11-19T14:10:45+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,AWAY,last10_score_against_pg,115.8000,https://www.nba.com/team/1610612762/jazz/schedule,2026-11-19T14:10:45+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,AWAY,rest_days,0,https://www.nba.com/team/1610612762/jazz/schedule,2026-11-19T14:10:45+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,AWAY,back_to_back,YES,https://www.nba.com/team/1610612762/jazz/schedule,2026-11-19T14:10:45+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,AWAY,key_absences,Lauri Markkanen OUT; Jaren Jackson Jr OUT; Jusuf Nurkic OUT; Jaxson Hayes QUESTIONABLE,https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-18_08_15PM.pdf,2026-11-19T14:10:45+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,AWAY,lineup_confirmed,MISSING,No certified starting five independently verified,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,AWAY,venue,Crypto.com Arena Los Angeles California,https://www.nba.com/game/uta-vs-lal-0022600268,2026-11-19T14:10:45+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,AWAY,travel_km,MISSING,No measured travel distance to venue,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,AWAY,opponent_strength,MISSING,No independently calculated opponent strength,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,AWAY,opponent_strength_method,MISSING,No reproducible opponent adjustment fitted,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,AWAY,availability_effect,MISSING,No measured point effects of injuries,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,AWAY,adjustment_basis,MISSING,No quantified lineup rest home or travel adjustment,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,AWAY,last20_score_for_pg,MISSING,Current season has fewer than twenty completed games,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0011,GAME-15B2796BB483,AWAY,last20_score_against_pg,MISSING,Current season has fewer than twenty completed games,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,HOME,season_games,15,https://www.nblfixtures.com/teams/illawarra-hawks,2026-11-19T19:33:46+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,HOME,season_score_for_pg,97.4667,https://www.nblfixtures.com/teams/illawarra-hawks,2026-11-19T19:33:46+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,HOME,season_score_against_pg,104.7333,https://www.nblfixtures.com/teams/illawarra-hawks,2026-11-19T19:33:46+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,HOME,last5_score_for_pg,102.0000,https://www.nblfixtures.com/teams/illawarra-hawks,2026-11-19T19:33:46+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,HOME,last5_score_against_pg,104.0000,https://www.nblfixtures.com/teams/illawarra-hawks,2026-11-19T19:33:46+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,HOME,last10_score_for_pg,97.6000,https://www.nblfixtures.com/teams/illawarra-hawks,2026-11-19T19:33:46+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,HOME,last10_score_against_pg,104.7000,https://www.nblfixtures.com/teams/illawarra-hawks,2026-11-19T19:33:46+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,HOME,rest_days,4,https://www.nblfixtures.com/teams/illawarra-hawks,2026-11-19T19:33:46+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,HOME,back_to_back,NO,https://www.nblfixtures.com/teams/illawarra-hawks,2026-11-19T19:33:46+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,HOME,key_absences,Will Hickey OUT through illness; Mason Peatling OUT foot,https://league.nbl.com.au/news/illawarra-hawks-star-will-hickey-ruled-out-of-crucial-clash-adelaide,2026-11-19T19:33:46+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,HOME,lineup_confirmed,MISSING,No verified official starting five available during research,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,HOME,venue,WIN Entertainment Centre Wollongong NSW Australia,https://www.nbl.com.au/matches/illawarra-hawks-v-adelaide-36ers-men-19-11-2026,2026-11-19T19:33:46+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,HOME,travel_km,MISSING,Actual team travel route distance unverified,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,HOME,opponent_strength,MISSING,No computed opponent adjusted schedule strength,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,HOME,opponent_strength_method,MISSING,No reproducible opponent strength method fitted,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,HOME,availability_effect,MISSING,No measured points impact of confirmed absences,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,HOME,adjustment_basis,MISSING,No numeric home rest absence or travel adjustments admitted,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,HOME,last20_score_for_pg,MISSING,Current 2026-27 season fewer than twenty completed games,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,HOME,last20_score_against_pg,MISSING,Current 2026-27 season fewer than twenty completed games,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,AWAY,season_games,13,https://www.nblfixtures.com/teams/adelaide-36ers,2026-11-19T19:33:46+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,AWAY,season_score_for_pg,92.9231,https://www.nblfixtures.com/teams/adelaide-36ers,2026-11-19T19:33:46+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,AWAY,season_score_against_pg,92.4615,https://www.nblfixtures.com/teams/adelaide-36ers,2026-11-19T19:33:46+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,AWAY,last5_score_for_pg,99.6000,https://www.nblfixtures.com/teams/adelaide-36ers,2026-11-19T19:33:46+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,AWAY,last5_score_against_pg,95.2000,https://www.nblfixtures.com/teams/adelaide-36ers,2026-11-19T19:33:46+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,AWAY,last10_score_for_pg,93.1000,https://www.nblfixtures.com/teams/adelaide-36ers,2026-11-19T19:33:46+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,AWAY,last10_score_against_pg,94.0000,https://www.nblfixtures.com/teams/adelaide-36ers,2026-11-19T19:33:46+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,AWAY,rest_days,6,https://www.nblfixtures.com/teams/adelaide-36ers,2026-11-19T19:33:46+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,AWAY,back_to_back,NO,https://www.nblfixtures.com/teams/adelaide-36ers,2026-11-19T19:33:46+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,AWAY,key_absences,Bul Kuol OUT ACL,https://league.nbl.com.au/news/how-to-watch-talking-points-illawarra-v-adelaide-2027,2026-11-19T19:33:46+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,AWAY,lineup_confirmed,MISSING,No verified official starting five available during research,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,AWAY,venue,WIN Entertainment Centre Wollongong NSW Australia,https://www.nbl.com.au/matches/illawarra-hawks-v-adelaide-36ers-men-19-11-2026,2026-11-19T19:33:46+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,AWAY,travel_km,MISSING,Actual team travel route distance unverified,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,AWAY,opponent_strength,MISSING,No computed opponent adjusted schedule strength,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,AWAY,opponent_strength_method,MISSING,No reproducible opponent strength method fitted,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,AWAY,availability_effect,MISSING,No measured points impact of confirmed absences,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,AWAY,adjustment_basis,MISSING,No numeric home rest absence or travel adjustments admitted,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,AWAY,last20_score_for_pg,MISSING,Current 2026-27 season fewer than twenty completed games,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0012,GAME-6A470334D323,AWAY,last20_score_against_pg,MISSING,Current 2026-27 season fewer than twenty completed games,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0013,GAME-9117C559F74E,HOME,venue_first_innings_avg,MISSING,No source verified a compatible Adelaide Oval womens T20 first innings cohort,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0013,GAME-9117C559F74E,HOME,last5_first_innings_avg,157.4000,https://cricketsix.com/series/12677/wbbl-2026/,2026-11-20T19:03:40+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0013,GAME-9117C559F74E,HOME,last5_powerplay_avg,MISSING,Could not assemble five independently verified Strikers six over scores,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0013,GAME-9117C559F74E,HOME,key_absences,Darcie Brown OUT; Sophie Ecclestone OUT,https://www.adelaidestrikers.com.au/news/4611063/adelaide-strikers-injury-report-19november,2026-11-20T19:03:40+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0013,GAME-9117C559F74E,HOME,lineup_confirmed,MISSING,Official Cricket Australia game page still shows teams to be announced,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0013,GAME-9117C559F74E,HOME,batting_first,MISSING,No authoritative toss choice independently confirmed before research cutoff,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0013,GAME-9117C559F74E,HOME,rain_probability_pct,5,https://www.bom.gov.au/places/sa/adelaide-airport/forecast/detailed/,2026-11-20T19:03:40+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0013,GAME-9117C559F74E,HOME,venue,Adelaide Oval Adelaide Australia,https://www.cricket.com.au/matches/CA%3A40648/adelaide-strikers-women-melbourne-renegades-women-weber-wbbl-12,2026-11-20T19:03:40+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0013,GAME-9117C559F74E,HOME,travel_km,MISSING,No verified measured team travel distance,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0013,GAME-9117C559F74E,HOME,opponent_strength,MISSING,No independent opponent adjusted bowling and batting strength calculation,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0013,GAME-9117C559F74E,HOME,opponent_strength_method,MISSING,No validated opponent strength calculation,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0013,GAME-9117C559F74E,HOME,availability_effect,MISSING,Measured player run impact not available for absences,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0013,GAME-9117C559F74E,HOME,adjustment_basis,MISSING,No measured pace pitch toss or injury run adjustment applied,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0013,GAME-9117C559F74E,HOME,last10_first_innings_avg,MISSING,Only six completed 2026 WBBL team batting innings,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0013,GAME-9117C559F74E,HOME,last20_first_innings_avg,MISSING,Only six completed 2026 WBBL team batting innings,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0013,GAME-9117C559F74E,AWAY,venue_first_innings_avg,MISSING,No source verified a compatible Adelaide Oval womens T20 first innings cohort,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0013,GAME-9117C559F74E,AWAY,last5_first_innings_avg,152.8000,https://cricketsix.com/series/12677/wbbl-2026/,2026-11-20T19:03:40+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0013,GAME-9117C559F74E,AWAY,last5_powerplay_avg,37.4000,https://sportsguff.com/scorecard/women-s-big-bash-league-2026-27/melbourne-renegades-women-vs-sydney-sixers-women-20th-match,2026-11-20T19:03:40+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0013,GAME-9117C559F74E,AWAY,key_absences,MISSING,No complete official Renegades match-day absentee report verified,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0013,GAME-9117C559F74E,AWAY,lineup_confirmed,MISSING,Official Cricket Australia game page still shows teams to be announced,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0013,GAME-9117C559F74E,AWAY,batting_first,MISSING,No authoritative toss choice independently confirmed before research cutoff,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0013,GAME-9117C559F74E,AWAY,rain_probability_pct,5,https://www.bom.gov.au/places/sa/adelaide-airport/forecast/detailed/,2026-11-20T19:03:40+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0013,GAME-9117C559F74E,AWAY,venue,Adelaide Oval Adelaide Australia,https://www.cricket.com.au/matches/CA%3A40648/adelaide-strikers-women-melbourne-renegades-women-weber-wbbl-12,2026-11-20T19:03:40+11:00,OBSERVED
+20261118DA6D9F6251746B979F5895FA-G0013,GAME-9117C559F74E,AWAY,travel_km,MISSING,No verified measured team travel distance,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0013,GAME-9117C559F74E,AWAY,opponent_strength,MISSING,No independent opponent adjusted bowling and batting strength calculation,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0013,GAME-9117C559F74E,AWAY,opponent_strength_method,MISSING,No validated opponent strength calculation,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0013,GAME-9117C559F74E,AWAY,availability_effect,MISSING,Measured player run impact not available for absences,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0013,GAME-9117C559F74E,AWAY,adjustment_basis,MISSING,No measured pace pitch toss or injury run adjustment applied,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0013,GAME-9117C559F74E,AWAY,last10_first_innings_avg,MISSING,Only six completed 2026 WBBL team batting innings,,MISSING
+20261118DA6D9F6251746B979F5895FA-G0013,GAME-9117C559F74E,AWAY,last20_first_innings_avg,MISSING,Only six completed 2026 WBBL team batting innings,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,HOME,season_games,6,https://basket.co.il/results-by-date.asp?Board=5&lang=en,2026-11-20T22:09:04+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,HOME,season_score_for_pg,82.833,https://basket.co.il/results-by-date.asp?Board=5&lang=en,2026-11-20T22:09:04+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,HOME,season_score_against_pg,91.333,https://basket.co.il/results-by-date.asp?Board=5&lang=en,2026-11-20T22:09:04+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,HOME,last5_score_for_pg,83.0,https://basket.co.il/results-by-date.asp?Board=5&lang=en,2026-11-20T22:09:04+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,HOME,last5_score_against_pg,90.6,https://basket.co.il/results-by-date.asp?Board=5&lang=en,2026-11-20T22:09:04+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,HOME,last10_score_for_pg,MISSING,ONLY_SIX_2026_27_REGULAR_SEASON_GAMES,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,HOME,last10_score_against_pg,MISSING,ONLY_SIX_2026_27_REGULAR_SEASON_GAMES,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,HOME,rest_days,3,https://basket.co.il/results-by-date.asp?Board=5&lang=en,2026-11-20T22:09:04+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,HOME,back_to_back,NO,https://basket.co.il/results-by-date.asp?Board=5&lang=en,2026-11-20T22:09:04+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,HOME,key_absences,MISSING,NO_EXACT_GAME_INJURY_OR_ACTIVE_LIST_VERIFIED,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,HOME,lineup_confirmed,MISSING,STARTING_FIVE_NOT_CONFIRMED_FOR_THIS_GAME,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,HOME,venue,The Shell Beer Sheva,https://basket.co.il/results-by-date.asp?Board=5&lang=en,2026-11-20T22:09:04+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,HOME,travel_km,MISSING,TRAVEL_DISTANCE_NOT_VERIFIED,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,HOME,opponent_strength,MISSING,NO_OPPONENT_ADJUSTED_METRIC_VERIFIED,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,HOME,opponent_strength_method,MISSING,NO_OPPONENT_ADJUSTED_METRIC_VERIFIED,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,HOME,availability_effect,MISSING,NO_MEASURED_ABSENCE_EFFECT,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,HOME,adjustment_basis,MISSING,NO_QUANTIFIED_CURRENT_GAME_ADJUSTMENT,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,HOME,last20_score_for_pg,MISSING,ONLY_SIX_2026_27_REGULAR_SEASON_GAMES,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,HOME,last20_score_against_pg,MISSING,ONLY_SIX_2026_27_REGULAR_SEASON_GAMES,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,AWAY,season_games,6,https://bsl.org.il/team.asp?TeamId=2118&lang=en&sType=p1,2026-11-20T22:09:04+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,AWAY,season_score_for_pg,86.5,https://bsl.org.il/team.asp?TeamId=2118&lang=en&sType=p1,2026-11-20T22:09:04+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,AWAY,season_score_against_pg,79.0,https://bsl.org.il/team.asp?TeamId=2118&lang=en&sType=p1,2026-11-20T22:09:04+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,AWAY,last5_score_for_pg,91.4,https://bsl.org.il/team.asp?TeamId=2118&lang=en&sType=p1,2026-11-20T22:09:04+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,AWAY,last5_score_against_pg,79.6,https://bsl.org.il/team.asp?TeamId=2118&lang=en&sType=p1,2026-11-20T22:09:04+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,AWAY,last10_score_for_pg,MISSING,ONLY_SIX_2026_27_REGULAR_SEASON_GAMES,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,AWAY,last10_score_against_pg,MISSING,ONLY_SIX_2026_27_REGULAR_SEASON_GAMES,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,AWAY,rest_days,4,https://bsl.org.il/team.asp?TeamId=2118&lang=en&sType=p1,2026-11-20T22:09:04+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,AWAY,back_to_back,NO,https://bsl.org.il/team.asp?TeamId=2118&lang=en&sType=p1,2026-11-20T22:09:04+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,AWAY,key_absences,MISSING,NO_EXACT_GAME_INJURY_OR_ACTIVE_LIST_VERIFIED,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,AWAY,lineup_confirmed,MISSING,STARTING_FIVE_NOT_CONFIRMED_FOR_THIS_GAME,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,AWAY,venue,The Shell Beer Sheva,https://bsl.org.il/team.asp?TeamId=2118&lang=en&sType=p1,2026-11-20T22:09:04+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,AWAY,travel_km,MISSING,TRAVEL_DISTANCE_NOT_VERIFIED,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,AWAY,opponent_strength,MISSING,NO_OPPONENT_ADJUSTED_METRIC_VERIFIED,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,AWAY,opponent_strength_method,MISSING,NO_OPPONENT_ADJUSTED_METRIC_VERIFIED,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,AWAY,availability_effect,MISSING,NO_MEASURED_ABSENCE_EFFECT,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,AWAY,adjustment_basis,MISSING,NO_QUANTIFIED_CURRENT_GAME_ADJUSTMENT,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,AWAY,last20_score_for_pg,MISSING,ONLY_SIX_2026_27_REGULAR_SEASON_GAMES,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001,GAME-18B5EC66AA93,AWAY,last20_score_against_pg,MISSING,ONLY_SIX_2026_27_REGULAR_SEASON_GAMES,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,HOME,season_games,16,https://boxscorelab.com/teams/cleveland-cavaliers/games/,2026-11-21T11:25:14+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,HOME,season_score_for_pg,118.250,https://boxscorelab.com/teams/cleveland-cavaliers/games/,2026-11-21T11:25:14+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,HOME,season_score_against_pg,116.312,https://boxscorelab.com/teams/cleveland-cavaliers/games/,2026-11-21T11:25:14+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,HOME,last5_score_for_pg,122.000,https://boxscorelab.com/teams/cleveland-cavaliers/games/,2026-11-21T11:25:14+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,HOME,last5_score_against_pg,119.200,https://boxscorelab.com/teams/cleveland-cavaliers/games/,2026-11-21T11:25:14+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,HOME,last10_score_for_pg,116.600,https://boxscorelab.com/teams/cleveland-cavaliers/games/,2026-11-21T11:25:14+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,HOME,last10_score_against_pg,116.500,https://boxscorelab.com/teams/cleveland-cavaliers/games/,2026-11-21T11:25:14+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,HOME,rest_days,1,https://boxscorelab.com/teams/cleveland-cavaliers/games/,2026-11-21T11:25:14+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,HOME,back_to_back,NO,https://boxscorelab.com/teams/cleveland-cavaliers/games/,2026-11-21T11:25:14+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,HOME,key_absences,MOBLEY_OUT;TYSON_OUT;TOMLIN_OUT;WATSON_QUESTIONABLE,https://www.nba.com/pacers/news/preview-pacers-cavaliers-261120,2026-11-21T11:25:14+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,HOME,lineup_confirmed,MISSING,OFFICIAL_STARTING_FIVE_NOT_RELEASED_OR_VERIFIED,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,HOME,venue,Rocket Arena Cleveland Ohio USA,https://www.nba.com/game/ind-vs-cle-0022600045,2026-11-21T11:25:14+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,HOME,travel_km,MISSING,MATCH_TRAVEL_DISTANCE_NOT_VERIFIED,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,HOME,opponent_strength,MISSING,OPPONENT_ADJUSTED_NET_RATING_NOT_COMPUTED,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,HOME,opponent_strength_method,MISSING,OPPONENT_ADJUSTMENT_METHOD_NOT_AVAILABLE,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,HOME,availability_effect,MISSING,NO_MEASURED_ON_OFF_INJURY_EFFECT,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,HOME,adjustment_basis,MISSING,UNMEASURED_MATCH_SPECIFIC_PLAYER_EFFECT,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,HOME,last20_score_for_pg,MISSING,ONLY_16_COMPLETED_2026_27_GAMES,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,HOME,last20_score_against_pg,MISSING,ONLY_16_COMPLETED_2026_27_GAMES,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,AWAY,season_games,15,https://boxscorelab.com/teams/indiana-pacers/games/,2026-11-21T11:25:14+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,AWAY,season_score_for_pg,111.533,https://boxscorelab.com/teams/indiana-pacers/games/,2026-11-21T11:25:14+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,AWAY,season_score_against_pg,114.800,https://boxscorelab.com/teams/indiana-pacers/games/,2026-11-21T11:25:14+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,AWAY,last5_score_for_pg,114.000,https://boxscorelab.com/teams/indiana-pacers/games/,2026-11-21T11:25:14+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,AWAY,last5_score_against_pg,116.000,https://boxscorelab.com/teams/indiana-pacers/games/,2026-11-21T11:25:14+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,AWAY,last10_score_for_pg,109.800,https://boxscorelab.com/teams/indiana-pacers/games/,2026-11-21T11:25:14+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,AWAY,last10_score_against_pg,114.800,https://boxscorelab.com/teams/indiana-pacers/games/,2026-11-21T11:25:14+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,AWAY,rest_days,1,https://boxscorelab.com/teams/indiana-pacers/games/,2026-11-21T11:25:14+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,AWAY,back_to_back,NO,https://boxscorelab.com/teams/indiana-pacers/games/,2026-11-21T11:25:14+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,AWAY,key_absences,HALIBURTON_OUT;FURPHY_OUT;SHEPPARD_OUT;NEMBHARD_AVAILABLE_REPORT;BRADEN_SMITH_QUESTIONABLE,https://www.nba.com/pacers/news/preview-pacers-cavaliers-261120,2026-11-21T11:25:14+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,AWAY,lineup_confirmed,MISSING,OFFICIAL_STARTING_FIVE_NOT_RELEASED_OR_VERIFIED,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,AWAY,venue,Rocket Arena Cleveland Ohio USA,https://www.nba.com/game/ind-vs-cle-0022600045,2026-11-21T11:25:14+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,AWAY,travel_km,MISSING,MATCH_TRAVEL_DISTANCE_NOT_VERIFIED,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,AWAY,opponent_strength,MISSING,OPPONENT_ADJUSTED_NET_RATING_NOT_COMPUTED,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,AWAY,opponent_strength_method,MISSING,OPPONENT_ADJUSTMENT_METHOD_NOT_AVAILABLE,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,AWAY,availability_effect,MISSING,NO_MEASURED_ON_OFF_INJURY_EFFECT,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,AWAY,adjustment_basis,MISSING,UNMEASURED_MATCH_SPECIFIC_PLAYER_EFFECT,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,AWAY,last20_score_for_pg,MISSING,ONLY_15_COMPLETED_2026_27_GAMES,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003,GAME-9885F9634178,AWAY,last20_score_against_pg,MISSING,ONLY_15_COMPLETED_2026_27_GAMES,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007,GAME-7D5E6AF6C87F,HOME,venue_first_innings_avg,158,https://cricketerstales.com/cricket-fixture/mlsw-vs-mlrw-32nd-match-wbbl-2026/,2026-11-22T19:10:28+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007,GAME-7D5E6AF6C87F,HOME,last5_first_innings_avg,137.800,https://www.comparetv.com.au/stream-live-sport/wbbl/melbourne-stars/,2026-11-22T19:10:28+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007,GAME-7D5E6AF6C87F,HOME,last5_powerplay_avg,MISSING,ONLY_4_OF_LAST_5_SIX_OVER_SPLITS_VERIFIED,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007,GAME-7D5E6AF6C87F,HOME,key_absences,MISSING,FINAL_LINEUP_AND_ABSENCES_NOT_VERIFIED,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007,GAME-7D5E6AF6C87F,HOME,lineup_confirmed,MISSING,FINAL_PLAYING_XI_NOT_VERIFIED,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007,GAME-7D5E6AF6C87F,HOME,batting_first,PROVISIONAL_YES,https://www.reddit.com/r/CricketAus/comments/1y2f0am/match_thread_womens_big_bash_league_nov_22_2026/,2026-11-22T19:10:28+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007,GAME-7D5E6AF6C87F,HOME,rain_probability_pct,MISSING,DAY_FORECAST_NOT_KICKOFF_INTERRUPTION_RATE,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007,GAME-7D5E6AF6C87F,HOME,venue,JUNCTION_OVAL,https://www.cricket.com.au/matches/CA:40652/melbourne-stars-women-melbourne-renegades-women-match-32,2026-11-22T19:10:28+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007,GAME-7D5E6AF6C87F,HOME,travel_km,MISSING,BOTH_MELBOURNE_LOCAL_EXACT_TRAVEL_NOT_VERIFIED,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007,GAME-7D5E6AF6C87F,HOME,opponent_strength,MISSING,RENEGADES_BOWLING_QUALITY_NOT_ADJUSTED,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007,GAME-7D5E6AF6C87F,HOME,opponent_strength_method,MISSING,NO_OPPONENT_ADJUSTED_RUN_RATE,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007,GAME-7D5E6AF6C87F,HOME,availability_effect,MISSING,CONFIRMED_XI_AND_PLAYER_IMPACT_NOT_VERIFIED,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007,GAME-7D5E6AF6C87F,HOME,adjustment_basis,MISSING,VENUE_PLUS_1_SIX_OVER_IS_ANALYST_HYPOTHESIS,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007,GAME-7D5E6AF6C87F,HOME,last10_first_innings_avg,MISSING,ONLY_SEVEN_CURRENT_SEASON_GAMES,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007,GAME-7D5E6AF6C87F,HOME,last20_first_innings_avg,MISSING,ONLY_SEVEN_CURRENT_SEASON_GAMES,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007,GAME-7D5E6AF6C87F,AWAY,venue_first_innings_avg,158,https://cricketerstales.com/cricket-fixture/mlsw-vs-mlrw-32nd-match-wbbl-2026/,2026-11-22T19:10:28+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007,GAME-7D5E6AF6C87F,AWAY,last5_first_innings_avg,MISSING,RENEGADES_BATTING_FIRST_SPLIT_NOT_RECONCILED,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007,GAME-7D5E6AF6C87F,AWAY,last5_powerplay_avg,MISSING,RENEGADES_SIX_OVER_SPLITS_NOT_RECONCILED,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007,GAME-7D5E6AF6C87F,AWAY,key_absences,MISSING,FINAL_LINEUP_AND_ABSENCES_NOT_VERIFIED,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007,GAME-7D5E6AF6C87F,AWAY,lineup_confirmed,MISSING,FINAL_PLAYING_XI_NOT_VERIFIED,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007,GAME-7D5E6AF6C87F,AWAY,batting_first,PROVISIONAL_NO,https://www.reddit.com/r/CricketAus/comments/1y2f0am/match_thread_womens_big_bash_league_nov_22_2026/,2026-11-22T19:10:28+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007,GAME-7D5E6AF6C87F,AWAY,rain_probability_pct,MISSING,DAY_FORECAST_NOT_KICKOFF_INTERRUPTION_RATE,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007,GAME-7D5E6AF6C87F,AWAY,venue,JUNCTION_OVAL,https://www.cricket.com.au/matches/CA:40652/melbourne-stars-women-melbourne-renegades-women-match-32,2026-11-22T19:10:28+11:00,OBSERVED
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007,GAME-7D5E6AF6C87F,AWAY,travel_km,MISSING,BOTH_MELBOURNE_LOCAL_EXACT_TRAVEL_NOT_VERIFIED,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007,GAME-7D5E6AF6C87F,AWAY,opponent_strength,MISSING,REN_BOWLING_CONCESSION_NOT_OPPONENT_ADJUSTED,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007,GAME-7D5E6AF6C87F,AWAY,opponent_strength_method,MISSING,NO_OPPONENT_ADJUSTED_RUN_RATE,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007,GAME-7D5E6AF6C87F,AWAY,availability_effect,MISSING,CONFIRMED_XI_AND_PLAYER_IMPACT_NOT_VERIFIED,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007,GAME-7D5E6AF6C87F,AWAY,adjustment_basis,MISSING,NO_MEASURED_SQUAD_IMPACT,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007,GAME-7D5E6AF6C87F,AWAY,last10_first_innings_avg,MISSING,ONLY_SEVEN_CURRENT_SEASON_GAMES,,MISSING
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007,GAME-7D5E6AF6C87F,AWAY,last20_first_innings_avg,MISSING,ONLY_SEVEN_CURRENT_SEASON_GAMES,,MISSING

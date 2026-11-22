@@ -1,0 +1,20 @@
+check,status,detail
+S1,PASS,"7 cards and 7 requests inventoried once (FROZEN_MANIFEST.csv, ALL_RECORD_MAPPING.csv); local keys preserved"
+S2,PASS,card bytes copied unchanged: inputs/cards and canonical wrappers match FROZEN_SOURCE SHA-256 (CANONICAL_READBACK 14/14); LF throughout
+S3,PASS,"propositions, p, centre and availability copied literally; ranks from intake 2026-11-22-2 for sealed cards, computed by the registered rule for refused cards and labelled so"
+S4,PASS,grades from margins and totals with sum checks; G0006 L1 rows graded as their own contracts; G0007 graded on the completed Stars innings
+S5,PASS,"source, field and retrieval time per final (SOURCE_DISCOVERY_REGISTER.csv); operator terms not used"
+S6,PASS,30 rows = 15 WIN + 15 LOSS; card means recomputed from MASTER_GRADES.csv
+S7,PASS,R1-R12 retrospective written for all 7 cards
+S8,PASS,"9 deep loss reviews, 14 sections each, plus joint sections for P-699, P-700, P-703; P-702 NONE_REQUIRED"
+S9,PASS,"no shadow, reforecast or baseline rows exist (BASELINE_P UNAVAILABLE on all 30 rows)"
+S10,PASS,no pending events; UNRESOLVED_POST_IMPORT.csv empty; first play open on all 7 (REQUIREMENT_CLOSURE.csv)
+S11,PASS,"z, PIT, Brier and log loss recomputed by script; no baseline reconstructed"
+S12,PASS,outputs read back; combined-log prefix byte-identical; mapping and manifest reconcile
+S13,PASS,"one revision-1 per key, parent NONE"
+S14,PASS,"FROZEN_MANIFEST.csv written at the pull before settlement; growth rechecked 2026-11-23T06:50 AEDT, no later block"
+S15,PASS,no open queue items; first-play gaps recorded per card with the route tried
+S16,PASS,"all 7 events settled, sealed or not; no model bundles (NOT_APPLICABLE_NO_MODEL)"
+S17,INFORMATION_INCOMPLETE,"register and sidecars written; first play not verified for any card; P-697, P-702, P-703 single-lineage (evidence B)"
+S18,PASS,local keys preserved; IDs assigned only by this import
+S19,NOT_APPLICABLE,ONECHAT_V1 cards carry no v24.0 PICKS_V2 ledger rows

@@ -310,7 +310,11 @@ def incoherent_labels(derived: dict) -> dict[str, str]:
 
     One score distribution implies: an Over on a higher total line is no more likely than on a lower one, and HOME
     covering a harder (more negative) handicap is no more likely than covering an easier one. Probabilities are taken
-    conditional on a decision, as scored. Returns {label: reason}."""
+    conditional on a decision, as scored. Returns {label: reason}.
+
+    v29.3: card rows carry no period or endpoint, so two totals are compared only when their lines are within 25% of
+    each other (alternate lines on one quantity). A 6-over score and a 20-over innings total (41.5 and 148.5 on one
+    WBBL card), or a half and a full game, are different quantities and are never compared."""
     out = {}
     for family, side, increasing in (("TOTAL", "OVER", False), ("HANDICAP", "HOME", True)):
         pts = []
@@ -324,6 +328,8 @@ def incoherent_labels(derived: dict) -> dict[str, str]:
             pts.append((d["lines"][i], d["ps"][i] / sum(d["ps"]), label))
         pts.sort()
         for (x1, q1, a), (x2, q2, b) in zip(pts, pts[1:]):
+            if family == "TOTAL" and not (x1 > 0 and x2 <= 1.25 * x1):
+                continue
             if x1 < x2 and ((q1 > q2 + 1e-6) if increasing else (q1 + 1e-6 < q2)):
                 why = (f"{family} {side} {x1:g} at {q1:.3f} and {x2:g} at {q2:.3f}: the "
                        + ("easier" if increasing else "lower") + " line must be at least as likely")

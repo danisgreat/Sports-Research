@@ -1,0 +1,29 @@
+canonical_id,field,source_tried,outcome,notes
+P-697,final_boxscore_and_linescore,https://basket.co.il/game-zone.asp?GameId=26688&lang=en,VERIFIED,capture sha256=8bf4825d21b55a09
+P-697,corroboration,https://basket.co.il/results-by-date.asp?Board=5&lang=en,VERIFIED,capture sha256=c18ac5fe39a45e9d
+P-697,actual_first_play,see SETTLEMENT.md,NOT_VERIFIED,NOT_VERIFIED (no permitted page gives a wall-clock tip-off)
+P-698,final_boxscore_and_linescore,https://www.fotmob.com/matches/beijing-guoan-vs-shanghai-port/9g2g0by,VERIFIED,capture sha256=fc15d6a5bbfe746a
+P-698,corroboration,https://news.zhibo8.com/zuqiu/2026-11-20/6b004dfca4060native.htm,VERIFIED,capture sha256=ac5f6199b9b01344
+P-698,actual_first_play,see SETTLEMENT.md,NOT_VERIFIED,"NOT_VERIFIED (FotMob halfs.firstHalfStarted 20.11.2026 12:35:27 on FotMob's clock, about 11:35:27Z if that clock is UTC+1; no official capture)"
+P-699,final_boxscore_and_linescore,https://www.statmuse.com/nba/ask/pacers-vs-cavaliers-box-score-november-20-2026,VERIFIED,capture sha256=2aff8bbe17b2877d
+P-699,corroboration,https://www.foxsports.com/nba/indiana-pacers-vs-cleveland-cavaliers-nov-20-2026-game-boxscore-106761,VERIFIED,capture sha256=3a53afd2b10aa208
+P-699,actual_first_play,see SETTLEMENT.md,NOT_VERIFIED,NOT_VERIFIED (nba.com and cdn.nba.com refused or rules unknown; StatMuse gives game clock only)
+P-700,final_boxscore_and_linescore,https://www.statmuse.com/nhl/ask/blue-jackets-vs-maple-leafs-box-score-november-21-2026,VERIFIED,capture sha256=0f21e0d4b060758b
+P-700,corroboration,https://www.foxsports.com/nhl/columbus-blue-jackets-vs-toronto-maple-leafs-nov-21-2026-game-boxscore-44917,VERIFIED,capture sha256=f354b30b565bd325
+P-700,actual_first_play,see SETTLEMENT.md,NOT_VERIFIED,NOT_VERIFIED (api-web.nhle.com refused; nhl.com page renders client-side; StatMuse gives game clock only)
+P-701,final_boxscore_and_linescore,https://www.nblfixtures.com/games/brisbane-bullets-vs-sydney-kings-2026-11-22,VERIFIED,capture sha256=f9fd228921104468
+P-701,corroboration,https://www.brisbanebullets.com.au/news/recap-full-power-bullets-take-down-kings,VERIFIED,capture sha256=d46856c0eb47c0e1
+P-701,actual_first_play,see SETTLEMENT.md,NOT_VERIFIED,NOT_VERIFIED (nblfixtures play-by-play gives game clock only)
+P-702,final_boxscore_and_linescore,https://shaiba.kz/news/812431,VERIFIED,capture sha256=86f00137e25e736d
+P-702,corroboration,https://shaiba.kz/match/39216/mkhk_aktobe-mkhk_torpedo/22-11-2026,VERIFIED,capture sha256=7809fec2f0cb7369
+P-702,actual_first_play,see SETTLEMENT.md,NOT_VERIFIED,NOT_VERIFIED (no permitted page gives the face-off time)
+P-703,final_boxscore_and_linescore,https://sportsguff.com/scorecard/women-s-big-bash-league-2026-27/melbourne-renegades-women-vs-melbourne-stars-women-32nd-match,VERIFIED,capture sha256=37cdc6181739f7d0
+P-703,corroboration,https://www.cricket.com.au/matches/CA:40652/melbourne-stars-women-melbourne-renegades-women-match-32,VERIFIED,capture sha256=eb3d05bf0e982bd5
+P-703,actual_first_play,see SETTLEMENT.md,NOT_VERIFIED,"NOT_VERIFIED (sportsguff lists a start of '22 Nov 2026, 1:55 PM' in an unstated time zone; not an official first-ball capture)"
+P-699,final_linescore,https://www.foxsports.com/nba/indiana-pacers-vs-cleveland-cavaliers-nov-20-2026-game-boxscore-106761,PARTIAL,server HTML linescore shows '-' placeholders; score taken from club recap text only
+P-699,final_linescore,https://www.nba.com/game/ind-vs-cle-0022600045,REFUSED_BY_AUDIT,BLOCKED_FOR_AI under the eight-name script rule; not opened
+P-699,final_linescore,https://api.foxsports.com/bifrost/v1/nba/event/106761/data,REFUSED_BY_AUDIT,BLOCKED_FOR_AI; not opened
+P-700,final_linescore,https://api-web.nhle.com/v1/gamecenter/2026020364/landing,REFUSED_BY_AUDIT,BLOCKED_FOR_AI; not opened
+P-700,final_linescore,https://www.nhl.com/gamecenter/cbj-vs-tor/2026/11/21/2026020364,PARTIAL,page renders client-side; no score in the captured HTML
+P-697,game_page,https://basket.co.il/game-zone.asp?GameId=26713&lang=en,WRONG_EVENT,captured by mistake (neighbouring row: Beer Sheva vs Bnei Herzliya); not used
+P-698,second_lineage,https://www.thecfa.cn/zuxiebei/20261102/38358.html,REFUSED_BY_AUDIT,RULES_UNKNOWN; not opened

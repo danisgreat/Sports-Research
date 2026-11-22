@@ -1883,3 +1883,1192 @@ Original: `prediction logs/PREDICTION_LOG_COMBINED_11.md`, P-696. Source: `resea
 <!-- END RESEARCH ADDENDUM P-696 2026-11-22-settlement-revision-1 -->
 
 <!-- END IMPORT BATCH 2026-11-22 P-686..P-696 20261118DA6D9F6251746B979F5895FA -->
+
+<!-- BEGIN IMPORT BATCH 2026-11-23 P-697..P-703 20261120-495CEEB69E9540938CF6A7DAA7B546B4 -->
+## Import batch · 23 November 2026 · P-697 to P-703 (20261120-495CEEB69E9540938CF6A7DAA7B546B4)
+
+Owner-invoked prompts 3→4 on GitHub mini `20261120-495CEEB69E9540938CF6A7DAA7B546B4`: all 7 cards settled (G0001, G0003, G0007 sealed on `origin/forecast-seals`; G0002, G0004, G0005, G0006 refused drops on `origin/card-drops`). **One canonical ID per game (P-697 to P-703)** in scheduled-start UTC order. Original card bytes follow verbatim inside canonical wrappers; verified settlements and deep loss reviews follow as dated addenda. Import metadata is not a forecast issue time. Full package: [CANONICAL_IMPORT_REPORT.md](../research/verification/mini_import_P-697_P-703_2026-11-22-2/CANONICAL_IMPORT_REPORT.md).
+<!-- END IMPORT BATCH HEADER -->
+
+<!-- BEGIN CANONICAL RESEARCH P-697 -->
+## P-697 — Basketball/Israel Super League (IBSL GameId 26688, Winner League Game 7) — Ironi Hai Motors Ness Ziona @ Hapoel Altshuler Shaham Beer Sheva/Dimona · 2026-11-20 IST
+
+Canonical retention by prompt-4 import `2026-11-22T20:00:00+00:00`. Scheduled start `2026-11-20T22:10:00+11:00`. Original `20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001` (8490 B, SHA-256 `ee7a13794ff5060fa6f4a00303d000d9e961e0ff2009b4d0ef64782387e22d85`, source `origin/forecast-seals:research/one_chat/sealed/ee7a13794ff5060fa6f4a00303d000d9e961e0ff2009b4d0ef64782387e22d85.md`, seal `SEALED` at `2026-11-20T11:15:24Z`). Original card follows verbatim; no forecast reissued; Track P scored separately via `ml one-chat score`.
+
+# Research card — 20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001
+
+**Local event:** LOCAL-20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001
+**Authority:** danisgreat/Sports-Research @ cb97bbc2a9f882e7f8a093648b6137315951da8b; MDS-2026.11.18-v29.1, ONE-CHAT-v3.
+**Status:** POST_SCHEDULE_CARD; actual first-play NOT_VERIFIED. Request registered on forecast-seals in d3807bc38a7ee4aae470ef26a5b00074463b377f, but this research ends after the scheduled tipoff. The card is NOT a verified prospectively eligible forecast.
+
+## Sporting evidence available at issue
+Official league schedule confirms Beer Sheva/Dimona hosting Ness Ziona on 2026-11-20 at 13:10 Israeli local time, at The Shell. It displayed this fixture in Upcoming Games during the pre-start check at 2026-11-20T22:08:28+11:00. That does NOT verify actual first play after the research or seal. Sources: https://basket.co.il/results-by-date.asp?Board=5&lang=en; https://basket.co.il/team.asp?TeamId=2119&lang=en&sType=p1; https://bsl.org.il/team.asp?TeamId=2118&lang=en&sType=p1.
+
+Both teams have only six 2026/27 league results before the fixture (so L10/L20 league-only observations are unavailable).
+- Beer Sheva chronological points scored/conceded: 82/95, 74/88, 75/91, 92/88, 86/88, 88/98; W1–L5. Season 82.833 for/91.333 against. Most recent five 83.0 for/90.6 against. Three full rest days since 16 November.
+- Ness Ziona chronological points scored/conceded: 62/76, 96/103 (double overtime), 78/66, 82/74, 111/81, 90/74; W4–L2. Season 86.5 for/79.0 against. Most recent five 91.4 for/79.6 against. Four full rest days since 15 November.
+- Opponent difficulty differs; Beer Sheva faced Hapoel Tel Aviv and Hapoel Jerusalem. No quantified opponent-adjusted adjustment was supported. Beer Sheva is home; no numeric home adjustment made. Neither starting five nor the exact game-day inactive bench was verified. The older roster page marks Amari Bailey season-inactive, not verified as an exact-event absence.
+- Prior head-to-head, measured player availability effect, possession pace and ORtg/DRtg were NOT_VERIFIED. This is a thin early-season form-only model, not a calibrated or validated forecast.
+
+## Transparent hand-calculated, uncalibrated model
+For each side, blended scored/conceded means = 0.40 × six-game season mean + 0.60 × most-recent-five mean. Projected home points = (Beer scored blend 82.933 + Ness conceded blend 79.360)/2 = **81.147**. Projected away points = (Ness scored blend 89.440 + Beer conceded blend 90.893)/2 = **90.167**. Projected total **171.313**; home margin **−9.020**. No unmeasured availability/home/opponent change added.
+
+Normal-margin and normal-total *approximations*, not fit or simulation. Margin SD **12.566** = square root of the average sample variances of each team's six actual game margins. Total SD **18.795** = square root of the average sample variances of each team's six actual full-game totals. Includes Ness Ziona's two-overtime game; tails, covariance and scheduled vs actual tipoff uncertain. Two-sided supplied contract probabilities are analytical CDF evaluations: P(HOME margin + 7.5 > 0) = **0.45186**; P(AWAY margin − 7.5 > 0) = **0.54814**; P(total > 169.5) = **0.53843**; P(total < 169.5) = **0.46157**. Side winner diagnostic: P(Ness Ziona wins) ≈ **0.76357**, but winner not in the registered supplied contracts and NOT a scored PICK. No pushes possible at the half-point lines. No lineup adjustments. Available data too thin for independently validated confidence.
+
+**Ranking:** No Rank 1 (required ≥62%), no Rank 2 (required ≥58%). Tentative lean: Ness Ziona −7.5 (54.8%) over 169.5 (53.8%), neither qualifies as an official ranked selection. Primary failure routes: uneven opposition, unverified player availability, tiny sample, home-court and rest effects, and overtime variance. No bookmaker prices, external tips or predictions used. Outcome not observed.
+
+## ORIGINAL ONECHAT_V1 (do not revise after issue)
+<!-- BEGIN ONECHAT_V1 20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001 -->
+format: ONECHAT_V1
+card_key: 20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001
+sport: Basketball
+competition: Israel Super League
+home: Hapoel Altshuler Shaham Beer Sheva/Dimona
+away: Ironi Hai Motors Ness Ziona
+scheduled_start: 2026-11-20T22:10:00+11:00
+request_at: 2026-11-20T22:02:00+11:00
+research_start_at: 2026-11-20T22:07:49+11:00
+research_end_at: 2026-11-20T22:14:40.541+11:00
+not_started_source: https://basket.co.il/results-by-date.asp?Board=5&lang=en
+not_started_observed_at: 2026-11-20T22:08:28+11:00
+outcome_exposure: NONE
+
+PICKS
+label,family,side,line,p,lean,centre,availability_basis,result_source
+L1,HANDICAP,HOME,7.5,0.45186,,-9.020,UNMEASURED,https://basket.co.il/results-by-date.asp?Board=5&lang=en
+L1,HANDICAP,AWAY,-7.5,0.54814,,9.020,UNMEASURED,https://basket.co.il/results-by-date.asp?Board=5&lang=en
+L2,TOTAL,OVER,169.5,0.53843,,171.313,UNMEASURED,https://basket.co.il/results-by-date.asp?Board=5&lang=en
+L2,TOTAL,UNDER,169.5,0.46157,,171.313,UNMEASURED,https://basket.co.il/results-by-date.asp?Board=5&lang=en
+
+FACTS
+side,field,value,source,observed_at
+HOME,season_games,6,https://basket.co.il/results-by-date.asp?Board=5&lang=en,2026-11-20T22:09:04+11:00
+HOME,season_score_for_pg,82.833,https://basket.co.il/results-by-date.asp?Board=5&lang=en,2026-11-20T22:09:04+11:00
+HOME,season_score_against_pg,91.333,https://basket.co.il/results-by-date.asp?Board=5&lang=en,2026-11-20T22:09:04+11:00
+HOME,last5_score_for_pg,83.0,https://basket.co.il/results-by-date.asp?Board=5&lang=en,2026-11-20T22:09:04+11:00
+HOME,last5_score_against_pg,90.6,https://basket.co.il/results-by-date.asp?Board=5&lang=en,2026-11-20T22:09:04+11:00
+HOME,last10_score_for_pg,MISSING,ONLY_SIX_2026_27_REGULAR_SEASON_GAMES,
+HOME,last10_score_against_pg,MISSING,ONLY_SIX_2026_27_REGULAR_SEASON_GAMES,
+HOME,rest_days,3,https://basket.co.il/results-by-date.asp?Board=5&lang=en,2026-11-20T22:09:04+11:00
+HOME,back_to_back,NO,https://basket.co.il/results-by-date.asp?Board=5&lang=en,2026-11-20T22:09:04+11:00
+HOME,key_absences,MISSING,NO_EXACT_GAME_INJURY_OR_ACTIVE_LIST_VERIFIED,
+HOME,lineup_confirmed,MISSING,STARTING_FIVE_NOT_CONFIRMED_FOR_THIS_GAME,
+HOME,venue,The Shell Beer Sheva,https://basket.co.il/results-by-date.asp?Board=5&lang=en,2026-11-20T22:09:04+11:00
+HOME,travel_km,MISSING,TRAVEL_DISTANCE_NOT_VERIFIED,
+HOME,opponent_strength,MISSING,NO_OPPONENT_ADJUSTED_METRIC_VERIFIED,
+HOME,opponent_strength_method,MISSING,NO_OPPONENT_ADJUSTED_METRIC_VERIFIED,
+HOME,availability_effect,MISSING,NO_MEASURED_ABSENCE_EFFECT,
+HOME,adjustment_basis,MISSING,NO_QUANTIFIED_CURRENT_GAME_ADJUSTMENT,
+HOME,last20_score_for_pg,MISSING,ONLY_SIX_2026_27_REGULAR_SEASON_GAMES,
+HOME,last20_score_against_pg,MISSING,ONLY_SIX_2026_27_REGULAR_SEASON_GAMES,
+AWAY,season_games,6,https://bsl.org.il/team.asp?TeamId=2118&lang=en&sType=p1,2026-11-20T22:09:04+11:00
+AWAY,season_score_for_pg,86.5,https://bsl.org.il/team.asp?TeamId=2118&lang=en&sType=p1,2026-11-20T22:09:04+11:00
+AWAY,season_score_against_pg,79.0,https://bsl.org.il/team.asp?TeamId=2118&lang=en&sType=p1,2026-11-20T22:09:04+11:00
+AWAY,last5_score_for_pg,91.4,https://bsl.org.il/team.asp?TeamId=2118&lang=en&sType=p1,2026-11-20T22:09:04+11:00
+AWAY,last5_score_against_pg,79.6,https://bsl.org.il/team.asp?TeamId=2118&lang=en&sType=p1,2026-11-20T22:09:04+11:00
+AWAY,last10_score_for_pg,MISSING,ONLY_SIX_2026_27_REGULAR_SEASON_GAMES,
+AWAY,last10_score_against_pg,MISSING,ONLY_SIX_2026_27_REGULAR_SEASON_GAMES,
+AWAY,rest_days,4,https://bsl.org.il/team.asp?TeamId=2118&lang=en&sType=p1,2026-11-20T22:09:04+11:00
+AWAY,back_to_back,NO,https://bsl.org.il/team.asp?TeamId=2118&lang=en&sType=p1,2026-11-20T22:09:04+11:00
+AWAY,key_absences,MISSING,NO_EXACT_GAME_INJURY_OR_ACTIVE_LIST_VERIFIED,
+AWAY,lineup_confirmed,MISSING,STARTING_FIVE_NOT_CONFIRMED_FOR_THIS_GAME,
+AWAY,venue,The Shell Beer Sheva,https://bsl.org.il/team.asp?TeamId=2118&lang=en&sType=p1,2026-11-20T22:09:04+11:00
+AWAY,travel_km,MISSING,TRAVEL_DISTANCE_NOT_VERIFIED,
+AWAY,opponent_strength,MISSING,NO_OPPONENT_ADJUSTED_METRIC_VERIFIED,
+AWAY,opponent_strength_method,MISSING,NO_OPPONENT_ADJUSTED_METRIC_VERIFIED,
+AWAY,availability_effect,MISSING,NO_MEASURED_ABSENCE_EFFECT,
+AWAY,adjustment_basis,MISSING,NO_QUANTIFIED_CURRENT_GAME_ADJUSTMENT,
+AWAY,last20_score_for_pg,MISSING,ONLY_SIX_2026_27_REGULAR_SEASON_GAMES,
+AWAY,last20_score_against_pg,MISSING,ONLY_SIX_2026_27_REGULAR_SEASON_GAMES,
+<!-- END ONECHAT_V1 20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001 -->
+<!-- END CANONICAL RESEARCH P-697 -->
+
+<!-- BEGIN RESEARCH ADDENDUM P-697 2026-11-22-settlement-revision-1 -->
+Original: `prediction logs/PREDICTION_LOG_COMBINED_11.md`, P-697. Source: `research/verification/mini_import_P-697_P-703_2026-11-22-2/SETTLEMENT.md` (P-697); exact settlement block follows.
+
+<!-- BEGIN SETTLEMENT P-697 LOCAL-20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001 revision-1 -->
+### P-697 · Basketball/Israel Super League (IBSL GameId 26688, Winner League Game 7) — Ironi Hai Motors Ness Ziona @ Hapoel Altshuler Shaham Beer Sheva/Dimona · 2026-11-20 IST · revision-1
+
+**Revision:** revision-1 · parent NONE · effective 2026-11-22T22:30:00+11:00 · affected ALL · changes NONE.
+**Card state:** SETTLED.
+- **Local key / native ID:** `LOCAL-20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001` · `REQ:BASKETBALL:ISRAEL_SUPER_LEAGUE:HAPOEL_BEER_SHEVA:IRONI_NESS_ZIONA:2026-11-20T11:10:00Z`.
+- **Custody & timing:** `SEALED` (server push `2026-11-20T11:15:24Z`, commit `824758df2`; scheduled tip `2026-11-20T11:10:00Z`, so sealed 5m24s after it; research `11:07:49Z`–`11:14:40Z`). Assessment `SEALED_AFTER_SCHEDULED_FIRST_PLAY_UNVERIFIED`. Actual first play `NOT_VERIFIED`: no permitted page gives a wall-clock tip-off. It counts for Track P only if a later capture shows tip-off after 11:15:24Z.
+- **Verified final (B):** **Hapoel Altshuler Shaham Beer Sheva/Dimona 90-80 Ironi Hai Motors Ness Ziona**, regulation. By quarter BSD 27-19-22-22=90, NZ 20-24-24-12=80 (sum check 27+19+22+22=90, 20+24+24+12=80; box check BSD 23×2+11×3+11=90, NZ 24×2+7×3+11=80). Home margin +10, total 170.
+- **Source & capture:** IBSL game page `G0001_ibsl_game26688.html` (SHA-256 in [EVENT_FINALS.csv](EVENT_FINALS.csv)); IBSL results list (same owner). Evidence B: one owner lineage.
+- **Definition:** HANDICAP and TOTAL on the final score including any overtime (`INCLUDE_OVERTIME` in the registered CONTRACTS.csv). Operator terms unknown and not needed.
+- **Expected vs final:** home margin centre −9.020 (SD 12.566), observed +10: error +19.02, z = +1.51 (PIT 0.935). Total centre 171.313 (SD 18.795), observed 170: z = −0.07.
+- **Card-mean Brier / d:** 0.2568 / −0.0068.
+
+| Rank | Exact original proposition | Original p | BASELINE_P | Grade | Evidence | Counts toward wins | Basis |
+|---|---|---:|---|---|---|---|---|
+| NOT_RANKED | Beer Sheva/Dimona +7.5 | 0.45186 | UNAVAILABLE | **WIN** | B | no | margin +10 + 7.5 > 0 |
+| R1 | Ness Ziona −7.5 | 0.54814 | UNAVAILABLE | **LOSS** | B | yes (rank 1) | away margin −10 − 7.5 < 0 |
+| R2 | Over 169.5 | 0.53843 | UNAVAILABLE | **WIN** | B | yes (rank 2) | 170 > 169.5 |
+| NOT_RANKED | Under 169.5 | 0.46157 | UNAVAILABLE | **LOSS** | B | no | 170 > 169.5 |
+
+**R1–R12 retrospective:** The card was a thin six-game form model: 0.4 × season + 0.6 × last five, no home edge, no opponent adjustment, and it said itself that no row reached its own 62% / 58% rank gates. The registered ranker still ranked both favoured sides, at 0.548 and 0.538, both inside the 0.05 no-direction band. Beer Sheva, 1–5 coming in, won by ten on 11/24 from three (45.8%) and 23/40 on twos (57.5%), against Ness Ziona's 7/21 (33.3%) and 24/52 (46.2%). Ness Ziona's 17 offensive rebounds to 8 did not make up for 18 turnovers to 15. The total landed half a point over the line. Grades come from the box score; nothing was backfilled.
+
+**Deep-review triggers (DEEPLOSS-v1):** top side Ness Ziona −7.5 (0.548, LOSS) = rank 1 · top total Over 169.5 (0.538, WIN) → one review.
+
+#### Deep loss review · P-697 · TOP_SIDE_AND_RANK_1 · Ironi Hai Motors Ness Ziona −7.5 (`DLR-2026-11-22-011`)
+
+**1. Exact frozen claim.** L1 HANDICAP AWAY −7.5 on the final score including overtime, p = 0.54814; centre: Ness Ziona by 9.020; no reference p, no BASELINE_P (`UNAVAILABLE:NO_FROZEN_SPORTING_BASELINE`), no ledger rows. Server seal 2026-11-20T11:15:24Z, after the 11:10:00Z scheduled tip; actual tip unverified.
+**2. Verified outcome.** Beer Sheva/Dimona 90-80 (quarters above, sum and box checks pass); regulation. Ness Ziona needed to win by 8 or more; it lost by 10, missing the line by 17.5 points (1.39 frozen SDs).
+**3. Distribution check.** In the frozen N(−9.02, 12.566) home-margin model the actual +10 sits at PIT 0.935 (z = +1.51). The card gave a home win by 10 or more 7.0%. Row Brier 0.3005 against 0.2500 for a constant 0.5; log loss 0.794 against 0.693. The card's own work made this row worse than no forecast.
+**4. Error decomposition.** The centre (−9.02) came wholly from the blend of six-game for/against means. No home edge was added: the card says "no numeric home adjustment made", so the centre carried 0 for home court. No opponent adjustment was made, though the card notes Beer Sheva had already faced Hapoel Tel Aviv and Hapoel Jerusalem. The width (12.57, from the two teams' six margins) was not the failure: a 19-point miss in a 12.6-point SD is uncommon but not extreme.
+**5. Research audit, fact by fact.** Fixture, date, venue and both teams' six results: TRUE (IBSL pages, captured before the game per the card). Records W1–L5 and W4–L2: TRUE as of the cutoff. Rest days 3 and 4: not re-verified (NOT_ASSESSABLE). Starting fives and absences: marked MISSING by the card; Amari Bailey, whom the card noted as season-inactive, does not appear in the box score, consistent with the card. Missed before the cutoff: home court and schedule strength, both knowable from the same IBSL pages. No market, exposure or invention breach.
+**6. What decided the game.** Three-point shooting: Beer Sheva 11/24 (45.8%) against 7/21 (33.3%), +12 points from three. Two-point efficiency: 57.5% against 46.2%. Turnovers: Ness Ziona 18, Beer Sheva 15, with Beer Sheva 11 steals. Ness Ziona 17 offensive rebounds to 8 kept it within ten. Beer Sheva led 27-20 after one and 68-68 after three, then won the fourth 22-12.
+**7. Knowable at the cutoff?** Home court: KNOWABLE (fixture page). Schedule strength behind Beer Sheva's 1–5: KNOWABLE (its six opponents were on the results list). Shooting splits: NOT_KNOWABLE. Fourth-quarter 22-12: NOT_KNOWABLE.
+**8. Process audit.** No reference or effect-table row was declared; there is no IBSL home-edge row in the repository, and the card set it to 0 rather than declare a scenario. The L5 and season windows overlap (five of six games), so the 0.6 weight on L5 counts most games twice. The line choice was supplied by the owner. p = 0.548 sits inside the no-direction band, and the card itself refused to rank it; the registered ranker ranked it anyway. Arithmetic reproduces (Φ((−9.02 + 7.5)/12.566) = 0.452 home side).
+**9. Verdict.** **MIXED.** A MODEL_LIMIT part: a six-game, unshrunk, schedule-blind centre with home court set to 0, in a league with no repository parameters. A VARIANCE part: a 12-point three-point swing. The pick should not have been made. The card already said so, and the 0.548 number carried no direction.
+**10. Cutoff-only counterfactual.** Declared scenario, diagnostic only: shrink the form margin 50% toward 0 (six games) and add a +3.0 home edge, a scenario value, not a measured IBSL row. The home-margin centre becomes −1.5, and P(Ness Ziona −7.5) = Φ((−7.5 + 1.5)/12.566) ≈ 0.32. The card's side would have flipped.
+**11. Failure class and recurrence.** `SMALL_SAMPLE_STRENGTH_OVERREACH`. `ml deep-loss tally` groups by printed alias. Without an alias the class now has 2 reviews (P-662, P-697), below the threshold of 3. The same registered class has 3 more reviews under the alias `PLUS_HANDICAP_WITHOUT_OPPONENT_CHECK` (P-660, P-685, P-693), and that group is already routed to prompt 8. Five reviews in all share the underlying failure: small, unadjusted early-season samples.
+**12. Correction.** Already in the v30.0 list ([TRIAGE](../external_reviews_2026-11-22/TRIAGE.md)): empirical-Bayes shrinkage of early-season form, plus an opponent-adjusted centre and a declared home-edge row before pricing a small-sample league. Owner: prompt 8 under a new registration. Acceptance test: on held-out IBSL/FIBA-40 games, Brier of the shrunk, home-adjusted centre below the unshrunk one. Rollback: keep the current recipe. No change is made under FREEZE-v1.
+**13. Matched wins.** Over 169.5 (rank 2) won by half a point with the same unshrunk recipe: a coin-flip number on a 0.5-point margin is not evidence the recipe works.
+**14. Honesty checklist.** PASS: no post-game fact used as if known; the variance part is quantified (+12 from three); no percentages of blame; frozen rows, ranks and grades unchanged.
+
+<!-- END SETTLEMENT P-697 LOCAL-20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0001 revision-1 -->
+<!-- END RESEARCH ADDENDUM P-697 2026-11-22-settlement-revision-1 -->
+
+<!-- BEGIN CANONICAL RESEARCH P-698 -->
+## P-698 — Soccer/China FA Cup semi-final — Shanghai Port @ Beijing Guoan · 2026-11-20 CST
+
+Canonical retention by prompt-4 import `2026-11-22T20:00:00+00:00`. Scheduled start `2026-11-20T22:35:00+11:00`. Original `20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0002` (11584 B, SHA-256 `1310de4b64a2a7330db6e50b75b03dbe66c326eee2ea8ee24fc43ca0c4e4c7f4`, source `origin/card-drops:drops/cards/20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0002.md`, seal `UNSEALED` at `UNSEALED`). Original card follows verbatim; no forecast reissued; Track P scored separately via `ml one-chat score`.
+
+# Research card — 20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0002
+
+**LOCAL_KEY:** LOCAL-20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0002
+**Authority:** main `cb97bbc2a9f882e7f8a093648b6137315951da8b`, MDS-2026.11.18-v29.1 / P-2026.11.18-v29.1 / SCV-v20 / ONE-CHAT-v3.
+**Custody status:** REQUEST_REGISTERED, POST_SCHEDULE_RESEARCH, NO_ACTUAL_FIRST_PLAY_VERIFIED, NO_PROSPECTIVE_ELIGIBILITY_ASSERTED.
+**Registration:** `card-drops` commit `7691880358498dba9c580c8cef7826ba030b7c6d`; confirmed on `forecast-seals` `155d4165b12d176812f3558c91834d5b3f5752bf` (2026-11-20 22:35:30 AEDT).
+**Timing:** Request first inspected 2026-11-20T22:33:43+11:00. Research began 2026-11-20T22:36:22+11:00 and completed 2026-11-20T22:42:53+11:00; scheduled first play 22:35 AEDT, actual first play not independently verified. No valid live not-started observation was obtained after registration. No outcome of this match was observed.
+
+## Fixture and sport-only research
+Chinese FA Cup semi-final, Beijing Guoan (home) vs Shanghai Port (away), Workers' Stadium, Beijing. Official CFA source: https://www.thecfa.cn/zuxiebei/20261102/38358.html; scheduled 2026-11-20 19:35 China time / 22:35 AEDT. Single-elimination semifinal, regulation 90-minute goals and corners exclude extra time/penalties; first-half line counts 45 minutes and first-half added time.
+
+2026 Chinese Super League 30-match season: Beijing 15W-10D-5L, 58 goals scored, 36 conceded (3rd); Shanghai 14W-8D-8L, 56 scored, 37 conceded (5th). Source statistical rows as of 8 November: https://matchscan.co/en/database/chinese-super-league/beijing-guoan and https://matchscan.co/en/database/chinese-super-league/shanghai-port. Results are earlier than this match, as recorded at https://fdb4.io/team/beijing-guoan/results and https://fdb4.io/team/shanghai-port/results. Last five scored/conceded: Beijing 9/3, Shanghai 16/4. Last ten: Beijing 24/9, Shanghai 26/10. Last twenty league games: Beijing 43/22, Shanghai 41/24. Both last played league match 8 Nov, leaving 11 full calendar rest days, but national-team arrivals occurred later. H2H 2026: Beijing 2–0 Shanghai in 1 March Super Cup; 2–2 on 10 May; 0–0 on 5 Sept.
+
+20 November confirmed starting lists were published at 18:20 CST. Beijing XI: Hou Sen, Guilherme Ramos, Ru Zinan, Bai Yang, Wang Gang, Aboubacar Konte, Zhang Xizhe, Wang Yu, Jia Feifan, Cao Yongjing, Zhang Yuning. Beijing absences: Fabio injured, Serginho injured, Dawan suspended. Lin Liangming substitutes. Shanghai XI: Yan Junling, Jiang Guangtai, Wei Zhen, Yang Xi, Li Shuai, Yusup Umidjan, Mateus Vital, Oscar Melendo, Wu Lei, Prince Ampem, Leonardo. Jean-Claude Aziangbe substitutes. Source https://news.zhibo8.com/zuqiu/2026-11-20/6afff396a5413native.htm. Nick Montgomery coaches Beijing; Kevin Muscat Shanghai. There is no independently measured injury on/off scoring/corner effect; none was invented. Beijing temperature forecast ~2–6°C during evening, weak northerly wind, no sourced numerical weather effect (https://en.weather.com.cn/weather/101010100.shtml). Cup pressure, weather, availability, opponent strength and travel were not quantitatively adjusted.
+
+### Raw last-ten league game rows (most recent first)
+Beijing GF: 1,4,1,3,0,1,3,3,4,4; GA: 0,3,0,0,0,1,3,0,2,0; corners FOR: 11,4,5,4,1,1,9,5,1,5; corners AGAINST: 3,5,5,2,14,4,5,8,10,5.
+Shanghai GF: 6,3,3,4,0,1,2,1,3,3; GA: 1,1,0,2,0,0,1,1,2,2; corners FOR: 5,5,5,8,14,0,5,10,3,4; corners AGAINST: 3,3,1,5,1,3,2,3,0,7.
+Both teams' 5 Sept meeting repeats across the two ten-game windows. Exact last-ten first-half event rows are unavailable; current league first-half share supplies the timing approximation instead.
+
+### Explicit, uncalibrated model arithmetic
+For each goal scoring centre: average each side's goals scored with the opponent's goals conceded; separately repeat using season xG. Season actual paired λ_home 1.5833, λ_away 1.5333. Season xG paired λ_home 1.4233 and λ_away 1.1883 (xG input Beijing 48.9 for/28.8 conceded; Shanghai 42.5 for/36.5 conceded, 30 matches). Recent L10 paired λ_home 1.700, λ_away 1.750; L5 paired λ_home 1.300, λ_away 1.900. Fixed synthesis: 60% of the 50/50 actual-season/xG-season centre +25% L10 +15% L5. Regulation goal centres λ_home 1.522, λ_away 1.539, λ_total 3.061. Poisson independent-goals approximation, no simulation or calibrated model claimed. P(total ≥3) = 1−e^(−3.061)(1+3.061+3.061²/2) = 0.59034.
+
+League 2026: 240 matches, first-half 1.31 of 3.17 goals per game (https://xgoalspro.com/football/china/super-league/stats/). Approximate first-half λ =3.061×1.31/3.17=1.265; P(first-half ≥1)=1−exp(−1.265)=0.71775. Actual team-specific half splits not verified.
+
+Corners: season paired Beijing 0.5×(177/30+119/30)=4.9333; Shanghai 0.5×(173/30+142/30)=5.2500. Recent ten paired Beijing 0.5×(4.6+2.8)=3.700; Shanghai 0.5×(5.9+6.1)=6.000. Weighted 60% season +40% recent => Beijing 4.440, Shanghai 5.550, μ=9.990. Pooled 20 team-match total corner counts sample variance 14.8526 (one duplicate fixture). Moment-matched negative binomial r=μ²/(variance−μ)=20.5239; P(corners ≤10)=0.58571. Regression, weather, lineup and corner covariance uncertainties remain material. No bookmaker inputs or external predictions.
+
+### Supplied-contract directions, analytical only
+1. L1 FIRST_HALF OVER 0.5 goals: 71.8%, opposing UNDER 28.2%; not a certified pregame issued pick.
+2. L2 FULL_GAME OVER 2.5 goals: 59.0%, opposing UNDER 41.0%. Correlated with L1.
+3. L3 REGULATION CORNERS UNDER 10.5: 58.6%, opposing OVER 41.4%. Diversification alternative.
+L1 meets numerical Rank-1 gate 62%; L2 meets Rank-2 floor 58%, but neither is prospectively qualified. Principal failure route: material unavailable attackers for Beijing without measured effects, knockout tempo, and cold weather. Sensitivity to ±0.3 total goals is P(over 2.5) about 52%–65%, not a confidence interval.
+
+## ONECHAT_V1 — first, unchanged research card
+<!-- BEGIN ONECHAT_V1 20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0002 -->
+format: ONECHAT_V1
+card_key: 20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0002
+sport: Soccer
+competition: China FA Cup
+home: Beijing Guoan
+away: Shanghai Port
+scheduled_start: 2026-11-20T22:35:00+11:00
+request_at: 2026-11-20T22:33:43+11:00
+research_start_at: 2026-11-20T22:36:22+11:00
+research_end_at: 2026-11-20T22:42:53+11:00
+not_started_source: NONE_FOUND
+not_started_observed_at:
+outcome_exposure: NONE
+
+PICKS
+label,family,side,line,p,lean,centre,availability_basis,result_source
+L1,PERIOD,OVER,0.5,0.71775,,1.265,UNMEASURED,https://www.fotmob.com/matches/beijing-guoan-vs-shanghai-port/9g2g0by
+L1,PERIOD,UNDER,0.5,0.28225,,1.265,UNMEASURED,https://www.fotmob.com/matches/beijing-guoan-vs-shanghai-port/9g2g0by
+L2,TOTAL,OVER,2.5,0.59034,,3.061,UNMEASURED,https://www.fotmob.com/matches/beijing-guoan-vs-shanghai-port/9g2g0by
+L2,TOTAL,UNDER,2.5,0.40966,,3.061,UNMEASURED,https://www.fotmob.com/matches/beijing-guoan-vs-shanghai-port/9g2g0by
+L3,CORNERS,OVER,10.5,0.41429,,9.990,UNMEASURED,https://www.fotmob.com/matches/beijing-guoan-vs-shanghai-port/9g2g0by
+L3,CORNERS,UNDER,10.5,0.58571,,9.990,UNMEASURED,https://www.fotmob.com/matches/beijing-guoan-vs-shanghai-port/9g2g0by
+
+FACTS
+side,field,value,source,observed_at
+HOME,season_games,30,https://matchscan.co/en/database/chinese-super-league/beijing-guoan,2026-11-20T22:42:53+11:00
+HOME,season_score_for_pg,1.9333,https://matchscan.co/en/database/chinese-super-league/beijing-guoan,2026-11-20T22:42:53+11:00
+HOME,season_score_against_pg,1.2000,https://matchscan.co/en/database/chinese-super-league/beijing-guoan,2026-11-20T22:42:53+11:00
+HOME,last5_score_for_pg,1.8,https://fdb4.io/team/beijing-guoan/results,2026-11-20T22:42:53+11:00
+HOME,last5_score_against_pg,0.6,https://fdb4.io/team/beijing-guoan/results,2026-11-20T22:42:53+11:00
+HOME,last10_score_for_pg,2.4,https://fdb4.io/team/beijing-guoan/results,2026-11-20T22:42:53+11:00
+HOME,last10_score_against_pg,0.9,https://fdb4.io/team/beijing-guoan/results,2026-11-20T22:42:53+11:00
+HOME,last10_first_half_goals_pg,MISSING,NO_VERIFIED_LAST10_HT_SERIES,
+HOME,last10_corners_for_pg,4.6,https://matchscan.co/en/database/chinese-super-league/beijing-guoan,2026-11-20T22:42:53+11:00
+HOME,last10_corners_against_pg,6.1,https://matchscan.co/en/database/chinese-super-league/beijing-guoan,2026-11-20T22:42:53+11:00
+HOME,rest_days,11,https://fdb4.io/team/beijing-guoan/results,2026-11-20T22:42:53+11:00
+HOME,key_absences,FABIO_INJURED;SERGINHO_INJURED;DAWAN_SUSPENDED,https://news.zhibo8.com/zuqiu/2026-11-20/6afff396a5413native.htm,2026-11-20T22:42:53+11:00
+HOME,lineup_confirmed,YES_REPORTED_OFFICIAL_18_20_CST,https://news.zhibo8.com/zuqiu/2026-11-20/6afff396a5413native.htm,2026-11-20T22:42:53+11:00
+HOME,venue,WORKERS_STADIUM_BEIJING,https://www.thecfa.cn/zuxiebei/20261102/38358.html,2026-11-20T22:42:53+11:00
+HOME,travel_km,MISSING,ACTUAL_TRAVEL_DISTANCE_NOT_VERIFIED,
+HOME,opponent_strength,MISSING,NO_OPPONENT_ADJUSTED_MEASURE,
+HOME,opponent_strength_method,MISSING,NO_OPPONENT_ADJUSTED_MEASURE,
+HOME,availability_effect,MISSING,NO_SOURCED_MEASURED_ABSENCE_EFFECT,
+HOME,adjustment_basis,MISSING,NO_QUANTIFIED_AVAILABILITY_WEATHER_CUP_EFFECT,
+HOME,last20_score_for_pg,2.15,https://fdb4.io/team/beijing-guoan/results,2026-11-20T22:42:53+11:00
+HOME,last20_score_against_pg,1.10,https://fdb4.io/team/beijing-guoan/results,2026-11-20T22:42:53+11:00
+AWAY,season_games,30,https://matchscan.co/en/database/chinese-super-league/shanghai-port,2026-11-20T22:42:53+11:00
+AWAY,season_score_for_pg,1.8667,https://matchscan.co/en/database/chinese-super-league/shanghai-port,2026-11-20T22:42:53+11:00
+AWAY,season_score_against_pg,1.2333,https://matchscan.co/en/database/chinese-super-league/shanghai-port,2026-11-20T22:42:53+11:00
+AWAY,last5_score_for_pg,3.2,https://fdb4.io/team/shanghai-port/results,2026-11-20T22:42:53+11:00
+AWAY,last5_score_against_pg,0.8,https://fdb4.io/team/shanghai-port/results,2026-11-20T22:42:53+11:00
+AWAY,last10_score_for_pg,2.6,https://fdb4.io/team/shanghai-port/results,2026-11-20T22:42:53+11:00
+AWAY,last10_score_against_pg,1.0,https://fdb4.io/team/shanghai-port/results,2026-11-20T22:42:53+11:00
+AWAY,last10_first_half_goals_pg,MISSING,NO_VERIFIED_LAST10_HT_SERIES,
+AWAY,last10_corners_for_pg,5.9,https://matchscan.co/en/database/chinese-super-league/shanghai-port,2026-11-20T22:42:53+11:00
+AWAY,last10_corners_against_pg,2.8,https://matchscan.co/en/database/chinese-super-league/shanghai-port,2026-11-20T22:42:53+11:00
+AWAY,rest_days,11,https://fdb4.io/team/shanghai-port/results,2026-11-20T22:42:53+11:00
+AWAY,key_absences,NO_VERIFIED_STARTER_ABSENCE;JEAN_CLAUDE_SUBSTITUTE,https://news.zhibo8.com/zuqiu/2026-11-20/6afff396a5413native.htm,2026-11-20T22:42:53+11:00
+AWAY,lineup_confirmed,YES_REPORTED_OFFICIAL_18_20_CST,https://news.zhibo8.com/zuqiu/2026-11-20/6afff396a5413native.htm,2026-11-20T22:42:53+11:00
+AWAY,venue,WORKERS_STADIUM_BEIJING,https://www.thecfa.cn/zuxiebei/20261102/38358.html,2026-11-20T22:42:53+11:00
+AWAY,travel_km,MISSING,ACTUAL_TRAVEL_DISTANCE_NOT_VERIFIED,
+AWAY,opponent_strength,MISSING,NO_OPPONENT_ADJUSTED_MEASURE,
+AWAY,opponent_strength_method,MISSING,NO_OPPONENT_ADJUSTED_MEASURE,
+AWAY,availability_effect,MISSING,NO_SOURCED_MEASURED_ABSENCE_EFFECT,
+AWAY,adjustment_basis,MISSING,NO_QUANTIFIED_AVAILABILITY_WEATHER_CUP_EFFECT,
+AWAY,last20_score_for_pg,2.05,https://fdb4.io/team/shanghai-port/results,2026-11-20T22:42:53+11:00
+AWAY,last20_score_against_pg,1.20,https://fdb4.io/team/shanghai-port/results,2026-11-20T22:42:53+11:00
+<!-- END ONECHAT_V1 20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0002 -->
+<!-- END CANONICAL RESEARCH P-698 -->
+
+<!-- BEGIN RESEARCH ADDENDUM P-698 2026-11-22-settlement-revision-1 -->
+Original: `prediction logs/PREDICTION_LOG_COMBINED_11.md`, P-698. Source: `research/verification/mini_import_P-697_P-703_2026-11-22-2/SETTLEMENT.md` (P-698); exact settlement block follows.
+
+<!-- BEGIN SETTLEMENT P-698 LOCAL-20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0002 revision-1 -->
+### P-698 · Soccer/China FA Cup semi-final — Shanghai Port @ Beijing Guoan · 2026-11-20 CST · revision-1
+
+**Revision:** revision-1 · parent NONE · effective 2026-11-22T22:30:00+11:00 · affected ALL · changes NONE.
+**Card state:** SETTLED.
+- **Local key / native ID:** `LOCAL-20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0002` · `REQ:SOCCER:CHINA_FA_CUP:BEIJING_GUOAN:SHANGHAI_PORT:2026-11-20T11:35:00Z`.
+- **Custody & timing:** `UNSEALED`: the drop was refused for having no not-started page and no `not_started_observed_at`. The card's research began 2026-11-20T11:36:22Z. FotMob's half-time record gives the first half starting at "20.11.2026 12:35:27" on its own clock, about 11:35:27Z if that clock is UTC+1 (unofficial). If so, research began about a minute after kick-off. The card records no outcome seen. Assessment `UNSEALED_DROP_REFUSED`; research only.
+- **Verified final (A):** **Beijing Guoan 0-2 Shanghai Port**, 90 minutes, no extra time. First half 0-1 (Wu Lei, penalty, about 30'); second half 0-1 (Mateus Vital 59'). Sum check 0+0=0, 1+1=2. Corners 3-3 = 6. Beijing's Wang Gang sent off at 26-27' (VAR handball, penalty).
+- **Sources & captures:** FotMob `G0002_fotmob.html`; Beijing Guoan FC's own report, republished by zhibo8, `G0002_zhibo8_report.html` (2026-11-20 21:42:53 CST). Two independent lineages; corners from FotMob only.
+- **Definition:** L1 first half including stoppage time; L2 goals and L3 corners in regulation 90 minutes (registered contracts). No extra time was played, so regulation equals the full match.
+- **Expected vs final:** goals λ 3.061, observed 2 (P(T ≤ 2) = 0.410); first-half λ 1.265, observed 1; corners μ 9.99 (NB r 20.52), observed 6 (P(C ≤ 6) = 0.184).
+- **Card-mean Brier / d:** 0.1999 / +0.0501.
+
+| Rank | Exact original proposition | Original p | BASELINE_P | Grade | Evidence | Counts toward wins | Basis |
+|---|---|---:|---|---|---|---|---|
+| R1 | First-half goals Over 0.5 | 0.71775 | UNAVAILABLE | **WIN** | A | yes (rank 1) | 1 > 0.5 |
+| NOT_RANKED | First-half goals Under 0.5 | 0.28225 | UNAVAILABLE | **LOSS** | A | no | 1 > 0.5 |
+| R2 | Total goals Over 2.5 | 0.59034 | UNAVAILABLE | **LOSS** | A | yes (rank 2) | 2 < 2.5 |
+| NOT_RANKED | Total goals Under 2.5 | 0.40966 | UNAVAILABLE | **WIN** | A | no | 2 < 2.5 |
+| NOT_RANKED | Total corners Over 10.5 | 0.41429 | UNAVAILABLE | **LOSS** | A (FotMob) | no | 6 < 10.5 |
+| R3 | Total corners Under 10.5 | 0.58571 | UNAVAILABLE | **WIN** | A (FotMob) | no (rank 3) | 6 < 10.5 |
+
+Ranks are the registered rule computed on this refused card, not registered ranks.
+
+**R1–R12 retrospective:** The card's Poisson (λ 3.061) and negative-binomial corner (μ 9.99) arithmetic reproduces exactly (0.59034 and 0.58571). The match turned at 26': VAR gave a penalty and a red card against Beijing's Wang Gang, one of the card's confirmed starters, and Wu Lei scored it. That settled the first-half Over by itself. A ten-man Beijing then had 1 shot on target all match. Shanghai had 18 shots, 9 on target and 13 big chances (FotMob), and scored once more. The research began after kick-off, so the card is research-only whatever its grades.
+
+**Deep-review triggers (DEEPLOSS-v1):** top side none (no winner or handicap row) · top total Over 2.5 goals (0.590, LOSS) · rank 1 first-half Over 0.5 (0.718, WIN) → one review.
+
+#### Deep loss review · P-698 · TOP_TOTAL · Total goals Over 2.5 (`DLR-2026-11-22-012`)
+
+**1. Exact frozen claim.** L2 TOTAL OVER 2.5 goals, regulation 90 minutes, p = 0.59034 from an independent-Poisson total with λ = 3.061 (60% season actual/xG mix, 25% L10, 15% L5). No reference, BASELINE_P or ledger rows. Never sealed; research began about a minute after kick-off.
+**2. Verified outcome.** 0-2 at 90 minutes (both sources); 2 goals, missing the line by 0.5. In the frozen model a 2-goal game had probability 0.219, and at most 2 goals 0.410.
+**3. Distribution check.** PIT for 2 goals is between P(T ≤ 1) = 0.190 and P(T ≤ 2) = 0.410: a mid-low outcome, not a tail. Row Brier 0.3485 against 0.25; log loss 0.892 against 0.693.
+**4. Error decomposition.** Centre 3.061 against an observed 2: −1.06 goals. The centre already exceeded both teams' season means (Beijing 58 for/36 against, Shanghai 56/37 in 30 games). It was raised by recent Shanghai scoring (16 in its last five). No adjustment was made for a cup semi-final, the cold, or Beijing's three listed absences. The Poisson width is set by λ, so there is no separate width error.
+**5. Research audit, fact by fact.** Starting XIs: TRUE as far as the club report and FotMob show (Wang Gang, Wu Lei and Mateus Vital all started). Season records and goals: not re-verified against an official CSL table (NOT_ASSESSABLE; the cited sites were not re-opened). H2H 0-0 on 5 September: TRUE (FotMob h2h). Timing: research after kick-off, which the card disclosed. No market, exposure or invention breach found.
+**6. What decided the game.** The 26' red card and penalty. Then Shanghai's finishing: 13 big chances and 9 shots on target for 2 goals, against Beijing's 2 big chances and 1 shot on target. A ten-man home side cuts its own attack, which lowers expected goals even as the visitors dominate. Shanghai had 66% of the ball in the second half.
+**7. Knowable at the cutoff?** Red card: NOT_KNOWABLE. Shanghai's conversion: NOT_KNOWABLE. Cup-semi tempo: PARTLY (a signal; no measured size).
+**8. Process audit.** L1 (first half Over 0.5) and L2 (Over 2.5) share one goal process. The card said so ("Correlated with L1") and did not rank them as independent evidence. The overlapping L5 inside L10 inside the season gives recent games extra weight. The arithmetic reads back exactly. Research started after kick-off, the card's largest process failure; it makes the card unusable for Track P regardless of the result.
+**9. Verdict.** **VARIANCE**, shown by the numbers in 3 and 6: a 41% outcome in the frozen model, decided by a 26' red card and 13 big chances turned into 2 goals. Whether the pick should have been made: the number was a fair reading of both teams' scoring, but the card was written after kick-off and should not have been carded as a pre-game card.
+**10. Cutoff-only counterfactual.** NOT_ASSESSABLE: no knowable driver had a measurable effect to price.
+**11. Failure class and recurrence.** `VARIANCE` (11 earlier VARIANCE reviews; VARIANCE is never a pattern).
+**12. Correction.** NO_CHANGE for the forecast. The timing failure is already handled: from v29.2 the brief allows late requests, and the card counts only with a not-started page during research and a seal before the captured first play.
+**13. Matched wins.** First-half Over 0.5 (rank 1) won from the same process, but on a penalty after a red card: that win says nothing for the first-half model. Corners Under (rank 3) won with 6 against a 9.99 centre (P(≤ 6) = 0.18 in the card's own model); no measured effect explains the low count, so the win is not evidence for the corner model.
+**14. Honesty checklist.** PASS.
+
+<!-- END SETTLEMENT P-698 LOCAL-20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0002 revision-1 -->
+<!-- END RESEARCH ADDENDUM P-698 2026-11-22-settlement-revision-1 -->
+
+<!-- BEGIN CANONICAL RESEARCH P-699 -->
+## P-699 — Basketball/NBA Cup East Group B (game 0022600045) — Indiana Pacers @ Cleveland Cavaliers · 2026-11-20 ET
+
+Canonical retention by prompt-4 import `2026-11-22T20:00:00+00:00`. Scheduled start `2026-11-21T11:30:00+11:00`. Original `20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003` (14258 B, SHA-256 `cecb1ed127089e608d7f73d2a8b66fa260179cfb92f62152ec35c31b22f18765`, source `origin/forecast-seals:research/one_chat/sealed/cecb1ed127089e608d7f73d2a8b66fa260179cfb92f62152ec35c31b22f18765.md`, seal `SEALED` at `2026-11-21T00:28:31Z`). Original card follows verbatim; no forecast reissued; Track P scored separately via `ml one-chat score`.
+
+# Game 3 research card — IND at CLE — NBA Cup 20 November 2026
+
+**Card key:** `20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003`  
+**Local key:** `LOCAL-20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003`  
+**Authority:** `main` at `cb97bbc2a9f882e7f8a093648b6137315951da8b`; governing MDS-2026.11.18-v29.1; ONE-CHAT-v3; competition NBA.  
+**Exact registered contract:** Pacers +5.5 / Cavaliers -5.5; combined Over/Under 234.5 points, all including overtime.  
+**Timing:** Original request received by chat before 11:22:38 AEDT; registration published at 11:24:01 AEDT, forecast research began 2026-11-21T11:24:09+11:00, completed 2026-11-21T11:27:02+11:00; scheduled first tip 11:30:00 AEDT. Unstarted public status (the upcoming game remained in the "Coming up" section without a score) on https://boxscorelab.com/teams/indiana-pacers/games/, observed 2026-11-21T11:25:14+11:00. Actual first play requires later independent verification, not inferred from schedule. Outcome exposure NONE. No final score or in-play result was read.
+
+## Match context and team availability
+Official NBA fixture https://www.nba.com/game/ind-vs-cle-0022600045: Indiana Pacers visit Cleveland Cavaliers, Friday 20 Nov 2026 19:30 Eastern, Saturday 21 Nov 11:30 AEDT, Rocket Arena, Cleveland. The game is NBA Cup East Group B, counting toward 2026-27 NBA regular-season records. Source official Pacers preview https://www.nba.com/pacers/news/preview-pacers-cavaliers-261120, published 19 Nov 2026 10:39 ET. Pacers 5–10 (111.5 scored/114.8 conceded); Cleveland 8–8 (118.3 scored/116.3 conceded). Both last played Wed Nov 18: Indiana lost 104–119 against Houston, Cleveland lost 121–124 against Memphis. Both get one full rest day, neither on a back-to-back. Cleveland has home court. In their 2025–26 head-to-head Cleveland swept the four regular-season games (historical, roster changes reduce relevance).
+
+**Availability information known before forecast:** Indiana: Tyrese Haliburton OUT (hamstring), Johnny Furphy OUT (ACL), Ben Sheppard OUT (meniscus), T. J. McConnell probable, Braden Smith questionable. Andrew Nembhard was listed questionable on the official Pacers preview but reported available at 18:10 ET on game day, prior to cutoff (https://www.cbssports.com/fantasy/basketball/news/pacers-andrew-nembhard-available-versus-cleveland/); an available player is not proof he will start or has unrestricted minutes. Cleveland: Evan Mobley OUT (toe sprain), Jaylon Tyson OUT (ankle management), Nae'Qwan Tomlin OUT (back), Khalifa Diop OUT (assignment), Peyton Watson questionable (back). Exact starting fives and active game rosters NOT VERIFIED in a club-issued confirmed list; projected fives in https://www.nba.com/pacers/news/preview-pacers-cavaliers-261120 are explicitly only probable. No quantitative availability impact, fatigue or home-vs-away effect beyond a frozen league-level home offset was invented.
+
+**Environment/strategy:** NBA 48-minute game with four 12-minute quarters. Regulation ties trigger 5-minute overtime periods, repeated until decided; both supplied lines include overtime. Cup group play matters for differential but is still scored as an ordinary regular-season final. Recent Pacers perimeter defence and Cleveland's offensive rebounding are tactical risk factors in the official preview. Neither travel distance nor altitude adjustment was measured.
+
+## Inspectable historical data (2026–27, source snapshots before scheduled tip)
+All rows are completed prior to Nov 20, 2026 and exclude the fixture itself. Historical sport field source: https://boxscorelab.com/teams/cleveland-cavaliers/games/ and https://boxscorelab.com/teams/indiana-pacers/games/; site says "Coming up" for this game and last completed game on Nov 18. Data sources label original NBA Stats origin. Pooled historical game rows are correlated by opponents and not an independent forecast backtest.
+
+| Date (US) | Team | Points scored | Points allowed |
+|---|---|---:|---:|
+| 2026-10-21 | IND | 123 | 120 |
+| 2026-10-23 | IND | 105 | 121 |
+| 2026-10-25 | IND | 136 | 109 |
+| 2026-10-26 | IND | 102 | 110 |
+| 2026-10-28 | IND | 109 | 114 |
+| 2026-10-30 | IND | 125 | 145 |
+| 2026-11-01 | IND | 90 | 98 |
+| 2026-11-02 | IND | 104 | 108 |
+| 2026-11-04 | IND | 107 | 103 |
+| 2026-11-07 | IND | 102 | 114 |
+| 2026-11-09 | IND | 122 | 125 |
+| 2026-11-11 | IND | 114 | 101 |
+| 2026-11-13 | IND | 106 | 104 |
+| 2026-11-15 | IND | 124 | 131 |
+| 2026-11-18 | IND | 104 | 119 |
+| 2026-10-22 | CLE | 106 | 114 |
+| 2026-10-24 | CLE | 125 | 121 |
+| 2026-10-26 | CLE | 127 | 125 |
+| 2026-10-28 | CLE | 121 | 111 |
+| 2026-10-29 | CLE | 111 | 114 |
+| 2026-10-31 | CLE | 136 | 111 |
+| 2026-11-02 | CLE | 112 | 117 |
+| 2026-11-04 | CLE | 116 | 124 |
+| 2026-11-06 | CLE | 119 | 95 |
+| 2026-11-07 | CLE | 97 | 109 |
+| 2026-11-09 | CLE | 112 | 124 |
+| 2026-11-11 | CLE | 115 | 107 |
+| 2026-11-13 | CLE | 121 | 133 |
+| 2026-11-14 | CLE | 127 | 117 |
+| 2026-11-16 | CLE | 126 | 115 |
+| 2026-11-18 | CLE | 121 | 124 |
+
+Observed season and recent averages:
+| Team | Season n / PF / PA | L5 PF / PA | L10 PF / PA | L20 |
+|---|---|---|---|---|
+| Indiana | 15 / 111.53 / 114.80 | 114.00 / 116.00 | 109.80 / 114.80 | MISSING only 15 games |
+| Cleveland | 16 / 118.25 / 116.31 | 122.00 / 119.20 | 116.60 / 116.50 | MISSING only 16 games |
+
+NBA 2026 current season efficiency cross-check from https://www.teamrankings.com/nba/matchup/pacers-cavaliers-2026-11-20/efficiency (snapshot is for this fixture): IND offensive 1.079 points/poss and defensive 1.111, CLE offensive 1.143 and defensive 1.124; the reported possessions per game 103.4 for both teams. These are observed, not opponent-adjusted estimates; no independently computed strength-of-schedule offsets. The source's betting sections were not used.
+
+## Distribution (transparent and uncalibrated)
+FROZEN ANALYST RECIPE: use season offence–opponent defence pairing at 103.4 poss: IND = 103.4×(107.9+112.4)/200 = 113.8951; CLE = 103.4×(114.3+111.1)/200 = 116.5318. L10 paired scoring = IND 113.1500, CLE 115.7000; L5 = IND 116.6000, CLE 119.0000. Weighted centre: 60% season efficiency + 25% L10 + 15% L5. Add historical league home edge +1.66 points to CLE margin, split +0.83 CLE/-0.83 IND. The source/measurement for league home edge is PARAMETERS.md Part B from repo `main`; independent player availability effect not estimated. Result: IND mean 113.285; CLE mean 117.524; total 230.809; CLE home final margin +4.240.
+
+Competition width floor from repo `PARAMETERS.md` Part A `Basketball/NBA`: residual margin SD 14.05, total SD 18.70. These are fixed league residual widths, not 31-game sample SDs; no false precision as confidence. Correlation between total and margin not independently identified; for exact requested marginal contracts we evaluate two one-dimensional normals, not claim a joint grid. Margin SD and total SD never narrow below the floor. Historical league overtime share = 4.68%. For totals, separate explicit approximate OT branch: regulation expected total = 230.341, q(OT)=0.0468, and conditional OT adds an illustrative 10 points. Weighted total mean remains 230.809. In each branch total SD 18.70; note the 10-point OT increment is an analyst assumption and not learned. Margin model is final-score unconditional including overtime; a separate independent regulation-margin/OT winning transition cannot be estimated with available data. Zero push probability at both half-point lines.
+
+Exact contract formulas (normal CDF Φ):
+- CLE -5.5: P(final margin CLE minus IND > 5.5) = Φ((4.2395 - 5.5)/14.05) = 0.46426; IND +5.5 complementary = 0.53574.
+- Over 234.5: (1-q)Φ((reg_mu - 234.5)/18.7) + q Φ((reg_mu + 10 - 234.5)/18.7) = 0.42185. Under = 0.57815. Full-game incl OT.
+- Home winner diagnostic: Φ(4.2395/14.05)=0.61858 (not a registered contract; not scored). This ignores the exact regulation tie/OT winner transition and is labelled approximation.
+- League-only unconditioned comparator: league mean total 229.15, home mean margin +2.0, raw SD total 19.90, raw margin SD 15.43; separate from this team's card and cannot be retrospectively calibrated from current result.
+
+Sensitivity: +/-3 points applied to Cleveland margin centre changes P(CLE -5.5) from 0.381 to 0.549; +/-5 points applied to total centre changes P(Under 234.5) from 0.473 to 0.678. These are uncertainty scenarios, NOT calibrated confidence intervals. Primary failure routes: unresolved Watson availability, Mobley out but no measurable replacement effect, Nembhard's unconfirmed minutes, Siakam matchups, recent opponent-strength differences, unusual 3-point volatility, and NBA Cup differential incentives. No external betting prices, consensus tips, model simulators or invented confirmed starters used.
+
+## Ranked supplied-line diagnostics
+| Contract | Model probability | Selection |
+|---|---:|---|
+| Indiana +5.5 | 53.6% | Weak lean; fails Rank-2 58% |
+| Cleveland -5.5 | 46.4% | No selection |
+| Over 234.5 | 42.2% | No selection |
+| Under 234.5 | 57.8% | Near 58% threshold; rounding is NOT gate passage |
+
+**Ranking:** Rank-1 none (62% gate); Rank-2 none if actual unrounded probabilities under 58%; no qualified ranked contract. All probabilities uncalibrated research-only until independently verified receipt and first-play timing. Exact prices absent by deliberate market-blind policy; no pseudo market reference.
+
+## ORIGINAL ONECHAT_V1 (first issued original)
+<!-- BEGIN ONECHAT_V1 20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003 -->
+format: ONECHAT_V1
+card_key: 20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003
+sport: Basketball
+competition: NBA Cup group stage
+home: Cleveland Cavaliers
+away: Indiana Pacers
+scheduled_start: 2026-11-21T11:30:00+11:00
+request_at: 2026-11-21T11:22:38+11:00
+research_start_at: 2026-11-21T11:24:09+11:00
+research_end_at: 2026-11-21T11:27:02+11:00
+not_started_source: https://boxscorelab.com/teams/indiana-pacers/games/
+not_started_observed_at: 2026-11-21T11:25:14+11:00
+outcome_exposure: NONE
+
+PICKS
+label,family,side,line,p,lean,centre,availability_basis,result_source
+L1,HANDICAP,AWAY,5.5,0.53574,,-4.240,UNMEASURED,https://www.nba.com/game/ind-vs-cle-0022600045
+L1,HANDICAP,HOME,-5.5,0.46426,,4.240,UNMEASURED,https://www.nba.com/game/ind-vs-cle-0022600045
+L2,TOTAL,OVER,234.5,0.42185,,230.809,UNMEASURED,https://www.nba.com/game/ind-vs-cle-0022600045
+L2,TOTAL,UNDER,234.5,0.57815,,230.809,UNMEASURED,https://www.nba.com/game/ind-vs-cle-0022600045
+
+FACTS
+side,field,value,source,observed_at
+HOME,season_games,16,https://boxscorelab.com/teams/cleveland-cavaliers/games/,2026-11-21T11:25:14+11:00
+HOME,season_score_for_pg,118.250,https://boxscorelab.com/teams/cleveland-cavaliers/games/,2026-11-21T11:25:14+11:00
+HOME,season_score_against_pg,116.312,https://boxscorelab.com/teams/cleveland-cavaliers/games/,2026-11-21T11:25:14+11:00
+HOME,last5_score_for_pg,122.000,https://boxscorelab.com/teams/cleveland-cavaliers/games/,2026-11-21T11:25:14+11:00
+HOME,last5_score_against_pg,119.200,https://boxscorelab.com/teams/cleveland-cavaliers/games/,2026-11-21T11:25:14+11:00
+HOME,last10_score_for_pg,116.600,https://boxscorelab.com/teams/cleveland-cavaliers/games/,2026-11-21T11:25:14+11:00
+HOME,last10_score_against_pg,116.500,https://boxscorelab.com/teams/cleveland-cavaliers/games/,2026-11-21T11:25:14+11:00
+HOME,rest_days,1,https://boxscorelab.com/teams/cleveland-cavaliers/games/,2026-11-21T11:25:14+11:00
+HOME,back_to_back,NO,https://boxscorelab.com/teams/cleveland-cavaliers/games/,2026-11-21T11:25:14+11:00
+HOME,key_absences,MOBLEY_OUT;TYSON_OUT;TOMLIN_OUT;WATSON_QUESTIONABLE,https://www.nba.com/pacers/news/preview-pacers-cavaliers-261120,2026-11-21T11:25:14+11:00
+HOME,lineup_confirmed,MISSING,OFFICIAL_STARTING_FIVE_NOT_RELEASED_OR_VERIFIED,
+HOME,venue,Rocket Arena Cleveland Ohio USA,https://www.nba.com/game/ind-vs-cle-0022600045,2026-11-21T11:25:14+11:00
+HOME,travel_km,MISSING,MATCH_TRAVEL_DISTANCE_NOT_VERIFIED,
+HOME,opponent_strength,MISSING,OPPONENT_ADJUSTED_NET_RATING_NOT_COMPUTED,
+HOME,opponent_strength_method,MISSING,OPPONENT_ADJUSTMENT_METHOD_NOT_AVAILABLE,
+HOME,availability_effect,MISSING,NO_MEASURED_ON_OFF_INJURY_EFFECT,
+HOME,adjustment_basis,MISSING,UNMEASURED_MATCH_SPECIFIC_PLAYER_EFFECT,
+HOME,last20_score_for_pg,MISSING,ONLY_16_COMPLETED_2026_27_GAMES,
+HOME,last20_score_against_pg,MISSING,ONLY_16_COMPLETED_2026_27_GAMES,
+AWAY,season_games,15,https://boxscorelab.com/teams/indiana-pacers/games/,2026-11-21T11:25:14+11:00
+AWAY,season_score_for_pg,111.533,https://boxscorelab.com/teams/indiana-pacers/games/,2026-11-21T11:25:14+11:00
+AWAY,season_score_against_pg,114.800,https://boxscorelab.com/teams/indiana-pacers/games/,2026-11-21T11:25:14+11:00
+AWAY,last5_score_for_pg,114.000,https://boxscorelab.com/teams/indiana-pacers/games/,2026-11-21T11:25:14+11:00
+AWAY,last5_score_against_pg,116.000,https://boxscorelab.com/teams/indiana-pacers/games/,2026-11-21T11:25:14+11:00
+AWAY,last10_score_for_pg,109.800,https://boxscorelab.com/teams/indiana-pacers/games/,2026-11-21T11:25:14+11:00
+AWAY,last10_score_against_pg,114.800,https://boxscorelab.com/teams/indiana-pacers/games/,2026-11-21T11:25:14+11:00
+AWAY,rest_days,1,https://boxscorelab.com/teams/indiana-pacers/games/,2026-11-21T11:25:14+11:00
+AWAY,back_to_back,NO,https://boxscorelab.com/teams/indiana-pacers/games/,2026-11-21T11:25:14+11:00
+AWAY,key_absences,HALIBURTON_OUT;FURPHY_OUT;SHEPPARD_OUT;NEMBHARD_AVAILABLE_REPORT;BRADEN_SMITH_QUESTIONABLE,https://www.nba.com/pacers/news/preview-pacers-cavaliers-261120,2026-11-21T11:25:14+11:00
+AWAY,lineup_confirmed,MISSING,OFFICIAL_STARTING_FIVE_NOT_RELEASED_OR_VERIFIED,
+AWAY,venue,Rocket Arena Cleveland Ohio USA,https://www.nba.com/game/ind-vs-cle-0022600045,2026-11-21T11:25:14+11:00
+AWAY,travel_km,MISSING,MATCH_TRAVEL_DISTANCE_NOT_VERIFIED,
+AWAY,opponent_strength,MISSING,OPPONENT_ADJUSTED_NET_RATING_NOT_COMPUTED,
+AWAY,opponent_strength_method,MISSING,OPPONENT_ADJUSTMENT_METHOD_NOT_AVAILABLE,
+AWAY,availability_effect,MISSING,NO_MEASURED_ON_OFF_INJURY_EFFECT,
+AWAY,adjustment_basis,MISSING,UNMEASURED_MATCH_SPECIFIC_PLAYER_EFFECT,
+AWAY,last20_score_for_pg,MISSING,ONLY_15_COMPLETED_2026_27_GAMES,
+AWAY,last20_score_against_pg,MISSING,ONLY_15_COMPLETED_2026_27_GAMES,
+<!-- END ONECHAT_V1 20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003 -->
+<!-- END CANONICAL RESEARCH P-699 -->
+
+<!-- BEGIN RESEARCH ADDENDUM P-699 2026-11-22-settlement-revision-1 -->
+Original: `prediction logs/PREDICTION_LOG_COMBINED_11.md`, P-699. Source: `research/verification/mini_import_P-697_P-703_2026-11-22-2/SETTLEMENT.md` (P-699); exact settlement block follows.
+
+<!-- BEGIN SETTLEMENT P-699 LOCAL-20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003 revision-1 -->
+### P-699 · Basketball/NBA Cup East Group B (game 0022600045) — Indiana Pacers @ Cleveland Cavaliers · 2026-11-20 ET · revision-1
+
+**Revision:** revision-1 · parent NONE · effective 2026-11-22T22:30:00+11:00 · affected ALL · changes NONE.
+**Card state:** SETTLED.
+- **Local key / native ID:** `LOCAL-20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003` · `NBA:0022600045`.
+- **Custody & timing:** `SEALED` (server push `2026-11-21T00:28:31Z`, commit `deccbd118`; scheduled tip 00:30:00Z, so sealed 89 s before it; research 00:24:09Z–00:27:02Z, not-started check 00:25:14Z). Assessment `SEALED_BEFORE_SCHEDULED_FIRST_PLAY_UNVERIFIED`. Actual first play `NOT_VERIFIED`: nba.com is refused under the script rule, and StatMuse gives only the game clock. The most likely Track P candidate in this mini, once a permitted tip-off time is found.
+- **Verified final (A):** **Cleveland Cavaliers 128-119 Indiana Pacers**, regulation. IND 29-32-22-36=119, CLE 29-33-43-23=128 (sum checks pass; box check IND 2×29+3×14+19=119, CLE 2×27+3×19+17=128). Home margin +9, total 247.
+- **Sources & captures:** StatMuse box `G0003_statmuse.html`; Fox Sports page with the Cavaliers' recap text "128-119" `G0003_fox_box.html`.
+- **Definition:** final score including overtime (registered).
+- **Expected vs final:** CLE margin centre +4.24 (SD 14.05), observed +9: z = +0.34 (PIT 0.633). Total centre 230.81 (SD 18.70), observed 247: z = +0.87 (PIT 0.807).
+- **Card-mean Brier / d:** 0.3106 / −0.0606.
+
+| Rank | Exact original proposition | Original p | BASELINE_P | Grade | Evidence | Counts toward wins | Basis |
+|---|---|---:|---|---|---|---|---|
+| R2 | Indiana Pacers +5.5 | 0.53574 | UNAVAILABLE | **LOSS** | A | yes (rank 2) | −9 + 5.5 < 0 |
+| NOT_RANKED | Cleveland Cavaliers −5.5 | 0.46426 | UNAVAILABLE | **WIN** | A | no | 9 − 5.5 > 0 |
+| NOT_RANKED | Over 234.5 | 0.42185 | UNAVAILABLE | **WIN** | A | no | 247 > 234.5 |
+| R1 | Under 234.5 | 0.57815 | UNAVAILABLE | **LOSS** | A | yes (rank 1) | 247 > 234.5 |
+
+**R1–R12 retrospective:** The card used a real pace × efficiency centre: 103.4 possessions with season offence/defence pairings, plus L10 and L5 pairings and a league home edge of +1.66 (split). Its availability list held up in the box score: Haliburton, Sheppard and Furphy out for Indiana; Mobley, Tyson, Tomlin and Diop out for Cleveland; Nembhard available; Watson, listed questionable, played. Both teams shot well from three: CLE 19/44 (43.2%), IND 14/34 (41.2%). Harden scored 51 with 7/11 from three. Cleveland won the third quarter 43-22. Estimated possessions (FGA + 0.44·FTA − OREB + TO) were about 106 (IND) and 111 (CLE), above the card's 103.4.
+
+**Deep-review triggers (DEEPLOSS-v1):** top side Indiana +5.5 (0.536, LOSS) · top total Under 234.5 (0.578, LOSS) = rank 1 → two reviews and a joint section.
+
+#### Deep loss review · P-699 · TOP_TOTAL_AND_RANK_1 · Under 234.5 (`DLR-2026-11-22-013`)
+
+**1. Exact frozen claim.** L2 TOTAL UNDER 234.5 points including overtime, p = 0.57815. Centre 230.809 from 60% season-efficiency pairing (230.4), 25% L10 (228.85) and 15% L5 (235.6), plus a 4.68% overtime branch adding 10 points. SD 18.70, the NBA residual floor. No reference p, no BASELINE_P, no ledger rows. Sealed 00:28:31Z, 89 s before the scheduled tip.
+**2. Verified outcome.** 247 points (sum checks pass), regulation; over the line by 12.5 (0.67 SD) and over the centre by 16.2 (0.87 SD).
+**3. Distribution check.** PIT 0.807. The card gave a total of 247 or more about 20%. Row Brier 0.3343 against 0.25; log loss 0.863 against 0.693.
+**4. Error decomposition.** Pace: about 108 average possessions against 103.4, worth about +10 points at the card's efficiencies. Efficiency: Cleveland about 1.16 points per possession (128 / about 111) against the card's 1.127 pairing. The weighting: the L5 pairing (235.6) was already above the line, and the card gave it 15%. The width matched the league floor.
+**5. Research audit, fact by fact.** Availability list: TRUE throughout (box score, inactive list). Rest days and no back-to-back: TRUE (both last played 18 November). Efficiency and pace figures from TeamRankings: plausible but not re-verified (NOT_ASSESSABLE without re-opening). Season scoring rows: consistent with the records (IND 5-10 → 5-11, CLE 8-8 → 9-8 per the Fox recap). No market or exposure breach; the card says the source's betting sections were not used.
+**6. What decided the game.** Three-point shooting: 33/78 combined (42.3%). Cleveland's 43-point third quarter. Harden's 51 points. Possessions about 5% above the card's figure.
+**7. Knowable at the cutoff?** Harden's 51: NOT_KNOWABLE. The shooting: NOT_KNOWABLE. Higher pace: PARTLY (both teams' L5 scored more, a signal the 15% weight mostly discounted).
+**8. Process audit.** A pace model was used, so this is not `BASKETBALL_TOTAL_WITHOUT_PACE_MODEL`. Overlapping windows (L5 inside L10 inside the season) are weighted as if independent. The overtime branch's +10 is an unlearned analyst constant (disclosed). p = 0.578 sits just under the card's own 58% Rank 2 gate; the card ranked nothing, the registered ranker ranked it first.
+**9. Verdict.** **VARIANCE**, shown by the numbers: a PIT 0.81 outcome driven by 42% three-point shooting and a 51-point game. Whether the pick should have been made: the number was honest and the card did not claim a pick; it was not a strong edge.
+**10. Cutoff-only counterfactual.** Declared scenario, diagnostic only: weight L5, L10 and season equally. The centre becomes about 232.1 (with the overtime branch) and P(Under 234.5) about 0.55. Nothing knowable would have flipped it.
+**11. Failure class and recurrence.** `VARIANCE`.
+**12. Correction.** NO_CHANGE for this row. The recency-weighting issue is in the v30.0 list (fitted, non-overlapping recency weights).
+**13. Matched wins.** None on this card.
+**14. Honesty checklist.** PASS.
+
+#### Deep loss review · P-699 · TOP_SIDE · Indiana Pacers +5.5 (`DLR-2026-11-22-014`)
+
+**1. Exact frozen claim.** L1 HANDICAP AWAY +5.5 including overtime, p = 0.53574; CLE margin centre +4.24 (including +1.66 home), SD 14.05. Flags `NO_DIRECTION`, `UNMEASURED_AVAILABILITY_PRICED`, `PLUS_HANDICAP`. Rank 2.
+**2. Verified outcome.** Cleveland by 9; Indiana +5.5 lost by 3.5 points (0.25 SD).
+**3. Distribution check.** PIT of the margin 0.633 (z = +0.34). The card gave Cleveland by 6 or more 46.4%. Row Brier 0.2870; log loss 0.767 against 0.693.
+**4. Error decomposition.** Centre +4.24 against +9: a 4.8-point miss. The third quarter alone went 43-22 to Cleveland. The width is right for the league.
+**5. Research audit, fact by fact.** As above: availability TRUE; both teams' records TRUE. Mobley out was priced at 0 (UNMEASURED) while Cleveland was the side missing its best defender. Cleveland won anyway.
+**6. What decided the game.** Cleveland's third quarter (43-22) and Harden's 51. Indiana won the fourth 36-23 to get within 9.
+**7. Knowable at the cutoff?** NOT_KNOWABLE for both drivers. Mobley's absence was known, but its effect was not measurable from the card's sources.
+**8. Process audit.** p = 0.536 has no direction, and the card refused to rank it; the registered ranker ranked it second. Both unmeasured absences (Haliburton, Mobley) were priced as 0. That is honest, but it puts an unmeasured line in a ranked slot. A plus handicap was taken without an opponent-strength adjustment beyond season efficiency.
+**9. Verdict.** **VARIANCE**: a 0.34-SD miss on a no-direction number. The pick should not have been ranked; it was a coin flip.
+**10. Cutoff-only counterfactual.** NOT_ASSESSABLE: no effect-table row exists for Haliburton or Mobley.
+**11. Failure class and recurrence.** `VARIANCE`.
+**12. Correction.** NO_CHANGE under FREEZE-v1. The shadow selection policy (SELECT-SHADOW-v1, registered today) drops no-direction rows and is the test of whether that helps.
+**13. Matched wins.** None.
+**14. Honesty checklist.** PASS.
+
+**Joint section (P-699).** Both rows lost to one shared driver: Cleveland's 43-point third quarter raised the total and widened the margin at once. The card priced them as two independent one-dimensional normals; it said it had not identified their correlation. Indiana +5.5 with the Under is a positively correlated pair, since a high-scoring Cleveland game hurts both. Ranking both in the top two concentrated one risk. Class note: `SHARED_DRIVER_TOP_TWO`, recorded in prose only, since each row has its own class above.
+
+<!-- END SETTLEMENT P-699 LOCAL-20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0003 revision-1 -->
+<!-- END RESEARCH ADDENDUM P-699 2026-11-22-settlement-revision-1 -->
+
+<!-- BEGIN CANONICAL RESEARCH P-700 -->
+## P-700 — Ice Hockey/NHL Regular Season (game 2026020364) — Columbus Blue Jackets @ Toronto Maple Leafs · 2026-11-21 ET
+
+Canonical retention by prompt-4 import `2026-11-22T20:00:00+00:00`. Scheduled start `2026-11-22T11:00:00+11:00`. Original `20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0004` (14230 B, SHA-256 `f895b68e2c8bd3e1933cd52437580851e025cf810999b0f2e5191ca7157f9437`, source `origin/card-drops:drops/cards/20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0004.md`, seal `UNSEALED` at `UNSEALED`). Original card follows verbatim; no forecast reissued; Track P scored separately via `ml one-chat score`.
+
+# Game 4 — Columbus Blue Jackets at Toronto Maple Leafs (NHL; 21 Nov 2026 Toronto local)
+
+**Original card key:** `20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0004`  
+**Local event key:** `LOCAL-20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0004`  
+**Repository authority:** `danisgreat/Sports-Research` `main` SHA `cb97bbc2a9f882e7f8a093648b6137315951da8b` (READ ONLY), MDS-2026.11.18-v29.1, ONECHAT-v3, NHL hockey rules and `ONECHAT_V1_ICE_HOCKEY_v29.0.md`.  
+**Issue classification:** `POST_SCHEDULE_RESEARCH / ACTUAL_FIRST_PLAY_NOT_VERIFIED`. Original user estimated 11:07 AEDT; authoritative NHL scheduled puck-drop 11:00 AEDT. Registration is after scheduled start. No prospectivity assumed, irrespective of any successful GitHub card seal.  
+**Original user request:** The original unchanged text contains `CLB Blue Panthers` and `NBA Regular Season`; administrative crosswalk is `Columbus Blue Jackets at Toronto Maple Leafs — NHL regular season`, NHL native game ID `2026020364`. The two +0.5 handicaps remain unchanged and are treated as distinct single-team contracts, not as opposite signs of one spread.  
+**Request registration:** card-drops request commit `7397ab0b57ab6c7f0024c97a1b1a3cf4dae19fa7`; independent `forecast-seals` registration commit `2c527a7b09b7db853b0c914c6c2cf886e7b3439c` at 2026-11-22T11:06:32+11:00.  
+**Research start / end:** 2026-11-22T11:06:33+11:00 to 2026-11-22T11:11:01+11:00. Never used game-in-progress score or result, bookmaker lines, bookmaker odds or other predictors.  
+**Not-started evidence limitation:** A rendered pregame-preview snapshot at https://plainhockey.com/games/2026-11-21/cbj-tor showed 'Preview' (displayed update time 6:45 p.m. Toronto time). However it does NOT independently prove the NHL game had not started when this card was made. The actual first faceoff is UNKNOWN. Any status observation after the scheduled 7 p.m. EST start is stale-risk and not prospective proof.
+
+## Timing, match and playing rules
+
+The NHL official game page (https://www.nhl.com/gamecenter/cbj-vs-tor/2026/11/21/2026020364) and Toronto club's official game-day preview (https://www.nhl.com/mapleleafs/news/game-day-vs-blue-jackets-nov-21-2026) establish teams, date, rink and league. Game time 2026-11-21 19:00 EST = 2026-11-22 11:00 AEDT, not 11:07. The regular season plays three 20-minute periods and, when tied, a 5-minute three-on-three sudden-death overtime then shootout. Under repository BK-OT/IH controls all supplied full-game spreads and goal totals INCLUDE OT/SO unless explicitly stated otherwise. Exactly one goal is credited to a shootout winner. Both +0.5 handicaps settle as **which club wins the full game**: no drawn final. The 6.5 total counts 4–3 (after 3–3 in regulation) as Over. A regulation-only interpretation is different and is NOT the priced contract.
+
+## Sporting evidence (pregame dated rows only)
+
+Records: Toronto 8–13–3, Columbus 8–12–0. Toronto actual season 24 games: GF75, GA84, season xGF66.7 xGA78.6. Columbus 20 games: GF48, GA65, xGF55.7, xGA63.5. Sporting totals and team xG: https://www.data-driven-hockey.com/nhl-teams/toronto-maple-leafs/ ; https://www.data-driven-hockey.com/nhl-teams/columbus-blue-jackets/. Note: source's season GF excludes shootout-awarded tally, whereas some historical final scorelines show an added shootout winner goal. Thus raw game-score columns need not sum identically to the season goals table. No post-21-Nov result was included.
+
+Dated last-ten final scorelines before this matchup (latest to oldest):
+- Columbus scores FOR: [4, 1, 3, 1, 1, 2, 2, 7, 1, 2], AGAINST: [2, 5, 4, 3, 4, 5, 1, 2, 3, 3]; 24 GF/32 GA in 10 (2.40/3.20); last-five 10/18 (2.00/3.60). Source: https://primitivestats.com/teams/29/games. Columbus's 20 displayed results have 50 scoreline GF including two shootout winners, compared with 48 season GF excluding such awards.
+- Toronto scores FOR: [3, 3, 0, 2, 3, 0, 2, 2, 4, 4], AGAINST: [4, 6, 1, 5, 6, 4, 4, 3, 2, 5]; 23 GF/40 GA in 10 (2.30/4.00); last-five 11/22 (2.20/4.40). Source: https://primitivestats.com/teams/10/games. This page exposes 23 dated fixtures against 24 in the season summary; L20 is therefore marked MISSING because the omitted game's date and L20 membership are not independently checked.
+- Rest: both last played Thursday 19 Nov (Toronto vs LA Kings, Columbus at Chicago), one full day rest; neither back-to-back. Columbus 3rd contest on a 4-game road trip; neither travel-km nor measured fatigue-goal effect verified. NHL's first meeting 20 Oct in Columbus was Toronto 6–2. Leafs lost eight consecutive games entering the matchup; both teams on losing recent ten-game form.
+- Confirmed pregame starting goaltenders from dated game-preview source: **Anthony Stolarz (Toronto, .904 season save rate)**, **Cam Talbot (Columbus, .909)**. https://frozenpool.dobbersports.com/frozenpool_preview.php?date=2026-11-21&team=TOR; team primary source https://www.nhl.com/bluejackets/news/game-preview-112126. Their confirmed statuses do NOT establish the exact on-ice first faceoff time. Toronto also has Sergei Bobrovsky (.874 season save rate); Columbus Jet Greaves (.875). The starter comparison may reduce volatility versus whole-team goals allowed, but no independently measured impact size was available, so **goalie-adjustment coefficient = 0, UNMEASURED** rather than invented.
+- Absences: Columbus Sean Monahan (lower body), Conor Garland (IR); Toronto Kirill Marchenko absent per NHL's pregame projected-lines preview. Columbus lines were projected, with Cam Talbot named; no exact verifiable complete active-skater confirmation on both teams. https://thehockeynews.com/nhl/columbus-blue-jackets/latest-news/columbus-blue-jackets-lines-defensive-pairings-scratches-for-tonights-game-vs-toronto-maple-leafs-3. No numerical injury/rotation adjustment applied.
+
+## Coherent numerical calculation (uncalibrated sporting baseline)
+
+Same-team pairing for each attack: mean of the team's goals for and opponent goals against; same for xGF/opponent xGA. The frozen blend is **60% season** (half actual goals and half xG), **25% latest-10** and **15% latest-5** paired goals. No external market input. Toronto home margin adjustment **+0.31 goals** from repo NHL effect table, split +0.155 Toronto/-0.155 Columbus. No extra adjustment for unmeasured absences or rest. The pre-OT result is:
+
+- Columbus season goals pair 2.9500, xG pair 3.0300, L10 pair 3.2000, L5 pair 3.2000; before rink 3.0740, final-goals target **2.9190**.
+- Toronto season goals pair 3.1875, xG pair 2.9771, L10 pair 2.7500, L5 pair 2.9000; before rink 2.9719, final-goals target **3.1269**.
+- Full-game goal centre **6.0459**; Toronto margin **+0.2079**. The total is a goal count, not the difference between team ratings.
+
+For full-game coherence, use independent negative-binomial regulation counts (same shape k=28.0313) with regulation centres Columbus λ=2.8381, Toronto λ=3.0460. These centres subtract half of the modelled regulation tie mass (t=0.16173) from each full-game target, since every tied regulation game eventually acquires one OT/SO winning goal. The shape is chosen so regulation margin SD exactly matches the NHL repository's **2.55 goal** residual-width floor. Thus both regulation total and margin SD=2.5500, exceeding NHL total-width floor 2.30. The input floor is a development benchmark, not a prospectively qualified model. Explicit grid n=0..25 goals/team, normalized mass 1.000000000000; no simulation or trained model was run.
+
+- Regulation home wins p=0.45083; away wins p=0.38744; tie p=0.16173.
+- On a regulation tie, allocate OT/SO winner 50/50 without claiming measured shootout skill. Hence full-game TOR +0.5 (win) p=0.53169, CBJ +0.5 (win) p=0.46831. Neither contract is a two-goal puck line; their events are exclusive and exhaustive under full-match scoring.
+- Full-game Over 6.5 = P(regulation total ≥ 7)+P(regulation score 3–3)=0.42098 (3–3 creates a 4–3 full-time 7-goal game). Full-game Under 6.5=0.57902; push probability zero.
+- For ±0.3 goals in the regulation total centre, Under 6.5 is about 53.3%–62.5%; this is a scenario range, NOT a confidence interval. Tactical empty-net tail and goalie GSAx were not independently fitted; these are explicit model risk flags.
+
+**Rank decision:** All exact supplied rows retain their computed probabilities below. Nominal Under 6.5 (57.9%) is <58% Rank 2 floor; no eligible Rank 1 or Rank 2. Even if the seal workflow accepts the data schema, the card was issued after scheduled puck drop and has NO independently proven pre-first-play status, so it is a **POST_SCHEDULE_DIAGNOSTIC / PROSPECTIVE_UNQUALIFIED** card. Do not settle or score it as a prospective selection. The main failure routes are higher-than-projected shot conversion/empty-net goals, unmeasured goalie and injury effects, and the first-play timing gap. All four supplied contracts remain intact.
+
+## ONECHAT_V1 original exact structured card
+
+<!-- BEGIN ONECHAT_V1 20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0004 -->
+format: ONECHAT_V1
+card_key: 20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0004
+sport: Ice Hockey
+competition: NHL Regular Season
+home: Toronto Maple Leafs
+away: Columbus Blue Jackets
+scheduled_start: 2026-11-22T11:00:00+11:00
+request_at: 2026-11-22T11:05:59+11:00
+research_start_at: 2026-11-22T11:06:33+11:00
+research_end_at: 2026-11-22T11:11:01+11:00
+not_started_source: https://plainhockey.com/games/2026-11-21/cbj-tor
+not_started_observed_at: 2026-11-22T11:11:01+11:00
+outcome_exposure: NONE
+
+PICKS
+label,family,side,line,p,lean,centre,availability_basis,result_source
+L1,HANDICAP,AWAY,+0.5,0.46831,,0.2079,UNMEASURED,https://www.nhl.com/gamecenter/cbj-vs-tor/2026/11/21/2026020364
+L2,HANDICAP,HOME,+0.5,0.53169,,0.2079,UNMEASURED,https://www.nhl.com/gamecenter/cbj-vs-tor/2026/11/21/2026020364
+L3,TOTAL,OVER,6.5,0.42098,,6.0459,UNMEASURED,https://www.nhl.com/gamecenter/cbj-vs-tor/2026/11/21/2026020364
+L3,TOTAL,UNDER,6.5,0.57902,,6.0459,UNMEASURED,https://www.nhl.com/gamecenter/cbj-vs-tor/2026/11/21/2026020364
+
+FACTS
+side,field,value,source,observed_at
+HOME,season_games,24,https://www.data-driven-hockey.com/nhl-teams/toronto-maple-leafs/,2026-11-22T11:11:01+11:00
+HOME,season_score_for_pg,3.1250,https://www.data-driven-hockey.com/nhl-teams/toronto-maple-leafs/,2026-11-22T11:11:01+11:00
+HOME,season_score_against_pg,3.5000,https://www.data-driven-hockey.com/nhl-teams/toronto-maple-leafs/,2026-11-22T11:11:01+11:00
+HOME,last10_score_for_pg,2.3000,https://primitivestats.com/teams/10/games,2026-11-22T11:11:01+11:00
+HOME,last10_score_against_pg,4.0000,https://primitivestats.com/teams/10/games,2026-11-22T11:11:01+11:00
+HOME,rest_days,1,https://primitivestats.com/teams/10/games,2026-11-22T11:11:01+11:00
+HOME,back_to_back,NO,https://primitivestats.com/teams/10/games,2026-11-22T11:11:01+11:00
+HOME,starting_goalie_confirmed,YES_ANTHONY_STOLARZ,https://frozenpool.dobbersports.com/frozenpool_preview.php?date=2026-11-21&team=TOR,2026-11-22T11:11:01+11:00
+HOME,starting_goalie_save_pct,.904,https://frozenpool.dobbersports.com/frozenpool_preview.php?date=2026-11-21&team=TOR,2026-11-22T11:11:01+11:00
+HOME,key_absences,KIRILL_MARCHENKO_MISS_11TH_CONSECUTIVE,https://www.nhl.com/news/columbus-blue-jackets-toronto-maple-leafs-game-preview-november-21-2026,2026-11-22T11:11:01+11:00
+HOME,venue,SCOTIABANK_ARENA_TORONTO,https://www.nhl.com/mapleleafs/news/game-day-vs-blue-jackets-nov-21-2026,2026-11-22T11:11:01+11:00
+HOME,travel_km,MISSING,TRAVEL_DISTANCE_NOT_QUANTIFIED,
+HOME,opponent_strength,MISSING,NO_SCHEDULE_ADJUSTED_OPPONENT_METRIC,
+HOME,opponent_strength_method,MISSING,OPPONENT_ADJUSTMENT_NOT_ESTIMATED,
+HOME,availability_effect,MISSING,NO_MEASURED_WITH_WITHOUT_ABSENCE_IMPACT,
+HOME,adjustment_basis,REPO_NHL_HOME_EDGE_PLUS_0.31_SPLIT_HALF,https://github.com/danisgreat/Sports-Research/blob/main/PARAMETERS.md,2026-11-22T11:11:01+11:00
+HOME,last20_score_for_pg,MISSING,SOURCE_LOG_23_OF_24_GAMES_AND_TIMING_OF_OMITTED_GAME_NOT_VERIFIED,
+HOME,last20_score_against_pg,MISSING,SOURCE_LOG_23_OF_24_GAMES_AND_TIMING_OF_OMITTED_GAME_NOT_VERIFIED,
+AWAY,season_games,20,https://www.data-driven-hockey.com/nhl-teams/columbus-blue-jackets/,2026-11-22T11:11:01+11:00
+AWAY,season_score_for_pg,2.4000,https://www.data-driven-hockey.com/nhl-teams/columbus-blue-jackets/,2026-11-22T11:11:01+11:00
+AWAY,season_score_against_pg,3.2500,https://www.data-driven-hockey.com/nhl-teams/columbus-blue-jackets/,2026-11-22T11:11:01+11:00
+AWAY,last10_score_for_pg,2.4000,https://primitivestats.com/teams/29/games,2026-11-22T11:11:01+11:00
+AWAY,last10_score_against_pg,3.2000,https://primitivestats.com/teams/29/games,2026-11-22T11:11:01+11:00
+AWAY,rest_days,1,https://primitivestats.com/teams/29/games,2026-11-22T11:11:01+11:00
+AWAY,back_to_back,NO,https://primitivestats.com/teams/29/games,2026-11-22T11:11:01+11:00
+AWAY,starting_goalie_confirmed,YES_CAM_TALBOT,https://frozenpool.dobbersports.com/frozenpool_preview.php?date=2026-11-21&team=TOR,2026-11-22T11:11:01+11:00
+AWAY,starting_goalie_save_pct,.909,https://frozenpool.dobbersports.com/frozenpool_preview.php?date=2026-11-21&team=TOR,2026-11-22T11:11:01+11:00
+AWAY,key_absences,SEAN_MONAHAN_LOWER_BODY;CONOR_GARLAND_IR,https://thehockeynews.com/nhl/columbus-blue-jackets/latest-news/columbus-blue-jackets-lines-defensive-pairings-scratches-for-tonights-game-vs-toronto-maple-leafs-3,2026-11-22T11:11:01+11:00
+AWAY,venue,SCOTIABANK_ARENA_TORONTO,https://www.nhl.com/mapleleafs/news/game-day-vs-blue-jackets-nov-21-2026,2026-11-22T11:11:01+11:00
+AWAY,travel_km,MISSING,TRAVEL_DISTANCE_NOT_QUANTIFIED,
+AWAY,opponent_strength,MISSING,NO_SCHEDULE_ADJUSTED_OPPONENT_METRIC,
+AWAY,opponent_strength_method,MISSING,OPPONENT_ADJUSTMENT_NOT_ESTIMATED,
+AWAY,availability_effect,MISSING,NO_MEASURED_WITH_WITHOUT_ABSENCE_IMPACT,
+AWAY,adjustment_basis,REPO_NHL_HOME_EDGE_MINUS_0.31_SPLIT_HALF,https://github.com/danisgreat/Sports-Research/blob/main/PARAMETERS.md,2026-11-22T11:11:01+11:00
+AWAY,last20_score_for_pg,2.5000,https://primitivestats.com/teams/29/games,2026-11-22T11:11:01+11:00
+AWAY,last20_score_against_pg,3.2500,https://primitivestats.com/teams/29/games,2026-11-22T11:11:01+11:00
+<!-- END ONECHAT_V1 20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0004 -->
+<!-- END CANONICAL RESEARCH P-700 -->
+
+<!-- BEGIN RESEARCH ADDENDUM P-700 2026-11-22-settlement-revision-1 -->
+Original: `prediction logs/PREDICTION_LOG_COMBINED_11.md`, P-700. Source: `research/verification/mini_import_P-697_P-703_2026-11-22-2/SETTLEMENT.md` (P-700); exact settlement block follows.
+
+<!-- BEGIN SETTLEMENT P-700 LOCAL-20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0004 revision-1 -->
+### P-700 · Ice Hockey/NHL Regular Season (game 2026020364) — Columbus Blue Jackets @ Toronto Maple Leafs · 2026-11-21 ET · revision-1
+
+**Revision:** revision-1 · parent NONE · effective 2026-11-22T22:30:00+11:00 · affected ALL · changes NONE.
+**Card state:** SETTLED.
+- **Local key / native ID:** `LOCAL-20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0004` · `NHL:2026020364`.
+- **Custody & timing:** `UNSEALED`: the drop was refused because labels L1 and L2 each had one side. The request was registered at 00:06:32Z, after the 00:00:00Z scheduled puck drop; research ran 00:06:33Z–00:11:01Z. The card disclosed that its not-started evidence was a stale preview page. Assessment `UNSEALED_DROP_REFUSED`; research only.
+- **Verified final (A):** **Columbus Blue Jackets 4-3 Toronto Maple Leafs**, regulation. CBJ 1-1-2=4, TOR 2-1-0=3 (sum checks pass). Goals: 1st 18:38 TOR (PP), 19:43 CBJ, 19:55 TOR; 2nd 05:10 TOR, 15:26 CBJ (PP); 3rd 15:40 CBJ, 16:32 CBJ. Shots 35-26 CBJ; power plays 1/3 each; goalies Talbot (CBJ) 23/26, Stolarz (TOR) 31/35 in 58 minutes; no empty-net goal.
+- **Sources & captures:** StatMuse box `G0004_statmuse.html`; Fox Sports page with the Maple Leafs' video text "the Leafs 4-3 loss" `G0004_fox_box.html`.
+- **Definition:** both +0.5 rows and the 6.5 total include overtime and the shootout (registered). No overtime was played.
+- **Contract defect (carried literally):** "Blue Jackets +0.5" (L1) and "Maple Leafs +0.5" (L2) are the same two-way winner contract, since no draw is possible with OT/SO. Each was registered as its own one-sided label, so this card counts one result twice: once as a win and once as a loss. v29.2 refuses such a request at registration.
+- **Expected vs final:** TOR margin centre +0.21, observed −1; total centre 6.046, observed 7. The frozen grid gave P(total ≥ 7, or 3-3 then OT) = 0.421.
+- **Card-mean Brier / d:** 0.3002 / −0.0502 (three labels, two of them one contract).
+
+| Rank | Exact original proposition | Original p | BASELINE_P | Grade | Evidence | Counts toward wins | Basis |
+|---|---|---:|---|---|---|---|---|
+| R3 | Columbus Blue Jackets +0.5 | 0.46831 | UNAVAILABLE | **WIN** | A | no (rank 3) | CBJ won in regulation |
+| R2 | Toronto Maple Leafs +0.5 | 0.53169 | UNAVAILABLE | **LOSS** | A | yes (rank 2) | TOR lost |
+| NOT_RANKED | Over 6.5 | 0.42098 | UNAVAILABLE | **WIN** | A | no | 7 > 6.5 |
+| R1 | Under 6.5 | 0.57902 | UNAVAILABLE | **LOSS** | A | yes (rank 1) | 7 > 6.5 |
+
+Ranks are the registered rule computed on this refused card: each one-sided label's only row counts as its favoured side.
+
+**R1–R12 retrospective:** The card's facts held: Stolarz and Talbot started; Monahan and Garland did not play; Marchenko, acquired by Toronto, was in a non-contact jersey. Its negative-binomial regulation grid and 50/50 overtime split were coherent, and the arithmetic is internally consistent. Toronto led 3-1 five minutes into the second; Columbus scored three unanswered, two of them 52 seconds apart late in the third. Columbus outshot Toronto 35-26, with 78 shot attempts to 49. The card was researched after the scheduled puck drop and never sealed, so it is research only.
+
+**Deep-review triggers (DEEPLOSS-v1):** top side Maple Leafs +0.5 (0.532, LOSS) · top total Under 6.5 (0.579, LOSS) = rank 1 → two reviews and a joint section.
+
+#### Deep loss review · P-700 · TOP_TOTAL_AND_RANK_1 · Under 6.5 (`DLR-2026-11-22-016`)
+
+**1. Exact frozen claim.** L3 TOTAL UNDER 6.5 goals including OT/SO, p = 0.57902. Grid: negative binomial (k = 28.03), regulation λ CBJ 2.838 and TOR 3.046, 3-3 sent to OT. No reference p, no BASELINE_P, no ledger rows. Researched after the scheduled puck drop; not sealed.
+**2. Verified outcome.** 7 goals in regulation (sum checks pass); over the line by 0.5 and over the centre by 0.95.
+**3. Distribution check.** The card gave 7 or more goals (including a 3-3 regulation tie) 42.1%: a common outcome, not a tail. Row Brier 0.3353 against 0.25; log loss 0.865 against 0.693.
+**4. Error decomposition.** The centre (6.05) was 0.95 low. Both goalies stopped about 88.5% (Talbot .885, Stolarz .886) against season rates of .909 and .904 cited by the card. That is roughly a goal above expectation at these shot counts (61 shots × about 2 points of save percentage ≈ 1.2 goals).
+**5. Research audit, fact by fact.** Goalies: TRUE. Absences (Monahan, Garland; Marchenko on Toronto's side): TRUE per the box score and morning-skate report. Records and last-ten scorelines: consistent (Toronto's losing run continued). Timing: research after the scheduled puck drop, disclosed. No market breach.
+**6. What decided the game.** Three goals in 77 seconds at the end of the first period, two Columbus goals in 52 seconds in the third, and both goalies at about .885.
+**7. Knowable at the cutoff?** NOT_KNOWABLE: the goal bursts and save rates.
+**8. Process audit.** Coherent grid; goalie effect set to 0 (UNMEASURED, disclosed). p = 0.579 is just under the card's own 58% gate; the card ranked nothing. The research was after the scheduled start, the card's main process failure.
+**9. Verdict.** **VARIANCE**: a 42% outcome reached through about a goal of below-average goaltending.
+**10. Cutoff-only counterfactual.** NOT_ASSESSABLE: no measured goalie row.
+**11. Failure class and recurrence.** `VARIANCE`.
+**12. Correction.** NO_CHANGE.
+**13. Matched wins.** Over 6.5 and Columbus +0.5 are the complements of the losing rows, not independent wins.
+**14. Honesty checklist.** PASS.
+
+#### Deep loss review · P-700 · TOP_SIDE · Toronto Maple Leafs +0.5 (`DLR-2026-11-22-015`)
+
+**1. Exact frozen claim.** L2 HANDICAP HOME +0.5 including OT/SO, which is "Toronto wins", p = 0.53169. Regulation win 0.451 plus half of the 0.162 tie mass; home edge +0.31 goals from the repository's NHL row. The same contract as L1 (Columbus +0.5, p = 0.46831), registered separately.
+**2. Verified outcome.** Columbus 4-3 in regulation: Toronto lost.
+**3. Distribution check.** A Columbus regulation win had probability 0.387 in the card's grid: an ordinary outcome. Row Brier 0.2827; log loss 0.759 against 0.693.
+**4. Error decomposition.** The centre (Toronto +0.21) was near even, so no material error. Toronto led 3-1 and lost the last 35 minutes 0-3 while being outshot.
+**5. Research audit, fact by fact.** As in the review above: TRUE where checkable. Toronto's eight-game losing run before the game: TRUE per the card's sources; it was priced only through form windows.
+**6. What decided the game.** Columbus's 35 shots to 26 and 3-0 in the final 35 minutes.
+**7. Knowable at the cutoff?** NOT_KNOWABLE.
+**8. Process audit.** p = 0.532 has no direction. The contract defect means this row and L1 are scored as two results. The card itself treated them, correctly, as one exclusive, exhaustive event ("Neither contract is a two-goal puck line; their events are exclusive and exhaustive").
+**9. Verdict.** **VARIANCE**: a no-direction number on a near-even game. The pick should not have been ranked.
+**10. Cutoff-only counterfactual.** NOT_ASSESSABLE.
+**11. Failure class and recurrence.** `VARIANCE`.
+**12. Correction.** Already made in v29.2: a one-sided label, or the same contract twice, is refused at registration.
+**13. Matched wins.** Columbus +0.5 "won" only as the complement of this row.
+**14. Honesty checklist.** PASS.
+
+**Joint section (P-700).** One shared driver, Columbus's late scoring, beat both the Toronto row and the Under. The card's grid priced them jointly and coherently. The ranker put the Under first and the Toronto row second, so the top two shared Toronto keeping the score down. Class note: `SHARED_DRIVER_TOP_TWO`, prose only.
+
+<!-- END SETTLEMENT P-700 LOCAL-20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0004 revision-1 -->
+<!-- END RESEARCH ADDENDUM P-700 2026-11-22-settlement-revision-1 -->
+
+<!-- BEGIN CANONICAL RESEARCH P-701 -->
+## P-701 — Basketball/Australia NBL 2026-27 Round 10 — Sydney Kings @ Brisbane Bullets · 2026-11-22 AEST
+
+Canonical retention by prompt-4 import `2026-11-22T20:00:00+00:00`. Scheduled start `2026-11-22T17:00:00+11:00`. Original `20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0005` (10662 B, SHA-256 `4ffbd02d88b7e5547a4a499770b9718f4e78549cfd85fc3f85ade266fc07b16c`, source `origin/card-drops:drops/cards/20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0005.md`, seal `UNSEALED` at `UNSEALED`). Original card follows verbatim; no forecast reissued; Track P scored separately via `ml one-chat score`.
+
+# Game 5 — Brisbane Bullets vs Sydney Kings — NBL27 Round 10
+
+**Card key:** `20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0005`  
+**Local event key:** `LOCAL-20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0005`  
+**Official scheduled start:** 22 Nov 2026 17:00 AEDT (16:00 AEST), Brisbane Entertainment Centre.
+**User-estimated time:** 17:05 AEDT (preserved unchanged in registered request).
+**Competition:** Australian NBL, 40 minutes plus 5-minute overtime periods as required.
+**Fixture namespace:** `REQ:2026-11-22:NBL:BRI:SYD` — fallback because the official match page does not expose a verifiable native numeric fixture ID.
+**Live-status custody:** An independent fixture card was displaying `Upcoming` and no live play-by-play before the registered card was drafted. The actual first on-court play is not independently verified.
+**Official fixture:** https://league.nbl.com.au/matches/brisbane-bullets-v-sydney-kings-men-22-11-2026
+
+## Registered original request
+
+```text
+Upcoming Basketball Game: Brisbane Bullets vs Sydney Kings, Australia NBL,\
+Estimated Game Time Start: 22 November 2026, 5:05 PM AEDT (can be delayed so continue the process as normal)\
+\
+Bullets +4.5\
+Kings -4.5\
+Combined Total: Over/Under 189.5 Points [$github](app://connector_76869538009648d5b282a4bb21c3d157)
+```
+
+## Contemporaneous sporting evidence
+
+- **Official league history:** Brisbane 6–8 (14 completed), 94.357 scored/99.214 conceded; Sydney 9–4 (13 completed), 98.615 scored/89.692 conceded. Raw chronological records are retained below. Sources: https://www.nbl.com.au/club-schedule/bri and https://www.nbl.com.au/club-schedule/syd.
+- **Short-term form:** Brisbane L5 95.8 for/102.2 against, L10 95.3/100.7; Sydney L5 94.6/88.8, L10 95.7/89.8. These are raw points, not opponent-adjusted ratings.
+- **Availability:** Kendric Davis OUT (quad; 23.3 points, 8.2 assists per game before this game), Torrey Craig AVAILABLE (groin fitness test passed), Lachlan Bofinger called into the squad; Brisbane Arnas Velička RETURNING after extended injury absence, Tyrell Harrison available; no other Brisbane injury listed in the league pregame preview.
+- **Availability sources:** https://league.nbl.com.au/news/sydney-kings-suffer-superstar-blow-kendric-davis; https://league.nbl.com.au/news/arnas-velicka-return-brisbane-bullets; https://league.nbl.com.au/news/how-to-watch-talking-points-brisbane-v-sydney-nbl27.
+- **Starting fives:** Both UNCONFIRMED. Independent lineup page reports 'awaiting confirmation': https://www.nblfixtures.com/lineups. Projected starters are not official confirmation.
+- **Rest:** Last official completed game for both sides was 15 November; six complete off-days, neither in a back-to-back. Sydney visits Brisbane (away travel not quantified).
+- **Matchup and H2H:** Sydney won 93–78 on 30 September 2026. The Kings have had the stronger 2026–27 record and defensive scoring suppression, but Davis missing creates an important unmeasured discontinuity.
+- **Missing:** Current verified possessions, team ORtg/DRtg, opponent-adjusted net rating, measured Davis on/off usage displacement, confirmed starters, and independently verified first jump ball.
+
+## Frozen source game rows (date ascending, regulation + OT final results)
+
+Brisbane Bullets points-for : points-against through 15 Nov: 88:85, 103:95, 78:93, 99:109, 91:97, 115:105, 85:106, 98:81, 85:107, 96:89, 109:104, 92:120, 90:94, 92:104.
+
+Sydney Kings points-for : points-against through 15 Nov: 111:90, 121:100, 93:78, 78:84, 101:102, 102:81, 108:82, 95:105, 99:91, 71:68, 110:99, 82:84, 111:102.
+
+## Transparent uncalibrated distribution
+
+- Source cohort: 14 Brisbane and 13 Sydney completed 2026–27 NBL regular-season matches at a strict pre-tip cutoff. Last 20 from this season is not available.
+- Blend each team's points-for and points-against (60% season, 25% L10, 15% L5); mutually cross Brisbane's offence with Sydney's defence, and Sydney's offence with Brisbane's defence.
+- Blended BRI for/against 94.8093/100.0336; blended SYD for/against 97.2842/89.5854.
+- Venue adjustment: repository NBL average home margin +1.40 points split +0.70 to Brisbane mean / −0.70 to Sydney mean. Unadjusted availability scoring means BRI 92.8973, SYD 97.9589.
+- **Analyst scenario, NOT measured:** Davis confirmed OUT. Illustrative Sydney scoring reduction 3.0 points relative to the historical mixture. This is *not* a calibrated effect; its magnitude is unsupported by directly measured on/off minutes. No numeric Velička effect is imposed.
+- Scenario centre: Brisbane 92.8973; Sydney 94.9589; total 187.8562; signed home margin -2.0616.
+- Model widths: independent total Normal SD 18.12 and home-minus-away margin Normal SD 15.03; sourced NBL residual width floors from https://github.com/danisgreat/Sports-Research/blob/main/research/competition_parameters/COMPETITION_PARAMETERS.csv. A zero total/margin covariance is an approximation; these are not calibrated team SDs. Total and margin imply coherent team score variables by H=(T+M)/2, A=(T−M)/2. Overtime included in final-score histories and settlement.
+- Full-game (includes overtime) exact-contract p(Brisbane +4.5) = Phi((mean_margin+4.5)/15.03)=0.564441; p(Sydney −4.5)=0.435559. p(Under 189.5)=Phi((189.5−mean_total)/18.12)=0.536141; Over=0.463859.
+- Sensitivity with unmeasured Davis reduction 0 to 5 points: Brisbane +4.5 from 0.485 to 0.616; Under 189.5 from 0.470 to 0.580.
+- This is a **provisional, uncalibrated analytical scenario only**. Not a qualified reference probability, independently admitted performance model, or verified calibrated Monte Carlo run.
+- No Rank-1 (>=62%) or Rank-2 (>=58%) is admitted from this scenario, especially with confirmed starters unavailable and a material unmeasured injury effect.
+
+## ORIGINAL ONECHAT_V1 — exact card drop
+<!-- BEGIN ONECHAT_V1 20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0005 -->
+format: ONECHAT_V1
+card_key: 20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0005
+sport: Basketball
+competition: NBL Regular Season
+home: Brisbane Bullets
+away: Sydney Kings
+scheduled_start: 2026-11-22T17:00:00+11:00
+request_at: 2026-11-22T16:52:49+11:00
+research_start_at: 2026-11-22T16:53:30+11:00
+research_end_at: 2026-11-22T16:55:55+11:00
+not_started_source: https://www.nblfixtures.com/games/brisbane-bullets-vs-sydney-kings-2026-11-22
+not_started_observed_at: 2026-11-22T16:55:05+11:00
+outcome_exposure: NONE
+
+PICKS
+label,family,side,line,p,lean,centre,availability_basis,result_source
+L1,HANDICAP,HOME,4.5,0.56444,,-2.062,UNMEASURED,https://league.nbl.com.au/matches/brisbane-bullets-v-sydney-kings-men-22-11-2026
+L1,HANDICAP,AWAY,-4.5,0.43556,,2.062,UNMEASURED,https://league.nbl.com.au/matches/brisbane-bullets-v-sydney-kings-men-22-11-2026
+L2,TOTAL,OVER,189.5,0.46386,,187.856,UNMEASURED,https://league.nbl.com.au/matches/brisbane-bullets-v-sydney-kings-men-22-11-2026
+L2,TOTAL,UNDER,189.5,0.53614,,187.856,UNMEASURED,https://league.nbl.com.au/matches/brisbane-bullets-v-sydney-kings-men-22-11-2026
+
+FACTS
+side,field,value,source,observed_at
+HOME,season_games,14,https://www.nbl.com.au/club-schedule/bri,2026-11-22T16:55:05+11:00
+HOME,season_score_for_pg,94.357,https://www.nbl.com.au/club-schedule/bri,2026-11-22T16:55:05+11:00
+HOME,season_score_against_pg,99.214,https://www.nbl.com.au/club-schedule/bri,2026-11-22T16:55:05+11:00
+HOME,last5_score_for_pg,95.800,https://www.nbl.com.au/club-schedule/bri,2026-11-22T16:55:05+11:00
+HOME,last5_score_against_pg,102.200,https://www.nbl.com.au/club-schedule/bri,2026-11-22T16:55:05+11:00
+HOME,last10_score_for_pg,95.300,https://www.nbl.com.au/club-schedule/bri,2026-11-22T16:55:05+11:00
+HOME,last10_score_against_pg,100.700,https://www.nbl.com.au/club-schedule/bri,2026-11-22T16:55:05+11:00
+HOME,rest_days,6,https://www.nbl.com.au/club-schedule/bri,2026-11-22T16:55:05+11:00
+HOME,back_to_back,NO,https://www.nbl.com.au/club-schedule/bri,2026-11-22T16:55:05+11:00
+HOME,key_absences,NONE_LISTED_RETURNING_VELICKA,https://league.nbl.com.au/news/arnas-velicka-return-brisbane-bullets,2026-11-22T16:55:05+11:00
+HOME,lineup_confirmed,MISSING,AWAITING_CONFIRMED_STARTING_FIVE,
+HOME,venue,BRISBANE_ENTERTAINMENT_CENTRE,https://league.nbl.com.au/matches/brisbane-bullets-v-sydney-kings-men-22-11-2026,2026-11-22T16:55:05+11:00
+HOME,travel_km,MISSING,DISTANCE_NOT_VERIFIED,
+HOME,opponent_strength,MISSING,OPPONENT_ADJUSTED_RATING_NOT_COMPUTED,
+HOME,opponent_strength_method,MISSING,MISSING_STRENGTH_DATA,
+HOME,availability_effect,MISSING,NO_MEASURED_ON_OFF_INJURY_IMPACT,
+HOME,adjustment_basis,REPO_NBL_HOME_EDGE_PLUS_0.7,https://github.com/danisgreat/Sports-Research/blob/main/research/competition_parameters/COMPETITION_PARAMETERS.csv,2026-11-22T16:55:05+11:00
+HOME,last20_score_for_pg,MISSING,ONLY_14_COMPLETED_2026_27_GAMES,
+HOME,last20_score_against_pg,MISSING,ONLY_14_COMPLETED_2026_27_GAMES,
+AWAY,season_games,13,https://www.nbl.com.au/club-schedule/syd,2026-11-22T16:55:05+11:00
+AWAY,season_score_for_pg,98.615,https://www.nbl.com.au/club-schedule/syd,2026-11-22T16:55:05+11:00
+AWAY,season_score_against_pg,89.692,https://www.nbl.com.au/club-schedule/syd,2026-11-22T16:55:05+11:00
+AWAY,last5_score_for_pg,94.600,https://www.nbl.com.au/club-schedule/syd,2026-11-22T16:55:05+11:00
+AWAY,last5_score_against_pg,88.800,https://www.nbl.com.au/club-schedule/syd,2026-11-22T16:55:05+11:00
+AWAY,last10_score_for_pg,95.700,https://www.nbl.com.au/club-schedule/syd,2026-11-22T16:55:05+11:00
+AWAY,last10_score_against_pg,89.800,https://www.nbl.com.au/club-schedule/syd,2026-11-22T16:55:05+11:00
+AWAY,rest_days,6,https://www.nbl.com.au/club-schedule/syd,2026-11-22T16:55:05+11:00
+AWAY,back_to_back,NO,https://www.nbl.com.au/club-schedule/syd,2026-11-22T16:55:05+11:00
+AWAY,key_absences,KENDRIC_DAVIS_OUT;TORREY_CRAIG_AVAILABLE;KELI_LEAUPEPE_OUT,https://league.nbl.com.au/news/sydney-kings-suffer-superstar-blow-kendric-davis,2026-11-22T16:55:05+11:00
+AWAY,lineup_confirmed,MISSING,AWAITING_CONFIRMED_STARTING_FIVE,
+AWAY,venue,BRISBANE_ENTERTAINMENT_CENTRE,https://league.nbl.com.au/matches/brisbane-bullets-v-sydney-kings-men-22-11-2026,2026-11-22T16:55:05+11:00
+AWAY,travel_km,MISSING,DISTANCE_NOT_VERIFIED,
+AWAY,opponent_strength,MISSING,OPPONENT_ADJUSTED_RATING_NOT_COMPUTED,
+AWAY,opponent_strength_method,MISSING,MISSING_STRENGTH_DATA,
+AWAY,availability_effect,MISSING,NO_MEASURED_ON_OFF_INJURY_IMPACT,
+AWAY,adjustment_basis,UNMEASURED_DAVIS_MINUS_3_POINTS_SCENARIO,ANALYST_UNMEASURED_SCENARIO,2026-11-22T16:55:05+11:00
+AWAY,last20_score_for_pg,MISSING,ONLY_13_COMPLETED_2026_27_GAMES,
+AWAY,last20_score_against_pg,MISSING,ONLY_13_COMPLETED_2026_27_GAMES,
+<!-- END ONECHAT_V1 20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0005 -->
+<!-- END CANONICAL RESEARCH P-701 -->
+
+<!-- BEGIN RESEARCH ADDENDUM P-701 2026-11-22-settlement-revision-1 -->
+Original: `prediction logs/PREDICTION_LOG_COMBINED_11.md`, P-701. Source: `research/verification/mini_import_P-697_P-703_2026-11-22-2/SETTLEMENT.md` (P-701); exact settlement block follows.
+
+<!-- BEGIN SETTLEMENT P-701 LOCAL-20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0005 revision-1 -->
+### P-701 · Basketball/Australia NBL 2026-27 Round 10 — Sydney Kings @ Brisbane Bullets · 2026-11-22 AEST · revision-1
+
+**Revision:** revision-1 · parent NONE · effective 2026-11-23T07:00:00+11:00 · affected ALL · changes NONE.
+**Card state:** SETTLED.
+- **Local key / native ID:** `LOCAL-20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0005` · `REQ:2026-11-22:NBL:BRI:SYD`.
+- **Custody & timing:** `UNSEALED`: the drop was refused because FACTS AWAY `adjustment_basis` named `ANALYST_UNMEASURED_SCENARIO` as its source instead of a page. Scheduled tip 2026-11-22T06:00:00Z. Assessment `UNSEALED_DROP_REFUSED`; research only. Actual first play `NOT_VERIFIED` (game clock only).
+- **Verified final (A):** **Brisbane Bullets 115-104 Sydney Kings**, regulation. By quarter BRI 30-24-33-28=115, SYD 26-26-23-29=104 (sum check 30+24+33+28=115, 26+26+23+29=104). Home margin +11, total 219.
+- **Sources & captures:** nblfixtures.com game page `G0005_nblfixtures_r3.html`; Brisbane Bullets club recap `G0005_bullets_recap.html` (22 Nov). Two independent lineages.
+- **Definition:** final score including overtime (registered). No overtime was played.
+- **Expected vs final:** home margin centre −2.06 (SD 15.03), observed +11: z = +0.87. Total centre 187.86 (SD 18.12), observed 219: z = +1.72 (PIT 0.957).
+- **Card-mean Brier / d:** 0.2386 / +0.0114.
+
+| Rank | Exact original proposition | Original p | BASELINE_P | Grade | Evidence | Counts toward wins | Basis |
+|---|---|---:|---|---|---|---|---|
+| R1 | Brisbane Bullets +4.5 | 0.56444 | UNAVAILABLE | **WIN** | A | yes (rank 1) | 11 + 4.5 > 0 |
+| NOT_RANKED | Sydney Kings −4.5 | 0.43556 | UNAVAILABLE | **LOSS** | A | no | −11 − 4.5 < 0 |
+| NOT_RANKED | Over 189.5 | 0.46386 | UNAVAILABLE | **WIN** | A | no | 219 > 189.5 |
+| R2 | Under 189.5 | 0.53614 | UNAVAILABLE | **LOSS** | A | yes (rank 2) | 219 > 189.5 |
+
+Ranks are the registered rule computed on this refused card, not registered ranks.
+
+**R1–R12 retrospective:** The card used raw points for and against: 60% season, 25% L10 and 15% L5, crossed between the teams, plus the repository NBL home edge (+1.40). It then took 3.0 points off Sydney for Kendric Davis's absence as an "analyst scenario, NOT measured". It knew Velička was returning; it listed no other Brisbane return. The Bullets' recap says four players returned (Velička, McDaniel, Holt, Mackinnon), and Mackinnon top-scored with 23. Brisbane shot 21/49 from three, won the offensive boards 19-8 and had 33 assists. Sydney also lost Dellavedova and Maluach during the game. The side pick (+4.5) won by 15.5; the total went 29.5 over.
+
+**Deep-review triggers (DEEPLOSS-v1):** top side Brisbane +4.5 (0.564, WIN) = rank 1 · top total Under 189.5 (0.536, LOSS) → one review.
+
+#### Deep loss review · P-701 · TOP_TOTAL · Under 189.5 (`DLR-2026-11-22-017`)
+
+**1. Exact frozen claim.** L2 TOTAL UNDER 189.5 points including overtime, p = 0.53614. Centre 187.856, SD 18.12 (the repository NBL residual floor). The centre included a −3.0 Sydney "scenario" for Davis's absence, disclosed as unmeasured. No reference p, no BASELINE_P, no ledger rows. Never sealed.
+**2. Verified outcome.** 219 points (sum checks pass), regulation; over the line by 29.5 (1.63 SD) and over the centre by 31.1 (1.72 SD).
+**3. Distribution check.** PIT 0.957. The card gave 219 or more about 4.5%. Row Brier 0.2874 against 0.25; log loss 0.768 against 0.693.
+**4. Error decomposition.** The total was built from raw points per game, with no possessions or efficiency, from a season in which Brisbane averaged 94.4 and Sydney 98.6. Brisbane scored 115, 21 above its season mean. The Davis scenario moved the total 3 points toward the Under (centre 190.9 without it, P(Under) 0.470). It did not decide the row: the miss was 31 points.
+**5. Research audit, fact by fact.** Davis OUT: TRUE (recap). Torrey Craig available, Velička returning: consistent with the recap. "No other Brisbane injury listed": the recap names three more returning players (McDaniel, Holt, Mackinnon); whether they were listed as returning before the game is NOT_ASSESSABLE from the captured pages. Records and raw game rows: consistent. Rest: six days off for both, consistent with both last playing 15 November. No market or exposure breach.
+**6. What decided the game.** Brisbane's three-point shooting (21/49, 42.9%), offensive rebounding (19-8, 22 second-chance points to 12), 14 more shots than Sydney, and a full-strength Brisbane against a Sydney side that lost two more guards in the game.
+**7. Knowable at the cutoff?** Brisbane at full strength: PARTLY (Velička's return was known; the others NOT_ASSESSABLE). Shooting and in-game injuries: NOT_KNOWABLE.
+**8. Process audit.** No pace or efficiency model for a basketball total, the registered pattern class. The unmeasured Davis adjustment was priced into both rows; the card flagged it and refused to rank, and the registered ranker ranked the Under second anyway. The card also put the adjustment in FACTS with a non-page source, which is why the drop was refused.
+**9. Verdict.** **MIXED.** A MODEL_LIMIT part: a raw-points total with an unmeasured downward adjustment. A VARIANCE part: 42.9% three-point shooting and in-game injuries. p = 0.536 had no real direction; the pick should not have been ranked.
+**10. Cutoff-only counterfactual.** Declared scenario, diagnostic only: remove the unmeasured −3. The centre becomes 190.9, and P(Under 189.5) about 0.47: the card's lean flips to the Over.
+**11. Failure class and recurrence.** `BASKETBALL_TOTAL_WITHOUT_PACE_MODEL`. Earlier reviews: P-687, P-688, P-693 (`ml deep-loss tally`). This is the 4th, an established pattern routed to prompt 8. Secondary: `UNFITTED_ANALYST_ADJUSTMENT` (prose only).
+**12. Correction.** In the v30.0 list: possessions × opponent-adjusted efficiency for basketball totals, and no unmeasured adjustments in a priced row. Acceptance test: on held-out NBL games, Brier of the pace model's total below the raw-points total. No change under FREEZE-v1.
+**13. Matched wins.** Brisbane +4.5 (rank 1) won by 15.5 from the same raw-points recipe. The unmeasured Davis adjustment helped that row, so the win is not evidence for the adjustment.
+**14. Honesty checklist.** PASS.
+
+<!-- END SETTLEMENT P-701 LOCAL-20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0005 revision-1 -->
+<!-- END RESEARCH ADDENDUM P-701 2026-11-22-settlement-revision-1 -->
+
+<!-- BEGIN CANONICAL RESEARCH P-702 -->
+## P-702 — Ice Hockey/Jastar Hokei Ligasy 2026-27 (shaiba 39216) — MHK Torpedo Ust-Kamenogorsk U20 @ MHK Aktobe U20 · 2026-11-22 AQTT
+
+Canonical retention by prompt-4 import `2026-11-22T20:00:00+00:00`. Scheduled start `2026-11-22T19:00:00+11:00`. Original `20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0006` (7660 B, SHA-256 `a0b9810fe6963974077305e6d80a68a61d4a2646f9b762296c568e827ee13bec`, source `origin/card-drops:drops/cards/20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0006.md`, seal `UNSEALED` at `UNSEALED`). Original card follows verbatim; no forecast reissued; Track P scored separately via `ml one-chat score`.
+
+# Game 6 — MHK Aktobe U20 vs MHK Torpedo Ust-Kamenogorsk U20 (Kazakhstan Jastar Hokei Ligasy)
+
+**Card key:** `20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0006`
+**League/fixture:** Jastar Hokei Ligasy 2026–27, official match #148, venue Aktobe Arena; 22 Nov 2026 13:00 Kazakhstan UTC+5 / 19:00 AEDT.
+**Fixture source:** https://shaiba.kz/match/39216/mkhk_aktobe-mkhk_torpedo/22-11-2026
+**Registration:** forecast-seals commit `a929d749f7f8a8feb4be925ea67ec87fe22a167d` published at 2026-11-22 18:58:33 AEDT, prior to research.
+**Status:** Preview research only, timing dependent on independent GitHub seal; first actual puck drop not verified.
+
+## Original request verbatim
+```text
+[$github](app://connector_76869538009648d5b282a4bb21c3d157) Upcoming Ice Hockey Game: Aktobe U20 vs Torpedo Ust-Kamenogorsk U20, Kazakhstan MHL,\
+Estimated Game Time Start: 22 November 2026, 7:00 PM AEDT (can be delayed so continue the process as normal)\
+\
+Aktobe +4.5\
+Torpedo -3.5\
+Combined Total: Over/Under 7.5 Goals
+```
+
+## Pregame sporting evidence
+- Official league standings: Aktobe U20 24 GP, 63 GF, 113 GA, 8 regulation wins, 1 OT loss, 15 regulation losses; Torpedo U20 22 GP, 113 GF, 64 GA, 15 regulation wins, 2 shootout wins, 5 regulation losses. Source: https://jas.ligasy.kz/ru/standings.
+- Last-10 from complete date-stamped league schedule through 17 Nov: Aktobe 26 GF / 35 GA (2.60 / 3.50 per game), Torpedo 69 GF / 28 GA (6.90 / 2.80). Source: https://jas.ligasy.kz/ru/schedule.
+- H2H Torpedo hosted Aktobe and won 4–1 on 16 Nov and 5–3 on 17 Nov 2026. Source: https://shaiba.kz/match/39216/mkhk_aktobe-mkhk_torpedo/22-11-2026.
+- Live fixture status read at research cutoff: 0–0, `не начался` (not started), at https://shaiba.kz/match/39216/mkhk_aktobe-mkhk_torpedo/22-11-2026, observed 2026-11-22T18:59:00+11:00. Not proof of actual first play.
+- Both last played 17 Nov 2026; four complete days off, not a back-to-back. Torpedo away in Aktobe; travel kilometres not independently verified.
+- On squad page Aktobe goalies: Kirichenko, Sapargaliev, Shpigun; Torpedo: Cherepanov, Grokhotov. Actual starting goalies and individual save percentages NOT confirmed; no verified current injuries/absences. Source https://shaiba.kz/match/39216/mkhk_aktobe-mkhk_torpedo/22-11-2026.
+
+## Model — uncalibrated sporting-data shadow diagnostic
+- Season weight 70% plus last 10 30% for raw GF and GA, cross each offense against opposing defense, split hand-set ±0.10 goals venue adjustment. NO opponent-adjusted possession or shot-quality correction, NO measured goalie-impact model and NO simulation run.
+- Season scoring: Aktobe GF 2.6250, GA 4.7083; Torpedo GF 5.1364, GA 2.9091.
+- Fused lambda regulation: Aktobe 2.84693, Torpedo 4.90564; regulation total 7.75258, Torpedo regulation margin 2.05871.
+- Explicit independent regulation Poisson goals (0 to 24 each); if regulation tied, distribute one awarded overtime/shootout goal equally between teams and price **final** score, including OT/SO. The 50:50 overtime assumption is illustrative and not league-calibrated. Empty-net effects and opponent-dependent scoring dispersion omitted; these can materially change spread/totals.
+- P(Aktobe +4.5)=0.814437; P(Torpedo −3.5)=0.294680; OVER7.5=0.512002; UNDER7.5=0.487998. Both spreads succeed together at exactly four-goal Torpedo victory: probability 0.109117. They are NOT complementary.
+- No ranked / official recommendation despite high shadow probabilities: this league and target are not independently performance qualified, starter goalie save rates unknown, widths unvalidated. SPORT_ONLY, MARKET_BLIND.
+
+## ORIGINAL ONECHAT_V1
+<!-- BEGIN ONECHAT_V1 20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0006 -->
+format: ONECHAT_V1
+card_key: 20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0006
+sport: Ice Hockey
+competition: Jastar Hokei Ligasy 2026-27
+home: MHK Aktobe U20
+away: MHK Torpedo Ust-Kamenogorsk U20
+scheduled_start: 2026-11-22T19:00:00+11:00
+request_at: 2026-11-22T18:56:00+11:00
+research_start_at: 2026-11-22T18:58:41+11:00
+research_end_at: 2026-11-22T19:00:02+11:00
+not_started_source: https://shaiba.kz/match/39216/mkhk_aktobe-mkhk_torpedo/22-11-2026
+not_started_observed_at: 2026-11-22T18:59:00+11:00
+outcome_exposure: NONE
+
+PICKS
+label,family,side,line,p,lean,centre,availability_basis,result_source
+L1,HANDICAP,HOME,+4.5,0.814437,,-2.0587,UNCONFIRMED_STARTING_GOALIES,https://shaiba.kz/match/39216/mkhk_aktobe-mkhk_torpedo/22-11-2026
+L1,HANDICAP,AWAY,-3.5,0.294680,,2.0587,UNCONFIRMED_STARTING_GOALIES,https://shaiba.kz/match/39216/mkhk_aktobe-mkhk_torpedo/22-11-2026
+L2,TOTAL,OVER,7.5,0.512002,,7.7526,UNCONFIRMED_STARTING_GOALIES,https://shaiba.kz/match/39216/mkhk_aktobe-mkhk_torpedo/22-11-2026
+L2,TOTAL,UNDER,7.5,0.487998,,7.7526,UNCONFIRMED_STARTING_GOALIES,https://shaiba.kz/match/39216/mkhk_aktobe-mkhk_torpedo/22-11-2026
+
+FACTS
+side,field,value,source,observed_at
+HOME,season_games,24,https://jas.ligasy.kz/ru/standings,2026-11-22T18:59:00+11:00
+HOME,season_score_for_pg,2.6250,https://jas.ligasy.kz/ru/standings,2026-11-22T18:59:00+11:00
+HOME,season_score_against_pg,4.7083,https://jas.ligasy.kz/ru/standings,2026-11-22T18:59:00+11:00
+HOME,last10_score_for_pg,2.6000,https://jas.ligasy.kz/ru/schedule,2026-11-22T18:59:00+11:00
+HOME,last10_score_against_pg,3.5000,https://jas.ligasy.kz/ru/schedule,2026-11-22T18:59:00+11:00
+HOME,rest_days,4,https://jas.ligasy.kz/ru/schedule,2026-11-22T18:59:00+11:00
+HOME,back_to_back,NO,https://jas.ligasy.kz/ru/schedule,2026-11-22T18:59:00+11:00
+HOME,starting_goalie_confirmed,MISSING,NO_VERIFIED_STARTING_GOALIE,
+HOME,starting_goalie_save_pct,MISSING,NO_VERIFIED_STARTER_OR_SAVE_PERCENTAGE,
+HOME,key_absences,MISSING,NO_CURRENT_INJURY_REPORT,
+HOME,venue,Aktobe Arena,https://shaiba.kz/match/39216/mkhk_aktobe-mkhk_torpedo/22-11-2026,2026-11-22T18:59:00+11:00
+HOME,travel_km,MISSING,NO_VERIFIED_ROAD_DISTANCE,
+HOME,opponent_strength,MISSING,NO_OPPONENT_ADJUSTED_METRIC,
+HOME,opponent_strength_method,MISSING,NOT_CALCULATED,
+HOME,availability_effect,MISSING,NO_MEASURED_ON_OFF_EFFECT,
+HOME,adjustment_basis,MISSING,NO_CALIBRATED_POSITIONAL_ADJUSTMENT,
+HOME,last20_score_for_pg,MISSING,FULL_LAST20_NOT_COMPUTED,
+HOME,last20_score_against_pg,MISSING,FULL_LAST20_NOT_COMPUTED,
+AWAY,season_games,22,https://jas.ligasy.kz/ru/standings,2026-11-22T18:59:00+11:00
+AWAY,season_score_for_pg,5.1364,https://jas.ligasy.kz/ru/standings,2026-11-22T18:59:00+11:00
+AWAY,season_score_against_pg,2.9091,https://jas.ligasy.kz/ru/standings,2026-11-22T18:59:00+11:00
+AWAY,last10_score_for_pg,6.9000,https://jas.ligasy.kz/ru/schedule,2026-11-22T18:59:00+11:00
+AWAY,last10_score_against_pg,2.8000,https://jas.ligasy.kz/ru/schedule,2026-11-22T18:59:00+11:00
+AWAY,rest_days,4,https://jas.ligasy.kz/ru/schedule,2026-11-22T18:59:00+11:00
+AWAY,back_to_back,NO,https://jas.ligasy.kz/ru/schedule,2026-11-22T18:59:00+11:00
+AWAY,starting_goalie_confirmed,MISSING,NO_VERIFIED_STARTING_GOALIE,
+AWAY,starting_goalie_save_pct,MISSING,NO_VERIFIED_STARTER_OR_SAVE_PERCENTAGE,
+AWAY,key_absences,MISSING,NO_CURRENT_INJURY_REPORT,
+AWAY,venue,Aktobe Arena,https://shaiba.kz/match/39216/mkhk_aktobe-mkhk_torpedo/22-11-2026,2026-11-22T18:59:00+11:00
+AWAY,travel_km,MISSING,NO_VERIFIED_ROAD_DISTANCE,
+AWAY,opponent_strength,MISSING,NO_OPPONENT_ADJUSTED_METRIC,
+AWAY,opponent_strength_method,MISSING,NOT_CALCULATED,
+AWAY,availability_effect,MISSING,NO_MEASURED_ON_OFF_EFFECT,
+AWAY,adjustment_basis,MISSING,NO_CALIBRATED_POSITIONAL_ADJUSTMENT,
+AWAY,last20_score_for_pg,MISSING,FULL_LAST20_NOT_COMPUTED,
+AWAY,last20_score_against_pg,MISSING,FULL_LAST20_NOT_COMPUTED,
+<!-- END ONECHAT_V1 20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0006 -->
+<!-- END CANONICAL RESEARCH P-702 -->
+
+<!-- BEGIN RESEARCH ADDENDUM P-702 2026-11-22-settlement-revision-1 -->
+Original: `prediction logs/PREDICTION_LOG_COMBINED_11.md`, P-702. Source: `research/verification/mini_import_P-697_P-703_2026-11-22-2/SETTLEMENT.md` (P-702); exact settlement block follows.
+
+<!-- BEGIN SETTLEMENT P-702 LOCAL-20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0006 revision-1 -->
+### P-702 · Ice Hockey/Jastar Hokei Ligasy 2026-27 (shaiba 39216) — MHK Torpedo Ust-Kamenogorsk U20 @ MHK Aktobe U20 · 2026-11-22 AQTT · revision-1
+
+**Revision:** revision-1 · parent NONE · effective 2026-11-23T07:00:00+11:00 · affected ALL · changes NONE.
+**Card state:** SETTLED.
+- **Local key / native ID:** `LOCAL-20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0006` · `JASTAR:39216`.
+- **Custody & timing:** `UNSEALED`: the drop was refused because L1's two handicap lines were not equal and opposite, `availability_basis` used a non-vocabulary value, and L1's probabilities summed to 1.109. The request was registered at 18:57:39 AEDT for a 19:00 start, and research lasted 81 seconds (18:58:41–19:00:02). Assessment `UNSEALED_DROP_REFUSED`; research only.
+- **Verified final (B):** **MHK Aktobe U20 6-3 MHK Torpedo U20**, regulation. By period 3:1, 0:1, 3:1 (sum check 3+0+3=6, 1+1+1=3). Goals 11:38, 13:07, 17:31, 19:07, 39:10, 41:11, 46:31, 50:14, 59:11 (empty net). Goalies Shpigun (AKT), Grokhotov (TOR). Margin +3, total 9.
+- **Sources & captures:** shaiba.kz match report `G0006_shaiba_report.html` (posted 22 Nov 15:22 local); shaiba.kz match page's live feed at 5:3 in the 3rd period (same owner). Evidence B: one owner lineage. Betting widgets on the pages were not read.
+- **Definition:** both handicap rows and the 7.5 total include overtime and the shootout (registered). No overtime. L1's rows are two different contracts ("Aktobe +4.5", "Torpedo −3.5"), each graded on its own.
+- **Expected vs final:** margin centre Aktobe −2.06 (the card's own sign: Torpedo favoured by 2.06), observed Aktobe +3. Total centre 7.75, observed 9.
+- **Card-mean Brier / d:** 0.1494 / +0.1006 (L1 is the mean of its two non-complementary rows).
+
+| Rank | Exact original proposition | Original p | BASELINE_P | Grade | Evidence | Counts toward wins | Basis |
+|---|---|---:|---|---|---|---|---|
+| R1 | MHK Aktobe U20 +4.5 | 0.814437 | UNAVAILABLE | **WIN** | B | yes (rank 1) | 3 + 4.5 > 0 |
+| NOT_RANKED | MHK Torpedo U20 −3.5 | 0.294680 | UNAVAILABLE | **LOSS** | B | no | −3 − 3.5 < 0 |
+| R2 | Over 7.5 | 0.512002 | UNAVAILABLE | **WIN** | B | yes (rank 2) | 9 > 7.5 |
+| NOT_RANKED | Under 7.5 | 0.487998 | UNAVAILABLE | **LOSS** | B | no | 9 > 7.5 |
+
+Ranks are the registered rule computed on this refused card. Rank 1 rests on a malformed label whose two rows are different contracts.
+
+**R1–R12 retrospective:** The card made Torpedo favourites by about two goals, while giving Aktobe +4.5 81% and Torpedo −3.5 29%. Two different contracts were placed in one label, so the probabilities summed to 1.109 and could not be complementary. Aktobe won 6-3: up 3-1 after one period, pegged back to 3-3, then three unanswered goals, the last into an empty net. Both rows the card favoured won. That does not rescue a card researched in 81 seconds whose structure was invalid. No deep review is triggered: top side (Aktobe +4.5), top total (Over 7.5) and rank 1 all won. Matched-win check: the Aktobe +4.5 "win" is consistent with the card's own centre (Torpedo by about 2) only because +4.5 is a wide cushion. Its 0.81 came from that cushion, not from a read on Aktobe.
+
+**Deep-review triggers (DEEPLOSS-v1):** top side Aktobe +4.5 (0.814, WIN) = rank 1 · top total Over 7.5 (0.512, WIN) → NONE_REQUIRED.
+
+<!-- END SETTLEMENT P-702 LOCAL-20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0006 revision-1 -->
+<!-- END RESEARCH ADDENDUM P-702 2026-11-22-settlement-revision-1 -->
+
+<!-- BEGIN CANONICAL RESEARCH P-703 -->
+## P-703 — Cricket/Weber WBBL 12 Match 32 (CA:40652) — Melbourne Renegades Women @ Melbourne Stars Women · 2026-11-22 AEDT
+
+Canonical retention by prompt-4 import `2026-11-22T20:00:00+00:00`. Scheduled start `2026-11-22T19:10:00+11:00`. Original `20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007` (9903 B, SHA-256 `ecbec897098e7eaab9d130d8733c7d0d391bbcb256c01ff21cd0716e5faffb4e`, source `origin/forecast-seals:research/one_chat/sealed/ecbec897098e7eaab9d130d8733c7d0d391bbcb256c01ff21cd0716e5faffb4e.md`, seal `SEALED` at `2026-11-22T08:12:42Z`). Original card follows verbatim; no forecast reissued; Track P scored separately via `ml one-chat score`.
+
+# Game 7 — Melbourne Stars Women v Melbourne Renegades Women (WBBL|12 Match 32)
+
+**Local key:** LOCAL-20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007; **card key:** `20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007`.
+**Official scheduled first ball:** 22 Nov 2026 19:10 AEDT. **Ground:** Junction Oval Melbourne.
+**Administrative identity:** Cricket Australia `CA:40652`. User wrote Renegades first; official fixture lists Stars first; original message is preserved unmodified.
+**Custody caveat:** GitHub registered request `5040e417cb766d11c65d8ffaa11a30c3ce7b8758` published 19:08:31 AEDT. Original independent `Upcoming` observation shortly after scheduled 19:10 exists, but actual first ball NOT_VERIFIED. Forecast-seal prospectivity requires independent first-play proof; no guarantee.
+
+## Original request (preserved verbatim)
+```text
+[$github](app://connector_76869538009648d5b282a4bb21c3d157) Upcoming Cricket Game: Melbourne Renegades(W) vs Melbourne Stars(W), T20 Big Bash Women,\
+Estimated Game Time Start: 22 November 2026, 7:10 PM AEDT (can be delayed so continue the process as normal)\
+\
+\
+Stars(W) 1st Innings Runs at end of 20 overs Total: Over/Under 148.5 Runs\
+Stars(W) 1st Innings Runs at the end of 6 overs: Over/Under 41.5 Runs
+```
+
+## Pre-match sporting research (NO in-match outcome data used)
+
+- Cricket Australia fixture: https://www.cricket.com.au/matches/CA:40652/melbourne-stars-women-melbourne-renegades-women-match-32 ; official WBBL season list https://www.cricket.com.au/matches/series/CA:4687.
+- Stars record 2–5 after seven completed matches, Renegades 3–4, as of 21 Nov 2026. Venue Junction Oval, neutral geography for Melbourne teams though home assignment Stars.
+- Stars seven completed 2026-27 innings totals (oldest to latest): 192,164,109,159,136,165,120; mean 149.286. Last five 109,159,136,165,120; mean 137.800.
+- Sources: https://www.comparetv.com.au/stream-live-sport/wbbl/melbourne-stars/ ; https://cricketerstales.com/cricket-fixture/mlsw-vs-mlrw-32nd-match-wbbl-2026/ ; https://www.cricketworld.com ; event pages referenced by the source.
+- Four directly checked recent Stars six-over totals: 34 (6 Nov v Sixers), 36 (8 Nov v Scorchers), 50 (12 Nov v Heat), 36 (16 Nov v Thunder). Four-game mean 39.000; 2 Nov six-over total NOT VERIFIED; last-five mean intentionally MISSING.
+- Sources six-over: https://www.sportsguff.com/scorecard/women-s-big-bash-league-2026-27/melbourne-stars-women-vs-sydney-sixers-women-12th-match ; https://sportsguff.com/scorecard/women-s-big-bash-league-2026-27/perth-scorchers-women-vs-melbourne-stars-women-16th-match ; https://cricketfieldguide.com/match/melbourne-stars-women-v-brisbane-heat-women-01m79k8020evxs5zeffwvpskvt ; https://cricketfieldguide.com/match/melbourne-stars-women-v-sydney-thunder-women-01m7kwwhp7ea380xc9xrbddpjg.
+- Renegades last five completed opponents' reported run totals: 154,152,140,152,168; mean 153.200 (secondary records; opposition/innings roles not fully re-verified; noisy proxy, not adjusted bowling rating).
+- Venue: 2026 sampled seven T20s first-innings mean 158, secondary provider; sample small; alternate source gives 151. https://cricketerstales.com/cricket-fixture/mlsw-vs-mlrw-32nd-match-wbbl-2026/ and https://femalecricket.com/wbbl12/100550-melbourne-stars-vs-melbourne-renegades-wbbl-2026-match-32-where-to-watch-squads-and-pitch-report.html.
+- Rain/showers forecast in preview (unverified provider 70% chance for broader day; not reliable probability of play interruption): https://femalecricket.com/wbbl12/100550-melbourne-stars-vs-melbourne-renegades-wbbl-2026-match-32-where-to-watch-squads-and-pitch-report.html.
+- Preliminary toss report 'Stars chose to bat' from thread https://www.reddit.com/r/CricketAus/comments/1y2f0am/match_thread_womens_big_bash_league_nov_22_2026/; NOT independently confirmed by Cricket Australia scoreboard at freeze. Playing XIs not independently confirmed; pre-match squad list is not a final XI.
+- Key bowling threats in provisional Renegades squad include Hayley Matthews, Sophie Molineux and Georgia Wareham. No verified same-day exclusions; leave absence adjustment zero/UNMEASURED.
+
+## Simple cricket innings distribution — scenario only
+- Stars innings at 20-over cap: 55% last-five Stars runs (137.800), 25% reported opponent-runs proxy against Renegades (153.200), and 20% sampled venue first-innings mean (158.000) => mean 145.690. Normal SD 32 runs is explicitly assumed for sensitivity, NOT estimated from an independently qualified WBBL sample.
+- Stars six-over runs: four observed six-over samples average 39.000, illustrative +1 run venue/toss scenario => mean 40.000. Normal SD 12.5 is a declared assumption. Six-over innings score under six overs not unconditional on rain, not a measured powerplay SD.
+- P(Stars total OVER 148.5)= 0.465013; UNDER=0.534987. P(Stars after exactly six overs OVER 41.5)=0.452242; UNDER=0.547758.
+- These are two marginal Normal approximations, not a jointly estimated innings/wicket process; no claim of an independently calibrated model, no simulated ball-by-ball innings or quoted bookmaker input. Sensitivity ±12 total-run mean and ±8 six-over mean materially alter these probabilities.
+- Rain/DLS/early all-out/abandonment: Neither market is assigned an arbitrary win for an unfinished contract. Actual sportsbook rules may differ; settle only after verified innings endpoint and operator-specific eligibility. A Stars all-out below 20 overs can supply a final innings total; an interrupted innings without an endpoint can be void/unknown under contract rule.
+- No published rank: estimated highest side <58%; six-over source n4 (not complete n5), lineup unconfirmed, rain settlement uncertain, and prospective seal timing unresolved. Strongest directional leans are UNDER both thresholds but neither is qualified.
+
+## Original ONECHAT_V1 block
+<!-- BEGIN ONECHAT_V1 20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007 -->
+format: ONECHAT_V1
+card_key: 20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007
+sport: Cricket
+competition: Weber WBBL 12
+home: Melbourne Stars Women
+away: Melbourne Renegades Women
+scheduled_start: 2026-11-22T19:10:00+11:00
+request_at: 2026-11-22T19:07:11+11:00
+research_start_at: 2026-11-22T19:08:40+11:00
+research_end_at: 2026-11-22T19:11:33+11:00
+not_started_source: https://www.cricket.com.au/matches/series/CA:4687
+not_started_observed_at: 2026-11-22T19:10:28+11:00
+outcome_exposure: NONE
+
+PICKS
+label,family,side,line,p,lean,centre,availability_basis,result_source
+L1,TOTAL,OVER,148.5,0.465013,,145.690,UNMEASURED,https://www.cricket.com.au/matches/CA:40652/melbourne-stars-women-melbourne-renegades-women-match-32
+L1,TOTAL,UNDER,148.5,0.534987,,145.690,UNMEASURED,https://www.cricket.com.au/matches/CA:40652/melbourne-stars-women-melbourne-renegades-women-match-32
+L2,TOTAL,OVER,41.5,0.452242,,40.000,UNMEASURED,https://www.cricket.com.au/matches/CA:40652/melbourne-stars-women-melbourne-renegades-women-match-32
+L2,TOTAL,UNDER,41.5,0.547758,,40.000,UNMEASURED,https://www.cricket.com.au/matches/CA:40652/melbourne-stars-women-melbourne-renegades-women-match-32
+
+FACTS
+side,field,value,source,observed_at
+HOME,venue_first_innings_avg,158,https://cricketerstales.com/cricket-fixture/mlsw-vs-mlrw-32nd-match-wbbl-2026/,2026-11-22T19:10:28+11:00
+HOME,last5_first_innings_avg,137.800,https://www.comparetv.com.au/stream-live-sport/wbbl/melbourne-stars/,2026-11-22T19:10:28+11:00
+HOME,last5_powerplay_avg,MISSING,ONLY_4_OF_LAST_5_SIX_OVER_SPLITS_VERIFIED,
+HOME,key_absences,MISSING,FINAL_LINEUP_AND_ABSENCES_NOT_VERIFIED,
+HOME,lineup_confirmed,MISSING,FINAL_PLAYING_XI_NOT_VERIFIED,
+HOME,batting_first,PROVISIONAL_YES,https://www.reddit.com/r/CricketAus/comments/1y2f0am/match_thread_womens_big_bash_league_nov_22_2026/,2026-11-22T19:10:28+11:00
+HOME,rain_probability_pct,MISSING,DAY_FORECAST_NOT_KICKOFF_INTERRUPTION_RATE,
+HOME,venue,JUNCTION_OVAL,https://www.cricket.com.au/matches/CA:40652/melbourne-stars-women-melbourne-renegades-women-match-32,2026-11-22T19:10:28+11:00
+HOME,travel_km,MISSING,BOTH_MELBOURNE_LOCAL_EXACT_TRAVEL_NOT_VERIFIED,
+HOME,opponent_strength,MISSING,RENEGADES_BOWLING_QUALITY_NOT_ADJUSTED,
+HOME,opponent_strength_method,MISSING,NO_OPPONENT_ADJUSTED_RUN_RATE,
+HOME,availability_effect,MISSING,CONFIRMED_XI_AND_PLAYER_IMPACT_NOT_VERIFIED,
+HOME,adjustment_basis,MISSING,VENUE_PLUS_1_SIX_OVER_IS_ANALYST_HYPOTHESIS,
+HOME,last10_first_innings_avg,MISSING,ONLY_SEVEN_CURRENT_SEASON_GAMES,
+HOME,last20_first_innings_avg,MISSING,ONLY_SEVEN_CURRENT_SEASON_GAMES,
+AWAY,venue_first_innings_avg,158,https://cricketerstales.com/cricket-fixture/mlsw-vs-mlrw-32nd-match-wbbl-2026/,2026-11-22T19:10:28+11:00
+AWAY,last5_first_innings_avg,MISSING,RENEGADES_BATTING_FIRST_SPLIT_NOT_RECONCILED,
+AWAY,last5_powerplay_avg,MISSING,RENEGADES_SIX_OVER_SPLITS_NOT_RECONCILED,
+AWAY,key_absences,MISSING,FINAL_LINEUP_AND_ABSENCES_NOT_VERIFIED,
+AWAY,lineup_confirmed,MISSING,FINAL_PLAYING_XI_NOT_VERIFIED,
+AWAY,batting_first,PROVISIONAL_NO,https://www.reddit.com/r/CricketAus/comments/1y2f0am/match_thread_womens_big_bash_league_nov_22_2026/,2026-11-22T19:10:28+11:00
+AWAY,rain_probability_pct,MISSING,DAY_FORECAST_NOT_KICKOFF_INTERRUPTION_RATE,
+AWAY,venue,JUNCTION_OVAL,https://www.cricket.com.au/matches/CA:40652/melbourne-stars-women-melbourne-renegades-women-match-32,2026-11-22T19:10:28+11:00
+AWAY,travel_km,MISSING,BOTH_MELBOURNE_LOCAL_EXACT_TRAVEL_NOT_VERIFIED,
+AWAY,opponent_strength,MISSING,REN_BOWLING_CONCESSION_NOT_OPPONENT_ADJUSTED,
+AWAY,opponent_strength_method,MISSING,NO_OPPONENT_ADJUSTED_RUN_RATE,
+AWAY,availability_effect,MISSING,CONFIRMED_XI_AND_PLAYER_IMPACT_NOT_VERIFIED,
+AWAY,adjustment_basis,MISSING,NO_MEASURED_SQUAD_IMPACT,
+AWAY,last10_first_innings_avg,MISSING,ONLY_SEVEN_CURRENT_SEASON_GAMES,
+AWAY,last20_first_innings_avg,MISSING,ONLY_SEVEN_CURRENT_SEASON_GAMES,
+<!-- END ONECHAT_V1 20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007 -->
+<!-- END CANONICAL RESEARCH P-703 -->
+
+<!-- BEGIN RESEARCH ADDENDUM P-703 2026-11-22-settlement-revision-1 -->
+Original: `prediction logs/PREDICTION_LOG_COMBINED_11.md`, P-703. Source: `research/verification/mini_import_P-697_P-703_2026-11-22-2/SETTLEMENT.md` (P-703); exact settlement block follows.
+
+<!-- BEGIN SETTLEMENT P-703 LOCAL-20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007 revision-1 -->
+### P-703 · Cricket/Weber WBBL 12 Match 32 (CA:40652) — Melbourne Renegades Women @ Melbourne Stars Women · 2026-11-22 AEDT · revision-1
+
+**Revision:** revision-1 · parent NONE · effective 2026-11-23T07:00:00+11:00 · affected ALL · changes NONE.
+**Card state:** SETTLED.
+- **Local key / native ID:** `LOCAL-20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007` · `CA:40652`.
+- **Custody & timing:** `SEALED` (server push `2026-11-22T08:12:42Z`, commit `ad9df53e1`; scheduled first ball 08:10:00Z, so sealed 2m42s after it; request registered 19:08:31 AEDT). Assessment `SEALED_AFTER_SCHEDULED_FIRST_PLAY_UNVERIFIED`. Actual first ball `NOT_VERIFIED`. The sportsguff page lists the start as "22 Nov 2026, 1:55 PM" in an unstated time zone. If that were IST, the first ball would have been 19:25 AEDT, after the seal, but this is not an official capture and settles nothing. It counts for Track P only with a permitted first-ball capture later than 19:12:42 AEDT.
+- **Verified final (B):** **Melbourne Stars Women 159/7 (20 overs; 57/0 after 6 overs)**, batting first after winning the toss. Phases 57/0 (1–6) + 78/3 (7–16) + 24/4 (17–20) = 159/7 (sum check 57+78+24=159; batters 150 + extras 9 = 159). Fall of wickets 1-80 (8.5 ov) … 7-159 (19.6 ov). Both contracts depend only on the Stars innings, which is complete in the capture; the match result is not needed.
+- **Sources & captures:** sportsguff scorecard `G0007_sg_try.html` (captured during the Renegades chase); cricket.com.au match page `G0007_ca.html` renders client-side and has no score. Evidence B: one lineage.
+- **Definition:** Stars innings at the 20-over cap, and Stars runs at the end of 6 overs (registered; no super over). The innings was not interrupted.
+- **Expected vs final:** 20-over centre 145.69 (assumed SD 32), observed 159: z = +0.42 (PIT 0.661). 6-over centre 40.0 (assumed SD 12.5), observed 57: z = +1.36 (PIT 0.913).
+- **Card-mean Brier / d:** 0.2931 / −0.0431.
+
+| Rank | Exact original proposition | Original p | BASELINE_P | Grade | Evidence | Counts toward wins | Basis |
+|---|---|---:|---|---|---|---|---|
+| NOT_RANKED | Stars 20-over total Over 148.5 | 0.465013 | UNAVAILABLE | **WIN** | B | no | 159 > 148.5 |
+| R2 | Stars 20-over total Under 148.5 | 0.534987 | UNAVAILABLE | **LOSS** | B | yes (rank 2) | 159 > 148.5 |
+| NOT_RANKED | Stars 6-over total Over 41.5 | 0.452242 | UNAVAILABLE | **WIN** | B | no | 57 > 41.5 |
+| R1 | Stars 6-over total Under 41.5 | 0.547758 | UNAVAILABLE | **LOSS** | B | yes (rank 1) | 57 > 41.5 |
+
+Ranks are the registered ranks from intake `2026-11-22-2`.
+
+**R1–R12 retrospective:** The card weighted the Stars' last five innings (mean 137.8, a slump) at 55%, the Renegades' opponents' runs at 25% and the venue at 20%. For six overs it used four checked samples (mean 39) and assumed SDs of 32 and 12.5. It said itself that neither row qualified for a rank. Meg Lanning (44 off 29) and Amy Jones (57 off 43) put on 80 for the first wicket: 57/0 after the powerplay. After that the Stars added only 102 in 14 overs while losing 7 wickets (24/4 in the last four). The toss information came from a Reddit match thread; it was correct (the scorecard confirms the Stars chose to bat).
+
+**Deep-review triggers (DEEPLOSS-v1):** top side none · top total Stars 20-over Under 148.5 (0.535, LOSS) · rank 1 Stars 6-over Under 41.5 (0.548, LOSS) → two reviews and a joint section.
+
+#### Deep loss review · P-703 · RANK_1 · Stars 6-over total Under 41.5 (`DLR-2026-11-22-019`)
+
+**1. Exact frozen claim.** L2 TOTAL UNDER 41.5, Stars runs at the end of 6 overs, p = 0.547758. Normal(40.0, 12.5): four checked six-over scores (34, 36, 50, 36; mean 39.0) plus a +1 venue/toss scenario. SD declared as an assumption. Sealed 2m42s after the scheduled first ball.
+**2. Verified outcome.** 57/0 after 6 overs (phase sum checks pass); over the line by 15.5 (1.24 SD).
+**3. Distribution check.** PIT 0.913. The card gave 57 or more about 9%. Row Brier 0.3000 against 0.25; log loss 0.794 against 0.693.
+**4. Error decomposition.** Centre 40 against 57. The sample was four innings, one of them 50, and the fifth (2 November) was not verified. The SD was assumed, not measured. Using the card's own SD, the standard error of a four-innings mean is about 6 runs, half the assumed SD: the centre itself was very uncertain.
+**5. Research audit, fact by fact.** The four six-over scores: as cited (not re-opened). Toss "Stars chose to bat": TRUE (scorecard), though sourced from a Reddit match thread, a live-match venue that carries outcome-exposure risk; the card recorded no outcome seen. Squad threats (Matthews, Molineux, Wareham): all bowled (Wareham 2/24, Matthews 2/20, Molineux 0/19). Rain: the innings was not interrupted.
+**6. What decided the game.** An 80-run opening stand, 9.5 an over through the powerplay: Lanning 44 off 29, Jones 57 off 43, no wicket in the first six overs.
+**7. Knowable at the cutoff?** NOT_KNOWABLE: the opening stand. PARTLY: the Stars' 2026 six-over scores already included a 50.
+**8. Process audit.** A four-sample mean with an assumed SD, priced to three decimals. p = 0.548 has no direction, and the card refused to rank it; the registered ranker ranked it first. The 6-over and 20-over rows were priced as independent normals on one innings; the card disclosed this.
+**9. Verdict.** **VARIANCE**, by the numbers: a PIT 0.91 outcome from one partnership, on a no-direction number. The pick should not have been ranked.
+**10. Cutoff-only counterfactual.** NOT_ASSESSABLE: no phase model or measured six-over distribution exists for WBBL in the repository.
+**11. Failure class and recurrence.** `VARIANCE`.
+**12. Correction.** NO_CHANGE under FREEZE-v1. Coupled phase-to-innings simulation (`sr_kit.cricket_innings`) is in the v30.0 list.
+**13. Matched wins.** None on this card.
+**14. Honesty checklist.** PASS. The outcome-exposure risk of the Reddit source is recorded; no outcome was used.
+
+#### Deep loss review · P-703 · TOP_TOTAL · Stars 20-over total Under 148.5 (`DLR-2026-11-22-018`)
+
+**1. Exact frozen claim.** L1 TOTAL UNDER 148.5, Stars innings at the 20-over cap, p = 0.534987. Normal(145.69, 32), the SD assumed.
+**2. Verified outcome.** 159/7 in 20 overs; over the line by 10.5 (0.33 SD).
+**3. Distribution check.** PIT 0.661. The card gave 159 or more about 34%. Row Brier 0.2862; log loss 0.766 against 0.693.
+**4. Error decomposition.** The 55% weight on a five-innings slump (137.8) pulled the centre below the Stars' own season mean (149.3). With the season mean in place of the slump, the centre is about 152.0 and P(Under) about 0.46. The overs after the powerplay were slow (102 in 14), so the miss came almost entirely from the first six overs.
+**5. Research audit, fact by fact.** As in the review above. Season and last-five Stars totals: consistent with the scorecards cited.
+**6. What decided the game.** The 57/0 powerplay, then 78/3 and 24/4.
+**7. Knowable at the cutoff?** NOT_KNOWABLE.
+**8. Process audit.** The 20-over row and the 6-over row are one innings. They were priced as independent normals and both put in the top two. Overweighting a five-game slump is a recency choice the card made without a measured basis.
+**9. Verdict.** **VARIANCE**: a PIT 0.66 outcome. The 0.535 number had no direction.
+**10. Cutoff-only counterfactual.** Declared scenario, diagnostic only: weight the season mean (149.3) instead of the last five. The centre is about 152.0 and P(Under 148.5) about 0.46: the lean flips.
+**11. Failure class and recurrence.** `VARIANCE`.
+**12. Correction.** NO_CHANGE under FREEZE-v1. Fitted, non-overlapping recency weights are in the v30.0 list.
+**13. Matched wins.** None.
+**14. Honesty checklist.** PASS.
+
+**Joint section (P-703).** Both rows are the same innings: the 6-over score is the first part of the 20-over total. One opening stand beat both. The card priced them as independent marginal normals (disclosed) and the ranker put both in the top two. Class note: `PHASE_INCOHERENCE` / `SHARED_DRIVER_TOP_TWO`, recorded in prose only.
+
+<!-- END SETTLEMENT P-703 LOCAL-20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0007 revision-1 -->
+<!-- END RESEARCH ADDENDUM P-703 2026-11-22-settlement-revision-1 -->
+
+<!-- END IMPORT BATCH 2026-11-23 P-697..P-703 20261120-495CEEB69E9540938CF6A7DAA7B546B4 -->

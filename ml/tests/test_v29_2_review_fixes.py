@@ -48,6 +48,14 @@ def test_a_harder_over_priced_above_an_easier_one_is_flagged_not_refused(tmp_pat
     assert O.incoherent_labels(O.check(meta, picks, facts, "CHAT1-G0001")[1]) == {}
 
 
+def test_totals_on_different_quantities_are_not_compared():
+    # v29.3: G0007 (WBBL) priced a 6-over score (41.5) and a 20-over innings total (148.5); not one distribution.
+    picks = [f"L1,TOTAL,OVER,148.5,0.465013,,145.69,NONE,{R}", f"L1,TOTAL,UNDER,148.5,0.534987,,145.69,NONE,{R}",
+             f"L2,TOTAL,OVER,41.5,0.452242,,40.0,NONE,{R}", f"L2,TOTAL,UNDER,41.5,0.547758,,40.0,NONE,{R}"]
+    meta, pk, facts = O.parse(O.BLOCK.search(M.card(picks=picks))["body"])
+    assert O.incoherent_labels(O.check(meta, pk, facts, "CHAT1-G0001")[1]) == {}
+
+
 def test_a_harder_home_handicap_priced_above_an_easier_one_is_flagged():
     picks = [f"L1,HANDICAP,HOME,-7.5,0.60,,,NONE,{R}", f"L1,HANDICAP,AWAY,7.5,0.40,,,NONE,{R}",
              f"L2,HANDICAP,HOME,-3.5,0.55,,,NONE,{R}", f"L2,HANDICAP,AWAY,3.5,0.45,,,NONE,{R}"]
