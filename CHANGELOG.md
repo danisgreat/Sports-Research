@@ -29,6 +29,12 @@ request had been registered with one side per label, and a Jastar U20 card whose
   [SELECT-SHADOW-v1](research/external/SELECTION_SHADOW_PLAN_v1.md) registers a separate top-two policy that may
   issue one pick or none, compared with the frozen ranker on the same future games. Kit and model upgrades, availability
   effects, central pre-computation and gates on the registered rank need a v30.0 registration and are listed, not done.
+- Owner: requests and cards may be sent after the scheduled start. Games often start late; the actual first play
+  decides, so such a game is a full game log (request, seal, settlement, P-ID) and counts when the seal precedes the
+  captured first play. The code already worked this way; the brief, drop README and runbook now say so, and a test
+  covers a request registered after the scheduled start.
+- Codex review of #12: the shadow comparison is confirmatory only with eligibility and the plan's publication time,
+  takes games in the registered order, and reads "same contract" from the registered request definitions.
 - Cleanup: 16 superseded `research/external/` files (evaluation plans v24.14 to v28.0, five-lane profiles and lane
   briefs v24.13 and v24.14, one-chat briefs v25.0 to v29.0) moved to
   [archive/superseded_2026-11-22/](archive/superseded_2026-11-22/README.md) with RELOCATIONS.csv (RELOC-v1). Live links

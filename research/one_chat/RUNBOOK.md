@@ -95,10 +95,12 @@ python -m ml one-chat prepare --message CHAT1.txt --mini MINI21 --out <prep fold
 python -m ml one-chat register-requests --folder <prep folder>/MINI21
 ```
 
-**Timing (v29.2).** Send each request 30 to 60 minutes before its start. Between 18 and 22 November every request in
-the live minis was registered within ten minutes of the start (one after it), research ran as short as 81 seconds,
-and two seals landed after the scheduled start. Earlier requests leave time for confirmed lineups, a check drop and
-a seal before first play. The packet names the kit row each game reaches (v29.2) and any family-prior fallback.
+**Late starts (owner, 22 November 2026).** A request may be sent, registered, researched and sealed after the scheduled start. Games often start late, and what counts is the **actual first play**, never the scheduled time. Such a game is a full game log: same request, card, seal, settlement and canonical P-ID as any other. It is scored when the card's not-started page was observed during the research and the server seal came before the first play captured at settlement. If play had already begun, the card is kept as research and does not count. Research is never cut short for the start.
+
+**Timing (v29.2).** Earlier requests are still better where they are possible: they leave time for confirmed lineups, a
+check drop and a seal before first play. Between 18 and 22 November every request in the live minis was registered
+within ten minutes of the scheduled start (one after it), and research ran as short as 81 seconds. The packet names the
+kit row each game reaches (v29.2) and any family-prior fallback.
 
 `prepare` reads every message exactly as written and writes, per game, REQUEST.txt (the message itself), EVENT.csv, CONTRACTS.csv and SKELETON.md, plus one CHAT_PACKET.md in start order; a message it cannot read is listed in PREPARE_REPORT.csv with the reason and is not registered. `register-requests` registers and publishes the whole mini in one push. Paste CHAT_PACKET.md and [ONE_CHAT_BRIEF_v29.2](../external/ONE_CHAT_BRIEF_v29.2.md) into the chat only after the publication shows on GitHub. Use a new mini key per chat per day (MINI21, MINI22, …); never give the same game to two chats.
 

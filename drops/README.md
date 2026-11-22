@@ -42,15 +42,20 @@ drops/cards/<CARD_KEY>.md
 ```
 
 It must contain the `ONECHAT_V1` block for the registered key. A green check means it was sealed; GitHub's push time
-on `forecast-seals` is the timing evidence, not the drop time. Push at least 30 minutes before the scheduled start.
+on `forecast-seals` is the timing evidence, not the drop time. Push as soon as the card is finished.
+
+**After the scheduled start is fine.** Requests and cards may be pushed after the scheduled start: games often start
+late, and what counts is the **actual first play**. Open the official live page or match centre, record that play
+has not begun (`not_started_source`, `not_started_observed_at`), research and push as usual. The game is logged and
+settled like any other, and it counts when the seal is earlier than the first play captured at settlement.
 A red check means it was **not** sealed: the run summary gives the reason.
 
 Before pushing, run the [checklist](../research/external/ONE_CHAT_BRIEF_v29.2.md#before-you-hand-over-a-card-v292).
 The usual refusals: a FACTS `source` that is not one bare `https://` address (write `MISSING` and the reason
 instead), a PICKS label with one side, and a `not_started_source` that is `NONE_FOUND` or not filled in.
 
-A green seal's summary says how many minutes before the scheduled start GitHub published it, or that it came after
-the scheduled start (it then counts only if settlement shows play began after the seal).
+A green seal's summary says how many minutes before the scheduled start GitHub published it, or how long after it.
+After is normal for a late start: the game counts when settlement's first-play capture is later than the seal.
 
 **A red card can be fixed before first play.** A refused card was never sealed, so nothing is the forecast of record
 yet. Read the reason, correct the card, and push it as a **new** file, for example `drops/cards/<CARD_KEY>-fix1.md`.

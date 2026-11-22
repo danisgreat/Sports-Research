@@ -10,8 +10,10 @@ research/external/SELECTION_SHADOW_PLAN_v1.md before any result is scored:
   existing registered boundary), CONTRADICTS_OWN_CENTRE, INCOHERENT_ACROSS_LINES or NO_RESULT_SOURCE; SHADOW_STRICT
   also drops UNMEASURED_AVAILABILITY_PRICED (on the first 12 sealed cards every line carried it, so STRICT issued
   nothing: the comparison measures whether abstaining on unmeasured absences pays);
-- at most one candidate per contract: a second label that is the same contract (same family, side and line, or a
-  winner and a half-point handicap on the same side where the handicap is on the deciding score) is dropped;
+- at most one candidate per contract: a second label that is the same contract is dropped. "Same contract" uses the
+  registered request's definitions (forecast_integrity: period, endpoint, action and unit, so a winner equals a
+  half-point handicap only on the deciding score with no draw possible); without them, only an exact repeat of family,
+  sides and lines on the card;
 - the list holds the highest two remaining by conditional p (label order on ties). It may hold one or none;
 - a pair is marked DEPENDENT when both picks are totals or both are handicaps on the same card (nested or shared
   game state), so the joint outcome is reported with that caveat.
@@ -24,7 +26,9 @@ Nothing here reaches a card, a seal, a rank or the registered score (ML-SEP-v1 s
 from __future__ import annotations
 
 import argparse
+import subprocess
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 from ml import forecast_integrity as F
@@ -57,16 +61,40 @@ def _conditional(rows: list[dict]) -> dict:
             for r in rows if r["p"] not in ("", "UNPRICED") and total.get(r["label"])}
 
 
-def _contract(row: dict, sport: str):
-    """One identity per contract on a card; a winner and a half-point handicap on the deciding score are one."""
-    line = F.line_value(row["line"]) if row["line"] else None
-    if row["family"] == "WINNER" or (row["family"] == "HANDICAP" and line is not None and abs(line) == 0.5
-                                     and sport in F.WINNER_SCORE):
-        return ("MATCH_WINNER", row["side"])
-    return (row["family"], row["side"], line)
+def _label_identities(rows: list[dict], sport: str, contracts: list[dict] | None) -> dict:
+    """label -> contract identity. With the registered request's definitions, two labels are one contract exactly when
+    forecast_integrity says so (period, endpoint, action and unit included: regulation-time hockey or a handicap on
+    another statistic stays distinct). Without them, only an exact repeat of family, sides and lines is one contract."""
+    defs, by_label, out = {}, {}, {}
+    for c in contracts or []:
+        defs.setdefault(c["label"], []).append(c)
+    for r in rows:
+        by_label.setdefault(r["label"], []).append(r)
+    for label, group in by_label.items():
+        if label in defs and not F.line_shape_problems(defs[label], ""):
+            out[label] = ("REQUEST", F._contract_identity(defs[label], sport))
+        else:
+            out[label] = ("CARD", group[0]["family"],
+                          frozenset((r["side"].upper(), F.line_value(r["line"]) if r["line"] else None) for r in group))
+    return out
 
 
-def select(picks: list[dict], cards: dict[str, dict]) -> list[dict]:
+def load_contracts(keys, root=O.ROOT) -> dict[str, list[dict]]:
+    """Each card's registered CONTRACTS.csv, from the seal branch (or local staging); absent keys are left out."""
+    out = {}
+    for key in keys:
+        res = subprocess.run(["git", "-C", str(root), "cat-file", "blob",
+                              f"refs/remotes/origin/{O.SEAL_BRANCH}:{F.request_path(key)}/CONTRACTS.csv"], capture_output=True)
+        raw = res.stdout if not res.returncode else None
+        local = O.request_staging(root) / F.request_path(key) / "CONTRACTS.csv"
+        if raw is None and local.exists():
+            raw = local.read_bytes()
+        if raw is not None:
+            out[key] = F.rows(raw)
+    return out
+
+
+def select(picks: list[dict], cards: dict[str, dict], contracts: dict[str, list[dict]] | None = None) -> list[dict]:
     """The shadow list and the registered ranker's top two, for every card, with the reason for each dropped candidate."""
     out = []
     by_card = {}
@@ -75,6 +103,7 @@ def select(picks: list[dict], cards: dict[str, dict]) -> list[dict]:
     for key in sorted(by_card):
         rows, sport = by_card[key], cards.get(key, {}).get("sport", "")
         cond = _conditional(rows)
+        idents = _label_identities(rows, sport, (contracts or {}).get(key))
         gid = rows[0]["game_id"]
         current = sorted((r for r in rows if r["rank"]), key=lambda r: int(r["rank"]))[:2]
         for slot, r in enumerate(current, start=1):
@@ -90,7 +119,7 @@ def select(picks: list[dict], cards: dict[str, dict]) -> list[dict]:
                 why = sorted(set(filter(None, r["flags"].split(";"))) & set(excluding))
                 if p < MIN_P and "NO_DIRECTION" not in why:
                     why.append("BELOW_0.55")
-                ident = _contract(r, sport)
+                ident = idents[r["label"]]
                 if not why and ident in seen:
                     why.append("SAME_CONTRACT_AS_A_HIGHER_PICK")
                 if why:
@@ -142,12 +171,23 @@ def score(selected: list[dict], outcomes: dict) -> list[dict]:
     return rows
 
 
-def compare(selected: list[dict], outcomes: dict, eligible: set[str] | None = None) -> list[dict]:
+def compare(selected: list[dict], outcomes: dict, eligible: set[str] | None = None, cards: dict | None = None,
+            confirmatory: bool = False) -> list[dict]:
     """The registered decision (SELECTION_SHADOW_PLAN_v1 §4): per-pick hit-rate difference, variant minus registered
-    ranker, on the same first CHECKPOINT eligible games, with a game-clustered bootstrap interval."""
+    ranker, on the same first CHECKPOINT eligible games, with a game-clustered bootstrap interval.
+
+    Games are taken in the registered scorer's order (scheduled start, game_id, card_key). A verdict is confirmatory
+    only with the registered score's eligibility and this plan's publication time; otherwise it is descriptive."""
     import random
 
-    games = sorted({r["card_key"] for r in selected if eligible is None or r["card_key"] in eligible})[:CHECKPOINT]
+    def order(k):
+        c = (cards or {}).get(k, {})
+        try:
+            return (O.T.clock(c["scheduled_start"], "scheduled_start"), c.get("game_id", ""), k)
+        except (KeyError, ValueError):
+            return (datetime.max.replace(tzinfo=timezone.utc), "", k)
+
+    games = sorted({r["card_key"] for r in selected if eligible is None or r["card_key"] in eligible}, key=order)[:CHECKPOINT]
     per = {}
     for r in selected:
         g = outcomes.get((r["card_key"], r["label"], r["side"]))
@@ -176,7 +216,9 @@ def compare(selected: list[dict], outcomes: dict, eligible: set[str] | None = No
                 lo = diffs[int(len(diffs) * ALPHA_EACH / 2)]
                 hi = diffs[min(len(diffs) - 1, int(len(diffs) * (1 - ALPHA_EACH / 2)))]
         ratio = nv / nb if nb else 0.0
-        if len(games) < CHECKPOINT:
+        if not confirmatory:
+            verdict = "DESCRIPTIVE_INCOMPLETE_INPUTS"
+        elif len(games) < CHECKPOINT:
             verdict = f"DESCRIPTIVE_BELOW_{CHECKPOINT}_GAMES"
         elif lo is not None and lo > 0 and ratio >= COVERAGE_FLOOR:
             verdict = "IMPROVEMENT_DEMONSTRATED"
@@ -216,7 +258,7 @@ def main(argv=None) -> int:
     if args.out.exists():
         raise SystemExit(f"{args.out} already exists")
     cards, picks = _load(args.intake)
-    selected = select(picks, cards)
+    selected = select(picks, cards, load_contracts(sorted(cards)))
     args.out.mkdir(parents=True)
     (args.out / "SHADOW_PICKS.csv").write_bytes(O.csv_bytes(PICK_FIELDS, selected))
     if args.cmd == "score":
@@ -230,7 +272,9 @@ def main(argv=None) -> int:
             after = O.T.clock(args.registered_at, "registered_at") if args.registered_at else None
             eligible = {r["card_key"] for r in O.read_csv(args.coverage) if r.get("eligible") == "Y"
                         and (after is None or (r.get("seal_time") and O.T.clock(r["seal_time"], "seal_time") > after))}
-        (args.out / "SHADOW_COMPARE.csv").write_bytes(O.csv_bytes(COMPARE_FIELDS, compare(selected, grades, eligible)))
+        confirmatory = bool(args.coverage and args.registered_at)
+        (args.out / "SHADOW_COMPARE.csv").write_bytes(O.csv_bytes(COMPARE_FIELDS, compare(
+            selected, grades, eligible, cards, confirmatory)))
     print(f"{RULE}: {len({r['card_key'] for r in selected})} cards -> {args.out}")
     return 0
 

@@ -56,8 +56,8 @@ def _margin(server_time: str, scheduled_start: str) -> str:
     minutes = abs(gap) / 60
     if gap >= 0:
         return f"{minutes:.0f} min before the scheduled start"
-    return (f"{minutes:.0f} min AFTER the scheduled start: it counts only if settlement verifies that play began "
-            "after the seal")
+    return (f"{minutes:.0f} min after the scheduled start; normal for a late start: it counts when settlement's "
+            "first-play capture is later than the seal")
 
 
 def changed_drops(root, before: str, after: str) -> list[str]:

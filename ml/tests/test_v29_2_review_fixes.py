@@ -106,20 +106,56 @@ def pick(label, family, side, line, p, flags="", fav="Y", rank=""):
                 rank=rank, flags=flags)
 
 
+def hockey_contracts(action):
+    scope = dict(period="FULL_GAME", endpoint="FINAL_SCORE", action=action)
+    return [dict(label="L1", family="HANDICAP", side="AWAY", line="-0.5", unit="GOALS", **scope),
+            dict(label="L1", family="HANDICAP", side="HOME", line="0.5", unit="GOALS", **scope),
+            dict(label="L2", family="WINNER", side="AWAY", line="", unit="GAMES", **scope),
+            dict(label="L2", family="WINNER", side="HOME", line="", unit="GAMES", **scope)]
+
+
+def shadow_picks():
+    return [pick("L1", "HANDICAP", "AWAY", "-0.5", 0.66, rank="1"), pick("L1", "HANDICAP", "HOME", "0.5", 0.34, fav=""),
+            pick("L2", "WINNER", "AWAY", "", 0.65, rank="2"), pick("L2", "WINNER", "HOME", "", 0.35, fav=""),
+            pick("L3", "TOTAL", "OVER", "5.5", 0.52, flags="NO_DIRECTION", rank="3"),
+            pick("L3", "TOTAL", "UNDER", "5.5", 0.48, fav="")]
+
+
 def test_the_shadow_list_drops_coin_flips_duplicates_and_may_be_empty():
-    picks = [pick("L1", "HANDICAP", "AWAY", "-0.5", 0.66, rank="1"), pick("L1", "HANDICAP", "HOME", "0.5", 0.34, fav=""),
-             pick("L2", "WINNER", "AWAY", "", 0.65, rank="2"), pick("L2", "WINNER", "HOME", "", 0.35, fav=""),
-             pick("L3", "TOTAL", "OVER", "5.5", 0.52, flags="NO_DIRECTION", rank="3"),
-             pick("L3", "TOTAL", "UNDER", "5.5", 0.48, fav="")]
-    out = S.select(picks, {"K": dict(sport="Ice Hockey")})
+    cards = {"K": dict(sport="Ice Hockey")}
+    out = S.select(shadow_picks(), cards, {"K": hockey_contracts("INCLUDE_OT_SO")})
     signal = [(r["slot"], r["label"]) for r in out if r["policy"] == "SHADOW_SIGNAL"]
     assert signal == [(1, "L1")]                                          # L2 is the same winner; L3 has no direction
     dropped = {r["label"]: r["reason"] for r in out if r["policy"] == "SHADOW_SIGNAL_DROPPED"}
     assert dropped == {"L2": "SAME_CONTRACT_AS_A_HIGHER_PICK", "L3": "NO_DIRECTION"}
     assert [(r["slot"], r["label"]) for r in out if r["policy"] == "REGISTERED_RANK"] == [(1, "L1"), (2, "L2")]
-    flat = [dict(p, flags="UNMEASURED_AVAILABILITY_PRICED") for p in picks]
-    strict = [r for r in S.select(flat, {"K": dict(sport="Ice Hockey")}) if r["policy"] == "SHADOW_STRICT"]
+    flat = [dict(p, flags="UNMEASURED_AVAILABILITY_PRICED") for p in shadow_picks()]
+    strict = [r for r in S.select(flat, cards) if r["policy"] == "SHADOW_STRICT"]
     assert [r["reason"] for r in strict] == ["NO_STRONG_PICK"]
+
+
+@pytest.mark.parametrize("contracts", [None, {"K": hockey_contracts("REGULATION_ONLY")}])
+def test_the_shadow_list_keeps_contracts_the_definitions_do_not_make_equal(contracts):
+    # Codex review of #12: regulation-time hockey can draw, and without definitions nothing is merged.
+    out = S.select(shadow_picks(), {"K": dict(sport="Ice Hockey")}, contracts)
+    assert [(r["slot"], r["label"]) for r in out if r["policy"] == "SHADOW_SIGNAL"] == [(1, "L1"), (2, "L2")]
+
+
+def test_the_checkpoint_follows_the_registered_order_and_needs_both_inputs():
+    picks = [dict(pick("L1", "TOTAL", "OVER", "150.5", 0.62, rank="1"), card_key=k, game_id=k)
+             for k in ("A-LATE", "Z-EARLY")]
+    cards = {"A-LATE": dict(scheduled_start="2026-12-02T08:00:00+00:00", game_id="A-LATE"),
+             "Z-EARLY": dict(scheduled_start="2026-12-01T08:00:00+00:00", game_id="Z-EARLY")}
+    selected = S.select(picks, cards)
+    grades = {("A-LATE", "L1", "OVER"): "WIN", ("Z-EARLY", "L1", "OVER"): "LOSS"}
+    old, S.CHECKPOINT = S.CHECKPOINT, 1
+    try:
+        first = S.compare(selected, grades, cards=cards, confirmatory=True)[0]
+        assert first["games"] == 1 and first["variant_hit_rate"] == 0.0     # Z-EARLY (a loss) is the first game
+        assert first["verdict"] == "NOT_DEMONSTRATED"
+        assert S.compare(selected, grades, cards=cards)[0]["verdict"] == "DESCRIPTIVE_INCOMPLETE_INPUTS"
+    finally:
+        S.CHECKPOINT = old
 
 
 def test_the_shadow_score_keeps_the_denominator_and_the_decision_waits_for_100_games():
@@ -130,5 +166,23 @@ def test_the_shadow_score_keeps_the_denominator_and_the_decision_waits_for_100_g
     rows = {r["policy"]: r for r in S.score(selected, grades)}
     assert (rows["REGISTERED_RANK"]["picks"], rows["REGISTERED_RANK"]["one_won"]) == (2, 1)
     assert rows["SHADOW_SIGNAL"]["pairs"] == 1 and rows["SHADOW_SIGNAL"]["dependent_pairs"] == 0
-    verdicts = {r["variant"]: r["verdict"] for r in S.compare(selected, grades)}
+    verdicts = {r["variant"]: r["verdict"] for r in S.compare(selected, grades, confirmatory=True)}
     assert verdicts == {"SHADOW_SIGNAL": "DESCRIPTIVE_BELOW_100_GAMES", "SHADOW_STRICT": "DESCRIPTIVE_BELOW_100_GAMES"}
+
+
+# --- late starts (owner, 22 Nov 2026): a request after the scheduled start is a full, counted game ----------------------
+
+def test_a_request_sent_after_the_scheduled_start_is_a_full_counted_game_when_play_starts_late(repo, tmp_path):
+    late = "2026-11-20T04:00:00+00:00"           # scheduled start; the request is published 04:30, research 05:05-06:30
+    folder = M.build(repo, tmp_path, [M.card(start=late)])               # sealed 07:00
+    path = M.outcomes(repo, tmp_path / "cap", ["CHAT1-G0001"], start="2026-11-20T08:00:00+00:00")   # first play 08:00
+    M.commit_all(repo)
+    s = M.run(repo, tmp_path, [folder], [path], "late")
+    cover = O.read_csv(repo / "research/one_chat/scores/late/COVERAGE.csv")[0]
+    assert cover["timing"] == O.ELIGIBLE and cover["eligible"] == "Y" and s["games_in_sequence"] == 1
+    # The same card, but play had begun before the seal: kept, not counted.
+    gone = M.outcomes(repo, tmp_path / "cap", ["CHAT1-G0001"], start="2026-11-20T06:50:00+00:00", name="OUT2.csv")
+    M.commit_all(repo)
+    M.run(repo, tmp_path, [folder], [gone], "begun")
+    begun = O.read_csv(repo / "research/one_chat/scores/begun/COVERAGE.csv")[0]
+    assert begun["timing"] == "SEALED_AFTER_START" and begun["eligible"] == ""

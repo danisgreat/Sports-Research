@@ -48,7 +48,7 @@ def test_a_refused_card_can_be_fixed_before_first_play_and_the_seal_reports_its_
 
 
 def test_the_margin_says_when_a_seal_came_after_the_scheduled_start():
-    assert D._margin("2026-11-20T11:15:24Z", "2026-11-20T22:10:00+11:00").startswith("5 min AFTER the scheduled start")
+    assert D._margin("2026-11-20T11:15:24Z", "2026-11-20T22:10:00+11:00").startswith("5 min after the scheduled start; normal for a late start")
     assert D._margin("2026-11-21T00:28:31Z", "2026-11-21T11:30:00+11:00") == "1 min before the scheduled start"
     assert D._margin("", "2026-11-21T11:30:00+11:00") == ""
 

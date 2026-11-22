@@ -42,7 +42,7 @@ absolute paths in the reviews are omitted.
   and duplicate contracts, marks dependent pairs, and has a strict variant that also abstains on unmeasured absences.
   It is compared with the frozen ranker on the same future games at a pre-stated checkpoint, with coverage and
   denominators shown.
-- **Operations.** The runbook asks for requests 30 to 60 minutes before start. Check drops and full refusal reasons
+- **Operations.** Requests may come after the scheduled start (owner): the actual first play decides. Earlier requests are recommended where possible. Check drops and full refusal reasons
   were added earlier in this release.
 
 ## Not implemented, and why

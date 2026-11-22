@@ -20,9 +20,10 @@ All three policies are computed from the same sealed cards.
 - **SHADOW_SIGNAL**: the candidates are the favoured sides of priced supplied lines, using the probability conditional
   on a decision. A candidate is dropped if it is below 0.55 (the existing `NO_DIRECTION` boundary, not a value tuned
   on results) or flagged `CONTRADICTS_OWN_CENTRE`, `INCOHERENT_ACROSS_LINES` or `NO_RESULT_SOURCE`. A second candidate
-  that is the same contract as a higher one is also dropped: same family, side and line, or a winner and a half-point
-  handicap on the same side where the handicap is on the deciding score (basketball points, ice hockey goals, baseball
-  runs). The highest two remaining are kept, label order breaking ties. The list may hold one pick, or none
+  that is the same contract as a higher one is also dropped. "Same contract" is read from the registered request's
+  definitions, using the registration's own rule (period, endpoint, action and unit). A winner equals a half-point
+  handicap only on the deciding score with no draw possible, so hockey settled in regulation, or a handicap on another
+  statistic, stays distinct. Without the definitions, only an exact repeat of family, sides and lines counts. The highest two remaining are kept, label order breaking ties. The list may hold one pick, or none
   (`NO_STRONG_PICK`).
 - **SHADOW_STRICT**: as SIGNAL, and it also drops `UNMEASURED_AVAILABILITY_PRICED`. On the first 12 sealed cards every
   line carried that flag, so STRICT issued nothing. Its coverage measures whether abstaining on unmeasured absences is
@@ -35,7 +36,9 @@ lines or a shared game state). Its joint outcome is reported with that caveat.
 
 The confirmatory universe is every game that is eligible in the registered score (`COVERAGE.csv` `eligible=Y`, with a
 server seal before verified first play) and whose seal server time is later than this plan's first `main` publication
-(`--coverage`, `--registered-at`). The 12 cards sealed before it are development data. They are reported, and they never
+(`--coverage`, `--registered-at`). A run without both inputs is descriptive (`DESCRIPTIVE_INCOMPLETE_INPUTS`) and
+never gives a verdict. Games are taken in the registered scorer's order: scheduled start, then game, then card key. The
+cards sealed before publication are development data. They are reported, and they never
 enter the decision. An unpriced line is never a candidate. A pick that ends as a push or void is reported and is not
 decided. A game that is unsettled at the registered 14-day deadline is excluded from the universe, exactly as in the
 registered score.
