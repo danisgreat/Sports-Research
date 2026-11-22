@@ -3,3 +3,4 @@ card_key,status,reason
 20261118DA6D9F6251746B979F5895FA-G0007,NO_FORECAST,Registered request; no card was produced.
 20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0002,NO_FORECAST,Card drop refused (no not-started page; research began after kick-off); never sealed. Settled as research only (P-698).
 20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0004,NO_FORECAST,"Card drop refused (request registered with one side per label, so no card could pass); never sealed. Settled as research only (P-700)."
+20261120-495CEEB69E9540938CF6A7DAA7B546B4-G0005,NO_FORECAST,Card drop refused (FACTS adjustment_basis source not a page); never sealed. Settled as research only (P-701).
