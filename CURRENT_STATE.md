@@ -6,11 +6,13 @@ and [reproducible initial report](research/verification/historical_pre_event_v1/
 All 685 cards / 3,150 rows are retained, including 280 cards with stated p. No
 independent original-custody evidence is inferred: initially 0 Tier-A qualified
 cards and **HISTORICAL_EVIDENCE_INSUFFICIENT**. Existing training use and historical
-scores remain intact. Track P stays ONE-CHAT-v3 / v29.2, **0 qualifying games /
+scores remain intact. Track P stays ONE-CHAT-v3 / v29.3, **0 qualifying games /
 600-game horizon**, **NOT_YET_DEMONSTRATED** at this snapshot. Counts and verdicts
 are separate; no historical rows enter its registry or sequential test.
 
-**Current release — MDS-2026.11.22-v29.2 / CR-2026.11.22-R1 / P-2026.11.22-v29.2 / SCV-2026.11.18-v20: a request that registers can always be carded.** Owner order 22 November 2026, after six `seal-drops` refusals (18–22 November). Registering a new request now runs the card's own line rules (every label carries all its sides; a winner line is empty, so `ML` gets a reason instead of a crash) and refuses one contract registered twice: where no draw is possible, a moneyline and either side's ±0.5 are one winner contract (P-689 counted one AHL result twice). `prepare` reads half-point spreads in no-draw sports as that winner contract. Refusal reasons say how to fix FACTS sources and `not_started_source`; run summaries keep the full reasons. [ONE_CHAT_BRIEF_v29.2](research/external/ONE_CHAT_BRIEF_v29.2.md) adds a checklist before a card is handed over and the rules for a request written by hand. Two different spreads in a request are two contracts. A draft pushed to `drops/check/` gets the exact seal verdict without being sealed. A refused card may be corrected before first play, and each seal states its margin before the start. Two external reviews were triaged ([triage](research/verification/external_reviews_2026-11-22/TRIAGE.md)): tennis games spreads stay handicaps, incoherent prices across lines are flagged, the packet names the kit row, replay clocks are strict, and a separately registered shadow top-two policy ([SELECT-SHADOW-v1](research/external/SELECTION_SHADOW_PLAN_v1.md)) is compared with the frozen ranker. Sixteen superseded `research/external/` files are in [archive/superseded_2026-11-22/](archive/superseded_2026-11-22/README.md). Requests registered earlier, sealed cards, scoring and [EVALUATION_PLAN_v29.0.md](research/external/EVALUATION_PLAN_v29.0.md) are unchanged. [Implementation](research/verification/framework_change_2026-11-22-1/IMPLEMENTATION.md).
+**Current release — MDS-2026.11.23-v29.3 / CR-2026.11.23-R1 / P-2026.11.23-v29.3 / SCV-2026.11.18-v20: the coherence flag compares one quantity only.** Two totals on a card are compared only when their lines are within 25% of each other; a 6-over score and a 20-over total were wrongly flagged. Flag only; nothing refused or rescored.
+
+**Previous release — MDS-2026.11.22-v29.2 / CR-2026.11.22-R1 / P-2026.11.22-v29.2 / SCV-2026.11.18-v20: a request that registers can always be carded.** Owner order 22 November 2026, after six `seal-drops` refusals (18–22 November). Registering a new request now runs the card's own line rules (every label carries all its sides; a winner line is empty, so `ML` gets a reason instead of a crash) and refuses one contract registered twice: where no draw is possible, a moneyline and either side's ±0.5 are one winner contract (P-689 counted one AHL result twice). `prepare` reads half-point spreads in no-draw sports as that winner contract. Refusal reasons say how to fix FACTS sources and `not_started_source`; run summaries keep the full reasons. [ONE_CHAT_BRIEF_v29.2](research/external/ONE_CHAT_BRIEF_v29.2.md) adds a checklist before a card is handed over and the rules for a request written by hand. Two different spreads in a request are two contracts. A draft pushed to `drops/check/` gets the exact seal verdict without being sealed. A refused card may be corrected before first play, and each seal states its margin before the start. Two external reviews were triaged ([triage](research/verification/external_reviews_2026-11-22/TRIAGE.md)): tennis games spreads stay handicaps, incoherent prices across lines are flagged, the packet names the kit row, replay clocks are strict, and a separately registered shadow top-two policy ([SELECT-SHADOW-v1](research/external/SELECTION_SHADOW_PLAN_v1.md)) is compared with the frozen ranker. Sixteen superseded `research/external/` files are in [archive/superseded_2026-11-22/](archive/superseded_2026-11-22/README.md). Requests registered earlier, sealed cards, scoring and [EVALUATION_PLAN_v29.0.md](research/external/EVALUATION_PLAN_v29.0.md) are unchanged. [Implementation](research/verification/framework_change_2026-11-22-1/IMPLEMENTATION.md).
 
 **Previous release — MDS-2026.11.18-v29.1 / CR-2026.11.18-R2 / P-2026.11.18-v29.1 / SCV-2026.11.18-v20: read the owner's request text as written.** `ml one-chat prepare` parses shortened team names, colon-optional handicap lines, `Away @ Home` headers, mixed ML+spread requests, and `research/one_chat/SCHEDULE_SOURCES.csv` prefix matching while refusing template placeholders. Statistical constants and [EVALUATION_PLAN_v29.0.md](research/external/EVALUATION_PLAN_v29.0.md) are unchanged. [Runbook §7a](research/one_chat/RUNBOOK.md#7a-writing-the-requests-v291).
 
@@ -38,16 +40,16 @@ Standing protocols (`ENV-v2`, `REF-v2`, `RETAIN-v2`, `MLSCOPE-v3`, `ML-SEP-v1`, 
 
 | Item | Value |
 |---|---|
-| Versions (from `VERSIONS.csv`) | MDS-2026.11.22-v29.2 · CR-2026.11.22-R1 · P-2026.11.22-v29.2 · SCV-2026.11.18-v20 · SEL-2026.10.22-v4 |
-| Highest canonical ID / next | P-696 / **P-697** (from the import mappings) |
-| Historical cards used for training | 696 cards; 3128 admitted contract rows, 1337 with stated p; historical study, not prospective issuance |
+| Versions (from `VERSIONS.csv`) | MDS-2026.11.23-v29.3 · CR-2026.11.23-R1 · P-2026.11.23-v29.3 · SCV-2026.11.18-v20 · SEL-2026.10.22-v4 |
+| Highest canonical ID / next | P-703 / **P-704** (from the import mappings) |
+| Historical cards used for training | 703 cards; 3158 admitted contract rows, 1367 with stated p; historical study, not prospective issuance |
 | Active local mini | `NONE`; last / next local key `NONE` / `NONE` (footer) |
 | Open cards in the active mini | 0 of 0: none |
 | Frozen league-day events without settlement | 0: none |
 | Learning store | view 15; 5402 events, 5402 results, 8 team-statistic rows, 0 player-availability rows |
 | Adjustment ledger | 0 contract rows on 0 cards; 0 adjustment rows |
 | Prospective shadow ledger | 12 frozen rows on 2 events (`research/prospective/CYCLE_SHADOW_LEDGER.csv`) |
-| Effective settlements (imported local-key rows) | 875 rows, 69 revised by settlement imports, 0 UNRESOLVED |
+| Effective settlements (imported local-key rows) | 905 rows, 69 revised by settlement imports, 0 UNRESOLVED |
 | Permanently closed unattainable contracts | 9 exact rows; DO_NOT_RETRY; excluded from sporting scores |
 | Active releases | none |
 
@@ -58,11 +60,11 @@ Standing protocols (`ENV-v2`, `REF-v2`, `RETAIN-v2`, `MLSCOPE-v3`, `ML-SEP-v1`, 
 | Item | Value |
 |---|---|
 | Status | ACTIVE |
-| Method | MDS-2026.11.22-v29.2 (generated from VERSIONS.csv) |
-| Control revision | CR-2026.11.22-R1 (generated from VERSIONS.csv) |
+| Method | MDS-2026.11.23-v29.3 (generated from VERSIONS.csv) |
+| Control revision | CR-2026.11.23-R1 (generated from VERSIONS.csv) |
 | Scoring version | SCV-2026.11.18-v20 (generated from VERSIONS.csv) |
 | Selection version | SEL-2026.10.22-v4 (generated from VERSIONS.csv) |
-| Prompt suite | P-2026.11.22-v29.2 (generated from VERSIONS.csv) |
+| Prompt suite | P-2026.11.23-v29.3 (generated from VERSIONS.csv) |
 | Learning pipeline | MLSCOPE-v3 with ML-SEP-v1 (no promoted model) and LEARNLOG-v1; store, ledger and release values are in the generated block above. No active release: MLB-CYCLE-4, NHL-CYCLE-6 and NBA-CYCLE-4 were retired on 16 November 2026 (stale, zero frozen games); the declared card references are unchanged. One-chat intakes and scores: [research/one_chat/](research/one_chat/README.md). |
 | Active local mini | NONE (owner instruction 12 November 2026, CR-2026.11.12-R1). The repository holds no active mini. Each research chat starts and keeps its own mini under its own distinct MINI_KEY (WORKFLOW prompt 2: parallel minis use distinct namespaces). The former files, all settled or empty, are in [archive/retired_active_minis_2026-11-12/](archive/retired_active_minis_2026-11-12/README.md) |
 | Mini-log format | `mini-log-10` (in-progress `mini-log-2` through `mini-log-9` retain their format and issued cores) |
@@ -84,7 +86,7 @@ Standing protocols (`ENV-v2`, `REF-v2`, `RETAIN-v2`, `MLSCOPE-v3`, `ML-SEP-v1`, 
 ## Scoreboard
 
 - **Summary from the records (CARD-TRAIN-v1 run [2026-11-16-1](research/card_training/2026-11-16-1/REPORT.md), all settled cards P-001 to P-685).** 3,082 decisive rows on 656 cards. Rank 1: 381 W / 228 L, 62.6% (58.7% to 66.3%). Rank 2: 331 W / 249 L, 57.1% (53.0% to 61.0%). Ranks 3 and 4: 618 W / 494 L, 55.6%. Rows with a stated probability: 1,291 on 280 cards, Brier 0.2311, card-mean difference against a constant 0.5 of -0.0204 [-0.0312, -0.0096]; November chat-research rows -0.0017 [-0.0292, +0.0259] on 32 cards. 1,791 rows (58%) carry no number. Outcome-exposed and descriptive; no frozen same-row baseline exists for any of these cards.
-- **Predictive advantage (ONE-CHAT-v3, v29.2):** NOT_YET_DEMONSTRATED. Cards are being sealed on `forecast-seals` (12 by 22 November 2026, from minis `20261118DA6D9F6251746B979F5895FA` and `20261120-495CEEB69E9540938CF6A7DAA7B546B4`); P-689 is the first with a verified pre-start server seal. The verdict, current mean, lower bound and assessed prefix are printed by `python -m ml one-chat score`. [Plan](research/external/EVALUATION_PLAN_v29.0.md).
+- **Predictive advantage (ONE-CHAT-v3, v29.3):** NOT_YET_DEMONSTRATED. Cards are being sealed on `forecast-seals` (13 by 22 November 2026, from minis `20261118DA6D9F6251746B979F5895FA` and `20261120-495CEEB69E9540938CF6A7DAA7B546B4`); P-689 is the first with a verified pre-start server seal. The verdict, current mean, lower bound and assessed prefix are printed by `python -m ml one-chat score`. [Plan](research/external/EVALUATION_PLAN_v29.0.md).
 - **Audit and its findings:** [on-request audit of 16 November 2026](research/verification/retrospective_2026-11-16-1/RETROSPECTIVE_REPORT.md).
 - Earlier scoreboard notes (13 October to 10 November) and the 11 October retrospective summary: [history](research/history/CURRENT_STATE_RELEASES.md).
 Full tables: [research/scoreboard/SCOREBOARD.md](research/scoreboard/SCOREBOARD.md).
@@ -132,6 +134,10 @@ Active destination: [Part 11](prediction%20logs/PREDICTION_LOG_COMBINED_11.md); 
 ## Settlement revisions import — 2026-11-16T19:22:52+11:00
 
 Prompts 3→4 under the owner order of 16 November (S-1). The 53 rows left UNRESOLVED by the 14 and 15 November imports (P-647, P-661, P-662, P-664, P-678, P-683) are settled as revision-2 from the captures the owner's source recovery saved: 26 WIN, 27 LOSS; the effective view now holds 0 UNRESOLVED rows. The two WBBL six-over grades rest on a one-run threshold bound; three second-lineage checks stay open with grades settled. One deep loss review (P-662, first lean). Six addendum blocks appended to Part 11 with exact readback. [Report](research/verification/settlement_import_2026-11-16-1/CANONICAL_IMPORT_REPORT.md). CARD-TRAIN-v1 rerun: [research/card_training/2026-11-16-1](research/card_training/2026-11-16-1/REPORT.md) (3,082 rows admitted, 2,858 scored; conclusions unchanged).
+
+## Settlement, audit, canonical import and archive — 2026-11-23T07:00:00+11:00 (P-697–P-703)
+
+Prompts 3→4 on GitHub mini `20261120-495CEEB69E9540938CF6A7DAA7B546B4` (3 sealed cards, 4 refused drops, 7 registered requests). Archived byte-exact at [archive/settled_minis_2026-11-22/20261120-495CEEB69E9540938CF6A7DAA7B546B4/](archive/settled_minis_2026-11-22/20261120-495CEEB69E9540938CF6A7DAA7B546B4/README.md). All 7 cards settled: 30 rows, 15 WIN / 15 LOSS, 0 UNRESOLVED; Rank 1 3W / 4L, Rank 2 2W / 5L; mean card Brier 0.2498. 9 deep loss reviews. No game is Track P-eligible: first play is unverified on all three sealed cards. [Settlement](research/verification/mini_import_P-697_P-703_2026-11-22-2/SETTLEMENT.md) · [Audit](research/verification/mini_import_P-697_P-703_2026-11-22-2/AUDIT_REPORT.md) · [Import](research/verification/mini_import_P-697_P-703_2026-11-22-2/CANONICAL_IMPORT_REPORT.md).
 
 ## Settlement, audit, canonical import and archive — 2026-11-22T17:40:00+11:00 (P-686–P-696)
 

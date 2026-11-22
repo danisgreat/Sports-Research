@@ -193,3 +193,6 @@ research/verification/framework_change_2026-11-16-4/OWNER_REVIEW.original.txt -t
 # 2026-11-22 settlement, audit, canonical import and archive (P-686 to P-696, mini 20261118DA6D9F6251746B979F5895FA).
 archive/settled_minis_2026-11-22/** -text
 research/verification/mini_import_P-686_P-696_2026-11-22-1/** -text
+
+# 2026-11-23 settlement, audit, canonical import and archive (P-697 to P-703, mini 20261120-495CEEB69E9540938CF6A7DAA7B546B4).
+research/verification/mini_import_P-697_P-703_2026-11-22-2/** -text
