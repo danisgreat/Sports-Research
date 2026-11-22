@@ -28,7 +28,6 @@ import tempfile
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from ml import picks as P
 from ml import timing as T
 from ml import forecast_integrity as F
 
@@ -205,7 +204,8 @@ def check(meta: dict, picks: list[dict], facts: list[dict], key: str, root=ROOT)
         else:
             window = (clocks["research_start_at"], clocks["research_end_at"])
     if meta.get("not_started_source") and not re.match(r"https?://\S+$", meta["not_started_source"]):
-        problems.append("header: not_started_source must be the page that showed the game had not started")
+        problems.append("header: not_started_source must be the page that showed the game had not started"
+                        " (only its https:// address; without such a page the card has no pre-start proof and cannot be sealed)")
     words = re.sub(r"https?://\S+", " ", "\n".join(meta.values()) + "\n" + "\n".join(",".join(r.values()) for r in picks + facts))
     if MARKET.search(words):
         problems.append("block: sporting fields only; no odds, prices, bookmakers or tips")
@@ -218,32 +218,12 @@ def check(meta: dict, picks: list[dict], facts: list[dict], key: str, root=ROOT)
     for label, rows in by_label.items():
         name = f"PICKS {label}: "
         family = rows[0]["family"]
-        sides = [r["side"].upper() for r in rows]
-        if any(r["family"] != family for r in rows) or family not in P.FAMILIES:
-            problems.append(name + "one family from the allowed vocabulary per line")
-            continue
-        if any(s not in P.SIDES[family] for s in sides) or len(set(sides)) != len(sides):
-            problems.append(name + f"sides must be distinct and from {'/'.join(P.SIDES[family])}")
-            continue
-        three_way = family == "WINNER" and "DRAW" in sides
-        if len(rows) != (3 if three_way else 2) or (set(sides) not in ({"HOME", "AWAY"}, {"OVER", "UNDER"}, {"YES", "NO"}, {"HOME", "AWAY", "DRAW"})):
-            problems.append(name + "both sides of the line are required (HOME/AWAY, OVER/UNDER, YES/NO, or HOME/AWAY/DRAW)")
+        # The same line rules run when the request is registered (forecast_integrity, v29.2).
+        shape = F.line_shape_problems(rows, name)
+        if shape:
+            problems += shape
             continue
         lines = [_number(r["line"]) if r["line"] else None for r in rows]
-        if family == "WINNER":
-            if any(r["line"] for r in rows):
-                problems.append(name + "a winner row has no line")
-        elif set(sides) == {"YES", "NO"}:
-            if any(r["line"] for r in rows):
-                problems.append(name + "a yes/no row has no line")
-        elif any(x is None for x in lines):
-            problems.append(name + "a numeric line is required on both rows")
-            continue
-        elif set(sides) == {"HOME", "AWAY"}:
-            if abs(lines[0] + lines[1]) > 1e-9:
-                problems.append(name + "the two handicap lines must be equal and opposite")
-        elif lines[0] != lines[1]:
-            problems.append(name + "both rows carry the same line")
         for r in rows:
             if r["availability_basis"] not in AVAILABILITY:
                 problems.append(name + f"availability_basis must be one of {'/'.join(AVAILABILITY)}")
@@ -283,7 +263,8 @@ def check(meta: dict, picks: list[dict], facts: list[dict], key: str, root=ROOT)
             problems.append(name + "value is required; write MISSING and the reason in source when it could not be found")
         elif r["value"] != "MISSING":
             if not re.match(r"https?://\S+$", r["source"]):
-                problems.append(name + "an observed value needs its source page")
+                problems.append(name + "an observed value needs its source page: put only the page's https:// address in "
+                                "source, with no other words; with no page, write MISSING as the value and the reason in source")
             try:
                 t = T.clock(r["observed_at"], "observed_at")
             except ValueError:
@@ -324,8 +305,36 @@ def _flags(row: dict, p, favoured: bool, line) -> list[str]:
     return flags
 
 
+def incoherent_labels(derived: dict) -> dict[str, str]:
+    """Lines whose prices contradict another line of the same family on the card (v29.2; a flag, never a refusal).
+
+    One score distribution implies: an Over on a higher total line is no more likely than on a lower one, and HOME
+    covering a harder (more negative) handicap is no more likely than covering an easier one. Probabilities are taken
+    conditional on a decision, as scored. Returns {label: reason}."""
+    out = {}
+    for family, side, increasing in (("TOTAL", "OVER", False), ("HANDICAP", "HOME", True)):
+        pts = []
+        for label, d in derived.items():
+            if label == "_facts" or d["unpriced"] or d["family"] != family:
+                continue
+            sides = [r["side"].upper() for r in d["rows"]]
+            if side not in sides or d["lines"][sides.index(side)] is None or not sum(d["ps"]):
+                continue
+            i = sides.index(side)
+            pts.append((d["lines"][i], d["ps"][i] / sum(d["ps"]), label))
+        pts.sort()
+        for (x1, q1, a), (x2, q2, b) in zip(pts, pts[1:]):
+            if x1 < x2 and ((q1 > q2 + 1e-6) if increasing else (q1 + 1e-6 < q2)):
+                why = (f"{family} {side} {x1:g} at {q1:.3f} and {x2:g} at {q2:.3f}: the "
+                       + ("easier" if increasing else "lower") + " line must be at least as likely")
+                out.setdefault(a, why)
+                out.setdefault(b, why)
+    return out
+
+
 def rows_for(card_key: str, gid: str, derived: dict) -> list[dict]:
     out, favoured = [], []
+    incoherent = incoherent_labels(derived)
     for label, d in derived.items():
         if label == "_facts":
             continue
@@ -333,8 +342,9 @@ def rows_for(card_key: str, gid: str, derived: dict) -> list[dict]:
         for i, r in enumerate(d["rows"]):
             p = None if d["unpriced"] else d["ps"][i]
             fav = best == i
+            flags = _flags(r, p, fav, d["lines"][i]) + (["INCOHERENT_ACROSS_LINES"] if label in incoherent else [])
             row = dict(card_key=card_key, game_id=gid, **{k: r[k] for k in PICK_COLUMNS}, favoured="Y" if fav else "", rank="",
-                       flags=";".join(_flags(r, p, fav, d["lines"][i])))
+                       flags=";".join(flags))
             row["side"] = r["side"].upper()
             out.append(row)
             if fav:
@@ -781,6 +791,67 @@ def seal(files, root=ROOT, *, push=True, lookup=None, wait=(0, 3, 6, 12), attemp
             _git(root, "fetch", "-q", "origin", SEAL_BRANCH, check=False)
 
 
+def _block_refusal(repo, root, key, meta, pk, problems, first_block, policy_time):
+    """Why one card block cannot be sealed (None if it can), and its registered request files.
+
+    The only place these checks live: ``seal`` and ``preflight`` (the DROP-SEAL check drop) both call it, so a card
+    that passes the check would be sealed by the same code in the same state."""
+    if key in first_block:
+        return ("an earlier version of this card is already sealed; the first sealed card is the forecast of record"), {}
+    if problems:
+        return "incomplete or invalid card: " + " | ".join(problems), {}
+    folder = request_staging(root) / F.request_path(key)
+    if not folder.exists():
+        folder = root / F.request_path(key)
+    request = {name: (folder / name).read_bytes() for name in (*F.REQUEST_FILES, "MANIFEST.csv") if (folder / name).exists()}
+    if len(request) != 4:
+        return "no registered request under this card key", {}
+    request_issues = F.request_problems(request, meta, pk)
+    if request_issues:
+        return "card differs from its registered request: " + " | ".join(request_issues), {}
+    registration = request_registration(repo, key, request)
+    if (registration is None or registration[0] > T.clock(meta["research_start_at"], "research start")
+            or registration[0] < T.clock(policy_time, "policy publication")):
+        return "request must be independently published after the policy and before research starts", {}
+    return None, request
+
+
+def _policy(repo):
+    plan = repo.blob("refs/remotes/origin/main", PLAN)
+    if plan is None:
+        raise OneChatError("publish the current evaluation registration on main before sealing forecasts")
+    policy_commit = repo.first_content(PLAN, sha(plan))
+    policy_time = repo.pushed_at(policy_commit) if policy_commit else ""
+    if not policy_time:
+        raise OneChatError("current registration has no independently verified main publication time"
+                           + (f" ({repo.activity_error})" if repo.activity_error else ""))
+    return plan, policy_commit, policy_time
+
+
+def preflight(files, root=ROOT, *, lookup=None) -> list[dict]:
+    """Check cards exactly as ``seal`` would, publishing nothing (v29.2 check drop). One row per card block."""
+    root = Path(root)
+    repo = Repo(root, lookup=lookup)
+    first_block = {}
+    for r in repo.seals:
+        first_block.setdefault(r["card_key"], r["block_sha256"])
+    _, _, policy_time = _policy(repo)
+    out = []
+    for file in map(Path, files):
+        blocks = card_blocks(file.read_bytes().decode("utf-8", errors="replace"), root)
+        if not blocks:
+            out.append(dict(card_key="", ok=False, reason="no ONECHAT_V1 block", scheduled_start=""))
+        for key, block_sha, meta, pk, fc, problems, derived in blocks:
+            if first_block.get(key) == block_sha:
+                reason = "this exact card is already sealed"
+            else:
+                reason, _ = _block_refusal(repo, root, key, meta, pk, problems, first_block, policy_time)
+            warnings = sorted(set(incoherent_labels(derived).values())) if not problems else []
+            out.append(dict(card_key=key, ok=reason is None, reason=reason or "", scheduled_start=meta.get("scheduled_start", ""),
+                            warnings=warnings))
+    return out
+
+
 def _seal_once(files, root, *, push, lookup, wait) -> dict:
     repo = Repo(root, lookup=lookup)
     sealed_blocks = {r["block_sha256"] for r in repo.seals}
@@ -788,14 +859,7 @@ def _seal_once(files, root, *, push, lookup, wait) -> dict:
     for r in repo.seals:
         first_block.setdefault(r["card_key"], r["block_sha256"])
     rows, payload, refused = [], {}, []
-    plan=repo.blob("refs/remotes/origin/main",PLAN)
-    if plan is None:
-        raise OneChatError("publish the current evaluation registration on main before sealing forecasts")
-    policy_commit=repo.first_content(PLAN,sha(plan))
-    policy_time=repo.pushed_at(policy_commit) if policy_commit else ""
-    if not policy_time:
-        raise OneChatError("current registration has no independently verified main publication time"
-                           + (f" ({repo.activity_error})" if repo.activity_error else ""))
+    plan, policy_commit, policy_time = _policy(repo)
     for file in map(Path, files):
         raw = file.read_bytes()
         digest = sha(raw)
@@ -809,28 +873,9 @@ def _seal_once(files, root, *, push, lookup, wait) -> dict:
         for key, block_sha, meta, pk, fc, problems, derived in blocks:
             if block_sha in sealed_blocks:
                 continue
-            if key in first_block:
-                refused.append(dict(file=file.name, card_key=key, reason="an earlier version of this card is already sealed; "
-                                    "the first sealed card is the forecast of record"))
-                continue
-            if problems:
-                refused.append(dict(file=file.name, card_key=key, reason="incomplete or invalid card: " + " | ".join(problems)[:300]))
-                continue
-            folder = request_staging(root) / F.request_path(key)
-            if not folder.exists():
-                folder = root / F.request_path(key)
-            request = {name: (folder / name).read_bytes() for name in (*F.REQUEST_FILES, "MANIFEST.csv") if (folder / name).exists()}
-            if len(request) != 4:
-                refused.append(dict(file=file.name, card_key=key, reason="no registered request under this card key"))
-                continue
-            request_issues = F.request_problems(request, meta, pk)
-            if request_issues:
-                refused.append(dict(file=file.name, card_key=key, reason="card differs from its registered request: " + " | ".join(request_issues)[:300]))
-                continue
-            registration=request_registration(repo,key,request)
-            if (registration is None or registration[0]>T.clock(meta["research_start_at"],"research start")
-                    or registration[0]<T.clock(policy_time,"policy publication")):
-                refused.append(dict(file=file.name, card_key=key, reason="request must be independently published after the policy and before research starts"))
+            reason, request = _block_refusal(repo, root, key, meta, pk, problems, first_block, policy_time)
+            if reason:
+                refused.append(dict(file=file.name, card_key=key, reason=reason))
                 continue
             for name, data in request.items():
                 request_payload[F.request_path(key) + "/" + name] = data
@@ -1005,14 +1050,16 @@ def timing_label(card: dict, actual_start: str, seal: dict) -> str:
         return "TIMING_UNKNOWN"
     if card["outcome_exposure"].strip().upper() != "NONE":
         return "OUTCOME_EXPOSED"
-    if max(began, seen, ended, last) > start:
+    # v29.2: "before first play" is strict. A clock equal to first play is not before it, and a first play known only to
+    # the minute is read at that minute's start, so a seal inside that minute is never taken as pre-start.
+    if max(began, seen, ended, last) >= start:
         return "POST_START"
     if seal["seal"] != "SEALED":
         return seal["seal"]
     sealed = T.clock(seal["seal_time"], "seal_time")
     if sealed < ended:
         return "CLOCK_INCONSISTENT"
-    if sealed > start:
+    if sealed >= start:
         return "SEALED_AFTER_START"
     return "SEALED_PRE_START_SERVER" if seal["seal_basis"] == "SERVER_PUSH_TIME" else "SEALED_PRE_START_CLIENT"
 
@@ -1115,6 +1162,10 @@ def score(intakes, outcomes, out, *, root=ROOT, captures=None, cohort=None, base
         raise OneChatError("Freeze sporting baseline probabilities and provenance in the original request CONTRACTS.csv before sealing; post-result comparator files are not admitted")
     base = {}
     seals = {k: seal_evidence(repo, c["block_sha256"]) for k, c in cards.items()}
+    # v29.2: a replay at as_of sees only what existed by then. A seal GitHub published after as_of does not count.
+    for k, s in seals.items():
+        if s["seal"] == "SEALED" and s.get("seal_time") and T.clock(s["seal_time"], "seal_time") > as_of:
+            seals[k] = dict(seal="SEALED_AFTER_AS_OF", seal_time="", seal_basis="")
     # Regenerating a derivative's manifest cannot change the forecast of record.
     for key, card in cards.items():
         seal = seals[key]
@@ -1200,12 +1251,12 @@ def score(intakes, outcomes, out, *, root=ROOT, captures=None, cohort=None, base
 
         def settled_by_cutoff(g):
             # A row counts only if it was settled by the deadline: a row settled later cannot bring a dropped game back.
-            if cutoff is None:
-                return True
+            # v29.2: nor by the replay time, so a replay at as_of never uses a settlement made after it.
+            limit = as_of if cutoff is None else min(cutoff, as_of)
             try:
-                return T.clock(g["settled_at"], "settled_at") <= cutoff
+                return T.clock(g["settled_at"], "settled_at") <= limit
             except (KeyError, ValueError):
-                return False
+                return cutoff is None
 
         done = {k: g for k, g in got.items() if g is not None and g["grade"] in TERMINAL and settled_by_cutoff(g)}
         open_rows = [r for r in mine if (r["label"], r["side"]) not in done]
@@ -1344,7 +1395,8 @@ def score(intakes, outcomes, out, *, root=ROOT, captures=None, cohort=None, base
     for sp in sorted({g["sport"] for g in sequence}):
         keys = {g["card_key"] for g in sequence if g["sport"] == sp}
         add("sport_all_rows", sp, [r for r in rows if r["card_key"] in keys])
-    for flag in ("NO_DIRECTION", "UNMEASURED_AVAILABILITY_PRICED", "CONTRADICTS_OWN_CENTRE", "PLUS_HANDICAP"):
+    for flag in ("NO_DIRECTION", "UNMEASURED_AVAILABILITY_PRICED", "CONTRADICTS_OWN_CENTRE", "PLUS_HANDICAP",
+                 "INCOHERENT_ACROSS_LINES"):
         add("hypothesis_flag_favoured", flag, [r for r in fav if flag in r["flags"].split(";")])
         add("hypothesis_flag_favoured", "NOT_" + flag, [r for r in fav if flag not in r["flags"].split(";")])
     sports = []

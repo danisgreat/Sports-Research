@@ -4,6 +4,8 @@ An outside chat (for example ChatGPT) cannot run this repository's commands, but
 
     drops/requests/<CARD_KEY>/REQUEST.txt, EVENT.csv, CONTRACTS.csv   before research starts
     drops/cards/<any name>.md                                           the finished card, before first play
+    drops/check/<any name>.md                                           v29.2: a draft checked exactly as a seal
+                                                                         would be; nothing is published
 
 The `seal-drops` workflow runs this module on every push to the drop branch. It reads the exact pushed blobs and
 calls the unchanged ONE-CHAT-v3 code: `forecast_integrity.register_request` + `one_chat.publish_requests` for a
@@ -28,6 +30,7 @@ RULE = "DROP-SEAL-v1"
 DROP_ROOT = "drops"
 REQUEST_DROP = re.compile(r"drops/requests/([A-Za-z0-9_-]+)/(REQUEST\.txt|EVENT\.csv|CONTRACTS\.csv)")
 CARD_DROP = re.compile(r"drops/cards/[^/]+\.md")
+CHECK_DROP = re.compile(r"drops/check/[^/]+\.md")
 ZERO = "0" * 40
 RACE = ("seal push refused", "refresh and retry")    # another drop published first: refetch and publish on top
 
@@ -42,6 +45,19 @@ def _publish(fn, root, attempts=5, pause=4):
                 raise
             time.sleep(pause * (n + 1))
             O._git(root, "fetch", "-q", "origin", O.SEAL_BRANCH, check=False)
+
+
+def _margin(server_time: str, scheduled_start: str) -> str:
+    """How far before (or after) the scheduled start the server published the seal, in plain words."""
+    try:
+        gap = (O.T.clock(scheduled_start, "scheduled_start") - O.T.clock(server_time, "server time")).total_seconds()
+    except ValueError:
+        return ""
+    minutes = abs(gap) / 60
+    if gap >= 0:
+        return f"{minutes:.0f} min before the scheduled start"
+    return (f"{minutes:.0f} min after the scheduled start; normal for a late start: it counts when settlement's "
+            "first-play capture is later than the seal")
 
 
 def changed_drops(root, before: str, after: str) -> list[str]:
@@ -95,12 +111,15 @@ def process(root, before: str, after: str, *, lookup=None, wait=(0, 3, 6, 12)) -
     results: list[dict] = []
     requests: dict[str, set[str]] = {}
     cards: list[str] = []
+    checks: list[str] = []
     for p in paths:
         m = REQUEST_DROP.fullmatch(p)
         if m:
             requests.setdefault(m[1], set()).add(m[2])
         elif CARD_DROP.fullmatch(p):
             cards.append(p)
+        elif CHECK_DROP.fullmatch(p):
+            checks.append(p)
         elif not p.endswith("README.md"):
             results.append(dict(drop=p, kind="unknown", status="IGNORED",
                                 detail="not a request file or a card; see drops/README.md"))
@@ -156,8 +175,11 @@ def process(root, before: str, after: str, *, lookup=None, wait=(0, 3, 6, 12)) -
                 outcome = _publish(lambda: O.seal([file], root, lookup=lookup, wait=wait), root)
                 refused = "; ".join(f"{r['card_key'] or 'card'}: {r['reason']}" for r in outcome.get("refused", []))
                 if outcome["sealed"] and not refused:
+                    margin = "; ".join(m for m in (_margin(outcome["server_time"], b[2].get("scheduled_start", ""))
+                                                   for b in blocks) if m) if outcome["server_time"] else ""
                     results.append(dict(item, status="SEALED", commit=outcome["commit"],
-                                        detail=f"server time {outcome['server_time'] or 'pending'} on {O.SEAL_BRANCH}"))
+                                        detail=f"server time {outcome['server_time'] or 'pending'} on {O.SEAL_BRANCH}"
+                                        + (f" ({margin})" if margin else "")))
                 elif refused:
                     sealed = f"sealed {outcome['cards']}; " if outcome["sealed"] else ""
                     results.append(dict(item, status="FAILED", commit=outcome.get("commit", ""), detail=sealed + "not sealed: " + refused))
@@ -165,6 +187,24 @@ def process(root, before: str, after: str, *, lookup=None, wait=(0, 3, 6, 12)) -
                     results.append(dict(item, status="ALREADY_SEALED", detail=outcome.get("note", "")))
             except (O.OneChatError, ValueError, OSError, UnicodeDecodeError) as exc:
                 results.append(dict(item, status="FAILED", detail=str(exc)))
+
+    # Check drops: the same checks as a seal, nothing published. A failed check is red so the chat sees it.
+    with tempfile.TemporaryDirectory(prefix="drop-check-") as temp:
+        for i, p in enumerate(checks):
+            item = dict(drop=p, kind="check")
+            try:
+                file = Path(temp) / f"check{i:03d}.md"
+                file.write_bytes(blob(root, after, p))
+                blocks = O.card_blocks(file.read_bytes().decode("utf-8"), root)
+                for b in blocks:
+                    _restore_published_request(root, b[0])
+                for r in O.preflight([file], root, lookup=lookup):
+                    warn = ("; WARNING (does not block the seal): " + " / ".join(r["warnings"])) if r.get("warnings") else ""
+                    results.append(dict(item, card_key=r["card_key"], status="CHECK_PASSED" if r["ok"] else "CHECK_FAILED",
+                                        detail=("would be sealed now; push it to drops/cards/ to seal it" if r["ok"]
+                                                else "would NOT be sealed: " + r["reason"]) + warn))
+            except (O.OneChatError, ValueError, OSError, UnicodeDecodeError) as exc:
+                results.append(dict(item, status="CHECK_FAILED", detail=str(exc)))
     return results
 
 
@@ -174,7 +214,8 @@ def summary(results: list[dict], after: str) -> str:
         return "\n".join(lines + ["No request or card drops in this push."]) + "\n"
     lines += ["| Drop | Kind | Card key | Status | Detail |", "|---|---|---|---|---|"]
     for r in results:
-        detail = str(r.get("detail", "")).replace("|", "/").replace("\n", " ")[:400]
+        # v29.2: long enough for several full refusal reasons (400 characters cut the second one off).
+        detail = str(r.get("detail", "")).replace("|", "/").replace("\n", " ")[:3000]
         lines.append(f"| `{r['drop']}` | {r['kind']} | {r.get('card_key', '')} | **{r['status']}** | {detail} |")
     return "\n".join(lines) + "\n"
 
@@ -191,7 +232,7 @@ def main(argv=None) -> int:
     if args.summary:
         with open(args.summary, "a", encoding="utf-8") as fh:
             fh.write(text)
-    return 1 if any(r["status"] == "FAILED" for r in results) else 0
+    return 1 if any(r["status"] in ("FAILED", "CHECK_FAILED") for r in results) else 0
 
 
 if __name__ == "__main__":

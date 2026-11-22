@@ -315,7 +315,7 @@ The probability source is Part A section 7 (ANALYST_PRIMARY_V1 from the frozen r
 
 ## v24.15 operational and parameter amendment
 
-For v24.15 manifest-bound external work, EXT-v3 governs reduced/six-role scope, explicit numeric-or-unpriced coverage, official no-play delay amendments and independent source snapshot versions. The owner authorizes this statistical/admission correction before a v24.14 scored card. Subsequent source-only audits may update access snapshots without changing method identity; other statistical changes keep the freeze and owner-authority rules. See [EXT-v3](EXTERNAL_RESEARCH_PROTOCOL_V3.md).
+For v24.15 manifest-bound external work, EXT-v3 governs reduced/six-role scope, explicit numeric-or-unpriced coverage, official no-play delay amendments and independent source snapshot versions. The owner authorizes this statistical/admission correction before a v24.14 scored card. Subsequent source-only audits may update access snapshots without changing method identity; other statistical changes keep the freeze and owner-authority rules. See [EXT-v3](https://github.com/danisgreat/Sports-Research/blob/cb97bbc2a9f882e7f8a093648b6137315951da8b/EXTERNAL_RESEARCH_PROTOCOL_V3.md).
 
 
 ## Owner-directed ASSESS-100 amendment (CR-2026.11.11-R4)
@@ -332,7 +332,7 @@ Every settled record and game log is ingested, admitted and used in an actual tr
 
 ## One chat per game (ONE-CHAT-v1, CR-2026.11.16-R2)
 
-Owner order, 16 November 2026. The measured forecast is the card one research chat writes for one game under the [brief](research/external/ONE_CHAT_BRIEF_v25.0.md). It replaces, for new games, the five-lane external route (EXT-v3) and its unstarted FIVE_LANES against SINGLE_RESEARCH assessment, which never admitted a game; their text and registrations are kept.
+Owner order, 16 November 2026. The measured forecast is the card one research chat writes for one game under the [brief](archive/superseded_2026-11-22/research/external/ONE_CHAT_BRIEF_v25.0.md). It replaces, for new games, the five-lane external route (EXT-v3) and its unstarted FIVE_LANES against SINGLE_RESEARCH assessment, which never admitted a game; their text and registrations are kept.
 
 - **The block.** Every card ends with one `ONECHAT_V1` block: the header (identity, scheduled start, request, research start and end, the not-started observation, outcome exposure), a PICKS table with a probability for both sides of every supplied line, and a FACTS table of the sport's required pregame figures ([CARD_AND_LOG_TEMPLATES](CARD_AND_LOG_TEMPLATES.md)).
 - **A number or UNPRICED.** A supplied line carries a probability on every side or UNPRICED on every side (one side may be marked LEAN). An unpriced line is retained, never ranked and never scored.
@@ -341,7 +341,7 @@ Owner order, 16 November 2026. The measured forecast is the card one research ch
 - **Comparator.** Computed here at import, never by the chat: the constant 0.5 on supplied lines, and a league base rate where one was frozen before the result.
 - **Timing (TIMING-v3 unchanged).** A card counts when the research began and the not-started observation was made at or before the official first play, with no outcome exposure. The file's saved time is reported; research is never hurried to beat it.
 - **Settlement.** Every row is graded from a permitted result page whose saved capture is recorded by SHA-256; `OUTCOMES.csv` carries the grades. Canonical IDs, byte-exact retention, deep loss reviews and CARD-TRAIN-v1 are unchanged.
-- **Assessment.** [EVALUATION_PLAN_v25.0](research/external/EVALUATION_PLAN_v25.0.md) and [SCORING_AND_VALIDATION](SCORING_AND_VALIDATION.md) §15.
+- **Assessment.** [EVALUATION_PLAN_v25.0](archive/superseded_2026-11-22/research/external/EVALUATION_PLAN_v25.0.md) and [SCORING_AND_VALIDATION](SCORING_AND_VALIDATION.md) §15.
 
 Replaces: CORE §2 "External research lanes (EXT-v3)" as the route for new games, and ASSESS-100 / EXT-EVAL-v2 as the current assessment. Originals: https://github.com/danisgreat/Sports-Research/blob/8f2f38faf2dda46986c20df3d503f4f8115e225b/archive/superseded_2026-11-16-2.
 

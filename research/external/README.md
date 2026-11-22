@@ -8,7 +8,7 @@ Upload to each chat (or once to a ChatGPT Project):
 
 | File | What it is |
 |---|---|
-| [ONE_CHAT_BRIEF_v29.0.md](ONE_CHAT_BRIEF_v29.0.md) | The one brief: what the chat does and the `ONECHAT_V1` block that ends every card (v25.0 to v28.0 are retained; do not upload them) |
+| [ONE_CHAT_BRIEF_v29.2.md](ONE_CHAT_BRIEF_v29.2.md) | The one brief: what the chat does and the `ONECHAT_V1` block that ends every card (v25.0 to v29.0 are archived in [archive/superseded_2026-11-22](../../archive/superseded_2026-11-22/README.md); do not upload them) |
 | [`ml/kit/sr_kit.py`](../../ml/kit/sr_kit.py) and the kit parameter files below | The calculation kit (unchanged, v24.15) |
 | The current do-not-open list and `sources/PREGAME_SOURCES_<SPORT>_v24.15.csv` | Where the chat may read (unchanged) |
 
@@ -59,4 +59,4 @@ A refresh that changes a file's contents is a new round of changes: it takes the
 
 ## Retained package notes (historical five-lane EXT-v3)
 
-Only v24.15 kit/source/access files are current. v24.13 and v24.14 profiles/briefs/kit files are retained originals and must not be mixed into a current chat. The standalone kit header names v24.15. Source-only snapshots use their own date-based versions; `CURRENT_ACCESS.csv` identifies the current reader/access pair with canonical-LF hashes. Prior five-lane evaluation plans (`EVALUATION_PLAN_v24.14.md` through `EVALUATION_PLAN_v24.19.md`) and `EXT-v3` (archived at [`cb97bbc2a`](https://github.com/danisgreat/Sports-Research/blob/cb97bbc2a9f882e7f8a093648b6137315951da8b/EXTERNAL_RESEARCH_PROTOCOL_V3.md)) are retained history and take no new game; the current registered evaluation is [EVALUATION_PLAN_v29.0.md](EVALUATION_PLAN_v29.0.md).
+Only v24.15 kit/source/access files are current. v24.13 and v24.14 profiles/briefs/kit files are retained originals and must not be mixed into a current chat. The standalone kit header names v24.15. Source-only snapshots use their own date-based versions; `CURRENT_ACCESS.csv` identifies the current reader/access pair with canonical-LF hashes. Prior five-lane evaluation plans (`EVALUATION_PLAN_v24.14.md` to `v24.16.md`, archived in [archive/superseded_2026-11-22](../../archive/superseded_2026-11-22/README.md); `EVALUATION_PLAN_v24.19.md` here) and `EXT-v3` (archived at [`cb97bbc2a`](https://github.com/danisgreat/Sports-Research/blob/cb97bbc2a9f882e7f8a093648b6137315951da8b/EXTERNAL_RESEARCH_PROTOCOL_V3.md)) are retained history and take no new game; the current registered evaluation is [EVALUATION_PLAN_v29.0.md](EVALUATION_PLAN_v29.0.md).

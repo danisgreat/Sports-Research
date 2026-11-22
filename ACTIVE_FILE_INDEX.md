@@ -8,7 +8,8 @@
 |---|---|
 | Operator runbook (prepare, register, seal, settle, score, parallel chats) | [research/one_chat/RUNBOOK.md](research/one_chat/RUNBOOK.md) |
 | Registered prospective evaluation plan (Track P, 600-game horizon) | [research/external/EVALUATION_PLAN_v29.0.md](research/external/EVALUATION_PLAN_v29.0.md) |
-| Research chat brief & `ONECHAT_V1` block schema | [research/external/ONE_CHAT_BRIEF_v29.0.md](research/external/ONE_CHAT_BRIEF_v29.0.md), [templates](research/external/templates/) |
+| Shadow top-two selection (SELECT-SHADOW-v1, registered separately) | [research/external/SELECTION_SHADOW_PLAN_v1.md](research/external/SELECTION_SHADOW_PLAN_v1.md), [`ml/selection_shadow.py`](ml/selection_shadow.py) |
+| Research chat brief & `ONECHAT_V1` block schema | [research/external/ONE_CHAT_BRIEF_v29.2.md](research/external/ONE_CHAT_BRIEF_v29.2.md), [templates](research/external/templates/) |
 | Current chat upload package (kit, parameters, reader access, per-sport sources) | [research/external/README.md](research/external/README.md), [`ml/kit/sr_kit.py`](ml/kit/sr_kit.py) |
 | One-chat intakes, scores, schedule sources & deep loss register | [research/one_chat/README.md](research/one_chat/README.md), [research/deep_loss/README.md](research/deep_loss/README.md) |
 | Historical pre-event validation (Track H, HPPV-v1) | [research/verification/historical_pre_event_v1/README.md](research/verification/historical_pre_event_v1/README.md) |

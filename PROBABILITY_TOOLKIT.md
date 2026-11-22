@@ -811,4 +811,4 @@ P(A beats B) = 1 / (1 + 10^(−(Elo_A − Elo_B)/400)).
 
 ## v24.15 operational and parameter amendment
 
-For v24.15 use the exact measured soccer competition row in research/competition_parameters/COMPETITION_PARAMETERS.csv and the matching upload kit. The old five worked soccer constants are historical method examples, not a fallback that overrides an available exact league row. A measured mean is not calibrated probability skill. Missing corners and unvalidated cricket contracts retain an explicit UNPRICED disposition. See [EXT-v3](EXTERNAL_RESEARCH_PROTOCOL_V3.md).
+For v24.15 use the exact measured soccer competition row in research/competition_parameters/COMPETITION_PARAMETERS.csv and the matching upload kit. The old five worked soccer constants are historical method examples, not a fallback that overrides an available exact league row. A measured mean is not calibrated probability skill. Missing corners and unvalidated cricket contracts retain an explicit UNPRICED disposition. See [EXT-v3](https://github.com/danisgreat/Sports-Research/blob/cb97bbc2a9f882e7f8a093648b6137315951da8b/EXTERNAL_RESEARCH_PROTOCOL_V3.md).

@@ -1,5 +1,49 @@
 # Australian rules request format and finals extra time — MDS/P v24.12 / CR-2026.11.10-R2 / P-2026.11.10-v24.10, 10 November 2026
 
+## 22 November 2026 — v29.2 / CR-2026.11.22-R1 / P-2026.11.22-v29.2: a request that registers can always be carded
+
+Owner order: review the failed `seal-drops` runs and fix them. Six drops were refused between 18 and 22 November:
+an AHL request with `ML` as a line (a raw "could not convert string to float" crash), an NBA card and an NBL card whose
+FACTS `source` was prose instead of a page address, a soccer card with no not-started page, and an NHL card whose
+request had been registered with one side per label, and a Jastar U20 card whose request put two different spreads
+("Aktobe +4.5", "Torpedo -3.5") under one label: in both, no card could ever pass both the request and the card checks.
+- Registration now runs the card's own line rules (`forecast_integrity.line_shape_problems`, shared with `one_chat.check`):
+  every label carries all its sides, a winner line is empty, and a text line is refused with its reason.
+- Registration refuses one contract registered twice. Where no draw is possible (basketball; ice hockey including the
+  shootout; baseball including extras; tennis), a moneyline and either side's ±0.5 are the same winner contract: the
+  re-registered AHL request (P-689) had two labels for one result, which counted it twice.
+- `prepare` reads half-point spreads in those sports as that winner contract; a real spread stays a handicap.
+- Refusal reasons say how to fix a FACTS `source` and `not_started_source`; the run summary keeps up to 3,000 characters.
+- [ONE_CHAT_BRIEF_v29.2](research/external/ONE_CHAT_BRIEF_v29.2.md): a checklist before a card is handed over and the
+  rules for a request written by hand; [drops/README.md](drops/README.md) and the [runbook](research/one_chat/RUNBOOK.md) point to it.
+- Owner: two different spreads in a request ("Aktobe +4.5", "Torpedo -3.5") are asked for on purpose. `prepare` now
+  registers them as two contracts, each priced on both sides, instead of refusing them.
+- Check drops: a draft pushed to `drops/check/` runs the exact seal checks (one shared `_block_refusal`) and
+  publishes nothing. A refused card, never sealed, may be corrected and pushed as a new file before first play.
+  Seal summaries state the margin before the scheduled start. Refusal reasons are no longer cut at 300 characters.
+- Two external reviews (owner, 22 Nov; [triage](research/verification/external_reviews_2026-11-22/TRIAGE.md)). The
+  ±0.5 winner equivalence now needs the deciding score (a tennis games spread stays a handicap; this was a v29.2
+  defect). `INCOHERENT_ACROSS_LINES` flags prices that break one score distribution; it is a flag and a check warning,
+  never a refusal. The chat packet names the kit row and any family-prior fallback (the kit is unchanged). A replay at
+  `as_of` ignores later seals and settlements, and a clock equal to first play is not before it.
+  [SELECT-SHADOW-v1](research/external/SELECTION_SHADOW_PLAN_v1.md) registers a separate top-two policy that may
+  issue one pick or none, compared with the frozen ranker on the same future games. Kit and model upgrades, availability
+  effects, central pre-computation and gates on the registered rank need a v30.0 registration and are listed, not done.
+- Owner: requests and cards may be sent after the scheduled start. Games often start late; the actual first play
+  decides, so such a game is a full game log (request, seal, settlement, P-ID) and counts when the seal precedes the
+  captured first play. The code already worked this way; the brief, drop README and runbook now say so, and a test
+  covers a request registered after the scheduled start.
+- Codex review of #12: the shadow comparison is confirmatory only with eligibility and the plan's publication time,
+  takes games in the registered order, and reads "same contract" from the registered request definitions.
+- Cleanup: 16 superseded `research/external/` files (evaluation plans v24.14 to v28.0, five-lane profiles and lane
+  briefs v24.13 and v24.14, one-chat briefs v25.0 to v29.0) moved to
+  [archive/superseded_2026-11-22/](archive/superseded_2026-11-22/README.md) with RELOCATIONS.csv (RELOC-v1). Live links
+  repointed. Links left dead by the 19 November pruning now point at the `cb97bbc2a` permalinks.
+
+The new checks run only when a new request is registered: an identical earlier registration is still recognised, and
+sealed requests and cards keep the rules they were registered under. Scoring, the card format and
+EVALUATION_PLAN_v29.0 are unchanged. [Implementation](research/verification/framework_change_2026-11-22-1/IMPLEMENTATION.md).
+
 ## 22 November 2026 — Settlement, audit, canonical import and archive: P-686 to P-696 (`20261118DA6D9F6251746B979F5895FA`, records only)
 
 Pulled the >10-game GitHub mini `20261118DA6D9F6251746B979F5895FA` (18–20 November 2026) from `origin/forecast-seals` (10 sealed cards: `G0002`, `G0003`, `G0005`, `G0006`, `G0008`–`G0013`; 12 registered requests) and `origin/card-drops` (`G0001` unsealed card + `G0004` unregistered superseded AHL draft). Archived byte-exact at `archive/settled_minis_2026-11-22/20261118DA6D9F6251746B979F5895FA/` with `FROZEN_MANIFEST.csv`. Settled all 11 carded games (**P-686 to P-696**, 46 contract rows, **0 UNRESOLVED**) from robots-permitted official box-score captures saved to `../one_chat_captures/2026-11-22/`, audited under `SRC-ALT-v3` / `EXH-v1` / `DEEPLOSS-v1` / `ONE-CHAT-v3`, appended 11 canonical wrappers + 11 settlement addenda to [Part 11](prediction%20logs/PREDICTION_LOG_COMBINED_11.md) with byte-exact prefix and 22/22 block readback, appended 10 deep loss reviews (`DLR-2026-11-22-001`–`010`) to `research/deep_loss/DEEP_LOSS_REGISTER.csv`, ran `ml one-chat intake --from-seals` (`research/one_chat/intake/2026-11-22-1`) and `ml card-training run` (`research/card_training/2026-11-22-1`). Non-card keys `G0004` (superseded draft) and `G0007` (`NBA:0022600258` registered request with no card dropped — `NO_FORECAST`) consume 0 canonical IDs. Highest canonical ID **P-696**, next **P-697**, reserved **P-518–P-522** unchanged. `FREEZE-v1` holds; no method, rule, version or evaluation-plan change; no predictive advantage certified (`P-689` / `G0005` is the first game with verified pre-start server seal and official first-play capture). [Settlement](research/verification/mini_import_P-686_P-696_2026-11-22-1/SETTLEMENT.md), [Audit](research/verification/mini_import_P-686_P-696_2026-11-22-1/AUDIT_REPORT.md), [Import report](research/verification/mini_import_P-686_P-696_2026-11-22-1/CANONICAL_IMPORT_REPORT.md).

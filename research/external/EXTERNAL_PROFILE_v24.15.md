@@ -1,6 +1,6 @@
 # External research profile v24.15
 
-Read this profile and your lane brief in full. The repository writer maintains the one authoritative mini; your output is research input. [Full EXT-v3 protocol](../../EXTERNAL_RESEARCH_PROTOCOL_V3.md).
+Read this profile and your lane brief in full. The repository writer maintains the one authoritative mini; your output is research input. [Full EXT-v3 protocol](https://github.com/danisgreat/Sports-Research/blob/cb97bbc2a9f882e7f8a093648b6137315951da8b/EXTERNAL_RESEARCH_PROTOCOL_V3.md).
 
 ## Before researching
 
@@ -60,4 +60,4 @@ Evidence side is HOME/AWAY/EVENT. Source classes: FIELD_OWNER, LEAGUE, CLUB, OFF
 The writer saves raw originals, returns exact refusal reasons and requests corrections by parent hash. Your chat does not assign P-IDs, issue a scored card or modify the authoritative mini.
 
 
-Read [EXT-v3](../../EXTERNAL_RESEARCH_PROTOCOL_V3.md) sections 1-5 before returning. Use the assigned explicit FULL_FIVE/REDUCED/FULL_SIX mode. Read the actual sandbox clock with datetime.now(timezone.utc) at start, retrieval and completion; unavailable execution is CLOCK_UNAVAILABLE, never a guessed time. Leave unsupported/all-push/unvalidated contracts in UNPRICED with a reason; no silent omission. Official delay/access amendments preserve the original manifest. L6 is an extra audit role, never a second pricer.
+Read [EXT-v3](https://github.com/danisgreat/Sports-Research/blob/cb97bbc2a9f882e7f8a093648b6137315951da8b/EXTERNAL_RESEARCH_PROTOCOL_V3.md) sections 1-5 before returning. Use the assigned explicit FULL_FIVE/REDUCED/FULL_SIX mode. Read the actual sandbox clock with datetime.now(timezone.utc) at start, retrieval and completion; unavailable execution is CLOCK_UNAVAILABLE, never a guessed time. Leave unsupported/all-push/unvalidated contracts in UNPRICED with a reason; no silent omission. Official delay/access amendments preserve the original manifest. L6 is an extra audit role, never a second pricer.

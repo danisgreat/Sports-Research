@@ -1,4 +1,4 @@
-# Current runbook: one chat per game (v29.0)
+# Current runbook: one chat per game (v29.2)
 
 Authority for ONECHAT_V1 cards: this runbook, CORE and [EVALUATION_PLAN_v29.0](../external/EVALUATION_PLAN_v29.0.md). The reference-first PICKS_V2 and five-lane documents describe separate retained workflows and are not extra prerequisites for a one-chat card. One writer publishes each request/card. Historical records keep their original rules.
 
@@ -18,7 +18,7 @@ Prepare CONTRACTS.csv, one row per side of every requested contract:
 label,family,side,line,period,endpoint,action,unit,request_excerpt,baseline_p,baseline_id
 ```
 
-Period, endpoint, units and action/retirement/overtime rules are explicit. The request excerpt is an exact substring of the original message. Do not add, omit or change a supplied line. Empty line values apply only to winner/yes-no contracts. A required winner output must also be explicitly included in the retained request. A sporting-data-only baseline may be generated centrally with `python -m ml baseline` from admitted pregame history (see ml/league_baseline.py); freeze its probability and recipe/history/code provenance in these rows before research. If no compatible baseline exists, leave baseline_p empty and put `UNAVAILABLE:<reason>` in baseline_id. Never fill it from a later result or a price.
+Period, endpoint, units and action/retirement/overtime rules are explicit. The request excerpt is an exact substring of the original message. Do not add, omit or change a supplied line. Empty line values apply only to winner/yes-no contracts. Registration (v29.2) runs the card's own line rules, so a request that registers can always be carded: every label carries all its sides (HOME/AWAY, OVER/UNDER, YES/NO), a winner row's line is empty (`ML` only in the excerpt), and one contract is registered once. Where no draw is possible (basketball; ice hockey including the shootout; baseball including extras; tennis), a moneyline and either side's ±0.5 are the same winner contract: one WINNER label, each row keeping its own excerpt. An identical earlier registration is still recognised; sealed requests keep the rules they were registered under. A required winner output must also be explicitly included in the retained request. A sporting-data-only baseline may be generated centrally with `python -m ml baseline` from admitted pregame history (see ml/league_baseline.py); freeze its probability and recipe/history/code provenance in these rows before research. If no compatible baseline exists, leave baseline_p empty and put `UNAVAILABLE:<reason>` in baseline_id. Never fill it from a later result or a price.
 
 ```text
 python -m ml one-chat register-request --source REQUEST.txt --event EVENT.csv --contracts CONTRACTS.csv --card-key <MINI_KEY>-G0001
@@ -28,7 +28,7 @@ This preserves exact source bytes in Git staging storage and publishes only the 
 
 ## 2. Research and write the card
 
-Give the chat [ONE_CHAT_BRIEF_v29.0](../external/ONE_CHAT_BRIEF_v29.0.md), the kit, the sport's current permitted-source list and do-not-open list. Price both sides of each exact requested contract or retain UNPRICED. Supply the ONECHAT_V1 block, offset-aware research clocks and sport-specific FACTS rows. Keep missing values with their real reasons. No unsupported probability, absence effect, source or model execution is invented.
+Give the chat [ONE_CHAT_BRIEF_v29.2](../external/ONE_CHAT_BRIEF_v29.2.md), the kit, the sport's current permitted-source list and do-not-open list. Price both sides of each exact requested contract or retain UNPRICED. Supply the ONECHAT_V1 block, offset-aware research clocks and sport-specific FACTS rows. Keep missing values with their real reasons. No unsupported probability, absence effect, source or model execution is invented.
 
 Capture L5/L10/L20 history, opponent strength, venue, rest/travel, availability/lineup status and adjustment evidence where available. Use the existing LEARNLOG PRIOR_GAMES.csv and AVAILABILITY.csv schemas for raw histories/player rows; retained aggregates are not substitutes for raw game-level lineage. The feature builder preserves missingness and rejects incompatible types. Sources with prices may supply sporting fields only; retain access restrictions and exclude price/tip data from research.
 
@@ -47,6 +47,9 @@ A research chat that cannot run these commands pushes to the `card-drops` branch
 `seal-drops` workflow runs `python -m ml.drop_seal`, which calls the same `register-request` and `seal` code with
 `main`'s reviewed code, and marks the drop commit green (done) or red (not sealed, reason in the run summary).
 Research may start only after the request's check is green. Rules and file formats: [drops/README.md](../../drops/README.md).
+v29.2: a draft pushed to `drops/check/` runs the same checks as a seal (`one_chat.preflight`, sharing
+`_block_refusal` with `seal`) and publishes nothing; a refused card, never sealed, may be corrected and pushed as a new
+file before first play; each seal's summary states its margin before the scheduled start.
 Rehearsals push to `test-card-drops…` and seal to `test-forecast-seals`, which is never scored; a local rehearsal (`ONE_CHAT_SEAL_BRANCH=test-forecast-seals…`) keeps its own staging and pending commits apart from the registered branch.
 
 **Trust.** GitHub runs the copy of `seal-drops.yml` held in the pushed drop commit, with write access to the seal branches. Whoever can push to `card-drops` can therefore also change what that run does, exactly as they could push to `forecast-seals` directly. Neither can backdate anything: the only timing evidence is GitHub's own push time on `forecast-seals`, and `main` accepts changes only through a reviewed pull request. Give drop access only to a chat you would trust to push seals.
@@ -92,7 +95,14 @@ python -m ml one-chat prepare --message CHAT1.txt --mini MINI21 --out <prep fold
 python -m ml one-chat register-requests --folder <prep folder>/MINI21
 ```
 
-`prepare` reads every message exactly as written and writes, per game, REQUEST.txt (the message itself), EVENT.csv, CONTRACTS.csv and SKELETON.md, plus one CHAT_PACKET.md in start order; a message it cannot read is listed in PREPARE_REPORT.csv with the reason and is not registered. `register-requests` registers and publishes the whole mini in one push. Paste CHAT_PACKET.md and [ONE_CHAT_BRIEF_v29.0](../external/ONE_CHAT_BRIEF_v29.0.md) into the chat only after the publication shows on GitHub. Use a new mini key per chat per day (MINI21, MINI22, …); never give the same game to two chats.
+**Late starts (owner, 22 November 2026).** A request may be sent, registered, researched and sealed after the scheduled start. Games often start late, and what counts is the **actual first play**, never the scheduled time. Such a game is a full game log: same request, card, seal, settlement and canonical P-ID as any other. It is scored when the card's not-started page was observed during the research and the server seal came before the first play captured at settlement. If play had already begun, the card is kept as research and does not count. Research is never cut short for the start.
+
+**Timing (v29.2).** Earlier requests are still better where they are possible: they leave time for confirmed lineups, a
+check drop and a seal before first play. Between 18 and 22 November every request in the live minis was registered
+within ten minutes of the scheduled start (one after it), and research ran as short as 81 seconds. The packet names the
+kit row each game reaches (v29.2) and any family-prior fallback.
+
+`prepare` reads every message exactly as written and writes, per game, REQUEST.txt (the message itself), EVENT.csv, CONTRACTS.csv and SKELETON.md, plus one CHAT_PACKET.md in start order; a message it cannot read is listed in PREPARE_REPORT.csv with the reason and is not registered. `register-requests` registers and publishes the whole mini in one push. Paste CHAT_PACKET.md and [ONE_CHAT_BRIEF_v29.2](../external/ONE_CHAT_BRIEF_v29.2.md) into the chat only after the publication shows on GitHub. Use a new mini key per chat per day (MINI21, MINI22, …); never give the same game to two chats.
 
 Save each chat's cumulative mini into one folder (for example `C:/chat-minis/MINI21.md`) whenever the chat hands over a card, and leave the sealer running:
 
@@ -102,7 +112,10 @@ python -m ml one-chat seal --watch C:/chat-minis
 
 Each pass (every two minutes) seals every new finished card in every mini, card by card: an unfinished, changed or unregistered card is reported and skipped, and the mini's other cards are still sealed. A card must be sealed before its own game's first play; the earliest games come first in each packet for this reason.
 
-After settlement, score from the sealed copies, never from the chats' later files:
+After settlement, score from the sealed copies, never from the chats' later files. The registered rank's top two are
+also compared with the separately registered shadow selection ([SELECTION_SHADOW_PLAN_v1](../external/SELECTION_SHADOW_PLAN_v1.md),
+`python -m ml.selection_shadow score … --coverage <score>/COVERAGE.csv --registered-at <plan publication>`), which never
+changes a card or the registered score:
 
 ```text
 python -m ml one-chat intake --from-seals --out research/one_chat/intake/<run>
@@ -118,6 +131,8 @@ Write the requests as you always do, one `Upcoming …` message per game, separa
 - `Handicap Games Spread: -3.5` and similar wordings, with or without a colon;
 - `Away @ Home` headers (the second name is the home side); with `vs` and no `Home side / venue` line, HOME and AWAY are the first- and second-named sides, and the chat prices them by name;
 - a moneyline on one side and a spread on the other (`Redhawks ML`, `lakers HC +1.5`) as two contracts, each priced on both sides.
+- (v29.2) two different spreads (`Aktobe +4.5`, `Torpedo -3.5`) as two contracts, each priced on both sides (both sides of one line, `A -3.5` and `B +3.5`, stay one contract);
+- (v29.2) where no draw is possible, half-point spreads (`Americans -0.5`, `Crunch -0.5`; `Blue Jackets +0.5`) as the one winner contract they settle as, priced on both sides; a real spread (`Americans -1.5`) stays a handicap.
 
 A message that still holds template placeholders (`Team A`, `X.X`, `Day Month Year`) is refused and nothing is guessed.
 

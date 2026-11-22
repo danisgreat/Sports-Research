@@ -504,3 +504,12 @@ Removed retired root protocols and unreferenced historical `ml/` scripts; every 
 | `ml/evaluation/primary_replay.py`, `ml/tests/test_primary_replay.py` | [`cb97bbc2a/ml/evaluation/primary_replay.py`](https://github.com/danisgreat/Sports-Research/blob/cb97bbc2a9f882e7f8a093648b6137315951da8b/ml/evaluation/primary_replay.py) | Retired Oct 16 proxy replay; zero runtime imports |
 | `ml/historical_backfill.py` | [`cb97bbc2a/ml/historical_backfill.py`](https://github.com/danisgreat/Sports-Research/blob/cb97bbc2a9f882e7f8a093648b6137315951da8b/ml/historical_backfill.py) | One-off historical backfill utility; zero tests or runtime imports |
 | `ml/historical_identity.py` | [`cb97bbc2a/ml/historical_identity.py`](https://github.com/danisgreat/Sports-Research/blob/cb97bbc2a9f882e7f8a093648b6137315951da8b/ml/historical_identity.py) | One-off historical collision utility; zero tests or runtime imports |
+
+## Superseded external documents — 2026-11-22 (v29.2, RELOC-v1)
+
+Sixteen `research/external/` files that no current workflow uses were moved unchanged to
+[archive/superseded_2026-11-22/](archive/superseded_2026-11-22/README.md): evaluation plans v24.14 to v28.0, five-lane
+profiles and lane briefs v24.13 and v24.14, and one-chat briefs v25.0 to v29.0. Old path, new path and SHA-256 for each
+are in [RELOCATIONS.csv](archive/superseded_2026-11-22/RELOCATIONS.csv). Live documents now link to the archived copies.
+Dated records keep their original paths. Links left dead by the 2026-11-19 pruning
+(`EXTERNAL_RESEARCH_PROTOCOL_V3.md` in seven live documents) now point at the `cb97bbc2a` permalinks above.

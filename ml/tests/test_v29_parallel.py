@@ -81,7 +81,7 @@ def test_prepare_reads_the_owners_messages_into_requests_contracts_and_skeletons
     assert event["event_id"].startswith("REQ:basketball:nbl:cairns-taipans:perth-wildcats:")
     assert (out / "MINI7-G0001/REQUEST.txt").read_text(encoding="utf-8").startswith("Upcoming Basketball Game: Melbourne United")
     packet = (out / "CHAT_PACKET.md").read_text(encoding="utf-8")
-    assert packet.index("MINI7-G0001") < packet.index("MINI7-G0002") and "ONE_CHAT_BRIEF_v29.0.md" in packet
+    assert packet.index("MINI7-G0001") < packet.index("MINI7-G0002") and "ONE_CHAT_BRIEF_v29.2.md" in packet
     key, _, meta, picks, facts, problems, _ = O.card_blocks(fill(skeletons(out)["MINI7-G0001"]))[0]
     assert key == "MINI7-G0001" and problems == [] and len(facts) == 2 * len(O.required_facts("Basketball"))
 
@@ -89,7 +89,6 @@ def test_prepare_reads_the_owners_messages_into_requests_contracts_and_skeletons
 @pytest.mark.parametrize("text,needle", [
     (MESSAGES.replace("Schedule: https://example.org/nbl/schedule\n", "", 1), "no official schedule page"),
     (MESSAGES.replace("Sydney Kings Spread +4.5", "Sydney Kings to cover"), "line not understood"),
-    (MESSAGES.replace("Sydney Kings Spread +4.5", "Sydney Kings Spread +5.5"), "equal and opposite"),
     (MESSAGES.replace("Melbourne United Spread", "Melbourne Utd Spread"), "neither"),
     (MESSAGES.replace("Upcoming Basketball Game: Melbourne", "Upcoming Darts Game: Melbourne"), "no request format"),
     (MESSAGES.replace("20 November 2026, 7:30 PM AEDT", "next Friday evening"), "Estimated Game Time Start"),
