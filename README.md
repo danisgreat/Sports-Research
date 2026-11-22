@@ -12,7 +12,7 @@ A sports-only, market-blind forecasting framework and custody/evaluation harness
 | Active workflow | **ONE-CHAT-v3** — [Runbook](research/one_chat/RUNBOOK.md) · [Chat brief](research/external/ONE_CHAT_BRIEF_v29.0.md) |
 | Registered plan (Track P) | [EVALUATION_PLAN_v29.0](research/external/EVALUATION_PLAN_v29.0.md) · **600-game horizon** · Live seals on `forecast-seals` (`python -m ml one-chat score`) |
 | Historical validation (Track H) | [HPPV-v1](research/verification/historical_pre_event_v1/README.md) · 685 cards / 3,150 rows (280 with stated `p`) · 0 Tier-A (`HISTORICAL_EVIDENCE_INSUFFICIENT`) |
-| Canonical log IDs | Highest `P-685` · Next **`P-686`** · Live state in [CURRENT_STATE.md](CURRENT_STATE.md) |
+| Canonical log IDs | Highest `P-696` · Next **`P-697`** · Live state in [CURRENT_STATE.md](CURRENT_STATE.md) |
 
 <!-- END GENERATED README HEADER -->
 

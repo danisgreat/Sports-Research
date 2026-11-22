@@ -189,3 +189,7 @@ research/verification/framework_change_2026-11-16-4/OWNER_REVIEW.original.txt -t
 "research/verification/mini_import_P-601_P-622_2026-10-21-1/LOCAL_ID_MAPPING.csv" -text
 "research/verification/settlement_import_2026-11-07-1/SETTLEMENT_REVISIONS.csv" -text
 "research/verification/settlement_import_2026-11-07-2/SETTLEMENT_REVISIONS.csv" -text
+
+# 2026-11-22 settlement, audit, canonical import and archive (P-686 to P-696, mini 20261118DA6D9F6251746B979F5895FA).
+archive/settled_minis_2026-11-22/** -text
+research/verification/mini_import_P-686_P-696_2026-11-22-1/** -text

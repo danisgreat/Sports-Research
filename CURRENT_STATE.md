@@ -37,15 +37,15 @@ Standing protocols (`ENV-v2`, `REF-v2`, `RETAIN-v2`, `MLSCOPE-v3`, `ML-SEP-v1`, 
 | Item | Value |
 |---|---|
 | Versions (from `VERSIONS.csv`) | MDS-2026.11.18-v29.1 · CR-2026.11.18-R2 · P-2026.11.18-v29.1 · SCV-2026.11.18-v20 · SEL-2026.10.22-v4 |
-| Highest canonical ID / next | P-685 / **P-686** (from the import mappings) |
-| Historical cards used for training | 685 cards; 3082 admitted contract rows, 1291 with stated p; historical study, not prospective issuance |
+| Highest canonical ID / next | P-696 / **P-697** (from the import mappings) |
+| Historical cards used for training | 696 cards; 3128 admitted contract rows, 1337 with stated p; historical study, not prospective issuance |
 | Active local mini | `NONE`; last / next local key `NONE` / `NONE` (footer) |
 | Open cards in the active mini | 0 of 0: none |
 | Frozen league-day events without settlement | 0: none |
 | Learning store | view 15; 5402 events, 5402 results, 8 team-statistic rows, 0 player-availability rows |
 | Adjustment ledger | 0 contract rows on 0 cards; 0 adjustment rows |
 | Prospective shadow ledger | 12 frozen rows on 2 events (`research/prospective/CYCLE_SHADOW_LEDGER.csv`) |
-| Effective settlements (imported local-key rows) | 829 rows, 69 revised by settlement imports, 0 UNRESOLVED |
+| Effective settlements (imported local-key rows) | 875 rows, 69 revised by settlement imports, 0 UNRESOLVED |
 | Permanently closed unattainable contracts | 9 exact rows; DO_NOT_RETRY; excluded from sporting scores |
 | Active releases | none |
 
@@ -66,8 +66,8 @@ Standing protocols (`ENV-v2`, `REF-v2`, `RETAIN-v2`, `MLSCOPE-v3`, `ML-SEP-v1`, 
 | Mini-log format | `mini-log-10` (in-progress `mini-log-2` through `mini-log-9` retain their format and issued cores) |
 | Settlement format | `mini-settlement-10` with source discovery, attempts and closure / S1-S19 (settlement-9 and earlier retain original formats) |
 | Freeze | None. Custody is the git history of `main` (CURRENT_RULES §9). Cards record the HEAD SHA they read. The last control manifest, `CONTROL_MANIFEST_2026-10-09-3.md`, is in [archive/controls/](archive/controls/). |
-| Highest committed canonical ID | **P-685** |
-| Next canonical ID | **P-686** (equal to the line in GAME_LOG_STATUS_CURRENT.md) |
+| Highest committed canonical ID | **P-696** |
+| Next canonical ID | **P-697** (equal to the line in GAME_LOG_STATUS_CURRENT.md) |
 | Reserved IDs | P-518 to P-522 |
 | Active Combined Log | [prediction logs/PREDICTION_LOG_COMBINED_11.md](prediction%20logs/PREDICTION_LOG_COMBINED_11.md) |
 | Previous parts | Parts 1 to 8, immutable; Part 6 keeps its original P-518 to P-522 source block; Part 7 closed with 51 originals P-550 to P-600; Part 8 closed with 22 originals P-601 to P-622; Part 9 closed 14 November 2026 with 37 originals P-623 to P-659; Part 10 closed 16 November 2026 with 26 originals P-660 to P-685 |
@@ -130,3 +130,7 @@ Active destination: [Part 11](prediction%20logs/PREDICTION_LOG_COMBINED_11.md); 
 ## Settlement revisions import — 2026-11-16T19:22:52+11:00
 
 Prompts 3→4 under the owner order of 16 November (S-1). The 53 rows left UNRESOLVED by the 14 and 15 November imports (P-647, P-661, P-662, P-664, P-678, P-683) are settled as revision-2 from the captures the owner's source recovery saved: 26 WIN, 27 LOSS; the effective view now holds 0 UNRESOLVED rows. The two WBBL six-over grades rest on a one-run threshold bound; three second-lineage checks stay open with grades settled. One deep loss review (P-662, first lean). Six addendum blocks appended to Part 11 with exact readback. [Report](research/verification/settlement_import_2026-11-16-1/CANONICAL_IMPORT_REPORT.md). CARD-TRAIN-v1 rerun: [research/card_training/2026-11-16-1](research/card_training/2026-11-16-1/REPORT.md) (3,082 rows admitted, 2,858 scored; conclusions unchanged).
+
+## Settlement, audit, canonical import and archive — 2026-11-22T17:40:00+11:00 (P-686–P-696)
+
+Prompts 3→4 on GitHub mini `20261118DA6D9F6251746B979F5895FA` pulled from `origin/forecast-seals` (10 sealed cards, 12 registered requests) and `origin/card-drops` (`G0001` unsealed card + `G0004` superseded draft). Archived byte-exact at [archive/settled_minis_2026-11-22/20261118DA6D9F6251746B979F5895FA/](archive/settled_minis_2026-11-22/20261118DA6D9F6251746B979F5895FA/README.md). All 11 carded games imported to [Part 11](prediction%20logs/PREDICTION_LOG_COMBINED_11.md) as **P-686–P-696** (46 rows: 23 WIN, 23 LOSS, **0 UNRESOLVED**; Rank 1 8W/3L, Rank 2 5W/6L; card-mean Brier 0.2422, `d = +0.0078` all 11 / `+0.0051` 10 sealed; 22/22 blocks verified byte-exact). Non-card keys `G0004` and `G0007` (`NO_FORECAST`) consumed 0 IDs. 10 deep loss reviews (`DLR-2026-11-22-001`–`010`) appended to `research/deep_loss/DEEP_LOSS_REGISTER.csv`. Track P (`ONE-CHAT-v3`): `P-689` (`G0005`, AHL) is the first game with verified pre-start server seal and official first-play capture; intake saved at `research/one_chat/intake/2026-11-22-1` and captured outcomes at `research/one_chat/outcomes/2026-11-22-1/OUTCOMES.csv`. No predictive advantage is certified; `FREEZE-v1` holds. [Settlement](research/verification/mini_import_P-686_P-696_2026-11-22-1/SETTLEMENT.md), [Audit](research/verification/mini_import_P-686_P-696_2026-11-22-1/AUDIT_REPORT.md), [Import report](research/verification/mini_import_P-686_P-696_2026-11-22-1/CANONICAL_IMPORT_REPORT.md). CARD-TRAIN-v1 rerun: [research/card_training/2026-11-22-1](research/card_training/2026-11-22-1/REPORT.md) (696 cards, 3,128 admitted rows, 1,337 with stated p, 2,904 scored walk-forward; conclusions unchanged).
