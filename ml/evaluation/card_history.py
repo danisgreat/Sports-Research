@@ -360,6 +360,8 @@ def inventory_rows(path: Path) -> list[dict]:
             if not (primary or research):
                 raise ValueError(f"Unsupported probability role at {path}:{line}: {role}")
             rank = r["original_rank"]
+            # The 22 Nov 2026 inventory (P-686 to P-696) writes ranks as R1, R2, R3; read them as 1, 2, 3.
+            rank = rank[1:] if re.fullmatch(r"R\d+", rank) else rank
             if primary and rank != "-" and (not rank.isdigit() or int(rank) < 1):
                 raise ValueError(f"Invalid original primary rank at {path}:{line}")
             baseline = re.fullmatch(r"BASELINE_P\s+([01](?:\.\d+)?)", r["note"].strip())
