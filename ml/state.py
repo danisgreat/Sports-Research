@@ -18,10 +18,13 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 STATE = "CURRENT_STATE.md"
+README = "README.md"
 VERSIONS = "VERSIONS.csv"
 VERSION_ITEMS = ("method", "control_revision", "prompt_suite", "scoring", "selection")
 CORE_LINE = re.compile(r"\*\*MDS-[^*\n]*? · CR-[^*\n]*? · P-[^*\n]*? · SCV-[^*\n]*? · SEL-[^*\n]*?\.\*\*")
 BEGIN, END = "<!-- BEGIN GENERATED STATE (python -m ml state --write) -->", "<!-- END GENERATED STATE -->"
+README_BEGIN = "<!-- BEGIN GENERATED README HEADER (python -m ml state --write) -->"
+README_END = "<!-- END GENERATED README HEADER -->"
 ACTIVE_POINTER = re.compile(r"\| Active local mini \| \[(research/active_minis/[^\]]+\.md)\]")
 
 
@@ -159,6 +162,58 @@ def generate(root=ROOT) -> str:
     return "\n".join(lines)
 
 
+def generate_readme_header(root=ROOT) -> str:
+    """Short, authoritative status header for README.md generated from VERSIONS.csv and the registered plan."""
+    from ml import one_chat as O
+
+    root = Path(root)
+    v = versions(root)
+    top = highest_canonical(root)
+    plan_path = O.PLAN
+    plan_name = Path(plan_path).stem
+    lines = [
+        README_BEGIN,
+        "",
+        "*Generated from `VERSIONS.csv` and the registered plan; do not edit by hand (`python -m ml state --write`).*",
+        "",
+        "| Field | Current value |",
+        "|---|---|",
+        "| Release | " + " · ".join(v[i]["current"] for i in VERSION_ITEMS) + " |",
+        f"| Active workflow | **{O.RULE}** — [Runbook](research/one_chat/RUNBOOK.md) · [Chat brief](research/external/ONE_CHAT_BRIEF_v29.0.md) |",
+        f"| Registered plan (Track P) | [{plan_name}]({plan_path}) · **{O.HORIZON}-game horizon** · Live seals on `forecast-seals` (`python -m ml one-chat score`) |",
+        "| Historical validation (Track H) | [HPPV-v1](research/verification/historical_pre_event_v1/README.md) · 685 cards / 3,150 rows (280 with stated `p`) · 0 Tier-A (`HISTORICAL_EVIDENCE_INSUFFICIENT`) |",
+        f"| Canonical log IDs | Highest `P-{top:03d}` · Next **`P-{top + 1:03d}`** · Live state in [CURRENT_STATE.md](CURRENT_STATE.md) |",
+        "",
+        README_END,
+    ]
+    return "\n".join(lines)
+
+
+def write_readme(root=ROOT) -> bool:
+    path = Path(root) / README
+    if not path.exists():
+        return False
+    text = path.read_bytes().decode("utf-8")
+    if README_BEGIN not in text or README_END not in text:
+        return False
+    block = generate_readme_header(root)
+    new = text[: text.index(README_BEGIN)] + block + text[text.index(README_END) + len(README_END) :]
+    if new != text:
+        path.write_bytes(new.encode("utf-8"))
+        return True
+    return False
+
+
+def committed_readme_header(root=ROOT) -> str | None:
+    path = Path(root) / README
+    if not path.exists():
+        return None
+    text = path.read_text(encoding="utf-8")
+    if README_BEGIN not in text or README_END not in text:
+        return None
+    return text[text.index(README_BEGIN) : text.index(README_END) + len(README_END)]
+
+
 def write(root=ROOT) -> bool:
     path = Path(root) / STATE
     text = path.read_bytes().decode("utf-8")
@@ -179,7 +234,8 @@ def write(root=ROOT) -> bool:
     changed = new != text
     if changed:
         path.write_bytes(new.encode("utf-8"))
-    return changed
+    readme_changed = write_readme(root)
+    return changed or readme_changed
 
 
 def committed_block(root=ROOT) -> str | None:
@@ -197,7 +253,7 @@ def main(argv=None):
     if args.restamp:
         print("restamped: " + (", ".join(restamp()) or "nothing to change"))
     elif args.write:
-        print("CURRENT_STATE.md updated" if write() else "CURRENT_STATE.md already current")
+        print("CURRENT_STATE.md and README.md updated" if write() else "CURRENT_STATE.md and README.md already current")
     else:
         print(generate())
 
