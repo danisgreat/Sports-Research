@@ -479,10 +479,10 @@ Moved so that live pages hold current instructions only. Content was moved verba
 
 | Former location | Now | SHA-256 (first 16) |
 |---|---|---|
-| `research/verification/framework_change_2026-11-08-1/regime_study/scripts/regime_nba.py` | [ml/studies/regime_nba.py](ml/studies/regime_nba.py) | `00194840815b550f` |
-| `research/verification/framework_change_2026-11-08-1/regime_study/scripts/regime_generic.py` | [ml/studies/regime_generic.py](ml/studies/regime_generic.py) | `41f7221cc9b3bf96` |
-| `research/verification/framework_change_2026-11-08-1/regime_study/scripts/loso.py` | [ml/studies/regime_eval.py (rewritten as functions)](ml/studies/regime_eval.py) | `f0e0cc710b56f3ae` |
-| `research/verification/framework_change_2026-11-08-1/regime_study/scripts/sizes.py` | [ml/studies/regime_eval.py (rewritten as functions)](ml/studies/regime_eval.py) | `f0e0cc710b56f3ae` |
+| `research/verification/framework_change_2026-11-08-1/regime_study/scripts/regime_nba.py` | [`cb97bbc2a/ml/studies/regime_nba.py`](https://github.com/danisgreat/Sports-Research/blob/cb97bbc2a9f882e7f8a093648b6137315951da8b/ml/studies/regime_nba.py) | `00194840815b550f` |
+| `research/verification/framework_change_2026-11-08-1/regime_study/scripts/regime_generic.py` | [`cb97bbc2a/ml/studies/regime_generic.py`](https://github.com/danisgreat/Sports-Research/blob/cb97bbc2a9f882e7f8a093648b6137315951da8b/ml/studies/regime_generic.py) | `41f7221cc9b3bf96` |
+| `research/verification/framework_change_2026-11-08-1/regime_study/scripts/loso.py` | [`cb97bbc2a/ml/studies/regime_eval.py`](https://github.com/danisgreat/Sports-Research/blob/cb97bbc2a9f882e7f8a093648b6137315951da8b/ml/studies/regime_eval.py) | `f0e0cc710b56f3ae` |
+| `research/verification/framework_change_2026-11-08-1/regime_study/scripts/sizes.py` | [`cb97bbc2a/ml/studies/regime_eval.py`](https://github.com/danisgreat/Sports-Research/blob/cb97bbc2a9f882e7f8a093648b6137315951da8b/ml/studies/regime_eval.py) | `f0e0cc710b56f3ae` |
 | `PROMPTS.md (former content)` | [research/history/PROMPTS_ROOT_PAGE.md](research/history/PROMPTS_ROOT_PAGE.md) | `ee5cbd4d5228932f` |
 | `CURRENT_STATE.md release paragraphs (v24.3 and earlier)` | [research/history/CURRENT_STATE_RELEASES.md](research/history/CURRENT_STATE_RELEASES.md) | `64adc538cc0aa47b` |
 | `CURRENT_STATE.md October implementation notes` | [research/history/CURRENT_STATE_IMPLEMENTATION_NOTES.md](research/history/CURRENT_STATE_IMPLEMENTATION_NOTES.md) | `c2fb4b6fa3362cb8` |
@@ -490,3 +490,17 @@ Moved so that live pages hold current instructions only. Content was moved verba
 | `research/prompts/README.md Primary ML/RL lane` | [research/history/PROMPTS_README_PRIMARY_LANE.md](research/history/PROMPTS_README_PRIMARY_LANE.md) | `f31cd48658659306` |
 | `SOURCES.md Part D` | [research/history/SOURCES_RETIRED_RUNTIME.md](research/history/SOURCES_RETIRED_RUNTIME.md) | `d6e1262939e4ec2a` |
 | `RULES_<SPORT>.md numerical engine and shadow sections` | [archive/historical_engine_sections_2026-11-08/](archive/historical_engine_sections_2026-11-08/) | folder |
+
+## Pruning — 2026-11-19 (retired docs & unreferenced `ml/` modules)
+
+Removed retired root protocols and unreferenced historical `ml/` scripts; every removed file remains preserved byte-for-byte at commit `cb97bbc2a9f882e7f8a093648b6137315951da8b` (`CR-2026.11.17-R1` permalink rule).
+
+| Former location | Preserved original (permalink) | Reason |
+|---|---|---|
+| `README.md` (pre-pruning long form) | [`cb97bbc2a/README.md`](https://github.com/danisgreat/Sports-Research/blob/cb97bbc2a9f882e7f8a093648b6137315951da8b/README.md) | Replaced by short generated-header `README.md` (`ml state --write`) |
+| `EXTERNAL_RESEARCH_PROTOCOL_V2.md` | [`cb97bbc2a/EXTERNAL_RESEARCH_PROTOCOL_V2.md`](https://github.com/danisgreat/Sports-Research/blob/cb97bbc2a9f882e7f8a093648b6137315951da8b/EXTERNAL_RESEARCH_PROTOCOL_V2.md) | Superseded by EXT-v3 and ONE-CHAT-v3; zero active code/test/prompt refs |
+| `EXTERNAL_RESEARCH_PROTOCOL_V3.md` | [`cb97bbc2a/EXTERNAL_RESEARCH_PROTOCOL_V3.md`](https://github.com/danisgreat/Sports-Research/blob/cb97bbc2a9f882e7f8a093648b6137315951da8b/EXTERNAL_RESEARCH_PROTOCOL_V3.md) | Retired five-lane route replaced by ONE-CHAT-v3; linked from `EXTERNAL_RESEARCH_PROTOCOL.md` |
+| `ml/studies/__init__.py`, `regime_eval.py`, `regime_generic.py`, `regime_nba.py` | [`cb97bbc2a/ml/studies`](https://github.com/danisgreat/Sports-Research/tree/cb97bbc2a9f882e7f8a093648b6137315951da8b/ml/studies) | Completed Nov 8 regime study; zero active code/test imports |
+| `ml/evaluation/primary_replay.py`, `ml/tests/test_primary_replay.py` | [`cb97bbc2a/ml/evaluation/primary_replay.py`](https://github.com/danisgreat/Sports-Research/blob/cb97bbc2a9f882e7f8a093648b6137315951da8b/ml/evaluation/primary_replay.py) | Retired Oct 16 proxy replay; zero runtime imports |
+| `ml/historical_backfill.py` | [`cb97bbc2a/ml/historical_backfill.py`](https://github.com/danisgreat/Sports-Research/blob/cb97bbc2a9f882e7f8a093648b6137315951da8b/ml/historical_backfill.py) | One-off historical backfill utility; zero tests or runtime imports |
+| `ml/historical_identity.py` | [`cb97bbc2a/ml/historical_identity.py`](https://github.com/danisgreat/Sports-Research/blob/cb97bbc2a9f882e7f8a093648b6137315951da8b/ml/historical_identity.py) | One-off historical collision utility; zero tests or runtime imports |

@@ -6,11 +6,13 @@ and [reproducible initial report](research/verification/historical_pre_event_v1/
 All 685 cards / 3,150 rows are retained, including 280 cards with stated p. No
 independent original-custody evidence is inferred: initially 0 Tier-A qualified
 cards and **HISTORICAL_EVIDENCE_INSUFFICIENT**. Existing training use and historical
-scores remain intact. Track P stays ONE-CHAT-v3 / v28.0, **0 qualifying games /
+scores remain intact. Track P stays ONE-CHAT-v3 / v29.1, **0 qualifying games /
 600-game horizon**, **NOT_YET_DEMONSTRATED** at this snapshot. Counts and verdicts
 are separate; no historical rows enter its registry or sequential test.
 
-**Current release — MDS-2026.11.18-v29.0 / CR-2026.11.18-R1 / P-2026.11.18-v29.0 / SCV-2026.11.18-v20: several chats a day.** Owner order 18 November 2026 (four chats, up to ten games each). `ml one-chat prepare` drafts each game's request, contracts and card skeleton from the owner's REQ-v5 messages; `register-requests` publishes a whole mini at once; `seal --watch` seals each finished card card by card (an unfinished or changed card no longer blocks the rest) and retries when chats publish at the same time; `intake --from-seals` scores the first sealed copies; a row unsettled 14 days after its scheduled start is dropped by rule with a worst-case sensitivity; a game without a verified first play is excluded instead of stopping the run; per-sport templates are on main. Statistical constants unchanged. [Plan](research/external/EVALUATION_PLAN_v29.0.md), [runbook §7](research/one_chat/RUNBOOK.md), [implementation](research/verification/framework_change_2026-11-18-1/IMPLEMENTATION.md).
+**Current release — MDS-2026.11.18-v29.1 / CR-2026.11.18-R2 / P-2026.11.18-v29.1 / SCV-2026.11.18-v20: read the owner's request text as written.** `ml one-chat prepare` parses shortened team names, colon-optional handicap lines, `Away @ Home` headers, mixed ML+spread requests, and `research/one_chat/SCHEDULE_SOURCES.csv` prefix matching while refusing template placeholders. Statistical constants and [EVALUATION_PLAN_v29.0.md](research/external/EVALUATION_PLAN_v29.0.md) are unchanged. [Runbook §7a](research/one_chat/RUNBOOK.md#7a-writing-the-requests-v291).
+
+**Previous release — MDS-2026.11.18-v29.0 / CR-2026.11.18-R1 / P-2026.11.18-v29.0 / SCV-2026.11.18-v20: several chats a day.** Owner order 18 November 2026 (four chats, up to ten games each). `ml one-chat prepare` drafts each game's request, contracts and card skeleton from the owner's REQ-v5 messages; `register-requests` publishes a whole mini at once; `seal --watch` seals each finished card card by card (an unfinished or changed card no longer blocks the rest) and retries when chats publish at the same time; `intake --from-seals` scores the first sealed copies; a row unsettled 14 days after its scheduled start is dropped by rule with a worst-case sensitivity; a game without a verified first play is excluded instead of stopping the run; per-sport templates are on main. Statistical constants unchanged. [Plan](research/external/EVALUATION_PLAN_v29.0.md), [runbook §7](research/one_chat/RUNBOOK.md), [implementation](research/verification/framework_change_2026-11-18-1/IMPLEMENTATION.md).
 
 **Previous release — MDS-2026.11.17-v28.0 / CR-2026.11.17-R1 / P-2026.11.17-v28.0 / SCV-2026.11.17-v19: review fixes.** Owner order 17 November 2026. The historical evidence command works on Windows (one portable lock, also used by timing corrections) and a Windows CI job guards it; local rehearsal staging is kept apart from the registered seal branch; GitHub activity is fetched only when a server time is needed and a failed fetch is explicit; the confidence sequence uses lambdas (0.5, 0.7, 0.9) and a 600-game horizon, registered with a published power study before any real game; stale pointers and rule contradictions corrected. The initial historical run is unchanged and verifies at its implementation commit; the current verified run is [hppv_runs/2026-11-17-1](research/verification/hppv_runs/2026-11-17-1/README.md) (outputs byte-identical). [Plan](research/external/EVALUATION_PLAN_v29.0.md), [implementation](research/verification/framework_change_2026-11-17-1/IMPLEMENTATION.md).
 
@@ -26,13 +28,7 @@ are separate; no historical rows enter its registry or sequential test.
 
 ## Authority
 
-**Research retention before model availability (RETAIN-v2).** Defined in [RESEARCH_RETENTION_PROTOCOL](RESEARCH_PROTOCOL.md#part-c-research_retention_protocol); summarised in [CORE](CORE.md) §2.
-
-**Required repository fallback (REF-v2).** Defined in [WORKFLOW](WORKFLOW.md#part-a-execution_environment_protocol) Part A §2 (GitHub `main` at a printed SHA when a local file is unreadable).
-
-**ML/RL scope (MLSCOPE-v3).** Defined in [FORECAST_CYCLE_PROTOCOL](REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol); summarised in [CORE](CORE.md) §7.
-
-**Execution environment (ENV-v2).** Defined in [EXECUTION_ENVIRONMENT_PROTOCOL](WORKFLOW.md#part-a-execution_environment_protocol); summarised in [CORE](CORE.md) §1.
+Standing protocols (`ENV-v2`, `REF-v2`, `RETAIN-v2`, `MLSCOPE-v3`, `ML-SEP-v1`, `FREEZE-v1`) are summarised in [CORE.md](CORE.md) and linked from [ACTIVE_FILE_INDEX.md](ACTIVE_FILE_INDEX.md).
 
 <!-- BEGIN GENERATED STATE (python -m ml state --write) -->
 
@@ -41,15 +37,15 @@ are separate; no historical rows enter its registry or sequential test.
 | Item | Value |
 |---|---|
 | Versions (from `VERSIONS.csv`) | MDS-2026.11.18-v29.1 · CR-2026.11.18-R2 · P-2026.11.18-v29.1 · SCV-2026.11.18-v20 · SEL-2026.10.22-v4 |
-| Highest canonical ID / next | P-685 / **P-686** (from the import mappings) |
-| Historical cards used for training | 685 cards; 3082 admitted contract rows, 1291 with stated p; historical study, not prospective issuance |
+| Highest canonical ID / next | P-696 / **P-697** (from the import mappings) |
+| Historical cards used for training | 696 cards; 3128 admitted contract rows, 1337 with stated p; historical study, not prospective issuance |
 | Active local mini | `NONE`; last / next local key `NONE` / `NONE` (footer) |
 | Open cards in the active mini | 0 of 0: none |
 | Frozen league-day events without settlement | 0: none |
 | Learning store | view 15; 5402 events, 5402 results, 8 team-statistic rows, 0 player-availability rows |
 | Adjustment ledger | 0 contract rows on 0 cards; 0 adjustment rows |
 | Prospective shadow ledger | 12 frozen rows on 2 events (`research/prospective/CYCLE_SHADOW_LEDGER.csv`) |
-| Effective settlements (imported local-key rows) | 829 rows, 69 revised by settlement imports, 0 UNRESOLVED |
+| Effective settlements (imported local-key rows) | 875 rows, 69 revised by settlement imports, 0 UNRESOLVED |
 | Permanently closed unattainable contracts | 9 exact rows; DO_NOT_RETRY; excluded from sporting scores |
 | Active releases | none |
 
@@ -70,8 +66,8 @@ are separate; no historical rows enter its registry or sequential test.
 | Mini-log format | `mini-log-10` (in-progress `mini-log-2` through `mini-log-9` retain their format and issued cores) |
 | Settlement format | `mini-settlement-10` with source discovery, attempts and closure / S1-S19 (settlement-9 and earlier retain original formats) |
 | Freeze | None. Custody is the git history of `main` (CURRENT_RULES §9). Cards record the HEAD SHA they read. The last control manifest, `CONTROL_MANIFEST_2026-10-09-3.md`, is in [archive/controls/](archive/controls/). |
-| Highest committed canonical ID | **P-685** |
-| Next canonical ID | **P-686** (equal to the line in GAME_LOG_STATUS_CURRENT.md) |
+| Highest committed canonical ID | **P-696** |
+| Next canonical ID | **P-697** (equal to the line in GAME_LOG_STATUS_CURRENT.md) |
 | Reserved IDs | P-518 to P-522 |
 | Active Combined Log | [prediction logs/PREDICTION_LOG_COMBINED_11.md](prediction%20logs/PREDICTION_LOG_COMBINED_11.md) |
 | Previous parts | Parts 1 to 8, immutable; Part 6 keeps its original P-518 to P-522 source block; Part 7 closed with 51 originals P-550 to P-600; Part 8 closed with 22 originals P-601 to P-622; Part 9 closed 14 November 2026 with 37 originals P-623 to P-659; Part 10 closed 16 November 2026 with 26 originals P-660 to P-685 |
@@ -86,7 +82,7 @@ are separate; no historical rows enter its registry or sequential test.
 ## Scoreboard
 
 - **Summary from the records (CARD-TRAIN-v1 run [2026-11-16-1](research/card_training/2026-11-16-1/REPORT.md), all settled cards P-001 to P-685).** 3,082 decisive rows on 656 cards. Rank 1: 381 W / 228 L, 62.6% (58.7% to 66.3%). Rank 2: 331 W / 249 L, 57.1% (53.0% to 61.0%). Ranks 3 and 4: 618 W / 494 L, 55.6%. Rows with a stated probability: 1,291 on 280 cards, Brier 0.2311, card-mean difference against a constant 0.5 of -0.0204 [-0.0312, -0.0096]; November chat-research rows -0.0017 [-0.0292, +0.0259] on 32 cards. 1,791 rows (58%) carry no number. Outcome-exposed and descriptive; no frozen same-row baseline exists for any of these cards.
-- **Predictive advantage (ONE-CHAT-v3, v28.0):** NOT_YET_DEMONSTRATED with 0 games: no request or card has been sealed on `forecast-seals`. The verdict, current mean, lower bound and assessed prefix are printed by `python -m ml one-chat score`. [Plan](research/external/EVALUATION_PLAN_v29.0.md).
+- **Predictive advantage (ONE-CHAT-v3, v29.1):** NOT_YET_DEMONSTRATED with 0 games: no request or card has been sealed on `forecast-seals`. The verdict, current mean, lower bound and assessed prefix are printed by `python -m ml one-chat score`. [Plan](research/external/EVALUATION_PLAN_v29.0.md).
 - **Audit and its findings:** [on-request audit of 16 November 2026](research/verification/retrospective_2026-11-16-1/RETROSPECTIVE_REPORT.md).
 - Earlier scoreboard notes (13 October to 10 November) and the 11 October retrospective summary: [history](research/history/CURRENT_STATE_RELEASES.md).
 Full tables: [research/scoreboard/SCOREBOARD.md](research/scoreboard/SCOREBOARD.md).
@@ -134,3 +130,7 @@ Active destination: [Part 11](prediction%20logs/PREDICTION_LOG_COMBINED_11.md); 
 ## Settlement revisions import — 2026-11-16T19:22:52+11:00
 
 Prompts 3→4 under the owner order of 16 November (S-1). The 53 rows left UNRESOLVED by the 14 and 15 November imports (P-647, P-661, P-662, P-664, P-678, P-683) are settled as revision-2 from the captures the owner's source recovery saved: 26 WIN, 27 LOSS; the effective view now holds 0 UNRESOLVED rows. The two WBBL six-over grades rest on a one-run threshold bound; three second-lineage checks stay open with grades settled. One deep loss review (P-662, first lean). Six addendum blocks appended to Part 11 with exact readback. [Report](research/verification/settlement_import_2026-11-16-1/CANONICAL_IMPORT_REPORT.md). CARD-TRAIN-v1 rerun: [research/card_training/2026-11-16-1](research/card_training/2026-11-16-1/REPORT.md) (3,082 rows admitted, 2,858 scored; conclusions unchanged).
+
+## Settlement, audit, canonical import and archive — 2026-11-22T17:40:00+11:00 (P-686–P-696)
+
+Prompts 3→4 on GitHub mini `20261118DA6D9F6251746B979F5895FA` pulled from `origin/forecast-seals` (10 sealed cards, 12 registered requests) and `origin/card-drops` (`G0001` unsealed card + `G0004` superseded draft). Archived byte-exact at [archive/settled_minis_2026-11-22/20261118DA6D9F6251746B979F5895FA/](archive/settled_minis_2026-11-22/20261118DA6D9F6251746B979F5895FA/README.md). All 11 carded games imported to [Part 11](prediction%20logs/PREDICTION_LOG_COMBINED_11.md) as **P-686–P-696** (46 rows: 23 WIN, 23 LOSS, **0 UNRESOLVED**; Rank 1 8W/3L, Rank 2 5W/6L; card-mean Brier 0.2422, `d = +0.0078` all 11 / `+0.0051` 10 sealed; 22/22 blocks verified byte-exact). Non-card keys `G0004` and `G0007` (`NO_FORECAST`) consumed 0 IDs. 10 deep loss reviews (`DLR-2026-11-22-001`–`010`) appended to `research/deep_loss/DEEP_LOSS_REGISTER.csv`. Track P (`ONE-CHAT-v3`): `P-689` (`G0005`, AHL) is the first game with verified pre-start server seal and official first-play capture; intake saved at `research/one_chat/intake/2026-11-22-1` and captured outcomes at `research/one_chat/outcomes/2026-11-22-1/OUTCOMES.csv`. No predictive advantage is certified; `FREEZE-v1` holds. [Settlement](research/verification/mini_import_P-686_P-696_2026-11-22-1/SETTLEMENT.md), [Audit](research/verification/mini_import_P-686_P-696_2026-11-22-1/AUDIT_REPORT.md), [Import report](research/verification/mini_import_P-686_P-696_2026-11-22-1/CANONICAL_IMPORT_REPORT.md). CARD-TRAIN-v1 rerun: [research/card_training/2026-11-22-1](research/card_training/2026-11-22-1/REPORT.md) (696 cards, 3,128 admitted rows, 1,337 with stated p, 2,904 scored walk-forward; conclusions unchanged).

@@ -79,3 +79,16 @@ def test_the_briefs_worked_example_is_a_valid_block_apart_from_its_elided_facts(
     assert problems and all(p.startswith("FACTS ") and "required for Basketball" in p for p in problems)
     rows = O.rows_for("CHATX-G0001", "GAME-X", derived)
     assert {r["label"]: r["p"] for r in rows if r["side"] in ("HOME", "OVER")} == {"L1": "0.61", "L2": "0.52", "L3": "UNPRICED"}
+
+
+def test_readme_generated_header_is_current_and_has_no_stale_version_contradictions():
+    assert S.committed_readme_header() == S.generate_readme_header(), "run `python -m ml state --write` to update README.md"
+    readme = (S.ROOT / "README.md").read_text(encoding="utf-8")
+    for target in ("research/one_chat/RUNBOOK.md", O.PLAN, "CURRENT_STATE.md", "CORE.md"):
+        assert target in readme and (S.ROOT / target).exists()
+    assert "400-game horizon" not in readme and "Release v24.16" not in readme
+    for target in re.findall(r"\]\(([^)\s]+)\)", readme):
+        if target.startswith(("http://", "https://", "#", "mailto:")):
+            continue
+        clean = target.split("#")[0].replace("%20", " ")
+        assert (S.ROOT / clean).exists(), f"README.md broken link: {target}"

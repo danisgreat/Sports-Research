@@ -10,7 +10,7 @@ merely because they pass a later validator.
 The primary confidence sequence targets the average conditional advantage
 through the current game and allows drift. A successful assessed prefix and
 continuing performance are reported separately. The first 100 are a secondary,
-calendar-free descriptive checkpoint. See EVALUATION_PLAN_v27.0.md.
+calendar-free descriptive checkpoint. See EVALUATION_PLAN_v29.0.md.
 """
 from __future__ import annotations
 
@@ -48,8 +48,8 @@ NO_DIRECTION = 0.05         # H-NODIR: a stated p within this of 0.5 (flag only)
 BANDS = (0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.9, 1.0)
 DECISIVE, TERMINAL = ("WIN", "LOSS"), ("WIN", "LOSS", "PUSH", "VOID")
 
-# Registered assessment constants (EVALUATION_PLAN_v28.0, with forecast_integrity.LAMBDAS). Changing any of them is a
-# new registration. BET_CAP and PRIOR_VAR belong to the retired v26 e-process kept only for replay.
+# Registered assessment constants (EVALUATION_PLAN_v29.0, carried unchanged from v28.0 with forecast_integrity.LAMBDAS).
+# Changing any of them is a new registration. BET_CAP and PRIOR_VAR belong to the retired v26 e-process kept for replay.
 ALPHA = 0.05                # e-value threshold 1 / ALPHA = 20
 PRACTICAL = 0.01            # running mean advantage required at the crossing
 HORIZON = 600               # games after which, without a crossing, advantage is NOT_DEMONSTRATED (v28.0)

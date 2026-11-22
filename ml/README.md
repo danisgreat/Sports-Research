@@ -1,27 +1,29 @@
-> **Primary ML/RL owner amendment (15 October 2026):** [PRIMARY_PREDICTION_PROTOCOL](../ML_PIPELINE.md#part-a-primary_prediction_protocol) permits the separate receipt-bound primary runtime and its full-information sporting mixture (PRIMARY_HEDGE_MIX_V3, which replaced the Exp3 bandit on 15 October 2026). Older statements below barring all model card inputs describe the prior independent-manual lane and are superseded for this new named lane. Existing historical artifacts remain unqualified; market/decision-lab outputs stay excluded.
+# `ml/` — forecasting, custody, evaluation and workshop code
 
-**Online history and confirmed players (HIST-2026.10.16-v2 / AVAIL-2026.10.16-v3).** For every game, research both sides' L5/L10/L15/L20 online under [HISTORICAL_SOURCE_PROTOCOL](../HISTORICAL_SOURCE_PROTOCOL.md), with opened sources, dated game rows and true n. Seek exact-game confirmed players, starting roles, bench/replacements and absences under [ROSTER_AVAILABILITY_PROTOCOL](../ROSTER_AVAILABILITY_PROTOCOL.md); projected players remain unconfirmed. The retired local results store and its derived profiles are not required inputs or fallbacks. Earlier archive-first directions are superseded.
+This is the only directory in the repository where code lives. Active daily operation is **ONE-CHAT-v3** ([RUNBOOK](../research/one_chat/RUNBOOK.md), [EVALUATION_PLAN_v29.0](../research/external/EVALUATION_PLAN_v29.0.md)); fitted models remain separate from cards until promoted (`ML-SEP-v1`).
 
-**Required repository fallback (REF-v2).** Always keep [https://github.com/danisgreat/Sports-Research/tree/main](https://github.com/danisgreat/Sports-Research/tree/main) as the standing reference. If required local files are not fully accessible (missing, unreadable, truncated or incomplete), retrieve the actual required contents from this repository before declaring them unavailable. Apply the remote fallback (REF-v2, [WORKFLOW](../WORKFLOW.md#part-a-execution_environment_protocol) Part A §2): resolve one main commit SHA, record exact files/read time and fallback results in the existing reading receipt, and preserve the declared authority mode. Never substitute an unpublished local mini, claim unread content or treat viewing code as executing it. If authorized remote access also fails, record the real gap and continue independent work.
+## Active commands (`ONE-CHAT-v3`, `HPPV-v1`, `CARD-TRAIN-v1`, `KIT-v1`, `STATE-v1`)
 
-# `ml/` — primary sporting runtime and maintainer model workshop
+```text
+python -m ml one-chat prepare --message CHAT1.txt --mini MINI21 --out <prep>/MINI21
+python -m ml one-chat register-requests --folder <prep>/MINI21
+python -m ml one-chat seal --watch <minis_dir>                                         # or --card FILE [...]
+python -m ml one-chat intake --from-seals --out research/one_chat/intake/<run>
+python -m ml one-chat score --intake <intakes> --outcomes <outcomes> --out research/one_chat/scores/<run>
+python -m ml one-chat power --out <dir>                                                # registered simulation power study
+python -m ml historical-pre-event run|verify|append|backtest                           # Track H (HPPV-v1, separate from Track P)
+python -m ml card-training run|verify --out research/card_training/<run>               # CARD-TRAIN-v1 walk-forward study
+python -m ml kit verify|params|sha                                                     # calculation kit (ml/kit/sr_kit.py)
+python -m ml deep-loss check|tally                                                     # deep loss register
+python -m ml state [--write | --restamp]                                               # sync CURRENT_STATE.md, README.md, prompts
+python -m pytest ml/tests                                                              # full regression suite
+```
 
-**HPPV-v1 (17 November 2026):** `python -m ml historical-pre-event run|verify|append|backtest`
-implements the separate historical evidence track. [Operator guide and schemas](../research/verification/historical_pre_event_v1/README.md).
-The frozen 685-card census, reviewed custody evidence, exact endpoints, independent
-outcomes, same-contract benchmarks and event-level statistics never feed the v27.0
-prospective registry. The strict-cutoff model study is retrospective and separate
-from proof of original forecast issuance.
+**HPPV-v1 (Track H):** [Operator guide and schemas](../research/verification/historical_pre_event_v1/README.md). The frozen 685-card census, reviewed custody evidence, exact endpoints, independent outcomes, same-contract benchmarks and event-level statistics never feed the Track P prospective registry.
 
-**ML/RL scope (MLSCOPE-v3).** Owner instruction, 22 October 2026: models run where they are needed. Prompt 1 first freezes the competition's declared reference (a release or TB-2-MD / TB-1-MD or the league-only baseline; `python -m ml reference …` or `pregame reference`), then researches the game online and prices every p_card as ANALYST_PRIMARY_V1 / UNCALIBRATED_ANALYST_PRIMARY: the reference plus logged adjustments ([PROBABILITY_TOOLKIT](../PROBABILITY_TOOLKIT.md); code may do the arithmetic, with every input and step printed). After the card is written to the mini, prompt 1 runs `pregame run`, which re-uses the executed reference and freezes the card's own final p on the same contracts, or records NOT_RUN_NO_RELEASE. Nothing a model prints after the card changes the card's p_card, ranks or picks, and the reference is never edited. Prompt 3 settles the shadow with the card; prompt 6 ingests and evaluates; prompt 8 builds releases and decides promotion. A model is judged only after at least 8 weeks and 50 paired games; a progress review falls due when either is reached first. RL has no forecasting role: online expert weighting updates at settlement. Details: [FORECAST_CYCLE_PROTOCOL](../REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol). Supersedes MLSCOPE-v1, NOCODE-v1 and any older text that forbids code or models in prompts 1–5.
+## Legacy workshop & retained commands
 
-**Repeat bug audit:** [implementation and coverage](../research/verification/ml_bug_audit_2026-10-14-1/IMPLEMENTATION.md) repairs source parsing, grids, chronology, failure handling, reports, shadow outcomes and decision mechanics. Read the [additional artifact admission notice](../research/model_shadow/BUG_AUDIT_ADMISSION_2026-10-14.md) before using old outputs with the new implementation. Fixed historical fit/grid smoke checks are not predictive validation; fresh model outputs need controlled regeneration.
-
-**Historical workshop review (14 October 2026):** CR-2026.10.14-R3 / prompt suite v11.3. Current primary release is CR-2026.10.16-R2 / PRIMARY-2026.10.16-v3.3 / prompt suite v17.0 under PRIMARY_PREDICTION_PROTOCOL; `python -m ml.evaluation.primary_replay` runs the corrected historical policy proxy into a new V3 output folder; the old replay is recoverable at 869a4776e. Read the [actual implementation review](../research/verification/framework_change_2026-10-14-5/ML_WORKSHOP_REVIEW.md) and [artifact admission](../research/model_shadow/ARTIFACT_PROVENANCE.md). Historical model outputs retain their original generating source; corrected report replays have new receipts. No model is promoted. That historical review reported 60 executed checks; current primary/integrity test results are in the new primary verification report. Neither establishes predictive qualification.
-
-**Authority:** CURRENT_RULES §0 (model workshop exception) and §5a (decision-lab firewall), CR-2026.10.14-R1; framework change [2026-10-14-3](../research/verification/framework_change_2026-10-14-3/IMPLEMENTATION.md); design in [archive: ML_RL_IMPLEMENTATION_FRAMEWORK_2026-10-14.md](../archive/consolidation_2026-11-07/archived/ML_RL_IMPLEMENTATION_FRAMEWORK_2026-10-14.md).
-
-This is the only place in the repository where code may live. A maintainer runs it. Prompts 1–3 now run/read the named source-reviewed primary runtime under PRIMARY_PREDICTION_PROTOCOL and retain the immutable bundle under `research/primary_predictions/` or the named mini evidence scope. Other workshop outputs remain separate under `research/model_shadow/`; its unadmitted forecasts and DECISION_LAB are not primary inputs. Every output carries its actual status/receipt.
+*The sections below describe the retained historical workshop, `PICKS_V2` reference/ledger lane (`MLSCOPE-v3`), and earlier `EXT-v2`/`EXT-v3` commands. Retired one-off scripts (`ml/studies/*`, `ml/evaluation/primary_replay.py`, `ml/historical_backfill.py`, `ml/historical_identity.py`) were pruned on 19 November 2026 and remain recoverable at [`cb97bbc2a`](../HISTORICAL_LINK_INDEX.md#pruning--2026-11-19-retired-docs--unreferenced-ml-modules).*
 
 ## Run
 
@@ -178,7 +180,7 @@ Tests: `test_learning_store.py` (dedup, quarantine, revisions, interrupted inges
 
 **Executable forecast cycle (CYCLE-v1).** Apply [FORECAST_CYCLE_PROTOCOL](../REFERENCE_MODEL_PROTOCOL.md#merged-forecast_cycle_protocol). New contextual forecasts use MODEL_ASSISTED_CYCLE_V1 with a frozen exact-competition release, actual execution receipt, identical-contract baseline shadows and verified settlement feedback. Existing V3/tennis adapters retain their own cohorts; missing/unsupported inputs require a real failure receipt and retained research. This statistical/procedure release authorises experimental execution, not predictive qualification.
 
-`python -m ml.workflow research --help` is the stdlib failure-receipt entry point. `python -m ml cycle release|verify|settle|evaluate` connects exact-scope store data, contextual models, delayed sporting feedback and paired prospective evaluation. `python -m ml historical-backfill --help` obtains independently reconciled owner results without reviving the retired store. `python -m ml historical-identity build|verify --map MAP.csv` disambiguates source records without renumbering issued IDs. Older no-real-data and empty-store statements above describe their dated releases; current status is in CURRENT_STATE and the new implementation report.
+`python -m ml.workflow research --help` is the stdlib failure-receipt entry point. `python -m ml cycle release|verify|settle|evaluate` connects exact-scope store data, contextual models, delayed sporting feedback and paired prospective evaluation. Older no-real-data and empty-store statements above describe their dated releases; current status is in CURRENT_STATE.
 
 ## Reference stage, picks block, ledger, simulators and league lane (22 October 2026, v24.0)
 
@@ -217,9 +219,9 @@ Benchmarks load through `ml/benchmarks.py`, which refuses any price column. Test
 Changed: `ml/reference.py` (LEAGUE-KEY-v2: a league name selects constants only inside its own sport; OT-PERIODS-v1: basketball overtime as real extra periods, flag `OT_PERIODS_V1` on every receipt), `ml/core/distributions.py` (`ScoreGrid.resolve_ties_periods`), `ml/picks.py` (`rank_scope`, `event_key`, `external_runs`, `external_disagreement`), `ml/learning_log.py` (LINEUP-CAPTURE-v1: availability rows for both sides). None of these files is in the forecast cycle's import closure, so no release is retired. Tests: `ml/tests/test_release_v24_13.py`.
 
 
-## Release v24.14 integrity commands
+## Retained v24.14 external-lane integrity commands
 
-python -m ml external package-check validates the complete upload package. The init/packet/intake/status/review-source/admit commands enforce EXT-v2. append-card performs the lease-held hash-compare mini append; append-research retains nonnumeric work; bind-card binds exact central pricing, learning and ledger evidence. Legacy check/merge is diagnostic only. learning-log readiness reports actual feature evidence. external evaluate uses the verified prospective ledger and exact 100-event/eight-week paired experiment. See ../EXTERNAL_RESEARCH_PROTOCOL_V2.md and ../research/verification/framework_change_2026-11-11-2/IMPLEMENTATION.md. No model is promoted and the frozen cycle/shared reference table are unchanged.
+`python -m ml external package-check` validates the legacy upload package (`init`/`packet`/`intake`/`status`/`review-source`/`admit`/`append-card`/`bind-card`/`evaluate`). See [EXTERNAL_RESEARCH_PROTOCOL.md](../EXTERNAL_RESEARCH_PROTOCOL.md) and [research/verification/framework_change_2026-11-11-2/IMPLEMENTATION.md](../research/verification/framework_change_2026-11-11-2/IMPLEMENTATION.md). Takes no new game under ONE-CHAT-v3.
 
 ## One chat per game, deep loss register, versions (v25.0)
 

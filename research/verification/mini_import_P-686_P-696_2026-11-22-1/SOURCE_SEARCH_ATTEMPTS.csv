@@ -1,0 +1,12 @@
+canonical_id,field,source_tried,outcome,notes
+P-686,final_boxscore_and_linescore,https://www.foxsports.com/nba/portland-trail-blazers-vs-minnesota-timberwolves-nov-17-2026-game-boxscore-106739,VERIFIED,capture sha256=f3af78436756f760
+P-687,final_boxscore_and_linescore,https://www.foxsports.com/college-basketball/michigan-state-spartans-vs-tennessee-volunteers-nov-17-2026-game-boxscore-264973,VERIFIED,capture sha256=2eb3a3d42da1d940
+P-688,final_boxscore_and_linescore,https://www.bleague.jp/game_detail/?ScheduleKey=506605,VERIFIED,capture sha256=740da59fec86f6c6
+P-689,final_boxscore_and_linescore,https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=gameSummary&game_id=1029340&key=50c2cd9b5e18e390&site_id=1&client_code=ahl&lang=en,VERIFIED,capture sha256=a6f3993e2999c3f4
+P-690,final_boxscore_and_linescore,https://www.foxsports.com/nba/houston-rockets-vs-indiana-pacers-nov-18-2026-game-boxscore-106744,VERIFIED,capture sha256=9912841ae4cfdef2
+P-691,final_boxscore_and_linescore,https://www.foxsports.com/nba/atlanta-hawks-vs-oklahoma-city-thunder-nov-18-2026-game-boxscore-106749,VERIFIED,capture sha256=b23f869d9f53b087
+P-692,final_boxscore_and_linescore,https://www.foxsports.com/nba/detroit-pistons-vs-new-orleans-pelicans-nov-18-2026-game-boxscore-106748,VERIFIED,capture sha256=994cc432a25fd162
+P-693,final_boxscore_and_linescore,https://samfordsports.com/boxscore.aspx?id=13967,VERIFIED,capture sha256=5d6331f79e9b1098
+P-694,final_boxscore_and_linescore,https://www.foxsports.com/nba/utah-jazz-vs-los-angeles-lakers-nov-18-2026-game-boxscore-106753,VERIFIED,capture sha256=c855ad9a03274036
+P-695,final_boxscore_and_linescore,https://www.nblfixtures.com/games/illawarra-hawks-vs-adelaide-36ers-2026-11-19,VERIFIED,capture sha256=5f026797ecd8d38c
+P-696,final_boxscore_and_linescore,https://sportsguff.com/scorecard/women-s-big-bash-league-2026-27/adelaide-strikers-women-vs-melbourne-renegades-women-28th-match,VERIFIED,capture sha256=6f023f45466529c3
