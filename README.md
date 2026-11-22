@@ -8,8 +8,8 @@ A sports-only, market-blind forecasting framework and custody/evaluation harness
 
 | Field | Current value |
 |---|---|
-| Release | MDS-2026.11.18-v29.1 · CR-2026.11.18-R2 · P-2026.11.18-v29.1 · SCV-2026.11.18-v20 · SEL-2026.10.22-v4 |
-| Active workflow | **ONE-CHAT-v3** — [Runbook](research/one_chat/RUNBOOK.md) · [Chat brief](research/external/ONE_CHAT_BRIEF_v29.0.md) |
+| Release | MDS-2026.11.22-v29.2 · CR-2026.11.22-R1 · P-2026.11.22-v29.2 · SCV-2026.11.18-v20 · SEL-2026.10.22-v4 |
+| Active workflow | **ONE-CHAT-v3** — [Runbook](research/one_chat/RUNBOOK.md) · [Chat brief](research/external/ONE_CHAT_BRIEF_v29.2.md) |
 | Registered plan (Track P) | [EVALUATION_PLAN_v29.0](research/external/EVALUATION_PLAN_v29.0.md) · **600-game horizon** · Live seals on `forecast-seals` (`python -m ml one-chat score`) |
 | Historical validation (Track H) | [HPPV-v1](research/verification/historical_pre_event_v1/README.md) · 685 cards / 3,150 rows (280 with stated `p`) · 0 Tier-A (`HISTORICAL_EVIDENCE_INSUFFICIENT`) |
 | Canonical log IDs | Highest `P-696` · Next **`P-697`** · Live state in [CURRENT_STATE.md](CURRENT_STATE.md) |
@@ -20,7 +20,7 @@ A sports-only, market-blind forecasting framework and custody/evaluation harness
 
 1. **[Runbook](research/one_chat/RUNBOOK.md)** — how to prepare, register, seal (`forecast-seals`), settle and score one-chat cards across parallel chats.
 2. **[Registered Evaluation Plan (v29.0)](research/external/EVALUATION_PLAN_v29.0.md)** — population, immutable request/card custody, 14-day settlement deadline, and the anytime-valid empirical-Bernstein confidence sequence (600-game horizon, alpha = 0.05, practical threshold 0.01).
-3. **[Chat Brief (v29.0)](research/external/ONE_CHAT_BRIEF_v29.0.md)** & **[Upload Package](research/external/README.md)** — what to upload to each research chat (`ONE_CHAT_BRIEF_v29.0.md`, [`ml/kit/sr_kit.py`](ml/kit/sr_kit.py), kit parameters, and current access/source lists).
+3. **[Chat Brief (v29.2)](research/external/ONE_CHAT_BRIEF_v29.2.md)** & **[Upload Package](research/external/README.md)** — what to upload to each research chat (`ONE_CHAT_BRIEF_v29.2.md`, [`ml/kit/sr_kit.py`](ml/kit/sr_kit.py), kit parameters, and current access/source lists).
 4. **[CURRENT_STATE.md](CURRENT_STATE.md)** — live generated state, canonical IDs, scoreboard, and version pointers.
 5. **[CORE.md](CORE.md)** — standing honesty, custody, `SPORTS_ONLY / MARKET_BLIND`, `STATS-ONLY-v2`, `ML-SEP-v1` and `FREEZE-v1` rules.
 
@@ -45,7 +45,7 @@ python -m ml state --write
 
 | Area | Primary files |
 |---|---|
-| Active operation (`ONE-CHAT-v3`) | [RUNBOOK](research/one_chat/RUNBOOK.md), [EVALUATION_PLAN_v29.0](research/external/EVALUATION_PLAN_v29.0.md), [ONE_CHAT_BRIEF_v29.0](research/external/ONE_CHAT_BRIEF_v29.0.md), [research/one_chat/](research/one_chat/README.md), [VERSIONS.csv](VERSIONS.csv) |
+| Active operation (`ONE-CHAT-v3`) | [RUNBOOK](research/one_chat/RUNBOOK.md), [EVALUATION_PLAN_v29.0](research/external/EVALUATION_PLAN_v29.0.md), [ONE_CHAT_BRIEF_v29.2](research/external/ONE_CHAT_BRIEF_v29.2.md), [research/one_chat/](research/one_chat/README.md), [VERSIONS.csv](VERSIONS.csv) |
 | Standing authority & state | [CURRENT_STATE.md](CURRENT_STATE.md), [CORE.md](CORE.md), [RULES_REFERENCE.md](RULES_REFERENCE.md), [SCORING_AND_VALIDATION.md](SCORING_AND_VALIDATION.md), [AUDIT_REVIEW_PROTOCOL.md](AUDIT_REVIEW_PROTOCOL.md), [CHANGELOG.md](CHANGELOG.md) |
 | Probability, kit & code | [`ml/`](ml/README.md), [`ml/kit/sr_kit.py`](ml/kit/sr_kit.py), [PROBABILITY_TOOLKIT.md](PROBABILITY_TOOLKIT.md), [PARAMETERS.md](PARAMETERS.md), [SIMULATION_PROTOCOL.md](SIMULATION_PROTOCOL.md) |
 | Sport rules (10 sports + Other) | [RULES_BASEBALL.md](RULES_BASEBALL.md), [RULES_BASKETBALL.md](RULES_BASKETBALL.md), [RULES_ICE_HOCKEY.md](RULES_ICE_HOCKEY.md), [RULES_SOCCER.md](RULES_SOCCER.md), [RULES_CRICKET.md](RULES_CRICKET.md), [RULES_TENNIS.md](RULES_TENNIS.md), [RULES_NRL_RUGBY.md](RULES_NRL_RUGBY.md), [RULES_RUGBY_UNION.md](RULES_RUGBY_UNION.md), [RULES_AFL.md](RULES_AFL.md), [RULES_AMERICAN_FOOTBALL.md](RULES_AMERICAN_FOOTBALL.md) |

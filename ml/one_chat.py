@@ -28,7 +28,6 @@ import tempfile
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from ml import picks as P
 from ml import timing as T
 from ml import forecast_integrity as F
 
@@ -205,7 +204,8 @@ def check(meta: dict, picks: list[dict], facts: list[dict], key: str, root=ROOT)
         else:
             window = (clocks["research_start_at"], clocks["research_end_at"])
     if meta.get("not_started_source") and not re.match(r"https?://\S+$", meta["not_started_source"]):
-        problems.append("header: not_started_source must be the page that showed the game had not started")
+        problems.append("header: not_started_source must be the page that showed the game had not started"
+                        " (only its https:// address; without such a page the card has no pre-start proof and cannot be sealed)")
     words = re.sub(r"https?://\S+", " ", "\n".join(meta.values()) + "\n" + "\n".join(",".join(r.values()) for r in picks + facts))
     if MARKET.search(words):
         problems.append("block: sporting fields only; no odds, prices, bookmakers or tips")
@@ -218,32 +218,12 @@ def check(meta: dict, picks: list[dict], facts: list[dict], key: str, root=ROOT)
     for label, rows in by_label.items():
         name = f"PICKS {label}: "
         family = rows[0]["family"]
-        sides = [r["side"].upper() for r in rows]
-        if any(r["family"] != family for r in rows) or family not in P.FAMILIES:
-            problems.append(name + "one family from the allowed vocabulary per line")
-            continue
-        if any(s not in P.SIDES[family] for s in sides) or len(set(sides)) != len(sides):
-            problems.append(name + f"sides must be distinct and from {'/'.join(P.SIDES[family])}")
-            continue
-        three_way = family == "WINNER" and "DRAW" in sides
-        if len(rows) != (3 if three_way else 2) or (set(sides) not in ({"HOME", "AWAY"}, {"OVER", "UNDER"}, {"YES", "NO"}, {"HOME", "AWAY", "DRAW"})):
-            problems.append(name + "both sides of the line are required (HOME/AWAY, OVER/UNDER, YES/NO, or HOME/AWAY/DRAW)")
+        # The same line rules run when the request is registered (forecast_integrity, v29.2).
+        shape = F.line_shape_problems(rows, name)
+        if shape:
+            problems += shape
             continue
         lines = [_number(r["line"]) if r["line"] else None for r in rows]
-        if family == "WINNER":
-            if any(r["line"] for r in rows):
-                problems.append(name + "a winner row has no line")
-        elif set(sides) == {"YES", "NO"}:
-            if any(r["line"] for r in rows):
-                problems.append(name + "a yes/no row has no line")
-        elif any(x is None for x in lines):
-            problems.append(name + "a numeric line is required on both rows")
-            continue
-        elif set(sides) == {"HOME", "AWAY"}:
-            if abs(lines[0] + lines[1]) > 1e-9:
-                problems.append(name + "the two handicap lines must be equal and opposite")
-        elif lines[0] != lines[1]:
-            problems.append(name + "both rows carry the same line")
         for r in rows:
             if r["availability_basis"] not in AVAILABILITY:
                 problems.append(name + f"availability_basis must be one of {'/'.join(AVAILABILITY)}")
@@ -283,7 +263,8 @@ def check(meta: dict, picks: list[dict], facts: list[dict], key: str, root=ROOT)
             problems.append(name + "value is required; write MISSING and the reason in source when it could not be found")
         elif r["value"] != "MISSING":
             if not re.match(r"https?://\S+$", r["source"]):
-                problems.append(name + "an observed value needs its source page")
+                problems.append(name + "an observed value needs its source page: put only the page's https:// address in "
+                                "source, with no other words; with no page, write MISSING as the value and the reason in source")
             try:
                 t = T.clock(r["observed_at"], "observed_at")
             except ValueError:

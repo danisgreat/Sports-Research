@@ -17,7 +17,17 @@ drops/requests/<CARD_KEY>/CONTRACTS.csv   label,family,side,line,period,endpoint
 ```
 
 `<CARD_KEY>` is `<MINI_KEY>-G0001`, `-G0002`… (letters, digits, `_` and `-` only) and must equal the `card_key` in
-the card. Column rules are in the [runbook](../research/one_chat/RUNBOOK.md) §1.
+the card. Column rules are in the [runbook](../research/one_chat/RUNBOOK.md) §1. A request is refused (v29.2) if:
+
+- a label has only one side: every line needs both rows (HOME and AWAY, OVER and UNDER, YES and NO);
+- `line` holds text such as `ML`: a moneyline is `WINNER` with `line` empty (`ML` belongs in `request_excerpt`);
+- a handicap label's two lines are not equal and opposite: two different spreads ("A +4.5", "B -3.5") are two
+  labels, each with both sides;
+- two labels are one contract. Where no draw is possible (basketball; ice hockey with overtime and shootout;
+  baseball with extra innings; tennis), "A ML", "A -0.5" and "B +0.5" all mean "A wins": register one `WINNER`
+  label, one row per side, each row keeping its own excerpt.
+
+Examples and the reasons: [ONE_CHAT_BRIEF_v29.2](../research/external/ONE_CHAT_BRIEF_v29.2.md#if-you-register-the-request-yourself-drops-v292).
 
 **Wait for the green `seal-drops` check on that commit before starting research.** The card's `research_start_at`
 must be later than the time GitHub published the registration; research started earlier makes the card unsealable.
@@ -34,6 +44,10 @@ drops/cards/<CARD_KEY>.md
 It must contain the `ONECHAT_V1` block for the registered key. A green check means it was sealed; GitHub's push time
 on `forecast-seals` is the timing evidence, not the drop time. Push at least 30 minutes before the scheduled start.
 A red check means it was **not** sealed: the run summary gives the reason.
+
+Before pushing, run the [checklist](../research/external/ONE_CHAT_BRIEF_v29.2.md#before-you-hand-over-a-card-v292).
+The usual refusals: a FACTS `source` that is not one bare `https://` address (write `MISSING` and the reason
+instead), a PICKS label with one side, and a `not_started_source` that is `NONE_FOUND` or not filled in.
 
 ## Rules
 

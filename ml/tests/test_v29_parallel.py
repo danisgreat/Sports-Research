@@ -81,7 +81,7 @@ def test_prepare_reads_the_owners_messages_into_requests_contracts_and_skeletons
     assert event["event_id"].startswith("REQ:basketball:nbl:cairns-taipans:perth-wildcats:")
     assert (out / "MINI7-G0001/REQUEST.txt").read_text(encoding="utf-8").startswith("Upcoming Basketball Game: Melbourne United")
     packet = (out / "CHAT_PACKET.md").read_text(encoding="utf-8")
-    assert packet.index("MINI7-G0001") < packet.index("MINI7-G0002") and "ONE_CHAT_BRIEF_v29.0.md" in packet
+    assert packet.index("MINI7-G0001") < packet.index("MINI7-G0002") and "ONE_CHAT_BRIEF_v29.2.md" in packet
     key, _, meta, picks, facts, problems, _ = O.card_blocks(fill(skeletons(out)["MINI7-G0001"]))[0]
     assert key == "MINI7-G0001" and problems == [] and len(facts) == 2 * len(O.required_facts("Basketball"))
 

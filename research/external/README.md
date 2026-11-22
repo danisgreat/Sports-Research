@@ -8,7 +8,7 @@ Upload to each chat (or once to a ChatGPT Project):
 
 | File | What it is |
 |---|---|
-| [ONE_CHAT_BRIEF_v29.0.md](ONE_CHAT_BRIEF_v29.0.md) | The one brief: what the chat does and the `ONECHAT_V1` block that ends every card (v25.0 to v28.0 are retained; do not upload them) |
+| [ONE_CHAT_BRIEF_v29.2.md](ONE_CHAT_BRIEF_v29.2.md) | The one brief: what the chat does and the `ONECHAT_V1` block that ends every card (v25.0 to v29.0 are retained; do not upload them) |
 | [`ml/kit/sr_kit.py`](../../ml/kit/sr_kit.py) and the kit parameter files below | The calculation kit (unchanged, v24.15) |
 | The current do-not-open list and `sources/PREGAME_SOURCES_<SPORT>_v24.15.csv` | Where the chat may read (unchanged) |
 

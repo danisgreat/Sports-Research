@@ -90,6 +90,10 @@ def register_request(source, event, contracts, key, root):
         raise ValueError(
             "a registered request is immutable; use a new key and retain the earlier request"
         )
+    # v29.2: a new request must be cardable. An identical earlier registration is still recognised above.
+    problems = contract_problems(payload)
+    if problems:
+        raise ValueError(" | ".join(problems))
     folder.mkdir(parents=True)
     for name, raw in payload.items():
         (folder / name).write_bytes(raw)
@@ -136,14 +140,21 @@ def request_problems(payload, meta=None, picks=None):
                 problems.append(
                     f"request {r['label']}: excerpt is absent from the unchanged original request"
                 )
-            if r["line"] and abs(float(r["line"])) not in {
+            line = line_value(r["line"])
+            if r["line"].strip() and line is None:
+                problems.append(
+                    f"request {r['label']}: line must be a number, not {r['line']!r}; "
+                    "a moneyline is a WINNER line with the line left empty"
+                )
+            elif line is not None and abs(line) not in {
                 abs(float(x))
                 for x in re.findall(r"[-+]?\d+(?:\.\d+)?", r["request_excerpt"])
             }:
                 problems.append(
                     f"request {r['label']}: numeric line is absent from its original excerpt"
                 )
-            if r["baseline_p"] and not 0 < float(r["baseline_p"]) < 1:
+            base = line_value(r["baseline_p"])
+            if r["baseline_p"].strip() and (base is None or not 0 < base < 1):
                 problems.append(
                     "request: frozen baseline probability must be between zero and one"
                 )
@@ -158,8 +169,14 @@ def request_problems(payload, meta=None, picks=None):
         if picks is not None:
 
             def identity(r):
-                line = float(r["line"]) if r["line"] else None
-                return r["label"], r["family"], r["side"].upper(), line
+                text = r["line"].strip()
+                line = line_value(text) if text else None
+                return (
+                    r["label"],
+                    r["family"],
+                    r["side"].upper(),
+                    text if line is None and text else line,
+                )
 
             if {identity(r) for r in contracts} != {identity(r) for r in picks} or len(
                 contracts
@@ -169,6 +186,141 @@ def request_problems(payload, meta=None, picks=None):
                 )
     except (KeyError, ValueError, UnicodeError) as exc:
         problems.append("request: " + str(exc))
+    return problems
+
+
+# v29.2 (CR-2026.11.22-R1). One rule set for the shape of a requested line, run both when a request is registered and
+# when its card is checked, so a request that registers can always be carded (an NHL request registered with one side
+# per label could never be sealed). Registration also refuses one contract registered twice (P-689 counted one AHL
+# result twice). Neither check runs on a request registered earlier: sealed history keeps its original rules.
+COMPLETE_SIDES = (
+    {"HOME", "AWAY"},
+    {"OVER", "UNDER"},
+    {"YES", "NO"},
+    {"HOME", "AWAY", "DRAW"},
+)
+
+
+def line_value(text):
+    """The number a line or probability field holds, or None (empty, text such as 'ML', or not finite)."""
+    try:
+        x = float(str(text).strip())
+    except ValueError:
+        return None
+    return x if math.isfinite(x) else None
+
+
+def line_shape_problems(rows, name):
+    """Problems with one requested line: every row sharing a label. ``name`` prefixes each message."""
+    from ml import picks as P
+
+    family = rows[0]["family"]
+    sides = [r["side"].upper() for r in rows]
+    if any(r["family"] != family for r in rows) or family not in P.FAMILIES:
+        return [name + "one family from the allowed vocabulary per line"]
+    if any(s not in P.SIDES[family] for s in sides) or len(set(sides)) != len(sides):
+        return [name + f"sides must be distinct and from {'/'.join(P.SIDES[family])}"]
+    three_way = family == "WINNER" and "DRAW" in sides
+    if len(rows) != (3 if three_way else 2) or set(sides) not in COMPLETE_SIDES:
+        return [
+            name
+            + "both sides of the line are required (HOME/AWAY, OVER/UNDER, YES/NO, or HOME/AWAY/DRAW); "
+            f"this line has only {'/'.join(sides)}: add the other side's row under the same label"
+        ]
+    texts = [r["line"].strip() for r in rows]
+    if family == "WINNER" or set(sides) == {"YES", "NO"}:
+        if any(texts):
+            kind = "winner" if family == "WINNER" else "yes/no"
+            return [
+                name
+                + f"a {kind} row has no line: leave line empty (the excerpt may still say ML)"
+            ]
+        return []
+    bad = [t for t in texts if t and line_value(t) is None]
+    if bad:
+        return [
+            name
+            + f"line must be a number, not {bad[0]!r}; a moneyline is a WINNER line with the line left empty"
+        ]
+    if not all(texts):
+        return [name + "a numeric line is required on both rows"]
+    lines = [line_value(t) for t in texts]
+    if set(sides) == {"HOME", "AWAY"}:
+        if abs(lines[0] + lines[1]) > 1e-9:
+            return [name + "the two handicap lines must be equal and opposite"]
+    elif lines[0] != lines[1]:
+        return [name + "both rows carry the same line"]
+    return []
+
+
+def no_draw(sport, rows):
+    """True when a full-game result can never be a draw: basketball and tennis always (overtime and tie-breaks
+    decide), ice hockey when the contract includes the shootout, baseball when it includes extra innings."""
+    if not all(r["period"].upper().startswith("FULL") for r in rows):
+        return False
+    text = " ".join(
+        r[f] for r in rows for f in ("period", "endpoint", "action")
+    ).upper()
+    if "REGULATION" in text:
+        return False
+    if sport in ("Basketball", "Tennis"):
+        return True
+    if sport == "Ice Hockey":
+        return bool(re.search(r"(?<![A-Z])SO(?![A-Z])|SHOOTOUT", text))
+    return sport == "Baseball" and "EXTRA" in text
+
+
+def _contract_identity(rows, sport):
+    family = rows[0]["family"]
+    sides = frozenset((r["side"].upper(), line_value(r["line"])) for r in rows)
+    scope = frozenset(
+        (r["period"].upper(), r["endpoint"].upper(), r["action"].upper()) for r in rows
+    )
+    two_way = {s for s, _ in sides} == {"HOME", "AWAY"}
+    if (
+        two_way
+        and no_draw(sport, rows)
+        and (
+            family == "WINNER"
+            or (
+                family == "HANDICAP"
+                and all(v is not None and abs(v) == 0.5 for _, v in sides)
+            )
+        )
+    ):
+        return "MATCH_WINNER", scope
+    return family, sides, scope, frozenset(r["unit"].upper() for r in rows)
+
+
+def contract_problems(payload):
+    """Registration-only checks on a new request: every line is cardable and no contract is registered twice."""
+    try:
+        events, contracts = rows(payload["EVENT.csv"]), rows(payload["CONTRACTS.csv"])
+        sport = events[0]["sport"]
+    except (KeyError, IndexError, UnicodeError):
+        return []  # request_problems has already reported a malformed request
+    by_label = {}
+    for r in contracts:
+        by_label.setdefault(r["label"], []).append(r)
+    problems, first = [], {}
+    for label, group in by_label.items():
+        shape = line_shape_problems(group, f"request {label}: ")
+        if shape:
+            problems += shape
+            continue
+        key = _contract_identity(group, sport)
+        if key not in first:
+            first[key] = label
+        elif key[0] == "MATCH_WINNER":
+            problems.append(
+                f"request {first[key]} and {label}: the same two-way contract twice. No draw is possible here, so a "
+                "moneyline and either side's +0.5 or -0.5 all settle as 'this side wins'; register it once, as one "
+                "WINNER label with a HOME row and an AWAY row (line empty), each row keeping its own excerpt"
+            )
+        else:
+            problems.append(
+                f"request {first[key]} and {label}: the same contract twice; register it once"
+            )
     return problems
 
 

@@ -194,6 +194,11 @@ def contracts_for(game: dict) -> list[dict]:
             side_lines.setdefault("SPREAD", []).append((_side(m["team"], home, away), _num(m[2]), ln))
             continue
         raise PrepareError(f"line not understood: {ln!r}")
+    # v29.2: where no draw is possible, "Side +0.5" and "Side -0.5" both settle as "Side wins", so half-point spreads
+    # are the winner contract, registered once ("Americans -0.5" and "Crunch -0.5" were two labels for one result).
+    if "SPREAD" in side_lines and all(abs(v) == 0.5 for _, v, _ in side_lines["SPREAD"]) and \
+            F.no_draw(sport, [dict(period=period, endpoint=endpoint, action="STANDARD")]):
+        side_lines.setdefault("ML", []).extend((s, None, ln) for s, _, ln in side_lines.pop("SPREAD"))
     # "Team A ML" and "Team B +1.5" are two contracts, each priced on both sides (GAME_REQUEST_TEMPLATE §1b).
     if "ML" in side_lines:
         excerpt = side_lines["ML"][0][2]
@@ -266,7 +271,7 @@ def prepare(message, mini: str, out, *, schedules=None, first: int = 1) -> dict:
                          away=game["away"], scheduled_start=game["scheduled_start"], schedule_source=source)
             payload = {"REQUEST.txt": (msg.strip("\n") + "\n").encode("utf-8"),
                        "EVENT.csv": F.csv_bytes(F.EVENT_FIELDS, [event]), "CONTRACTS.csv": F.csv_bytes(F.CONTRACT_FIELDS, contracts)}
-            problems = F.request_problems(payload)
+            problems = F.request_problems(payload) or F.contract_problems(payload)
             if problems:
                 raise PrepareError(" | ".join(problems))
             games.append((key, game, contracts, payload))
@@ -282,7 +287,7 @@ def prepare(message, mini: str, out, *, schedules=None, first: int = 1) -> dict:
         (folder / "SKELETON.md").write_text(skeleton(key, game, contracts), encoding="utf-8")
     ordered = sorted(games, key=lambda g: O.T.clock(g[1]["scheduled_start"], "scheduled_start"))
     packet = [f"# Chat packet {mini}: {len(ordered)} games", "",
-              "Follow ONE_CHAT_BRIEF_v29.0.md from the repository's main branch. Work the games in the order below (earliest start first).",
+              "Follow ONE_CHAT_BRIEF_v29.2.md from the repository's main branch. Work the games in the order below (earliest start first).",
               "For each game: research, then fill the skeleton's FILL and ? fields, and hand over the finished card at once.",
               "Keep the card key, sport, competition, home, away, scheduled_start and every PICKS label, family, side and line exactly as given.",
               "HOME and AWAY are the sides named in each skeleton's home and away fields (the request's first- and second-named sides unless it names a home side or uses '@'); price them by name.",

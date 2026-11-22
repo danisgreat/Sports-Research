@@ -174,7 +174,8 @@ def summary(results: list[dict], after: str) -> str:
         return "\n".join(lines + ["No request or card drops in this push."]) + "\n"
     lines += ["| Drop | Kind | Card key | Status | Detail |", "|---|---|---|---|---|"]
     for r in results:
-        detail = str(r.get("detail", "")).replace("|", "/").replace("\n", " ")[:400]
+        # v29.2: long enough for several full refusal reasons (400 characters cut the second one off).
+        detail = str(r.get("detail", "")).replace("|", "/").replace("\n", " ")[:3000]
         lines.append(f"| `{r['drop']}` | {r['kind']} | {r.get('card_key', '')} | **{r['status']}** | {detail} |")
     return "\n".join(lines) + "\n"
 

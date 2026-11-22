@@ -179,7 +179,7 @@ def generate_readme_header(root=ROOT) -> str:
         "| Field | Current value |",
         "|---|---|",
         "| Release | " + " · ".join(v[i]["current"] for i in VERSION_ITEMS) + " |",
-        f"| Active workflow | **{O.RULE}** — [Runbook](research/one_chat/RUNBOOK.md) · [Chat brief](research/external/ONE_CHAT_BRIEF_v29.0.md) |",
+        f"| Active workflow | **{O.RULE}** — [Runbook](research/one_chat/RUNBOOK.md) · [Chat brief](research/external/ONE_CHAT_BRIEF_v29.2.md) |",
         f"| Registered plan (Track P) | [{plan_name}]({plan_path}) · **{O.HORIZON}-game horizon** · Live seals on `forecast-seals` (`python -m ml one-chat score`) |",
         "| Historical validation (Track H) | [HPPV-v1](research/verification/historical_pre_event_v1/README.md) · 685 cards / 3,150 rows (280 with stated `p`) · 0 Tier-A (`HISTORICAL_EVIDENCE_INSUFFICIENT`) |",
         f"| Canonical log IDs | Highest `P-{top:03d}` · Next **`P-{top + 1:03d}`** · Live state in [CURRENT_STATE.md](CURRENT_STATE.md) |",
