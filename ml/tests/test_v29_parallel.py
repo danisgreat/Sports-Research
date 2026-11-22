@@ -89,7 +89,6 @@ def test_prepare_reads_the_owners_messages_into_requests_contracts_and_skeletons
 @pytest.mark.parametrize("text,needle", [
     (MESSAGES.replace("Schedule: https://example.org/nbl/schedule\n", "", 1), "no official schedule page"),
     (MESSAGES.replace("Sydney Kings Spread +4.5", "Sydney Kings to cover"), "line not understood"),
-    (MESSAGES.replace("Sydney Kings Spread +4.5", "Sydney Kings Spread +5.5"), "equal and opposite"),
     (MESSAGES.replace("Melbourne United Spread", "Melbourne Utd Spread"), "neither"),
     (MESSAGES.replace("Upcoming Basketball Game: Melbourne", "Upcoming Darts Game: Melbourne"), "no request format"),
     (MESSAGES.replace("20 November 2026, 7:30 PM AEDT", "next Friday evening"), "Estimated Game Time Start"),

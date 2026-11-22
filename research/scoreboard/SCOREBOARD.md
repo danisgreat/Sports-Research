@@ -16,12 +16,17 @@ All cards remain in the census. Original timing and custody are unverified until
 independent evidence is recovered; this is not a finding that all historical forecasts
 were late. Preserved descriptive and training results below keep their original labels.
 
-## B. Current v27.0 prospective evidence — ONE-CHAT-v3 (17 November 2026)
+## B. Prospective evidence — ONE-CHAT-v3 (snapshot of 17 November 2026, v27.0; superseded)
+
+This table is a dated snapshot, not the current state. The registered horizon is now 600 games
+([EVALUATION_PLAN_v29.0](../external/EVALUATION_PLAN_v29.0.md)). By 22 November 2026, 13 cards were sealed on
+`forecast-seals` and P-689 was the first game with a verified pre-start server seal. The current verdict, mean and
+bound come only from `python -m ml one-chat score` over a complete census of the seal branch.
 
 | Measurement | Current implementation snapshot |
 |---|---|
 | Registered qualifying games | 0 |
-| Registered assessment horizon | 400 games |
+| Registered assessment horizon (v27.0; now 600) | 400 games |
 | Current verdict | NOT_YET_DEMONSTRATED |
 
 [Registered plan](../external/EVALUATION_PLAN_v29.0.md) · [runbook](../one_chat/RUNBOOK.md).

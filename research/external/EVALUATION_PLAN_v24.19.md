@@ -1,6 +1,6 @@
 # Paired research assessment with on-request audits (EXT-EVAL-v2 / ASSESS-100 / AUDIT-ANYTIME-v1)
 
-Owner instruction, CR-2026.11.15-R3 (MDS-2026.11.15-v24.19): the assessment can be run at any time on request, at any game count. This plan supersedes [EVALUATION_PLAN_v24.16](EVALUATION_PLAN_v24.16.md) by adding on-request audits; the rest of v24.16 (CR-2026.11.11-R4) is carried forward unchanged. Forecast/profile/kit identities remain v24.15.
+Owner instruction, CR-2026.11.15-R3 (MDS-2026.11.15-v24.19): the assessment can be run at any time on request, at any game count. This plan supersedes [EVALUATION_PLAN_v24.16](../../archive/superseded_2026-11-22/research/external/EVALUATION_PLAN_v24.16.md) by adding on-request audits; the rest of v24.16 (CR-2026.11.11-R4) is carried forward unchanged. Forecast/profile/kit identities remain v24.15.
 
 ## On-request audits at any count (AUDIT-ANYTIME-v1)
 

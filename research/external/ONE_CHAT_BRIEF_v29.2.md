@@ -97,6 +97,11 @@ after the game starts**, so check before you push.
    *Refused 20 Nov (CSL soccer, research began one minute after kick-off).*
 5. **The labels, families, sides and lines match the registered request exactly.**
 
+If you push to the drop branch: push a draft to `drops/check/<CARD_KEY>.md` first. It is checked exactly as a seal
+would be and nothing is published. A red check lists every reason; fix them and check again. Then push the card to
+`drops/cards/`. If a real card comes back red, it was not sealed: fix it and push the corrected card as a new file
+(`drops/cards/<CARD_KEY>-fix1.md`) before first play. A sealed card is final.
+
 ## If you register the request yourself (drops, v29.2)
 
 When you push a game's `CONTRACTS.csv` to `drops/requests/<CARD_KEY>/` yourself, it is checked by the same rules
@@ -124,7 +129,9 @@ as the card, so a request that registers can always be carded:
 
 ## What happens to the card
 
-The owner's repository reads the block as written. It refuses a block that is incomplete or does not add up, and tells the owner why. It never changes a number. It computes the comparison itself: your numbers on the supplied lines against a constant 0.5, game by game, and ranks your lines by your own numbers. The test is described in the [plan](EVALUATION_PLAN_v29.0.md); it can show an advantage as soon as the evidence is strong enough, and does not get easier to pass by being checked often. It also notes, without changing anything, a number within 5 points of 0.5, a number that sits on the wrong side of your own centre, a priced line with an unmeasured absence and a plus handicap, so those can be tested on results.
+The owner's repository reads the block as written. It refuses a block that is incomplete or does not add up, and tells the owner why. It never changes a number. It computes the comparison itself: your numbers on the supplied lines against a constant 0.5, game by game, and ranks your lines by your own numbers. The test is described in the [plan](EVALUATION_PLAN_v29.0.md); it can show an advantage as soon as the evidence is strong enough, and does not get easier to pass by being checked often. It also notes, without changing anything, a number within 5 points of 0.5, a number that sits on the wrong side of your own centre, a priced line with an unmeasured absence, a plus handicap and (v29.2) lines whose prices contradict one another (a higher Over more likely than a lower one, a harder handicap more likely than an easier one), so those can be tested on results. A check drop warns you about contradicting lines before you seal.
+
+**Kit row (v29.2).** Each game in the packet names the kit row its competition reaches. Pass that exact key to the kit. If the packet says the game falls to a family prior, say so on the card, or name the row that is this competition and why.
 
 A card counts when all of your research (start, the not-started check, every fact and the end) happened before the first play, you saw nothing of the outcome, and the owner sealed it before the first play (GitHub's own push time is the proof). Research is never hurried to beat a start: a card that misses it is kept as research and simply does not count.
 

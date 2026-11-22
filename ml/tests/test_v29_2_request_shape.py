@@ -169,6 +169,21 @@ def test_prepare_reads_half_point_spreads_as_the_winner_where_no_draw_is_possibl
     assert {r["label"] for r in rows} == {"L1", "L2"}
 
 
+def test_prepare_reads_two_different_spreads_as_two_contracts():
+    # Owner, 22 Nov 2026: "Aktobe +4.5" and "Torpedo -3.5" were asked for on purpose.
+    text = ("Upcoming Ice Hockey Game: Torpedo @ Aktobe, Jastar Hokei Ligasy 2026-27,\n"
+            "Estimated Game Time Start: 22 November 2026, 7:00 PM AEDT\n\nAktobe +4.5\nTorpedo -3.5\n"
+            "Combined Total: Over/Under 7.5 Goals\n")
+    rows = OPS.contracts_for(OPS.parse_message(text))
+    assert [(r["label"], r["family"], r["side"], r["line"], r["request_excerpt"]) for r in rows if r["family"] == "HANDICAP"] == [
+        ("L1", "HANDICAP", "HOME", "4.5", "Aktobe +4.5"), ("L1", "HANDICAP", "AWAY", "-4.5", "Aktobe +4.5"),
+        ("L2", "HANDICAP", "HOME", "3.5", "Torpedo -3.5"), ("L2", "HANDICAP", "AWAY", "-3.5", "Torpedo -3.5")]
+    assert [r["label"] for r in rows if r["family"] == "TOTAL"] == ["L3", "L3"]
+    # Both sides of one line written out ("A -3.5", "B +3.5") stay one contract.
+    one = OPS.contracts_for(OPS.parse_message(text.replace("Aktobe +4.5\nTorpedo -3.5", "Aktobe +3.5\nTorpedo -3.5")))
+    assert [r["label"] for r in one if r["family"] == "HANDICAP"] == ["L1", "L1"]
+
+
 def test_prepare_keeps_a_real_puck_line_as_a_handicap():
     rows = OPS.contracts_for(OPS.parse_message(AHL_TEXT.replace("Americans -0.5\nCrunch -0.5", "Americans -1.5")))
     assert [(r["family"], r["side"], r["line"]) for r in rows if r["label"] == "L1"] == [

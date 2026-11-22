@@ -16,6 +16,23 @@ request had been registered with one side per label, and a Jastar U20 card whose
 - Refusal reasons say how to fix a FACTS `source` and `not_started_source`; the run summary keeps up to 3,000 characters.
 - [ONE_CHAT_BRIEF_v29.2](research/external/ONE_CHAT_BRIEF_v29.2.md): a checklist before a card is handed over and the
   rules for a request written by hand; [drops/README.md](drops/README.md) and the [runbook](research/one_chat/RUNBOOK.md) point to it.
+- Owner: two different spreads in a request ("Aktobe +4.5", "Torpedo -3.5") are asked for on purpose. `prepare` now
+  registers them as two contracts, each priced on both sides, instead of refusing them.
+- Check drops: a draft pushed to `drops/check/` runs the exact seal checks (one shared `_block_refusal`) and
+  publishes nothing. A refused card, never sealed, may be corrected and pushed as a new file before first play.
+  Seal summaries state the margin before the scheduled start. Refusal reasons are no longer cut at 300 characters.
+- Two external reviews (owner, 22 Nov; [triage](research/verification/external_reviews_2026-11-22/TRIAGE.md)). The
+  ±0.5 winner equivalence now needs the deciding score (a tennis games spread stays a handicap; this was a v29.2
+  defect). `INCOHERENT_ACROSS_LINES` flags prices that break one score distribution; it is a flag and a check warning,
+  never a refusal. The chat packet names the kit row and any family-prior fallback (the kit is unchanged). A replay at
+  `as_of` ignores later seals and settlements, and a clock equal to first play is not before it.
+  [SELECT-SHADOW-v1](research/external/SELECTION_SHADOW_PLAN_v1.md) registers a separate top-two policy that may
+  issue one pick or none, compared with the frozen ranker on the same future games. Kit and model upgrades, availability
+  effects, central pre-computation and gates on the registered rank need a v30.0 registration and are listed, not done.
+- Cleanup: 16 superseded `research/external/` files (evaluation plans v24.14 to v28.0, five-lane profiles and lane
+  briefs v24.13 and v24.14, one-chat briefs v25.0 to v29.0) moved to
+  [archive/superseded_2026-11-22/](archive/superseded_2026-11-22/README.md) with RELOCATIONS.csv (RELOC-v1). Live links
+  repointed. Links left dead by the 19 November pruning now point at the `cb97bbc2a` permalinks.
 
 The new checks run only when a new request is registered: an identical earlier registration is still recognised, and
 sealed requests and cards keep the rules they were registered under. Scoring, the card format and

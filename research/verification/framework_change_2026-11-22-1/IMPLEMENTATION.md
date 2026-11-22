@@ -33,6 +33,37 @@ as it is; v29.2 stops new ones.
 - Documents: [ONE_CHAT_BRIEF_v29.2](../../external/ONE_CHAT_BRIEF_v29.2.md) (v29.0 retained),
   [drops/README.md](../../../drops/README.md), [RUNBOOK](../../one_chat/RUNBOOK.md) §1 and §7a, prompt 1, prompt stamps, versions.
 
+## Second round (same day, owner review)
+
+- **Unequal spreads.** The owner confirmed "Aktobe +4.5 / Torpedo -3.5" was on purpose. `prepare` registers two
+  different spreads as two contracts, each priced on both sides. Both sides of one line written out stay one contract.
+  The v29.0 test that expected a refusal was removed.
+- **Check drops.** `drops/check/<name>.md` → `one_chat.preflight`, which runs `_block_refusal`, the single home of the
+  seal checks (moved out of `_seal_once`). The result is `CHECK_PASSED` or `CHECK_FAILED`, and nothing is published.
+- **Fix before first play.** A refused card was never sealed, so a corrected card under a new file name is sealed by the
+  unchanged code. This is now documented for chats (`drops/README.md`, brief checklist).
+- **Seal margin.** A sealed drop's summary states the minutes before (or after) the scheduled start.
+- **Full reasons.** `_seal_once` no longer cuts refusal reasons at 300 characters.
+- **Cleanup.** 16 superseded `research/external/` files moved unchanged to `archive/superseded_2026-11-22/` with
+  `RELOCATIONS.csv`. v24.19 plan, v24.15 profile/lane briefs and `AUDIT_CHAT_BRIEF_v1` stay because code or tests read
+  them. Live links were repointed, and the seven dead `EXTERNAL_RESEARCH_PROTOCOL_V3.md` links and the removed-command
+  notes left by the 19 November pruning now point at the `cb97bbc2a` permalinks.
+- Tests: `ml/tests/test_v29_2_drops.py` (check drop, fix-then-seal, margin, full reasons), and unequal spreads in
+  `test_v29_2_request_shape.py`.
+
+## Third round (two external reviews)
+
+Findings checked first, then acted on: [triage](../external_reviews_2026-11-22/TRIAGE.md).
+- `forecast_integrity.winner_by_margin`: ±0.5 equals the winner only on the deciding score (points, goals with the
+  shootout goal, runs). This fixes `PlayerX Games -0.5` being read as the tennis match winner.
+- `one_chat.incoherent_labels` → `INCOHERENT_ACROSS_LINES` flag, a score report row and a check-drop warning. Never a refusal.
+- `one_chat_ops.kit_row_note`: the chat packet names the kit row and any fallback. `sr_kit.py` (frozen identity) is unchanged.
+- `one_chat.score`: `as_of` excludes later seals (`SEALED_AFTER_AS_OF`) and later settlements; `timing_label` is
+  strict at first play.
+- `ml/selection_shadow.py` and SELECTION_SHADOW_PLAN_v1: the registered shadow top-two comparison.
+- Small fixes: the scoreboard's v27.0 snapshot is dated; the learning-store protocol link is repointed.
+- Tests: `ml/tests/test_v29_2_review_fixes.py` (12).
+
 ## Tests
 
 `ml/tests/test_v29_2_request_shape.py` uses the owner's real drops: the `ML` request gets a reason and no crash; the

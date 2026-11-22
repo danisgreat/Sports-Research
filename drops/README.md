@@ -49,8 +49,27 @@ Before pushing, run the [checklist](../research/external/ONE_CHAT_BRIEF_v29.2.md
 The usual refusals: a FACTS `source` that is not one bare `https://` address (write `MISSING` and the reason
 instead), a PICKS label with one side, and a `not_started_source` that is `NONE_FOUND` or not filled in.
 
+A green seal's summary says how many minutes before the scheduled start GitHub published it, or that it came after
+the scheduled start (it then counts only if settlement shows play began after the seal).
+
+**A red card can be fixed before first play.** A refused card was never sealed, so nothing is the forecast of record
+yet. Read the reason, correct the card, and push it as a **new** file, for example `drops/cards/<CARD_KEY>-fix1.md`.
+Leave the refused file where it is. Once a card is sealed, it is final.
+
+## 2a. Check a draft first (v29.2)
+
+Push a draft to `drops/check/<CARD_KEY>.md` to have it checked exactly as a seal would check it: the card, its match
+with the registered request and the research timing. **Nothing is sealed or published.** `CHECK_PASSED` (green) means
+the same card pushed to `drops/cards/` now would be sealed. `CHECK_FAILED` (red) gives every reason in full. A
+`WARNING` on a passing check (for example, a higher Over priced above a lower one) does not block the seal, but it
+means your lines contradict each other: fix them before you push the card. A check
+takes about a minute, so leave time before the start to push the real card. Only a `CHECK_PASSED` row in the run
+summary counts. Any other status, including `IGNORED` (shown before this feature is live), means the draft was not
+checked; a green mark alone proves nothing for a check.
+
 ## Rules
 
 - A registered request and a sealed card are permanent. Re-pushing different numbers for a sealed key is refused.
 - Do not edit or delete earlier drops; push a new file instead.
+- A file in `drops/check/` is never sealed: only `drops/cards/` seals.
 - Other files in `drops/` are ignored and reported.

@@ -39,7 +39,7 @@ CONTRACT_FIELDS = (
     "baseline_id",
 )
 REQUEST_FILES = ("REQUEST.txt", "EVENT.csv", "CONTRACTS.csv")
-# Registered in EVALUATION_PLAN_v28.0 (v27.0 used eight values from 0.05 to 0.9).
+# Registered in EVALUATION_PLAN_v28.0, now archive/superseded_2026-11-22/research/external/ (v27.0 used eight values from 0.05 to 0.9).
 LAMBDAS = (0.5, 0.7, 0.9)
 STATISTICAL_RULE = "AVERAGE-CONDITIONAL-MEAN-EB-v2"
 
@@ -270,6 +270,23 @@ def no_draw(sport, rows):
     return sport == "Baseball" and "EXTRA" in text
 
 
+# The score that decides the match, when it is also a handicap's unit. Not tennis: a match is decided by sets, and a
+# games spread can lose while the match is won (0-6 7-6 7-6 is a match win and a 14-18 games count).
+WINNER_SCORE = {"Basketball": "POINTS", "Ice Hockey": "GOALS", "Baseball": "RUNS"}
+
+
+def winner_by_margin(sport, rows):
+    """True when a half-point handicap on these rows settles exactly as the match winner: no draw is possible and
+    every handicap row is on the score that decides the match (points; goals including the shootout goal; runs)."""
+    unit = WINNER_SCORE.get(sport)
+    handicaps = [r for r in rows if r.get("family", "HANDICAP") == "HANDICAP"]
+    return (
+        bool(unit)
+        and no_draw(sport, rows)
+        and all(r["unit"].strip().upper() == unit for r in handicaps)
+    )
+
+
 def _contract_identity(rows, sport):
     family = rows[0]["family"]
     sides = frozenset((r["side"].upper(), line_value(r["line"])) for r in rows)
@@ -277,16 +294,12 @@ def _contract_identity(rows, sport):
         (r["period"].upper(), r["endpoint"].upper(), r["action"].upper()) for r in rows
     )
     two_way = {s for s, _ in sides} == {"HOME", "AWAY"}
-    if (
-        two_way
-        and no_draw(sport, rows)
-        and (
-            family == "WINNER"
-            or (
-                family == "HANDICAP"
-                and all(v is not None and abs(v) == 0.5 for _, v in sides)
-            )
-        )
+    half = family == "HANDICAP" and all(
+        v is not None and abs(v) == 0.5 for _, v in sides
+    )
+    if two_way and (
+        (family == "WINNER" and no_draw(sport, rows))
+        or (half and winner_by_margin(sport, rows))
     ):
         return "MATCH_WINNER", scope
     return family, sides, scope, frozenset(r["unit"].upper() for r in rows)

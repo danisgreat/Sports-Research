@@ -221,4 +221,4 @@ Not estimable from the archive: `CUP_ROTATION` (needs starting lineups) and `RUL
 
 ## v24.15 operational and parameter amendment
 
-The v24.15 owner-authorized statistical release loads 32 measured soccer competition rows and its declared family prior; originals remain archived. The upload builder does not silently modify this table. The explicit --install-soccer release option requires the reviewed prior SHA and an unoccupied archive destination. Existing card probabilities and frozen model bundles are unchanged. See [EXT-v3](EXTERNAL_RESEARCH_PROTOCOL_V3.md).
+The v24.15 owner-authorized statistical release loads 32 measured soccer competition rows and its declared family prior; originals remain archived. The upload builder does not silently modify this table. The explicit --install-soccer release option requires the reviewed prior SHA and an unoccupied archive destination. Existing card probabilities and frozen model bundles are unchanged. See [EXT-v3](https://github.com/danisgreat/Sports-Research/blob/cb97bbc2a9f882e7f8a093648b6137315951da8b/EXTERNAL_RESEARCH_PROTOCOL_V3.md).

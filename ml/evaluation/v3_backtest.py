@@ -1,6 +1,7 @@
 """V3-equivalent rolling-origin backtest of PRIMARY_HEDGE_MIX_V3 (Improvement 17).
 
-Unlike the preserved 41,752-game proxy replay (ml.evaluation.primary_replay), every evaluated event is issued with
+Unlike the 41,752-game proxy replay (ml.evaluation.primary_replay, removed 22 November 2026;
+kept at commit cb97bbc2a), every evaluated event is issued with
 the runtime's own functions and policy: ``primary.fit_experts_and_line`` at the event's horizon on rows whose game,
 final and source availability were known by then; ``primary.warm_records`` for the 30-game-week warm start; and
 full-information feedback from earlier backtest issues that were settled and available by the horizon, which take

@@ -194,22 +194,26 @@ def contracts_for(game: dict) -> list[dict]:
             side_lines.setdefault("SPREAD", []).append((_side(m["team"], home, away), _num(m[2]), ln))
             continue
         raise PrepareError(f"line not understood: {ln!r}")
-    # v29.2: where no draw is possible, "Side +0.5" and "Side -0.5" both settle as "Side wins", so half-point spreads
-    # are the winner contract, registered once ("Americans -0.5" and "Crunch -0.5" were two labels for one result).
+    # v29.2: where no draw is possible and the spread is on the score that decides the match (points, goals with the
+    # shootout goal, runs; never tennis games), "Side +0.5" and "Side -0.5" both settle as "Side wins", so half-point
+    # spreads are the winner contract, registered once ("Americans -0.5" and "Crunch -0.5" were two labels for one result).
     if "SPREAD" in side_lines and all(abs(v) == 0.5 for _, v, _ in side_lines["SPREAD"]) and \
-            F.no_draw(sport, [dict(period=period, endpoint=endpoint, action="STANDARD")]):
+            F.winner_by_margin(sport, [dict(period=period, endpoint=endpoint, action="STANDARD", unit=unit)]):
         side_lines.setdefault("ML", []).extend((s, None, ln) for s, _, ln in side_lines.pop("SPREAD"))
     # "Team A ML" and "Team B +1.5" are two contracts, each priced on both sides (GAME_REQUEST_TEMPLATE §1b).
     if "ML" in side_lines:
         excerpt = side_lines["ML"][0][2]
         add("winner", "WINNER", [("HOME", ""), ("AWAY", "")], period, endpoint, unit, excerpt)
     if "SPREAD" in side_lines:
-        given = {s: v for s, v, _ in side_lines["SPREAD"]}
-        if "HOME" in given and "AWAY" in given and abs(given["HOME"] + given["AWAY"]) > 1e-9:
-            raise PrepareError("the two spreads are not equal and opposite")
-        h = given["HOME"] if "HOME" in given else -given["AWAY"]
-        excerpt = side_lines["SPREAD"][0][2]
-        add("handicap", "HANDICAP", [("HOME", _line(h)), ("AWAY", _line(-h))], period, endpoint, unit, excerpt)
+        spreads = side_lines["SPREAD"]
+        given = {s: v for s, v, _ in spreads}
+        if len(spreads) == 2 and len(given) == 2 and abs(given["HOME"] + given["AWAY"]) < 1e-9:
+            spreads = spreads[:1]       # "A -3.5" and "B +3.5": both sides of one line, one contract
+        # v29.2 (owner, 22 Nov 2026): different spreads ("Aktobe +4.5", "Torpedo -3.5") are asked for on purpose and are
+        # different contracts, each priced on both sides under its own label.
+        for side, value, excerpt in spreads:
+            h = value if side == "HOME" else -value
+            add(("handicap", h), "HANDICAP", [("HOME", _line(h)), ("AWAY", _line(-h))], period, endpoint, unit, excerpt)
     if not items:
         raise PrepareError("no supplied line was found")
     rows = []
@@ -220,6 +224,39 @@ def contracts_for(game: dict) -> list[dict]:
                              action="STANDARD", unit=unit, request_excerpt=excerpt, baseline_p="",
                              baseline_id="UNAVAILABLE:NO_FROZEN_LEAGUE_BASELINE"))
     return rows
+
+
+KIT_PARAMS = "research/external/kit/v24.15/KIT_PARAMETERS_v24.15.csv"
+KIT_SPORT = {"Australian Rules": "AFL"}
+
+
+def kit_row_note(sport: str, competition: str, root=None) -> str:
+    """Which kit parameter row this game's competition reaches (v29.2). The kit is unchanged; this names the row so the
+    chat passes an exact key, and a family fallback ("NBA Cup group stage" reaching the 40-minute FIBA prior) is never silent."""
+    path = Path(root or O.ROOT) / KIT_PARAMS
+    if not path.exists():
+        return ""
+    from ml.kit import sr_kit as K
+    params = K.load_params(path)
+    prefix = KIT_SPORT.get(sport, sport)
+    key = f"{prefix}/{competition}"
+
+    def usable(k):
+        return params[k]["status"] not in ("NOT_USABLE", "NOT_ESTIMATED", "NOT_COVERED")
+
+    if key in params and usable(key):
+        return f"Kit row: `{key}` (its own row, {params[key]['status']})."
+    words = set(_words(competition))
+    near = sorted(k for k in params if k.startswith(prefix + "/") and usable(k) and set(_words(k.split("/", 1)[1])) <= words)
+    note = f"Kit row: no own row for `{key}`."
+    if near:
+        note += (" Rows named inside this competition's name: " + ", ".join(f"`{k}`" for k in near)
+                 + ". Pass the one that is this competition to the kit, or say on the card why none is.")
+    try:
+        fallback = K.row(params, key).get("competition", "a family prior")
+    except K.KitError:
+        return note + " The kit has no row and no family prior for it: price from the research and say NOT_COVERED."
+    return note + f" Otherwise the kit uses `{fallback}` (widths +10%, UNCALIBRATED_FAMILY_PROXY): say so on the card."
 
 
 def _event_id(game: dict) -> str:
@@ -293,7 +330,9 @@ def prepare(message, mini: str, out, *, schedules=None, first: int = 1) -> dict:
               "HOME and AWAY are the sides named in each skeleton's home and away fields (the request's first- and second-named sides unless it names a home side or uses '@'); price them by name.",
               "Give both sides of every line a probability (they sum to 1), or write UNPRICED on both. Never change a card you have already handed over.", ""]
     for key, game, contracts, payload in ordered:
+        kit = kit_row_note(game["sport"], game["competition"])
         packet += [f"## {key} · {game['home']} v {game['away']} · {game['competition']} · {game['scheduled_start']}", "",
+                   *([kit, ""] if kit else []),
                    "Request as sent:", "", "```text", payload["REQUEST.txt"].decode("utf-8").rstrip("\n"), "```", "",
                    "Card skeleton:", "", "```text", skeleton(key, game, contracts).rstrip("\n"), "```", ""]
     (out / "CHAT_PACKET.md").write_text("\n".join(packet), encoding="utf-8")
