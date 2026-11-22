@@ -20,7 +20,7 @@ The owner registers every game's request before you start and gives you a **chat
    - A number near 0.50 says you have no direction. Write it as it is; do not dress it up as a pick.
    - If you cannot support a number at all, write `UNPRICED` on both sides. You may mark one side `LEAN`. An unpriced line is kept but never scored or ranked.
 6. **Find where the result will be published.** For each line, give the page that will show the figure that settles it (the final score, the first-half score, the corner count, the score after six overs). If you cannot find a permitted page for that figure, write `NONE_FOUND`, and say so at the top of the card so the owner knows before the game.
-7. **Write the card**, end it with the filled skeleton, and hand it over **as soon as it is finished**, before you start the next game; each card must reach the owner before its own game starts. When you re-send the whole mini, copy every earlier card byte for byte: a changed earlier card is refused and the first version stays the forecast of record. The owner seals the file in the repository before play; a card sealed after the game starts is kept as research but never counts. The owner settles later; you never settle or audit.
+7. **Write the card**, end it with the filled skeleton, and hand it over **as soon as it is finished**, before you start the next game; each card must reach the owner before its game actually starts. A late start is normal: the scheduled time is not a deadline, the first play is. When you re-send the whole mini, copy every earlier card byte for byte: a changed earlier card is refused and the first version stays the forecast of record. The owner seals the file in the repository before play; a card sealed after play has begun is kept as research but never counts. The owner settles later; you never settle or audit.
 
 ## The block that ends every card
 
@@ -92,8 +92,10 @@ after the game starts**, so check before you push.
 3. **A winner row's `line` is empty.** Never `ML`.
 4. **`not_started_source` is the `https://` address of the page that showed the game had not started**, and
    `not_started_observed_at` is filled and falls between `research_start_at` and `research_end_at`. `NONE_FOUND`
-   cannot be sealed: without that page the card has no pre-start proof. If you began after the scheduled start, open
-   the official live page or match centre first; if it shows play has begun, say so and stop.
+   cannot be sealed: without that page the card has no pre-start proof. If you begin after the scheduled start (requests
+   may come late, and games often start late), open the official live page or match centre first. If it shows the
+   game has not begun, research and hand over as usual: the card is a full game and counts if it is sealed before the
+   first play. If play has begun, say so and stop.
    *Refused 20 Nov (CSL soccer, research began one minute after kick-off).*
 5. **The labels, families, sides and lines match the registered request exactly.**
 
