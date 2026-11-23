@@ -305,42 +305,69 @@ def _flags(row: dict, p, favoured: bool, line) -> list[str]:
     return flags
 
 
-def incoherent_labels(derived: dict) -> dict[str, str]:
-    """Lines whose prices contradict another line of the same family on the card (v29.2; a flag, never a refusal).
+def contract_scopes(contracts) -> dict[str, tuple]:
+    """label -> (family, period, endpoint, action, unit) from the registered CONTRACTS.csv rows (v29.4)."""
+    out = {}
+    for c in contracts or []:
+        out.setdefault(c["label"], (c["family"].upper(), c["period"].upper(), c["endpoint"].upper(), c["action"].upper(),
+                                    c["unit"].upper()))
+    return out
 
-    One score distribution implies: an Over on a higher total line is no more likely than on a lower one, and HOME
-    covering a harder (more negative) handicap is no more likely than covering an easier one. Probabilities are taken
+
+def registered_contracts(key: str, root=ROOT) -> list[dict] | None:
+    """A request's registered CONTRACTS.csv: local staging, the working tree, then the seal branch; None if absent."""
+    root = Path(root)
+    for folder in (request_staging(root) / F.request_path(key), root / F.request_path(key)):
+        if (folder / "CONTRACTS.csv").exists():
+            return F.rows((folder / "CONTRACTS.csv").read_bytes())
+    res = subprocess.run(["git", "-C", str(root), "cat-file", "blob",
+                          f"refs/remotes/origin/{SEAL_BRANCH}:{F.request_path(key)}/CONTRACTS.csv"], capture_output=True)
+    return None if res.returncode else F.rows(res.stdout)
+
+
+def incoherent_labels(derived: dict, scopes: dict | None = None) -> dict[str, str]:
+    """Lines whose prices contradict another line of the same quantity on the card (a flag, never a refusal).
+
+    One score distribution implies: an Over on a higher line is no more likely than on a lower one, and HOME covering
+    a harder (more negative) handicap is no more likely than covering an easier one. Probabilities are taken
     conditional on a decision, as scored. Returns {label: reason}.
 
-    v29.3: card rows carry no period or endpoint, so two totals are compared only when their lines are within 25% of
-    each other (alternate lines on one quantity). A 6-over score and a 20-over innings total (41.5 and 148.5 on one
-    WBBL card), or a half and a full game, are different quantities and are never compared."""
+    v29.4: lines are compared only when the registered request gives both the same family, period, endpoint, action
+    and unit (``scopes``, from ``contract_scopes``). Card rows carry none of these, so without the registered
+    definitions nothing is compared: two totals on different periods (74.5 and 80.5) are never confused, and two
+    totals on one quantity are compared however far apart their lines are (130.5 and 180.5). Team totals are not
+    compared, because no registered field names the team."""
     out = {}
-    for family, side, increasing in (("TOTAL", "OVER", False), ("HANDICAP", "HOME", True)):
-        pts = []
-        for label, d in derived.items():
-            if label == "_facts" or d["unpriced"] or d["family"] != family:
-                continue
-            sides = [r["side"].upper() for r in d["rows"]]
-            if side not in sides or d["lines"][sides.index(side)] is None or not sum(d["ps"]):
-                continue
-            i = sides.index(side)
-            pts.append((d["lines"][i], d["ps"][i] / sum(d["ps"]), label))
+    if not scopes:
+        return out
+    groups = {}
+    for label, d in derived.items():
+        if label == "_facts" or d["unpriced"] or label not in scopes:
+            continue
+        scope = scopes[label]
+        # Team totals are not compared: the registered definitions carry no field naming the team.
+        side = {"TOTAL": "OVER", "HANDICAP": "HOME"}.get(d["family"])
+        sides = [r["side"].upper() for r in d["rows"]]
+        if (side is None or scope[0] != d["family"] or side not in sides
+                or d["lines"][sides.index(side)] is None or not sum(d["ps"])):
+            continue
+        i = sides.index(side)
+        groups.setdefault(scope, []).append((d["lines"][i], d["ps"][i] / sum(d["ps"]), label, side))
+    for scope, pts in groups.items():
         pts.sort()
-        for (x1, q1, a), (x2, q2, b) in zip(pts, pts[1:]):
-            if family == "TOTAL" and not (x1 > 0 and x2 <= 1.25 * x1):
-                continue
+        increasing = scope[0] == "HANDICAP"
+        for (x1, q1, a, side), (x2, q2, b, _) in zip(pts, pts[1:]):
             if x1 < x2 and ((q1 > q2 + 1e-6) if increasing else (q1 + 1e-6 < q2)):
-                why = (f"{family} {side} {x1:g} at {q1:.3f} and {x2:g} at {q2:.3f}: the "
+                why = (f"{scope[0]} {side} {x1:g} at {q1:.3f} and {x2:g} at {q2:.3f}: the "
                        + ("easier" if increasing else "lower") + " line must be at least as likely")
                 out.setdefault(a, why)
                 out.setdefault(b, why)
     return out
 
 
-def rows_for(card_key: str, gid: str, derived: dict) -> list[dict]:
+def rows_for(card_key: str, gid: str, derived: dict, scopes: dict | None = None) -> list[dict]:
     out, favoured = [], []
-    incoherent = incoherent_labels(derived)
+    incoherent = incoherent_labels(derived, scopes)
     for label, d in derived.items():
         if label == "_facts":
             continue
@@ -402,7 +429,7 @@ def intake(drop, out, root=ROOT) -> dict:
                 continue
             seen[key] = bsha
             gid = game_id(meta)
-            mine = rows_for(key, gid, derived)
+            mine = rows_for(key, gid, derived, contract_scopes(registered_contracts(key, root)))
             labels = {r["label"] for r in mine}
             cards.append(dict(row, game_id=gid, status="ADMITTED", problems="", supplied_lines=len(labels),
                               priced_lines=len({r["label"] for r in mine if r["p"] != "UNPRICED"}),
@@ -852,7 +879,10 @@ def preflight(files, root=ROOT, *, lookup=None) -> list[dict]:
                 reason = "this exact card is already sealed"
             else:
                 reason, _ = _block_refusal(repo, root, key, meta, pk, problems, first_block, policy_time)
-            warnings = sorted(set(incoherent_labels(derived).values())) if not problems else []
+            scopes = contract_scopes(registered_contracts(key, root))
+            warnings = sorted(set(incoherent_labels(derived, scopes).values())) if not problems else []
+            if not problems and not scopes:
+                warnings.append("lines not compared for coherence: no registered contract definitions found")
             out.append(dict(card_key=key, ok=reason is None, reason=reason or "", scheduled_start=meta.get("scheduled_start", ""),
                             warnings=warnings))
     return out
@@ -1183,7 +1213,7 @@ def score(intakes, outcomes, out, *, root=ROOT, captures=None, cohort=None, base
         if seal["seal"] != "SEALED":
             continue
         mine = [r for r in picks if r["card_key"] == key and r["game_id"] == card["game_id"]]
-        expected = rows_for(key, card["game_id"], seal["verified_derived"])
+        expected = rows_for(key, card["game_id"], seal["verified_derived"], contract_scopes(seal["request_contracts"]))
         canonical = lambda rs: csv_bytes(ROW_FIELDS, sorted(rs, key=lambda r: (r["label"], r["side"])))
         if canonical(mine) != canonical(expected):
             custody.append(f"{key}: parsed probabilities/contracts/ranks differ from the exact published block")

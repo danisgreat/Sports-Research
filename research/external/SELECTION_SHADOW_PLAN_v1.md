@@ -1,5 +1,10 @@
 # SELECT-SHADOW-v1: registered shadow plan for the top two picks (v29.2, 22 November 2026)
 
+> **Superseded on 23 November 2026 (v29.4) by [SELECT-SHADOW-v2](SELECTION_SHADOW_PLAN_v2.md), before v1 reached any
+> eligible game.** v1 judged picks one at a time, used the stated p for `NO_DIRECTION` while ranking on the
+> conditional p, took its coverage and registration time from the caller, and let one outcome file overwrite another.
+> Kept here as the record of what was registered; it decides nothing.
+
 This registration takes effect at its first independently verified GitHub publication on `main`. It does not change
 [EVALUATION_PLAN_v29.0](EVALUATION_PLAN_v29.0.md), whose card protocol, selection policy (the registered rank) and
 600-game Brier test stay frozen. Nothing here reaches a card, a seal, a rank or the registered score. Code:

@@ -253,9 +253,15 @@ def line_shape_problems(rows, name):
     return []
 
 
-def no_draw(sport, rows):
+# v29.4: baseball draws depend on the competition. MLB plays extra innings to a result; NPB, KBO and other leagues cap
+# extra innings and allow ties (RULES_BASEBALL: "Tie-permitting leagues ... never a two-way winner label"). Any
+# baseball competition not named here is treated as tie-permitting.
+TIE_FREE_BASEBALL = ("MLB", "MAJOR LEAGUE BASEBALL")
+
+
+def no_draw(sport, rows, competition=""):
     """True when a full-game result can never be a draw: basketball and tennis always (overtime and tie-breaks
-    decide), ice hockey when the contract includes the shootout, baseball when it includes extra innings."""
+    decide), ice hockey when the contract includes the shootout, MLB baseball when it includes extra innings."""
     if not all(r["period"].upper().startswith("FULL") for r in rows):
         return False
     text = " ".join(
@@ -267,7 +273,14 @@ def no_draw(sport, rows):
         return True
     if sport == "Ice Hockey":
         return bool(re.search(r"(?<![A-Z])SO(?![A-Z])|SHOOTOUT", text))
-    return sport == "Baseball" and "EXTRA" in text
+    comp = (competition or "").upper()
+    return (
+        sport == "Baseball"
+        and "EXTRA" in text
+        and any(
+            re.search(rf"(?<![A-Z]){name}(?![A-Z])", comp) for name in TIE_FREE_BASEBALL
+        )
+    )
 
 
 # The score that decides the match, when it is also a handicap's unit. Not tennis: a match is decided by sets, and a
@@ -275,19 +288,19 @@ def no_draw(sport, rows):
 WINNER_SCORE = {"Basketball": "POINTS", "Ice Hockey": "GOALS", "Baseball": "RUNS"}
 
 
-def winner_by_margin(sport, rows):
+def winner_by_margin(sport, rows, competition=""):
     """True when a half-point handicap on these rows settles exactly as the match winner: no draw is possible and
     every handicap row is on the score that decides the match (points; goals including the shootout goal; runs)."""
     unit = WINNER_SCORE.get(sport)
     handicaps = [r for r in rows if r.get("family", "HANDICAP") == "HANDICAP"]
     return (
         bool(unit)
-        and no_draw(sport, rows)
+        and no_draw(sport, rows, competition)
         and all(r["unit"].strip().upper() == unit for r in handicaps)
     )
 
 
-def _contract_identity(rows, sport):
+def _contract_identity(rows, sport, competition=""):
     family = rows[0]["family"]
     sides = frozenset((r["side"].upper(), line_value(r["line"])) for r in rows)
     scope = frozenset(
@@ -298,8 +311,8 @@ def _contract_identity(rows, sport):
         v is not None and abs(v) == 0.5 for _, v in sides
     )
     if two_way and (
-        (family == "WINNER" and no_draw(sport, rows))
-        or (half and winner_by_margin(sport, rows))
+        (family == "WINNER" and no_draw(sport, rows, competition))
+        or (half and winner_by_margin(sport, rows, competition))
     ):
         return "MATCH_WINNER", scope
     return family, sides, scope, frozenset(r["unit"].upper() for r in rows)
@@ -309,7 +322,7 @@ def contract_problems(payload):
     """Registration-only checks on a new request: every line is cardable and no contract is registered twice."""
     try:
         events, contracts = rows(payload["EVENT.csv"]), rows(payload["CONTRACTS.csv"])
-        sport = events[0]["sport"]
+        sport, competition = events[0]["sport"], events[0].get("competition", "")
     except (KeyError, IndexError, UnicodeError):
         return []  # request_problems has already reported a malformed request
     by_label = {}
@@ -321,7 +334,7 @@ def contract_problems(payload):
         if shape:
             problems += shape
             continue
-        key = _contract_identity(group, sport)
+        key = _contract_identity(group, sport, competition)
         if key not in first:
             first[key] = label
         elif key[0] == "MATCH_WINNER":

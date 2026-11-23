@@ -155,16 +155,17 @@ def test_an_identical_earlier_registration_is_still_recognised(tmp_path):
     assert register(tmp_path, AHL_TWICE, key="MINI-G0005")["status"] == "ALREADY_REGISTERED"
 
 
-@pytest.mark.parametrize("text,winner_excerpts", [
-    (AHL_TEXT, ("Americans -0.5",)),
-    (NHL_TEXT, ("Blue Jackets +0.5",)),
-    (AHL_TEXT.replace("Crunch -0.5", "Crunch ML"), ("Americans -0.5", "Crunch ML")),
+@pytest.mark.parametrize("text,excerpts", [
+    (AHL_TEXT, ("Crunch -0.5", "Americans -0.5")),
+    (NHL_TEXT, ("Maple Leafs +0.5", "Blue Jackets +0.5")),
+    (AHL_TEXT.replace("Crunch -0.5", "Crunch ML"), ("Crunch ML", "Americans -0.5")),
 ])
-def test_prepare_reads_half_point_spreads_as_the_winner_where_no_draw_is_possible(text, winner_excerpts):
+def test_prepare_reads_half_point_spreads_as_the_winner_where_no_draw_is_possible(text, excerpts):
     rows = OPS.contracts_for(OPS.parse_message(text))
     winner = [r for r in rows if r["family"] == "WINNER"]
     assert [(r["label"], r["side"], r["line"]) for r in winner] == [("L1", "HOME", ""), ("L1", "AWAY", "")]
-    assert winner[0]["request_excerpt"] in winner_excerpts
+    # v29.4: each side keeps the supplied line that named it, so no supplied line is dropped.
+    assert tuple(r["request_excerpt"] for r in winner) == excerpts
     assert not [r for r in rows if r["family"] == "HANDICAP"]
     assert {r["label"] for r in rows} == {"L1", "L2"}
 

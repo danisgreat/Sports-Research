@@ -163,7 +163,7 @@ def contracts_for(game: dict) -> list[dict]:
             spec = {"first half goals": ("PERIOD", "FIRST_HALF", "FIRST_HALF_INCL_STOPPAGE", "GOALS"),
                     "total goals": ("TOTAL", "FULL_MATCH", "REGULATION_90", "GOALS"),
                     "total corners": ("CORNERS", "FULL_MATCH", "REGULATION_90", "CORNERS")}[what]
-            add(what, spec[0], [("OVER", line), ("UNDER", line)], spec[1], spec[2], spec[3], ln)
+            add((what, line), spec[0], [("OVER", line), ("UNDER", line)], spec[1], spec[2], spec[3], ln)
             continue
         if sport == "Cricket":
             m = re.search(r"^(?P<team>.+?)\s+1st Innings Runs at (?:the )?end of (?:over )?(?P<n>\d+)\b.*?Over/Under\s*" + NUM, ln, re.I)
@@ -173,16 +173,17 @@ def contracts_for(game: dict) -> list[dict]:
             _side(team, home, away)
             tag = O._slug(team).upper().replace("-", "_")
             if n in (20, 50):
-                add(("innings", team), "TEAM_TOTAL", [("OVER", line), ("UNDER", line)], f"FIRST_INNINGS_{tag}",
+                add(("innings", team, line), "TEAM_TOTAL", [("OVER", line), ("UNDER", line)], f"FIRST_INNINGS_{tag}",
                     f"SCHEDULED_{n}_OVERS_OR_ALL_OUT", "RUNS", ln)
             else:
-                add(("checkpoint", team, n), "PERIOD", [("OVER", line), ("UNDER", line)], f"FIRST_INNINGS_{tag}_OVER_{n}",
+                add(("checkpoint", team, n, line), "PERIOD", [("OVER", line), ("UNDER", line)], f"FIRST_INNINGS_{tag}_OVER_{n}",
                     f"END_OF_COMPLETED_OVER_{n}", "RUNS", ln)
             continue
         m = re.search(r"Combined Total(?: Points| Goals| Runs| Games)?\s*:\s*Over/Under\s*" + NUM, ln, re.I)
         if m:
             line = _line(_num(m[1]))
-            add("total", "TOTAL", [("OVER", line), ("UNDER", line)], period, endpoint, unit, ln)
+            # v29.4: the key includes the line, so two different totals (140.5 and 145.5) are two contracts.
+            add(("total", line), "TOTAL", [("OVER", line), ("UNDER", line)], period, endpoint, unit, ln)
             continue
         m = re.match(r"^(?P<team>.+?)\s+(?:ML|Moneyline|ML/Spread)\s*:?\s*$", ln, re.I)
         if m:
@@ -198,36 +199,46 @@ def contracts_for(game: dict) -> list[dict]:
     # shootout goal, runs; never tennis games), "Side +0.5" and "Side -0.5" both settle as "Side wins", so half-point
     # spreads are the winner contract, registered once ("Americans -0.5" and "Crunch -0.5" were two labels for one result).
     if "SPREAD" in side_lines and all(abs(v) == 0.5 for _, v, _ in side_lines["SPREAD"]) and \
-            F.winner_by_margin(sport, [dict(period=period, endpoint=endpoint, action="STANDARD", unit=unit)]):
+            F.winner_by_margin(sport, [dict(period=period, endpoint=endpoint, action="STANDARD", unit=unit)],
+                               game["competition"]):
         side_lines.setdefault("ML", []).extend((s, None, ln) for s, _, ln in side_lines.pop("SPREAD"))
     # "Team A ML" and "Team B +1.5" are two contracts, each priced on both sides (GAME_REQUEST_TEMPLATE §1b).
     if "ML" in side_lines:
-        excerpt = side_lines["ML"][0][2]
-        add("winner", "WINNER", [("HOME", ""), ("AWAY", "")], period, endpoint, unit, excerpt)
+        # v29.4: each side's row keeps the supplied line that named it, so every line maps to a retained row.
+        named = {}
+        for side, _, ln in side_lines["ML"]:
+            named.setdefault(side, ln)
+        first = side_lines["ML"][0][2]
+        add("winner", "WINNER", [(s, "", named.get(s, first)) for s in ("HOME", "AWAY")], period, endpoint, unit, first)
     if "SPREAD" in side_lines:
         spreads = side_lines["SPREAD"]
         given = {s: v for s, v, _ in spreads}
+        pair = {}
         if len(spreads) == 2 and len(given) == 2 and abs(given["HOME"] + given["AWAY"]) < 1e-9:
-            spreads = spreads[:1]       # "A -3.5" and "B +3.5": both sides of one line, one contract
+            pair = {s: ln for s, _, ln in spreads}   # "A -3.5" and "B +3.5": both sides of one line, one contract
+            spreads = spreads[:1]
         # v29.2 (owner, 22 Nov 2026): different spreads ("Aktobe +4.5", "Torpedo -3.5") are asked for on purpose and are
         # different contracts, each priced on both sides under its own label.
         for side, value, excerpt in spreads:
             h = value if side == "HOME" else -value
-            add(("handicap", h), "HANDICAP", [("HOME", _line(h)), ("AWAY", _line(-h))], period, endpoint, unit, excerpt)
+            add(("handicap", h), "HANDICAP", [("HOME", _line(h), pair.get("HOME", excerpt)), ("AWAY", _line(-h), pair.get("AWAY", excerpt))],
+                period, endpoint, unit, excerpt)
     if not items:
         raise PrepareError("no supplied line was found")
     rows = []
     # Labels follow the order of the lines in the owner's message.
     for n, (_, family, sides_lines, period, endpoint, unit, excerpt) in enumerate(sorted(items, key=lambda x: x[0]), start=1):
-        for side, line in sides_lines:
+        for item in sides_lines:
+            side, line = item[0], item[1]
             rows.append(dict(label=f"L{n}", family=family, side=side, line=line, period=period, endpoint=endpoint,
-                             action="STANDARD", unit=unit, request_excerpt=excerpt, baseline_p="",
+                             action="STANDARD", unit=unit, request_excerpt=item[2] if len(item) > 2 else excerpt, baseline_p="",
                              baseline_id="UNAVAILABLE:NO_FROZEN_LEAGUE_BASELINE"))
     return rows
 
 
 KIT_PARAMS = "research/external/kit/v24.15/KIT_PARAMETERS_v24.15.csv"
 KIT_SPORT = {"Australian Rules": "AFL"}
+KIT_ALIASES = "research/one_chat/KIT_COMPETITION_ALIASES.csv"
 
 
 def kit_row_note(sport: str, competition: str, root=None) -> str:
@@ -243,6 +254,14 @@ def kit_row_note(sport: str, competition: str, root=None) -> str:
 
     def usable(k):
         return params[k]["status"] not in ("NOT_USABLE", "NOT_ESTIMATED", "NOT_COVERED")
+
+    # v29.4: a reviewed alias resolves the competition once ("Australia NBL" is the NBL row), so the row is named, not guessed.
+    aliases = Path(root or O.ROOT) / KIT_ALIASES
+    if aliases.exists():
+        for r in O.read_csv(aliases):
+            if r["sport"] == sport and r["competition"].strip().lower() == competition.strip().lower() and r["kit_row"] in params                     and usable(r["kit_row"]):
+                return (f"Kit row: `{r['kit_row']}` ({params[r['kit_row']]['status']}), the reviewed alias for '{competition}' "
+                        f"in {KIT_ALIASES} ({r['basis']}). Pass this exact key to the kit and print it on the card.")
 
     if key in params and usable(key):
         return f"Kit row: `{key}` (its own row, {params[key]['status']})."
