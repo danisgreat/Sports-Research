@@ -1,5 +1,31 @@
 # Australian rules request format and finals extra time — MDS/P v24.12 / CR-2026.11.10-R2 / P-2026.11.10-v24.10, 10 November 2026
 
+## 23 November 2026 — v29.4 / CR-2026.11.23-R2 / P-2026.11.23-v29.4: contracts and pairs (third external review)
+
+The owner passed on a read-only external review (7.3/10), with an order to implement what actually needs
+implementing. Each claim was reproduced first ([triage](research/verification/external_reviews_2026-11-23/TRIAGE.md)).
+
+- **Contract identity.** A half-point run line is the match winner only in MLB; NPB, KBO and any other baseball
+  competition allow ties, so `±0.5` stays a handicap there (`RULES_BASEBALL`). `prepare` keeps two different totals
+  (140.5, 145.5) as two contracts, and each side of a winner or paired spread keeps the excerpt of the line that named
+  it.
+- **Coherence.** `INCOHERENT_ACROSS_LINES` compares lines only on one registered quantity (family, period, endpoint,
+  action, unit). This replaces the v29.3 25% rule, which still confused 74.5/80.5 and missed 130.5/180.5. Intake and
+  score use the same registered definitions; the check-drop preview says when none were found.
+- **Kit aliases.** [KIT_COMPETITION_ALIASES.csv](research/one_chat/KIT_COMPETITION_ALIASES.csv) lets the packet name
+  the reviewed row for six competition names; the kit is unchanged.
+- **SELECT-SHADOW-v2** ([plan](research/external/SELECTION_SHADOW_PLAN_v2.md)) replaces v1 before any eligible game.
+  - The decision is two distinct picks both winning per eligible request, with a pair-coverage floor of 0.5.
+  - One conditional probability is used throughout (the 50/36/14 case is admitted at 58.14%).
+  - Inputs must be a registered score with 0 custody problems, plus the plan's verified publication time.
+  - Conflicting or missing grades are refused, and every pair is marked `SAME_QUANTITY` or `SAME_GAME`.
+- **CURRENT_STATE.** The manual canonical-ID rows (P-696 / P-697) are replaced by a pointer to the generated block,
+  and two undated status sentences are dated.
+- **Unchanged.** Sealed cards, the registered rank and score, and EVALUATION_PLAN_v29.0. Intake 2026-11-22-2 rescored
+  with 0 custody problems.
+- **Deferred with reasons.** Missing facts, the frozen league comparator, joint pair probabilities, timing evidence and
+  a durable capture store.
+
 ## 23 November 2026 — Settlement, audit, canonical import and archive: P-697 to P-703 (`20261120-495CEEB69E9540938CF6A7DAA7B546B4`)
 
 Pulled the GitHub mini `20261120-495CEEB69E9540938CF6A7DAA7B546B4` (20–22 November 2026) from `origin/forecast-seals` (7 registered requests, 3 sealed cards: G0001, G0003, G0007) and `origin/card-drops` (4 refused drops: G0002, G0004, G0005, G0006). Archived byte-exact at `archive/settled_minis_2026-11-22/20261120-495CEEB69E9540938CF6A7DAA7B546B4/` with `FROZEN_MANIFEST.csv` and `DROP_LOG.csv`. Settled all 7 games (**P-697 to P-703**, 30 contract rows, 15 WIN / 15 LOSS, **0 UNRESOLVED**) from permitted captures in `../one_chat_captures/2026-11-22-2/`, audited under `SRC-ALT-v3` / `EXH-v1` / `DEEPLOSS-v1` / `ONE-CHAT-v3`, and appended 7 canonical wrappers and 7 settlement addenda to [Part 11](prediction%20logs/PREDICTION_LOG_COMBINED_11.md) (prefix byte-identical, 14/14 readback). 9 deep loss reviews (`DLR-2026-11-22-011`–`019`) appended to `research/deep_loss/DEEP_LOSS_REGISTER.csv`; `BASKETBALL_TOTAL_WITHOUT_PACE_MODEL` now has 4. `ml one-chat intake --from-seals` written to `research/one_chat/intake/2026-11-22-2` (all 13 sealed cards; supersedes 2026-11-22-1 as the census) and `ml card-training run` to `research/card_training/2026-11-23-1`. Highest canonical ID **P-703**, next **P-704**. No game is Track P-eligible (first play unverified on all three sealed cards). Two duplicate local exports already committed under `research/active_minis/received/OWNER_DROP_2026-11-15/` were deleted from the local "to be settled" folder after a byte-for-byte check. [Settlement](research/verification/mini_import_P-697_P-703_2026-11-22-2/SETTLEMENT.md), [Audit](research/verification/mini_import_P-697_P-703_2026-11-22-2/AUDIT_REPORT.md), [Import report](research/verification/mini_import_P-697_P-703_2026-11-22-2/CANONICAL_IMPORT_REPORT.md).

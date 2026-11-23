@@ -113,9 +113,9 @@ python -m ml one-chat seal --watch C:/chat-minis
 Each pass (every two minutes) seals every new finished card in every mini, card by card: an unfinished, changed or unregistered card is reported and skipped, and the mini's other cards are still sealed. A card must be sealed before its own game's first play; the earliest games come first in each packet for this reason.
 
 After settlement, score from the sealed copies, never from the chats' later files. The registered rank's top two are
-also compared with the separately registered shadow selection ([SELECTION_SHADOW_PLAN_v1](../external/SELECTION_SHADOW_PLAN_v1.md),
-`python -m ml.selection_shadow score … --coverage <score>/COVERAGE.csv --registered-at <plan publication>`), which never
-changes a card or the registered score:
+also compared with the separately registered shadow selection ([SELECTION_SHADOW_PLAN_v2](../external/SELECTION_SHADOW_PLAN_v2.md),
+`python -m ml.selection_shadow score --intake <intake> --outcomes <every OUTCOMES.csv> --score <registered score folder> --out <folder>`,
+on the same intake and outcome files as the score), which never changes a card or the registered score:
 
 ```text
 python -m ml one-chat intake --from-seals --out research/one_chat/intake/<run>

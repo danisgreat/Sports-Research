@@ -8,7 +8,7 @@ A sports-only, market-blind forecasting framework and custody/evaluation harness
 
 | Field | Current value |
 |---|---|
-| Release | MDS-2026.11.23-v29.3 · CR-2026.11.23-R1 · P-2026.11.23-v29.3 · SCV-2026.11.18-v20 · SEL-2026.10.22-v4 |
+| Release | MDS-2026.11.23-v29.4 · CR-2026.11.23-R2 · P-2026.11.23-v29.4 · SCV-2026.11.18-v20 · SEL-2026.10.22-v4 |
 | Active workflow | **ONE-CHAT-v3** — [Runbook](research/one_chat/RUNBOOK.md) · [Chat brief](research/external/ONE_CHAT_BRIEF_v29.2.md) |
 | Registered plan (Track P) | [EVALUATION_PLAN_v29.0](research/external/EVALUATION_PLAN_v29.0.md) · **600-game horizon** · Live seals on `forecast-seals` (`python -m ml one-chat score`) |
 | Historical validation (Track H) | [HPPV-v1](research/verification/historical_pre_event_v1/README.md) · 685 cards / 3,150 rows (280 with stated `p`) · 0 Tier-A (`HISTORICAL_EVIDENCE_INSUFFICIENT`) |
