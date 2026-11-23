@@ -230,6 +230,29 @@ def test_registered_pairs_are_marked_by_quantity():
     assert {r["pair"] for r in plain if r["policy"] == "REGISTERED_RANK"} == {"SAME_GAME"}
 
 
+
+def test_the_shadow_plan_publication_time_is_read_from_main_history(repo, tmp_path):
+    # Codex on PR #14: Repo indexed only the evaluation plan, so the shadow plan's publication was never found.
+    plan = repo / S.PLAN
+    plan.parent.mkdir(parents=True, exist_ok=True)
+    plan.write_bytes((O.ROOT / S.PLAN).read_bytes())
+    M.git(repo, "add", S.PLAN)
+    M.git(repo, "commit", "-q", "-m", "shadow plan")
+    M.git(repo, "push", "-q", "origin", "main")
+    head = M.git(repo, "rev-parse", "HEAD")
+    M.LIVE_PUSHES[str(repo)].append(dict(before="", after=head, pushed_at_server="2026-11-23T10:00:00Z",
+                                         ref="refs/heads/main"))
+    score = tmp_path / "score"
+    score.mkdir()
+    (score / "SUMMARY.csv").write_text("custody_problems\n0\n", encoding="utf-8")
+    (score / "SEQUENCE.csv").write_text("card_key\nEARLY\nLATE\n", encoding="utf-8")
+    (score / "COVERAGE.csv").write_text("card_key,seal_time\nEARLY,2026-11-23T09:00:00Z\nLATE,2026-11-23T11:00:00Z\n",
+                                        encoding="utf-8")
+    keep, published, problems = S.registered_sequence(score, repo)
+    assert problems == [] and published.startswith("2026-11-23T10:00:00")
+    assert keep == ["LATE"]
+
+
 # --- contract identity (v29.4) --------------------------------------------------------------------------------------------
 
 def test_two_different_totals_are_two_contracts():

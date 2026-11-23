@@ -33,7 +33,7 @@ from ml import forecast_integrity as F
 from ml import one_chat as O
 
 RULE = "SELECT-SHADOW-v2"
-PLAN = "research/external/SELECTION_SHADOW_PLAN_v2.md"
+PLAN = O.SHADOW_PLAN             # its first verified main publication is read by O.Repo
 MIN_P = 0.55                     # conditional p; the same 0.05 margin as the registered NO_DIRECTION boundary
 SIGNAL = ("CONTRADICTS_OWN_CENTRE", "INCOHERENT_ACROSS_LINES", "NO_RESULT_SOURCE")
 VARIANTS = {"SHADOW_SIGNAL": SIGNAL, "SHADOW_STRICT": SIGNAL + ("UNMEASURED_AVAILABILITY_PRICED",)}

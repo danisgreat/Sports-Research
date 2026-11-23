@@ -78,6 +78,10 @@ SEALED = "research/one_chat/sealed"
 SEALS = SEALED + "/SEALS.csv"
 SEAL_FIELDS = ("card_key", "block_sha256", "file_sha256", "sealed_path", "sealed_at_client", "policy_sha256", "policy_commit")
 PLAN = "research/external/EVALUATION_PLAN_v29.0.md"
+# Plans whose first verified publication on main is read from git history (v29.4: the shadow plan too, so its
+# registration time comes from GitHub, never from the caller).
+SHADOW_PLAN = "research/external/SELECTION_SHADOW_PLAN_v2.md"
+MAIN_PLANS = (PLAN, SHADOW_PLAN)
 RECEIPTS = SEALED + "/PUSH_RECEIPTS.csv"
 RECEIPT_FIELDS = ("before", "after", "pushed_at_server", "ref", "source", "retrieved_at")
 SCORES = "research/one_chat/scores"
@@ -497,7 +501,7 @@ class Repo:
         self._blob_cache = {}
         self._reader = None
         self._content_commits = {}
-        raw_log = _git(self.root,"log","--all","--reverse","--format=@%H","--raw","--no-abbrev","--",SEALED,F.REQUEST_ROOT,PLAN,REQUEST_INDEX,check=False).stdout
+        raw_log = _git(self.root,"log","--all","--reverse","--format=@%H","--raw","--no-abbrev","--",SEALED,F.REQUEST_ROOT,*MAIN_PLANS,REQUEST_INDEX,check=False).stdout
         current = ""
         for ln in raw_log.splitlines():
             if ln.startswith("@"):
@@ -577,7 +581,7 @@ class Repo:
     def first_content(self, path, digest):
         ref=self.seal_ref or "HEAD"
         raw=self.blob(ref,path)
-        if path==PLAN:
+        if path in MAIN_PLANS:
             raw=self.blob("refs/remotes/origin/main",path)
         if raw is None or sha(raw)!=digest:
             # Pending, not-yet-pushed objects are still reportable, never eligible.
