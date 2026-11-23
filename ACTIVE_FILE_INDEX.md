@@ -36,4 +36,4 @@
 | Retired five-lane external route (`EXT-v2` / `EXT-v3` pointers) | [EXTERNAL_RESEARCH_PROTOCOL.md](EXTERNAL_RESEARCH_PROTOCOL.md) |
 | Compatibility pointers | [METHOD.md](METHOD.md), [PROMPTS.md](PROMPTS.md) |
 
-**History, not instructions:** `archive/`, closed `prediction logs/` Parts 1–10, dated folders under `research/verification/`, `research/issued_research/`, `research/model_shadow/`, and [archive/root_documents_2026-10-14/](archive/root_documents_2026-10-14/README.md). Working clone outside OneDrive: `C:\Users\danie\Projects\Sports-Research`.
+**History, not instructions:** `archive/`, closed `prediction logs/` Parts 1–10, dated folders under `research/verification/`, `research/issued_research/`, `research/model_shadow/`, and [archive/root_documents_2026-10-14/](archive/root_documents_2026-10-14/README.md).

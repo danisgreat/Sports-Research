@@ -53,4 +53,4 @@ python -m ml state --write
 | Logs, scoreboard & learning | [Active Combined Log (Part 11)](prediction%20logs/PREDICTION_LOG_COMBINED_11.md), [GAME_LOG_STATUS_CURRENT.md](GAME_LOG_STATUS_CURRENT.md), [SCOREBOARD.md](research/scoreboard/SCOREBOARD.md), [HYPOTHESIS_REGISTER.md](HYPOTHESIS_REGISTER.md), [ML_PIPELINE.md](ML_PIPELINE.md) |
 | Retained legacy routes & history | [ACTIVE_FILE_INDEX.md](ACTIVE_FILE_INDEX.md), [research/prompts/](research/prompts/README.md), [EXTERNAL_RESEARCH_PROTOCOL.md](EXTERNAL_RESEARCH_PROTOCOL.md), [HISTORICAL_LINK_INDEX.md](HISTORICAL_LINK_INDEX.md), [archive/](archive/), [LICENSE.md](LICENSE.md) |
 
-*Previous long-form README preserved byte-for-byte at [`cb97bbc2a`](https://github.com/danisgreat/Sports-Research/blob/cb97bbc2a9f882e7f8a093648b6137315951da8b/README.md). Working clone outside OneDrive: `C:\Users\danie\Projects\Sports-Research`.*
+*Previous long-form README preserved byte-for-byte at [`cb97bbc2a`](https://github.com/danisgreat/Sports-Research/blob/cb97bbc2a9f882e7f8a093648b6137315951da8b/README.md).*
