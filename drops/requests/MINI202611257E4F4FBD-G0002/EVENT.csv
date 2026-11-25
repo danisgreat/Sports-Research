@@ -1,0 +1,2 @@
+event_id,sport,competition,home,away,scheduled_start,schedule_source
+REQ:basketball:ncaab:washington-state:sam-houston-state:2026-11-25T0200Z,Basketball,NCAAB,Washington State,Sam Houston State,2026-11-25T13:00:00+11:00,https://wsucougars.com/sports/mens-basketball/schedule
