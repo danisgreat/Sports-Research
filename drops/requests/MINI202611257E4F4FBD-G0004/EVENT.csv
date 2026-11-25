@@ -1,0 +1,2 @@
+event_id,sport,competition,home,away,scheduled_start,schedule_source
+REQ:ice-hockey:nhl-regular-season:tb-lightning:car-hurricanes:2026-11-26T0000Z,Ice Hockey,NHL Regular Season,TB Lightning,CAR Hurricanes,2026-11-26T11:00:00+11:00,https://www.nhl.com/news/nhl-nationally-televised-games-for-week-of-november-23-2026
